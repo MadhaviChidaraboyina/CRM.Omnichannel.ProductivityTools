@@ -1,0 +1,14 @@
+{
+	"extends":  "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+	"include": [
+		"Constants.ts",
+		"MainLibrary.ts",
+		"../PostMsgWrapper.ts",
+		"../CIFrameworkConstants.ts"
+	],
+	"compilerOptions": {
+		"sourceMap": true,
+		"outFile": "msdyn_ciLibrary.js",
+		"module":"amd"
+	}
+}

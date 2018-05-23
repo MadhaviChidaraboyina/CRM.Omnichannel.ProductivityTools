@@ -1,0 +1,13 @@
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<ProjectToBuild Include="Client\WebResources.csproj" />
+		<ProjectToBuild Include="Client.UnitTests\Client.UnitTests.csproj" />
+		<ProjectToBuild Include="Solution\ProviderSolution.csproj" />
+	</ItemGroup>
+	<Target Name="Clean">
+		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
+	</Target>
+	<Target Name="Build">
+		<MSBuild Projects="@(ProjectToBuild)"/>
+	</Target>
+</Project>

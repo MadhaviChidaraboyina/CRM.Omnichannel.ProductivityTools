@@ -1,0 +1,27 @@
+﻿{
+	"NavBar": {
+		"All": {
+			"xPath": "//*[@data-id='navbutton']"
+		}
+	},
+	"MoreOptionsButton": {
+		"All": {
+			"xPath": "//*[@id='__flyoutRootNode']//*[@data-id='sitemap-areaBar-more-btn']"
+		}
+	},
+	"OverFlowMenuItem": {
+		"All": {
+			"xPath": "//*[@id='__flyoutRootNode']//*[@data-id='areabar-overflow-{0}']"
+		}
+	},
+	"Module": {
+		"All": {
+			"xPath": "//*[@id='__flyoutRootNode']//ul/li[@data-id='sitemap-module-{0}']"
+		}
+	},
+	"SubModule": {
+		"All": {
+			"xPath": "//*//*[@id='__flyoutRootNode']//ul/li[@data-id='sitemap-entity-{0}']"
+		}
+	}
+}

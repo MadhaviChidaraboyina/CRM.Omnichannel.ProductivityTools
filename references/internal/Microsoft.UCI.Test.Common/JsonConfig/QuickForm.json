@@ -1,0 +1,34 @@
+﻿{
+	"Form": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='quickCreateRoot']"
+		}
+	},
+	"Tab": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='quickCreateRoot']/div[@data-id='tabpanel-{0}']"
+		}
+	},
+	"Section": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='quickCreateRoot']/div[@data-id='tabpanel-{0}']/section/section[@data-id='{1}']"
+		}
+	},
+	"ErrorIcon": {
+		"All": {
+			"xPath": "//*[contains(@data-id, '{0}') and contains(@data-id, 'error-icon')]"
+		}
+	},
+
+	"ButtonDataId": {
+		"All": {
+			"xPath": "//button[@data-id='{0}']"
+		}
+	},
+
+	"ControlSelector": {
+		"All": {
+			"xPath": "//*[@data-id='{0}']"
+		}
+	},
+}

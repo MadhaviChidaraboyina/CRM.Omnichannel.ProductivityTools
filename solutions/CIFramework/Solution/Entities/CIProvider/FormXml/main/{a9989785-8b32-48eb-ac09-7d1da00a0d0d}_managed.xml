@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms>
+  <systemform>
+    <formid>{a9989785-8b32-48eb-ac09-7d1da00a0d0d}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{2190ec7e-bb48-4408-aa64-6008072a8a39}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{700edb12-0fa4-4b08-aed3-208619a35f0e}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8c621a7b-fd3a-4d1b-81a2-28795ccc836b}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{07478256-16a3-4608-6c09-e5a84d0215e3}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_label" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_label" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{910edd35-4cd4-4b0a-9e21-b54e9e84225a}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_landingurl" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="msdyn_landingurl" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{35765a1a-2106-2a1b-79a4-38eb1ab76b66}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_clicktoact" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_clicktoact" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{50406692-cbc1-7b41-e503-013b03760a3b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_usesinglesignon" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_usesinglesignon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5bca6707-68a4-eec9-a347-74e94dec8494}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_widgetheight" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="msdyn_widgetheight" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a2a65eb5-5ce7-a480-6c51-b80d32b55256}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_widgetwidth" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="msdyn_widgetwidth" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0960a736-de53-67ab-9354-cb0cd6435b05}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_channeltype" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_channeltype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c0e04a8e-e0a8-9cb4-3563-cb92ba28e129}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_sortorder" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="msdyn_sortorder" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="{2190ec7e-bb48-4408-aa64-6008072a8a39}_section_2" showlabel="false" showbar="false" locklevel="0" id="{77aae49c-3484-52cc-1e2e-79610778ba04}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                  <labels>
+                    <label description="CIProviderCIProviderCIProviderCIProviderMembers" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c5e85023-a3e0-be00-5996-0c7923b809bd}" showlabel="false" colspan="1" auto="false" rowspan="6">
+                        <labels>
+                          <label description="CIProviderCIProviderCIProviderCIProviderMembers" languagecode="1033" />
+                        </labels>
+                        <control id="CIProviderCIProviderCIProviderCIProviderMembers" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{1a988717-4d38-9675-c0d8-76d2ed319d5c}">
+                          <parameters>
+                            <ViewId>{30CE6879-6B7A-E211-8976-00155D89AC0C}</ViewId>
+                            <IsUserView>false</IsUserView>
+                            <RelationshipName>msdyn_ciprovider_systemuser_membership</RelationshipName>
+                            <TargetEntityType>systemuser</TargetEntityType>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <ViewIds>{00000000-0000-0000-00AA-000010001019},{30CE6879-6B7A-E211-8976-00155D89AC0C}</ViewIds>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <ChartGridMode>All</ChartGridMode>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation/>
+      <controlDescriptions />
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

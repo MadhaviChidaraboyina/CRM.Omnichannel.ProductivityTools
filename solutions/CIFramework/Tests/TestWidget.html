@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+		// ToDo Instead of document referrer get the Configuration
+		var anchorElement = document.createElement('a');
+		anchorElement.href = document.referrer;
+
+		var imported = document.createElement("script");
+		imported.src = anchorElement.origin + "/CITTest/WebResources/Widget/msdyn_ciFrameworkLibrary.js";
+		document.getElementsByTagName("head")[0].appendChild(imported);
+
+		const apiNamespace = "Microsoft.CIFramework.";
+
+		function executeAPIs() {
+			var textarea = document.getElementById("APIExecutionresult");
+			textarea.value = "";
+			var comboBox = document.forms["form1"]["ApiComboBox"];
+			var selectedItems = Array.prototype.filter.call(comboBox.options, item => item.selected ? true: false);
+			selectedItems.map((selectedItem) => {
+				let promise = eval(apiNamespace + selectedItem.value);
+				promise.then(function (result) {
+					textarea.value += selectedItem.value + ' has executed successfully ' + (result != undefined && result != null ? 'with return value ' + JSON.stringify(result) : '') + '.\n';
+				}
+				, function (error) {
+					textarea.value += selectedItem.value + ' has failed with error: ' + error + '\n';
+				});
+			});
+		}
+
+    </script>
+</head>
+<body>
+    <div align="center">
+        <form name="form1">
+            <p><strong>Select the APIs you want to execute. You may control-click (Windows) or command-click (Mac) to select more than one.</strong></p>
+            <select name="ApiComboBox" multiple size="12">
+                <!--ToDo Keep adding APIs and set size as APIs are created-->
+                <option value="setClickToAct(true)">setClickToAct(true)</option>
+                <option value="setClickToAct(false)">setClickToAct(false)</option>
+                <option value="setMode(1)">setMode(1)</option>
+                <option value="setMode(0)">setMode(0)</option>
+                <option value="setWidth(10)">setWidth(10)</option>
+                <option value="setWidth(20)">setWidth(20)</option>
+                <option value="getMode()">getMode()</option>
+                <option value="getWidth()">getWidth()</option>
+                <option value="getClickToAct()">getClickToAct()</option>
+                <option value="searchAndOpenRecords('account','?$filter=name eq \'a1\'&$select=name')">searchAndOpenRecords()[Account Name a1]</option>
+            </select>
+            <input type="button" value="Submit" onclick="executeAPIs()">
+        </form>
+        <form name="form2">
+            <textarea id="APIExecutionresult" name="APIExecutionresult" rows="50" cols="50" style="border: none"></textarea>
+        </form>
+    </div>
+</body>
+</html>

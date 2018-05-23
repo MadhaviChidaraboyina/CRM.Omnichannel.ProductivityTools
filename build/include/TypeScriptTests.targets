@@ -1,0 +1,60 @@
+<!--
+***********************************************************************************************
+TypeScriptTests.targets
+
+This file defines the steps in the standard build process for compiling and
+running TypeScript unit tests.
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+***********************************************************************************************
+-->
+
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<IsUnitTestProject>true</IsUnitTestProject>
+		<TypeScriptSourceMap>true</TypeScriptSourceMap>
+		<TypeScriptGeneratesDeclarations>false</TypeScriptGeneratesDeclarations>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ChutzpahPath>$(PKG_CHUTZPAH)\tools</ChutzpahPath>
+		<ChutzpahCmdRunner>$(ChutzpahPath)\chutzpah.console.exe</ChutzpahCmdRunner>
+		<ChutzpahConfig>$(XrmSolutionsRoot)\build\config\chutzpah.json</ChutzpahConfig>
+		<ChutzpahTestHarnessDir>$(MSBuildProjectDirectory)\..\TMP</ChutzpahTestHarnessDir>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<GetCopyToOutputDirectoryItemsDependsOn>
+			$(GetCopyToOutputDirectoryItemsDependsOn);
+			RunTypeScriptUnitTests;
+		</GetCopyToOutputDirectoryItemsDependsOn>
+	</PropertyGroup>
+	
+	<Import Project="TypeScriptTestTypings.targets" />
+		
+	<ItemGroup>
+		<ChutzpahEnvironment Include="TestHarnessDir=$(ChutzpahTestHarnessDir)" />
+		<ChutzpahEnvironment Include="OutputPath=$(OutputPath)" />
+		<ChutzpahEnvironment Include="PKG_UCLIENT_UNITTESTTOOLS=$(PKG_UCLIENT_UNITTESTTOOLS)" />
+		<ChutzpahEnvironment Include="PKG_CRM_REACTJS=$(PKG_CRM_REACTJS)" />
+		<ChutzpahEnvironment Include="PKG_OSS_REQUIREJS=$(PKG_OSS_REQUIREJS)" />
+		<ChutzpahEnvironment Include="SolutionDir=$(SolutionDir)" />
+		<ChutzpahEnvironment Include="PKG_MOMENTJS=$(PKG_MOMENTJS)" />	
+	</ItemGroup>
+
+	<Target Name="RunTypeScriptUnitTests" Condition="$(ConfigurationIsDebug)">
+		<!--<MakeDir Directories="$(ChutzpahTestHarnessDir)" />-->
+		<Exec
+			WorkingDirectory="$(MSBuildProjectDirectory)"
+			Command="$(ChutzpahCmdRunner) $(MSBuildProjectDirectory) /vsoutput"
+			EnvironmentVariables="@(ChutzpahEnvironment)" />
+	</Target>
+
+	<Target Name="TestInBrowser">
+		<!--<MakeDir Directories="$(ChutzpahTestHarnessDir)" />-->
+		<Exec
+			WorkingDirectory="$(MSBuildProjectDirectory)"
+			Command="$(ChutzpahCmdRunner) $(MSBuildProjectDirectory) /openInBrowser $(ChutzpahBrowser)"
+			EnvironmentVariables="@(ChutzpahEnvironment)" />
+	</Target>
+</Project>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
+  <PropertyGroup>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <NOTARGET>true</NOTARGET>
+    <SolutionFileNamePrefix>msdyn_CIFramework</SolutionFileNamePrefix>
+    <ApplicationFolder>$(XrmSolutionsRoot)\solutions\CIFramework</ApplicationFolder>
+    <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
+    <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
+    <ProjectGuid>{8C903DD2-5BA8-4ED0-830D-44E44FE69766}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="packageMap.xml">
+      <Link>packageMap.xml</Link>
+    </Content>
+    <Content Include="Entities\CIProvider\Entity.xml" />
+    <Content Include="Entities\CIProvider\FormXml\main\{a9989785-8b32-48eb-ac09-7d1da00a0d0d}_managed.xml" />
+    <Content Include="Entities\CIProvider\SavedQueries\{4ebf43a0-6ac3-4ad7-bd52-11d5f9bdadfd}.xml" />
+    <Content Include="Entities\CIProvider\SavedQueries\{6a13feec-85d7-4b9f-b94c-16619ffe4617}.xml" />
+    <Content Include="Entities\CIProvider\SavedQueries\{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}.xml" />
+    <Content Include="Entities\CIProvider\SavedQueries\{303dff48-b284-459a-ac10-d67e92bc5a8c}.xml" />
+    <Content Include="Entities\CIProvider\SavedQueries\{633c9e21-2171-4500-b2de-e26712495930}.xml" />
+    <Content Include="Entities\CIProvider\SavedQueries\{9024dbea-2352-436d-bb5f-848405158adb}.xml" />
+    <Content Include="Entities\CIProvider\SavedQueries\{b8efd5d0-fb16-e811-812f-000d3a2528ca}.xml" />
+    <Content Include="Other\Customizations.xml" />
+    <Content Include="Other\Relationships.xml" />
+    <Content Include="Other\Solution.xml" />
+    <Content Include="Other\Relationships\CIProvider.xml" />
+    <Content Include="WebResources\Widget\msdyn_ciLibrary.js.data.xml" />
+    <Content Include="WebResources\CRMClients\msdyn_internal_ci_library.js.data.xml" />
+  </ItemGroup>
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
+</Project>

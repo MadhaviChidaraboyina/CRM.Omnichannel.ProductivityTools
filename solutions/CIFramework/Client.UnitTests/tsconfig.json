@@ -1,0 +1,7 @@
+{
+	"extends": "../../tsconfig/tsconfig.base.mocha.fullapi.json",
+	"include": [ "**/*.ts" ],
+	"compilerOptions": {
+		"outFile": "ClientUnitTests.js"
+	}
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships>
+  <EntityRelationship Name="lk_msdyn_ciprovider_createdby" />
+  <EntityRelationship Name="lk_msdyn_ciprovider_modifiedby" />
+  <EntityRelationship Name="msdyn_ciprovider_systemuser_membership" />
+  <EntityRelationship Name="organization_msdyn_ciprovider" />
+</EntityRelationships>
