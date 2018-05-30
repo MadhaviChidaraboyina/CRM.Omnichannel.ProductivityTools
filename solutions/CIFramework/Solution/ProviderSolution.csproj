@@ -29,6 +29,8 @@
     <Content Include="Other\Relationships\CIProvider.xml" />
     <Content Include="WebResources\Widget\msdyn_ciLibrary.js.data.xml" />
     <Content Include="WebResources\CRMClients\msdyn_internal_ci_library.js.data.xml" />
+		<Content Include="AppModules\CIConfigApp\*" />
+		<Content Include="AppModuleSitemaps\CIConfigApp\*"/>
   </ItemGroup>
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />

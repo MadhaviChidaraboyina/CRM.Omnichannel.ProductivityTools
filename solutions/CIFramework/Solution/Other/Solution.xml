@@ -83,6 +83,8 @@
       <RootComponent type="1" schemaName="msdyn_ciprovider" behavior="0" />
       <RootComponent type="61" schemaName="Widget/msdyn_ciLibrary.js" behavior="0" />
       <RootComponent type="61" schemaName="CRMClients/msdyn_internal_ci_library.js" behavior="0" />
+      <RootComponent type="62" schemaName="msdyn_ChannelIntegrationFrameworkSitemap" behavior="0" />
+      <RootComponent type="80" schemaName="msdyn_ChannelIntegrationFrameworkApp" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>
