@@ -10,28 +10,28 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 		<TypeScriptTestFile Include="$(PKG_MOCHA_DEFINITELYTYPED)\content\scripts\typings\mocha\mocha.d.ts">
-			<Link>Typings\mocha.d.ts</Link>
+			<Link>TypeDefinitions\mocha.d.ts</Link>
 		</TypeScriptTestFile>
 		<TypeScriptTestFile Include="$(PKG_UCLIENT_UNITTESTTOOLS)\content\typings\chai\chai.d.ts">
-			<Link>Typings\chai.d.ts</Link>
+			<Link>TypeDefinitions\chai.d.ts</Link>
 		</TypeScriptTestFile>
 		<TypeScriptTestFile Include="$(PKG_UCLIENT_UNITTESTTOOLS)\content\typings\assertion-error\assertion-error.d.ts">
-			<Link>Typings\assertion-error.d.ts</Link>
+			<Link>TypeDefinitions\assertion-error.d.ts</Link>
 		</TypeScriptTestFile>
 		<TypeScriptTestFile Include="$(PKG_UCLIENT_UNITTESTTOOLS)\content\typings\sinon\sinon.d.ts">
-			<Link>Typings\sinon.d.ts</Link>
+			<Link>TypeDefinitions\sinon.d.ts</Link>
 		</TypeScriptTestFile>
 		<TypeScriptTestFile Include="$(PKG_UCLIENT_UNITTESTTOOLS)\content\typings\sinon-chai\sinon-chai.d.ts">
-			<Link>Typings\sinon-chai.d.ts</Link>
+			<Link>TypeDefinitions\sinon-chai.d.ts</Link>
 		</TypeScriptTestFile>
 		<TypeScriptTestFile Include="$(PKG_UCLIENT_UNITTESTTOOLS)\content\typings\bdd-using\bdd-using.d.ts">
-			<Link>Typings\bdd-using.d.ts</Link>
+			<Link>TypeDefinitions\bdd-using.d.ts</Link>
 		</TypeScriptTestFile>
 		<TypeScriptTestFile Include="$(PKG_UCLIENT_UNITTESTTOOLS)\content\typings\chai-as-promised\chai-as-promised.d.ts">
-			<Link>Typings\chai-as-promised.d.ts</Link>
+			<Link>TypeDefinitions\chai-as-promised.d.ts</Link>
 		</TypeScriptTestFile>
-		<TypeScriptTestFile Include="$(XrmSolutionsRoot)\references\internal\TypeDefinitions\React\react-addons-test-utils.d.ts">
-			<Link>Typings\react-addons-test-utils.d.ts</Link>
+		<TypeScriptTestFile Include="$(WSRoot)\references\internal\TypeDefinitions\React\react-addons-test-utils.d.ts">
+			<Link>TypeDefinitions\react-addons-test-utils.d.ts</Link>
 		</TypeScriptTestFile>
 	</ItemGroup>
 </Project>

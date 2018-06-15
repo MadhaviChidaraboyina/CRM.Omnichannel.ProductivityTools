@@ -25,6 +25,10 @@
       <Private>True</Private>
       <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(PKG_CRM_VSTEST)\lib\net452\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Xrm.Kernel.Contracts">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
@@ -35,7 +39,7 @@
       <Private>True</Private>
       <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.Xrm.Sdk.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Xrm.Sdk.Test" Condition="'$(IgnoreTestSdkReference)'!='true'">	
+    <Reference Include="Microsoft.Xrm.Sdk.Test">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_XRMTESTSDK)\lib\net452\Microsoft.Xrm.Sdk.Test.dll</HintPath>
@@ -48,12 +52,12 @@
     <Reference Include="Microsoft.Xrm.Test.Common">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
-      <HintPath>$(PKG_XRMTESTCOMMON)\Microsoft.Xrm.Test.Common.dll</HintPath>
+      <HintPath>$(PKG_XRMSERVER)\lib\net452\Microsoft.Xrm.Test.Common.dll</HintPath>
     </Reference>
 		<Reference Include="Newtonsoft.Json">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
-      <HintPath>$(PKG_JSON)\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>$(PKG_JSON)\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
 		<Reference Include="xunit.core">
       <SpecificVersion>False</SpecificVersion>
@@ -100,6 +104,11 @@
 		<ItemGroup>
 			<SourceFiles Include="$(TargetDir)\*.*" />
 		</ItemGroup>
-		<Copy SourceFiles="@(SourceFiles)" DestinationFolder="$(XrmSolutionsRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Tests" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" />
+		
+		<!-- execute only when DropInConfigurationFolder is true -->
+		<Copy SourceFiles="@(SourceFiles)" DestinationFolder="$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Tests" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="('$(DropInConfigurationFolder)' == 'true')" />
+		
+		<!-- execute only when DropInConfigurationFolder is not true -->
+		<Copy SourceFiles="@(SourceFiles)" DestinationFolder="$(WSRoot)\drop\Tests" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="('$(DropInConfigurationFolder)' == 'false') OR ('$(DropInConfigurationFolder)' == '')" />
 	</Target>
 </Project>

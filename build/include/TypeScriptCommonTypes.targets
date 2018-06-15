@@ -9,9 +9,9 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<SolutionTypeDefinitions>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\TypeDefinitions</SolutionTypeDefinitions>
-		<PlatformTypeDefinitions>$(XrmSolutionsRoot)\references\internal\TypeDefinitions</PlatformTypeDefinitions>
-		<ExternalTypeDefinitions>$(XrmSolutionsRoot)\references\external\TypeDefinitions</ExternalTypeDefinitions>
+		<SolutionTypeDefinitions>$(WSRoot)\target\$(BuildType)\$(BuildTarget)\TypeDefinitions</SolutionTypeDefinitions>
+		<PlatformTypeDefinitions>$(WSRoot)\references\internal\TypeDefinitions</PlatformTypeDefinitions>
+		<ExternalTypeDefinitions>$(WSRoot)\references\external\TypeDefinitions</ExternalTypeDefinitions>
 		<PackageTypeDefinitions>$(PKG_CRM_CLIENTAPITYPINGS)\clientapi</PackageTypeDefinitions>
 	</PropertyGroup>
 	<ItemGroup>

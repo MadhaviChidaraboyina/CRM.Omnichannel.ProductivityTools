@@ -1,10 +1,9 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<UpdateLocFiles Condition="'$(UpdateLocFiles)' == 'true' ">true</UpdateLocFiles>
 		<LocalizationExtractFolderOutput>$(OutputPath)\$(SolutionFileNamePrefix)\Extract</LocalizationExtractFolderOutput>
 	</PropertyGroup>
 
-	<Target Name="UpdateLoc" AfterTargets="AfterBuild" Condition="'$(UpdateLocFiles)' == 'true' And '$(ThrowsLocalizeError)' == ''" >
+	<Target Name="UpdateLoc" AfterTargets="AfterBuild" Condition="'$(EnableLocalization)' == 'true' And '$(ThrowsLocalizeError)' == ''" >
 		<Message text="Localization Extraction Started" Importance="High" />
 		<MakeDir Directories="$(LocalizationExtractFolderOutput)" Condition="!Exists('$(LocalizationExtractFolderOutput)')"/>
 		
@@ -17,7 +16,6 @@
 		
 		<!--Copy Plugin and Web Resources resx files-->
 		<Exec Command="xcopy $(ApplicationFolder)\*.en-US.resx $(XrmSolutionsRoot)\drop\Resources\$(SolutionFileNamePrefix)\* /sy /EXCLUDE:$(XrmSolutionsRoot)\build\config\LocExclude.txt" />
-		<Exec Command="xcopy $(ApplicationFolder)\*.1033.resx $(XrmSolutionsRoot)\drop\Resources\$(SolutionFileNamePrefix)\* /sy /EXCLUDE:$(XrmSolutionsRoot)\build\config\LocExclude.txt" />
 		
 		<!--Rename Plugin and Web Resources Resx Files-->
 		<!--<Exec Command="for /r $(XrmSolutionsRoot)\drop\Resources\$(SolutionFileNamePrefix)\ %%i IN (*.resx) do ren %%i %%~ni.en-us.resx " />-->

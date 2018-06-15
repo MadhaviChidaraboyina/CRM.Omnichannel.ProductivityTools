@@ -30,67 +30,67 @@
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTDEPENDENCY)\Microsoft.Crm.QA.CrmConfig.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.Dashboards.Helper">
+      <Reference Include="Microsoft.Crm.QA.Dashboards.Helper">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTDEPENDENCY)\Microsoft.Crm.QA.Dashboards.Helper.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.InternalUtils">
+      <Reference Include="Microsoft.Crm.QA.InternalUtils">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTDEPENDENCY)\Microsoft.Crm.QA.InternalUtils.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.MetadataLib">
-			<SpecificVersion>False</SpecificVersion>
+    <Reference Include="Microsoft.Crm.QA.MetadataLib">
+      <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTDEPENDENCY)\Microsoft.Crm.QA.MetadataLib.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.QAApplication.SATFramework">
+    <Reference Include="Microsoft.Crm.QA.QAApplication.SATFramework">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT)\testcases\NonShip\QA\TestCases\Microsoft.Crm.QA.QAApplication.SATFramework.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.QAApplication.UCIFramework">
+    <Reference Include="Microsoft.Crm.QA.QAApplication.UCIFramework">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT)\testcases\NonShip\QA\TestCases\Microsoft.Crm.QA.QAApplication.UCIFramework.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.SdkProxy">
+    <Reference Include="Microsoft.Crm.QA.SdkProxy">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTDEPENDENCY)\Microsoft.Crm.QA.SdkProxy.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.TestCaseBaseClasses">
+    <Reference Include="Microsoft.Crm.QA.TestCaseBaseClasses">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTDEPENDENCY)\Microsoft.Crm.QA.TestCaseBaseClasses.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.UnitTestUtility">
+    <Reference Include="Microsoft.Crm.QA.UnitTestUtility">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTDEPENDENCY)\Microsoft.Crm.QA.UnitTestUtility.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.Utf">
+    <Reference Include="Microsoft.Crm.QA.Utf">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTDEPENDENCY)\Microsoft.Crm.QA.Utf.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.Utf.Logging">
+    <Reference Include="Microsoft.Crm.QA.Utf.Logging">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTDEPENDENCY)\Microsoft.Crm.QA.Utf.Logging.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Crm.QA.Utils">
+    <Reference Include="Microsoft.Crm.QA.Utils">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTDEPENDENCY)\Microsoft.Crm.QA.Utils.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Diagnostics.Tracing.EventSource">
+    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_CRM_VSTEST)\lib\net452\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
     </Reference>
-		<Reference Include="Microsoft.Xrm.Kernel.Contracts">
+    <Reference Include="Microsoft.Xrm.Kernel.Contracts">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_XRMSERVER)\lib\net452\Microsoft.Xrm.Kernel.Contracts.dll</HintPath>
@@ -100,7 +100,7 @@
       <Private>True</Private>
       <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.Xrm.Sdk.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Xrm.Sdk.Test" Condition="'$(IgnoreTestSdkReference)'!='true'">	
+    <Reference Include="Microsoft.Xrm.Sdk.Test">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_XRMTESTSDK)\lib\net452\Microsoft.Xrm.Sdk.Test.dll</HintPath>
@@ -113,24 +113,24 @@
     <Reference Include="Microsoft.Xrm.Test.Common">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
-      <HintPath>$(PKG_XRMTESTCOMMON)\Microsoft.Xrm.Test.Common.dll</HintPath>
+      <HintPath>$(PKG_XRMSERVER)\lib\net452\Microsoft.Xrm.Test.Common.dll</HintPath>
     </Reference>
-		<Reference Include="Newtonsoft.Json">
+    <Reference Include="Newtonsoft.Json">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
-      <HintPath>$(PKG_JSON)\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>$(PKG_JSON)\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-		<Reference Include="WebDriver">
-			<SpecificVersion>False</SpecificVersion>
-			<Private>True</Private>
+    <Reference Include="WebDriver">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTEXTENSIONS)\WebDriver.dll</HintPath>
     </Reference>
-		<Reference Include="WebDriver.Support">
-			<SpecificVersion>False</SpecificVersion>
-			<Private>True</Private>
+    <Reference Include="WebDriver.Support">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
       <HintPath>$(PKG_UCLIENT_TESTEXTENSIONS)\WebDriver.Support.dll</HintPath>
     </Reference>
-		<Reference Include="xunit.core">
+    <Reference Include="xunit.core">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
       <HintPath>$(PKG_XUNIT_EXTENSIBILITY_CORE)\lib\dotnet\xunit.core.dll</HintPath>
@@ -175,7 +175,7 @@
 		<ItemGroup>
 			<SATDrivers Include="$(PKG_UCLIENT_TESTEXTENSIONS)\**\*" />
 			<AccessibilityJScripts Include="$(PKG_UCLIENT)\testcases\NonShip\QA\TestCases\AccessibilityJScripts\*.*" />
-            <JsonConfig Include="$(PKG_UCLIENT)\testcases\NonShip\QA\TestCases\JsonConfig\*.*" />
+			<JsonConfig Include="$(PKG_UCLIENT)\testcases\NonShip\QA\TestCases\JsonConfig\*.*" />
 		</ItemGroup>	
 		<MakeDir Directories="$(TargetDir)\SATDrivers" Condition="!Exists('$(TargetDir)\SATDrivers')" />
 		<Copy SourceFiles="@(SATDrivers)" DestinationFolder="$(TargetDir)\SATDrivers" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" />
@@ -185,17 +185,21 @@
 		
 		<MakeDir Directories="$(TargetDir)\JsonConfig" Condition="!Exists('$(TargetDir)\JsonConfig')" />
 		<Copy SourceFiles="@(JsonConfig)" DestinationFolder="$(TargetDir)\JsonConfig" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" />
-		
-		<Exec Command="$(PKG_XRMAPP_TOOLS)\tools\EntityFormsIntegrator\EntityFormsIntegrator.exe /solutiondir:$(XrmSolutionsRoot)\solutions /outdir:$(TargetDir)" />
 	</Target>
 	<Target Name="AfterBuild">
 		<ItemGroup>
 			<SourceFiles Include="$(TargetDir)\*.*" />
 		</ItemGroup>
-		<Copy SourceFiles="@(SourceFiles)" DestinationFolder="$(XrmSolutionsRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Tests" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" />
-		<Copy SourceFiles="@(SATDrivers)" DestinationFolder="$(XrmSolutionsRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Tests\SATDrivers\%(RecursiveDir)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" />
-		<Copy SourceFiles="@(AccessibilityJScripts)" DestinationFolder="$(XrmSolutionsRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Tests\AccessibilityJScripts\%(RecursiveDir)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" />
-		<Copy SourceFiles="@(JsonConfig)" DestinationFolder="$(XrmSolutionsRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Tests\JsonConfig\%(RecursiveDir)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" />
-		<Exec Command="$(PKG_XRMAPP_TOOLS)\tools\EntityFormsIntegrator\EntityFormsIntegrator.exe /solutiondir:$(XrmSolutionsRoot)\solutions /outdir:$(XrmSolutionsRoot)\drop\Tests" />
+		<!-- execute only when DropInConfigurationFolder is true -->
+		<Copy SourceFiles="@(SourceFiles)" DestinationFolder="$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Tests" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="('$(DropInConfigurationFolder)' == 'true')" />
+		<Copy SourceFiles="@(SATDrivers)" DestinationFolder="$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Tests\SATDrivers\%(RecursiveDir)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="('$(DropInConfigurationFolder)' == 'true')" />
+		<Copy SourceFiles="@(AccessibilityJScripts)" DestinationFolder="$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Tests\AccessibilityJScripts\%(RecursiveDir)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="('$(DropInConfigurationFolder)' == 'true')" />
+		<Copy SourceFiles="@(JsonConfig)" DestinationFolder="$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Tests\JsonConfig\%(RecursiveDir)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="('$(DropInConfigurationFolder)' == 'true')" />
+			
+		<!-- execute only when DropInConfigurationFolder is not true -->
+		<Copy SourceFiles="@(SourceFiles)" DestinationFolder="$(WSRoot)\drop\Tests" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="('$(DropInConfigurationFolder)' == 'false') OR ('$(DropInConfigurationFolder)' == '')" />
+		<Copy SourceFiles="@(SATDrivers)" DestinationFolder="$(WSRoot)\drop\Tests\SATDrivers\%(RecursiveDir)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="('$(DropInConfigurationFolder)' == 'false') OR ('$(DropInConfigurationFolder)' == '')" />
+		<Copy SourceFiles="@(AccessibilityJScripts)" DestinationFolder="$(WSRoot)\drop\Tests\AccessibilityJScripts\%(RecursiveDir)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="('$(DropInConfigurationFolder)' == 'false') OR ('$(DropInConfigurationFolder)' == '')" />
+		<Copy SourceFiles="@(JsonConfig)" DestinationFolder="$(WSRoot)\drop\Tests\JsonConfig\%(RecursiveDir)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="('$(DropInConfigurationFolder)' == 'false') OR ('$(DropInConfigurationFolder)' == '')" />
 	</Target>
 </Project>

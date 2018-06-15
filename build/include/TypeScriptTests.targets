@@ -19,16 +19,16 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 	<PropertyGroup>
 		<ChutzpahPath>$(PKG_CHUTZPAH)\tools</ChutzpahPath>
 		<ChutzpahCmdRunner>$(ChutzpahPath)\chutzpah.console.exe</ChutzpahCmdRunner>
-		<ChutzpahConfig>$(XrmSolutionsRoot)\build\config\chutzpah.json</ChutzpahConfig>
+		<ChutzpahConfig>$(WSRoot)\build\config\chutzpah.json</ChutzpahConfig>
 		<ChutzpahTestHarnessDir>$(MSBuildProjectDirectory)\..\TMP</ChutzpahTestHarnessDir>
 	</PropertyGroup>
 	
-	<PropertyGroup>
+	<!--<PropertyGroup>
 		<GetCopyToOutputDirectoryItemsDependsOn>
 			$(GetCopyToOutputDirectoryItemsDependsOn);
 			RunTypeScriptUnitTests;
 		</GetCopyToOutputDirectoryItemsDependsOn>
-	</PropertyGroup>
+	</PropertyGroup>-->
 	
 	<Import Project="TypeScriptTestTypings.targets" />
 		
@@ -42,8 +42,8 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 		<ChutzpahEnvironment Include="PKG_MOMENTJS=$(PKG_MOMENTJS)" />	
 	</ItemGroup>
 
-	<Target Name="RunTypeScriptUnitTests" Condition="$(ConfigurationIsDebug)">
-		<!--<MakeDir Directories="$(ChutzpahTestHarnessDir)" />-->
+	<!--<Target Name="RunTypeScriptUnitTests" Condition="$(ConfigurationIsDebug)">
+		<MakeDir Directories="$(ChutzpahTestHarnessDir)" />
 		<Exec
 			WorkingDirectory="$(MSBuildProjectDirectory)"
 			Command="$(ChutzpahCmdRunner) $(MSBuildProjectDirectory) /vsoutput"
@@ -51,10 +51,10 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 	</Target>
 
 	<Target Name="TestInBrowser">
-		<!--<MakeDir Directories="$(ChutzpahTestHarnessDir)" />-->
+		<MakeDir Directories="$(ChutzpahTestHarnessDir)" />
 		<Exec
 			WorkingDirectory="$(MSBuildProjectDirectory)"
 			Command="$(ChutzpahCmdRunner) $(MSBuildProjectDirectory) /openInBrowser $(ChutzpahBrowser)"
 			EnvironmentVariables="@(ChutzpahEnvironment)" />
-	</Target>
+	</Target>-->
 </Project>

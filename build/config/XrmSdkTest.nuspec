@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Microsoft.Dynamics.Xrm.Solutions.Sdk.Test</id>
+    <version>1.0.0</version>
+    <authors>Microsoft Corporation</authors>
+    <owners>alstanes, carlo</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Microsoft Dynamics 365 XRM SDK Test</description>
+    <releaseNotes>This test framework is meant to be used together with an XRM / CRM 8.0 or above instance. It includes support for solution import, unit-testing, component-testing and integration-testing.</releaseNotes>
+    <copyright>Copyright ©2016 Microsoft Corporation</copyright>
+    <tags>CRM XRM Test TestFramework TestSDK XrmTestSDK</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+	<files>
+		<file src="..\..\drop\TestFramework\*.*" target="lib\net452" />
+  </files>
+</package>

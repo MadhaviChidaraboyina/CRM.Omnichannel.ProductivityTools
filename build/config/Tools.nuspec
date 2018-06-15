@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Microsoft.Dynamics.XrmSolutions.Tools</id>
+    <version>$version$</version>
+    <authors>Microsoft Corporation</authors>
+    <owners>leemac, carlo</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Microsoft Dynamics 365 XRM Solutions Tools</description>
+    <releaseNotes>This release includes XRM Solution Tools.</releaseNotes>
+    <copyright>Copyright ©2016 Microsoft Corporation</copyright>
+    <tags>CRM XRM CRMPrime xrmSolutions XS Tools</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+	<files>
+		<!-- retail artifacts -->
+		<file src="..\..\build\**" target="build" />
+		<file src="..\..\drop\retail\i386\**" target="tools" />
+		<file src="..\..\references\internal\**" target="tools" />
+		<file src="..\..\tools\**" target="tools" />
+		<file src="..\..\SolutionTemplate\solutions\**" target="template" />
+		
+		<!-- debug artifacts -->
+		<file src="..\..\drop\debug\**" target="debug" />
+		
+  </files>
+</package>

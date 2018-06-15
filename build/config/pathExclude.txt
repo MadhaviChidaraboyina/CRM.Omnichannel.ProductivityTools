@@ -1,3 +1,3 @@
-*\tools\commands\
-*\tools\nuget\
-*\tools\ImportSolution\
+*\tools\commands
+*\tools\nuget
+*\tools\ImportSolution

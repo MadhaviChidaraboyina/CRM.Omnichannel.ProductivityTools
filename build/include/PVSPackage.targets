@@ -1,0 +1,121 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
+
+	<ItemGroup>
+		<Reference Include="Microsoft.Crm.Sdk.Proxy">
+		  <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.IdentityModel">
+		  <Private>False</Private>
+		  <HintPath>$(PKG_IDENTITY_MODEL)\lib\net35\Microsoft.IdentityModel.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
+		  <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms">
+		  <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Uii.AifServices, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+		  <HintPath>$(PKG_CRMSDK_UII)\lib\net452\Microsoft.Uii.AifServices.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Uii.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+		  <HintPath>$(PKG_CRMSDK_UII)\lib\net452\Microsoft.Uii.Common.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Uii.Common.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+		  <HintPath>$(PKG_CRMSDK_UII)\lib\net452\Microsoft.Uii.Common.Configuration.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Uii.Common.Listeners, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+		  <HintPath>$(PKG_CRMSDK_UII)\lib\net452\Microsoft.Uii.Common.Listeners.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Uii.Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+		  <HintPath>$(PKG_CRMSDK_UII)\lib\net452\Microsoft.Uii.Common.Logging.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Uii.Common.Logging.Providers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+		  <HintPath>$(PKG_CRMSDK_UII)\lib\net452\Microsoft.Uii.Common.Logging.Providers.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Uii.Common.Providers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+		  <HintPath>$(PKG_CRMSDK_UII)\lib\net452\Microsoft.Uii.Common.Providers.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Uii.Csr.Browser.Web, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+		  <HintPath>$(PKG_CRMSDK_UII)\lib\net452\Microsoft.Uii.Csr.Browser.Web.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Uii.Csr.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+		  <HintPath>$(PKG_CRMSDK_UII)\lib\net452\Microsoft.Uii.Csr.Core.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Uii.Csr.Win32Api, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+		  <HintPath>$(PKG_CRMSDK_UII)\lib\net452\Microsoft.Uii.Csr.Win32Api.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Xrm.Sdk">
+		  <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.Xrm.Sdk.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Xrm.Sdk.Deployment">
+		  <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.Xrm.Sdk.Deployment.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Xrm.Sdk.Workflow">
+		  <HintPath>$(PKG_CRMSDK_WORKFLOW)\lib\net452\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Xrm.Tooling.Connector">
+		  <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.Xrm.Tooling.Connector.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase">
+		  <HintPath>$(PKG_CRMSDK_XRMTOOLING_DEPLOYMENT)\lib\net452\Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+	</ItemGroup>
+	
+  <Choose>
+    <When Condition="('$(DropInConfigurationFolder)' == 'true')">
+      <PropertyGroup>
+        <PDPackagesDropPath>$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\PDPackages</PDPackagesDropPath>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <PDPackagesDropPath>$(WSRoot)\drop\PDPackages</PDPackagesDropPath>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  
+	<PropertyGroup>
+    <PDPackageName Condition="'$(PDPackageName)'==''">$null</PDPackageName>
+    <PVSPackageName Condition="'$(PVSPackageName)'==''">$null</PVSPackageName>
+  </PropertyGroup>
+  
+	<Target Name="CreatePDPackageZip" AfterTargets="AfterBuild">
+		<Message Text="Creating Package Deployer Package" Importance="high" />
+		<Exec command="powershell -Command &quot;&amp;{Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned; $(PKG_XRMAPP_TOOLS)\tools\BuildScripts\CreatePDPackage.ps1 $(SolutionName) $(PDPackageName) $(DllName) $(DropFolder) $(WSRoot) $(PKG_XRMAPP_TOOLS) }&quot;" />
+		<Message Text="Finished Creating Package Deployer Package" Importance="high" />
+    
+    <Message Text="Output path is: $(OutputPath)" Importance="high" />
+    <Message Text="Drop folder is: $(PDPackagesDropPath)" Importance="high" />
+    
+    <ItemGroup>
+      <DebugAssemblies Include="$(OutputPath)$(AssemblyName).*" />
+    </ItemGroup>
+    
+    <Copy SourceFiles="@(DebugAssemblies)" DestinationFolder="$(PDPackagesDropPath)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" />
+	</Target>
+			
+	<Target Name="CreatePVSPackageZip" AfterTargets="AfterBuild" DependsOnTargets="CreatePDPackageZip" Condition="'$(BuildPVS)' == 'true'">
+		<Message Text="Creating PVS Package" Importance="high" />
+		<Exec command="powershell -Command &quot;&amp;{Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned; $(PKG_XRMAPP_TOOLS)\tools\BuildScripts\CreatePVSPackage.ps1 $(SolutionName) $(PDPackageName) $(PVSPackageName) $(DllName) $(DropFolder) $(WSRoot) $(PKG_XRMAPP_TOOLS) }&quot;" />
+		<Message Text="Finished Creating PVS Package" Importance="high" />
+	</Target>
+</Project>

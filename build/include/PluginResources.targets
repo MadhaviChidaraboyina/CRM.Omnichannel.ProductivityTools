@@ -1,0 +1,20 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">	
+	<Target Name="RefreshPluginResources" AfterTargets="Compile" 
+		Condition=" '$(PluginResourceFolder)' != '' AND '@(PluginResources)' != '' ">
+		<Message text="Folder: $(PluginResourceFolder)" Importance="High" />
+		<MakeDir Directories="$(PluginResourceFolder)" Condition="!Exists('$(PluginResourceFolder)')" />
+		
+		<ItemGroup>
+			<PluginResources Include="@(PluginResources)">
+				<OriginalFileName>%(PluginResources.FileName)</OriginalFileName>
+				<UpdatedFileName>$([System.String]::Copy('%(PluginResources.OriginalFileName)').Replace('-', '_'))</UpdatedFileName>
+				<TargetFileName>$(PluginResourceFolder)\%(PluginResources.UpdatedFileName)%(PluginResources.Extension).xml</TargetFileName>
+			</PluginResources>
+		</ItemGroup>
+		
+		<Copy SourceFiles="%(PluginResources.FullPath)" DestinationFiles="%(PluginResources.TargetFileName)" 
+			Retries="20" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition=" '%(PluginResources.FullPath)' != '' " />
+		<Message text="Copied %(PluginResources.FullPath) to %(PluginResources.TargetFileName)"
+			Importance="High" Condition=" '%(PluginResources.FullPath)' != '' " />
+	</Target>
+</Project>

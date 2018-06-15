@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Target Name="AfterBuild">
+    <ItemGroup>
+      <DropFiles Include="$(TargetDir)\*.*">
+        <Visible>false</Visible>
+      </DropFiles>
+    </ItemGroup>
+    <Copy SourceFiles="@(DropFiles)" DestinationFolder="$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\$(MSBuildProjectName)" SkipUnchangedFiles="true" />
+		<Copy SourceFiles="@(DropFiles)" DestinationFolder="$(WSRoot)\tools\$(MSBuildProjectName)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>
