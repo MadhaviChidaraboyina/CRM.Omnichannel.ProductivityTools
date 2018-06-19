@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="CIProvider" OriginalName="CIProvider">msdyn_ciprovider</Name>
+  <Name LocalizedName="Channel" OriginalName="Channel">msdyn_ciprovider</Name>
   <EntityInfo>
     <entity Name="msdyn_ciprovider">
       <LocalizedNames>
-        <LocalizedName description="CIProvider" languagecode="1033" />
+        <LocalizedName description="Channel Provider" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="CIProviders" languagecode="1033" />
+        <LocalizedCollectionName description="Channel Providers" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="Storing configuration for individual CI ciproviders" languagecode="1033" />
@@ -241,41 +241,6 @@
             <Description description="Unique identifier of the delegate user who modified the record." languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_ChannelType">
-          <Type>nvarchar</Type>
-          <Name>msdyn_channeltype</Name>
-          <LogicalName>msdyn_channeltype</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>0</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
-          <displaynames>
-            <displayname description="ChannelType" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="" languagecode="1033" />
-          </Descriptions>
-        </attribute>
         <attribute PhysicalName="msdyn_ClickToAct">
           <Type>bit</Type>
           <Name>msdyn_clicktoact</Name>
@@ -307,7 +272,7 @@
             <IntroducedVersion>1.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
             <displaynames>
-              <displayname description="ClickToAct" languagecode="1033" />
+              <displayname description="Click-To-Act" languagecode="1033" />
             </displaynames>
             <Descriptions>
               <Description description="" languagecode="1033" />
@@ -326,11 +291,45 @@
             </options>
           </optionset>
           <displaynames>
-            <displayname description="ClickToAct" languagecode="1033" />
+            <displayname description="Click-To-Act" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Enable Click to Act for the Channel" languagecode="1033" />
           </Descriptions>
+        </attribute>
+        <attribute PhysicalName="msdyn_SortOrder">
+          <Type>int</Type>
+          <Name>msdyn_sortorder</Name>
+          <LogicalName>msdyn_sortorder</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <MinValue>0</MinValue>
+          <MaxValue>1000</MaxValue>
+          <displaynames>
+           <displayname description="Channel Order" languagecode="1033" />
+					</displaynames>
+					<Descriptions>
+						<Description description="Select Channel Order as 0 for this Channel to take precedence over others." languagecode="1033" />
+					</Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Label">
           <Type>nvarchar</Type>
@@ -396,10 +395,10 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="LandingUrl" languagecode="1033" />
+            <displayname description="Channel URL" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="URL for the Channel provider" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_name">
@@ -434,7 +433,7 @@
             <displayname description="Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Name of the CI provider" languagecode="1033" />
+            <Description description="Name of the Channel provider" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ciproviderId">
@@ -466,164 +465,6 @@
           </displaynames>
           <Descriptions>
             <Description description="Unique identifier for CIProvider records" languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_SortOrder">
-          <Type>int</Type>
-          <Name>msdyn_sortorder</Name>
-          <LogicalName>msdyn_sortorder</LogicalName>
-          <RequiredLevel>required</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>0</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <MinValue>0</MinValue>
-          <MaxValue>1000</MaxValue>
-          <displaynames>
-            <displayname description="SortOrder" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="" languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_UseSingleSignOn">
-          <Type>bit</Type>
-          <Name>msdyn_usesinglesignon</Name>
-          <LogicalName>msdyn_usesinglesignon</LogicalName>
-          <RequiredLevel>required</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>0</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AppDefaultValue>0</AppDefaultValue>
-          <optionset Name="msdyn_ciprovider_msdyn_usesinglesignon">
-            <OptionSetType>bit</OptionSetType>
-            <IntroducedVersion>1.0</IntroducedVersion>
-            <IsCustomizable>1</IsCustomizable>
-            <displaynames>
-              <displayname description="UseSingleSignOn" languagecode="1033" />
-            </displaynames>
-            <Descriptions>
-              <Description description="" languagecode="1033" />
-            </Descriptions>
-            <options>
-              <option value="0" Color="#0000ff">
-                <labels>
-                  <label description="No" languagecode="1033" />
-                </labels>
-              </option>
-              <option value="1" Color="#0000ff">
-                <labels>
-                  <label description="Yes" languagecode="1033" />
-                </labels>
-              </option>
-            </options>
-          </optionset>
-          <displaynames>
-            <displayname description="UseSingleSignOn" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="" languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_WidgetHeight">
-          <Type>int</Type>
-          <Name>msdyn_widgetheight</Name>
-          <LogicalName>msdyn_widgetheight</LogicalName>
-          <RequiredLevel>required</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>0</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <MinValue>0</MinValue>
-          <MaxValue>100</MaxValue>
-          <displaynames>
-            <displayname description="WidgetHeight" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Height in percentage." languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_WidgetWidth">
-          <Type>int</Type>
-          <Name>msdyn_widgetwidth</Name>
-          <LogicalName>msdyn_widgetwidth</LogicalName>
-          <RequiredLevel>required</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>0</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <MinValue>0</MinValue>
-          <MaxValue>50</MaxValue>
-          <displaynames>
-            <displayname description="WidgetWidth" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Width in percentage." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OrganizationId">
@@ -741,7 +582,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the CIProvider" languagecode="1033" />
+            <Description description="Status of the Channel Provider" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -796,7 +637,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the CIProvider" languagecode="1033" />
+            <Description description="Reason for the status of the Channel Provider" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">
@@ -867,6 +708,124 @@
             <Description description="Time zone code that was in use when the record was created." languagecode="1033" />
           </Descriptions>
         </attribute>
+				<attribute PhysicalName="msdyn_AppSelector">
+					<Type>ntext</Type>
+					<Name>msdyn_appselector</Name>
+					<LogicalName>msdyn_appselector</LogicalName>
+					<RequiredLevel>none</RequiredLevel>
+					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+					<ImeMode>auto</ImeMode>
+					<ValidForUpdateApi>1</ValidForUpdateApi>
+					<ValidForReadApi>1</ValidForReadApi>
+					<ValidForCreateApi>1</ValidForCreateApi>
+					<IsCustomField>0</IsCustomField>
+					<IsAuditEnabled>1</IsAuditEnabled>
+					<IsSecured>0</IsSecured>
+					<IntroducedVersion>1.0</IntroducedVersion>
+					<IsCustomizable>1</IsCustomizable>
+					<IsRenameable>1</IsRenameable>
+					<CanModifySearchSettings>1</CanModifySearchSettings>
+					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+					<SourceType>0</SourceType>
+					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+					<IsSortableEnabled>0</IsSortableEnabled>
+					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+					<IsDataSourceSecret>0</IsDataSourceSecret>
+					<Format>text</Format>
+					<MaxLength>4000</MaxLength>
+					<displaynames>
+						<displayname description="App Selector" languagecode="1033" />
+					</displaynames>
+					<Descriptions>
+						<Description description="Select Unified Interface Apps for the Channel" languagecode="1033" />
+					</Descriptions>
+				</attribute>
+				<attribute PhysicalName="msdyn_RoleSelector">
+					<Type>ntext</Type>
+					<Name>msdyn_roleselector</Name>
+					<LogicalName>msdyn_roleselector</LogicalName>
+					<RequiredLevel>none</RequiredLevel>
+					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+					<ImeMode>auto</ImeMode>
+					<ValidForUpdateApi>1</ValidForUpdateApi>
+					<ValidForReadApi>1</ValidForReadApi>
+					<ValidForCreateApi>1</ValidForCreateApi>
+					<IsCustomField>0</IsCustomField>
+					<IsAuditEnabled>1</IsAuditEnabled>
+					<IsSecured>0</IsSecured>
+					<IntroducedVersion>1.0</IntroducedVersion>
+					<IsCustomizable>1</IsCustomizable>
+					<IsRenameable>1</IsRenameable>
+					<CanModifySearchSettings>1</CanModifySearchSettings>
+					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+					<SourceType>0</SourceType>
+					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+					<IsSortableEnabled>0</IsSortableEnabled>
+					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+					<IsDataSourceSecret>0</IsDataSourceSecret>
+					<Format>text</Format>
+					<MaxLength>4000</MaxLength>
+					<displaynames>
+						<displayname description="Role Selector" languagecode="1033" />
+					</displaynames>
+					<Descriptions>
+						<Description description="Select the Roles for the Channel" languagecode="1033" />
+					</Descriptions>
+				</attribute>
+				<attribute PhysicalName="msdyn_CIProviderAPIVersion">
+					<Type>picklist</Type>
+					<Name>msdyn_CIProviderAPIVersion</Name>
+					<LogicalName>msdyn_CIProviderAPIVersion</LogicalName>
+					<RequiredLevel>none</RequiredLevel>
+					<DisplayMask>ValidForForm|ValidForGrid|ValidForAdvancedFind</DisplayMask>
+					<ImeMode>auto</ImeMode>
+					<ValidForUpdateApi>1</ValidForUpdateApi>
+					<ValidForReadApi>1</ValidForReadApi>
+					<ValidForCreateApi>1</ValidForCreateApi>
+					<IsCustomField>1</IsCustomField>
+					<IsAuditEnabled>0</IsAuditEnabled>
+					<IsSecured>0</IsSecured>
+					<IntroducedVersion>1.0</IntroducedVersion>
+					<IsCustomizable>0</IsCustomizable>
+					<IsRenameable>0</IsRenameable>
+					<CanModifySearchSettings>0</CanModifySearchSettings>
+					<CanModifyRequirementLevelSettings>0</CanModifyRequirementLevelSettings>
+					<CanModifyAdditionalSettings>0</CanModifyAdditionalSettings>
+					<SourceType>0</SourceType>
+					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+					<IsSortableEnabled>0</IsSortableEnabled>
+					<CanModifyGlobalFilterSettings>0</CanModifyGlobalFilterSettings>
+					<CanModifyIsSortableSettings>0</CanModifyIsSortableSettings>
+					<AppDefaultValue>0</AppDefaultValue>
+					<optionset Name="msdyn_CIProvider_API_Version">
+						<OptionSetType>picklist</OptionSetType>
+						<IntroducedVersion>1.0</IntroducedVersion>
+						<IsCustomizable>0</IsCustomizable>
+						<displaynames>
+							<displayname description="API Version" languagecode="1033" />
+						</displaynames>
+						<Descriptions>
+							<Description description="Channel Integration Provider API Version" languagecode="1033" />
+						</Descriptions>
+						<options>
+							<option value="0" Color="#0000ff">
+								<labels>
+									<label description="1.0" languagecode="1033" />
+								</labels>
+							</option>
+						</options>
+					</optionset>
+					<displaynames>
+						<displayname description="API Version" languagecode="1033" />
+					</displaynames>
+					<Descriptions>
+						<Description description="API Version" languagecode="1033" />
+					</Descriptions>
+				</attribute>
       </attributes>
       <EntitySetName>msdyn_ciproviders</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>

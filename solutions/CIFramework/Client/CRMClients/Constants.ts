@@ -87,10 +87,12 @@ namespace Microsoft.CIFramework.Internal
 	{
 		export const originURL = "originURL";
 		export const CIClickToAct = "CIClickToAct";
-		export const widgetIframeId = "crmUrlAddressableWidget";
+		export const widgetIframeId = "SidePanelIFrame";
 		export const value = "value";
 		export const clickToActAttributeName = "msdyn_clicktoact";
 		export const systemUserLogicalName = "systemuser";
+		export const appSelectorFieldName = "msdyn_appselector";
+		export const roleSelectorFieldName = "msdyn_roleselector";
 		export const providerOdataQuery = "?$select=fullname&$expand=msdyn_ciprovider_systemuser_membership($filter=statecode eq 0;$orderby=msdyn_sortorder asc,createdon asc;$top={0})";
 		export const providerNavigationProperty = "msdyn_ciprovider_systemuser_membership";
 		export const providerId = "msdyn_ciproviderid";

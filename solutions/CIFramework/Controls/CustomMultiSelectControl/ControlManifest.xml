@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<control namespace="MscrmControls.Service.CIProvider" constructor="CustomMultiSelectControl" version="1.0.0" display-name-key="CC_CIProviderCustomMultiSelectControlControl_Name" control-type="virtual">
+		<modes>
+		</modes>
+		<type-group name="Text">
+			<type>SingleLine.Text</type>
+		</type-group>
+		<property name="elementUniqueNames" display-name-key="CC_Field_Multi" description-key="CC_Field_Multi_Desc" of-type-group="Text" usage="bound" required="true" hidden="true" />
+		<resources>
+			<library name="mscommon" version="&gt;=1" order="1">
+				<packaged_library path="libs/mscommonlib-1.0.0.js" version="1.2.1" />
+			</library>
+			<code path="CIProviderCustomMultiSelectControl.js" order="2" />
+		</resources>
+	</control>
+</manifest>

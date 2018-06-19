@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebResources", "Client\WebResources.csproj", "{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProviderSolution", "Solution\ProviderSolution.csproj", "{8C903DD2-5BA8-4ED0-830D-44E44FE69766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.UnitTests", "Client.UnitTests\Client.UnitTests.csproj", "{E384AAE5-8092-468D-AB60-D4249553DF5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomMultiSelectControl", "Controls\CustomMultiSelectControl\CustomMultiSelectControl.csproj", "{19C777D1-A0D4-4021-BBDC-AD1357D06A41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentClickToActControl", "Controls\AgentClickToActControl\AgentClickToActControl.csproj", "{393D6CD8-2B5D-4351-803C-849AFD8B18A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug|amd64 = debug|amd64
+		debug|Any CPU = debug|Any CPU
+		release|amd64 = release|amd64
+		release|Any CPU = release|Any CPU
+		retail|amd64 = retail|amd64
+		retail|Any CPU = retail|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.debug|amd64.ActiveCfg = debug|amd64
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.debug|amd64.Build.0 = debug|amd64
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.debug|Any CPU.ActiveCfg = debug|Any CPU
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.debug|Any CPU.Build.0 = debug|Any CPU
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.release|amd64.ActiveCfg = release|amd64
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.release|amd64.Build.0 = release|amd64
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.release|Any CPU.ActiveCfg = release|Any CPU
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.release|Any CPU.Build.0 = release|Any CPU
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.retail|amd64.ActiveCfg = retail|amd64
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.retail|amd64.Build.0 = retail|amd64
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.retail|Any CPU.ActiveCfg = retail|Any CPU
+		{40BDA2FA-2606-4EF0-8F4D-326BEDCD1785}.retail|Any CPU.Build.0 = retail|Any CPU
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.debug|amd64.ActiveCfg = debug|amd64
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.debug|amd64.Build.0 = debug|amd64
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.debug|Any CPU.ActiveCfg = debug|Any CPU
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.debug|Any CPU.Build.0 = debug|Any CPU
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.release|amd64.ActiveCfg = release|amd64
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.release|amd64.Build.0 = release|amd64
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.release|Any CPU.ActiveCfg = release|Any CPU
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.release|Any CPU.Build.0 = release|Any CPU
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.retail|amd64.ActiveCfg = retail|amd64
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.retail|amd64.Build.0 = retail|amd64
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.retail|Any CPU.ActiveCfg = retail|Any CPU
+		{8C903DD2-5BA8-4ED0-830D-44E44FE69766}.retail|Any CPU.Build.0 = retail|Any CPU
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.debug|amd64.ActiveCfg = debug|amd64
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.debug|amd64.Build.0 = debug|amd64
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.debug|Any CPU.ActiveCfg = debug|Any CPU
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.debug|Any CPU.Build.0 = debug|Any CPU
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.release|amd64.ActiveCfg = release|amd64
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.release|amd64.Build.0 = release|amd64
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.release|Any CPU.ActiveCfg = release|Any CPU
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.release|Any CPU.Build.0 = release|Any CPU
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.retail|amd64.ActiveCfg = retail|amd64
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.retail|amd64.Build.0 = retail|amd64
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.retail|Any CPU.ActiveCfg = retail|Any CPU
+		{E384AAE5-8092-468D-AB60-D4249553DF5C}.retail|Any CPU.Build.0 = retail|Any CPU
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.debug|amd64.ActiveCfg = debug|amd64
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.debug|amd64.Build.0 = debug|amd64
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.debug|Any CPU.ActiveCfg = debug|Any CPU
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.debug|Any CPU.Build.0 = debug|Any CPU
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.release|amd64.ActiveCfg = release|amd64
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.release|amd64.Build.0 = release|amd64
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.release|Any CPU.ActiveCfg = release|Any CPU
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.release|Any CPU.Build.0 = release|Any CPU
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.retail|amd64.ActiveCfg = retail|amd64
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.retail|amd64.Build.0 = retail|amd64
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.retail|Any CPU.ActiveCfg = retail|Any CPU
+		{19C777D1-A0D4-4021-BBDC-AD1357D06A41}.retail|Any CPU.Build.0 = retail|Any CPU
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.debug|amd64.ActiveCfg = debug|amd64
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.debug|amd64.Build.0 = debug|amd64
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.debug|Any CPU.ActiveCfg = debug|Any CPU
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.debug|Any CPU.Build.0 = debug|Any CPU
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.release|amd64.ActiveCfg = release|amd64
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.release|amd64.Build.0 = release|amd64
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.release|Any CPU.ActiveCfg = release|Any CPU
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.release|Any CPU.Build.0 = release|Any CPU
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.retail|amd64.ActiveCfg = retail|amd64
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.retail|amd64.Build.0 = retail|amd64
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.retail|Any CPU.ActiveCfg = retail|Any CPU
+		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.retail|Any CPU.Build.0 = retail|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

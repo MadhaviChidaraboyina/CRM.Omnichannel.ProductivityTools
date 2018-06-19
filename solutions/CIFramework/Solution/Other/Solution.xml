@@ -3,7 +3,7 @@
   <SolutionManifest>
     <UniqueName>ChannelAPIIntegrationFramework</UniqueName>
     <LocalizedNames>
-      <LocalizedName description="Channel Api Integration Framework" languagecode="1033" />
+      <LocalizedName description="Channel API Integration Framework" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
     <Version>1.0.0.0</Version>
@@ -83,7 +83,11 @@
       <RootComponent type="1" schemaName="msdyn_ciprovider" behavior="0" />
       <RootComponent type="61" schemaName="Widget/msdyn_ciLibrary.js" behavior="0" />
       <RootComponent type="61" schemaName="CRMClients/msdyn_internal_ci_library.js" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_Callprovider.svg" behavior="0" />
       <RootComponent type="62" schemaName="msdyn_ChannelIntegrationFrameworkSitemap" behavior="0" />
+
+      <RootComponent type="66" schemaName="MscrmControls.Service.CIProvider.CustomMultiSelectControl" />
+      <RootComponent type="66" schemaName="MscrmControls.FieldControls.AgentClickToActControl" />
       <RootComponent type="80" schemaName="msdyn_ChannelIntegrationFrameworkApp" behavior="0" />
     </RootComponents>
     <MissingDependencies />

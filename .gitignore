@@ -47,7 +47,7 @@ SolutionPackage/
 # Build/tooling output folders
 /.tools/
 /drop/
-/packages/
+/packages/*
 /target/
 /.git/
 [Oo]bj/

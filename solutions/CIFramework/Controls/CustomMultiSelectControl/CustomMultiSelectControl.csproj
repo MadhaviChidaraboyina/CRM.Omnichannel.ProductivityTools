@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(BUILDTYPE)' == '' ">Debug</Configuration>
+    <Configuration Condition=" '$(BUILDTYPE)' == 'Debug' ">Debug</Configuration>
+    <Configuration Condition=" '$(BUILDTYPE)' == 'cover' ">Release</Configuration>
+    <Configuration Condition=" '$(BUILDTYPE)' == 'retail' ">Release</Configuration>
+    <ProjectGuid>{19C777D1-A0D4-4021-BBDC-AD1357D06A41}</ProjectGuid>
+    <ProjectTypeGuids>{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\CIFrameworkControls\CIProviderCustomMultiSelectControl</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>CIProviderCustomMultiSelectControl</RootNamespace>
+    <AssemblyName>CIProviderCustomMultiSelectControl</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="CommonReferences.ts" />
+    <TypeScriptCompile Include="CustomMultiSelectControl.ts" />
+    <TypeScriptCompile Include="inputsOutputs.g.ts" />
+    <TypeScriptCompile Include="PrivateReferences.ts" />
+    <TypeScriptCompile Include="Utils\AppMultiSelectHelper.ts" />
+    <TypeScriptCompile Include="Utils\CustomMutliSelectorConfig.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlManifest.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="libs\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="strings\" />
+    <Folder Include="Typings\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <TypeScriptOutFile>$(OutputPath)\CIProviderCustomMultiSelectControl.js</TypeScriptOutFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <Import Project="$(XrmSolutionsRoot)\build\include\TypeScriptCommonTypes.targets" />
+  <Import Project="$(PKG_TYPESCRIPT_MSBUILD)\tools\Microsoft.TypeScript.targets" />
+  <Target Name="VerifyAlteredTargetsUsed" />
+</Project>

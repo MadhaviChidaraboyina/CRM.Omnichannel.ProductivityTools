@@ -28,6 +28,8 @@ namespace Microsoft.CIFramework.Internal
 	let state = {} as IState;
 	const listenerWindow = window.parent;
 
+	declare var Xrm : any;
+
 	/**
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
 	 * returns false to disable the button visibility
@@ -40,43 +42,50 @@ namespace Microsoft.CIFramework.Internal
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		const widgetCount = 1;
+		const appId = Xrm.Utility.getGlobalContext().getCurrentAppProperties()._settledValue.appId;
+		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$orderby=msdyn_sortorder asc").then(
+		(result : any) => {
 
-		// Retrieve providers associated with system user
-		state.client.retrieveRecord(Constants.systemUserLogicalName, state.client.getUserID().toString(), String.format(Constants.providerOdataQuery, widgetCount)).then(
-		(result : Map<string,any>)=>
-		{
-			if (result && result.get(Constants.providerNavigationProperty))
-			{
-				//event listener for the onCliCkToAct event
-				listenerWindow.removeEventListener(Constants.CIClickToAct, onClickToAct);
-				listenerWindow.addEventListener(Constants.CIClickToAct, onClickToAct);
-				// populate ciProviders in state.
-				state.ciProviders = new Map<string,any>();
-				for(var x of result.get(Constants.providerNavigationProperty))
-				{
-					state.ciProviders.set(x[Constants.landingUrl], new CIProvider(x));
+			if (result && result.entities) {
+
+					//event listener for the onCliCkToAct event
+					listenerWindow.removeEventListener(Constants.CIClickToAct, onClickToAct);
+					listenerWindow.addEventListener(Constants.CIClickToAct, onClickToAct);
+					// populate ciProviders in state.
+					state.ciProviders = new Map<string, any>();
+					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
+
+					for (var x of result.entities) {
+						var apps = x[Constants.appSelectorFieldName];
+						var currRoles = x[Constants.roleSelectorFieldName];
+						var foundProvider = false;
+						currRoles = (currRoles != null) ? currRoles.split(";") : null;
+						for (var role of roles) {
+							if (apps && apps.indexOf(appId) !== -1) {
+								if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
+									continue;
+								}
+								state.ciProviders.set(x[Constants.landingUrl], new CIProvider(x));
+								foundProvider = true;
+							}
+						}
+						if (foundProvider) break;
+					}
+					// initialize and set post message wrapper.
+					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(state.ciProviders.keys()), apiHandlers);
+					// load the widgets onto client. 
+					for (let [key, value] of state.ciProviders) {
+						state.client.loadWidget(key, value.label);
+					}
 				}
 
-				// initialize and set post message wrapper.
-				state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(state.ciProviders.keys()), apiHandlers);
-				
-				// load the widgets onto client. 
-				// todo: check if we need to load the widgets or the client will do it based on client config
-				for(let [key, value]  of state.ciProviders)
-				{
-					state.client.loadWidget(key, value.label);
-				}
+				reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
+			},
+			(error: Error) => {
+				reportError(initializeCI.name + "Execution failed  in" + (Date.now() - startTime) + "ms with error as " + error.message);
+			}
+		);
 
-				reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime) + "ms for providers: " + mapToString(result));
-			}
-			else
-			{
-				reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime) + "ms with zero providers for the current user");
-			}
-		},(error : Map<string,any>)=>
-		{
-			reportError(initializeCI.name + "Execution failed  in" + (Date.now() - startTime) + "ms with error as " + error.get(Constants.message));
-		});
 		return false;
 	}
 
