@@ -311,32 +311,50 @@ namespace Microsoft.CIFramework.Internal
 
 	export function searchAndOpenRecords(parameters: Map<string, any>) : Promise<Map<string,any>>
 	{
+		return doSearch(parameters, true);
+	}
+
+
+	function doSearch(parameters: Map<string, any>, searchOnly: boolean) : Promise<Map<string,any>>
+	{
+		let errorMessage = "";
+
 		if (!parameters)
 		{
-			return rejectWithErrorMessage("Parameter list cant be empty");
+			errorMessage = "Parameter list cant be empty";
 		}
 		if (!parameters.get(Constants.originURL))
 		{
-			return rejectWithErrorMessage("Paramter:url cant be empty");
+			errorMessage = "Paramter:url cant be empty";
 		}
 		if (!parameters.get(Constants.entityName))
 		{
-			return rejectWithErrorMessage("Parameter:entityName cant be empty");
+			errorMessage = "Parameter:entityName cant be empty";
 		}
 		if (!parameters.get(Constants.queryParameters))
 		{
-			return rejectWithErrorMessage("Parameter:query cant be empty");
+			errorMessage = "Parameter:query cant be empty";
+		}
+
+		if (errorMessage != "")
+		{
+			return rejectWithErrorMessage(errorMessage);
 		}
 
 		const provider = state.ciProviders.get(parameters.get(Constants.originURL));
 		if(provider && provider.providerId)
 		{
-			return state.client.retrieveMultipleAndOpenRecords(parameters.get(Constants.entityName), parameters.get(Constants.queryParameters));
+			return state.client.retrieveMultipleAndOpenRecords(parameters.get(Constants.entityName), parameters.get(Constants.queryParameters), searchOnly);
 		}
 		else
 		{
 			reportError(searchAndOpenRecords.name + "Execution failed with error as Associated Provider record not found.");
 			return rejectWithErrorMessage("Associated Provider record not found.");
 		}
+	}
+
+	export function search(parameters: Map<string, any>) : Promise<Map<string,any>>
+	{
+		return doSearch(parameters, false);
 	}
 }

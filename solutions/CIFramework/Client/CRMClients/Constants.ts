@@ -105,6 +105,7 @@ namespace Microsoft.CIFramework.Internal
 		export const entityName = "entityName";
 		export const queryParameters = "queryParameters";
 		export const message = "message";
+		export const searchOnly = "searchOnly";
 	}
 
 	/**

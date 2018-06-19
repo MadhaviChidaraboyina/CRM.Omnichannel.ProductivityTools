@@ -62,7 +62,7 @@ namespace Microsoft.CIFramework.Internal
 			Xrm.Panel.loadPanel(url, title, true);
 		}
 
-		client.retrieveMultipleAndOpenRecords = (entityName: string, queryParmeters: string): Promise<Map<string,any>> =>
+		client.retrieveMultipleAndOpenRecords = (entityName: string, queryParmeters: string, searchOnly: boolean): Promise<Map<string,any>> =>
 		{
 			return new Promise<Map<string,any>>((resolve, reject) =>
 			{
@@ -71,7 +71,10 @@ namespace Microsoft.CIFramework.Internal
 					{
 						if(result.entities.length == 1) {
 							let resultItem = result.entities[0];
-							Xrm.Utility.openEntityForm(entityName, resultItem[entityName + "id"]);
+							if (searchOnly == false)
+							{
+								Xrm.Utility.openEntityForm(entityName, resultItem[entityName + "id"]);
+							}
 						}
 						else if(result.entities.length > 1) {
 							//To-Do handle this after UC dependency to open categorized search page on same window is resolved

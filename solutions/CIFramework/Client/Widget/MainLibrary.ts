@@ -56,12 +56,12 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to search records with respect to query parameters and open the respective record  
 	*/
-	export function searchAndOpenRecords(entityName: string, queryParmeters: string) : Promise<Map<string, any>>
+	export function searchAndOpenRecords(entityName: string, queryParmeters: string, searchOnly: boolean) : Promise<Map<string, any>>
 	{
 		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.searchAndOpenRecords,
-			messageData: new Map().set(Constants.entityName, entityName).set(Constants.queryParameters, queryParmeters)
+			messageData: new Map().set(Constants.entityName, entityName).set(Constants.queryParameters, queryParmeters).set(Constants.searchOnly, searchOnly)
 		}
 		
 		return new Promise<Map<string, any>>((resolve, reject) =>

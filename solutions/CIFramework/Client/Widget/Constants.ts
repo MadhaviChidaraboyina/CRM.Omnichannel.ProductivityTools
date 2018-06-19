@@ -28,6 +28,7 @@ namespace Microsoft.CIFramework
 		export const entityName: string = "entityName";
 		export const queryParameters: string = "queryParameters";
 		export const message: string = "message";
+		export const searchOnly = "searchOnly";
 	}
 
 	/**

@@ -15,7 +15,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 	/**
 	 * wait time for receiving a response from the listener window, before we reject the promise
 	 */
-	export const promiseTimeOut = 1000; // in milliseconds
+	export const promiseTimeOut = 5000; // in milliseconds
 	
 	/**
 	 * String for correlationId to be used as a key.

@@ -24,7 +24,7 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for retrieve multiple reords and open one of them.
 	*/
-	type RetrieveMultipleAndOpenFunction = (entityName: string, queryParmeters: string) => Promise<Map<string,any>>;
+	type RetrieveMultipleAndOpenFunction = (entityName: string, queryParmeters: string, searchOnly: boolean) => Promise<Map<string,any>>;
 
 	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
