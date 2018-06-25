@@ -94,7 +94,7 @@ namespace Microsoft.CIFramework.Internal
 		
 		client.setWidgetMode = (name: string, mode: number): void =>
 		{
-			Xrm.Panel.setPanelState(mode);
+			Xrm.Panel.state = mode;
 		}
 
 		client.setWidgetWidth = (name: string, width: number): void =>
@@ -104,7 +104,7 @@ namespace Microsoft.CIFramework.Internal
 
 		client.getWidgetMode = (): number =>
 		{
-			return Xrm.Panel.getPanelState();
+			return Xrm.Panel.state;
 		}
 
 		client.getWidgetWidth = (): number =>

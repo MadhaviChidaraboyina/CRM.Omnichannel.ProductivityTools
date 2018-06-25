@@ -12,6 +12,7 @@ namespace Microsoft.CIFramework
 		export const setClickToAct = "setclicktoact";
 		export const getClickToAct = "getclicktoact";
 		export const searchAndOpenRecords = "searchandopenrecords";
+		export const search = "search";
 		export const setMode = "setmode";
 		export const setWidth = "setwidth";
 		export const getMode = "getmode";

@@ -15,6 +15,7 @@ namespace Microsoft.CIFramework.Internal
 	const apiHandlers = new Map<string, any>([
 		["setclicktoact", [setClickToAct]],
 		["searchandopenrecords", [searchAndOpenRecords]], 
+		["search", [search]],
 		["setmode", [setMode]],
 		["setwidth", [setWidth]],
 		["getmode", [getMode]],
@@ -42,7 +43,7 @@ namespace Microsoft.CIFramework.Internal
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		const widgetCount = 1;
-		const appId = Xrm.Utility.getGlobalContext().getCurrentAppProperties()._settledValue.appId;
+		const appId = top.location.search.split('appid=')[1].split('&')[0];
 		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$orderby=msdyn_sortorder asc").then(
 		(result : any) => {
 
@@ -311,7 +312,7 @@ namespace Microsoft.CIFramework.Internal
 
 	export function searchAndOpenRecords(parameters: Map<string, any>) : Promise<Map<string,any>>
 	{
-		return doSearch(parameters, true);
+		return doSearch(parameters, false);
 	}
 
 
@@ -355,6 +356,6 @@ namespace Microsoft.CIFramework.Internal
 
 	export function search(parameters: Map<string, any>) : Promise<Map<string,any>>
 	{
-		return doSearch(parameters, false);
+		return doSearch(parameters, true);
 	}
 }

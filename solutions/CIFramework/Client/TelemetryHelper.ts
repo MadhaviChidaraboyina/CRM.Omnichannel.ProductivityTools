@@ -39,9 +39,8 @@ namespace Microsoft.CIFramework
 	{
 		let result: string;
 		const data1 = event.detail["field"];
-		const data2 = event.detail["entityReference"];
-		const data3 = event.detail["originURL"];
-		result = "value " + data1["value"] + "\nname " + data1["name"] + "\ntype " +data1["type"] + "\n EntityReference "+ data2["entityType"] + ", ID "+ data2["id"] + ", name : "+ data2["name"] + "\nOrigin URL "+ data3;
+		const data2 = event.detail["ParentEntityReference"];
+		result = "value " + data1["value"] + "\nname " + data1["name"] + "\ntype " + data1["type"] + "\n ParentEntityReference "+ data2["entityType"] + ", ID "+ data2["id"] + ", name : "+ data2["name"];
 		return result;
 	}
 }

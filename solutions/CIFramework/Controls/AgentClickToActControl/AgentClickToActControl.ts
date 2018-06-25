@@ -205,8 +205,9 @@ module MscrmControls.FieldControls {
 				style: {
 					maxHeight: "2em",
 					maxWidth: "2em",
-					borderRadius: "50%",
-					cursor: "pointer"
+					cursor: "pointer",
+					margin: "3px"
+
 				}
 			});
 		}
@@ -241,11 +242,11 @@ module MscrmControls.FieldControls {
 				placeholder: this.placeholder(),
 				readOnly: false,
 				style: {
-					height: "100%",
+					height: "28px",
 					width: "100%",
 					"padding-left": "0.5rem",
 					"padding-right": "0.5rem",
-					"margin-top": "0.5rem"
+					"margin-top": "0.15rem"
 				},
 				selectValueOnFocus: true,
 				onChange: this._changeHandler,

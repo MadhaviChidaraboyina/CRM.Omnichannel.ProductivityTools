@@ -60,10 +60,9 @@ namespace Microsoft.CIFramework
 	{
 		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
-			messageType: MessageType.searchAndOpenRecords,
+			messageType: searchOnly ? MessageType.search : MessageType.searchAndOpenRecords,
 			messageData: new Map().set(Constants.entityName, entityName).set(Constants.queryParameters, queryParmeters).set(Constants.searchOnly, searchOnly)
 		}
-		
 		return new Promise<Map<string, any>>((resolve, reject) =>
 		{
 			//domains contains the domains this widgte can talk to , which is the CRM instance, so passing that as target origin.

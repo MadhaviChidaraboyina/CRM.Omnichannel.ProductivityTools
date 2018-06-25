@@ -136,6 +136,9 @@ module MscrmControls.Service.CIProvider {
 						handler.FunctionName = "Microsoft.CIFramework.Internal.initializeCI";
 						handler.Parameters = "\"4\"";
 						handler.Enabled = true;
+						if (!selectedApp[0].EventHandlers) {
+							selectedApp[0].EventHandlers = [];
+						}
 						selectedApp[0].EventHandlers.push(handler);
 					}
 					this.selectedAppsToUpdate.push(selectedApp[0]);
@@ -170,9 +173,11 @@ module MscrmControls.Service.CIProvider {
 		}
 
 		private containsEventHandler(selectedApp: ElementInformation): boolean {
-			for (let eventHandler of selectedApp.EventHandlers) {
-				if (eventHandler.FunctionName === "Microsoft.CIFramework.Internal.initializeCI") {
-					return true;
+			if (selectedApp.EventHandlers) {
+				for (let eventHandler of selectedApp.EventHandlers) {
+					if (eventHandler.FunctionName === "Microsoft.CIFramework.Internal.initializeCI") {
+						return true;
+					}
 				}
 			}
 			return false;
