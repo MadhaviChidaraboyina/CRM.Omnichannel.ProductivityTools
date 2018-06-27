@@ -160,6 +160,10 @@
     <value>Channel API Integration Framework</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
+  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
+    <value>Channel API Integration Framework</value>
+    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
+  </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
@@ -464,9 +468,9 @@
     <value>Channel Provider</value>
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
-  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Channel Provider</value>
-    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
+  <data name="80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
+    <value>Channel Integration Framework</value>
+    <comment> 'msdyn_ChannelIntegrationFrameworkApp' : LocalizedName for AppModule</comment>
   </data>
   <data name="80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
     <value>Channel Integration Framework</value>
@@ -485,7 +489,7 @@
     <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Group" xml:space="preserve">
-    <value>CI Provider Configuration</value>
+    <value>Channel Provider Configuration</value>
     <comment>Title for Area 'New_Area' Group 'New_Group'</comment>
   </data>
 </root>
