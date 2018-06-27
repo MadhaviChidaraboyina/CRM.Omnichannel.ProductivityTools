@@ -23,7 +23,7 @@
       <LocalizedName description="CIProviders" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="All active CIProviders" languagecode="1033" />
+      <Description description="All Channel Providers" languagecode="1033" />
     </Descriptions>
   </savedquery>
 </savedqueries>

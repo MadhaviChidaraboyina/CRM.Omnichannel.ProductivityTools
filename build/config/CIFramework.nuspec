@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Microsoft.Dynamics.XrmSolutions.CIFramework</id>
+    <id>Microsoft.Dynamics.Service.CIFramework</id>
     <version>1.0.0</version>
     <authors>Microsoft Corporation</authors>
-    <owners></owners>
+    <owners>soverm</owners>
     <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
     <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
     <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Microsoft Dynamics 365 XRM Solution for Channel Integration.</description>
-    <releaseNotes>This release includes XRM solution: Channel Integration - for partners to integrate 3rd parrty Channels & providers seamlessly into Dynamics 365.</releaseNotes>
+    <releaseNotes>This release includes XRM solution: Channel Integration - for partners to integrate 3rd party Channels providers seamlessly into Dynamics 365.</releaseNotes>
     <copyright>Copyright �2016 Microsoft Corporation</copyright>
     <tags>CRM XRM CI CIFramework Solution</tags>
     <dependencies>
@@ -18,17 +18,7 @@
   </metadata>
 	<files>
 		<!-- retail artifacts -->
-		<file src="..\..\drop\retail\AnyCPU\Data\*.*" target="Data" />
 		<file src="..\..\drop\retail\AnyCPU\Solutions\*.*" target="Solutions" />
-		<file src="..\..\drop\retail\AnyCPU\PDPackages\*.*" target="PDPackages" />
-		<file src="..\..\drop\retail\AnyCPU\Plugins\*.*" target="Plugins" />
-		<file src="..\..\drop\retail\AnyCPU\Tests\**" target="Tests" />
-		
-		<!-- debug artifacts -->
-		<file src="..\..\drop\debug\AnyCPU\Data\*.*" target="Debug\Data" />
-		<file src="..\..\drop\debug\AnyCPU\Solutions\*.*" target="Debug\Solutions" />
-		<file src="..\..\drop\debug\AnyCPU\PDPackages\*.*" target="Debug\PDPackages" />
-		<file src="..\..\drop\debug\AnyCPU\Plugins\*.*" target="Debug\Plugins" />
-		<file src="..\..\drop\debug\AnyCPU\Tests\**" target="Debug\Tests" />
+		<file src="..\..\drop\retail\AnyCPU\PVSPackages\*.*" target="PVSPackages" />
   </files>
 </package>

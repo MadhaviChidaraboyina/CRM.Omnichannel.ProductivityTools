@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Channel Providers" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="Storing configuration for individual CI ciproviders" languagecode="1033" />
+        <Description description="Storing configuration for individual Channel Providers" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -272,7 +272,7 @@
             <IntroducedVersion>1.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
             <displaynames>
-              <displayname description="Click-To-Act" languagecode="1033" />
+              <displayname description="Enable Outbound Communication" languagecode="1033" />
             </displaynames>
             <Descriptions>
               <Description description="" languagecode="1033" />
@@ -291,10 +291,10 @@
             </options>
           </optionset>
           <displaynames>
-            <displayname description="Click-To-Act" languagecode="1033" />
+            <displayname description="Enable Outbound Communication" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Enable Click to Act for the Channel" languagecode="1033" />
+            <Description description="Enable Outbound Communication" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SortOrder">
@@ -392,7 +392,7 @@
           <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <Format>url</Format>
-          <MaxLength>100</MaxLength>
+          <MaxLength>1024</MaxLength>
           <Length>200</Length>
           <displaynames>
             <displayname description="Channel URL" languagecode="1033" />

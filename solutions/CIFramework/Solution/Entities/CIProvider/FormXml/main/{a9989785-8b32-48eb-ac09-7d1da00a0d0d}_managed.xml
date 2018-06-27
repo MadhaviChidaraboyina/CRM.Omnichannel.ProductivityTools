@@ -5,9 +5,12 @@
     <IntroducedVersion>1.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-		<form>
+		<form shownavigationbar="false">
 			<tabs>
 				<tab verticallayout="true" id="{2190ec7e-bb48-4408-aa64-6008072a8a39}" IsUserDefined="1" name="{2190ec7e-bb48-4408-aa64-6008072a8a39}" locklevel="0" expanded="true" showlabel="true">
+					<labels>
+						<label description="Channel Provider Configuration" languagecode="1033" />
+					</labels>
 					<columns>
 						<column width="34%">
 							<sections>

@@ -85,6 +85,9 @@
     </ItemGroup>
   </Target>
   <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)\%(RecursiveDir)')">
+		<PropertyGroup>
+			<ExcludedFromMinification>$(TypeScriptOutDir)\**\*.js</ExcludedFromMinification>
+		</PropertyGroup>
     <Copy SourceFiles="@(WebResources)" DestinationFolder="$(SolutionPackagePath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
     <Copy SourceFiles="@(TypeDefinitions)" DestinationFolder="$(XrmSolutionsRoot)\solutions\TypeDefinitions\CIFramework\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
   </Target>
