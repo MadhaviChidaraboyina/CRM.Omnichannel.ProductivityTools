@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="Source LCID" xml:space="preserve">
+    <value>1033</value>
+  </metadata>
+  <metadata name="Source file" xml:space="preserve">
+    <value>msdyn_CIFramework_managed.zip</value>
+  </metadata>
+  <metadata name="Source package type" xml:space="preserve">
+    <value>Both</value>
+  </metadata>
+  <metadata name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVp
+        bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </metadata>
+  <data name="10:CustomLabel,msdyn_ciprovider_systemuser_membershipOrdinal:1" xml:space="preserve">
+    <value />
+    <comment>msdyn_ciprovider_systemuser CustomLabel for EntityRelationship 'msdyn_ciprovider_systemuser_membership'</comment>
+  </data>
+  <data name="10:CustomLabel,msdyn_ciprovider_systemuser_membershipOrdinal:2" xml:space="preserve">
+    <value />
+    <comment>msdyn_ciprovider_systemuser CustomLabel for EntityRelationship 'msdyn_ciprovider_systemuser_membership'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
+    <value>Kaydı oluşturan kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_createdby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_ciprovider_modifiedby" xml:space="preserve">
+    <value>Kaydı değiştiren kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_modifiedby'</comment>
+  </data>
+  <data name="10:Description,organization_msdyn_ciprovider" xml:space="preserve">
+    <value>Kuruluşun benzersiz tanımlayıcısı</value>
+    <comment>msdyn_ciprovider Description for EntityRelationship 'organization_msdyn_ciprovider'</comment>
+  </data>
+  <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
+    <value>Microsoft Dynamics 365</value>
+    <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
+  </data>
+  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
+    <value>Channel API Integration Framework</value>
+    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
+  </data>
+  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
+    <value>Kanal API'sı Tümleştirme Çerçevesi</value>
+    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
+  </data>
+  <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
+    <value>Microsoft Dynamics 365</value>
+    <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
+  </data>
+  <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
+    <value>Bu varlığa ait bir form.</value>
+    <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
+  </data>
+  <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
+    <value>Tüm etkin CIProviders</value>
+    <comment>'Channel' : Description for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderCreatedBy" xml:space="preserve">
+    <value>Kaydı oluşturan kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
+    <value>Kaydın oluşturulduğu tarih ve saat.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
+    <value>Kaydı oluşturan temsilci kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
+    <value>Bireysel CI sağlayıcılar için depolama yapılandırması</value>
+    <comment> 'msdyn_ciprovider' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
+    <value>Bu kaydı oluşturan içeri aktarma işleminin sıra numarası.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
+    <value>Kaydı değiştiren kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
+    <value>Kaydın değiştirildiği tarih ve saat.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
+    <value>Kaydı değiştiren temsilci kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
+    <value>Kanal için Birleşik Arabirim Uygulamalarını seçin</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_AppSelector' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_CIProviderAPIVersion" xml:space="preserve">
+    <value>API Sürümü</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_CIProviderAPIVersion' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
+    <value>CIProvider kayıtları benzersiz tanımlayıcısı</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_CIProvider_API_Version" xml:space="preserve">
+    <value>Kanal Tümleştirme Sağlayıcısı API Sürümü</value>
+    <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
+    <value />
+    <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_msdyn_clicktoact' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_statecode" xml:space="preserve">
+    <value>CIProvider durumu</value>
+    <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_statuscode" xml:space="preserve">
+    <value>CIProvider durumunun açıklaması</value>
+    <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
+    <value>Kanal için Eylem Gerçekleştirmek için Tıklayın özelliğini etkinleştir</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ClickToAct' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_Label" xml:space="preserve">
+    <value />
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_Label' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_LandingUrl" xml:space="preserve">
+    <value>Kanal sağlayıcı URL'si</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_LandingUrl' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_name" xml:space="preserve">
+    <value>Kanal sağlayıcının adı</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_RoleSelector" xml:space="preserve">
+    <value>Kanal için Rolleri seçin</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_RoleSelector' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_SortOrder" xml:space="preserve">
+    <value>Diğer kanallara göre öncelik vermek üzere bu Kanal için Kanal Sırasını 0 olarak ayarlayın.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
+    <value>Kuruluşun benzersiz tanımlayıcısı</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
+    <value>Kaydın taşındığı tarih ve saat.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
+    <value>Kanal Sağlayıcının Durumu</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderstatuscode" xml:space="preserve">
+    <value>Kanal Sağlayıcı durumunun açıklaması</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Yalnızca dahili kullanım içindir.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Kayıt oluşturulduğunda kullanımda olan zaman dilimi kodu.</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
+    <value>Oluşturan</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
+    <value>Oluşturma Tarihi</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
+    <value>Oluşturan (Temsilci)</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
+    <value>İçeri Aktarma Sıra Numarası</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderModifiedBy" xml:space="preserve">
+    <value>Değiştiren</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
+    <value>Değiştirme Tarihi</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
+    <value>Değiştiren (Temsilci)</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
+    <value>Uygulama Seçici</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_AppSelector' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_CIProviderAPIVersion" xml:space="preserve">
+    <value>API Sürümü</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_CIProviderAPIVersion' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
+    <value>CIProviderId</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_CIProvider_API_Version" xml:space="preserve">
+    <value>API Sürümü</value>
+    <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
+    <value>Eylem Gerçekleştirmek için Tıklayın</value>
+    <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_msdyn_clicktoact' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_statecode" xml:space="preserve">
+    <value>Durum</value>
+    <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_statuscode" xml:space="preserve">
+    <value>Durum Açıklaması</value>
+    <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
+    <value>Eylem Gerçekleştirmek için Tıklayın</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ClickToAct' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_Label" xml:space="preserve">
+    <value>Etiket</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_Label' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_LandingUrl" xml:space="preserve">
+    <value>Kanal URL'si</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_LandingUrl' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_name" xml:space="preserve">
+    <value>Ad</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_RoleSelector" xml:space="preserve">
+    <value>Rol Seçici</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_RoleSelector' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_SortOrder" xml:space="preserve">
+    <value>Kanal Sırası</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
+    <value>Kuruluş Kimliği</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
+    <value>Kaydın Oluşturulduğu Tarih</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
+    <value>Durum</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderstatuscode" xml:space="preserve">
+    <value>Durum Açıklaması</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Saat Dilimi Kuralı Sürüm Numarası</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC Dönüştürme Saat Dilimi Kodu</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:label,Channel{2190ec7e-bb48-4408-aa64-6008072a8a39}" xml:space="preserve">
+    <value>Channel Provider Configuration</value>
+    <comment>'Channel' : label for tab in Entity FormXml ID: '{2190ec7e-bb48-4408-aa64-6008072a8a39}'</comment>
+  </data>
+  <data name="1:label,Channel{51ee0bc8-2a26-7a49-664d-8077d77d456a}" xml:space="preserve">
+    <value>Kanal için Birleşik Arabirim Uygulamalarını seçin</value>
+    <comment>'Channel' : label for section in Entity FormXml ID: '{51ee0bc8-2a26-7a49-664d-8077d77d456a}'</comment>
+  </data>
+  <data name="1:label,Channel{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}" xml:space="preserve">
+    <value>Kanal için Rolleri seçin</value>
+    <comment>'Channel' : label for section in Entity FormXml ID: '{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}'</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_CIProvider_API_Version0" xml:space="preserve">
+    <value>1.0</value>
+    <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact0" xml:space="preserve">
+    <value>Hayır</value>
+    <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact1" xml:space="preserve">
+    <value>Evet</value>
+    <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode0" xml:space="preserve">
+    <value>Etkin</value>
+    <comment>'msdyn_ciprovider' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode1" xml:space="preserve">
+    <value>Etkin değil</value>
+    <comment>'msdyn_ciprovider' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode1" xml:space="preserve">
+    <value>Etkin</value>
+    <comment>'msdyn_ciprovider' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode2" xml:space="preserve">
+    <value>Etkin değil</value>
+    <comment>'msdyn_ciprovider' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
+    <value>Kanal Sağlayıcılar</value>
+    <comment> 'msdyn_ciprovider' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Channel{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}" xml:space="preserve">
+    <value>CIProvider Arama Görünümü</value>
+    <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}'</comment>
+  </data>
+  <data name="1:LocalizedName,Channel{303dff48-b284-459a-ac10-d67e92bc5a8c}" xml:space="preserve">
+    <value>CIProvider İlişkili Görünümü</value>
+    <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{303dff48-b284-459a-ac10-d67e92bc5a8c}'</comment>
+  </data>
+  <data name="1:LocalizedName,Channel{4ebf43a0-6ac3-4ad7-bd52-11d5f9bdadfd}" xml:space="preserve">
+    <value>CIProvider Gelişmiş Bul Görünümü</value>
+    <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{4ebf43a0-6ac3-4ad7-bd52-11d5f9bdadfd}'</comment>
+  </data>
+  <data name="1:LocalizedName,Channel{633c9e21-2171-4500-b2de-e26712495930}" xml:space="preserve">
+    <value>Etkin CIProviders</value>
+    <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{633c9e21-2171-4500-b2de-e26712495930}'</comment>
+  </data>
+  <data name="1:LocalizedName,Channel{6a13feec-85d7-4b9f-b94c-16619ffe4617}" xml:space="preserve">
+    <value>Etkin CIProviders Öğelerini Hızlı Bul</value>
+    <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{6a13feec-85d7-4b9f-b94c-16619ffe4617}'</comment>
+  </data>
+  <data name="1:LocalizedName,Channel{9024dbea-2352-436d-bb5f-848405158adb}" xml:space="preserve">
+    <value>Etkin Olmayan CIProviders</value>
+    <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{9024dbea-2352-436d-bb5f-848405158adb}'</comment>
+  </data>
+  <data name="1:LocalizedName,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
+    <value>Bilgiler</value>
+    <comment>'Channel' : LocalizedName for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
+  </data>
+  <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
+    <value>CIProviders</value>
+    <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
+    <value>Kanal Sağlayıcı</value>
+    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
+  </data>
+  <data name="80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
+    <value>Channel Integration Framework</value>
+    <comment> 'msdyn_ChannelIntegrationFrameworkApp' : LocalizedName for AppModule</comment>
+  </data>
+  <data name="80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
+    <value>Kanal Tümleştirme Çerçevesi</value>
+    <comment> 'msdyn_ChannelIntegrationFrameworkApp' : LocalizedName for AppModule</comment>
+  </data>
+  <data name="81:LocalizedName,msdyn_ChannelIntegrationFrameworkSitemap" xml:space="preserve">
+    <value>Kanal Tümleştirme Çerçevesi</value>
+    <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Sağlayıcı</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Group" xml:space="preserve">
+    <value>CI Sağlayıcı Yapılandırması</value>
+    <comment>Title for Area 'New_Area' Group 'New_Group'</comment>
+  </data>
+</root>

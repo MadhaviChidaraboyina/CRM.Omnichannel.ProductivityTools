@@ -108,8 +108,8 @@ echo Processing %xRM_NAME%
 setlocal ENABLEDELAYEDEXPANSION
 for /f "tokens=1,2" %%i in (%xRM_LANGLIST%) do (
     for /f %%o in ('dir /s /b %xRM_SRCPATH%*.1033.resx') do (
-        rem for /f %%f in ('dir /s /b %XrmSolutionsRoot%\Packages\CRMLoc.b-V9.0-b.xrmSolutions_%xRM_NAME%.%xRM_LocVer%\%%i\xrmSolutions\%xRM_NAME%\%xRM_COMPNAME%\*.lcl') do (
-        for /f %%f in ('dir /s /b %XrmSolutionsRoot%\Packages\CRMLoc.b-V9.0-b.xrmSolutions_%xRM_NAME%.%xRM_LocVer%\%%i\xrmSolutions\%xRM_NAME%\%xRM_COMPNAME%\LCL\*.lcl') do (
+        rem for /f %%f in ('dir /s /b %XrmSolutionsRoot%\Packages\CRMLoc.b-V9.0_weekly-b.xrmSolutions_%xRM_NAME%.%xRM_LocVer%\%%i\xrmSolutions\%xRM_NAME%\%xRM_COMPNAME%\*.lcl') do (
+        for /f %%f in ('dir /s /b %XrmSolutionsRoot%\Packages\CRMLoc.b-V9.0_weekly-b.xrmSolutions_%xRM_NAME%.%xRM_LocVer%\%%i\xrmSolutions\%xRM_NAME%\%xRM_COMPNAME%\LCL\*.lcl') do (
             if /i "%%~no%%~xo"=="%%~nf" (
                 set xRM_LCL=%%~df%%~pf
                 set xRM_LSS=!xRM_LCL:LCL=LSS!
@@ -130,8 +130,8 @@ for /f "tokens=1,2" %%i in (%xRM_LANGLIST%) do (
         )
     )
     for /f %%o in ('dir /s /b %xRM_SRCPATH%\%xRM_NAME%\%xRM_COMPNAME%\*.en-us.resx') do (
-        rem for /f %%f in ('dir /s /b %XrmSolutionsRoot%\Packages\CRMLoc.b-V9.0-b.xrmSolutions_%xRM_NAME%.%xRM_LocVer%\%%i\xrmSolutions\%xRM_NAME%\%xRM_COMPNAME%\*.lcl') do (
-        for /f %%f in ('dir /s /b %XrmSolutionsRoot%\Packages\CRMLoc.b-V9.0-b.xrmSolutions_%xRM_NAME%.%xRM_LocVer%\%%i\xrmSolutions\%xRM_NAME%\%xRM_COMPNAME%\LCL\*.lcl') do (
+        rem for /f %%f in ('dir /s /b %XrmSolutionsRoot%\Packages\CRMLoc.b-V9.0_weekly-b.xrmSolutions_%xRM_NAME%.%xRM_LocVer%\%%i\xrmSolutions\%xRM_NAME%\%xRM_COMPNAME%\*.lcl') do (
+        for /f %%f in ('dir /s /b %XrmSolutionsRoot%\Packages\CRMLoc.b-V9.0_weekly-b.xrmSolutions_%xRM_NAME%.%xRM_LocVer%\%%i\xrmSolutions\%xRM_NAME%\%xRM_COMPNAME%\LCL\*.lcl') do (
             if /i "%%~no%%~xo"=="%%~nf" (
                 set xRM_LCL=%%~df%%~pf
                 set xRM_LSS=!xRM_LCL:LCL=LSS!

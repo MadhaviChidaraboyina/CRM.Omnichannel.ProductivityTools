@@ -38,7 +38,7 @@
 SolutionPackage/
 
 # Loc related temp file
-/src/Localize/Temp
+/tools/Localize/Temp
 *.edb
 *.lsp
 
