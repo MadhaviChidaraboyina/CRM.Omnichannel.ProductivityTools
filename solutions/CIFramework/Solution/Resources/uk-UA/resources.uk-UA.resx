@@ -173,7 +173,7 @@
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
-    <value>Усі активні постачальники послуг інтеграції каналів</value>
+    <value>Усі постачальники каналів</value>
     <comment>'Channel' : Description for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedBy" xml:space="preserve">
@@ -189,7 +189,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Збереження конфігурації для окремих постачальників послуг інтеграції каналів</value>
+    <value>Збереження конфігурації для окремих постачальників каналів</value>
     <comment> 'msdyn_ciprovider' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
@@ -237,7 +237,7 @@
     <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
-    <value>Увімкнути функцію "Дія за клацанням" для каналу</value>
+    <value>Увімкнути зовнішні зв’язки</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ClickToAct' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_Label" xml:space="preserve">
@@ -329,7 +329,7 @@
     <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
-    <value>Дія за клацанням</value>
+    <value>Увімкнути зовнішні зв’язки</value>
     <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_msdyn_clicktoact' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_statecode" xml:space="preserve">
@@ -341,7 +341,7 @@
     <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
-    <value>Дія за клацанням</value>
+    <value>Увімкнути зовнішні зв’язки</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ClickToAct' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_Label" xml:space="preserve">
@@ -389,7 +389,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,Channel{2190ec7e-bb48-4408-aa64-6008072a8a39}" xml:space="preserve">
-    <value>Channel Provider Configuration</value>
+    <value>Конфігурація постачальника каналів</value>
     <comment>'Channel' : label for tab in Entity FormXml ID: '{2190ec7e-bb48-4408-aa64-6008072a8a39}'</comment>
   </data>
   <data name="1:label,Channel{51ee0bc8-2a26-7a49-664d-8077d77d456a}" xml:space="preserve">
@@ -433,27 +433,27 @@
     <comment> 'msdyn_ciprovider' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedName,Channel{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}" xml:space="preserve">
-    <value>Подання підстановки постачальників послуг інтеграції каналів</value>
+    <value>Подання підстановки постачальників каналів</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{303dff48-b284-459a-ac10-d67e92bc5a8c}" xml:space="preserve">
-    <value>Зв’язане подання постачальників послуг інтеграції каналів</value>
+    <value>Зв’язане подання постачальників каналів</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{303dff48-b284-459a-ac10-d67e92bc5a8c}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{4ebf43a0-6ac3-4ad7-bd52-11d5f9bdadfd}" xml:space="preserve">
-    <value>Подання розширеного пошуку постачальників послуг інтеграції каналів</value>
+    <value>Подання розширеного пошуку постачальників каналів</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{4ebf43a0-6ac3-4ad7-bd52-11d5f9bdadfd}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{633c9e21-2171-4500-b2de-e26712495930}" xml:space="preserve">
-    <value>Активні постачальники послуг інтеграції каналів</value>
+    <value>Активні постачальники каналів</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{633c9e21-2171-4500-b2de-e26712495930}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{6a13feec-85d7-4b9f-b94c-16619ffe4617}" xml:space="preserve">
-    <value>Швидкий пошук активних постачальників послуг інтеграції каналів</value>
+    <value>Швидкий пошук активних постачальників каналів</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{6a13feec-85d7-4b9f-b94c-16619ffe4617}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{9024dbea-2352-436d-bb5f-848405158adb}" xml:space="preserve">
-    <value>Неактивні постачальники послуг інтеграції каналів</value>
+    <value>Неактивні постачальники каналів</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{9024dbea-2352-436d-bb5f-848405158adb}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
@@ -489,7 +489,7 @@
     <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Group" xml:space="preserve">
-    <value>Конфігурація постачальника послуг інтеграції каналів</value>
+    <value>Конфігурація постачальника каналів</value>
     <comment>Title for Area 'New_Area' Group 'New_Group'</comment>
   </data>
 </root>
