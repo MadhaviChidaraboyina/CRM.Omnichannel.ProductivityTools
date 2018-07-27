@@ -15,17 +15,18 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * utility func to create a promise and reject it with the passed error message
 	*/
-	export function rejectWithErrorMessage(errorMessage : string)
+	export function rejectWithErrorMessage(errorMessage : string, apiName: string)
 	{
-		return Promise.reject(createErrorMap(errorMessage));
+		reportError(apiName + " failed with error: " + errorMessage);
+		return Promise.reject(createErrorMap(errorMessage, apiName));
 	}
 
 	/**
 	 * utility func to create a error map with the error message and optional error code
 	*/
-	export function createErrorMap(errorMessage : string)
+	export function createErrorMap(errorMessage : string, apiName?: string)
 	{
-		return new Map().set(Constants.message, errorMessage);
+		return new Map().set(Constants.message, errorMessage).set(Constants.name, apiName);
 	}
 
 	/**
@@ -103,9 +104,25 @@ namespace Microsoft.CIFramework.Internal
 		export const widgetHeight = "msdyn_widgetheight";
 		export const widgetWidth = "msdyn_widgetwidth";
 		export const entityName = "entityName";
+		export const entityId = "entityId";
 		export const queryParameters = "queryParameters";
 		export const message = "message";
 		export const searchOnly = "searchOnly";
+		export const entityFormOptions = "entityFormOptions";
+		export const entityFormParameters = "entityFormParameters";
+		export const SizeChangeHandler = "sizeChangeHandler";
+		export const ModeChangeHandler = "modeChangedHandler";
+		export const NavigationHandler = "NavigationHandler";
+		export const AppName = "appName";
+		export const ClientUrl = "clientUrl";
+		export const AppUrl = "appUrl";
+		export const Theme = "themeName";
+		export const OrgLcid = "orgLcid";
+		export const OrgUniqueName = "orgUniqueName";
+		export const UserId = "userId";
+		export const UserLcid = "userLcid";
+		export const UserName = "username";
+		export const DefaultCountryCode = "defaultCountryCode";
 	}
 
 	/**
@@ -114,5 +131,8 @@ namespace Microsoft.CIFramework.Internal
 	export namespace MessageType
 	{
 		export const onClickToAct = "onclicktoact";
+		export const onSizeChanged = "onsizechanged";
+		export const onModeChanged = "onmodechanged";
+		export const onPageNavigate = "onpagenavigate";
 	}
 }

@@ -6,7 +6,7 @@ namespace Microsoft.CIFramework
 	 */
 	export function reportUsage(result: string): void
 	{
-		console.log(result); // TO-DO: use the actual reporting APIs once integrated with UC client.
+		console.trace(result); // TO-DO: use the actual reporting APIs once integrated with UC client.
 	}
 
 	/**
@@ -15,7 +15,7 @@ namespace Microsoft.CIFramework
 	 */
 	export function reportError(error: string): void
 	{
-		console.log(error); // TO-DO: use the actual reporting APIs once integrated with UC client.
+		console.error(error); // TO-DO: use the actual reporting APIs once integrated with UC client.
 	}
 
 	/**
@@ -25,6 +25,9 @@ namespace Microsoft.CIFramework
 	export function mapToString(map: Map<string, any>): string
 	{
 		let result: string;
+        if(!map) {
+            return "";
+        }
 		map.forEach((value, key) => {
 			result += key + " : " + value + ", ";
 		});

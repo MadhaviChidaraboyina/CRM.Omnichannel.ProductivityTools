@@ -115,7 +115,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			return (Math.random() + 1).toString(36).substring(7);
 		}
 		
-		createDeferred(): IDeferred {
+		createDeferred(noTimeout?: boolean): IDeferred {
 			const deferred: IDeferred = {
 				promise: null,
 				resolve: null,
@@ -127,22 +127,27 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 				deferred.resolve = resolve;
 				deferred.reject = reject;
 			});
-
-			let timeout = new Promise<Map<string, any>>((resolve, reject) => {
-				deferred.timerId = setTimeout(() => {
-					reject(createErrorMap("Timeout occurred as no response was received from listener window"));
-				}, promiseTimeOut);
-			});
-
-			deferred.promise = Promise.race([
-				actualpromise,
-				timeout
-			]).then((result) => {
-				clearTimeout(deferred.timerId);
+			let promises = [actualpromise];
+			if (!noTimeout) {
+				let timeout = new Promise<Map<string, any>>((resolve, reject) => {
+					deferred.timerId = setTimeout(() => {
+						reject(createErrorMap("Timeout occurred as no response was received from listener window"));
+					}, promiseTimeOut);
+				});
+				promises.push(timeout);
+			}
+			deferred.promise = Promise.race(
+				promises
+			).then((result) => {
+				if (deferred.timerId) {
+					clearTimeout(deferred.timerId);
+				}
 				this.removePromise(deferred);
 				return result;
-			}).catch((result) => {
-				clearTimeout(deferred.timerId);
+				}).catch((result) => {
+					if (deferred.timerId) {
+						clearTimeout(deferred.timerId);
+					}
 				this.removePromise(deferred);
 				throw result;
 			});
@@ -172,13 +177,13 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		 * Function on caller (widget/CI) to add a new correlation Id to a message, map a new promise against it and post the message to the receiver (CI/widget)
 		 */
 		//TO-DO in V2, check if the user should have resolve and reject exposed to send in their custom implementation
-		postMsg(receivingWindow: Window, message: IExternalRequestMessageType, targetOrigin: string, isEventFlag: boolean): Promise<Map<string, any>> {
+		postMsg(receivingWindow: Window, message: IExternalRequestMessageType, targetOrigin: string, isEventFlag: boolean, noTimeout?: boolean): Promise<Map<string, any>> {
 			if ((receivingWindow) && (targetOrigin != "*")) {
 				if (!isEventFlag) {
 					let trackingCorrelationId = this.getCorrelationId();
 					let messageInternal = message as IRequestMessageType;
 					messageInternal[messageCorrelationId] = trackingCorrelationId;
-					let deferred = this.createDeferred();
+					let deferred = this.createDeferred(noTimeout);
 					this.pendingPromises.set(trackingCorrelationId, deferred);
 					return this.postMsgInternal(receivingWindow, messageInternal,targetOrigin, deferred);
 				}

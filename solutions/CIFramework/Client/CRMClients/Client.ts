@@ -6,10 +6,15 @@
 
 namespace Microsoft.CIFramework.Internal
 {
+	export type EventHandler = (event?: CustomEvent) => void;
+
+	type XrmEventHandler = (context?: XrmClientApi.EventContext) => void;
+
+	type RegisterHandler = (eventName: string, handler: EventHandler) => boolean;
 	/**
 	 * Func type for all CRUD functions.
 	*/
-	type CRUDFunction = (entityName: string, entityId: string, valuesToUpdate: Map<string,any>|string) => Promise<Map<string,any>>;
+	type CRUDFunction = (entityName: string, entityId?: string, data?: Map<string,any>|string) => Promise<Map<string,any>>;
 
 	/**
 	 * Func type for all set a setting kind of functions.
@@ -24,15 +29,33 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for retrieve multiple reords and open one of them.
 	*/
-	type RetrieveMultipleAndOpenFunction = (entityName: string, queryParmeters: string, searchOnly: boolean) => Promise<Map<string,any>>;
+	type RetrieveMultipleAndOpenFunction = (entityName: string, queryParmeters: string, searchOnly: boolean) => Promise<Map<string, any>>;
+
+	/**
+	 * Func type for opening a new or an existing form page
+	*/
+	type OpenFormFunction = (entityFormOptions: string, entityFormParameters?: string) => Promise<Map<string, any>>;
 
 	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
 	 * This type specifies all the functions that are exposed to clients for impl. 
 	*/
 	export type IClient = 
-	{
+		{
+
+		sizeChanged: XrmEventHandler;
+
+		modeChanged: XrmEventHandler;
+
+		navigationHandler: XrmEventHandler;
+
+		registerHandler: RegisterHandler;
+
+		createRecord: CRUDFunction;
+
 		updateRecord: CRUDFunction;
+
+		deleteRecord: CRUDFunction;
 
 		retrieveRecord: CRUDFunction;
 
@@ -48,7 +71,11 @@ namespace Microsoft.CIFramework.Internal
 
 		getWidgetMode: GetContextFunction;
 
+		getEnvironment: GetContextFunction;
+
 		getWidgetWidth: GetContextFunction;
+
+		openForm: OpenFormFunction;
 
 	}
 

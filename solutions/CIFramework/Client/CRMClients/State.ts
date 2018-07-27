@@ -20,7 +20,7 @@ namespace Microsoft.CIFramework.Internal
 		/**
 		 *  Map to store providers information. key'ed on landing urls
 		*/
-		ciProviders : Map<string,any>;
+		ciProviders: Map<string, CIProvider>;
 
 		/**
 		 * Post message wrapper object

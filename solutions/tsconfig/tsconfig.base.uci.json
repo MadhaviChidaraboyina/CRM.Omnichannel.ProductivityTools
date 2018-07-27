@@ -1,8 +1,9 @@
 {
-    "files": [
-		"../../Packages/Crm.ClientApiTypings.1.0.713/clientapi/XrmClientApi.d.ts",
-		"../../Packages/Crm.ClientApiTypings.1.0.713/clientapi/XrmClientApiDeprecated.d.ts",
-		"../../Packages/Crm.ClientApiTypings.1.0.713/clientapi/XrmClientApiInternal.d.ts",
+  "files": [
+		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApi.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApiInternal.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApiDeprecated.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApiInternal.d.ts",
 		"../../references/internal/TypeDefinitions/XrmClientApi/XrmClientApiGap.d.ts",
 		"../../references/internal/TypeDefinitions/XrmClientApi/XrmClientApiCommand.d.ts",
 		"../../references/external/TypeDefinitions/microsoft.ajax.d.ts",
@@ -12,10 +13,10 @@
 	"exclude": [
 		"node_modules"
 	],
-    "compilerOptions": {
+	"compilerOptions": {
 		"noImplicitAny":  true,
 		"noEmitOnError": true,
-    "target": "es6",
-    "skipLibCheck": true
-    }
+		"target": "es6",
+		"skipLibCheck": true
+		}
 }

@@ -12,12 +12,21 @@ namespace Microsoft.CIFramework
 		export const setClickToAct = "setclicktoact";
 		export const getClickToAct = "getclicktoact";
 		export const searchAndOpenRecords = "searchandopenrecords";
+		export const openForm = "openform";
+		export const createRecord = "createrecord";
+		export const deleteRecord = "deleterecord";
+		export const retrieveRecord = "retrieverecord";
+		export const updateRecord = "updaterecord";
 		export const search = "search";
 		export const setMode = "setmode";
 		export const setWidth = "setwidth";
 		export const getMode = "getmode";
+		export const getEnvironment = "getenvironment";
 		export const getWidth = "getwidth";
 		export const onClickToAct = "onclicktoact";
+		export const onModeChanged = "onmodechanged";
+		export const onSizeChanged = "onsizechanged";
+		export const onPageNavigate = "onpagenavigate";
 	}
 
 	/**
@@ -27,9 +36,12 @@ namespace Microsoft.CIFramework
 	{
 		export const value: string = "value";
 		export const entityName: string = "entityName";
+		export const entityId: string = "entityId";
 		export const queryParameters: string = "queryParameters";
 		export const message: string = "message";
 		export const searchOnly = "searchOnly";
+		export const entityFormOptions = "entityFormOptions";
+		export const entityFormParameters = "entityFormParameters";
 	}
 
 	/**

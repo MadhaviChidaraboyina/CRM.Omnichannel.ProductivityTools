@@ -393,7 +393,7 @@
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <Format>url</Format>
           <MaxLength>1024</MaxLength>
-          <Length>200</Length>
+          <Length>1024</Length>
           <displaynames>
             <displayname description="Channel URL" languagecode="1033" />
           </displaynames>

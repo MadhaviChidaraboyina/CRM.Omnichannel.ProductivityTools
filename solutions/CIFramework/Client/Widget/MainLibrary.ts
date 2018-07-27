@@ -25,106 +25,197 @@ namespace Microsoft.CIFramework
 		reportUsage(initialize.name + "Executed successfully in " + (Date.now() - startTime) + " Ms");
 	}
 
+	function sendMessage<T>(funcName: string, payload: postMessageNamespace.IExternalRequestMessageType, isEvent: boolean, noTimeout?: boolean) : Promise<T>{
+		let startTime = Date.now();
+
+		return new Promise<T>((resolve, reject) => {
+			//domains contains the domains this widget can talk to , which is the CRM instance, so passing that as target origin.
+			return postMessage.postMsg(targetWindow, payload, domains[domains.length - 1], false, noTimeout)
+				.then((result: Map<string, any>) => {
+					if (result && (!isNullOrUndefined(result.get(Constants.value)))) {
+						reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));
+						return resolve(result.get(Constants.value));
+					}
+					else {
+						reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));
+						return resolve(null);
+					}
+				},
+				(error: Map<string, any>) => {
+					reportError(funcName + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
+					return reject(error.get(Constants.message));
+				});
+		});
+	}
+
 	/**
-	 * API to set/reset value of ClickToAct for a widget. Only when set to true, the widget's clickToAct handlers will be invoked
+	 * API to set/reset value of ClickToAct for a widget
+	 *
+	 * @param value. When set to 'true', invoke the registered 'onclicktoact' handler.
+	 *
 	*/
 	export function setClickToAct(value : boolean) : Promise<void>
 	{
-		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.setClickToAct,
 			messageData: new Map().set(Constants.value, value)
 		}
-		
-		return new Promise<void>((resolve, reject) =>
-		{
-			//domains contains the domains this widgte can talk to , which is the CRM instance, so passing that as target origin.
-			return postMessage.postMsg(targetWindow, payload, domains[domains.length-1], false)
-			.then(() =>
-			{
-				reportUsage(setClickToAct.name + "Executed successfully in " + (Date.now() - startTime) + " Ms");
-				return resolve();
-			},
-			(error: Map<string, any>) => 
-			{
-				reportError(setClickToAct.name + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
-				return reject(error.get(Constants.message));
-			});
-		});
+
+		return sendMessage<void>(setClickToAct.name, payload, false);
 	}
 
 	/**
-	 * API to search records with respect to query parameters and open the respective record  
+	 * API to open the create form for given entity with data passed in pre-populated
+	 * Invokes the api Xrm.Navigation.openForm(entityFormOptions, formParameters)
+	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openform
+	 *
+	 * @param entityFormOptions. A JSON string encoding the entityFormOptions parameter of
+	 * the openForm API
+	 * @param entityFormParameters. A JSON string encoding the formParameters parameter
+	 * of the openForm API
+	 *
+	 * returns a boolean Promise: 'true' if openForm API succeeded and 'false' otherwise
+	*/
+	export function openForm(entityFormOptions: string, entityFormParameters?: string): Promise<boolean> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.openForm,
+			messageData: new Map().set(Constants.entityFormOptions, entityFormOptions).set(Constants.entityFormParameters, entityFormParameters)
+		}
+
+		return sendMessage<boolean>(openForm.name, payload, false, true);
+	}
+
+	/**
+	 * API to retrieve a given entity record based on entityId and oData query
+	 * Invokes the api Xrm.WebApi.retrieveRecord(entityName, entityId, options)
+	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-webapi/retrieverecord
+	 *
+	 * @param entityName. The entity name to retrieve
+	 * @param entityId. The CRM record Id to retrieve
+	 *
+	 * @returns a map Promise: the result of the retrieve operation depending upon the query
+	*/
+	export function retrieveRecord(entityName: string, entityId: string, query?: string): Promise<Map<string, any>> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.retrieveRecord,
+			messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.queryParameters, query)
+		}
+
+		return sendMessage<Map<string, any>>(retrieveRecord.name, payload, false);
+	}
+
+	/**
+	 * API to update a given entity record based on entityId
+	 * Invokes the api Xrm.WebApi.updateRecord(entityName, entityId, data)
+	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-webapi/updaterecord
+	 *
+	 * @param entityName. The entity name to retrieve
+	 * @param entityId. The CRM record Id to retrieve
+	 * @param data. A map  object representing the modified data to be set
+	 *
+	 * @returns a map Promise: the result of the update operation
+	*/
+	export function updateRecord(entityName: string, entityId: string, data: Map<string, any>): Promise<Map<string, any>> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.updateRecord,
+			messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.value, data)
+		}
+
+		return sendMessage<Map<string, any>>(retrieveRecord.name, payload, false);
+	}
+
+	/**
+	 * API to create a new entity record based on passed data
+	 * Invokes the api Xrm.WebApi.createRecord(entityName, data)
+	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-webapi/createrecord
+	 *
+	 * @param entityName. The entity name to retrieve
+	 * @param data. A map  object representing the entity record data to be set
+	 *
+	 * @returns a map Promise: the result of the create operation
+	*/
+	export function createRecord(entityName: string, data: Map<string, any>): Promise<Map<string, any>> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.createRecord,
+			messageData: new Map().set(Constants.entityName, entityName).set(Constants.value, data)
+		}
+
+		return sendMessage<Map<string, any>>(createRecord.name, payload, false);
+	}
+
+	/**
+	 * API to delete an entity record based on entityId
+	 * Invokes the api Xrm.WebApi.deleteRecord(entityName, entityId)
+	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-webapi/deleterecord
+	 *
+	 * @param entityName. The entity name to delete
+	 * @param entityId. The record id to delete
+	 *
+	 * @returns a map Promise: the result of the delete operation
+	*/
+	export function deleteRecord(entityName: string, entityId: string): Promise<Map<string, any>> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.deleteRecord,
+			messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId)
+		}
+
+		return sendMessage<Map<string, any>>(deleteRecord.name, payload, false);
+	}
+
+	/**
+	 * API to search records with respect to query parameters and open the respective record
+	 *
+	 * @param entityName. The name of the entity to search
+	 * @param queryParameter. An oData query string as supported by Dynamics CRM defining the search
+	 * @param searchOnly. When set to 'false', if the search record was a single record, open the record on the main UCI page
+	 * When set to 'true' return the search results but don't perform any navigation on the main page
+	 *
+	 * Returns a map Promise representing the search results as per the search query
 	*/
 	export function searchAndOpenRecords(entityName: string, queryParmeters: string, searchOnly: boolean) : Promise<Map<string, any>>
 	{
-		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: searchOnly ? MessageType.search : MessageType.searchAndOpenRecords,
 			messageData: new Map().set(Constants.entityName, entityName).set(Constants.queryParameters, queryParmeters).set(Constants.searchOnly, searchOnly)
 		}
-		return new Promise<Map<string, any>>((resolve, reject) =>
-		{
-			//domains contains the domains this widgte can talk to , which is the CRM instance, so passing that as target origin.
-			return postMessage.postMsg(targetWindow, payload, domains[domains.length - 1], false)
-			.then((result: Map<string, any>) =>
-			{
-				if(result && (!isNullOrUndefined(result.get(Constants.value))))
-				{
-					reportUsage(searchAndOpenRecords.name + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result.get(Constants.value)));
-					return resolve(result.get(Constants.value));
-				}
-				else
-				{
-					reportUsage(searchAndOpenRecords.name + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));
-					return resolve(null);
-				}
-			},
-			(error:  Map<string, any>) => 
-			{
-				reportError(searchAndOpenRecords.name + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
-				return reject(error.get(Constants.message));
-			});
-		});
+		return sendMessage<Map<string, any>>(searchAndOpenRecords.name, payload, false);
 	}
 
 	/**
 	 * API to get the Panel State
+	 *
+	 * @returns a Promise: '0' for minimized and '1' for docked mode
 	*/
 	export function getMode() : Promise<number>
 	{
-		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getMode,
 			messageData: new Map()
 		}
 
-		return new Promise<number>((resolve, reject) =>
-		{
-			return postMessage.postMsg(targetWindow, payload, domains[domains.length-1], false)
-			.then((result: Map<string, any>) =>
-			{
-				if(result && (!isNullOrUndefined(result.get(Constants.value))))
-				{
-					reportUsage(getMode.name + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + result.get(Constants.value));
-					return resolve(result.get(Constants.value));
-				}
-				else
-				{
-					reportUsage(getMode.name + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));
-					return resolve(null);
-				}
-			},
-			(error: Map<string, any>) => 
-			{
-				reportError(getMode.name + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
-				return reject(error.get(Constants.message));
-			});
-		});
+		return sendMessage<number>(getMode.name, payload, false);
 	}
 
 	/**
-	 * API to get the Panel width 
+	 * API to get the current main UCI page details
+	 *
+	 * @returns a Promise: map with available details of the current page
+	 *  'appid', 'pagetype', 'record-id' (if available), 'clientUrl', 'appUrl',
+	 * 'orgLcid', 'orgUniqueName', 'userId', 'userLcid', 'username'
+	*/
+	export function getEnvironment(): Promise<Map<string, any>> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getEnvironment,
+			messageData: new Map()
+		}
+
+		return sendMessage<Map<string, any>>(getEnvironment.name, payload, false);
+	}
+
+	/**
+	 * API to get the Panel width
+	 *
+	 * @returns a Promise with the panel width
 	*/
 	export function getWidth() : Promise<number>
 	{
@@ -134,32 +225,13 @@ namespace Microsoft.CIFramework
 			messageData: new Map()
 		}
 
-		return new Promise<number>((resolve, reject) =>
-		{
-			return postMessage.postMsg(targetWindow, payload, domains[domains.length-1], false)
-			.then((result: Map<string, any>) =>
-			{
-				if(result && (!isNullOrUndefined(result.get(Constants.value))))
-				{
-					reportUsage(getWidth.name + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + result.get(Constants.value));
-					return resolve(result.get(Constants.value));
-				}
-				else
-				{
-					reportUsage(getWidth.name + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));
-					return resolve(null);
-				}
-			},
-			(error: Map<string, any>) => 
-			{
-				reportError(getWidth.name + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
-				return reject(error.get(Constants.message));
-			});
-		});
+		return sendMessage<number>(getWidth.name, payload, false);
 	}
 
 	/**
 	 * API to set the Panel width
+	 *
+	 * @params value. The panel width to be set in pixels
 	*/
 	export function setWidth(value : number) : Promise<void>
 	{
@@ -169,24 +241,13 @@ namespace Microsoft.CIFramework
 			messageData: new Map().set(Constants.value, value)
 		}
 
-		return new Promise<void>((resolve, reject) =>
-		{
-			return postMessage.postMsg(targetWindow, payload, domains[domains.length-1], false)
-			.then(() =>
-			{
-				reportUsage(setWidth.name + "Executed successfully in " + (Date.now() - startTime) + " Ms");
-				return resolve();
-			},
-			(error: Map<string, any>) => 
-			{
-				reportError(setWidth.name + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
-				return reject(error.get(Constants.message));
-			});
-		});
+		return sendMessage<void>(setWidth.name, payload, false);
 	}
 
 	/**
-	 * API to set the Panel State 
+	 * API to set the Panel State
+	 *
+	 * @params value. The mode to set on the panel, '0' - minimized, '1' - docked
 	*/
 	export function setMode(value : number) : Promise<void>
 	{
@@ -196,24 +257,13 @@ namespace Microsoft.CIFramework
 			messageData: new Map().set(Constants.value, value)
 		}
 
-		return new Promise<void>((resolve, reject) =>
-		{
-			return postMessage.postMsg(targetWindow, payload, domains[domains.length-1], false)
-			.then(() =>
-			{
-				reportUsage(setMode.name + "Executed successfully in " + (Date.now() - startTime) + " Ms");
-				return resolve();
-			},
-			(error: Map<string, any>) => 
-			{
-				reportError(setMode.name + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
-				return reject(error.get(Constants.message));
-			});
-		});
+		return sendMessage<void>(setMode.name, payload, false);
 	}
 
 	/**
 	 * API to check the whether clickToAct functionality is enabled or not
+	 *
+	 * @returns a boolean Promise on whether ClickToAct is currently enabled
 	*/
 	export function getClickToAct() : Promise<boolean>
 	{
@@ -223,47 +273,33 @@ namespace Microsoft.CIFramework
 			messageData: new Map()
 		}
 
-		return new Promise<boolean>((resolve, reject) =>
-		{
-			return postMessage.postMsg(targetWindow, payload, domains[domains.length-1], false)
-			.then((result: Map<string, any>) =>
-			{
-				if(result && (!isNullOrUndefined(result.get(Constants.value))))
-				{
-					reportUsage(getClickToAct.name + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + result.get(Constants.value));
-					return resolve(result.get(Constants.value));
-				}
-				else
-				{
-					reportUsage(getClickToAct.name + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));
-					return resolve(null);
-				}
-			},
-			(error: Map<string, any>) => 
-			{
-				reportError(getClickToAct.name + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
-				return reject(error.get(Constants.message));
-			});
-		});
+		return sendMessage<boolean>(getClickToAct.name, payload, false);
 	}
 
 	/**
-	 * API to add the subscriber for the onClickToAct event
+	 * API to add the subscriber for the named event
+	 *
+	 * @params eventName. The event for which to set the handler. The currently supported events are
+	 *  'onclicktoact' - when a click-to-act enabled field is clicked by the agent
+	 *  'onmodechanged' - when the panel mode is manually toggled between 'minimized' and 'docked'
+	 *  'onsizechanged' - when the panel size is manually changed by dragging
+	 *  'onpagenavigate' - triggered before a navigation event occurs on the main page
+	 * @params func. The handler function to invoke on the event
 	 */
-	export function addHandler(eventName: string, func: ((eventData:Map<string, any>) => Promise<Map<string, any>>))
+	export function addHandler(eventName: string, handlerFunction: ((eventData:Map<string, any>) => Promise<Map<string, any>>))
 	{
 		let startTime = Date.now();
-		postMessage.addHandler(eventName, func);
+		postMessage.addHandler(eventName, handlerFunction);
 		reportUsage(addHandler.name + " executed successfully in "+ (Date.now() - startTime));
 	}
 
 	/**
 	 * API to remove the subscriber
 	 */
-	export function removeHandler(eventName: string, func: ((eventData:Map<string, any>) => Promise<Map<string, any>>))
+	export function removeHandler(eventName: string, handlerFunction: ((eventData:Map<string, any>) => Promise<Map<string, any>>))
 	{
 		let startTime = Date.now();
-		postMessage.removeHandler(eventName, func);
+		postMessage.removeHandler(eventName, handlerFunction);
 		reportUsage(removeHandler.name + " executed successfully in "+ (Date.now() - startTime));
 	}
 

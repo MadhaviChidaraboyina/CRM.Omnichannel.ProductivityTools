@@ -1,11 +1,7 @@
 {
-    "files": [
-		"../../Packages/Crm.ClientApiTypings.1.0.713/clientapi/XrmClientApi.d.ts",
-		"../../Packages/Crm.ClientApiTypings.1.0.713/clientapi/XrmClientApiDeprecated.d.ts",
-		"../../references/internal/TypeDefinitions/XrmClientApi/XrmUCIAndClassicWeb.d.ts",		
-		"../../references/internal/TypeDefinitions/XrmClientApi/XrmClientApiGap.d.ts",
-		"../../references/internal/TypeDefinitions/XrmClientApi/XrmClassicWebClientApi.d.ts",
-		"../../references/internal/TypeDefinitions/XrmClientApi/XrmClientApiCommand.d.ts",
+	"files": [
+		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApiInternal.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApi.d.ts",
 		"../../references/external/TypeDefinitions/microsoft.ajax.d.ts",
 		"../../references/external/TypeDefinitions/lib.es6.d.ts",
 		"../../references/external/TypeDefinitions/whatwg-fetch.d.ts"
@@ -13,10 +9,10 @@
 	"exclude": [
 		"node_modules"
 	],
-  "compilerOptions": {
-    "noImplicitAny": true,
-    "noEmitOnError": true,
-    "target": "es6",    
-    "skipLibCheck": true
-  }
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"noEmitOnError": true,
+		"target": "es6",
+		"skipLibCheck": true
+	}
 }
