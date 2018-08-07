@@ -2,7 +2,7 @@
 <AppModule>
      <UniqueName>msdyn_ChannelIntegrationFrameworkApp</UniqueName>
      <IntroducedVersion>1.0</IntroducedVersion>
-     <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+     <WebResourceId>25665EDF-3868-4378-9852-E2B59B1BDD9F</WebResourceId>
      <FormFactor>1</FormFactor>
      <ClientType>4</ClientType>
      <AppModuleComponents>
@@ -16,4 +16,7 @@
      <LocalizedNames>
        <LocalizedName description="Channel Integration Framework" languagecode="1033" />
      </LocalizedNames>
+  <Descriptions>
+    <Description description="Bring your communication channels and build immersive experience with Dynamics 365"  languagecode="1033"/>
+  </Descriptions>
 </AppModule>

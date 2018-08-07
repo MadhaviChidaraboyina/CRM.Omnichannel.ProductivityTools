@@ -492,4 +492,8 @@
     <value>Channel Provider Configuration</value>
     <comment>Title for Area 'New_Area' Group 'New_Group'</comment>
   </data>
+  <data name="15062:Description,msdyn_ChannelIntegrationFrameworkDesc" xml:space="preserve">
+    <value>Bring your communication channels and build immersive experience with Dynamics 365</value>
+    <comment>'msdyn_ChannelIntegrationFrameworkDesc':Description of the solution and app</comment>
+  </data>
 </root>

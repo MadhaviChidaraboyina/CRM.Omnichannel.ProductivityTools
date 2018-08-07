@@ -5,7 +5,9 @@
     <LocalizedNames>
       <LocalizedName description="Channel API Integration Framework" languagecode="1033" />
     </LocalizedNames>
-    <Descriptions />
+    <Descriptions>
+      <Description description="Bring your communication channels and build immersive experience with Dynamics 365" languagecode="1033"/>
+    </Descriptions>
     <Version>1.0.0.0</Version>
     <Managed>2</Managed>
     <Publisher>
@@ -89,6 +91,7 @@
       <RootComponent type="66" schemaName="MscrmControls.Service.CIProvider.CustomMultiSelectControl" />
       <RootComponent type="66" schemaName="MscrmControls.FieldControls.AgentClickToActControl" />
       <RootComponent type="80" schemaName="msdyn_ChannelIntegrationFrameworkApp" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_CIFIcon.svg" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>
