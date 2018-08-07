@@ -12,7 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <RestorePackages>true</RestorePackages>
     <SolutionName>CIFramework</SolutionName>
-    <PDPackageName>ChannelIntegrationFramework.PackageDeployer</PDPackageName>
+    <PDPackageName>CIFramework.PackageDeployer</PDPackageName>
     <DllName>$(AssemblyName).dll</DllName>
     <DropFolder>$(SolutionName)PVS</DropFolder>
     <BuildPVS>true</BuildPVS>
