@@ -38,7 +38,7 @@
 1110 gl-ES
 2052 zh-CN
 2070 pt-PT
-2074 sr-Latn-RS
+2074 sr-Latn-CS
 3076 zh-HK
 3082 es-ES
-3098 sr-Cyrl-RS
+3098 sr-Cyrl-CS
