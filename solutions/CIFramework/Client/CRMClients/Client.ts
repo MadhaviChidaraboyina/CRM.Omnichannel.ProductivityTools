@@ -34,7 +34,12 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for opening a new or an existing form page
 	*/
-	type OpenFormFunction = (entityFormOptions: string, entityFormParameters?: string) => Promise<Map<string, any>>;
+    type OpenFormFunction = (entityFormOptions: string, entityFormParameters?: string) => Promise<Map<string, any>>;
+
+    /**
+	 * Func type for loading all widgets.
+	*/
+    type LoadWidgetsFunction = (ciProviders: Map<string, CIProvider>) => Promise<Map<string, boolean|string>>;
 
 	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
@@ -61,7 +66,7 @@ namespace Microsoft.CIFramework.Internal
 
 		getUserID: GetContextFunction;
 
-		loadWidget: SetSettingFunction;
+		loadWidgets: LoadWidgetsFunction;
 
 		retrieveMultipleAndOpenRecords: RetrieveMultipleAndOpenFunction;
 

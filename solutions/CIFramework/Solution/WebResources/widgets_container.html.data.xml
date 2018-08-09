@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+  <WebResourceId>{C986C76D-0E5F-49BB-9AFC-6D9B73A667FD}</WebResourceId>
+  <Name>widgets_container.html</Name>
+  <DisplayName>widgets_container.html</DisplayName>
+  <WebResourceType>1</WebResourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>0</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/widgets_containerC986C76D-0E5F-49BB-9AFC-6D9B73A667FD</FileName>
+</WebResource>
+
+

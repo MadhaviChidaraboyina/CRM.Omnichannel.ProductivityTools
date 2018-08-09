@@ -150,17 +150,34 @@ namespace Microsoft.CIFramework.Internal
 			return Xrm.Utility.getGlobalContext().userSettings.userId;
 		}
 
-		client.loadWidget = (url: string, title: string): void =>
+        client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> =>
 		{
 			const options: XrmClientApi.PanelOptions = {
 				defaultCollapsedBehavior: false,
 				onSizeChangeHandler: client.sizeChanged,
 				onStateChangeHandler: client.modeChanged
 			};
-			Xrm.Panel.loadPanel(url, title, options).then(function () {
-					Xrm.Navigation.addOnPreNavigation(client.navigationHandler);
-				}
-			);
+            return new Promise<Map<string, boolean | string>>((resolve, reject) => {
+                return Xrm.Panel.loadPanel("/webresources/widgets_container.html", "Widgets", options).then(function () {
+                    console.log("Panel loaded; setting up widgets now");
+                    Xrm.Navigation.addOnPreNavigation(client.navigationHandler);
+                    let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+                    let status: Map<string, boolean | string> = new Map<string, boolean | string>();
+                    widgetIFrame.onload = function () {                        
+                        for (let [key, value] of ciProviders) {
+                            //TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
+                            var iFrame = document.createElement("iframe");
+                            iFrame.src = key;
+                            iFrame.title = value.label;     //We may need to figure out where to put this title based on UX
+                            var doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
+                            doc.body.appendChild(iFrame);
+                            status.set(value.name, true);
+                        }
+                    }
+                    return resolve(status);
+                }
+                );
+            });
 		}
 
 		client.openForm = (entityFormOptions: string, entityFormParameters?: string): Promise<Map<string, any>> =>

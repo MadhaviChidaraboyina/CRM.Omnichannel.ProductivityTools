@@ -53,7 +53,7 @@ namespace Microsoft.CIFramework.Internal
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		const widgetCount = 1;
 		const appId = top.location.search.split('appid=')[1].split('&')[0];
-		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$orderby=msdyn_sortorder asc").then(
+		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=contains(" + Constants.appSelectorFieldName + ",'"+ appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
 		(result : any) => {
 
 			if (result && result.entities) {
@@ -68,31 +68,26 @@ namespace Microsoft.CIFramework.Internal
 					state.ciProviders = new Map<string, any>();
 					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
 
-					for (var x of result.entities) {
-						var apps = x[Constants.appSelectorFieldName];
-						var currRoles = x[Constants.roleSelectorFieldName];
-						var foundProvider = false;
-						currRoles = (currRoles != null) ? currRoles.split(";") : null;
-						for (var role of roles) {
-							if (apps && apps.indexOf(appId) !== -1) {
-								if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
-									continue;
-								}
-								state.ciProviders.set(x[Constants.landingUrl], new CIProvider(x));
-								foundProvider = true;
-							}
-						}
-						if (foundProvider) break;
-					}
+                    for (var x of result.entities) {
+                        var currRoles = x[Constants.roleSelectorFieldName];
+                        currRoles = (currRoles != null) ? currRoles.split(";") : null;
+                        for (var role of roles) {
+                            if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
+                                continue;
+                            }
+                            state.ciProviders.set(x[Constants.landingUrl], new CIProvider(x));
+                        }
+                    }
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(state.ciProviders.keys()), apiHandlers);
 					// load the widgets onto client. 
-					for (let [key, value] of state.ciProviders) {
+					/*for (let [key, value] of state.ciProviders) {
 						state.client.loadWidget(key, value.label);
-					}
+					}*/
+                    state.client.loadWidgets(state.ciProviders).then(function (widgetLoadStatus) {
+                        reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime) + "ms for providers: " + mapToString(widgetLoadStatus));
+                    });
 				}
-
-				reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
 			},
 			(error: Error) => {
 				reportError(initializeCI.name + "Execution failed  in" + (Date.now() - startTime) + "ms with error as " + error.message);
