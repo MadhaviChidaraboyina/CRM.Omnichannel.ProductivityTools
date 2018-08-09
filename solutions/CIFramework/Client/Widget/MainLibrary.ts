@@ -13,7 +13,7 @@ namespace Microsoft.CIFramework
 	function initialize()
 	{
 		let startTime = Date.now();
-		targetWindow = window.parent;
+        targetWindow = window.top;
 		var anchorElement = document.createElement("a");
 		anchorElement.href = document.referrer;
 		domains.push(anchorElement.protocol + "//" + anchorElement.hostname);
@@ -30,7 +30,7 @@ namespace Microsoft.CIFramework
 
 		return new Promise<T>((resolve, reject) => {
 			//domains contains the domains this widget can talk to , which is the CRM instance, so passing that as target origin.
-			return postMessage.postMsg(targetWindow, payload, domains[domains.length - 1], false, noTimeout)
+            return postMessage.postMsg(targetWindow, payload, domains[domains.length - 1], false, noTimeout)
 				.then((result: Map<string, any>) => {
 					if (result && (!isNullOrUndefined(result.get(Constants.value)))) {
 						reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));

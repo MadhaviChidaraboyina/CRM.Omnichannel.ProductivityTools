@@ -162,16 +162,22 @@ namespace Microsoft.CIFramework.Internal
                     console.log("Panel loaded; setting up widgets now");
                     Xrm.Navigation.addOnPreNavigation(client.navigationHandler);
                     let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+                    let targetWindow = window.parent;
                     let status: Map<string, boolean | string> = new Map<string, boolean | string>();
+                    let heightRatio: number = 100 / ciProviders.size;
                     widgetIFrame.onload = function () {                        
                         for (let [key, value] of ciProviders) {
                             //TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
                             var iFrame = document.createElement("iframe");
                             iFrame.src = key;
+                            iFrame.height = heightRatio.toFixed(0) + "%";
+                            iFrame.width = "100%";
                             iFrame.title = value.label;     //We may need to figure out where to put this title based on UX
+                            value.hostIFrame = iFrame;
                             var doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
+                            //widgetIFrame.contentWindow["CIFTargetWindow"] = targetWindow;
                             doc.body.appendChild(iFrame);
-                            status.set(value.name, true);
+                            status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
                         }
                     }
                     return resolve(status);

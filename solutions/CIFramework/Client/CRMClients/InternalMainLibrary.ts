@@ -105,15 +105,18 @@ namespace Microsoft.CIFramework.Internal
 			messageData: data
 		}
 
-		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
-		for (let [key, value] of state.ciProviders) {
+		//let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
+        for (let [key, value] of state.ciProviders) {
+            if (!value.hostIFrame) {
+                continue;
+            }
 			if (eventCheck) {
 				if (eventCheck(value)) {
-					state.messageLibrary.postMsg(widgetIFrame.contentWindow, payload, key, true, noTimeout);
+					state.messageLibrary.postMsg(value.hostIFrame.contentWindow, payload, key, true, noTimeout);
 				}
 			}
 			else {
-				state.messageLibrary.postMsg(widgetIFrame.contentWindow, payload, key, true, noTimeout);
+				state.messageLibrary.postMsg(value.hostIFrame.contentWindow, payload, key, true, noTimeout);
 			}
 		}
 		reportUsage(reportMessage);

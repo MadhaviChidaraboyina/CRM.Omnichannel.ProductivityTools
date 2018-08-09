@@ -36,7 +36,8 @@ namespace Microsoft.CIFramework.Internal
 		readonly label : string;					// Label of the Widget
 		readonly widgetHeight : number; 	// Height of the widget Panel
 		readonly widgetWidth : number;	//Width of the widget Panel
-		clickToAct : boolean;		//Boolean flag to enable or disable Click to act functionality , it can be changed through setClickToAct API
+        clickToAct: boolean;		//Boolean flag to enable or disable Click to act functionality , it can be changed through setClickToAct API
+        hostIFrame: HTMLIFrameElement;  //The iFrame hosting this widget
 		constructor(x : XrmClientApi.WebApi.Entity)
 		{
 			this.name = x[Constants.name];
@@ -44,7 +45,8 @@ namespace Microsoft.CIFramework.Internal
 			this.label = x[Constants.label];
 			this.widgetHeight = x[Constants.widgetHeight];
 			this.widgetWidth = x[Constants.widgetWidth];
-			this.clickToAct = x[Constants.clickToActAttributeName];
+            this.clickToAct = x[Constants.clickToActAttributeName];
+            this.hostIFrame = null;
 		}
 	}
 }

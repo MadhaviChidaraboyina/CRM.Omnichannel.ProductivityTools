@@ -52,6 +52,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 	{
 		return new Map().set(message, errorMessage);
 	}
+
 }
 
 //export { };
