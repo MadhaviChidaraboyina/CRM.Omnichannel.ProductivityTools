@@ -129,4 +129,8 @@
     <value>Связаться с указанным агентом</value>
     <comment>Contact the Provided Agent</comment>
   </data>
+  <data name="CC_ChannelCommunicationControl_Name" xml:space="preserve">
+    <value>Элемент управления связью по каналу</value>
+    <comment>Name of the Agent Click To Act Control</comment>
+  </data>
 </root>

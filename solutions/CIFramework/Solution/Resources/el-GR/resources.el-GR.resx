@@ -152,13 +152,13 @@
     <value>Μοναδικό αναγνωριστικό για τον οργανισμό</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'organization_msdyn_ciprovider'</comment>
   </data>
+  <data name="15062:Description,ChannelAPIIntegrationFramework" xml:space="preserve">
+    <value>Bring your communication channels and build immersive experience with Dynamics 365</value>
+    <comment> 'ChannelAPIIntegrationFramework' : Description for Solution</comment>
+  </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Πλαίσιο ενοποίησης API καναλιού</value>
@@ -468,9 +468,9 @@
     <value>Πάροχος καναλιού</value>
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
-  <data name="80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
-    <value>Channel Integration Framework</value>
-    <comment> 'msdyn_ChannelIntegrationFrameworkApp' : LocalizedName for AppModule</comment>
+  <data name="80:Description,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
+    <value>Bring your communication channels and build immersive experience with Dynamics 365</value>
+    <comment> 'msdyn_ChannelIntegrationFrameworkApp' : Description for AppModule</comment>
   </data>
   <data name="80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
     <value>Πλαίσιο ενοποίησης καναλιού</value>
@@ -479,10 +479,6 @@
   <data name="81:LocalizedName,msdyn_ChannelIntegrationFrameworkSitemap" xml:space="preserve">
     <value>Πλαίσιο ενοποίησης καναλιού</value>
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
-  </data>
-  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
-    <value>Provider</value>
-    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>Πάροχος</value>
