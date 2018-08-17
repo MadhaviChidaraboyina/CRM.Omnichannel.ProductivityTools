@@ -129,4 +129,8 @@
     <value>Võta määratud agendiga ühendust</value>
     <comment>Contact the Provided Agent</comment>
   </data>
+  <data name="CC_ChannelCommunicationControl_Name" xml:space="preserve">
+    <value>Kanali side juhtelement</value>
+    <comment>Name of the Agent Click To Act Control</comment>
+  </data>
 </root>

@@ -129,4 +129,8 @@
     <value>Poñerse en contacto co axente proporcionado</value>
     <comment>Contact the Provided Agent</comment>
   </data>
+  <data name="CC_ChannelCommunicationControl_Name" xml:space="preserve">
+    <value>Control de comunicación da canle</value>
+    <comment>Name of the Agent Click To Act Control</comment>
+  </data>
 </root>

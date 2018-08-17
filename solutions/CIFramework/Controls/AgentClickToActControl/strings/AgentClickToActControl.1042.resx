@@ -129,4 +129,8 @@
     <value>제공된 에이전트에 연락</value>
     <comment>Contact the Provided Agent</comment>
   </data>
+  <data name="CC_ChannelCommunicationControl_Name" xml:space="preserve">
+    <value>채널 통신 제어</value>
+    <comment>Name of the Agent Click To Act Control</comment>
+  </data>
 </root>
