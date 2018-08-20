@@ -5,6 +5,7 @@
 		"Client.ts",
 		"State.ts",
 		"WebClient.ts",
+		"WidgetIFrame.ts",
 		"InternalMainLibrary.ts",
 		"../PostMsgWrapper.ts",
 		"../CIFrameworkConstants.ts"

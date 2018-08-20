@@ -92,8 +92,8 @@ namespace Microsoft.CIFramework.Internal
 		export const value = "value";
 		export const clickToActAttributeName = "msdyn_clicktoact";
 		export const systemUserLogicalName = "systemuser";
-        export const appSelectorFieldName = "msdyn_appselector";
-        export const sortOrderFieldName = "msdyn_sortorder";
+		export const appSelectorFieldName = "msdyn_appselector";
+		export const sortOrderFieldName = "msdyn_sortorder";
 		export const roleSelectorFieldName = "msdyn_roleselector";
 		export const providerOdataQuery = "?$select=fullname&$expand=msdyn_ciprovider_systemuser_membership($filter=statecode eq 0;$orderby=msdyn_sortorder asc,createdon asc;$top={0})";
 		export const providerNavigationProperty = "msdyn_ciprovider_systemuser_membership";
@@ -124,6 +124,8 @@ namespace Microsoft.CIFramework.Internal
 		export const UserLcid = "userLcid";
 		export const UserName = "username";
 		export const DefaultCountryCode = "defaultCountryCode";
+		export const MinimizedHeight = 34;
+		export const DefaultFullWidth = 100;
 	}
 
 	/**

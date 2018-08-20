@@ -67,26 +67,37 @@ namespace Microsoft.CIFramework.Internal
 					// populate ciProviders in state.
 					state.ciProviders = new Map<string, any>();
 					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
-
-                    for (var x of result.entities) {
-                        var currRoles = x[Constants.roleSelectorFieldName];
-                        currRoles = (currRoles != null) ? currRoles.split(";") : null;
-                        for (var role of roles) {
-                            if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
-                                continue;
-                            }
-                            state.ciProviders.set(x[Constants.landingUrl], new CIProvider(x));
-                        }
-                    }
+					var defaultMode = state.client.getWidgetMode() as number;
+					var doneFirst: boolean = false;
+					for (var x of result.entities) {
+						var currRoles = x[Constants.roleSelectorFieldName];
+						currRoles = (currRoles != null) ? currRoles.split(";") : null;
+						for (var role of roles) {
+							if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
+								continue;
+							}
+							var provider: CIProvider = new CIProvider(x);
+							if (!doneFirst) {
+								doneFirst = true;
+								provider.currentMode = defaultMode; //First widget is set to the mode panel is in
+							}
+							else {
+								provider.currentMode = 0;   //All other widgets start minimized
+							}
+							state.ciProviders.set(x[Constants.landingUrl], provider);
+							break;
+						}
+					}
+					//updateProviderSizes();
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(state.ciProviders.keys()), apiHandlers);
 					// load the widgets onto client. 
 					/*for (let [key, value] of state.ciProviders) {
 						state.client.loadWidget(key, value.label);
 					}*/
-                    state.client.loadWidgets(state.ciProviders).then(function (widgetLoadStatus) {
-                        reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime) + "ms for providers: " + mapToString(widgetLoadStatus));
-                    });
+					state.client.loadWidgets(state.ciProviders).then(function (widgetLoadStatus) {
+						reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime) + "ms for providers: " + mapToString(widgetLoadStatus));
+					});
 				}
 			},
 			(error: Error) => {
@@ -106,17 +117,19 @@ namespace Microsoft.CIFramework.Internal
 		}
 
 		//let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
-        for (let [key, value] of state.ciProviders) {
-            if (!value.hostIFrame) {
-                continue;
-            }
+		for (let [key, value] of state.ciProviders) {
+			if (!value.getContainer()) {
+				continue;
+			}
 			if (eventCheck) {
-				if (eventCheck(value)) {
-					state.messageLibrary.postMsg(value.hostIFrame.contentWindow, payload, key, true, noTimeout);
+				if (eventCheck(value)) {    //TODO: different types of widgets may be interested in different types of events. Need to enhance 'clickToAct' setting. Also which events should be suppressed for minimized widgets?
+					value.setMode(data.get(Constants.value) as number);
+					state.messageLibrary.postMsg(value.getContainer().getContentWindow(), payload, key, true, noTimeout);
 				}
 			}
 			else {
-				state.messageLibrary.postMsg(value.hostIFrame.contentWindow, payload, key, true, noTimeout);
+				value.setMode(data.get(Constants.value) as number);
+				state.messageLibrary.postMsg(value.getContainer().getContentWindow(), payload, key, true, noTimeout);
 			}
 		}
 		reportUsage(reportMessage);
@@ -146,6 +159,13 @@ namespace Microsoft.CIFramework.Internal
 		let provider = state.ciProviders.get(parameters.get(Constants.originURL));
 		return (provider && provider.providerId ? [provider, null] : [null, "Associated Provider record not found"]);
 	}
+
+	function updateProviderSizes(): void {
+		var width = state.client.getWidgetWidth() as number;
+		for (let [key, value] of state.ciProviders) {
+			value.setWidth(width);
+		}
+	}
 	/**
 	 * The handler called by the client for a size-changed event. The client is
 	 * expected to pass a CustomEvent event object with details of the event
@@ -156,6 +176,7 @@ namespace Microsoft.CIFramework.Internal
 	 * is a number representing the new panel width as passed by the client
 	 */
 	function onSizeChanged(event: CustomEvent): void {
+		updateProviderSizes();
 		raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked");
 	}
 
@@ -169,6 +190,7 @@ namespace Microsoft.CIFramework.Internal
 	 * is the numeric value of the current mode as passed by the client
 	 */
 	function onModeChanged(event: CustomEvent): void {
+		updateProviderSizes();  //TODO: global modeChanged event: this shouldn't be passed to all widgets. WHo should it be passed to?
 		raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked");
 	}
 
@@ -237,13 +259,13 @@ namespace Microsoft.CIFramework.Internal
 	 * setMode API's client side handler that post message library will invoke. 
 	*/
 	export function setMode(parameters: Map<string, any>) : Promise<Map<string, any>>
-	{
+	{   //TODO: This should be reinterpreted to 'only the widget's mode changed'
 		const [provider, errMsg] = getProvider(parameters, [Constants.value]);
 		if(provider)
 		{
-			state.client.setWidgetMode(null, parameters.get(Constants.value) as number);
+			//state.client.setWidgetMode(null, parameters.get(Constants.value) as number);
 			reportUsage(setMode.name + "Executed successfully");
-			return Promise.resolve(new Map());
+			return provider.setMode(parameters.get(Constants.value) as number);
 		}
 		else
 		{
@@ -255,13 +277,15 @@ namespace Microsoft.CIFramework.Internal
 	 * setWidth API's client side handler that post message library will invoke. 
 	*/
 	export function setWidth(parameters: Map<string, any>) : Promise<Map<string, any>>
-	{
+	{   //TODO: This should be reinterpreted to 'only the widget's width changed. Should we even allow this in multi-widget scenario?
+		//TODO: if the new width is greater than panel width, what do we do?
 		const [provider, errMsg] = getProvider(parameters, [Constants.value]);
 		if(provider)
 		{
-			state.client.setWidgetWidth(null, parameters.get(Constants.value) as number);
+			//state.client.setWidgetWidth(null, parameters.get(Constants.value) as number);
+			//TODO: calculate max width across all widgets and set panel to it
 			reportUsage(setWidth.name + "Executed successfully");
-			return Promise.resolve(new Map());
+			return provider.setWidth(parameters.get(Constants.value) as number);
 		}
 		else
 		{
@@ -292,8 +316,8 @@ namespace Microsoft.CIFramework.Internal
 		const [provider, errMsg] = getProvider(parameters); // if there are multiple widgets then we need this to get the value of particular widget
 		if(provider)
 		{
-			reportUsage(getMode.name + "Executed successfully");
-			return Promise.resolve(new Map().set(Constants.value, state.client.getWidgetMode()));
+			//reportUsage(getMode.name + "Executed successfully");
+			return Promise.resolve(new Map().set(Constants.value, provider.getMode()));
 		}
 		else
 		{
@@ -310,7 +334,7 @@ namespace Microsoft.CIFramework.Internal
 		if(provider)
 		{
 			reportUsage(getWidth.name + "Executed successfully");
-			return Promise.resolve(new Map().set(Constants.value, state.client.getWidgetWidth()));
+			return Promise.resolve(new Map().set(Constants.value, Number(provider.getWidth())));
 		}
 		else
 		{

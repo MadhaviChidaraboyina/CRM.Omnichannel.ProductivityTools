@@ -4,6 +4,7 @@
 
 /// <reference path="Client.ts" />
 /// <reference path="Constants.ts" />
+/// <reference path="WidgetIFrame.ts" />
 
 namespace Microsoft.CIFramework.Internal
 {
@@ -150,40 +151,39 @@ namespace Microsoft.CIFramework.Internal
 			return Xrm.Utility.getGlobalContext().userSettings.userId;
 		}
 
-        client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> =>
+		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> =>
 		{
 			const options: XrmClientApi.PanelOptions = {
 				defaultCollapsedBehavior: false,
 				onSizeChangeHandler: client.sizeChanged,
 				onStateChangeHandler: client.modeChanged
 			};
-            return new Promise<Map<string, boolean | string>>((resolve, reject) => {
-                return Xrm.Panel.loadPanel("/webresources/widgets_container.html", "Widgets", options).then(function () {
-                    console.log("Panel loaded; setting up widgets now");
-                    Xrm.Navigation.addOnPreNavigation(client.navigationHandler);
-                    let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
-                    let targetWindow = window.parent;
-                    let status: Map<string, boolean | string> = new Map<string, boolean | string>();
-                    let heightRatio: number = 100 / ciProviders.size;
-                    widgetIFrame.onload = function () {                        
-                        for (let [key, value] of ciProviders) {
-                            //TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
-                            var iFrame = document.createElement("iframe");
-                            iFrame.src = key;
-                            iFrame.height = heightRatio.toFixed(0) + "%";
-                            iFrame.width = "100%";
-                            iFrame.title = value.label;     //We may need to figure out where to put this title based on UX
-                            value.hostIFrame = iFrame;
-                            var doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
-                            //widgetIFrame.contentWindow["CIFTargetWindow"] = targetWindow;
-                            doc.body.appendChild(iFrame);
-                            status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
-                        }
-                    }
-                    return resolve(status);
-                }
-                );
-            });
+			return new Promise<Map<string, boolean | string>>((resolve, reject) => {
+				return Xrm.Panel.loadPanel("/webresources/widgets_container.html", "", options).then(function () {
+					Xrm.Navigation.addOnPreNavigation(client.navigationHandler);
+					let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+					let targetWindow = window.parent;
+					let status: Map<string, boolean | string> = new Map<string, boolean | string>();
+					let widgetHeight: number = widgetIFrame.clientHeight / ciProviders.size;   //TODO: Figure out correct units to use
+					widgetIFrame.onload = function () {
+						var doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
+						for (let [key, value] of ciProviders) {
+							//TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
+							var iFrame = document.createElement("iframe");
+							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
+							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
+							//iFrame.setAttribute("data-base_url", Xrm.Utility.getGlobalContext().getClientUrl());
+							iFrame.src = key;
+							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
+							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetIFrame.clientWidth, widgetHeight);
+							doc.body.appendChild(iFrame);
+							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
+						}
+					}
+					return resolve(status);
+				}
+				);
+			});
 		}
 
 		client.openForm = (entityFormOptions: string, entityFormParameters?: string): Promise<Map<string, any>> =>
