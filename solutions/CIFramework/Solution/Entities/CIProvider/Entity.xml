@@ -776,10 +776,10 @@
 						<Description description="Select the Roles for the Channel" languagecode="1033" />
 					</Descriptions>
 				</attribute>
-				<attribute PhysicalName="msdyn_CIProviderAPIVersion">
+				<attribute PhysicalName="msdyn_ciproviderapiversion">
 					<Type>picklist</Type>
-					<Name>msdyn_CIProviderAPIVersion</Name>
-					<LogicalName>msdyn_CIProviderAPIVersion</LogicalName>
+					<Name>msdyn_ciproviderapiversion</Name>
+					<LogicalName>msdyn_ciproviderapiversion</LogicalName>
 					<RequiredLevel>none</RequiredLevel>
 					<DisplayMask>ValidForForm|ValidForGrid|ValidForAdvancedFind</DisplayMask>
 					<ImeMode>auto</ImeMode>
@@ -801,7 +801,7 @@
 					<CanModifyGlobalFilterSettings>0</CanModifyGlobalFilterSettings>
 					<CanModifyIsSortableSettings>0</CanModifyIsSortableSettings>
 					<AppDefaultValue>0</AppDefaultValue>
-					<optionset Name="msdyn_CIProvider_API_Version">
+					<optionset Name="msdyn_ciproviderapiversion">
 						<OptionSetType>picklist</OptionSetType>
 						<IntroducedVersion>1.0</IntroducedVersion>
 						<IsCustomizable>0</IsCustomizable>
