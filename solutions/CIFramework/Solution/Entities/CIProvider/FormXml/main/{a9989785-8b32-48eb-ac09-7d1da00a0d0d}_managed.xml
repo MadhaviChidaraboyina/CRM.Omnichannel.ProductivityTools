@@ -43,7 +43,7 @@
 										</row>
 										<row>
 											<cell id="{2b3d7a63-0066-41d0-939c-12bad22bb227}" showlabel="true" locklevel="0">
-												<control id="msdyn_CIProviderAPIVersion" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="msdyn_CIProviderAPIVersion" disabled="false" />
+												<control id="msdyn_ciproviderapiversion" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="msdyn_ciproviderapiversion" disabled="false" />
 											</cell>
 										</row>
 									</rows>

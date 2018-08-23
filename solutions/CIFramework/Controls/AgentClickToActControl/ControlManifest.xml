@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-	<control namespace="MscrmControls.FieldControls" constructor="AgentClickToActControl" version="1.0.0" display-name-key="CC_CIProviderAgentClickToActControl_Name" control-type="virtual">
+	<control namespace="MscrmControls.FieldControls" constructor="AgentClickToActControl" version="1.0.0" display-name-key="CC_ChannelCommunicationControl_Name" control-type="virtual">
 		<modes>
 		</modes>
 		<property name="elementUniqueNames" display-name-key="CC_Field_Multi" description-key="CC_Field_Multi_Desc" of-type="SingleLine.Phone" of-type-group="Text" usage="bound" required="true" hidden="true" />

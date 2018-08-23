@@ -129,4 +129,8 @@
     <value>Susisiekti su pateiktu agentu</value>
     <comment>Contact the Provided Agent</comment>
   </data>
+  <data name="CC_ChannelCommunicationControl_Name" xml:space="preserve">
+    <value>Kanalo ryšio valdiklis</value>
+    <comment>Name of the Agent Click To Act Control</comment>
+  </data>
 </root>

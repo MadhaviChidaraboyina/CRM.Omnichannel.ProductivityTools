@@ -129,4 +129,8 @@
     <value>入力したエージェントに連絡する</value>
     <comment>Contact the Provided Agent</comment>
   </data>
+  <data name="CC_ChannelCommunicationControl_Name" xml:space="preserve">
+    <value>チャネル通信コントロール</value>
+    <comment>Name of the Agent Click To Act Control</comment>
+  </data>
 </root>
