@@ -164,7 +164,9 @@ namespace Microsoft.CIFramework.Internal
 					let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 					let targetWindow = window.parent;
 					let status: Map<string, boolean | string> = new Map<string, boolean | string>();
-					let widgetHeight: number = widgetIFrame.clientHeight / ciProviders.size;   //TODO: Figure out correct units to use
+					let fracHeightForActiveWidget: number = 0.6;
+					let widgetHeight: number = widgetIFrame.clientHeight * fracHeightForActiveWidget;
+					let minimizedHeight: number = (widgetIFrame.clientHeight * (1-fracHeightForActiveWidget))/ ciProviders.size;   // TODO: Figure out correct units to use
 					widgetIFrame.onload = function () {
 						var doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
 						for (let [key, value] of ciProviders) {
@@ -175,7 +177,7 @@ namespace Microsoft.CIFramework.Internal
 							//iFrame.setAttribute("data-base_url", Xrm.Utility.getGlobalContext().getClientUrl());
 							iFrame.src = key;
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
-							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetIFrame.clientWidth, widgetHeight);
+							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetIFrame.clientWidth, widgetHeight, minimizedHeight);
 							doc.body.appendChild(iFrame);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
 						}

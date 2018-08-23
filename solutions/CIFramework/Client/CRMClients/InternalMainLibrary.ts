@@ -68,7 +68,7 @@ namespace Microsoft.CIFramework.Internal
 					state.ciProviders = new Map<string, any>();
 					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
 					var defaultMode = state.client.getWidgetMode() as number;
-					var doneFirst: boolean = false;
+					var first: string = null;
 					for (var x of result.entities) {
 						var currRoles = x[Constants.roleSelectorFieldName];
 						currRoles = (currRoles != null) ? currRoles.split(";") : null;
@@ -76,15 +76,19 @@ namespace Microsoft.CIFramework.Internal
 							if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
 								continue;
 							}
-							var provider: CIProvider = new CIProvider(x);
-							if (!doneFirst) {
+							var provider: CIProvider = new CIProvider(x, state);
+							/*if (!doneFirst) {
 								doneFirst = true;
 								provider.currentMode = defaultMode; //First widget is set to the mode panel is in
 							}
 							else {
 								provider.currentMode = 0;   //All other widgets start minimized
-							}
+								//provider.currentMode = defaultMode;   //DEBUG only:
+							}*/
 							state.ciProviders.set(x[Constants.landingUrl], provider);
+							if (!first) {
+								first = x[Constants.landingUrl];
+							}
 							break;
 						}
 					}
@@ -98,6 +102,9 @@ namespace Microsoft.CIFramework.Internal
 					state.client.loadWidgets(state.ciProviders).then(function (widgetLoadStatus) {
 						reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime) + "ms for providers: " + mapToString(widgetLoadStatus));
 					});
+					if (first) {
+						state.sessionInfo.setActiveProvider(state.ciProviders.get(first));
+					}
 				}
 			},
 			(error: Error) => {
@@ -109,7 +116,7 @@ namespace Microsoft.CIFramework.Internal
 	}
 
 	/*Utility function to raise events registered for the framework*/
-	function raiseEvent(data: Map<string, any>, messageType: string, reportMessage: string, eventCheck?: (value: any) => boolean, noTimeout?: boolean): void {
+	function raiseEvent(data: Map<string, any>, messageType: string, reportMessage: string): void {
 		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: messageType,
@@ -118,29 +125,30 @@ namespace Microsoft.CIFramework.Internal
 
 		//let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
 		for (let [key, value] of state.ciProviders) {
-			if (!value.getContainer()) {
+			/*if (!value.getContainer()) {
 				continue;
 			}
 			if (eventCheck) {
 				if (eventCheck(value)) {    //TODO: different types of widgets may be interested in different types of events. Need to enhance 'clickToAct' setting. Also which events should be suppressed for minimized widgets?
-					value.setMode(data.get(Constants.value) as number);
-					state.messageLibrary.postMsg(value.getContainer().getContentWindow(), payload, key, true, noTimeout);
+					value.raiseEvent(data, messageType);
+					//state.messageLibrary.postMsg(value.getContainer().getContentWindow(), payload, key, true, noTimeout);
 				}
 			}
-			else {
-				value.setMode(data.get(Constants.value) as number);
-				state.messageLibrary.postMsg(value.getContainer().getContentWindow(), payload, key, true, noTimeout);
-			}
+			else {*/
+				//value.setMode(data.get(Constants.value) as number);
+				value.raiseEvent(data, messageType);
+				//state.messageLibrary.postMsg(value.getContainer().getContentWindow(), payload, key, true, noTimeout);
+			//}
 		}
 		reportUsage(reportMessage);
 	}
 
-	function clickToActCheck(value: any): boolean {
+	/*function clickToActCheck(value: any): boolean {
 		if (!isNullOrUndefined(value) && value.clickToAct) {
 			return true;
 		}
 		return false;
-	}
+	}*/
 
 	function getProvider(parameters: Map<string, any>, reqParams?: string[]): [CIProvider, string] {
 		if (!parameters) {
@@ -347,7 +355,7 @@ namespace Microsoft.CIFramework.Internal
 	*/
 	export function onClickToAct(event: CustomEvent) : void
 	{
-		raiseEvent(buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event), clickToActCheck);
+		raiseEvent(buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event));
 	}
 
 	export function openForm(parameters: Map<string, any>): Promise<Map<string, any>> {
