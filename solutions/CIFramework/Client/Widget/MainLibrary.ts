@@ -30,7 +30,7 @@ namespace Microsoft.CIFramework
 			//To-Do Log the Message that more than one domains are present
 		}
 		postMessage = new postMessageNamespace.postMsgWrapper(window, domains, null);
-		reportUsage(initialize.name + "Executed successfully in " + (Date.now() - startTime) + " Ms");
+		Internal.reportUsage(initialize.name + "Executed successfully in " + (Date.now() - startTime) + " Ms");
 	}
 
 	function sendMessage<T>(funcName: string, payload: postMessageNamespace.IExternalRequestMessageType, isEvent: boolean, noTimeout?: boolean) : Promise<T>{
@@ -41,16 +41,16 @@ namespace Microsoft.CIFramework
 			return postMessage.postMsg(targetWindow, payload, domains[domains.length - 1], false, noTimeout)
 				.then((result: Map<string, any>) => {
 					if (result && (!isNullOrUndefined(result.get(Constants.value)))) {
-						reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));
+						Internal.reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + Internal.mapToString(result));
 						return resolve(result.get(Constants.value));
 					}
 					else {
-						reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));
+						Internal.reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + Internal.mapToString(result));
 						return resolve(null);
 					}
 				},
 				(error: Map<string, any>) => {
-					reportError(funcName + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
+					Internal.reportError(funcName + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
 					return reject(error.get(Constants.message));
 				});
 		});
@@ -298,7 +298,7 @@ namespace Microsoft.CIFramework
 	{
 		let startTime = Date.now();
 		postMessage.addHandler(eventName, handlerFunction);
-		reportUsage(addHandler.name + " executed successfully in "+ (Date.now() - startTime));
+		Internal.reportUsage(addHandler.name + " executed successfully in "+ (Date.now() - startTime));
 	}
 
 	/**
@@ -308,7 +308,7 @@ namespace Microsoft.CIFramework
 	{
 		let startTime = Date.now();
 		postMessage.removeHandler(eventName, handlerFunction);
-		reportUsage(removeHandler.name + " executed successfully in "+ (Date.now() - startTime));
+		Internal.reportUsage(removeHandler.name + " executed successfully in "+ (Date.now() - startTime));
 	}
 
 	window.onload = () => {

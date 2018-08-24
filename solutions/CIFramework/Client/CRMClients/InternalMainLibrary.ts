@@ -6,6 +6,7 @@
 /// <reference path="Constants.ts" />
 /// <reference path="State.ts" />
 /// <reference path="../TelemetryHelper.ts" />
+/// <reference path="aria-webjs-sdk-1.6.2.d.ts" />
 
 namespace Microsoft.CIFramework.Internal
 {
@@ -35,7 +36,8 @@ namespace Microsoft.CIFramework.Internal
 	let state = {} as IState;
 	const listenerWindow = window.parent;
 
-	declare var Xrm : any;
+	declare var Xrm: any;
+	declare var appId: string;
 
 	/**
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
@@ -46,13 +48,14 @@ namespace Microsoft.CIFramework.Internal
 		if (Xrm.Utility.getGlobalContext().client.getClient() === "UnifiedServiceDesk") {
 			return false;
 		}
-		let startTime = Date.now();
+		let startTime = new Date();
 		// set the client implementation.
 		state.client = setClient(clientType);
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		const widgetCount = 1;
-		const appId = top.location.search.split('appid=')[1].split('&')[0];
+		appId = top.location.search.split('appid=')[1].split('&')[0];
+
 		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$orderby=msdyn_sortorder asc").then(
 		(result : any) => {
 
@@ -68,20 +71,32 @@ namespace Microsoft.CIFramework.Internal
 					state.ciProviders = new Map<string, any>();
 					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
 
+					var environmentInfo: any = [];
+					environmentInfo["orgId"] = Xrm.Utility.getGlobalContext().organizationSettings.organizationId;
+					environmentInfo["orgName"] = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
+					environmentInfo["crmVersion"] = Xrm.Utility.getGlobalContext().getVersion();
+					environmentInfo["appId"] = appId;
+
 					for (var x of result.entities) {
 						var apps = x[Constants.appSelectorFieldName];
 						var currRoles = x[Constants.roleSelectorFieldName];
+
 						var foundProvider = false;
+
 						currRoles = (currRoles != null) ? currRoles.split(";") : null;
 						for (var role of roles) {
 							if (apps && apps.indexOf(appId) !== -1) {
 								if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
 									continue;
 								}
-								state.ciProviders.set(x[Constants.landingUrl], new CIProvider(x));
+								state.ciProviders.set(x[Constants.landingUrl], new CIProvider(x, environmentInfo));
+
+								var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], x[Constants.SortOrder], appId, false, null);
+								setUsageData(usageData);
 								foundProvider = true;
 							}
 						}
+						
 						if (foundProvider) break;
 					}
 					// initialize and set post message wrapper.
@@ -91,11 +106,10 @@ namespace Microsoft.CIFramework.Internal
 						state.client.loadWidget(key, value.label);
 					}
 				}
-
-				reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
+				reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
 			},
 			(error: Error) => {
-				reportError(initializeCI.name + "Execution failed  in" + (Date.now() - startTime) + "ms with error as " + error.message);
+				reportError(initializeCI.name + "Execution failed  in" + (Date.now() - startTime.getTime()) + "ms with error as " + error.message);
 			}
 		);
 
@@ -131,22 +145,47 @@ namespace Microsoft.CIFramework.Internal
 		return false;
 	}
 
-	function getProvider(parameters: Map<string, any>, reqParams?: string[]): [CIProvider, string] {
+	function getProvider(parameters: Map<string, any>, reqParams?: string[]): [CIProvider, IErrorHandler] {
 		if (!parameters) {
-			return [null, "Parameter list cant be empty"];
+			let error = {} as IErrorHandler;
+			error.reportTime = new Date().toUTCString();
+			error.errorMsg = "Parameter list cannot be empty";
+			error.errorType = errorTypes.InvalidParams;
+			error.sourceFunc = getProvider.name;
+			return [null, error];
 		}
 		if (!parameters.get(Constants.originURL)) {
-			return [null, "Paramter:url cant be empty"];
+			let error = {} as IErrorHandler;
+			error.reportTime = new Date().toUTCString();
+			error.errorMsg = "Paramter:url cannot be empty";
+			error.errorType = errorTypes.InvalidParams;
+			error.sourceFunc = getProvider.name;
+			return [null, error];
 		}
 		if (reqParams) {
 			reqParams.forEach(function (param) {
 				if (isNullOrUndefined(parameters.get(param))) {
-					return [null, "Parameter: " + param + " cant be empty"];
+					let error = {} as IErrorHandler;
+					error.reportTime = new Date().toUTCString();
+					error.errorMsg = "Parameter: " + param + " cannot be empty";
+					error.errorType = errorTypes.InvalidParams;
+					error.sourceFunc = getProvider.name;
+					return [null, error];
 				}
 			});
 		}
 		let provider = state.ciProviders.get(parameters.get(Constants.originURL));
-		return (provider && provider.providerId ? [provider, null] : [null, "Associated Provider record not found"]);
+		if (provider && provider.providerId) {
+			return [provider, null];
+		}
+		else {
+			let error = {} as IErrorHandler;
+			error.reportTime = new Date().toUTCString();
+			error.errorMsg = "Associated Provider record not found";
+			error.errorType = errorTypes.InvalidParams;
+			error.sourceFunc = getProvider.name;
+			return [null, error];
+		}
 	}
 	/**
 	 * The handler called by the client for a size-changed event. The client is
@@ -191,18 +230,22 @@ namespace Microsoft.CIFramework.Internal
 	*/
 	export function setClickToAct(parameters: Map<string, any>) : Promise<Map<string,any>>
 	{
-		const [provider, errMsg] = getProvider(parameters, [Constants.value]);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.value]);
 		if(provider)
 		{
 			return new Promise<Map<string, any>>((resolve, reject) =>
 			{
-				return state.client.updateRecord(Constants.providerLogicalName, provider.providerId,
-										new Map<string, any>([ [Constants.clickToActAttributeName, parameters.get(Constants.value) as boolean] ])).then(
+				return state.client.updateRecord(Constants.providerLogicalName, provider.providerId, telemetryData,
+					new Map<string, any>([[Constants.clickToActAttributeName, parameters.get(Constants.value) as boolean]])).then(
 				(result: Map<string, any>) =>
 				{
 					provider.clickToAct = parameters.get(Constants.value) as boolean;
 					state.ciProviders.set(parameters.get(Constants.originURL), provider);
-					reportUsage(setClickToAct.name + "Executed successfully with result as " + mapToString(result));
+
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setClickToAct.name, telemetryData);
+					setPerfData(perfData);
 					return resolve(result);
 				},
 				(error: Map<string, any>) =>
@@ -213,7 +256,7 @@ namespace Microsoft.CIFramework.Internal
 		}
 		else
 		{
-			return rejectWithErrorMessage(errMsg, setClickToAct.name);
+			return rejectWithErrorMessage(errorData.errorMsg, setClickToAct.name, appId, true, errorData);
 		}
 	}
 
@@ -222,17 +265,19 @@ namespace Microsoft.CIFramework.Internal
 	*/
 	export function getClickToAct(parameters: Map<string, any>) : Promise<Map<string, any>>
 	{
-		const [provider, errMsg] = getProvider(parameters);
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
 		if(provider)
 		{
-			reportUsage(getClickToAct.name + "Executed successfully with result as " + provider.clickToAct);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getClickToAct.name);
+			setPerfData(perfData);
+
 			return Promise.resolve(new Map().set(Constants.value, provider.clickToAct));
 		}
 		else
 		{
-			return rejectWithErrorMessage(errMsg, getClickToAct.name);
+			return rejectWithErrorMessage(errorData.errorMsg, getClickToAct.name, appId, true, errorData);
 		}
-
 	}
 
 	/**
@@ -240,16 +285,20 @@ namespace Microsoft.CIFramework.Internal
 	*/
 	export function setMode(parameters: Map<string, any>) : Promise<Map<string, any>>
 	{
-		const [provider, errMsg] = getProvider(parameters, [Constants.value]);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.value]);
 		if(provider)
 		{
-			state.client.setWidgetMode(null, parameters.get(Constants.value) as number);
-			reportUsage(setMode.name + "Executed successfully");
+			state.client.setWidgetMode(null, parameters.get(Constants.value) as number, telemetryData);
+
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setMode.name, telemetryData);
+			setPerfData(perfData);
 			return Promise.resolve(new Map());
 		}
 		else
 		{
-			return rejectWithErrorMessage(errMsg, setMode.name);
+			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
 		}
 	}
 
@@ -258,16 +307,20 @@ namespace Microsoft.CIFramework.Internal
 	*/
 	export function setWidth(parameters: Map<string, any>) : Promise<Map<string, any>>
 	{
-		const [provider, errMsg] = getProvider(parameters, [Constants.value]);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.value]);
 		if(provider)
 		{
-			state.client.setWidgetWidth(null, parameters.get(Constants.value) as number);
-			reportUsage(setWidth.name + "Executed successfully");
+			state.client.setWidgetWidth(null, parameters.get(Constants.value) as number, telemetryData);
+
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setWidth.name, telemetryData);
+			setPerfData(perfData);
 			return Promise.resolve(new Map());
 		}
 		else
 		{
-			return rejectWithErrorMessage(errMsg, setWidth.name);
+			return rejectWithErrorMessage(errorData.errorMsg, setWidth.name, appId, true, errorData);
 		}
 	}
 
@@ -275,14 +328,18 @@ namespace Microsoft.CIFramework.Internal
 	 * getEnvironment API's client side handler that post message library will invoke. 
 	*/
 	export function getEnvironment(parameters: Map<string, any>): Promise<Map<string, any>> {
-		const [provider, errMsg] = getProvider(parameters); // if there are multiple widgets then we need this to get the value of particular widget 
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters); // if there are multiple widgets then we need this to get the value of particular widget 
 		if (provider) {
-			let data = state.client.getEnvironment();
-			reportUsage(getEnvironment.name + "Executed successfully: " + JSON.stringify(data));
+			let data = state.client.getEnvironment(telemetryData);
+
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getEnvironment.name, telemetryData);
+			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, data));
 		}
 		else {
-			return rejectWithErrorMessage(errMsg, getEnvironment.name);
+			return rejectWithErrorMessage(errorData.errorMsg, getEnvironment.name, appId, true, errorData);
 		}
 	}
 
@@ -291,15 +348,19 @@ namespace Microsoft.CIFramework.Internal
 	*/
 	export function getMode(parameters: Map<string, any>) : Promise<Map<string, any>>
 	{
-		const [provider, errMsg] = getProvider(parameters); // if there are multiple widgets then we need this to get the value of particular widget
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters); // if there are multiple widgets then we need this to get the value of particular widget
 		if(provider)
 		{
-			reportUsage(getMode.name + "Executed successfully");
-			return Promise.resolve(new Map().set(Constants.value, state.client.getWidgetMode()));
+			let mode = state.client.getWidgetMode(telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getMode.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, mode));
 		}
 		else
 		{
-			return rejectWithErrorMessage(errMsg, getMode.name);
+			return rejectWithErrorMessage(errorData.errorMsg, getMode.name, appId, true, errorData);
 		}
 	}
 
@@ -308,15 +369,19 @@ namespace Microsoft.CIFramework.Internal
 	*/
 	export function getWidth(parameters: Map<string, any>) : Promise<Map<string, any>>
 	{
-		const [provider, errMsg] = getProvider(parameters);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
 		if(provider)
 		{
-			reportUsage(getWidth.name + "Executed successfully");
-			return Promise.resolve(new Map().set(Constants.value, state.client.getWidgetWidth()));
+			let width = state.client.getWidgetWidth(telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getWidth.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, width));
 		}
 		else
 		{
-			return rejectWithErrorMessage(errMsg, getWidth.name);
+			return rejectWithErrorMessage(errorData.errorMsg, getWidth.name, appId, true, errorData);
 		}
 	}
 
@@ -328,125 +393,147 @@ namespace Microsoft.CIFramework.Internal
 		raiseEvent(buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event), clickToActCheck);
 	}
 
+	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
 	export function openForm(parameters: Map<string, any>): Promise<Map<string, any>> {
-		const [provider, errMsg] = getProvider(parameters, [Constants.entityFormOptions, Constants.entityFormParameters]);
+		const [provider, errorData] = getProvider(parameters, [Constants.entityFormOptions, Constants.entityFormParameters]);
 		if (provider) {
 			return state.client.openForm(parameters.get(Constants.entityFormOptions), parameters.get(Constants.entityFormParameters));
 		}
 		else {
-			return rejectWithErrorMessage(errMsg, openForm.name);
+			return rejectWithErrorMessage(errorData.errorMsg, openForm.name, appId, true, errorData);
 		}
 	}
 
 	export function retrieveRecord(parameters: Map<string, any>): Promise<Map<string, any>> {
-		const [provider, errMsg] = getProvider(parameters, [Constants.entityName, Constants.entityId, Constants.queryParameters]);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName, Constants.entityId, Constants.queryParameters]);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				state.client.retrieveRecord(parameters.get(Constants.entityName), parameters.get(Constants.entityId), parameters.get(Constants.queryParameters)).then(
+				state.client.retrieveRecord(parameters.get(Constants.entityName), parameters.get(Constants.entityId), telemetryData, parameters.get(Constants.queryParameters)).then(
 					function (res) {
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), retrieveRecord.name, telemetryData);
+						setPerfData(perfData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
-					(error: Error) => {
-						return rejectWithErrorMessage(error.message, retrieveRecord.name);
+					(error: IErrorHandler) => {
+						return rejectWithErrorMessage(error.errorMsg, retrieveRecord.name, appId, true, error);
 					}
 				);
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errMsg, retrieveRecord.name);
+			return rejectWithErrorMessage(errorData.errorMsg, retrieveRecord.name, appId, true, errorData);
 		}
 	}
 
 	export function updateRecord(parameters: Map<string, any>): Promise<Map<string, any>> {
-		const [provider, errMsg] = getProvider(parameters, [Constants.entityName, Constants.entityId, Constants.value]);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName, Constants.entityId, Constants.value]);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				state.client.updateRecord(parameters.get(Constants.entityName), parameters.get(Constants.entityId), parameters.get(Constants.value)).then(
+				state.client.updateRecord(parameters.get(Constants.entityName), parameters.get(Constants.entityId), telemetryData, parameters.get(Constants.value)).then(
 					function (res) {
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), updateRecord.name, telemetryData);
+						setPerfData(perfData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
-					(error: Error) => {
-						return rejectWithErrorMessage(error.message, updateRecord.name);
+					(error: IErrorHandler) => {
+						return rejectWithErrorMessage(error.errorMsg, updateRecord.name, appId, true, error);
 					}
 				);
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errMsg, updateRecord.name);
+			return rejectWithErrorMessage(errorData.errorMsg, updateRecord.name, appId, true, errorData);
 		}
 	}
 
 	export function createRecord(parameters: Map<string, any>): Promise<Map<string, any>> {
-		const [provider, errMsg] = getProvider(parameters, [Constants.entityName, Constants.value]);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName, Constants.value]);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				state.client.createRecord(parameters.get(Constants.entityName), null, parameters.get(Constants.value)).then(
+				state.client.createRecord(parameters.get(Constants.entityName), null, telemetryData, parameters.get(Constants.value)).then(
 					function (res) {
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), createRecord.name, telemetryData);
+						setPerfData(perfData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
-					(error: Error) => {
-						return rejectWithErrorMessage(error.message, createRecord.name);
+					(error: IErrorHandler) => {
+						return rejectWithErrorMessage(error.errorMsg, createRecord.name, appId, true, error);
 					}
 				);
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errMsg, createRecord.name);
+			return rejectWithErrorMessage(errorData.errorMsg, createRecord.name, appId, true, errorData);
 		}
 	}
 
 	export function deleteRecord(parameters: Map<string, any>): Promise<Map<string, any>> {
-		const [provider, errMsg] = getProvider(parameters, [Constants.entityName, Constants.entityId]);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName, Constants.entityId]);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				state.client.deleteRecord(parameters.get(Constants.entityName), parameters.get(Constants.entityId)).then(
+				state.client.deleteRecord(parameters.get(Constants.entityName), parameters.get(Constants.entityId), telemetryData).then(
 					function (res) {
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), deleteRecord.name, telemetryData);
+						setPerfData(perfData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
-					(error: Error) => {
-						return rejectWithErrorMessage(error.message, deleteRecord.name);
+					(error: IErrorHandler) => {
+						return rejectWithErrorMessage(error.errorMsg, deleteRecord.name, appId, true, error);
 					}
 				);
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errMsg, deleteRecord.name);
+			return rejectWithErrorMessage(errorData.errorMsg, deleteRecord.name, appId, true, errorData);
 		}
 	}
 
 	export function searchAndOpenRecords(parameters: Map<string, any>) : Promise<Map<string,any>>
 	{
-		const [provider, errMsg] = getProvider(parameters);
+		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			return doSearch(parameters, false);
+			return doSearch(parameters, false, searchAndOpenRecords.name);
 		}
 		else {
-			return rejectWithErrorMessage(errMsg, searchAndOpenRecords.name);
+			return rejectWithErrorMessage(errorData.errorMsg, searchAndOpenRecords.name, appId, true, errorData);
 		}
 	}
 
-
-	function doSearch(parameters: Map<string, any>, searchOnly: boolean) : Promise<Map<string,any>>
+	function doSearch(parameters: Map<string, any>, searchOnly: boolean, callerName?: string) : Promise<Map<string,any>>
 	{
-		const [provider, errMsg] = getProvider(parameters, [Constants.entityName, Constants.queryParameters]);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName, Constants.queryParameters]);
 		if(provider)
 		{
-			return state.client.retrieveMultipleAndOpenRecords(parameters.get(Constants.entityName), parameters.get(Constants.queryParameters), searchOnly);
+			let searchResult = state.client.retrieveMultipleAndOpenRecords(parameters.get(Constants.entityName), parameters.get(Constants.queryParameters), searchOnly, telemetryData);
+
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), callerName ? callerName : doSearch.name, telemetryData);
+			setPerfData(perfData);
+			return searchResult;
 		}
 		else
 		{
-			return rejectWithErrorMessage(errMsg, doSearch.name);
+			return rejectWithErrorMessage(errorData.errorMsg, doSearch.name, appId, true, errorData);
 		}
 	}
 
 	export function search(parameters: Map<string, any>) : Promise<Map<string,any>>
 	{
-		const [provider, errMsg] = getProvider(parameters);
+		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			return doSearch(parameters, true);
+			return doSearch(parameters, true, search.name);
 		}
 		else {
-			return rejectWithErrorMessage(errMsg, search.name);
+			return rejectWithErrorMessage(errorData.errorMsg, search.name, appId, true, errorData);
 		}
 	}
 }

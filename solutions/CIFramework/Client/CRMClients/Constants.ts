@@ -15,8 +15,9 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * utility func to create a promise and reject it with the passed error message
 	*/
-	export function rejectWithErrorMessage(errorMessage : string, apiName: string)
+	export function rejectWithErrorMessage(errorMessage: string, apiName: string, appId?: string, isError?: boolean, error?: IErrorHandler)
 	{
+		logFailure(appId, isError, error);
 		reportError(apiName + " failed with error: " + errorMessage);
 		return Promise.reject(createErrorMap(errorMessage, apiName));
 	}
@@ -123,6 +124,9 @@ namespace Microsoft.CIFramework.Internal
 		export const UserLcid = "userLcid";
 		export const UserName = "username";
 		export const DefaultCountryCode = "defaultCountryCode";
+		export const APIVersion = "msdyn_ciproviderapiversion";
+		export const SortOrder = "msdyn_sortorder";
+		export const crmVersion = "crmVersion";
 	}
 
 	/**

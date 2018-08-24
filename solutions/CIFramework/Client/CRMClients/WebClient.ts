@@ -4,6 +4,7 @@
 
 /// <reference path="Client.ts" />
 /// <reference path="Constants.ts" />
+/// <reference path="../TelemetryHelper.ts" />
 
 namespace Microsoft.CIFramework.Internal
 {
@@ -23,7 +24,7 @@ namespace Microsoft.CIFramework.Internal
 			return true;
 		}
 
-		client.createRecord = (entityName: string, entityId?: string, valuesToUpdate?: Map<string, any> | string): Promise<Map<string, any>> => {
+		client.createRecord = (entityName: string, entityId?: string, telemetryData?: Object|any, valuesToUpdate?: Map<string, any> | string): Promise<Map<string, any>> => {
 			if (!valuesToUpdate) {
 				return rejectWithErrorMessage("Need values to create for createRecord", "createRecord");
 			}
@@ -35,9 +36,13 @@ namespace Microsoft.CIFramework.Internal
 				data = valuesToUpdate;
 			}
 			return new Promise<Map<string, any>>((resolve, reject) => {
+				let startTime = new Date();
 				return Xrm.WebApi.createRecord(entityName, buildEntity(data)).then(
 					(result: XrmClientApi.LookupValue) => {
-						return resolve(buildMap(result));
+						let timeTaken = Date.now() - startTime.getTime();
+						let apiName = "Xrm.WebApi.createRecord";
+						logApiData(telemetryData, startTime, timeTaken, apiName);
+						return resolve(buildMap(result)); 
 					},
 					(error: Error) => {
 						return rejectWithErrorMessage(error.message, "createRecord");
@@ -45,7 +50,7 @@ namespace Microsoft.CIFramework.Internal
 			});
 		}
 
-		client.updateRecord =  (entityName: string, entityId: string, valuesToUpdate?: Map<string,any>|string): Promise<Map<string,any>> =>
+		client.updateRecord = (entityName: string, entityId: string, telemetryData?: Object|any, valuesToUpdate?: Map<string, any> | string): Promise<Map<string, any>> =>
 		{
 			if (!valuesToUpdate)
 			{
@@ -62,25 +67,32 @@ namespace Microsoft.CIFramework.Internal
 			}
 			return new Promise<Map<string, any>>((resolve, reject) =>
 			{
+				let startTime = new Date();
 				return Xrm.WebApi.updateRecord(entityName, entityId, buildEntity(data)).then(
-				(result: XrmClientApi.LookupValue) =>
-				{
-					return resolve(buildMap(result));
-				},
-				(error: Error) =>
-				{
-					return rejectWithErrorMessage(error.message, "updateRecord");
-				});
+					(result: XrmClientApi.LookupValue) => {
+						let timeTaken = Date.now() - startTime.getTime();
+						let apiName = "Xrm.WebApi.updateRecord";
+						logApiData(telemetryData, startTime, timeTaken, apiName);
+						return resolve(buildMap(result));
+					},
+					(error: Error) =>
+					{
+						return rejectWithErrorMessage(error.message, "updateRecord");
+					});
 			});
 		}
 
-		client.retrieveRecord = (entityName: string, entityId: string, query?: string): Promise<Map<string,any>> =>
+		client.retrieveRecord = (entityName: string, entityId: string, telemetryData?: Object|any, query?: string): Promise<Map<string,any>> =>
 		{
 			return new Promise<Map<string, any>>((resolve, reject) =>
 			{
+				let startTime = new Date();
 				return Xrm.WebApi.retrieveRecord(entityName, entityId, query).then(
 					(result: XrmClientApi.WebApi.Entity) =>
 					{
+						let timeTaken = Date.now() - startTime.getTime();
+						let apiName = "Xrm.WebApi.updateRecord";
+						logApiData(telemetryData, startTime, timeTaken, apiName);
 						return resolve(buildMap(result));
 					},
 					(error: Error) =>
@@ -88,13 +100,17 @@ namespace Microsoft.CIFramework.Internal
 						return rejectWithErrorMessage(error.message, "retrieveRecord");
 					});
 			});
-			 
+
 		}
 
-		client.deleteRecord = (entityName: string, entityId: string, valuesToUpdate?: Map<string, any> | string): Promise<Map<string, any>> => {
+		client.deleteRecord = (entityName: string, entityId: string, telemetryData?: Object|any, valuesToUpdate?: Map<string, any> | string): Promise<Map<string, any>> => {
 			return new Promise<Map<string, any>>((resolve, reject) => {
+				let startTime = new Date();
 				return Xrm.WebApi.deleteRecord(entityName, entityId).then(
 					(result: XrmClientApi.LookupValue) => {
+						let timeTaken = Date.now() - startTime.getTime();
+						let apiName = "Xrm.WebApi.deleteRecord"
+						logApiData(telemetryData, startTime, timeTaken, apiName);
 						return resolve(buildMap(result));
 					},
 					(error: Error) => {
@@ -169,6 +185,7 @@ namespace Microsoft.CIFramework.Internal
 			var fp: XrmClientApi.FormParameters = (entityFormParameters ? JSON.parse(entityFormParameters) : null);
 
 			return new Promise<Map<string, any>>((resolve, reject) => {
+
 				return Xrm.Navigation.openForm(fo, fp).then(function (res) {
 					return resolve(new Map<string, any>().set(Constants.value, res));
 				},
@@ -179,10 +196,11 @@ namespace Microsoft.CIFramework.Internal
 			});
 		}
 
-		client.retrieveMultipleAndOpenRecords = (entityName: string, queryParmeters: string, searchOnly: boolean): Promise<Map<string,any>> =>
+		client.retrieveMultipleAndOpenRecords = (entityName: string, queryParmeters: string, searchOnly: boolean, telemetryData?: Object|any): Promise<Map<string, any>> =>
 		{
 			return new Promise<Map<string,any>>((resolve, reject) =>
 			{
+				let retrieveMultipleStartTime = new Date();
 				Xrm.WebApi.retrieveMultipleRecords(entityName, queryParmeters).then(
 					(result: XrmClientApi.WebApi.RetrieveMultipleResponse) =>
 					{
@@ -200,7 +218,10 @@ namespace Microsoft.CIFramework.Internal
 						else {
 							//To-Do handle this after UC dependency to open categorized search page on same window is resolved
 						}
-						return resolve(new Map<string,any>().set(Constants.value, result.entities));
+						let retrieveMultipleTimeTaken = Date.now() - retrieveMultipleStartTime.getTime();
+						let retrieveMultipleApiName = "Xrm.WebApi.retrieveMultipleRecords"
+						logApiData(telemetryData, retrieveMultipleStartTime, retrieveMultipleTimeTaken, retrieveMultipleApiName);
+						return resolve(new Map<string, any>().set(Constants.value, result.entities));
 					},
 					(error: Error) =>
 					{
@@ -209,28 +230,46 @@ namespace Microsoft.CIFramework.Internal
 				);
 			}); 
 		}
-		
-		client.setWidgetMode = (name: string, mode: number): void =>
+
+		client.setWidgetMode = (name: string, mode: number, telemetryData?: Object|any): void =>
 		{
+			let startTime = new Date();
 			Xrm.Panel.state = mode;
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Panel.setState"
+			logApiData(telemetryData, startTime, timeTaken, apiName);
 		}
 
-		client.setWidgetWidth = (name: string, width: number): void =>
+		client.setWidgetWidth = (name: string, width: number, telemetryData?: Object|any): void =>
 		{
+			let startTime = new Date();
 			Xrm.Panel.width = width;
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Panel.setWidth"
+			logApiData(telemetryData, startTime, timeTaken, apiName);
 		}
 
-		client.getWidgetMode = (): number =>
+		client.getWidgetMode = (telemetryData?: Object|any): number =>
 		{
-			return Xrm.Panel.state;
+			let startTime = new Date();
+			let state = Xrm.Panel.state;
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Panel.getState";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+			return state;
 		}
 
-		client.getEnvironment = (): Map<string,any> => {
+		client.getEnvironment = (telemetryData?: Object|any): Map<string, any> => {
 			//Xrm.Page is deprecated hence definition not available in .d.ts
 			//Using eval(...) to avoid compiler error
 			var data: Map<string, any> = new Map<string, any>();
 			try {
+				let startTime = new Date();
 				let pageUrl: any = new URL(eval("window.top.Xrm.Page.getUrl()") as string);
+				let timeTaken = Date.now() - startTime.getTime();
+				let apiName = "Xrm.Page.getUrl"
+				logApiData(telemetryData, startTime, timeTaken, apiName);
+				
 				for (var entry of pageUrl.searchParams.entries()) {
 					data.set(entry[0], entry[1]);
 				}
@@ -238,7 +277,13 @@ namespace Microsoft.CIFramework.Internal
 			catch (error) {
 				//geturl not available on this page
 			}
+
+			let startTime = new Date();
 			var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Utility.getGlobalContext";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
 			data.set(Constants.ClientUrl, context.getClientUrl());
 			data.set(Constants.AppUrl, context.getCurrentAppUrl());
 			data.set(Constants.OrgLcid, context.organizationSettings.languageId);
@@ -249,9 +294,14 @@ namespace Microsoft.CIFramework.Internal
 			return data;
 		}
 
-		client.getWidgetWidth = (): number =>
+		client.getWidgetWidth = (telemetryData?: Object|any): number =>
 		{
-			return Xrm.Panel.width;
+			let startTime = new Date();
+			let width = Xrm.Panel.width;
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Panel.getWidth";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+			return width;
 		}
 
 		return client;

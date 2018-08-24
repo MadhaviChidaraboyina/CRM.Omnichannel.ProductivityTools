@@ -36,8 +36,14 @@ namespace Microsoft.CIFramework.Internal
 		readonly label : string;					// Label of the Widget
 		readonly widgetHeight : number; 	// Height of the widget Panel
 		readonly widgetWidth : number;	//Width of the widget Panel
-		clickToAct : boolean;		//Boolean flag to enable or disable Click to act functionality , it can be changed through setClickToAct API
-		constructor(x : XrmClientApi.WebApi.Entity)
+		readonly sortOrder : string;	//Sort Order
+		readonly apiVersion : string;	//API Version
+		readonly orgId : string;	//Organization ID
+		readonly orgName : string;	//Organization Name
+		readonly crmVersion : string;	//CRM version
+		readonly appId : string;	//App Id
+		clickToAct: boolean;		//Boolean flag to enable or disable Click to act functionality , it can be changed through setClickToAct API
+		constructor(x : XrmClientApi.WebApi.Entity, environmentInfo: any)
 		{
 			this.name = x[Constants.name];
 			this.providerId = x[Constants.providerId];
@@ -45,6 +51,12 @@ namespace Microsoft.CIFramework.Internal
 			this.widgetHeight = x[Constants.widgetHeight];
 			this.widgetWidth = x[Constants.widgetWidth];
 			this.clickToAct = x[Constants.clickToActAttributeName];
+			this.sortOrder = x[Constants.SortOrder];
+			this.apiVersion = x[Constants.APIVersion];
+			this.orgId = environmentInfo["orgId"];
+			this.orgName = environmentInfo["orgName"];
+			this.crmVersion = environmentInfo["crmVersion"];
+			this.appId = environmentInfo["appId"];
 		}
 	}
 }
