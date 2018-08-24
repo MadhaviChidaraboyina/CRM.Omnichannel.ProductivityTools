@@ -3,6 +3,8 @@
  */
 /// <reference path="Constants.ts" />
 /// <reference path="../TelemetryHelper.ts" />
+/// <reference path="../PostmsgWrapper.ts" />
+/// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 
 namespace Microsoft.CIFramework {
     let targetWindow: Window;
@@ -20,6 +22,9 @@ namespace Microsoft.CIFramework {
         }
         postMessage = new postMessageNamespace.postMsgWrapper(window, domains, null);
         reportUsage(initialize.name + "Executed successfully in " + (Date.now() - startTime) + " Ms");
+        window.addEventListener("focus", function () {
+            setMode(1); //TODO: replace 1 with named constant
+        });
     }
 
     function sendMessage<T>(funcName: string, payload: postMessageNamespace.IExternalRequestMessageType, isEvent: boolean, noTimeout?: boolean): Promise<T> {

@@ -20,15 +20,15 @@
 
 
 namespace Microsoft.CIFramework.postMessageNamespace {
-	
+
 	type IDeferred = {
 		timerId: number;
-		promise: Promise<Map<string,any>>;
+		promise: Promise<Map<string, any>>;
 		resolve: <T>(value?: T | Promise<T>) => void;
 		reject: <T>(error?: T) => void;
 	}
 
-	type Handler = (dictionary: Map<string, any>) => Promise<Map<string, any>>;
+	export type Handler = (dictionary: Map<string, any>) => Promise<Map<string, any>>;
 
 	/**
 	 * Creates a new request message type, for message exchange between CI and any widget
@@ -86,27 +86,34 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		 * Function for add handlers separate from the constructor
 		 */
 		addHandler(messageType: string, handler: Handler) {
-			if (this.messageHandlers.has(messageType))
-			{
+			if (this.messageHandlers.has(messageType)) {
 				this.messageHandlers.get(messageType).add(handler);
 			}
-			else
-			{
+			else {
 				this.messageHandlers.set(messageType, new Set().add(handler));
 			}
 		}
 
 		/**
+		 * Function for getting handlers registered for an event
+		 */
+		getHandlers(messageType: string): Set<Handler> {
+			if (this.messageHandlers.has(messageType)) {
+				return this.messageHandlers.get(messageType);
+			}
+			return null;
+		}
+		/**
 		 * Function for remove a particular handler
 		 */
 		removeHandler(messageType: string, handler: Handler) {
-			if(!this.messageHandlers.has(messageType)) {
+			if (!this.messageHandlers.has(messageType)) {
 				return;
 			}
 
 			this.messageHandlers.get(messageType).delete(handler);
 		}
-		 
+
 
 		/**
 		 * Create a new correlation Id to map a promise against it, on the caller side (widget/CI)
@@ -114,7 +121,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		getCorrelationId() {
 			return (Math.random() + 1).toString(36).substring(7);
 		}
-		
+
 		createDeferred(noTimeout?: boolean): IDeferred {
 			const deferred: IDeferred = {
 				promise: null,
@@ -144,10 +151,10 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 				}
 				this.removePromise(deferred);
 				return result;
-				}).catch((result) => {
-					if (deferred.timerId) {
-						clearTimeout(deferred.timerId);
-					}
+			}).catch((result) => {
+				if (deferred.timerId) {
+					clearTimeout(deferred.timerId);
+				}
 				this.removePromise(deferred);
 				throw result;
 			});
@@ -159,13 +166,12 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		 * removes the entry from pendingPromises, given the value for that entry.
 		 * @param deferred deferred object based on which entry should be deleted.
 		 */
-		removePromise(deferred: IDeferred)
-		{
+		removePromise(deferred: IDeferred) {
 			let keyToDelete = null;
-			for(let [key, value] of this.pendingPromises) {
-				if(value == deferred) {
+			for (let [key, value] of this.pendingPromises) {
+				if (value == deferred) {
 					keyToDelete = key;
-					break; 
+					break;
 				}
 			}
 			if (keyToDelete) {
@@ -185,7 +191,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 					messageInternal[messageCorrelationId] = trackingCorrelationId;
 					let deferred = this.createDeferred(noTimeout);
 					this.pendingPromises.set(trackingCorrelationId, deferred);
-					return this.postMsgInternal(receivingWindow, messageInternal,targetOrigin, deferred);
+					return this.postMsgInternal(receivingWindow, messageInternal, targetOrigin, deferred);
 				}
 				else {
 					return this.postMsgInternal(receivingWindow, message, targetOrigin);
@@ -203,19 +209,19 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		 * @param targetOrigin target url
 		 * @param deferred deferred object related with this message
 		 */
-		postMsgInternal(receivingWindow: Window, message: IExternalRequestMessageType, targetOrigin: string, deferred? : IDeferred) {
+		postMsgInternal(receivingWindow: Window, message: IExternalRequestMessageType, targetOrigin: string, deferred?: IDeferred) {
 			let retries = 0;
-			while(true) {
-				try { 
+			while (true) {
+				try {
 					receivingWindow.postMessage(message, targetOrigin);
-					if(deferred) {
+					if (deferred) {
 						return deferred.promise;
 					}
 					return;
 				}
-				catch(error) {
+				catch (error) {
 					// todo - log the error and retries number.
-					if(++retries == retryCount) {
+					if (++retries == retryCount) {
 						return rejectWithErrorMessage("Not able to post the request to receiving window after multiple tries.");
 					}
 				}
@@ -244,26 +250,25 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			let trackingCorrelationId = event.data[messageCorrelationId];
 			let msg: IResponseMessageType;
 
-			if(!trackingCorrelationId) {
+			if (!trackingCorrelationId) {
 				// todo - log message recieved has no correlation id, with origin & msg details
 			}
-			else
-			{
+			else {
 				// correlation id exists, perform validation to send back failure, if needed.
 				let messageData = null;
-				if(!event.origin || event.origin === "*" || !event.source) {
+				if (!event.origin || event.origin === "*" || !event.source) {
 					messageData = createErrorMap("Origin/Source of the message cant be null or all");
 				}
 				if (!whiteListedOrigin) {
 					messageData = createErrorMap("Sender domain is not a recognised or is invalid and hence the message cant be processed");
 				}
-				
-				if(messageData) {
+
+				if (messageData) {
 					msg = {
-							messageOutcome: messageFailure,
-							messageData: messageData,
-							messageCorrelationId: trackingCorrelationId
-						};
+						messageOutcome: messageFailure,
+						messageData: messageData,
+						messageCorrelationId: trackingCorrelationId
+					};
 					return this.sendResponseMsg(event.source, msg, event.origin);
 				}
 			}
@@ -279,18 +284,17 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			if (!pendingPromise) {
 				let data = <IExternalRequestMessageType>event.data;
 				data.messageData.set(originURL, whiteListedOrigin);
-				
+
 				/**
 				 * Iterate through the handler list and invoke them all nd handle if there are no handlers
 				 */
-				if(!this.messageHandlers.get(data.messageType))
-				{
+				if (!this.messageHandlers.get(data.messageType)) {
 					if (trackingCorrelationId) {
 						msg = {
-								messageOutcome: messageSuccess,
-								messageData: createErrorMap("No handlers found to process the request."),
-								messageCorrelationId: trackingCorrelationId
-							};
+							messageOutcome: messageSuccess,
+							messageData: createErrorMap("No handlers found to process the request."),
+							messageCorrelationId: trackingCorrelationId
+						};
 						this.sendResponseMsg(event.source, msg, event.origin);
 					}
 					// todo - log that no handler was found alongwith message & origin details, and if we are sending back a response or silently ignoring.
@@ -321,7 +325,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 						}
 					);
 				})
-					
+
 			}
 			/**
 			 * If an open promise against this message's correlation Id does exist, 

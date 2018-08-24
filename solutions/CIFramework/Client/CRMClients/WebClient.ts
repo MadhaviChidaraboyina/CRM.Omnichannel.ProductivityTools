@@ -5,18 +5,17 @@
 /// <reference path="Client.ts" />
 /// <reference path="Constants.ts" />
 /// <reference path="WidgetIFrame.ts" />
+/// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApi.d.ts" />
 
-namespace Microsoft.CIFramework.Internal
-{
+namespace Microsoft.CIFramework.Internal {
 	/**
 	 * Actual implementation of IClient for web client 
 	*/
-	export function webClient() : IClient
-	{
+	export function webClient(): IClient {
 		let client = {} as IClient;
 
-		client.registerHandler = (eventName: string, handler: EventHandler): boolean =>
-		{
+		client.registerHandler = (eventName: string, handler: EventHandler): boolean => {
 			if (!this.eventHandlers) {
 				this.eventHandlers = new Map<string, EventHandler>();
 			}
@@ -30,7 +29,7 @@ namespace Microsoft.CIFramework.Internal
 			}
 			let data: Map<string, any> = null;
 			if (typeof (valuesToUpdate) == "string") {
-				data = JSON.parse(valuesToUpdate);
+				data = JSON.parse(valuesToUpdate as string);
 			}
 			else {
 				data = valuesToUpdate;
@@ -46,50 +45,39 @@ namespace Microsoft.CIFramework.Internal
 			});
 		}
 
-		client.updateRecord =  (entityName: string, entityId: string, valuesToUpdate?: Map<string,any>|string): Promise<Map<string,any>> =>
-		{
-			if (!valuesToUpdate)
-			{
+		client.updateRecord = (entityName: string, entityId: string, valuesToUpdate?: Map<string, any> | string): Promise<Map<string, any>> => {
+			if (!valuesToUpdate) {
 				return rejectWithErrorMessage("Need values to update for updateRecord", "updateRecord");
 			}
 			let data: Map<string, any> = null;
-			if (typeof (valuesToUpdate) == "string")
-			{
-				data = JSON.parse(valuesToUpdate);
+			if (typeof (valuesToUpdate) == "string") {
+				data = JSON.parse(valuesToUpdate as string);
 			}
-			else
-			{
+			else {
 				data = valuesToUpdate;
 			}
-			return new Promise<Map<string, any>>((resolve, reject) =>
-			{
+			return new Promise<Map<string, any>>((resolve, reject) => {
 				return Xrm.WebApi.updateRecord(entityName, entityId, buildEntity(data)).then(
-				(result: XrmClientApi.LookupValue) =>
-				{
-					return resolve(buildMap(result));
-				},
-				(error: Error) =>
-				{
-					return rejectWithErrorMessage(error.message, "updateRecord");
-				});
+					(result: XrmClientApi.LookupValue) => {
+						return resolve(buildMap(result));
+					},
+					(error: Error) => {
+						return rejectWithErrorMessage(error.message, "updateRecord");
+					});
 			});
 		}
 
-		client.retrieveRecord = (entityName: string, entityId: string, query?: string): Promise<Map<string,any>> =>
-		{
-			return new Promise<Map<string, any>>((resolve, reject) =>
-			{
+		client.retrieveRecord = (entityName: string, entityId: string, query?: string): Promise<Map<string, any>> => {
+			return new Promise<Map<string, any>>((resolve, reject) => {
 				return Xrm.WebApi.retrieveRecord(entityName, entityId, query).then(
-					(result: XrmClientApi.WebApi.Entity) =>
-					{
+					(result: XrmClientApi.WebApi.Entity) => {
 						return resolve(buildMap(result));
 					},
-					(error: Error) =>
-					{
+					(error: Error) => {
 						return rejectWithErrorMessage(error.message, "retrieveRecord");
 					});
 			});
-			 
+
 		}
 
 		client.deleteRecord = (entityName: string, entityId: string, valuesToUpdate?: Map<string, any> | string): Promise<Map<string, any>> => {
@@ -146,13 +134,11 @@ namespace Microsoft.CIFramework.Internal
 			}
 		}
 
-		client.getUserID = (): string =>
-		{
+		client.getUserID = (): string => {
 			return Xrm.Utility.getGlobalContext().userSettings.userId;
 		}
 
-		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> =>
-		{
+		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> => {
 			const options: XrmClientApi.PanelOptions = {
 				defaultCollapsedBehavior: false,
 				onSizeChangeHandler: client.sizeChanged,
@@ -166,20 +152,23 @@ namespace Microsoft.CIFramework.Internal
 					let status: Map<string, boolean | string> = new Map<string, boolean | string>();
 					let fracHeightForActiveWidget: number = 0.6;
 					let widgetHeight: number = widgetIFrame.clientHeight * fracHeightForActiveWidget;
-					let minimizedHeight: number = (widgetIFrame.clientHeight * (1-fracHeightForActiveWidget))/ ciProviders.size;   // TODO: Figure out correct units to use
+					let minimizedHeight: number = (widgetIFrame.clientHeight * (1 - fracHeightForActiveWidget)) / ciProviders.size;   // TODO: Figure out correct units to use
 					widgetIFrame.onload = function () {
 						var doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
 						for (let [key, value] of ciProviders) {
 							//TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
+							var containerDiv = document.createElement("div");
+							containerDiv.setAttribute("tabindex", "-1");    //Needed to receive the focus event
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
-							//iFrame.setAttribute("data-base_url", Xrm.Utility.getGlobalContext().getClientUrl());
 							iFrame.src = key;
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
 							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetIFrame.clientWidth, widgetHeight, minimizedHeight);
-							doc.body.appendChild(iFrame);
+							containerDiv.appendChild(iFrame);
+							doc.body.appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
+							console.log("AMEYA loading - " + key);
 						}
 					}
 					return resolve(status);
@@ -188,8 +177,7 @@ namespace Microsoft.CIFramework.Internal
 			});
 		}
 
-		client.openForm = (entityFormOptions: string, entityFormParameters?: string): Promise<Map<string, any>> =>
-		{
+		client.openForm = (entityFormOptions: string, entityFormParameters?: string): Promise<Map<string, any>> => {
 			var fo: XrmClientApi.EntityFormOptions = JSON.parse(entityFormOptions);
 			var fp: XrmClientApi.FormParameters = (entityFormParameters ? JSON.parse(entityFormParameters) : null);
 
@@ -197,60 +185,52 @@ namespace Microsoft.CIFramework.Internal
 				return Xrm.Navigation.openForm(fo, fp).then(function (res) {
 					return resolve(new Map<string, any>().set(Constants.value, res));
 				},
-				function (err) {
-					return reject(err);
-				}
+					function (err) {
+						return reject(err);
+					}
 				);
 			});
 		}
 
-		client.retrieveMultipleAndOpenRecords = (entityName: string, queryParmeters: string, searchOnly: boolean): Promise<Map<string,any>> =>
-		{
-			return new Promise<Map<string,any>>((resolve, reject) =>
-			{
+		client.retrieveMultipleAndOpenRecords = (entityName: string, queryParmeters: string, searchOnly: boolean): Promise<Map<string, any>> => {
+			return new Promise<Map<string, any>>((resolve, reject) => {
 				Xrm.WebApi.retrieveMultipleRecords(entityName, queryParmeters).then(
-					(result: XrmClientApi.WebApi.RetrieveMultipleResponse) =>
-					{
-						if(result.entities.length == 1) {
+					(result: XrmClientApi.WebApi.RetrieveMultipleResponse) => {
+						if (result.entities.length == 1) {
 							let resultItem = result.entities[0];
-							if (searchOnly == false)
-							{
-								var fo: XrmClientApi.EntityFormOptions = { entityName: entityName, entityId: resultItem[entityName + "id"]};
+							if (searchOnly == false) {
+								var fo: XrmClientApi.EntityFormOptions = { entityName: entityName, entityId: resultItem[entityName + "id"] };
 								Xrm.Navigation.openForm(fo);
 							}
 						}
-						else if(result.entities.length > 1) {
+						else if (result.entities.length > 1) {
 							//To-Do handle this after UC dependency to open categorized search page on same window is resolved
 						}
 						else {
 							//To-Do handle this after UC dependency to open categorized search page on same window is resolved
 						}
-						return resolve(new Map<string,any>().set(Constants.value, result.entities));
+						return resolve(new Map<string, any>().set(Constants.value, result.entities));
 					},
-					(error: Error) =>
-					{
+					(error: Error) => {
 						return rejectWithErrorMessage(error.message, "retrieveMultipleAndOpenRecords");
 					}
 				);
-			}); 
+			});
 		}
-		
-		client.setWidgetMode = (name: string, mode: number): void =>
-		{
+
+		client.setWidgetMode = (name: string, mode: number): void => {
 			Xrm.Panel.state = mode;
 		}
 
-		client.setWidgetWidth = (name: string, width: number): void =>
-		{
+		client.setWidgetWidth = (name: string, width: number): void => {
 			Xrm.Panel.width = width;
 		}
 
-		client.getWidgetMode = (): number =>
-		{
+		client.getWidgetMode = (): number => {
 			return Xrm.Panel.state;
 		}
 
-		client.getEnvironment = (): Map<string,any> => {
+		client.getEnvironment = (): Map<string, any> => {
 			//Xrm.Page is deprecated hence definition not available in .d.ts
 			//Using eval(...) to avoid compiler error
 			var data: Map<string, any> = new Map<string, any>();
@@ -274,8 +254,7 @@ namespace Microsoft.CIFramework.Internal
 			return data;
 		}
 
-		client.getWidgetWidth = (): number =>
-		{
+		client.getWidgetWidth = (): number => {
 			return Xrm.Panel.width;
 		}
 

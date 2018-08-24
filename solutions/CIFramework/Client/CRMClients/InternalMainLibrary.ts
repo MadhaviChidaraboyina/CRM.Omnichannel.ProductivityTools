@@ -7,8 +7,7 @@
 /// <reference path="State.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 
-namespace Microsoft.CIFramework.Internal
-{
+namespace Microsoft.CIFramework.Internal {
 	/**
 	 * mapping of handlers for each API needed by postMessageWrapper
 	 */
@@ -35,14 +34,13 @@ namespace Microsoft.CIFramework.Internal
 	let state = {} as IState;
 	const listenerWindow = window.parent;
 
-	declare var Xrm : any;
+	declare var Xrm: any;
 
 	/**
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
 	 * returns false to disable the button visibility
 	 */
-	export function initializeCI(clientType: number) : boolean
-	{
+	export function initializeCI(clientType: number): boolean {
 		if (Xrm.Utility.getGlobalContext().client.getClient() === "UnifiedServiceDesk") {
 			return false;
 		}
@@ -51,12 +49,11 @@ namespace Microsoft.CIFramework.Internal
 		state.client = setClient(clientType);
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
-		const widgetCount = 1;
 		const appId = top.location.search.split('appid=')[1].split('&')[0];
-		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=contains(" + Constants.appSelectorFieldName + ",'"+ appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
-		(result : any) => {
+		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=contains(" + Constants.appSelectorFieldName + ",'" + appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
+			(result: any) => {
 
-			if (result && result.entities) {
+				if (result && result.entities) {
 
 					//event listener for the onCliCkToAct event
 					listenerWindow.removeEventListener(Constants.CIClickToAct, onClickToAct);
@@ -66,6 +63,7 @@ namespace Microsoft.CIFramework.Internal
 					state.client.registerHandler(Constants.NavigationHandler, onPageNavigation);
 					// populate ciProviders in state.
 					state.ciProviders = new Map<string, any>();
+					state.sessionManager = new SessionInfo();
 					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
 					var defaultMode = state.client.getWidgetMode() as number;
 					var first: string = null;
@@ -77,14 +75,6 @@ namespace Microsoft.CIFramework.Internal
 								continue;
 							}
 							var provider: CIProvider = new CIProvider(x, state);
-							/*if (!doneFirst) {
-								doneFirst = true;
-								provider.currentMode = defaultMode; //First widget is set to the mode panel is in
-							}
-							else {
-								provider.currentMode = 0;   //All other widgets start minimized
-								//provider.currentMode = defaultMode;   //DEBUG only:
-							}*/
 							state.ciProviders.set(x[Constants.landingUrl], provider);
 							if (!first) {
 								first = x[Constants.landingUrl];
@@ -92,18 +82,14 @@ namespace Microsoft.CIFramework.Internal
 							break;
 						}
 					}
-					//updateProviderSizes();
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(state.ciProviders.keys()), apiHandlers);
 					// load the widgets onto client. 
-					/*for (let [key, value] of state.ciProviders) {
-						state.client.loadWidget(key, value.label);
-					}*/
 					state.client.loadWidgets(state.ciProviders).then(function (widgetLoadStatus) {
 						reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime) + "ms for providers: " + mapToString(widgetLoadStatus));
 					});
 					if (first) {
-						state.sessionInfo.setActiveProvider(state.ciProviders.get(first));
+						state.sessionManager.setActiveProvider(state.ciProviders.get(first));
 					}
 				}
 			},
@@ -125,30 +111,10 @@ namespace Microsoft.CIFramework.Internal
 
 		//let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
 		for (let [key, value] of state.ciProviders) {
-			/*if (!value.getContainer()) {
-				continue;
-			}
-			if (eventCheck) {
-				if (eventCheck(value)) {    //TODO: different types of widgets may be interested in different types of events. Need to enhance 'clickToAct' setting. Also which events should be suppressed for minimized widgets?
-					value.raiseEvent(data, messageType);
-					//state.messageLibrary.postMsg(value.getContainer().getContentWindow(), payload, key, true, noTimeout);
-				}
-			}
-			else {*/
-				//value.setMode(data.get(Constants.value) as number);
-				value.raiseEvent(data, messageType);
-				//state.messageLibrary.postMsg(value.getContainer().getContentWindow(), payload, key, true, noTimeout);
-			//}
+			value.raiseEvent(data, messageType);
 		}
 		reportUsage(reportMessage);
 	}
-
-	/*function clickToActCheck(value: any): boolean {
-		if (!isNullOrUndefined(value) && value.clickToAct) {
-			return true;
-		}
-		return false;
-	}*/
 
 	function getProvider(parameters: Map<string, any>, reqParams?: string[]): [CIProvider, string] {
 		if (!parameters) {
@@ -217,30 +183,24 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * setClickToAct API's client side handler that post message library will invoke. 
 	*/
-	export function setClickToAct(parameters: Map<string, any>) : Promise<Map<string,any>>
-	{
+	export function setClickToAct(parameters: Map<string, any>): Promise<Map<string, any>> {
 		const [provider, errMsg] = getProvider(parameters, [Constants.value]);
-		if(provider)
-		{
-			return new Promise<Map<string, any>>((resolve, reject) =>
-			{
+		if (provider) {
+			return new Promise<Map<string, any>>((resolve, reject) => {
 				return state.client.updateRecord(Constants.providerLogicalName, provider.providerId,
-										new Map<string, any>([ [Constants.clickToActAttributeName, parameters.get(Constants.value) as boolean] ])).then(
-				(result: Map<string, any>) =>
-				{
-					provider.clickToAct = parameters.get(Constants.value) as boolean;
-					state.ciProviders.set(parameters.get(Constants.originURL), provider);
-					reportUsage(setClickToAct.name + "Executed successfully with result as " + mapToString(result));
-					return resolve(result);
-				},
-				(error: Map<string, any>) =>
-				{
-					return reject(error);
-				});
+					new Map<string, any>([[Constants.clickToActAttributeName, parameters.get(Constants.value) as boolean]])).then(
+					(result: Map<string, any>) => {
+						provider.clickToAct = parameters.get(Constants.value) as boolean;
+						state.ciProviders.set(parameters.get(Constants.originURL), provider);
+						reportUsage(setClickToAct.name + "Executed successfully with result as " + mapToString(result));
+						return resolve(result);
+					},
+					(error: Map<string, any>) => {
+						return reject(error);
+					});
 			});
 		}
-		else
-		{
+		else {
 			return rejectWithErrorMessage(errMsg, setClickToAct.name);
 		}
 	}
@@ -248,16 +208,13 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	* API to check ClickToAct is enabled or not
 	*/
-	export function getClickToAct(parameters: Map<string, any>) : Promise<Map<string, any>>
-	{
+	export function getClickToAct(parameters: Map<string, any>): Promise<Map<string, any>> {
 		const [provider, errMsg] = getProvider(parameters);
-		if(provider)
-		{
+		if (provider) {
 			reportUsage(getClickToAct.name + "Executed successfully with result as " + provider.clickToAct);
 			return Promise.resolve(new Map().set(Constants.value, provider.clickToAct));
 		}
-		else
-		{
+		else {
 			return rejectWithErrorMessage(errMsg, getClickToAct.name);
 		}
 
@@ -266,17 +223,13 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * setMode API's client side handler that post message library will invoke. 
 	*/
-	export function setMode(parameters: Map<string, any>) : Promise<Map<string, any>>
-	{   //TODO: This should be reinterpreted to 'only the widget's mode changed'
+	export function setMode(parameters: Map<string, any>): Promise<Map<string, any>> {
 		const [provider, errMsg] = getProvider(parameters, [Constants.value]);
-		if(provider)
-		{
-			//state.client.setWidgetMode(null, parameters.get(Constants.value) as number);
+		if (provider) {
 			reportUsage(setMode.name + "Executed successfully");
 			return provider.setMode(parameters.get(Constants.value) as number);
 		}
-		else
-		{
+		else {
 			return rejectWithErrorMessage(errMsg, setMode.name);
 		}
 	}
@@ -284,19 +237,15 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * setWidth API's client side handler that post message library will invoke. 
 	*/
-	export function setWidth(parameters: Map<string, any>) : Promise<Map<string, any>>
-	{   //TODO: This should be reinterpreted to 'only the widget's width changed. Should we even allow this in multi-widget scenario?
+	export function setWidth(parameters: Map<string, any>): Promise<Map<string, any>> {   //TODO: This should be reinterpreted to 'only the widget's width changed. Should we even allow this in multi-widget scenario?
 		//TODO: if the new width is greater than panel width, what do we do?
 		const [provider, errMsg] = getProvider(parameters, [Constants.value]);
-		if(provider)
-		{
-			//state.client.setWidgetWidth(null, parameters.get(Constants.value) as number);
+		if (provider) {
 			//TODO: calculate max width across all widgets and set panel to it
 			reportUsage(setWidth.name + "Executed successfully");
 			return provider.setWidth(parameters.get(Constants.value) as number);
 		}
-		else
-		{
+		else {
 			return rejectWithErrorMessage(errMsg, setWidth.name);
 		}
 	}
@@ -319,16 +268,12 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * getMode API's client side handler that post message library will invoke.
 	*/
-	export function getMode(parameters: Map<string, any>) : Promise<Map<string, any>>
-	{
+	export function getMode(parameters: Map<string, any>): Promise<Map<string, any>> {
 		const [provider, errMsg] = getProvider(parameters); // if there are multiple widgets then we need this to get the value of particular widget
-		if(provider)
-		{
-			//reportUsage(getMode.name + "Executed successfully");
+		if (provider) {
 			return Promise.resolve(new Map().set(Constants.value, provider.getMode()));
 		}
-		else
-		{
+		else {
 			return rejectWithErrorMessage(errMsg, getMode.name);
 		}
 	}
@@ -336,16 +281,13 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * getWidth API's client side handler that post message library will invoke. 
 	*/
-	export function getWidth(parameters: Map<string, any>) : Promise<Map<string, any>>
-	{
+	export function getWidth(parameters: Map<string, any>): Promise<Map<string, any>> {
 		const [provider, errMsg] = getProvider(parameters);
-		if(provider)
-		{
+		if (provider) {
 			reportUsage(getWidth.name + "Executed successfully");
 			return Promise.resolve(new Map().set(Constants.value, Number(provider.getWidth())));
 		}
-		else
-		{
+		else {
 			return rejectWithErrorMessage(errMsg, getWidth.name);
 		}
 	}
@@ -353,8 +295,7 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * subscriber of onClickToAct event
 	*/
-	export function onClickToAct(event: CustomEvent) : void
-	{
+	export function onClickToAct(event: CustomEvent): void {
 		raiseEvent(buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event));
 	}
 
@@ -444,8 +385,7 @@ namespace Microsoft.CIFramework.Internal
 		}
 	}
 
-	export function searchAndOpenRecords(parameters: Map<string, any>) : Promise<Map<string,any>>
-	{
+	export function searchAndOpenRecords(parameters: Map<string, any>): Promise<Map<string, any>> {
 		const [provider, errMsg] = getProvider(parameters);
 		if (provider) {
 			return doSearch(parameters, false);
@@ -456,21 +396,17 @@ namespace Microsoft.CIFramework.Internal
 	}
 
 
-	function doSearch(parameters: Map<string, any>, searchOnly: boolean) : Promise<Map<string,any>>
-	{
+	function doSearch(parameters: Map<string, any>, searchOnly: boolean): Promise<Map<string, any>> {
 		const [provider, errMsg] = getProvider(parameters, [Constants.entityName, Constants.queryParameters]);
-		if(provider)
-		{
+		if (provider) {
 			return state.client.retrieveMultipleAndOpenRecords(parameters.get(Constants.entityName), parameters.get(Constants.queryParameters), searchOnly);
 		}
-		else
-		{
+		else {
 			return rejectWithErrorMessage(errMsg, doSearch.name);
 		}
 	}
 
-	export function search(parameters: Map<string, any>) : Promise<Map<string,any>>
-	{
+	export function search(parameters: Map<string, any>): Promise<Map<string, any>> {
 		const [provider, errMsg] = getProvider(parameters);
 		if (provider) {
 			return doSearch(parameters, true);

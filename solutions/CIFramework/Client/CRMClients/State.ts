@@ -5,6 +5,9 @@
 /// <reference path="Constants.ts" />
 /// <reference path="WebClient.ts" />
 /// <reference path="WidgetIFrame.ts" />
+/// <reference path="../PostMsgWrapper.ts" />
+/// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApi.d.ts" />
 
 namespace Microsoft.CIFramework.Internal {
 	/**
@@ -25,7 +28,7 @@ namespace Microsoft.CIFramework.Internal {
             /**
              *  Information about current active sessions
             */
-            sessionInfo: SessionInfo;
+            sessionManager: SessionInfo;
 
             /**
              * Post message wrapper object
@@ -36,14 +39,24 @@ namespace Microsoft.CIFramework.Internal {
     export class SessionInfo {
         _activeProvider: CIProvider;
 
-        setActiveProvider(provider: CIProvider) {
+        setActiveProvider(provider: CIProvider): Promise<Map<string, any>> {
             if (this._activeProvider != provider) {
-                if (this._activeProvider) {
-                    this._activeProvider.setMode(0);    //TODO: replace 0 with named constant
-                }
+                //TODO check if it is okay to switch provider
+                //if no, reject the promise
+                //if yes, switch the providers
+                let oldProvider: CIProvider = this._activeProvider;
                 this._activeProvider = provider;
-                this._activeProvider.setMode(1);    //TODO: replace with named constant
+                if (oldProvider) {
+                    oldProvider.raiseEvent(new Map<string, any>().set(Constants.value, 0), MessageType.onModeChanged);    //TODO: replace 0 with named constant
+                }
+                if (this._activeProvider) {
+                    this._activeProvider.raiseEvent(new Map<string, any>().set(Constants.value, 1), MessageType.onModeChanged);    //TODO: replace with named constant
+                }
             }
+            return Promise.resolve(new Map<string, any>().set(Constants.value, true));    //TODO: Session manager needs to eval whether it is feasibile to change session and resolve or reject the promise
+        }
+        getActiveProvider(): CIProvider {
+            return this._activeProvider;
         }
     }
     /*Class to store CI providers information locally*/
@@ -71,7 +84,7 @@ namespace Microsoft.CIFramework.Internal {
             this._widgetContainer = null;
             this.currentMode = 0;
         }
-        raiseEvent(data: Map<string, any>, messageType: string, noTimeout?: boolean): void {
+        raiseEvent(data: Map<string, any>, messageType: string): void {
             const payload: postMessageNamespace.IExternalRequestMessageType = {
                 messageType: messageType,
                 messageData: data
@@ -88,7 +101,7 @@ namespace Microsoft.CIFramework.Internal {
             if (!this.getContainer()) {
                 return;
             }
-            this._state.messageLibrary.postMsg(this.getContainer().getContentWindow(), payload, this.landingUrl, true, noTimeout);
+            this._state.messageLibrary.postMsg(this.getContainer().getContentWindow(), payload, this.landingUrl, true);
         }
         getContainer(): WidgetContainer {
             return this._widgetContainer;
@@ -109,16 +122,53 @@ namespace Microsoft.CIFramework.Internal {
             if (container) {
                 ret = container.setHeight(this.getHeight()) && container.setWidth(this.getWidth());
             }
-            if (ret) {
+            return Promise.resolve(new Map<string, any>().set(Constants.value, ret));
+            /*if (ret) {
                 return Promise.resolve(new Map<string, any>());
             }
             else {
                 return Promise.reject(new Map<string, any>().set(Constants.message, "Attempting to set size of a null widget container"));
-            }
+            }*/
         }
         setMode(mode: number): Promise<Map<string, any>> {
-            this.currentMode = mode;
-            return this.updateContainerSize();
+            if (this.currentMode == mode) {
+                return Promise.resolve(new Map<string, any>().set(Constants.value, true));
+            }
+            switch (mode) {
+                case 1: //TODO - replace with named constant. We have the focus
+                    if (this._state.sessionManager.getActiveProvider() == this) {
+                        this.currentMode = mode;
+                        return this.updateContainerSize();
+                    }
+                    return this._state.sessionManager.setActiveProvider(this).then(
+                        function (result: Map<string, any>) {
+                            if (result.get(Constants.value)) {
+                                this.currentMode = mode;
+                                return this.updateContainerSize();
+                            }
+                            return Promise.resolve(result);
+                        }.bind(this),
+                        function (error) {
+                            return Promise.reject(error);
+                        });
+                case 0://TODO - replace with named constant. We lost the focus
+                    if (this._state.sessionManager.getActiveProvider() != this) {
+                        this.currentMode = mode;
+                        return this.updateContainerSize();
+                    }
+                    return this._state.sessionManager.setActiveProvider(null).then(
+                        function (result: Map<string, any>) {
+                            if (result.get(Constants.value)) {
+                                this.currentMode = mode;
+                                return this.updateContainerSize();
+                            }
+                            return Promise.resolve(result);
+                        }.bind(this),
+                        function (error) {
+                            return Promise.reject(error);
+                        });
+            }
+            return Promise.reject(new Map<string, any>().set(Constants.message, "Invalid mode value"));  
         }
         getMode(): number {
             return this.currentMode;
