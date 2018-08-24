@@ -10,12 +10,20 @@ namespace Microsoft.CIFramework
 	let postMessage: postMessageNamespace.postMsgWrapper;
 	let domains : string[] = [];
 
-	function initialize()
+	function initialize()
 	{
 		let startTime = Date.now();
 		targetWindow = window.parent;
 		var anchorElement = document.createElement("a");
-		anchorElement.href = document.referrer;
+		var anchorDomain = document.referrer;
+		try {
+			var crmDomain: string = document.querySelector('script[' + Constants.ScriptIdAttributeName + '="' + Constants.ScriptIdAttributeValue + '"]').getAttribute(Constants.ScriptCRMUrlAttributeName);
+			if (crmDomain) {
+				anchorDomain = crmDomain;
+			}
+		}
+		catch (error) { }
+		anchorElement.href = anchorDomain;
 		domains.push(anchorElement.protocol + "//" + anchorElement.hostname);
 		if(domains.length > 1)
 		{
