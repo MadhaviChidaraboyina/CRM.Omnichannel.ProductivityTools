@@ -153,7 +153,7 @@
     <comment>msdyn_ciprovider Description for EntityRelationship 'organization_msdyn_ciprovider'</comment>
   </data>
   <data name="15062:Description,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Bring your communication channels and build immersive experience with Dynamics 365</value>
+    <value>Brug dine kommunikationskanaler, og få en fængslende oplevelse med Dynamics 365</value>
     <comment> 'ChannelAPIIntegrationFramework' : Description for Solution</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
@@ -469,7 +469,7 @@
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="80:Description,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
-    <value>Bring your communication channels and build immersive experience with Dynamics 365</value>
+    <value>Brug dine kommunikationskanaler, og få en fængslende oplevelse med Dynamics 365</value>
     <comment> 'msdyn_ChannelIntegrationFrameworkApp' : Description for AppModule</comment>
   </data>
   <data name="80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
