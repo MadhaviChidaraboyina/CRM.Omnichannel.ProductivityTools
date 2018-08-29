@@ -2,7 +2,6 @@
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
 /// <reference path="Constants.ts" />
-/// <reference path="../TelemetryHelper.ts" />
 
 namespace Microsoft.CIFramework
 {
@@ -30,7 +29,6 @@ namespace Microsoft.CIFramework
 			//To-Do Log the Message that more than one domains are present
 		}
 		postMessage = new postMessageNamespace.postMsgWrapper(window, domains, null);
-		Internal.reportUsage(initialize.name + "Executed successfully in " + (Date.now() - startTime) + " Ms");
 	}
 
 	function sendMessage<T>(funcName: string, payload: postMessageNamespace.IExternalRequestMessageType, isEvent: boolean, noTimeout?: boolean) : Promise<T>{
@@ -41,16 +39,13 @@ namespace Microsoft.CIFramework
 			return postMessage.postMsg(targetWindow, payload, domains[domains.length - 1], false, noTimeout)
 				.then((result: Map<string, any>) => {
 					if (result && (!isNullOrUndefined(result.get(Constants.value)))) {
-						Internal.reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + Internal.mapToString(result));
 						return resolve(result.get(Constants.value));
 					}
 					else {
-						Internal.reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + Internal.mapToString(result));
 						return resolve(null);
 					}
 				},
 				(error: Map<string, any>) => {
-					Internal.reportError(funcName + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
 					return reject(error.get(Constants.message));
 				});
 		});
@@ -292,13 +287,13 @@ namespace Microsoft.CIFramework
 	 *  'onmodechanged' - when the panel mode is manually toggled between 'minimized' and 'docked'
 	 *  'onsizechanged' - when the panel size is manually changed by dragging
 	 *  'onpagenavigate' - triggered before a navigation event occurs on the main page
+	 *  'onsendkbarticle' - triggered when the agent clicks on the 'send KB Article' button on the KB control
 	 * @params func. The handler function to invoke on the event
 	 */
 	export function addHandler(eventName: string, handlerFunction: ((eventData:Map<string, any>) => Promise<Map<string, any>>))
 	{
 		let startTime = Date.now();
 		postMessage.addHandler(eventName, handlerFunction);
-		Internal.reportUsage(addHandler.name + " executed successfully in "+ (Date.now() - startTime));
 	}
 
 	/**
@@ -308,7 +303,6 @@ namespace Microsoft.CIFramework
 	{
 		let startTime = Date.now();
 		postMessage.removeHandler(eventName, handlerFunction);
-		Internal.reportUsage(removeHandler.name + " executed successfully in "+ (Date.now() - startTime));
 	}
 
 	window.onload = () => {

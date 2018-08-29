@@ -29,6 +29,7 @@
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.6.2.d.ts" />
     <TypeScriptCompile Include="CRMClients\IErrorHandler.ts" />
     <TypeScriptCompile Include="CRMClients\TelemetryConstants.ts" />
+    <TypeScriptCompile Include="TelemetryHelper.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\TypeScript.targets" />

@@ -3,6 +3,7 @@
 	"include": [
 		"Constants.ts",
 		"TelemetryConstants.ts",
+		"../TelemetryHelper.ts",
 		"Client.ts",
 		"State.ts",
 		"WebClient.ts",

@@ -89,6 +89,7 @@ namespace Microsoft.CIFramework.Internal
 	{
 		export const originURL = "originURL";
 		export const CIClickToAct = "CIClickToAct";
+		export const CISendKBArticle = "KMClickToSend";
 		export const widgetIframeId = "SidePanelIFrame";
 		export const value = "value";
 		export const clickToActAttributeName = "msdyn_clicktoact";
@@ -138,5 +139,6 @@ namespace Microsoft.CIFramework.Internal
 		export const onSizeChanged = "onsizechanged";
 		export const onModeChanged = "onmodechanged";
 		export const onPageNavigate = "onpagenavigate";
+		export const onSendKBArticle = "onsendkbarticle";
 	}
 }

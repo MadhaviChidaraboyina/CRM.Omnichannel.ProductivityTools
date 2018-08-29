@@ -27,6 +27,7 @@ namespace Microsoft.CIFramework
 		export const onModeChanged = "onmodechanged";
 		export const onSizeChanged = "onsizechanged";
 		export const onPageNavigate = "onpagenavigate";
+		export const onSendKBArticle = "onsendkbarticle";
 	}
 
 	/**
