@@ -12,7 +12,7 @@ namespace Microsoft.CIFramework
 	function initialize()
 	{
 		let startTime = Date.now();
-		targetWindow = window.parent;
+		targetWindow = window.top;
 		var anchorElement = document.createElement("a");
 		var anchorDomain = document.referrer;
 		try {
