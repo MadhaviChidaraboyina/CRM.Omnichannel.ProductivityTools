@@ -15,8 +15,9 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * utility func to create a promise and reject it with the passed error message
 	*/
-	export function rejectWithErrorMessage(errorMessage : string, apiName: string)
+	export function rejectWithErrorMessage(errorMessage: string, apiName: string, appId?: string, isError?: boolean, error?: IErrorHandler)
 	{
+		logFailure(appId, isError, error);
 		reportError(apiName + " failed with error: " + errorMessage);
 		return Promise.reject(createErrorMap(errorMessage, apiName));
 	}
@@ -88,6 +89,7 @@ namespace Microsoft.CIFramework.Internal
 	{
 		export const originURL = "originURL";
 		export const CIClickToAct = "CIClickToAct";
+		export const CISendKBArticle = "KMClickToSend";
 		export const widgetIframeId = "SidePanelIFrame";
 		export const value = "value";
 		export const clickToActAttributeName = "msdyn_clicktoact";
@@ -126,6 +128,9 @@ namespace Microsoft.CIFramework.Internal
 		export const DefaultCountryCode = "defaultCountryCode";
 		export const MinimizedHeight = 34;
 		export const DefaultFullWidth = 100;
+		export const APIVersion = "msdyn_ciproviderapiversion";
+		export const SortOrder = "msdyn_sortorder";
+		export const crmVersion = "crmVersion";
 	}
 
 	/**
@@ -137,5 +142,6 @@ namespace Microsoft.CIFramework.Internal
 		export const onSizeChanged = "onsizechanged";
 		export const onModeChanged = "onmodechanged";
 		export const onPageNavigate = "onpagenavigate";
+		export const onSendKBArticle = "onsendkbarticle";
 	}
 }

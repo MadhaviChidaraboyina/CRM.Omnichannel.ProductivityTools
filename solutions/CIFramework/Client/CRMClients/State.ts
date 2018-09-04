@@ -72,7 +72,13 @@ namespace Microsoft.CIFramework.Internal {
         clickToAct: boolean;		//Boolean flag to enable or disable Click to act functionality , it can be changed through setClickToAct API
         _widgetContainer: WidgetContainer;  //The iFrame hosting this widget
         currentMode: number;
-        constructor(x: XrmClientApi.WebApi.Entity, state: IState) {
+        sortOrder : string;	//Sort Order
+        apiVersion : string;	//API Version
+        orgId : string;	//Organization ID
+        orgName : string;	//Organization Name
+        crmVersion : string;	//CRM version
+        appId : string;	//App Id
+        constructor(x: XrmClientApi.WebApi.Entity, state: IState, environmentInfo: any) {
             this._state = state;
             this.name = x[Constants.name];
             this.providerId = x[Constants.providerId];
@@ -83,6 +89,12 @@ namespace Microsoft.CIFramework.Internal {
             this.clickToAct = x[Constants.clickToActAttributeName];
             this._widgetContainer = null;
             this.currentMode = 0;
+            this.sortOrder = x[Constants.SortOrder];
+            this.apiVersion = x[Constants.APIVersion];
+            this.orgId = environmentInfo["orgId"];
+            this.orgName = environmentInfo["orgName"];
+            this.crmVersion = environmentInfo["crmVersion"];
+            this.appId = environmentInfo["appId"];
         }
         raiseEvent(data: Map<string, any>, messageType: string): void {
             const payload: postMessageNamespace.IExternalRequestMessageType = {

@@ -16,6 +16,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="CIFrameworkConstants.ts" />
+    <Content Include="CRMClients\aria-webjs-sdk-1.6.2.js" />
     <Content Include="CRMClients\Client.ts" />
     <Content Include="CRMClients\Constants.ts" />
     <Content Include="CRMClients\InternalMainLibrary.ts" />
@@ -25,6 +26,10 @@
     <Content Include="Widget\MainLibrary.ts" />
     <Content Include="Widget\Constants.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
+    <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.6.2.d.ts" />
+    <TypeScriptCompile Include="CRMClients\IErrorHandler.ts" />
+    <TypeScriptCompile Include="CRMClients\TelemetryConstants.ts" />
+    <TypeScriptCompile Include="TelemetryHelper.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\TypeScript.targets" />

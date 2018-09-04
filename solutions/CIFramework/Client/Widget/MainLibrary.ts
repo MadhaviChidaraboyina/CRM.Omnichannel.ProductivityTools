@@ -2,53 +2,58 @@
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
 /// <reference path="Constants.ts" />
-/// <reference path="../TelemetryHelper.ts" />
 /// <reference path="../PostmsgWrapper.ts" />
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
+namespace Microsoft.CIFramework
+{
+	let targetWindow: Window;
+	let postMessage: postMessageNamespace.postMsgWrapper;
+	let domains : string[] = [];
 
-namespace Microsoft.CIFramework {
-    let targetWindow: Window;
-    let postMessage: postMessageNamespace.postMsgWrapper;
-    let domains: string[] = [];
-
-    function initialize() {
-        let startTime = Date.now();
-        targetWindow = window.top;
-        var anchorElement = document.createElement("a");
-        anchorElement.href = document.referrer;
-        domains.push(anchorElement.protocol + "//" + anchorElement.hostname);
-        if (domains.length > 1) {
-            //To-Do Log the Message that more than one domains are present
-        }
-        postMessage = new postMessageNamespace.postMsgWrapper(window, domains, null);
-        reportUsage(initialize.name + "Executed successfully in " + (Date.now() - startTime) + " Ms");
-        window.addEventListener("focus", function () {
+	function initialize()
+	{
+		let startTime = Date.now();
+		targetWindow = window.top;
+		var anchorElement = document.createElement("a");
+		var anchorDomain = document.referrer;
+		try {
+			var crmDomain: string = document.querySelector('script[' + Constants.ScriptIdAttributeName + '="' + Constants.ScriptIdAttributeValue + '"]').getAttribute(Constants.ScriptCRMUrlAttributeName);
+			if (crmDomain) {
+				anchorDomain = crmDomain;
+			}
+		}
+		catch (error) { }
+		anchorElement.href = anchorDomain;
+		domains.push(anchorElement.protocol + "//" + anchorElement.hostname);
+		if(domains.length > 1)
+		{
+			//To-Do Log the Message that more than one domains are present
+		}
+		postMessage = new postMessageNamespace.postMsgWrapper(window, domains, null);
+    window.addEventListener("focus", function () {
             setMode(1); //TODO: replace 1 with named constant
         });
-    }
+	}
 
-    function sendMessage<T>(funcName: string, payload: postMessageNamespace.IExternalRequestMessageType, isEvent: boolean, noTimeout?: boolean): Promise<T> {
-        let startTime = Date.now();
+	function sendMessage<T>(funcName: string, payload: postMessageNamespace.IExternalRequestMessageType, isEvent: boolean, noTimeout?: boolean) : Promise<T>{
+		let startTime = Date.now();
 
-        return new Promise<T>((resolve, reject) => {
-            //domains contains the domains this widget can talk to , which is the CRM instance, so passing that as target origin.
-            return postMessage.postMsg(targetWindow, payload, domains[domains.length - 1], false, noTimeout)
-                .then((result: Map<string, any>) => {
-                    if (result && (!isNullOrUndefined(result.get(Constants.value)))) {
-                        reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));
-                        return resolve(result.get(Constants.value));
-                    }
-                    else {
-                        reportUsage(funcName + "Executed successfully in " + (Date.now() - startTime) + " Ms with result as " + mapToString(result));
-                        return resolve(null);
-                    }
-                },
-                (error: Map<string, any>) => {
-                    reportError(funcName + "Execution failed in " + (Date.now() - startTime) + " Ms with error as " + error.get(Constants.message));
-                    return reject(error.get(Constants.message));
-                });
-        });
-    }
+		return new Promise<T>((resolve, reject) => {
+			//domains contains the domains this widget can talk to , which is the CRM instance, so passing that as target origin.
+			return postMessage.postMsg(targetWindow, payload, domains[domains.length - 1], false, noTimeout)
+				.then((result: Map<string, any>) => {
+					if (result && (!isNullOrUndefined(result.get(Constants.value)))) {
+						return resolve(result.get(Constants.value));
+					}
+					else {
+						return resolve(null);
+					}
+				},
+				(error: Map<string, any>) => {
+					return reject(error.get(Constants.message));
+				});
+		});
+	}
 
 	/**
 	 * API to set/reset value of ClickToAct for a widget
@@ -57,6 +62,9 @@ namespace Microsoft.CIFramework {
 	 *
 	*/
     export function setClickToAct(value: boolean): Promise<void> {
+        if (isNullOrUndefined(value)) {
+            value = false;
+        }
         const payload: postMessageNamespace.IExternalRequestMessageType = {
             messageType: MessageType.setClickToAct,
             messageData: new Map().set(Constants.value, value)
@@ -77,14 +85,20 @@ namespace Microsoft.CIFramework {
 	 *
 	 * returns a boolean Promise: 'true' if openForm API succeeded and 'false' otherwise
 	*/
-    export function openForm(entityFormOptions: string, entityFormParameters?: string): Promise<boolean> {
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.openForm,
-            messageData: new Map().set(Constants.entityFormOptions, entityFormOptions).set(Constants.entityFormParameters, entityFormParameters)
-        }
+	export function openForm(entityFormOptions: string, entityFormParameters?: string): Promise<boolean> {
+		if(!(isNullOrUndefined(entityFormOptions) || entityFormOptions == "")){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.openForm,
+				messageData: new Map().set(Constants.entityFormOptions, entityFormOptions).set(Constants.entityFormParameters, entityFormParameters)
+			}
 
-        return sendMessage<boolean>(openForm.name, payload, false, true);
-    }
+			return sendMessage<boolean>(openForm.name, payload, false, true);
+		}else{
+			if(isNullOrUndefined(entityFormOptions) || entityFormOptions == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The EntityFormOptions parameter is blank. Provide a value to the parameter.");
+			}
+		}
+	}
 
 	/**
 	 * API to retrieve a given entity record based on entityId and oData query
@@ -96,14 +110,23 @@ namespace Microsoft.CIFramework {
 	 *
 	 * @returns a map Promise: the result of the retrieve operation depending upon the query
 	*/
-    export function retrieveRecord(entityName: string, entityId: string, query?: string): Promise<Map<string, any>> {
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.retrieveRecord,
-            messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.queryParameters, query)
-        }
+	export function retrieveRecord(entityName: string, entityId: string, query?: string): Promise<Map<string, any>> {
+		if(!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(entityId) || entityId == "")){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.retrieveRecord,
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.queryParameters, query)
+			}
 
-        return sendMessage<Map<string, any>>(retrieveRecord.name, payload, false);
-    }
+			return sendMessage<Map<string, any>>(retrieveRecord.name, payload, false);
+		}else{
+			if(isNullOrUndefined(entityName) || entityName == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(entityId) || entityId == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			}
+		}
+	}
 
 	/**
 	 * API to update a given entity record based on entityId
@@ -116,14 +139,26 @@ namespace Microsoft.CIFramework {
 	 *
 	 * @returns a map Promise: the result of the update operation
 	*/
-    export function updateRecord(entityName: string, entityId: string, data: Map<string, any>): Promise<Map<string, any>> {
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.updateRecord,
-            messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.value, data)
-        }
+	export function updateRecord(entityName: string, entityId: string, data: Map<string, any>): Promise<Map<string, any>> {
+		if(!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(entityId) || entityId == "") && !(isNullOrUndefined(data)) && data.size > 0){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.updateRecord,
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.value, data)
+			}
 
-        return sendMessage<Map<string, any>>(retrieveRecord.name, payload, false);
-    }
+			return sendMessage<Map<string, any>>(retrieveRecord.name, payload, false);
+		}else{
+			if(isNullOrUndefined(entityName) || entityName == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(entityId) || entityId == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The EntityId parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(data) || data.size == 0){
+				return postMessageNamespace.rejectWithErrorMessage("The parameter is blank. Provide a value to the parameter to update the record.");
+			}
+		}
+	}
 
 	/**
 	 * API to create a new entity record based on passed data
@@ -135,14 +170,23 @@ namespace Microsoft.CIFramework {
 	 *
 	 * @returns a map Promise: the result of the create operation
 	*/
-    export function createRecord(entityName: string, data: Map<string, any>): Promise<Map<string, any>> {
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.createRecord,
-            messageData: new Map().set(Constants.entityName, entityName).set(Constants.value, data)
-        }
+	export function createRecord(entityName: string, data: Map<string, any>): Promise<Map<string, any>> {
+		if(!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(data)) && data.size > 0){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.createRecord,
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.value, data)
+			}
 
-        return sendMessage<Map<string, any>>(createRecord.name, payload, false);
-    }
+			return sendMessage<Map<string, any>>(createRecord.name, payload, false);
+		}else{
+			if(isNullOrUndefined(entityName) || entityName == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(data) || data.size == 0){
+				return postMessageNamespace.rejectWithErrorMessage("Provide a value to the parameter to create record.");
+			}
+		}
+	}
 
 	/**
 	 * API to delete an entity record based on entityId
@@ -154,14 +198,23 @@ namespace Microsoft.CIFramework {
 	 *
 	 * @returns a map Promise: the result of the delete operation
 	*/
-    export function deleteRecord(entityName: string, entityId: string): Promise<Map<string, any>> {
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.deleteRecord,
-            messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId)
-        }
+	export function deleteRecord(entityName: string, entityId: string): Promise<Map<string, any>> {
+		if(!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(entityId) || entityId == "")){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.deleteRecord,
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId)
+			}
 
-        return sendMessage<Map<string, any>>(deleteRecord.name, payload, false);
-    }
+			return sendMessage<Map<string, any>>(deleteRecord.name, payload, false);
+		}else{
+			if(isNullOrUndefined(entityName) || entityName == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(entityId) || entityId == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The EntityId parameter is blank. Provide a value to the parameter.");
+			}
+		}
+	}
 
 	/**
 	 * API to search records with respect to query parameters and open the respective record
@@ -173,13 +226,26 @@ namespace Microsoft.CIFramework {
 	 *
 	 * Returns a map Promise representing the search results as per the search query
 	*/
-    export function searchAndOpenRecords(entityName: string, queryParmeters: string, searchOnly: boolean): Promise<Map<string, any>> {
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: searchOnly ? MessageType.search : MessageType.searchAndOpenRecords,
-            messageData: new Map().set(Constants.entityName, entityName).set(Constants.queryParameters, queryParmeters).set(Constants.searchOnly, searchOnly)
-        }
-        return sendMessage<Map<string, any>>(searchAndOpenRecords.name, payload, false);
-    }
+	export function searchAndOpenRecords(entityName: string, queryParmeters: string, searchOnly: boolean) : Promise<Map<string, any>>
+	{
+		if(!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(queryParmeters) || queryParmeters == "") && !(isNullOrUndefined(searchOnly))){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: searchOnly ? MessageType.search : MessageType.searchAndOpenRecords,
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.queryParameters, queryParmeters).set(Constants.searchOnly, searchOnly)
+			}
+			return sendMessage<Map<string, any>>(searchAndOpenRecords.name, payload, false);
+		}else{
+			if(isNullOrUndefined(entityName) || entityName == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(queryParmeters) || queryParmeters == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The queryParmeters parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(searchOnly)){
+				return postMessageNamespace.rejectWithErrorMessage("The searchOnly parameter is blank. Provide a value to the parameter.");
+			}
+		}
+	}
 
 	/**
 	 * API to get the Panel State
@@ -231,30 +297,40 @@ namespace Microsoft.CIFramework {
 	 *
 	 * @params value. The panel width to be set in pixels
 	*/
-    export function setWidth(value: number): Promise<void> {
-        let startTime = Date.now();
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.setWidth,
-            messageData: new Map().set(Constants.value, value)
-        }
+	export function setWidth(value : number) : Promise<void>
+	{
+		let startTime = Date.now();
+		if(!isNullOrUndefined(value) && value >= 0){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.setWidth,
+				messageData: new Map().set(Constants.value, value)
+			}
 
-        return sendMessage<void>(setWidth.name, payload, false);
-    }
+			return sendMessage<void>(setWidth.name, payload, false);
+		}else{
+			return postMessageNamespace.rejectWithErrorMessage("The setWidth parameter value is invalid. Provide a positive number to the parameter.");
+		}
+	}
 
 	/**
 	 * API to set the Panel State
 	 *
 	 * @params value. The mode to set on the panel, '0' - minimized, '1' - docked
 	*/
-    export function setMode(value: number): Promise<void> {
-        let startTime = Date.now();
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.setMode,
-            messageData: new Map().set(Constants.value, value)
-        }
+	export function setMode(value : number) : Promise<void>
+	{
+		let startTime = Date.now();
+		if(!isNullOrUndefined(value) && (value == 0 || value == 1)){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.setMode,
+				messageData: new Map().set(Constants.value, value)
+			}
 
-        return sendMessage<void>(setMode.name, payload, false);
-    }
+			return sendMessage<void>(setMode.name, payload, false);
+		}else{
+			return postMessageNamespace.rejectWithErrorMessage("The setMode paramter value must be 0 or 1.");
+		}
+	}
 
 	/**
 	 * API to check the whether clickToAct functionality is enabled or not
@@ -271,6 +347,7 @@ namespace Microsoft.CIFramework {
         return sendMessage<boolean>(getClickToAct.name, payload, false);
     }
 
+
 	/**
 	 * API to add the subscriber for the named event
 	 *
@@ -279,24 +356,43 @@ namespace Microsoft.CIFramework {
 	 *  'onmodechanged' - when the panel mode is manually toggled between 'minimized' and 'docked'
 	 *  'onsizechanged' - when the panel size is manually changed by dragging
 	 *  'onpagenavigate' - triggered before a navigation event occurs on the main page
+	 *  'onsendkbarticle' - triggered when the agent clicks on the 'send KB Article' button on the KB control
 	 * @params func. The handler function to invoke on the event
 	 */
-    export function addHandler(eventName: string, handlerFunction: ((eventData: Map<string, any>) => Promise<Map<string, any>>)) {
-        let startTime = Date.now();
-        postMessage.addHandler(eventName, handlerFunction);
-        reportUsage(addHandler.name + " executed successfully in " + (Date.now() - startTime));
-    }
+	export function addHandler(eventName: string, handlerFunction: ((eventData:Map<string, any>) => Promise<Map<string, any>>))
+	{
+		let startTime = Date.now();
+		if(!(isNullOrUndefined(eventName) || eventName == "") && !isNullOrUndefined(handlerFunction)){
+			postMessage.addHandler(eventName, handlerFunction);
+		}else{
+			if(isNullOrUndefined(eventName) || eventName == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The parameter EventName is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(handlerFunction)){
+				return postMessageNamespace.rejectWithErrorMessage("Passing data parameters to addHandler is mandatory.");
+			}
+		}
+	}
 
 	/**
 	 * API to remove the subscriber
 	 */
-    export function removeHandler(eventName: string, handlerFunction: ((eventData: Map<string, any>) => Promise<Map<string, any>>)) {
-        let startTime = Date.now();
-        postMessage.removeHandler(eventName, handlerFunction);
-        reportUsage(removeHandler.name + " executed successfully in " + (Date.now() - startTime));
-    }
+	export function removeHandler(eventName: string, handlerFunction: ((eventData:Map<string, any>) => Promise<Map<string, any>>))
+	{
+		let startTime = Date.now();
+		if(!(isNullOrUndefined(eventName) || eventName == "") && !isNullOrUndefined(handlerFunction)){
+			postMessage.removeHandler(eventName, handlerFunction);
+		}else{
+			if(isNullOrUndefined(eventName) || eventName == ""){
+				return postMessageNamespace.rejectWithErrorMessage("The EventName parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(handlerFunction)){
+				return postMessageNamespace.rejectWithErrorMessage("Passing data parameters to removeHandler is mandatory.");
+			}
+		}
+	}
 
-    window.onload  = () => {
-        initialize();
-    };
+	window.onload = () => {
+		initialize();
+	}; 
 }

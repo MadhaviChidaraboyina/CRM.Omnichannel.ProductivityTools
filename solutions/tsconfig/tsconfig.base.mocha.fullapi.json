@@ -1,7 +1,8 @@
 {
     "files": [
-		"../../Packages/Crm.ClientApiTypings.1.0.713/clientapi/XrmClientApi.d.ts",
-		"../../Packages/Crm.ClientApiTypings.1.0.713/clientapi/XrmClientApiDeprecated.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApi.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApiDeprecated.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApiInternal.d.ts",
 		"../../references/internal/TypeDefinitions/XrmClientApi/XrmClientApiGap.d.ts",
 		"../../references/internal/TypeDefinitions/XrmClientApi/XrmClassicWebClientApi.d.ts",
     "../../references/internal/TypeDefinitions/XrmClientApi/XrmUCIAndClassicWeb.d.ts",
