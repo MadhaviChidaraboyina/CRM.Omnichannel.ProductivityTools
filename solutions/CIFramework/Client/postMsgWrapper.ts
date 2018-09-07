@@ -122,7 +122,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			return (Math.random() + 1).toString(36).substring(7);
 		}
 
-		createDeferred(noTimeout?: boolean): IDeferred {
+		private createDeferred(noTimeout?: boolean): IDeferred {
 			const deferred: IDeferred = {
 				promise: null,
 				resolve: null,
@@ -166,7 +166,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		 * removes the entry from pendingPromises, given the value for that entry.
 		 * @param deferred deferred object based on which entry should be deleted.
 		 */
-		removePromise(deferred: IDeferred) {
+		private removePromise(deferred: IDeferred) {
 			let keyToDelete = null;
 			for (let [key, value] of this.pendingPromises) {
 				if (value == deferred) {
@@ -209,7 +209,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		 * @param targetOrigin target url
 		 * @param deferred deferred object related with this message
 		 */
-		postMsgInternal(receivingWindow: Window, message: IExternalRequestMessageType, targetOrigin: string, deferred?: IDeferred) {
+		private postMsgInternal(receivingWindow: Window, message: IExternalRequestMessageType, targetOrigin: string, deferred?: IDeferred) {
 			let retries = 0;
 			while (true) {
 				try {
@@ -232,7 +232,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		/**
 		 * Function on receiver (widget/CI) to send back a response against an open request to the caller (CI/widget)
 		 */
-		sendResponseMsg<T extends IResponseMessageType>(receivingWindow: Window, message: T, targetOrigin: string) {
+		private sendResponseMsg<T extends IResponseMessageType>(receivingWindow: Window, message: T, targetOrigin: string) {
 			if ((receivingWindow) && (targetOrigin != "*")) {
 				receivingWindow.postMessage(message, targetOrigin);
 			}
@@ -241,7 +241,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		/**
 		 * Common function on caller and receiver to process requests and responses
 		 */
-		processMessage(event: MessageEvent) {
+		private processMessage(event: MessageEvent) {
 
 			let whiteListedOrigin = this.listWhitelistedDomains.find((whiteListedDomain) => {
 				return (new RegExp(event.origin + '*')).test(whiteListedDomain)
