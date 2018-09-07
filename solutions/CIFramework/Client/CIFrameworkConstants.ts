@@ -42,7 +42,8 @@ namespace Microsoft.CIFramework.postMessageNamespace {
  * utility func to create a promise and reject it with the passed error message
 */
     export function rejectWithErrorMessage(errorMessage: string) {
-        return Promise.reject(Microsoft.CIFramework.Utility.createErrorMap(errorMessage));
+        return Promise.reject(
+            JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(Microsoft.CIFramework.Utility.createErrorMap(errorMessage))));
     }
 }
 

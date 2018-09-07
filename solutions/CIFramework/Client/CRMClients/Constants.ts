@@ -4,14 +4,6 @@
 namespace Microsoft.CIFramework.Internal
 {
 	/**
-	 * utility func to  check if an object is null or undefined
-	*/
-	export function isNullOrUndefined(obj: any)
-	{
-		return (obj === null || obj === undefined);
-	}
-
-	/**
 	 * utility func to create a promise and reject it with the passed error message
 	*/
 	export function rejectWithErrorMessage(errorMessage: string, apiName: string, appId?: string, isError?: boolean, error?: IErrorHandler) {
@@ -27,6 +19,4 @@ namespace Microsoft.CIFramework.Internal
 		WebClient,
 		UCClient
     }
-
-    let Constants = Microsoft.CIFramework.Constants;
 }

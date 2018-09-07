@@ -99,7 +99,7 @@ namespace Microsoft.CIFramework.Internal {
         raiseEvent(data: Map<string, any>, messageType: string): void {
             const payload: postMessageNamespace.IExternalRequestMessageType = {
                 messageType: messageType,
-                messageData: data
+                messageData: JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(data))
             }
             switch (messageType) {
                 case MessageType.onModeChanged:
