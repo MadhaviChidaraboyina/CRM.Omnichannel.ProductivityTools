@@ -1,18 +1,20 @@
 {
 	"extends":  "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
-	"include": [
-		"Constants.ts",
-		"TelemetryConstants.ts",
-		"../TelemetryHelper.ts",
-		"Client.ts",
-		"State.ts",
-		"WebClient.ts",
-		"WidgetIFrame.ts",
-		"InternalMainLibrary.ts",
-		"../PostMsgWrapper.ts",
-		"../CIFrameworkConstants.ts",
-		"aria-webjs-sdk-1.6.2.js"
-	],
+  "include": [
+    "../Constants.ts",
+    "Constants.ts",
+    "../CIFrameworkUtilities.ts",
+    "../CIFrameworkConstants.ts",
+    "TelemetryConstants.ts",
+    "../TelemetryHelper.ts",
+    "../PostMsgWrapper.ts",
+    "Client.ts",
+    "State.ts",
+    "WebClient.ts",
+    "WidgetIFrame.ts",
+    "InternalMainLibrary.ts",
+    "aria-webjs-sdk-1.6.2.js"
+  ],
 	"compilerOptions": {
 		"sourceMap": true,
 		"outFile": "msdyn_internal_ci_library.js",

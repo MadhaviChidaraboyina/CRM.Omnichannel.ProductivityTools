@@ -36,23 +36,14 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 
 	export const originURL = 'originURL';
 
-	export const message = 'message';
+    export const message = 'message';
 
-	/**
-	 * utility func to create a promise and reject it with the passed error message
-	*/
-	export function rejectWithErrorMessage(errorMessage: string) {
-		return Promise.reject(createErrorMap(errorMessage));
-	}
-
-	/**
-	 * utility func to create a error map with the error message and optional error code
-	*/
-	export function createErrorMap(errorMessage : string)
-	{
-		return new Map().set(message, errorMessage);
-	}
-
+    /**
+ * utility func to create a promise and reject it with the passed error message
+*/
+    export function rejectWithErrorMessage(errorMessage: string) {
+        return Promise.reject(Microsoft.CIFramework.Utility.createErrorMap(errorMessage));
+    }
 }
 
 //export { };

@@ -367,14 +367,14 @@ namespace Microsoft.CIFramework.Internal {
 	 * subscriber of onClickToAct event
 	*/
 	export function onClickToAct(event: CustomEvent): void {
-		raiseEvent(buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event));
+        raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event));
 	}
 
 	/**
 	 * subscriber of onSendKBArticle event
 	*/
 	export function onSendKBArticle(event: CustomEvent): void {
-		raiseEvent(buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client");
+        raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client");
 	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry

@@ -1,9 +1,7 @@
 /**
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
-/// <reference path="Constants.ts" />
-/// <reference path="../PostmsgWrapper.ts" />
-/// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
+
 namespace Microsoft.CIFramework
 {
 	let targetWindow: Window;

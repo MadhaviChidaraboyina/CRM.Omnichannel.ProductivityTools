@@ -138,7 +138,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			if (!noTimeout) {
 				let timeout = new Promise<Map<string, any>>((resolve, reject) => {
 					deferred.timerId = setTimeout(() => {
-						reject(createErrorMap("Timeout occurred as no response was received from listener window"));
+                        reject(Microsoft.CIFramework.Utility.createErrorMap("Timeout occurred as no response was received from listener window"));
 					}, promiseTimeOut);
 				});
 				promises.push(timeout);
@@ -257,10 +257,10 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 				// correlation id exists, perform validation to send back failure, if needed.
 				let messageData = null;
 				if (!event.origin || event.origin === "*" || !event.source) {
-					messageData = createErrorMap("Origin/Source of the message cant be null or all");
+                    messageData = Microsoft.CIFramework.Utility.createErrorMap("Origin/Source of the message cant be null or all");
 				}
 				if (!whiteListedOrigin) {
-					messageData = createErrorMap("Sender domain is not a recognised or is invalid and hence the message cant be processed");
+                    messageData = Microsoft.CIFramework.Utility.createErrorMap("Sender domain is not a recognised or is invalid and hence the message cant be processed");
 				}
 
 				if (messageData) {
@@ -292,7 +292,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 					if (trackingCorrelationId) {
 						msg = {
 							messageOutcome: messageSuccess,
-							messageData: createErrorMap("No handlers found to process the request."),
+                            messageData: Microsoft.CIFramework.Utility.createErrorMap("No handlers found to process the request."),
 							messageCorrelationId: trackingCorrelationId
 						};
 						this.sendResponseMsg(event.source, msg, event.origin);

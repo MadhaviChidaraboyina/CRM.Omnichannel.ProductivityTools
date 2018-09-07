@@ -24,8 +24,9 @@
     <Content Include="CRMClients\WebClient.ts" />
     <Content Include="PostMsgWrapper.ts" />
     <Content Include="Widget\MainLibrary.ts" />
-    <Content Include="Widget\Constants.ts" />
+    <Content Include="Constants.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
+    <TypeScriptCompile Include="CIFrameworkUtilities.ts" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.6.2.d.ts" />
     <TypeScriptCompile Include="CRMClients\IErrorHandler.ts" />
     <TypeScriptCompile Include="CRMClients\TelemetryConstants.ts" />
@@ -84,9 +85,6 @@
       <WebResources Include="$(TypeScriptOutDir)\**\*.less" />
       <WebResources Include="$(TypeScriptOutDir)\**\*.js" />
       <WebResources Include="$(TypeScriptOutDir)\**\*.resx" />
-    </ItemGroup>
-    <ItemGroup>
-      <TypeDefinitions Include="$(TypeScriptOutDir)\**\*.d.ts" />
     </ItemGroup>
   </Target>
   <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)\%(RecursiveDir)')">
