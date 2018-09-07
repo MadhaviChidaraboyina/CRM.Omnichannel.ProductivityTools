@@ -7,8 +7,8 @@ namespace Microsoft.CIFramework
 {
 	let targetWindow: Window;
 	let postMessage: postMessageNamespace.postMsgWrapper;
-    let domains: string[] = [];
-    let Constants = Microsoft.CIFramework.Constants;
+	let domains: string[] = [];
+	let Constants = Microsoft.CIFramework.Constants;
 
 	function initialize()
 	{
@@ -30,9 +30,9 @@ namespace Microsoft.CIFramework
 			//To-Do Log the Message that more than one domains are present
 		}
 		postMessage = new postMessageNamespace.postMsgWrapper(window, domains, null);
-    window.addEventListener("focus", function () {
-            setMode(1); //TODO: replace 1 with named constant
-        });
+	window.addEventListener("focus", function () {
+			setMode(1); //TODO: replace 1 with named constant
+		});
 	}
 
 	function sendMessage<T>(funcName: string, payload: postMessageNamespace.IExternalRequestMessageType, isEvent: boolean, noTimeout?: boolean) : Promise<T>{
@@ -61,17 +61,17 @@ namespace Microsoft.CIFramework
 	 * @param value. When set to 'true', invoke the registered 'onclicktoact' handler.
 	 *
 	*/
-    export function setClickToAct(value: boolean): Promise<void> {
-        if (isNullOrUndefined(value)) {
-            value = false;
-        }
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.setClickToAct,
-            messageData: new Map().set(Constants.value, value)
-        }
+	export function setClickToAct(value: boolean): Promise<void> {
+		if (isNullOrUndefined(value)) {
+			value = false;
+		}
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.setClickToAct,
+			messageData: new Map().set(Constants.value, value)
+		}
 
-        return sendMessage<void>(setClickToAct.name, payload, false);
-    }
+		return sendMessage<void>(setClickToAct.name, payload, false);
+	}
 
 	/**
 	 * API to open the create form for given entity with data passed in pre-populated
@@ -90,17 +90,17 @@ namespace Microsoft.CIFramework
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.openForm,
 				messageData: new Map().set(Constants.entityFormOptions, entityFormOptions).set(Constants.entityFormParameters, entityFormParameters)
-            }
+			}
 
-            return new Promise((resolve, reject) => {
-                return sendMessage<Object>(openForm.name, payload, false, true).then(
-                    function (result: Object) {
-                        return resolve(JSON.stringify(result));
-                    },
-                    function (error: Map<string, any>) {
-                        return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
-                    });
-            });
+			return new Promise((resolve, reject) => {
+				return sendMessage<Object>(openForm.name, payload, false, true).then(
+					function (result: Object) {
+						return resolve(JSON.stringify(result));
+					},
+					function (error: Map<string, any>) {
+						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+					});
+			});
 
 		}else{
 			if(isNullOrUndefined(entityFormOptions) || entityFormOptions == ""){
@@ -125,15 +125,15 @@ namespace Microsoft.CIFramework
 				messageType: MessageType.retrieveRecord,
 				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.queryParameters, query)
 			}
-            return new Promise((resolve, reject) => {
-                return sendMessage<Map<string, any>>(retrieveRecord.name, payload, false).then(
-                    function (result: Map<string, any>) {
-                        return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
-                    },
-                    function (error: Map<string, any>) {
-                        return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
-                    });
-            });
+			return new Promise((resolve, reject) => {
+				return sendMessage<Map<string, any>>(retrieveRecord.name, payload, false).then(
+					function (result: Map<string, any>) {
+						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
+					},
+					function (error: Map<string, any>) {
+						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+					});
+			});
 		}else{
 			if(isNullOrUndefined(entityName) || entityName == ""){
 				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
@@ -159,18 +159,18 @@ namespace Microsoft.CIFramework
 		if(!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(entityId) || entityId == "") && !isNullOrUndefined(data)){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.updateRecord,
-                messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.value, Microsoft.CIFramework.Utility.buildMap(JSON.parse(data)))
-            }
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.value, Microsoft.CIFramework.Utility.buildMap(JSON.parse(data)))
+			}
 
-            return new Promise((resolve, reject) => {
-                return sendMessage<Map<string, any>>(updateRecord.name, payload, false).then(
-                    function (result: Map<string, any>) {
-                        return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
-                    },
-                    function (error: Map<string, any>) {
-                        return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
-                    });
-            });
+			return new Promise((resolve, reject) => {
+				return sendMessage<Map<string, any>>(updateRecord.name, payload, false).then(
+					function (result: Map<string, any>) {
+						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
+					},
+					function (error: Map<string, any>) {
+						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+					});
+			});
 		}else{
 			if(isNullOrUndefined(entityName) || entityName == ""){
 				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
@@ -198,18 +198,18 @@ namespace Microsoft.CIFramework
 		if(!(isNullOrUndefined(entityName) || entityName == "") && !isNullOrUndefined(data)){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.createRecord,
-                messageData: new Map().set(Constants.entityName, entityName).set(Constants.value, Microsoft.CIFramework.Utility.buildMap(JSON.parse(data)))
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.value, Microsoft.CIFramework.Utility.buildMap(JSON.parse(data)))
 			}
 
-            return new Promise((resolve, reject) => {
-                return sendMessage<Map<string, any>>(createRecord.name, payload, false).then(
-                    function (result: Map<string, any>) {
-                        return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
-                    },
-                    function (error: Map<string, any>) {
-                        return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
-                    });
-            });
+			return new Promise((resolve, reject) => {
+				return sendMessage<Map<string, any>>(createRecord.name, payload, false).then(
+					function (result: Map<string, any>) {
+						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
+					},
+					function (error: Map<string, any>) {
+						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+					});
+			});
 			
 		}else{
 			if(isNullOrUndefined(entityName) || entityName == ""){
@@ -238,15 +238,15 @@ namespace Microsoft.CIFramework
 				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId)
 			}
 
-            return new Promise((resolve, reject) => {
-                return sendMessage<Map<string, any>>(deleteRecord.name, payload, false).then(
-                    function (result: Map<string, any>) {
-                        return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
-                    },
-                    function (error: Map<string, any>) {
-                        return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
-                    });
-            });
+			return new Promise((resolve, reject) => {
+				return sendMessage<Map<string, any>>(deleteRecord.name, payload, false).then(
+					function (result: Map<string, any>) {
+						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
+					},
+					function (error: Map<string, any>) {
+						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+					});
+			});
 		}else{
 			if(isNullOrUndefined(entityName) || entityName == ""){
 				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
@@ -273,17 +273,17 @@ namespace Microsoft.CIFramework
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: searchOnly ? MessageType.search : MessageType.searchAndOpenRecords,
 				messageData: new Map().set(Constants.entityName, entityName).set(Constants.queryParameters, queryParmeters).set(Constants.searchOnly, searchOnly)
-            }
+			}
 
-            return new Promise((resolve, reject) => {
-                return sendMessage<Map<string, any>>(searchAndOpenRecords.name, payload, false).then(
-                    function (result: Map<string, any>) {
-                        return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
-                    },
-                    function (error: Map<string, any>) {
-                        return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
-                    });
-            });
+			return new Promise((resolve, reject) => {
+				return sendMessage<Map<string, any>>(searchAndOpenRecords.name, payload, false).then(
+					function (result: Map<string, any>) {
+						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
+					},
+					function (error: Map<string, any>) {
+						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+					});
+			});
 		}else{
 			if(isNullOrUndefined(entityName) || entityName == ""){
 				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
@@ -302,53 +302,53 @@ namespace Microsoft.CIFramework
 	 *
 	 * @returns a Promise: '0' for minimized and '1' for docked mode
 	*/
-    export function getMode(): Promise<number> {
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.getMode,
-            messageData: new Map()
-        }
+	export function getMode(): Promise<number> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getMode,
+			messageData: new Map()
+		}
 
-        return sendMessage<number>(getMode.name, payload, false);
-    }
+		return sendMessage<number>(getMode.name, payload, false);
+	}
 
 	/**
 	 * API to get the current main UCI page details
 	 *
 	 * @returns a Promise: map with available details of the current page
 	 *  'appid', 'pagetype', 'record-id' (if available), 'clientUrl', 'appUrl',
-	 * 'orgLcid', 'orgUniqueName', 'userId', 'userLcid', 'username'
+	 * 'orgLcid', 'orgUniqueName', 'userId', 'userLcid', 'username', orgId
 	*/
-    export function getEnvironment(): Promise<string> {
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.getEnvironment,
-            messageData: new Map()
-        }
+	export function getEnvironment(): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getEnvironment,
+			messageData: new Map()
+		}
 
-        return new Promise((resolve, reject) => {
-            return sendMessage<Map<string, any>>(getEnvironment.name, payload, false).then(
-                function (result: Map<string, any>) {
-                    return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
-                },
-                function (error: Map<string, any>) {
-                    return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
-                });
-        });
-    }
+		return new Promise((resolve, reject) => {
+			return sendMessage<Map<string, any>>(getEnvironment.name, payload, false).then(
+				function (result: Map<string, any>) {
+					return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
+				},
+				function (error: Map<string, any>) {
+					return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+				});
+		});
+	}
 
 	/**
 	 * API to get the Panel width
 	 *
 	 * @returns a Promise with the panel width
 	*/
-    export function getWidth(): Promise<number> {
-        let startTime = Date.now();
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.getWidth,
-            messageData: new Map()
-        }
+	export function getWidth(): Promise<number> {
+		let startTime = Date.now();
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getWidth,
+			messageData: new Map()
+		}
 
-        return sendMessage<number>(getWidth.name, payload, false);
-    }
+		return sendMessage<number>(getWidth.name, payload, false);
+	}
 
 	/**
 	 * API to set the Panel width
@@ -395,15 +395,15 @@ namespace Microsoft.CIFramework
 	 *
 	 * @returns a boolean Promise on whether ClickToAct is currently enabled
 	*/
-    export function getClickToAct(): Promise<boolean> {
-        let startTime = Date.now();
-        const payload: postMessageNamespace.IExternalRequestMessageType = {
-            messageType: MessageType.getClickToAct,
-            messageData: new Map()
-        }
+	export function getClickToAct(): Promise<boolean> {
+		let startTime = Date.now();
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getClickToAct,
+			messageData: new Map()
+		}
 
-        return sendMessage<boolean>(getClickToAct.name, payload, false);
-    }
+		return sendMessage<boolean>(getClickToAct.name, payload, false);
+	}
 
 
 	/**

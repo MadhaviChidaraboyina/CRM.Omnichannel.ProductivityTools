@@ -37,12 +37,12 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				let startTime = new Date();
-                return Xrm.WebApi.createRecord(entityName, Microsoft.CIFramework.Utility.buildEntity(data)).then(
+				return Xrm.WebApi.createRecord(entityName, Microsoft.CIFramework.Utility.buildEntity(data)).then(
 					(result: XrmClientApi.LookupValue) => {
 						let timeTaken = Date.now() - startTime.getTime();
 						let apiName = "Xrm.WebApi.createRecord";
 						logApiData(telemetryData, startTime, timeTaken, apiName);
-                        return resolve(Microsoft.CIFramework.Utility.buildMap(result)); 
+						return resolve(Microsoft.CIFramework.Utility.buildMap(result)); 
 					},
 					(error: Error) => {
 						return rejectWithErrorMessage(error.message, "createRecord");
@@ -66,12 +66,12 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise<Map<string, any>>((resolve, reject) =>
 			{
 				let startTime = new Date();
-                return Xrm.WebApi.updateRecord(entityName, entityId, Microsoft.CIFramework.Utility.buildEntity(data)).then(
+				return Xrm.WebApi.updateRecord(entityName, entityId, Microsoft.CIFramework.Utility.buildEntity(data)).then(
 					(result: XrmClientApi.LookupValue) => {
 						let timeTaken = Date.now() - startTime.getTime();
 						let apiName = "Xrm.WebApi.updateRecord";
 						logApiData(telemetryData, startTime, timeTaken, apiName);
-                        return resolve(Microsoft.CIFramework.Utility.buildMap(result));
+						return resolve(Microsoft.CIFramework.Utility.buildMap(result));
 					},
 					(error: Error) =>
 					{
@@ -91,7 +91,7 @@ namespace Microsoft.CIFramework.Internal {
 						let timeTaken = Date.now() - startTime.getTime();
 						let apiName = "Xrm.WebApi.updateRecord";
 						logApiData(telemetryData, startTime, timeTaken, apiName);
-                        return resolve(Microsoft.CIFramework.Utility.buildMap(result));
+						return resolve(Microsoft.CIFramework.Utility.buildMap(result));
 					},
 					(error: Error) => {
 						return rejectWithErrorMessage(error.message, "retrieveRecord");
@@ -108,7 +108,7 @@ namespace Microsoft.CIFramework.Internal {
 						let timeTaken = Date.now() - startTime.getTime();
 						let apiName = "Xrm.WebApi.deleteRecord"
 						logApiData(telemetryData, startTime, timeTaken, apiName);
-                        return resolve(Microsoft.CIFramework.Utility.buildMap(result));
+						return resolve(Microsoft.CIFramework.Utility.buildMap(result));
 					},
 					(error: Error) => {
 						return rejectWithErrorMessage(error.message, "deleteRecord");
@@ -310,6 +310,7 @@ namespace Microsoft.CIFramework.Internal {
 			data.set(Constants.AppUrl, context.getCurrentAppUrl());
 			data.set(Constants.OrgLcid, context.organizationSettings.languageId);
 			data.set(Constants.OrgUniqueName, context.organizationSettings.uniqueName);
+			data.set(Constants.OrgId, context.organizationSettings.organizationId);
 			data.set(Constants.UserId, context.userSettings.userId);
 			data.set(Constants.UserLcid, context.userSettings.languageId);
 			data.set(Constants.UserName, context.userSettings.userName);

@@ -10,7 +10,7 @@
 /// <reference path="aria-webjs-sdk-1.6.2.d.ts" />
 
 namespace Microsoft.CIFramework.Internal {
-    let Constants = Microsoft.CIFramework.Constants;
+	let Constants = Microsoft.CIFramework.Constants;
 	/**
 	 * mapping of handlers for each API needed by postMessageWrapper
 	 */
@@ -70,15 +70,15 @@ namespace Microsoft.CIFramework.Internal {
 					// populate ciProviders in state.
 					state.ciProviders = new Map<string, any>();
 					state.sessionManager = new SessionInfo();
-                    var roles = Xrm.Utility.getGlobalContext().getUserRoles();
-                    let telemetryData: any = new Object();
+					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
+					let telemetryData: any = new Object();
 					var defaultMode = state.client.getWidgetMode(telemetryData) as number;
-                    var first: string = null;
-                    var environmentInfo: any = [];
-                    environmentInfo["orgId"] = Xrm.Utility.getGlobalContext().organizationSettings.organizationId;
-                    environmentInfo["orgName"] = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
-                    environmentInfo["crmVersion"] = Xrm.Utility.getGlobalContext().getVersion();
-                    environmentInfo["appId"] = appId;
+					var first: string = null;
+					var environmentInfo: any = [];
+					environmentInfo["orgId"] = Xrm.Utility.getGlobalContext().organizationSettings.organizationId;
+					environmentInfo["orgName"] = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
+					environmentInfo["crmVersion"] = Xrm.Utility.getGlobalContext().getVersion();
+					environmentInfo["appId"] = appId;
 					for (var x of result.entities) {
 						var currRoles = x[Constants.roleSelectorFieldName];
 						currRoles = (currRoles != null) ? currRoles.split(";") : null;
@@ -86,10 +86,10 @@ namespace Microsoft.CIFramework.Internal {
 							if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
 								continue;
 							}
-                            var provider: CIProvider = new CIProvider(x, state, environmentInfo);
-                            state.ciProviders.set(x[Constants.landingUrl], provider);
-                            var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], x[Constants.SortOrder], appId, false, null);
-                            setUsageData(usageData);
+							var provider: CIProvider = new CIProvider(x, state, environmentInfo);
+							state.ciProviders.set(x[Constants.landingUrl], provider);
+							var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], x[Constants.SortOrder], appId, false, null);
+							setUsageData(usageData);
 							if (!first) {
 								first = x[Constants.landingUrl];
 							}
@@ -100,7 +100,7 @@ namespace Microsoft.CIFramework.Internal {
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(state.ciProviders.keys()), apiHandlers);
 					// load the widgets onto client. 
 					state.client.loadWidgets(state.ciProviders).then(function (widgetLoadStatus) {
-                        reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
+						reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
 					});
 					if (first) {
 						state.sessionManager.setActiveProvider(state.ciProviders.get(first));
@@ -277,17 +277,17 @@ namespace Microsoft.CIFramework.Internal {
 	/**
 	 * setMode API's client side handler that post message library will invoke. 
 	*/
-    export function setMode(parameters: Map<string, any>): Promise<Map<string, any>> {
-        let telemetryData: any = new Object();
-        let startTime = new Date();
-        const [provider, errorData] = getProvider(parameters, [Constants.value]);
+	export function setMode(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.value]);
 		if (provider) { //TODO: See whether perfData needs to include provider.setMode() call
-            var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setMode.name, telemetryData);
-            setPerfData(perfData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setMode.name, telemetryData);
+			setPerfData(perfData);
 			return provider.setMode(parameters.get(Constants.value) as number);
 		}
 		else {
-            return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
 		}
 	}
 
@@ -296,19 +296,19 @@ namespace Microsoft.CIFramework.Internal {
 	*/
 	export function setWidth(parameters: Map<string, any>): Promise<Map<string, any>> {   //TODO: This should be reinterpreted to 'only the widget's width changed. Should we even allow this in multi-widget scenario?
 		//TODO: if the new width is greater than panel width, what do we do?
-        let telemetryData: any = new Object();
-        let startTime = new Date();
-        const [provider, errorData] = getProvider(parameters, [Constants.value]);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.value]);
 
 		if (provider) {
 			//TODO: calculate max width across all widgets and set panel to it
-            var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setWidth.name, telemetryData);
-            setPerfData(perfData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setWidth.name, telemetryData);
+			setPerfData(perfData);
 
 			return provider.setWidth(parameters.get(Constants.value) as number);
 		}
 		else {
-            return rejectWithErrorMessage(errorData.errorMsg, setWidth.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, setWidth.name, appId, true, errorData);
 		}
 	}
 
@@ -335,16 +335,16 @@ namespace Microsoft.CIFramework.Internal {
 	 * getMode API's client side handler that post message library will invoke.
 	*/
 	export function getMode(parameters: Map<string, any>): Promise<Map<string, any>> {
-        let telemetryData: any = new Object();
-        let startTime = new Date();
-        const [provider, errorData] = getProvider(parameters); // if there are multiple widgets then we need this to get the value of particular widget
-        if (provider) {
-            var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getMode.name, telemetryData);
-            setPerfData(perfData);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters); // if there are multiple widgets then we need this to get the value of particular widget
+		if (provider) {
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getMode.name, telemetryData);
+			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, provider.getMode()));
 		}
 		else {
-            return rejectWithErrorMessage(errorData.errorMsg, getMode.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, getMode.name, appId, true, errorData);
 		}
 	}
 
@@ -352,16 +352,16 @@ namespace Microsoft.CIFramework.Internal {
 	 * getWidth API's client side handler that post message library will invoke. 
 	*/
 	export function getWidth(parameters: Map<string, any>): Promise<Map<string, any>> {
-        let telemetryData: any = new Object();
-        let startTime = new Date();
-        const [provider, errorData] = getProvider(parameters);
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-            var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getWidth.name, telemetryData);
-            setPerfData(perfData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getWidth.name, telemetryData);
+			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, Number(provider.getWidth())));
 		}
 		else {
-            return rejectWithErrorMessage(errorData.errorMsg, getWidth.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, getWidth.name, appId, true, errorData);
 		}
 	}
 
@@ -369,14 +369,14 @@ namespace Microsoft.CIFramework.Internal {
 	 * subscriber of onClickToAct event
 	*/
 	export function onClickToAct(event: CustomEvent): void {
-        raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event));
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event));
 	}
 
 	/**
 	 * subscriber of onSendKBArticle event
 	*/
 	export function onSendKBArticle(event: CustomEvent): void {
-        raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client");
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client");
 	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
