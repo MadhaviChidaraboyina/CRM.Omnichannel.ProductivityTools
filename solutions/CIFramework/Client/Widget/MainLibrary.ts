@@ -30,9 +30,15 @@ namespace Microsoft.CIFramework
 			//To-Do Log the Message that more than one domains are present
 		}
 		postMessage = new postMessageNamespace.postMsgWrapper(window, domains, null);
-	window.addEventListener("focus", function () {
+		window.addEventListener("focus", function () {
 			setMode(1); //TODO: replace 1 with named constant
 		});
+		var dict: any = {};
+		dict["detail"] = domains;
+		var event_1 = new CustomEvent(Constants.CIFInitEvent, dict);
+		window.setTimeout(function () {
+			window.dispatchEvent(event_1);
+		}, 0);
 	}
 
 	function sendMessage<T>(funcName: string, payload: postMessageNamespace.IExternalRequestMessageType, isEvent: boolean, noTimeout?: boolean) : Promise<T>{

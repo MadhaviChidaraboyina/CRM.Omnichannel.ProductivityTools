@@ -84,6 +84,7 @@ namespace Microsoft.CIFramework
 		export const SortOrder = "msdyn_sortorder";
 		export const crmVersion = "crmVersion";
 		export const OrgId = "orgId";
+		export const CIFInitEvent = "CIFInitDone";
 	}
 
 	/**
