@@ -456,7 +456,5 @@ namespace Microsoft.CIFramework
 		}
 	}
 
-	window.onload = () => {
-		initialize();
-	}; 
+	initialize();
 }
