@@ -90,10 +90,6 @@ namespace Microsoft.CIFramework
             messageType: MessageType.notifyCIF,
             messageData: new Map().set(Constants.eventType,eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(notificationUX)))
         }
-		/*let startTime = Date.now();
-        return sendMessage<void>(notifyCIF.name, payload, false, true).then(function(value) {
-			console.log(value);
-		});*/
 		return new Promise((resolve, reject) => {
 			return sendMessage<Map<string, any>>(notifyCIF.name, payload, false, true).then(
 				function (result: Map<string, any>) {
