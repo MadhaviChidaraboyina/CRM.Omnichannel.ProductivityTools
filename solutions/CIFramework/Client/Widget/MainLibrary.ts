@@ -80,6 +80,32 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+	 * API to invoke toast popup widget
+	 *
+	 * @param value. It's a string which contains header,body of the popup
+	 *
+	*/
+    export function notifyCIF(eventType: string, notificationUX: string): Promise<string> {		
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+            messageType: MessageType.notifyCIF,
+            messageData: new Map().set(Constants.eventType,eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(notificationUX)))
+        }
+		/*let startTime = Date.now();
+        return sendMessage<void>(notifyCIF.name, payload, false, true).then(function(value) {
+			console.log(value);
+		});*/
+		return new Promise((resolve, reject) => {
+			return sendMessage<Map<string, any>>(notifyCIF.name, payload, false, true).then(
+				function (result: Map<string, any>) {
+					return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
+				},
+				function (error: Map<string, any>) {
+					return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+				});
+		});
+    }
+
+	/**
 	 * API to open the create form for given entity with data passed in pre-populated
 	 * Invokes the api Xrm.Navigation.openForm(entityFormOptions, formParameters)
 	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openform

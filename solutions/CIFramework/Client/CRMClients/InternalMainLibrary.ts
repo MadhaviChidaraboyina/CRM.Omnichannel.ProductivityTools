@@ -16,6 +16,7 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	const apiHandlers = new Map<string, any>([
 		["setclicktoact", [setClickToAct]],
+		["notifyCIF", [notifyCIF]],
 		["searchandopenrecords", [searchAndOpenRecords]],
 		["openform", [openForm]],
 		["createrecord", [createRecord]],
@@ -524,4 +525,114 @@ namespace Microsoft.CIFramework.Internal {
 			return rejectWithErrorMessage(errorData.errorMsg, search.name, appId, true, errorData);
 		}
 	}
+	
+	/**
+	 * API to invoke toast popup widget
+	 *
+	 * @param value. It's a string which contains header,body of the popup
+	 *
+	*/
+    export function notifyCIF(notificationUX: Map<string,Map<string,any>>): Promise<boolean>{
+       	let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
+		var childDivs = toastDiv.getElementsByTagName('div');
+		let i = 0;
+		if(childDivs != null){
+			for( i=0; i< childDivs.length; i++ ){
+				let childDiv = childDivs[i];
+				if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+					childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:none;');
+				}
+			}
+		}
+		toastDiv.insertAdjacentHTML('afterbegin', '<div id="CIFToast" style="position: relative;display:table;background-color: rgba(102, 102, 102, 0.5);width:254px;z-index: 2;cursor: pointer;border: 2px solid #dedede;border-radius: 5px;padding: 10px;margin: 10px 0;background-color: lightblue;"><div id="header_CIF" style="display:block;"></div><div class="bodyDivCIF" style="display:block;"><p id="body_CIF"></p></div></div>');
+		let header,body,buttons,icon;
+		for (let [key, value] of notificationUX) {
+			if(key.search(Constants.eventType) != -1){
+				console.log(value);
+			}
+			if(key.search(Constants.notificationUXObject) != -1){
+				for(let [key1, value1] of value){
+					if(key1.search(Constants.headerDataCIF) != -1){
+						header = value1;
+					}else if(key1.search(Constants.bodyDataCIF) != -1){
+						body = value1;
+					}else if(key1.search(Constants.buttonsCIF) != -1){
+						buttons = value1;
+					}else if(key1.search(Constants.CIFNotificationIcon) != -1){
+						icon = value1;
+					}
+				}
+			}
+		}
+		let headerVal = "";
+		let bodyVal = "";
+		for( i = 0; i < header.length; i++){
+			for (let key in header[i]) {
+				headerVal += key + "  " + header[i][key] + " ";
+			}
+			headerVal += "\n";
+		}
+		for( i = 0; i < body.length; i++){
+			for (let key in body[i]) {
+				bodyVal += key + "  " + body[i][key] + " ";
+			}
+			bodyVal += "\n";
+		}
+		widgetIFrame.contentWindow.document.getElementById("header_CIF").innerText = headerVal;
+		widgetIFrame.contentWindow.document.getElementById("body_CIF").innerText = bodyVal;
+		let chatWindowBody = widgetIFrame.contentWindow.document.getElementById("CIFToast").getElementsByClassName("bodyDivCIF")[0];
+		let map = new Map();
+		for( i = 0; i < buttons.length; i++){
+			var btn = document.createElement("BUTTON");
+			chatWindowBody.appendChild(btn);
+			let buttonParam = new Map();
+			let k = 0;
+			let buttonNameCIF,buttonReturnValueCIF;
+			for (let key in buttons[i]) {
+				if(key.search(Constants.buttonDisplayText) != -1){
+					btn.innerText = buttons[i][key];
+				}else if(key.search(Constants.buttonName) != -1){
+					buttonNameCIF = buttons[i][key];
+				}else if(key.search(Constants.buttonReturnValue) != -1){
+					buttonReturnValueCIF = buttons[i][key];
+				}
+			}
+			buttonParam.set(buttonNameCIF,buttonReturnValueCIF);
+			map.set(btn,buttonParam);
+		}
+		widgetIFrame.contentWindow.document.getElementById("header_CIF").addEventListener("click", function() {
+			childDivs = toastDiv.getElementsByTagName('div');
+			if(childDivs != null){
+				for( i=0; i< childDivs.length; i++ ){
+					let childDiv = childDivs[i];
+					if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+						childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:none;');
+					}
+				}
+				this.parentElement.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
+			}
+		});
+		return new Promise(function (resolve) {
+			for(let [key,value] of map){
+				key.addEventListener("click", function clickListener() {
+					key.removeEventListener("click", clickListener);
+					key.parentElement.parentElement.style.display = "none";
+					key.parentElement.remove();
+					childDivs = toastDiv.getElementsByTagName('div');
+					if(childDivs != null){
+						for( i=0; i< childDivs.length; i++ ){
+							let childDiv = childDivs[i];
+							if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+								childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
+								break;
+							}
+						}
+					}
+					var mapReturn = new Map().set(Constants.value,value);
+					resolve(mapReturn);
+				});
+			}
+		});
+    }
 }

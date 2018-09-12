@@ -28,6 +28,7 @@ namespace Microsoft.CIFramework
 		export const onSizeChanged = "onsizechanged";
 		export const onPageNavigate = "onpagenavigate";
 		export const onSendKBArticle = "onsendkbarticle";
+		export const notifyCIF = "notifyCIF";
 	}
 
 	/**
@@ -85,6 +86,15 @@ namespace Microsoft.CIFramework
 		export const crmVersion = "crmVersion";
 		export const OrgId = "orgId";
 		export const CIFInitEvent = "CIFInitDone";
+		export const eventType: string = "eventType";
+		export const headerDataCIF: string = "headerDataCIF";
+		export const bodyDataCIF: string = "bodyDataCIF";
+		export const notificationUXObject: string = "notificationUXObject";
+		export const buttonDisplayText = "buttonDisplayText";
+		export const buttonReturnValue = "buttonReturnValue";
+		export const buttonsCIF = "buttons";
+		export const buttonName = "buttonName";
+		export const CIFNotificationIcon = "CIFNotificationIcon";
 	}
 
 	/**
