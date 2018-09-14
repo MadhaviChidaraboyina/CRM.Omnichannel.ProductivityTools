@@ -1,0 +1,5 @@
+{
+    "presets": [[
+        "minify", {"exclude": {"Microsoft": true} }
+    ]]
+}

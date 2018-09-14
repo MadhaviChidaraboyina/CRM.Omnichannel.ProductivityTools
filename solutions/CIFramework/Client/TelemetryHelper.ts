@@ -61,7 +61,9 @@ namespace Microsoft.CIFramework.Internal
 		let ApiData: any = new Object();
 		ApiData["StartTime"] = startTime.toUTCString();
 		ApiData["TimeTaken"] = timetaken;
-		telemetryData[apiName] = ApiData;
+		if (telemetryData) {
+			telemetryData[apiName] = ApiData;
+		}
 	}
 
 	export function logFailure(appId: string, isError: boolean, error: IErrorHandler) {
