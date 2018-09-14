@@ -69,7 +69,7 @@ namespace Microsoft.CIFramework.Internal {
 					state.client.registerHandler(Constants.NavigationHandler, onPageNavigation);
 					// populate ciProviders in state.
 					state.ciProviders = new Map<string, any>();
-					state.sessionManager = new SessionInfo();
+					state.sessionManager = new SessionInfo(state.client);
 					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
 					let telemetryData: any = new Object();
 					var defaultMode = state.client.getWidgetMode(telemetryData) as number;

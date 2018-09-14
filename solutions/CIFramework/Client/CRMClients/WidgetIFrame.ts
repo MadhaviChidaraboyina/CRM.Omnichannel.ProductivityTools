@@ -2,6 +2,7 @@
 {
 	export interface WidgetContainer {
 		setHeight(height: number): boolean;
+		setVisibility(visibility: boolean): boolean;
 		setWidth(height: number): boolean;
 		getContentWindow(): Window;
 		setProvider(provider: CIProvider): void;
@@ -9,25 +10,49 @@
 	export class WidgetIFrameWrapper  implements WidgetContainer {
 		hostIFrame: HTMLIFrameElement;
 		provider: CIProvider;
+		visibility: boolean;
+        preservedHeight: number;
+        preservedWidth: number;
 
 		constructor(hostIFrame: HTMLIFrameElement) {
 			this.hostIFrame = hostIFrame;
 			this.provider = null;
+			this.visibility = true;
+			this.preservedHeight = 0;
+		}
+
+		setVisibility(visibility: boolean): boolean {
+			this.visibility = visibility;
+            this.setHeight(this.preservedHeight);
+            this.setWidth(this.preservedWidth);
+			return true;
 		}
 
 		setHeight(height: number): boolean {
 			if (!this.hostIFrame) {
 				return false;
 			}
-			this.hostIFrame.height = height.toString();
+			this.preservedHeight = height;
+			if (this.visibility) {
+				this.hostIFrame.height = (height > 0 ? height.toString() : "100%");
+			}
+			else {
+				this.hostIFrame.height = "0";
+			}
 			return true;
 		}
 
 		setWidth(width: number): boolean {
 			if (!this.hostIFrame) {
 				return false;
-			}
-			this.hostIFrame.width = width.toString();
+            }
+            this.preservedWidth = width;
+            if (this.visibility) {
+                this.hostIFrame.width = (width > 0 ? width.toString() : "100%");
+            }
+            else {
+                this.hostIFrame.width = "0";
+            }
 			return true;
 		}
 

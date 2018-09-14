@@ -38,6 +38,11 @@ namespace Microsoft.CIFramework.Internal {
 
     export class SessionInfo {
         _activeProvider: CIProvider;
+        _client: IClient;
+
+        constructor(client: IClient) {
+            this._client = client;
+        }
 
         setActiveProvider(provider: CIProvider): Promise<Map<string, any>> {
             if (this._activeProvider != provider) {
@@ -49,9 +54,10 @@ namespace Microsoft.CIFramework.Internal {
                 if (oldProvider) {
                     oldProvider.raiseEvent(new Map<string, any>().set(Constants.value, 0), MessageType.onModeChanged);    //TODO: replace 0 with named constant
                 }
-                if (this._activeProvider) {
-                    this._activeProvider.raiseEvent(new Map<string, any>().set(Constants.value, 1), MessageType.onModeChanged);    //TODO: replace with named constant
-                }
+            }
+            if (this._activeProvider) {
+                //this._activeProvider.raiseEvent(new Map<string, any>().set(Constants.value, 1), MessageType.onModeChanged);    //TODO: replace with named constant
+                this._client.setWidgetMode("mode", this._activeProvider.getMode());
             }
             return Promise.resolve(new Map<string, any>().set(Constants.value, true));    //TODO: Session manager needs to eval whether it is feasibile to change session and resolve or reject the promise
         }
@@ -132,7 +138,8 @@ namespace Microsoft.CIFramework.Internal {
             let container = this.getContainer();
             let ret: boolean = false;
             if (container) {
-                ret = container.setHeight(this.getHeight()) && container.setWidth(this.getWidth());
+                let visibility: boolean = this.getMode() == 1;  //TODO: replace with named constant
+                ret = container.setVisibility(visibility) && container.setHeight(this.getHeight()) && container.setWidth(this.getWidth());
             }
             return Promise.resolve(new Map<string, any>().set(Constants.value, ret));
             /*if (ret) {
@@ -146,16 +153,17 @@ namespace Microsoft.CIFramework.Internal {
             if (this.currentMode == mode) {
                 return Promise.resolve(new Map<string, any>().set(Constants.value, true));
             }
+            this.currentMode = mode;
             switch (mode) {
                 case 1: //TODO - replace with named constant. We have the focus
-                    if (this._state.sessionManager.getActiveProvider() == this) {
-                        this.currentMode = mode;
+                    /*if (this._state.sessionManager.getActiveProvider() == this) {
+                        //this.currentMode = mode;
                         return this.updateContainerSize();
-                    }
+                    }*/
                     return this._state.sessionManager.setActiveProvider(this).then(
                         function (result: Map<string, any>) {
                             if (result.get(Constants.value)) {
-                                this.currentMode = mode;
+                                //this.currentMode = mode;
                                 return this.updateContainerSize();
                             }
                             return Promise.resolve(result);
@@ -164,14 +172,14 @@ namespace Microsoft.CIFramework.Internal {
                             return Promise.reject(error);
                         });
                 case 0://TODO - replace with named constant. We lost the focus
-                    if (this._state.sessionManager.getActiveProvider() != this) {
-                        this.currentMode = mode;
+                    /*if (this._state.sessionManager.getActiveProvider() != this) {
+                        //this.currentMode = mode;
                         return this.updateContainerSize();
-                    }
+                    }*/
                     return this._state.sessionManager.setActiveProvider(null).then(
                         function (result: Map<string, any>) {
                             if (result.get(Constants.value)) {
-                                this.currentMode = mode;
+                                //this.currentMode = mode;
                                 return this.updateContainerSize();
                             }
                             return Promise.resolve(result);
