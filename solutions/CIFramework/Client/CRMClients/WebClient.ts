@@ -174,7 +174,7 @@ namespace Microsoft.CIFramework.Internal {
 					let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 					let targetWindow = window.parent;
 					let status: Map<string, boolean | string> = new Map<string, boolean | string>();
-					let fracHeightForActiveWidget: number = 0.6;
+					let fracHeightForActiveWidget: number = 0.9;
 					let widgetHeight: number = widgetIFrame.clientHeight * fracHeightForActiveWidget;
 					let minimizedHeight: number = (widgetIFrame.clientHeight * (1 - fracHeightForActiveWidget)) / ciProviders.size;   // TODO: Figure out correct units to use
 					widgetIFrame.onload = function () {
