@@ -212,17 +212,13 @@
     <value>เลือกแอปส่วนติดต่อแบบรวมสำหรับช่องทาง</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_AppSelector' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_CIProviderAPIVersion" xml:space="preserve">
+  <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderapiversion" xml:space="preserve">
     <value>รุ่น API</value>
-    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_CIProviderAPIVersion' on Entity</comment>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
     <value>รหัสเฉพาะสำหรับเรกคอร์ด CIProvider</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_CIProvider_API_Version" xml:space="preserve">
-    <value>รุ่น API ของผู้ให้บริการการรวมช่องทาง</value>
-    <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
     <value />
@@ -316,17 +312,13 @@
     <value>ตัวเลือกแอป</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_AppSelector' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_CIProviderAPIVersion" xml:space="preserve">
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderapiversion" xml:space="preserve">
     <value>รุ่น API</value>
-    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_CIProviderAPIVersion' on Entity</comment>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
     <value>CIProviderId</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_CIProvider_API_Version" xml:space="preserve">
-    <value>รุ่น API</value>
-    <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
     <value>เปิดใช้งานการสื่อสารขาออก</value>
@@ -400,7 +392,7 @@
     <value>เลือกบทบาทสำหรับช่องทาง</value>
     <comment>'Channel' : label for section in Entity FormXml ID: '{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}'</comment>
   </data>
-  <data name="1:label,msdyn_ciprovidermsdyn_CIProvider_API_Version0" xml:space="preserve">
+  <data name="1:label,msdyn_ciprovidermsdyn_ciproviderapiversion0" xml:space="preserve">
     <value>1.0</value>
     <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
   </data>

@@ -212,17 +212,13 @@
     <value>Velg apper i Enhetlig grensesnitt for kanalen</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_AppSelector' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_CIProviderAPIVersion" xml:space="preserve">
+  <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderapiversion" xml:space="preserve">
     <value>API-versjon</value>
-    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_CIProviderAPIVersion' on Entity</comment>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
     <value>Unik ID for oppføringer for CI-leverandør</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_CIProvider_API_Version" xml:space="preserve">
-    <value>API-versjon for kanalintegreringsleverandør</value>
-    <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
     <value />
@@ -316,17 +312,13 @@
     <value>Appvelger</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_AppSelector' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_CIProviderAPIVersion" xml:space="preserve">
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderapiversion" xml:space="preserve">
     <value>API-versjon</value>
-    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_CIProviderAPIVersion' on Entity</comment>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
     <value>ID for CI-leverandør</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_CIProvider_API_Version" xml:space="preserve">
-    <value>API-versjon</value>
-    <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
     <value>Aktiver utgående kommunikasjon</value>
@@ -400,7 +392,7 @@
     <value>Velg rollene for kanalen</value>
     <comment>'Channel' : label for section in Entity FormXml ID: '{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}'</comment>
   </data>
-  <data name="1:label,msdyn_ciprovidermsdyn_CIProvider_API_Version0" xml:space="preserve">
+  <data name="1:label,msdyn_ciprovidermsdyn_ciproviderapiversion0" xml:space="preserve">
     <value>1.0</value>
     <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
   </data>
