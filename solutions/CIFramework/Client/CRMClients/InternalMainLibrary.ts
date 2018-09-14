@@ -598,7 +598,8 @@ namespace Microsoft.CIFramework.Internal {
 					buttonReturnValueCIF = buttons[i][key];
 				}
 			}
-			buttonParam.set(buttonNameCIF,buttonReturnValueCIF);
+			buttonParam.set(Constants.buttonName,buttonNameCIF);
+			buttonParam.set(Constants.buttonReturnValue,buttonReturnValueCIF);
 			map.set(btn,buttonParam);
 		}
 		widgetIFrame.contentWindow.document.getElementById("header_CIF").addEventListener("click", function() {
