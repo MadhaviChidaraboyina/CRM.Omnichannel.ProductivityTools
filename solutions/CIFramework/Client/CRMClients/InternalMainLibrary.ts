@@ -634,7 +634,7 @@ namespace Microsoft.CIFramework.Internal {
 					let notificationBody = widgetIFrame.contentWindow.document.getElementById("body_CIF");
 					var label1 = document.createElement("label");
 					notificationBody.appendChild(label1);
-					label1.setAttribute('style', 'margin-left: 10px;font-family:Segoe UI;font-style:normal;font-size:14px;text-align:left;height:16px;margin-right:11px;width:78px;word-wrap:break-word;color:#D8D8D8;');
+					label1.setAttribute('style', 'display: inline-table;margin-left: 10px;font-family:Segoe UI;font-style:normal;font-size:14px;text-align:left;height:16px;margin-right:11px;width:78px;word-wrap:break-word;color:#D8D8D8;');
 					var label2 = document.createElement("label");
 					notificationBody.appendChild(label2);
 					label2.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:left;height:16px;width:163px;word-wrap:break-word;color:#FFFFFF;display:inline-table;');
