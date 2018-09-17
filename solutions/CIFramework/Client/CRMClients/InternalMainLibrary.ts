@@ -545,8 +545,8 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-		toastDiv.insertAdjacentHTML('afterbegin', '<div id="CIFToast" style="position: relative;display:table;background-color: rgba(102, 102, 102, 0.5);width:254px;z-index: 2;cursor: pointer;border: 2px solid #dedede;border-radius: 5px;padding: 10px;margin: 10px 0;background-color: lightblue;"><div id="header_CIF" style="display:block;"></div><div class="bodyDivCIF" style="display:block;"><p id="body_CIF"></p></div></div>');
-		let header,body,buttons,icon;
+		toastDiv.insertAdjacentHTML('afterbegin', '<div id="CIFToast" style="position: relative;display:table;background-color: rgba(102, 102, 102, 0.5);width:280px;z-index: 2;border-radius: 4px;background-color: #333333;"><div id="header_NotificationType_CIF" style="display:block;min-height:21px;"></div><div id="header_CIF" style="display:block;min-height:71px;"><img style="width:71px; height:71px; float:left;"></img><div id="headerKeyCIF" style="font-family:Segoe UI;font-style:normal;font-size:12px;text-align:left;color:#D8D8D8;"></div><div id="headerNameCIF" style="font-family:Segoe UI;font-style:Semibold;font-size:18px;text-align:left;color:#FFFFFF;"></div><div id="headerDetailsCIF"  style="font-family:Segoe UI;font-style:normal;font-size:12px;text-align:left;color:#D8D8D8;"></div></div><div></div><div class="bodyDivCIF" style="display:block;"><div id="bodyDivider_CIF" style="width:280px; height:1px; background-color: #F1F1F1;"></div><p id="body_CIF"><div></div></p></div></div>');
+		let header,body,buttons,icon,notificationType;
 		for (let [key, value] of notificationUX) {
 			if(key.search(Constants.eventType) != -1){
 				console.log(value);
@@ -561,46 +561,141 @@ namespace Microsoft.CIFramework.Internal {
 						buttons = value1;
 					}else if(key1.search(Constants.CIFNotificationIcon) != -1){
 						icon = value1;
+					}else if(key1.search(Constants.notificationType) != -1){
+						notificationType = value1;
 					}
 				}
 			}
+		}
+		if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
+			if(notificationType[0] == 1){ //For Soft notification
+			
+			}else{
+				if(notificationType[0] == 2){
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").setAttribute('style','display:block;min-height:21px;width:280px;background-color:#000000;');
+					var label1 = document.createElement("label");
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").appendChild(label1);
+					label1.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;margin-right:35px;');
+					label1.innerText = notificationType[1];
+					var label2 = document.createElement("label");
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").appendChild(label2);
+					label2.setAttribute('style', 'font-family:Segoe UI;font-style:Regular;font-size:11px;text-align:Right;height:13px;color:#FFFFFF;');
+					label2.innerText = notificationType[2];
+				}else if(notificationType[0] == 3 || notificationType[0] == 5){
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").setAttribute('style','display:block;min-height:21px;background-color:#B22912;width:280px;');
+					var img = document.createElement("IMG");
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").appendChild(img);
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").getElementsByTagName("img")[0].src = notificationType[1];
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").getElementsByTagName("img")[0].setAttribute('style','width:12px; height:12px; font-style:Regular; font-size:12px; text-align:Left; float:left; margin-right:5px;');
+					var label = document.createElement("label");
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").appendChild(label);
+					label.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;');
+					label.innerText = notificationType[2];
+				}else if(notificationType[0] == 4){
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").setAttribute('style','display:block;min-height:21px;background-color:#B22912;width:280px;');
+					var label1 = document.createElement("label");
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").appendChild(label1);
+					label1.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;');
+					label1.innerText = notificationType[1];
+				}else if(notificationType[0] == 6){
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").setAttribute('style','display:block;min-height:21px;background-color:#000000;width:280px;');
+					var img = document.createElement("IMG");
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").appendChild(img);
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").getElementsByTagName("img")[0].src = notificationType[1];
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").getElementsByTagName("img")[0].setAttribute('style','width:12px; height:12px; font-style:Regular; font-size:12px; text-align:Left; float:left; margin-right:5px;');
+					var label = document.createElement("label");
+					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").appendChild(label);
+					label.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;');
+					label.innerText = notificationType[2];
+					widgetIFrame.contentWindow.document.getElementById("CIFToast").style.backgroundColor = "#25477A";
+				}
+			}
+		}
+		if(header == null || header == "undefined"){
+			return postMessageNamespace.rejectWithErrorMessage("The header value is blank. Provide a value to the parameter.");
 		}
 		let headerVal = "";
 		let bodyVal = "";
 		for( i = 0; i < header.length; i++){
 			for (let key in header[i]) {
-				headerVal += key + "  " + header[i][key] + " ";
-			}
-			headerVal += "\n";
-		}
-		for( i = 0; i < body.length; i++){
-			for (let key in body[i]) {
-				bodyVal += key + "  " + body[i][key] + " ";
-			}
-			bodyVal += "\n";
-		}
-		widgetIFrame.contentWindow.document.getElementById("header_CIF").innerText = headerVal;
-		widgetIFrame.contentWindow.document.getElementById("body_CIF").innerText = bodyVal;
-		let chatWindowBody = widgetIFrame.contentWindow.document.getElementById("CIFToast").getElementsByClassName("bodyDivCIF")[0];
-		let map = new Map();
-		for( i = 0; i < buttons.length; i++){
-			var btn = document.createElement("BUTTON");
-			chatWindowBody.appendChild(btn);
-			let buttonParam = new Map();
-			let k = 0;
-			let buttonNameCIF,buttonReturnValueCIF;
-			for (let key in buttons[i]) {
-				if(key.search(Constants.buttonDisplayText) != -1){
-					btn.innerText = buttons[i][key];
-				}else if(key.search(Constants.buttonName) != -1){
-					buttonNameCIF = buttons[i][key];
-				}else if(key.search(Constants.buttonReturnValue) != -1){
-					buttonReturnValueCIF = buttons[i][key];
+				widgetIFrame.contentWindow.document.getElementById("headerKeyCIF").innerText = key;
+				for(let j = 0; j < header[i][key].length; j++){
+					if(j == 0){
+						widgetIFrame.contentWindow.document.getElementById("headerNameCIF").innerText = header[i][key][j];
+					}else{
+						headerVal += header[i][key][j] + "\n";
+					}
 				}
 			}
-			buttonParam.set(Constants.buttonName,buttonNameCIF);
-			buttonParam.set(Constants.buttonReturnValue,buttonReturnValueCIF);
-			map.set(btn,buttonParam);
+		}
+		if(body != null && body != "undefined"){
+			for( i = 0; i < body.length; i++){
+				for (let key in body[i]) {
+					let notificationBody = widgetIFrame.contentWindow.document.getElementById("body_CIF");
+					var label1 = document.createElement("label");
+					notificationBody.appendChild(label1);
+					label1.setAttribute('style', 'font-family:Segoe UI;font-style:normal;font-size:14px;text-align:left;height:16px;margin-right:11px;width:78px;word-wrap:break-word;color:#D8D8D8;');
+					var label2 = document.createElement("label");
+					notificationBody.appendChild(label2);
+					label2.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:left;height:16px;width:163px;word-wrap:break-word;color:#FFFFFF;display:inline-table;');
+					label1.innerText = key;
+					label2.innerText = body[i][key];
+					var div = document.createElement("div");
+					notificationBody.appendChild(div);
+				}
+			}
+		}else{
+			widgetIFrame.contentWindow.document.getElementById("bodyDivider_CIF").style.display = "none";
+		}
+		widgetIFrame.contentWindow.document.getElementById("headerDetailsCIF").innerText = headerVal;
+		widgetIFrame.contentWindow.document.getElementById("header_CIF").getElementsByTagName("img")[0].src = "";
+		let chatWindowBody = widgetIFrame.contentWindow.document.getElementById("CIFToast").getElementsByClassName("bodyDivCIF")[0];
+		let map = new Map();
+		if(buttons != null && buttons != "undefined"){
+			for( i = 0; i < buttons.length; i++){
+				var btn = document.createElement("BUTTON");
+				chatWindowBody.appendChild(btn);
+				var img = document.createElement("IMG");
+				btn.appendChild(img);
+				let buttonParam = new Map();
+				let k = 0;
+				let buttonNameCIF,buttonReturnValueCIF;
+				for (let key in buttons[i]) {
+					if(key.search(Constants.buttonType) != -1){
+						if(buttons[i][key].search("Accept") != -1){
+							if(buttons.length == 1){
+								btn.setAttribute('style','width:252px;background-color:#47C21D;height:40px;');
+							}else{
+								btn.setAttribute('style','width:120px;background-color:#47C21D;height:40px;margin-right:14px;');
+							}
+							btn.getElementsByTagName("img")[0].src = ""; //Default image URL.
+							btn.getElementsByTagName("img")[0].setAttribute('style','width:16px; height:16px; float:left; font-style:Regular; font-size:16px; text-align:Left;');
+						}else if(buttons[i][key].search("Reject") != -1){
+							if(buttons.length == 1){
+								btn.setAttribute('style','width:252px;background-color:#EA0600;height:40px;');
+							}else{
+								btn.setAttribute('style','width:120px;background-color:#EA0600;height:40px;margin-right:14px;');
+							}
+							btn.getElementsByTagName("img")[0].src = ""; //Default image URL.
+							btn.getElementsByTagName("img")[0].setAttribute('style','width:16px; height:16px; float:left; font-style:Regular; font-size:16px; text-align:Left;');
+						}
+					}
+					if(key.search(Constants.buttonDisplayText) != -1){
+						btn.innerText = buttons[i][key];
+					}else if(key.search(Constants.buttonName) != -1){
+						buttonNameCIF = buttons[i][key];
+					}else if(key.search(Constants.buttonReturnValue) != -1){
+						buttonReturnValueCIF = buttons[i][key];
+					}else if(key.search(Constants.buttonColor) != -1){
+						btn.style.backgroundColor = buttons[i][key];
+					}else if(key.search(Constants.buttonImage) != -1){
+						btn.getElementsByTagName("img")[0].src = buttons[i][key];
+					}
+				}
+				buttonParam.set(Constants.buttonName,buttonNameCIF);
+				buttonParam.set(Constants.buttonReturnValue,buttonReturnValueCIF);
+				map.set(btn,buttonParam);
+			}
 		}
 		widgetIFrame.contentWindow.document.getElementById("header_CIF").addEventListener("click", function() {
 			childDivs = toastDiv.getElementsByTagName('div');

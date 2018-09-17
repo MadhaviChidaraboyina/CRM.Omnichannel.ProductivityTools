@@ -95,6 +95,11 @@ namespace Microsoft.CIFramework
 		export const buttonsCIF = "buttons";
 		export const buttonName = "buttonName";
 		export const CIFNotificationIcon = "CIFNotificationIcon";
+		export const buttonColor = "buttonColor";
+		export const buttonImage = "buttonImage";
+		export const timeout = "timeout"; //Needs to be implemented.
+		export const buttonType = "buttonType"; //Needs to be implemented.
+		export const notificationType = "notificationType"; 
 	}
 
 	/**
