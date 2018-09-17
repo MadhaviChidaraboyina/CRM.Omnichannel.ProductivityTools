@@ -583,7 +583,7 @@ namespace Microsoft.CIFramework.Internal {
 					label2.innerText = notificationType[2];
 				}else if(notificationType[0] == 3 || notificationType[0] == 5){
 					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").setAttribute('style','display:block;min-height:21px;background-color:#B22912;width:280px;');
-					var img = document.createElement("IMG");
+					var img = document.createElement("img");
 					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").appendChild(img);
 					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").getElementsByTagName("img")[0].src = notificationType[1];
 					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").getElementsByTagName("img")[0].setAttribute('style','width:12px; height:12px; font-style:Regular; font-size:12px; text-align:Left; float:left; margin-right:5px;');
@@ -599,7 +599,7 @@ namespace Microsoft.CIFramework.Internal {
 					label1.innerText = notificationType[1];
 				}else if(notificationType[0] == 6){
 					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").setAttribute('style','display:block;min-height:21px;background-color:#000000;width:280px;');
-					var img = document.createElement("IMG");
+					var img = document.createElement("img");
 					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").appendChild(img);
 					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").getElementsByTagName("img")[0].src = notificationType[1];
 					widgetIFrame.contentWindow.document.getElementById("header_NotificationType_CIF").getElementsByTagName("img")[0].setAttribute('style','width:12px; height:12px; font-style:Regular; font-size:12px; text-align:Left; float:left; margin-right:5px;');
@@ -655,7 +655,7 @@ namespace Microsoft.CIFramework.Internal {
 			for( i = 0; i < buttons.length; i++){
 				var btn = document.createElement("BUTTON");
 				chatWindowBody.appendChild(btn);
-				var img = document.createElement("IMG");
+				var img = document.createElement("img");
 				btn.appendChild(img);
 				let buttonParam = new Map();
 				let k = 0;
