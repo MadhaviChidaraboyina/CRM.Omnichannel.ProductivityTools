@@ -681,7 +681,7 @@ namespace Microsoft.CIFramework.Internal {
 						}
 					}
 					if(key.search(Constants.buttonDisplayText) != -1){
-						btn.innerText = buttons[i][key];
+						btn.setAttribute('content', buttons[i][key]);
 					}else if(key.search(Constants.buttonName) != -1){
 						buttonNameCIF = buttons[i][key];
 					}else if(key.search(Constants.buttonReturnValue) != -1){
