@@ -7,7 +7,23 @@ namespace Microsoft.CIFramework
 {
 	let targetWindow: Window;
 	let postMessage: postMessageNamespace.postMsgWrapper;
-	let domains : string[] = [];
+	let domains: string[] = [];
+
+	// Function to get the value of the specified queryString Key from the provided queryString
+	function parseQueryString(queryString: string, key: string): any {
+		if (queryString != null) {
+			var params: any = {};
+			var queries: string[];
+			queries = queryString.substring(1).split("&");
+			queries.forEach((query) => {
+				var queryPair = query.split("=");
+				var queryKey = decodeURIComponent(queryPair[0]);
+				var queryValue = decodeURIComponent(queryPair.length > 1 ? queryPair[1] : "");
+				params[queryKey] = queryValue;
+			});
+			return params[key];
+		}
+	}
 
 	function initialize()
 	{
@@ -15,15 +31,27 @@ namespace Microsoft.CIFramework
 		targetWindow = window.top;
 		var anchorElement = document.createElement("a");
 		var anchorDomain = document.referrer;
+		var crmUrl: string = "";
 		try {
-			var crmDomain: string = document.querySelector('script[' + Constants.ScriptIdAttributeName + '="' + Constants.ScriptIdAttributeValue + '"]').getAttribute(Constants.ScriptCRMUrlAttributeName);
+			var scriptTag = document.querySelector('script[' + Constants.ScriptIdAttributeName + '="' + Constants.ScriptIdAttributeValue + '"]');
+			var crmDomain: string = scriptTag.getAttribute(Constants.ScriptCRMUrlAttributeName);
 			if (crmDomain) {
 				anchorDomain = crmDomain;
 			}
 		}
 		catch (error) { }
+		try {
+			// Get the crmUrl from window.location
+			crmUrl = parseQueryString(window.location.search, Constants.UciLib);
+		}
+		catch (error) { }
 		anchorElement.href = anchorDomain;
 		domains.push(anchorElement.protocol + "//" + anchorElement.hostname);
+		if (crmUrl != "" && crmUrl != null) {
+			let anchor = document.createElement("a");
+			anchor.href = crmUrl;
+			domains.push(anchor.protocol + "//" + anchor.hostname);
+		}
 		if(domains.length > 1)
 		{
 			//To-Do Log the Message that more than one domains are present

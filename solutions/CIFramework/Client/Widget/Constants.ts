@@ -48,6 +48,7 @@ namespace Microsoft.CIFramework
 		export const ScriptIdAttributeValue = "CIFMainLibrary";
 		export const ScriptCRMUrlAttributeName = "data-crmurl";
 		export const Attributes = "attributes";
+		export const UciLib = "ucilib";
 	}
 
 	/**
