@@ -28,6 +28,7 @@ namespace Microsoft.CIFramework
 		export const onSizeChanged = "onsizechanged";
 		export const onPageNavigate = "onpagenavigate";
 		export const onSendKBArticle = "onsendkbarticle";
+		export const getEntityMetadata = "getEntityMetadata";
 	}
 
 	/**
@@ -46,6 +47,7 @@ namespace Microsoft.CIFramework
 		export const ScriptIdAttributeName = "data-cifid";
 		export const ScriptIdAttributeValue = "CIFMainLibrary";
 		export const ScriptCRMUrlAttributeName = "data-crmurl";
+		export const Attributes = "attributes";
 	}
 
 	/**

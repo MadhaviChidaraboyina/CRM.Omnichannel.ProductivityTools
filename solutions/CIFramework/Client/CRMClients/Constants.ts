@@ -128,6 +128,7 @@ namespace Microsoft.CIFramework.Internal
 		export const APIVersion = "msdyn_ciproviderapiversion";
 		export const SortOrder = "msdyn_sortorder";
 		export const crmVersion = "crmVersion";
+		export const attributes = "attributes";
 	}
 
 	/**

@@ -37,6 +37,11 @@ namespace Microsoft.CIFramework.Internal
 	type OpenFormFunction = (entityFormOptions: string, entityFormParameters?: string, telemetryData?: Object) => Promise<Map<string, any>>;
 
 	/**
+	 * Func type for get Metadata about an entity
+	*/
+	type getMetadataFunction = (entityName: string, attributes?: Array<string>) => Promise<Object>;
+
+	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
 	 * This type specifies all the functions that are exposed to clients for impl. 
 	*/
@@ -76,6 +81,8 @@ namespace Microsoft.CIFramework.Internal
 		getWidgetWidth: GetContextFunction;
 
 		openForm: OpenFormFunction;
+
+		getEntityMetadata: getMetadataFunction;
 
 	}
 

@@ -394,6 +394,31 @@ namespace Microsoft.CIFramework
 		}
 	}
 
+	/**
+	 * API to get the EntityMetadata
+	 * Invokes the API Xrm.Utility.getEntityMetadata(entityName, attributes)
+	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-utility/getentitymetadata
+	 * @params entityName - Name of the Entity whose metadata is to be fetched
+	 * attributes - The attributes to get metadata for
+	 * 
+	 * @returns a Promise: JSON String with available metadata of the current entity
+	*/
+	export function getEntityMetadata(entityName: string, attributes?: Array<string>): Promise<string> {
+		if (!(isNullOrUndefined(entityName) || entityName == "")) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.getEntityMetadata,
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.Attributes, attributes)
+			}
+			return sendMessage<string>(getEntityMetadata.name, payload, false);
+		}
+		else {
+			if (isNullOrUndefined(entityName) || entityName == "") {
+				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter");
+			}
+		}
+	}
+
+
 	window.onload = () => {
 		initialize();
 	}; 
