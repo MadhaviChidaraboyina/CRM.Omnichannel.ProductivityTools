@@ -573,6 +573,7 @@ namespace Microsoft.CIFramework.Internal {
 				noOfNotifications++;
 				if(noOfNotifications > 5){
 					toastDiv.removeChild(toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]);
+					noOfNotifications--;
 				}
 				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" class="CIFToastDiv" style="position: relative;display:table;background-color: rgba(102, 102, 102, 0.5);width:280px;z-index: 2;border-radius: 4px;background-color: #333333;padding-bottom: 10px;"><div class="header_NotificationType_CIF" style="display:block;min-height:21px;"></div><div class="header_CIF" style="display:block;min-height:71px;"><img style="width:71px; height:71px; float:left; margin-left: 10px;"></img><div class="headerKeyCIF" style="font-family:Segoe UI;font-style:normal;font-size:12px;text-align:left;color:#D8D8D8;"></div><div class="headerNameCIF" style="font-family:Segoe UI;font-style:Semibold;font-size:18px;text-align:left;color:#FFFFFF;"></div><div class="headerDetailsCIF"  style="font-family:Segoe UI;font-style:normal;font-size:12px;text-align:left;color:#D8D8D8;"></div></div><div></div><div class="bodyDivCIF" style="display:block;"><div class="bodyDivider_CIF" style="width:280px; height:1px; background-color: #F1F1F1;"></div><p class="body_CIF"><div></div></p></div></div>');
 				let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
