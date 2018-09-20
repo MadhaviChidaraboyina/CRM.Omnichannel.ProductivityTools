@@ -132,13 +132,13 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: messageType,
-			messageData: data
+			messageData: JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(data))
 		}
 
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
 		for (let [key, value] of state.ciProviders) {
 			let whitelistDomain = key;
-			if (value.trustedDomain != "") {
+			if (!isNullOrUndefined(value.trustedDomain)) {
 				whitelistDomain = value.trustedDomain;
 			}
 			if (eventCheck) {

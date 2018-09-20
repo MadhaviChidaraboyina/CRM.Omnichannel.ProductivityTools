@@ -242,10 +242,16 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 				//TODO - Replace URL with some other supported object if IE support becomes mandatory. URL is not supported by IE11
 				var domainUrl = new URL(event.origin);
 				var domainHostName = decodeURIComponent(domainUrl.hostname);
-				if (whiteListedDomain == domainHostName)
+				var whiteListedDomainUrl;
+				var whiteListedDomainHostName = "";
+				if (whiteListedDomain != null) {
+					whiteListedDomainUrl = new URL(whiteListedDomain);
+					whiteListedDomainHostName = decodeURIComponent(whiteListedDomainUrl.hostname);
+				}
+				if (whiteListedDomainHostName != "" && whiteListedDomainHostName == domainHostName)
 					return true;
-				else if (whiteListedDomain.startsWith("*"))
-					return (domainHostName.endsWith(whiteListedDomain.substr(2)));
+				else if (whiteListedDomain != null && whiteListedDomainHostName.startsWith("*"))
+					return (domainHostName.endsWith(whiteListedDomainHostName.substr(2)));
 				return false;
 			});
 
