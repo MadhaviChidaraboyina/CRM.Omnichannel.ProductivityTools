@@ -26,6 +26,7 @@ namespace Microsoft.CIFramework.Internal {
 		["setmode", [setMode]],
 		["setwidth", [setWidth]],
 		["getmode", [getMode]],
+		["getEntityMetadata", [getEntityMetadata]],
 		["getenvironment", [getEnvironment]],
 		["getwidth", [getWidth]],
 		["getclicktoact", [getClickToAct]]
@@ -74,6 +75,7 @@ namespace Microsoft.CIFramework.Internal {
 					let telemetryData: any = new Object();
 					var defaultMode = state.client.getWidgetMode(telemetryData) as number;
 					var first: string = null;
+
 					var environmentInfo: any = [];
 					environmentInfo["orgId"] = Xrm.Utility.getGlobalContext().organizationSettings.organizationId;
 					environmentInfo["orgName"] = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
@@ -522,6 +524,29 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, search.name, appId, true, errorData);
+		}
+	}
+
+	export function getEntityMetadata(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		if (provider) {
+			return new Promise<Object>((resolve, reject) => {
+				state.client.getEntityMetadata(parameters.get(Constants.entityName), parameters.get(Constants.Attributes)).then(
+					function (res) {
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getEntityMetadata.name, telemetryData);
+						setPerfData(perfData);
+						return resolve(new Map<string, any>().set(Constants.value, res));
+					},
+					(error: IErrorHandler) => {
+						return rejectWithErrorMessage(error.errorMsg, getEntityMetadata.name, appId, true, error);
+					}
+				);
+			});
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, getEntityMetadata.name, appId, true, errorData);
 		}
 	}
 }

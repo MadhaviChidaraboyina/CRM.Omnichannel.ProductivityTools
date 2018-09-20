@@ -212,17 +212,13 @@
     <value>Επιλέξτε εφαρμογές ενοποιημένου περιβάλλοντος εργασίας για το κανάλι</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_AppSelector' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_CIProviderAPIVersion" xml:space="preserve">
+  <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderapiversion" xml:space="preserve">
     <value>Έκδοση API</value>
-    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_CIProviderAPIVersion' on Entity</comment>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
     <value>Μοναδικό αναγνωριστικό για καρτέλες CIProvider</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_CIProvider_API_Version" xml:space="preserve">
-    <value>Έκδοση API Παρόχου Ενοποίησης Καναλιού</value>
-    <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
     <value />
@@ -316,17 +312,13 @@
     <value>Επιλογέας εφαρμογής</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_AppSelector' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_CIProviderAPIVersion" xml:space="preserve">
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderapiversion" xml:space="preserve">
     <value>Έκδοση API</value>
-    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_CIProviderAPIVersion' on Entity</comment>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
     <value>Αναγνωριστικό CIProvider</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_CIProvider_API_Version" xml:space="preserve">
-    <value>Έκδοση API</value>
-    <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
     <value>Ενεργοποίηση εξερχόμενης επικοινωνίας</value>
@@ -400,8 +392,8 @@
     <value>Επιλέξτε τους ρόλους για το κανάλι</value>
     <comment>'Channel' : label for section in Entity FormXml ID: '{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}'</comment>
   </data>
-  <data name="1:label,msdyn_ciprovidermsdyn_CIProvider_API_Version0" xml:space="preserve">
-    <value>1,0</value>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciproviderapiversion0" xml:space="preserve">
+    <value>1.0</value>
     <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact0" xml:space="preserve">

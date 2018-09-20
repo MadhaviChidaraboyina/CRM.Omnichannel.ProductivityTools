@@ -7,7 +7,25 @@ namespace Microsoft.CIFramework
 {
 	let targetWindow: Window;
 	let postMessage: postMessageNamespace.postMsgWrapper;
+
 	let domains: string[] = [];
+
+	// Function to get the value of the specified queryString Key from the provided queryString
+	function parseQueryString(queryString: string, key: string): any {
+		if (queryString != null) {
+			var params: any = {};
+			var queries: string[];
+			queries = queryString.substring(1).split("&");
+			queries.forEach((query) => {
+				var queryPair = query.split("=");
+				var queryKey = decodeURIComponent(queryPair[0]);
+				var queryValue = decodeURIComponent(queryPair.length > 1 ? queryPair[1] : "");
+				params[queryKey] = queryValue;
+			});
+			return params[key];
+		}
+	}
+
 	let Constants = Microsoft.CIFramework.Constants;
 
 	function initialize()
@@ -16,15 +34,27 @@ namespace Microsoft.CIFramework
 		targetWindow = window.top;
 		var anchorElement = document.createElement("a");
 		var anchorDomain = document.referrer;
+		var crmUrl: string = "";
 		try {
-			var crmDomain: string = document.querySelector('script[' + Constants.ScriptIdAttributeName + '="' + Constants.ScriptIdAttributeValue + '"]').getAttribute(Constants.ScriptCRMUrlAttributeName);
+			var scriptTag = document.querySelector('script[' + Constants.ScriptIdAttributeName + '="' + Constants.ScriptIdAttributeValue + '"]');
+			var crmDomain: string = scriptTag.getAttribute(Constants.ScriptCRMUrlAttributeName);
 			if (crmDomain) {
 				anchorDomain = crmDomain;
 			}
 		}
 		catch (error) { }
+		try {
+			// Get the crmUrl from window.location
+			crmUrl = parseQueryString(window.location.search, Constants.UciLib);
+		}
+		catch (error) { }
 		anchorElement.href = anchorDomain;
 		domains.push(anchorElement.protocol + "//" + anchorElement.hostname);
+		if (crmUrl != "" && crmUrl != null) {
+			let anchor = document.createElement("a");
+			anchor.href = crmUrl;
+			domains.push(anchor.protocol + "//" + anchor.hostname);
+		}
 		if(domains.length > 1)
 		{
 			//To-Do Log the Message that more than one domains are present
@@ -216,7 +246,6 @@ namespace Microsoft.CIFramework
 						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
 					});
 			});
-			
 		}else{
 			if(isNullOrUndefined(entityName) || entityName == ""){
 				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
@@ -452,6 +481,30 @@ namespace Microsoft.CIFramework
 			}
 			if(isNullOrUndefined(handlerFunction)){
 				return postMessageNamespace.rejectWithErrorMessage("Passing data parameters to removeHandler is mandatory.");
+			}
+		}
+	}
+
+	/**
+	 * API to get the EntityMetadata
+	 * Invokes the API Xrm.Utility.getEntityMetadata(entityName, attributes)
+	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-utility/getentitymetadata
+	 * @params entityName - Name of the Entity whose metadata is to be fetched
+	 * attributes - The attributes to get metadata for
+	 * 
+	 * @returns a Promise: JSON String with available metadata of the current entity
+	*/
+	export function getEntityMetadata(entityName: string, attributes?: Array<string>): Promise<string> {
+		if (!(isNullOrUndefined(entityName) || entityName == "")) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.getEntityMetadata,
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.Attributes, attributes)
+			}
+			return sendMessage<string>(getEntityMetadata.name, payload, false);
+		}
+		else {
+			if (isNullOrUndefined(entityName) || entityName == "") {
+				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter");
 			}
 		}
 	}

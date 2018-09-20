@@ -35,9 +35,9 @@ namespace Microsoft.CIFramework.Internal
 	export function mapToString(map: Map<string, any>): string
 	{
 		let result: string;
-        if(!map) {
-            return "";
-        }
+		if(!map) {
+			return "";
+		}
 		map.forEach((value, key) => {
 			result += key + " : " + value + ", ";
 		});
@@ -60,10 +60,10 @@ namespace Microsoft.CIFramework.Internal
 	export function logApiData(telemetryData: Object | any, startTime: any, timetaken: any, apiName: string) {
 		let ApiData: any = new Object();
 		ApiData["StartTime"] = startTime.toUTCString();
-        ApiData["TimeTaken"] = timetaken;
-        if (telemetryData) {
-            telemetryData[apiName] = ApiData;
-        }
+		ApiData["TimeTaken"] = timetaken;
+		if (telemetryData) {
+			telemetryData[apiName] = ApiData;
+		}
 	}
 
 	export function logFailure(appId: string, isError: boolean, error: IErrorHandler) {

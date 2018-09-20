@@ -39,7 +39,13 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for loading all widgets.
 	*/
-	type LoadWidgetsFunction = (ciProviders: Map<string, CIProvider>) => Promise<Map<string, boolean|string>>;
+	type LoadWidgetsFunction = (ciProviders: Map<string, CIProvider>) => Promise<Map<string, boolean | string>>;
+
+	/**
+	 * Func type for get Metadata about an entity
+	*/
+	type getMetadataFunction = (entityName: string, attributes?: Array<string>) => Promise<Object>;
+
 
 	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
@@ -81,6 +87,8 @@ namespace Microsoft.CIFramework.Internal
 		getWidgetWidth: GetContextFunction;
 
 		openForm: OpenFormFunction;
+
+		getEntityMetadata: getMetadataFunction;
 
 	}
 

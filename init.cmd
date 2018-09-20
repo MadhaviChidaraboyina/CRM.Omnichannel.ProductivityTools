@@ -248,6 +248,10 @@ if [%DevAgentTag%] == [true] (
 
 ==========================================================
 
+echo Checking For node js
+==================================================
+powershell -ExecutionPolicy Bypass -Command %WSRoot%\scripts\init\Initialize-DownloadNodejs.ps1 %WSRoot%
+
 :eof
 echo Done!
 @echo on

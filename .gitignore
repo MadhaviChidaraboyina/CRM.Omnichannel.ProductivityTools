@@ -6,6 +6,7 @@
 *.lo
 *.o
 *.obj
+*.StyleCop
 
 # Precompiled Headers
 *.gch
@@ -47,7 +48,7 @@ SolutionPackage/
 # Build/tooling output folders
 /.tools/
 /drop/
-/packages/*
+**/packages/*
 /target/
 /.git/
 [Oo]bj/
@@ -71,6 +72,8 @@ SolutionPackage/
 
 *.dll
 *.pdb
+
+solutions/TypeDefinitions/CIFramework/
 
 # Generated tsconfig.json files
 /src/**/tsconfig.json

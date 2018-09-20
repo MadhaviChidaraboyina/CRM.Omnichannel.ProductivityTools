@@ -28,6 +28,7 @@ namespace Microsoft.CIFramework
 		export const onSizeChanged = "onsizechanged";
 		export const onPageNavigate = "onpagenavigate";
 		export const onSendKBArticle = "onsendkbarticle";
+		export const getEntityMetadata = "getEntityMetadata";
 	}
 
 	/**
@@ -83,8 +84,10 @@ namespace Microsoft.CIFramework
 		export const APIVersion = "msdyn_ciproviderapiversion";
 		export const SortOrder = "msdyn_sortorder";
 		export const crmVersion = "crmVersion";
-		export const OrgId = "orgId";
 		export const CIFInitEvent = "CIFInitDone";
+		export const Attributes = "attributes";
+		export const UciLib = "ucilib";
+		export const OrgId = "orgId";
 	}
 
 	/**

@@ -18,5 +18,5 @@ namespace Microsoft.CIFramework.Internal
 	{
 		WebClient,
 		UCClient
-    }
+	}
 }
