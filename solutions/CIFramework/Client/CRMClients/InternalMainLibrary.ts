@@ -565,7 +565,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		let map = new Map();
 		if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
-			if(notificationType[0].search(MessageType.softNotification)){ //For Soft notification
+			if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
 				if(body == null || body == "undefined"){
 					return postMessageNamespace.rejectWithErrorMessage("The body value is blank. Provide a value to the parameter.");
 				}
@@ -581,7 +581,7 @@ namespace Microsoft.CIFramework.Internal {
 				let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
 				if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
 					let headerElement = toastDiv.getElementsByClassName("header_NotificationType_CIF")[len-1];
-					if(notificationType[0].search(MessageType.broadCast) && notificationType.length == 3){
+					if(notificationType[0].search(MessageType.broadCast) != -1 && notificationType.length == 3){
 						headerElement.setAttribute('style','display:block;min-height:21px;width:280px;background-color:#000000;');
 						var label1 = document.createElement("label");
 						headerElement.appendChild(label1);
@@ -591,7 +591,7 @@ namespace Microsoft.CIFramework.Internal {
 						headerElement.appendChild(label2);
 						label2.setAttribute('style', 'margin-left: 10px;font-family:Segoe UI;font-style:Regular;font-size:11px;text-align:Right;height:13px;color:#FFFFFF;');
 						label2.innerText = notificationType[2];
-					}else if((notificationType[0].search(MessageType.notification) || notificationType[0].search(MessageType.escalation)) && notificationType.length == 3){
+					}else if((notificationType[0].search(MessageType.notification) != -1 || notificationType[0].search(MessageType.escalation)) != -1 && notificationType.length == 3){
 						headerElement.setAttribute('style','display:block;min-height:21px;background-color:#B22912;width:280px;');
 						var img = document.createElement("img");
 						headerElement.appendChild(img);
@@ -601,13 +601,13 @@ namespace Microsoft.CIFramework.Internal {
 						headerElement.appendChild(label);
 						label.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;');
 						label.innerText = notificationType[2];
-					}else if(notificationType[0].search(MessageType.transfer) && notificationType.length == 2){
+					}else if(notificationType[0].search(MessageType.transfer) != -1 && notificationType.length == 2){
 						headerElement.setAttribute('style','display:block;min-height:21px;background-color:#B22912;width:280px;');
 						var label1 = document.createElement("label");
 						headerElement.appendChild(label1);
 						label1.setAttribute('style', 'margin-left: 10px;font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;');
 						label1.innerText = notificationType[1];
-					}else if(notificationType[0].search(MessageType.internalCommunication) && notificationType.length == 3){
+					}else if(notificationType[0].search(MessageType.internalCommunication) != -1 && notificationType.length == 3){
 						headerElement.setAttribute('style','display:block;min-height:21px;background-color:#000000;width:280px;');
 						var img = document.createElement("img");
 						headerElement.appendChild(img);
@@ -747,7 +747,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 		return new Promise(function (resolve) {
-			if(notificationType[0].search(MessageType.softNotification)){
+			if(notificationType[0].search(MessageType.softNotification) != -1){
 				for(let [key,value] of map){
 					key.addEventListener("click", function clickListener() {
 						key.removeEventListener("click", clickListener);
