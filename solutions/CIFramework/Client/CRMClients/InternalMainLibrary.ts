@@ -51,6 +51,8 @@ namespace Microsoft.CIFramework.Internal {
 			return false;
 		}
 		let startTime = new Date();
+		let trustedDomains: string[] = [];
+
 		// set the client implementation.
 		state.client = setClient(clientType);
 
@@ -87,6 +89,9 @@ namespace Microsoft.CIFramework.Internal {
 							if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
 								continue;
 							}
+							trustedDomains.push(x[Constants.landingUrl]);
+							if (x[Constants.trustedDomain] != "")
+								trustedDomains.push(x[Constants.trustedDomain]);
 							var provider: CIProvider = new CIProvider(x, state, environmentInfo);
 							state.ciProviders.set(x[Constants.landingUrl], provider);
 							var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], x[Constants.SortOrder], appId, false, null);
@@ -98,7 +103,7 @@ namespace Microsoft.CIFramework.Internal {
 						}
 					}
 					// initialize and set post message wrapper.
-					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(state.ciProviders.keys()), apiHandlers);
+					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
 					// initialize the session manager
 					state.sessionManager = new SessionInfo(state.client, state.ciProviders.get(first));
 					// load the widgets onto client. 

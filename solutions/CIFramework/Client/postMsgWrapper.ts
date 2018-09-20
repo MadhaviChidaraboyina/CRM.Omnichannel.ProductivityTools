@@ -244,7 +244,14 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		private processMessage(event: MessageEvent) {
 
 			let whiteListedOrigin = this.listWhitelistedDomains.find((whiteListedDomain) => {
-				return (new RegExp(event.origin + '*')).test(whiteListedDomain)
+				//TODO - Replace URL with some other supported object if IE support becomes mandatory. URL is not supported by IE11
+				var domainUrl = new URL(event.origin);
+				var domainHostName = decodeURIComponent(domainUrl.hostname);
+				if (whiteListedDomain == domainHostName)
+					return true;
+				else if (whiteListedDomain.startsWith("*"))
+					return (domainHostName.endsWith(whiteListedDomain.substr(2)));
+				return false;
 			});
 
 			let trackingCorrelationId = event.data[messageCorrelationId];

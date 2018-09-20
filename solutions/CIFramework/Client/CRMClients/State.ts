@@ -85,7 +85,8 @@ namespace Microsoft.CIFramework.Internal {
         orgId : string;	//Organization ID
         orgName : string;	//Organization Name
         crmVersion : string;	//CRM version
-        appId : string;	//App Id
+        appId: string;	//App Id
+        trustedDomain: string;	// Domain to be whitelisted
         constructor(x: XrmClientApi.WebApi.Entity, state: IState, environmentInfo: any) {
             this._state = state;
             this.name = x[Constants.name];
@@ -99,6 +100,7 @@ namespace Microsoft.CIFramework.Internal {
             this.currentMode = 0;
             this.sortOrder = x[Constants.SortOrder];
             this.apiVersion = x[Constants.APIVersion];
+            this.trustedDomain = x[Constants.trustedDomain];
             this.orgId = environmentInfo["orgId"];
             this.orgName = environmentInfo["orgName"];
             this.crmVersion = environmentInfo["crmVersion"];
@@ -121,7 +123,7 @@ namespace Microsoft.CIFramework.Internal {
             if (!this.getContainer()) {
                 return Promise.resolve(new Map().set(Constants.value, false));
             }
-            return this._state.messageLibrary.postMsg(this.getContainer().getContentWindow(), payload, this.landingUrl, true);
+            return this._state.messageLibrary.postMsg(this.getContainer().getContentWindow(), payload, this.trustedDomain || this.landingUrl, true);
         }
         getContainer(): WidgetContainer {
             return this._widgetContainer;

@@ -20,13 +20,13 @@ namespace Microsoft.CIFramework.Internal {
 		export const startTime = "Start_Time";
 		export const timeTaken = "Time_Taken";
 		export const apiName = "API_Name";
-		export const telemetryData = "API_Data";
+		export const telemetryData = "API_Perf_Markers";
 		export const isError = "Is_Error";
 		export const errorMessage = "Error_Message";
 		export const errorType = "Error_Type";
 		export const errorReportTime = "Error_Report_Time";
 		export const errorFunction = "Error_Function";
-		export const perfTable = "CIF_Perf_Telemetry_TEST";
-		export const usageTable = "CIF_Usage_Telemetry_TEST";
+		export const perfTable = "D365_CIF_Perf";
+		export const usageTable = "D365_CIF_Usage";
 	}
 }
