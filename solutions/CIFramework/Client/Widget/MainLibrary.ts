@@ -86,7 +86,7 @@ namespace Microsoft.CIFramework
 					}
 				},
 				(error: Map<string, any>) => {
-					return reject(error.get(Constants.message));
+					return reject(error);
 				});
 		});
 	}
