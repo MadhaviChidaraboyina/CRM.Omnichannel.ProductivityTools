@@ -28,7 +28,8 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		reject: <T>(error?: T) => void;
 	}
 
-	type Handler = (dictionary: Map<string, any>) => Promise<Map<string, any>>;
+	export type Handler = (dictionary: Map<string, any> | string) => Promise<Map<string, any>>;
+
 
 	/**
 	 * Creates a new request message type, for message exchange between CI and any widget
@@ -37,7 +38,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 	export interface IExternalRequestMessageType {
 
 		messageType: string
-		messageData: Map<string, any>
+		messageData: Map<string, any> | string
 	}
 
 	interface IRequestMessageType extends IExternalRequestMessageType {
@@ -131,7 +132,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			if (!noTimeout) {
 				let timeout = new Promise<Map<string, any>>((resolve, reject) => {
 					deferred.timerId = setTimeout(() => {
-						reject(createErrorMap("Timeout occurred as no response was received from listener window"));
+						reject(Microsoft.CIFramework.Utility.createErrorMap("Timeout occurred as no response was received from listener window"));
 					}, promiseTimeOut);
 				});
 				promises.push(timeout);
@@ -244,21 +245,24 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			let trackingCorrelationId = event.data[messageCorrelationId];
 			let msg: IResponseMessageType;
 
-			if(!trackingCorrelationId) {
-				// todo - log message recieved has no correlation id, with origin & msg details
+			let messageData = null;
+			if (!event.origin || event.origin === "*" || !event.source) {
+				messageData = Microsoft.CIFramework.Utility.createErrorMap("Origin/Source of the message cant be null or all");
 			}
-			else
-			{
-				// correlation id exists, perform validation to send back failure, if needed.
-				let messageData = null;
-				if(!event.origin || event.origin === "*" || !event.source) {
-					messageData = createErrorMap("Origin/Source of the message cant be null or all");
+			if (!whiteListedOrigin) {
+				messageData = Microsoft.CIFramework.Utility.createErrorMap("Sender domain is not a recognised or is invalid and hence the message cant be processed");
+			}
+
+			if (!trackingCorrelationId) {
+				if (messageData) {
+					// log message recieved has no correlation id, with origin & msg details
+					console.trace("Ignoring message from unknown event source: " + event.origin);
+					return;
 				}
-				if (!whiteListedOrigin) {
-					messageData = createErrorMap("Sender domain is not a recognised or is invalid and hence the message cant be processed");
-				}
-				
-				if(messageData) {
+			}
+			else {
+				// correlation id exists, but the domain was not whitelisted. Return an error response
+				if (messageData) {
 					msg = {
 							messageOutcome: messageFailure,
 							messageData: messageData,
@@ -278,8 +282,8 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			 */
 			if (!pendingPromise) {
 				let data = <IExternalRequestMessageType>event.data;
-				data.messageData.set(originURL, whiteListedOrigin);
-				
+				if(typeof(data.messageData) != "string")
+					data.messageData.set(originURL, whiteListedOrigin);
 				/**
 				 * Iterate through the handler list and invoke them all nd handle if there are no handlers
 				 */
@@ -287,18 +291,18 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 				{
 					if (trackingCorrelationId) {
 						msg = {
-								messageOutcome: messageSuccess,
-								messageData: createErrorMap("No handlers found to process the request."),
-								messageCorrelationId: trackingCorrelationId
-							};
+							messageOutcome: messageSuccess,
+							messageData: Microsoft.CIFramework.Utility.createErrorMap("No handlers found to process the request."),
+							messageCorrelationId: trackingCorrelationId
+						};
 						this.sendResponseMsg(event.source, msg, event.origin);
 					}
 					// todo - log that no handler was found alongwith message & origin details, and if we are sending back a response or silently ignoring.
 					return;
 				}
 
-				this.messageHandlers.get(data.messageType).forEach((handlerFunction) => {
-					handlerFunction(data.messageData).then(
+				this.messageHandlers.get(data.messageType).forEach((handlerFunction: Handler) => {
+					(<Handler>handlerFunction)(data.messageData).then(
 						(result: Map<string, any>) => {
 							if (trackingCorrelationId) {
 								msg = {

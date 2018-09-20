@@ -1,10 +1,11 @@
 {
 	"extends":  "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
 	"include": [
-		"Constants.ts",
+    "../Constants.ts",
+    "../CIFrameworkUtilities.ts",
+    "../CIFrameworkConstants.ts",
 		"MainLibrary.ts",
-		"../PostMsgWrapper.ts",
-		"../CIFrameworkConstants.ts"
+		"../PostMsgWrapper.ts"
 	],
 	"compilerOptions": {
 		"sourceMap": true,

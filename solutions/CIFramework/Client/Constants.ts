@@ -47,8 +47,46 @@ namespace Microsoft.CIFramework
 		export const ScriptIdAttributeName = "data-cifid";
 		export const ScriptIdAttributeValue = "CIFMainLibrary";
 		export const ScriptCRMUrlAttributeName = "data-crmurl";
+		export const name = "msdyn_name";
+
+		export const originURL = "originURL";
+		export const CIClickToAct = "CIClickToAct";
+		export const CISendKBArticle = "KMClickToSend";
+		export const widgetIframeId = "SidePanelIFrame";
+		export const clickToActAttributeName = "msdyn_clicktoact";
+		export const systemUserLogicalName = "systemuser";
+		export const appSelectorFieldName = "msdyn_appselector";
+		export const sortOrderFieldName = "msdyn_sortorder";
+		export const roleSelectorFieldName = "msdyn_roleselector";
+		export const providerOdataQuery = "?$select=fullname&$expand=msdyn_ciprovider_systemuser_membership($filter=statecode eq 0;$orderby=msdyn_sortorder asc,createdon asc;$top={0})";
+		export const providerNavigationProperty = "msdyn_ciprovider_systemuser_membership";
+		export const providerId = "msdyn_ciproviderid";
+		export const landingUrl = "msdyn_landingurl";
+		export const label = "msdyn_label";
+		export const providerLogicalName = "msdyn_ciprovider";
+		export const widgetHeight = "msdyn_widgetheight";
+		export const widgetWidth = "msdyn_widgetwidth";
+		export const SizeChangeHandler = "sizeChangeHandler";
+		export const ModeChangeHandler = "modeChangedHandler";
+		export const NavigationHandler = "NavigationHandler";
+		export const AppName = "appName";
+		export const ClientUrl = "clientUrl";
+		export const AppUrl = "appUrl";
+		export const Theme = "themeName";
+		export const OrgLcid = "orgLcid";
+		export const OrgUniqueName = "orgUniqueName";
+		export const UserId = "userId";
+		export const UserLcid = "userLcid";
+		export const UserName = "username";
+		export const DefaultCountryCode = "defaultCountryCode";
+		export const MinimizedHeight = 34;
+		export const DefaultFullWidth = 100;
+		export const APIVersion = "msdyn_ciproviderapiversion";
+		export const SortOrder = "msdyn_sortorder";
+		export const crmVersion = "crmVersion";
 		export const Attributes = "attributes";
 		export const UciLib = "ucilib";
+		export const OrgId = "orgId";
 	}
 
 	/**

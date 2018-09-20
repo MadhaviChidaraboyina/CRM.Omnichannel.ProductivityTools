@@ -39,18 +39,11 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 	export const message = 'message';
 
 	/**
-	 * utility func to create a promise and reject it with the passed error message
-	*/
+ * utility func to create a promise and reject it with the passed error message
+*/
 	export function rejectWithErrorMessage(errorMessage: string) {
-		return Promise.reject(createErrorMap(errorMessage));
-	}
-
-	/**
-	 * utility func to create a error map with the error message and optional error code
-	*/
-	export function createErrorMap(errorMessage : string)
-	{
-		return new Map().set(message, errorMessage);
+		return Promise.reject(
+			JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(Microsoft.CIFramework.Utility.createErrorMap(errorMessage))));
 	}
 }
 

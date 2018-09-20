@@ -4,12 +4,13 @@
 
 /// <reference path="Client.ts" />
 /// <reference path="Constants.ts" />
+/// <reference path="../Constants.ts" />
 /// <reference path="State.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 /// <reference path="aria-webjs-sdk-1.6.2.d.ts" />
 
-namespace Microsoft.CIFramework.Internal
-{
+namespace Microsoft.CIFramework.Internal {
+	let Constants = Microsoft.CIFramework.Constants;
 	/**
 	 * mapping of handlers for each API needed by postMessageWrapper
 	 */
@@ -73,13 +74,12 @@ namespace Microsoft.CIFramework.Internal
 					// populate ciProviders in state.
 					state.ciProviders = new Map<string, any>();
 					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
-
+					let telemetryData: any = new Object();
 					var environmentInfo: any = [];
 					environmentInfo["orgId"] = Xrm.Utility.getGlobalContext().organizationSettings.organizationId;
 					environmentInfo["orgName"] = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
 					environmentInfo["crmVersion"] = Xrm.Utility.getGlobalContext().getVersion();
 					environmentInfo["appId"] = appId;
-
 					for (var x of result.entities) {
 						var apps = x[Constants.appSelectorFieldName];
 						var currRoles = x[Constants.roleSelectorFieldName];
@@ -316,13 +316,11 @@ namespace Microsoft.CIFramework.Internal
 		if(provider)
 		{
 			state.client.setWidgetWidth(null, parameters.get(Constants.value) as number, telemetryData);
-
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setWidth.name, telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map());
 		}
-		else
-		{
+		else {
 			return rejectWithErrorMessage(errorData.errorMsg, setWidth.name, appId, true, errorData);
 		}
 	}
@@ -391,16 +389,15 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * subscriber of onClickToAct event
 	*/
-	export function onClickToAct(event: CustomEvent) : void
-	{
-		raiseEvent(buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event), clickToActCheck);
+	export function onClickToAct(event: CustomEvent): void {
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event), clickToActCheck);
 	}
 
 	/**
 	 * subscriber of onSendKBArticle event
 	*/
 	export function onSendKBArticle(event: CustomEvent): void {
-		raiseEvent(buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client");
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client");
 	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
@@ -553,7 +550,7 @@ namespace Microsoft.CIFramework.Internal
 		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
 		if (provider) {
 			return new Promise<Object>((resolve, reject) => {
-				state.client.getEntityMetadata(parameters.get(Constants.entityName), parameters.get(Constants.attributes)).then(
+				state.client.getEntityMetadata(parameters.get(Constants.entityName), parameters.get(Constants.Attributes)).then(
 					function (res) {
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getEntityMetadata.name, telemetryData);
 						setPerfData(perfData);
