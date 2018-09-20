@@ -566,9 +566,6 @@ namespace Microsoft.CIFramework.Internal {
 		let map = new Map();
 		if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
 			if(notificationType[0].search(MessageType.softNotification)){ //For Soft notification
-				if(header.length != 2){
-					return postMessageNamespace.rejectWithErrorMessage("The header must have both icon and title. Provide values to the parameter.");
-				}
 				if(body == null || body == "undefined"){
 					return postMessageNamespace.rejectWithErrorMessage("The body value is blank. Provide a value to the parameter.");
 				}
