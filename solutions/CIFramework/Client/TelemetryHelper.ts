@@ -7,7 +7,7 @@ namespace Microsoft.CIFramework.Internal
 {
 	declare var Xrm: any;
 	declare var defaultLogger: any;
-	var projectIngestionKey = "d29ebc73a0674c1491d9a313c9357834-2fec07c6-6cdf-411e-9fa6-fcb6b43eb97c-6781";
+	var projectIngestionKey = "39f156fe0f00465288756928db675fe0-fef5dc1c-14bd-4361-9259-5f10f8ef5040-7209";
 	defaultLogger = AWTLogManager.initialize(projectIngestionKey);
 
 	/**
@@ -74,7 +74,7 @@ namespace Microsoft.CIFramework.Internal
 	// Function to populate the Usage Data Telemetry
 	export function setUsageData(data: UsageTelemetryData): void {
 		var testUsageTelemetry = new AWTEventProperties();
-		testUsageTelemetry.setName("FinalUsageTable");
+		testUsageTelemetry.setName(TelemetryConstants.usageTable);
 
 		testUsageTelemetry.setProperty(TelemetryConstants.apiVersion, data.apiVersion ? data.apiVersion : "");
 		testUsageTelemetry.setProperty(TelemetryConstants.appId, data.appId ? data.appId : "");
@@ -97,7 +97,7 @@ namespace Microsoft.CIFramework.Internal
 	// Function to populate the Performance Data Telemetry
 	export function setPerfData(data: PerfTelemetryData) {
 		var testPerfTelemetry = new AWTEventProperties();
-		testPerfTelemetry.setName("TestUTCDate");
+		testPerfTelemetry.setName(TelemetryConstants.perfTable);
 
 		testPerfTelemetry.setProperty(TelemetryConstants.providerId, data.providerData.providerId ? data.providerData.providerId : "");
 		testPerfTelemetry.setProperty(TelemetryConstants.providerName, data.providerData.name ? data.providerData.name : "");
