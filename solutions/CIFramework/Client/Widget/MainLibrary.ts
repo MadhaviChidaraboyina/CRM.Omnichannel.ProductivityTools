@@ -85,14 +85,14 @@ namespace Microsoft.CIFramework
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-    export function notifyCIF(eventType: string, notificationUX: string): Promise<string> {	
+    export function notifyEvent(eventType: string, notificationUX: string): Promise<string> {	
 		if(!(isNullOrUndefined(eventType) || isNullOrUndefined(notificationUX))){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.notifyCIF,
+				messageType: MessageType.notifyEvent,
 				messageData: new Map().set(Constants.eventType,eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(notificationUX)))
 			}
 			return new Promise((resolve, reject) => {
-				return sendMessage<Map<string, any>>(notifyCIF.name, payload, false, true).then(
+				return sendMessage<Map<string, any>>(notifyEvent.name, payload, false, false).then(
 					function (result: Map<string, any>) {
 						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
 					},

@@ -28,7 +28,13 @@ namespace Microsoft.CIFramework
 		export const onSizeChanged = "onsizechanged";
 		export const onPageNavigate = "onpagenavigate";
 		export const onSendKBArticle = "onsendkbarticle";
-		export const notifyCIF = "notifyCIF";
+		export const notifyEvent = "notifyEvent";
+		export const softNotification = "softNotification";
+		export const broadCast = "broadCast";
+		export const internalCommunication = "internalCommunication";
+		export const notification = "notification";
+		export const transfer = "transfer";
+		export const escalation = "escalation";
 	}
 
 	/**
@@ -90,16 +96,19 @@ namespace Microsoft.CIFramework
 		export const headerDataCIF: string = "headerDataCIF";
 		export const bodyDataCIF: string = "bodyDataCIF";
 		export const notificationUXObject: string = "notificationUXObject";
-		export const buttonDisplayText = "buttonDisplayText";
-		export const buttonReturnValue = "buttonReturnValue";
-		export const buttonsCIF = "buttons";
-		export const buttonName = "buttonName";
+		export const actionDisplayText = "actionDisplayText";
+		export const actionReturnValue = "actionReturnValue";
+		export const actionsCIF = "actions";
+		export const actionName = "actionName";
 		export const CIFNotificationIcon = "CIFNotificationIcon";
-		export const buttonColor = "buttonColor";
-		export const buttonImage = "buttonImage";
-		export const timeout = "timeout"; //Needs to be implemented.
-		export const buttonType = "buttonType"; //Needs to be implemented.
+		export const actionColor = "actionColor";
+		export const actionImage = "actionImage";
+		export const Timeout = "Timeout";
+		export const Accept = "Accept";
+		export const Reject = "Reject";
+		export const actionType = "actionType";
 		export const notificationType = "notificationType"; 
+		export const Timer = "Timer"; 
 	}
 
 	/**

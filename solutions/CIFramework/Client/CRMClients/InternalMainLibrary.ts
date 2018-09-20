@@ -16,7 +16,7 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	const apiHandlers = new Map<string, any>([
 		["setclicktoact", [setClickToAct]],
-		["notifyCIF", [notifyCIF]],
+		["notifyEvent", [notifyEvent]],
 		["searchandopenrecords", [searchAndOpenRecords]],
 		["openform", [openForm]],
 		["createrecord", [createRecord]],
@@ -533,11 +533,12 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-    export function notifyCIF(notificationUX: Map<string,Map<string,any>>): Promise<boolean>{
+    export function notifyEvent(notificationUX: Map<string,Map<string,any>>): Promise<boolean>{
        	let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
 		let i = 0;
-		let header,body,buttons,icon;
+		let header,body,actions,icon;
+		let waitTime = -1;
 		let notificationType: any = [];
 		for (let [key, value] of notificationUX) {
 			if(key.search(Constants.eventType) != -1){
@@ -549,8 +550,8 @@ namespace Microsoft.CIFramework.Internal {
 						header = value1;
 					}else if(key1.search(Constants.bodyDataCIF) != -1){
 						body = value1;
-					}else if(key1.search(Constants.buttonsCIF) != -1){
-						buttons = value1;
+					}else if(key1.search(Constants.actionsCIF) != -1){
+						actions = value1;
 					}else if(key1.search(Constants.CIFNotificationIcon) != -1){
 						icon = value1;
 					}else if(key1.search(Constants.notificationType) != -1){
@@ -564,7 +565,10 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		let map = new Map();
 		if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
-			if(notificationType[0] == 1){ //For Soft notification
+			if(notificationType[0].search(MessageType.softNotification)){ //For Soft notification
+				if(header.length != 2){
+					return postMessageNamespace.rejectWithErrorMessage("The header must have both icon and title. Provide values to the parameter.");
+				}
 				if(body == null || body == "undefined"){
 					return postMessageNamespace.rejectWithErrorMessage("The body value is blank. Provide a value to the parameter.");
 				}
@@ -580,7 +584,7 @@ namespace Microsoft.CIFramework.Internal {
 				let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
 				if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
 					let headerElement = toastDiv.getElementsByClassName("header_NotificationType_CIF")[len-1];
-					if(notificationType[0] == 2 && notificationType.length == 3){
+					if(notificationType[0].search(MessageType.broadCast) && notificationType.length == 3){
 						headerElement.setAttribute('style','display:block;min-height:21px;width:280px;background-color:#000000;');
 						var label1 = document.createElement("label");
 						headerElement.appendChild(label1);
@@ -590,7 +594,7 @@ namespace Microsoft.CIFramework.Internal {
 						headerElement.appendChild(label2);
 						label2.setAttribute('style', 'margin-left: 10px;font-family:Segoe UI;font-style:Regular;font-size:11px;text-align:Right;height:13px;color:#FFFFFF;');
 						label2.innerText = notificationType[2];
-					}else if((notificationType[0] == 3 || notificationType[0] == 5) && notificationType.length == 3){
+					}else if((notificationType[0].search(MessageType.notification) || notificationType[0].search(MessageType.escalation)) && notificationType.length == 3){
 						headerElement.setAttribute('style','display:block;min-height:21px;background-color:#B22912;width:280px;');
 						var img = document.createElement("img");
 						headerElement.appendChild(img);
@@ -600,13 +604,13 @@ namespace Microsoft.CIFramework.Internal {
 						headerElement.appendChild(label);
 						label.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;');
 						label.innerText = notificationType[2];
-					}else if(notificationType[0] == 4 && notificationType.length == 2){
+					}else if(notificationType[0].search(MessageType.transfer) && notificationType.length == 2){
 						headerElement.setAttribute('style','display:block;min-height:21px;background-color:#B22912;width:280px;');
 						var label1 = document.createElement("label");
 						headerElement.appendChild(label1);
 						label1.setAttribute('style', 'margin-left: 10px;font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;');
 						label1.innerText = notificationType[1];
-					}else if(notificationType[0] == 6 && notificationType.length == 3){
+					}else if(notificationType[0].search(MessageType.internalCommunication) && notificationType.length == 3){
 						headerElement.setAttribute('style','display:block;min-height:21px;background-color:#000000;width:280px;');
 						var img = document.createElement("img");
 						headerElement.appendChild(img);
@@ -655,50 +659,60 @@ namespace Microsoft.CIFramework.Internal {
 				toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].innerHTML = headerVal;
 				toastDiv.getElementsByClassName("header_CIF")[len-1].getElementsByTagName("img")[0].src = "";
 				let chatWindowBody = toastDiv.getElementsByClassName("bodyDivCIF")[len-1];
-				if(buttons != null && buttons != "undefined"){
-					for( i = 0; i < buttons.length; i++){
+				if(actions != null && actions != "undefined"){
+					for( i = 0; i < actions.length; i++){
 						var btn = document.createElement("BUTTON");
 						chatWindowBody.appendChild(btn);
 						var img = document.createElement("img");
 						btn.appendChild(img);
-						let buttonParam = new Map();
+						let actionParam = new Map();
 						let k = 0;
-						let buttonNameCIF,buttonReturnValueCIF;
-						for (let key in buttons[i]) {
-							if(key.search(Constants.buttonType) != -1){
-								if(buttons[i][key].search("Accept") != -1){
-									if(buttons.length == 1){
+						let isTimeOut = false;
+						let actionNameCIF,actionReturnValueCIF;
+						for (let key in actions[i]) {
+							if(key.search(Constants.actionType) != -1){
+								if(actions[i][key].search(Constants.Accept) != -1){
+									if(actions.length == 1){
 										btn.setAttribute('style','width:252px;background-color:#47C21D;height:40px;margin-left: 10px;');
 									}else{
 										btn.setAttribute('style','width:120px;background-color:#47C21D;height:40px;margin-right:14px;margin-left: 10px;');
 									}
 									btn.getElementsByTagName("img")[0].src = ""; //Default image URL.
 									btn.getElementsByTagName("img")[0].setAttribute('style','width:16px; height:16px; float:left; font-style:Regular; font-size:16px; text-align:Left;');
-								}else if(buttons[i][key].search("Reject") != -1){
-									if(buttons.length == 1){
+								}else if(actions[i][key].search(Constants.Reject) != -1){
+									if(actions.length == 1){
 										btn.setAttribute('style','width:252px;background-color:#EA0600;height:40px;margin-left: 10px;');
 									}else{
 										btn.setAttribute('style','width:120px;background-color:#EA0600;height:40px;margin-right:14px;');
 									}
 									btn.getElementsByTagName("img")[0].src = ""; //Default image URL.
 									btn.getElementsByTagName("img")[0].setAttribute('style','width:16px; height:16px; float:left; font-style:Regular; font-size:16px; text-align:Left;');
+								}else if(actions[i][key].search(Constants.Timeout) != -1){
+									btn.setAttribute('style','display:none');
+									isTimeOut = true;
 								}
 							}
-							if(key.search(Constants.buttonDisplayText) != -1){
-								btn.innerText = buttons[i][key];
-							}else if(key.search(Constants.buttonName) != -1){
-								buttonNameCIF = buttons[i][key];
-							}else if(key.search(Constants.buttonReturnValue) != -1){
-								buttonReturnValueCIF = buttons[i][key];
-							}else if(key.search(Constants.buttonColor) != -1){
-								btn.style.backgroundColor = buttons[i][key];
-							}else if(key.search(Constants.buttonImage) != -1){
-								btn.getElementsByTagName("img")[0].src = buttons[i][key];
+							if(key.search(Constants.actionDisplayText) != -1){
+								btn.innerText = actions[i][key];
+							}else if(key.search(Constants.actionName) != -1){
+								actionNameCIF = actions[i][key];
+							}else if(key.search(Constants.actionReturnValue) != -1){
+								actionReturnValueCIF = actions[i][key];
+							}else if(key.search(Constants.actionColor) != -1){
+								btn.style.backgroundColor = actions[i][key];
+							}else if(key.search(Constants.actionImage) != -1){
+								btn.getElementsByTagName("img")[0].src = actions[i][key];
+							}else if(key.search(Constants.Timer) != -1){
+								waitTime = actions[i][key];
 							}
 						}
-						buttonParam.set(Constants.buttonName,buttonNameCIF);
-						buttonParam.set(Constants.buttonReturnValue,buttonReturnValueCIF);
-						map.set(btn,buttonParam);
+						actionParam.set(Constants.actionName,actionNameCIF);
+						actionParam.set(Constants.actionReturnValue,actionReturnValueCIF);
+						if(isTimeOut){
+							map.set(currentToast,actionParam);
+						}else{
+							map.set(btn,actionParam);
+						}
 					}
 				}
 				toastDiv.getElementsByClassName("header_CIF")[len-1].addEventListener("click", function() {
@@ -717,6 +731,9 @@ namespace Microsoft.CIFramework.Internal {
 		}else{
 			return postMessageNamespace.rejectWithErrorMessage("The notificationType value is blank. Provide a value to the parameter.");
 		}
+		if(waitTime == -1){
+			return postMessageNamespace.rejectWithErrorMessage("The timer value is blank. Provide a value to the parameter.");
+		}
 		var childDivs = toastDiv.getElementsByTagName('div');
 		if(childDivs != null){
 			let c = 0;
@@ -733,36 +750,56 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 		return new Promise(function (resolve) {
-			if(notificationType[0] != 1){
+			if(notificationType[0].search(MessageType.softNotification)){
 				for(let [key,value] of map){
 					key.addEventListener("click", function clickListener() {
 						key.removeEventListener("click", clickListener);
-						key.parentElement.parentElement.style.display = "none";
 						key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-						noOfNotifications--;
-						childDivs = toastDiv.getElementsByTagName('div');
-						if(childDivs != null){
-							for( i=0; i< childDivs.length; i++ ){
-								let childDiv = childDivs[i];
-								if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
-									childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
-									break;
-								}
-							}
-						}
-						var mapReturn = new Map().set(Constants.value,value);
+						var mapReturn = new Map().set(Constants.value,null);
 						resolve(mapReturn);
 					});
 				}
 			}else{
 				for(let [key,value] of map){
-					key.addEventListener("click", function clickListener() {
-						key.removeEventListener("click", clickListener);
-						//key.parentElement.parentElement.style.display = "none";
-						key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-						var mapReturn = new Map().set(Constants.value,null);
-						resolve(mapReturn);
-					});
+					if(key == toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]){
+						setTimeout(function(){
+							if(key != null && key.parentElement != null){
+								key.parentElement.removeChild(key);
+								noOfNotifications--;
+								childDivs = toastDiv.getElementsByTagName('div');
+								if(childDivs != null){
+									for( i=0; i< childDivs.length; i++ ){
+										let childDiv = childDivs[i];
+										if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+											childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
+											break;
+										}
+									}
+								}
+							}
+							var mapReturn = new Map().set(Constants.value,value);
+							resolve(mapReturn);
+							}, waitTime);
+					}else{
+						key.addEventListener("click", function clickListener() {
+							key.removeEventListener("click", clickListener);
+							key.parentElement.parentElement.style.display = "none";
+							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
+							noOfNotifications--;
+							childDivs = toastDiv.getElementsByTagName('div');
+							if(childDivs != null){
+								for( i=0; i< childDivs.length; i++ ){
+									let childDiv = childDivs[i];
+									if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+										childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
+										break;
+									}
+								}
+							}
+							var mapReturn = new Map().set(Constants.value,value);
+							resolve(mapReturn);
+						});
+					}
 				}
 			}
 		});
