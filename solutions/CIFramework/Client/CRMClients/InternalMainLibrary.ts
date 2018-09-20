@@ -712,6 +712,9 @@ namespace Microsoft.CIFramework.Internal {
 						}
 					}
 				}
+				if(waitTime == -1){
+					return postMessageNamespace.rejectWithErrorMessage("The timer value is blank. Provide a value to the parameter.");
+				}
 				toastDiv.getElementsByClassName("header_CIF")[len-1].addEventListener("click", function() {
 					childDivs = toastDiv.getElementsByTagName('div');
 					if(childDivs != null){
@@ -727,9 +730,6 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}else{
 			return postMessageNamespace.rejectWithErrorMessage("The notificationType value is blank. Provide a value to the parameter.");
-		}
-		if(waitTime == -1){
-			return postMessageNamespace.rejectWithErrorMessage("The timer value is blank. Provide a value to the parameter.");
 		}
 		var childDivs = toastDiv.getElementsByTagName('div');
 		if(childDivs != null){
