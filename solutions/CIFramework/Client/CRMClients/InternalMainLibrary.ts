@@ -51,6 +51,8 @@ namespace Microsoft.CIFramework.Internal {
 			return false;
 		}
 		let startTime = new Date();
+		let trustedDomains: string[] = [];
+
 		// set the client implementation.
 		state.client = setClient(clientType);
 
@@ -92,7 +94,13 @@ namespace Microsoft.CIFramework.Internal {
 								if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
 									continue;
 								}
-								state.ciProviders.set(x[Constants.landingUrl], new CIProvider(x, environmentInfo));
+
+								var ChannelProvider = new CIProvider(x, environmentInfo);
+								state.ciProviders.set(x[Constants.landingUrl], ChannelProvider);
+
+								trustedDomains.push(x[Constants.landingUrl]);
+								if (x[Constants.trustedDomain] != "")
+									trustedDomains.push(x[Constants.trustedDomain]);
 
 								var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], x[Constants.SortOrder], appId, false, null);
 								setUsageData(usageData);
@@ -103,7 +111,7 @@ namespace Microsoft.CIFramework.Internal {
 						if (foundProvider) break;
 					}
 					// initialize and set post message wrapper.
-					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(state.ciProviders.keys()), apiHandlers);
+					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
 					// load the widgets onto client. 
 					for (let [key, value] of state.ciProviders) {
 						state.client.loadWidget(key, value.label);
@@ -129,13 +137,17 @@ namespace Microsoft.CIFramework.Internal {
 
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
 		for (let [key, value] of state.ciProviders) {
+			let whitelistDomain = key;
+			if (value.trustedDomain != "") {
+				whitelistDomain = value.trustedDomain;
+			}
 			if (eventCheck) {
 				if (eventCheck(value)) {
-					state.messageLibrary.postMsg(widgetIFrame.contentWindow, payload, key, true, noTimeout);
+					state.messageLibrary.postMsg(widgetIFrame.contentWindow, payload, whitelistDomain, true, noTimeout);
 				}
 			}
 			else {
-				state.messageLibrary.postMsg(widgetIFrame.contentWindow, payload, key, true, noTimeout);
+				state.messageLibrary.postMsg(widgetIFrame.contentWindow, payload, whitelistDomain, true, noTimeout);
 			}
 		}
 		reportUsage(reportMessage);

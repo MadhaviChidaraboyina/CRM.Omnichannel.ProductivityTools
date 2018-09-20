@@ -87,6 +87,7 @@ namespace Microsoft.CIFramework
 		export const Attributes = "attributes";
 		export const UciLib = "ucilib";
 		export const OrgId = "orgId";
+		export const trustedDomain = "msdyn_trustedDomain";
 	}
 
 	/**

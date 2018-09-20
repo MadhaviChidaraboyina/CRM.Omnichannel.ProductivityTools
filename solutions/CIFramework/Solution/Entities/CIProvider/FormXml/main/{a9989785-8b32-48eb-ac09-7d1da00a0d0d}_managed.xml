@@ -46,6 +46,11 @@
 												<control id="msdyn_ciproviderapiversion" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="msdyn_ciproviderapiversion" disabled="false" />
 											</cell>
 										</row>
+										<row>
+											<cell id="{d6aa4662-c329-37e8-ec51-1e8572e277ae}" showlabel="true" locklevel="0">
+												<control id="msdyn_trustedDomain" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_trustedDomain" disabled="false" />
+											</cell>
+										</row>
 									</rows>
 								</section>
 							</sections>

@@ -43,6 +43,7 @@ namespace Microsoft.CIFramework.Internal
 		readonly crmVersion : string;	//CRM version
 		readonly appId : string;	//App Id
 		clickToAct: boolean;		//Boolean flag to enable or disable Click to act functionality , it can be changed through setClickToAct API
+		trustedDomain: string;	// Domain to be whitelisted
 		constructor(x : XrmClientApi.WebApi.Entity, environmentInfo: any)
 		{
 			this.name = x[Constants.name];
@@ -53,6 +54,7 @@ namespace Microsoft.CIFramework.Internal
 			this.clickToAct = x[Constants.clickToActAttributeName];
 			this.sortOrder = x[Constants.SortOrder];
 			this.apiVersion = x[Constants.APIVersion];
+			this.trustedDomain = x[Constants.trustedDomain];
 			this.orgId = environmentInfo["orgId"];
 			this.orgName = environmentInfo["orgName"];
 			this.crmVersion = environmentInfo["crmVersion"];
