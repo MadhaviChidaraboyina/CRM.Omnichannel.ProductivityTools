@@ -669,17 +669,17 @@ namespace Microsoft.CIFramework.Internal {
 						for (let key in actions[i]) {
 							if(key.search(Constants.actionType) != -1){
 								if(actions[i][key].search(Constants.Accept) != -1){
-									if(actions.length == 1){
+									if(actions.length == 2){
 										btn.setAttribute('style','width:252px;background-color:#47C21D;height:40px;margin-left: 10px;');
-									}else{
+									}else if(actions.length == 3){
 										btn.setAttribute('style','width:120px;background-color:#47C21D;height:40px;margin-right:14px;margin-left: 10px;');
 									}
 									btn.getElementsByTagName("img")[0].src = ""; //Default image URL.
 									btn.getElementsByTagName("img")[0].setAttribute('style','width:16px; height:16px; float:left; font-style:Regular; font-size:16px; text-align:Left;');
 								}else if(actions[i][key].search(Constants.Reject) != -1){
-									if(actions.length == 1){
+									if(actions.length == 2){
 										btn.setAttribute('style','width:252px;background-color:#EA0600;height:40px;margin-left: 10px;');
-									}else{
+									}else if(actions.length == 3){
 										btn.setAttribute('style','width:120px;background-color:#EA0600;height:40px;margin-right:14px;');
 									}
 									btn.getElementsByTagName("img")[0].src = ""; //Default image URL.
