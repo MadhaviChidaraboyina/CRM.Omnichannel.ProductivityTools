@@ -70,7 +70,6 @@ namespace Microsoft.CIFramework.Internal {
 					state.client.registerHandler(Constants.NavigationHandler, onPageNavigation);
 					// populate ciProviders in state.
 					state.ciProviders = new Map<string, any>();
-					state.sessionManager = new SessionInfo(state.client);
 					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
 					let telemetryData: any = new Object();
 					var defaultMode = state.client.getWidgetMode(telemetryData) as number;
@@ -100,13 +99,12 @@ namespace Microsoft.CIFramework.Internal {
 					}
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(state.ciProviders.keys()), apiHandlers);
+					// initialize the session manager
+					state.sessionManager = new SessionInfo(state.client, state.ciProviders.get(first));
 					// load the widgets onto client. 
 					state.client.loadWidgets(state.ciProviders).then(function (widgetLoadStatus) {
 						reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
 					});
-					if (first) {
-						state.sessionManager.setActiveProvider(state.ciProviders.get(first));
-					}
 				}
 			},
 			(error: Error) => {
@@ -118,7 +116,7 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	/*Utility function to raise events registered for the framework*/
-	function raiseEvent(data: Map<string, any>, messageType: string, reportMessage: string): void {
+	function raiseEvent(data: Map<string, any>, messageType: string, reportMessage: string, provider?: CIProvider): void {
 		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: messageType,
@@ -126,8 +124,25 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		//let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
-		for (let [key, value] of state.ciProviders) {
-			value.raiseEvent(data, messageType);
+		if (isNullOrUndefined(provider)) {
+			//A Map object iterates in insertion order. If IE11 support is required, ensure this order is preserved
+			for (let [key, value] of state.ciProviders) {
+				var eventStatus: { result?: any, error?: string } = {};
+				value.raiseEvent(data, messageType).then(
+					function (result: Map<string, any>) {
+						this.result = result.get(Constants.value);
+					}.bind(eventStatus),
+					function (error: string) {
+						//TODO: send error for telemetry
+						this.error = error;
+					}.bind(eventStatus));
+				if (eventStatus.result) {
+					break;
+				}
+			}
+		}
+		else {
+			provider.raiseEvent(data, messageType);
 		}
 		reportUsage(reportMessage);
 	}
@@ -192,7 +207,7 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	function onSizeChanged(event: CustomEvent): void {
 		updateProviderSizes();
-		raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked");
+		raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked", state.sessionManager.getActiveProvider());
 	}
 
 	/**
@@ -206,7 +221,7 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	function onModeChanged(event: CustomEvent): void {
 		updateProviderSizes();  //TODO: global modeChanged event: this shouldn't be passed to all widgets. WHo should it be passed to?
-		raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked");
+		raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked", state.sessionManager.getActiveProvider());
 	}
 
 	/**
@@ -378,7 +393,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * subscriber of onSendKBArticle event
 	*/
 	export function onSendKBArticle(event: CustomEvent): void {
-		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client");
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client", state.sessionManager.getActiveProvider());
 	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry

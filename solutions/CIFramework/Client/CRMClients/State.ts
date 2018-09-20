@@ -38,10 +38,12 @@ namespace Microsoft.CIFramework.Internal {
 
     export class SessionInfo {
         _activeProvider: CIProvider;
+        _defaultProvider: CIProvider;
         _client: IClient;
 
-        constructor(client: IClient) {
+        constructor(client: IClient, defaultProvider?: CIProvider) {
             this._client = client;
+            this._defaultProvider = defaultProvider;
         }
 
         setActiveProvider(provider: CIProvider): Promise<Map<string, any>> {
@@ -62,7 +64,7 @@ namespace Microsoft.CIFramework.Internal {
             return Promise.resolve(new Map<string, any>().set(Constants.value, true));    //TODO: Session manager needs to eval whether it is feasibile to change session and resolve or reject the promise
         }
         getActiveProvider(): CIProvider {
-            return this._activeProvider;
+            return this._activeProvider || this._defaultProvider;
         }
     }
     /*Class to store CI providers information locally*/
@@ -102,7 +104,7 @@ namespace Microsoft.CIFramework.Internal {
             this.crmVersion = environmentInfo["crmVersion"];
             this.appId = environmentInfo["appId"];
         }
-        raiseEvent(data: Map<string, any>, messageType: string): void {
+        raiseEvent(data: Map<string, any>, messageType: string): Promise<Map<string, any>> {
             const payload: postMessageNamespace.IExternalRequestMessageType = {
                 messageType: messageType,
                 messageData: JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(data))
@@ -113,13 +115,13 @@ namespace Microsoft.CIFramework.Internal {
                     break;
                 case MessageType.onClickToAct:
                     if (!this.clickToAct) {
-                        return;
+                        return Promise.resolve(new Map().set(Constants.value, false));
                     }
             }
             if (!this.getContainer()) {
-                return;
+                return Promise.resolve(new Map().set(Constants.value, false));
             }
-            this._state.messageLibrary.postMsg(this.getContainer().getContentWindow(), payload, this.landingUrl, true);
+            return this._state.messageLibrary.postMsg(this.getContainer().getContentWindow(), payload, this.landingUrl, true);
         }
         getContainer(): WidgetContainer {
             return this._widgetContainer;
