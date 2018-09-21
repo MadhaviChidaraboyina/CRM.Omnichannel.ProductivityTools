@@ -110,6 +110,37 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+	 * API to invoke toast popup widget
+	 *
+	 * @param value. It's a string which contains header,body of the popup
+	 *
+	*/
+    export function notifyEvent(eventType: string, notificationUX: string): Promise<string> {	
+		if(!(isNullOrUndefined(eventType) || isNullOrUndefined(notificationUX))){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.notifyEvent,
+				messageData: new Map().set(Constants.eventType,eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(notificationUX)))
+			}
+			return new Promise((resolve, reject) => {
+				return sendMessage<Map<string, any>>(notifyEvent.name, payload, false, false).then(
+					function (result: Map<string, any>) {
+						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
+					},
+					function (error: Map<string, any>) {
+						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+					});
+			});
+		}else{
+			if(isNullOrUndefined(eventType)){
+				return postMessageNamespace.rejectWithErrorMessage("The EventType parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(notificationUX)){
+				return postMessageNamespace.rejectWithErrorMessage("The notificationUX parameter is blank. Provide a value to the parameter.");
+			}
+		}
+    }
+
+	/**
 	 * API to open the create form for given entity with data passed in pre-populated
 	 * Invokes the api Xrm.Navigation.openForm(entityFormOptions, formParameters)
 	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openform
