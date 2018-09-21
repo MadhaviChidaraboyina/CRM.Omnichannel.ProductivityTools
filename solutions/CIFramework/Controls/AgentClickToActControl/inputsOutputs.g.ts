@@ -1,11 +1,12 @@
 module MscrmControls.FieldControls {
 	export interface IInputBag
 	{
-		elementUniqueNames: Mscrm.SingleLineProperty;
+		value: Mscrm.SingleLineProperty;
+		iconUrl: Mscrm.SingleLineProperty;
 	}
 
 	export interface IOutputBag
 	{
-		elementUniqueNames: string;
+		value: string;
 	}
 }

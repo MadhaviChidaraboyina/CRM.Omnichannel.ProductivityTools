@@ -125,7 +125,7 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: messageType,
-			messageData: data
+			messageData: JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(data))
 		}
 
 		//let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
@@ -391,7 +391,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * subscriber of onClickToAct event
 	*/
 	export function onClickToAct(event: CustomEvent): void {
-		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + eventToString(event));
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + JSON.stringify(event.detail));
 	}
 
 	/**

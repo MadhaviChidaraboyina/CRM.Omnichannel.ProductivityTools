@@ -96,6 +96,6 @@ namespace Microsoft.CIFramework
 	*/
 	export function isNullOrUndefined(obj: any)
 	{
-		return (obj === "null" || obj === "undefined");
+		return (obj == null || typeof obj === "undefined");
 	}
 }

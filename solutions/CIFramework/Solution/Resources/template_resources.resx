@@ -152,13 +152,13 @@
     <value>Unique identifier for the organization</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'organization_msdyn_ciprovider'</comment>
   </data>
+  <data name="15062:Description,ChannelAPIIntegrationFramework" xml:space="preserve">
+    <value>Bring your communication channels and build immersive experience with Dynamics 365</value>
+    <comment> 'ChannelAPIIntegrationFramework' : Description for Solution</comment>
+  </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Channel API Integration Framework</value>
@@ -212,17 +212,13 @@
     <value>Select Unified Interface Apps for the Channel</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_AppSelector' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_CIProviderAPIVersion" xml:space="preserve">
+  <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderapiversion" xml:space="preserve">
     <value>API Version</value>
-    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_CIProviderAPIVersion' on Entity</comment>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
     <value>Unique identifier for CIProvider records</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_CIProvider_API_Version" xml:space="preserve">
-    <value>Channel Integration Provider API Version</value>
-    <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
     <value />
@@ -259,6 +255,10 @@
   <data name="1:Description,msdyn_ciprovidermsdyn_SortOrder" xml:space="preserve">
     <value>Select Channel Order as 0 for this Channel to take precedence over others.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+    <value>Domain to be whitelisted</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trustedDomain' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Unique identifier for the organization</value>
@@ -316,17 +316,13 @@
     <value>App Selector</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_AppSelector' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_CIProviderAPIVersion" xml:space="preserve">
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderapiversion" xml:space="preserve">
     <value>API Version</value>
-    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_CIProviderAPIVersion' on Entity</comment>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
     <value>CIProviderId</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_CIProvider_API_Version" xml:space="preserve">
-    <value>API Version</value>
-    <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_CIProvider_API_Version' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
     <value>Enable Outbound Communication</value>
@@ -364,6 +360,10 @@
     <value>Channel Order</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+    <value>Trusted Domain</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trustedDomain' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Organization Id</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
@@ -400,7 +400,7 @@
     <value>Select the Roles for the Channel</value>
     <comment>'Channel' : label for section in Entity FormXml ID: '{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}'</comment>
   </data>
-  <data name="1:label,msdyn_ciprovidermsdyn_CIProvider_API_Version0" xml:space="preserve">
+  <data name="1:label,msdyn_ciprovidermsdyn_ciproviderapiversion0" xml:space="preserve">
     <value>1.0</value>
     <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
   </data>
@@ -468,9 +468,9 @@
     <value>Channel Provider</value>
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
-  <data name="80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
-    <value>Channel Integration Framework</value>
-    <comment> 'msdyn_ChannelIntegrationFrameworkApp' : LocalizedName for AppModule</comment>
+  <data name="80:Description,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
+    <value>Bring your communication channels and build immersive experience with Dynamics 365</value>
+    <comment> 'msdyn_ChannelIntegrationFrameworkApp' : Description for AppModule</comment>
   </data>
   <data name="80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
     <value>Channel Integration Framework</value>
@@ -484,16 +484,8 @@
     <value>Provider</value>
     <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
-  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
-    <value>Provider</value>
-    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
-  </data>
   <data name="81:Title,New_AreaNew_Group" xml:space="preserve">
     <value>Channel Provider Configuration</value>
     <comment>Title for Area 'New_Area' Group 'New_Group'</comment>
-  </data>
-  <data name="15062:Description,msdyn_ChannelIntegrationFrameworkDesc" xml:space="preserve">
-    <value>Bring your communication channels and build immersive experience with Dynamics 365</value>
-    <comment>'msdyn_ChannelIntegrationFrameworkDesc':Description of the solution and app</comment>
   </data>
 </root>

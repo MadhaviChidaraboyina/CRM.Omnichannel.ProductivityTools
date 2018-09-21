@@ -44,19 +44,6 @@ namespace Microsoft.CIFramework.Internal
 		return result;
 	}
 
-	/**
-	 * Gereric function to convert event data into string
-	 * @param event 
-	 */
-	export function eventToString(event: CustomEvent): string
-	{
-		let result: string;
-		const data1 = event.detail["field"];
-		const data2 = event.detail["ParentEntityReference"];
-		result = "value " + data1["value"] + "\nname " + data1["name"] + "\ntype " + data1["type"] + "\n ParentEntityReference "+ data2["entityType"] + ", ID "+ data2["id"] + ", name : "+ data2["name"];
-		return result;
-	}
-
 	export function logApiData(telemetryData: Object | any, startTime: any, timetaken: any, apiName: string) {
 		let ApiData: any = new Object();
 		ApiData["StartTime"] = startTime.toUTCString();
