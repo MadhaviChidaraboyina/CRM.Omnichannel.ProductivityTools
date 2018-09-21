@@ -80,7 +80,7 @@ module MscrmControls.FieldControls {
 		 */
 		public getOutputs(): IOutputBag {
 			return <IOutputBag>{
-				elementUniqueNames: this._value
+				value: this._value
 			};
 		}
 
@@ -161,19 +161,17 @@ module MscrmControls.FieldControls {
 		 * Method implements a proper action for the control.
 		 */
 		protected action() {
-			var mdetails : any = {};
-			var value = this.context.parameters.elementUniqueNames;
-			mdetails["field"] = {
+			let value = this.context.parameters.value;
+			let data: any = {
 				"value": value.raw,
 				"name": value.attributes.LogicalName,
-				"type": value.attributes.Format
+				"format": value.attributes.Format,
+				"entityLogicalName" : (value.attributes as any).EntityLogicalName,
+				"relatedEntityName": Xrm.Page.data.entity.getEntityReference().entityType
 			};
-			mdetails["AssociatedEntityLogicalName"] = (value.attributes as any).EntityLogicalName;
-			mdetails["ParentEntityReference"] = Xrm.Page.data.entity.getEntityReference();
-			var dict : any = {};
-			dict["detail"] = mdetails;
-			var event_1 = new CustomEvent("CIClickToAct", dict);
-			window.dispatchEvent(event_1);
+
+			let event = new CustomEvent("CIClickToAct", { detail: data });
+			window.dispatchEvent(event);
 			return true;
 		}
 
@@ -199,7 +197,7 @@ module MscrmControls.FieldControls {
 		protected actionButtonComponent(): Mscrm.Component {
 			return this.context.factory.createElement("IMG", {
 				key: "conditionalImage",
-				source: "/webresources/msdyn_Callprovider.svg", // TODO : Retrieve provider icon
+				source: this.context.parameters.iconUrl.raw != null ? this.context.parameters.iconUrl.raw : "/webresources/msdyn_Callprovider.svg", // TODO : Retrieve provider icon
 				altText: this.context.resources.getString("Provided_Contact_Value"),
 				onClick: this._clickButtonHandler,
 				style: {
@@ -238,7 +236,7 @@ module MscrmControls.FieldControls {
 			return {
 				id: AgentClickToActControl.PHONE_INPUT_ID_SEED,
 				key: AgentClickToActControl.PHONE_INPUT_ID_SEED,
-				value: this.context.parameters.elementUniqueNames.raw,
+				value: this.context.parameters.value.raw,
 				placeholder: this.placeholder(),
 				readOnly: false,
 				style: {
