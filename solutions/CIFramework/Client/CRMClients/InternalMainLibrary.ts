@@ -746,22 +746,48 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-		return new Promise(function (resolve) {
-			if(notificationType[0].search(MessageType.softNotification) != -1){
-				for(let [key,value] of map){
-					key.addEventListener("click", function clickListener() {
-						key.removeEventListener("click", clickListener);
-						key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-						var mapReturn = new Map().set(Constants.value,null);
-						resolve(mapReturn);
-					});
-				}
-			}else{
-				for(let [key,value] of map){
-					if(key == toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]){
-						setTimeout(function(){
-							if(key != null && key.parentElement != null){
-								key.parentElement.removeChild(key);
+		return new Promise(function (resolve,reject) {
+			let telemetryData: any = new Object();
+			let startTime = new Date();
+			const [provider, errorData] = getProvider(notificationUX, [Constants.value]);
+			if (provider) { //TODO: See whether perfData needs to include provider.notifyEvent() call
+				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), notifyEvent.name, telemetryData);
+				setPerfData(perfData);
+				if(notificationType[0].search(MessageType.softNotification) != -1){
+					for(let [key,value] of map){
+						key.addEventListener("click", function clickListener() {
+							key.removeEventListener("click", clickListener);
+							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
+							var mapReturn = new Map().set(Constants.value,null);
+							resolve(mapReturn);
+						});
+					}
+				}else{
+					for(let [key,value] of map){
+						if(key == toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]){
+							setTimeout(function(){
+								if(key != null && key.parentElement != null){
+									key.parentElement.removeChild(key);
+									noOfNotifications--;
+									childDivs = toastDiv.getElementsByTagName('div');
+									if(childDivs != null){
+										for( i=0; i< childDivs.length; i++ ){
+											let childDiv = childDivs[i];
+											if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+												childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
+												break;
+											}
+										}
+									}
+								}
+								var mapReturn = new Map().set(Constants.value,value);
+								resolve(mapReturn);
+								}, waitTime);
+						}else{
+							key.addEventListener("click", function clickListener() {
+								key.removeEventListener("click", clickListener);
+								key.parentElement.parentElement.style.display = "none";
+								key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
 								noOfNotifications--;
 								childDivs = toastDiv.getElementsByTagName('div');
 								if(childDivs != null){
@@ -773,31 +799,14 @@ namespace Microsoft.CIFramework.Internal {
 										}
 									}
 								}
-							}
-							var mapReturn = new Map().set(Constants.value,value);
-							resolve(mapReturn);
-							}, waitTime);
-					}else{
-						key.addEventListener("click", function clickListener() {
-							key.removeEventListener("click", clickListener);
-							key.parentElement.parentElement.style.display = "none";
-							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-							noOfNotifications--;
-							childDivs = toastDiv.getElementsByTagName('div');
-							if(childDivs != null){
-								for( i=0; i< childDivs.length; i++ ){
-									let childDiv = childDivs[i];
-									if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
-										childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
-										break;
-									}
-								}
-							}
-							var mapReturn = new Map().set(Constants.value,value);
-							resolve(mapReturn);
-						});
+								var mapReturn = new Map().set(Constants.value,value);
+								resolve(mapReturn);
+							});
+						}
 					}
 				}
+			}else{
+				return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
 			}
 		});
     }
