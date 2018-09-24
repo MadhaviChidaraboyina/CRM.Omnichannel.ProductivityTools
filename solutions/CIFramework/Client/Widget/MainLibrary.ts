@@ -92,7 +92,7 @@ namespace Microsoft.CIFramework
 				messageData: new Map().set(Constants.eventType,eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(notificationUX)))
 			}
 			return new Promise((resolve, reject) => {
-				return sendMessage<Map<string, any>>(notifyEvent.name, payload, false, false).then(
+				return sendMessage<Map<string, any>>(notifyEvent.name, payload, false, true).then(
 					function (result: Map<string, any>) {
 						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
 					},

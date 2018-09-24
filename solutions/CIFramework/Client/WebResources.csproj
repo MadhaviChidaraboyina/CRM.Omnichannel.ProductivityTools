@@ -20,6 +20,7 @@
     <Content Include="CRMClients\Client.ts" />
     <Content Include="CRMClients\Constants.ts" />
     <Content Include="CRMClients\InternalMainLibrary.ts" />
+	<Content Include="CRMClients\NotificationInfra.ts" />
     <Content Include="CRMClients\State.ts" />
     <Content Include="CRMClients\WebClient.ts" />
     <Content Include="PostMsgWrapper.ts" />
