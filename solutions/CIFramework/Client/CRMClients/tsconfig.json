@@ -13,7 +13,7 @@
     "WebClient.ts",
     "WidgetIFrame.ts",
     "InternalMainLibrary.ts",
-	"NotificationInfra.ts",
+    "NotificationInfra.ts",
     "aria-webjs-sdk-1.6.2.js"
   ],
 	"compilerOptions": {
