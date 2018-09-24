@@ -161,13 +161,18 @@ module MscrmControls.FieldControls {
 		 * Method implements a proper action for the control.
 		 */
 		protected action() {
+			let entityId: string = '';
+			try {
+				entityId = Xrm.Page.data.entity.getEntityReference().id;
+			}
+			catch (error) { }
 			let value = this.context.parameters.value;
 			let data: any = {
 				"value": value.raw,
 				"name": value.attributes.LogicalName,
 				"format": value.attributes.Format,
-				"entityLogicalName" : (value.attributes as any).EntityLogicalName,
-				"relatedEntityName": Xrm.Page.data.entity.getEntityReference().entityType
+				"entityLogicalName": (value.attributes as any).EntityLogicalName,
+				"entityId": entityId
 			};
 
 			let event = new CustomEvent("CIClickToAct", { detail: data });
