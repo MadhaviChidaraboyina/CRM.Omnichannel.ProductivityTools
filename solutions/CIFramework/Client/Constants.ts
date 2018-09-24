@@ -112,7 +112,8 @@ namespace Microsoft.CIFramework
 		export const Reject = "Reject";
 		export const actionType = "actionType";
 		export const notificationType = "notificationType"; 
-		export const Timer = "Timer"; 
+		export const Timer = "Timer";
+		export const NoOfNotifications = "NoOfNotifications";
 	}
 
 	/**
