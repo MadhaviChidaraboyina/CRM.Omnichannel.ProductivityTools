@@ -60,9 +60,6 @@ namespace Microsoft.CIFramework
 			//To-Do Log the Message that more than one domains are present
 		}
 		postMessage = new postMessageNamespace.postMsgWrapper(window, domains, null);
-		window.addEventListener("focus", function () {
-			setMode(1); //TODO: replace 1 with named constant
-		});
 		var dict: any = {};
 		dict["detail"] = domains;
 		var event_1 = new CustomEvent(Constants.CIFInitEvent, dict);

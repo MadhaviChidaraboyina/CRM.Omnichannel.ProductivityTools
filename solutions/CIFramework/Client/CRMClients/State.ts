@@ -52,15 +52,13 @@ namespace Microsoft.CIFramework.Internal {
                 //if no, reject the promise
                 //if yes, switch the providers
                 let oldProvider: CIProvider = this._activeProvider;
-                this._activeProvider = provider;
+                this._activeProvider = provider || this._defaultProvider;
                 if (oldProvider) {
                     oldProvider.raiseEvent(new Map<string, any>().set(Constants.value, 0), MessageType.onModeChanged);    //TODO: replace 0 with named constant
                 }
             }
-            if (this._activeProvider) {
-                //this._activeProvider.raiseEvent(new Map<string, any>().set(Constants.value, 1), MessageType.onModeChanged);    //TODO: replace with named constant
-                this._client.setWidgetMode("mode", this._activeProvider.getMode());
-            }
+            let mode: number = this._activeProvider ? this._activeProvider.getMode() : 0;   //TODO: replace 0 with named constant
+            this._client.setWidgetMode("mode", mode);
             return Promise.resolve(new Map<string, any>().set(Constants.value, true));    //TODO: Session manager needs to eval whether it is feasibile to change session and resolve or reject the promise
         }
         getActiveProvider(): CIProvider {
