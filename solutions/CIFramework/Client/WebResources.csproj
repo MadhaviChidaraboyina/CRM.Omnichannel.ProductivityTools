@@ -25,6 +25,8 @@
     <Content Include="PostMsgWrapper.ts" />
     <Content Include="Widget\MainLibrary.ts" />
     <Content Include="Widget\Constants.ts" />
+    <Content Include="WidgetContainer\AuthHelper.ts" />
+    <Content Include="WidgetContainer\PresenceControl.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.6.2.d.ts" />
     <TypeScriptCompile Include="CRMClients\IErrorHandler.ts" />
@@ -62,6 +64,7 @@
       <Link>tsconfig\tsconfig.base.uciandclassicweb.json</Link>
     </None>
     <Content Include="Widget\tsconfig.json" />
+    <Content Include="WidgetContainer\tsconfig.json" />
     <Content Include="CRMClients\tsconfig.json" />
     <None Include="packages.config" />
   </ItemGroup>

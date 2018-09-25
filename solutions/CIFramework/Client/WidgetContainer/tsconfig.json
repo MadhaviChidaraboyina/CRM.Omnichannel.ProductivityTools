@@ -1,0 +1,12 @@
+﻿{
+	"extends":  "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+	"include": [
+		"AuthHelper.ts",
+		"PresenceControl.ts"
+	],
+	"compilerOptions": {
+		"sourceMap": true,
+		"outFile": "msdyn_core_ci_library.js",
+		"module": "amd"
+	}
+}
