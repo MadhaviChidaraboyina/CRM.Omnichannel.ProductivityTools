@@ -1,0 +1,1221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="resources.en-US.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="bg-BG" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <Props>
+    <Str Name="CustomName1" Val="Custom 1" />
+    <Str Name="CustomName2" Val="Custom 2" />
+    <Str Name="CustomName3" Val="Custom 3" />
+    <Str Name="CustomName4" Val="Custom 4" />
+    <Str Name="CustomName5" Val="Custom 5" />
+    <Str Name="CustomName6" Val="IQA" />
+  </Props>
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Loc" />
+    <Cmt Name="LPK" />
+    <Cmt Name="Note" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Settings Name="..\LSS\locver.lss" Type="Lss" />
+  <Item ItemId=";resources.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+      <Item ItemId=";10:CustomLabel,msdyn_ciprovider_systemuser_membershipOrdinal:1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003914Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:CustomLabel,msdyn_ciprovider_systemuser_membershipOrdinal:2" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003914Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,lk_msdyn_ciprovider_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Еднозначен идентификатор на потребителя, създал записа.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,lk_msdyn_ciprovider_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Еднозначен идентификатор на потребителя, променил записа.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,organization_msdyn_ciprovider" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the organization]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Еднозначен идентификатор за организацията]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:Description,ChannelAPIIntegrationFramework" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Bring your communication channels and build immersive experience with Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Вземете своите комуникационни канали и изградете потапящо изживяване с Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-08-23T04:23:26.0005184Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO7234_20180817" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:Description,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,ChannelAPIIntegrationFramework" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel API Integration Framework]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Рамка за интеграция на API на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A form for this entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Формуляр за този обект.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All Channel Providers]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Всички доставчици на канал]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[All active CIProviders]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008039Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Еднозначен идентификатор на потребителя, създал записа.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Дата и час на създаване на записа.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Еднозначен идентификатор на потребител представител, създал записа.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sequence number of the import that created this record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Пореден номер на импортирането, създало този запис.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Еднозначен идентификатор на потребителя, променил записа.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Дата и час на промяна на записа.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Еднозначен идентификатор на потребителя представител, променил записа.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderOrganizationId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the organization]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Еднозначен идентификатор за организацията]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Дата и час на мигриране на записа.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Само за вътрешна употреба.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Код на часова зона, използвана при създаване на записа.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderentitymsdyn_ciprovider" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Storing configuration for individual Channel Providers]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Съхранение на конфигурация за индивидуални доставчици на канал]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Storing configuration for individual CI ciproviders]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008039Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_AppSelector" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select Unified Interface Apps for the Channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Изберете приложения на Унифициран интерфейс за канала]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_ClickToAct" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable Outbound Communication]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Активиране на изходяща комуникация]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Enable Click to Act for the Channel]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008032Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_Label" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_LandingUrl" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[URL for the Channel provider]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[URL адрес за доставчика на канала]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_RoleSelector" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select the Roles for the Channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Изберете ролите за канала]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_SortOrder" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select Channel Order as 0 for this Channel to take precedence over others.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Изберете реда на канал като 0 за този канал, за да вземе предимство пред останалите.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_ciproviderId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for CIProvider records]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Еднозначен идентификатор на записи на доставчик на CI]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_ciprovider_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the CIProvider]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Състояние на доставчик на CI]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_ciprovider_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the CIProvider]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Описание на състоянието на доставчик на CI]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_ciproviderapiversion" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[API Version]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Версия на API]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-09-12T10:38:00.0008399Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO7633_20180907" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name of the Channel provider]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Името на доставчика на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_trustedDomain" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Domain to be whitelisted]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Домейн за добавяне в списъка с разрешени]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-09-28T12:34:49.0000572Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO7838_20180924" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Channel Provider]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Състояние на доставчика на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciproviderstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Channel Provider]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Описание на състоянието на доставчика на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_ciproviderentitymsdyn_ciprovider" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Providers]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Доставчици на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Channel{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Provider Lookup View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Изглед на справка за доставчик на канал]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[CIProvider Lookup View]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008032Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Channel{303dff48-b284-459a-ac10-d67e92bc5a8c}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Provider Associated View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Свързан изглед на доставчик на канал]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[CIProvider Associated View]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008032Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Channel{4ebf43a0-6ac3-4ad7-bd52-11d5f9bdadfd}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Provider Advanced Find View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Изглед на разширено търсене на доставчик на канал]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[CIProvider Advanced Find View]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008032Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Channel{633c9e21-2171-4500-b2de-e26712495930}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Channel Providers]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Активни доставчици на канал]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Active CIProviders]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008032Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Channel{6a13feec-85d7-4b9f-b94c-16619ffe4617}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Quick Find Active Channel Providers]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Бързо търсене на активни доставчици на канал]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Quick Find Active CIProviders]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008032Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Channel{9024dbea-2352-436d-bb5f-848405158adb}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive Channel Providers]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Неактивни доставчици на канал]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Inactive CIProviders]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008032Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Information]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Информация]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[CIProviders]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Доставчици на CI]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Provider]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Доставчик на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Създадено от]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Създадено на]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Създадено от (представител)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import Sequence Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Номер на последователност за импортиране]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Променено от]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Променено на]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Променено от (представител)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderOrganizationId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Organization Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ИД на организация]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Записът е създаден на]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Номер на версията на правило за часова зона]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Преобразуване на код на часова зона към UTC]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003912Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_AppSelector" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[App Selector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Селектор на приложения]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_ClickToAct" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable Outbound Communication]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Активиране на изходяща комуникация]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Click-To-Act]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008021Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_Label" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Label]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Етикет]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_LandingUrl" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[URL адрес на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_RoleSelector" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Role Selector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Селектор на роли]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_SortOrder" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Order]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ред на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_ciproviderId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[CIProviderId]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[CIProviderId]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable Outbound Communication]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Активиране на изходяща комуникация]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Click-To-Act]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008021Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_ciprovider_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Състояние]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_ciprovider_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Описание на състоянието]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_ciproviderapiversion" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[API Version]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Версия на API]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-09-12T10:38:00.0008384Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO7633_20180907" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Име]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.0003909Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_trustedDomain" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Trusted Domain]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Надежден домейн]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-09-28T12:34:49.0000572Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO7838_20180924" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Състояние]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciproviderstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Описание на състоянието]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{2190ec7e-bb48-4408-aa64-6008072a8a39}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Provider Configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Конфигурация на доставчик на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008021Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{51ee0bc8-2a26-7a49-664d-8077d77d456a}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select Unified Interface Apps for the Channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Изберете приложения на Унифициран интерфейс за канала]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select the Roles for the Channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Изберете ролите за канала]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Не]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Yes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Да]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciprovider_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Активно]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciprovider_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Неактивно]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Активно]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Неактивно]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciproviderapiversion0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[1.0]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[1,0]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-09-12T10:38:00.0008408Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO7633_20180907" />
+        </Props>
+      </Item>
+      <Item ItemId=";80:Description,msdyn_ChannelIntegrationFrameworkApp" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Bring your communication channels and build immersive experience with Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Вземете своите комуникационни канали и изградете потапящо изживяване с Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-08-23T04:23:26.0005348Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO7234_20180817" />
+        </Props>
+      </Item>
+      <Item ItemId=";80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Integration Framework]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Рамка за интеграция на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";81:LocalizedName,msdyn_ChannelIntegrationFrameworkSitemap" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Integration Framework]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Рамка за интеграция на канал]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";81:Title,New_AreaNew_Area" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Provider]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Доставчик]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:06.000391Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";81:Title,New_AreaNew_Group" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Provider Configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Конфигурация на доставчик на канал]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[CI Provider Configuration]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-07-05T09:06:31.0008021Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6914_20180703" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

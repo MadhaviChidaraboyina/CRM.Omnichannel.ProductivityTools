@@ -1,0 +1,1076 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LS_SETTINGS_FILE xmlns="">
+	<LS_SETTINGS_DESCRIPTION>
+		<![CDATA[]]>
+	</LS_SETTINGS_DESCRIPTION>
+	<optionSet id="LSOptions">
+		<optionSet id="Defaults" displayName="Options Defaults">
+			<optionSet id="Espresso" displayName="Espresso" />
+			<optionSet id="Parsers" displayName="Parsers" />
+		</optionSet>
+		<optionSet id="User" displayName="User Overrides">
+			<optionSet id="Espresso" displayName="Espresso" />
+			<optionSet id="Parsers" displayName="Parsers" />
+		</optionSet>
+		<optionSet id="Project" displayName="Project Overrides">
+			<optionSet id="Espresso" displayName="Espresso">
+				<optionSet id="ExtensionOptions" displayName="Extensions" helpText="Options for installed extensions.">
+					<optionSet id="Import Comments" displayName="Import Comments" helpText="Use these settings to control how comments are imported.">
+						<option id="\ImportComments\ImportFileType" displayName="LCG/LCX file extension" helpText="Enter the extension of the files containing the developer comments that you want to import.">
+							<string defaultValue=".LCG" currentValue=".LCL" />
+						</option>
+						<option id="\ImportComments\ImportSubDir" displayName="Name of folder containing .LCG/LCX files" helpText="Enter the subdirectory that contains LCG/LCX files.">
+							<string defaultValue="LCG" currentValue="..//..//PL//LCL" />
+						</option>
+						<option id="\ImportComments\CommentNamesToMerge" displayName="Comments to import from .LCG" helpText="Enter the names of the comments whose content you want to import from an LCX file using the Import Comments add-in. Comments in the software database (.edb) file whose names match those being imported are overwritten by the imported comments content. If content matches, the Enabled value is overwritten to match the imported comments Enabled value.">
+							<stringList>
+								<defaultList>
+									<item string="RCCX" itemID="0" />
+									<item string="LcxAdmin" itemID="1" />
+								</defaultList>
+								<currentList>
+									<item string="Loc" itemID="0" />
+								</currentList>
+							</stringList>
+						</option>
+					</optionSet>
+					<optionSet id="GetLocStatsClient" displayName="GetLocStatsClient" helpText="Settings for the GetLocStatsClient extension.">
+						<option id="\GetLocStatsClient\Start Delimiter" displayName="First character delimiter" helpText="Enter the character(s) that marks the beginning of pseudo localized strings.">
+							<string defaultValue="[" currentValue="W\'" />
+						</option>
+						<option id="\GetLocStatsClient\End Delimiter" displayName="Last character delimiter" helpText="Enter the character(s) that marks the end of pseudo localized strings.">
+							<string defaultValue="]" currentValue="_W" />
+						</option>
+						<option id="\GetLocStatsClient\Extension String" displayName="String to add to extend pseudo localized strings" helpText="Enter the string to use to extend the pseudo localized strings.">
+							<string defaultValue=" !!!" currentValue=" ĉĉĉ" />
+						</option>
+					</optionSet>
+					<optionSet id="Statistics Options (Word Count)" displayName="Statistics Options (Word Count)" helpText="Configuration Options for the Statistics (Word Count) Extension.">
+						<option id="StatsIgnoreNums" displayName="Ignore words with numeric characters only (0-9)" helpText="Ignore words that just consist of numeric characters (0-9). This only works with the Word97 counting method.">
+							<boolean defaultValue="0" currentValue="1" />
+						</option>
+					</optionSet>
+				</optionSet>
+				<optionSet id="TranslationPlatform" displayName="Translation Platform" helpText="Settings for the Translation Platform">
+					<optionSet id="Localization Directive (LocRule) Settings" displayName="Localization Directive (LocRule) Settings" helpText="Use these settings to control how Localization Directives are handled for specific resources.">
+						<optionSet id="Adaptation Rule" displayName="Adaptation Rule" helpText="Use the Adaptation rule settings to identify and correctly localize strings based on content in the map file. Do not change these settings without the help of the LocStudio team.">
+							<optionSet id="Font Settings" displayName="Font Settings" helpText="Use these settings to locate strings with a string category of FontName and correctly localize the strings using content in the Map file with the ID of Fonts.">
+								<option id="\LocRuleAgent\AdaptationRule\AdaptationRule01\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="1" currentValue="0" />
+								</option>
+							</optionSet>
+						</optionSet>
+						<optionSet id="HTML and XML Tag Rule" displayName="HTML and XML Tag Rule" helpText="Use these settings to detect and appropriately translate HTML and XML tags. Do not change these settings without help from the LocStudio team.">
+							<optionSet id="HTML and XML Tag Rule Placeholder 06" displayName="HTML and XML Tag Rule Placeholder 06" helpText="Use these settings to create additional instances of the HTML and XML Tag rule.">
+								<option id="\LocRuleAgent\HtmlTagRule\HtmlTagRule06\RegEx" displayName="Regular Expression" helpText="If you are creating a new version of a rule using a placeholder, enter a regular expression to identify information or characters in the string. Otherwise, do not change this setting.">
+									<string defaultValue="" currentValue="(&amp;amp;amp;amp;amp;\w+;)|(&amp;amp;amp;amp;\w+;)|(&amp;amp;amp;\w+;)|(&amp;amp;\w+;)" />
+								</option>
+								<option id="\LocRuleAgent\HtmlTagRule\HtmlTagRule06\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="0" currentValue="1" />
+								</option>
+								<option id="\LocRuleAgent\HtmlTagRule\HtmlTagRule06\Description" displayName="Description" helpText="If you are creating a new version of a rule using a placeholder, enter a short description of your new rule. Otherwise, do not change this setting.">
+									<string defaultValue="Setting to allow the addition of more HTML and XML Tag rule" currentValue="Workaround LSBuild bug 2" />
+								</option>
+							</optionSet>
+							<optionSet id="HTML and XML Tag Rule Placeholder 05" displayName="HTML and XML Tag Rule Placeholder 05" helpText="Use these settings to create additional instances of the HTML and XML Tag rule.">
+								<option id="\LocRuleAgent\HtmlTagRule\HtmlTagRule05\RegEx" displayName="Regular Expression" helpText="If you are creating a new version of a rule using a placeholder, enter a regular expression to identify information or characters in the string. Otherwise, do not change this setting.">
+									<string defaultValue="" currentValue="&amp;([a-zA-Z0-9]+|#[0-9a-fA-F]+);" />
+								</option>
+								<option id="\LocRuleAgent\HtmlTagRule\HtmlTagRule05\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="0" currentValue="1" />
+								</option>
+								<option id="\LocRuleAgent\HtmlTagRule\HtmlTagRule05\Description" displayName="Description" helpText="If you are creating a new version of a rule using a placeholder, enter a short description of your new rule. Otherwise, do not change this setting.">
+									<string defaultValue="Setting to allow the addition of more HTML and XML Tag rule" currentValue="Workaround LSBuild bug" />
+								</option>
+							</optionSet>
+							<optionSet id="Double-escaped Tags Settings" displayName="Double-escaped Tags Settings" helpText="Use these settings to detect valid HTML and XML tags that are escaped twice.">
+								<option id="\LocRuleAgent\HtmlTagRule\HtmlTagRule04\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="0" currentValue="1" />
+								</option>
+								<option id="\LocRuleAgent\HtmlTagRule\HtmlTagRule04\Description" displayName="Description" helpText="If you are creating a new version of a rule using a placeholder, enter a short description of your new rule. Otherwise, do not change this setting.">
+									<string defaultValue="Detects the presence of double escaped XML like tags" currentValue="Detects the presence of double escaped XML like tags" />
+								</option>
+							</optionSet>
+							<optionSet id="Escaped Tags Settings" displayName="Escaped Tags Settings" helpText="Use these settings to detect valid HTML and XML tags that are escaped.">
+								<option id="\LocRuleAgent\HtmlTagRule\HtmlTagRule03\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="0" currentValue="1" />
+								</option>
+							</optionSet>
+						</optionSet>
+						<optionSet id="Software Markups Rule" displayName="Software Markups Rule" helpText="Use these settings to determine how and when software markups, such as accelerators and terminators, are localized. Do not change these settings without help from the LocStudio team.">
+							<optionSet id="Terminator and Accelerator Settings" displayName="Terminator and Accelerator Settings" helpText="Use these settings to determine how and when accelerators and terminators are localized.">
+								<option id="\LocRuleAgent\SoftwareMarkupsRule\SoftwareMarkupsRule01\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="1" currentValue="0" />
+								</option>
+							</optionSet>
+						</optionSet>
+						<optionSet id="Placeholder Rule" displayName="Placeholder Rule" helpText="Use these settings to mark placeholder text that must exist in the target when it exits in the source. Do not change these settings without help from the LocStudio team.">
+							<optionSet id="Environment Variable Settings" displayName="Environment Variable Settings" helpText="Use these settings to set up placeholders when using environment variables.">
+								<option id="\LocRuleAgent\PlaceholderRule\PlaceholderRule06\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="1" currentValue="0" />
+								</option>
+							</optionSet>
+							<optionSet id="MSI Variable Settings" displayName="MSI Variable Settings" helpText="Use these settings to set up placeholders when using the MSI parser.">
+								<option id="\LocRuleAgent\PlaceholderRule\PlaceholderRule05\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="1" currentValue="0" />
+								</option>
+							</optionSet>
+							<optionSet id="Avalon Embedded Controls Settings" displayName="Avalon Embedded Controls Settings" helpText="Use these settings to set up placeholders when using Avalon embedded controls.">
+								<option id="\LocRuleAgent\PlaceholderRule\PlaceholderRule04\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="1" currentValue="0" />
+								</option>
+							</optionSet>
+							<optionSet id="Managed Code Variable Settings" displayName="Managed Code Variable Settings" helpText="Use these settings to set up placeholders when using the MCP parser.">
+								<option id="\LocRuleAgent\PlaceholderRule\PlaceholderRule03\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="1" currentValue="0" />
+								</option>
+							</optionSet>
+							<optionSet id="PrintF Variable Settings" displayName="PrintF Variable Settings" helpText="Use these settings to set up placeholders when using PrintF variables with the Win32 parser.">
+								<option id="\LocRuleAgent\PlaceholderRule\PlaceholderRule01\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="1" currentValue="0" />
+								</option>
+							</optionSet>
+						</optionSet>
+						<optionSet id="Lock String Rule" displayName="Lock String Rule" helpText="Use these settings to determine how and when an entire string is locked. Do not change these settings without the help of the LocStudio team.">
+							<optionSet id="Legacy Pseudo Localization Non-alphabetic Settings" displayName="Legacy Pseudo Localization Non-alphabetic Settings" helpText="Use these settings to locate and lock strings that do not contain alphabetic characters. If On, this rule is used during verification and pseudo localization.">
+								<option id="\LocRuleAgent\LockStringRule\LockStringRule02\FileExtension" displayName="File Extension" helpText="Enter the file extensions of the file types this rule will affect. If left blank, all file types are affected by this rule.">
+									<stringList>
+										<defaultList />
+										<currentList>
+											<item string=".dll" itemID="0" />
+											<item string=".exe" itemID="1" />
+										</currentList>
+									</stringList>
+								</option>
+								<option id="\LocRuleAgent\LockStringRule\LockStringRule02\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="0" currentValue="0" />
+								</option>
+							</optionSet>
+						</optionSet>
+						<optionSet id="Minimum Length Lock Rule" displayName="Minimum Length Lock Rule" helpText="Use these settings to determine how and when a string is too short. Do not change these settings without the help of the LocStudio team.">
+							<optionSet id="Minimum Length Lock Rule Settings" displayName="Minimum Length Lock Rule Settings" helpText="Use these settings to set specific minimum length. To set up multiple minimum length lock restrictions, use a Minimum Length Lock rule placeholder.">
+								<option id="\LocRuleAgent\MinLengthLockRule\MinLengthLockRule01\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="1" currentValue="0" />
+								</option>
+							</optionSet>
+						</optionSet>
+						<optionSet id="Lock Substring Rule" displayName="Lock Substring Rule" helpText="Use these settings to determine how and when part of the text in a string is locked. Do not change these settings without the help of the LocStudio team.">
+							<optionSet id="Format Specifier Lock Settings" displayName="Format Specifier Lock Settings" helpText="Provides only backwards compatibility. Locks characters that function as format specifiers. The default values are # $ @ _ %.">
+								<option id="\LocRuleAgent\LockSubstringRule\LockSubstringRule07\Enabled" displayName="Enabled" helpText="To validate strings per this rule, select On. To stop validation with this rule, select Off.">
+									<boolean defaultValue="0" currentValue="0" />
+								</option>
+							</optionSet>
+						</optionSet>
+					</optionSet>
+					<optionSet id="Localization Verification (LocVer) Settings" displayName="Localization Verification (LocVer) Settings" helpText="Use these settings to control how Localization Verification (LocVer) is handled.">
+						<optionSet id="Message Settings" displayName="Message Settings" helpText="Settings for messages reported by LocVer.">
+							<option id="\LocVer\Messages\Ignore" displayName="Ignore Messages" helpText="Ignore any messages with the same ID as listed in this setting.">
+								<stringList>
+									<defaultList />
+									<currentList>
+										<item string="3020" itemID="0" />
+										<item string="3021" itemID="1" />
+										<item string="3023" itemID="2" />
+										<item string="3210" itemID="3" />
+										<item string="3211" itemID="4" />
+										<item string="4210" itemID="5" />
+										<item string="4211" itemID="6" />
+										<item string="4173" itemID="7" />
+									</currentList>
+								</stringList>
+							</option>
+						</optionSet>
+						<optionSet id="Rule Settings" displayName="Rule Settings" helpText="Settings to control which localization rules (LocVer rules) should be processed.">
+							<option id="\LocVer\Rules\Keywords to ignore" displayName="Keywords To Ignore" helpText="All keywords in this list will be ignored. Example: If the list contains 'MyRule' and 'Locked', the rules '{MyRule}' and '{Locked}' will be ignored.">
+								<stringList>
+									<defaultList />
+									<currentList>
+										<item string="Dlg" itemID="0" />
+										<item string="NoGPPL" itemID="1" />
+										<item string="Dart" itemID="2" />
+										<item string="Adaption" itemID="3" />
+										<item string="NoDelim" itemID="4" />
+										<item string="nsQuery" itemID="5" />
+										<item string="nsAccountFormTabNames" itemID="6" />
+										<item string="nsAccountFormSectionNames" itemID="7" />
+										<item string="nsAccountFormAccountInformationSectionFieldNames" itemID="8" />
+										<item string="nsAccountFormAddressSectionFieldNames" itemID="9" />
+										<item string="nsAccountFormBusinessInformationSectionFieldNames" itemID="10" />
+										<item string="nsAccountFormCompanyInformationSectionFieldNames" itemID="11" />
+										<item string="nsAccountFormDescriptionSectionFieldNames" itemID="12" />
+										<item string="nsAccountFormInternalInformationSectionFieldNames" itemID="13" />
+										<item string="nsAccountFormBillingInformationSectionFieldNames" itemID="14" />
+										<item string="nsAccountFormContactMethodsSectionFieldNames" itemID="15" />
+										<item string="nsAccountForminternal_informationSectionFieldLabels" itemID="16" />
+										<item string="nsAccountFormaccount_informationSectionFieldLabels" itemID="17" />
+										<item string="nsAccountFormaddressSectionFieldLabels" itemID="18" />
+										<item string="nsAccountFormcompany_informationSectionFieldLabels" itemID="19" />
+										<item string="nsAccountFormOwnershipFieldDropdownOptions" itemID="20" />
+										<item string="nsAccountFormdescriptionSectionFieldLabels" itemID="21" />
+										<item string="nsAccountFormcontact_methodsSectionFieldLabels" itemID="22" />
+										<item string="nsAccountFormAllowEmailFieldDropdownOptions" itemID="23" />
+										<item string="nsAccountFormAllowFaxesFieldDropdownOptions" itemID="24" />
+										<item string="nsAccountFormAllowPhoneCallsFieldDropdownOptions" itemID="25" />
+										<item string="nsAccountFormAllowMailFieldDropdownOptions" itemID="26" />
+										<item string="nsAccountFormbusiness_informationSectionFieldLabels" itemID="27" />
+										<item string="nsAccountFormCategoryFieldDropdownOptions" itemID="28" />
+										<item string="nsAccountFormPreferredMethodofContactFieldDropdownOptions" itemID="29" />
+										<item string="nsAccountFormIndustryFieldDropdownOptions" itemID="30" />
+										<item string="nsAccountFormRelationshipTypeFieldDropdownOptions" itemID="31" />
+										<item string="nsAccountFormbilling_informationSectionFieldLabels" itemID="32" />
+										<item string="nsAccountFormCreditHoldFieldDropdownOptions" itemID="33" />
+										<item string="nsAccountFormFieldLabels" itemID="34" />
+										<item string="nsAccountFormStatusFieldDropdownOptions" itemID="35" />
+										<item string="nsAccountFormStatusReasonFieldDropdownOptions" itemID="36" />
+										<item string="nsAccountFormPaymentTermsFieldDropdownOptions" itemID="37" />
+										<item string="nsAccountFormAddressTypeFieldDropdownOptions" itemID="38" />
+										<item string="nsAccountFormShippingMethodFieldDropdownOptions" itemID="39" />
+										<item string="nsAccountFormFreightTermsFieldDropdownOptions" itemID="40" />
+										<item string="nsContactFormTabNames" itemID="41" />
+										<item string="nsContactFormSectionNames" itemID="42" />
+										<item string="nsContactFormNameSectionFieldNames" itemID="43" />
+										<item string="nsContactFormAddressSectionFieldNames" itemID="44" />
+										<item string="nsContactFormProfessionalInformationSectionFieldNames" itemID="45" />
+										<item string="nsContactFormPersonalInformationSectionFieldNames" itemID="46" />
+										<item string="nsContactFormDescriptionSectionFieldNames" itemID="47" />
+										<item string="nsContactFormInternalInformationSectionFieldNames" itemID="48" />
+										<item string="nsContactFormBillingInformationSectionFieldNames" itemID="49" />
+										<item string="nsContactFormContactMethodsSectionFieldNames" itemID="50" />
+										<item string="nsContactForminternal_informationSectionFieldLabels" itemID="51" />
+										<item string="nsContactFormFieldLabels" itemID="52" />
+										<item string="nsContactFormStatusFieldDropdownOptions" itemID="53" />
+										<item string="nsContactFormStatusReasonFieldDropdownOptions" itemID="54" />
+										<item string="nsContactFormprofessional_informationSectionFieldLabels" itemID="55" />
+										<item string="nsContactFormnameSectionFieldLabels" itemID="56" />
+										<item string="nsContactFormdescriptionSectionFieldLabels" itemID="57" />
+										<item string="nsContactFormRoleFieldDropdownOptions" itemID="58" />
+										<item string="nsContactFormpersonal_informationSectionFieldLabels" itemID="59" />
+										<item string="nsContactFormMaritalStatusFieldDropdownOptions" itemID="60" />
+										<item string="nsContactFormGenderFieldDropdownOptions" itemID="61" />
+										<item string="nsContactFormaddressSectionFieldLabels" itemID="62" />
+										<item string="nsContactFormcontact_methodsSectionFieldLabels" itemID="63" />
+										<item string="nsContactFormPreferredMethodofContactFieldDropdownOptions" itemID="64" />
+										<item string="nsContactFormAllowEmailFieldDropdownOptions" itemID="65" />
+										<item string="nsContactFormAllowFaxesFieldDropdownOptions" itemID="66" />
+										<item string="nsContactFormAllowPhoneCallsFieldDropdownOptions" itemID="67" />
+										<item string="nsContactFormAllowMailFieldDropdownOptions" itemID="68" />
+										<item string="nsContactFormbilling_informationSectionFieldLabels" itemID="69" />
+										<item string="nsContactFormPaymentTermsFieldDropdownOptions" itemID="70" />
+										<item string="nsContactFormAddressTypeFieldDropdownOptions" itemID="71" />
+										<item string="nsContactFormShippingMethodFieldDropdownOptions" itemID="72" />
+										<item string="nsContactFormCreditHoldFieldDropdownOptions" itemID="73" />
+										<item string="nsContactFormFreightTermsFieldDropdownOptions" itemID="74" />
+										<item string="nsOpportunityFormTabNames" itemID="75" />
+										<item string="nsOpportunityFormSectionNames" itemID="76" />
+										<item string="nsOpportunityFormOpportunityInformationSectionFieldNames" itemID="77" />
+										<item string="nsOpportunityFormEstimatedRevenueSectionFieldNames" itemID="78" />
+										<item string="nsOpportunityFormDescriptionSectionFieldNames" itemID="79" />
+										<item string="nsOpportunityFormInternalInformationSectionFieldNames" itemID="80" />
+										<item string="nsOpportunityForminternal_informationSectionFieldLabels" itemID="81" />
+										<item string="nsOpportunityFormestimated_revenueSectionFieldLabels" itemID="82" />
+										<item string="nsOpportunityFormRatingFieldDropdownOptions" itemID="83" />
+										<item string="nsOpportunityFormopportunity_informationSectionFieldLabels" itemID="84" />
+										<item string="nsOpportunityFormFieldLabels" itemID="85" />
+										<item string="nsOpportunityFormStatusFieldDropdownOptions" itemID="86" />
+										<item string="nsOpportunityFormStatusReasonFieldDropdownOptions" itemID="87" />
+										<item string="nsOpportunityFormdescriptionSectionFieldLabels" itemID="88" />
+										<item string="nsOpportunityFormRevenueFieldDropdownOptions" itemID="89" />
+										<item string="nsLeadFormTabNames" itemID="90" />
+										<item string="nsLeadFormSectionNames" itemID="91" />
+										<item string="nsLeadFormNameSectionFieldNames" itemID="92" />
+										<item string="nsLeadFormContactInformationSectionFieldNames" itemID="93" />
+										<item string="nsLeadFormDescriptionSectionFieldNames" itemID="94" />
+										<item string="nsLeadFormAddressSectionFieldNames" itemID="95" />
+										<item string="nsLeadFormCompanyInformationSectionFieldNames" itemID="96" />
+										<item string="nsLeadFormLeadInformationSectionFieldNames" itemID="97" />
+										<item string="nsLeadFormInternalInformationSectionFieldNames" itemID="98" />
+										<item string="nsLeadFormContactMethodsSectionFieldNames" itemID="99" />
+										<item string="nsLeadForminternal_informationSectionFieldLabels" itemID="100" />
+										<item string="nsLeadFormFieldLabels" itemID="101" />
+										<item string="nsLeadFormStatusFieldDropdownOptions" itemID="102" />
+										<item string="nsLeadFormStatusReasonFieldDropdownOptions" itemID="103" />
+										<item string="nsLeadFormcontact_informationSectionFieldLabels" itemID="104" />
+										<item string="nsLeadFormnameSectionFieldLabels" itemID="105" />
+										<item string="nsLeadFormcompany_informationSectionFieldLabels" itemID="106" />
+										<item string="nsLeadFormIndustryFieldDropdownOptions" itemID="107" />
+										<item string="nsLeadFormlead_informationSectionFieldLabels" itemID="108" />
+										<item string="nsLeadFormLeadSourceFieldDropdownOptions" itemID="109" />
+										<item string="nsLeadFormdescriptionSectionFieldLabels" itemID="110" />
+										<item string="nsLeadFormcontact_methodsSectionFieldLabels" itemID="111" />
+										<item string="nsLeadFormPreferredMethodofContactFieldDropdownOptions" itemID="112" />
+										<item string="nsLeadFormAllowEmailFieldDropdownOptions" itemID="113" />
+										<item string="nsLeadFormAllowFaxesFieldDropdownOptions" itemID="114" />
+										<item string="nsLeadFormAllowPhoneCallsFieldDropdownOptions" itemID="115" />
+										<item string="nsLeadFormAllowMailFieldDropdownOptions" itemID="116" />
+										<item string="nsLeadFormaddressSectionFieldLabels" itemID="117" />
+										<item string="nsLeadFormRatingFieldDropdownOptions" itemID="118" />
+										<item string="nsAnnotationFormTabNames" itemID="119" />
+										<item string="nsAnnotationFormSectionNames" itemID="120" />
+										<item string="nsAnnotationFormAccountInformationSectionFieldNames" itemID="121" />
+										<item string="nsAnnotationFormFieldLabels" itemID="122" />
+										<item string="nsAnnotationFormaccount_informationSectionFieldLabels" itemID="123" />
+										<item string="nsAnnotationFormIsDocumentFieldDropdownOptions" itemID="124" />
+										<item string="nsSystemuserFormTabNames" itemID="125" />
+										<item string="nsSystemuserFormSectionNames" itemID="126" />
+										<item string="nsSystemuserFormSection1SectionFieldNames" itemID="127" />
+										<item string="nsSystemuserFormOrganizationInfoSectionFieldNames" itemID="128" />
+										<item string="nsSystemuserFormMailingAddressSectionFieldNames" itemID="129" />
+										<item string="nsSystemuserFormOtherAddressSectionFieldNames" itemID="130" />
+										<item string="nsSystemuserFormAddressPreferenceSectionFieldNames" itemID="131" />
+										<item string="nsSystemuserFormFieldLabels" itemID="132" />
+										<item string="nsSystemuserFormsection_1SectionFieldLabels" itemID="133" />
+										<item string="nsSystemuserFormmailing_addressSectionFieldLabels" itemID="134" />
+										<item string="nsSystemuserFormother_addressSectionFieldLabels" itemID="135" />
+										<item string="nsSystemuserFormorganization_infoSectionFieldLabels" itemID="136" />
+										<item string="nsSystemuserFormPreferredPhoneFieldDropdownOptions" itemID="137" />
+										<item string="nsSystemuserFormaddress_preferenceSectionFieldLabels" itemID="138" />
+										<item string="nsSystemuserFormPreferredAddressFieldDropdownOptions" itemID="139" />
+										<item string="nsTeamFormTabNames" itemID="140" />
+										<item string="nsTeamFormSectionNames" itemID="141" />
+										<item string="nsTeamFormSection1SectionFieldNames" itemID="142" />
+										<item string="nsTeamFormDescSectionFieldNames" itemID="143" />
+										<item string="nsTeamFormsection_1SectionFieldLabels" itemID="144" />
+										<item string="nsTeamFormdescSectionFieldLabels" itemID="145" />
+										<item string="nsTeamFormFieldLabels" itemID="146" />
+										<item string="nsBusinessunitFormTabNames" itemID="147" />
+										<item string="nsBusinessunitFormSectionNames" itemID="148" />
+										<item string="nsBusinessunitFormSection1SectionFieldNames" itemID="149" />
+										<item string="nsBusinessunitFormBillToAddressSectionFieldNames" itemID="150" />
+										<item string="nsBusinessunitFormShipToAddressSectionFieldNames" itemID="151" />
+										<item string="nsBusinessunitFormsection_1SectionFieldLabels" itemID="152" />
+										<item string="nsBusinessunitFormbill_to_addressSectionFieldLabels" itemID="153" />
+										<item string="nsBusinessunitFormship_to_addressSectionFieldLabels" itemID="154" />
+										<item string="nsIncidentFormTabNames" itemID="155" />
+										<item string="nsIncidentFormSectionNames" itemID="156" />
+										<item string="nsIncidentFormAssignmentInformationSectionFieldNames" itemID="157" />
+										<item string="nsIncidentFormCustomerInformationSectionFieldNames" itemID="158" />
+										<item string="nsIncidentFormOverviewSectionFieldNames" itemID="159" />
+										<item string="nsIncidentFormContractinformationSectionFieldNames" itemID="160" />
+										<item string="nsIncidentFormProductInformationSectionFieldNames" itemID="161" />
+										<item string="nsIncidentFormOtherSectionFieldNames" itemID="162" />
+										<item string="nsIncidentFormassignment_informationSectionFieldLabels" itemID="163" />
+										<item string="nsIncidentFormcustomer_informationSectionFieldLabels" itemID="164" />
+										<item string="nsIncidentFormoverviewSectionFieldLabels" itemID="165" />
+										<item string="nsIncidentFormotherSectionFieldLabels" itemID="166" />
+										<item string="nsIncidentFormSatisfactionFieldDropdownOptions" itemID="167" />
+										<item string="nsIncidentFormPriorityFieldDropdownOptions" itemID="168" />
+										<item string="nsIncidentFormproduct_informationSectionFieldLabels" itemID="169" />
+										<item string="nsIncidentFormServiceLevelFieldDropdownOptions" itemID="170" />
+										<item string="nsIncidentFormFieldLabels" itemID="171" />
+										<item string="nsIncidentFormStatusFieldDropdownOptions" itemID="172" />
+										<item string="nsIncidentFormStatusReasonFieldDropdownOptions" itemID="173" />
+										<item string="nsIncidentFormcontract_informationSectionFieldLabels" itemID="174" />
+										<item string="nsIncidentFormCaseOriginFieldDropdownOptions" itemID="175" />
+										<item string="nsIncidentFormCaseTypeFieldDropdownOptions" itemID="176" />
+										<item string="nsCompetitorFormTabNames" itemID="177" />
+										<item string="nsCompetitorFormSectionNames" itemID="178" />
+										<item string="nsCompetitorFormCompetitorInformationSectionFieldNames" itemID="179" />
+										<item string="nsCompetitorFormAddressSectionFieldNames" itemID="180" />
+										<item string="nsCompetitorFormAnalysisSectionFieldNames" itemID="181" />
+										<item string="nsCompetitorFormcompetitor_informationSectionFieldLabels" itemID="182" />
+										<item string="nsCompetitorFormFieldLabels" itemID="183" />
+										<item string="nsCompetitorFormaddressSectionFieldLabels" itemID="184" />
+										<item string="nsCompetitorFormanalysisSectionFieldLabels" itemID="185" />
+										<item string="nsDocumentindexFormTabNames" itemID="186" />
+										<item string="nsDocumentindexFormSectionNames" itemID="187" />
+										<item string="nsDocumentindexFormDocumentIndexSectionFieldNames" itemID="188" />
+										<item string="nsDocumentindexFormdocument_indexSectionFieldLabels" itemID="189" />
+										<item string="nsKbarticleFormTabNames" itemID="190" />
+										<item string="nsKbarticleFormSectionNames" itemID="191" />
+										<item string="nsKbarticleFormArticleInformationSectionFieldNames" itemID="192" />
+										<item string="nsKbarticleFormArticle_informationSectionFieldLabels" itemID="193" />
+										<item string="nsKbarticleFormStatusReasonFieldDropdownOptions" itemID="194" />
+										<item string="nsBusinessunitnewsarticleFormTabNames" itemID="195" />
+										<item string="nsBusinessunitnewsarticleFormSectionNames" itemID="196" />
+										<item string="nsBusinessunitnewsarticleFormAnnouncementInformationSectionFieldNames" itemID="197" />
+										<item string="nsBusinessunitnewsarticleFormAnnouncement_informationSectionFieldLabels" itemID="198" />
+										<item string="nsBusinessunitnewsarticleFormVisibleToFieldDropdownOptions" itemID="199" />
+										<item string="nsBusinessunitnewsarticleFormOnHomePageFieldDropdownOptions" itemID="200" />
+										<item string="nsActivityFormTabNames" itemID="201" />
+										<item string="nsActivityFormSectionNames" itemID="202" />
+										<item string="nsActivityFormTaskInformationSectionFieldNames" itemID="203" />
+										<item string="nsActivityFormFieldLabels" itemID="204" />
+										<item string="nsActivityFormTask_informationSectionFieldLabels" itemID="205" />
+										<item string="nsActivityFormStatusFieldDropdownOptions" itemID="206" />
+										<item string="nsActivityFormTypeFieldDropdownOptions" itemID="207" />
+										<item string="nsActivityFormPriorityFieldDropdownOptions" itemID="208" />
+										<item string="nsFaxactivityFormTabNames" itemID="209" />
+										<item string="nsFaxactivityFormSectionNames" itemID="210" />
+										<item string="nsFaxactivityFormSubjectInformationSectionFieldNames" itemID="211" />
+										<item string="nsFaxactivityFormsubject_informationSectionFieldLabels" itemID="212" />
+										<item string="nsFaxactivityFormTypeFieldDropdownOptions" itemID="213" />
+										<item string="nsFaxactivityFormdirectioncodeFieldDropdownOptions" itemID="214" />
+										<item string="nsFaxactivityFormisavailablefbFieldDropdownOptions" itemID="215" />
+										<item string="nsFaxactivityFormiscustomerviewableFieldDropdownOptions" itemID="216" />
+										<item string="nsFaxactivityFormisprivateFieldDropdownOptions" itemID="217" />
+										<item string="nsFaxactivityFormPriorityFieldDropdownOptions" itemID="218" />
+										<item string="nsFaxactivityFormFieldLabels" itemID="219" />
+										<item string="nsFaxactivityFormStatusReasonFieldDropdownOptions" itemID="220" />
+										<item string="nsPhonecallactivityFormTabNames" itemID="221" />
+										<item string="nsPhonecallactivityFormSectionNames" itemID="222" />
+										<item string="nsPhonecallactivityFormSubjectInformationSectionFieldNames" itemID="223" />
+										<item string="nsPhonecallactivityFormsubject_informationSectionFieldLabels" itemID="224" />
+										<item string="nsPhonecallactivityFormTypeFieldDropdownOptions" itemID="225" />
+										<item string="nsPhonecallactivityFormdirectioncodeFieldDropdownOptions" itemID="226" />
+										<item string="nsPhonecallactivityFormisavailablefbFieldDropdownOptions" itemID="227" />
+										<item string="nsPhonecallactivityFormiscustomerviewableFieldDropdownOptions" itemID="228" />
+										<item string="nsPhonecallactivityFormisprivateFieldDropdownOptions" itemID="229" />
+										<item string="nsPhonecallactivityFormleftmessageFieldDropdownOptions" itemID="230" />
+										<item string="nsPhonecallactivityFormPriorityFieldDropdownOptions" itemID="231" />
+										<item string="nsPhonecallactivityFormFieldLabels" itemID="232" />
+										<item string="nsPhonecallactivityFormStatusReasonFieldDropdownOptions" itemID="233" />
+										<item string="nsEmailactivityFormTabNames" itemID="234" />
+										<item string="nsEmailactivityFormSectionNames" itemID="235" />
+										<item string="nsEmailactivityFormSubjectInformationSectionFieldNames" itemID="236" />
+										<item string="nsEmailactivityFormsubject_informationSectionFieldLabels" itemID="237" />
+										<item string="nsEmailactivityFormTypeFieldDropdownOptions" itemID="238" />
+										<item string="nsEmailactivityFormdeliveryreceiptrequestedFieldDropdownOptions" itemID="239" />
+										<item string="nsEmailactivityFormdirectioncodeFieldDropdownOptions" itemID="240" />
+										<item string="nsEmailactivityFormisavailablefbFieldDropdownOptions" itemID="241" />
+										<item string="nsEmailactivityFormiscustomerviewableFieldDropdownOptions" itemID="242" />
+										<item string="nsEmailactivityFormisprivateFieldDropdownOptions" itemID="243" />
+										<item string="nsEmailactivityFormPriorityFieldDropdownOptions" itemID="244" />
+										<item string="nsEmailactivityFormFieldLabels" itemID="245" />
+										<item string="nsEmailactivityFormStatusReasonFieldDropdownOptions" itemID="246" />
+										<item string="nsIncidentresolutionactivityFormTabNames" itemID="247" />
+										<item string="nsIncidentresolutionactivityFormSectionNames" itemID="248" />
+										<item string="nsIncidentresolutionactivityFormSubjectInformationSectionFieldNames" itemID="249" />
+										<item string="nsIncidentresolutionactivityFormFieldLabels" itemID="250" />
+										<item string="nsIncidentresolutionactivityFormsubject_informationSectionFieldLabels" itemID="251" />
+										<item string="nsIncidentresolutionactivityFormTypeFieldDropdownOptions" itemID="252" />
+										<item string="nsIncidentresolutionactivityFormisprivateFieldDropdownOptions" itemID="253" />
+										<item string="nsIncidentresolutionactivityFormPriorityFieldDropdownOptions" itemID="254" />
+										<item string="nsLetteractivityFormTabNames" itemID="255" />
+										<item string="nsLetteractivityFormSectionNames" itemID="256" />
+										<item string="nsLetteractivityFormSubjectInformationSectionFieldNames" itemID="257" />
+										<item string="nsLetteractivityFormsubject_informationSectionFieldLabels" itemID="258" />
+										<item string="nsLetteractivityFormTypeFieldDropdownOptions" itemID="259" />
+										<item string="nsLetteractivityFormdirectioncodeFieldDropdownOptions" itemID="260" />
+										<item string="nsLetteractivityFormisavailablefbFieldDropdownOptions" itemID="261" />
+										<item string="nsLetteractivityFormiscustomerviewableFieldDropdownOptions" itemID="262" />
+										<item string="nsLetteractivityFormisprivateFieldDropdownOptions" itemID="263" />
+										<item string="nsLetteractivityFormPriorityFieldDropdownOptions" itemID="264" />
+										<item string="nsLetteractivityFormFieldLabels" itemID="265" />
+										<item string="nsLetteractivityFormStatusReasonFieldDropdownOptions" itemID="266" />
+										<item string="nsAppointmentactivityFormTabNames" itemID="267" />
+										<item string="nsAppointmentactivityFormSectionNames" itemID="268" />
+										<item string="nsAppointmentactivityFormSubjectInformationSectionFieldNames" itemID="269" />
+										<item string="nsAppointmentactivityFormsubject_informationSectionFieldLabels" itemID="270" />
+										<item string="nsAppointmentactivityFormTypeFieldDropdownOptions" itemID="271" />
+										<item string="nsAppointmentactivityFormalldayeventFieldDropdownOptions" itemID="272" />
+										<item string="nsAppointmentactivityFormdirectioncodeFieldDropdownOptions" itemID="273" />
+										<item string="nsAppointmentactivityFormisavailablefbFieldDropdownOptions" itemID="274" />
+										<item string="nsAppointmentactivityFormiscustomerviewableFieldDropdownOptions" itemID="275" />
+										<item string="nsAppointmentactivityFormisprivateFieldDropdownOptions" itemID="276" />
+										<item string="nsAppointmentactivityFormPriorityFieldDropdownOptions" itemID="277" />
+										<item string="nsAppointmentactivityFormFieldLabels" itemID="278" />
+										<item string="nsAppointmentactivityFormStatusReasonFieldDropdownOptions" itemID="279" />
+										<item string="nsOpportunitycloseactivityFormTabNames" itemID="280" />
+										<item string="nsOpportunitycloseactivityFormSectionNames" itemID="281" />
+										<item string="nsOpportunitycloseactivityFormSubjectInformationSectionFieldNames" itemID="282" />
+										<item string="nsOpportunitycloseactivityFormFieldLabels" itemID="283" />
+										<item string="nsOpportunitycloseactivityFormsubject_informationSectionFieldLabels" itemID="284" />
+										<item string="nsOpportunitycloseactivityFormactivitytypecodeFieldDropdownOptions" itemID="285" />
+										<item string="nsOpportunitycloseactivityFormcompetitoriddeletionstateFieldDropdownOptions" itemID="286" />
+										<item string="nsOpportunitycloseactivityFormisprivateFieldDropdownOptions" itemID="287" />
+										<item string="nsQuotecloseactivityFormTabNames" itemID="288" />
+										<item string="nsQuotecloseactivityFormSectionNames" itemID="289" />
+										<item string="nsQuotecloseactivityFormSubjectInformationSectionFieldNames" itemID="290" />
+										<item string="nsQuotecloseactivityFormsubject_informationSectionFieldLabels" itemID="291" />
+										<item string="nsQuotecloseactivityFormTypeFieldDropdownOptions" itemID="292" />
+										<item string="nsQuotecloseactivityFormFieldLabels" itemID="293" />
+										<item string="nsQuotecloseactivityFormisprivateFieldDropdownOptions" itemID="294" />
+										<item string="nsOrdercloseactivityFormTabNames" itemID="295" />
+										<item string="nsOrdercloseactivityFormSectionNames" itemID="296" />
+										<item string="nsOrdercloseactivityFormSubjectInformationSectionFieldNames" itemID="297" />
+										<item string="nsOrdercloseactivityFormsubject_informationSectionFieldLabels" itemID="298" />
+										<item string="nsOrdercloseactivityFormTypeFieldDropdownOptions" itemID="299" />
+										<item string="nsOrdercloseactivityFormFieldLabels" itemID="300" />
+										<item string="nsOrdercloseactivityFormisprivateFieldDropdownOptions" itemID="301" />
+										<item string="nsActivitymimeattachmentFormTabNames" itemID="302" />
+										<item string="nsActivitymimeattachmentFormSectionNames" itemID="303" />
+										<item string="nsActivitymimeattachmentFormtestSectionFieldNames" itemID="304" />
+										<item string="nsActivitymimeattachmentFormtestSectionFieldLabels" itemID="305" />
+										<item string="nsContractFormTabNames" itemID="306" />
+										<item string="nsContractFormSectionNames" itemID="307" />
+										<item string="nsContractFormHeaderSectionFieldNames" itemID="308" />
+										<item string="nsContractFormBillingInformationSectionFieldNames" itemID="309" />
+										<item string="nsContractFormPricingSectionFieldNames" itemID="310" />
+										<item string="nsContractFormContractTypeSectionFieldNames" itemID="311" />
+										<item string="nsContractFormHistorySectionFieldNames" itemID="312" />
+										<item string="nsContractFormDescriptionSectionFieldNames" itemID="313" />
+										<item string="nsContractFormheaderSectionFieldLabels" itemID="314" />
+										<item string="nsContractFormhistorySectionFieldLabels" itemID="315" />
+										<item string="nsContractFormFieldLabels" itemID="316" />
+										<item string="nsContractFormAllotmentTypeFieldDropdownOptions" itemID="317" />
+										<item string="nsContractFormbilling_informationSectionFieldLabels" itemID="318" />
+										<item string="nsContractFormbillingfrequencycodeFieldDropdownOptions" itemID="319" />
+										<item string="nsContractFormcontract_typeSectionFieldLabels" itemID="320" />
+										<item string="nsContractFormDiscountisFieldDropdownOptions" itemID="321" />
+										<item string="nsContractFormpricingSectionFieldLabels" itemID="322" />
+										<item string="nsContractFormResponseLevelFieldDropdownOptions" itemID="323" />
+										<item string="nsContractFormdescriptionSectionFieldLabels" itemID="324" />
+										<item string="nsContractFormStatusFieldDropdownOptions" itemID="325" />
+										<item string="nsContractFormStatusReasonFieldDropdownOptions" itemID="326" />
+										<item string="nsContractdetailFormTabNames" itemID="327" />
+										<item string="nsContractdetailFormSectionNames" itemID="328" />
+										<item string="nsContractdetailFormContractDetailInformationSectionFieldNames" itemID="329" />
+										<item string="nsContractdetailFormAllotmentDetailsSectionFieldNames" itemID="330" />
+										<item string="nsContractdetailFormPricingSectionFieldNames" itemID="331" />
+										<item string="nsContractdetailFormCustomerInformationSectionFieldNames" itemID="332" />
+										<item string="nsContractdetailFormSerialSectionFieldNames" itemID="333" />
+										<item string="nsContractdetailFormcontract_detail_informationSectionFieldLabels" itemID="334" />
+										<item string="nsContractdetailFormcustomer_informationSectionFieldLabels" itemID="335" />
+										<item string="nsContractdetailFormpricingSectionFieldLabels" itemID="336" />
+										<item string="nsContractdetailFormallotment_detailsSectionFieldLabels" itemID="337" />
+										<item string="nsContractdetailFormserial__x0023_SectionFieldLabels" itemID="338" />
+										<item string="nsContractdetailFormFieldLabels" itemID="339" />
+										<item string="nsContractdetailFormStatusFieldDropdownOptions" itemID="340" />
+										<item string="nsContractdetailFormStatusReasonFieldDropdownOptions" itemID="341" />
+										<item string="nsDiscountFormTabNames" itemID="342" />
+										<item string="nsDiscountFormSectionNames" itemID="343" />
+										<item string="nsDiscountFormDiscountInformationSectionFieldNames" itemID="344" />
+										<item string="nsDiscountFormDiscount_informationSectionFieldLabels" itemID="345" />
+										<item string="nsKbarticletemplateFormTabNames" itemID="346" />
+										<item string="nsKbarticletemplateFormSectionNames" itemID="347" />
+										<item string="nsKbarticletemplateFormTitleSectionFieldNames" itemID="348" />
+										<item string="nsKbarticletemplateFormTitleSectionFieldLabels" itemID="349" />
+										<item string="nsKbarticletemplateFormStatusReasonFieldDropdownOptions" itemID="350" />
+										<item string="nsKbarticletemplateFormFieldLabels" itemID="351" />
+										<item string="nsPricelevelFormTabNames" itemID="352" />
+										<item string="nsPricelevelFormSectionNames" itemID="353" />
+										<item string="nsPricelevelFormPriceLevelInformationSectionFieldNames" itemID="354" />
+										<item string="nsPricelevelFormDescriptionSectionFieldNames" itemID="355" />
+										<item string="nsPricelevelFormprice_level_informationSectionFieldLabels" itemID="356" />
+										<item string="nsPricelevelFormFieldLabels" itemID="357" />
+										<item string="nsPricelevelFormStatusReasonFieldDropdownOptions" itemID="358" />
+										<item string="nsPricelevelFormdescriptionSectionFieldLabels" itemID="359" />
+										<item string="nsProductFormTabNames" itemID="360" />
+										<item string="nsProductFormSectionNames" itemID="361" />
+										<item string="nsProductFormProductInformationSectionFieldNames" itemID="362" />
+										<item string="nsProductFormCostsSectionFieldNames" itemID="363" />
+										<item string="nsProductFormDescriptionInformationSectionFieldNames" itemID="364" />
+										<item string="nsProductFormDescriptionSectionFieldNames" itemID="365" />
+										<item string="nsProductFormproduct_informationSectionFieldLabels" itemID="366" />
+										<item string="nsProductFormcostsSectionFieldLabels" itemID="367" />
+										<item string="nsProductFormProductTypeFieldDropdownOptions" itemID="368" />
+										<item string="nsProductFormdescriptionSectionFieldLabels" itemID="369" />
+										<item string="nsProductFormdescription_informationSectionFieldLabels" itemID="370" />
+										<item string="nsProductFormFieldLabels" itemID="371" />
+										<item string="nsProductFormStatusFieldDropdownOptions" itemID="372" />
+										<item string="nsProductFormStatusReasonFieldDropdownOptions" itemID="373" />
+										<item string="nsProductpricelevelFormTabNames" itemID="374" />
+										<item string="nsProductpricelevelFormSectionNames" itemID="375" />
+										<item string="nsProductpricelevelFormPriceListItemInformationSectionFieldNames" itemID="376" />
+										<item string="nsProductpricelevelFormPricingSectionFieldNames" itemID="377" />
+										<item string="nsProductpricelevelFormRoundingSectionFieldNames" itemID="378" />
+										<item string="nsProductpricelevelFormpricingSectionFieldLabels" itemID="379" />
+										<item string="nsProductpricelevelFormFieldLabels" itemID="380" />
+										<item string="nsProductpricelevelFormprice_list_item_informationSectionFieldLabels" itemID="381" />
+										<item string="nsProductpricelevelFormQuantitySellingOptionFieldDropdownOptions" itemID="382" />
+										<item string="nsProductpricelevelFormPricingMethodFieldDropdownOptions" itemID="383" />
+										<item string="nsProductpricelevelFormroundingSectionFieldLabels" itemID="384" />
+										<item string="nsProductpricelevelFormRoundingOptionFieldDropdownOptions" itemID="385" />
+										<item string="nsProductpricelevelFormRoundingPolicyFieldDropdownOptions" itemID="386" />
+										<item string="nsRoleFormTabNames" itemID="387" />
+										<item string="nsRoleFormSectionNames" itemID="388" />
+										<item string="nsRoleFormRoleInformationSectionFieldNames" itemID="389" />
+										<item string="nsRoleFormRole_informationSectionFieldLabels" itemID="390" />
+										<item string="nsSalesliteratureFormTabNames" itemID="391" />
+										<item string="nsSalesliteratureFormSectionNames" itemID="392" />
+										<item string="nsSalesliteratureFormSalesLiteratureInformationSectionFieldNames" itemID="393" />
+										<item string="nsSalesliteratureFormDescriptionSectionFieldNames" itemID="394" />
+										<item string="nsSalesliteratureFormSales_Literature_InformationSectionFieldLabels" itemID="395" />
+										<item string="nsSalesliteratureFormdescriptionSectionFieldLabels" itemID="396" />
+										<item string="nsSalesliteratureFormTypeFieldDropdownOptions" itemID="397" />
+										<item string="nsSalesliteratureFormFieldLabels" itemID="398" />
+										<item string="nsSavedqueryFormTabNames" itemID="399" />
+										<item string="nsSavedqueryFormSectionNames" itemID="400" />
+										<item string="nsSavedqueryFormAccountInformationSectionFieldNames" itemID="401" />
+										<item string="nsSavedqueryFormaccount_informationSectionFieldLabels" itemID="402" />
+										<item string="nsSavedqueryFormCustomizableFieldDropdownOptions" itemID="403" />
+										<item string="nsSavedqueryFormDefaultFieldDropdownOptions" itemID="404" />
+										<item string="nsSavedqueryFormQuickFindCompatibleFieldDropdownOptions" itemID="405" />
+										<item string="nsSavedqueryFormUserDefinedFieldDropdownOptions" itemID="406" />
+										<item string="nsUomFormTabNames" itemID="407" />
+										<item string="nsUomFormSectionNames" itemID="408" />
+										<item string="nsUomFormUnitofMeasureInformationSectionFieldNames" itemID="409" />
+										<item string="nsUomFormUnit_of_Measure_informationSectionFieldLabels" itemID="410" />
+										<item string="nsUomscheduleFormTabNames" itemID="411" />
+										<item string="nsUomscheduleFormSectionNames" itemID="412" />
+										<item string="nsUomscheduleFormUOMScheduleInformationSectionFieldNames" itemID="413" />
+										<item string="nsUomscheduleFormUoM_Schedule_informationSectionFieldLabels" itemID="414" />
+										<item string="nsSalesliteratureitemFormTabNames" itemID="415" />
+										<item string="nsSalesliteratureitemFormSectionNames" itemID="416" />
+										<item string="nsSalesliteratureitemFormDocumentInformationSectionFieldNames" itemID="417" />
+										<item string="nsSalesliteratureitemFormDocument_informationSectionFieldLabels" itemID="418" />
+										<item string="nsSalesliteratureitemFormFieldLabels" itemID="419" />
+										<item string="nsCustomeraddressFormTabNames" itemID="420" />
+										<item string="nsCustomeraddressFormSectionNames" itemID="421" />
+										<item string="nsCustomeraddressFormCustomerAddressInformationSectionFieldNames" itemID="422" />
+										<item string="nsCustomeraddressFormPhoneNumbersSectionFieldNames" itemID="423" />
+										<item string="nsCustomeraddressFormAdditionalInformationSectionFieldNames" itemID="424" />
+										<item string="nsCustomeraddressFormcustomer_address_informationSectionFieldLabels" itemID="425" />
+										<item string="nsCustomeraddressFormFieldLabels" itemID="426" />
+										<item string="nsCustomeraddressFormAddressTypeFieldDropdownOptions" itemID="427" />
+										<item string="nsCustomeraddressFormphone_numbersSectionFieldLabels" itemID="428" />
+										<item string="nsCustomeraddressFormadditional_informationSectionFieldLabels" itemID="429" />
+										<item string="nsCustomeraddressFormShippingMethodFieldDropdownOptions" itemID="430" />
+										<item string="nsCustomeraddressFormFreightTermsFieldDropdownOptions" itemID="431" />
+										<item string="nsDiscounttypeFormTabNames" itemID="432" />
+										<item string="nsDiscounttypeFormSectionNames" itemID="433" />
+										<item string="nsDiscounttypeFormDiscountTypeInformationSectionFieldNames" itemID="434" />
+										<item string="nsDiscounttypeFormdiscount_type_informationSectionFieldLabels" itemID="435" />
+										<item string="nsDiscounttypeFormFieldLabels" itemID="436" />
+										<item string="nsDiscounttypeFormStatusReasonFieldDropdownOptions" itemID="437" />
+										<item string="nsKbarticlecommentFormTabNames" itemID="438" />
+										<item string="nsKbarticlecommentFormSectionNames" itemID="439" />
+										<item string="nsKbarticlecommentFormKBCommentSectionFieldNames" itemID="440" />
+										<item string="nsKbarticlecommentFormcommentSectionFieldLabels" itemID="441" />
+										<item string="nsOpportunityproductFormTabNames" itemID="442" />
+										<item string="nsOpportunityproductFormSectionNames" itemID="443" />
+										<item string="nsOpportunityproductFormOpportunityProductInformationSectionFieldNames" itemID="444" />
+										<item string="nsOpportunityproductFormPricingSectionFieldNames" itemID="445" />
+										<item string="nsOpportunityproductFormpricingSectionFieldLabels" itemID="446" />
+										<item string="nsOpportunityproductFormopportunity_product_informationSectionFieldLabels" itemID="447" />
+										<item string="nsOpportunityproductFormFieldLabels" itemID="448" />
+										<item string="nsQuoteFormTabNames" itemID="449" />
+										<item string="nsQuoteFormSectionNames" itemID="450" />
+										<item string="nsQuoteFormQuoteInformationSectionFieldNames" itemID="451" />
+										<item string="nsQuoteFormTotalsSectionFieldNames" itemID="452" />
+										<item string="nsQuoteFormDatesSectionFieldNames" itemID="453" />
+										<item string="nsQuoteFormShippingInformationSectionFieldNames" itemID="454" />
+										<item string="nsQuoteFormDescriptionSectionFieldNames" itemID="455" />
+										<item string="nsQuoteFormBillToAddressSectionFieldNames" itemID="456" />
+										<item string="nsQuoteFormShipToAddressSectionFieldNames" itemID="457" />
+										<item string="nsQuoteFormInternalInformationSectionFieldNames" itemID="458" />
+										<item string="nsQuoteForminternal_informationSectionFieldLabels" itemID="459" />
+										<item string="nsQuoteFormquote_informationSectionFieldLabels" itemID="460" />
+										<item string="nsQuoteFormdatesSectionFieldLabels" itemID="461" />
+										<item string="nsQuoteFormtotalsSectionFieldLabels" itemID="462" />
+										<item string="nsQuoteFormshipping_informationSectionFieldLabels" itemID="463" />
+										<item string="nsQuoteFormFreightTermsFieldDropdownOptions" itemID="464" />
+										<item string="nsQuoteFormPaymentTermsFieldDropdownOptions" itemID="465" />
+										<item string="nsQuoteFormShippingMethodFieldDropdownOptions" itemID="466" />
+										<item string="nsQuoteFormdescriptionSectionFieldLabels" itemID="467" />
+										<item string="nsQuoteFormFieldLabels" itemID="468" />
+										<item string="nsQuoteFormStatusFieldDropdownOptions" itemID="469" />
+										<item string="nsQuoteFormbill_to_addressSectionFieldLabels" itemID="470" />
+										<item string="nsQuoteFormship_to_addressSectionFieldLabels" itemID="471" />
+										<item string="nsQuoteFormShipToFieldDropdownOptions" itemID="472" />
+										<item string="nsQuotedetailFormTabNames" itemID="473" />
+										<item string="nsQuotedetailFormSectionNames" itemID="474" />
+										<item string="nsQuotedetailFormQuoteDetailInformationSectionFieldNames" itemID="475" />
+										<item string="nsQuotedetailFormPricingSectionFieldNames" itemID="476" />
+										<item string="nsQuotedetailFormDeliveryInformationSectionFieldNames" itemID="477" />
+										<item string="nsQuotedetailFormShipToAddressSectionFieldNames" itemID="478" />
+										<item string="nsQuotedetailFormpricingSectionFieldLabels" itemID="479" />
+										<item string="nsQuotedetailFormdelivery_informationSectionFieldLabels" itemID="480" />
+										<item string="nsQuotedetailFormship_to_addressSectionFieldLabels" itemID="481" />
+										<item string="nsQuotedetailFormShipToFieldDropdownOptions" itemID="482" />
+										<item string="nsQuotedetailFormquote_detail_informationSectionFieldLabels" itemID="483" />
+										<item string="nsQuotedetailFormPricingFieldDropdownOptions" itemID="484" />
+										<item string="nsQuotedetailFormSelectProductFieldDropdownOptions" itemID="485" />
+										<item string="nsQuotedetailFormFieldLabels" itemID="486" />
+										<item string="nsQuotedetailFormFreightTermsFieldDropdownOptions" itemID="487" />
+										<item string="nsSalesorderFormTabNames" itemID="488" />
+										<item string="nsSalesorderFormSectionNames" itemID="489" />
+										<item string="nsSalesorderFormOrderInformationSectionFieldNames" itemID="490" />
+										<item string="nsSalesorderFormTotalsSectionFieldNames" itemID="491" />
+										<item string="nsSalesorderFormDatesSectionFieldNames" itemID="492" />
+										<item string="nsSalesorderFormShippingInformationSectionFieldNames" itemID="493" />
+										<item string="nsSalesorderFormDescriptionSectionFieldNames" itemID="494" />
+										<item string="nsSalesorderFormBillToAddressSectionFieldNames" itemID="495" />
+										<item string="nsSalesorderFormShipToAddressSectionFieldNames" itemID="496" />
+										<item string="nsSalesorderFormInternalInformationSectionFieldNames" itemID="497" />
+										<item string="nsSalesorderForminternal_informationSectionFieldLabels" itemID="498" />
+										<item string="nsSalesorderFormorder_informationSectionFieldLabels" itemID="499" />
+										<item string="nsSalesorderFormdatesSectionFieldLabels" itemID="500" />
+										<item string="nsSalesorderFormtotalsSectionFieldLabels" itemID="501" />
+										<item string="nsSalesorderFormshipping_informationSectionFieldLabels" itemID="502" />
+										<item string="nsSalesorderFormFreightTermsFieldDropdownOptions" itemID="503" />
+										<item string="nsSalesorderFormPaymentTermsFieldDropdownOptions" itemID="504" />
+										<item string="nsSalesorderFormShippingMethodFieldDropdownOptions" itemID="505" />
+										<item string="nsSalesorderFormdescriptionSectionFieldLabels" itemID="506" />
+										<item string="nsSalesorderFormFieldLabels" itemID="507" />
+										<item string="nsSalesorderFormStatusFieldDropdownOptions" itemID="508" />
+										<item string="nsSalesorderFormStatusReasonFieldDropdownOptions" itemID="509" />
+										<item string="nsSalesorderFormbill_to_addressSectionFieldLabels" itemID="510" />
+										<item string="nsSalesorderFormship_to_addressSectionFieldLabels" itemID="511" />
+										<item string="nsSalesorderFormShipToFieldDropdownOptions" itemID="512" />
+										<item string="nsSalesorderdetailFormTabNames" itemID="513" />
+										<item string="nsSalesorderdetailFormSectionNames" itemID="514" />
+										<item string="nsSalesorderdetailFormSalesOrderDetailInformationSectionFieldNames" itemID="515" />
+										<item string="nsSalesorderdetailFormPricingSectionFieldNames" itemID="516" />
+										<item string="nsSalesorderdetailFormDeliveryInformationSectionFieldNames" itemID="517" />
+										<item string="nsSalesorderdetailFormFulfillmentSectionFieldNames" itemID="518" />
+										<item string="nsSalesorderdetailFormShipToAddressSectionFieldNames" itemID="519" />
+										<item string="nsSalesorderdetailFormpricingSectionFieldLabels" itemID="520" />
+										<item string="nsSalesorderdetailFormdelivery_informationSectionFieldLabels" itemID="521" />
+										<item string="nsSalesorderdetailFormship_to_addressSectionFieldLabels" itemID="522" />
+										<item string="nsSalesorderdetailFormShipToFieldDropdownOptions" itemID="523" />
+										<item string="nsSalesorderdetailFormsales_order_detail_informationSectionFieldLabels" itemID="524" />
+										<item string="nsSalesorderdetailFormPricingFieldDropdownOptions" itemID="525" />
+										<item string="nsSalesorderdetailFormSelectProductFieldDropdownOptions" itemID="526" />
+										<item string="nsSalesorderdetailFormFieldLabels" itemID="527" />
+										<item string="nsSalesorderdetailFormFreightTermsFieldDropdownOptions" itemID="528" />
+										<item string="nsSalesorderdetailFormfulfillmentSectionFieldLabels" itemID="529" />
+										<item string="nsInvoiceFormTabNames" itemID="530" />
+										<item string="nsInvoiceFormSectionNames" itemID="531" />
+										<item string="nsInvoiceFormInvoiceInformationSectionFieldNames" itemID="532" />
+										<item string="nsInvoiceFormTotalsSectionFieldNames" itemID="533" />
+										<item string="nsInvoiceFormShippingInformationSectionFieldNames" itemID="534" />
+										<item string="nsInvoiceFormDescriptionSectionFieldNames" itemID="535" />
+										<item string="nsInvoiceFormBillToAddressSectionFieldNames" itemID="536" />
+										<item string="nsInvoiceFormShipToAddressSectionFieldNames" itemID="537" />
+										<item string="nsInvoiceFormInternalInformationSectionFieldNames" itemID="538" />
+										<item string="nsInvoiceForminternal_informationSectionFieldLabels" itemID="539" />
+										<item string="nsInvoiceForminvoice_informationSectionFieldLabels" itemID="540" />
+										<item string="nsInvoiceFormtotalsSectionFieldLabels" itemID="541" />
+										<item string="nsInvoiceFormshipping_informationSectionFieldLabels" itemID="542" />
+										<item string="nsInvoiceFormPaymentTermsFieldDropdownOptions" itemID="543" />
+										<item string="nsInvoiceFormShippingMethodFieldDropdownOptions" itemID="544" />
+										<item string="nsInvoiceFormdescriptionSectionFieldLabels" itemID="545" />
+										<item string="nsInvoiceFormFieldLabels" itemID="546" />
+										<item string="nsInvoiceFormStatusFieldDropdownOptions" itemID="547" />
+										<item string="nsInvoiceFormStatusReasonFieldDropdownOptions" itemID="548" />
+										<item string="nsInvoiceFormbill_to_addressSectionFieldLabels" itemID="549" />
+										<item string="nsInvoiceFormship_to_addressSectionFieldLabels" itemID="550" />
+										<item string="nsInvoiceFormShipToFieldDropdownOptions" itemID="551" />
+										<item string="nsInvoicedetailFormTabNames" itemID="552" />
+										<item string="nsInvoicedetailFormSectionNames" itemID="553" />
+										<item string="nsInvoicedetailFormInvoiceDetailInformationSectionFieldNames" itemID="554" />
+										<item string="nsInvoicedetailFormPricingSectionFieldNames" itemID="555" />
+										<item string="nsInvoicedetailFormDeliveryInformationSectionFieldNames" itemID="556" />
+										<item string="nsInvoicedetailFormFulfillmentSectionFieldNames" itemID="557" />
+										<item string="nsInvoicedetailFormShipToAddressSectionFieldNames" itemID="558" />
+										<item string="nsInvoicedetailFormpricingSectionFieldLabels" itemID="559" />
+										<item string="nsInvoicedetailFormship_to_addressSectionFieldLabels" itemID="560" />
+										<item string="nsInvoicedetailFormShipToFieldDropdownOptions" itemID="561" />
+										<item string="nsInvoicedetailForminvoice_detail_informationSectionFieldLabels" itemID="562" />
+										<item string="nsInvoicedetailFormPricingFieldDropdownOptions" itemID="563" />
+										<item string="nsInvoicedetailFormSelectProductFieldDropdownOptions" itemID="564" />
+										<item string="nsInvoicedetailFormdelivery_informationSectionFieldLabels" itemID="565" />
+										<item string="nsInvoicedetailFormfulfillmentSectionFieldLabels" itemID="566" />
+										<item string="nsInvoicedetailFormFieldLabels" itemID="567" />
+										<item string="nsInvoicedetailFormFreightTermsFieldDropdownOptions" itemID="568" />
+										<item string="nsTemplateFormTabNames" itemID="569" />
+										<item string="nsTemplateFormSectionNames" itemID="570" />
+										<item string="nsTemplateFormEmailTemplateInformationSectionFieldNames" itemID="571" />
+										<item string="nsTemplateFormemail_template_informationSectionFieldLabels" itemID="572" />
+										<item string="nsTemplateFormFieldLabels" itemID="573" />
+										<item string="nsTemplateFormTemplateTypeFieldDropdownOptions" itemID="574" />
+										<item string="nsTemplateFormViewableByFieldDropdownOptions" itemID="575" />
+										<item string="nsContracttemplateFormTabNames" itemID="576" />
+										<item string="nsContracttemplateFormSectionNames" itemID="577" />
+										<item string="nsContracttemplateFormContractTypeInformationSectionFieldNames" itemID="578" />
+										<item string="nsContracttemplateFormContract_Type_informationSectionFieldLabels" itemID="579" />
+										<item string="nsContracttemplateFormAllotmentTypeFieldDropdownOptions" itemID="580" />
+										<item string="nsTerritoryFormTabNames" itemID="581" />
+										<item string="nsTerritoryFormSectionNames" itemID="582" />
+										<item string="nsTerritoryFormTerritoryInformationSectionFieldNames" itemID="583" />
+										<item string="nsTerritoryFormterritory_informationSectionFieldLabels" itemID="584" />
+										<item string="nsTerritoryFormFieldLabels" itemID="585" />
+										<item string="nsQueueFormTabNames" itemID="586" />
+										<item string="nsQueueFormSectionNames" itemID="587" />
+										<item string="nsQueueFormQueueInformationSectionFieldNames" itemID="588" />
+										<item string="nsQueueFormqueue_informationSectionFieldLabels" itemID="589" />
+										<item string="nsQueueitemFormTabNames" itemID="590" />
+										<item string="nsQueueitemFormSectionNames" itemID="591" />
+										<item string="nsQueueitemFormAccountInformationSectionFieldNames" itemID="592" />
+										<item string="nsQueueitemFormFieldLabels" itemID="593" />
+										<item string="nsQueueitemFormTypeFieldDropdownOptions" itemID="594" />
+										<item string="nsQuoteFormStatusReasonFieldActiveDropdownOptions" itemID="595" />
+										<item string="nsQuoteFormStatusReasonFieldWonDropdownOptions" itemID="596" />
+										<item string="nsQuoteFormStatusReasonFieldClosedDropdownOptions" itemID="597" />
+										<item string="nsQuoteFormStatusReasonFieldDraftDropdownOptions" itemID="598" />
+										<item string="[_DialogFontDefault]" itemID="599" />
+										<item string="nsPopulatedRoleNames" itemID="600" />
+										<item string="ResID" itemID="601" />
+									</currentList>
+								</stringList>
+							</option>
+						</optionSet>
+					</optionSet>
+					<optionSet id="Pseudo Translation Settings" displayName="Pseudo Translation Settings" helpText="Use these settings to control the pseudo localization process.">
+						<optionSet id="Binary pseudo localization" displayName="Binary pseudo localization" helpText="Use these settings to control pseudo localization of binaries.">
+							<option id="\PseudoLoc\BinaryPseudoLoc\DlgHorizontalStretch" displayName="Percentage to stretch dialogs horizontally" helpText="Enter the percentage to stretch dialogs horizontally. This should be greater than zero.">
+								<int defaultValue="40" currentValue="0" />
+							</option>
+							<option id="\PseudoLoc\BinaryPseudoLoc\DlgFontSize" displayName="Dialog font size" helpText="Enter the font size to use in dialogs.">
+								<int defaultValue="8" currentValue="9" />
+							</option>
+							<option id="\PseudoLoc\BinaryPseudoLoc\DlgFontName" displayName="Dialog font" helpText="Enter the font to use in dialogs.">
+								<string defaultValue="" currentValue="MS Shell Dlg" />
+							</option>
+						</optionSet>
+						<optionSet id="Delimiter and String Extension Settings" displayName="Delimiter and String Extension Settings" helpText="Use these settings to specify delimiters and extensions.">
+							<option id="\PseudoTranslation\Delimiters and Extensions\Start Delimiter" displayName="First character delimiter" helpText="Enter the character(s) that marks the beginning of pseudo localized strings.">
+								<string defaultValue="[" currentValue="" />
+							</option>
+							<option id="\PseudoTranslation\Delimiters and Extensions\End Delimiter" displayName="Last character delimiter" helpText="Enter the character(s) that marks the end of pseudo localized strings.">
+								<string defaultValue="]" currentValue="" />
+							</option>
+							<option id="\PseudoTranslation\Delimiters and Extensions\Extension String" displayName="String to add to extend pseudo localized strings" helpText="Enter the string to use to extend the pseudo localized strings.">
+								<string defaultValue=" !!!" currentValue="" />
+							</option>
+						</optionSet>
+						<optionSet id="Character and Keyboard Shortcut Replacement Settings" displayName="Character and Keyboard Shortcut Replacement Settings" helpText="Use these settings to change keyboard shortcuts and character replacement options.">
+							<option id="\PseudoTranslation\Replacement Settings\Replacement Method" displayName="Replacement method" helpText="Select which replacement method to use during pseudo localization.  Default - Substitute characters based on the target language. None - Do not replace characters. Matching - Substitute each character with something similar. Random - Change characters at random. Prepending random - Prepend random characters. Combo - Use Matching and Prepending random methods for character replacement.">
+								<pick defaultValue="0" currentValue="1">
+									<defaultList>
+										<item string="Default" itemID="0" />
+										<item string="None" itemID="1" />
+										<item string="Matching replacement" itemID="2" />
+										<item string="Random replacement" itemID="3" />
+										<item string="Prepending random characters" itemID="4" />
+										<item string="Combo replacement" itemID="5" />
+									</defaultList>
+									<currentList>
+										<item string="Default" itemID="0" />
+										<item string="None" itemID="1" />
+										<item string="Matching replacement" itemID="2" />
+										<item string="Random replacement" itemID="3" />
+										<item string="Prepending random characters" itemID="4" />
+										<item string="Combo replacement" itemID="5" />
+									</currentList>
+								</pick>
+							</option>
+							<option id="\PseudoTranslation\Replacement Settings\Hotkey Handling" displayName="Keyboard shortcuts" helpText="Select how keyboard shortcuts (hotkeys) should be pseudo localized.">
+								<pick defaultValue="0" currentValue="2">
+									<defaultList>
+										<item string="Don't localize" itemID="0" />
+										<item string="ANSI hotkey" itemID="1" />
+										<item string="DBCS style hotkey" itemID="2" />
+									</defaultList>
+									<currentList>
+										<item string="Don't localize" itemID="0" />
+										<item string="ANSI hotkey" itemID="1" />
+										<item string="DBCS style hotkey" itemID="2" />
+									</currentList>
+								</pick>
+							</option>
+							<option id="\PseudoTranslation\Replacement Settings\Script Selection" displayName="Script to use when replacing characters" helpText="Select the script to use to replace characters during pseudo localization.">
+								<pick defaultValue="7" currentValue="7">
+									<defaultList allowAdditions="-1">
+										<item string="0-ASCII" itemID="0" />
+										<item string="1-ASCIItoDBCS" itemID="1" />
+										<item string="2-Unicode" itemID="2" />
+										<item string="3-Unicode2" itemID="3" />
+										<item string="4-Hindi" itemID="4" />
+										<item string="1250-Central European" itemID="5" />
+										<item string="1251-Cyrillic" itemID="6" />
+										<item string="1252-Western European" itemID="7" />
+										<item string="1253-Greek" itemID="8" />
+										<item string="1254-Turkish" itemID="9" />
+										<item string="1255-Hebrew" itemID="10" />
+										<item string="1256-Arabic" itemID="11" />
+										<item string="1257-Baltic" itemID="12" />
+										<item string="1258-Vietnam" itemID="13" />
+										<item string="874-Thai" itemID="14" />
+										<item string="932-Japanese" itemID="15" />
+										<item string="936-Simplified Chinese" itemID="16" />
+										<item string="949-Korean" itemID="17" />
+										<item string="950-Traditional Chinese" itemID="18" />
+										<item string="437-DOS:US" itemID="19" />
+										<item string="737-DOS:Greek" itemID="20" />
+										<item string="775-DOS:Baltic" itemID="21" />
+										<item string="850-DOS:Western European" itemID="22" />
+										<item string="852-DOS:Central European" itemID="23" />
+										<item string="857-DOS:Turkish" itemID="24" />
+										<item string="866-DOS:Cyrillic" itemID="25" />
+										<item string="10000-Mac:Roman" itemID="26" />
+										<item string="10006-Mac:Greek" itemID="27" />
+										<item string="10007-Mac:Cyrillic" itemID="28" />
+										<item string="10029-Mac:Central European" itemID="29" />
+										<item string="10081-Mac:Turkish" itemID="30" />
+									</defaultList>
+									<currentList allowAdditions="-1">
+										<item string="0-ASCII" itemID="0" />
+										<item string="1-ASCIItoDBCS" itemID="1" />
+										<item string="2-Unicode" itemID="2" />
+										<item string="3-Unicode2" itemID="3" />
+										<item string="4-Hindi" itemID="4" />
+										<item string="1250-Central European" itemID="5" />
+										<item string="1251-Cyrillic" itemID="6" />
+										<item string="1252-Western European" itemID="7" />
+										<item string="1253-Greek" itemID="8" />
+										<item string="1254-Turkish" itemID="9" />
+										<item string="1255-Hebrew" itemID="10" />
+										<item string="1256-Arabic" itemID="11" />
+										<item string="1257-Baltic" itemID="12" />
+										<item string="1258-Vietnam" itemID="13" />
+										<item string="874-Thai" itemID="14" />
+										<item string="932-Japanese" itemID="15" />
+										<item string="936-Simplified Chinese" itemID="16" />
+										<item string="949-Korean" itemID="17" />
+										<item string="950-Traditional Chinese" itemID="18" />
+										<item string="437-DOS:US" itemID="19" />
+										<item string="737-DOS:Greek" itemID="20" />
+										<item string="775-DOS:Baltic" itemID="21" />
+										<item string="850-DOS:Western European" itemID="22" />
+										<item string="852-DOS:Central European" itemID="23" />
+										<item string="857-DOS:Turkish" itemID="24" />
+										<item string="866-DOS:Cyrillic" itemID="25" />
+										<item string="10000-Mac:Roman" itemID="26" />
+										<item string="10006-Mac:Greek" itemID="27" />
+										<item string="10007-Mac:Cyrillic" itemID="28" />
+										<item string="10029-Mac:Central European" itemID="29" />
+										<item string="10081-Mac:Turkish" itemID="30" />
+									</currentList>
+								</pick>
+							</option>
+						</optionSet>
+						<optionSet id="Prepend Settings" displayName="Prepend Settings" helpText="Use these settings to prepend strings during pseudo localization. Prepending adds characters to the begining of a string to approximate the string size after localization.">
+							<option id="\PseudoTranslation\Prepend\Number of Characters to Prepend" displayName="Number of characters to prepend" helpText="Enter the number of characters (between 0 and 20) to add to the beginning of the string using the scripts selected in the codepage setting. This setting is only used when the replacement method is set to Combo replacement or Prepend random replacement.">
+								<int defaultValue="5" currentValue="2" />
+							</option>
+							<option id="\PseudoTranslation\Prepend\Hash ID End Delimiter" displayName="End character delimiter for hashed resource ID" helpText="Enter the character(s) that marks the end of a hashed resource ID.">
+								<string defaultValue="]" currentValue="］" />
+							</option>
+							<option id="\PseudoTranslation\Prepend\Hash ID Start Delimiter" displayName="Start character delimiter for hashed resource ID" helpText="Enter the character(s) that marks the beginning of a hashed resource ID.">
+								<string defaultValue="[" currentValue="［" />
+							</option>
+							<option id="\PseudoTranslation\Prepend\Prepend Resource ID" displayName="Prepend resource ID" helpText="To prepend the string with the Resource ID, select Full for the whole ID or Short for only the numeric portion of the ID. To prepend the string with a unique Hash ID for the resource, select Hash ID.">
+								<pick defaultValue="3" currentValue="3">
+									<defaultList>
+										<item string="None" itemID="0" />
+										<item string="Full" itemID="1" />
+										<item string="Short" itemID="2" />
+										<item string="Hash ID" itemID="3" />
+									</defaultList>
+									<currentList>
+										<item string="None" itemID="0" />
+										<item string="Full" itemID="1" />
+										<item string="Short" itemID="2" />
+										<item string="Hash ID" itemID="3" />
+									</currentList>
+								</pick>
+							</option>
+						</optionSet>
+						<optionSet id="String Growth Limitation Settings" displayName="String Growth Limitation Settings" helpText="Use these settings to limit string growth during pseudo localization. Both will be used to determine string size.">
+							<option id="\PseudoTranslation\String Limitations\Relative String Enlargement" displayName="Percentage to stretch strings (Default)" helpText="Enter the percentage (between 0 and 100) each string can grow during pseudo localization. This value will be used for the pseudo localization categories which are not specified in the &quot;Percentage to stretch strings (Overrides)&quot; list.">
+								<int defaultValue="40" currentValue="20" />
+							</option>
+						</optionSet>
+						<option id="\PseudoLoc\MarkStringLocalized" displayName="Mark strings as localized after pseudo localization" helpText="Select On to mark strings as localized after pseudo localization.">
+							<boolean defaultValue="0" currentValue="1"/>
+						</option>
+						<option id="\PseudoTranslation\ResourceCategory" displayName="Resource categories to pseudo localize" helpText="List the resource categories to pseudo localize, one per line. If you do not select any categories, then only resources with no resource category will be pseudo localized.">
+							<stringList>
+								<defaultList>
+									<item string="Dialog" itemID="0"/>
+									<item string="Menu" itemID="1"/>
+									<item string="HTML" itemID="2"/>
+									<item string="Message" itemID="3"/>
+									<item string="StringTable" itemID="4"/>
+									<item string="AutoAdaptation" itemID="5"/>
+								</defaultList>
+								<currentList>
+									<item string="Dialog" itemID="0"/>
+									<item string="Menu" itemID="1"/>
+									<item string="HTML" itemID="2"/>
+									<item string="Message" itemID="3"/>
+									<item string="StringTable" itemID="4"/>
+									<item string="AutoAdaptation" itemID="5"/>
+									<item string="Other" itemID="6"/>
+								</currentList>
+							</stringList>
+						</option>
+						<option id="\PseudoLoc\PseudoLocalizeUpdated" displayName="Pseudo localize Updated strings" helpText="Select On to pseudo localize strings changed during an update.">
+							<boolean defaultValue="0" currentValue="1"/>
+						</option>
+					</optionSet>
+				</optionSet>
+			</optionSet>
+			<optionSet id="Parsers" displayName="Parsers">
+				<optionSet id="Parser 3" displayName="Win32 Options" helpText="Win32 format files (.exe, .dll, ...)">
+					<option id="Strip_Trailing_Zero" displayName="Strip trailing zero from string table strings" helpText="Strips any trailing zero from string table strings during update, and then appends the trailing zero during generate.">
+						<boolean defaultValue="0" currentValue="1"/>
+					</option>
+				</optionSet>
+				<optionSet id="Parser 3, Sub-parser 7" displayName="HEAT Options" helpText="HEAT Parser options for Localization Studio. Contact bgitsupport@microsoft.com if you have any questions.">
+					<option id="IncTermNoResId" displayName="Include Terms which have no Resource Identifier" helpText="Include Terms which have no Resource Identifier. Terms without Resource Identifiers cannot be Updated or Uploaded if they change. See the LOOM Specification for details on how to add Resource Identifiers to all elements in HTML files.">
+						<boolean defaultValue="0" currentValue="1"/>
+					</option>
+					<option id="IncXMLTermNoResId" displayName="(LocXML parser only) Include XML Terms which have no Resource Identifier" helpText="Include XML terms which have no Resource Identifier when using the LocXML parser. XML terms without Resource Identifiers cannot be Updated or Uploaded if they change. ">
+						<boolean defaultValue="1" currentValue="1"/>
+					</option>
+				</optionSet>
+				<optionSet id="Parser 22" displayName="POMHTML Parser options" helpText="POMHTML Parser options for Localization Studio.">
+					<option id="IncTermNoResId" displayName="Include Terms which have no Resource Identifier" helpText="Include Terms which have no Resource Identifier. Terms without Resource Identifiers cannot be Updated or Uploaded if they change.">
+						<boolean defaultValue="0" currentValue="1"/>
+					</option>
+					<option id="FileEncoding" displayName="Generated File Encoding Type" helpText="Choose the Encoding Type for the Generated Files. Note: Internet Explorer 3.0x does not support Unicode or UTF-8.">
+						<pick defaultValue="0" currentValue="2">
+							<defaultList>
+								<item string="Use Source File Encoding" itemID="0"/>
+								<item string="ANSI" itemID="1"/>
+								<item string="UTF-8" itemID="2"/>
+								<item string="Unicode" itemID="3"/>
+							</defaultList>
+							<currentList>
+								<item string="Use Source File Encoding" itemID="0"/>
+								<item string="ANSI" itemID="1"/>
+								<item string="UTF-8" itemID="2"/>
+								<item string="Unicode" itemID="3"/>
+							</currentList>
+						</pick>
+					</option>
+					<option id="LoomConfiguration" displayName="LOOM Configuration to use" helpText="Choose from the list of LOOM configurations in the LocStudio folder. These can be configured using the LOOMConfig tool. Note: FactorySettings.config.xml cannot be edited!">
+						<pick defaultValue="0" currentValue="1">
+							<defaultList>
+								<item string="Factory Settings" itemID="0"/>
+								<item string="js" itemID="1"/>
+								<item string="MP" itemID="2"/>
+								<item string="Settings" itemID="3"/>
+								<item string="Solutions" itemID="4"/>
+								<item string="wxl" itemID="5"/>
+							</defaultList>
+							<currentList>
+								<item string="Factory Settings" itemID="0"/>
+								<item string="js" itemID="1"/>
+							</currentList>
+						</pick>
+					</option>
+				</optionSet>
+				<optionSet id="Parser 211" displayName="Managed Resource Parser" helpText="Managed Resource Formats (*.dll *.exe *.resources *.resx)">
+					<option id="GENERATE_CULTURE_NEUTRAL" displayName="Generate culture-neutral target" helpText="If this option is on, the parser will generate target files in the culture-neutral variant of the target language.">
+						<boolean defaultValue="0" currentValue="1"/>
+					</option>
+					<option id="INCLUDE_STRINGS_INTO_TARGET" displayName="Include these string types when generating target files" helpText="Sets additional string types included in the target file. Localized strings are always included. To include updated strings, select Localized and updated. To include updated strings and string that are not localized, select All (excluding locked strings) or All (including locked strings).">
+						<pick defaultValue="0" currentValue="3">
+							<defaultList>
+								<item string="Localized" itemID="0"/>
+								<item string="Localized and updated" itemID="1"/>
+								<item string="All (excluding locked strings)" itemID="2"/>
+								<item string="All (including locked strings)" itemID="3"/>
+							</defaultList>
+							<currentList>
+								<item string="Localized" itemID="0"/>
+								<item string="Localized and updated" itemID="1"/>
+								<item string="All (excluding locked strings)" itemID="2"/>
+								<item string="All (including locked strings)" itemID="3"/>
+							</currentList>
+						</pick>
+					</option>
+					<option id="DONT_INCLUDE_CULTURE_IN_RESX" displayName="Do not include culture name in the target .resx files" helpText="If this option is on, the culture name will not be included in the generated .resx file name.">
+						<boolean defaultValue="0" currentValue="1"/>
+					</option>
+				</optionSet>
+				<optionSet id="Parser 227" displayName="Local Binding Parser Options" helpText="Options for local binding text file parser">
+					<optionSet id="Parsing Options" displayName="Parsing Options" helpText="Options to control how the source file is parsed">
+						<option id="CombineTags" displayName="Combine matching data" helpText="Set this option to &quot;on&quot; to combine entries with the same loc ID and source string.">
+							<boolean defaultValue="0" currentValue="1"/>
+						</option>
+					</optionSet>
+					<optionSet id="Target File Options" displayName="Target File Options" helpText="Options to control how the target file is written">
+						<option id="DelLocTags" displayName="Remove local binding tag comments" helpText="Set this option to &quot;on&quot; to remove the &quot;_locID&quot; comments from the file.">
+							<boolean defaultValue="0" currentValue="1"/>
+						</option>
+					</optionSet>
+				</optionSet>
+			</optionSet>
+		</optionSet>
+	</optionSet>
+</LS_SETTINGS_FILE>

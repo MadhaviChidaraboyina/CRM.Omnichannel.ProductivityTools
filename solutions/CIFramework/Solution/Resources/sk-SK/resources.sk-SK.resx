@@ -256,6 +256,10 @@
     <value>Ak pri kanáli vyberiete poradie 0, bude mať prednosť pred ostatnými.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+    <value>Doména na pridanie do zoznamu povolených</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trustedDomain' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Jednoznačný identifikátor organizácie</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
@@ -355,6 +359,10 @@
   <data name="1:displayname,msdyn_ciprovidermsdyn_SortOrder" xml:space="preserve">
     <value>Poradie kanálov</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+    <value>Dôveryhodná doména</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trustedDomain' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Identifikátor organizácie</value>
@@ -457,6 +465,10 @@
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
+    <value>Channel Provider</value>
+    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>Poskytovateľ kanála</value>
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
@@ -471,6 +483,10 @@
   <data name="81:LocalizedName,msdyn_ChannelIntegrationFrameworkSitemap" xml:space="preserve">
     <value>Integračná architektúra kanála</value>
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>Poskytovateľ</value>

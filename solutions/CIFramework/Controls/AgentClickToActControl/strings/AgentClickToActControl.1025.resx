@@ -133,4 +133,20 @@
     <value>عنصر التحكم في اتصال القناة</value>
     <comment>Name of the Agent Click To Act Control</comment>
   </data>
+  <data name="CC_Field_Value" xml:space="preserve">
+    <value>القيمة</value>
+    <comment>Attribute details</comment>
+  </data>
+  <data name="CC_Field_Value_Desc" xml:space="preserve">
+    <value>تفاصيل السمة</value>
+    <comment>Attribute details</comment>
+  </data>
+  <data name="CC_Field_IconUrl" xml:space="preserve">
+    <value>عنوان URL للرمز</value>
+    <comment>Url of Icon</comment>
+  </data>
+  <data name="CC_Field_IconUrl_Desc" xml:space="preserve">
+    <value>عنوان URL الخاص بالرمز</value>
+    <comment>Url of Icon</comment>
+  </data>
 </root>

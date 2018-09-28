@@ -256,6 +256,10 @@
     <value>दूसरों के मुकाबले वरीयता देने के लिए, इस चैनल के लिए चैनल ऑर्डर का 0 के रूप में चयन करें.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+    <value>श्वेत सूचीबद्ध किया जाने वाला डोमेन</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trustedDomain' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>संगठन का युनीक आइडेंटिफ़ायर</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
@@ -355,6 +359,10 @@
   <data name="1:displayname,msdyn_ciprovidermsdyn_SortOrder" xml:space="preserve">
     <value>चैनल ऑर्डर</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+    <value>विश्वसनीय डोमेन</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trustedDomain' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>संगठन Id</value>
@@ -457,6 +465,10 @@
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
+    <value>Channel Provider</value>
+    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>चैनल प्रदाता</value>
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
@@ -471,6 +483,10 @@
   <data name="81:LocalizedName,msdyn_ChannelIntegrationFrameworkSitemap" xml:space="preserve">
     <value>चैनल एकीकरण फ़्रेमवर्क</value>
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>प्रदाता</value>
