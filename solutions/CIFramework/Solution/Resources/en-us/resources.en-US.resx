@@ -468,6 +468,10 @@
     <value>Channel Provider</value>
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
+  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
+    <value>Channel Provider</value>
+    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
+  </data>
   <data name="80:Description,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
     <value>Bring your communication channels and build immersive experience with Dynamics 365</value>
     <comment> 'msdyn_ChannelIntegrationFrameworkApp' : Description for AppModule</comment>
@@ -479,6 +483,10 @@
   <data name="81:LocalizedName,msdyn_ChannelIntegrationFrameworkSitemap" xml:space="preserve">
     <value>Channel Integration Framework</value>
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>Provider</value>

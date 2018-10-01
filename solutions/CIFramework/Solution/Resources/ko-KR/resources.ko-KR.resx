@@ -256,6 +256,10 @@
     <value>이 채널이 다른 채널보다 우선하도록 하려면 채널 순서를 0으로 선택합니다.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+    <value>허용 목록에 추가할 도메인</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trustedDomain' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>조직의 고유 식별자</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
@@ -355,6 +359,10 @@
   <data name="1:displayname,msdyn_ciprovidermsdyn_SortOrder" xml:space="preserve">
     <value>채널 순서</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+    <value>신뢰할 수 있는 도메인</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trustedDomain' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>조직 ID</value>
@@ -457,6 +465,10 @@
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
+    <value>Channel Provider</value>
+    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>채널 공급자</value>
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
@@ -471,6 +483,10 @@
   <data name="81:LocalizedName,msdyn_ChannelIntegrationFrameworkSitemap" xml:space="preserve">
     <value>채널 통합 프레임워크</value>
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>공급자</value>

@@ -133,4 +133,20 @@
     <value>Арнаның байланыс басқару</value>
     <comment>Name of the Agent Click To Act Control</comment>
   </data>
+  <data name="CC_Field_Value" xml:space="preserve">
+    <value>Мән</value>
+    <comment>Attribute details</comment>
+  </data>
+  <data name="CC_Field_Value_Desc" xml:space="preserve">
+    <value>Төлсипат мәліметтері</value>
+    <comment>Attribute details</comment>
+  </data>
+  <data name="CC_Field_IconUrl" xml:space="preserve">
+    <value>URL белгішесі</value>
+    <comment>Url of Icon</comment>
+  </data>
+  <data name="CC_Field_IconUrl_Desc" xml:space="preserve">
+    <value>Белгішенің Url мекенжайы</value>
+    <comment>Url of Icon</comment>
+  </data>
 </root>
