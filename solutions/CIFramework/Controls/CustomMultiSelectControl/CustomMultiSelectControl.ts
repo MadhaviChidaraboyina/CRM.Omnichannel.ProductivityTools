@@ -40,6 +40,9 @@ module MscrmControls.Service.CIProvider {
 		private fieldName: string;
 		private sysAdminCustomizerRoles: RoleInformation[];
 
+		// List of Apps not to be shown in the App Picker for CIF Config
+		private invalidAppsForCif: string[] = ["msdyn_ChannelIntegrationFrameworkApp", "msdyusd_USDAdminSettings", "msdyn_OCAPP"];
+
 		/**
 		 * Empty constructor.
 		 */
@@ -95,7 +98,9 @@ module MscrmControls.Service.CIProvider {
 						//To-Do - Add Telemetry
 					for (let app of data.entities) {
 						console.log(app);
-						this.elementList.push({ ElementId: app.appmoduleid, ElementUniqueName: app.uniquename, ElementName: app.name, EventHandlers: JSON.parse(app.eventhandlers) });
+						if (this.invalidAppsForCif.indexOf(app.uniquename) == -1) {
+							this.elementList.push({ ElementId: app.appmoduleid, ElementUniqueName: app.uniquename, ElementName: app.name, EventHandlers: JSON.parse(app.eventhandlers) });
+						}
 					}
 					this.context.utils.requestRender();
 				},
