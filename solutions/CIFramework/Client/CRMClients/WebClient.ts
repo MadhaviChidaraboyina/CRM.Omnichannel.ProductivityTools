@@ -225,12 +225,18 @@ namespace Microsoft.CIFramework.Internal
 								Xrm.Navigation.openForm(fo);
 							}
 						}
-						else if(result.entities.length > 1) {
-							//To-Do handle this after UC dependency to open categorized search page on same window is resolved
-						}
+						// Open the Search Page with the Search String from the OData Parameters if the records != 1. Opens blank search page if the $search parameter has no value
 						else {
-							//To-Do handle this after UC dependency to open categorized search page on same window is resolved
+							try {
+								var searchPageInput: XrmClientApi.SearchPageInput;
+								searchPageInput.searchText = Microsoft.CIFramework.Utility.extractParameter(queryParmeters, "$search");
+								searchPageInput.searchType = 1;
+								searchPageInput.EntityNames.push(entityName);
+								Xrm.Navigation.navigateTo(searchPageInput);
+							}
+							catch (error) { }
 						}
+
 						let retrieveMultipleTimeTaken = Date.now() - retrieveMultipleStartTime.getTime();
 						let retrieveMultipleApiName = "Xrm.WebApi.retrieveMultipleRecords"
 						logApiData(telemetryData, retrieveMultipleStartTime, retrieveMultipleTimeTaken, retrieveMultipleApiName);
@@ -316,6 +322,27 @@ namespace Microsoft.CIFramework.Internal
 			let apiName = "Xrm.Panel.getWidth";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
 			return width;
+		}
+
+		client.renderSearchPage = (entityName: string, searchString: string, telemetryData?: Object | any): Promise<void> =>
+		{
+			let startTime;
+			try {
+				var searchPageInput: XrmClientApi.SearchPageInput;
+				searchPageInput.searchText = searchString;
+				searchPageInput.EntityNames.push(entityName);
+				searchPageInput.searchType = 1;
+
+				startTime = new Date();
+				Xrm.Navigation.navigateTo(searchPageInput);
+				let timeTaken = Date.now() - startTime.getTime();
+				let apiName = "Xrm.Navigation.navigateTo";
+				logApiData(telemetryData, startTime, timeTaken, apiName);
+				return;
+			}
+			catch (error) {
+				logFailure("", true, error);
+			}
 		}
 
 		return client;

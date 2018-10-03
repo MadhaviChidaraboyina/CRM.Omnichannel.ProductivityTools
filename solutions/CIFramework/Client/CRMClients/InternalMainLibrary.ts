@@ -29,7 +29,8 @@ namespace Microsoft.CIFramework.Internal {
 		["getEntityMetadata", [getEntityMetadata]],
 		["getenvironment", [getEnvironment]],
 		["getwidth", [getWidth]],
-		["getclicktoact", [getClickToAct]]
+		["getclicktoact", [getClickToAct]],
+		["renderSearchPage", [renderSearchPage]]
 	]);
 
 	/**
@@ -577,6 +578,29 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, getEntityMetadata.name, appId, true, errorData);
+		}
+	}
+
+	export function renderSearchPage(parameters: Map<string, any>, entityName: string, searchString: string): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		if (provider) {
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				state.client.renderSearchPage(parameters.get(Constants.entityName), parameters.get(Constants.SearchString)).then(
+					function (res) {
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), renderSearchPage.name, telemetryData);
+						setPerfData(perfData);
+						return resolve(new Map<string, any>().set(Constants.value, res));
+					},
+					(error: IErrorHandler) => {
+						return rejectWithErrorMessage(error.errorMsg, renderSearchPage.name, appId, true, error);
+					}
+				);
+			});
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, renderSearchPage.name, appId, true, errorData);
 		}
 	}
 }

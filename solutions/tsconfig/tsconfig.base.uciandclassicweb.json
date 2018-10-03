@@ -1,7 +1,7 @@
 {
 	"files": [
-		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApiInternal.d.ts",
-		"../../Packages/Crm.ClientApiTypings.1.0.2474-manual/clientapi/XrmClientApi.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2522-manual/clientapi/XrmClientApiInternal.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2522-manual/clientapi/XrmClientApi.d.ts",
 		"../../references/external/TypeDefinitions/microsoft.ajax.d.ts",
 		"../../references/external/TypeDefinitions/lib.es6.d.ts",
 		"../../references/external/TypeDefinitions/whatwg-fetch.d.ts"

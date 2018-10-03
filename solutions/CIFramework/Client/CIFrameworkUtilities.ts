@@ -49,4 +49,21 @@ namespace Microsoft.CIFramework.Utility {
 		});
 		return entity;
 	}
+
+	export function extractParameter(queryString: string, parameterName: string): string {
+		var params: any = {};
+		if (queryString != null && queryString != "") {
+			var queryStringArray = queryString.substr(1).split("&");
+			queryStringArray.forEach((query) => {
+				var queryPair = query.split("=");
+				var queryKey = decodeURIComponent(queryPair[0]);
+				var queryValue = decodeURIComponent(queryPair.length > 1 ? queryPair[1] : "");
+				params[queryKey] = queryValue;
+			});
+		}
+		if (params.hasOwnProperty(parameterName))
+			return params.parameterName;
+		else
+			return "";
+	}
 }

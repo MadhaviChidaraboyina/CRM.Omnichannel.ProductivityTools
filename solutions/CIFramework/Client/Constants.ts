@@ -29,6 +29,7 @@ namespace Microsoft.CIFramework
 		export const onPageNavigate = "onpagenavigate";
 		export const onSendKBArticle = "onsendkbarticle";
 		export const getEntityMetadata = "getEntityMetadata";
+		export const renderSearchPage = "renderSearchPage";
 	}
 
 	/**
@@ -88,6 +89,7 @@ namespace Microsoft.CIFramework
 		export const UciLib = "ucilib";
 		export const OrgId = "orgId";
 		export const trustedDomain = "msdyn_trustedDomain";
+		export const SearchString = "searchString";
 	}
 
 	/**
