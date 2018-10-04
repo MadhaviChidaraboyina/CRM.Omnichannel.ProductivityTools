@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+  <WebResourceId>{d41f1029-92a4-42cd-a3fc-197dd50606e2}</WebResourceId>
+  <Name>msdyn_notificationCss.css</Name>
+  <DisplayName>msdyn_notificationCss.css</DisplayName>
+  <WebResourceType>2</WebResourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>0</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/msdyn_notificationCssd41f1029-92a4-42cd-a3fc-197dd50606e2</FileName>
+</WebResource>
+
+

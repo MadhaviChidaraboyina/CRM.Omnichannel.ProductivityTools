@@ -27,49 +27,46 @@ namespace Microsoft.CIFramework.Internal {
 		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
 			map = renderSoftNotification(header,body);
 		}else{
-			//toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" class="CIFToastDiv"><div class="header_NotificationType_CIF"></div><div class="header_CIF"><img id="CIFHeaderIcon"></img><div class="headerKeyCIF"></div><div class="headerNameCIF"></div><div class="headerDetailsCIF"></div></div><div></div><div class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p class="body_CIF"><div></div></p></div></div>');
-			toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" class="CIFToastDiv" style="position: relative;display:table;background-color: rgba(102, 102, 102, 0.5);width:280px;z-index: 2;border-radius: 4px;background-color: #333333;padding-bottom: 10px;"><div class="header_NotificationType_CIF" style="display:block;min-height:21px;"></div><div class="header_CIF" style="display:block;min-height:71px;"><img style="width:71px; height:71px; float:left; margin-left: 10px;"></img><div class="headerKeyCIF" style="font-family:Segoe UI;font-style:normal;font-size:12px;text-align:left;color:#D8D8D8;"></div><div class="headerNameCIF" style="font-family:Segoe UI;font-style:Semibold;font-size:18px;text-align:left;color:#FFFFFF;"></div><div class="headerDetailsCIF"  style="font-family:Segoe UI;font-style:normal;font-size:12px;text-align:left;color:#D8D8D8;"></div></div><div></div><div class="bodyDivCIF" style="display:block;"><div class="bodyDivider_CIF" style="width:280px; height:1px; background-color: #F1F1F1;"></div><p class="body_CIF"><div></div></p></div></div>');
+			toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" class="CIFToastDiv"><div class="header_NotificationType_CIF"></div><div class="header_CIF"><span class="CIFHeaderIcon"></span><div class="headerKeyCIF"></div><div class="headerNameCIF"></div><div class="headerDetailsCIF"></div></div><div></div><div class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p class="body_CIF"><div></div></p></div></div>');
 			let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
 			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
 			if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
 				let headerElement = toastDiv.getElementsByClassName("header_NotificationType_CIF")[len-1];
 				if(notificationType[0].search(MessageType.broadCast) != -1 && notificationType.length == 3){
-					headerElement.setAttribute('style','display:block;min-height:21px;width:280px;background-color:#000000;');
+					headerElement.classList.add("header_NotificationType_CIF_Broadcast");
 					var label1 = document.createElement("label");
 					headerElement.appendChild(label1);
-					label1.setAttribute('style', 'margin-left: 10px;font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;margin-right:35px;');
+					label1.classList.add("broadCastLabel1");
 					label1.innerText = notificationType[1];
 					var label2 = document.createElement("label");
 					headerElement.appendChild(label2);
-					label2.setAttribute('style', 'margin-left: 10px;font-family:Segoe UI;font-style:Regular;font-size:11px;text-align:Right;height:13px;color:#FFFFFF;');
+					label2.classList.add("broadCastLabel2");
 					label2.innerText = notificationType[2];
-				}else if((notificationType[0].search(MessageType.notification) != -1 || notificationType[0].search(MessageType.escalation)) != -1 && notificationType.length == 3){
-					headerElement.setAttribute('style','display:block;min-height:21px;background-color:#B22912;width:280px;');
-					var img = document.createElement("img");
-					headerElement.appendChild(img);
-					headerElement.getElementsByTagName("img")[0].src = notificationType[1];
-					headerElement.getElementsByTagName("img")[0].setAttribute('style','width:12px; height:12px; font-style:Regular; font-size:12px; text-align:Left; float:left; margin-right:10px;margin-left: 10px;');
+				}else if((notificationType[0].search(MessageType.notification) != -1 || notificationType[0].search(MessageType.escalation)) != -1 && notificationType.length == 2){
+					headerElement.classList.add("header_NotificationType_CIF_notification");
+					var span = document.createElement("span");
+					headerElement.appendChild(span);
+					headerElement.getElementsByTagName("span")[0].classList.add("notificationSpan");
 					var label = document.createElement("label");
 					headerElement.appendChild(label);
-					label.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;');
-					label.innerText = notificationType[2];
+					label.classList.add("notificationLabel");
+					label.innerText = notificationType[1];
 				}else if(notificationType[0].search(MessageType.transfer) != -1 && notificationType.length == 2){
-					headerElement.setAttribute('style','display:block;min-height:21px;background-color:#B22912;width:280px;');
+					headerElement.classList.add("header_NotificationType_CIF_transfer");
 					var label1 = document.createElement("label");
 					headerElement.appendChild(label1);
-					label1.setAttribute('style', 'margin-left: 10px;font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;');
+					label1.classList.add("transferLabel");
 					label1.innerText = notificationType[1];
-				}else if(notificationType[0].search(MessageType.internalCommunication) != -1 && notificationType.length == 3){
-					headerElement.setAttribute('style','display:block;min-height:21px;background-color:#000000;width:280px;');
-					var img = document.createElement("img");
-					headerElement.appendChild(img);
-					headerElement.getElementsByTagName("img")[0].src = notificationType[1];
-					headerElement.getElementsByTagName("img")[0].setAttribute('style','width:12px; height:12px; font-style:Regular; font-size:12px; text-align:Left; float:left; margin-right:10px;margin-left: 10px;');
+				}else if(notificationType[0].search(MessageType.internalCommunication) != -1 && notificationType.length == 2){
+					headerElement.classList.add("header_NotificationType_CIF_internalCommunication");
+					var span = document.createElement("span");
+					headerElement.appendChild(span);
+					headerElement.getElementsByTagName("span")[0].classList.add("internalCommunicationSpan");
 					var label = document.createElement("label");
 					headerElement.appendChild(label);
-					label.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:11px;text-align:Left;height:13px;color:#FFFFFF;');
-					label.innerText = notificationType[2];
-					currentToast.setAttribute('style','position: relative;display:table;background-color: rgba(102, 102, 102, 0.5);width:280px;z-index: 2;border-radius: 4px;background-color: #25477A;padding-bottom: 10px');
+					label.classList.add("internalCommunicationLabel");
+					label.innerText = notificationType[1];
+					currentToast.classList.add("internalCommunication_CIFToastDiv");
 				}
 			}
 			let headerVal = "";
@@ -92,16 +89,16 @@ namespace Microsoft.CIFramework.Internal {
 						let notificationBody = toastDiv.getElementsByClassName("body_CIF")[len-1];
 						var label1 = document.createElement("label");
 						notificationBody.appendChild(label1);
-						label1.setAttribute('style', 'display: inline-table;margin-left: 10px;font-family:Segoe UI;font-style:normal;font-size:14px;text-align:left;height:16px;margin-right:11px;width:78px;word-wrap:break-word;color:#D8D8D8;');
+						label1.classList.add("body_CIFLabel1");
 						var label2 = document.createElement("label");
-						label2.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:left;height:16px;width: 163px; color:#FFFFFF;display: inline-block;position: absolute;height: 40px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;word-break: break-all;');
+						label2.classList.add("body_CIFLabel2");
 						label1.innerText = key;
 						label2.innerText = body[i][key];
 						label2.addEventListener("mouseover", function mouseOverListener() {
-							this.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:left;height:16px;width: 163px;color:#FFFFFF;display: inline-table;height: auto;white-space: normal;overflow: visible;');
+							this.classList.add("body_CIFLabel2_mouseover");
 						});
 						label2.addEventListener("mouseout", function mouseoutListener() {
-							this.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:left;height:16px;width: 163px; color:#FFFFFF;display: inline-block;position: absolute;height: 40px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;word-break: break-all;');
+							this.classList.add("body_CIFLabel2_mouseout");
 						});
 						notificationBody.appendChild(label2);
 						var div = document.createElement("div");
@@ -109,10 +106,10 @@ namespace Microsoft.CIFramework.Internal {
 					}
 				}
 			}else{
-				toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].setAttribute('style','width:280px; height:1px; background-color: #F1F1F1; display:none');
+				toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].classList.add("bodyDivider_CIF_invisible");
 			}
 			toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].innerHTML = headerVal;
-			toastDiv.getElementsByClassName("header_CIF")[len-1].getElementsByTagName("img")[0].src = "/webresources/msdyn_CIFIcon.svg";
+			//toastDiv.getElementsByClassName("header_CIF")[len-1].getElementsByTagName("img")[0].src = "/webresources/msdyn_CIFIcon.svg";
 			let chatWindowBody = toastDiv.getElementsByClassName("bodyDivCIF")[len-1];
 			if(actions != null && actions != "undefined"){
 				let accept = false;
@@ -131,7 +128,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 				for( i = 0; i < actions.length; i++){
 					var btn = document.createElement("BUTTON");
-					var img = document.createElement('img');
+					var span = document.createElement('span');
 					chatWindowBody.appendChild(btn);
 					let actionParam = new Map();
 					let k = 0;
@@ -145,31 +142,29 @@ namespace Microsoft.CIFramework.Internal {
 						if(key.search(Constants.actionType) != -1){
 							if(actions[i][key].search(Constants.Accept) != -1){
 								if(bothButtons == false){
-									btn.setAttribute('style','width:252px;background-color:#47C21D;height:40px;margin-left: 10px;');
+									btn.classList.add("bothButtonsAccept_CIF");
 								}else{
-									btn.setAttribute('style','width:120px;background-color:#47C21D;height:40px;margin-right:14px;margin-left: 10px;');
+									btn.classList.add("singleButtonAccept_CIF");
 								}
-								img.setAttribute('src', '/webresources/msdyn_CIFIcon.svg');
-								btn.appendChild(img);
-								btn.getElementsByTagName("img")[0].setAttribute('style','width:16px; height:16px; float:left; font-style:Regular; font-size:16px; text-align:Left;');
+								btn.appendChild(span);
+								btn.getElementsByTagName("span")[0].classList.add("acceptButtonSpan_CIF");
 							}else if(actions[i][key].search(Constants.Reject) != -1){
 								if(bothButtons == false){
-									btn.setAttribute('style','width:252px;background-color:#EA0600;height:40px;margin-left: 10px;');
+									btn.classList.add("bothButtonsReject_CIF");
 								}else{
-									btn.setAttribute('style','width:120px;background-color:#EA0600;height:40px;margin-right:14px;');
+									btn.classList.add("singleButtonReject_CIF");
 								}
-								img.setAttribute('src', '/webresources/msdyn_CIFIcon.svg');
-								btn.appendChild(img);
-								btn.getElementsByTagName("img")[0].setAttribute('style','width:16px; height:16px; float:left; font-style:Regular; font-size:16px; text-align:Left;');
+								btn.appendChild(span);
+								btn.getElementsByTagName("span")[0].classList.add("rejectButtonSpan_CIF");
 							}else if(actions[i][key].search(Constants.Timeout) != -1){
-								btn.setAttribute('style','display:none');
+								btn.classList.add("timeOutCIF");
 								isTimeOut = true;
 							}
 						}
 						if(key.search(Constants.actionDisplayText) != -1){
 							var span = document.createElement('span');
 							span.innerText = actions[i][key];
-							span.setAttribute('style','height:16px; font-style:Semibold; font-family:Segoe UI; font-size:14px; color:#FFFFFF;');
+							span.classList.add("actionDisplayText_CIF");
 							btn.appendChild(span);
 						}else if(key.search(Constants.actionName) != -1){
 							actionNameCIF = actions[i][key];
@@ -177,9 +172,9 @@ namespace Microsoft.CIFramework.Internal {
 							actionReturnValueCIF = actions[i][key];
 						}else if(key.search(Constants.actionColor) != -1){
 							btn.style.backgroundColor = actions[i][key];
-						}else if(key.search(Constants.actionImage) != -1){
+						}/*else if(key.search(Constants.actionImage) != -1){
 							btn.getElementsByTagName("img")[0].src = actions[i][key];
-						}
+						}*/
 					}
 					actionParam.set(Constants.actionName,actionNameCIF);
 					actionParam.set(Constants.actionReturnValue,actionReturnValueCIF);
@@ -237,27 +232,28 @@ namespace Microsoft.CIFramework.Internal {
 			for( i=0; i< childDivs.length; i++ ){
 				let childDiv = childDivs[i];
 				if(childDiv != null){
-					childDiv.setAttribute('style', 'display:none;');
+					childDiv.classList.add("timeOutCIF");
 				}
 			}
 		}
-		toastDiv.insertAdjacentHTML('afterbegin', '<div id="CIFSoftToast" style="position:relative;display:table;box-shadow: 4px 0 2px rgba(0, 0, 0, 0.5);width:320px;border-radius: 4px;background-color: #333333;"><div id="header_SoftNotification_CIF" style="display:block;min-height:21px;"></div><div id="bodyDivSoftToastCIF" style="display:block;"></div></div>');
+		toastDiv.insertAdjacentHTML('afterbegin', '<div id="CIFSoftToast" class="CIFSoftNotificationToast"><div id="header_SoftNotification_CIF" class="headerSoftNotification_CIF"></div><div id="bodyDivSoftToastCIF" class="bodyDivSoftToast_CIF"></div></div>');
 		//Constructing header
 		let chatWindowHeader = widgetIFrame.contentWindow.document.getElementById("header_SoftNotification_CIF");
-		var img = document.createElement("img");
-		chatWindowHeader.appendChild(img);
-		chatWindowHeader.getElementsByTagName("img")[0].src = header[0];
-		chatWindowHeader.getElementsByTagName("img")[0].setAttribute('style','width:16px; height:16px; font-style:Regular; font-size:12px; text-align:Left; float:left; margin-right:10px;margin-left: 10px;');
+		var span = document.createElement("span");
+		chatWindowHeader.appendChild(span);
+		//chatWindowHeader.getElementsByTagName("img")[0].src = header[0];
+		chatWindowHeader.getElementsByTagName("span")[0].classList.add("chatWindowHeaderSpan_CIF");
 		var label = document.createElement("label");
 		chatWindowHeader.appendChild(label);
-		label.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:Left;height:16px;color:#FFFFFF; margin-right:50px;');
+		label.classList.add("chatWindowHeaderLabel_CIF");
 		label.innerText = header[1];
-		img = document.createElement("img");
-		chatWindowHeader.appendChild(img);
-		chatWindowHeader.getElementsByTagName("img")[1].id = "closeSoftNotificationCIF";
-		chatWindowHeader.getElementsByTagName("img")[1].src = "/webresources/msdyn_CIFIcon.svg";
+		span = document.createElement("span");
+		span.classList.add("closeSoftNotification_CIF");
+		chatWindowHeader.appendChild(span);
+		chatWindowHeader.getElementsByTagName("span")[1].id = "closeSoftNotificationCIF";
+		//chatWindowHeader.getElementsByTagName("img")[1].src = "/webresources/msdyn_CIFIcon.svg";
 		var div = document.createElement("div");
-		div.setAttribute('style','height:11px;');
+		div.classList.add("chatWindowHeaderDiv_CIF");
 		chatWindowHeader.appendChild(div);
 		//Constructing body
 		if(body != null && body != "undefined"){
@@ -265,7 +261,7 @@ namespace Microsoft.CIFramework.Internal {
 				var label1 = document.createElement("label");
 				let notificationBody = widgetIFrame.contentWindow.document.getElementById("bodyDivSoftToastCIF");
 				notificationBody.appendChild(label1);
-				label1.setAttribute('style', 'display: inline-table;margin-left: 10px;font-family:Segoe UI;font-style:normal;font-size:14px;text-align:left;color:#D8D8D8;');
+				label1.classList.add("notificationBodyCIF");
 				label1.innerText = body;
 			}else{
 				for(i = 0; i < body.length; i++){
@@ -273,14 +269,14 @@ namespace Microsoft.CIFramework.Internal {
 						let notificationBody = widgetIFrame.contentWindow.document.getElementById("bodyDivSoftToastCIF");
 						var label1 = document.createElement("label");
 						notificationBody.appendChild(label1);
-						label1.setAttribute('style', 'display: inline-table;margin-left: 10px;font-family:Segoe UI;font-style:normal;font-size:14px;text-align:left;height:16px;margin-right:11px;width:78px;word-wrap:break-word;color:#D8D8D8;');
+						label1.classList.add("notificationBodyLabel1_CIF");
 						var label2 = document.createElement("label");
 						notificationBody.appendChild(label2);
-						label2.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:left;height:16px;width:163px;word-wrap:break-word;color:#FFFFFF;display:inline-table;');
+						label2.classList.add("notificationBodyLabel2_CIF");
 						label1.innerText = key;
 						label2.innerText = body[i][key];
 						div = document.createElement("div");
-						div.setAttribute('style','height:11px;');
+						div.classList.add("chatWindowHeaderDiv_CIF");
 						notificationBody.appendChild(div);
 					}
 				}
