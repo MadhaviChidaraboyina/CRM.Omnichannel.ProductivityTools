@@ -32,7 +32,8 @@ namespace Microsoft.CIFramework {
 			for (var i = 0; i < presenceList.length; i++) {
 				var node = document.createElement("div");
 				node.id = presenceList[i].presenceId;
-				node.onclick = eval("Microsoft.OmniChannel.setPresenceFunction()");
+				var setPresenceEvent = new CustomEvent("setPresenceEvent");
+				node.onclick = window.dispatchEvent(setPresenceEvent);
 				var divNode = document.createElement("div");
 				divNode.style.height = '16px';
 				divNode.style.width = '16px';
