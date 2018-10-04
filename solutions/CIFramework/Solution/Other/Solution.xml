@@ -93,7 +93,7 @@
       <RootComponent type="80" schemaName="msdyn_ChannelIntegrationFrameworkApp" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_CIFIcon.svg" behavior="0" />
       <RootComponent type="61" schemaName="widgets_container.html" behavior="0" />
-	  <RootComponent type="61" schemaName="msdyn_notificationCss.css" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_notificationCss.css" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>
