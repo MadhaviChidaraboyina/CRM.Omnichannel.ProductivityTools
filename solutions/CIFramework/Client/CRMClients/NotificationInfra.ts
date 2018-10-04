@@ -27,6 +27,7 @@ namespace Microsoft.CIFramework.Internal {
 		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
 			map = renderSoftNotification(header,body);
 		}else{
+			//toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" class="CIFToastDiv"><div class="header_NotificationType_CIF"></div><div class="header_CIF"><img id="CIFHeaderIcon"></img><div class="headerKeyCIF"></div><div class="headerNameCIF"></div><div class="headerDetailsCIF"></div></div><div></div><div class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p class="body_CIF"><div></div></p></div></div>');
 			toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" class="CIFToastDiv" style="position: relative;display:table;background-color: rgba(102, 102, 102, 0.5);width:280px;z-index: 2;border-radius: 4px;background-color: #333333;padding-bottom: 10px;"><div class="header_NotificationType_CIF" style="display:block;min-height:21px;"></div><div class="header_CIF" style="display:block;min-height:71px;"><img style="width:71px; height:71px; float:left; margin-left: 10px;"></img><div class="headerKeyCIF" style="font-family:Segoe UI;font-style:normal;font-size:12px;text-align:left;color:#D8D8D8;"></div><div class="headerNameCIF" style="font-family:Segoe UI;font-style:Semibold;font-size:18px;text-align:left;color:#FFFFFF;"></div><div class="headerDetailsCIF"  style="font-family:Segoe UI;font-style:normal;font-size:12px;text-align:left;color:#D8D8D8;"></div></div><div></div><div class="bodyDivCIF" style="display:block;"><div class="bodyDivider_CIF" style="width:280px; height:1px; background-color: #F1F1F1;"></div><p class="body_CIF"><div></div></p></div></div>');
 			let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
 			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
@@ -93,10 +94,16 @@ namespace Microsoft.CIFramework.Internal {
 						notificationBody.appendChild(label1);
 						label1.setAttribute('style', 'display: inline-table;margin-left: 10px;font-family:Segoe UI;font-style:normal;font-size:14px;text-align:left;height:16px;margin-right:11px;width:78px;word-wrap:break-word;color:#D8D8D8;');
 						var label2 = document.createElement("label");
-						notificationBody.appendChild(label2);
-						label2.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:left;height:16px;width:163px;word-wrap:break-word;color:#FFFFFF;display:inline-table;');
+						label2.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:left;height:16px;width: 163px; color:#FFFFFF;display: inline-block;position: absolute;height: 40px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;word-break: break-all;');
 						label1.innerText = key;
 						label2.innerText = body[i][key];
+						label2.addEventListener("mouseover", function mouseOverListener() {
+							this.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:left;height:16px;width: 163px;color:#FFFFFF;display: inline-table;height: auto;white-space: normal;overflow: visible;');
+						});
+						label2.addEventListener("mouseout", function mouseoutListener() {
+							this.setAttribute('style', 'font-family:Segoe UI;font-style:Semibold;font-size:14px;text-align:left;height:16px;width: 163px; color:#FFFFFF;display: inline-block;position: absolute;height: 40px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;word-break: break-all;');
+						});
+						notificationBody.appendChild(label2);
 						var div = document.createElement("div");
 						notificationBody.appendChild(div);
 					}
@@ -105,21 +112,12 @@ namespace Microsoft.CIFramework.Internal {
 				toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].setAttribute('style','width:280px; height:1px; background-color: #F1F1F1; display:none');
 			}
 			toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].innerHTML = headerVal;
-			toastDiv.getElementsByClassName("header_CIF")[len-1].getElementsByTagName("img")[0].src = "";
+			toastDiv.getElementsByClassName("header_CIF")[len-1].getElementsByTagName("img")[0].src = "/webresources/msdyn_CIFIcon.svg";
 			let chatWindowBody = toastDiv.getElementsByClassName("bodyDivCIF")[len-1];
 			if(actions != null && actions != "undefined"){
+				let accept = false;
+				let reject = false;
 				for( i = 0; i < actions.length; i++){
-					var btn = document.createElement("BUTTON");
-					chatWindowBody.appendChild(btn);
-					var img = document.createElement("img");
-					btn.appendChild(img);
-					let actionParam = new Map();
-					let k = 0;
-					let isTimeOut = false;
-					let actionNameCIF,actionReturnValueCIF;
-					let bothButtons = false;
-					let accept = false;
-					let reject = false;
 					for (let key in actions[i]) {
 						if(key.search(Constants.actionType) != -1){
 							if(actions[i][key].search(Constants.Accept) != -1){
@@ -130,6 +128,16 @@ namespace Microsoft.CIFramework.Internal {
 							}
 						}
 					}
+				}
+				for( i = 0; i < actions.length; i++){
+					var btn = document.createElement("BUTTON");
+					var img = document.createElement('img');
+					chatWindowBody.appendChild(btn);
+					let actionParam = new Map();
+					let k = 0;
+					let isTimeOut = false;
+					let actionNameCIF,actionReturnValueCIF;
+					let bothButtons = false;
 					if(accept == true && reject == true){
 						bothButtons = true;
 					}
@@ -141,7 +149,8 @@ namespace Microsoft.CIFramework.Internal {
 								}else{
 									btn.setAttribute('style','width:120px;background-color:#47C21D;height:40px;margin-right:14px;margin-left: 10px;');
 								}
-								btn.getElementsByTagName("img")[0].src = ""; //Default image URL.
+								img.setAttribute('src', '/webresources/msdyn_CIFIcon.svg');
+								btn.appendChild(img);
 								btn.getElementsByTagName("img")[0].setAttribute('style','width:16px; height:16px; float:left; font-style:Regular; font-size:16px; text-align:Left;');
 							}else if(actions[i][key].search(Constants.Reject) != -1){
 								if(bothButtons == false){
@@ -149,7 +158,8 @@ namespace Microsoft.CIFramework.Internal {
 								}else{
 									btn.setAttribute('style','width:120px;background-color:#EA0600;height:40px;margin-right:14px;');
 								}
-								btn.getElementsByTagName("img")[0].src = ""; //Default image URL.
+								img.setAttribute('src', '/webresources/msdyn_CIFIcon.svg');
+								btn.appendChild(img);
 								btn.getElementsByTagName("img")[0].setAttribute('style','width:16px; height:16px; float:left; font-style:Regular; font-size:16px; text-align:Left;');
 							}else if(actions[i][key].search(Constants.Timeout) != -1){
 								btn.setAttribute('style','display:none');
@@ -157,7 +167,10 @@ namespace Microsoft.CIFramework.Internal {
 							}
 						}
 						if(key.search(Constants.actionDisplayText) != -1){
-							btn.innerText = actions[i][key];
+							var span = document.createElement('span');
+							span.innerText = actions[i][key];
+							span.setAttribute('style','height:16px; font-style:Semibold; font-family:Segoe UI; font-size:14px; color:#FFFFFF;');
+							btn.appendChild(span);
 						}else if(key.search(Constants.actionName) != -1){
 							actionNameCIF = actions[i][key];
 						}else if(key.search(Constants.actionReturnValue) != -1){
@@ -242,8 +255,7 @@ namespace Microsoft.CIFramework.Internal {
 		img = document.createElement("img");
 		chatWindowHeader.appendChild(img);
 		chatWindowHeader.getElementsByTagName("img")[1].id = "closeSoftNotificationCIF";
-		chatWindowHeader.getElementsByTagName("img")[1].src = "https://wecision.com/enterprise/images/icons/closeIcon.png";
-		//chatWindowHeader.getElementsByTagName("img")[1].setAttribute('style','width:16px; height:16px; font-style:Regular; font-size:16px; text-align:Left; float:left; margin-right:10px;margin-left: 250px;');
+		chatWindowHeader.getElementsByTagName("img")[1].src = "/webresources/msdyn_CIFIcon.svg";
 		var div = document.createElement("div");
 		div.setAttribute('style','height:11px;');
 		chatWindowHeader.appendChild(div);

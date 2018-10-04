@@ -602,9 +602,14 @@ namespace Microsoft.CIFramework.Internal {
 						key.addEventListener("click", function clickListener() {
 							key.removeEventListener("click", clickListener);
 							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-							var mapReturn = new Map().set(Constants.value,null);
+							var mapReturn = new Map().set(Constants.value,new Map());
 							resolve(mapReturn);
 						});
+						setTimeout(function(){
+							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
+							var mapReturn = new Map().set(Constants.value,new Map());
+							resolve(mapReturn);
+						}, 20000);
 					}
 				}else{
 					for(let [key,value] of map){
