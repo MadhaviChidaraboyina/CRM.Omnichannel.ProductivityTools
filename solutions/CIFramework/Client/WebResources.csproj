@@ -64,7 +64,6 @@
       <Link>tsconfig\tsconfig.base.uciandclassicweb.json</Link>
     </None>
     <Content Include="Widget\tsconfig.json" />
-    <Content Include="WidgetContainer\tsconfig.json" />
     <Content Include="CRMClients\tsconfig.json" />
     <None Include="packages.config" />
   </ItemGroup>

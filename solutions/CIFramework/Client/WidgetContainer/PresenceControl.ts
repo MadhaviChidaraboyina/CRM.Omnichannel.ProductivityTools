@@ -33,7 +33,8 @@ namespace Microsoft.CIFramework {
 				var node = document.createElement("div");
 				node.id = presenceList[i].presenceId;
 				var setPresenceEvent = new CustomEvent("setPresenceEvent", { detail: presenceList[i].presenceId });
-				node.onclick = window.dispatchEvent(setPresenceEvent);
+				let raiseSetPresence = function() { window.dispatchEvent(setPresenceEvent); };
+				node.onclick = raiseSetPresence;
 				var divNode = document.createElement("div");
 				divNode.style.height = '16px';
 				divNode.style.width = '16px';

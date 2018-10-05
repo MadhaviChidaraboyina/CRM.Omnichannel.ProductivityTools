@@ -11,7 +11,8 @@
 		"InternalMainLibrary.ts",
 		"../PostMsgWrapper.ts",
 		"../CIFrameworkConstants.ts",
-		"aria-webjs-sdk-1.6.2.js"
+		"aria-webjs-sdk-1.6.2.js",
+		"../WidgetContainer/PresenceControl.ts"
 	],
 	"compilerOptions": {
 		"sourceMap": true,
