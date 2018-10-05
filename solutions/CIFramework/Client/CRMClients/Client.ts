@@ -46,6 +46,10 @@ namespace Microsoft.CIFramework.Internal
 	*/
 	type getMetadataFunction = (entityName: string, attributes?: Array<string>) => Promise<Object>;
 
+	/**
+	 * Func type to check if this client can and should load CIF
+	*/
+	type CheckCapabilityFunction = () => boolean;
 
 	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
@@ -90,6 +94,7 @@ namespace Microsoft.CIFramework.Internal
 
 		getEntityMetadata: getMetadataFunction;
 
+		checkCIFCapability: CheckCapabilityFunction;
 	}
 
 	/**

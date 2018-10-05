@@ -205,7 +205,7 @@ namespace Microsoft.CIFramework.Internal {
 							containerDiv.appendChild(iFrame);
 							doc.body.appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
-							console.log("AMEYA loading - " + key);
+							console.log("AMEYA loading - " + key + " height = " + widgetHeight + " minheight "  + minimizedHeight);
 						}
 					}
 					return resolve(status);
@@ -338,6 +338,23 @@ namespace Microsoft.CIFramework.Internal {
 			let apiName = "Xrm.Panel.getWidth";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
 			return width;
+		}
+
+		client.checkCIFCapability = (): boolean  => {
+			if (Xrm.Utility.getGlobalContext().client.getClient() === "UnifiedServiceDesk") {
+				return false;
+			}
+			try {
+				if (window.top.document.getElementById(Constants.widgetIframeId)) {
+					//The side panel already exists. Don't load another
+					return false;
+				}
+			}
+			catch (error) {
+				//We couldn't access the top level window. Don't load the side-panel
+				return false;
+			}
+			return true;
 		}
 
 		return client;

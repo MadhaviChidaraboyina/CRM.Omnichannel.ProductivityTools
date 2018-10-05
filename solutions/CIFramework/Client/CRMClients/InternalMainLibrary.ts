@@ -50,15 +50,14 @@ namespace Microsoft.CIFramework.Internal {
 	 * returns false to disable the button visibility
 	 */
 	export function initializeCI(clientType: number): boolean {
-		if (Xrm.Utility.getGlobalContext().client.getClient() === "UnifiedServiceDesk") {
-			return false;
-		}
 		let startTime = new Date();
 		let trustedDomains: string[] = [];
 
 		// set the client implementation.
 		state.client = setClient(clientType);
-
+		if (!state.client.checkCIFCapability()) {
+			return false;
+		}
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		appId = top.location.search.split('appid=')[1].split('&')[0];
 		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=contains(" + Constants.appSelectorFieldName + ",'" + appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
