@@ -25,7 +25,6 @@
     <Content Include="PostMsgWrapper.ts" />
     <Content Include="Widget\MainLibrary.ts" />
     <Content Include="Widget\Constants.ts" />
-    <Content Include="WidgetContainer\AuthHelper.ts" />
     <Content Include="WidgetContainer\PresenceControl.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.6.2.d.ts" />
