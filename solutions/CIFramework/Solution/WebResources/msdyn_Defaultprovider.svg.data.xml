@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+	<WebResourceId>{A32CB95E-0E4E-4AC5-A020-05F5D8B21C2F}</WebResourceId>
+	<Name>msdyn_Defaultprovider.svg</Name>
+	<DisplayName>msdyn_Defaultprovider.svg</DisplayName>
+	<LanguageCode>1033</LanguageCode>
+	<WebResourceType>11</WebResourceType>
+	<IntroducedVersion>1.0</IntroducedVersion>
+	<IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+	<IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+	<DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+	<IsCustomizable>1</IsCustomizable>
+	<CanBeDeleted>1</CanBeDeleted>
+	<IsHidden>0</IsHidden>
+	<FileName>/WebResources/msdyn_DefaultproviderA32CB95E-0E4E-4AC5-A020-05F5D8B21C2F</FileName>
+</WebResource>
