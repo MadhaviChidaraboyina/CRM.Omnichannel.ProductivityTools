@@ -55,10 +55,6 @@
     <Content Include="WebResources\widgets_container.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="WebResources\widgets_authHelper.js.data.xml" />
-    <Content Include="WebResources\widgets_authHelper.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="WebResources\widgets_container.html.data.xml" />
     <Content Include="WebResources\Widget\msdyn_ciLibrary.js.data.xml" />
     <Content Include="WebResources\CRMClients\msdyn_internal_ci_library.js.data.xml" />
