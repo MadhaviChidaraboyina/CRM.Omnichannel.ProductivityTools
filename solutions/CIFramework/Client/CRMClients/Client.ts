@@ -52,6 +52,11 @@ namespace Microsoft.CIFramework.Internal
 	type CheckCapabilityFunction = () => boolean;
 
 	/**
+	 * Func type for search based on Search String
+	*/
+	type renderSearchPageFunction = (entityName: string, searchString: string, telemetryData?: Object) => Promise<void>;
+
+	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
 	 * This type specifies all the functions that are exposed to clients for impl. 
 	*/
@@ -95,6 +100,8 @@ namespace Microsoft.CIFramework.Internal
 		getEntityMetadata: getMetadataFunction;
 
 		checkCIFCapability: CheckCapabilityFunction;
+
+		renderSearchPage: renderSearchPageFunction;
 	}
 
 	/**

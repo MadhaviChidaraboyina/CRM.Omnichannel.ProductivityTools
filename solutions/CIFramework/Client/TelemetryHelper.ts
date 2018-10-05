@@ -32,14 +32,16 @@ namespace Microsoft.CIFramework.Internal
 	 * Generic method to convert map data into string
 	 * @param map 
 	 */
-	export function mapToString(map: Map<string, any>): string
+	export function mapToString(map: Map<string, any>, exclusionList: string[] = []): string
 	{
-		let result: string;
+		let result: string = "";
 		if(!map) {
 			return "";
 		}
 		map.forEach((value, key) => {
-			result += key + " : " + value + ", ";
+			if (exclusionList.indexOf(key) == -1) {
+				result += key + " : " + value + ", ";
+			}
 		});
 		return result;
 	}

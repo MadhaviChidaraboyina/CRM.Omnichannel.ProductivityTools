@@ -10,22 +10,6 @@ namespace Microsoft.CIFramework
 
 	let domains: string[] = [];
 
-	// Function to get the value of the specified queryString Key from the provided queryString
-	function parseQueryString(queryString: string, key: string): any {
-		if (queryString != null) {
-			var params: any = {};
-			var queries: string[];
-			queries = queryString.substring(1).split("&");
-			queries.forEach((query) => {
-				var queryPair = query.split("=");
-				var queryKey = decodeURIComponent(queryPair[0]);
-				var queryValue = decodeURIComponent(queryPair.length > 1 ? queryPair[1] : "");
-				params[queryKey] = queryValue;
-			});
-			return params[key];
-		}
-	}
-
 	let Constants = Microsoft.CIFramework.Constants;
 
 	function initialize()
@@ -45,7 +29,7 @@ namespace Microsoft.CIFramework
 		catch (error) { }
 		try {
 			// Get the crmUrl from window.location
-			crmUrl = parseQueryString(window.location.search, Constants.UciLib);
+			crmUrl = Microsoft.CIFramework.Utility.extractParameter(window.location.search, Constants.UciLib);
 		}
 		catch (error) { }
 		anchorElement.href = anchorDomain;
@@ -533,6 +517,31 @@ namespace Microsoft.CIFramework
 		else {
 			if (isNullOrUndefined(entityName) || entityName == "") {
 				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter");
+			}
+		}
+	}
+
+	/**
+	 * API to search based on the Search String
+	 * Invokes the API Xrm.Navigation.navigateTo(PageInput)
+	 * @param entityName -Name of the Entity for which the records are to be fetched
+	 * @param searchString - String based on which the search is to be made
+	 */
+
+	export function renderSearchPage(entityName: string, searchString: string): Promise<void> {
+		if (!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(searchString))) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.renderSearchPage,
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.SearchString, searchString)
+			}
+			return sendMessage<void>(renderSearchPage.name, payload, false);
+		}
+		else {
+			if (isNullOrUndefined(entityName) || entityName == "") {
+				return postMessageNamespace.rejectWithErrorMessage("The EntityName Parameter is blank. Provide a value to the parameter");
+			}
+			if (isNullOrUndefined(searchString)) {
+				return postMessageNamespace.rejectWithErrorMessage("The SearchString Parameter cannot be NULL");
 			}
 		}
 	}

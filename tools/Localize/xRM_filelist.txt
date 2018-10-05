@@ -1,1 +1,2 @@
-CIFramework
+solutions\CIFramework\Controls\AgentClickToActControl\strings\AgentClickToActControl.1033.resx
+solutions\CIFramework\Solution\Resources\en-us\resources.en-US.resx

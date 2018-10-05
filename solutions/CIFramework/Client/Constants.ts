@@ -36,6 +36,7 @@ namespace Microsoft.CIFramework
 		export const notification = "notification";
 		export const transfer = "transfer";
 		export const escalation = "escalation";
+		export const renderSearchPage = "renderSearchPage";
 	}
 
 	/**
@@ -114,6 +115,7 @@ namespace Microsoft.CIFramework
 		export const notificationType = "notificationType"; 
 		export const Timer = "Timer";
 		export const NoOfNotifications = "NoOfNotifications";
+		export const SearchString = "searchString";
 	}
 
 	/**

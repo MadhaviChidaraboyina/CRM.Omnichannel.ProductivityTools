@@ -256,6 +256,10 @@
     <value>Velg verdien 0 for Kanalordre for at denne kanalen skal kunne overstyre andre.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+    <value>Domene som skal hvitelistes</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trustedDomain' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Unik ID for organisasjonen</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
@@ -355,6 +359,10 @@
   <data name="1:displayname,msdyn_ciprovidermsdyn_SortOrder" xml:space="preserve">
     <value>Kanalordre</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+    <value>Klarert domene</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trustedDomain' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Organisasjons-ID</value>
@@ -457,6 +465,10 @@
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
+    <value>Channel Provider</value>
+    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>Kanalleverandør</value>
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
@@ -471,6 +483,10 @@
   <data name="81:LocalizedName,msdyn_ChannelIntegrationFrameworkSitemap" xml:space="preserve">
     <value>Integration Framework for kanal</value>
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>Leverandør</value>

@@ -133,4 +133,20 @@
     <value>Contrôle de la communication du canal</value>
     <comment>Name of the Agent Click To Act Control</comment>
   </data>
+  <data name="CC_Field_Value" xml:space="preserve">
+    <value>Valeur</value>
+    <comment>Attribute details</comment>
+  </data>
+  <data name="CC_Field_Value_Desc" xml:space="preserve">
+    <value>Détails de l’attribut</value>
+    <comment>Attribute details</comment>
+  </data>
+  <data name="CC_Field_IconUrl" xml:space="preserve">
+    <value>URL d’icône</value>
+    <comment>Url of Icon</comment>
+  </data>
+  <data name="CC_Field_IconUrl_Desc" xml:space="preserve">
+    <value>URL de l’icône</value>
+    <comment>Url of Icon</comment>
+  </data>
 </root>
