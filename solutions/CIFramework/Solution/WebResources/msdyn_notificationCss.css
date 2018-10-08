@@ -288,6 +288,7 @@
 .headerSoftNotification_CIF{
 	display:block;
 	min-height:21px;
+	margin-right:10px;
 }
 .bodyDivSoftToast_CIF{
 	display:block;
@@ -311,11 +312,12 @@
 	text-align:Left;
 	height:16px;
 	color:#FFFFFF; 
-	margin-right:50px;
 }
 .closeSoftNotification_CIF{
 	font-family: CRM MDL2 ASSETS;
 	color:#FFFFFF;
+	float:right;
+	margin-right:10px;
 }
 .chatWindowHeaderDiv_CIF{
 	height:11px;
@@ -353,3 +355,13 @@
 	color:#FFFFFF;
 	display:inline-table;
 }
+@font-face{font-family:"CRMMDL2";src:url('/uclient/resources/styles/CRMMDL2.woff') format('woff');font-weight: normal;font-style: normal;}
+.FontIcons-closeSoftNotification_CIF:before {font-family: "CRMMDL2"; content: "\E711";}
+.FontIcons-rejectHardNotification_CIF:before {font-family: "CRMMDL2"; content: "\E711";}
+.FontIcons_acceptButtonSpan_CIF:before {font-family: "CRMMDL2"; content: "\E73E";}
+.FontIcons_internalCommunicationSpan:before {font-family: "CRMMDL2"; content: "\E77B";}
+.FontIcons_notificationSpan:before {font-family: "CRMMDL2"; content: "\EA8F";}
+.FontIcons_escalationSpan:before {font-family: "CRMMDL2"; content: "\E7BA";}
+.FontIcons_CIFHeaderIcon:before {font-family: "CRMMDL2"; content: "\E8F2";}
+.FontIcons_chatWindowHeaderSpan_CIF:before {font-family: "CRMMDL2"; content: "\E8F2";}
+.FontIcons_smsWindowHeaderSpan_CIF:before {font-family: "CRMMDL2"; content: "\E715";}

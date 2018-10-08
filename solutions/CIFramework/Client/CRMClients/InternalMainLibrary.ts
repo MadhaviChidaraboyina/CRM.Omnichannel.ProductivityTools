@@ -538,7 +538,7 @@ namespace Microsoft.CIFramework.Internal {
        	let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
 		let i = 0;
-		let header,body,actions,icon;
+		let header,body,actions;
 		let waitTime = -1;
 		let notificationType: any = [];
 		for (let [key, value] of notificationUX) {
@@ -553,8 +553,6 @@ namespace Microsoft.CIFramework.Internal {
 						body = value1;
 					}else if(key1.search(Constants.actionsCIF) != -1){
 						actions = value1;
-					}else if(key1.search(Constants.CIFNotificationIcon) != -1){
-						icon = value1;
 					}else if(key1.search(Constants.notificationType) != -1){
 						notificationType = value1;
 					}
@@ -580,7 +578,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 		let map = new Map();
-		map = renderEventNotification(header,body,actions,icon,notificationType);
+		map = renderEventNotification(header,body,actions,notificationType);
 		if(actions != null && actions != "undefined"){
 			for( i = 0; i < actions.length; i++){
 				for (let key in actions[i]) {
