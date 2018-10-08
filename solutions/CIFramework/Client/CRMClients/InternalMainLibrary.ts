@@ -622,6 +622,12 @@ namespace Microsoft.CIFramework.Internal {
 											for( i=0; i< childDivs.length; i++ ){
 												let childDiv = childDivs[i];
 												if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+													childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:none;');
+												}
+											}
+											for( i=0; i< childDivs.length; i++ ){
+												let childDiv = childDivs[i];
+												if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
 													childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
 													break;
 												}
