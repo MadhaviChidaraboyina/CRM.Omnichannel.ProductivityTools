@@ -580,11 +580,11 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-	export function notifyEvent(notificationUX: Map<string,Map<string,any>>): Promise<boolean>{
-		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+    export function notifyEvent(notificationUX: Map<string,Map<string,any>>): Promise<boolean>{
+       	let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
 		let i = 0;
-		let header,body,actions,icon;
+		let header,body,actions;
 		let waitTime = -1;
 		let notificationType: any = [];
 		for (let [key, value] of notificationUX) {
@@ -599,8 +599,6 @@ namespace Microsoft.CIFramework.Internal {
 						body = value1;
 					}else if(key1.search(Constants.actionsCIF) != -1){
 						actions = value1;
-					}else if(key1.search(Constants.CIFNotificationIcon) != -1){
-						icon = value1;
 					}else if(key1.search(Constants.notificationType) != -1){
 						notificationType = value1;
 					}
@@ -626,7 +624,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 		let map = new Map();
-		map = renderEventNotification(header,body,actions,icon,notificationType);
+		map = renderEventNotification(header,body,actions,notificationType);
 		if(actions != null && actions != "undefined"){
 			for( i = 0; i < actions.length; i++){
 				for (let key in actions[i]) {
@@ -636,11 +634,11 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-		return new Promise(function (resolve,reject) {
-			let telemetryData: any = new Object();
-			let startTime = new Date();
-			const [provider, errorData] = getProvider(notificationUX, [Constants.value]);
-			if (provider) { //TODO: See whether perfData needs to include provider.notifyEvent() call
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		if (provider) {
+			return new Promise(function (resolve,reject) {
 				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), notifyEvent.name, telemetryData);
 				setPerfData(perfData);
 				if(notificationType[0].search(MessageType.softNotification) != -1){
@@ -648,9 +646,14 @@ namespace Microsoft.CIFramework.Internal {
 						key.addEventListener("click", function clickListener() {
 							key.removeEventListener("click", clickListener);
 							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-							var mapReturn = new Map().set(Constants.value,null);
+							var mapReturn = new Map().set(Constants.value,new Map());
 							resolve(mapReturn);
 						});
+						setTimeout(function(){
+							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
+							var mapReturn = new Map().set(Constants.value,new Map());
+							resolve(mapReturn);
+						}, 20000);
 					}
 				}else{
 					for(let [key,value] of map){
@@ -662,6 +665,12 @@ namespace Microsoft.CIFramework.Internal {
 										noOfNotifications--;
 										var childDivs = toastDiv.getElementsByTagName('div');
 										if(childDivs != null){
+											for( i=0; i< childDivs.length; i++ ){
+												let childDiv = childDivs[i];
+												if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+													childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:none;');
+												}
+											}
 											for( i=0; i< childDivs.length; i++ ){
 												let childDiv = childDivs[i];
 												if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
@@ -696,12 +705,12 @@ namespace Microsoft.CIFramework.Internal {
 							});
 						}
 					}
-				}
-			}else{
-				return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
-			}
-		});
-	}
+				}		
+			});
+		}else{
+			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
+		}
+    }
 
 	export function renderSearchPage(parameters: Map<string, any>, entityName: string, searchString: string): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
