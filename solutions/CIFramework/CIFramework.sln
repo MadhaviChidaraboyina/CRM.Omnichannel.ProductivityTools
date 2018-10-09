@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomMultiSelectControl", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentClickToActControl", "Controls\AgentClickToActControl\AgentClickToActControl.csproj", "{393D6CD8-2B5D-4351-803C-849AFD8B18A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIFrameworkPlugins", "Plugins\CIFrameworkPlugins.csproj", "{88F7AED2-045C-4456-B125-F9B65B4C033B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		debug|amd64 = debug|amd64
@@ -83,6 +85,18 @@ Global
 		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.retail|amd64.Build.0 = retail|amd64
 		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.retail|Any CPU.ActiveCfg = retail|Any CPU
 		{393D6CD8-2B5D-4351-803C-849AFD8B18A9}.retail|Any CPU.Build.0 = retail|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.debug|amd64.ActiveCfg = Debug|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.debug|amd64.Build.0 = Debug|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.release|amd64.ActiveCfg = Retail|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.release|amd64.Build.0 = Retail|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.release|Any CPU.ActiveCfg = Retail|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.release|Any CPU.Build.0 = Retail|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.retail|amd64.ActiveCfg = Retail|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.retail|amd64.Build.0 = Retail|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.retail|Any CPU.ActiveCfg = Retail|Any CPU
+		{88F7AED2-045C-4456-B125-F9B65B4C033B}.retail|Any CPU.Build.0 = Retail|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

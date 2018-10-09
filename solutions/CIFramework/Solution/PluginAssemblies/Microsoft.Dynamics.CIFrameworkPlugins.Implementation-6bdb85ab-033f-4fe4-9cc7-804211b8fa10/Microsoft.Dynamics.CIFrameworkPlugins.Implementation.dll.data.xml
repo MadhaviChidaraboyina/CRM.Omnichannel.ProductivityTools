@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PluginAssembly FullName="Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" PluginAssemblyId="6bdb85ab-033f-4fe4-9cc7-804211b8fa10" CustomizationLevel="1">
+	<IsolationMode>2</IsolationMode>
+	<SourceType>0</SourceType>
+	<IntroducedVersion>1.0</IntroducedVersion>
+	<FileName>/PluginAssemblies/Microsoft.Dynamics.CIFrameworkPlugins.Implementation-6bdb85ab-033f-4fe4-9cc7-804211b8fa10/Microsoft.Dynamics.CIFrameworkPlugins.Implementation.dll</FileName>
+	<PluginTypes>
+		<PluginType AssemblyQualifiedName="Microsoft.Dynamics.CIFrameworkPlugins.UpdateRolePrivilegesForProviderEntity, Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" PluginTypeId="20bd5041-cc3b-4bce-a2b8-a34712045900" Name="Microsoft.Dynamics.CIFrameworkPlugins.UpdateRolePrivilegesForProviderEntity">
+			<FriendlyName>cc744e6f-77b2-415e-bc07-8ca69f1de14e</FriendlyName>
+		</PluginType>
+		 <PluginType AssemblyQualifiedName="Microsoft.Dynamics.CIFrameworkPlugins.FilterRetrieveMultipleForProviderEntity, Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" PluginTypeId="6955ba36-5d2c-427e-ac18-45400bc3e268" Name="Microsoft.Dynamics.CIFrameworkPlugins.FilterRetrieveMultipleForProviderEntity">
+          <FriendlyName>ba3652a4-b12b-4f93-b606-67106f7bd073</FriendlyName>
+        </PluginType>
+	</PluginTypes>
+</PluginAssembly>

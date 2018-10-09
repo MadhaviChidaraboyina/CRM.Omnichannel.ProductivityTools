@@ -76,7 +76,6 @@ namespace Microsoft.CIFramework.Internal {
 					state.client.registerHandler(Constants.NavigationHandler, onPageNavigation);
 					// populate ciProviders in state.
 					state.ciProviders = new Map<string, any>();
-					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
 					let telemetryData: any = new Object();
 					var environmentInfo: any = [];
 					environmentInfo["orgId"] = Xrm.Utility.getGlobalContext().organizationSettings.organizationId;
@@ -85,17 +84,10 @@ namespace Microsoft.CIFramework.Internal {
 					environmentInfo["appId"] = appId;
 					for (var x of result.entities) {
 						var apps = x[Constants.appSelectorFieldName];
-						var currRoles = x[Constants.roleSelectorFieldName];
 
 						var foundProvider = false;
 
-						currRoles = (currRoles != null) ? currRoles.split(";") : null;
-						for (var role of roles) {
 							if (apps && apps.indexOf(appId) !== -1) {
-								if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
-									continue;
-								}
-
 								var ChannelProvider = new CIProvider(x, environmentInfo);
 								state.ciProviders.set(x[Constants.landingUrl], ChannelProvider);
 
@@ -107,7 +99,6 @@ namespace Microsoft.CIFramework.Internal {
 								setUsageData(usageData);
 								foundProvider = true;
 							}
-						}
 						
 						if (foundProvider) break;
 					}

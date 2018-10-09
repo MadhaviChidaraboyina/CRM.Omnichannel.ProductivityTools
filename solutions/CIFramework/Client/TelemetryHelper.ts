@@ -70,7 +70,7 @@ namespace Microsoft.CIFramework.Internal
 		testUsageTelemetry.setProperty(TelemetryConstants.channelOrder, data.sortOrder ? data.sortOrder : "");
 		testUsageTelemetry.setProperty(TelemetryConstants.clientType, Xrm.Utility.getGlobalContext().client.getClient());
 		testUsageTelemetry.setProperty(TelemetryConstants.crmVersion, Xrm.Utility.getGlobalContext().getVersion());
-		testUsageTelemetry.setProperty(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId);
+		testUsageTelemetry.setPropertyWithPii(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId, AWTPiiKind.Identity);
 		testUsageTelemetry.setProperty(TelemetryConstants.orgName, Xrm.Utility.getGlobalContext().organizationSettings.uniqueName);
 		testUsageTelemetry.setProperty(TelemetryConstants.providerId, data.providerId ? data.providerId : "");
 		testUsageTelemetry.setProperty(TelemetryConstants.providerName, data.providerName ? data.providerName : "");
@@ -79,6 +79,7 @@ namespace Microsoft.CIFramework.Internal
 		testUsageTelemetry.setProperty(TelemetryConstants.errorType, data.errorObject ? errorTypes[data.errorObject.errorType] : "");
 		testUsageTelemetry.setProperty(TelemetryConstants.errorReportTime, data.errorObject ? data.errorObject.reportTime : "");
 		testUsageTelemetry.setProperty(TelemetryConstants.errorFunction, data.errorObject ? data.errorObject.sourceFunc : "");
+		testUsageTelemetry.setPropertyWithPii(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId, AWTPiiKind.Identity);
 
 		defaultLogger.logEvent(testUsageTelemetry);
 	}

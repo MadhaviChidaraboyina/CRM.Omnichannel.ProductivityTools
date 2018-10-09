@@ -222,7 +222,7 @@ module MscrmControls.Service.CIProvider {
 
 
 		private filterAdminAndCustomizerRoles(): void {
-			this.currentSelectedElements = this.currentSelectedElements.filter(role => (role !== this.sysAdminCustomizerRoles[0].RoleId || role !== this.sysAdminCustomizerRoles[1].RoleId))
+			this.currentSelectedElements = this.currentSelectedElements.filter(role => (role !== this.sysAdminCustomizerRoles[0].RoleId && role !== this.sysAdminCustomizerRoles[1].RoleId))
 		}
 
 		private setSelectedElements(selectedElements: any): void {
@@ -259,6 +259,7 @@ module MscrmControls.Service.CIProvider {
 
 		private getCurrentSelectedElements(): string {
 			if (this.fieldName === CustomMultiSelectorConfig.RoleSelectorFieldName) {
+				this.filterAdminAndCustomizerRoles();
 				return (this.currentSelectedElements.join(elementSeparator).length > 0 ? (this.currentSelectedElements.join(elementSeparator) +
 					elementSeparator + this.sysAdminCustomizerRoles[0].RoleId + elementSeparator + this.sysAdminCustomizerRoles[1].RoleId)
 					: (this.sysAdminCustomizerRoles[0].RoleId + elementSeparator + this.sysAdminCustomizerRoles[1].RoleId));
