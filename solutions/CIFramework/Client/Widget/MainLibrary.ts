@@ -392,6 +392,46 @@ namespace Microsoft.CIFramework
 		}
 	}
 
+	/**
+	 * API to set the agent presence
+	 * Invokes the API setAgentPresence(presenceInfo)
+	 * @param presenceInfo - Details of the Presence to be set for the Agent
+
+	 * @returns a Promise: HTMLDivElement after setting the Agent Presence
+	 */
+	export function setAgentPresence(presenceInfo: any): Promise<HTMLDivElement> {
+		if (!(isNullOrUndefined(presenceInfo))) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.setAgentPresence,
+				messageData: new Map().set(Constants.presenceInfo, presenceInfo)
+			}
+			return sendMessage<HTMLDivElement>(setAgentPresence.name, payload, false);
+		}
+		else {
+			return postMessageNamespace.rejectWithErrorMessage("The presenceInfo parameter is null. Provide a value to the parameter");
+		}
+	}
+
+	/**
+	 * API to set all the presences
+	 * Invokes the API setAllPresence(presenceList)
+	 * @param presenceList - Array containing all the available Presences
+
+	 * @returns a Promise: HTMLDivElement after setting the list of presences
+	 */
+	export function setAllPresence(presenceList: any): Promise<HTMLDivElement> {
+		if (!(isNullOrUndefined(presenceList))) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.setAllPresence,
+				messageData: new Map().set(Constants.presenceList, presenceList)
+			}
+			return sendMessage<HTMLDivElement>(setAllPresence.name, payload, false);
+		}
+		else {
+			return postMessageNamespace.rejectWithErrorMessage("The presenceList parameter is null. Provide a value to the parameter");
+		}
+	}
+
 	window.onload = () => {
 		initialize();
 	}; 

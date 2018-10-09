@@ -326,6 +326,24 @@ namespace Microsoft.CIFramework.Internal {
 			return width;
 		}
 
+		client.setAgentPresence = (presenceInfo: any, telemetryData?: Object | any): HTMLDivElement => {
+			let startTime = new Date();
+			let presenceDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAgentPresence(presenceInfo);
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "PresenceControl.setAgentPresence";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+			return presenceDiv;
+		}
+
+		client.setAllPresence = (presenceList: any, telemetryData?: Object | any): HTMLDivElement => {
+			let startTime = new Date();
+			let presenceListDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAllPresences(presenceList);
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "PresenceContro.setAllPresence";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+			return presenceList;
+		}
+
 		return client;
 	}
 }

@@ -28,6 +28,8 @@ namespace Microsoft.CIFramework
 		export const onSizeChanged = "onsizechanged";
 		export const onPageNavigate = "onpagenavigate";
 		export const onSendKBArticle = "onsendkbarticle";
+		export const setAgentPresence = "setAgentPresence";
+		export const setAllPresence = "setAllPresence";
 	}
 
 	/**
@@ -46,6 +48,8 @@ namespace Microsoft.CIFramework
 		export const ScriptIdAttributeName = "data-cifid";
 		export const ScriptIdAttributeValue = "CIFMainLibrary";
 		export const ScriptCRMUrlAttributeName = "data-crmurl";
+		export const presenceInfo = "presenceInfo";
+		export const presenceList = "presenceList";
 	}
 
 	/**

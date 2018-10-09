@@ -26,7 +26,9 @@ namespace Microsoft.CIFramework.Internal {
 		["getmode", [getMode]],
 		["getenvironment", [getEnvironment]],
 		["getwidth", [getWidth]],
-		["getclicktoact", [getClickToAct]]
+		["getclicktoact", [getClickToAct]],
+		["setAgentPresence", [setAgentPresence]],
+		["setAllPresence", [setAllPresence]]
 	]);
 
 	/**
@@ -520,6 +522,36 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, search.name, appId, true, errorData);
+		}
+	}
+
+	export function setAgentPresence(parameters: Map<string, any>, presenceInfo: any): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		if (provider) {
+			let presenceDiv = state.client.setAgentPresence(presenceInfo);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAgentPresence.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, presenceDiv));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, setAgentPresence.name, appId, true, errorData);
+		}
+	}
+
+	export function setAllPresence(parameters: Map<string, any>, presenceList: any): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		if (provider) {
+			let presenceListDiv = state.client.setAllPresence(presenceList);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAllPresence.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, presenceList));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, setAllPresence.name, appId, true, errorData);
 		}
 	}
 }

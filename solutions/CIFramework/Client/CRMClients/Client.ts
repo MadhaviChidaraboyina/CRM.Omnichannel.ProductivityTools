@@ -42,6 +42,11 @@ namespace Microsoft.CIFramework.Internal
 	type LoadWidgetsFunction = (ciProviders: Map<string, CIProvider>) => Promise<Map<string, boolean|string>>;
 
 	/**
+	 * Func type for Setting Agent Presence and all presences
+	*/
+	type setPresenceFunction = (presenceInfo: any, telemetryData?: Object) => HTMLDivElement;
+
+	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
 	 * This type specifies all the functions that are exposed to clients for impl. 
 	*/
@@ -81,6 +86,10 @@ namespace Microsoft.CIFramework.Internal
 		getWidgetWidth: GetContextFunction;
 
 		openForm: OpenFormFunction;
+
+		setAgentPresence: setPresenceFunction;
+
+		setAllPresence: setPresenceFunction;
 
 	}
 

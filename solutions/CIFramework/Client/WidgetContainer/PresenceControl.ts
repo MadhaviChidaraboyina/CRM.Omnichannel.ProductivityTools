@@ -2,7 +2,7 @@
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
 */
 
-namespace Microsoft.CIFramework {
+namespace Microsoft.CIFramework.Internal {
 	type PresenceInfo = {
 		presenceId: string;
 		presenceColor: string;
