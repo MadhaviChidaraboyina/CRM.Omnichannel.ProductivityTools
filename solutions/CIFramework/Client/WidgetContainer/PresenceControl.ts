@@ -19,75 +19,82 @@ namespace Microsoft.CIFramework {
 
 	export class PresenceControl {
 
-		private static instance: any = null;
+		private static instance: PresenceControl;
 
-		// Private Constructor
-		private PresenceControl() {
-			PresenceControl.instance = new PresenceControl();
-			return PresenceControl.instance;
+		// Empty Constructor
+		constructor() { }
+
+		public static get Instance(): PresenceControl {
+			if (this.instance == null) {
+				this.instance = new PresenceControl();
+			}
+			return this.instance;
 		}
 
-		public setAllPresences(presenceList: PresenceInfo[]) {
-			document.getElementById("PresenceList").innerHTML = '';
-			for (var i = 0; i < presenceList.length; i++) {
-				var node = document.createElement("div");
-				node.id = presenceList[i].presenceId;
-				var setPresenceEvent = new CustomEvent("setPresenceEvent", { detail: presenceList[i].presenceId });
-				let raiseSetPresence = function() { window.dispatchEvent(setPresenceEvent); };
-				node.onclick = raiseSetPresence;
-				var divNode = document.createElement("div");
-				divNode.style.height = '16px';
-				divNode.style.width = '16px';
-				divNode.style.borderRadius = '50%';
-				divNode.style.backgroundColor = presenceList[i].presenceColor;
-				divNode.style.cssFloat = 'left';
-				node.appendChild(divNode);
-				var textNode = document.createElement('div');
-				textNode.innerText = presenceList[i].presenceText;
-				textNode.style.cssFloat = 'left';
-				node.appendChild(textNode);
-				var lineBreakNode = document.createElement('br');
-				node.appendChild(lineBreakNode);
-				document.getElementById("PresenceList").appendChild(node);
+		public setAllPresences(presenceList: PresenceInfo[]): HTMLDivElement {
+			if (presenceList != null) {
+				var presenceListNode = document.createElement('div');
+				for (var i = 0; i < presenceList.length; i++) {
+					var presenceNode = document.createElement('div');
+					presenceNode.id = presenceList[i].presenceId;
+					var setPresenceEvent = new CustomEvent('setPresenceEvent', {
+						detail: presenceList[i].presenceId
+					});
+					var raiseSetPresence = function () {
+						window.dispatchEvent(setPresenceEvent);
+					};
+					presenceNode.onclick = raiseSetPresence;
+
+					var presenceColorNode = document.createElement('div');
+					presenceColorNode.classList.add('ColorNode');
+					presenceColorNode.style.backgroundColor = presenceList[i].presenceColor;
+					presenceNode.appendChild(presenceColorNode);
+
+					var presenceTextNode = document.createElement('div');
+					presenceTextNode.classList.add('TextNode');
+					presenceTextNode.innerText = presenceList[i].presenceText;
+					presenceNode.appendChild(presenceTextNode);
+
+					var lineBreakNode = document.createElement('br');
+					presenceNode.appendChild(lineBreakNode);
+				}
+				presenceListNode.appendChild(presenceNode);
+
+				// Do not return presenceListNode. Call the Sliver Function to add the List and pass presenceListNode there
+				return presenceListNode;
+			}
+			else {
+				var presenceListNode = document.createElement('div');
+				return presenceListNode;
 			}
 		}
 
-		public updateCurrentPresence(presenceInfo: PresenceInfo) {
-			var currentStatusNode = document.getElementById('CurrentStatus');
-			currentStatusNode.innerHTML = '';
+		public setAgentPresence(presenceInfo: PresenceInfo): HTMLDivElement {
+			// Creates the Main Div for Agent Presence
+			var updatedPresenceNode = document.createElement('div');
+			updatedPresenceNode.classList.add("AgentPresenceDiv");
 
-			var divNode = document.createElement('div');
-			divNode.style.height = '16px';
-			divNode.style.width = '16px';
-			divNode.style.borderRadius = '50%';
-			divNode.style.backgroundColor = presenceInfo.presenceColor;
-			divNode.style.cssFloat = 'left';
-			currentStatusNode.appendChild(divNode);
+			// Creates the Image Element for the Agent Presence
+			var updatedPresenceImageNode = document.createElement('img');
+			updatedPresenceImageNode.classList.add('UserImageNode');
+			updatedPresenceImageNode.src = ""; //Source of the Image
+			updatedPresenceNode.appendChild(updatedPresenceImageNode);
 
-			var textNode = document.createElement('div');
-			textNode.innerText = presenceInfo.presenceText;
-			textNode.style.cssFloat = 'left';
-			currentStatusNode.appendChild(textNode);
+			// Creates the Color Div for Agent Presence
+			var updatedPresenceColorNode = document.createElement('div');
+			updatedPresenceColorNode.style.backgroundColor = presenceInfo.presenceColor;
+			updatedPresenceColorNode.innerText = " ";
+			updatedPresenceColorNode.classList.add('AgentPresenceColorNode');
+			updatedPresenceNode.appendChild(updatedPresenceColorNode);
 
-			currentStatusNode.onclick = this.showListFunction;
-		}
+			// Creates the Text Div for Agent Presence
+			var updatedPresenceTextNode = document.createElement('div');
+			updatedPresenceTextNode.innerText = presenceInfo.presenceText;
+			updatedPresenceTextNode.classList.add('TextNode');
+			updatedPresenceNode.appendChild(updatedPresenceTextNode);
 
-		public showListFunction(event: MouseEvent) {
-			var x = document.getElementById('PresenceList');
-			if (x.style.display == 'none') {
-				x.style.display = 'block';
-				(event as Event).preventDefault();
-				(event as Event).stopImmediatePropagation();
-				document.addEventListener("click", this.hideListFunction);
-			}
-		}
-
-		public hideListFunction() {
-			var x = document.getElementById('PresenceList');
-			if (x.style.display == 'block') {
-				x.style.display = 'none';
-				document.removeEventListener('click', this.hideListFunction);
-			}
+			// Do not return updatedPresenceNode. Call the Sliver Function to update the Presence and pass updatedPresenceNode there
+			return updatedPresenceNode;
 		}
 	}
 }
