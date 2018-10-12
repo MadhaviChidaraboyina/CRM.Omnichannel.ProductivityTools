@@ -115,6 +115,8 @@ namespace Microsoft.CIFramework
 		export const notificationType = "notificationType"; 
 		export const Timer = "Timer";
 		export const NoOfNotifications = "NoOfNotifications";
+		export const SMS = "SMS";
+		export const Chat = "Chat";
 		export const SearchString = "searchString";
 	}
 
