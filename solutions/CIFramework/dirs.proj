@@ -3,6 +3,7 @@
 		<ProjectToBuild Include="Client\WebResources.csproj" />
 		<ProjectToBuild Include="Controls\CustomMultiSelectControl\CustomMultiSelectControl.csproj" />
 		<ProjectToBuild Include="Controls\AgentClickToActControl\AgentClickToActControl.csproj" />
+		<ProjectToBuild Include="Plugins\CIFrameworkPlugins.csproj" />
 		<ProjectToBuild Include="Client.UnitTests\Client.UnitTests.csproj" />
 		<ProjectToBuild Include="Solution\ProviderSolution.csproj" />
 		<ProjectToBuild Include="solutions.proj" Condition="'$(EnableSigning)'!='true'" /> 

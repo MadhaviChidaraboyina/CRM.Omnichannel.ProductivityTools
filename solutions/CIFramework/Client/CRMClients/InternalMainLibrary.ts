@@ -75,7 +75,6 @@ namespace Microsoft.CIFramework.Internal {
 					state.client.registerHandler(Constants.NavigationHandler, onPageNavigation);
 					// populate ciProviders in state.
 					state.ciProviders = new Map<string, any>();
-					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
 					let telemetryData: any = new Object();
 					var defaultMode = state.client.getWidgetMode(telemetryData) as number;
 					var first: string = null;
@@ -88,21 +87,16 @@ namespace Microsoft.CIFramework.Internal {
 					for (var x of result.entities) {
 						var currRoles = x[Constants.roleSelectorFieldName];
 						currRoles = (currRoles != null) ? currRoles.split(";") : null;
-						for (var role of roles) {
-							if (currRoles && currRoles.Length > 2 && currRoles.indexOf(role) === -1) {
-								continue;
-							}
-							trustedDomains.push(x[Constants.landingUrl]);
-							if (x[Constants.trustedDomain] != "")
-								trustedDomains.push(x[Constants.trustedDomain]);
-							var provider: CIProvider = new CIProvider(x, state, environmentInfo);
-							state.ciProviders.set(x[Constants.landingUrl], provider);
-							var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], x[Constants.SortOrder], appId, false, null);
-							setUsageData(usageData);
-							if (!first) {
-								first = x[Constants.landingUrl];
-							}
-							break;
+						
+						trustedDomains.push(x[Constants.landingUrl]);
+						if (x[Constants.trustedDomain] != "")
+							trustedDomains.push(x[Constants.trustedDomain]);
+						var provider: CIProvider = new CIProvider(x, state, environmentInfo);
+						state.ciProviders.set(x[Constants.landingUrl], provider);
+						var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], x[Constants.SortOrder], appId, false, null);
+						setUsageData(usageData);
+						if (!first) {
+							first = x[Constants.landingUrl];
 						}
 					}
 					// initialize and set post message wrapper.
@@ -580,8 +574,8 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-    export function notifyEvent(notificationUX: Map<string,Map<string,any>>): Promise<boolean>{
-       	let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+	export function notifyEvent(notificationUX: Map<string,Map<string,any>>): Promise<boolean>{
+		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
 		let i = 0;
 		let header,body,actions;
@@ -636,7 +630,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		let telemetryData: any = new Object();
 		let startTime = new Date();
-		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		const [provider, errorData] = getProvider(notificationUX);
 		if (provider) {
 			return new Promise(function (resolve,reject) {
 				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), notifyEvent.name, telemetryData);
@@ -710,7 +704,7 @@ namespace Microsoft.CIFramework.Internal {
 		}else{
 			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
 		}
-    }
+	}
 
 	export function renderSearchPage(parameters: Map<string, any>, entityName: string, searchString: string): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
