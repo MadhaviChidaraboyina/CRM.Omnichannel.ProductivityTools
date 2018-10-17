@@ -61,7 +61,7 @@ namespace Microsoft.CIFramework.Internal {
 		const widgetCount = 1;
 		appId = top.location.search.split('appid=')[1].split('&')[0];
 
-		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$orderby=msdyn_sortorder asc").then(
+		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=contains(" + Constants.appSelectorFieldName + ",'" + appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
 		(result : any) => {
 
 			if (result && result.entities) {

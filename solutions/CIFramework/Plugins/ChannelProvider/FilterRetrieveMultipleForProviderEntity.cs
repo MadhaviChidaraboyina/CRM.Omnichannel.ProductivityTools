@@ -44,8 +44,9 @@
 							var conversionResponse = (FetchXmlToQueryExpressionResponse)organizationService.Execute(conversionRequest);
 							QueryExpression queryExpression = conversionResponse.Query;
 							trace.Trace("Converted to query expression {0}", queryExpression.ToString());
-							// Add condition
-							queryExpression.Criteria.FilterOperator = LogicalOperator.Or;
+							// Add filter with role conditions
+
+							var filter = new FilterExpression(LogicalOperator.Or);
 
 							for (int rolecount=0; rolecount < userRoles.Length; rolecount++)
 							{
@@ -55,10 +56,10 @@
 									Operator = ConditionOperator.Like,
 									Values = { "%" + userRoles[rolecount] + "%" }
 								};
-								queryExpression.Criteria.AddCondition(filterbyRoles);
+								filter.AddCondition(filterbyRoles);
 							}
 
-						//	queryExpression.Criteria.AddFilter(filter);
+							queryExpression.Criteria.AddFilter(filter);
 							trace.Trace("Added condition {0}", queryExpression.ToString());
 							//convert to Fetch Expression
 							var FetchconversionRequest = new QueryExpressionToFetchXmlRequest
@@ -91,9 +92,7 @@
 		private string[] GetUserRoles(IOrganizationService organizationService, IPluginExecutionContext context, ITracingService trace)
 		{
 			EntityCollection userRoles = organizationService.RetrieveMultiple(this.QueryUserRoles(context.InitiatingUserId, trace));
-			trace.Trace("Roles Record count {0}", userRoles.TotalRecordCount.ToString());
 			trace.Trace("Roles Record count {0}", userRoles.Entities.Count.ToString());
-			trace.Trace("Roles Record count {0}", userRoles.Entities[0]["roleid"].ToString());
 			int rolesCount = userRoles.Entities.Count;
 			if (rolesCount > 0)
 			{
