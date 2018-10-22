@@ -3,6 +3,7 @@
  */
 
 /// <reference path="Constants.ts" />
+/// <reference path="../WidgetContainer/PresenceControl.ts" />
 
 namespace Microsoft.CIFramework.Internal
 {
@@ -42,9 +43,14 @@ namespace Microsoft.CIFramework.Internal
 	type LoadWidgetsFunction = (ciProviders: Map<string, CIProvider>) => Promise<Map<string, boolean|string>>;
 
 	/**
-	 * Func type for Setting Agent Presence and all presences
+	 * Func type for Setting Agent Presence
 	*/
-	type setPresenceFunction = (presenceInfo: any, telemetryData?: Object) => HTMLDivElement;
+	type setAgentPresenceFunction = (presenceInfo: PresenceInfo, telemetryData?: Object) => HTMLDivElement;
+
+	/**
+	 * Func type for Setting all presences
+	*/
+	type setAllPresencesFunction = (presenceList: PresenceInfo[], telemetryData?: Object) => HTMLDivElement;
 
 	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
@@ -87,9 +93,9 @@ namespace Microsoft.CIFramework.Internal
 
 		openForm: OpenFormFunction;
 
-		setAgentPresence: setPresenceFunction;
+		setAgentPresence: setAgentPresenceFunction;
 
-		setAllPresence: setPresenceFunction;
+		setAllPresence: setAllPresencesFunction;
 
 	}
 

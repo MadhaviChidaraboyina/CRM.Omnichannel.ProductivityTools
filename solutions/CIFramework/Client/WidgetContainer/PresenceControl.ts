@@ -3,14 +3,14 @@
 */
 
 namespace Microsoft.CIFramework.Internal {
-	type PresenceInfo = {
+	export type PresenceInfo = {
 		presenceId: string;
 		presenceColor: string;
 		presenceText: string;
 		basePresenceStatus: string;
 	}
 
-	type AgentInfo = {
+	export type AgentInfo = {
 		agentId: string;
 		agentName: string;
 		presenceId: string;
