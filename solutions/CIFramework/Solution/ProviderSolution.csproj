@@ -60,6 +60,7 @@
     <Content Include="WebResources\msdyn_notificationCss.css">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="WebResources\msdyn_ProviderIcon.svg" />
     <Content Include="WebResources\Widget\msdyn_ciLibrary.js.data.xml" />
     <Content Include="WebResources\CRMClients\msdyn_internal_ci_library.js.data.xml" />
     <Content Include="AppModules\CIConfigApp\*" />

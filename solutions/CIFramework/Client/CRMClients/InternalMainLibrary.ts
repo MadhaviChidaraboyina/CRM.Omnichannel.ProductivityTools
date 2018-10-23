@@ -62,8 +62,9 @@ namespace Microsoft.CIFramework.Internal {
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		appId = top.location.search.split('appid=')[1].split('&')[0];
 		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=contains(" + Constants.appSelectorFieldName + ",'" + appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
-			(result: any) => {
-				if (result && result.entities) {
+		(result : any) => {
+
+			if (result && result.entities) {
 
 					//event listener for the onCliCkToAct event
 					listenerWindow.removeEventListener(Constants.CIClickToAct, onClickToAct);
