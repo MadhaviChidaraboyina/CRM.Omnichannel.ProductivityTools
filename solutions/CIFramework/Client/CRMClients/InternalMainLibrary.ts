@@ -765,43 +765,41 @@ namespace Microsoft.CIFramework.Internal {
 		state.client.setWidgetWidth("setWidgetWidth", width*2);
 		isNotesControl = true;
 		return new Promise(function (resolve) {
-			setWidth(notesDetails).then(function (returnValue: Map<string, any>) {
-				let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
-				widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
-				let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
-				notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader">Add Notes</div></div>');
-				notesDiv.getElementsByClassName("CIFNotes").classList.add("notesDivCIF");
-				notesDiv.getElementsByClassName("notesHeader").classList.add("notesHeaderCIF");
-				var span = document.createElement("span");
-				span.classList.add("closeSoftNotification_CIF");
-				span.classList.add("FontIcons-closeSoftNotification_CIF");
-				span.setAttribute("aria-label", "Close");
-				notesDiv.getElementsByClassName("notesHeader")[0].appendChild(span);
-				var newTextArea = document.createElement('TextArea');
-				let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
-				notesElement.appendChild(newTextArea);
-				newTextArea.setAttribute('placeholder','Type your note');
-				newTextArea.classList.add("newTextAreaCIF");
-				var saveBtn = document.createElement("BUTTON");
-				notesElement.appendChild(saveBtn);
-				saveBtn.classList.add("notesSaveButtonCIF");
-				saveBtn.innerText = "Add Note";
-				var cancelBtn = document.createElement("BUTTON");
-				notesElement.appendChild(cancelBtn);
-				cancelBtn.classList.add("notesCancelButtonCIF");
-				cancelBtn.innerText = "Cancel";
-				saveBtn.addEventListener("click", function clickListener() {
-					saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
-						cancelNotes();
-						state.client.setWidgetWidth("setWidgetWidth", width);
-						resolve(retval);
-					});
-				});
-				cancelBtn.addEventListener("click", function clickListener() {
+			let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+			widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
+			let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
+			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader">Add Notes</div></div>');
+			notesDiv.getElementsByClassName("CIFNotes").classList.add("notesDivCIF");
+			notesDiv.getElementsByClassName("notesHeader").classList.add("notesHeaderCIF");
+			var span = document.createElement("span");
+			span.classList.add("closeSoftNotification_CIF");
+			span.classList.add("FontIcons-closeSoftNotification_CIF");
+			span.setAttribute("aria-label", "Close");
+			notesDiv.getElementsByClassName("notesHeader")[0].appendChild(span);
+			var newTextArea = document.createElement('TextArea');
+			let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
+			notesElement.appendChild(newTextArea);
+			newTextArea.setAttribute('placeholder','Type your note');
+			newTextArea.classList.add("newTextAreaCIF");
+			var saveBtn = document.createElement("BUTTON");
+			notesElement.appendChild(saveBtn);
+			saveBtn.classList.add("notesSaveButtonCIF");
+			saveBtn.innerText = "Add Note";
+			var cancelBtn = document.createElement("BUTTON");
+			notesElement.appendChild(cancelBtn);
+			cancelBtn.classList.add("notesCancelButtonCIF");
+			cancelBtn.innerText = "Cancel";
+			saveBtn.addEventListener("click", function clickListener() {
+				saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
 					cancelNotes();
 					state.client.setWidgetWidth("setWidgetWidth", width);
-					resolve(new Map().set(Constants.value,true));
+					resolve(retval);
 				});
+			});
+			cancelBtn.addEventListener("click", function clickListener() {
+				cancelNotes();
+				state.client.setWidgetWidth("setWidgetWidth", width);
+				resolve(new Map().set(Constants.value,true));
 			});
 		});
 	}
