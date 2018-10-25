@@ -861,7 +861,9 @@ namespace Microsoft.CIFramework.Internal {
 	export function cancelNotes(): void{	
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
-		notesDiv.removeChild(notesDiv.getElementsByClassName("CIFNotes")[0]);
+		if(!isNullOrUndefined(notesDiv)){
+			notesDiv.removeChild(notesDiv.getElementsByClassName("CIFNotes")[0]);
+		}
 	}
 }
 
