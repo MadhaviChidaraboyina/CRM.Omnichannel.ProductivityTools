@@ -124,7 +124,8 @@ namespace Microsoft.CIFramework
 		export const context = "context";
 		export const initials = "initials";
 		export const isVisible = "isVisible";
-		export const sessionId = "sessionId";
+        export const sessionId = "sessionId";
+        export const DEFAULT_WIDGET_WIDTH = 378;
 	}
 
 	/**

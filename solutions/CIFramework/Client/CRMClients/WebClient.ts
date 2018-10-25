@@ -189,6 +189,7 @@ namespace Microsoft.CIFramework.Internal {
 					let status: Map<string, boolean | string> = new Map<string, boolean | string>();
 					let fracHeightForActiveWidget: number = 0.9;
 					let widgetHeight: number = widgetIFrame.clientHeight * fracHeightForActiveWidget;
+					let widgetWidth: number = Constants.DEFAULT_WIDGET_WIDTH;
 					let minimizedHeight: number = (widgetIFrame.clientHeight * (1 - fracHeightForActiveWidget)) / ciProviders.size;   // TODO: Figure out correct units to use
 					widgetIFrame.onload = function () {
 						var doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
@@ -201,7 +202,7 @@ namespace Microsoft.CIFramework.Internal {
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
 							iFrame.src = key;
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
-							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetIFrame.clientWidth, widgetHeight, minimizedHeight);
+							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetWidth, widgetHeight, minimizedHeight);
 							containerDiv.appendChild(iFrame);
 							doc.body.appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded

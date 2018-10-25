@@ -11,8 +11,8 @@
 		hostIFrame: HTMLIFrameElement;
 		provider: CIProvider;
 		visibility: boolean;
-        preservedHeight: number;
-        preservedWidth: number;
+		preservedHeight: number;
+		preservedWidth: number;
 
 		constructor(hostIFrame: HTMLIFrameElement) {
 			this.hostIFrame = hostIFrame;
@@ -23,8 +23,8 @@
 
 		setVisibility(visibility: boolean): boolean {
 			this.visibility = visibility;
-            this.setHeight(this.preservedHeight);
-            this.setWidth(this.preservedWidth);
+			this.setHeight(this.preservedHeight);
+			this.setWidth(this.preservedWidth);
 			return true;
 		}
 
@@ -42,17 +42,20 @@
 			return true;
 		}
 
+		private static getDefaultWidth() {
+			return Constants.DEFAULT_WIDGET_WIDTH.toString();
+		}
 		setWidth(width: number): boolean {
 			if (!this.hostIFrame) {
 				return false;
-            }
-            this.preservedWidth = width;
-            if (this.visibility) {
-                this.hostIFrame.width = (width > 0 ? width.toString() : "100%");
-            }
-            else {
-                this.hostIFrame.width = "0";
-            }
+			}
+			this.preservedWidth = width;
+			if (this.visibility) {
+				this.hostIFrame.width = (width > 0 ? width.toString() : WidgetIFrameWrapper.getDefaultWidth());
+			}
+			else {
+				this.hostIFrame.width = "0";
+			}
 			return true;
 		}
 
