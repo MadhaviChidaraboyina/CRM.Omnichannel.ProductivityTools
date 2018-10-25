@@ -20,6 +20,7 @@ namespace Microsoft.CIFramework.Internal {
 		["notifyEvent", [notifyEvent]],
 		["searchandopenrecords", [searchAndOpenRecords]],
 		["openform", [openForm]],
+		["openKBSearchControl", [openkbsearchcontrol]],
 		["createrecord", [createRecord]],
 		["updaterecord", [updateRecord]],
 		["retrieverecord", [retrieveRecord]],

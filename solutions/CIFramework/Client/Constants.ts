@@ -13,6 +13,7 @@ namespace Microsoft.CIFramework
 		export const getClickToAct = "getclicktoact";
 		export const searchAndOpenRecords = "searchandopenrecords";
 		export const openForm = "openform";
+		export const openKBSearchControl = "openkbsearchcontrol";
 		export const createRecord = "createrecord";
 		export const deleteRecord = "deleterecord";
 		export const retrieveRecord = "retrieverecord";
