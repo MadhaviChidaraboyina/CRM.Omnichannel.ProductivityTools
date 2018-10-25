@@ -755,28 +755,35 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		
 		let width: number = 0;
+		let panelWidth = state.client.getWidgetWidth();
+		width = panelWidth as number;
+		notesDetails.set(Constants.value,width);
+		state.client.setWidgetWidth("setWidgetWidth", width*2);
 		return new Promise(function (resolve) {
-			let panelWidth = state.client.getWidgetWidth();
-			width = panelWidth as number;
-			notesDetails.set(Constants.value,width);
-			state.client.setWidgetWidth("setWidgetWidth", width*2);
 			setWidth(notesDetails).then(function (returnValue: Map<string, any>) {
 				let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 				widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
 				let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
-				notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes" style="position: relative;display:table;background-color: rgba(102, 102, 102, 0.5);width:280px;z-index: 2;border-radius: 4px;background-color: #333333;padding-bottom: 10px;min-height: 120px;"></div>');
+				notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader">Add Notes</div></div>');
+				notesDiv.getElementsByClassName("CIFNotes").classList.add("notesDivCIF");
+				notesDiv.getElementsByClassName("notesHeader").classList.add("notesHeaderCIF");
+				var span = document.createElement("span");
+				span.classList.add("closeSoftNotification_CIF");
+				span.classList.add("FontIcons-closeSoftNotification_CIF");
+				span.setAttribute("aria-label", "Close");
+				notesDiv.getElementsByClassName("notesHeader")[0].appendChild(span);
 				var newTextArea = document.createElement('TextArea');
 				let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
 				notesElement.appendChild(newTextArea);
 				newTextArea.setAttribute('placeholder','Type your note');
-				newTextArea.setAttribute('style','min-height: 300px;width: 280px;');
+				newTextArea.classList.add("newTextAreaCIF");
 				var saveBtn = document.createElement("BUTTON");
 				notesElement.appendChild(saveBtn);
-				saveBtn.setAttribute('style','width:120px;');
+				saveBtn.classList.add("notesSaveButtonCIF");
 				saveBtn.innerText = "Add Note";
 				var cancelBtn = document.createElement("BUTTON");
 				notesElement.appendChild(cancelBtn);
-				cancelBtn.setAttribute('style','width:120px;');
+				cancelBtn.classList.add("notesCancelButtonCIF");
 				cancelBtn.innerText = "Cancel";
 				saveBtn.addEventListener("click", function clickListener() {
 					saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
