@@ -37,6 +37,7 @@ namespace Microsoft.CIFramework
 		export const transfer = "transfer";
 		export const escalation = "escalation";
 		export const renderSearchPage = "renderSearchPage";
+		export const insertNotes = "insertNotes";
 	}
 
 	/**
@@ -118,6 +119,13 @@ namespace Microsoft.CIFramework
 		export const SMS = "SMS";
 		export const Chat = "Chat";
 		export const SearchString = "searchString";
+		export const activityType = "activityType";
+		export const sessionDetails = "sessionDetails";
+		export const activityId = "activityId";
+		export const Id = "id";
+		export const notetext = "notetext";
+		export const annotation = "annotation";
+		export const entitySetName = "entitySetName";
 	}
 
 	/**
