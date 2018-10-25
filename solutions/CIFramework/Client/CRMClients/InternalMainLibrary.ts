@@ -44,6 +44,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	declare var Xrm: any;
 	let noOfNotifications = 0;
+	let isNotesControl = false;
 
 	declare var appId: string;
 
@@ -195,10 +196,13 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	function updateProviderSizes(): void {
-		var width = state.client.getWidgetWidth() as number;
-		for (let [key, value] of state.ciProviders) {
-			value.setWidth(width);
+		if(isNotesControl == false)
+			var width = state.client.getWidgetWidth() as number;
+			for (let [key, value] of state.ciProviders) {
+				value.setWidth(width);
+			}
 		}
+		isNotesControl = false;
 	}
 	/**
 	 * The handler called by the client for a size-changed event. The client is
@@ -759,6 +763,7 @@ namespace Microsoft.CIFramework.Internal {
 		width = panelWidth as number;
 		notesDetails.set(Constants.value,width);
 		state.client.setWidgetWidth("setWidgetWidth", width*2);
+		isNotesControl = true;
 		return new Promise(function (resolve) {
 			setWidth(notesDetails).then(function (returnValue: Map<string, any>) {
 				let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
