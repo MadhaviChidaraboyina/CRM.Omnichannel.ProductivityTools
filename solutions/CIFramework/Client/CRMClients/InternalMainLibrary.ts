@@ -32,7 +32,9 @@ namespace Microsoft.CIFramework.Internal {
 		["getenvironment", [getEnvironment]],
 		["getwidth", [getWidth]],
 		["getclicktoact", [getClickToAct]],
-		["renderSearchPage", [renderSearchPage]]
+		["renderSearchPage", [renderSearchPage]],
+		["startUISession", [startUISession]],
+		["endUISession", [endUISession]]
 	]);
 
 	/**
@@ -59,6 +61,7 @@ namespace Microsoft.CIFramework.Internal {
 		if (!state.client.checkCIFCapability()) {
 			return false;
 		}
+
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		appId = top.location.search.split('appid=')[1].split('&')[0];
 		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=contains(" + Constants.appSelectorFieldName + ",'" + appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
@@ -74,8 +77,6 @@ namespace Microsoft.CIFramework.Internal {
 					state.client.registerHandler(Constants.ModeChangeHandler, onModeChanged);
 					state.client.registerHandler(Constants.SizeChangeHandler, onSizeChanged);
 					state.client.registerHandler(Constants.NavigationHandler, onPageNavigation);
-					// populate ciProviders in state.
-					state.ciProviders = new Map<string, any>();
 					let telemetryData: any = new Object();
 					var defaultMode = state.client.getWidgetMode(telemetryData) as number;
 					var first: string = null;
@@ -88,24 +89,22 @@ namespace Microsoft.CIFramework.Internal {
 					for (var x of result.entities) {
 						var currRoles = x[Constants.roleSelectorFieldName];
 						currRoles = (currRoles != null) ? currRoles.split(";") : null;
-						
 						trustedDomains.push(x[Constants.landingUrl]);
 						if (x[Constants.trustedDomain] != "")
 							trustedDomains.push(x[Constants.trustedDomain]);
 						var provider: CIProvider = new CIProvider(x, state, environmentInfo);
-						state.ciProviders.set(x[Constants.landingUrl], provider);
 						var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], x[Constants.SortOrder], appId, false, null);
 						setUsageData(usageData);
 						if (!first) {
 							first = x[Constants.landingUrl];
+							state.providerManager = new ProviderManager(state.client, provider);
 						}
+						state.providerManager.addProvider(x[Constants.landingUrl], provider);
 					}
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
-					// initialize the session manager
-					state.sessionManager = new SessionInfo(state.client, state.ciProviders.get(first));
 					// load the widgets onto client. 
-					state.client.loadWidgets(state.ciProviders).then(function (widgetLoadStatus) {
+					state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
 						reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
 					});
 				}
@@ -129,7 +128,7 @@ namespace Microsoft.CIFramework.Internal {
 		//let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
 		if (isNullOrUndefined(provider)) {
 			//A Map object iterates in insertion order. If IE11 support is required, ensure this order is preserved
-			for (let [key, value] of state.ciProviders) {
+			for (let [key, value] of state.providerManager.ciProviders) {
 				var eventStatus: { result?: any, error?: string } = {};
 				value.raiseEvent(data, messageType).then(
 					function (result: Map<string, any>) {
@@ -179,7 +178,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			});
 		}
-		let provider = state.ciProviders.get(parameters.get(Constants.originURL));
+		let provider = state.providerManager.ciProviders.get(parameters.get(Constants.originURL));
 		if (provider && provider.providerId) {
 			return [provider, null];
 		}
@@ -195,7 +194,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	function updateProviderSizes(): void {
 		var width = state.client.getWidgetWidth() as number;
-		for (let [key, value] of state.ciProviders) {
+		for (let [key, value] of state.providerManager.ciProviders) {
 			value.setWidth(width);
 		}
 	}
@@ -210,7 +209,7 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	function onSizeChanged(event: CustomEvent): void {
 		updateProviderSizes();
-		raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked", state.sessionManager.getActiveProvider());
+		raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked", state.providerManager.getActiveProvider());
 	}
 
 	/**
@@ -224,7 +223,7 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	function onModeChanged(event: CustomEvent): void {
 		updateProviderSizes();  //TODO: global modeChanged event: this shouldn't be passed to all widgets. WHo should it be passed to?
-		raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked", state.sessionManager.getActiveProvider());
+		raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked", state.providerManager.getActiveProvider());
 	}
 
 	/**
@@ -256,7 +255,7 @@ namespace Microsoft.CIFramework.Internal {
 				(result: Map<string, any>) =>
 				{
 					provider.clickToAct = parameters.get(Constants.value) as boolean;
-					state.ciProviders.set(parameters.get(Constants.originURL), provider);
+					state.providerManager.ciProviders.set(parameters.get(Constants.originURL), provider);
 
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setClickToAct.name, telemetryData);
 					setPerfData(perfData);
@@ -396,7 +395,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * subscriber of onSendKBArticle event
 	*/
 	export function onSendKBArticle(event: CustomEvent): void {
-		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client", state.sessionManager.getActiveProvider());
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client", state.providerManager.getActiveProvider());
 	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
@@ -727,6 +726,34 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, renderSearchPage.name, appId, true, errorData);
+		}
+	}
+
+	export function startUISession(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), startUISession.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map<string, any>().set(Constants.value, provider.startUISession(parameters.get(Constants.context), parameters.get(Constants.initials), parameters.get(Constants.entityFormOptions), parameters.get(Constants.entityFormParameters), parameters.get(Constants.isVisible))));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, startUISession.name, appId, true, errorData);
+		}
+	}
+
+	export function endUISession(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), endUISession.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map<string, any>().set(Constants.value, provider.endUISession(parameters.get(Constants.sessionId))));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, endUISession.name, appId, true, errorData);
 		}
 	}
 }

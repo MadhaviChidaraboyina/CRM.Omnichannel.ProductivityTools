@@ -546,5 +546,37 @@ namespace Microsoft.CIFramework
 		}
 	}
 
+	/**
+	 * API to start UI Session
+	 */
+	export function startUISession(context: any, initials: string, entityFormOptions: string, entityFormParameters: string, isVisible: boolean): Promise<string> {
+		if (!isNullOrUndefined(context) && !isNullOrUndefined(initials)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.startUISession,
+				messageData: new Map().set(Constants.context, context).set(Constants.initials, initials).set(Constants.entityFormOptions, entityFormOptions).set(Constants.entityFormParameters, entityFormParameters).set(Constants.isVisible, isVisible)
+			}
+			return sendMessage<string>(startUISession.name, payload, false);
+		}
+		else {
+			return postMessageNamespace.rejectWithErrorMessage("context or initials is null");
+		}
+	}
+
+	/**
+	 * API to end UI Session
+	 */
+	export function endUISession(sessionId: string): Promise<string> {
+		if (!isNullOrUndefined(sessionId)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.endUISession,
+				messageData: new Map().set(Constants.sessionId, sessionId)
+			}
+			return sendMessage<string>(endUISession.name, payload, false);
+		}
+		else {
+			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");
+		}
+	}
+
 	initialize();
 }

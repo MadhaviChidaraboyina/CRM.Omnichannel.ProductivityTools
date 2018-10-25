@@ -28,6 +28,7 @@ namespace Microsoft.CIFramework
 		export const onSizeChanged = "onsizechanged";
 		export const onPageNavigate = "onpagenavigate";
 		export const onSendKBArticle = "onsendkbarticle";
+		export const onUISessionVisibilityChanged = "onUISessionVisibilityChanged";
 		export const getEntityMetadata = "getEntityMetadata";
 		export const notifyEvent = "notifyEvent";
 		export const softNotification = "softNotification";
@@ -37,6 +38,8 @@ namespace Microsoft.CIFramework
 		export const transfer = "transfer";
 		export const escalation = "escalation";
 		export const renderSearchPage = "renderSearchPage";
+		export const startUISession = "startUISession";
+		export const endUISession = "endUISession";
 	}
 
 	/**
@@ -118,6 +121,10 @@ namespace Microsoft.CIFramework
 		export const SMS = "SMS";
 		export const Chat = "Chat";
 		export const SearchString = "searchString";
+		export const context = "context";
+		export const initials = "initials";
+		export const isVisible = "isVisible";
+		export const sessionId = "sessionId";
 	}
 
 	/**
