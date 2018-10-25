@@ -60,7 +60,6 @@ namespace Microsoft.CIFramework.Internal {
 				}
 				presenceListNode.appendChild(presenceNode);
 
-				// Do not return presenceListNode. Call the Sliver Function to add the List and pass presenceListNode there
 				return presenceListNode;
 			}
 			else {
@@ -93,7 +92,6 @@ namespace Microsoft.CIFramework.Internal {
 			updatedPresenceTextNode.classList.add('TextNode');
 			updatedPresenceNode.appendChild(updatedPresenceTextNode);
 
-			// Do not return updatedPresenceNode. Call the Sliver Function to update the Presence and pass updatedPresenceNode there
 			return updatedPresenceNode;
 		}
 	}

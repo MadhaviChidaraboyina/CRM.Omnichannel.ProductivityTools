@@ -399,13 +399,13 @@ namespace Microsoft.CIFramework
 
 	 * @returns a Promise: HTMLDivElement after setting the Agent Presence
 	 */
-	export function setAgentPresence(presenceInfo: any): Promise<HTMLDivElement> {
+	export function setAgentPresence(presenceInfo: any): Promise<boolean> {
 		if (!(isNullOrUndefined(presenceInfo))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.setAgentPresence,
 				messageData: new Map().set(Constants.presenceInfo, presenceInfo)
 			}
-			return sendMessage<HTMLDivElement>(setAgentPresence.name, payload, false);
+			return sendMessage<boolean>(setAgentPresence.name, payload, false);
 		}
 		else {
 			return postMessageNamespace.rejectWithErrorMessage("The presenceInfo parameter is null. Provide a value to the parameter");
@@ -419,13 +419,13 @@ namespace Microsoft.CIFramework
 
 	 * @returns a Promise: HTMLDivElement after setting the list of presences
 	 */
-	export function setAllPresence(presenceList: any): Promise<HTMLDivElement> {
+	export function setAllPresence(presenceList: any): Promise<boolean> {
 		if (!(isNullOrUndefined(presenceList))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.setAllPresence,
 				messageData: new Map().set(Constants.presenceList, presenceList)
 			}
-			return sendMessage<HTMLDivElement>(setAllPresence.name, payload, false);
+			return sendMessage<boolean>(setAllPresence.name, payload, false);
 		}
 		else {
 			return postMessageNamespace.rejectWithErrorMessage("The presenceList parameter is null. Provide a value to the parameter");

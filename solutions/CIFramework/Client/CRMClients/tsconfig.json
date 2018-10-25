@@ -12,7 +12,7 @@
 		"../PostMsgWrapper.ts",
 		"../CIFrameworkConstants.ts",
 		"aria-webjs-sdk-1.6.2.js",
-		"../WidgetContainer/PresenceControl.ts"
+		"PresenceControl.ts"
 	],
 	"compilerOptions": {
 		"sourceMap": true,

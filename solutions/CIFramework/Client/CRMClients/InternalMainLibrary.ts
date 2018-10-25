@@ -530,10 +530,10 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
 		if (provider) {
-			let presenceDiv = state.client.setAgentPresence(presenceInfo);
+			let agentPresenceStatus = state.client.setAgentPresence(presenceInfo);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAgentPresence.name, telemetryData);
 			setPerfData(perfData);
-			return Promise.resolve(new Map().set(Constants.value, presenceDiv));
+			return Promise.resolve(new Map().set(Constants.value, agentPresenceStatus));
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, setAgentPresence.name, appId, true, errorData);
@@ -545,10 +545,10 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
 		if (provider) {
-			let presenceListDiv = state.client.setAllPresence(presenceList);
+			let presenceListDivStatus = state.client.setAllPresence(presenceList);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAllPresence.name, telemetryData);
 			setPerfData(perfData);
-			return Promise.resolve(new Map().set(Constants.value, presenceList));
+			return Promise.resolve(new Map().set(Constants.value, presenceListDivStatus));
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, setAllPresence.name, appId, true, errorData);

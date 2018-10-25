@@ -326,22 +326,36 @@ namespace Microsoft.CIFramework.Internal {
 			return width;
 		}
 
-		client.setAgentPresence = (presenceInfo: any, telemetryData?: Object | any): HTMLDivElement => {
+		client.setAgentPresence = (presenceInfo: any, telemetryData?: Object | any): boolean => {
 			let startTime = new Date();
-			let presenceDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAgentPresence(presenceInfo);
+			let agentPresence = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAgentPresence(presenceInfo);
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "PresenceControl.setAgentPresence";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
-			return presenceDiv;
+
+			var agentPresenceParent = document.getElementById("CurrentStatus");
+			if (agentPresenceParent != null) {
+				agentPresenceParent.innerHTML = "";
+				agentPresenceParent.appendChild(agentPresence);
+				return true;
+			}
+			return false;
 		}
 
-		client.setAllPresence = (presenceList: any, telemetryData?: Object | any): HTMLDivElement => {
+		client.setAllPresence = (presenceList: any, telemetryData?: Object | any): boolean => {
 			let startTime = new Date();
 			let presenceListDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAllPresences(presenceList);
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "PresenceContro.setAllPresence";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
-			return presenceList;
+
+			var presenceListParent = document.getElementById("PresenceList");
+			if (presenceListParent != null) {
+				presenceListParent.innerHTML = "";
+				presenceListParent.appendChild(presenceListDiv);
+				return true;
+			}
+			return false;
 		}
 
 		return client;

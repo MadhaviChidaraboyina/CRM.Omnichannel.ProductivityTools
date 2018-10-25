@@ -3,7 +3,7 @@
  */
 
 /// <reference path="Constants.ts" />
-/// <reference path="../WidgetContainer/PresenceControl.ts" />
+/// <reference path="PresenceControl.ts" />
 
 namespace Microsoft.CIFramework.Internal
 {
@@ -45,12 +45,12 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for Setting Agent Presence
 	*/
-	type setAgentPresenceFunction = (presenceInfo: PresenceInfo, telemetryData?: Object) => HTMLDivElement;
+	type setAgentPresenceFunction = (presenceInfo: PresenceInfo, telemetryData?: Object) => boolean;
 
 	/**
 	 * Func type for Setting all presences
 	*/
-	type setAllPresencesFunction = (presenceList: PresenceInfo[], telemetryData?: Object) => HTMLDivElement;
+	type setAllPresencesFunction = (presenceList: PresenceInfo[], telemetryData?: Object) => boolean;
 
 	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
