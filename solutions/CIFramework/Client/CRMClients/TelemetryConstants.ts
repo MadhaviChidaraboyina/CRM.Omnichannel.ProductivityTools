@@ -28,5 +28,6 @@ namespace Microsoft.CIFramework.Internal {
 		export const errorFunction = "Error_Function";
 		export const perfTable = "D365_CIF_Perf";
 		export const usageTable = "D365_CIF_Usage";
+		export const userId = "User_ID";
 	}
 }

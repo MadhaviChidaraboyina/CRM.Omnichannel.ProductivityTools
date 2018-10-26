@@ -21,7 +21,7 @@
 
 namespace Microsoft.CIFramework.postMessageNamespace {
 
-	type IDeferred = {
+	export type IDeferred = {
 		timerId: number;
 		promise: Promise<Map<string, any>>;
 		resolve: <T>(value?: T | Promise<T>) => void;
@@ -62,10 +62,12 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		/**
 		 * Creates and loads an instance of the wrapper on the CI or widget domain, wherever it is loaded
 		 */
-		constructor(listenerWindow: Window, domains: string[], handlers?: Map<string, Set<Handler>>) {
+		constructor(listenerWindow?: Window, domains?: string[], handlers?: Map<string, Set<Handler>>) {
 			// todo - ensure that there is always one listener for message event from CI side. For now: always removing previous one, if any, so that we only have one listener at a time. 
-			listenerWindow.removeEventListener(messageConstant, this.processMessage.bind(this));
-			listenerWindow.addEventListener(messageConstant, this.processMessage.bind(this));
+			if (listenerWindow) {
+				listenerWindow.removeEventListener(messageConstant, this.processMessage.bind(this));
+				listenerWindow.addEventListener(messageConstant, this.processMessage.bind(this));
+			}
 			//TO-DO, initialization of whitelisted domains may need to take a different path in future
 			this.listWhitelistedDomains = domains;
 			if (handlers) {

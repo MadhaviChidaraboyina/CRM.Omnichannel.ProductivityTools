@@ -40,6 +40,9 @@ namespace Microsoft.CIFramework
 		export const renderSearchPage = "renderSearchPage";
 		export const startUISession = "startUISession";
 		export const endUISession = "endUISession";
+		export const setAgentPresence = "setAgentPresence";
+		export const setAllPresence = "setAllPresence";
+		export const insertNotes = "insertNotes";
 	}
 
 	/**
@@ -118,6 +121,8 @@ namespace Microsoft.CIFramework
 		export const notificationType = "notificationType"; 
 		export const Timer = "Timer";
 		export const NoOfNotifications = "NoOfNotifications";
+		export const SMS = "SMS";
+		export const Chat = "Chat";
 		export const SearchString = "searchString";
 		export const context = "context";
 		export const initials = "initials";
@@ -125,6 +130,16 @@ namespace Microsoft.CIFramework
 		export const sessionId = "sessionId";
 		export const MaxSessions = 5;
 		export const sessionColors = ["#2A757D", "#464775", "#9E2069", "#427825", "#511466", "#365C99", "#9C4141", "#84612A"];
+		export const DEFAULT_WIDGET_WIDTH = 378;
+		export const presenceInfo = "presenceInfo";
+		export const presenceList = "presenceList";
+		export const activityType = "activityType";
+		export const sessionDetails = "sessionDetails";
+		export const activityId = "activityId";
+		export const Id = "id";
+		export const notetext = "notetext";
+		export const annotation = "annotation";
+		export const entitySetName = "entitySetName";
 	}
 
 	/**
