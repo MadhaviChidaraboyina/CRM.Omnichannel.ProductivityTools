@@ -96,7 +96,7 @@ namespace Microsoft.CIFramework
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-    export function notifyEvent(eventType: string, notificationUX: string): Promise<string> {	
+	export function notifyEvent(eventType: string, notificationUX: string): Promise<string> {	
 		if(!(isNullOrUndefined(eventType) || isNullOrUndefined(notificationUX))){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.notifyEvent,
@@ -119,7 +119,7 @@ namespace Microsoft.CIFramework
 				return postMessageNamespace.rejectWithErrorMessage("The notificationUX parameter is blank. Provide a value to the parameter.");
 			}
 		}
-    }
+	}
 
 	/**
 	 * API to open the create form for given entity with data passed in pre-populated
@@ -527,7 +527,6 @@ namespace Microsoft.CIFramework
 	 * @param entityName -Name of the Entity for which the records are to be fetched
 	 * @param searchString - String based on which the search is to be made
 	 */
-
 	export function renderSearchPage(entityName: string, searchString: string): Promise<void> {
 		if (!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(searchString))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
@@ -543,6 +542,26 @@ namespace Microsoft.CIFramework
 			if (isNullOrUndefined(searchString)) {
 				return postMessageNamespace.rejectWithErrorMessage("The SearchString Parameter cannot be NULL");
 			}
+		}
+	}
+
+	/**
+	 * API to set the agent presence
+	 * Invokes the API setAgentPresence(presenceInfo)
+	 * @param presenceInfo - Details of the Presence to be set for the Agent
+
+	 * @returns a Promise: HTMLDivElement after setting the Agent Presence
+	 */
+	export function setAgentPresence(presenceInfo: string): Promise<boolean> {
+		if (!(isNullOrUndefined(presenceInfo))) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.setAgentPresence,
+				messageData: new Map().set(Constants.presenceInfo, presenceInfo)
+			}
+			return sendMessage<boolean>(setAgentPresence.name, payload, false);
+		}
+		else {
+			return postMessageNamespace.rejectWithErrorMessage("The presenceInfo parameter is null. Provide a value to the parameter");
 		}
 	}
 
@@ -575,6 +594,26 @@ namespace Microsoft.CIFramework
 		}
 		else {
 			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");
+		}
+	}
+
+	/**
+ * API to set all the presences
+ * Invokes the API setAllPresence(presenceList)
+ * @param presenceList - Array containing all the available Presences
+
+ * @returns a Promise: HTMLDivElement after setting the list of presences
+ */
+	export function setAllPresence(presenceList: any): Promise<boolean> {
+		if (!(isNullOrUndefined(presenceList))) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.setAllPresence,
+				messageData: new Map().set(Constants.presenceList, presenceList)
+			}
+			return sendMessage<boolean>(setAllPresence.name, payload, false);
+		}
+		else {
+			return postMessageNamespace.rejectWithErrorMessage("The presenceList parameter is null. Provide a value to the parameter");
 		}
 	}
 

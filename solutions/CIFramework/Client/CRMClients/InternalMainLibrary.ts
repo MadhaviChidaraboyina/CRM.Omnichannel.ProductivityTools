@@ -34,7 +34,9 @@ namespace Microsoft.CIFramework.Internal {
 		["getclicktoact", [getClickToAct]],
 		["renderSearchPage", [renderSearchPage]],
 		["startUISession", [startUISession]],
-		["endUISession", [endUISession]]
+		["endUISession", [endUISession]],
+		["setAgentPresence", [setAgentPresence]],
+		["setAllPresence", [setAllPresence]]
 	]);
 
 	/**
@@ -544,12 +546,11 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-
 	export function getEntityMetadata(parameters: Map<string, any>): Promise<Map<string, any>> {
-		let telemetryData: any = new Object();
-		let startTime = new Date();
-		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
-		if (provider) {
+				let telemetryData: any = new Object();
+				let startTime = new Date();
+				const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+				if (provider) {
 			return new Promise<Object>((resolve, reject) => {
 				state.client.getEntityMetadata(parameters.get(Constants.entityName), parameters.get(Constants.Attributes)).then(
 					function (res) {
@@ -754,6 +755,36 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, endUISession.name, appId, true, errorData);
+		}
+	}
+
+	export function setAgentPresence(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		if (provider) {
+			let agentPresenceStatus = state.client.setAgentPresence(JSON.parse(parameters.get(Constants.presenceInfo)), telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAgentPresence.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, agentPresenceStatus));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, setAgentPresence.name, appId, true, errorData);
+		}
+	}
+
+	export function setAllPresence(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		if (provider) {
+			let presenceListDivStatus = state.client.setAllPresence(JSON.parse(parameters.get(Constants.presenceList)), telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAllPresence.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, presenceListDivStatus));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, setAllPresence.name, appId, true, errorData);
 		}
 	}
 }

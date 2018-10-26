@@ -363,8 +363,7 @@ namespace Microsoft.CIFramework.Internal {
 			return true;
 		}
 
-		client.renderSearchPage = (entityName: string, searchString: string, telemetryData?: Object | any): Promise<void> =>
-		{
+		client.renderSearchPage = (entityName: string, searchString: string, telemetryData?: Object | any): Promise<void> => {
 			let startTime;
 			try {
 				var searchPageInput: XrmClientApi.SearchPageInput;
@@ -382,6 +381,40 @@ namespace Microsoft.CIFramework.Internal {
 			catch (error) {
 				logFailure("", true, error);
 			}
+		}
+
+		client.setAgentPresence = (presenceInfo: any, telemetryData?: Object | any): boolean => {
+			let startTime = new Date();
+			let agentPresence = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAgentPresence(presenceInfo);
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "PresenceControl.setAgentPresence";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let agentPresenceParent = widgetIFrame.contentWindow.document.getElementById("CurrentStatus");
+			if (agentPresenceParent != null) {
+				agentPresenceParent.innerHTML = "";
+				agentPresenceParent.appendChild(agentPresence);
+				return true;
+			}
+			return false;
+		}
+
+		client.setAllPresence = (presenceList: any, telemetryData?: Object | any): boolean => {
+			let startTime = new Date();
+			let presenceListDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAllPresences(presenceList);
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "PresenceContro.setAllPresence";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let presenceListParent = widgetIFrame.contentWindow.document.getElementById("PresenceList");
+			if (presenceListParent != null) {
+				presenceListParent.innerHTML = "";
+				presenceListParent.appendChild(presenceListDiv);
+				return true;
+			}
+			return false;
 		}
 
 		return client;

@@ -40,6 +40,8 @@ namespace Microsoft.CIFramework
 		export const renderSearchPage = "renderSearchPage";
 		export const startUISession = "startUISession";
 		export const endUISession = "endUISession";
+		export const setAgentPresence = "setAgentPresence";
+		export const setAllPresence = "setAllPresence";
 	}
 
 	/**
@@ -124,8 +126,10 @@ namespace Microsoft.CIFramework
 		export const context = "context";
 		export const initials = "initials";
 		export const isVisible = "isVisible";
-        export const sessionId = "sessionId";
-        export const DEFAULT_WIDGET_WIDTH = 378;
+		export const sessionId = "sessionId";
+		export const DEFAULT_WIDGET_WIDTH = 378;
+		export const presenceInfo = "presenceInfo";
+		export const presenceList = "presenceList";
 	}
 
 	/**

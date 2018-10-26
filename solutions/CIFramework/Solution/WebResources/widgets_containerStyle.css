@@ -1,0 +1,54 @@
+﻿.MainDiv
+{
+	right: 5px; 
+	position: fixed;
+	bottom: 5px; 
+	font-family: undefined;
+}
+
+div#PresenceList
+{
+	display:none;
+}
+
+button#CurrentStatus
+{
+	float:right;
+}
+
+.ColorNode
+{
+	height:16px;
+	width:16px;
+	border-radius: 50%;
+	float:left;
+}
+
+.TextNode
+{
+	float:left;
+	text-align: center;
+}
+
+.AgentPresenceDiv
+{
+	position: relative;
+	width: 42px;
+}
+
+.UserImageNode
+{
+	border-radius: 50%;
+	height: 42px;
+	width: 42px;
+}
+
+.AgentPresenceColorNode
+{
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	right: 0;
+	bottom: 18px; /* This should be the height of the text below */
+}
