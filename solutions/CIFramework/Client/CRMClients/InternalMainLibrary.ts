@@ -197,13 +197,17 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	function updateProviderSizes(): void {
-		if(isNotesControl == false)
+		if(countFlapPromises == 0)
 			var width = state.client.getWidgetWidth() as number;
 			for (let [key, value] of state.ciProviders) {
 				value.setWidth(width);
 			}
-		}
-		isNotesControl = false;
+		}else{
+			for(let i = 0; i < countFlapPromises; i++){
+				//flapPromises[i].resolve();
+			}
+			countFlapPromises = 0;
+		}	
 	}
 	/**
 	 * The handler called by the client for a size-changed event. The client is
@@ -215,15 +219,8 @@ namespace Microsoft.CIFramework.Internal {
 	 * is a number representing the new panel width as passed by the client
 	 */
 	function onSizeChanged(event: CustomEvent): void {
-		if(countFlapPromises == 0){
-			updateProviderSizes();
-			raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked");
-		}else{
-			for(let i = 0; i < countFlapPromises; i++){
-				//flapPromises[i].resolve();
-			}
-			countFlapPromises = 0;
-		}		
+		updateProviderSizes();
+		raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked");	
 	}
 
 	/**
@@ -236,15 +233,8 @@ namespace Microsoft.CIFramework.Internal {
 	 * is the numeric value of the current mode as passed by the client
 	 */
 	function onModeChanged(event: CustomEvent): void {
-		if(countFlapPromises == 0){
-			updateProviderSizes();  //TODO: global modeChanged event: this shouldn't be passed to all widgets. WHo should it be passed to?
-			raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked", state.sessionManager.getActiveProvider());
-		}else{
-			for(let i = 0; i < countFlapPromises; i++){
-				//flapPromises[i].resolve();
-			}
-			countFlapPromises = 0;
-		}
+		updateProviderSizes();  //TODO: global modeChanged event: this shouldn't be passed to all widgets. WHo should it be passed to?
+		raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked", state.sessionManager.getActiveProvider());
 	}
 
 	/**
@@ -771,18 +761,17 @@ namespace Microsoft.CIFramework.Internal {
 			}else if(key.search(Constants.entitySetName) != -1){
 				entitySetName = value;
 			}
-		}
-		
+		}		
 		let width: number = 0;
 		let panelWidth = state.client.getWidgetWidth();
 		width = panelWidth as number;
 		notesDetails.set(Constants.value,width);
-		//state.client.setWidgetWidth("setWidgetWidth", width*2);
 		return expandFlap(width, function (resolve: any){
 			let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
-			widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
 			let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
-			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes" style="position: relative;display:table;background-color: rgba(102, 102, 102, 0.5);width:280px;z-index: 2;border-radius: 4px;background-color: #333333;padding-bottom: 10px;min-height: 120px;background-color: #F6F6F6;"><div class="notesHeader" style="height: 39px;color: #333333;font-family: Segoe UI;font-size: 16px;line-height: 19px;font-style: Semibold;">Add Notes</div></div>');
+			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader">Add Notes</div></div>');
+			notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
+			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
 			var span = document.createElement("span");
 			span.classList.add("closeSoftNotification_CIF");
 			span.classList.add("FontIcons-closeSoftNotification_CIF");
@@ -792,14 +781,14 @@ namespace Microsoft.CIFramework.Internal {
 			let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
 			notesElement.appendChild(newTextArea);
 			newTextArea.setAttribute('placeholder','Type your note');
-			newTextArea.setAttribute('style','min-height: 300px;width: 280px;');
+			newTextArea.classList.add("newTextAreaCIF");
 			var saveBtn = document.createElement("BUTTON");
 			notesElement.appendChild(saveBtn);
-			saveBtn.setAttribute('style','width: 93px;float: right;color: #FFFFFF;background-color: #315FA2;font-style: Semiboid;font-family: Segoe UI;font-size: 12px;line-height: 14px;height: 28px;');
+			saveBtn.classList.add("notesSaveButtonCIF");
 			saveBtn.innerText = "Add Note";
 			var cancelBtn = document.createElement("BUTTON");
 			notesElement.appendChild(cancelBtn);
-			cancelBtn.setAttribute('style','width: 93px;float: right;color: #FFFFFF;background-color: #315FA2;font-style: Semiboid;font-family: Segoe UI;font-size: 12px;line-height: 14px;height: 28px;');
+			cancelBtn.classList.add("notesCancelButtonCIF");
 			cancelBtn.innerText = "Cancel";
 			saveBtn.addEventListener("click", function clickListener() {
 				saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
