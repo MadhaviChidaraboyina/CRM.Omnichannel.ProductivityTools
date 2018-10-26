@@ -18,6 +18,7 @@ namespace Microsoft.CIFramework.Internal {
 	const apiHandlers = new Map<string, any>([
 		["setclicktoact", [setClickToAct]],
 		["notifyEvent", [notifyEvent]],
+		["insertNotes", [insertNotes]],
 		["searchandopenrecords", [searchAndOpenRecords]],
 		["openform", [openForm]],
 		["createrecord", [createRecord]],
@@ -47,6 +48,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	declare var Xrm: any;
 	let noOfNotifications = 0;
+	let isNotesControl = false;
 
 	declare var appId: string;
 
@@ -195,10 +197,13 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	function updateProviderSizes(): void {
-		var width = state.client.getWidgetWidth() as number;
-		for (let [key, value] of state.providerManager.ciProviders) {
-			value.setWidth(width);
+		if (isNotesControl == false) {
+			var width = state.client.getWidgetWidth() as number;
+			for (let [key, value] of state.providerManager.ciProviders) {
+				value.setWidth(width);
+			}
 		}
+		isNotesControl = false;
 	}
 	/**
 	 * The handler called by the client for a size-changed event. The client is
@@ -785,6 +790,135 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, setAllPresence.name, appId, true, errorData);
+		}
+	}
+
+	/**
+	 * API to insert notes
+	 *
+	 * @param value. It's a map which contains entityName=Transcript, entitySetName=Transcripts and transcriptId
+	 *
+	*/
+	export function insertNotes(notesDetails: Map<string,any>): Promise<boolean>{
+		let entityName: string;
+		let originURL: string;
+		let entityId: string;
+		let entitySetName: string;
+		for (let [key, value] of notesDetails) {
+			if(key.search(Constants.entityName) != -1){
+				entityName = value;
+			}else if(key.search(Constants.originURL) != -1){
+				originURL = value;
+			}else if(key.search(Constants.entityId) != -1){
+				entityId = value;
+			}else if(key.search(Constants.entitySetName) != -1){
+				entitySetName = value;
+			}
+		}
+		
+		let width: number = 0;
+		let panelWidth = state.client.getWidgetWidth();
+		width = panelWidth as number;
+		notesDetails.set(Constants.value,width);
+		state.client.setWidgetWidth("setWidgetWidth", width*2);
+		isNotesControl = true;
+		return new Promise(function (resolve) {
+			let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+			widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
+			let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
+			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader">Add Notes</div></div>');
+			notesDiv.getElementsByClassName("CIFNotes").classList.add("notesDivCIF");
+			notesDiv.getElementsByClassName("notesHeader").classList.add("notesHeaderCIF");
+			var span = document.createElement("span");
+			span.classList.add("closeSoftNotification_CIF");
+			span.classList.add("FontIcons-closeSoftNotification_CIF");
+			span.setAttribute("aria-label", "Close");
+			notesDiv.getElementsByClassName("notesHeader")[0].appendChild(span);
+			var newTextArea = document.createElement('TextArea');
+			let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
+			notesElement.appendChild(newTextArea);
+			newTextArea.setAttribute('placeholder','Type your note');
+			newTextArea.classList.add("newTextAreaCIF");
+			var saveBtn = document.createElement("BUTTON");
+			notesElement.appendChild(saveBtn);
+			saveBtn.classList.add("notesSaveButtonCIF");
+			saveBtn.innerText = "Add Note";
+			var cancelBtn = document.createElement("BUTTON");
+			notesElement.appendChild(cancelBtn);
+			cancelBtn.classList.add("notesCancelButtonCIF");
+			cancelBtn.innerText = "Cancel";
+			saveBtn.addEventListener("click", function clickListener() {
+				saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
+					cancelNotes();
+					state.client.setWidgetWidth("setWidgetWidth", width);
+					resolve(retval);
+				});
+			});
+			cancelBtn.addEventListener("click", function clickListener() {
+				cancelNotes();
+				state.client.setWidgetWidth("setWidgetWidth", width);
+				resolve(new Map().set(Constants.value,true));
+			});
+		});
+	}
+
+	export function saveNotes(notesDetails: Map<string,any>,newTextArea: any): Promise<Map<string, any>>{		
+		let entityName: string;
+		let originURL: string;
+		let entityId: string;
+		let entitySetName: string;
+		for (let [key, value] of notesDetails) {
+			if(key.search(Constants.entityName) != -1){
+				entityName = value;
+			}else if(key.search(Constants.originURL) != -1){
+				originURL = value;
+			}else if(key.search(Constants.entityId) != -1){
+				entityId = value;
+			}else if(key.search(Constants.entitySetName) != -1){
+				entitySetName = value;
+			}
+		}
+		let annotationId: string;
+		let textAreaValue = newTextArea.value;
+		let map = new Map().set(Constants.notetext,textAreaValue);
+		let createMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.value, map).set(Constants.originURL,originURL);
+		const [provider, errorData] = getProvider(notesDetails, [Constants.value]);
+		if (provider){
+			return new Promise(function (resolve) {
+				createRecord(createMap).then(function (returnValue: Map<string, any>) {	
+					for(let [key,value] of returnValue){
+						if(key.search(Constants.value) != -1){
+							for(let [key1,value1] of value){
+								if(key1.search(Constants.Id) != -1){
+									annotationId = value1;
+								}
+							}
+						}
+					}
+					var returnUpdateValue = new Map();
+					let odataBind = entitySetName+"("+entityId+")";
+					let odataBindPropertyName = "objectid_"+entityName+"@odata.bind";
+					let notesMap = new Map().set(odataBindPropertyName,odataBind);
+					let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
+					updateRecord(updateMap).then(function (updatedAnnotation: Map<string, any>) {
+						for(let [key,value] of updatedAnnotation){
+							if(key.search(Constants.value) != -1){
+								returnUpdateValue = value;
+							}
+						}
+						var mapReturn = new Map().set(Constants.value,returnUpdateValue);
+						resolve(mapReturn);
+					});
+				});
+			});
+		}
+	}
+
+	export function cancelNotes(): void{	
+		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+		let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
+		if(!isNullOrUndefined(notesDiv)){
+			notesDiv.removeChild(notesDiv.getElementsByClassName("CIFNotes")[0]);
 		}
 	}
 }

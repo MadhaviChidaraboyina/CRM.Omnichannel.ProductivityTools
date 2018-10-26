@@ -42,6 +42,7 @@ namespace Microsoft.CIFramework
 		export const endUISession = "endUISession";
 		export const setAgentPresence = "setAgentPresence";
 		export const setAllPresence = "setAllPresence";
+		export const insertNotes = "insertNotes";
 	}
 
 	/**
@@ -130,6 +131,13 @@ namespace Microsoft.CIFramework
 		export const DEFAULT_WIDGET_WIDTH = 378;
 		export const presenceInfo = "presenceInfo";
 		export const presenceList = "presenceList";
+		export const activityType = "activityType";
+		export const sessionDetails = "sessionDetails";
+		export const activityId = "activityId";
+		export const Id = "id";
+		export const notetext = "notetext";
+		export const annotation = "annotation";
+		export const entitySetName = "entitySetName";
 	}
 
 	/**

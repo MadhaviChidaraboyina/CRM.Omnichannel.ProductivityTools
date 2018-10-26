@@ -286,7 +286,7 @@ namespace Microsoft.CIFramework.Internal {
 			Xrm.Panel.width = width;
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.setWidth"
-			logApiData(telemetryData, startTime, timeTaken, apiName);
+			//logApiData(telemetryData, startTime, timeTaken, apiName);
 		}
 
 
@@ -342,7 +342,7 @@ namespace Microsoft.CIFramework.Internal {
 			let width = Xrm.Panel.width;
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.getWidth";
-			logApiData(telemetryData, startTime, timeTaken, apiName);
+			//logApiData(telemetryData, startTime, timeTaken, apiName);
 			return width;
 		}
 
