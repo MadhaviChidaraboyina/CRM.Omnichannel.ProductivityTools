@@ -769,7 +769,7 @@ namespace Microsoft.CIFramework.Internal {
 		return expandFlap(width, function (resolve: any){
 			let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 			let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
-			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader">Add Notes</div></div>');
+			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader"><br/><div style="margin-left:18px">Add Notes</div></div></div>');
 			notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
 			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
 			var span = document.createElement("span");
@@ -780,8 +780,12 @@ namespace Microsoft.CIFramework.Internal {
 			var newTextArea = document.createElement('TextArea');
 			let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
 			notesElement.appendChild(newTextArea);
+			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = width+"px";
 			newTextArea.setAttribute('placeholder','Type your note');
 			newTextArea.classList.add("newTextAreaCIF");
+			var textAreaWidth = width - width/8;
+			newTextArea.id = "notesTextAreaCIF";
+			widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF").style.width = textAreaWidth+"px";
 			var saveBtn = document.createElement("BUTTON");
 			notesElement.appendChild(saveBtn);
 			saveBtn.classList.add("notesSaveButtonCIF");
