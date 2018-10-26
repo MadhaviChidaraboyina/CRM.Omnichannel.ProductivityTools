@@ -396,6 +396,25 @@ namespace Microsoft.CIFramework
 
 		return sendMessage<number>(getWidth.name, payload, false);
 	}
+	/**
+	 * API to call the openkbsearch control
+	 *
+	 * @params value. search string
+	*/
+	export function openKBSearchControl(value : string) : Promise<void>
+	{
+		let startTime = Date.now();
+		if(!isNullOrUndefined(value)){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.openKBSearchControl,
+				messageData: new Map().set(Constants.SearchString, value)
+			}
+
+			return sendMessage<void>(openKBSearchControl.name, payload, false);
+		}else{
+			return postMessageNamespace.rejectWithErrorMessage("The openKBSearchControl parameter value is invalid. Provide a positive number to the parameter.");
+		}
+	}
 
 	/**
 	 * API to set the Panel width
