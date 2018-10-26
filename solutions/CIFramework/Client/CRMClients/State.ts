@@ -38,9 +38,10 @@ namespace Microsoft.CIFramework.Internal {
 		_defaultProvider: CIProvider;
 		_client: IClient;
 
-		constructor(client: IClient, defaultProvider?: CIProvider) {
+		constructor(client: IClient, defaultProviderUrl?: string, defaultProvider?: CIProvider) {
 			this._client = client;
 			this.ciProviders = new Map<string, CIProvider>();
+			this.ciProviders.set(defaultProviderUrl, defaultProvider);
 			this._defaultProvider = defaultProvider;
 			this._client.setWidgetMode("mode", (defaultProvider ? defaultProvider.getMode() : 0));  //TODO: replace with named constant
 		}
@@ -244,8 +245,9 @@ namespace Microsoft.CIFramework.Internal {
 		getWidth(): number {
 			return this.widgetWidth;
 		}
-
-		startUISession(context: any, initials: string, entityFormOptions: string, entityFormParameters: string, isVisible: boolean): string {
+		
+		startUISession(context: any, initials: string): string {
+			//check if a session with the same conext already exists
 			let sessionId: string = this._state.messageLibrary.getCorrelationId();
 			let session: UISession = {
 				sessionId: sessionId,
@@ -255,9 +257,6 @@ namespace Microsoft.CIFramework.Internal {
 			};
 
 			this.uiSessions.set(sessionId, session);
-			if (isVisible) {
-				//Todo
-			}
 
 			SessionPanel.getInstance().addUISession(sessionId, this, initials);
 
@@ -267,7 +266,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		endUISession(sessionId: string): string {
-			if (this.uiSessions.get(sessionId)) {
+			if (this.uiSessions.has(sessionId)) {
 				this.uiSessions.delete(sessionId);
 				SessionPanel.getInstance().removeUISession(sessionId);
 			}

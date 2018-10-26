@@ -549,11 +549,11 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to start UI Session
 	 */
-	export function startUISession(context: any, initials: string, entityFormOptions: string, entityFormParameters: string, isVisible: boolean): Promise<string> {
+	export function startUISession(context: any, initials: string, isVisible: boolean): Promise<string> {
 		if (!isNullOrUndefined(context) && !isNullOrUndefined(initials)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.startUISession,
-				messageData: new Map().set(Constants.context, context).set(Constants.initials, initials).set(Constants.entityFormOptions, entityFormOptions).set(Constants.entityFormParameters, entityFormParameters).set(Constants.isVisible, isVisible)
+				messageData: new Map().set(Constants.context, context).set(Constants.initials, initials).set(Constants.isVisible, isVisible)
 			}
 			return sendMessage<string>(startUISession.name, payload, false);
 		}

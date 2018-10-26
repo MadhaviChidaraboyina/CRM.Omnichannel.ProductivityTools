@@ -9,7 +9,6 @@ namespace Microsoft.CIFramework.Internal {
 		sidePanelIFrame: any;
 		UIsessions: Map<string, CIProvider>;
 		visibleUISession: string;
-		colors: string[] = ["lightgreen", "blue", "green", "goldenrod"];
 		counter: number = 0;
 
 		private static instance: SessionPanel;
@@ -41,7 +40,7 @@ namespace Microsoft.CIFramework.Internal {
 				return;
 			}
 
-			if (this.visibleUISession != '' && !isNullOrUndefined(this.UIsessions.get(this.visibleUISession))) {
+			if (this.visibleUISession != '') {
 				this.UIsessions.get(this.visibleUISession).setInvisibleSession(this.visibleUISession);
 			}
 
@@ -50,10 +49,24 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		createSessionElement(id: string, initials: string): any {
-			return '<div id="' + id + '" class="avatar-circle" style="width: 26px; height: 26px; background-color: ' + this.colors[this.counter++ % 4] +' ; border-radius: 50%; -webkit-border-radius: 50%; text-align: center; margin: 4px;"><span class="initials" style=" position: relative; top: 3px; font-size: 14px; line-height: normal; color: #fff; font-family: Segoe UI;">' + initials + '</span></div>';
+			return '<div id="' + id + '" class="avatar-circle" style="width: 26px; height: 26px; background-color: ' + Constants.sessionColors[this.counter++ % 4] +' ; border-radius: 50%; -webkit-border-radius: 50%; text-align: center; margin: 4px;"><span class="initials" style=" position: relative; top: 3px; font-size: 14px; line-height: normal; color: #fff; font-family: Segoe UI;">' + initials + '</span></div>';
+		}
+
+		canAddUISession(): boolean {
+			if (this.UIsessions.size < Constants.MaxSessions) {
+				return true;
+			}
+			else {
+				return false;
+			}
 		}
 
 		addUISession(sessionId: string, provider: CIProvider, initials: string): void {
+			if (!this.canAddUISession()) {
+				//ToDo: raise notification and reject promise
+				return;
+			}
+
 			let sessionPanel = this.getSessionPanel();
 			if (sessionPanel == null)
 				return;
@@ -71,20 +84,25 @@ namespace Microsoft.CIFramework.Internal {
 			if (this.visibleUISession == '') {
 				this.setVisibleUISession(sessionId);
 			}
+
+			if (this.UIsessions.size == Constants.MaxSessions) {
+				//ToDo:raise OnMaxUISessionsReached event
+			}
 		}
 
 		removeUISession(sessionId: string): void {
 			let sessionElement = this.getSessionElement(sessionId);
-			if (sessionElement == null)
-				return;
+			if (sessionElement && this.UIsessions.has(sessionId)) {
+				this.UIsessions.delete(sessionId);
+				sessionElement.parentNode.removeChild(sessionElement);
 
-			this.UIsessions.delete(sessionId);
-
-			sessionElement.parentNode.removeChild(sessionElement);
-
-			if (this.UIsessions.size > 0) {
-				//setting last in the Map as visible
-				this.setVisibleUISession(Array.from(this.UIsessions.keys()).pop());
+				if (this.visibleUISession == sessionId) {
+					this.visibleUISession = '';
+					if (this.UIsessions.size > 0) {
+						//setting last in the Map as visible
+						this.setVisibleUISession(Array.from(this.UIsessions.keys()).pop());
+					}
+				}
 			}
 		}
 

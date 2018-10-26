@@ -80,7 +80,7 @@ namespace Microsoft.CIFramework.Internal {
 					var roles = Xrm.Utility.getGlobalContext().getUserRoles();
 					let telemetryData: any = new Object();
 					var defaultMode = state.client.getWidgetMode(telemetryData) as number;
-					var first: string = null;
+					var first: boolean = true;
 
 					var environmentInfo: any = [];
 					environmentInfo["orgId"] = Xrm.Utility.getGlobalContext().organizationSettings.organizationId;
@@ -98,18 +98,16 @@ namespace Microsoft.CIFramework.Internal {
 							if (x[Constants.trustedDomain] != "")
 								trustedDomains.push(x[Constants.trustedDomain]);
 							var provider: CIProvider = new CIProvider(x, state, environmentInfo);
-							if (!first) {
-								first = x[Constants.landingUrl];
+							if (first) {
 								// initialize the session manager
-								state.providerManager = new ProviderManager(state.client, provider);
+								state.providerManager = new ProviderManager(state.client, x[Constants.landingUrl], provider);
+								first = false;
 							}
-
-							state.providerManager.addProvider(x[Constants.landingUrl], provider);
+							else {
+								state.providerManager.addProvider(x[Constants.landingUrl], provider);
+							}
 							var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], x[Constants.SortOrder], appId, false, null);
 							setUsageData(usageData);
-							if (!first) {
-								first = x[Constants.landingUrl];
-							}
 							break;
 						}
 					}
@@ -739,7 +737,7 @@ namespace Microsoft.CIFramework.Internal {
 		if (provider) {
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), startUISession.name, telemetryData);
 			setPerfData(perfData);
-			return Promise.resolve(new Map<string, any>().set(Constants.value, provider.startUISession(parameters.get(Constants.context), parameters.get(Constants.initials), parameters.get(Constants.entityFormOptions), parameters.get(Constants.entityFormParameters), parameters.get(Constants.isVisible))));
+			return Promise.resolve(new Map<string, any>().set(Constants.value, provider.startUISession(parameters.get(Constants.context), parameters.get(Constants.initials))));
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, startUISession.name, appId, true, errorData);

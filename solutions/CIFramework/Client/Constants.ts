@@ -123,6 +123,8 @@ namespace Microsoft.CIFramework
 		export const initials = "initials";
 		export const isVisible = "isVisible";
 		export const sessionId = "sessionId";
+		export const MaxSessions = 5;
+		export const sessionColors = ["#2A757D", "#464775", "#9E2069", "#427825", "#511466", "#365C99", "#9C4141", "#84612A"];
 	}
 
 	/**
