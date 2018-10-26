@@ -766,7 +766,6 @@ namespace Microsoft.CIFramework.Internal {
 		isNotesControl = true;
 		return new Promise(function (resolve) {
 			let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
-			widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
 			let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
 			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader">Add Notes</div></div>');
 			notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
