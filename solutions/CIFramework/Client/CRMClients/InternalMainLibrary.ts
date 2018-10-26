@@ -769,8 +769,8 @@ namespace Microsoft.CIFramework.Internal {
 			widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
 			let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
 			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader">Add Notes</div></div>');
-			notesDiv.getElementsByClassName("CIFNotes").classList.add("notesDivCIF");
-			notesDiv.getElementsByClassName("notesHeader").classList.add("notesHeaderCIF");
+			notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
+			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
 			var span = document.createElement("span");
 			span.classList.add("closeSoftNotification_CIF");
 			span.classList.add("FontIcons-closeSoftNotification_CIF");
