@@ -547,6 +547,7 @@ namespace Microsoft.CIFramework.Internal {
 		let i = 0;
 		let header,body,actions;
 		let waitTime = -1;
+		let panelWidth = state.client.getWidgetWidth();
 		let notificationType: any = [];
 		for (let [key, value] of notificationUX) {
 			if(key.search(Constants.eventType) != -1){
@@ -585,7 +586,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 		let map = new Map();
-		map = renderEventNotification(header,body,actions,notificationType);
+		map = renderEventNotification(header,body,actions,notificationType,panelWidth);
 		if(actions != null && actions != "undefined"){
 			for( i = 0; i < actions.length; i++){
 				for (let key in actions[i]) {
@@ -688,6 +689,12 @@ namespace Microsoft.CIFramework.Internal {
 			let originURL: string;
 			let entityId: string;
 			let entitySetName: string;
+			let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+			let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
+			var childDivs = notesDiv.getElementsByTagName('div');
+			if(childDivs != null){
+				return postMessageNamespace.rejectWithErrorMessage("This conversation already has a note opened.");
+			}
        		for (let [key, value] of notesDetails) {
 				if(key.search(Constants.entityName) != -1){
 					entityName = value;
@@ -698,7 +705,7 @@ namespace Microsoft.CIFramework.Internal {
 				}else if(key.search(Constants.entitySetName) != -1){
 					entitySetName = value;
 				}
-			}		
+			}
 			let width: number = 0;
 			let panelWidth = state.client.getWidgetWidth();
 			width = panelWidth as number;
@@ -706,8 +713,6 @@ namespace Microsoft.CIFramework.Internal {
 			return expandFlap(width, function (resolve: any){
 				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), insertNotes.name, telemetryData);
 				setPerfData(perfData);
-				let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
-				let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
 				notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader"><br/><div style="margin-left:18px">Add Notes</div></div></div>');
 				notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
 				notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
@@ -735,8 +740,8 @@ namespace Microsoft.CIFramework.Internal {
 				cancelBtn.innerText = "Cancel";
 				saveBtn.addEventListener("click", function clickListener() {
 					saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
-						cancelNotes();
-						state.client.setWidgetWidth("setWidgetWidth", width);
+						//cancelNotes();
+						//state.client.setWidgetWidth("setWidgetWidth", width);
 						resolve(retval);
 					});
 				});

@@ -2,7 +2,6 @@
 	position: relative;
 	display:table;
 	background-color: rgba(102, 102, 102, 0.5);
-	width:280px;
 	z-index: 2;
 	border-radius: 4px;
 	background-color: #333333;
@@ -12,7 +11,6 @@
 	position: relative;
 	display:table;
 	background-color: rgba(102, 102, 102, 0.5);
-	width:280px;
 	z-index: 2;
 	border-radius: 4px;
 	background-color: #25477A;
@@ -25,26 +23,22 @@
 .header_NotificationType_CIF_Broadcast{
 	display:block;
 	min-height:21px;
-	width:280px;
 	background-color:#000000;
 }
 .header_NotificationType_CIF_notification{
 	display:block;
 	min-height:21px;
 	background-color:#B22912;
-	width:280px;
 }
 .header_NotificationType_CIF_transfer{
 	display:block;
 	min-height:21px;
 	background-color:#B22912;
-	width:280px;
 }
 .header_NotificationType_CIF_internalCommunication{
 	display:block;
 	min-height:21px;
 	background-color:#000000;
-	width:280px;
 }
 .header_CIF{
 	display:block;
@@ -57,6 +51,7 @@
 	margin-left: 10px;
 	font-family: CRM MDL2 ASSETS;
 	color:#FFFFFF;
+	text-align:center;
 }
 .headerKeyCIF{
 	font-family:Segoe UI;
@@ -82,8 +77,7 @@
 .bodyDivCIF{
 	display:block;
 }
-.bodyDivider_CIF{
-	width:280px; 
+.bodyDivider_CIF{ 
 	height:1px; 
 	background-color: #F1F1F1;
 }
@@ -164,7 +158,6 @@
 	text-align:left;
 	height:16px;
 	margin-right:11px;
-	width:78px;
 	word-wrap:break-word;
 	color:#D8D8D8;
 }
@@ -173,8 +166,7 @@
 	font-style:Semibold;
 	font-size:14px;
 	text-align:left;
-	height:16px;
-	width: 163px; 
+	height:16px; 
 	color:#FFFFFF;
 	display: inline-block;
 	position: absolute;
@@ -190,7 +182,6 @@
 	font-size:14px;
 	text-align:left;
 	height:16px;
-	width: 163px;
 	color:#FFFFFF;
 	display: inline-table;
 	height: auto;
@@ -202,8 +193,7 @@
 	font-style:Semibold;
 	font-size:14px;
 	text-align:left;
-	height:16px;
-	width: 163px; 
+	height:16px; 
 	color:#FFFFFF;
 	display: inline-block;
 	position: absolute;
@@ -214,32 +204,27 @@
 	word-break: break-all;
 }
 .bodyDivider_CIF_invisible{
-	width:280px; 
 	height:1px; 
 	background-color: #F1F1F1; 
 	display:none;
 }
 .bothButtonsAccept_CIF{
-	width:252px;
 	background-color:#47C21D;
 	height:40px;
 	margin-left: 10px;
 }
 .singleButtonAccept_CIF{
-	width:120px;
 	background-color:#47C21D;
 	height:40px;
 	margin-right:14px;
 	margin-left: 10px;
 }
 .bothButtonsReject_CIF{
-	width:252px;
 	background-color:#EA0600;
 	height:40px;
 	margin-left: 10px;
 }
 .singleButtonReject_CIF{
-	width:120px;
 	background-color:#EA0600;
 	height:40px;
 	margin-right:14px;
@@ -281,7 +266,6 @@
 	position:relative;
 	display:table;
 	box-shadow: 4px 0 2px rgba(0, 0, 0, 0.5);
-	width:320px;
 	border-radius: 4px;
 	background-color: #333333;
 }
@@ -340,7 +324,6 @@
 	text-align:left;
 	height:16px;
 	margin-right:11px;
-	width:78px;
 	word-wrap:break-word;
 	color:#D8D8D8;
 }
@@ -350,7 +333,6 @@
 	font-size:14px;
 	text-align:left;
 	height:16px;
-	width:163px;
 	word-wrap:break-word;
 	color:#FFFFFF;
 	display:inline-table;
@@ -359,7 +341,6 @@
 	position: relative;
 	display:table;
 	background-color: rgba(102, 102, 102, 0.5);
-	width:280px;
 	z-index: 2;
 	border-radius: 4px;
 	background-color: #333333;
@@ -378,11 +359,9 @@
 }
 .newTextAreaCIF{
 	min-height: 300px;
-	width: 240px;
 	margin-left: 20px;
 }
 .notesSaveButtonCIF{
-	width: 93px;
 	float: right;
 	color: #FFFFFF;
 	background-color: #315FA2;
@@ -394,7 +373,6 @@
 	margin-right: 20px;
 }
 .notesCancelButtonCIF{
-	width: 93px;
 	float: right;
 	color: #FFFFFF;
 	background-color: #315FA2;
