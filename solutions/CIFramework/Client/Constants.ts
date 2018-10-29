@@ -126,6 +126,7 @@ namespace Microsoft.CIFramework
 		export const notetext = "notetext";
 		export const annotation = "annotation";
 		export const entitySetName = "entitySetName";
+		export const annotationId = "annotationid";
 	}
 
 	/**
