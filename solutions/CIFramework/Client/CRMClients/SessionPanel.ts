@@ -3,7 +3,7 @@
  */
 
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
-
+/** @internal */
 namespace Microsoft.CIFramework.Internal {
 	export class SessionPanel {
 		sidePanelIFrame: any;

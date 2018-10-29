@@ -9,6 +9,7 @@
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2522-manual/clientapi/XrmClientApi.d.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 
+/** @internal */
 namespace Microsoft.CIFramework.Internal {
 	/**
 	 * Actual implementation of IClient for web client 

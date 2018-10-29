@@ -4,7 +4,7 @@
 
 /// <reference path="Constants.ts" />
 /// <reference path="PresenceControl.ts" />
-
+/** @internal */
 namespace Microsoft.CIFramework.Internal
 {
 	export type EventHandler = (event?: CustomEvent) => void;

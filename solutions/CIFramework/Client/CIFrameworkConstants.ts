@@ -5,6 +5,7 @@
 /**
  * Constants for CIFramework.
  */
+/** @internal */
 namespace Microsoft.CIFramework.postMessageNamespace {
 
 	/**

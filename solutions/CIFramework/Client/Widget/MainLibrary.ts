@@ -12,6 +12,7 @@ namespace Microsoft.CIFramework
 
 	let Constants = Microsoft.CIFramework.Constants;
 
+    /** @internal */
 	function initialize()
 	{
 		let startTime = Date.now();
@@ -52,6 +53,7 @@ namespace Microsoft.CIFramework
 		}, 0);
 	}
 
+    /** @internal */
 	function sendMessage<T>(funcName: string, payload: postMessageNamespace.IExternalRequestMessageType, isEvent: boolean, noTimeout?: boolean) : Promise<T>{
 		let startTime = Date.now();
 
@@ -517,7 +519,7 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to remove the subscriber
 	 */
-	export function removeHandler(eventName: string, handlerFunction: ((eventData:Map<string, any>) => Promise<Map<string, any>>))
+    export function removeHandler(eventName: string, handlerFunction: ((eventData: string) => Promise<Object>))
 	{
 		let startTime = Date.now();
 		if(!(isNullOrUndefined(eventName) || eventName == "") && !isNullOrUndefined(handlerFunction)){

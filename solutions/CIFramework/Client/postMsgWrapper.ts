@@ -18,7 +18,7 @@
 /// <reference path="CIFrameworkConstants.ts" />
 /// <reference path="../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 
-
+/** @internal */
 namespace Microsoft.CIFramework.postMessageNamespace {
 
 	export type IDeferred = {

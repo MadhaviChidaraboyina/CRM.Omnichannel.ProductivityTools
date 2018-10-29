@@ -8,7 +8,7 @@
 /// <reference path="State.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 /// <reference path="aria-webjs-sdk-1.6.2.d.ts" />
-
+/** @internal */
 namespace Microsoft.CIFramework.Internal {
 	let Constants = Microsoft.CIFramework.Constants;
 	const listenerWindow = window.parent;

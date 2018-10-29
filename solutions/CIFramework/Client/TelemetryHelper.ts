@@ -2,7 +2,7 @@
 /// <reference path="CRMClients/State.ts" />
 /// <reference path="CRMClients/aria-webjs-sdk-1.6.2.d.ts" />
 /// <reference path="CRMClients/IErrorHandler.ts" />
-
+/** @internal */
 namespace Microsoft.CIFramework.Internal
 {
 	declare var Xrm: any;
