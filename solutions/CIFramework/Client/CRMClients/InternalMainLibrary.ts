@@ -692,7 +692,7 @@ namespace Microsoft.CIFramework.Internal {
 			let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 			let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
 			var childDivs = notesDiv.getElementsByTagName('div');
-			if(childDivs != null){
+			if(childDivs != null && childDivs.length > 0){
 				return postMessageNamespace.rejectWithErrorMessage("This conversation already has a note opened.");
 			}
        		for (let [key, value] of notesDetails) {
@@ -713,19 +713,20 @@ namespace Microsoft.CIFramework.Internal {
 			return expandFlap(width, function (resolve: any){
 				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), insertNotes.name, telemetryData);
 				setPerfData(perfData);
-				notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader"><br/><div style="margin-left:18px">Add Notes</div></div></div>');
+				widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].parentElement.setAttribute('style','position: absolute;right: 0px;');
+				notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader"><div class="notesHeaderSpan_CIF" style="margin-left:18px"><br/>Add Notes</div></div></div>');
 				notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
 				notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
 				var span = document.createElement("span");
-				span.classList.add("closeSoftNotification_CIF");
+				span.classList.add("closeNotes_CIF");
 				span.classList.add("FontIcons-closeSoftNotification_CIF");
 				span.setAttribute("aria-label", "Close");
-				notesDiv.getElementsByClassName("notesHeader")[0].appendChild(span);
+				notesDiv.getElementsByClassName("notesHeaderSpan_CIF")[0].appendChild(span);
 				var newTextArea = document.createElement('TextArea');
 				let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
 				notesElement.appendChild(newTextArea);
 				widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = width+"px";
-				newTextArea.setAttribute('placeholder','Type your note');
+				newTextArea.setAttribute('placeholder','Start adding notes');
 				newTextArea.classList.add("newTextAreaCIF");
 				var textAreaWidth = width - width/8;
 				newTextArea.id = "notesTextAreaCIF";
@@ -740,12 +741,15 @@ namespace Microsoft.CIFramework.Internal {
 				cancelBtn.innerText = "Cancel";
 				saveBtn.addEventListener("click", function clickListener() {
 					saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
-						//cancelNotes();
-						//state.client.setWidgetWidth("setWidgetWidth", width);
 						resolve(retval);
 					});
 				});
 				cancelBtn.addEventListener("click", function clickListener() {
+					cancelNotes();
+					state.client.setWidgetWidth("setWidgetWidth", width);
+					resolve(new Map().set(Constants.value,true));
+				});
+				span.addEventListener("click", function clickListener() {
 					cancelNotes();
 					state.client.setWidgetWidth("setWidgetWidth", width);
 					resolve(new Map().set(Constants.value,true));
@@ -783,34 +787,84 @@ namespace Microsoft.CIFramework.Internal {
 		let annotationId: string;
 		let textAreaValue = newTextArea.value;
 		let map = new Map().set(Constants.notetext,textAreaValue);
+		let noteText = "";
 		let createMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.value, map).set(Constants.originURL,originURL);
 		const [provider, errorData] = getProvider(notesDetails, [Constants.value]);
 		if (provider){
 			return new Promise(function (resolve) {
-				createRecord(createMap).then(function (returnValue: Map<string, any>) {	
-					for(let [key,value] of returnValue){
+				let searchQuery = "?$select=annotationid&$filter=_objectid_value eq " + entityId;
+				let searchMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.queryParameters,searchQuery).set(Constants.originURL,originURL);
+				search(searchMap).then(function (returnSearchResult: Map<string, any>) {
+					annotationId = "";
+					for(let [key,value] of returnSearchResult){
 						if(key.search(Constants.value) != -1){
-							for(let [key1,value1] of value){
-								if(key1.search(Constants.Id) != -1){
-									annotationId = value1;
+							for(let i=0; i< value.length; i++ ){
+								for(let key1 in value[i]){
+									if(key1.search(Constants.annotationId) != -1){
+										annotationId = value[i][key1];
+									}
 								}
 							}
 						}
 					}
-					var returnUpdateValue = new Map();
-					let odataBind = entitySetName+"("+entityId+")";
-					let odataBindPropertyName = "objectid_"+entityName+"@odata.bind";
-					let notesMap = new Map().set(odataBindPropertyName,odataBind);
-					let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
-					updateRecord(updateMap).then(function (updatedAnnotation: Map<string, any>) {
-						for(let [key,value] of updatedAnnotation){
-							if(key.search(Constants.value) != -1){
-								returnUpdateValue = value;
+					if(annotationId == ""){
+						createRecord(createMap).then(function (returnValue: Map<string, any>) {	
+							for(let [key,value] of returnValue){
+								if(key.search(Constants.value) != -1){
+									for(let [key1,value1] of value){
+										if(key1.search(Constants.Id) != -1){
+											annotationId = value1;
+										}
+									}
+								}
 							}
-						}
-						var mapReturn = new Map().set(Constants.value,returnUpdateValue);
-						resolve(mapReturn);
-					});
+							var returnUpdateValue = new Map();
+							let odataBind = entitySetName+"("+entityId+")";
+							let odataBindPropertyName = "objectid_"+entityName+"@odata.bind";
+							let notesMap = new Map().set(odataBindPropertyName,odataBind);
+							let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
+							updateRecord(updateMap).then(function (updatedAnnotation: Map<string, any>) {
+								for(let [key,value] of updatedAnnotation){
+									if(key.search(Constants.value) != -1){
+										returnUpdateValue = value;
+									}
+								}
+								var mapReturn = new Map().set(Constants.value,returnUpdateValue);
+								resolve(mapReturn);
+							});
+						});
+					}else{
+						searchQuery = "?$select=notetext&$filter=_objectid_value eq " + entityId;
+						searchMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.queryParameters,searchQuery).set(Constants.originURL,originURL);
+						search(searchMap).then(function (returnSearchResult: Map<string, any>) {
+							for(let [key,value] of returnSearchResult){
+								if(key.search(Constants.value) != -1){
+									for(let i=0; i< value.length; i++ ){
+										for(let key1 in value[i]){
+											if(key1.search(Constants.notetext) != -1){
+												noteText = value[i][key1];
+											}
+										}
+									}
+								}
+							}
+							let notesMap = new Map().set(Constants.notetext,noteText+" "+textAreaValue);
+							let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
+							updateRecord(updateMap).then(function (returnValue: Map<string, any>) {	
+								for(let [key,value] of returnValue){
+									if(key.search(Constants.value) != -1){
+										for(let [key1,value1] of value){
+											if(key1.search(Constants.Id) != -1){
+												annotationId = value1;
+											}
+										}
+									}
+								}
+								var mapReturn = new Map().set(Constants.value,returnValue);
+								resolve(mapReturn);
+							});
+						});
+					}		
 				});
 			});
 		}
