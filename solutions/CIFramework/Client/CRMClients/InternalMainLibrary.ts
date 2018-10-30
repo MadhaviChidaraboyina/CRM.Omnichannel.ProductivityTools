@@ -745,12 +745,38 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
+			const [sessionId, errorData] = provider.startUISession(parameters.get(Constants.context), parameters.get(Constants.initials));
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), startUISession.name, telemetryData);
 			setPerfData(perfData);
-			return Promise.resolve(new Map<string, any>().set(Constants.value, provider.startUISession(parameters.get(Constants.context), parameters.get(Constants.initials))));
+			if (sessionId != null) {
+				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
+			}
+			else {
+				return rejectWithErrorMessage(errorData.errorMsg, startUISession.name, appId, true, errorData);
+			}
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, startUISession.name, appId, true, errorData);
+		}
+	}
+
+	export function switchUISession(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			const [sessionId, errorData] = provider.switchUISession(parameters.get(Constants.sessionId));
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), switchUISession.name, telemetryData);
+			setPerfData(perfData);
+			if (sessionId != null) {
+				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
+			}
+			else {
+				return rejectWithErrorMessage(errorData.errorMsg, switchUISession.name, appId, true, errorData);
+			}
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, switchUISession.name, appId, true, errorData);
 		}
 	}
 
@@ -759,9 +785,15 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
+			const [sessionId, errorData] = provider.endUISession(parameters.get(Constants.sessionId));
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), endUISession.name, telemetryData);
 			setPerfData(perfData);
-			return Promise.resolve(new Map<string, any>().set(Constants.value, provider.endUISession(parameters.get(Constants.sessionId))));
+			if (sessionId != null) {
+				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
+			}
+			else {
+				return rejectWithErrorMessage(errorData.errorMsg, endUISession.name, appId, true, errorData);
+			}
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, endUISession.name, appId, true, errorData);

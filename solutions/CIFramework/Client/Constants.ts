@@ -39,7 +39,9 @@ namespace Microsoft.CIFramework
 		export const escalation = "escalation";
 		export const renderSearchPage = "renderSearchPage";
 		export const startUISession = "startUISession";
+		export const switchUISession = "switchUISession";
 		export const endUISession = "endUISession";
+		export const onMaxUISessionsReached = "onMaxUISessionsReached";
 		export const setAgentPresence = "setAgentPresence";
 		export const setAllPresence = "setAllPresence";
 		export const insertNotes = "insertNotes";
@@ -126,10 +128,10 @@ namespace Microsoft.CIFramework
 		export const SearchString = "searchString";
 		export const context = "context";
 		export const initials = "initials";
-		export const isVisible = "isVisible";
 		export const sessionId = "sessionId";
-		export const MaxSessions = 5;
+		export const MaxUISessions = 5;
 		export const sessionColors = ["#2A757D", "#464775", "#9E2069", "#427825", "#511466", "#365C99", "#9C4141", "#84612A"];
+		export const activeSessionColors = ["#D7F5F3", "#EBECF7", "#FFE5F5", "#E0F5D5", "#F7E6FC", "#D9E8FF", "#FFE3E3", "#F2EBDF"];
 		export const DEFAULT_WIDGET_WIDTH = 378;
 		export const presenceInfo = "presenceInfo";
 		export const presenceList = "presenceList";

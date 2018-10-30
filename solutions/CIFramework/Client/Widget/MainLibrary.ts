@@ -607,12 +607,28 @@ namespace Microsoft.CIFramework
 		if (!isNullOrUndefined(context) && !isNullOrUndefined(initials)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.startUISession,
-				messageData: new Map().set(Constants.context, context).set(Constants.initials, initials).set(Constants.isVisible, isVisible)
+				messageData: new Map().set(Constants.context, context).set(Constants.initials, initials)
 			}
 			return sendMessage<string>(startUISession.name, payload, false);
 		}
 		else {
 			return postMessageNamespace.rejectWithErrorMessage("context or initials is null");
+		}
+	}
+
+	/**
+	 * API to switch UI Session
+	 */
+	export function switchUISession(sessionId: string): Promise<string> {
+		if (!isNullOrUndefined(sessionId)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.switchUISession,
+				messageData: new Map().set(Constants.sessionId, sessionId)
+			}
+			return sendMessage<string>(switchUISession.name, payload, false);
+		}
+		else {
+			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");
 		}
 	}
 

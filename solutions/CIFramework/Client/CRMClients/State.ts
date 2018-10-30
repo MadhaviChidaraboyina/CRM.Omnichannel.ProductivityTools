@@ -245,9 +245,34 @@ namespace Microsoft.CIFramework.Internal {
 		getWidth(): number {
 			return this.widgetWidth;
 		}
-		
-		startUISession(context: any, initials: string): string {
-			//check if a session with the same conext already exists
+
+		startUISession(context: any, initials: string): [string, IErrorHandler] {
+			var UISessionsIterator = this.uiSessions.values();
+			let currentUISession = UISessionsIterator.next();
+			while (currentUISession) {
+				if (currentUISession.value.context == context) {
+					let error = {} as IErrorHandler;
+					error.reportTime = new Date().toUTCString();
+					error.errorMsg = "UISession with the same context already exists";
+					error.errorType = errorTypes.GenericError;
+					error.sourceFunc = startUISession.name;
+					return [null, error];
+				}
+
+				currentUISession = UISessionsIterator.next();
+			}
+
+			if (!SessionPanel.getInstance().canAddUISession()) {
+				//raise notification
+
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Cannot add the UISession. Maximum UISessions limit reached. Limit: " + Constants.MaxUISessions;
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = startUISession.name;
+				return [null, error];
+			}
+
 			let sessionId: string = this._state.messageLibrary.getCorrelationId();
 			let session: UISession = {
 				sessionId: sessionId,
@@ -257,21 +282,46 @@ namespace Microsoft.CIFramework.Internal {
 			};
 
 			this.uiSessions.set(sessionId, session);
-
 			SessionPanel.getInstance().addUISession(sessionId, this, initials);
-
-			//load peek panel
-			
-			return sessionId;
+			return [sessionId, null];
 		}
 
-		endUISession(sessionId: string): string {
-			if (this.uiSessions.has(sessionId)) {
-				this.uiSessions.delete(sessionId);
-				SessionPanel.getInstance().removeUISession(sessionId);
+		switchUISession(sessionId: string): [string, IErrorHandler] {
+			if (!this.uiSessions.has(sessionId)) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Session with ID:" + sessionId + "does not exist";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = switchUISession.name;
+				return [null, error];
 			}
-			
-			return sessionId;
+
+			if (SessionPanel.getInstance().visibleUISession == sessionId) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Session with ID:" + sessionId + "is already visible";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = switchUISession.name;
+				return [null, error];
+			}
+
+			SessionPanel.getInstance().setVisibleUISession(sessionId);
+			return [sessionId, null];
+		}
+
+		endUISession(sessionId: string): [string, IErrorHandler] {
+			if (!this.uiSessions.has(sessionId)) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Session with ID:" + sessionId + "does not exist";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = endUISession.name;
+				return [null, error];
+			}
+
+			this.uiSessions.delete(sessionId);
+			SessionPanel.getInstance().removeUISession(sessionId);
+			return [sessionId, null];
 		}
 
 		setVisibleSession(sessionId: string, showWidget?: boolean): void {

@@ -36,10 +36,6 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		setVisibleUISession(sessionId: string) {
-			if (sessionId == this.visibleUISession) {
-				return;
-			}
-
 			if (this.visibleUISession != '') {
 				this.UIsessions.get(this.visibleUISession).setInvisibleSession(this.visibleUISession);
 			}
@@ -49,11 +45,11 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		createSessionElement(id: string, initials: string): any {
-			return '<div id="' + id + '" class="avatar-circle" style="width: 26px; height: 26px; background-color: ' + Constants.sessionColors[this.counter++ % 4] +' ; border-radius: 50%; -webkit-border-radius: 50%; text-align: center; margin: 4px;"><span class="initials" style=" position: relative; top: 3px; font-size: 14px; line-height: normal; color: #fff; font-family: Segoe UI;">' + initials + '</span></div>';
+			return '<div id="' + id + '" class="avatar-circle" style="width: 26px; height: 26px; background-color: ' + Constants.sessionColors[this.counter++ % Constants.sessionColors.length] + ' ; border-radius: 50%; -webkit-border-radius: 50%; text-align: center; margin: 4px;"><span class="initials" style=" position: relative; top: 3px; font-size: 14px; line-height: normal; color: #fff; font-family: Segoe UI;">' + initials + '</span></div>';
 		}
 
 		canAddUISession(): boolean {
-			if (this.UIsessions.size < Constants.MaxSessions) {
+			if (this.UIsessions.size < Constants.MaxUISessions) {
 				return true;
 			}
 			else {
@@ -62,11 +58,6 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		addUISession(sessionId: string, provider: CIProvider, initials: string): void {
-			if (!this.canAddUISession()) {
-				//ToDo: raise notification and reject promise
-				return;
-			}
-
 			let sessionPanel = this.getSessionPanel();
 			if (sessionPanel == null)
 				return;
@@ -85,8 +76,8 @@ namespace Microsoft.CIFramework.Internal {
 				this.setVisibleUISession(sessionId);
 			}
 
-			if (this.UIsessions.size == Constants.MaxSessions) {
-				//ToDo:raise OnMaxUISessionsReached event
+			if (this.UIsessions.size == Constants.MaxUISessions) {
+				//postmessagewrapper - raiseEvent(new Map<string, any>().set('Limit', Constants.MaxUISessions), MessageType.onMaxUISessionsReached);
 			}
 		}
 
