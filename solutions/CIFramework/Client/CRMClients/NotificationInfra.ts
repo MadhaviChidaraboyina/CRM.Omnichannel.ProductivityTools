@@ -323,8 +323,8 @@ namespace Microsoft.CIFramework.Internal {
 						label1.setAttribute("aria-label", key);
 						label2.innerText = body[i][key];
 						label2.setAttribute("aria-label", body[i][key]);
-						label1.style.width = (panelWidth * 0.3 - 10)+"px";
-						label2.style.width = (panelWidth * 0.7 - 30)+"px";
+						label1.style.width = (panelWidth * 0.3)+"px";
+						label2.style.width = ((panelWidth * 0.7) - 20)+"px";
 						div = document.createElement("div");
 						div.classList.add("chatWindowHeaderDiv_CIF");
 						notificationBody.appendChild(div);
