@@ -717,9 +717,10 @@ namespace Microsoft.CIFramework.Internal {
 				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), insertNotes.name, telemetryData);
 				setPerfData(perfData);
 				widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
-				notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader"><div class="notesHeaderSpan_CIF" style="margin-left:18px"><br/>Add Notes</div></div></div>');
+				notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" tabindex="0" class="CIFNotes"><div id="notesHeaderIdCIF" tabindex="0" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close" style="margin-left:18px"><br/>Add Notes</div></div></div>');
 				notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
 				notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
+				widgetIFrame.contentWindow.document.getElementById("notesHeaderIdCIF").style.height = ((listenerWindow.outerHeight * 0.75) * 0.14)+"px";
 				var span = document.createElement("span");
 				span.classList.add("closeNotes_CIF");
 				span.classList.add("FontIcons-closeSoftNotification_CIF");
@@ -729,19 +730,25 @@ namespace Microsoft.CIFramework.Internal {
 				let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
 				notesElement.appendChild(newTextArea);
 				widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = (width-7)+"px";
+				widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.height = (listenerWindow.outerHeight * 0.75) + "px";
 				newTextArea.setAttribute('placeholder','Start adding notes');
 				newTextArea.classList.add("newTextAreaCIF");
 				var textAreaWidth = width - width/8 - 7;
 				newTextArea.id = "notesTextAreaCIF";
 				widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF").style.width = textAreaWidth+"px";
+				widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF").style.height = ((listenerWindow.outerHeight * 0.75) * 0.7)+"px";
 				var saveBtn = document.createElement("BUTTON");
 				notesElement.appendChild(saveBtn);
 				saveBtn.classList.add("notesSaveButtonCIF");
 				saveBtn.innerText = "Add Note";
+				saveBtn.tabIndex = 0;
+				saveBtn.setAttribute("aria-label", "Add Note");
 				var cancelBtn = document.createElement("BUTTON");
 				notesElement.appendChild(cancelBtn);
 				cancelBtn.classList.add("notesCancelButtonCIF");
 				cancelBtn.innerText = "Cancel";
+				cancelBtn.tabIndex = 0;
+				cancelBtn.setAttribute("aria-label", "Cancel");
 				saveBtn.addEventListener("click", function clickListener() {
 					saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
 						cancelNotes();
@@ -752,12 +759,12 @@ namespace Microsoft.CIFramework.Internal {
 				cancelBtn.addEventListener("click", function clickListener() {
 					cancelNotes();
 					state.client.setWidgetWidth("setWidgetWidth", width);
-					resolve(new Map().set(Constants.value,true));
+					resolve(new Map().set(Constants.value,""));
 				});
 				span.addEventListener("click", function clickListener() {
 					cancelNotes();
 					state.client.setWidgetWidth("setWidgetWidth", width);
-					resolve(new Map().set(Constants.value,true));
+					resolve(new Map().set(Constants.value,""));
 				});
 			});
 		}
