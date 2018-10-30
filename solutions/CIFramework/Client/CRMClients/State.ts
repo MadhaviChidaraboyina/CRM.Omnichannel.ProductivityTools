@@ -9,7 +9,7 @@
 /// <reference path="../PostMsgWrapper.ts" />
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2522-manual/clientapi/XrmClientApi.d.ts" />
-
+/** @internal */
 namespace Microsoft.CIFramework.Internal {
 	/**
 	 * type defined for storing all global information at one place. 

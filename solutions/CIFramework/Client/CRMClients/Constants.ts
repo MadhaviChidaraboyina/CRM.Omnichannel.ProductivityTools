@@ -1,6 +1,7 @@
 /**
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
+/** @internal */
 namespace Microsoft.CIFramework.Internal
 {
 	/**

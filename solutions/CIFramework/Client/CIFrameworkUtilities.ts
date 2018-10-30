@@ -5,6 +5,7 @@
 /**
  * Constants for CIFramework.
  */
+/** @internal */
 namespace Microsoft.CIFramework.Utility {
 	/**
 	 * utility func to create a error map with the error message and optional error code
