@@ -249,7 +249,7 @@ namespace Microsoft.CIFramework.Internal {
 		startUISession(context: any, initials: string): [string, IErrorHandler] {
 			var UISessionsIterator = this.uiSessions.values();
 			let currentUISession = UISessionsIterator.next();
-			while (currentUISession) {
+			while (!currentUISession.done) {
 				if (currentUISession.value.context == context) {
 					let error = {} as IErrorHandler;
 					error.reportTime = new Date().toUTCString();
@@ -290,7 +290,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (!this.uiSessions.has(sessionId)) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Session with ID:" + sessionId + "does not exist";
+				error.errorMsg = "Session with ID:" + sessionId + " does not exist";
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = switchUISession.name;
 				return [null, error];
@@ -299,13 +299,13 @@ namespace Microsoft.CIFramework.Internal {
 			if (SessionPanel.getInstance().visibleUISession == sessionId) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Session with ID:" + sessionId + "is already visible";
+				error.errorMsg = "Session with ID:" + sessionId + " is already visible";
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = switchUISession.name;
 				return [null, error];
 			}
 
-			SessionPanel.getInstance().setVisibleUISession(sessionId);
+			SessionPanel.getInstance().switchSession(sessionId);
 			return [sessionId, null];
 		}
 
@@ -324,7 +324,7 @@ namespace Microsoft.CIFramework.Internal {
 			return [sessionId, null];
 		}
 
-		setVisibleSession(sessionId: string, showWidget?: boolean): void {
+		setVisibleUISession(sessionId: string, showWidget?: boolean): void {
 			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", true).set("context", this.uiSessions.get(sessionId).context), MessageType.onUISessionVisibilityChanged);
 			this.visibleUISession = sessionId;
 
@@ -333,7 +333,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		setInvisibleSession(sessionId: string, hideWidget?: boolean): void {
+		setInvisibleUISession(sessionId: string, hideWidget?: boolean): void {
 			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", false).set("context", this.uiSessions.get(sessionId).context), MessageType.onUISessionVisibilityChanged);
 			this.visibleUISession = '';
 

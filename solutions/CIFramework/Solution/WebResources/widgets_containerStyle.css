@@ -52,3 +52,37 @@ button#CurrentStatus
 	right: 0;
 	bottom: 18px; /* This should be the height of the text below */
 }
+
+.uiSession
+{
+	display: flex;
+	height: 50px;
+}
+
+.avatarCircle
+{
+	width: 26px;
+	height: 26px; 
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	text-align: center;
+	margin: 12px 4px;
+}
+
+.initials
+{
+	position: relative;
+	top: 3px;
+	font-size: 14px;
+	line-height: normal;
+	color: #fff;
+	font-family: Segoe UI;
+}
+
+.selectionLine {
+	border-radius: 20%;
+	height: 21px;
+	width: 2px;
+	margin: 15px 0px;
+	display: none;
+}

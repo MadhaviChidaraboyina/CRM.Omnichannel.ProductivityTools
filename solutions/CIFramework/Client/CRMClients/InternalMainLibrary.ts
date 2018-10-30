@@ -36,6 +36,7 @@ namespace Microsoft.CIFramework.Internal {
 		["getclicktoact", [getClickToAct]],
 		["renderSearchPage", [renderSearchPage]],
 		["startUISession", [startUISession]],
+		["switchUISession", [switchUISession]],
 		["endUISession", [endUISession]],
 		["setAgentPresence", [setAgentPresence]],
 		["setAllPresence", [setAllPresence]]
