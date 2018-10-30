@@ -592,58 +592,59 @@ namespace Microsoft.CIFramework.Internal {
 		let waitTime = -1;
 		let panelWidth = state.client.getWidgetWidth();
 		let notificationType: any = [];
-		for (let [key, value] of notificationUX) {
-			if(key.search(Constants.eventType) != -1){
-				console.log(value);
-			}
-			if(key.search(Constants.notificationUXObject) != -1){
-				for(let [key1, value1] of value){
-					if(key1.search(Constants.headerDataCIF) != -1){
-						header = value1;
-					}else if(key1.search(Constants.bodyDataCIF) != -1){
-						body = value1;
-					}else if(key1.search(Constants.actionsCIF) != -1){
-						actions = value1;
-					}else if(key1.search(Constants.notificationType) != -1){
-						notificationType = value1;
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(notificationUX, [Constants.value]);
+		if (provider) {
+			for (let [key, value] of notificationUX) {
+				if(key.search(Constants.eventType) != -1){
+					console.log(value);
+				}
+				if(key.search(Constants.notificationUXObject) != -1){
+					for(let [key1, value1] of value){
+						if(key1.search(Constants.headerDataCIF) != -1){
+							header = value1;
+						}else if(key1.search(Constants.bodyDataCIF) != -1){
+							body = value1;
+						}else if(key1.search(Constants.actionsCIF) != -1){
+							actions = value1;
+						}else if(key1.search(Constants.notificationType) != -1){
+							notificationType = value1;
+						}
 					}
 				}
 			}
-		}
-		if(header == null || header == "undefined"){
-			return postMessageNamespace.rejectWithErrorMessage("The header value is blank. Provide a value to the parameter.");
-		}
-		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
-			if(body == null || body == "undefined"){
-				return postMessageNamespace.rejectWithErrorMessage("The body value is blank. Provide a value to the parameter.");
+			if(header == null || header == "undefined"){
+				return postMessageNamespace.rejectWithErrorMessage("The header value is blank. Provide a value to the parameter.");
 			}
-		}
-		if(notificationType == null || notificationType == "undefined"  || notificationType.length <= 0){
-			return postMessageNamespace.rejectWithErrorMessage("The notificationType value is blank. Provide a value to the parameter.");
-		}
-		if(notificationType[0].search(MessageType.softNotification) == -1){ //For Soft notification
-			noOfNotifications++;
-			if(noOfNotifications > 5){
-				toastDiv.removeChild(toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]);
-				noOfNotifications--;
+			if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
+				if(body == null || body == "undefined"){
+					return postMessageNamespace.rejectWithErrorMessage("The body value is blank. Provide a value to the parameter.");
+				}
 			}
-		}
-		let map = new Map();
-		map = renderEventNotification(header,body,actions,notificationType,panelWidth);
-		if(actions != null && actions != "undefined"){
-			for( i = 0; i < actions.length; i++){
-				for (let key in actions[i]) {
-					if(key.search(Constants.Timer) != -1){
-						waitTime = actions[i][key];
+			if(notificationType == null || notificationType == "undefined"  || notificationType.length <= 0){
+				return postMessageNamespace.rejectWithErrorMessage("The notificationType value is blank. Provide a value to the parameter.");
+			}
+			if(notificationType[0].search(MessageType.softNotification) == -1){ //For Soft notification
+				noOfNotifications++;
+				if(noOfNotifications > 5){
+					toastDiv.removeChild(toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]);
+					noOfNotifications--;
+				}
+			}
+			let map = new Map();
+			map = renderEventNotification(header,body,actions,notificationType,panelWidth);
+			if(actions != null && actions != "undefined"){
+				for( i = 0; i < actions.length; i++){
+					for (let key in actions[i]) {
+						if(key.search(Constants.Timer) != -1){
+							waitTime = actions[i][key];
+						}
 					}
 				}
 			}
-		}
-		return new Promise(function (resolve,reject) {
-			let telemetryData: any = new Object();
-			let startTime = new Date();
-			const [provider, errorData] = getProvider(notificationUX, [Constants.value]);
-			if (provider) { //TODO: See whether perfData needs to include provider.notifyEvent() call
+			return new Promise(function (resolve,reject) {
+				 //TODO: See whether perfData needs to include provider.notifyEvent() call
 				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), notifyEvent.name, telemetryData);
 				setPerfData(perfData);
 				if(notificationType[0].search(MessageType.softNotification) != -1){
@@ -711,10 +712,10 @@ namespace Microsoft.CIFramework.Internal {
 						}
 					}
 				}
-			}else{
-				return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
-			}
-		});
+			});
+		}else{
+			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
+		}
     }
 
 	export function renderSearchPage(parameters: Map<string, any>, entityName: string, searchString: string): Promise<Map<string, any>> {
