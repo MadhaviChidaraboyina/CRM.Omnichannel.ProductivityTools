@@ -120,14 +120,14 @@ namespace Microsoft.CIFramework.Internal {
 						label2.setAttribute("aria-label", body[i][key]);
 						label2.addEventListener("mouseover", function mouseOverListener() {
 							this.classList.add("body_CIFLabel2_mouseover");
-							label2.style.width = (panelWidth * 0.7)+"px";
+							label2.style.width = ((panelWidth * 0.7) - 20)+"px";
 						});
 						label2.addEventListener("mouseout", function mouseoutListener() {
 							this.classList.add("body_CIFLabel2_mouseout");
-							label2.style.width = (panelWidth * 0.7)+"px";
+							label2.style.width = ((panelWidth * 0.7) - 20)+"px";
 						});
 						label1.style.width = (panelWidth * 0.3)+"px";
-						label2.style.width = (panelWidth * 0.7)+"px";
+						label2.style.width = ((panelWidth * 0.7) - 20)+"px";
 						notificationBody.appendChild(label2);
 						var div = document.createElement("div");
 						notificationBody.appendChild(div);
