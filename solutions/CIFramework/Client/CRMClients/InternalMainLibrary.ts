@@ -43,7 +43,6 @@ namespace Microsoft.CIFramework.Internal {
 	declare var Xrm: any;
 	let noOfNotifications = 0;
 	var flapPromises: any = [];
-	let countFlapPromises = 0;
 
 	declare var appId: string;
 
@@ -180,13 +179,16 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	function updateProviderSizes(): void {
-		if(countFlapPromises == 0){
+		if(flapPromises.length == 0){
 			var width = state.client.getWidgetWidth() as number;
 			for (let [key, value] of state.ciProviders) {
 				value.setWidth(width);
 			}
 		}else{
-			countFlapPromises = 0;
+			let l = flapPromises.length;
+			for(let i = 0; i < flapPromises.length; i++){
+				l = flapPromises.pop();
+			}
 		}		
 	}
 	/**
@@ -549,58 +551,59 @@ namespace Microsoft.CIFramework.Internal {
 		let waitTime = -1;
 		let panelWidth = state.client.getWidgetWidth();
 		let notificationType: any = [];
-		for (let [key, value] of notificationUX) {
-			if(key.search(Constants.eventType) != -1){
-				console.log(value);
-			}
-			if(key.search(Constants.notificationUXObject) != -1){
-				for(let [key1, value1] of value){
-					if(key1.search(Constants.headerDataCIF) != -1){
-						header = value1;
-					}else if(key1.search(Constants.bodyDataCIF) != -1){
-						body = value1;
-					}else if(key1.search(Constants.actionsCIF) != -1){
-						actions = value1;
-					}else if(key1.search(Constants.notificationType) != -1){
-						notificationType = value1;
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(notificationUX, [Constants.value]);
+		if (provider) {
+			for (let [key, value] of notificationUX) {
+				if(key.search(Constants.eventType) != -1){
+					console.log(value);
+				}
+				if(key.search(Constants.notificationUXObject) != -1){
+					for(let [key1, value1] of value){
+						if(key1.search(Constants.headerDataCIF) != -1){
+							header = value1;
+						}else if(key1.search(Constants.bodyDataCIF) != -1){
+							body = value1;
+						}else if(key1.search(Constants.actionsCIF) != -1){
+							actions = value1;
+						}else if(key1.search(Constants.notificationType) != -1){
+							notificationType = value1;
+						}
 					}
 				}
 			}
-		}
-		if(header == null || header == "undefined"){
-			return postMessageNamespace.rejectWithErrorMessage("The header value is blank. Provide a value to the parameter.");
-		}
-		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
-			if(body == null || body == "undefined"){
-				return postMessageNamespace.rejectWithErrorMessage("The body value is blank. Provide a value to the parameter.");
+			if(header == null || header == "undefined"){
+				return postMessageNamespace.rejectWithErrorMessage("The header value is blank. Provide a value to the parameter.");
 			}
-		}
-		if(notificationType == null || notificationType == "undefined"  || notificationType.length <= 0){
-			return postMessageNamespace.rejectWithErrorMessage("The notificationType value is blank. Provide a value to the parameter.");
-		}
-		if(notificationType[0].search(MessageType.softNotification) == -1){ //For Soft notification
-			noOfNotifications++;
-			if(noOfNotifications > 5){
-				toastDiv.removeChild(toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]);
-				noOfNotifications--;
+			if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
+				if(body == null || body == "undefined"){
+					return postMessageNamespace.rejectWithErrorMessage("The body value is blank. Provide a value to the parameter.");
+				}
 			}
-		}
-		let map = new Map();
-		map = renderEventNotification(header,body,actions,notificationType,panelWidth);
-		if(actions != null && actions != "undefined"){
-			for( i = 0; i < actions.length; i++){
-				for (let key in actions[i]) {
-					if(key.search(Constants.Timer) != -1){
-						waitTime = actions[i][key];
+			if(notificationType == null || notificationType == "undefined"  || notificationType.length <= 0){
+				return postMessageNamespace.rejectWithErrorMessage("The notificationType value is blank. Provide a value to the parameter.");
+			}
+			if(notificationType[0].search(MessageType.softNotification) == -1){ //For Soft notification
+				noOfNotifications++;
+				if(noOfNotifications > 5){
+					toastDiv.removeChild(toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]);
+					noOfNotifications--;
+				}
+			}
+			let map = new Map();
+			map = renderEventNotification(header,body,actions,notificationType,panelWidth);
+			if(actions != null && actions != "undefined"){
+				for( i = 0; i < actions.length; i++){
+					for (let key in actions[i]) {
+						if(key.search(Constants.Timer) != -1){
+							waitTime = actions[i][key];
+						}
 					}
 				}
 			}
-		}
-		return new Promise(function (resolve,reject) {
-			let telemetryData: any = new Object();
-			let startTime = new Date();
-			const [provider, errorData] = getProvider(notificationUX, [Constants.value]);
-			if (provider) { //TODO: See whether perfData needs to include provider.notifyEvent() call
+			return new Promise(function (resolve,reject) {
+				 //TODO: See whether perfData needs to include provider.notifyEvent() call
 				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), notifyEvent.name, telemetryData);
 				setPerfData(perfData);
 				if(notificationType[0].search(MessageType.softNotification) != -1){
@@ -668,10 +671,10 @@ namespace Microsoft.CIFramework.Internal {
 						}
 					}
 				}
-			}else{
-				return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
-			}
-		});
+			});
+		}else{
+			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
+		}
     }
 
 	/**
@@ -713,7 +716,7 @@ namespace Microsoft.CIFramework.Internal {
 			return expandFlap(width, function (resolve: any){
 				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), insertNotes.name, telemetryData);
 				setPerfData(perfData);
-				widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].parentElement.setAttribute('style','position: absolute;right: 0px;');
+				widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
 				notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader"><div class="notesHeaderSpan_CIF" style="margin-left:18px"><br/>Add Notes</div></div></div>');
 				notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
 				notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
@@ -725,10 +728,10 @@ namespace Microsoft.CIFramework.Internal {
 				var newTextArea = document.createElement('TextArea');
 				let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
 				notesElement.appendChild(newTextArea);
-				widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = width+"px";
+				widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = (width-7)+"px";
 				newTextArea.setAttribute('placeholder','Start adding notes');
 				newTextArea.classList.add("newTextAreaCIF");
-				var textAreaWidth = width - width/8;
+				var textAreaWidth = width - width/8 - 7;
 				newTextArea.id = "notesTextAreaCIF";
 				widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF").style.width = textAreaWidth+"px";
 				var saveBtn = document.createElement("BUTTON");
@@ -741,6 +744,8 @@ namespace Microsoft.CIFramework.Internal {
 				cancelBtn.innerText = "Cancel";
 				saveBtn.addEventListener("click", function clickListener() {
 					saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
+						cancelNotes();
+						state.client.setWidgetWidth("setWidgetWidth", width);
 						resolve(retval);
 					});
 				});
@@ -763,7 +768,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function expandFlap(width: number,renderNotes: any): Promise<any>{
 		let promise = new Promise(renderNotes);
-		flapPromises[countFlapPromises++] = promise;
+		let l = flapPromises.push(promise);
 		state.client.setWidgetWidth("setWidgetWidth", width*2);
 		return promise;
 	}
@@ -773,6 +778,7 @@ namespace Microsoft.CIFramework.Internal {
 		let originURL: string;
 		let entityId: string;
 		let entitySetName: string;
+		let annotationId: string;
        	for (let [key, value] of notesDetails) {
 			if(key.search(Constants.entityName) != -1){
 				entityName = value;
@@ -782,9 +788,10 @@ namespace Microsoft.CIFramework.Internal {
 				entityId = value;
 			}else if(key.search(Constants.entitySetName) != -1){
 				entitySetName = value;
+			}else if(key.search(Constants.annotationId) != -1){
+				annotationId = value;
 			}
 		}
-		let annotationId: string;
 		let textAreaValue = newTextArea.value;
 		let map = new Map().set(Constants.notetext,textAreaValue);
 		let noteText = "";
@@ -792,23 +799,50 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(notesDetails, [Constants.value]);
 		if (provider){
 			return new Promise(function (resolve) {
-				let searchQuery = "?$select=annotationid&$filter=_objectid_value eq " + entityId;
-				let searchMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.queryParameters,searchQuery).set(Constants.originURL,originURL);
-				search(searchMap).then(function (returnSearchResult: Map<string, any>) {
-					annotationId = "";
-					for(let [key,value] of returnSearchResult){
-						if(key.search(Constants.value) != -1){
-							for(let i=0; i< value.length; i++ ){
-								for(let key1 in value[i]){
-									if(key1.search(Constants.annotationId) != -1){
-										annotationId = value[i][key1];
+				if(annotationId == ""){
+					createRecord(createMap).then(function (returnValue: Map<string, any>) {	
+						for(let [key,value] of returnValue){
+							if(key.search(Constants.value) != -1){
+								for(let [key1,value1] of value){
+									if(key1.search(Constants.Id) != -1){
+										annotationId = value1;
 									}
 								}
 							}
 						}
-					}
-					if(annotationId == ""){
-						createRecord(createMap).then(function (returnValue: Map<string, any>) {	
+						var returnUpdateValue = new Map();
+						let odataBind = entitySetName+"("+entityId+")";
+						let odataBindPropertyName = "objectid_"+entityName+"@odata.bind";
+						let notesMap = new Map().set(odataBindPropertyName,odataBind);
+						let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
+						updateRecord(updateMap).then(function (updatedAnnotation: Map<string, any>) {
+							for(let [key,value] of updatedAnnotation){
+								if(key.search(Constants.value) != -1){
+									returnUpdateValue = value;
+								}
+							}
+							var mapReturn = new Map().set(Constants.value,annotationId);
+							resolve(mapReturn);
+						});
+					});
+				}else{
+					let searchQuery = "?$select=notetext&$filter=_objectid_value eq " + entityId;
+					let searchMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.queryParameters,searchQuery).set(Constants.originURL,originURL);
+					search(searchMap).then(function (returnSearchResult: Map<string, any>) {
+						for(let [key,value] of returnSearchResult){
+							if(key.search(Constants.value) != -1){
+								for(let i=0; i< value.length; i++ ){
+									for(let key1 in value[i]){
+										if(key1.search(Constants.notetext) != -1){
+											noteText = value[i][key1];
+										}
+									}
+								}
+							}
+						}
+						let notesMap = new Map().set(Constants.notetext,noteText+" "+textAreaValue);
+						let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
+						updateRecord(updateMap).then(function (returnValue: Map<string, any>) {	
 							for(let [key,value] of returnValue){
 								if(key.search(Constants.value) != -1){
 									for(let [key1,value1] of value){
@@ -818,54 +852,11 @@ namespace Microsoft.CIFramework.Internal {
 									}
 								}
 							}
-							var returnUpdateValue = new Map();
-							let odataBind = entitySetName+"("+entityId+")";
-							let odataBindPropertyName = "objectid_"+entityName+"@odata.bind";
-							let notesMap = new Map().set(odataBindPropertyName,odataBind);
-							let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
-							updateRecord(updateMap).then(function (updatedAnnotation: Map<string, any>) {
-								for(let [key,value] of updatedAnnotation){
-									if(key.search(Constants.value) != -1){
-										returnUpdateValue = value;
-									}
-								}
-								var mapReturn = new Map().set(Constants.value,returnUpdateValue);
-								resolve(mapReturn);
-							});
+							var mapReturn = new Map().set(Constants.value,annotationId);
+							resolve(mapReturn);
 						});
-					}else{
-						searchQuery = "?$select=notetext&$filter=_objectid_value eq " + entityId;
-						searchMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.queryParameters,searchQuery).set(Constants.originURL,originURL);
-						search(searchMap).then(function (returnSearchResult: Map<string, any>) {
-							for(let [key,value] of returnSearchResult){
-								if(key.search(Constants.value) != -1){
-									for(let i=0; i< value.length; i++ ){
-										for(let key1 in value[i]){
-											if(key1.search(Constants.notetext) != -1){
-												noteText = value[i][key1];
-											}
-										}
-									}
-								}
-							}
-							let notesMap = new Map().set(Constants.notetext,noteText+" "+textAreaValue);
-							let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
-							updateRecord(updateMap).then(function (returnValue: Map<string, any>) {	
-								for(let [key,value] of returnValue){
-									if(key.search(Constants.value) != -1){
-										for(let [key1,value1] of value){
-											if(key1.search(Constants.Id) != -1){
-												annotationId = value1;
-											}
-										}
-									}
-								}
-								var mapReturn = new Map().set(Constants.value,returnValue);
-								resolve(mapReturn);
-							});
-						});
-					}		
-				});
+					});
+				}
 			});
 		}
     }

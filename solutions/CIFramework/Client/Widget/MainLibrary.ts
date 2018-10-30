@@ -85,11 +85,11 @@ namespace Microsoft.CIFramework
 	 * @param value. It's a string which contains session,activity details
 	 *
 	*/
-    export function insertNotes(entityName: string, entitySetName: string, entityId: string): Promise<string> {	
+    export function insertNotes(entityName: string, entitySetName: string, entityId: string, annotationId: string): Promise<string> {	
 		if(!(isNullOrUndefined(entityName) || isNullOrUndefined(entitySetName) || isNullOrUndefined(entityId))){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.insertNotes,
-				messageData: new Map().set(Constants.entityName,entityName).set(Constants.entitySetName,entitySetName).set(Constants.entityId,entityId)
+				messageData: new Map().set(Constants.entityName,entityName).set(Constants.entitySetName,entitySetName).set(Constants.entityId,entityId).set(Constants.annotationId,annotationId)
 			}
 			return new Promise((resolve, reject) => {
 				return sendMessage<Map<string, any>>(insertNotes.name, payload, false, true).then(
