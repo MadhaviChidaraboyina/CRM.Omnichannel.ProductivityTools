@@ -3,7 +3,8 @@
  */
 
 /// <reference path="Constants.ts" />
-
+/// <reference path="PresenceControl.ts" />
+/** @internal */
 namespace Microsoft.CIFramework.Internal
 {
 	export type EventHandler = (event?: CustomEvent) => void;
@@ -62,6 +63,16 @@ namespace Microsoft.CIFramework.Internal
 	type renderSearchPageFunction = (entityName: string, searchString: string, telemetryData?: Object) => Promise<void>;
 
 	/**
+	 * Func type for Setting Agent Presence
+	*/
+	type setAgentPresenceFunction = (presenceInfo: PresenceInfo, telemetryData?: Object) => boolean;
+
+	/**
+	 * Func type for Setting all presences
+	*/
+	type setAllPresencesFunction = (presenceList: PresenceInfo[], telemetryData?: Object) => boolean;
+
+	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
 	 * This type specifies all the functions that are exposed to clients for impl. 
 	*/
@@ -109,6 +120,11 @@ namespace Microsoft.CIFramework.Internal
 		checkCIFCapability: CheckCapabilityFunction;
 
 		renderSearchPage: renderSearchPageFunction;
+
+		setAgentPresence: setAgentPresenceFunction;
+
+		setAllPresence: setAllPresencesFunction;
+
 	}
 
 	/**

@@ -10,6 +10,7 @@
 /// <reference path="../TelemetryHelper.ts" />
 /// <reference path="aria-webjs-sdk-1.6.2.d.ts" />
 
+/** @internal */
 namespace Microsoft.CIFramework.Internal {
 	let Constants = Microsoft.CIFramework.Constants;
 	/**
@@ -18,6 +19,7 @@ namespace Microsoft.CIFramework.Internal {
 	const apiHandlers = new Map<string, any>([
 		["setclicktoact", [setClickToAct]],
 		["notifyEvent", [notifyEvent]],
+		["insertNotes", [insertNotes]],
 		["searchandopenrecords", [searchAndOpenRecords]],
 		["openform", [openForm]],
 		["openkbsearchcontrol",[openKBSearchControl]],
@@ -33,7 +35,11 @@ namespace Microsoft.CIFramework.Internal {
 		["getenvironment", [getEnvironment]],
 		["getwidth", [getWidth]],
 		["getclicktoact", [getClickToAct]],
-		["renderSearchPage", [renderSearchPage]]
+		["renderSearchPage", [renderSearchPage]],
+		["startUISession", [startUISession]],
+		["endUISession", [endUISession]],
+		["setAgentPresence", [setAgentPresence]],
+		["setAllPresence", [setAllPresence]]
 	]);
 
 	/**
@@ -44,6 +50,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	declare var Xrm: any;
 	let noOfNotifications = 0;
+	let isNotesControl = false;
 
 	declare var appId: string;
 
@@ -60,6 +67,7 @@ namespace Microsoft.CIFramework.Internal {
 		if (!state.client.checkCIFCapability()) {
 			return false;
 		}
+
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		appId = top.location.search.split('appid=')[1].split('&')[0];
 		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=contains(" + Constants.appSelectorFieldName + ",'" + appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
@@ -75,8 +83,6 @@ namespace Microsoft.CIFramework.Internal {
 					state.client.registerHandler(Constants.ModeChangeHandler, onModeChanged);
 					state.client.registerHandler(Constants.SizeChangeHandler, onSizeChanged);
 					state.client.registerHandler(Constants.NavigationHandler, onPageNavigation);
-					// populate ciProviders in state.
-					state.ciProviders = new Map<string, any>();
 					let telemetryData: any = new Object();
 					var defaultMode = state.client.getWidgetMode(telemetryData) as number;
 					var first: string = null;
@@ -89,24 +95,22 @@ namespace Microsoft.CIFramework.Internal {
 					for (var x of result.entities) {
 						var currRoles = x[Constants.roleSelectorFieldName];
 						currRoles = (currRoles != null) ? currRoles.split(";") : null;
-						
 						trustedDomains.push(x[Constants.landingUrl]);
 						if (x[Constants.trustedDomain] != "")
 							trustedDomains.push(x[Constants.trustedDomain]);
 						var provider: CIProvider = new CIProvider(x, state, environmentInfo);
-						state.ciProviders.set(x[Constants.landingUrl], provider);
 						var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], x[Constants.SortOrder], appId, false, null);
 						setUsageData(usageData);
 						if (!first) {
 							first = x[Constants.landingUrl];
+							state.providerManager = new ProviderManager(state.client, provider);
 						}
+						state.providerManager.addProvider(x[Constants.landingUrl], provider);
 					}
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
-					// initialize the session manager
-					state.sessionManager = new SessionInfo(state.client, state.ciProviders.get(first));
 					// load the widgets onto client. 
-					state.client.loadWidgets(state.ciProviders).then(function (widgetLoadStatus) {
+					state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
 						reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
 					});
 				}
@@ -130,7 +134,7 @@ namespace Microsoft.CIFramework.Internal {
 		//let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));//TO-DO: for multiple widgets, this might be the part of for loop
 		if (isNullOrUndefined(provider)) {
 			//A Map object iterates in insertion order. If IE11 support is required, ensure this order is preserved
-			for (let [key, value] of state.ciProviders) {
+			for (let [key, value] of state.providerManager.ciProviders) {
 				var eventStatus: { result?: any, error?: string } = {};
 				value.raiseEvent(data, messageType).then(
 					function (result: Map<string, any>) {
@@ -180,7 +184,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			});
 		}
-		let provider = state.ciProviders.get(parameters.get(Constants.originURL));
+		let provider = state.providerManager.ciProviders.get(parameters.get(Constants.originURL));
 		if (provider && provider.providerId) {
 			return [provider, null];
 		}
@@ -195,10 +199,13 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	function updateProviderSizes(): void {
-		var width = state.client.getWidgetWidth() as number;
-		for (let [key, value] of state.ciProviders) {
-			value.setWidth(width);
+		if (isNotesControl == false) {
+			var width = state.client.getWidgetWidth() as number;
+			for (let [key, value] of state.providerManager.ciProviders) {
+				value.setWidth(width);
+			}
 		}
+		isNotesControl = false;
 	}
 	/**
 	 * The handler called by the client for a size-changed event. The client is
@@ -211,7 +218,7 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	function onSizeChanged(event: CustomEvent): void {
 		updateProviderSizes();
-		raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked", state.sessionManager.getActiveProvider());
+		raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked", state.providerManager.getActiveProvider());
 	}
 
 	/**
@@ -225,7 +232,7 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	function onModeChanged(event: CustomEvent): void {
 		updateProviderSizes();  //TODO: global modeChanged event: this shouldn't be passed to all widgets. WHo should it be passed to?
-		raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked", state.sessionManager.getActiveProvider());
+		raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked", state.providerManager.getActiveProvider());
 	}
 
 	/**
@@ -257,7 +264,7 @@ namespace Microsoft.CIFramework.Internal {
 				(result: Map<string, any>) =>
 				{
 					provider.clickToAct = parameters.get(Constants.value) as boolean;
-					state.ciProviders.set(parameters.get(Constants.originURL), provider);
+					state.providerManager.ciProviders.set(parameters.get(Constants.originURL), provider);
 
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setClickToAct.name, telemetryData);
 					setPerfData(perfData);
@@ -419,7 +426,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * subscriber of onSendKBArticle event
 	*/
 	export function onSendKBArticle(event: CustomEvent): void {
-		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client", state.sessionManager.getActiveProvider());
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client", state.providerManager.getActiveProvider());
 	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
@@ -568,12 +575,11 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-
 	export function getEntityMetadata(parameters: Map<string, any>): Promise<Map<string, any>> {
-		let telemetryData: any = new Object();
-		let startTime = new Date();
-		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
-		if (provider) {
+				let telemetryData: any = new Object();
+				let startTime = new Date();
+				const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+				if (provider) {
 			return new Promise<Object>((resolve, reject) => {
 				state.client.getEntityMetadata(parameters.get(Constants.entityName), parameters.get(Constants.Attributes)).then(
 					function (res) {
@@ -750,6 +756,193 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, renderSearchPage.name, appId, true, errorData);
+		}
+	}
+
+	export function startUISession(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), startUISession.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map<string, any>().set(Constants.value, provider.startUISession(parameters.get(Constants.context), parameters.get(Constants.initials), parameters.get(Constants.entityFormOptions), parameters.get(Constants.entityFormParameters), parameters.get(Constants.isVisible))));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, startUISession.name, appId, true, errorData);
+		}
+	}
+
+	export function endUISession(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), endUISession.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map<string, any>().set(Constants.value, provider.endUISession(parameters.get(Constants.sessionId))));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, endUISession.name, appId, true, errorData);
+		}
+	}
+
+	export function setAgentPresence(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		if (provider) {
+			let agentPresenceStatus = state.client.setAgentPresence(JSON.parse(parameters.get(Constants.presenceInfo)), telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAgentPresence.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, agentPresenceStatus));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, setAgentPresence.name, appId, true, errorData);
+		}
+	}
+
+	export function setAllPresence(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		if (provider) {
+			let presenceListDivStatus = state.client.setAllPresence(JSON.parse(parameters.get(Constants.presenceList)), telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAllPresence.name, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, presenceListDivStatus));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, setAllPresence.name, appId, true, errorData);
+		}
+	}
+
+	/**
+	 * API to insert notes
+	 *
+	 * @param value. It's a map which contains entityName=Transcript, entitySetName=Transcripts and transcriptId
+	 *
+	*/
+	export function insertNotes(notesDetails: Map<string,any>): Promise<boolean>{
+		let entityName: string;
+		let originURL: string;
+		let entityId: string;
+		let entitySetName: string;
+		for (let [key, value] of notesDetails) {
+			if(key.search(Constants.entityName) != -1){
+				entityName = value;
+			}else if(key.search(Constants.originURL) != -1){
+				originURL = value;
+			}else if(key.search(Constants.entityId) != -1){
+				entityId = value;
+			}else if(key.search(Constants.entitySetName) != -1){
+				entitySetName = value;
+			}
+		}
+		
+		let width: number = 0;
+		let panelWidth = state.client.getWidgetWidth();
+		width = panelWidth as number;
+		notesDetails.set(Constants.value,width);
+		state.client.setWidgetWidth("setWidgetWidth", width*2);
+		isNotesControl = true;
+		return new Promise(function (resolve) {
+			let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+			widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
+			let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
+			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" class="CIFNotes"><div class="notesHeader">Add Notes</div></div>');
+			notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
+			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
+			var span = document.createElement("span");
+			span.classList.add("closeSoftNotification_CIF");
+			span.classList.add("FontIcons-closeSoftNotification_CIF");
+			span.setAttribute("aria-label", "Close");
+			notesDiv.getElementsByClassName("notesHeader")[0].appendChild(span);
+			var newTextArea = document.createElement('TextArea');
+			let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
+			notesElement.appendChild(newTextArea);
+			newTextArea.setAttribute('placeholder','Type your note');
+			newTextArea.classList.add("newTextAreaCIF");
+			var saveBtn = document.createElement("BUTTON");
+			notesElement.appendChild(saveBtn);
+			saveBtn.classList.add("notesSaveButtonCIF");
+			saveBtn.innerText = "Add Note";
+			var cancelBtn = document.createElement("BUTTON");
+			notesElement.appendChild(cancelBtn);
+			cancelBtn.classList.add("notesCancelButtonCIF");
+			cancelBtn.innerText = "Cancel";
+			saveBtn.addEventListener("click", function clickListener() {
+				saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
+					cancelNotes();
+					state.client.setWidgetWidth("setWidgetWidth", width);
+					resolve(retval);
+				});
+			});
+			cancelBtn.addEventListener("click", function clickListener() {
+				cancelNotes();
+				state.client.setWidgetWidth("setWidgetWidth", width);
+				resolve(new Map().set(Constants.value,true));
+			});
+		});
+	}
+
+	export function saveNotes(notesDetails: Map<string,any>,newTextArea: any): Promise<Map<string, any>>{		
+		let entityName: string;
+		let originURL: string;
+		let entityId: string;
+		let entitySetName: string;
+		for (let [key, value] of notesDetails) {
+			if(key.search(Constants.entityName) != -1){
+				entityName = value;
+			}else if(key.search(Constants.originURL) != -1){
+				originURL = value;
+			}else if(key.search(Constants.entityId) != -1){
+				entityId = value;
+			}else if(key.search(Constants.entitySetName) != -1){
+				entitySetName = value;
+			}
+		}
+		let annotationId: string;
+		let textAreaValue = newTextArea.value;
+		let map = new Map().set(Constants.notetext,textAreaValue);
+		let createMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.value, map).set(Constants.originURL,originURL);
+		const [provider, errorData] = getProvider(notesDetails, [Constants.value]);
+		if (provider){
+			return new Promise(function (resolve) {
+				createRecord(createMap).then(function (returnValue: Map<string, any>) {	
+					for(let [key,value] of returnValue){
+						if(key.search(Constants.value) != -1){
+							for(let [key1,value1] of value){
+								if(key1.search(Constants.Id) != -1){
+									annotationId = value1;
+								}
+							}
+						}
+					}
+					var returnUpdateValue = new Map();
+					let odataBind = entitySetName+"("+entityId+")";
+					let odataBindPropertyName = "objectid_"+entityName+"@odata.bind";
+					let notesMap = new Map().set(odataBindPropertyName,odataBind);
+					let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
+					updateRecord(updateMap).then(function (updatedAnnotation: Map<string, any>) {
+						for(let [key,value] of updatedAnnotation){
+							if(key.search(Constants.value) != -1){
+								returnUpdateValue = value;
+							}
+						}
+						var mapReturn = new Map().set(Constants.value,returnUpdateValue);
+						resolve(mapReturn);
+					});
+				});
+			});
+		}
+	}
+
+	export function cancelNotes(): void{	
+		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+		let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
+		if(!isNullOrUndefined(notesDiv)){
+			notesDiv.removeChild(notesDiv.getElementsByClassName("CIFNotes")[0]);
 		}
 	}
 }

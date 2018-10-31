@@ -9,6 +9,7 @@
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2522-manual/clientapi/XrmClientApi.d.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 
+/** @internal */
 namespace Microsoft.CIFramework.Internal {
 	/**
 	 * Actual implementation of IClient for web client 
@@ -189,6 +190,7 @@ namespace Microsoft.CIFramework.Internal {
 					let status: Map<string, boolean | string> = new Map<string, boolean | string>();
 					let fracHeightForActiveWidget: number = 0.9;
 					let widgetHeight: number = widgetIFrame.clientHeight * fracHeightForActiveWidget;
+					let widgetWidth: number = Constants.DEFAULT_WIDGET_WIDTH;
 					let minimizedHeight: number = (widgetIFrame.clientHeight * (1 - fracHeightForActiveWidget)) / ciProviders.size;   // TODO: Figure out correct units to use
 					widgetIFrame.onload = function () {
 						var doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
@@ -201,7 +203,7 @@ namespace Microsoft.CIFramework.Internal {
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
 							iFrame.src = key;
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
-							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetIFrame.clientWidth, widgetHeight, minimizedHeight);
+							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetWidth, widgetHeight, minimizedHeight);
 							containerDiv.appendChild(iFrame);
 							doc.body.appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
@@ -301,7 +303,7 @@ namespace Microsoft.CIFramework.Internal {
 			Xrm.Panel.width = width;
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.setWidth"
-			logApiData(telemetryData, startTime, timeTaken, apiName);
+			//logApiData(telemetryData, startTime, timeTaken, apiName);
 		}
 
 
@@ -357,7 +359,7 @@ namespace Microsoft.CIFramework.Internal {
 			let width = Xrm.Panel.width;
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.getWidth";
-			logApiData(telemetryData, startTime, timeTaken, apiName);
+			//logApiData(telemetryData, startTime, timeTaken, apiName);
 			return width;
 		}
 
@@ -378,8 +380,7 @@ namespace Microsoft.CIFramework.Internal {
 			return true;
 		}
 
-		client.renderSearchPage = (entityName: string, searchString: string, telemetryData?: Object | any): Promise<void> =>
-		{
+		client.renderSearchPage = (entityName: string, searchString: string, telemetryData?: Object | any): Promise<void> => {
 			let startTime;
 			try {
 				var searchPageInput: XrmClientApi.SearchPageInput;
@@ -397,6 +398,40 @@ namespace Microsoft.CIFramework.Internal {
 			catch (error) {
 				logFailure("", true, error);
 			}
+		}
+
+		client.setAgentPresence = (presenceInfo: any, telemetryData?: Object | any): boolean => {
+			let startTime = new Date();
+			let agentPresence = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAgentPresence(presenceInfo);
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "PresenceControl.setAgentPresence";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let agentPresenceParent = widgetIFrame.contentWindow.document.getElementById("CurrentStatus");
+			if (agentPresenceParent != null) {
+				agentPresenceParent.innerHTML = "";
+				agentPresenceParent.appendChild(agentPresence);
+				return true;
+			}
+			return false;
+		}
+
+		client.setAllPresence = (presenceList: any, telemetryData?: Object | any): boolean => {
+			let startTime = new Date();
+			let presenceListDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAllPresences(presenceList);
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "PresenceContro.setAllPresence";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let presenceListParent = widgetIFrame.contentWindow.document.getElementById("PresenceList");
+			if (presenceListParent != null) {
+				presenceListParent.innerHTML = "";
+				presenceListParent.appendChild(presenceListDiv);
+				return true;
+			}
+			return false;
 		}
 
 		return client;

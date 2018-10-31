@@ -30,6 +30,8 @@
     <TypeScriptCompile Include="CIFrameworkUtilities.ts" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.6.2.d.ts" />
     <TypeScriptCompile Include="CRMClients\IErrorHandler.ts" />
+    <TypeScriptCompile Include="CRMClients\SessionPanel.ts" />
+    <TypeScriptCompile Include="CRMClients\PresenceControl.ts" />
     <TypeScriptCompile Include="CRMClients\TelemetryConstants.ts" />
     <TypeScriptCompile Include="TelemetryHelper.ts" />
   </ItemGroup>
@@ -93,8 +95,8 @@
       <ExcludedFromMinification>$(TypeScriptOutDir)\**\*.js</ExcludedFromMinification>
     </PropertyGroup>
     <Copy SourceFiles="@(WebResources)" DestinationFolder="$(SolutionPackagePath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
-	<Exec Condition="$(Configuration) == 'Retail'" Command="npm run minifyClient" WorkingDirectory="..\" />
-  <Exec Condition="$(Configuration) == 'Retail'" Command="npm run minifyWidget" WorkingDirectory="..\" />
+    <Exec Condition="$(Configuration) == 'Retail'" Command="npm run minifyClient" WorkingDirectory="..\" />
+    <Exec Condition="$(Configuration) == 'Retail'" Command="npm run minifyWidget" WorkingDirectory="..\" />
     <Copy SourceFiles="@(TypeDefinitions)" DestinationFolder="$(XrmSolutionsRoot)\solutions\TypeDefinitions\CIFramework\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
   </Target>
 </Project>

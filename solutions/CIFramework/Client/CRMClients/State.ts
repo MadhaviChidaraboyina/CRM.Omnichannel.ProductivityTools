@@ -5,13 +5,14 @@
 /// <reference path="Constants.ts" />
 /// <reference path="WebClient.ts" />
 /// <reference path="WidgetIFrame.ts" />
+/// <reference path="SessionPanel.ts" />
 /// <reference path="../PostMsgWrapper.ts" />
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2522-manual/clientapi/XrmClientApi.d.ts" />
-
+/** @internal */
 namespace Microsoft.CIFramework.Internal {
 	/**
-	 * type defined for storing all local information at one place. 
+	 * type defined for storing all global information at one place. 
 	*/
 	export type IState =
 		{
@@ -21,14 +22,9 @@ namespace Microsoft.CIFramework.Internal {
 			client: IClient;
 
 			/**
-			 *  Map to store providers information. key'ed on landing urls
-			*/
-			ciProviders: Map<string, CIProvider>;
-
-			/**
 			 *  Information about current active sessions
 			*/
-			sessionManager: SessionInfo;
+			providerManager: ProviderManager;
 
 			/**
 			 * Post message wrapper object
@@ -36,15 +32,21 @@ namespace Microsoft.CIFramework.Internal {
 			messageLibrary: postMessageNamespace.postMsgWrapper;
 		}
 
-	export class SessionInfo {
+	export class ProviderManager {
+		ciProviders: Map<string, CIProvider>;
 		_activeProvider: CIProvider;
 		_defaultProvider: CIProvider;
 		_client: IClient;
 
 		constructor(client: IClient, defaultProvider?: CIProvider) {
 			this._client = client;
+			this.ciProviders = new Map<string, CIProvider>();
 			this._defaultProvider = defaultProvider;
 			this._client.setWidgetMode("mode", (defaultProvider ? defaultProvider.getMode() : 0));  //TODO: replace with named constant
+		}
+
+		addProvider(url: string, provider: CIProvider) {
+			this.ciProviders.set(url, provider);
 		}
 
 		setActiveProvider(provider: CIProvider): Promise<Map<string, any>> {
@@ -62,10 +64,25 @@ namespace Microsoft.CIFramework.Internal {
 			this._client.setWidgetMode("mode", mode);
 			return Promise.resolve(new Map<string, any>().set(Constants.value, true));    //TODO: Session manager needs to eval whether it is feasibile to change session and resolve or reject the promise
 		}
+
 		getActiveProvider(): CIProvider {
 			return this._activeProvider || this._defaultProvider;
 		}
 	}
+
+	export type ApplicationTab = {
+		applicationTabId: string;
+		entityFormOptions: {};
+		formParameters: {};
+	}
+
+	export type UISession = {
+		sessionId: string;
+		context: any;
+		applicationTabs: Map<string, ApplicationTab>;
+		initials: string;
+	}
+
 	/*Class to store CI providers information locally*/
 	export class CIProvider {
 		providerId: string;			//Widget id
@@ -86,6 +103,9 @@ namespace Microsoft.CIFramework.Internal {
 		crmVersion : string;	//CRM version
 		appId: string;	//App Id
 		trustedDomain: string;	// Domain to be whitelisted
+		uiSessions: Map<string, UISession>;
+		visibleUISession: string;
+
 		constructor(x: XrmClientApi.WebApi.Entity, state: IState, environmentInfo: any) {
 			this._state = state;
 			this.name = x[Constants.name];
@@ -104,7 +124,9 @@ namespace Microsoft.CIFramework.Internal {
 			this.orgName = environmentInfo["orgName"];
 			this.crmVersion = environmentInfo["crmVersion"];
 			this.appId = environmentInfo["appId"];
+			this.uiSessions = new Map<string, UISession>();
 		}
+
 		raiseEvent(data: Map<string, any>, messageType: string): Promise<Map<string, any>> {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: messageType,
@@ -124,9 +146,11 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			return this._state.messageLibrary.postMsg(this.getContainer().getContentWindow(), payload, this.trustedDomain || this.landingUrl, true);
 		}
+
 		getContainer(): WidgetContainer {
 			return this._widgetContainer;
 		}
+
 		setContainer(container: WidgetContainer, defaultWidth: number, defaultHeight: number, minimizedHeight: number): void {
 			this._widgetContainer = container;
 			this._minimizedHeight = minimizedHeight;
@@ -137,6 +161,7 @@ namespace Microsoft.CIFramework.Internal {
 				this.setHeight(defaultHeight);
 			}
 		}
+
 		updateContainerSize(): Promise<Map<string, any>> {
 			let container = this.getContainer();
 			let ret: boolean = false;
@@ -152,6 +177,7 @@ namespace Microsoft.CIFramework.Internal {
 				return Promise.reject(new Map<string, any>().set(Constants.message, "Attempting to set size of a null widget container"));
 			}*/
 		}
+
 		setMode(mode: number): Promise<Map<string, any>> {
 			if (this.currentMode == mode) {
 				return Promise.resolve(new Map<string, any>().set(Constants.value, true));
@@ -159,11 +185,11 @@ namespace Microsoft.CIFramework.Internal {
 			this.currentMode = mode;
 			switch (mode) {
 				case 1: //TODO - replace with named constant. We have the focus
-					/*if (this._state.sessionManager.getActiveProvider() == this) {
+					/*if (this._state.providerManager.getActiveProvider() == this) {
 						//this.currentMode = mode;
 						return this.updateContainerSize();
 					}*/
-					return this._state.sessionManager.setActiveProvider(this).then(
+					return this._state.providerManager.setActiveProvider(this).then(
 						function (result: Map<string, any>) {
 							if (result.get(Constants.value)) {
 								//this.currentMode = mode;
@@ -175,11 +201,11 @@ namespace Microsoft.CIFramework.Internal {
 							return Promise.reject(error);
 						});
 				case 0://TODO - replace with named constant. We lost the focus
-					/*if (this._state.sessionManager.getActiveProvider() != this) {
+					/*if (this._state.providerManager.getActiveProvider() != this) {
 						//this.currentMode = mode;
 						return this.updateContainerSize();
 					}*/
-					return this._state.sessionManager.setActiveProvider(null).then(
+					return this._state.providerManager.setActiveProvider(null).then(
 						function (result: Map<string, any>) {
 							if (result.get(Constants.value)) {
 								//this.currentMode = mode;
@@ -193,25 +219,78 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			return Promise.reject(new Map<string, any>().set(Constants.message, "Invalid mode value"));  
 		}
+
 		getMode(): number {
 			return this.currentMode;
 		}
+
 		setHeight(height: number): Promise<Map<string, any>> {
 			this.widgetHeight = height;
 			return this.updateContainerSize();
 		}
+
 		getHeight(): number {
 			if (!this.getMode()) {
 				return this._minimizedHeight;  //TODO: figure out what to use as minimized width We are minimized
 			}
 			return this.widgetHeight;
 		}
+
 		setWidth(width: number): Promise<Map<string, any>> {
 			this.widgetWidth = width;
 			return this.updateContainerSize();
 		}
+
 		getWidth(): number {
 			return this.widgetWidth;
+		}
+
+		startUISession(context: any, initials: string, entityFormOptions: string, entityFormParameters: string, isVisible: boolean): string {
+			let sessionId: string = this._state.messageLibrary.getCorrelationId();
+			let session: UISession = {
+				sessionId: sessionId,
+				context: context,
+				applicationTabs: null,
+				initials: initials
+			};
+
+			this.uiSessions.set(sessionId, session);
+			if (isVisible) {
+				//Todo
+			}
+
+			SessionPanel.getInstance().addUISession(sessionId, this, initials);
+
+			//load peek panel
+			
+			return sessionId;
+		}
+
+		endUISession(sessionId: string): string {
+			if (this.uiSessions.get(sessionId)) {
+				this.uiSessions.delete(sessionId);
+				SessionPanel.getInstance().removeUISession(sessionId);
+			}
+			
+			return sessionId;
+		}
+
+		setVisibleSession(sessionId: string, showWidget?: boolean): void {
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", true).set("context", this.uiSessions.get(sessionId).context), MessageType.onUISessionVisibilityChanged);
+			this.visibleUISession = sessionId;
+
+			if (showWidget) {
+				//Todo
+			}
+		}
+
+		setInvisibleSession(sessionId: string, hideWidget?: boolean): void {
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", false).set("context", this.uiSessions.get(sessionId).context), MessageType.onUISessionVisibilityChanged);
+			this.visibleUISession = '';
+
+			if (hideWidget) {
+				//Todo
+			}
 		}
 	}
 }
