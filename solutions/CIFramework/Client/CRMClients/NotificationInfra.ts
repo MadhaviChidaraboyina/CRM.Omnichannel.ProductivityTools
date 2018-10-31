@@ -32,6 +32,7 @@ namespace Microsoft.CIFramework.Internal {
 			toastDiv.getElementsByClassName("CIFHeaderIcon")[len-1].classList.add("FontIcons_CIFHeaderIcon");
 			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
 			toastDiv.getElementsByClassName("CIFToastDiv")[len-1].id = "CIFToastDiv_"+len;
+			panelWidth = panelWidth - 34;
 			widgetIFrame.contentWindow.document.getElementById("CIFToastDiv_"+len).style.width = panelWidth+"px";
 			if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
 				let headerElement = toastDiv.getElementsByClassName("header_NotificationType_CIF")[len-1];
