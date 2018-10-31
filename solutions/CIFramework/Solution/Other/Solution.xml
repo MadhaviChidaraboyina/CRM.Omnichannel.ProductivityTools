@@ -85,6 +85,7 @@
 			<RootComponent type="1" schemaName="msdyn_ciprovider" behavior="0" />
 			<RootComponent type="61" schemaName="Widget/msdyn_ciLibrary.js" behavior="0" />
 			<RootComponent type="61" schemaName="CRMClients/msdyn_internal_ci_library.js" behavior="0" />
+			<RootComponent type="61" schemaName="EventHandlersLib/msdyn_EventHandlersLib.js" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_Callprovider.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_CIFIcon.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_ProviderIcon.svg" behavior="0" />
@@ -102,6 +103,8 @@
 			<RootComponent type="92" id="{36f97e86-7ec0-e811-814c-000d3afd7b11}" behavior="0" />
 			<RootComponent type="92" id="{e018463a-8abd-e811-814c-000d3afd7b11}" behavior="0" />
 			<RootComponent type="92" id="{0d01b3be-4fc2-e811-8149-000d3a3aa233}" behavior="0" />
+			<RootComponent type="92" id="{2c8df2b8-43d7-e811-8158-000d3a069351}" behavior="0" />
+			<RootComponent type="92" id="{528b24b0-43d7-e811-8158-000d3a069351}" behavior="0" />
 		</RootComponents>
 		<MissingDependencies />
 	</SolutionManifest>

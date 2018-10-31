@@ -62,6 +62,7 @@
 	<ItemGroup>
 		<Compile Include="ChannelProvider\FilterRetrieveMultipleForProviderEntity.cs" />
 		<Compile Include="ChannelProvider\UpdateRolePrivilegesForProviderEntity.cs" />
+		<Compile Include="ChannelProvider\WildCardCheckOnProviderEntity.cs" />
 		<Compile Include="Properties\AssemblyInfo.cs" />
 	</ItemGroup>
 	<ItemGroup>
@@ -74,8 +75,8 @@
 	<Target Name="BuildGenerated" />
 	<Target Name="BuildCompiled" DependsOnTargets="Build" />
 	<Target Name="BuildLinked" />
-	<Target Name ="AfterBuild">
-		<Copy SourceFiles="$(OutputPath)\Microsoft.Dynamics.CIFrameworkPlugins.Implementation.dll" DestinationFolder ="$(XrmSolutionsRoot)\solutions\CIFramework\Solution\PluginAssemblies\Microsoft.Dynamics.CIFrameworkPlugins.Implementation-6bdb85ab-033f-4fe4-9cc7-804211b8fa10" ContinueOnError="false" />
+	<Target Name="AfterBuild">
+		<Copy SourceFiles="$(OutputPath)\Microsoft.Dynamics.CIFrameworkPlugins.Implementation.dll" DestinationFolder="$(XrmSolutionsRoot)\solutions\CIFramework\Solution\PluginAssemblies\Microsoft.Dynamics.CIFrameworkPlugins.Implementation-6bdb85ab-033f-4fe4-9cc7-804211b8fa10" ContinueOnError="false" />
 	</Target>
 	<!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 			 Other similar extension points exist, see Microsoft.Common.targets.
