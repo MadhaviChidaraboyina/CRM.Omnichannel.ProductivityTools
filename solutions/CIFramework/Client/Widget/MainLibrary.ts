@@ -605,7 +605,7 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to start UI Session
 	 */
-	export function startUISession(context: any, initials: string, isVisible: boolean): Promise<string> {
+	export function startUISession(context: any, initials: string): Promise<string> {
 		if (!isNullOrUndefined(context) && !isNullOrUndefined(initials)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.startUISession,

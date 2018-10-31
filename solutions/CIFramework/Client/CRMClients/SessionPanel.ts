@@ -57,14 +57,13 @@ namespace Microsoft.CIFramework.Internal {
 			this.getElement(this.visibleUISession + "selectionLine").style.display = "block";
 		}
 
-
 		//ToDo: Change code to prevent conversion
 		rgb2hex(orig: string) {
 			var rgb = orig.replace(/\s/g, '').match(/^rgba?\((\d+),(\d+),(\d+)/i);
 			return (rgb && rgb.length === 4) ? "#" +
-				("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) +
-				("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) +
-				("0" + parseInt(rgb[3], 10).toString(16)).slice(-2) : orig;
+				("0" + parseInt(rgb[1], 10).toString(16)).slice(-2).toUpperCase() +
+				("0" + parseInt(rgb[2], 10).toString(16)).slice(-2).toUpperCase() +
+				("0" + parseInt(rgb[3], 10).toString(16)).slice(-2).toUpperCase() : orig;
 		}
 
 		createSessionElement(id: string, initials: string): any {

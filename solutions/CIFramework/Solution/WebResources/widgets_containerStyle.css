@@ -57,6 +57,7 @@ button#CurrentStatus
 {
 	display: flex;
 	height: 50px;
+	cursor: pointer;
 }
 
 .avatarCircle
