@@ -774,7 +774,9 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	export function expandFlap(width: number,renderNotes: any): Promise<any>{
-		let promise = new Promise(renderNotes);
+		let promise = new Promise((resolve) => {
+		
+		}
 		let l = flapPromises.push(promise);
 		state.client.setWidgetWidth("setWidgetWidth", width*2);
 		return promise;

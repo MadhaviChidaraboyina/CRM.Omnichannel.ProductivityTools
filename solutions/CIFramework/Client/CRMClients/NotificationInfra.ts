@@ -32,6 +32,7 @@ namespace Microsoft.CIFramework.Internal {
 			toastDiv.getElementsByClassName("CIFHeaderIcon")[len-1].classList.add("FontIcons_CIFHeaderIcon");
 			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
 			toastDiv.getElementsByClassName("CIFToastDiv")[len-1].id = "CIFToastDiv_"+len;
+			panelWidth = panelWidth - 34;
 			widgetIFrame.contentWindow.document.getElementById("CIFToastDiv_"+len).style.width = panelWidth+"px";
 			if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
 				let headerElement = toastDiv.getElementsByClassName("header_NotificationType_CIF")[len-1];
@@ -323,8 +324,8 @@ namespace Microsoft.CIFramework.Internal {
 						label1.setAttribute("aria-label", key);
 						label2.innerText = body[i][key];
 						label2.setAttribute("aria-label", body[i][key]);
-						label1.style.width = (panelWidth * 0.3 - 10)+"px";
-						label2.style.width = (panelWidth * 0.7 - 30)+"px";
+						label1.style.width = (panelWidth * 0.3)+"px";
+						label2.style.width = ((panelWidth * 0.7) - 20)+"px";
 						div = document.createElement("div");
 						div.classList.add("chatWindowHeaderDiv_CIF");
 						notificationBody.appendChild(div);
