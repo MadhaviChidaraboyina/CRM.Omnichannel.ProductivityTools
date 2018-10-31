@@ -38,6 +38,11 @@ namespace Microsoft.CIFramework.Internal
 	type OpenFormFunction = (entityFormOptions: string, entityFormParameters?: string, telemetryData?: Object) => Promise<Map<string, any>>;
 
 	/**
+	 * Func type for opening a KB serach control 
+	*/
+	type openKBSearchControlFunction = (searchString: string,telemetryData?: Object) => Promise<Map<string, any>>;
+	
+	/**
 	 * Func type for loading all widgets.
 	*/
 	type LoadWidgetsFunction = (ciProviders: Map<string, CIProvider>) => Promise<Map<string, boolean | string>>;
@@ -107,6 +112,8 @@ namespace Microsoft.CIFramework.Internal
 		getWidgetWidth: GetContextFunction;
 
 		openForm: OpenFormFunction;
+		
+		openKBSearchControl:openKBSearchControlFunction;		
 
 		getEntityMetadata: getMetadataFunction;
 

@@ -9,6 +9,35 @@ namespace Microsoft.CIFramework
 	*/
 	export class MessageType
 	{
+		export const setClickToAct = "setclicktoact";
+		export const getClickToAct = "getclicktoact";
+		export const searchAndOpenRecords = "searchandopenrecords";
+		export const openForm = "openform";
+		export const openKBSearchControl = "openkbsearchcontrol";
+		export const createRecord = "createrecord";
+		export const deleteRecord = "deleterecord";
+		export const retrieveRecord = "retrieverecord";
+		export const updateRecord = "updaterecord";
+		export const search = "search";
+		export const setMode = "setmode";
+		export const setWidth = "setwidth";
+		export const getMode = "getmode";
+		export const getEnvironment = "getenvironment";
+		export const getWidth = "getwidth";
+		export const onClickToAct = "onclicktoact";
+		export const onModeChanged = "onmodechanged";
+		export const onSizeChanged = "onsizechanged";
+		export const onPageNavigate = "onpagenavigate";
+		export const onSendKBArticle = "onsendkbarticle";
+		export const getEntityMetadata = "getEntityMetadata";
+		export const notifyEvent = "notifyEvent";
+		export const softNotification = "softNotification";
+		export const broadCast = "broadCast";
+		export const internalCommunication = "internalCommunication";
+		export const notification = "notification";
+		export const transfer = "transfer";
+		export const escalation = "escalation";
+		export const renderSearchPage = "renderSearchPage";
 		public static setClickToAct = "setclicktoact";
 		public static getClickToAct = "getclicktoact";
 		public static searchAndOpenRecords = "searchandopenrecords";
