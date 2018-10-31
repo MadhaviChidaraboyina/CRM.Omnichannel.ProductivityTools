@@ -22,6 +22,7 @@ namespace Microsoft.CIFramework.Internal {
 		["insertNotes", [insertNotes]],
 		["searchandopenrecords", [searchAndOpenRecords]],
 		["openform", [openForm]],
+		["openkbsearchcontrol",[openKBSearchControl]],
 		["createrecord", [createRecord]],
 		["updaterecord", [updateRecord]],
 		["retrieverecord", [retrieveRecord]],
@@ -322,6 +323,28 @@ namespace Microsoft.CIFramework.Internal {
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
 		}
+	}
+	/**
+	 * openKBSearchControl API's client side handler that post message library will invoke. 
+	*/
+	export function openKBSearchControl(parameters: Map<string, any>): Promise<Map<string, any>> {   
+	
+	let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.SearchString]);
+
+		if (provider) {
+			
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), openKBSearchControl.name, telemetryData);
+			setPerfData(perfData);
+            
+			return state.client.openKBSearchControl(parameters.get(Constants.SearchString));			
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, setWidth.name, appId, true, errorData);
+		}
+		
+		
 	}
 
 	/**

@@ -216,6 +216,22 @@ namespace Microsoft.CIFramework.Internal {
 				);
 			});
 		}
+		
+		client.openKBSearchControl = (searchString: string,telemetryData?: Object|any): Promise<Map<string, any>> =>
+		{
+			//eval("window.top.Xrm.Page.getControl('KBSearchcontrol').setSearchQuery(+searchString+); use once serachstring is passed
+			return new Promise<Map<string, any>>((resolve, reject) => {
+
+				return eval("window.top.Xrm.Page.getControl('KBSearchcontrol').setFocus()").then(function (res:any) {
+					return resolve(new Map<string, any>().set(Constants.value, res));
+				},
+					function (err:any) {
+						return reject(err);
+					}
+				);
+			});
+						
+		}
 
 		client.openForm = (entityFormOptions: string, entityFormParameters?: string): Promise<Map<string, any>> => {
 			var fo: XrmClientApi.EntityFormOptions = JSON.parse(entityFormOptions);
