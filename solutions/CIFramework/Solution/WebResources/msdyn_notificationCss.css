@@ -373,13 +373,15 @@
 }
 .notesCancelButtonCIF{
 	float: right;
-	color: #FFFFFF;
-	background-color: #315FA2;
-	font-style: Semiboid;
+	color: #315FA2;
+	font-style: Semibold;
 	font-family: Segoe UI;
 	font-size: 12px;
 	line-height: 14px;
 	height: 28px;
+	margin-right: 12px;
+	margin-top: 10px;
+	text-decoration: none;
 }
 .closeNotes_CIF{
 	font-family: CRM MDL2 ASSETS;
