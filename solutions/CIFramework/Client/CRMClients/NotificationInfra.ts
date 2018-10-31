@@ -19,22 +19,27 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-    export function renderEventNotification(header:any,body:any,actions:any,notificationType:any): Map<any,any>{
+    export function renderEventNotification(header:any,body:any,actions:any,notificationType:any,panelWidth:any): Map<any,any>{
        	let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
 		let i = 0;
 		let map = new Map();
 		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
-			map = renderSoftNotification(header,body,notificationType[1]);
+			map = renderSoftNotification(header,body,notificationType[1],panelWidth);
 		}else{
 			toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><span class="CIFHeaderIcon"></span><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div></p></div></div>');
 			let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
 			toastDiv.getElementsByClassName("CIFHeaderIcon")[len-1].classList.add("FontIcons_CIFHeaderIcon");
 			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
+			toastDiv.getElementsByClassName("CIFToastDiv")[len-1].id = "CIFToastDiv_"+len;
+			panelWidth = panelWidth - 34;
+			widgetIFrame.contentWindow.document.getElementById("CIFToastDiv_"+len).style.width = panelWidth+"px";
 			if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
 				let headerElement = toastDiv.getElementsByClassName("header_NotificationType_CIF")[len-1];
 				if(notificationType[0].search(MessageType.broadCast) != -1 && notificationType.length == 3){
 					headerElement.classList.add("header_NotificationType_CIF_Broadcast");
+					toastDiv.getElementsByClassName("header_NotificationType_CIF_Broadcast")[len-1].id = "CIFToastType_"+len;
+					widgetIFrame.contentWindow.document.getElementById("CIFToastType_"+len).style.width = panelWidth+"px";
 					var label1 = document.createElement("label");
 					headerElement.appendChild(label1);
 					label1.classList.add("broadCastLabel1");
@@ -47,6 +52,8 @@ namespace Microsoft.CIFramework.Internal {
 					label2.setAttribute("aria-label", notificationType[2]);
 				}else if((notificationType[0].search(MessageType.notification) != -1 || notificationType[0].search(MessageType.escalation)) != -1 && notificationType.length == 2){
 					headerElement.classList.add("header_NotificationType_CIF_notification");
+					toastDiv.getElementsByClassName("header_NotificationType_CIF_notification")[len-1].id = "CIFToastType_"+len;
+					widgetIFrame.contentWindow.document.getElementById("CIFToastType_"+len).style.width = panelWidth+"px";
 					var span = document.createElement("span");
 					headerElement.appendChild(span);
 					headerElement.getElementsByTagName("span")[0].classList.add("notificationSpan");
@@ -62,6 +69,8 @@ namespace Microsoft.CIFramework.Internal {
 					label.setAttribute("aria-label", notificationType[1]);
 				}else if(notificationType[0].search(MessageType.transfer) != -1 && notificationType.length == 2){
 					headerElement.classList.add("header_NotificationType_CIF_transfer");
+					toastDiv.getElementsByClassName("header_NotificationType_CIF_transfer")[len-1].id = "CIFToastType_"+len;
+					widgetIFrame.contentWindow.document.getElementById("CIFToastType_"+len).style.width = panelWidth+"px";
 					var label1 = document.createElement("label");
 					headerElement.appendChild(label1);
 					label1.classList.add("transferLabel");
@@ -69,6 +78,8 @@ namespace Microsoft.CIFramework.Internal {
 					label1.setAttribute("aria-label", notificationType[1]);
 				}else if(notificationType[0].search(MessageType.internalCommunication) != -1 && notificationType.length == 2){
 					headerElement.classList.add("header_NotificationType_CIF_internalCommunication");
+					toastDiv.getElementsByClassName("header_NotificationType_CIF_internalCommunication")[len-1].id = "CIFToastType_"+len;
+					widgetIFrame.contentWindow.document.getElementById("CIFToastType_"+len).style.width = panelWidth+"px";
 					var span = document.createElement("span");
 					headerElement.appendChild(span);
 					headerElement.getElementsByTagName("span")[0].classList.add("internalCommunicationSpan");
@@ -110,10 +121,14 @@ namespace Microsoft.CIFramework.Internal {
 						label2.setAttribute("aria-label", body[i][key]);
 						label2.addEventListener("mouseover", function mouseOverListener() {
 							this.classList.add("body_CIFLabel2_mouseover");
+							label2.style.width = ((panelWidth * 0.7) - 20)+"px";
 						});
 						label2.addEventListener("mouseout", function mouseoutListener() {
 							this.classList.add("body_CIFLabel2_mouseout");
+							label2.style.width = ((panelWidth * 0.7) - 20)+"px";
 						});
+						label1.style.width = (panelWidth * 0.3)+"px";
+						label2.style.width = ((panelWidth * 0.7) - 20)+"px";
 						notificationBody.appendChild(label2);
 						var div = document.createElement("div");
 						notificationBody.appendChild(div);
@@ -122,6 +137,10 @@ namespace Microsoft.CIFramework.Internal {
 			}else{
 				toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].classList.add("bodyDivider_CIF_invisible");
 			}
+			toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].id = "CIFToastDivider_"+len;
+			widgetIFrame.contentWindow.document.getElementById("CIFToastDivider_"+len).style.width = panelWidth+"px";
+			toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].id = "CIFToastDividerInvisible_"+len;
+			widgetIFrame.contentWindow.document.getElementById("CIFToastDividerInvisible_"+len).style.width = panelWidth+"px";
 			toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].innerHTML = headerVal;
 			toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].setAttribute("aria-label", headerVal);
 			let chatWindowBody = toastDiv.getElementsByClassName("bodyDivCIF")[len-1];
@@ -157,8 +176,10 @@ namespace Microsoft.CIFramework.Internal {
 							if(actions[i][key].search(Constants.Accept) != -1){
 								if(bothButtons == false){
 									btn.classList.add("bothButtonsAccept_CIF");
+									btn.style.width = (panelWidth - 30) + "px";
 								}else{
 									btn.classList.add("singleButtonAccept_CIF");
+									btn.style.width = ((panelWidth / 2) - 20) + "px";
 								}
 								btn.appendChild(span);
 								btn.getElementsByTagName("span")[0].classList.add("acceptButtonSpan_CIF");
@@ -166,8 +187,10 @@ namespace Microsoft.CIFramework.Internal {
 							}else if(actions[i][key].search(Constants.Reject) != -1){
 								if(bothButtons == false){
 									btn.classList.add("bothButtonsReject_CIF");
+									btn.style.width = (panelWidth - 30) + "px";
 								}else{
 									btn.classList.add("singleButtonReject_CIF");
+									btn.style.width = ((panelWidth / 2) - 20) + "px";
 								}
 								btn.appendChild(span);
 								btn.getElementsByTagName("span")[0].classList.add("rejectButtonSpan_CIF");
@@ -237,7 +260,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param contains header,body of the popup
 	 *
 	*/
-    export function renderSoftNotification(header: any, body: any, notificationType: string): Map<string,any>{
+    export function renderSoftNotification(header: any, body: any, notificationType: string,panelWidth: any): Map<string,any>{
 		let map = new Map();
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("softToastDiv");
@@ -251,12 +274,13 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-		toastDiv.insertAdjacentHTML('afterbegin', '<div tabindex="0" id="CIFSoftToast" class="CIFSoftNotificationToast"><div tabindex="0" id="header_SoftNotification_CIF" class="headerSoftNotification_CIF"></div><div tabindex="0" id="bodyDivSoftToastCIF" class="bodyDivSoftToast_CIF"></div></div>');
+		toastDiv.insertAdjacentHTML('afterbegin', '<div tabindex="0" id="CIFSoftToast" class="CIFSoftNotificationToast"><div tabindex="0" id="header_SoftNotification_CIF" class="headerSoftNotification_CIF"><div><br></div></div><div tabindex="0" id="bodyDivSoftToastCIF" class="bodyDivSoftToast_CIF"></div></div>');
 		//Constructing header
 		let chatWindowHeader = widgetIFrame.contentWindow.document.getElementById("header_SoftNotification_CIF");
 		var span = document.createElement("span");
 		chatWindowHeader.appendChild(span);
 		chatWindowHeader.getElementsByTagName("span")[0].classList.add("chatWindowHeaderSpan_CIF");
+		widgetIFrame.contentWindow.document.getElementById("CIFSoftToast").style.width = panelWidth+"px";
 		if(notificationType.search(Constants.SMS) != -1){
 			chatWindowHeader.getElementsByTagName("span")[0].classList.add("FontIcons_smsWindowHeaderSpan_CIF");
 		}else if(notificationType.search(Constants.Chat) != -1){
@@ -267,6 +291,7 @@ namespace Microsoft.CIFramework.Internal {
 		label.classList.add("chatWindowHeaderLabel_CIF");
 		label.innerText = header[0];
 		label.setAttribute("aria-label", header[0]);
+		//label.style.width = panelWidth+"px";
 		span = document.createElement("span");
 		span.classList.add("closeSoftNotification_CIF");
 		span.classList.add("FontIcons-closeSoftNotification_CIF");
@@ -299,6 +324,8 @@ namespace Microsoft.CIFramework.Internal {
 						label1.setAttribute("aria-label", key);
 						label2.innerText = body[i][key];
 						label2.setAttribute("aria-label", body[i][key]);
+						label1.style.width = (panelWidth * 0.3)+"px";
+						label2.style.width = ((panelWidth * 0.7) - 20)+"px";
 						div = document.createElement("div");
 						div.classList.add("chatWindowHeaderDiv_CIF");
 						notificationBody.appendChild(div);

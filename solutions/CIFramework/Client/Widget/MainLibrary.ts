@@ -12,7 +12,7 @@ namespace Microsoft.CIFramework
 
 	let Constants = Microsoft.CIFramework.Constants;
 
-    /** @internal */
+	/** @internal */
 	function initialize()
 	{
 		let startTime = Date.now();
@@ -53,7 +53,7 @@ namespace Microsoft.CIFramework
 		}, 0);
 	}
 
-    /** @internal */
+	/** @internal */
 	function sendMessage<T>(funcName: string, payload: postMessageNamespace.IExternalRequestMessageType, isEvent: boolean, noTimeout?: boolean) : Promise<T>{
 		let startTime = Date.now();
 
@@ -93,6 +93,40 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+	 * API to insert notes control
+	 *
+	 * @param value. It's a string which contains session,activity details
+	 *
+	*/
+	export function insertNotes(entityName: string, entitySetName: string, entityId: string, annotationId: string): Promise<string> {	
+		if(!(isNullOrUndefined(entityName) || isNullOrUndefined(entitySetName) || isNullOrUndefined(entityId))){
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.insertNotes,
+				messageData: new Map().set(Constants.entityName,entityName).set(Constants.entitySetName,entitySetName).set(Constants.entityId,entityId).set(Constants.annotationId,annotationId)
+			}
+			return new Promise((resolve, reject) => {
+				return sendMessage<Map<string, any>>(insertNotes.name, payload, false, true).then(
+					function (result: Map<string, any>) {
+						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
+					},
+					function (error: Map<string, any>) {
+						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+					});
+			});
+		}else{
+			if(isNullOrUndefined(entityName)){
+				return postMessageNamespace.rejectWithErrorMessage("The entityName parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(entitySetName)){
+				return postMessageNamespace.rejectWithErrorMessage("The entitySetName parameter is blank. Provide a value to the parameter.");
+			}
+			if(isNullOrUndefined(entityId)){
+				return postMessageNamespace.rejectWithErrorMessage("The entityId parameter is blank. Provide a value to the parameter.");
+			}
+		}
+	}
+
+	/**
 	 * API to invoke toast popup widget
 	 *
 	 * @param value. It's a string which contains header,body of the popup
@@ -122,41 +156,6 @@ namespace Microsoft.CIFramework
 			}
 		}
 	}
-
-	/**
-	 * API to insert notes control
-	 *
-	 * @param value. It's a string which contains session,activity details
-	 *
-	*/
-    export function insertNotes(entityName: string, entitySetName: string, entityId: string): Promise<string> {	
-		if(!(isNullOrUndefined(entityName) || isNullOrUndefined(entitySetName) || isNullOrUndefined(entityId))){
-			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.insertNotes,
-				messageData: new Map().set(Constants.entityName,entityName).set(Constants.entitySetName,entitySetName).set(Constants.entityId,entityId)
-			}
-			return new Promise((resolve, reject) => {
-				return sendMessage<Map<string, any>>(insertNotes.name, payload, false, true).then(
-					function (result: Map<string, any>) {
-						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
-					},
-					function (error: Map<string, any>) {
-						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
-					});
-			});
-		}else{
-			if(isNullOrUndefined(entityName)){
-				return postMessageNamespace.rejectWithErrorMessage("The entityName parameter is blank. Provide a value to the parameter.");
-			}
-			if(isNullOrUndefined(entitySetName)){
-				return postMessageNamespace.rejectWithErrorMessage("The entitySetName parameter is blank. Provide a value to the parameter.");
-			}
-			if(isNullOrUndefined(entityId)){
-				return postMessageNamespace.rejectWithErrorMessage("The entityId parameter is blank. Provide a value to the parameter.");
-			}
-		}
-    }
-
 
 	/**
 	 * API to open the create form for given entity with data passed in pre-populated
@@ -538,7 +537,7 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to remove the subscriber
 	 */
-    export function removeHandler(eventName: string, handlerFunction: ((eventData: string) => Promise<Object>))
+	export function removeHandler(eventName: string, handlerFunction: ((eventData: string) => Promise<Object>))
 	{
 		let startTime = Date.now();
 		if(!(isNullOrUndefined(eventName) || eventName == "") && !isNullOrUndefined(handlerFunction)){

@@ -21,7 +21,7 @@ namespace Microsoft.CIFramework
 		public static setMode = "setmode";
 		public static setWidth = "setwidth";
 		public static getMode = "getmode";
-		public static getEnvironment = "getenvironment";
+		public static getEnvironment =  "getenvironment";
 		public static getWidth = "getwidth";
 		public static onClickToAct = "onclicktoact";
 		public static onModeChanged = "onmodechanged";
@@ -143,6 +143,7 @@ namespace Microsoft.CIFramework
 		public static notetext = "notetext";
 		public static annotation = "annotation";
 		public static entitySetName = "entitySetName";
+		public static annotationId = "annotationid";
 	}
 
 	/**
