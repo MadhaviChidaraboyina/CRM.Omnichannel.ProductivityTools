@@ -42,7 +42,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	declare var Xrm: any;
 	let noOfNotifications = 0;
-	var flapPromises: any = [];
+	var flapFunctions: any = [];
 
 	declare var appId: string;
 
@@ -179,15 +179,15 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	function updateProviderSizes(): void {
-		if(flapPromises.length == 0){
+		if(flapFunctions.length == 0){
 			var width = state.client.getWidgetWidth() as number;
 			for (let [key, value] of state.ciProviders) {
 				value.setWidth(width);
 			}
 		}else{
-			let l = flapPromises.length;
-			for(let i = 0; i < flapPromises.length; i++){
-				l = flapPromises.pop();
+			let l = flapFunctions.length;
+			for(let i = 0; i < flapFunctions.length; i++){
+				l = flapFunctions.pop();
 				Promise.resolve(l());
 			}
 		}		
@@ -777,7 +777,7 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	export function expandFlap(width: number,renderNotes: any): void{
-		let l = flapPromises.push(renderNotes);
+		let l = flapFunctions.push(renderNotes);
 		state.client.setWidgetWidth("setWidgetWidth", width*2);
 	}
 
