@@ -88,7 +88,7 @@
       <RootComponent type="61" schemaName="msdyn_Callprovider.svg" behavior="0" />
 	  <RootComponent type="61" schemaName="call_icon.svg" behavior="0" />
 	  <RootComponent type="61" schemaName="case_icon.svg" behavior="0" />
-	  <RootComponent type="61" schemaName="chat.svg" behavior="0" />
+	  <RootComponent type="61" schemaName="chat_icon.svg" behavior="0" />
       <RootComponent type="62" schemaName="msdyn_ChannelIntegrationFrameworkSitemap" behavior="0" />
 
       <RootComponent type="66" schemaName="MscrmControls.Service.CIProvider.CustomMultiSelectControl" />

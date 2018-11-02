@@ -113,6 +113,8 @@ namespace Microsoft.CIFramework
 		export const NoOfNotifications = "NoOfNotifications";
 		export const SMS = "SMS";
 		export const Chat = "Chat";
+		export const Call = "Call";
+		export const Case = "Case";
 		export const activityType = "activityType";
 		export const sessionDetails = "sessionDetails";
 		export const activityId = "activityId";

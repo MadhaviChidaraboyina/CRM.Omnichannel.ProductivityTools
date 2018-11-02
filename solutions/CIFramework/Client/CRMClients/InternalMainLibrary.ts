@@ -540,7 +540,8 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(notificationUX, [Constants.value]);
 		if (provider) {
 			return new Promise<any>((resolve, reject) => {
-				notifyEventClient(notificationUX, state.client).then(
+				let panelWidth = state.client.getWidgetWidth();
+				notifyEventClient(notificationUX, panelWidth).then(
 					function (res) {
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), notifyEvent.name, telemetryData);
 						setPerfData(perfData);

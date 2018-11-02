@@ -45,13 +45,15 @@
 	min-height:71px;
 }
 .CIFHeaderIcon{
+	font-family: CRM MDL2 ASSETS;
+	color:#FFFFFF;
+	text-align:center;
+}
+.CIFHeaderIconDiv{
 	width:71px; 
 	height:71px; 
 	float:left; 
 	margin-left: 10px;
-	font-family: CRM MDL2 ASSETS;
-	color:#FFFFFF;
-	text-align:center;
 }
 .headerKeyCIF{
 	font-family:Segoe UI;
@@ -220,22 +222,26 @@
 	background-color:#47C21D;
 	height:40px;
 	margin-left: 10px;
+	border-color: #47C21D;
 }
 .singleButtonAccept_CIF{
 	background-color:#47C21D;
 	height:40px;
 	margin-right:14px;
 	margin-left: 10px;
+	border-color: #47C21D;
 }
 .bothButtonsReject_CIF{
 	background-color:#EA0600;
 	height:40px;
 	margin-left: 10px;
+	border-color: #EA0600;
 }
 .singleButtonReject_CIF{
 	background-color:#EA0600;
 	height:40px;
 	margin-right:14px;
+	border-color: #EA0600;
 }
 .acceptButtonSpan_CIF{
 	width:16px; 
@@ -382,6 +388,7 @@
 	line-height: 14px;
 	height: 28px;
 	margin-right: 20px;
+	border-color: #315FA2;
 }
 .notesCancelButtonCIF{
 	float: right;

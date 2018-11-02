@@ -20,7 +20,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-    export function renderEventNotification(header:any,body:any,actions:any,notificationType:any,panelWidth:any): Map<any,any>{
+    export function renderEventNotification(header:any,body:any,actions:any,notificationType:any,panelWidth:any,eventType:any): Map<any,any>{
        	let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
 		let i = 0;
@@ -28,9 +28,14 @@ namespace Microsoft.CIFramework.Internal {
 		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
 			map = renderSoftNotification(header,body,notificationType[1],panelWidth);
 		}else{
-			toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><span class="CIFHeaderIcon"></span><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div></p></div></div>');
+			if(eventType.search(Constants.Chat) != -1){
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/chat_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div></p></div></div>');
+			}else if(eventType.search(Constants.Call) != -1){
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/call_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div></p></div></div>');
+			}else if(eventType.search(Constants.Case) != -1){
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/case_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div></p></div></div>');
+			}
 			let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
-			toastDiv.getElementsByClassName("CIFHeaderIcon")[len-1].classList.add("FontIcons_CIFHeaderIcon");
 			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
 			toastDiv.getElementsByClassName("CIFToastDiv")[len-1].id = "CIFToastDiv_"+len;
 			panelWidth = panelWidth - 34;
@@ -344,17 +349,18 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-    export function notifyEventClient(notificationUX: Map<string,Map<string,any>>,state: any): Promise<any>{
+    export function notifyEventClient(notificationUX: Map<string,Map<string,any>>,panelWidth: any): Promise<any>{
        	let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
 		let i = 0;
 		let header,body,actions;
+		let eventType;
 		let waitTime = -1;
-		let panelWidth = state.getWidgetWidth();
 		let notificationType: any = [];
 		for (let [key, value] of notificationUX) {
 			if(key.search(Constants.eventType) != -1){
 				console.log(value);
+				eventType = value;
 			}
 			if(key.search(Constants.notificationUXObject) != -1){
 				for(let [key1, value1] of value){
@@ -389,7 +395,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 		let map = new Map();
-		map = renderEventNotification(header,body,actions,notificationType,panelWidth);
+		map = renderEventNotification(header,body,actions,notificationType,panelWidth,eventType);
 		if(actions != null && actions != "undefined"){
 			for( i = 0; i < actions.length; i++){
 				for (let key in actions[i]) {
@@ -467,185 +473,4 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		});
     }
-
-	export function insertNotesClient(notesDetails: Map<string,any>, state: any): Promise<any>{
-		let entityName: string;
-		let originURL: string;
-		let entityId: string;
-		let entitySetName: string;
-		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
-		let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
-		var childDivs = notesDiv.getElementsByTagName('div');
-		if(childDivs != null && childDivs.length > 0){
-			return postMessageNamespace.rejectWithErrorMessage("This conversation already has a note opened.");
-		}
-       	for (let [key, value] of notesDetails) {
-			if(key.search(Constants.entityName) != -1){
-				entityName = value;
-			}else if(key.search(Constants.originURL) != -1){
-				originURL = value;
-			}else if(key.search(Constants.entityId) != -1){
-				entityId = value;
-			}else if(key.search(Constants.entitySetName) != -1){
-				entitySetName = value;
-			}
-		}
-		let width: number = 0;
-		let panelWidth = state.getWidgetWidth();
-		width = panelWidth as number;
-		notesDetails.set(Constants.value,width);
-		return new Promise(function (resolve,reject) {
-			expandFlap(width,state);
-			widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
-			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" tabindex="0" class="CIFNotes"><div id="notesHeaderIdCIF" tabindex="0" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close" style="margin-left:18px"><br/>Add Notes</div></div></div>');
-			notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
-			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
-			widgetIFrame.contentWindow.document.getElementById("notesHeaderIdCIF").style.height = ((listenerWindow.outerHeight * 0.75) * 0.14)+"px";
-			var span = document.createElement("span");
-			span.classList.add("closeNotes_CIF");
-			span.classList.add("FontIcons-closeSoftNotification_CIF");
-			span.setAttribute("aria-label", "Close");
-			notesDiv.getElementsByClassName("notesHeaderSpan_CIF")[0].appendChild(span);
-			var newTextArea = document.createElement('TextArea');
-			let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
-			notesElement.appendChild(newTextArea);
-			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = (width-7)+"px";
-			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.height = (listenerWindow.outerHeight * 0.75) + "px";
-			newTextArea.setAttribute('placeholder','Start adding notes');
-			newTextArea.classList.add("newTextAreaCIF");
-			var textAreaWidth = width - width/8 - 7;
-			newTextArea.id = "notesTextAreaCIF";
-			widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF").style.width = textAreaWidth+"px";
-			widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF").style.height = ((listenerWindow.outerHeight * 0.75) * 0.7)+"px";
-			var saveBtn = document.createElement("BUTTON");
-			notesElement.appendChild(saveBtn);
-			saveBtn.classList.add("notesSaveButtonCIF");
-			saveBtn.innerText = "Add Note";
-			saveBtn.tabIndex = 0;
-			saveBtn.setAttribute("aria-label", "Add Note");
-			var cancelBtn = document.createElement('a');
-			cancelBtn.setAttribute('href',"#");
-			notesElement.appendChild(cancelBtn);
-			cancelBtn.classList.add("notesCancelButtonCIF");
-			cancelBtn.innerText = "Cancel";
-			cancelBtn.tabIndex = 0;
-			cancelBtn.setAttribute("aria-label", "Cancel");
-			saveBtn.addEventListener("click", function clickListener() {
-				saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
-					cancelNotes();
-					state.setWidgetWidth("setWidgetWidth", width);
-					return resolve(new Map().set(Constants.value,retval));
-				});
-			});
-			cancelBtn.addEventListener("click", function clickListener() {
-				cancelNotes();
-				state.setWidgetWidth("setWidgetWidth", width);
-				return resolve(new Map().set(Constants.value,new Map().set(Constants.value,"")));
-			});
-			span.addEventListener("click", function clickListener() {
-				cancelNotes();
-				state.setWidgetWidth("setWidgetWidth", width);
-				return resolve(new Map().set(Constants.value,new Map().set(Constants.value,"")));
-			});
-		});
-	}
-
-	export function expandFlap(width: number, state: any): void{
-		state.removeHandler(Constants.ModeChangeHandler);
-		state.removeHandler(Constants.SizeChangeHandler);
-		state.setWidgetWidth("setWidgetWidth", width*2);
-	}
-
-    export function saveNotes(notesDetails: Map<string,any>,newTextArea: any): Promise<Map<string, any>>{		
-		let entityName: string;
-		let originURL: string;
-		let entityId: string;
-		let entitySetName: string;
-		let annotationId: string;
-       	for (let [key, value] of notesDetails) {
-			if(key.search(Constants.entityName) != -1){
-				entityName = value;
-			}else if(key.search(Constants.originURL) != -1){
-				originURL = value;
-			}else if(key.search(Constants.entityId) != -1){
-				entityId = value;
-			}else if(key.search(Constants.entitySetName) != -1){
-				entitySetName = value;
-			}else if(key.search(Constants.annotationId) != -1){
-				annotationId = value;
-			}
-		}
-		let textAreaValue = newTextArea.value;
-		let map = new Map().set(Constants.notetext,textAreaValue);
-		let noteText = "";
-		let createMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.value, map).set(Constants.originURL,originURL);
-		return new Promise(function (resolve) {
-			if(annotationId == ""){
-				createRecord(createMap).then(function (returnValue: Map<string, any>) {	
-					for(let [key,value] of returnValue){
-						if(key.search(Constants.value) != -1){
-							for(let [key1,value1] of value){
-								if(key1.search(Constants.Id) != -1){
-									annotationId = value1;
-								}
-							}
-						}
-					}
-					var returnUpdateValue = new Map();
-					let odataBind = entitySetName+"("+entityId+")";
-					let odataBindPropertyName = "objectid_"+entityName+"@odata.bind";
-					let notesMap = new Map().set(odataBindPropertyName,odataBind);
-					let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
-					updateRecord(updateMap).then(function (updatedAnnotation: Map<string, any>) {
-						for(let [key,value] of updatedAnnotation){
-							if(key.search(Constants.value) != -1){
-								returnUpdateValue = value;
-							}
-						}
-						var mapReturn = new Map().set(Constants.value,annotationId);
-						resolve(mapReturn);
-					});
-				});
-			}else{
-				let searchQuery = "?$select=notetext&$filter=_objectid_value eq " + entityId;
-				let searchMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.queryParameters,searchQuery).set(Constants.originURL,originURL);
-				search(searchMap).then(function (returnSearchResult: Map<string, any>) {
-					for(let [key,value] of returnSearchResult){
-						if(key.search(Constants.value) != -1){
-							for(let i=0; i< value.length; i++ ){
-								for(let key1 in value[i]){
-									if(key1.search(Constants.notetext) != -1){
-										noteText = value[i][key1];
-									}
-								}
-							}
-						}
-					}
-					let notesMap = new Map().set(Constants.notetext,noteText+" "+textAreaValue);
-					let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
-					updateRecord(updateMap).then(function (returnValue: Map<string, any>) {	
-						for(let [key,value] of returnValue){
-							if(key.search(Constants.value) != -1){
-								for(let [key1,value1] of value){
-									if(key1.search(Constants.Id) != -1){
-										annotationId = value1;
-									}
-								}
-							}
-						}
-						var mapReturn = new Map().set(Constants.value,annotationId);
-						resolve(mapReturn);
-					});
-				});
-			}
-		});
-    }
-
-	export function cancelNotes(): void{	
-		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
-		let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
-		if(!isNullOrUndefined(notesDiv)){
-			notesDiv.removeChild(notesDiv.getElementsByClassName("CIFNotes")[0]);
-		}
-	}
 }
