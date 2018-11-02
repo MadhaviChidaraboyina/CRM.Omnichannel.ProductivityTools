@@ -359,7 +359,7 @@ namespace Microsoft.CIFramework.Internal {
 			let startTime = new Date();
 			//let width = Xrm.Panel.width;
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
-			let width = widgetIFrame.clientWidth;   //TODO: temporary fix until plaform fixes the Panel.width getter
+			let width = widgetIFrame.clientWidth - Constants.DEFAULT_SIDEPANEL_WIDTH;   //TODO: temporary fix until plaform fixes the Panel.width getter
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.getWidth";
 			//logApiData(telemetryData, startTime, timeTaken, apiName);
