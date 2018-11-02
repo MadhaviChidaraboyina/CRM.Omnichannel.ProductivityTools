@@ -928,7 +928,8 @@ namespace Microsoft.CIFramework.Internal {
 				saveBtn.innerText = "Add Note";
 				saveBtn.tabIndex = 0;
 				saveBtn.setAttribute("aria-label", "Add Note");
-				var cancelBtn = document.createElement("BUTTON");
+				var cancelBtn = document.createElement('a');
+				cancelBtn.setAttribute('href',"#");
 				notesElement.appendChild(cancelBtn);
 				cancelBtn.classList.add("notesCancelButtonCIF");
 				cancelBtn.innerText = "Cancel";
