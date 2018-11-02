@@ -446,6 +446,7 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	export function onSetPresence(event: CustomEvent): void {
 		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSetPresenceEvent, onSetPresence.name + "event received from client", state.providerManager.getActiveProvider());
+	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
 	export function openForm(parameters: Map<string, any>): Promise<Map<string, any>> {
