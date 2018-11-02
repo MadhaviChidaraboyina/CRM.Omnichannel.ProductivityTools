@@ -567,6 +567,7 @@ namespace Microsoft.CIFramework.Internal {
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), insertNotes.name, telemetryData);
 						setPerfData(perfData);
 						state.client.registerHandler(Constants.ModeChangeHandler, onModeChanged);
+						state.client.registerHandler(Constants.SizeChangeHandler, onSizeChanged);
 						return resolve(res);
 					},
 					(error: IErrorHandler) => {

@@ -552,6 +552,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function expandFlap(width: number, state: any): void{
 		state.removeHandler(Constants.ModeChangeHandler);
+		state.removeHandler(Constants.SizeChangeHandler);
 		state.setWidgetWidth("setWidgetWidth", width*2);
 	}
 
