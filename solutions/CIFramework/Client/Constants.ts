@@ -28,6 +28,7 @@ namespace Microsoft.CIFramework
 		public static onSizeChanged = "onsizechanged";
 		public static onPageNavigate = "onpagenavigate";
 		public static onSendKBArticle = "onsendkbarticle";
+		public static onSetPresence = "onSetPresence";
 		public static onUISessionVisibilityChanged = "onUISessionVisibilityChanged";
 		public static getEntityMetadata = "getEntityMetadata";
 		public static notifyEvent = "notifyEvent";
@@ -46,6 +47,7 @@ namespace Microsoft.CIFramework
 		public static setAllPresence = "setAllPresence";
 		public static insertNotes = "insertNotes";
 		public static openKBSearchControl = "openkbsearchcontrol";
+		public static onSetPresenceEvent = "setPresenceEvent";
 	}
 
 	/**
@@ -69,6 +71,7 @@ namespace Microsoft.CIFramework
 		public static originURL = "originURL";
 		public static CIClickToAct = "CIClickToAct";
 		public static CISendKBArticle = "KMClickToSend";
+		public static SetPresenceEvent = "setPresenceEvent";
 		public static widgetIframeId = "SidePanelIFrame";
 		public static clickToActAttributeName = "msdyn_clicktoact";
 		public static systemUserLogicalName = "systemuser";

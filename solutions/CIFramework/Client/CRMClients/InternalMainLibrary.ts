@@ -81,6 +81,8 @@ namespace Microsoft.CIFramework.Internal {
 					listenerWindow.addEventListener(Constants.CIClickToAct, onClickToAct);
 					listenerWindow.removeEventListener(Constants.CISendKBArticle, onSendKBArticle);
 					listenerWindow.addEventListener(Constants.CISendKBArticle, onSendKBArticle);
+					listenerWindow.removeEventListener(Constants.SetPresenceEvent, onSetPresence);
+					listenerWindow.addEventListener(Constants.SetPresenceEvent, onSetPresence);
 					state.client.registerHandler(Constants.ModeChangeHandler, onModeChanged);
 					state.client.registerHandler(Constants.SizeChangeHandler, onSizeChanged);
 					state.client.registerHandler(Constants.NavigationHandler, onPageNavigation);
@@ -434,6 +436,12 @@ namespace Microsoft.CIFramework.Internal {
 	export function onSendKBArticle(event: CustomEvent): void {
 		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client", state.providerManager.getActiveProvider());
 	}
+
+	/**
+	 * subscriber of onSetPresence event
+	 */
+	export function onSetPresence(event: CustomEvent): void {
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSetPresenceEvent, onSetPresence.name + "event received from client", state.providerManager.getActiveProvider());
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
 	export function openForm(parameters: Map<string, any>): Promise<Map<string, any>> {
