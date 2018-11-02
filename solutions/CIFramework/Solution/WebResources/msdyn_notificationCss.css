@@ -63,6 +63,7 @@
 .headerNameCIF{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:18px;
 	text-align:left;
 	color:#FFFFFF;
@@ -85,6 +86,7 @@
 	margin-left: 10px;
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:11px;
 	text-align:Left;
 	height:13px;
@@ -115,6 +117,7 @@
 .notificationLabel{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:11px;
 	text-align:Left;
 	height:13px;
@@ -124,6 +127,7 @@
 	margin-left: 10px;
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:11px;
 	text-align:Left;
 	height:13px;
@@ -144,6 +148,7 @@
 .internalCommunicationLabel{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:11px;
 	text-align:Left;
 	height:13px;
@@ -164,6 +169,7 @@
 .body_CIFLabel2{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:14px;
 	text-align:left;
 	height:16px; 
@@ -179,6 +185,7 @@
 .body_CIFLabel2_mouseover{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:14px;
 	text-align:left;
 	height:16px;
@@ -191,6 +198,7 @@
 .body_CIFLabel2_mouseout{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:14px;
 	text-align:left;
 	height:16px; 
@@ -258,6 +266,7 @@
 .actionDisplayText_CIF{
 	height:16px; 
 	font-style:Semibold; 
+	font-weight: 600;
 	font-family:Segoe UI; 
 	font-size:14px; 
 	color:#FFFFFF;
@@ -292,6 +301,7 @@
 .chatWindowHeaderLabel_CIF{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:14px;
 	text-align:Left;
 	height:16px;
@@ -330,6 +340,7 @@
 .notificationBodyLabel2_CIF{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:14px;
 	text-align:left;
 	height:16px;
@@ -355,6 +366,7 @@
 	font-size: 16px;
 	line-height: 19px;
 	font-style: Semibold;
+	font-weight: 600;
 }
 .newTextAreaCIF{
 	margin-left: 20px;
@@ -375,6 +387,7 @@
 	float: right;
 	color: #315FA2;
 	font-style: Semibold;
+	font-weight: 600;
 	font-family: Segoe UI;
 	font-size: 12px;
 	line-height: 14px;
