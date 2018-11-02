@@ -24,6 +24,14 @@ namespace Microsoft.CIFramework.Internal {
 			return true;
 		}
 
+		client.removeHandler = (eventName: string): boolean => {
+			if (!this.eventHandlers) {
+				return false;
+			}
+			this.eventHandlers.delete(eventName);
+			return true;
+		}
+
 		client.createRecord = (entityName: string, entityId?: string, telemetryData?: Object|any, valuesToUpdate?: Map<string, any> | string): Promise<Map<string, any>> => {
 			if (!valuesToUpdate) {
 				return rejectWithErrorMessage("Need values to create for createRecord", "createRecord");

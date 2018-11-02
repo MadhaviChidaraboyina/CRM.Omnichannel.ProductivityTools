@@ -11,6 +11,8 @@ namespace Microsoft.CIFramework.Internal
 	type XrmEventHandler = (context?: XrmClientApi.EventContext) => void;
 
 	type RegisterHandler = (eventName: string, handler: EventHandler) => boolean;
+
+	type RemoveHandler = (eventName: string) => boolean;
 	/**
 	 * Func type for all CRUD functions.
 	*/
@@ -55,6 +57,8 @@ namespace Microsoft.CIFramework.Internal
 		navigationHandler: XrmEventHandler;
 
 		registerHandler: RegisterHandler;
+
+		removeHandler: RemoveHandler;
 
 		createRecord: CRUDFunction;
 
