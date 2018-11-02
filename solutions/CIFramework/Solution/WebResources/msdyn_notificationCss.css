@@ -382,7 +382,8 @@
 	float: right;
 	color: #FFFFFF;
 	background-color: #315FA2;
-	font-style: Semiboid;
+	font-style: Semibold;
+	font-weight: 600;
 	font-family: Segoe UI;
 	font-size: 12px;
 	line-height: 14px;
