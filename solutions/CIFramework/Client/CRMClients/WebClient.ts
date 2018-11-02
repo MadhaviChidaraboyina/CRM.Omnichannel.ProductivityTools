@@ -136,7 +136,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			let handler: EventHandler = this.eventHandlers.get(Constants.SizeChangeHandler);
 			if (handler) {
-				let data: Map<string, any> = new Map<string, any>().set(Constants.value, Xrm.Panel.width);
+				let data: Map<string, any> = new Map<string, any>().set(Constants.value, client.getWidgetWidth());
 				let event = new CustomEvent(Constants.SizeChangeHandler, { detail: data });
 				handler(event);
 			}
@@ -357,7 +357,9 @@ namespace Microsoft.CIFramework.Internal {
 		client.getWidgetWidth = (telemetryData?: Object|any): number =>
 		{
 			let startTime = new Date();
-			let width = Xrm.Panel.width;
+			//let width = Xrm.Panel.width;
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let width = widgetIFrame.clientWidth;   //TODO: temporary fix until plaform fixes the Panel.width getter
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.getWidth";
 			//logApiData(telemetryData, startTime, timeTaken, apiName);
