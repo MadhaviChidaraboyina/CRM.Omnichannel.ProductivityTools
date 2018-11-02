@@ -113,7 +113,7 @@ namespace Microsoft.CIFramework.Internal {
 			var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
 			presenceList.style.display = "none";
 
-			window.dispatchEvent(setPresenceEvent);
+			window.parent.dispatchEvent(setPresenceEvent);
 		}
 	}
 }

@@ -32,9 +32,9 @@
 			if (!this.hostIFrame) {
 				return false;
 			}
-			this.preservedHeight = height;
+			//this.preservedHeight = height;
 			if (this.visibility) {
-				this.hostIFrame.height = (height > 0 ? height.toString() : "100%");
+				this.hostIFrame.height = (height > 0 ? height.toString() : "calc(100% - 10px)");
 			}
 			else {
 				this.hostIFrame.height = "0";

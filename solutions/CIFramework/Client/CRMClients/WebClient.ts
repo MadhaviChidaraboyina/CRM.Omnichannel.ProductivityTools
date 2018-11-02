@@ -198,10 +198,11 @@ namespace Microsoft.CIFramework.Internal {
 							//TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
 							var containerDiv = document.createElement("div");
 							containerDiv.setAttribute("tabindex", "-1");    //Needed to receive the focus event
-							containerDiv.setAttribute("style", "margin-right: 34px");
+							containerDiv.setAttribute("style", "margin-right: " + Constants.DEFAULT_SIDEPANEL_WIDTH.toString() + "px");
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
+							iFrame.setAttribute("style", "border: 0px");
 							iFrame.src = key;
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
 							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetWidth, widgetHeight, minimizedHeight);
