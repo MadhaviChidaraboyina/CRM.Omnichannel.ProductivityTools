@@ -40,7 +40,7 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for opening a KB serach control 
 	*/
-	type openKBSearchControlFunction = (searchString: string,telemetryData?: Object) => Promise<Map<string, any>>;
+	type openKBSearchControlFunction = (searchString: string,telemetryData?: Object) => boolean;
 	
 	/**
 	 * Func type for loading all widgets.

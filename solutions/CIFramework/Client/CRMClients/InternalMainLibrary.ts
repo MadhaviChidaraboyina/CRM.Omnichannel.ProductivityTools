@@ -340,11 +340,11 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters, [Constants.SearchString]);
 
 		if (provider) {
-			
+			let ret = state.client.openKBSearchControl(parameters.get(Constants.SearchString), telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), openKBSearchControl.name, telemetryData);
 			setPerfData(perfData);
-			
-			return state.client.openKBSearchControl(parameters.get(Constants.SearchString));			
+			return Promise.resolve(new Map().set(Constants.value, ret));
+
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, setWidth.name, appId, true, errorData);

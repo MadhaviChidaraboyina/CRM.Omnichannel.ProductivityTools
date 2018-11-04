@@ -218,20 +218,16 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 		
-		client.openKBSearchControl = (searchString: string,telemetryData?: Object|any): Promise<Map<string, any>> =>
+		client.openKBSearchControl = (searchString: string,telemetryData?: Object|any): boolean =>
 		{
-			//eval("window.top.Xrm.Page.getControl('KBSearchcontrol').setSearchQuery(+searchString+); use once serachstring is passed
-			return new Promise<Map<string, any>>((resolve, reject) => {
-
-				return eval("window.top.Xrm.Page.getControl('KBSearchcontrol').setFocus()").then(function (res:any) {
-					return resolve(new Map<string, any>().set(Constants.value, res));
-				},
-					function (err:any) {
-						return reject(err);
-					}
-				);
-			});
-						
+			try {
+				//eval("window.top.Xrm.Page.getControl('KBSearchcontrol').setSearchQuery(+searchString+); use once serachstring is passed
+				eval("window.top.Xrm.Page.getControl('KBSearchcontrol').setFocus()");
+				return true;
+			}
+			catch (error) {
+				return false;
+			}
 		}
 
 		client.openForm = (entityFormOptions: string, entityFormParameters?: string): Promise<Map<string, any>> => {
