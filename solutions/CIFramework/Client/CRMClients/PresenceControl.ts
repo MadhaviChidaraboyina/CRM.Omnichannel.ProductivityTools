@@ -108,7 +108,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		private raiseSetPresence(e:any): any {
 			var setPresenceEvent = new CustomEvent('setPresenceEvent', {
-				detail: e.target.parentElement.getAttribute("id")
+				detail: { "presenceId": e.target.parentElement.getAttribute("id") }
 			});
 			var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
 			presenceList.style.display = "none";
