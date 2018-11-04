@@ -910,7 +910,7 @@ namespace Microsoft.CIFramework.Internal {
 				expandFlap(width,"insertNotes");
 				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), insertNotes.name, telemetryData);
 				setPerfData(perfData);
-				widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
+				//widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
 				notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" tabindex="0" class="CIFNotes"><div id="notesHeaderIdCIF" tabindex="0" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close" style="margin-left:18px"><br/>Add Notes</div></div></div>');
 				notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
 				notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");

@@ -138,6 +138,7 @@ namespace Microsoft.CIFramework
 		public static activeSessionColors = ["#D7F5F3", "#EBECF7", "#FFE5F5", "#E0F5D5", "#F7E6FC", "#D9E8FF", "#FFE3E3", "#F2EBDF"];
 		public static DEFAULT_WIDGET_WIDTH = 378;
 		public static DEFAULT_SIDEPANEL_WIDTH = 34;
+		public static DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER = 36;
 		public static presenceInfo = "presenceInfo";
 		public static presenceList = "presenceList";
 		public static activityType = "activityType";

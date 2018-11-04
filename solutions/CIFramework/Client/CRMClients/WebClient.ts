@@ -202,7 +202,7 @@ namespace Microsoft.CIFramework.Internal {
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
-							iFrame.setAttribute("style", "border: 0px");
+							iFrame.setAttribute("style", "position: absolute; right: " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px; border: 0px");
 							iFrame.src = key;
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
 							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetWidth, widgetHeight, minimizedHeight);
@@ -356,7 +356,7 @@ namespace Microsoft.CIFramework.Internal {
 			let startTime = new Date();
 			//let width = Xrm.Panel.width;
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
-			let width = widgetIFrame.clientWidth - Constants.DEFAULT_SIDEPANEL_WIDTH;   //TODO: temporary fix until plaform fixes the Panel.width getter
+			let width = widgetIFrame.clientWidth - Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER;   //TODO: temporary fix until plaform fixes the Panel.width getter
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.getWidth";
 			//logApiData(telemetryData, startTime, timeTaken, apiName);
