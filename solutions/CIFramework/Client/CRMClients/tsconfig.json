@@ -16,7 +16,8 @@
 		"InternalMainLibrary.ts",
 		"NotificationInfra.ts",
 		"aria-webjs-sdk-1.6.2.js",
-		"PresenceControl.ts"
+    "PresenceControl.ts",
+    "NotesInfra.ts"
 	],
 	"compilerOptions": {
 		"sourceMap": true,

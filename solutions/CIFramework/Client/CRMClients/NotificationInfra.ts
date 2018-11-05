@@ -12,6 +12,7 @@
 namespace Microsoft.CIFramework.Internal {
 	let Constants = Microsoft.CIFramework.Constants;
 	const listenerWindow = window.parent;
+	let noOfNotifications = 0;
 		
 	/**
 	 * API to invoke toast popup widget
@@ -19,27 +20,33 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-    export function renderEventNotification(header:any,body:any,actions:any,notificationType:any,panelWidth:any): Map<any,any>{
+    export function renderEventNotification(header:any,body:any,actions:any,notificationType:any,eventType:any): Map<any,any>{
        	let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
 		let i = 0;
 		let map = new Map();
 		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
-			map = renderSoftNotification(header,body,notificationType[1],panelWidth);
+			map = renderSoftNotification(header,body,notificationType[1]);
 		}else{
-			toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><span class="CIFHeaderIcon"></span><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div></p></div></div>');
+			if(eventType.search(Constants.Chat) != -1){
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/chat_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div></p></div></div>');
+			}else if(eventType.search(Constants.Call) != -1){
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/call_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div></p></div></div>');
+			}else if(eventType.search(Constants.Case) != -1){
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/case_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div></p></div></div>');
+			}
 			let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
-			toastDiv.getElementsByClassName("CIFHeaderIcon")[len-1].classList.add("FontIcons_CIFHeaderIcon");
+			//toastDiv.getElementsByClassName("CIFHeaderIcon")[len-1].classList.add("FontIcons_CIFHeaderIcon");
 			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
 			toastDiv.getElementsByClassName("CIFToastDiv")[len-1].id = "CIFToastDiv_"+len;
-			panelWidth = panelWidth - 34;
-			widgetIFrame.contentWindow.document.getElementById("CIFToastDiv_"+len).style.width = panelWidth+"px";
+			//panelWidth = panelWidth - 34;
+            widgetIFrame.contentWindow.document.getElementById("CIFToastDiv_" + len).style.width = "calc(100% - " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px)";//panelWidth+"px";
 			if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
 				let headerElement = toastDiv.getElementsByClassName("header_NotificationType_CIF")[len-1];
 				if(notificationType[0].search(MessageType.broadCast) != -1 && notificationType.length == 3){
 					headerElement.classList.add("header_NotificationType_CIF_Broadcast");
 					toastDiv.getElementsByClassName("header_NotificationType_CIF_Broadcast")[len-1].id = "CIFToastType_"+len;
-					widgetIFrame.contentWindow.document.getElementById("CIFToastType_"+len).style.width = panelWidth+"px";
+                    widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = "calc(100% - " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px)";//panelWidth+"px";
 					var label1 = document.createElement("label");
 					headerElement.appendChild(label1);
 					label1.classList.add("broadCastLabel1");
@@ -53,7 +60,7 @@ namespace Microsoft.CIFramework.Internal {
 				}else if((notificationType[0].search(MessageType.notification) != -1 || notificationType[0].search(MessageType.escalation)) != -1 && notificationType.length == 2){
 					headerElement.classList.add("header_NotificationType_CIF_notification");
 					toastDiv.getElementsByClassName("header_NotificationType_CIF_notification")[len-1].id = "CIFToastType_"+len;
-					widgetIFrame.contentWindow.document.getElementById("CIFToastType_"+len).style.width = panelWidth+"px";
+                    widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = "calc(100% - " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px)";//panelWidth+"px";
 					var span = document.createElement("span");
 					headerElement.appendChild(span);
 					headerElement.getElementsByTagName("span")[0].classList.add("notificationSpan");
@@ -70,7 +77,7 @@ namespace Microsoft.CIFramework.Internal {
 				}else if(notificationType[0].search(MessageType.transfer) != -1 && notificationType.length == 2){
 					headerElement.classList.add("header_NotificationType_CIF_transfer");
 					toastDiv.getElementsByClassName("header_NotificationType_CIF_transfer")[len-1].id = "CIFToastType_"+len;
-					widgetIFrame.contentWindow.document.getElementById("CIFToastType_"+len).style.width = panelWidth+"px";
+                    widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = "calc(100% - " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px)";//panelWidth+"px";
 					var label1 = document.createElement("label");
 					headerElement.appendChild(label1);
 					label1.classList.add("transferLabel");
@@ -79,7 +86,7 @@ namespace Microsoft.CIFramework.Internal {
 				}else if(notificationType[0].search(MessageType.internalCommunication) != -1 && notificationType.length == 2){
 					headerElement.classList.add("header_NotificationType_CIF_internalCommunication");
 					toastDiv.getElementsByClassName("header_NotificationType_CIF_internalCommunication")[len-1].id = "CIFToastType_"+len;
-					widgetIFrame.contentWindow.document.getElementById("CIFToastType_"+len).style.width = panelWidth+"px";
+                    widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = "calc(100% - " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px)";//panelWidth+"px";
 					var span = document.createElement("span");
 					headerElement.appendChild(span);
 					headerElement.getElementsByTagName("span")[0].classList.add("internalCommunicationSpan");
@@ -121,14 +128,14 @@ namespace Microsoft.CIFramework.Internal {
 						label2.setAttribute("aria-label", body[i][key]);
 						label2.addEventListener("mouseover", function mouseOverListener() {
 							this.classList.add("body_CIFLabel2_mouseover");
-							label2.style.width = ((panelWidth * 0.7) - 20)+"px";
+                            label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
 						});
 						label2.addEventListener("mouseout", function mouseoutListener() {
 							this.classList.add("body_CIFLabel2_mouseout");
-							label2.style.width = ((panelWidth * 0.7) - 20)+"px";
+                            label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
 						});
-						label1.style.width = (panelWidth * 0.3)+"px";
-						label2.style.width = ((panelWidth * 0.7) - 20)+"px";
+                        label1.style.width = "30%";//(panelWidth * 0.3)+"px";
+                        label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
 						notificationBody.appendChild(label2);
 						var div = document.createElement("div");
 						notificationBody.appendChild(div);
@@ -138,9 +145,9 @@ namespace Microsoft.CIFramework.Internal {
 				toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].classList.add("bodyDivider_CIF_invisible");
 			}
 			toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].id = "CIFToastDivider_"+len;
-			widgetIFrame.contentWindow.document.getElementById("CIFToastDivider_"+len).style.width = panelWidth+"px";
+            widgetIFrame.contentWindow.document.getElementById("CIFToastDivider_" + len).style.width = "calc(100% - " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px)";//panelWidth+"px";
 			toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].id = "CIFToastDividerInvisible_"+len;
-			widgetIFrame.contentWindow.document.getElementById("CIFToastDividerInvisible_"+len).style.width = panelWidth+"px";
+            widgetIFrame.contentWindow.document.getElementById("CIFToastDividerInvisible_" + len).style.width = "calc(100% - " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px)";//panelWidth+"px";
 			toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].innerHTML = headerVal;
 			toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].setAttribute("aria-label", headerVal);
 			let chatWindowBody = toastDiv.getElementsByClassName("bodyDivCIF")[len-1];
@@ -176,10 +183,10 @@ namespace Microsoft.CIFramework.Internal {
 							if(actions[i][key].search(Constants.Accept) != -1){
 								if(bothButtons == false){
 									btn.classList.add("bothButtonsAccept_CIF");
-									btn.style.width = (panelWidth - 30) + "px";
+                                    btn.style.width = "calc(100% - 30px)";//(panelWidth - 30) + "px";
 								}else{
 									btn.classList.add("singleButtonAccept_CIF");
-									btn.style.width = ((panelWidth / 2) - 20) + "px";
+                                    btn.style.width = "calc(50% - 20px)";//((panelWidth / 2) - 20) + "px";
 								}
 								btn.appendChild(span);
 								btn.getElementsByTagName("span")[0].classList.add("acceptButtonSpan_CIF");
@@ -187,14 +194,15 @@ namespace Microsoft.CIFramework.Internal {
 							}else if(actions[i][key].search(Constants.Reject) != -1){
 								if(bothButtons == false){
 									btn.classList.add("bothButtonsReject_CIF");
-									btn.style.width = (panelWidth - 30) + "px";
+                                    btn.style.width = "calc(100% - 30px)";//(panelWidth - 30) + "px";
 								}else{
 									btn.classList.add("singleButtonReject_CIF");
-									btn.style.width = ((panelWidth / 2) - 20) + "px";
+                                    btn.style.width = "calc(50% - 20px)";//((panelWidth / 2) - 20) + "px";
 								}
 								btn.appendChild(span);
 								btn.getElementsByTagName("span")[0].classList.add("rejectButtonSpan_CIF");
-								btn.getElementsByTagName("span")[0].classList.add("FontIcons-rejectHardNotification_CIF");							}else if(actions[i][key].search(Constants.Timeout) != -1){
+                                btn.getElementsByTagName("span")[0].classList.add("FontIcons-rejectHardNotification_CIF");
+                            } else if (actions[i][key].search(Constants.Timeout) != -1) {
 								btn.classList.add("timeOutCIF");
 								isTimeOut = true;
 							}
@@ -260,7 +268,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param contains header,body of the popup
 	 *
 	*/
-    export function renderSoftNotification(header: any, body: any, notificationType: string,panelWidth: any): Map<string,any>{
+    export function renderSoftNotification(header: any, body: any, notificationType: string): Map<string,any>{
 		let map = new Map();
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("softToastDiv");
@@ -280,7 +288,7 @@ namespace Microsoft.CIFramework.Internal {
 		var span = document.createElement("span");
 		chatWindowHeader.appendChild(span);
 		chatWindowHeader.getElementsByTagName("span")[0].classList.add("chatWindowHeaderSpan_CIF");
-		widgetIFrame.contentWindow.document.getElementById("CIFSoftToast").style.width = panelWidth+"px";
+        widgetIFrame.contentWindow.document.getElementById("CIFSoftToast").style.width = "calc(100% - " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px)";//panelWidth+"px";
 		if(notificationType.search(Constants.SMS) != -1){
 			chatWindowHeader.getElementsByTagName("span")[0].classList.add("FontIcons_smsWindowHeaderSpan_CIF");
 		}else if(notificationType.search(Constants.Chat) != -1){
@@ -324,8 +332,8 @@ namespace Microsoft.CIFramework.Internal {
 						label1.setAttribute("aria-label", key);
 						label2.innerText = body[i][key];
 						label2.setAttribute("aria-label", body[i][key]);
-						label1.style.width = (panelWidth * 0.3)+"px";
-						label2.style.width = ((panelWidth * 0.7) - 20)+"px";
+                        label1.style.width = "30%";//(panelWidth * 0.3)+"px";
+                        label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
 						div = document.createElement("div");
 						div.classList.add("chatWindowHeaderDiv_CIF");
 						notificationBody.appendChild(div);
@@ -336,4 +344,135 @@ namespace Microsoft.CIFramework.Internal {
 		map.set(widgetIFrame.contentWindow.document.getElementById("closeSoftNotificationCIF"),toastDiv);
 		return map;
 	}
+
+	/**
+	 * API to invoke toast popup widget
+	 *
+	 * @param value. It's a string which contains header,body of the popup
+	 *
+	*/
+    export function notifyEventClient(notificationUX: Map<string,Map<string,any>>): Promise<any>{
+       	let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
+		let i = 0;
+		let header,body,actions;
+		let eventType;
+		let waitTime = -1;
+		let notificationType: any = [];
+		for (let [key, value] of notificationUX) {
+			if(key.search(Constants.eventType) != -1){
+				console.log(value);
+				eventType = value;
+			}
+			if(key.search(Constants.notificationUXObject) != -1){
+				for(let [key1, value1] of value){
+					if(key1.search(Constants.headerDataCIF) != -1){
+						header = value1;
+					}else if(key1.search(Constants.bodyDataCIF) != -1){
+						body = value1;
+					}else if(key1.search(Constants.actionsCIF) != -1){
+						actions = value1;
+					}else if(key1.search(Constants.notificationType) != -1){
+						notificationType = value1;
+					}
+				}
+			}
+		}
+		if(header == null || header == "undefined"){
+			return postMessageNamespace.rejectWithErrorMessage("The header value is blank. Provide a value to the parameter.");
+		}
+		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
+			if(body == null || body == "undefined"){
+				return postMessageNamespace.rejectWithErrorMessage("The body value is blank. Provide a value to the parameter.");
+			}
+		}
+		if(notificationType == null || notificationType == "undefined"  || notificationType.length <= 0){
+			return postMessageNamespace.rejectWithErrorMessage("The notificationType value is blank. Provide a value to the parameter.");
+		}
+		if(notificationType[0].search(MessageType.softNotification) == -1){ //For Soft notification
+			noOfNotifications++;
+			if(noOfNotifications > 5){
+				toastDiv.removeChild(toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]);
+				noOfNotifications--;
+			}
+		}
+		let map = new Map();
+		map = renderEventNotification(header,body,actions,notificationType,eventType);
+		if(actions != null && actions != "undefined"){
+			for( i = 0; i < actions.length; i++){
+				for (let key in actions[i]) {
+					if(key.search(Constants.Timer) != -1){
+						waitTime = actions[i][key];
+					}
+				}
+			}
+		}
+		return new Promise(function (resolve,reject) {
+			if(notificationType[0].search(MessageType.softNotification) != -1){
+				for(let [key,value] of map){
+					key.addEventListener("click", function clickListener() {
+						key.removeEventListener("click", clickListener);
+						key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
+						var mapReturn = new Map().set(Constants.value,new Map());
+						return resolve(mapReturn);
+					});
+					setTimeout(function(){
+						key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
+						var mapReturn = new Map().set(Constants.value,new Map());
+						return resolve(mapReturn);
+					}, 20000);
+				}
+			}else{
+				for(let [key,value] of map){
+					if(key == toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]){
+						if(waitTime != -1){
+							setTimeout(function(){
+								if(key != null && key.parentElement != null){
+									key.parentElement.removeChild(key);
+									noOfNotifications--;
+									var childDivs = toastDiv.getElementsByTagName('div');
+									if(childDivs != null){
+										for( i=0; i< childDivs.length; i++ ){
+											let childDiv = childDivs[i];
+											if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+												childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:none;');
+											}
+										}
+										for( i=0; i< childDivs.length; i++ ){
+											let childDiv = childDivs[i];
+											if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+												childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
+												break;
+											}
+										}
+									}
+								}
+								var mapReturn = new Map().set(Constants.value,value);
+								return resolve(mapReturn);
+								}, waitTime);
+							}
+					}else{
+						key.addEventListener("click", function clickListener() {
+							key.removeEventListener("click", clickListener);
+							key.parentElement.parentElement.style.display = "none";
+							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
+							noOfNotifications--;
+							var childDivs = toastDiv.getElementsByTagName('div');
+							if(childDivs != null){
+								for( i=0; i< childDivs.length; i++ ){
+									let childDiv = childDivs[i];
+									if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
+										childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
+										break;
+									}
+								}
+							}
+							var mapReturn = new Map().set(Constants.value,value);
+							return resolve(mapReturn);
+						});
+					}
+				}
+			}
+		});
+    }
 }

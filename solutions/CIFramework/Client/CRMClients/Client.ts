@@ -12,6 +12,8 @@ namespace Microsoft.CIFramework.Internal
 	type XrmEventHandler = (context?: XrmClientApi.EventContext) => void;
 
 	type RegisterHandler = (eventName: string, handler: EventHandler) => boolean;
+
+	type RemoveHandler = (eventName: string) => EventHandler;
 	/**
 	 * Func type for all CRUD functions.
 	*/
@@ -73,6 +75,12 @@ namespace Microsoft.CIFramework.Internal
 	type setAllPresencesFunction = (presenceList: PresenceInfo[], telemetryData?: Object) => boolean;
 
 	/**
+	 * Func type for Setting all presences
+	*/
+	type expandFlapFunction = () => number;
+
+	type collapseFlapFunction = () => number;
+	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
 	 * This type specifies all the functions that are exposed to clients for impl. 
 	*/
@@ -86,6 +94,8 @@ namespace Microsoft.CIFramework.Internal
 		navigationHandler: XrmEventHandler;
 
 		registerHandler: RegisterHandler;
+
+		removeHandler: RemoveHandler;
 
 		createRecord: CRUDFunction;
 
@@ -124,6 +134,10 @@ namespace Microsoft.CIFramework.Internal
 		setAgentPresence: setAgentPresenceFunction;
 
 		setAllPresence: setAllPresencesFunction;
+
+		expandFlap: expandFlapFunction;
+
+		collapseFlap: collapseFlapFunction;
 
 	}
 

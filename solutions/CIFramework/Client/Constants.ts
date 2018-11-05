@@ -127,8 +127,10 @@ namespace Microsoft.CIFramework
 		public static notificationType = "notificationType"; 
 		public static Timer = "Timer";
 		public static NoOfNotifications = "NoOfNotifications";
-		public static SMS = "SMS";
-		public static Chat = "Chat";
+		public static SMS = "sms";
+		public static Chat = "chat";
+		public static Call = "call";
+		public static Case = "case";
 		public static SearchString = "searchString";
 		public static context = "context";
 		public static initials = "initials";

@@ -21,8 +21,19 @@ namespace Microsoft.CIFramework.Internal {
 			if (!this.eventHandlers) {
 				this.eventHandlers = new Map<string, EventHandler>();
 			}
-			this.eventHandlers.set(eventName, handler);
+			if (handler) {
+				this.eventHandlers.set(eventName, handler);
+			}
 			return true;
+		}
+
+		client.removeHandler = (eventName: string): EventHandler => {
+			if (!this.eventHandlers) {
+				return null;
+			}
+			let ret: EventHandler = this.eventHandlers.get(eventName);
+			this.eventHandlers.delete(eventName);
+			return ret;
 		}
 
 		client.createRecord = (entityName: string, entityId?: string, telemetryData?: Object|any, valuesToUpdate?: Map<string, any> | string): Promise<Map<string, any>> => {
@@ -189,7 +200,7 @@ namespace Microsoft.CIFramework.Internal {
 					let targetWindow = window.parent;
 					let status: Map<string, boolean | string> = new Map<string, boolean | string>();
 					let fracHeightForActiveWidget: number = 0.9;
-					let widgetHeight: number = widgetIFrame.clientHeight * fracHeightForActiveWidget;
+					let widgetHeight: number = widgetIFrame.clientHeight - 10;
 					let widgetWidth: number = Constants.DEFAULT_WIDGET_WIDTH;
 					let minimizedHeight: number = (widgetIFrame.clientHeight * (1 - fracHeightForActiveWidget)) / ciProviders.size;   // TODO: Figure out correct units to use
 					widgetIFrame.onload = function () {
@@ -198,18 +209,18 @@ namespace Microsoft.CIFramework.Internal {
 							//TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
 							var containerDiv = document.createElement("div");
 							containerDiv.setAttribute("tabindex", "-1");    //Needed to receive the focus event
-							containerDiv.setAttribute("style", "margin-right: " + Constants.DEFAULT_SIDEPANEL_WIDTH.toString() + "px");
+							containerDiv.setAttribute("style", "margin-right: " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px");
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
-							iFrame.setAttribute("style", "position: absolute; right: " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px; border: 0px");
+							iFrame.setAttribute("style", "position: absolute; right: " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px; border: 0px; height: calc(100% - 10px); width: " + widgetWidth.toString() + "px;");
 							iFrame.src = key;
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
 							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetWidth, widgetHeight, minimizedHeight);
 							containerDiv.appendChild(iFrame);
 							doc.body.appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
-							console.log("AMEYA loading - " + key + " height = " + widgetHeight + " minheight "  + minimizedHeight);
+							//console.log("AMEYA loading - " + key + " height = " + widgetHeight + " minheight "  + minimizedHeight);
 						}
 					}
 					return resolve(status);
@@ -356,11 +367,11 @@ namespace Microsoft.CIFramework.Internal {
 			let startTime = new Date();
 			//let width = Xrm.Panel.width;
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
-			let width = widgetIFrame.clientWidth - Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER;   //TODO: temporary fix until plaform fixes the Panel.width getter
+			let width = widgetIFrame.clientWidth;   //TODO: temporary fix until plaform fixes the Panel.width getter
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.getWidth";
 			//logApiData(telemetryData, startTime, timeTaken, apiName);
-			return width;
+            return width - Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER;
 		}
 
 		client.checkCIFCapability = (): boolean => {
@@ -433,7 +444,29 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			return false;
 		}
-
+		client.expandFlap = (): number => {
+			if (this.flapExpanded) {
+				return 0;
+			}
+			this.savedModeChangeHandler = client.removeHandler(Constants.ModeChangeHandler);
+			this.savedSizeChangeHandler = client.removeHandler(Constants.SizeChangeHandler);
+			this.origWidth = client.getWidgetWidth() as number;
+			client.setWidgetWidth("setWidgetWidth", (2 * this.origWidth + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER));
+            this.flapExpanded = true;
+            return this.origWidth;
+		}
+		client.collapseFlap = (): number => {
+			if (!this.flapExpanded) {
+				return 0;
+			}
+			client.setWidgetWidth("setWidgetWidth", this.origWidth);
+			this.flapExpanded = false;
+			client.registerHandler(Constants.ModeChangeHandler, this.savedModeChangeHandler);
+			client.registerHandler(Constants.SizeChangeHandler, this.savedSizeChangeHandler);
+			this.savedSizeChangeHandler = null;
+            this.savedModeChangeHandler = null;
+            return this.origWidth;
+		}
 		return client;
 	}
 }

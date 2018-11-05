@@ -45,13 +45,15 @@
 	min-height:71px;
 }
 .CIFHeaderIcon{
+	font-family: CRM MDL2 ASSETS;
+	color:#FFFFFF;
+	text-align:center;
+}
+.CIFHeaderIconDiv{
 	width:71px; 
 	height:71px; 
 	float:left; 
 	margin-left: 10px;
-	font-family: CRM MDL2 ASSETS;
-	color:#FFFFFF;
-	text-align:center;
 }
 .headerKeyCIF{
 	font-family:Segoe UI;
@@ -63,6 +65,7 @@
 .headerNameCIF{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:18px;
 	text-align:left;
 	color:#FFFFFF;
@@ -85,6 +88,7 @@
 	margin-left: 10px;
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:11px;
 	text-align:Left;
 	height:13px;
@@ -115,6 +119,7 @@
 .notificationLabel{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:11px;
 	text-align:Left;
 	height:13px;
@@ -124,6 +129,7 @@
 	margin-left: 10px;
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:11px;
 	text-align:Left;
 	height:13px;
@@ -144,6 +150,7 @@
 .internalCommunicationLabel{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:11px;
 	text-align:Left;
 	height:13px;
@@ -164,6 +171,7 @@
 .body_CIFLabel2{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:14px;
 	text-align:left;
 	height:16px; 
@@ -179,6 +187,7 @@
 .body_CIFLabel2_mouseover{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:14px;
 	text-align:left;
 	height:16px;
@@ -191,6 +200,7 @@
 .body_CIFLabel2_mouseout{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:14px;
 	text-align:left;
 	height:16px; 
@@ -212,22 +222,26 @@
 	background-color:#47C21D;
 	height:40px;
 	margin-left: 10px;
+	border-color: #47C21D;
 }
 .singleButtonAccept_CIF{
 	background-color:#47C21D;
 	height:40px;
 	margin-right:14px;
 	margin-left: 10px;
+	border-color: #47C21D;
 }
 .bothButtonsReject_CIF{
 	background-color:#EA0600;
 	height:40px;
 	margin-left: 10px;
+	border-color: #EA0600;
 }
 .singleButtonReject_CIF{
 	background-color:#EA0600;
 	height:40px;
 	margin-right:14px;
+	border-color: #EA0600;
 }
 .acceptButtonSpan_CIF{
 	width:16px; 
@@ -258,6 +272,7 @@
 .actionDisplayText_CIF{
 	height:16px; 
 	font-style:Semibold; 
+	font-weight: 600;
 	font-family:Segoe UI; 
 	font-size:14px; 
 	color:#FFFFFF;
@@ -292,6 +307,7 @@
 .chatWindowHeaderLabel_CIF{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:14px;
 	text-align:Left;
 	height:16px;
@@ -330,6 +346,7 @@
 .notificationBodyLabel2_CIF{
 	font-family:Segoe UI;
 	font-style:Semibold;
+	font-weight: 600;
 	font-size:14px;
 	text-align:left;
 	height:16px;
@@ -348,7 +365,6 @@
 	background-color: #FFFFFF;
 	border-style: solid;
 	border-color: #E5E5E5;
-	border: 1px;
 }
 .notesHeaderCIF{
 	color: #333333;
@@ -356,6 +372,7 @@
 	font-size: 16px;
 	line-height: 19px;
 	font-style: Semibold;
+	font-weight: 600;
 }
 .newTextAreaCIF{
 	margin-left: 20px;
@@ -365,17 +382,20 @@
 	float: right;
 	color: #FFFFFF;
 	background-color: #315FA2;
-	font-style: Semiboid;
+	font-style: Semibold;
+	font-weight: 600;
 	font-family: Segoe UI;
 	font-size: 12px;
 	line-height: 14px;
 	height: 28px;
 	margin-right: 20px;
+	border-color: #315FA2;
 }
 .notesCancelButtonCIF{
 	float: right;
 	color: #315FA2;
 	font-style: Semibold;
+	font-weight: 600;
 	font-family: Segoe UI;
 	font-size: 12px;
 	line-height: 14px;

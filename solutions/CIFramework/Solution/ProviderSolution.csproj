@@ -52,6 +52,9 @@
     <Content Include="Other\Relationships\CTIProvider.xml" />
     <Content Include="WebResources\msdyn_CIFIcon.svg" />
     <Content Include="WebResources\msdyn_Callprovider.svg" />
+	<Content Include="WebResources\call_icon.svg" />
+	<Content Include="WebResources\case_icon.svg" />
+	<Content Include="WebResources\chat_icon.svg" />
     <Content Include="WebResources\widgets_container.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
