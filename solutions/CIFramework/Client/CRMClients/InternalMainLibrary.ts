@@ -5,6 +5,7 @@
 /// <reference path="Client.ts" />
 /// <reference path="Constants.ts" />
 /// <reference path="NotificationInfra.ts" />
+/// <reference path="NotesInfra.ts" />
 /// <reference path="../Constants.ts" />
 /// <reference path="State.ts" />
 /// <reference path="../TelemetryHelper.ts" />
