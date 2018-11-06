@@ -72,7 +72,7 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for Setting all presences
 	*/
-	type setAllPresencesFunction = (presenceList: PresenceInfo[], telemetryData?: Object) => boolean;
+	type initializeAgentPresenceListFunction = (presenceList: PresenceInfo[], telemetryData?: Object) => boolean;
 
 	/**
 	 * Func type for Setting all presences
@@ -133,7 +133,7 @@ namespace Microsoft.CIFramework.Internal
 
 		setAgentPresence: setAgentPresenceFunction;
 
-		setAllPresence: setAllPresencesFunction;
+		initializeAgentPresenceList: initializeAgentPresenceListFunction;
 
 		expandFlap: expandFlapFunction;
 

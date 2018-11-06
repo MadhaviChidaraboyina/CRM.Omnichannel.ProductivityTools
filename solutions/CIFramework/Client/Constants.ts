@@ -44,7 +44,7 @@ namespace Microsoft.CIFramework
 		public static endUISession = "endUISession";
 		public static onMaxUISessionsReached = "onMaxUISessionsReached";
 		public static setAgentPresence = "setAgentPresence";
-		public static setAllPresence = "setAllPresence";
+		public static initializeAgentPresenceList = "initializeAgentPresenceList";
 		public static insertNotes = "insertNotes";
 		public static openKBSearchControl = "openkbsearchcontrol";
 		public static onSetPresenceEvent = "setPresenceEvent";

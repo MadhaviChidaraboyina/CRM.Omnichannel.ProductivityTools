@@ -670,18 +670,18 @@ namespace Microsoft.CIFramework
 
 	/**
  * API to set all the presences
- * Invokes the API setAllPresence(presenceList)
+ * Invokes the API initializeAgentPresenceList(presenceList)
  * @param presenceList - Array containing all the available Presences
 
  * @returns a Promise: HTMLDivElement after setting the list of presences
  */
-	export function setAllPresence(presenceList: any): Promise<boolean> {
+	export function initializeAgentPresenceList(presenceList: any): Promise<boolean> {
 		if (!(isNullOrUndefined(presenceList))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.setAllPresence,
+				messageType: MessageType.initializeAgentPresenceList,
 				messageData: new Map().set(Constants.presenceList, presenceList)
 			}
-			return sendMessage<boolean>(setAllPresence.name, payload, false);
+			return sendMessage<boolean>(initializeAgentPresenceList.name, payload, false);
 		}
 		else {
 			return postMessageNamespace.rejectWithErrorMessage("The presenceList parameter is null. Provide a value to the parameter");

@@ -2,6 +2,9 @@
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
 */
 /** @internal */
+
+/// <reference path="InternalMainLibrary.ts" />
+
 namespace Microsoft.CIFramework.Internal {
 	export type PresenceInfo = {
 		presenceId: string;
@@ -112,6 +115,14 @@ namespace Microsoft.CIFramework.Internal {
 			});
 			var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
 			presenceList.style.display = "none";
+
+			let updatedPresence: any = {};
+			updatedPresence.presenceId = e.target.parentElement.getAttribute("id");
+			updatedPresence.presenceText = e.target.parentElement.firstElementChild.nextSibling.innerText;
+			updatedPresence.presenceColor = e.target.parentElement.firstChild.style.backgroundColor;
+			updatedPresence.basePresenceStatus = e.target.parentElement.firstElementChild.nextSibling.innerText;
+
+			Microsoft.CIFramework.Internal.setAgentPresence(new Map().set(Constants.presenceInfo, JSON.stringify(updatedPresence)));
 
 			window.parent.dispatchEvent(setPresenceEvent);
 		}

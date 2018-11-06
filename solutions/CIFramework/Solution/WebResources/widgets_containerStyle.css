@@ -46,16 +46,26 @@ button#CurrentStatus
 	width: 34px;
 }
 
+.AgentPresenceDiv .TextNode 
+{
+	width: 100%;
+	margin: 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .innerDiv {
 	height: 28px;
 	width: 28px;
+	margin: auto;
 }
 
 .UserImageNode
 {
 	border-radius: 50%;
-	height: 24px;
-	width: 24px;
+	height: 20px;
+	width: 20px;
 }
 
 .AgentPresenceColorNode
@@ -64,7 +74,7 @@ button#CurrentStatus
 	width: 11px;
 	height: 11px;
 	position: absolute;
-	right: 7px;
+	right: 4px;
 	bottom: 13px; /* This should be the height of the text below */
 }
 

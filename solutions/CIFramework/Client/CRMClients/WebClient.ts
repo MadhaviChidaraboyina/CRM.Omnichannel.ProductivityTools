@@ -218,7 +218,7 @@ namespace Microsoft.CIFramework.Internal {
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
 							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetWidth, widgetHeight, minimizedHeight);
 							containerDiv.appendChild(iFrame);
-							doc.body.appendChild(containerDiv);
+							doc.getElementById("chatControlDiv").appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
 							//console.log("AMEYA loading - " + key + " height = " + widgetHeight + " minheight "  + minimizedHeight);
 						}
@@ -428,11 +428,11 @@ namespace Microsoft.CIFramework.Internal {
 			return false;
 		}
 
-		client.setAllPresence = (presenceList: any, telemetryData?: Object | any): boolean => {
+		client.initializeAgentPresenceList = (presenceList: any, telemetryData?: Object | any): boolean => {
 			let startTime = new Date();
 			let presenceListDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAllPresences(presenceList);
 			let timeTaken = Date.now() - startTime.getTime();
-			let apiName = "PresenceContro.setAllPresence";
+			let apiName = "PresenceControl.initializeAgentPresenceList";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
 
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));

@@ -40,7 +40,7 @@ namespace Microsoft.CIFramework.Internal {
 		["switchUISession", [switchUISession]],
 		["endUISession", [endUISession]],
 		["setAgentPresence", [setAgentPresence]],
-		["setAllPresence", [setAllPresence]]
+		["initializeAgentPresenceList", [initializeAgentPresenceList]]
 	]);
 
 	/**
@@ -762,18 +762,18 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	export function setAllPresence(parameters: Map<string, any>): Promise<Map<string, any>> {
+	export function initializeAgentPresenceList(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
 		if (provider) {
-			let presenceListDivStatus = state.client.setAllPresence(JSON.parse(parameters.get(Constants.presenceList)), telemetryData);
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAllPresence.name, telemetryData);
+			let presenceListDivStatus = state.client.initializeAgentPresenceList(JSON.parse(parameters.get(Constants.presenceList)), telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), initializeAgentPresenceList.name, telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, presenceListDivStatus));
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, setAllPresence.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, initializeAgentPresenceList.name, appId, true, errorData);
 		}
 	}
 }
