@@ -220,8 +220,10 @@ namespace Microsoft.CIFramework.Internal {
 	 * is a number representing the new panel width as passed by the client
 	 */
 	function onSizeChanged(event: CustomEvent): void {
-		updateProviderSizes();
-		raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked", state.providerManager.getActiveProvider());
+		if (!state.client.flapInUse()) {
+			updateProviderSizes();
+			raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked", state.providerManager.getActiveProvider());
+		}
 	}
 
 	/**
@@ -234,6 +236,9 @@ namespace Microsoft.CIFramework.Internal {
 	 * is the numeric value of the current mode as passed by the client
 	 */
 	function onModeChanged(event: CustomEvent): void {
+		if (state.client.flapInUse()) {
+			toggleNotesVisibility();
+		}
 		updateProviderSizes();  //TODO: global modeChanged event: this shouldn't be passed to all widgets. WHo should it be passed to?
 		raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked", state.providerManager.getActiveProvider());
 	}
@@ -436,7 +441,9 @@ namespace Microsoft.CIFramework.Internal {
 	 * subscriber of onSetPresence event
 	 */
 	export function onSetPresence(event: CustomEvent): void {
-		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSetPresenceEvent, onSetPresence.name + "event received from client", state.providerManager.getActiveProvider());
+		let eventMap = Microsoft.CIFramework.Utility.buildMap(event.detail);
+		state.client.setAgentPresence(eventMap.get("presenceInfo"));
+		raiseEvent(eventMap, MessageType.onSetPresenceEvent, onSetPresence.name + "event received from client");
 	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
@@ -614,13 +621,13 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-    export function notifyEvent(notificationUX: Map<string,Map<string,any>>): Promise<any>{
+	export function notifyEvent(notificationUX: Map<string,Map<string,any>>): Promise<any>{
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(notificationUX, [Constants.value]);
 		if (provider) {
 			return new Promise<any>((resolve, reject) => {
-				let panelWidth = state.client.getWidgetWidth();
+				//let panelWidth = state.client.getWidgetWidth();
 				notifyEventClient(notificationUX).then(
 					function (res) {
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), notifyEvent.name, telemetryData);
@@ -635,27 +642,27 @@ namespace Microsoft.CIFramework.Internal {
 		}else{
 			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
 		}
-    }
+	}
 
 	export function insertNotes(notesDetails: Map<string,any>): Promise<any>{
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(notesDetails, [Constants.value]);
 		if (provider) {
-            return new Promise<any>((resolve, reject) => {
-                let width = state.client.expandFlap();
-                if (!width) {
-                    return reject(new Map<string, string>().set(Constants.value, "Flap already expanded"));
-                }
-				insertNotesClient(notesDetails, width).then(
+			return new Promise<any>((resolve, reject) => {
+				let width = state.client.expandFlap();
+				if (!width) {
+					return reject(new Map<string, string>().set(Constants.value, "Flap already expanded"));
+				}
+				insertNotesClient(notesDetails).then(
 					function (res) {
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), insertNotes.name, telemetryData);
-                        setPerfData(perfData);
-                        state.client.collapseFlap();
+						setPerfData(perfData);
+						state.client.collapseFlap();
 						return resolve(res);
 					},
-                    (error: IErrorHandler) => {
-                        state.client.collapseFlap();
+					(error: IErrorHandler) => {
+						state.client.collapseFlap();
 						return rejectWithErrorMessage(error.errorMsg, insertNotes.name, appId, true, error);
 					}
 				);

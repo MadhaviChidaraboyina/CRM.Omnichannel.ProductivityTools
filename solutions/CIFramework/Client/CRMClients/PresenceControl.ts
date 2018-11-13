@@ -110,20 +110,16 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		private raiseSetPresence(e:any): any {
-			var setPresenceEvent = new CustomEvent('setPresenceEvent', {
-				detail: { "presenceId": e.target.parentElement.getAttribute("id") }
-			});
 			var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
 			presenceList.style.display = "none";
-
 			let updatedPresence: any = {};
 			updatedPresence.presenceId = e.target.parentElement.getAttribute("id");
 			updatedPresence.presenceText = e.target.parentElement.firstElementChild.nextSibling.innerText;
 			updatedPresence.presenceColor = e.target.parentElement.firstChild.style.backgroundColor;
 			updatedPresence.basePresenceStatus = e.target.parentElement.firstElementChild.nextSibling.innerText;
-
-			Microsoft.CIFramework.Internal.setAgentPresence(new Map().set(Constants.presenceInfo, JSON.stringify(updatedPresence)));
-
+			var setPresenceEvent = new CustomEvent('setPresenceEvent', {
+				detail: { "presenceId": e.target.parentElement.getAttribute("id"), "presenceInfo": JSON.stringify(updatedPresence) }
+			});
 			window.parent.dispatchEvent(setPresenceEvent);
 		}
 	}

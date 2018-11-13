@@ -209,16 +209,16 @@ namespace Microsoft.CIFramework.Internal {
 							//TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
 							var containerDiv = document.createElement("div");
 							containerDiv.setAttribute("tabindex", "-1");    //Needed to receive the focus event
-							containerDiv.setAttribute("style", "margin-right: " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px");
+							containerDiv.setAttribute("style", "margin-right: 0px; width: 100%");
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
-							iFrame.setAttribute("style", "position: absolute; right: " + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER.toString() + "px; border: 0px; height: calc(100% - 10px);");
+							iFrame.setAttribute("style", "border: 0px;");
 							iFrame.src = key;
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
 							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetWidth, widgetHeight, minimizedHeight);
 							containerDiv.appendChild(iFrame);
-							doc.getElementById("chatControlDiv").appendChild(containerDiv);
+							doc.getElementById("widgetControlDiv").appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
 							//console.log("AMEYA loading - " + key + " height = " + widgetHeight + " minheight "  + minimizedHeight);
 						}
@@ -367,11 +367,19 @@ namespace Microsoft.CIFramework.Internal {
 			let startTime = new Date();
 			//let width = Xrm.Panel.width;
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
-			let width = widgetIFrame.clientWidth;   //TODO: temporary fix until plaform fixes the Panel.width getter
+			let widgetArea = (<HTMLDivElement>widgetIFrame.contentDocument.getElementById("widgetArea"));
+			let width = 0;
+			return widgetArea.clientWidth;
+			/*if (this.flapExpanded) {
+				width = this.origWidth + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER;
+			}
+			else {
+				width = widgetIFrame.clientWidth;   //TODO: temporary fix until plaform fixes the Panel.width getter
+			}
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.getWidth";
 			//logApiData(telemetryData, startTime, timeTaken, apiName);
-            return width - Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER;
+			return width - Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER;*/
 		}
 
 		client.checkCIFCapability = (): boolean => {
@@ -448,24 +456,34 @@ namespace Microsoft.CIFramework.Internal {
 			if (this.flapExpanded) {
 				return 0;
 			}
-			this.savedModeChangeHandler = client.removeHandler(Constants.ModeChangeHandler);
-			this.savedSizeChangeHandler = client.removeHandler(Constants.SizeChangeHandler);
-			this.origWidth = client.getWidgetWidth() as number;
-			client.setWidgetWidth("setWidgetWidth", (2 * this.origWidth + Constants.DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER));
-            this.flapExpanded = true;
-            return this.origWidth;
+			//this.savedModeChangeHandler = client.removeHandler(Constants.ModeChangeHandler);
+			//this.savedSizeChangeHandler = client.removeHandler(Constants.SizeChangeHandler);
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let sessionPanelArea = (<HTMLDivElement>widgetIFrame.contentDocument.getElementById("sessionPanelArea"));
+			//let sessionPanelArea = (<HTMLDivElement>window.document.getElementById("sessionPanelArea"));
+			let widgetWidth = client.getWidgetWidth() as number;
+			this.origWidth = widgetWidth + sessionPanelArea.clientWidth;
+			this.flapExpanded = true;
+			client.setWidgetWidth("setWidgetWidth", (2 * this.origWidth - sessionPanelArea.clientWidth));
+			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', widgetWidth.toString() + "px");
+			return this.origWidth;
 		}
 		client.collapseFlap = (): number => {
 			if (!this.flapExpanded) {
 				return 0;
 			}
 			client.setWidgetWidth("setWidgetWidth", this.origWidth);
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', "0px");
 			this.flapExpanded = false;
-			client.registerHandler(Constants.ModeChangeHandler, this.savedModeChangeHandler);
-			client.registerHandler(Constants.SizeChangeHandler, this.savedSizeChangeHandler);
-			this.savedSizeChangeHandler = null;
-            this.savedModeChangeHandler = null;
-            return this.origWidth;
+			//client.registerHandler(Constants.ModeChangeHandler, this.savedModeChangeHandler);
+			//client.registerHandler(Constants.SizeChangeHandler, this.savedSizeChangeHandler);
+			//this.savedSizeChangeHandler = null;
+			//this.savedModeChangeHandler = null;
+			return this.origWidth;
+		}
+		client.flapInUse = (): boolean => {
+			return this.flapExpanded === true;
 		}
 		return client;
 	}

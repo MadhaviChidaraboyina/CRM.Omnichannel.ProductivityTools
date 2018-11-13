@@ -1,4 +1,10 @@
-﻿.MainDiv
+﻿:root {
+	--sessionPanelAreaWidth: 36px;
+	--flapAreaWidth: 0px;
+	--widgetAreaWidth: calc(100% - var(--sessionPanelAreaWidth) - var(--flapAreaWidth) - 2px);
+}
+
+.MainDiv
 {
 	right: 5px; 
 	position: fixed;

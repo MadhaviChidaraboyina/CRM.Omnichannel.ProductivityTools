@@ -12,8 +12,18 @@
 namespace Microsoft.CIFramework.Internal {
 	let Constants = Microsoft.CIFramework.Constants;
 	const listenerWindow = window.parent;
-	
-	export function insertNotesClient(notesDetails: Map<string,any>, width: number): Promise<any>{
+
+	export function toggleNotesVisibility(): void {
+		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
+		let notesDiv = widgetIFrame.contentWindow.document.getElementById("notesDiv");
+		if (notesDiv.style.visibility == "hidden") {
+			notesDiv.style.visibility = "visible";
+		}
+		else {
+			notesDiv.style.visibility = "hidden";
+		}
+	}
+	export function insertNotesClient(notesDetails: Map<string,any>/*, width: number*/): Promise<any>{
 		let entityName: string;
 		let originURL: string;
 		let entityId: string;
@@ -24,7 +34,7 @@ namespace Microsoft.CIFramework.Internal {
 		if(childDivs != null && childDivs.length > 0){
 			return postMessageNamespace.rejectWithErrorMessage("This conversation already has a note opened.");
 		}
-       	for (let [key, value] of notesDetails) {
+		for (let [key, value] of notesDetails) {
 			if(key.search(Constants.entityName) != -1){
 				entityName = value;
 			}else if(key.search(Constants.originURL) != -1){
@@ -35,14 +45,14 @@ namespace Microsoft.CIFramework.Internal {
 				entitySetName = value;
 			}
 		}
-		notesDetails.set(Constants.value, width);
+		//notesDetails.set(Constants.value, width);
 		return new Promise(function (resolve,reject) {
 			//expandFlap(width,state);
 			//widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
 			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" tabindex="0" class="CIFNotes"><div id="notesHeaderIdCIF" tabindex="0" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close" style="margin-left:18px"><br/>Add Notes</div></div></div>');
 			notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
-            notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
-            let availNotesHeight = widgetIFrame.clientHeight - 26;
+			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
+			let availNotesHeight = widgetIFrame.clientHeight - 26;
 			widgetIFrame.contentWindow.document.getElementById("notesHeaderIdCIF").style.height = (availNotesHeight * 0.14)+"px";
 			var span = document.createElement("span");
 			span.classList.add("closeNotes_CIF");
@@ -52,14 +62,14 @@ namespace Microsoft.CIFramework.Internal {
 			var newTextArea = document.createElement('TextArea');
 			let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
 			notesElement.appendChild(newTextArea);
-			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = (width-7)+"px";
+			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = "calc(100% - 7px)";//(width-7)+"px";
 			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.height = availNotesHeight.toString() + "px";
 			newTextArea.setAttribute('placeholder','Start adding notes');
 			newTextArea.classList.add("newTextAreaCIF");
-			var textAreaWidth = width - width/8 - 15;
+			var textAreaWidth = "calc(87.5% - 15px)";//width - width/8 - 15;
 			newTextArea.id = "notesTextAreaCIF";
-			widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF").style.width = textAreaWidth+"px";
-			widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF").style.height = (availNotesHeight * 0.7)+"px";
+			newTextArea.style.width = textAreaWidth;
+			newTextArea.style.height = (availNotesHeight * 0.7)+"px";
 			var saveBtn = document.createElement("BUTTON");
 			notesElement.appendChild(saveBtn);
 			saveBtn.classList.add("notesSaveButtonCIF");
@@ -93,13 +103,13 @@ namespace Microsoft.CIFramework.Internal {
 		});
 	}
 
-    export function saveNotes(notesDetails: Map<string,any>,newTextArea: any): Promise<Map<string, any>>{		
+	export function saveNotes(notesDetails: Map<string,any>,newTextArea: any): Promise<Map<string, any>>{
 		let entityName: string;
 		let originURL: string;
 		let entityId: string;
 		let entitySetName: string;
 		let annotationId: string;
-       	for (let [key, value] of notesDetails) {
+		for (let [key, value] of notesDetails) {
 			if(key.search(Constants.entityName) != -1){
 				entityName = value;
 			}else if(key.search(Constants.originURL) != -1){
@@ -176,7 +186,7 @@ namespace Microsoft.CIFramework.Internal {
 				});
 			}
 		});
-    }
+	}
 
 	export function cancelNotes(): void{	
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));

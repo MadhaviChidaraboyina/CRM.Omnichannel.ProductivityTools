@@ -75,11 +75,14 @@ namespace Microsoft.CIFramework.Internal
 	type initializeAgentPresenceListFunction = (presenceList: PresenceInfo[], telemetryData?: Object) => boolean;
 
 	/**
-	 * Func type for Setting all presences
+	 * Func type for using the flap for rendering any control
 	*/
 	type expandFlapFunction = () => number;
 
 	type collapseFlapFunction = () => number;
+
+	type flapInUseFunction = () => boolean;
+
 	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
 	 * This type specifies all the functions that are exposed to clients for impl. 
@@ -139,6 +142,7 @@ namespace Microsoft.CIFramework.Internal
 
 		collapseFlap: collapseFlapFunction;
 
+		flapInUse: flapInUseFunction;
 	}
 
 	/**
