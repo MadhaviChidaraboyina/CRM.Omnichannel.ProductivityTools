@@ -187,16 +187,16 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		//TO-DO in V2, check if the user should have resolve and reject exposed to send in their custom implementation
 		postMsg(receivingWindow: Window, message: IExternalRequestMessageType, targetOrigin: string, isEventFlag: boolean, noTimeout?: boolean): Promise<Map<string, any>> {
 			if ((receivingWindow) && (targetOrigin != "*")) {
+				let deferred = this.createDeferred(noTimeout);
 				if (!isEventFlag) {
 					let trackingCorrelationId = this.getCorrelationId();
 					let messageInternal = message as IRequestMessageType;
 					messageInternal[messageCorrelationId] = trackingCorrelationId;
-					let deferred = this.createDeferred(noTimeout);
 					this.pendingPromises.set(trackingCorrelationId, deferred);
 					return this.postMsgInternal(receivingWindow, messageInternal, targetOrigin, deferred);
 				}
 				else {
-					return this.postMsgInternal(receivingWindow, message, targetOrigin);
+					return this.postMsgInternal(receivingWindow, message, targetOrigin, deferred);
 				}
 			}
 			else {
