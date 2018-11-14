@@ -118,7 +118,7 @@ namespace Microsoft.CIFramework.Internal {
 			updatedPresence.presenceColor = e.target.parentElement.firstChild.style.backgroundColor;
 			updatedPresence.basePresenceStatus = e.target.parentElement.firstElementChild.nextSibling.innerText;
 			var setPresenceEvent = new CustomEvent('setPresenceEvent', {
-				detail: { "presenceId": e.target.parentElement.getAttribute("id"), "presenceInfo": JSON.stringify(updatedPresence) }
+				detail: { "presenceId": e.target.parentElement.getAttribute("id"), "presenceInfo": updatedPresence }
 			});
 			window.parent.dispatchEvent(setPresenceEvent);
 		}
