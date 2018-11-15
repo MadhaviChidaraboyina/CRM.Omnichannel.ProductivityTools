@@ -256,9 +256,9 @@
     <value>请为此渠道的渠道顺序选择 0，以使其优先于其他渠道。</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+  <data name="1:Description,msdyn_ciprovidermsdyn_trusteddomain" xml:space="preserve">
     <value>要加入白名单的域</value>
-    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trustedDomain' on Entity</comment>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>组织的唯一标识符</value>
@@ -360,9 +360,9 @@
     <value>渠道顺序</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+  <data name="1:displayname,msdyn_ciprovidermsdyn_trusteddomain" xml:space="preserve">
     <value>可信域​</value>
-    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trustedDomain' on Entity</comment>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>组织编号</value>
@@ -463,10 +463,6 @@
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
     <value>CIProvider</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Channel Provider</value>
-    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>渠道提供程序</value>

@@ -256,9 +256,9 @@
     <value>Selectați ordinea acestui canal la 0 ca să-i acordați prioritate în fața altora.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+  <data name="1:Description,msdyn_ciprovidermsdyn_trusteddomain" xml:space="preserve">
     <value>Domeniul care va fi în lista albă</value>
-    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trustedDomain' on Entity</comment>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Identificator unic pentru organizație</value>
@@ -360,9 +360,9 @@
     <value>Ordinea canalelor</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+  <data name="1:displayname,msdyn_ciprovidermsdyn_trusteddomain" xml:space="preserve">
     <value>Domeniu de încredere</value>
-    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trustedDomain' on Entity</comment>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>ID organizație</value>
@@ -463,10 +463,6 @@
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
     <value>Entități CIProvider</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Channel Provider</value>
-    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>Furnizor de canal</value>
