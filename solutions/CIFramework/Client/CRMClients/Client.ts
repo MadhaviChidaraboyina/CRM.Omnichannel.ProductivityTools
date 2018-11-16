@@ -134,15 +134,18 @@ namespace Microsoft.CIFramework.Internal
 
 		renderSearchPage: renderSearchPageFunction;
 
-		setAgentPresence: setAgentPresenceFunction;
-
-		initializeAgentPresenceList: initializeAgentPresenceListFunction;
-
 		expandFlap: expandFlapFunction;
 
 		collapseFlap: collapseFlapFunction;
 
 		flapInUse: flapInUseFunction;
+		}
+
+	export type IPresenceManager = {
+
+		setAgentPresence: setAgentPresenceFunction;
+
+		initializeAgentPresenceList: initializeAgentPresenceListFunction;
 	}
 
 	/**
@@ -158,6 +161,15 @@ namespace Microsoft.CIFramework.Internal
 			default:
 				// log error - not able to identify the client, falling back to webclient impl.
 				return webClient();
+		}
+	}
+
+	export function GetPresenceManager(clientType: number): IPresenceManager {
+		switch (clientType) {
+			case ClientType.WebClient:
+				return UCIPresenceManager();
+			default:
+				return UCIPresenceManager();
 		}
 	}
 }

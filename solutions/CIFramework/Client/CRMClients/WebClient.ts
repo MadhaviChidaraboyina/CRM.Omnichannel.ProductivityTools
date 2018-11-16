@@ -419,40 +419,7 @@ namespace Microsoft.CIFramework.Internal {
 				logFailure("", true, error);
 			}
 		}
-
-		client.setAgentPresence = (presenceInfo: any, telemetryData?: Object | any): boolean => {
-			let startTime = new Date();
-			let agentPresence = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAgentPresence(presenceInfo);
-			let timeTaken = Date.now() - startTime.getTime();
-			let apiName = "PresenceControl.setAgentPresence";
-			logApiData(telemetryData, startTime, timeTaken, apiName);
-
-			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
-			let agentPresenceParent = widgetIFrame.contentWindow.document.getElementById("CurrentStatus");
-			if (agentPresenceParent != null) {
-				agentPresenceParent.innerHTML = "";
-				agentPresenceParent.appendChild(agentPresence);
-				return true;
-			}
-			return false;
-		}
-
-		client.initializeAgentPresenceList = (presenceList: any, telemetryData?: Object | any): boolean => {
-			let startTime = new Date();
-			let presenceListDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAllPresences(presenceList);
-			let timeTaken = Date.now() - startTime.getTime();
-			let apiName = "PresenceControl.initializeAgentPresenceList";
-			logApiData(telemetryData, startTime, timeTaken, apiName);
-
-			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
-			let presenceListParent = widgetIFrame.contentWindow.document.getElementById("PresenceList");
-			if (presenceListParent != null) {
-				presenceListParent.innerHTML = "";
-				presenceListParent.appendChild(presenceListDiv);
-				return true;
-			}
-			return false;
-		}
+		
 		client.expandFlap = (): number => {
 			if (this.flapExpanded) {
 				return 0;
@@ -486,6 +453,47 @@ namespace Microsoft.CIFramework.Internal {
 		client.flapInUse = (): boolean => {
 			return this.flapExpanded === true;
 		}
+
 		return client;
+	}
+
+	export function UCIPresenceManager(): IPresenceManager {
+		let presence = {} as IPresenceManager;
+
+		presence.setAgentPresence = (presenceInfo: any, telemetryData?: Object | any): boolean => {
+			let startTime = new Date();
+			let agentPresence = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAgentPresence(presenceInfo);
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "PresenceControl.setAgentPresence";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let agentPresenceParent = widgetIFrame.contentWindow.document.getElementById("CurrentStatus");
+			if (agentPresenceParent != null) {
+				agentPresenceParent.innerHTML = "";
+				agentPresenceParent.appendChild(agentPresence);
+				return true;
+			}
+			return false;
+		}
+
+		presence.initializeAgentPresenceList = (presenceList: any, telemetryData?: Object | any): boolean => {
+			let startTime = new Date();
+			let presenceListDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAllPresences(presenceList);
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "PresenceControl.initializeAgentPresenceList";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let presenceListParent = widgetIFrame.contentWindow.document.getElementById("PresenceList");
+			if (presenceListParent != null) {
+				presenceListParent.innerHTML = "";
+				presenceListParent.appendChild(presenceListDiv);
+				return true;
+			}
+			return false;
+		}
+
+		return presence;
 	}
 }

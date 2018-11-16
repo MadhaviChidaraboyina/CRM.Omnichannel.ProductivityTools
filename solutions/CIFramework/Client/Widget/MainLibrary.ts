@@ -605,7 +605,7 @@ namespace Microsoft.CIFramework
 	 * Invokes the API setAgentPresence(presenceInfo)
 	 * @param presenceInfo - Details of the Presence to be set for the Agent
 
-	 * @returns a Promise: HTMLDivElement after setting the Agent Presence
+	 * @returns a Promise: Boolean Status after setting the Agent Presence
 	 */
 	export function setAgentPresence(presenceInfo: string): Promise<boolean> {
 		if (!(isNullOrUndefined(presenceInfo))) {
@@ -673,7 +673,7 @@ namespace Microsoft.CIFramework
  * Invokes the API initializeAgentPresenceList(presenceList)
  * @param presenceList - Array containing all the available Presences
 
- * @returns a Promise: HTMLDivElement after setting the list of presences
+ * @returns a Promise: Boolean Status after setting the list of presences
  */
 	export function initializeAgentPresenceList(presenceList: any): Promise<boolean> {
 		if (!(isNullOrUndefined(presenceList))) {
