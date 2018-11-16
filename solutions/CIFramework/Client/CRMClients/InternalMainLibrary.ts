@@ -116,11 +116,11 @@ namespace Microsoft.CIFramework.Internal {
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
 					// load the widgets onto client. 
-					for (let [key, value] of state.ciProviders) {
-						state.client.loadWidget(key, value.label);
-					}
+				state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
+					reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
+				});
 				}
-				reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
+				//reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
 			},
 			(error: Error) => {
 				reportError("initializeCI Execution failed  in" + (Date.now() - startTime.getTime()) + "ms with error as " + error.message);
@@ -439,6 +439,15 @@ namespace Microsoft.CIFramework.Internal {
 	*/
 	export function onSendKBArticle(event: CustomEvent): void {
 		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, "onSendKBArticle event recieved from client");
+	}
+
+	/**
+	 * subscriber of onSetPresence event
+	 */
+	export function onSetPresence(event: CustomEvent): void {
+		let eventMap = Microsoft.CIFramework.Utility.buildMap(event.detail);
+		state.client.setAgentPresence(eventMap.get("presenceInfo"));
+		raiseEvent(eventMap, MessageType.onSetPresenceEvent, "onSetPresence event received from client");
 	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
