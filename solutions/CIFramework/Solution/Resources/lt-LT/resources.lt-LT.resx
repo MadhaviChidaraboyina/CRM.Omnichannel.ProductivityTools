@@ -256,9 +256,9 @@
     <value>Pasirinkite šio kanalo užsakymą kaip 0, kad suteiktumėte pirmumą tarp kitų.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+  <data name="1:Description,msdyn_ciprovidermsdyn_trusteddomain" xml:space="preserve">
     <value>Domenas, kurį reikėtų įtraukti į baltąjį sąrašą</value>
-    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trustedDomain' on Entity</comment>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Organizacijos unikalusis identifikatorius</value>
@@ -360,9 +360,9 @@
     <value>Kanalo užsakymas</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+  <data name="1:displayname,msdyn_ciprovidermsdyn_trusteddomain" xml:space="preserve">
     <value>Patikimas domenas</value>
-    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trustedDomain' on Entity</comment>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Organizacijos ID</value>
@@ -463,10 +463,6 @@
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
     <value>CIProviders</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Channel Provider</value>
-    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>Kanalo tiekėjas</value>

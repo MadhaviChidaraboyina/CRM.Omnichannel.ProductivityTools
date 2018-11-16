@@ -116,13 +116,14 @@ namespace Microsoft.CIFramework.Internal {
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
 					// load the widgets onto client. 
-					state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
-						reportUsage(initializeCI.name + "Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
-					});
+					for (let [key, value] of state.ciProviders) {
+						state.client.loadWidget(key, value.label);
+					}
 				}
+				reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
 			},
 			(error: Error) => {
-				reportError(initializeCI.name + "Execution failed  in" + (Date.now() - startTime.getTime()) + "ms with error as " + error.message);
+				reportError("initializeCI Execution failed  in" + (Date.now() - startTime.getTime()) + "ms with error as " + error.message);
 			}
 		);
 
@@ -167,7 +168,7 @@ namespace Microsoft.CIFramework.Internal {
 			error.reportTime = new Date().toUTCString();
 			error.errorMsg = "Parameter list cannot be empty";
 			error.errorType = errorTypes.InvalidParams;
-			error.sourceFunc = getProvider.name;
+			error.sourceFunc = "getProvider";
 			return [null, error];
 		}
 		if (!parameters.get(Constants.originURL)) {
@@ -175,7 +176,7 @@ namespace Microsoft.CIFramework.Internal {
 			error.reportTime = new Date().toUTCString();
 			error.errorMsg = "Paramter:url cannot be empty";
 			error.errorType = errorTypes.InvalidParams;
-			error.sourceFunc = getProvider.name;
+			error.sourceFunc = "getProvider";
 			return [null, error];
 		}
 		if (reqParams) {
@@ -185,7 +186,7 @@ namespace Microsoft.CIFramework.Internal {
 					error.reportTime = new Date().toUTCString();
 					error.errorMsg = "Parameter: " + param + " cannot be empty";
 					error.errorType = errorTypes.InvalidParams;
-					error.sourceFunc = getProvider.name;
+					error.sourceFunc = "getProvider";
 					return [null, error];
 				}
 			});
@@ -199,7 +200,7 @@ namespace Microsoft.CIFramework.Internal {
 			error.reportTime = new Date().toUTCString();
 			error.errorMsg = "Associated Provider record not found";
 			error.errorType = errorTypes.InvalidParams;
-			error.sourceFunc = getProvider.name;
+			error.sourceFunc = "getProvider";
 			return [null, error];
 		}
 	}
@@ -220,10 +221,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * is a number representing the new panel width as passed by the client
 	 */
 	function onSizeChanged(event: CustomEvent): void {
-		if (!state.client.flapInUse()) {
-			updateProviderSizes();
-			raiseEvent(event.detail, MessageType.onSizeChanged, onSizeChanged.name + " invoked", state.providerManager.getActiveProvider());
-		}
+		raiseEvent(event.detail, MessageType.onSizeChanged, "onSizeChanged invoked");
 	}
 
 	/**
@@ -236,11 +234,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * is the numeric value of the current mode as passed by the client
 	 */
 	function onModeChanged(event: CustomEvent): void {
-		if (state.client.flapInUse()) {
-			toggleNotesVisibility();
-		}
-		updateProviderSizes();  //TODO: global modeChanged event: this shouldn't be passed to all widgets. WHo should it be passed to?
-		raiseEvent(event.detail, MessageType.onModeChanged, onModeChanged.name + " invoked", state.providerManager.getActiveProvider());
+		raiseEvent(event.detail, MessageType.onModeChanged, "onModeChanged invoked");
 	}
 
 	/**
@@ -253,7 +247,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * is the URL of the page being navigated to
 	 */
 	function onPageNavigation(event: CustomEvent): void {
-		raiseEvent(event.detail, MessageType.onPageNavigate, onPageNavigation.name + " invoked");
+		raiseEvent(event.detail, MessageType.onPageNavigate, "onPageNavigation invoked");
 	}
 	/**
 	 * setClickToAct API's client side handler that post message library will invoke. 
@@ -274,7 +268,7 @@ namespace Microsoft.CIFramework.Internal {
 					provider.clickToAct = parameters.get(Constants.value) as boolean;
 					state.providerManager.ciProviders.set(parameters.get(Constants.originURL), provider);
 
-					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setClickToAct.name, telemetryData);
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "setClickToAct", telemetryData);
 					setPerfData(perfData);
 					return resolve(result);
 				},
@@ -286,7 +280,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else
 		{
-			return rejectWithErrorMessage(errorData.errorMsg, setClickToAct.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "setClickToAct", appId, true, errorData);
 		}
 	}
 
@@ -299,14 +293,14 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if(provider)
 		{
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getClickToAct.name);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getClickToAct");
 			setPerfData(perfData);
 
 			return Promise.resolve(new Map().set(Constants.value, provider.clickToAct));
 		}
 		else
 		{
-			return rejectWithErrorMessage(errorData.errorMsg, getClickToAct.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "getClickToAct", appId, true, errorData);
 		}
 	}
 
@@ -317,13 +311,17 @@ namespace Microsoft.CIFramework.Internal {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.value]);
-		if (provider) { //TODO: See whether perfData needs to include provider.setMode() call
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setMode.name, telemetryData);
+		if(provider)
+		{
+			//state.client.setWidgetMode(null, parameters.get(Constants.value) as number, telemetryData);
+
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "setMode", telemetryData);
 			setPerfData(perfData);
 			return provider.setMode(parameters.get(Constants.value) as number);
 		}
-		else {
-			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
+		else
+		{
+			return rejectWithErrorMessage(errorData.errorMsg, "setMode", appId, true, errorData);
 		}
 	}
 	/**
@@ -337,7 +335,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		if (provider) {
 			let ret = state.client.openKBSearchControl(parameters.get(Constants.SearchString), telemetryData);
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), openKBSearchControl.name, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "openKBSearchControl", telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, ret));
 
@@ -357,16 +355,16 @@ namespace Microsoft.CIFramework.Internal {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.value]);
-
-		if (provider) {
-			//TODO: calculate max width across all widgets and set panel to it
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setWidth.name, telemetryData);
+		if(provider)
+		{
+			//state.client.setWidgetWidth(null, parameters.get(Constants.value) as number, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "setWidth", telemetryData);
 			setPerfData(perfData);
 
 			return provider.setWidth(parameters.get(Constants.value) as number);
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, setWidth.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "setWidth", appId, true, errorData);
 		}
 	}
 
@@ -380,12 +378,12 @@ namespace Microsoft.CIFramework.Internal {
 		if (provider) {
 			let data = state.client.getEnvironment(telemetryData);
 
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getEnvironment.name, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getEnvironment", telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, data));
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, getEnvironment.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "getEnvironment", appId, true, errorData);
 		}
 	}
 
@@ -396,13 +394,16 @@ namespace Microsoft.CIFramework.Internal {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters); // if there are multiple widgets then we need this to get the value of particular widget
-		if (provider) {
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getMode.name, telemetryData);
+		if(provider)
+		{
+			//let mode = state.client.getWidgetMode(telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getMode", telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, provider.getMode()));
 		}
-		else {
-			return rejectWithErrorMessage(errorData.errorMsg, getMode.name, appId, true, errorData);
+		else
+		{
+			return rejectWithErrorMessage(errorData.errorMsg, "getMode", appId, true, errorData);
 		}
 	}
 
@@ -413,13 +414,16 @@ namespace Microsoft.CIFramework.Internal {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
-		if (provider) {
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getWidth.name, telemetryData);
+		if(provider)
+		{
+			//let width = state.client.getWidgetWidth(telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getWidth", telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, Number(provider.getWidth())));
 		}
-		else {
-			return rejectWithErrorMessage(errorData.errorMsg, getWidth.name, appId, true, errorData);
+		else
+		{
+			return rejectWithErrorMessage(errorData.errorMsg, "getWidth", appId, true, errorData);
 		}
 	}
 
@@ -427,23 +431,14 @@ namespace Microsoft.CIFramework.Internal {
 	 * subscriber of onClickToAct event
 	*/
 	export function onClickToAct(event: CustomEvent): void {
-		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onClickToAct, onClickToAct.name + " event recieved from client with event data as " + JSON.stringify(event.detail));
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onClickToAct, "onClickToAct event recieved from client with event data as " + JSON.stringify(event.detail));
 	}
 
 	/**
 	 * subscriber of onSendKBArticle event
 	*/
 	export function onSendKBArticle(event: CustomEvent): void {
-		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, onSendKBArticle.name + " event recieved from client", state.providerManager.getActiveProvider());
-	}
-
-	/**
-	 * subscriber of onSetPresence event
-	 */
-	export function onSetPresence(event: CustomEvent): void {
-		let eventMap = Microsoft.CIFramework.Utility.buildMap(event.detail);
-		state.client.setAgentPresence(eventMap.get("presenceInfo"));
-		raiseEvent(eventMap, MessageType.onSetPresenceEvent, onSetPresence.name + "event received from client");
+		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, "onSendKBArticle event recieved from client");
 	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
@@ -453,7 +448,7 @@ namespace Microsoft.CIFramework.Internal {
 			return state.client.openForm(parameters.get(Constants.entityFormOptions), parameters.get(Constants.entityFormParameters));
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, openForm.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "openForm", appId, true, errorData);
 		}
 	}
 
@@ -465,18 +460,18 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				state.client.retrieveRecord(parameters.get(Constants.entityName), parameters.get(Constants.entityId), telemetryData, parameters.get(Constants.queryParameters)).then(
 					function (res) {
-						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), retrieveRecord.name, telemetryData);
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "retrieveRecord", telemetryData);
 						setPerfData(perfData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, retrieveRecord.name, appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "retrieveRecord", appId, true, error);
 					}
 				);
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, retrieveRecord.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "retrieveRecord", appId, true, errorData);
 		}
 	}
 
@@ -488,18 +483,18 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				state.client.updateRecord(parameters.get(Constants.entityName), parameters.get(Constants.entityId), telemetryData, parameters.get(Constants.value)).then(
 					function (res) {
-						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), updateRecord.name, telemetryData);
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "updateRecord", telemetryData);
 						setPerfData(perfData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, updateRecord.name, appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "updateRecord", appId, true, error);
 					}
 				);
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, updateRecord.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "updateRecord", appId, true, errorData);
 		}
 	}
 
@@ -511,18 +506,18 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				state.client.createRecord(parameters.get(Constants.entityName), null, telemetryData, parameters.get(Constants.value)).then(
 					function (res) {
-						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), createRecord.name, telemetryData);
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "createRecord", telemetryData);
 						setPerfData(perfData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, createRecord.name, appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "createRecord", appId, true, error);
 					}
 				);
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, createRecord.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "createRecord", appId, true, errorData);
 		}
 	}
 
@@ -534,18 +529,18 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				state.client.deleteRecord(parameters.get(Constants.entityName), parameters.get(Constants.entityId), telemetryData).then(
 					function (res) {
-						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), deleteRecord.name, telemetryData);
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "deleteRecord", telemetryData);
 						setPerfData(perfData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, deleteRecord.name, appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "deleteRecord", appId, true, error);
 					}
 				);
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, deleteRecord.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "deleteRecord", appId, true, errorData);
 		}
 	}
 
@@ -554,10 +549,10 @@ namespace Microsoft.CIFramework.Internal {
 	{
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			return doSearch(parameters, false, searchAndOpenRecords.name);
+			return doSearch(parameters, false, "searchAndOpenRecords");
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, searchAndOpenRecords.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "searchAndOpenRecords", appId, true, errorData);
 		}
 	}
 
@@ -571,13 +566,13 @@ namespace Microsoft.CIFramework.Internal {
 		{
 			let searchResult = state.client.retrieveMultipleAndOpenRecords(parameters.get(Constants.entityName), parameters.get(Constants.queryParameters), searchOnly, telemetryData);
 
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), callerName ? callerName : doSearch.name, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), callerName ? callerName : "doSearch", telemetryData);
 			setPerfData(perfData);
 			return searchResult;
 		}
 		else
 		{
-			return rejectWithErrorMessage(errorData.errorMsg, doSearch.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "doSearch", appId, true, errorData);
 		}
 	}
 
@@ -585,10 +580,10 @@ namespace Microsoft.CIFramework.Internal {
 	{
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			return doSearch(parameters, true, search.name);
+			return doSearch(parameters, true, "search");
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, search.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "search", appId, true, errorData);
 		}
 	}
 
@@ -600,18 +595,18 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise<Object>((resolve, reject) => {
 				state.client.getEntityMetadata(parameters.get(Constants.entityName), parameters.get(Constants.Attributes)).then(
 					function (res) {
-						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), getEntityMetadata.name, telemetryData);
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getEntityMetadata", telemetryData);
 						setPerfData(perfData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, getEntityMetadata.name, appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "getEntityMetadata", appId, true, error);
 					}
 				);
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, getEntityMetadata.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "getEntityMetadata", appId, true, errorData);
 		}
 	}
 
@@ -656,19 +651,19 @@ namespace Microsoft.CIFramework.Internal {
 				}
 				insertNotesClient(notesDetails).then(
 					function (res) {
-						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), insertNotes.name, telemetryData);
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "insertNotes", telemetryData);
 						setPerfData(perfData);
 						state.client.collapseFlap();
 						return resolve(res);
 					},
 					(error: IErrorHandler) => {
 						state.client.collapseFlap();
-						return rejectWithErrorMessage(error.errorMsg, insertNotes.name, appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "insertNotes", appId, true, error);
 					}
 				);
 			});
 		}else{
-			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "insertNotes", appId, true, errorData);
 		}
 	}
 
@@ -680,18 +675,18 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				state.client.renderSearchPage(parameters.get(Constants.entityName), parameters.get(Constants.SearchString)).then(
 					function (res) {
-						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), renderSearchPage.name, telemetryData);
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "renderSearchPage", telemetryData);
 						setPerfData(perfData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, renderSearchPage.name, appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "renderSearchPage", appId, true, error);
 					}
 				);
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, renderSearchPage.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "renderSearchPage", appId, true, errorData);
 		}
 	}
 
@@ -701,17 +696,17 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			const [sessionId, errorData] = provider.startUISession(parameters.get(Constants.context), parameters.get(Constants.initials));
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), startUISession.name, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "startUISession", telemetryData);
 			setPerfData(perfData);
 			if (sessionId != null) {
 				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
 			}
 			else {
-				return rejectWithErrorMessage(errorData.errorMsg, startUISession.name, appId, true, errorData);
+				return rejectWithErrorMessage(errorData.errorMsg, "startUISession", appId, true, errorData);
 			}
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, startUISession.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "startUISession", appId, true, errorData);
 		}
 	}
 
@@ -721,17 +716,17 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			const [sessionId, errorData] = provider.switchUISession(parameters.get(Constants.sessionId));
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), switchUISession.name, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "switchUISession", telemetryData);
 			setPerfData(perfData);
 			if (sessionId != null) {
 				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
 			}
 			else {
-				return rejectWithErrorMessage(errorData.errorMsg, switchUISession.name, appId, true, errorData);
+				return rejectWithErrorMessage(errorData.errorMsg, "switchUISession", appId, true, errorData);
 			}
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, switchUISession.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "switchUISession", appId, true, errorData);
 		}
 	}
 
@@ -741,17 +736,17 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			const [sessionId, errorData] = provider.endUISession(parameters.get(Constants.sessionId));
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), endUISession.name, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "endUISession", telemetryData);
 			setPerfData(perfData);
 			if (sessionId != null) {
 				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
 			}
 			else {
-				return rejectWithErrorMessage(errorData.errorMsg, endUISession.name, appId, true, errorData);
+				return rejectWithErrorMessage(errorData.errorMsg, "endUISession", appId, true, errorData);
 			}
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, endUISession.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "endUISession", appId, true, errorData);
 		}
 	}
 
@@ -761,12 +756,12 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
 		if (provider) {
 			let agentPresenceStatus = state.client.setAgentPresence(JSON.parse(parameters.get(Constants.presenceInfo)), telemetryData);
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAgentPresence.name, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "setAgentPresence", telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, agentPresenceStatus));
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, setAgentPresence.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "setAgentPresence", appId, true, errorData);
 		}
 	}
 
@@ -776,12 +771,12 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
 		if (provider) {
 			let presenceListDivStatus = state.client.initializeAgentPresenceList(JSON.parse(parameters.get(Constants.presenceList)), telemetryData);
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), initializeAgentPresenceList.name, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "initializeAgentPresenceList", telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, presenceListDivStatus));
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, initializeAgentPresenceList.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "initializeAgentPresenceList", appId, true, errorData);
 		}
 	}
 }

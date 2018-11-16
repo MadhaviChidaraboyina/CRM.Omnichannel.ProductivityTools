@@ -256,9 +256,9 @@
     <value>Odaberite poredak kanala kao 0 da bi ovaj kanal imao prednost pred drugim kanalima.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+  <data name="1:Description,msdyn_ciprovidermsdyn_trusteddomain" xml:space="preserve">
     <value>Domena koju treba dodati na popis dopuštenih</value>
-    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trustedDomain' on Entity</comment>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Jedinstveni identifikator za tvrtku ili ustanovu</value>
@@ -360,9 +360,9 @@
     <value>Poredak kanala</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+  <data name="1:displayname,msdyn_ciprovidermsdyn_trusteddomain" xml:space="preserve">
     <value>Pouzdana domena</value>
-    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trustedDomain' on Entity</comment>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>ID tvrtke ili ustanove</value>
@@ -463,10 +463,6 @@
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
     <value>Davatelji CIProvider</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Channel Provider</value>
-    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>Davatelj kanala</value>

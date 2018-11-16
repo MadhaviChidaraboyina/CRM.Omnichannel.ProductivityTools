@@ -48,7 +48,7 @@
 										</row>
 										<row>
 											<cell id="{d6aa4662-c329-37e8-ec51-1e8572e277ae}" showlabel="true" locklevel="0">
-												<control id="msdyn_trustedDomain" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_trustedDomain" disabled="false" />
+												<control id="msdyn_trusteddomain" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="msdyn_trusteddomain" disabled="false" />
 											</cell>
 										</row>
 									</rows>
@@ -131,11 +131,22 @@
 			</controlDescriptions>
 			<formLibraries>
 				<Library name="cc_MscrmControls.Service.CIProvider.CustomMultiSelectControl/CIProviderCustomMultiSelectControl.js" libraryUniqueId="{94c0045d-9c16-2eea-b68d-dae8c4343d31}" />
+				<Library name="EventHandlersLib/msdyn_EventHandlersLib.js" libraryUniqueId="{04CE1A39-B30B-427A-84B8-E2307C3DEB73}" />
 			</formLibraries>
 			<events>
 				<event name="onsave" application="false" active="false">
 					<Handlers>
 						<Handler functionName="MscrmControls.Service.CIProvider.CustomMultiSelectControl.UpdateAppModuleBase" libraryName="cc_MscrmControls.Service.CIProvider.CustomMultiSelectControl/CIProviderCustomMultiSelectControl.js" handlerUniqueId="{2e74ee1a-7e78-4345-67a7-82828a407c9e}" enabled="true" parameters="Xrm.Page.getAttribute(&quot;msdyn_appselector&quot;).getValue()" passExecutionContext="true" />
+					</Handlers>
+				</event>
+				<event name="onchange" application="false" active="false" attribute="msdyn_landingurl">
+					<Handlers>
+						<Handler functionName="CIFramework.wildcardCheckOnLandingUrl" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{F746DF43-A28B-405B-9F21-D8A8C9D2DF75}" enabled="true" parameters="" passExecutionContext="false"></Handler>
+					</Handlers>
+				</event>
+				<event name="onchange" application="false" active="false" attribute="msdyn_trusteddomain">
+					<Handlers>
+						<Handler functionName="CIFramework.wildcardCheckOnTrustedDomain" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{5AD9F61C-477E-424B-8640-EA55E8155506}" enabled="true" parameters="" passExecutionContext="false"></Handler>
 					</Handlers>
 				</event>
 			</events>

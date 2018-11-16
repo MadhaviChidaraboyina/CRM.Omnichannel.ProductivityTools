@@ -50,6 +50,7 @@
     <Content Include="Other\Relationships.xml" />
     <Content Include="Other\Solution.xml" />
     <Content Include="Other\Relationships\CTIProvider.xml" />
+    <Content Include="WebResources\EventHandlersLib\msdyn_EventHandlersLib.js.data.xml" />
     <Content Include="WebResources\msdyn_CIFIcon.svg" />
     <Content Include="WebResources\msdyn_Callprovider.svg" />
 	<Content Include="WebResources\call_icon.svg" />

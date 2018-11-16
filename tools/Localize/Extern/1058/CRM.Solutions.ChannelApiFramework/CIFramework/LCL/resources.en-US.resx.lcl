@@ -487,7 +487,7 @@
           <Str Name="Custom3" Val="WO6193_20180625" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_trustedDomain" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_trusteddomain" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Domain to be whitelisted]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -495,9 +495,9 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2018-09-28T12:34:49.0000567Z" />
+        <Modified By="v-rondai" DateTime="2018-11-15T04:19:19.0003015Z" />
         <Props>
-          <Str Name="Custom3" Val="WO7838_20180924" />
+          <Str Name="Custom3" Val="WO7925_20181112" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_ciproviderstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -979,17 +979,17 @@
           <Str Name="Custom3" Val="WO6193_20180625" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_trustedDomain" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_trusteddomain" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Trusted Domain]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Надійний домен]]></Val>
+            <Val><![CDATA[Довірений домен]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2018-09-28T12:34:49.0000576Z" />
+        <Modified By="v-rondai" DateTime="2018-11-15T04:19:19.0003008Z" />
         <Props>
-          <Str Name="Custom3" Val="WO7838_20180924" />
+          <Str Name="Custom3" Val="WO7925_20181112" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_ciproviderstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">

@@ -826,10 +826,10 @@
 						<Description description="API Version" languagecode="1033" />
 					</Descriptions>
 				</attribute>
-				<attribute PhysicalName="msdyn_trustedDomain">
-					<Type>ntext</Type>
-					<Name>msdyn_trustedDomain</Name>
-					<LogicalName>msdyn_trustedDomain</LogicalName>
+				<attribute PhysicalName="msdyn_trusteddomain">
+					<Type>nvarchar</Type>
+					<Name>msdyn_trusteddomain</Name>
+					<LogicalName>msdyn_trusteddomain</LogicalName>
 					<RequiredLevel>none</RequiredLevel>
 					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
 					<ImeMode>auto</ImeMode>

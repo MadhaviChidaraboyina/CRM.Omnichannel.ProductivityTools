@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LCX SchemaVersion="6.0" Name="F:\CTAS_log\Runs\20180924-172512-q18wcwg6s\Work\UI\Master\xrmSolutions\CIFramework\resources.en-US.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="de-DE" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+<LCX SchemaVersion="6.0" Name="F:\CTAS_log\Runs\20181112-111747-ns668tsva4\Work\UI\Master\xrmSolutions\CIFramework\resources.en-US.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="de-DE" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
   <OwnedComments>
     <Cmt Name="Dev" />
     <Cmt Name="LcxAdmin" />
@@ -224,7 +224,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_trustedDomain" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_trusteddomain" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Domain to be whitelisted]]></Val>
         </Str>
@@ -440,7 +440,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_trustedDomain" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_trusteddomain" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Trusted Domain]]></Val>
         </Str>

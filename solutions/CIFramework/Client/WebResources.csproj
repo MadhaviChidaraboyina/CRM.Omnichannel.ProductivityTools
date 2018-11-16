@@ -27,6 +27,7 @@
     <Content Include="PostMsgWrapper.ts" />
     <Content Include="Widget\MainLibrary.ts" />
     <Content Include="Constants.ts" />
+    <Content Include="EventHandlersLib\msdyn_EventHandlersLib.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="CIFrameworkUtilities.ts" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.6.2.d.ts" />
@@ -68,6 +69,7 @@
     </None>
     <Content Include="Widget\tsconfig.json" />
     <Content Include="CRMClients\tsconfig.json" />
+    <Content Include="EventHandlersLib\tsconfig.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Target Name="CopyStatic">

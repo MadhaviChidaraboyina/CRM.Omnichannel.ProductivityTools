@@ -256,9 +256,9 @@
     <value>Selecteer kanaalvolgorde 0 zodat dit kanaal voorrang krijgt boven andere.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+  <data name="1:Description,msdyn_ciprovidermsdyn_trusteddomain" xml:space="preserve">
     <value>Domein dat in witte lijst moet worden opgenomen</value>
-    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trustedDomain' on Entity</comment>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Unieke id voor de organisatie</value>
@@ -360,9 +360,9 @@
     <value>Kanaalvolgorde</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_SortOrder' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_trustedDomain" xml:space="preserve">
+  <data name="1:displayname,msdyn_ciprovidermsdyn_trusteddomain" xml:space="preserve">
     <value>Vertrouwd domein</value>
-    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trustedDomain' on Entity</comment>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOrganizationId" xml:space="preserve">
     <value>Organisatie-id</value>
@@ -463,10 +463,6 @@
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
     <value>CIProviders</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Channel Provider</value>
-    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>Kanaalprovider</value>
