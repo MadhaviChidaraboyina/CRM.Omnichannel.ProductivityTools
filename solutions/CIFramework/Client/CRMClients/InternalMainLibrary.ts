@@ -48,6 +48,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * Variable that will store all the info needed for library. There should be no other global variables in the library. Any info that needs to be stored should go into this.
 	 */
 	let state = {} as IState;
+	let presence = {} as IPresenceManager;
 	const listenerWindow = window.parent;
 
 	declare var Xrm: any;
@@ -66,6 +67,9 @@ namespace Microsoft.CIFramework.Internal {
 		if (!state.client.checkCIFCapability()) {
 			return false;
 		}
+
+		// set the presence
+		presence = GetPresenceManager(clientType);
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		appId = top.location.search.split('appid=')[1].split('&')[0];
@@ -442,7 +446,7 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	export function onSetPresence(event: CustomEvent): void {
 		let eventMap = Microsoft.CIFramework.Utility.buildMap(event.detail);
-		state.client.setAgentPresence(eventMap.get("presenceInfo"));
+		presence.setAgentPresence(eventMap.get("presenceInfo"));
 		raiseEvent(eventMap, MessageType.onSetPresenceEvent, onSetPresence.name + "event received from client");
 	}
 
@@ -760,7 +764,7 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
 		if (provider) {
-			let agentPresenceStatus = state.client.setAgentPresence(JSON.parse(parameters.get(Constants.presenceInfo)), telemetryData);
+			let agentPresenceStatus = presence.setAgentPresence(JSON.parse(parameters.get(Constants.presenceInfo)), telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), setAgentPresence.name, telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, agentPresenceStatus));
@@ -775,7 +779,7 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
 		if (provider) {
-			let presenceListDivStatus = state.client.initializeAgentPresenceList(JSON.parse(parameters.get(Constants.presenceList)), telemetryData);
+			let presenceListDivStatus = presence.initializeAgentPresenceList(JSON.parse(parameters.get(Constants.presenceList)), telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), initializeAgentPresenceList.name, telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, presenceListDivStatus));
