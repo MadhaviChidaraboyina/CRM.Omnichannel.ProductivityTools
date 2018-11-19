@@ -118,7 +118,7 @@ namespace Microsoft.CIFramework.Internal {
 						setUsageData(usageData);
 					}
 					// initialize and set post message wrapper.
-					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
+				state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers,addGenericHandler,removeGenericHandler);
 					// load the widgets onto client. 
 				state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
 						reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
@@ -133,6 +133,8 @@ namespace Microsoft.CIFramework.Internal {
 
 		return false;
 	}
+
+
 
 	/*Utility function to raise events registered for the framework*/
 	function raiseEvent(data: Map<string, any>, messageType: string, reportMessage: string, provider?: CIProvider): void {
@@ -794,5 +796,23 @@ namespace Microsoft.CIFramework.Internal {
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, "initializeAgentPresenceList", appId, true, errorData);
 		}
+	}
+
+	/**
+ * The handler will be called for generic event 
+ * @param event. event.detail will be the event detail
+ */
+	function onGenericEvent(event: CustomEvent): void {
+		raiseEvent(event.detail, event.type, "Generic event is rised");
+	}
+
+	function addGenericHandler(event: CustomEvent): void {
+		if (!(event.type == "onmodechanged" || event.type == "onsizechanged" || event.type == "onpagenavigate" || event.type == "onsendkbarticle"))
+			listenerWindow.addEventListener(event.type, onGenericEvent);
+	}
+
+	function removeGenericHandler(event: CustomEvent): void {
+		if (!(event.type == "onmodechanged" || event.type == "onsizechanged" || event.type == "onpagenavigate" || event.type == "onsendkbarticle"))
+			listenerWindow.removeEventListener(event.type, onGenericEvent);
 	}
 }

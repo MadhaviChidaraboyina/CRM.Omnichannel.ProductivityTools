@@ -59,10 +59,12 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 
 	export class postMsgWrapper {
 
+		private addGenericHandler:Function = null;
+		private removeGenericHandler: Function = null;
 		/**
 		 * Creates and loads an instance of the wrapper on the CI or widget domain, wherever it is loaded
 		 */
-		constructor(listenerWindow?: Window, domains?: string[], handlers?: Map<string, Set<Handler>>) {
+		constructor(listenerWindow?: Window, domains?: string[], handlers?: Map<string, Set<Handler>>, addGenericHandler?: Function, removeGenericHandler?: Function) {
 			// todo - ensure that there is always one listener for message event from CI side. For now: always removing previous one, if any, so that we only have one listener at a time. 
 			if (listenerWindow) {
 				listenerWindow.removeEventListener(messageConstant, this.processMessage.bind(this));
@@ -72,6 +74,12 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			this.listWhitelistedDomains = domains;
 			if (handlers) {
 				this.messageHandlers = handlers;
+			}
+			if (addGenericHandler) {
+				this.addGenericHandler = addGenericHandler;
+			}
+			if (removeGenericHandler) {
+				this.removeGenericHandler = removeGenericHandler;
 			}
 		}
 
@@ -88,6 +96,9 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		 * Function for add handlers separate from the constructor
 		 */
 		addHandler(messageType: string, handler: Handler) {
+			if (this.addGenericHandler) {
+				this.addGenericHandler();
+			}
 			if (this.messageHandlers.has(messageType)) {
 				this.messageHandlers.get(messageType).add(handler);
 			}
@@ -109,11 +120,15 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		 * Function for remove a particular handler
 		 */
 		removeHandler(messageType: string, handler: Handler) {
+			if (this.removeGenericHandler) {
+				this.removeGenericHandler();
+			}
 			if (!this.messageHandlers.has(messageType)) {
 				return;
 			}
 
 			this.messageHandlers.get(messageType).delete(handler);
+			
 		}
 
 
