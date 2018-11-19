@@ -228,7 +228,8 @@ namespace Microsoft.CIFramework.Internal {
 		if (!state.client.flapInUse()) {
 			updateProviderSizes();
 			raiseEvent(event.detail, MessageType.onSizeChanged, "onSizeChanged invoked", state.providerManager.getActiveProvider());
-	}
+		}
+	}	
 
 	/**
 	 * The handler called by the client for a mode-changed event. The client is expected
@@ -603,10 +604,10 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	export function getEntityMetadata(parameters: Map<string, any>): Promise<Map<string, any>> {
-				let telemetryData: any = new Object();
-				let startTime = new Date();
-				const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
-				if (provider) {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);
+		if (provider) {
 			return new Promise<Object>((resolve, reject) => {
 				state.client.getEntityMetadata(parameters.get(Constants.entityName), parameters.get(Constants.Attributes)).then(
 					function (res) {
@@ -795,4 +796,3 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 }
-
