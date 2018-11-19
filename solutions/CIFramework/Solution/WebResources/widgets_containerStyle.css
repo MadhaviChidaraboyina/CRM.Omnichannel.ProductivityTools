@@ -30,7 +30,7 @@ button#CurrentStatus
 	float:left;
 }
 
-.TextNode
+.textNode
 {
 	text-align: left;
 	overflow: auto;
@@ -42,7 +42,7 @@ button#CurrentStatus
 	overflow: hidden;
 }
 
-.AgentPresenceDiv
+.agentPresenceDiv
 {
 	position: fixed;
 	bottom: 5px;
@@ -52,7 +52,23 @@ button#CurrentStatus
 	width: 34px;
 }
 
-.AgentPresenceDiv .TextNode 
+.innerDiv {
+	height: 28px;
+	width: 28px;
+	margin: auto;
+}
+
+.backgroundColorDiv {
+	height: 28px;
+	width: 28px;
+	background-color: #315FA2;
+	border-radius: 50%;
+	text-align: center;
+	bottom: 10px;
+	right: 2px;
+}
+
+.agentPresenceDiv .textNode 
 {
 	width: 100%;
 	margin: 0px;
@@ -61,27 +77,24 @@ button#CurrentStatus
 	white-space: nowrap;
 }
 
-.innerDiv {
-	height: 28px;
-	width: 28px;
-	margin: auto;
+.userImageNode
+{
+	height: 14px;
+	width: 14px;
+	position: relative;
+	top: 6px;
+	filter: invert(100%);
 }
 
-.UserImageNode
+.agentPresenceColorNode
 {
 	border-radius: 50%;
-	height: 20px;
-	width: 20px;
-}
-
-.AgentPresenceColorNode
-{
-	border-radius: 50%;
-	width: 11px;
-	height: 11px;
+	border: 2px solid white;
+	width: 10px;
+	height: 10px;
 	position: absolute;
-	right: 4px;
-	bottom: 13px; /* This should be the height of the text below */
+	right: 1px;
+	bottom: 10px;
 }
 
 .uiSession
@@ -129,7 +142,7 @@ button#CurrentStatus
 	vertical-align: middle;
 }
 
-.PresenceListItem .TextNode
+.PresenceListItem .textNode
 {
 	font-size: 14px;
 	height: 35px;

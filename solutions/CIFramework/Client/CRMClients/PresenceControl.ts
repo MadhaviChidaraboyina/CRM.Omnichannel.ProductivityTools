@@ -49,7 +49,7 @@ namespace Microsoft.CIFramework.Internal {
 					presenceNode.appendChild(presenceColorNode);
 
 					var presenceTextNode = document.createElement('div');
-					presenceTextNode.classList.add('TextNode');
+					presenceTextNode.classList.add('textNode');
 					presenceTextNode.innerText = presenceList[i].presenceText;
 					presenceNode.appendChild(presenceTextNode);
 
@@ -70,30 +70,35 @@ namespace Microsoft.CIFramework.Internal {
 		public setAgentPresence(presenceInfo: PresenceInfo): HTMLDivElement {
 			// Creates the Main Div for Agent Presence
 			var updatedPresenceNode = document.createElement('div');
-			updatedPresenceNode.classList.add("AgentPresenceDiv");
+			updatedPresenceNode.classList.add("agentPresenceDiv");
 			updatedPresenceNode.title = presenceInfo.presenceText;
 			updatedPresenceNode.addEventListener("click", this.toggleList, false);
 
 			var innerDiv = document.createElement('div');
 			innerDiv.classList.add("innerDiv");
 
+			var backgroundColorDiv = document.createElement('div');
+			backgroundColorDiv.classList.add('backgroundColorDiv');
+
 			// Creates the Image Element for the Agent Presence
 			var updatedPresenceImageNode = document.createElement('img');
-			updatedPresenceImageNode.classList.add('UserImageNode');
-			updatedPresenceImageNode.src = "/_imgs/svg_2.svg"; //Source of the Image
-			innerDiv.appendChild(updatedPresenceImageNode);
+			updatedPresenceImageNode.classList.add('userImageNode');
+			updatedPresenceImageNode.src = "/_imgs/svg_2.svg";
+			backgroundColorDiv.appendChild(updatedPresenceImageNode);
+			innerDiv.appendChild(backgroundColorDiv);
+
 
 			// Creates the Color Div for Agent Presence
 			var updatedPresenceColorNode = document.createElement('div');
 			updatedPresenceColorNode.style.backgroundColor = presenceInfo.presenceColor;
 			updatedPresenceColorNode.innerText = " ";
-			updatedPresenceColorNode.classList.add('AgentPresenceColorNode');
+			updatedPresenceColorNode.classList.add('agentPresenceColorNode');
 			innerDiv.appendChild(updatedPresenceColorNode);
 
 			// Creates the Text Div for Agent Presence
 			var updatedPresenceTextNode = document.createElement('div');
 			updatedPresenceTextNode.innerText = presenceInfo.presenceText;
-			updatedPresenceTextNode.classList.add('TextNode');
+			updatedPresenceTextNode.classList.add('textNode');
 
 			updatedPresenceNode.appendChild(innerDiv);
 			updatedPresenceNode.appendChild(updatedPresenceTextNode);
