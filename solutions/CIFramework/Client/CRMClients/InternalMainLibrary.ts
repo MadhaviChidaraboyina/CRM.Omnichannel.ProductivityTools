@@ -121,7 +121,7 @@ namespace Microsoft.CIFramework.Internal {
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
 					// load the widgets onto client. 
 				state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
-					reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
+						reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
 				});
 				}
 				//reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
@@ -225,7 +225,9 @@ namespace Microsoft.CIFramework.Internal {
 	 * is a number representing the new panel width as passed by the client
 	 */
 	function onSizeChanged(event: CustomEvent): void {
-		raiseEvent(event.detail, MessageType.onSizeChanged, "onSizeChanged invoked");
+		if (!state.client.flapInUse()) {
+			updateProviderSizes();
+			raiseEvent(event.detail, MessageType.onSizeChanged, "onSizeChanged invoked", state.providerManager.getActiveProvider());
 	}
 
 	/**
@@ -345,7 +347,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, setWidth.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "openKBSearchControl", appId, true, errorData);
 		}
 		
 		
@@ -451,7 +453,7 @@ namespace Microsoft.CIFramework.Internal {
 	export function onSetPresence(event: CustomEvent): void {
 		let eventMap = Microsoft.CIFramework.Utility.buildMap(event.detail);
 		presence.setAgentPresence(eventMap.get("presenceInfo"));
-		raiseEvent(eventMap, MessageType.onSetPresenceEvent, "onSetPresence" + "event received from client");
+		raiseEvent(eventMap, MessageType.onSetPresenceEvent, "onSetPresence event received from client");
 	}
 
 	// Time taken by openForm is dependent on User Action. Hence, not logging this in Telemetry
@@ -638,17 +640,17 @@ namespace Microsoft.CIFramework.Internal {
 				//let panelWidth = state.client.getWidgetWidth();
 				notifyEventClient(notificationUX).then(
 					function (res) {
-						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), notifyEvent.name, telemetryData);
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "notifyEvent", telemetryData);
 						setPerfData(perfData);
 						return resolve(res);
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, notifyEvent.name, appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "notifyEvent", appId, true, error);
 					}
 				);
 			});
 		}else{
-			return rejectWithErrorMessage(errorData.errorMsg, setMode.name, appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "notifyEvent", appId, true, errorData);
 		}
 	}
 
