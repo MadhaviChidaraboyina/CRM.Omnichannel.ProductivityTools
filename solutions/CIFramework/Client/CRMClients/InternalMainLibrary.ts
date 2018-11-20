@@ -808,7 +808,7 @@ namespace Microsoft.CIFramework.Internal {
 */
 	function onGenericEvent(event: CustomEvent): void {
 		for (let i = 0; i < this.genericEventRegistrations[event.type].length; i++) {
-			raiseEvent(event.detail, event.type, "Generic event is rised", this.genericEventRegistrations[event.type][i]);
+			raiseEvent(event.detail, event.type, "Generic event rise", this.genericEventRegistrations.get(event.type)[i]);
 		}
 	}
 
@@ -820,18 +820,17 @@ namespace Microsoft.CIFramework.Internal {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [messageType]);
-
 		if (provider) {
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "addGenericHandler", telemetryData);
 			setPerfData(perfData);
 			if (!isPredefinedMessageType(messageType)) {
 				if (this.genericEventRegistrations.has(messageType)) {
-					this.genericEventRegistrations[messageType].append(provider);
+					this.genericEventRegistrations.get(messageType).append(provider);
 				}
 				else {
 					let list:CIProvider[];
 					list[0] = provider;
-					this.genericEventRegistrations[messageType] = list;
+					this.genericEventRegistrations.set(messageType, list);
 				}
 
 				window.addEventListener(messageType, onGenericEvent);
@@ -855,11 +854,11 @@ namespace Microsoft.CIFramework.Internal {
 			if (!isPredefinedMessageType(messageType)) {
 				if (this.genericEventRegistrations.has(messageType)) {
 					for (let i = 0; i < this.genericEventRegistrations[event.type].length; i++) {
-						if (this.genericEventRegistrations[messageType][i] == provider)
-							this.genericEventRegistrations[messageType].delete(this.genericEventRegistrations[messageType][i]);
+						if (this.genericEventRegistrations.get(messageType)[i] == provider)
+							this.genericEventRegistrations.get(messageType).delete(this.genericEventRegistrations.get(messageType)[i]);
 					}
 					}
-				if (this.genericEventRegistrations[messageType].length == 0) {
+				if (this.genericEventRegistrations.get(messageType).length == 0) {
 					window.removeEventListener(messageType, onGenericEvent);//remove after all providers are removed
 				}
 			}

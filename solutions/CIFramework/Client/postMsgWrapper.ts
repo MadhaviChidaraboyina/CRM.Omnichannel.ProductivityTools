@@ -112,6 +112,8 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			if (!this.messageHandlers.has(messageType)) {
 				return;
 			}
+
+
 			this.messageHandlers.get(messageType).delete(handler);
 			
 		}
