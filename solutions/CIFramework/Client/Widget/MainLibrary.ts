@@ -525,7 +525,7 @@ namespace Microsoft.CIFramework
 		if(!(isNullOrUndefined(eventName) || eventName == "") && !isNullOrUndefined(handlerFunction)){
 			postMessage.addHandler(eventName, handlerFunction);
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: "addGenericHandler",
+				messageType: MessageType.addGenericHandler,
 				messageData: new Map().set(Constants.eventType, eventName)
 			}
 			sendMessage<boolean>("addGenericHandler", payload, false);
@@ -548,7 +548,7 @@ namespace Microsoft.CIFramework
 		if(!(isNullOrUndefined(eventName) || eventName == "") && !isNullOrUndefined(handlerFunction)){
 			postMessage.removeHandler(eventName, handlerFunction);
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: "removeGenericHandler",
+				messageType: MessageType.removeGenericHandler,
 				messageData: new Map().set(Constants.eventType, eventName)
 			}
 			sendMessage<boolean>("removeGenericHandler", payload, false);

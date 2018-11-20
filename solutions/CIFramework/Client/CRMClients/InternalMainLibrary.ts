@@ -812,6 +812,10 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
+	function isPredefinedMessageType(messageType:string): boolean {
+		return messageType == "onmodechanged" || messageType == "onsizechanged" || messageType == "onpagenavigate" || messageType == "onsendkbarticle";
+	}
+
 	export function addGenericHandler(parameters: Map<string, any>,messageType:string): Promise<boolean> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
@@ -820,8 +824,16 @@ namespace Microsoft.CIFramework.Internal {
 		if (provider) {
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "addGenericHandler", telemetryData);
 			setPerfData(perfData);
-			if (!(messageType == "onmodechanged" || messageType == "onsizechanged" || messageType == "onpagenavigate" || messageType == "onsendkbarticle")) {
-				this.genericEventRegistrations.append(provider);
+			if (!isPredefinedMessageType(messageType)) {
+				if (this.genericEventRegistrations.has(messageType)) {
+					this.genericEventRegistrations[messageType].append(provider);
+				}
+				else {
+					let list:CIProvider[];
+					list[0] = provider;
+					this.genericEventRegistrations[messageType] = list;
+				}
+
 				window.addEventListener(messageType, onGenericEvent);
 			}
 			return Promise.resolve(true);
@@ -840,9 +852,16 @@ namespace Microsoft.CIFramework.Internal {
 
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "removeGenericHandler", telemetryData);
 			setPerfData(perfData);
-			if (!(messageType == "onmodechanged" || messageType == "onsizechanged" || messageType == "onpagenavigate" || messageType == "onsendkbarticle")) {
-				this.genericEventRegistrations.delete(provider);
-				window.removeEventListener(messageType, onGenericEvent);
+			if (!isPredefinedMessageType(messageType)) {
+				if (this.genericEventRegistrations.has(messageType)) {
+					for (let i = 0; i < this.genericEventRegistrations[event.type].length; i++) {
+						if (this.genericEventRegistrations[messageType][i] == provider)
+							this.genericEventRegistrations[messageType].delete(this.genericEventRegistrations[messageType][i]);
+					}
+					}
+				if (this.genericEventRegistrations[messageType].length == 0) {
+					window.removeEventListener(messageType, onGenericEvent);//remove after all providers are removed
+				}
 			}
 			return Promise.resolve(true);
 		}
