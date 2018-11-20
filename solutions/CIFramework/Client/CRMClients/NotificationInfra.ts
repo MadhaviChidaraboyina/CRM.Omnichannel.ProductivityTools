@@ -97,7 +97,7 @@ namespace Microsoft.CIFramework.Internal {
 					label.innerText = notificationType[1];
 					label.setAttribute("aria-label", notificationType[1]);
 					currentToast.classList.add("internalCommunication_CIFToastDiv");
-				}else if(notificationType[0].search(MessageType.hardNotification) != -1){
+				}else if(notificationType[0].search(MessageType.notification) != -1){
 					headerElement.classList.add("header_NotificationType_CIF_Broadcast");
 					toastDiv.getElementsByClassName("header_NotificationType_CIF_Broadcast")[len-1].id = "CIFToastType_"+len;
                     widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = panelWidth;

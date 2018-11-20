@@ -303,3 +303,18 @@ div#PresenceList
 	left: 40px;
 	box-shadow: 2px -2px 10px grey;
 }
+
+.notesDiv
+{
+	top:0px;
+}
+
+[dir='ltr'] .notesDiv
+{
+	right: 0px;
+}
+
+[dir='rtl'] .notesDiv
+{
+	left: 0px;
+}
