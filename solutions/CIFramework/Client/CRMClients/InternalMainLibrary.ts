@@ -803,9 +803,9 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	/**
-* The handler will be called for generic event 
-* @param event. event.detail will be the event detail
-*/
+	* The handler will be called for generic event 
+	* @param event. event.detail will be the event detail
+	*/
 	function onGenericEvent(event: CustomEvent): void {
 		if (this.genericEventRegistrations.has(event.type)) {
 			for (let i = 0; i < this.genericEventRegistrations.get(event.type).length; i++) {
@@ -833,9 +833,8 @@ namespace Microsoft.CIFramework.Internal {
 					let list:CIProvider[];
 					list[0] = provider;
 					this.genericEventRegistrations.set(messageType, list);
+					window.addEventListener(messageType, onGenericEvent);
 				}
-
-				window.addEventListener(messageType, onGenericEvent);
 			}
 			return Promise.resolve(true);
 		}
@@ -850,14 +849,13 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters, [Constants.eventType]);
 
 		if (provider) {
-
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "removeGenericHandler", telemetryData);
 			setPerfData(perfData);
 			if (!isPredefinedMessageType(messageType)) {
 				if (this.genericEventRegistrations.has(messageType)) {
 					for (let i = 0; i < this.genericEventRegistrations.get(event.type).length; i++) {
-						if (this.genericEventRegistrations.get(messageType)[i] == provider)
-							this.genericEventRegistrations.get(messageType).delete(this.genericEventRegistrations.get(messageType)[i]);
+							if (this.genericEventRegistrations.get(messageType)[i] == provider)
+								this.genericEventRegistrations.get(messageType).delete(this.genericEventRegistrations.get(messageType)[i]);
 					}
 					}
 				if (this.genericEventRegistrations.get(messageType).length == 0) {
