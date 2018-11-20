@@ -807,8 +807,10 @@ namespace Microsoft.CIFramework.Internal {
 * @param event. event.detail will be the event detail
 */
 	function onGenericEvent(event: CustomEvent): void {
-		for (let i = 0; i < this.genericEventRegistrations[event.type].length; i++) {
-			raiseEvent(event.detail, event.type, "Generic event rise", this.genericEventRegistrations.get(event.type)[i]);
+		if (this.genericEventRegistrations.has(event.type)) {
+			for (let i = 0; i < this.genericEventRegistrations.get(event.type).length; i++) {
+				raiseEvent(event.detail, event.type, "Generic event rise", this.genericEventRegistrations.get(event.type)[i]);
+			}
 		}
 	}
 
@@ -853,7 +855,7 @@ namespace Microsoft.CIFramework.Internal {
 			setPerfData(perfData);
 			if (!isPredefinedMessageType(messageType)) {
 				if (this.genericEventRegistrations.has(messageType)) {
-					for (let i = 0; i < this.genericEventRegistrations[event.type].length; i++) {
+					for (let i = 0; i < this.genericEventRegistrations.get(event.type).length; i++) {
 						if (this.genericEventRegistrations.get(messageType)[i] == provider)
 							this.genericEventRegistrations.get(messageType).delete(this.genericEventRegistrations.get(messageType)[i]);
 					}
