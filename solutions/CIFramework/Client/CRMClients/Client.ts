@@ -84,6 +84,26 @@ namespace Microsoft.CIFramework.Internal
 	type flapInUseFunction = () => boolean;
 
 	/**
+	 * Func type to add UISession
+	*/
+	type addUISessionFunction = (id: string, initials: string, sessionColor: string) => void;
+
+	/**
+	 * Func type to remove UISession
+	*/
+	type removeUISessionFunction = (id: string) => void;
+
+	/**
+	 * Func type to get color of UISession
+	*/
+	type getUISessionColorFunction = (id: string) => string;
+
+	/**
+	 * Func type to update UISession
+	*/
+	type updateUISessionFunction = (id: string, backgroundColor: string, visible: boolean) => void;
+
+	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
 	 * This type specifies all the functions that are exposed to clients for impl. 
 	*/
@@ -137,6 +157,14 @@ namespace Microsoft.CIFramework.Internal
 		expandFlap: expandFlapFunction;
 
 		collapseFlap: collapseFlapFunction;
+
+		addUISession: addUISessionFunction;
+
+		removeUISession: removeUISessionFunction;
+
+		getUISessionColor: getUISessionColorFunction;
+
+		updateUISession: updateUISessionFunction;
 
 		flapInUse: flapInUseFunction;
 		}

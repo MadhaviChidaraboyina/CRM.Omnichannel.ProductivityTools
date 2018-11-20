@@ -6,10 +6,19 @@
 
 .MainDiv
 {
-	right: 5px; 
 	position: fixed;
 	bottom: 5px; 
 	font-family: undefined;
+}
+
+[dir='ltr'] .MainDiv
+{
+	right: 5px;
+}
+
+[dir='rtl'] .MainDiv
+{
+	left: 5px;
 }
 
 div#PresenceList
@@ -17,9 +26,14 @@ div#PresenceList
 	display:none;
 }
 
-button#CurrentStatus
+[dir='ltr'] div#CurrentStatus
 {
 	float:right;
+}
+
+[dir='rtl'] div#CurrentStatus
+{
+	float: left;
 }
 
 .ColorNode
@@ -27,32 +41,86 @@ button#CurrentStatus
 	height:16px;
 	width:16px;
 	border-radius: 50%;
-	float:left;
 }
 
-.TextNode
+[dir='ltr'] .ColorNode
 {
-	text-align: left;
+	float: left;
+}
+
+[dir='rtl'] .ColorNode
+{
+	float: right;
+}
+
+.textNode
+{
 	overflow: auto;
 	font-size: 10px;
 	font-family: 'Segoe UI';
 	font-style: normal;
 	line-height: 13px;
-	margin-left: 2px;
 	overflow: hidden;
 }
 
-.AgentPresenceDiv
+[dir='ltr'] .textNode
+{
+	text-align: left;
+	margin-left: 2px;
+}
+
+[dir='rtl'] .textNode
+{
+	text-align: right;
+	margin-right: 2px;
+}
+
+.agentPresenceDiv
 {
 	position: fixed;
 	bottom: 5px;
 	display: inline-block;
 	background-color: #FFFFFF;
-	right: 0;
 	width: 34px;
 }
 
-.AgentPresenceDiv .TextNode 
+[dir='ltr'] .agentPresenceDiv
+{
+	right: 0;
+}
+
+[dir='rtl'] .agentPresenceDiv
+{
+	left: 0;
+}
+
+.innerDiv {
+	display: flex;
+	height: 28px;
+	width: 28px;
+	margin: auto;
+}
+
+.backgroundColorDiv {
+	height: 28px;
+	width: 28px;
+	background-color: #315FA2;
+	border-radius: 50%;
+	text-align: center;
+	bottom: 10px;
+}
+
+[dir='ltr'] .backgroundColorDiv
+{
+	right: 2px;
+}
+
+[dir='rtl'] .backgroundColorDiv
+{
+	left: 2px;
+}
+
+.agentPresenceDiv .textNode 
 {
 	width: 100%;
 	margin: 0px;
@@ -61,44 +129,110 @@ button#CurrentStatus
 	white-space: nowrap;
 }
 
-.innerDiv {
-	height: 28px;
-	width: 28px;
-	margin: auto;
+.userImageNode
+{
+	height: 14px;
+	width: 14px;
+	position: relative;
+	top: 6px;
+	filter: invert(100%);
 }
 
-.UserImageNode
+.agentPresenceColorNode
 {
 	border-radius: 50%;
-	height: 20px;
-	width: 20px;
-}
-
-.AgentPresenceColorNode
-{
-	border-radius: 50%;
-	width: 11px;
-	height: 11px;
+	border: 2px solid white;
+	width: 10px;
+	height: 10px;
 	position: absolute;
-	right: 4px;
-	bottom: 13px; /* This should be the height of the text below */
+	bottom: 10px;
+}
+
+[dir='ltr'] .agentPresenceColorNode
+{
+	right: 1px;
+}
+
+[dir='rtl'] .agentPresenceColorNode
+{
+	left: 1px;
+}
+
+.widgetArea
+{
+	width: calc(var(--widgetAreaWidth));
+	position: absolute;
+}
+
+[dir='ltr'] .widgetArea
+{
+	right: calc(var(--sessionPanelAreaWidth));
+}
+
+[dir='rtl'] .widgetArea
+{
+	left: calc(var(--sessionPanelAreaWidth));
+}
+
+.widgetControl
+{
+	position: absolute;
+}
+
+[dir='ltr'] .widgetControl
+{
+	right: calc(var(--sessionPanelWidth)); 
+}
+
+[dir='rtl'] .widgetControl
+{
+	left: calc(var(--sessionPanelWidth)); 
+}
+
+.flexJustify
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sessionPanel
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #EBEBEB;
+	width: calc(var(--sessionPanelAreaWidth) - 2px);
+	position: fixed;
+	height: calc(100% - 2px);
+}
+
+[dir='ltr'] .sessionPanel
+{
+	right: 0px;
+}
+
+[dir='rtl'] .sessionPanel
+{
+	left: 0px;
 }
 
 .uiSession
 {
-	display: flex;
 	height: 50px;
 	cursor: pointer;
+	border: none;
+	padding: 0px;
+	background-color: transparent;
 }
 
-.avatarCircle
+.iconCircle
 {
 	width: 26px;
 	height: 26px; 
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	text-align: center;
-	margin: 12px 4px;
+	margin: 0px 3px;
 }
 
 .initials
@@ -111,16 +245,14 @@ button#CurrentStatus
 	font-family: Segoe UI;
 }
 
-.selectionLine {
-	border-radius: 20%;
-	height: 21px;
-	width: 2px;
-	margin: 15px 0px;
-	display: none;
+.crossIconFont
+{
+	font-size: 20px;
 }
 
 .PresenceListItem 
 {
+	display: flex;
 	height: 35px;
 }
 
@@ -129,12 +261,21 @@ button#CurrentStatus
 	vertical-align: middle;
 }
 
-.PresenceListItem .TextNode
+.PresenceListItem .textNode
 {
 	font-size: 14px;
 	height: 35px;
 	vertical-align: middle;
+}
+
+[dir='ltr'] .PresenceListItem .textNode
+{
 	padding-left: 7px;
+}
+
+[dir='rtl'] .PresenceListItem .textNode
+{
+	padding-right: 7px;
 }
 
 .PresenceListInnerNode:first-child
@@ -146,9 +287,19 @@ button#CurrentStatus
 {
 	background-color: #FFFFFF;
 	position: fixed;
-	right: 40px;
 	bottom: 0px;
 	width: 191px;
 	padding: 5px;
+}
+
+[dir='ltr'] .PresenceListInnerNode
+{
+	right: 40px;
 	box-shadow: -2px -2px 10px grey;
+}
+
+[dir='rtl'] .PresenceListInnerNode
+{
+	left: 40px;
+	box-shadow: 2px -2px 10px grey;
 }

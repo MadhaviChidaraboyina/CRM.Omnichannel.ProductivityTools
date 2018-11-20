@@ -204,11 +204,13 @@ namespace Microsoft.CIFramework.Internal {
 					let widgetWidth: number = Constants.DEFAULT_WIDGET_WIDTH;
 					let minimizedHeight: number = (widgetIFrame.clientHeight * (1 - fracHeightForActiveWidget)) / ciProviders.size;   // TODO: Figure out correct units to use
 					widgetIFrame.onload = function () {
+						widgetIFrame.contentWindow.document.body.dir = window.parent.document.body.dir;
 						var doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
 						for (let [key, value] of ciProviders) {
 							//TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
 							var containerDiv = document.createElement("div");
 							containerDiv.setAttribute("tabindex", "-1");    //Needed to receive the focus event
+							containerDiv.setAttribute("role", "tabpanel");
 							containerDiv.setAttribute("style", "margin-right: 0px; width: 100%");
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
@@ -419,7 +421,74 @@ namespace Microsoft.CIFramework.Internal {
 				logFailure("", true, error);
 			}
 		}
-		
+
+		client.addUISession = (id: string, initials: string, sessionColor: string): void => {
+			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let sessionPanel = Utility.getElementFromIframe(sidePanelIFrame, Constants.sessionPanel);
+			if (sessionPanel == null)
+				return;
+
+			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div></div><div id="' + id + 'CrossIcon" class="flexJustify" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
+			var parser = new DOMParser();
+			var el = parser.parseFromString(sessionElementHtml, "text/html");
+			var sessionElement = el.getElementById(id);
+			sessionElement.onclick = function (event: MouseEvent) {
+				Microsoft.CIFramework.Internal.SessionPanel.getInstance().switchUISession((event.currentTarget as HTMLElement).id);
+			};
+
+			sessionElement.onkeydown = function (event: KeyboardEvent) {
+				if (event.keyCode == 13) {
+					Microsoft.CIFramework.Internal.SessionPanel.getInstance().switchUISession((event.currentTarget as HTMLElement).id);
+				}
+			};
+
+			let crossIcon = el.getElementById(id + "CrossIcon");
+			crossIcon.onclick = function (event: MouseEvent) {
+				Microsoft.CIFramework.Internal.SessionPanel.getInstance().endUISession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+			};
+
+			sessionPanel.appendChild(sessionElement);
+		}
+
+		client.removeUISession = (id: string): void => {
+			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let sessionElement = Utility.getElementFromIframe(sidePanelIFrame, id);
+			if (sessionElement == null)
+				return;
+
+			sessionElement.parentNode.removeChild(sessionElement);
+		}
+
+		client.getUISessionColor = (id: string): string => {
+			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let sessionElementCircle = Utility.getElementFromIframe(sidePanelIFrame, id + "IconCircle");
+			if (sessionElementCircle == null)
+				return "";
+
+			return Utility.rgb2hex(sessionElementCircle.style.backgroundColor);
+		}
+
+		client.updateUISession = (id: string, backgroundColor: string, visible: boolean): void => {
+			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let sessionElement = Utility.getElementFromIframe(sidePanelIFrame, id);
+			if (sessionElement == null)
+				return;
+
+			sessionElement.style.backgroundColor = backgroundColor;
+
+			//Update cross icon visibility
+			let sessionIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "UiSessionIcon");
+			if (sessionIcon == null)
+				return;
+
+			let crossIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "CrossIcon");
+			if (crossIcon == null)
+				return;
+
+			sessionIcon.style.display = (visible == true) ? 'none' : 'flex';
+			crossIcon.style.display = (visible == true) ? 'flex' : 'none';
+		}
+
 		client.expandFlap = (): number => {
 			if (this.flapExpanded) {
 				return 0;

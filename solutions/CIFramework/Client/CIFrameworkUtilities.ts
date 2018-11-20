@@ -67,4 +67,22 @@ namespace Microsoft.CIFramework.Utility {
 		else
 			return "";
 	}
+
+	/**
+	 * Converts given rgb value to hex value
+	 */
+	export function rgb2hex(value: string): string {
+		var rgb = value.replace(/\s/g, '').match(/^rgba?\((\d+),(\d+),(\d+)/i);
+		return (rgb && rgb.length === 4) ? "#" +
+			("0" + parseInt(rgb[1], 10).toString(16)).slice(-2).toUpperCase() +
+			("0" + parseInt(rgb[2], 10).toString(16)).slice(-2).toUpperCase() +
+			("0" + parseInt(rgb[3], 10).toString(16)).slice(-2).toUpperCase() : value;
+	}
+
+	/**
+	 * Utility to get element by id from iframe
+	 */
+	export function getElementFromIframe(iFrameObject: HTMLIFrameElement, id: string): any {
+		return iFrameObject.contentWindow.document.getElementById(id);
+	}
 }

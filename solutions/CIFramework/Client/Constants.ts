@@ -30,6 +30,8 @@ namespace Microsoft.CIFramework
 		public static onSendKBArticle = "onsendkbarticle";
 		public static onSetPresence = "onSetPresence";
 		public static onUISessionVisibilityChanged = "onUISessionVisibilityChanged";
+		public static onUISessionStarted = "onUISessionStarted";
+		public static onUISessionEnded = "onUISessionEnded";
 		public static getEntityMetadata = "getEntityMetadata";
 		public static notifyEvent = "notifyEvent";
 		public static softNotification = "softNotification";
@@ -48,6 +50,7 @@ namespace Microsoft.CIFramework
 		public static insertNotes = "insertNotes";
 		public static openKBSearchControl = "openkbsearchcontrol";
 		public static onSetPresenceEvent = "setPresenceEvent";
+		public static hardNotification = "hardNotification";
 	}
 
 	/**
@@ -138,6 +141,7 @@ namespace Microsoft.CIFramework
 		public static MaxUISessions = 5;
 		public static sessionColors = ["#2A757D", "#464775", "#9E2069", "#427825", "#511466", "#365C99", "#9C4141", "#84612A"];
 		public static activeSessionColors = ["#D7F5F3", "#EBECF7", "#FFE5F5", "#E0F5D5", "#F7E6FC", "#D9E8FF", "#FFE3E3", "#F2EBDF"];
+		public static sessionPanel = "sessionPanel";
 		public static DEFAULT_WIDGET_WIDTH = 378;
 		public static DEFAULT_SIDEPANEL_WIDTH = 34;
 		public static DEFAULT_SIDEPANEL_WIDTH_WITH_BORDER = 36;
@@ -151,6 +155,7 @@ namespace Microsoft.CIFramework
 		public static annotation = "annotation";
 		public static entitySetName = "entitySetName";
 		public static annotationId = "annotationid";
+		public static secRemaining = "secs remaining";
 	}
 
 	/**
