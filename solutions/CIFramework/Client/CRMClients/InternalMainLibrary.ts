@@ -41,8 +41,12 @@ namespace Microsoft.CIFramework.Internal {
 		["switchUISession", [switchUISession]],
 		["endUISession", [endUISession]],
 		["setAgentPresence", [setAgentPresence]],
-		["initializeAgentPresenceList", [initializeAgentPresenceList]]
+		["initializeAgentPresenceList", [initializeAgentPresenceList]],
+		["addgenerichandler", [addGenericHandler]],
+		["removegenerichandler", [removeGenericHandler]]
 	]);
+
+	let genericEventRegistrations = new Map<string, any>();
 
 	/**
 	 * Variable that will store all the info needed for library. There should be no other global variables in the library. Any info that needs to be stored should go into this.
@@ -118,7 +122,7 @@ namespace Microsoft.CIFramework.Internal {
 						setUsageData(usageData);
 					}
 					// initialize and set post message wrapper.
-				state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers,addGenericHandler,removeGenericHandler);
+				state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
 					// load the widgets onto client. 
 				state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
 						reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
@@ -803,16 +807,48 @@ namespace Microsoft.CIFramework.Internal {
  * @param event. event.detail will be the event detail
  */
 	function onGenericEvent(event: CustomEvent): void {
-		raiseEvent(event.detail, event.type, "Generic event is rised");
+		for(let v in this.genericEventRegistrations[event.type]) {
+			raiseEvent(event.detail, event.type, "Generic event is rised", v);
+			}
+		}
 	}
 
-	function addGenericHandler(event: CustomEvent): void {
-		if (!(event.type == "onmodechanged" || event.type == "onsizechanged" || event.type == "onpagenavigate" || event.type == "onsendkbarticle"))
-			listenerWindow.addEventListener(event.type, onGenericEvent);
+	export function addGenericHandler(parameters: Map<string, any>,messageType:string): Promise<boolean> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [messageType]);
+
+		if (provider) {
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "addGenericHandler", telemetryData);
+			setPerfData(perfData);
+			if (!(messageType == "onmodechanged" || messageType == "onsizechanged" || messageType == "onpagenavigate" || messageType == "onsendkbarticle")) {
+				this.genericEventRegistrations.append(getProvider(parameters, [messageType]));
+				window.addEventListener(messageType, onGenericEvent);
+			}
+			return Promise.resolve(true);
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, "addGenericHandler", appId, true, errorData);
+		}
 	}
 
-	function removeGenericHandler(event: CustomEvent): void {
-		if (!(event.type == "onmodechanged" || event.type == "onsizechanged" || event.type == "onpagenavigate" || event.type == "onsendkbarticle"))
-			listenerWindow.removeEventListener(event.type, onGenericEvent);
-	}
+	export function removeGenericHandler(parameters: Map<string, any>, messageType: string): Promise<boolean> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.eventType]);
+
+		if (provider) {
+
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "removeGenericHandler", telemetryData);
+			setPerfData(perfData);
+			if (!(messageType == "onmodechanged" || messageType == "onsizechanged" || messageType == "onpagenavigate" || messageType == "onsendkbarticle")) {
+				this.genericEventRegistrations.delete(getProvider(parameters, [Constants.eventType]));
+				window.removeEventListener(messageType, onGenericEvent);
+			}
+			return Promise.resolve(true);
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, "removeGenericHandler", appId, true, errorData);
+		}
+		}
 }
