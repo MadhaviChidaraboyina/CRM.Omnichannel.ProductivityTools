@@ -4,8 +4,9 @@
 	background-color: rgba(102, 102, 102, 0.5);
 	z-index: 2;
 	border-radius: 4px;
-	background-color: #333333;
+	background-color: #003D60;
 	padding-bottom: 10px;
+	box-shadow: 8px 8px 8px 8px grey;
 }
 .internalCommunication_CIFToastDiv{
 	position: relative;
@@ -42,7 +43,8 @@
 }
 .header_CIF{
 	display:block;
-	min-height:71px;
+	min-height:60px;
+	background-color:#003D60;
 }
 .CIFHeaderIcon{
 	font-family: CRM MDL2 ASSETS;
@@ -50,10 +52,14 @@
 	text-align:center;
 }
 .CIFHeaderIconDiv{
-	width:71px; 
-	height:71px; 
 	float:left; 
 	margin-left: 10px;
+}
+.CIFHeaderIconDivCollapsed{
+	width:35px; 
+	height:35px; 
+	float:left; 
+	margin-left: 5px;
 }
 .headerKeyCIF{
 	font-family:Segoe UI;
@@ -61,6 +67,16 @@
 	font-size:12px;
 	text-align:left;
 	color:#D8D8D8;
+}
+.headerTimerCIF{
+	font-family:Segoe UI;
+	font-style:normal;
+	font-size:12px;
+	text-align:left;
+	color:#D8D8D8;
+	float:right;
+	display:none;
+	margin-right:10px;
 }
 .headerNameCIF{
 	font-family:Segoe UI;
@@ -76,9 +92,11 @@
 	font-size:12px;
 	text-align:left;
 	color:#D8D8D8;
+	margin-left:60px;
 }
 .bodyDivCIF{
 	display:block;
+	background-color:#003D60;
 }
 .bodyDivider_CIF{ 
 	height:1px; 
@@ -93,7 +111,7 @@
 	text-align:Left;
 	height:13px;
 	color:#FFFFFF;
-	margin-right:35px;
+	margin-right:3px;
 }
 .broadCastLabel2{
 	margin-left: 10px;
@@ -409,6 +427,14 @@
 	color:#333333;
 	float:right;
 	margin-right:10px;
+}
+.hardNotificationLabel2{
+	font-family:Segoe UI;
+	text-align:left;
+	color:#FFFFFF;
+	font-style: Normal, Negreta;
+	font-size: 14px;
+	line-height: 16px;
 }
 @font-face{font-family:"CRMMDL2";src:url('/uclient/resources/styles/CRMMDL2.woff') format('woff');font-weight: normal;font-style: normal;}
 .FontIcons-closeSoftNotification_CIF:before {font-family: "CRMMDL2"; content: "\E711";}

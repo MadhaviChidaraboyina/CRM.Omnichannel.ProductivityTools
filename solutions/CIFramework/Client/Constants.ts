@@ -50,6 +50,7 @@ namespace Microsoft.CIFramework
 		public static insertNotes = "insertNotes";
 		public static openKBSearchControl = "openkbsearchcontrol";
 		public static onSetPresenceEvent = "setPresenceEvent";
+		public static hardNotification = "hardNotification";
 	}
 
 	/**
@@ -154,6 +155,7 @@ namespace Microsoft.CIFramework
 		public static annotation = "annotation";
 		public static entitySetName = "entitySetName";
 		public static annotationId = "annotationid";
+		public static secRemaining = "secs remaining";
 	}
 
 	/**

@@ -492,4 +492,8 @@
     <value>Channel Provider Configuration</value>
     <comment>Title for Area 'New_Area' Group 'New_Group'</comment>
   </data>
+  <data name="1:label,hardNotificationLabel2" xml:space="preserve">
+    <value>secs remaining</value>
+    <comment>'Notification header' : label for timer bar</comment>
+  </data>
 </root>
