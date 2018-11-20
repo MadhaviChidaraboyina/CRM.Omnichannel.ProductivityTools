@@ -158,21 +158,81 @@ div#PresenceList
 	left: 1px;
 }
 
-.uiSession
+.widgetArea
 {
-	display: flex;
-	height: 50px;
-	cursor: pointer;
+	width: calc(var(--widgetAreaWidth));
+	position: absolute;
 }
 
-.avatarCircle
+[dir='ltr'] .widgetArea
+{
+	right: calc(var(--sessionPanelAreaWidth));
+}
+
+[dir='rtl'] .widgetArea
+{
+	left: calc(var(--sessionPanelAreaWidth));
+}
+
+.widgetControl
+{
+	position: absolute;
+}
+
+[dir='ltr'] .widgetControl
+{
+	right: calc(var(--sessionPanelWidth)); 
+}
+
+[dir='rtl'] .widgetControl
+{
+	left: calc(var(--sessionPanelWidth)); 
+}
+
+.flexJustify
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sessionPanel
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #EBEBEB;
+	width: calc(var(--sessionPanelAreaWidth) - 2px);
+	position: fixed;
+	height: calc(100% - 2px);
+}
+
+[dir='ltr'] .sessionPanel
+{
+	right: 0px;
+}
+
+[dir='rtl'] .sessionPanel
+{
+	left: 0px;
+}
+
+.uiSession
+{
+	height: 50px;
+	cursor: pointer;
+	border: none;
+	padding: 0px;
+	background-color: transparent;
+}
+
+.iconCircle
 {
 	width: 26px;
 	height: 26px; 
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	text-align: center;
-	margin: 12px 4px;
+	margin: 0px 3px;
 }
 
 .initials
@@ -185,12 +245,9 @@ div#PresenceList
 	font-family: Segoe UI;
 }
 
-.selectionLine {
-	border-radius: 20%;
-	height: 21px;
-	width: 2px;
-	margin: 15px 0px;
-	display: none;
+.crossIconFont
+{
+	font-size: 20px;
 }
 
 .PresenceListItem 

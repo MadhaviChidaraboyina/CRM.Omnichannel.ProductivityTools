@@ -247,21 +247,6 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		startUISession(context: any, initials: string): [string, IErrorHandler] {
-			var UISessionsIterator = this.uiSessions.values();
-			let currentUISession = UISessionsIterator.next();
-			while (!currentUISession.done) {
-				if (currentUISession.value.context == context) {
-					let error = {} as IErrorHandler;
-					error.reportTime = new Date().toUTCString();
-					error.errorMsg = "UISession with the same context already exists";
-					error.errorType = errorTypes.GenericError;
-					error.sourceFunc = startUISession.name;
-					return [null, error];
-				}
-
-				currentUISession = UISessionsIterator.next();
-			}
-
 			if (!SessionPanel.getInstance().canAddUISession()) {
 				//raise notification
 
@@ -283,6 +268,8 @@ namespace Microsoft.CIFramework.Internal {
 
 			this.uiSessions.set(sessionId, session);
 			SessionPanel.getInstance().addUISession(sessionId, this, initials);
+
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleUISession == sessionId).set("context", context), MessageType.onUISessionStarted);
 			return [sessionId, null];
 		}
 
@@ -296,7 +283,7 @@ namespace Microsoft.CIFramework.Internal {
 				return [null, error];
 			}
 
-			if (SessionPanel.getInstance().visibleUISession == sessionId) {
+			if (SessionPanel.getInstance().getvisibleUISession() == sessionId) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
 				error.errorMsg = "Session with ID:" + sessionId + " is already visible";
@@ -305,7 +292,7 @@ namespace Microsoft.CIFramework.Internal {
 				return [null, error];
 			}
 
-			SessionPanel.getInstance().switchSession(sessionId);
+			SessionPanel.getInstance().switchUISession(sessionId);
 			return [sessionId, null];
 		}
 
@@ -319,8 +306,12 @@ namespace Microsoft.CIFramework.Internal {
 				return [null, error];
 			}
 
-			this.uiSessions.delete(sessionId);
-			SessionPanel.getInstance().removeUISession(sessionId);
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleUISession == sessionId).set("context", this.uiSessions.get(sessionId).context), MessageType.onUISessionEnded)
+				.then(function () {
+					this.uiSessions.delete(sessionId);
+					SessionPanel.getInstance().removeUISession(sessionId);
+				});
+
 			return [sessionId, null];
 		}
 

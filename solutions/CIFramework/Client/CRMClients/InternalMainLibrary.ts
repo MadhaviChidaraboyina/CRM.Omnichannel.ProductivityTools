@@ -68,7 +68,7 @@ namespace Microsoft.CIFramework.Internal {
 			return false;
 		}
 
-		// set the presence
+		SessionPanel.getInstance().setState(state);
 		presence = GetPresenceManager(clientType);
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
