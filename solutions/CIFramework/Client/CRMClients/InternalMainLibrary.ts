@@ -46,7 +46,7 @@ namespace Microsoft.CIFramework.Internal {
 		["removegenerichandler", [removeGenericHandler]]
 	]);
 
-	let genericEventRegistrations = new Map<string, any>();
+	let genericEventRegistrations = new Map<string, CIProvider[]>();
 
 	/**
 	 * Variable that will store all the info needed for library. There should be no other global variables in the library. Any info that needs to be stored should go into this.
@@ -803,13 +803,12 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	/**
- * The handler will be called for generic event 
- * @param event. event.detail will be the event detail
- */
+* The handler will be called for generic event 
+* @param event. event.detail will be the event detail
+*/
 	function onGenericEvent(event: CustomEvent): void {
-		for(let v in this.genericEventRegistrations[event.type]) {
-			raiseEvent(event.detail, event.type, "Generic event is rised", v);
-			}
+		for (let i = 0; i < this.genericEventRegistrations[event.type].length; i++) {
+			raiseEvent(event.detail, event.type, "Generic event is rised", this.genericEventRegistrations[event.type][i]);
 		}
 	}
 
@@ -822,7 +821,7 @@ namespace Microsoft.CIFramework.Internal {
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "addGenericHandler", telemetryData);
 			setPerfData(perfData);
 			if (!(messageType == "onmodechanged" || messageType == "onsizechanged" || messageType == "onpagenavigate" || messageType == "onsendkbarticle")) {
-				this.genericEventRegistrations.append(getProvider(parameters, [messageType]));
+				this.genericEventRegistrations.append(provider);
 				window.addEventListener(messageType, onGenericEvent);
 			}
 			return Promise.resolve(true);
@@ -842,7 +841,7 @@ namespace Microsoft.CIFramework.Internal {
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "removeGenericHandler", telemetryData);
 			setPerfData(perfData);
 			if (!(messageType == "onmodechanged" || messageType == "onsizechanged" || messageType == "onpagenavigate" || messageType == "onsendkbarticle")) {
-				this.genericEventRegistrations.delete(getProvider(parameters, [Constants.eventType]));
+				this.genericEventRegistrations.delete(provider);
 				window.removeEventListener(messageType, onGenericEvent);
 			}
 			return Promise.resolve(true);
@@ -850,5 +849,5 @@ namespace Microsoft.CIFramework.Internal {
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, "removeGenericHandler", appId, true, errorData);
 		}
-		}
+	}
 }
