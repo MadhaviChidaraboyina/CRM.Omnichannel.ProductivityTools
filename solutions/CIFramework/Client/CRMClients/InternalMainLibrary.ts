@@ -120,7 +120,7 @@ namespace Microsoft.CIFramework.Internal {
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
 					// load the widgets onto client. 
-				state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
+					state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
 						reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
 				});
 				}
@@ -279,9 +279,9 @@ namespace Microsoft.CIFramework.Internal {
 					setPerfData(perfData);
 					return resolve(result);
 				},
-				(error: Map<string, any>) =>
+				(error: IErrorHandler) =>
 				{
-					return reject(error);
+					return rejectWithErrorMessage(error.errorMsg, "setClickToAct", appId, true, error);
 				});
 			});
 		}
