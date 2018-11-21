@@ -292,7 +292,9 @@ namespace Microsoft.CIFramework.Internal {
 				}
 				if(childDiv.getElementsByClassName("header_NotificationType_CIF")[0] != null){
 					if(countNotificationTypeDisp == 0){
-						childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:block;');
+						if(isTimeOut == true){
+							childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:block;');
+						}
 					}else{
 						childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:none;');
 					}
