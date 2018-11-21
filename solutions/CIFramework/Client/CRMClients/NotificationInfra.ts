@@ -25,6 +25,7 @@ namespace Microsoft.CIFramework.Internal {
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
 		let i = 0;
+		let isTimeOut = false;
 		let map = new Map();
 		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
 			map = renderSoftNotification(header,body,notificationType[1]);
@@ -164,7 +165,6 @@ namespace Microsoft.CIFramework.Internal {
 			toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].innerHTML = headerVal;
 			toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].setAttribute("aria-label", headerVal);
 			let chatWindowBody = toastDiv.getElementsByClassName("bodyDivCIF")[len-1];
-			let isTimeOut = false;
 			if(actions != null && actions != "undefined"){
 				let accept = false;
 				let reject = false;
@@ -493,7 +493,7 @@ namespace Microsoft.CIFramework.Internal {
 								var mapReturn = new Map().set(Constants.value,new Map().set(Constants.value,Constants.Reject));
 								return resolve(mapReturn);
 							}
-						}, 20000);
+						}, 20000000);
 					}
 				}
 			}else{

@@ -150,15 +150,27 @@
 	background-color: #F1F1F1;
 }
 .broadCastLabel1{
-	margin-left: 10px;
 	font-family:Segoe UI;
 	font-style:Semibold;
 	font-weight: 600;
 	font-size:11px;
-	text-align:Left;
 	height:13px;
 	color:#FFFFFF;
+}
+[dir='ltr'] .broadCastLabel1
+{
+	margin-left: 10px;
+	text-align:Left;
 	margin-right:3px;
+	float:left;
+}
+
+[dir='rtl'] .broadCastLabel1
+{
+	margin-right: 10px;
+	text-align:right;
+	margin-left:3px;
+	float:right;
 }
 .broadCastLabel2{
 	margin-left: 10px;
@@ -449,8 +461,17 @@
 .headerSoftNotification_CIF{
 	display:block;
 	min-height:21px;
+}
+[dir='ltr'] .headerSoftNotification_CIF
+{
 	margin-right:10px;
 }
+
+[dir='rtl'] .headerSoftNotification_CIF
+{
+	margin-left:10px;
+}
+
 .bodyDivSoftToast_CIF{
 	display:block;
 }
@@ -458,28 +479,58 @@
 	width:16px; 
 	height:16px; 
 	font-style:Regular; 
-	font-size:12px; 
-	text-align:Left; 
-	float:left; 
-	margin-right:10px;
-	margin-left: 10px;
+	font-size:12px;   
 	font-family: CRM MDL2 ASSETS;
 	color:#FFFFFF;
+}
+[dir='ltr'] .chatWindowHeaderSpan_CIF
+{
+	text-align:Left;
+	float:left;
+	margin-right:10px;
+	margin-left: 10px;
+}
+
+[dir='rtl'] .chatWindowHeaderSpan_CIF
+{
+	text-align:right;
+	float:right;
+	margin-left:10px;
+	margin-right: 10px;
 }
 .chatWindowHeaderLabel_CIF{
 	font-family:Segoe UI;
 	font-style:Semibold;
 	font-weight: 600;
 	font-size:14px;
-	text-align:Left;
 	height:16px;
 	color:#FFFFFF; 
+}
+[dir='ltr'] .chatWindowHeaderLabel_CIF
+{
+	text-align:Left;
+	float:left;
+}
+
+[dir='rtl'] .chatWindowHeaderLabel_CIF
+{
+	text-align:right;
+	float:right;
 }
 .closeSoftNotification_CIF{
 	font-family: CRM MDL2 ASSETS;
 	color:#FFFFFF;
+}
+[dir='ltr'] .closeSoftNotification_CIF
+{
 	float:right;
 	margin-right:10px;
+}
+
+[dir='rtl'] .closeSoftNotification_CIF
+{
+	float:left;
+	margin-left:10px;
 }
 .chatWindowHeaderDiv_CIF{
 	height:11px;
@@ -495,15 +546,27 @@
 }
 .notificationBodyLabel1_CIF{
 	display: inline-table;
-	margin-left: 10px;
 	font-family:Segoe UI;
 	font-style:normal;
 	font-size:14px;
-	text-align:left;
 	height:16px;
-	margin-right:11px;
 	word-wrap:break-word;
 	color:#D8D8D8;
+}
+[dir='ltr'] .notificationBodyLabel1_CIF
+{
+	margin-left: 10px;
+	text-align:left;
+	margin-right:11px;
+	float:left;
+}
+
+[dir='rtl'] .notificationBodyLabel1_CIF
+{
+	margin-right: 10px;
+	text-align:right;
+	margin-left:11px;
+	float:right;
 }
 .notificationBodyLabel2_CIF{
 	font-family:Segoe UI;
@@ -515,6 +578,17 @@
 	word-wrap:break-word;
 	color:#FFFFFF;
 	display:inline-table;
+}
+[dir='ltr'] .notificationBodyLabel2_CIF
+{
+	text-align:left;
+	float:left;
+}
+
+[dir='rtl'] .notificationBodyLabel2_CIF
+{
+	text-align:right;
+	float:right;
 }
 .notesDivCIF{
 	position: relative;
@@ -537,11 +611,20 @@
 	font-weight: 600;
 }
 .newTextAreaCIF{
-	margin-left: 20px;
 	background-color: #FFFAE9;
 }
+[dir='ltr'] .newTextAreaCIF
+{
+	margin-left: 20px;
+	float:left;
+}
+
+[dir='rtl'] .newTextAreaCIF
+{
+	margin-right: 20px;
+	float:right;
+}
 .notesSaveButtonCIF{
-	float: right;
 	color: #FFFFFF;
 	background-color: #315FA2;
 	font-style: Semibold;
@@ -550,11 +633,20 @@
 	font-size: 12px;
 	line-height: 14px;
 	height: 28px;
-	margin-right: 20px;
 	border-color: #315FA2;
 }
-.notesCancelButtonCIF{
+[dir='ltr'] .notesSaveButtonCIF
+{
 	float: right;
+	margin-right: 20px;
+}
+
+[dir='rtl'] .notesSaveButtonCIF
+{
+	float: left;
+	margin-left: 20px;
+}
+.notesCancelButtonCIF{
 	color: #315FA2;
 	font-style: Semibold;
 	font-weight: 600;
@@ -562,23 +654,52 @@
 	font-size: 12px;
 	line-height: 14px;
 	height: 28px;
-	margin-right: 12px;
 	margin-top: 10px;
 	text-decoration: none;
+}
+[dir='ltr'] .notesCancelButtonCIF
+{
+	float: right;
+	margin-right: 12px;
+}
+
+[dir='rtl'] .notesCancelButtonCIF
+{
+	float: left;
+	margin-left: 12px;
 }
 .closeNotes_CIF{
 	font-family: CRM MDL2 ASSETS;
 	color:#333333;
+}
+[dir='ltr'] .closeNotes_CIF
+{
 	float:right;
 	margin-right:10px;
 }
+
+[dir='rtl'] .closeNotes_CIF
+{
+	float: left;
+	margin-left: 10px;
+}
 .hardNotificationLabel2{
 	font-family:Segoe UI;
-	text-align:left;
 	color:#FFFFFF;
 	font-style: Normal, Negreta;
 	font-size: 14px;
 	line-height: 16px;
+}
+[dir='ltr'] .hardNotificationLabel2
+{
+	float: left;
+	text-align:left;
+}
+
+[dir='rtl'] .hardNotificationLabel2
+{
+	float: right;
+	text-align:right;
 }
 @font-face{font-family:"CRMMDL2";src:url('/uclient/resources/styles/CRMMDL2.woff') format('woff');font-weight: normal;font-style: normal;}
 .FontIcons-closeSoftNotification_CIF:before {font-family: "CRMMDL2"; content: "\E711";}

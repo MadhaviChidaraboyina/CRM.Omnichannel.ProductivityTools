@@ -311,10 +311,10 @@ div#PresenceList
 
 [dir='ltr'] .notesDiv
 {
-	right: 0px;
+	left: 0px;
 }
 
 [dir='rtl'] .notesDiv
 {
-	left: 0px;
+	right: 0px;
 }
