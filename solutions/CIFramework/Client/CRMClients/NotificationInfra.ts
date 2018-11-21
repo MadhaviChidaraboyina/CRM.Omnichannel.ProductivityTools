@@ -493,7 +493,7 @@ namespace Microsoft.CIFramework.Internal {
 								var mapReturn = new Map().set(Constants.value,new Map().set(Constants.value,Constants.Reject));
 								return resolve(mapReturn);
 							}
-						}, 20000000);
+						}, 20000);
 					}
 				}
 			}else{
