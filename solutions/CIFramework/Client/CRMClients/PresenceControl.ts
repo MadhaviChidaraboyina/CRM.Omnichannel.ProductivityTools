@@ -118,10 +118,20 @@ namespace Microsoft.CIFramework.Internal {
 			var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
 			presenceList.style.display = "none";
 			let updatedPresence: any = {};
-			updatedPresence.presenceId = e.target.parentElement.getAttribute("id");
-			updatedPresence.presenceText = e.target.parentElement.firstElementChild.nextSibling.innerText;
-			updatedPresence.presenceColor = e.target.parentElement.firstChild.style.backgroundColor;
-			updatedPresence.basePresenceStatus = e.target.parentElement.firstElementChild.nextSibling.innerText;
+
+			let actualElement = e.target;
+			if (!isNullOrUndefined(actualElement.getAttribute("id")) && actualElement.getAttribute("id") != "") {
+				updatedPresence.presenceId = actualElement.getAttribute("id");
+				updatedPresence.presenceText = actualElement.firstElementChild.nextSibling.innerText;
+				updatedPresence.presenceColor = actualElement.firstChild.style.backgroundColor;
+				updatedPresence.basePresenceStatus = actualElement.firstElementChild.nextSibling.innerText;
+			}
+			else {
+				updatedPresence.presenceId = actualElement.parentElement.getAttribute("id");
+				updatedPresence.presenceText = actualElement.parentElement.firstElementChild.nextSibling.innerText;
+				updatedPresence.presenceColor = actualElement.parentElement.firstChild.style.backgroundColor;
+				updatedPresence.basePresenceStatus = actualElement.parentElement.firstElementChild.nextSibling.innerText;
+			}
 			var setPresenceEvent = new CustomEvent('setPresenceEvent', {
 				detail: { "presenceId": e.target.parentElement.getAttribute("id"), "presenceInfo": updatedPresence }
 			});
