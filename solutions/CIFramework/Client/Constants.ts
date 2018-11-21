@@ -51,6 +51,8 @@ namespace Microsoft.CIFramework
 		public static openKBSearchControl = "openkbsearchcontrol";
 		public static onSetPresenceEvent = "setPresenceEvent";
 		public static hardNotification = "hardNotification";
+		public static removeGenericHandler = "removeGenericHandler";
+		public static addGenericHandler = "addGenericHandler";
 	}
 
 	/**

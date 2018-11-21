@@ -524,6 +524,11 @@ namespace Microsoft.CIFramework
 		let startTime = Date.now();
 		if(!(isNullOrUndefined(eventName) || eventName == "") && !isNullOrUndefined(handlerFunction)){
 			postMessage.addHandler(eventName, handlerFunction);
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.addGenericHandler,
+				messageData: new Map().set(Constants.eventType, eventName)
+			}
+			sendMessage<boolean>("addGenericHandler", payload, false);
 		}else{
 			if(isNullOrUndefined(eventName) || eventName == ""){
 				return postMessageNamespace.rejectWithErrorMessage("The parameter EventName is blank. Provide a value to the parameter.");
@@ -542,6 +547,11 @@ namespace Microsoft.CIFramework
 		let startTime = Date.now();
 		if(!(isNullOrUndefined(eventName) || eventName == "") && !isNullOrUndefined(handlerFunction)){
 			postMessage.removeHandler(eventName, handlerFunction);
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.removeGenericHandler,
+				messageData: new Map().set(Constants.eventType, eventName)
+			}
+			sendMessage<boolean>("removeGenericHandler", payload, false);
 		}else{
 			if(isNullOrUndefined(eventName) || eventName == ""){
 				return postMessageNamespace.rejectWithErrorMessage("The EventName parameter is blank. Provide a value to the parameter.");

@@ -41,8 +41,12 @@ namespace Microsoft.CIFramework.Internal {
 		["switchUISession", [switchUISession]],
 		["endUISession", [endUISession]],
 		["setAgentPresence", [setAgentPresence]],
-		["initializeAgentPresenceList", [initializeAgentPresenceList]]
+		["initializeAgentPresenceList", [initializeAgentPresenceList]],
+		["addgenerichandler", [addGenericHandler]],
+		["removegenerichandler", [removeGenericHandler]]
 	]);
+
+	let genericEventRegistrations = new Map<string, CIProvider[]>();
 
 	/**
 	 * Variable that will store all the info needed for library. There should be no other global variables in the library. Any info that needs to be stored should go into this.
@@ -118,7 +122,7 @@ namespace Microsoft.CIFramework.Internal {
 						setUsageData(usageData);
 					}
 					// initialize and set post message wrapper.
-					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
+				state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
 					// load the widgets onto client. 
 					state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
 						reportUsage("initializeCI Executed successfully in" + (Date.now() - startTime.getTime()) + "ms for providers: " + mapToString(new Map<string, any>().set(Constants.value, result.entities)));
@@ -133,6 +137,8 @@ namespace Microsoft.CIFramework.Internal {
 
 		return false;
 	}
+
+
 
 	/*Utility function to raise events registered for the framework*/
 	function raiseEvent(data: Map<string, any>, messageType: string, reportMessage: string, provider?: CIProvider): void {
@@ -793,6 +799,73 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, "initializeAgentPresenceList", appId, true, errorData);
+		}
+	}
+
+	/**
+	* The handler will be called for generic event 
+	* @param event. event.detail will be the event detail
+	*/
+	function onGenericEvent(event: CustomEvent): void {
+		if (this.genericEventRegistrations.has(event.type)) {
+			for (let i = 0; i < this.genericEventRegistrations.get(event.type).length; i++) {
+				raiseEvent(event.detail, event.type, "Generic event rise", this.genericEventRegistrations.get(event.type)[i]);
+			}
+		}
+	}
+
+	function isPredefinedMessageType(messageType:string): boolean {
+		return messageType == "onmodechanged" || messageType == "onsizechanged" || messageType == "onpagenavigate" || messageType == "onsendkbarticle";
+	}
+
+	export function addGenericHandler(parameters: Map<string, any>,messageType:string): Promise<boolean> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [messageType]);
+		if (provider) {
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "addGenericHandler", telemetryData);
+			setPerfData(perfData);
+			if (!isPredefinedMessageType(messageType)) {
+				if (this.genericEventRegistrations.has(messageType) && this.genericEventRegistrations.get(messageType).length>0) {
+					this.genericEventRegistrations.get(messageType).append(provider);
+				}
+				else {
+					let list:CIProvider[];
+					list[0] = provider;
+					this.genericEventRegistrations.set(messageType, list);
+					window.addEventListener(messageType, onGenericEvent);
+				}
+			}
+			return Promise.resolve(true);
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, "addGenericHandler", appId, true, errorData);
+		}
+	}
+
+	export function removeGenericHandler(parameters: Map<string, any>, messageType: string): Promise<boolean> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.eventType]);
+
+		if (provider) {
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "removeGenericHandler", telemetryData);
+			setPerfData(perfData);
+			if (!isPredefinedMessageType(messageType)) {
+				if (this.genericEventRegistrations.has(messageType)) {
+					for (let i = 0; i < this.genericEventRegistrations.get(messageType).length; i++) {
+							if (this.genericEventRegistrations.get(messageType)[i] == provider)
+								this.genericEventRegistrations.get(messageType).delete(this.genericEventRegistrations.get(messageType)[i]);
+					}
+					}
+				if (this.genericEventRegistrations.get(messageType).length == 0) {
+					window.removeEventListener(messageType, onGenericEvent);//remove after all providers are removed
+				}
+			}
+			return Promise.resolve(true);
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, "removeGenericHandler", appId, true, errorData);
 		}
 	}
 }
