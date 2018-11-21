@@ -43,6 +43,7 @@
 }
 .header_CIF{
 	display:block;
+	margin-top:10px;
 	min-height:60px;
 	background-color:#003D60;
 }
@@ -52,8 +53,18 @@
 	text-align:center;
 }
 .CIFHeaderIconDiv{
+	
+}
+[dir='ltr'] .CIFHeaderIconDiv
+{
 	float:left; 
 	margin-left: 10px;
+}
+
+[dir='rtl'] .CIFHeaderIconDiv
+{
+	float:right; 
+	margin-right: 10px;
 }
 .CIFHeaderIconDivCollapsed{
 	width:35px; 
@@ -65,34 +76,70 @@
 	font-family:Segoe UI;
 	font-style:normal;
 	font-size:12px;
-	text-align:left;
 	color:#D8D8D8;
+}
+[dir='ltr'] .headerKeyCIF
+{
+	text-align:left;
+}
+
+[dir='rtl'] .headerKeyCIF
+{
+	text-align:right;
 }
 .headerTimerCIF{
 	font-family:Segoe UI;
 	font-style:normal;
 	font-size:12px;
-	text-align:left;
 	color:#D8D8D8;
-	float:right;
 	display:none;
+}
+[dir='ltr'] .headerTimerCIF
+{
+	text-align:left;
+	float:right;
 	margin-right:10px;
+}
+
+[dir='rtl'] .headerTimerCIF
+{
+	text-align:right;
+	float:left;
+	margin-left:10px;
 }
 .headerNameCIF{
 	font-family:Segoe UI;
 	font-style:Semibold;
 	font-weight: 600;
 	font-size:18px;
-	text-align:left;
 	color:#FFFFFF;
+}
+[dir='ltr'] .headerNameCIF
+{
+	text-align:left;
+}
+
+[dir='rtl'] .headerNameCIF
+{
+	text-align:right;
 }
 .headerDetailsCIF{
 	font-family:Segoe UI;
 	font-style:normal;
 	font-size:12px;
-	text-align:left;
 	color:#D8D8D8;
 	margin-left:60px;
+}
+[dir='ltr'] .headerDetailsCIF
+{
+	text-align:left;
+	margin-left:60px;
+}
+
+[dir='rtl'] .headerDetailsCIF
+{
+	text-align:right;
+	margin-right:60px;
 }
 .bodyDivCIF{
 	display:block;
@@ -176,22 +223,33 @@
 }
 .body_CIFLabel1{
 	display: inline-table;
-	margin-left: 10px;
 	font-family:Segoe UI;
 	font-style:normal;
 	font-size:14px;
-	text-align:left;
 	height:16px;
-	margin-right:11px;
 	word-wrap:break-word;
 	color:#D8D8D8;
+}
+[dir='ltr'] .body_CIFLabel1
+{
+	margin-left: 10px;
+	text-align:left;
+	margin-right:11px;
+	float:left;
+}
+
+[dir='rtl'] .body_CIFLabel1
+{
+	margin-right: 10px;
+	text-align:right;
+	margin-left:11px;
+	float:right;
 }
 .body_CIFLabel2{
 	font-family:Segoe UI;
 	font-style:Semibold;
 	font-weight: 600;
 	font-size:14px;
-	text-align:left;
 	height:16px; 
 	color:#FFFFFF;
 	display: inline-block;
@@ -202,12 +260,22 @@
 	text-overflow: ellipsis;
 	word-break: break-all;
 }
+[dir='ltr'] .body_CIFLabel2
+{
+	text-align:left;
+	margin-right:11px;
+}
+
+[dir='rtl'] .body_CIFLabel2
+{
+	text-align:right;
+	float:left;
+}
 .body_CIFLabel2_mouseover{
 	font-family:Segoe UI;
 	font-style:Semibold;
 	font-weight: 600;
 	font-size:14px;
-	text-align:left;
 	height:16px;
 	color:#FFFFFF;
 	display: inline-table;
@@ -215,12 +283,22 @@
 	white-space: normal;
 	overflow: visible;
 }
+[dir='ltr'] .body_CIFLabel2_mouseover
+{
+	text-align:left;
+	float:right;
+}
+
+[dir='rtl'] .body_CIFLabel2_mouseover
+{
+	text-align:right;
+	float:left;
+}
 .body_CIFLabel2_mouseout{
 	font-family:Segoe UI;
 	font-style:Semibold;
 	font-weight: 600;
 	font-size:14px;
-	text-align:left;
 	height:16px; 
 	color:#FFFFFF;
 	display: inline-block;
@@ -230,6 +308,17 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	word-break: break-all;
+}
+[dir='ltr'] .body_CIFLabel2_mouseout
+{
+	text-align:left;
+	float:right;
+}
+
+[dir='rtl'] .body_CIFLabel2_mouseout
+{
+	text-align:right;
+	float:left;
 }
 .bodyDivider_CIF_invisible{
 	height:1px; 
@@ -239,47 +328,102 @@
 .bothButtonsAccept_CIF{
 	background-color:#47C21D;
 	height:40px;
-	margin-left: 10px;
 	border-color: #47C21D;
+}
+[dir='ltr'] .bothButtonsAccept_CIF
+{
+	margin-left: 10px;
+}
+
+[dir='rtl'] .bothButtonsAccept_CIF
+{
+	margin-right: 10px;
 }
 .singleButtonAccept_CIF{
 	background-color:#47C21D;
 	height:40px;
+	border-color: #47C21D;
+}
+[dir='ltr'] .singleButtonAccept_CIF
+{
 	margin-right:14px;
 	margin-left: 10px;
-	border-color: #47C21D;
+	float:left;
+}
+
+[dir='rtl'] .singleButtonAccept_CIF
+{
+	margin-left:14px;
+	margin-right: 10px;
+	float:right;
 }
 .bothButtonsReject_CIF{
 	background-color:#EA0600;
 	height:40px;
-	margin-left: 10px;
 	border-color: #EA0600;
+}
+[dir='ltr'] .bothButtonsReject_CIF
+{
+	margin-left: 10px;
+}
+
+[dir='rtl'] .bothButtonsReject_CIF
+{
+	margin-right: 10px;
 }
 .singleButtonReject_CIF{
 	background-color:#EA0600;
 	height:40px;
-	margin-right:14px;
 	border-color: #EA0600;
+}
+[dir='ltr'] .singleButtonReject_CIF
+{
+	margin-right:14px;
+	float:right;
+}
+
+[dir='rtl'] .singleButtonReject_CIF
+{
+	margin-left:14px;
+	float:left;
 }
 .acceptButtonSpan_CIF{
 	width:16px; 
-	height:16px; 
-	float:left; 
+	height:16px;  
 	font-style:Regular; 
 	font-size:16px; 
-	text-align:Left;
 	font-family: CRM MDL2 ASSETS;
 	color:#FFFFFF;
 }
+[dir='ltr'] .acceptButtonSpan_CIF
+{
+	float:left;
+	text-align:Left;
+}
+
+[dir='rtl'] .acceptButtonSpan_CIF
+{
+	float:right;
+	text-align:right;
+}
 .rejectButtonSpan_CIF{
 	width:16px; 
-	height:16px; 
-	float:left; 
+	height:16px;  
 	font-style:Regular; 
 	font-size:16px; 
-	text-align:Left;
 	font-family: CRM MDL2 ASSETS;
 	color:#FFFFFF;
+}
+[dir='ltr'] .rejectButtonSpan_CIF
+{
+	float:left;
+	text-align:Left;
+}
+
+[dir='rtl'] .rejectButtonSpan_CIF
+{
+	float:right;
+	text-align:right;
 }
 .timeOutCIF{
 	display:none;
