@@ -586,7 +586,9 @@ namespace Microsoft.CIFramework.Internal {
 										isHeaderDetailsDisp = 1;
 									}
 									if(childDiv.getElementsByClassName("header_NotificationType_CIF")[0] != null){
-										childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:block;');
+										if(waitTime != -1){
+											childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:block;');
+										}
 										isNotificationTypeDisp = 1;
 									}
 									if(isBodyDisp == 1 && isHeaderDetailsDisp == 1 && isNotificationTypeDisp == 1){
