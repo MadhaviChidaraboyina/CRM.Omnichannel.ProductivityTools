@@ -826,7 +826,7 @@ namespace Microsoft.CIFramework.Internal {
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "addGenericHandler", telemetryData);
 			setPerfData(perfData);
 			if (!isPredefinedMessageType(messageType)) {
-				if (this.genericEventRegistrations.has(messageType)) {
+				if (this.genericEventRegistrations.has(messageType) && this.genericEventRegistrations.get(messageType).length>0) {
 					this.genericEventRegistrations.get(messageType).append(provider);
 				}
 				else {
@@ -853,7 +853,7 @@ namespace Microsoft.CIFramework.Internal {
 			setPerfData(perfData);
 			if (!isPredefinedMessageType(messageType)) {
 				if (this.genericEventRegistrations.has(messageType)) {
-					for (let i = 0; i < this.genericEventRegistrations.get(event.type).length; i++) {
+					for (let i = 0; i < this.genericEventRegistrations.get(messageType).length; i++) {
 							if (this.genericEventRegistrations.get(messageType)[i] == provider)
 								this.genericEventRegistrations.get(messageType).delete(this.genericEventRegistrations.get(messageType)[i]);
 					}
