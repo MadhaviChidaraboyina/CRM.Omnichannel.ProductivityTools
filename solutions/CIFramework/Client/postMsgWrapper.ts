@@ -188,16 +188,11 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		postMsg(receivingWindow: Window, message: IExternalRequestMessageType, targetOrigin: string, isEventFlag: boolean, noTimeout?: boolean): Promise<Map<string, any>> {
 			if ((receivingWindow) && (targetOrigin != "*")) {
 				let deferred = this.createDeferred(noTimeout);
-				if (!isEventFlag) {
-					let trackingCorrelationId = this.getCorrelationId();
-					let messageInternal = message as IRequestMessageType;
-					messageInternal[messageCorrelationId] = trackingCorrelationId;
-					this.pendingPromises.set(trackingCorrelationId, deferred);
-					return this.postMsgInternal(receivingWindow, messageInternal, targetOrigin, deferred);
-				}
-				else {
-					return this.postMsgInternal(receivingWindow, message, targetOrigin, deferred);
-				}
+				let trackingCorrelationId = this.getCorrelationId();
+				let messageInternal = message as IRequestMessageType;
+				messageInternal[messageCorrelationId] = trackingCorrelationId;
+				this.pendingPromises.set(trackingCorrelationId, deferred);
+				return this.postMsgInternal(receivingWindow, messageInternal, targetOrigin, deferred);
 			}
 			else {
 				return rejectWithErrorMessage("Receiving window or targetOrigin cannot be unspecified");
