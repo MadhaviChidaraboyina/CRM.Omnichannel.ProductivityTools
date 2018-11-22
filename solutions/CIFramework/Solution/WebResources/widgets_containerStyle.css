@@ -11,19 +11,10 @@ div#PresenceList
 
 .ColorNode
 {
-	height:16px;
-	width:16px;
+	height:12px;
+	width:12px;
 	border-radius: 50%;
-}
-
-[dir='ltr'] .ColorNode
-{
-	float: left;
-}
-
-[dir='rtl'] .ColorNode
-{
-	float: right;
+	vertical-align: middle;
 }
 
 .textNode
@@ -36,22 +27,9 @@ div#PresenceList
 	overflow: hidden;
 }
 
-[dir='ltr'] .textNode
-{
-	text-align: left;
-	margin-left: 2px;
-}
-
-[dir='rtl'] .textNode
-{
-	text-align: right;
-	margin-right: 2px;
-}
-
 .agentPresenceDiv
 {
 	background-color: #FFFFFF;
-	width: calc((--sessionPanelAreaWidth) - 2px);
 	padding: 5px 0px;
 }
 
@@ -82,8 +60,8 @@ div#PresenceList
 
 .agentPresenceDiv .textNode 
 {
-	width: 100%;
-	margin: 0px;
+	width: 30px;
+	margin: 2px;
 	text-align: center;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -210,18 +188,12 @@ div#PresenceList
 .PresenceListItem 
 {
 	display: flex;
-	height: 35px;
-}
-
-.PresenceListItem .ColorNode
-{
-	vertical-align: middle;
+	height: 28px;
 }
 
 .PresenceListItem .textNode
 {
 	font-size: 14px;
-	height: 35px;
 	vertical-align: middle;
 }
 
@@ -244,7 +216,7 @@ div#PresenceList
 {
 	background-color: #FFFFFF;
 	position: fixed;
-	bottom: 0px;
+	bottom: 10px;
 	width: 191px;
 	padding: 5px;
 }
