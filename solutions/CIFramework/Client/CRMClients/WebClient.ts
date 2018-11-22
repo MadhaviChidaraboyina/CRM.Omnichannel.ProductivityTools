@@ -200,8 +200,6 @@ namespace Microsoft.CIFramework.Internal {
 					let targetWindow = window.parent;
 					let status: Map<string, boolean | string> = new Map<string, boolean | string>();
 					let fracHeightForActiveWidget: number = 0.9;
-					let widgetHeight: number = widgetIFrame.clientHeight - 10;
-					let widgetWidth: number = Constants.DEFAULT_WIDGET_WIDTH;
 					let minimizedHeight: number = (widgetIFrame.clientHeight * (1 - fracHeightForActiveWidget)) / ciProviders.size;   // TODO: Figure out correct units to use
 					widgetIFrame.onload = function () {
 						widgetIFrame.contentWindow.document.body.dir = window.parent.document.body.dir;
@@ -209,16 +207,16 @@ namespace Microsoft.CIFramework.Internal {
 						for (let [key, value] of ciProviders) {
 							//TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
 							var containerDiv = document.createElement("div");
+							containerDiv.setAttribute("id", value.providerId);
 							containerDiv.setAttribute("tabindex", "-1");    //Needed to receive the focus event
 							containerDiv.setAttribute("role", "tabpanel");
-							containerDiv.setAttribute("style", "margin-right: 0px; width: 100%");
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
 							iFrame.setAttribute("style", "border: 0px;");
 							iFrame.src = key;
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
-							value.setContainer(new WidgetIFrameWrapper(iFrame), widgetWidth, widgetHeight, minimizedHeight);
+							value.setContainer(new WidgetIFrameWrapper(iFrame), minimizedHeight);
 							containerDiv.appendChild(iFrame);
 							doc.getElementById("widgetControlDiv").appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
@@ -422,32 +420,56 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		client.addUISession = (id: string, initials: string, sessionColor: string): void => {
+		client.addUISession = (id: string, initials: string, sessionColor: string, providerId: string): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionPanel = Utility.getElementFromIframe(sidePanelIFrame, Constants.sessionPanel);
 			if (sessionPanel == null)
 				return;
 
-			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div></div><div id="' + id + 'CrossIcon" class="flexJustify" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
+			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div></div><div id="' + id + 'CrossIcon" class="flexJustify" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
 			var parser = new DOMParser();
 			var el = parser.parseFromString(sessionElementHtml, "text/html");
 			var sessionElement = el.getElementById(id);
 			sessionElement.onclick = function (event: MouseEvent) {
-				Microsoft.CIFramework.Internal.SessionPanel.getInstance().switchUISession((event.currentTarget as HTMLElement).id);
-			};
-
-			sessionElement.onkeydown = function (event: KeyboardEvent) {
-				if (event.keyCode == 13) {
+				if (id == Microsoft.CIFramework.Internal.SessionPanel.getInstance().getvisibleUISession()) {
+					Microsoft.CIFramework.Internal.SessionPanel.getInstance().endUISession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+				}
+				else {
 					Microsoft.CIFramework.Internal.SessionPanel.getInstance().switchUISession((event.currentTarget as HTMLElement).id);
 				}
 			};
 
-			let crossIcon = el.getElementById(id + "CrossIcon");
-			crossIcon.onclick = function (event: MouseEvent) {
-				Microsoft.CIFramework.Internal.SessionPanel.getInstance().endUISession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+			sessionElement.onkeydown = function (event: KeyboardEvent) {
+				if (event.keyCode == 13) {
+					if (id == Microsoft.CIFramework.Internal.SessionPanel.getInstance().getvisibleUISession()) {
+						Microsoft.CIFramework.Internal.SessionPanel.getInstance().endUISession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+					}
+					else {
+						Microsoft.CIFramework.Internal.SessionPanel.getInstance().switchUISession((event.currentTarget as HTMLElement).id);
+					}
+				}
+				else if (event.keyCode == 37) {
+					if (sessionElement.previousElementSibling != null) {
+						(<HTMLElement>sessionElement.previousElementSibling).focus();
+					}
+					else {
+						let uiSessions = Utility.getElementsByClassName(sidePanelIFrame, "uiSession");
+						(<HTMLElement>uiSessions[uiSessions.length - 1]).focus();
+					}
+				}
+				else if (event.keyCode == 39) {
+					if (sessionElement.nextElementSibling != null && sessionElement.nextElementSibling.className.indexOf("uiSession") != -1) {
+						(<HTMLElement>sessionElement.nextElementSibling).focus();
+					}
+					else {
+						let uiSessions = Utility.getElementsByClassName(sidePanelIFrame, "uiSession");
+						(<HTMLElement>uiSessions[0]).focus();
+					}
+				}
 			};
 
-			sessionPanel.appendChild(sessionElement);
+			let presenceDiv = Utility.getElementFromIframe(sidePanelIFrame, "presenceDiv");
+			sessionPanel.insertBefore(sessionElement, presenceDiv);
 		}
 
 		client.removeUISession = (id: string): void => {
@@ -468,25 +490,35 @@ namespace Microsoft.CIFramework.Internal {
 			return Utility.rgb2hex(sessionElementCircle.style.backgroundColor);
 		}
 
-		client.updateUISession = (id: string, backgroundColor: string, visible: boolean): void => {
+		client.updateUISession = (id: string, visible: boolean): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionElement = Utility.getElementFromIframe(sidePanelIFrame, id);
 			if (sessionElement == null)
 				return;
 
-			sessionElement.style.backgroundColor = backgroundColor;
-
-			//Update cross icon visibility
+			var providerId = sessionElement.getAttribute("aria-controls");
+			let providerElement = Utility.getElementFromIframe(sidePanelIFrame, providerId);
 			let sessionIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "UiSessionIcon");
-			if (sessionIcon == null)
-				return;
-
 			let crossIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "CrossIcon");
-			if (crossIcon == null)
-				return;
 
-			sessionIcon.style.display = (visible == true) ? 'none' : 'flex';
-			crossIcon.style.display = (visible == true) ? 'flex' : 'none';
+			if (visible) {
+				sessionElement.style.backgroundColor = "#FFFFFF";
+				sessionElement.style.boxShadow = "0px 4px 8px rgba(102, 102, 102, 0.2)";
+				sessionIcon.style.display = "none";
+				crossIcon.style.display = "flex";
+				sessionElement.setAttribute("tabindex", 0);
+				providerElement.setAttribute("aria-labelledby", id);
+			}
+			else {
+				sessionElement.style.backgroundColor = "transparent";
+				sessionElement.style.boxShadow = "none";
+				sessionIcon.style.display = "flex";
+				crossIcon.style.display = "none";
+				sessionElement.setAttribute("tabindex", -1);
+				providerElement.setAttribute("aria-labelledby", "");
+			}
+
+			sessionElement.setAttribute("aria-selected", visible);
 		}
 
 		client.expandFlap = (): number => {
@@ -496,8 +528,7 @@ namespace Microsoft.CIFramework.Internal {
 			//this.savedModeChangeHandler = client.removeHandler(Constants.ModeChangeHandler);
 			//this.savedSizeChangeHandler = client.removeHandler(Constants.SizeChangeHandler);
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
-			let sessionPanelArea = (<HTMLDivElement>widgetIFrame.contentDocument.getElementById("sessionPanelArea"));
-			//let sessionPanelArea = (<HTMLDivElement>window.document.getElementById("sessionPanelArea"));
+			let sessionPanelArea = (<HTMLDivElement>widgetIFrame.contentDocument.getElementById("sessionPanel"));
 			let widgetWidth = client.getWidgetWidth() as number;
 			this.origWidth = widgetWidth + sessionPanelArea.clientWidth;
 			this.flapExpanded = true;

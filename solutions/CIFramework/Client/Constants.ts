@@ -141,8 +141,7 @@ namespace Microsoft.CIFramework
 		public static initials = "initials";
 		public static sessionId = "sessionId";
 		public static MaxUISessions = 5;
-		public static sessionColors = ["#2A757D", "#464775", "#9E2069", "#427825", "#511466", "#365C99", "#9C4141", "#84612A"];
-		public static activeSessionColors = ["#D7F5F3", "#EBECF7", "#FFE5F5", "#E0F5D5", "#F7E6FC", "#D9E8FF", "#FFE3E3", "#F2EBDF"];
+		public static sessionColors = ["#2A757D", "#70278B", "#FF8C00", "#427825", "#B4009E", "#B4A0FF"];
 		public static sessionPanel = "sessionPanel";
 		public static DEFAULT_WIDGET_WIDTH = 378;
 		public static DEFAULT_SIDEPANEL_WIDTH = 34;

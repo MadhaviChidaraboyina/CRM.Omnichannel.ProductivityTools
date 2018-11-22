@@ -174,21 +174,6 @@ div#PresenceList
 	left: calc(var(--sessionPanelAreaWidth));
 }
 
-.widgetControl
-{
-	position: absolute;
-}
-
-[dir='ltr'] .widgetControl
-{
-	right: calc(var(--sessionPanelWidth)); 
-}
-
-[dir='rtl'] .widgetControl
-{
-	left: calc(var(--sessionPanelWidth)); 
-}
-
 .flexJustify
 {
 	display: flex;
@@ -198,9 +183,7 @@ div#PresenceList
 
 .sessionPanel
 {
-	border-style: solid;
-	border-width: 1px;
-	border-color: #EBEBEB;
+	background-color: #EFEFEF;
 	width: calc(var(--sessionPanelAreaWidth) - 2px);
 	position: fixed;
 	height: calc(100% - 2px);
@@ -232,7 +215,7 @@ div#PresenceList
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	text-align: center;
-	margin: 0px 3px;
+	margin: 0px 4px;
 }
 
 .initials
@@ -248,6 +231,7 @@ div#PresenceList
 .crossIconFont
 {
 	font-size: 20px;
+	color: #BF0900;
 }
 
 .PresenceListItem 
