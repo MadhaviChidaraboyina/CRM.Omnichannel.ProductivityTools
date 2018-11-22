@@ -210,10 +210,13 @@ namespace Microsoft.CIFramework.Internal {
 							containerDiv.setAttribute("id", value.providerId);
 							containerDiv.setAttribute("tabindex", "-1");    //Needed to receive the focus event
 							containerDiv.setAttribute("role", "tabpanel");
+							containerDiv.setAttribute("style", "height: 100%");
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
 							iFrame.setAttribute("style", "border: 0px;");
+							iFrame.height = "100%";
+							iFrame.width = "100%";
 							iFrame.src = key;
 							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
 							value.setContainer(new WidgetIFrameWrapper(iFrame), minimizedHeight);
@@ -468,8 +471,8 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			};
 
-			let presenceDiv = Utility.getElementFromIframe(sidePanelIFrame, "presenceDiv");
-			sessionPanel.insertBefore(sessionElement, presenceDiv);
+			let uiSessions = Utility.getElementFromIframe(sidePanelIFrame, "uiSessions");
+			uiSessions.appendChild(sessionElement);
 		}
 
 		client.removeUISession = (id: string): void => {
