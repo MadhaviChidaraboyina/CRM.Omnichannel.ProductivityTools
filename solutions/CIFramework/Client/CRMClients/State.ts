@@ -152,15 +152,9 @@ namespace Microsoft.CIFramework.Internal {
 			return this._widgetContainer;
 		}
 
-		setContainer(container: WidgetContainer, defaultWidth: number, defaultHeight: number, minimizedHeight: number): void {
+		setContainer(container: WidgetContainer, minimizedHeight: number): void {
 			this._widgetContainer = container;
 			this._minimizedHeight = minimizedHeight;
-			if (!this.widgetWidth) {
-				this.setWidth(defaultWidth);
-			}
-			if (!this.widgetHeight) {
-				this.setHeight(defaultHeight);
-			}
 		}
 
 		updateContainerSize(): Promise<Map<string, any>> {
@@ -168,7 +162,7 @@ namespace Microsoft.CIFramework.Internal {
 			let ret: boolean = false;
 			if (container) {
 				let visibility: boolean = this.getMode() == 1;  //TODO: replace with named constant
-				ret = container.setVisibility(visibility) && container.setHeight(this.getHeight()) && container.setWidth(this.getWidth());
+				ret = container.setVisibility(visibility); // && container.setHeight(this.getHeight()) && container.setWidth(this.getWidth());
 			}
 			return Promise.resolve(new Map<string, any>().set(Constants.value, ret));
 			/*if (ret) {

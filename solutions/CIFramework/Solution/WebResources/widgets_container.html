@@ -9,14 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="msdyn_notificationCss.css" />
 </head>
 <body style="margin: 0px">
-	<!-- Div to append the ChatControl IFrame -->
-	<div id="widgetArea" class="widgetArea">
-		<div id="widgetControlDiv" tabindex="-1" class="widgetControl"></div>
-		<div id="toastDiv" style="position:absolute;right: 0px;left: 0px;z-index: 2;top:0px;"></div>
-		<div id="softToastDiv" style="position:absolute;bottom:11px;left: 0px;right:0px;z-index:1;width:100%;"></div>
-	</div>
 	<div id="sessionPanel" class="sessionPanel" role="tablist">
-		<div class="MainDiv">
+		<div id="presenceDiv" class="MainDiv">
 			<div id="PresenceList"></div>
 			<div id="CurrentStatus" aria-expanded="false" aria-labelledby="TextNode">
 				<div class="agentPresenceDiv">
@@ -32,6 +26,12 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<!-- Div to append the ChatControl IFrame -->
+	<div id="widgetArea" class="widgetArea" style="height:100%">
+		<div id="widgetControlDiv" tabindex="-1" class="widgetControl"></div>
+		<div id="toastDiv" style="position:absolute;right: 0px;left: 0px;z-index: 2;top:0px;"></div>
+		<div id="softToastDiv" style="position:absolute;bottom:1px;z-index:1;width:100%;"></div>
 	</div>
 	<div id="flapArea" style="width: calc(var(--flapAreaWidth))">
 		<div id="notesDiv" class="notesDiv"></div>

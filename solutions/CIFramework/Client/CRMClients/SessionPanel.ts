@@ -50,15 +50,14 @@ namespace Microsoft.CIFramework.Internal {
 				}
 
 				oldProvider.setInvisibleUISession(this.visibleUISession, switchProvider);
-				this.state.client.updateUISession(this.visibleUISession, "transparent", false);
+				this.state.client.updateUISession(this.visibleUISession, false);
 			}
 
 			this.visibleUISession = sessionId;
 			newProvider.setVisibleUISession(this.visibleUISession, switchProvider);
 			
 			let sessionColor = this.state.client.getUISessionColor(this.visibleUISession);
-			let backgroundColor = Constants.activeSessionColors[Constants.sessionColors.indexOf(sessionColor)];
-			this.state.client.updateUISession(this.visibleUISession, backgroundColor, true);
+			this.state.client.updateUISession(this.visibleUISession, true);
 		}
 
 		canAddUISession(): boolean {
@@ -74,7 +73,7 @@ namespace Microsoft.CIFramework.Internal {
 			this.UIsessions.set(sessionId, provider);
 
 			let sessionColor = Constants.sessionColors[this.counter++ % Constants.sessionColors.length];
-			this.state.client.addUISession(sessionId, initials, sessionColor);
+			this.state.client.addUISession(sessionId, initials, sessionColor, provider.providerId);
 
 			if (this.visibleUISession == '') {
 				this.switchUISession(sessionId);

@@ -23,8 +23,6 @@
 
 		setVisibility(visibility: boolean): boolean {
 			this.visibility = visibility;
-			this.setHeight(this.preservedHeight);
-			this.setWidth(this.preservedWidth);
 			return true;
 		}
 

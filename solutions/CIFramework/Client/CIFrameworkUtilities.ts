@@ -85,4 +85,11 @@ namespace Microsoft.CIFramework.Utility {
 	export function getElementFromIframe(iFrameObject: HTMLIFrameElement, id: string): any {
 		return iFrameObject.contentWindow.document.getElementById(id);
 	}
+
+	/**
+	 * Utility to get elements by classname from iframe
+	 */
+	export function getElementsByClassName(iFrameObject: HTMLIFrameElement, className: string): any {
+		return iFrameObject.contentWindow.document.getElementsByClassName(className);
+	}
 }
