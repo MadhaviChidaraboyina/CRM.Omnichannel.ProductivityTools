@@ -833,7 +833,7 @@ namespace Microsoft.CIFramework.Internal {
 					let list:CIProvider[];
 					list[0] = provider;
 					this.genericEventRegistrations.set(messageType, list);
-					window.addEventListener(messageType, onGenericEvent);
+					listenerWindow.addEventListener(messageType, onGenericEvent);
 				}
 			}
 			return Promise.resolve(true);
@@ -859,7 +859,7 @@ namespace Microsoft.CIFramework.Internal {
 					}
 					}
 				if (this.genericEventRegistrations.get(messageType).length == 0) {
-					window.removeEventListener(messageType, onGenericEvent);//remove after all providers are removed
+					listenerWindow.removeEventListener(messageType, onGenericEvent);//remove after all providers are removed
 				}
 			}
 			return Promise.resolve(true);

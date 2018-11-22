@@ -62,7 +62,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		/**
 		 * Creates and loads an instance of the wrapper on the CI or widget domain, wherever it is loaded
 		 */
-		constructor(listenerWindow?: Window, domains?: string[], handlers?: Map<string, Set<Handler>>) {
+		constructor(listenerWindow?: Window, domains?: string[], handlers?: Map<string, Set<Handler>>, responseTargetWindow?: Window) {
 			// todo - ensure that there is always one listener for message event from CI side. For now: always removing previous one, if any, so that we only have one listener at a time. 
 			if (listenerWindow) {
 				listenerWindow.removeEventListener(messageConstant, this.processMessage.bind(this));
@@ -73,6 +73,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 			if (handlers) {
 				this.messageHandlers = handlers;
 			}
+			this.responseTargetWindow = responseTargetWindow;
 		}
 
 		/**
@@ -84,6 +85,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 
 		messageHandlers = new Map<string, Set<Handler>>();
 
+		responseTargetWindow: Window = null;
 		/**
 		 * Function for add handlers separate from the constructor
 		 */
@@ -239,7 +241,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		 * Common function on caller and receiver to process requests and responses
 		 */
 		private processMessage(event: MessageEvent) {
-
+			let responseTargetWindow = this.responseTargetWindow || event.source;
 			let whiteListedOrigin = this.listWhitelistedDomains.find((whiteListedDomain) => {
 				//TODO - Replace URL with some other supported object if IE support becomes mandatory. URL is not supported by IE11
 				var domainUrl = new URL(event.origin);
@@ -283,7 +285,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 						messageData: messageData,
 						messageCorrelationId: trackingCorrelationId
 					};
-					return this.sendResponseMsg(event.source, msg, event.origin);
+					return this.sendResponseMsg(responseTargetWindow, msg, event.origin);
 				}
 			}
 
@@ -310,7 +312,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 							messageData: Microsoft.CIFramework.Utility.createErrorMap("No handlers found to process the request."),
 							messageCorrelationId: trackingCorrelationId
 						};
-						this.sendResponseMsg(event.source, msg, event.origin);
+						this.sendResponseMsg(responseTargetWindow, msg, event.origin);
 					}
 					// todo - log that no handler was found alongwith message & origin details, and if we are sending back a response or silently ignoring.
 					return;
@@ -318,26 +320,26 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 
 				this.messageHandlers.get(data.messageType).forEach((handlerFunction: Handler) => {
 					(<Handler>handlerFunction)(data.messageData).then(
-						(result: Map<string, any>) => {
+						function(result: Map<string, any>)  {
 							if (trackingCorrelationId) {
 								msg = {
 									messageOutcome: messageSuccess,
 									messageData: result,
 									messageCorrelationId: trackingCorrelationId
 								};
-								this.sendResponseMsg(event.source, msg, event.origin);
+								this.sendResponseMsg(responseTargetWindow, msg, event.origin);
 							}
-						},
-						(error: Map<string, any>) => {
+						}.bind(this),
+						function(error: Map<string, any>)  {
 							if (trackingCorrelationId) {
 								msg = {
 									messageOutcome: messageFailure,
 									messageData: error,
 									messageCorrelationId: trackingCorrelationId
 								};
-								this.sendResponseMsg(event.source, msg, event.origin);
+								this.sendResponseMsg(responseTargetWindow, msg, event.origin);
 							}
-						}
+						}.bind(this)
 					);
 				})
 

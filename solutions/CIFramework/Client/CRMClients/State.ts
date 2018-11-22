@@ -128,7 +128,7 @@ namespace Microsoft.CIFramework.Internal {
 			this.uiSessions = new Map<string, UISession>();
 		}
 
-		raiseEvent(data: Map<string, any>, messageType: string): Promise<Map<string, any>> {
+		raiseEvent(data: Map<string, any>, messageType: string, noTimeout?: boolean): Promise<Map<string, any>> {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: messageType,
 				messageData: JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(data))
@@ -145,7 +145,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (!this.getContainer()) {
 				return Promise.resolve(new Map().set(Constants.value, false));
 			}
-			return this._state.messageLibrary.postMsg(this.getContainer().getContentWindow(), payload, this.trustedDomain || this.landingUrl, true);
+			return this._state.messageLibrary.postMsg(this.getContainer().getContentWindow(), payload, this.trustedDomain || this.landingUrl, true, noTimeout);
 		}
 
 		getContainer(): WidgetContainer {
@@ -306,11 +306,11 @@ namespace Microsoft.CIFramework.Internal {
 				return [null, error];
 			}
 
-			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleUISession == sessionId).set("context", this.uiSessions.get(sessionId).context), MessageType.onUISessionEnded)
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleUISession == sessionId).set("context", this.uiSessions.get(sessionId).context), MessageType.onUISessionEnded, true)
 				.then(function () {
 					this.uiSessions.delete(sessionId);
 					SessionPanel.getInstance().removeUISession(sessionId);
-				});
+				}.bind(this));
 
 			return [sessionId, null];
 		}
