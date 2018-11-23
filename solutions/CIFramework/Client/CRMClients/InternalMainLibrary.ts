@@ -42,8 +42,8 @@ namespace Microsoft.CIFramework.Internal {
 		["endUISession", [endUISession]],
 		["setAgentPresence", [setAgentPresence]],
 		["initializeAgentPresenceList", [initializeAgentPresenceList]],
-		["addgenerichandler", [addGenericHandler]],
-		["removegenerichandler", [removeGenericHandler]]
+		["addGenericHandler", [addGenericHandler]],
+		["removeGenericHandler", [removeGenericHandler]]
 	]);
 
 	let genericEventRegistrations = new Map<string, CIProvider[]>();
@@ -807,32 +807,33 @@ namespace Microsoft.CIFramework.Internal {
 	* @param event. event.detail will be the event detail
 	*/
 	function onGenericEvent(event: CustomEvent): void {
-		if (this.genericEventRegistrations.has(event.type)) {
-			for (let i = 0; i < this.genericEventRegistrations.get(event.type).length; i++) {
-				raiseEvent(event.detail, event.type, "Generic event rise", this.genericEventRegistrations.get(event.type)[i]);
+		if (genericEventRegistrations.has(event.type)) {
+			for (let i = 0; i < genericEventRegistrations.get(event.type).length; i++) {
+				raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), event.type, "Generic event rise", genericEventRegistrations.get(event.type)[i]);
 			}
 		}
 	}
 
 	function isPredefinedMessageType(messageType:string): boolean {
-		return messageType == "onmodechanged" || messageType == "onsizechanged" || messageType == "onpagenavigate" || messageType == "onsendkbarticle";
+		return Object.keys(MessageType).indexOf(messageType) >= 0;
 	}
 
-	export function addGenericHandler(parameters: Map<string, any>,messageType:string): Promise<boolean> {
+	export function addGenericHandler(parameters: Map<string, any>): Promise<boolean> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
-		const [provider, errorData] = getProvider(parameters, [messageType]);
+		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
+			let messageType: string = parameters.get(Constants.eventType);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "addGenericHandler", telemetryData);
 			setPerfData(perfData);
 			if (!isPredefinedMessageType(messageType)) {
-				if (this.genericEventRegistrations.has(messageType) && this.genericEventRegistrations.get(messageType).length>0) {
-					this.genericEventRegistrations.get(messageType).append(provider);
+				if (genericEventRegistrations.has(messageType) && genericEventRegistrations.get(messageType).length > 0) {
+					genericEventRegistrations.get(messageType).push(provider);
 				}
 				else {
-					let list:CIProvider[];
+					let list: CIProvider[] = new Array<CIProvider>();
 					list[0] = provider;
-					this.genericEventRegistrations.set(messageType, list);
+					genericEventRegistrations.set(messageType, list);
 					listenerWindow.addEventListener(messageType, onGenericEvent);
 				}
 			}
@@ -843,22 +844,23 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	export function removeGenericHandler(parameters: Map<string, any>, messageType: string): Promise<boolean> {
+	export function removeGenericHandler(parameters: Map<string, any>): Promise<boolean> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.eventType]);
 
 		if (provider) {
+			let messageType: string = parameters.get(Constants.eventType);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "removeGenericHandler", telemetryData);
 			setPerfData(perfData);
 			if (!isPredefinedMessageType(messageType)) {
-				if (this.genericEventRegistrations.has(messageType)) {
-					for (let i = 0; i < this.genericEventRegistrations.get(messageType).length; i++) {
-							if (this.genericEventRegistrations.get(messageType)[i] == provider)
-								this.genericEventRegistrations.get(messageType).delete(this.genericEventRegistrations.get(messageType)[i]);
+				if (genericEventRegistrations.has(messageType)) {
+					for (let i = 0; i < genericEventRegistrations.get(messageType).length; i++) {
+						if (genericEventRegistrations.get(messageType)[i] == provider)
+							genericEventRegistrations.get(messageType).splice(i, 1);
 					}
-					}
-				if (this.genericEventRegistrations.get(messageType).length == 0) {
+				}
+				if (genericEventRegistrations.get(messageType).length == 0) {
 					listenerWindow.removeEventListener(messageType, onGenericEvent);//remove after all providers are removed
 				}
 			}
