@@ -154,8 +154,8 @@ namespace Microsoft.CIFramework.Internal {
 			for (let [key, value] of state.providerManager.ciProviders) {
 				var eventStatus: { result?: any, error?: string } = {};
 				value.raiseEvent(data, messageType).then(
-					function (result: Map<string, any>) {
-						this.result = result.get(Constants.value);
+					function (result: boolean) {
+						this.result = result;
 					}.bind(eventStatus),
 					function (error: string) {
 						//TODO: send error for telemetry
@@ -818,7 +818,7 @@ namespace Microsoft.CIFramework.Internal {
 		return Object.keys(MessageType).indexOf(messageType) >= 0;
 	}
 
-	export function addGenericHandler(parameters: Map<string, any>): Promise<boolean> {
+	export function addGenericHandler(parameters: Map<string, any>): Promise<Map<string, boolean>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
@@ -837,14 +837,14 @@ namespace Microsoft.CIFramework.Internal {
 					listenerWindow.addEventListener(messageType, onGenericEvent);
 				}
 			}
-			return Promise.resolve(true);
+			return Promise.resolve(new Map().set(Constants.value, true));
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, "addGenericHandler", appId, true, errorData);
 		}
 	}
 
-	export function removeGenericHandler(parameters: Map<string, any>): Promise<boolean> {
+	export function removeGenericHandler(parameters: Map<string, any>): Promise<Map<string, boolean>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.eventType]);
@@ -864,7 +864,7 @@ namespace Microsoft.CIFramework.Internal {
 					listenerWindow.removeEventListener(messageType, onGenericEvent);//remove after all providers are removed
 				}
 			}
-			return Promise.resolve(true);
+			return Promise.resolve(new Map().set(Constants.value, true));
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, "removeGenericHandler", appId, true, errorData);
