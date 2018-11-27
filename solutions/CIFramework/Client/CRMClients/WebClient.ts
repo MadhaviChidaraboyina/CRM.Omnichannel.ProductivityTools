@@ -405,22 +405,24 @@ namespace Microsoft.CIFramework.Internal {
 
 		client.renderSearchPage = (entityName: string, searchString: string, telemetryData?: Object | any): Promise<void> => {
 			let startTime;
-			try {
-				var searchPageInput: XrmClientApi.SearchPageInput;
-				searchPageInput.searchText = searchString;
-				searchPageInput.EntityNames.push(entityName);
-				searchPageInput.searchType = 1;
+			return new Promise<void>((resolve, reject) => {
+				try {
+					var searchPageInput: XrmClientApi.SearchPageInput;
+					searchPageInput.searchText = searchString;
+					searchPageInput.EntityNames.push(entityName);
+					searchPageInput.searchType = 1;
 
-				startTime = new Date();
-				Xrm.Navigation.navigateTo(searchPageInput);
-				let timeTaken = Date.now() - startTime.getTime();
-				let apiName = "Xrm.Navigation.navigateTo";
-				logApiData(telemetryData, startTime, timeTaken, apiName);
-				return;
-			}
-			catch (error) {
-				logFailure("", true, error);
-			}
+					startTime = new Date();
+					Xrm.Navigation.navigateTo(searchPageInput);
+					let timeTaken = Date.now() - startTime.getTime();
+					let apiName = "Xrm.Navigation.navigateTo";
+					logApiData(telemetryData, startTime, timeTaken, apiName);
+					return resolve();
+				}
+				catch (error) {
+					logFailure("", true, error);
+				}
+			});
 		}
 
 		client.addUISession = (id: string, initials: string, sessionColor: string, providerId: string): void => {

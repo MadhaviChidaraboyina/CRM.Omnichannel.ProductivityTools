@@ -157,9 +157,9 @@ namespace Microsoft.CIFramework.Internal {
 					function (result: boolean) {
 						this.result = result;
 					}.bind(eventStatus),
-					function (error: string) {
-						//TODO: send error for telemetry
+					function (error: IErrorHandler) {
 						this.error = error;
+						return rejectWithErrorMessage(error.errorMsg, messageType + " - raiseEvent", appId, true, error);
 					}.bind(eventStatus));
 				if (eventStatus.result) {
 					break;
