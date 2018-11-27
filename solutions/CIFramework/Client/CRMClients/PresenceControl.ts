@@ -73,6 +73,7 @@ namespace Microsoft.CIFramework.Internal {
 			updatedPresenceNode.classList.add("agentPresenceDiv");
 			updatedPresenceNode.title = presenceInfo.presenceText;
 			updatedPresenceNode.addEventListener("click", this.toggleList, false);
+			updatedPresenceNode.id = presenceInfo.presenceId;
 
 			var innerDiv = document.createElement('div');
 			innerDiv.classList.add("innerDiv");

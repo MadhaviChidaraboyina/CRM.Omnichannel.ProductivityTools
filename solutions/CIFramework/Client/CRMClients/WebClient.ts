@@ -573,8 +573,11 @@ namespace Microsoft.CIFramework.Internal {
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let agentPresenceParent = widgetIFrame.contentWindow.document.getElementById("CurrentStatus");
 			if (agentPresenceParent != null) {
-				agentPresenceParent.innerHTML = "";
-				agentPresenceParent.appendChild(agentPresence);
+				var currentPresenceId = agentPresenceParent.firstElementChild.id;
+				if (currentPresenceId != presenceInfo.presenceId) {
+					agentPresenceParent.innerHTML = "";
+					agentPresenceParent.appendChild(agentPresence);
+				}
 				return true;
 			}
 			return false;
