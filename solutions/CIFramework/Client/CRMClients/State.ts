@@ -43,27 +43,14 @@ namespace Microsoft.CIFramework.Internal {
 			this.ciProviders = new Map<string, CIProvider>();
 			this.ciProviders.set(defaultProviderUrl, defaultProvider);
 			this._defaultProvider = defaultProvider;
-			this._client.setWidgetMode("mode", (defaultProvider ? defaultProvider.getMode() : 0));  //TODO: replace with named constant
 		}
 
 		addProvider(url: string, provider: CIProvider) {
 			this.ciProviders.set(url, provider);
 		}
 
-		setActiveProvider(provider: CIProvider): Promise<Map<string, any>> {
-			if (this._activeProvider != provider) {
-				//TODO check if it is okay to switch provider
-				//if no, reject the promise
-				//if yes, switch the providers
-				let oldProvider: CIProvider = this._activeProvider;
-				this._activeProvider = provider || this._defaultProvider;
-				if (oldProvider) {
-					oldProvider.raiseEvent(new Map<string, any>().set(Constants.value, 0), MessageType.onModeChanged);    //TODO: replace 0 with named constant
-				}
-			}
-			let mode: number = this._activeProvider ? this._activeProvider.getMode() : 0;   //TODO: replace 0 with named constant
-			this._client.setWidgetMode("mode", mode);
-			return Promise.resolve(new Map<string, any>().set(Constants.value, true));    //TODO: Session manager needs to eval whether it is feasibile to change session and resolve or reject the promise
+		setActiveProvider(provider: CIProvider): void {
+			this._activeProvider = provider;
 		}
 
 		getActiveProvider(): CIProvider {
@@ -91,12 +78,9 @@ namespace Microsoft.CIFramework.Internal {
 		label: string;					// Label of the Widget
 		landingUrl: string;
 		_state: IState;
-		widgetHeight: number; 	// Height of the widget Panel
-		widgetWidth: number;	//Width of the widget Panel
 		_minimizedHeight: number;
 		clickToAct: boolean;		//Boolean flag to enable or disable Click to act functionality , it can be changed through setClickToAct API
 		_widgetContainer: WidgetContainer;  //The iFrame hosting this widget
-		currentMode: number;
 		sortOrder : string;	//Sort Order
 		apiVersion : string;	//API Version
 		orgId : string;	//Organization ID
@@ -113,11 +97,8 @@ namespace Microsoft.CIFramework.Internal {
 			this.providerId = x[Constants.providerId];
 			this.label = x[Constants.label];
 			this.landingUrl = x[Constants.landingUrl];
-			this.widgetHeight = x[Constants.widgetHeight] || 0;
-			this.widgetWidth = x[Constants.widgetWidth] || 0;
 			this.clickToAct = x[Constants.clickToActAttributeName];
 			this._widgetContainer = null;
-			this.currentMode = 0;
 			this.sortOrder = x[Constants.SortOrder];
 			this.apiVersion = x[Constants.APIVersion];
 			this.trustedDomain = x[Constants.trustedDomain];
@@ -134,9 +115,6 @@ namespace Microsoft.CIFramework.Internal {
 				messageData: JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(data))
 			}
 			switch (messageType) {
-				case MessageType.onModeChanged:
-					this.setMode(data.get(Constants.value) as number);
-					break;
 				case MessageType.onClickToAct:
 					if (!this.clickToAct) {
 						return Promise.resolve(new Map().set(Constants.value, false));
@@ -155,89 +133,6 @@ namespace Microsoft.CIFramework.Internal {
 		setContainer(container: WidgetContainer, minimizedHeight: number): void {
 			this._widgetContainer = container;
 			this._minimizedHeight = minimizedHeight;
-		}
-
-		updateContainerSize(): Promise<Map<string, any>> {
-			let container = this.getContainer();
-			let ret: boolean = false;
-			if (container) {
-				let visibility: boolean = this.getMode() == 1;  //TODO: replace with named constant
-				ret = container.setVisibility(visibility); // && container.setHeight(this.getHeight()) && container.setWidth(this.getWidth());
-			}
-			return Promise.resolve(new Map<string, any>().set(Constants.value, ret));
-			/*if (ret) {
-				return Promise.resolve(new Map<string, any>());
-			}
-			else {
-				return Promise.reject(new Map<string, any>().set(Constants.message, "Attempting to set size of a null widget container"));
-			}*/
-		}
-
-		setMode(mode: number): Promise<Map<string, any>> {
-			if (this.currentMode == mode) {
-				return Promise.resolve(new Map<string, any>().set(Constants.value, true));
-			}
-			this.currentMode = mode;
-			switch (mode) {
-				case 1: //TODO - replace with named constant. We have the focus
-					/*if (this._state.providerManager.getActiveProvider() == this) {
-						//this.currentMode = mode;
-						return this.updateContainerSize();
-					}*/
-					return this._state.providerManager.setActiveProvider(this).then(
-						function (result: Map<string, any>) {
-							if (result.get(Constants.value)) {
-								//this.currentMode = mode;
-								return this.updateContainerSize();
-							}
-							return Promise.resolve(result);
-						}.bind(this),
-						function (error) {
-							return Promise.reject(error);
-						});
-				case 0://TODO - replace with named constant. We lost the focus
-					/*if (this._state.providerManager.getActiveProvider() != this) {
-						//this.currentMode = mode;
-						return this.updateContainerSize();
-					}*/
-					return this._state.providerManager.setActiveProvider(null).then(
-						function (result: Map<string, any>) {
-							if (result.get(Constants.value)) {
-								//this.currentMode = mode;
-								return this.updateContainerSize();
-							}
-							return Promise.resolve(result);
-						}.bind(this),
-						function (error) {
-							return Promise.reject(error);
-						});
-			}
-			return Promise.reject(new Map<string, any>().set(Constants.message, "Invalid mode value"));  
-		}
-
-		getMode(): number {
-			return this.currentMode;
-		}
-
-		setHeight(height: number): Promise<Map<string, any>> {
-			this.widgetHeight = height;
-			return this.updateContainerSize();
-		}
-
-		getHeight(): number {
-			if (!this.getMode()) {
-				return this._minimizedHeight;  //TODO: figure out what to use as minimized width We are minimized
-			}
-			return this.widgetHeight;
-		}
-
-		setWidth(width: number): Promise<Map<string, any>> {
-			this.widgetWidth = width;
-			return this.updateContainerSize();
-		}
-
-		getWidth(): number {
-			return this.widgetWidth;
 		}
 
 		startUISession(context: any, initials: string): [string, IErrorHandler] {
@@ -314,7 +209,8 @@ namespace Microsoft.CIFramework.Internal {
 			this.visibleUISession = sessionId;
 
 			if (showWidget) {
-				//Todo
+				this._state.providerManager.setActiveProvider(this);
+				//update iframe visibility
 			}
 		}
 
@@ -323,7 +219,8 @@ namespace Microsoft.CIFramework.Internal {
 			this.visibleUISession = '';
 
 			if (hideWidget) {
-				//Todo
+				this._state.providerManager.setActiveProvider(null);
+				//update iframe visibility
 			}
 		}
 	}

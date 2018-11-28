@@ -215,12 +215,6 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	function updateProviderSizes(): void {
-		var width = state.client.getWidgetWidth() as number;
-		for (let [key, value] of state.providerManager.ciProviders) {
-			value.setWidth(width);
-		}	
-	}
 	/**
 	 * The handler called by the client for a size-changed event. The client is
 	 * expected to pass a CustomEvent event object with details of the event
@@ -232,7 +226,6 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	function onSizeChanged(event: CustomEvent): void {
 		if (!state.client.flapInUse()) {
-			updateProviderSizes();
 			raiseEvent(event.detail, MessageType.onSizeChanged, "onSizeChanged invoked", state.providerManager.getActiveProvider());
 		}
 	}	
@@ -326,11 +319,11 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters, [Constants.value]);
 		if(provider)
 		{
-			//state.client.setWidgetMode(null, parameters.get(Constants.value) as number, telemetryData);
+			let ret = state.client.setWidgetMode("setWidgetMode", parameters.get(Constants.value) as number, telemetryData);
 
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "setMode", telemetryData);
 			setPerfData(perfData);
-			return provider.setMode(parameters.get(Constants.value) as number);
+			return Promise.resolve(new Map().set(Constants.value, ret));
 		}
 		else
 		{
@@ -370,11 +363,11 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters, [Constants.value]);
 		if(provider)
 		{
-			//state.client.setWidgetWidth(null, parameters.get(Constants.value) as number, telemetryData);
+			let ret = state.client.setWidgetWidth("setWidgetWidth", parameters.get(Constants.value) as number, telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "setWidth", telemetryData);
 			setPerfData(perfData);
-
-			return provider.setWidth(parameters.get(Constants.value) as number);
+			
+			return Promise.resolve(new Map().set(Constants.value, ret));
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, "setWidth", appId, true, errorData);
@@ -412,7 +405,7 @@ namespace Microsoft.CIFramework.Internal {
 			//let mode = state.client.getWidgetMode(telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getMode", telemetryData);
 			setPerfData(perfData);
-			return Promise.resolve(new Map().set(Constants.value, provider.getMode()));
+			return Promise.resolve(new Map().set(Constants.value, state.client.getWidgetMode()));
 		}
 		else
 		{
@@ -432,7 +425,7 @@ namespace Microsoft.CIFramework.Internal {
 			//let width = state.client.getWidgetWidth(telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getWidth", telemetryData);
 			setPerfData(perfData);
-			return Promise.resolve(new Map().set(Constants.value, Number(provider.getWidth())));
+			return Promise.resolve(new Map().set(Constants.value, Number(state.client.getWidgetWidth())));
 		}
 		else
 		{
