@@ -55,8 +55,8 @@ namespace Microsoft.CIFramework.Internal
 		}
 	}
 
-	export function logFailure(appId: string, isError: boolean, error: IErrorHandler) {
-		var usageData = new UsageTelemetryData(null, null, null, null, appId ? appId : "", isError ? isError : false, error ? error : null);
+	export function logFailure(appId: string, isError: boolean, error: IErrorHandler, providerID?: string, providerName?: string) {
+		var usageData = new UsageTelemetryData(providerID ? providerID : "", providerName ? providerName : "", null, null, appId ? appId : "", isError ? isError : false, error ? error : null);
 		setUsageData(usageData);
 	}
 

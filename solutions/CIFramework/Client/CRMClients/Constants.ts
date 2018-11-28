@@ -7,8 +7,8 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * utility func to create a promise and reject it with the passed error message
 	*/
-	export function rejectWithErrorMessage(errorMessage: string, apiName: string, appId?: string, isError?: boolean, error?: IErrorHandler) {
-		logFailure(appId, isError, error);
+	export function rejectWithErrorMessage(errorMessage: string, apiName: string, appId?: string, isError?: boolean, error?: IErrorHandler, providerID?: string, providerName?: string) {
+		logFailure(appId, isError, error, providerID, providerName);
 		reportError(apiName + " failed with error: " + errorMessage);
 		return Promise.reject(Microsoft.CIFramework.Utility.createErrorMap(errorMessage, apiName));
 	}

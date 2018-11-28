@@ -429,7 +429,7 @@ namespace Microsoft.CIFramework.Internal {
 					return resolve();
 				}
 				catch (error) {
-					logFailure("", true, error);
+					return rejectWithErrorMessage(error.message, "renderSearchPage");
 				}
 			});
 		}

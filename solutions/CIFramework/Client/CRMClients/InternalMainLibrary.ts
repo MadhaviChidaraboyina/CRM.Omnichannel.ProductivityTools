@@ -280,7 +280,7 @@ namespace Microsoft.CIFramework.Internal {
 				},
 				(error: IErrorHandler) =>
 				{
-					return rejectWithErrorMessage(error.errorMsg, "setClickToAct", appId, true, error);
+					return rejectWithErrorMessage(error.errorMsg, "setClickToAct", appId, true, error, provider.providerId, provider.name);
 				});
 			});
 		}
@@ -480,7 +480,7 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, "retrieveRecord", appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "retrieveRecord", appId, true, error, provider.providerId, provider.name);
 					}
 				);
 			});
@@ -503,7 +503,7 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, "updateRecord", appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "updateRecord", appId, true, error, provider.providerId, provider.name);
 					}
 				);
 			});
@@ -526,7 +526,7 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, "createRecord", appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "createRecord", appId, true, error, provider.providerId, provider.name);
 					}
 				);
 			});
@@ -549,7 +549,7 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, "deleteRecord", appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "deleteRecord", appId, true, error, provider.providerId, provider.name);
 					}
 				);
 			});
@@ -615,7 +615,7 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, "getEntityMetadata", appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "getEntityMetadata", appId, true, error, provider.providerId, provider.name);
 					}
 				);
 			});
@@ -645,7 +645,7 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(res);
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, "notifyEvent", appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "notifyEvent", appId, true, error, provider.providerId, provider.name);
 					}
 				);
 			});
@@ -673,7 +673,7 @@ namespace Microsoft.CIFramework.Internal {
 					},
 					(error: IErrorHandler) => {
 						state.client.collapseFlap();
-						return rejectWithErrorMessage(error.errorMsg, "insertNotes", appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "insertNotes", appId, true, error, provider.providerId, provider.name);
 					}
 				);
 			});
@@ -695,7 +695,7 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					(error: IErrorHandler) => {
-						return rejectWithErrorMessage(error.errorMsg, "renderSearchPage", appId, true, error);
+						return rejectWithErrorMessage(error.errorMsg, "renderSearchPage", appId, true, error, provider.providerId, provider.name);
 					}
 				);
 			});
@@ -717,7 +717,7 @@ namespace Microsoft.CIFramework.Internal {
 				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
 			}
 			else {
-				return rejectWithErrorMessage(errorData.errorMsg, "startUISession", appId, true, errorData);
+				return rejectWithErrorMessage(errorData.errorMsg, "startUISession", appId, true, errorData, provider.providerId, provider.name);
 			}
 		}
 		else {
@@ -737,7 +737,7 @@ namespace Microsoft.CIFramework.Internal {
 				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
 			}
 			else {
-				return rejectWithErrorMessage(errorData.errorMsg, "switchUISession", appId, true, errorData);
+				return rejectWithErrorMessage(errorData.errorMsg, "switchUISession", appId, true, errorData, provider.providerId, provider.name);
 			}
 		}
 		else {
@@ -757,7 +757,7 @@ namespace Microsoft.CIFramework.Internal {
 				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
 			}
 			else {
-				return rejectWithErrorMessage(errorData.errorMsg, "endUISession", appId, true, errorData);
+				return rejectWithErrorMessage(errorData.errorMsg, "endUISession", appId, true, errorData, provider.providerId, provider.name);
 			}
 		}
 		else {
