@@ -298,7 +298,7 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		client.setWidgetMode = (name: string, mode: number, telemetryData?: Object|any): void =>
+		client.setWidgetMode = (name: string, mode: number, telemetryData?: Object|any): number =>
 		{
 			let startTime = new Date();
 
@@ -306,18 +306,27 @@ namespace Microsoft.CIFramework.Internal {
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.setState"
 			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			return mode;
 		}
 
-		client.setWidgetWidth = (name: string, width: number, telemetryData?: Object|any): void =>
+		client.setWidgetWidth = (name: string, width: number, telemetryData?: Object | any): number => {
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let sessionPanelArea = (<HTMLDivElement>widgetIFrame.contentDocument.getElementById("sessionPanel"));
+
+			client.setPanelWidth("setPanelWidth", width + sessionPanelArea.clientWidth);
+			return width;
+		}
+
+		client.setPanelWidth = (name: string, width: number, telemetryData?: Object|any): void =>
 		{
 			let startTime = new Date();
 
 			Xrm.Panel.width = width;
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.setWidth"
-			//logApiData(telemetryData, startTime, timeTaken, apiName);
+			logApiData(telemetryData, startTime, timeTaken, apiName);
 		}
-
 
 		client.getWidgetMode = (telemetryData?: Object|any): number =>
 		{
@@ -537,7 +546,7 @@ namespace Microsoft.CIFramework.Internal {
 			let widgetWidth = client.getWidgetWidth() as number;
 			this.origWidth = widgetWidth + sessionPanelArea.clientWidth;
 			this.flapExpanded = true;
-			client.setWidgetWidth("setWidgetWidth", (2 * this.origWidth - sessionPanelArea.clientWidth));
+			client.setPanelWidth("setPanelWidth", (2 * this.origWidth - sessionPanelArea.clientWidth));
 			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', widgetWidth.toString() + "px");
 			return this.origWidth;
 		}
@@ -545,7 +554,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (!this.flapExpanded) {
 				return 0;
 			}
-			client.setWidgetWidth("setWidgetWidth", this.origWidth);
+			client.setPanelWidth("setPanelWidth", this.origWidth);
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', "0px");
 			this.flapExpanded = false;

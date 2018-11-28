@@ -1,7 +1,7 @@
 ﻿:root {
-	--sessionPanelAreaWidth: 36px;
+	--sessionPanelAreaWidth: 34px;
 	--flapAreaWidth: 0px;
-	--widgetAreaWidth: calc(100% - var(--sessionPanelAreaWidth) - var(--flapAreaWidth) - 2px);
+	--widgetAreaWidth: calc(100% - var(--sessionPanelAreaWidth) - var(--flapAreaWidth));
 }
 
 div#PresenceList
@@ -128,7 +128,7 @@ div#PresenceList
 .sessionPanel
 {
 	background-color: #EFEFEF;
-	width: calc(var(--sessionPanelAreaWidth) - 2px);
+	width: calc(var(--sessionPanelAreaWidth));
 	position: fixed;
 	height: calc(100% - 10px);
 	display: flex;

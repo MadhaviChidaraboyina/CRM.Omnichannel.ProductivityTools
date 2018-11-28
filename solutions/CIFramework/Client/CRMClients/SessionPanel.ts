@@ -40,13 +40,13 @@ namespace Microsoft.CIFramework.Internal {
 				return;
 			}
 
-			let switchProvider = false;
+			let switchProvider = true;
 			let oldProvider: CIProvider;
 			let newProvider: CIProvider = this.UIsessions.get(sessionId);
 			if (this.visibleUISession != '') {
 				oldProvider = this.UIsessions.get(this.visibleUISession);
-				if (oldProvider != newProvider) {
-					switchProvider = true;
+				if (oldProvider == newProvider) {
+					switchProvider = false;
 				}
 
 				oldProvider.setInvisibleUISession(this.visibleUISession, switchProvider);

@@ -22,7 +22,7 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for all set a setting kind of functions.
 	*/
-	type SetSettingFunction = (name: string, value: any, telemetryData?: Object) => string | void;
+	type SetSettingFunction = (name: string, value: any, telemetryData?: Object) => string|number|void;
 
 	/**
 	 * Func type for all get a specific setting/context functions for which we dont need an input param.
@@ -137,6 +137,8 @@ namespace Microsoft.CIFramework.Internal
 		setWidgetMode: SetSettingFunction;
 
 		setWidgetWidth: SetSettingFunction;
+
+		setPanelWidth: SetSettingFunction;
 
 		getWidgetMode: GetContextFunction;
 
