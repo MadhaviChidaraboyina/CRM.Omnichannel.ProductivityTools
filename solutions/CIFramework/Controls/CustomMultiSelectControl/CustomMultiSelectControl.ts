@@ -41,7 +41,7 @@ module MscrmControls.Service.CIProvider {
 		private sysAdminCustomizerRoles: RoleInformation[];
 
 		// List of Apps not to be shown in the App Picker for CIF Config
-		private invalidAppsForCif: string[] = ["msdyn_ChannelIntegrationFrameworkApp", "msdyusd_USDAdminSettings", "msdyn_OCAPP"];
+		private invalidAppsForCif: string[] = ["msdyn_ChannelIntegrationFrameworkApp", "msdyusd_USDAdminSettings"];
 
 		/**
 		 * Empty constructor.
