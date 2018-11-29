@@ -94,7 +94,7 @@ namespace Microsoft.CIFramework.Internal
 		testPerfTelemetry.setProperty(TelemetryConstants.crmVersion, data.providerData.crmVersion ? data.providerData.crmVersion : "");
 		testPerfTelemetry.setProperty(TelemetryConstants.appId, data.providerData.appId ? data.providerData.appId : "");
 		testPerfTelemetry.setProperty(TelemetryConstants.apiVersion, data.providerData.apiVersion ? data.providerData.apiVersion : "");
-		testPerfTelemetry.setProperty(TelemetryConstants.orgId, data.providerData.orgId ? data.providerData.orgId : "");
+		testPerfTelemetry.setPropertyWithPii(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId, AWTPiiKind.Identity);
 		testPerfTelemetry.setProperty(TelemetryConstants.orgName, data.providerData.orgName ? data.providerData.orgName : "");
 		testPerfTelemetry.setProperty(TelemetryConstants.startTime, data.startTime ? data.startTime.toUTCString() : "");
 		testPerfTelemetry.setProperty(TelemetryConstants.timeTaken, data.timeTaken ? data.timeTaken : "");
