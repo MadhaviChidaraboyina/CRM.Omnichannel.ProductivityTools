@@ -1,5 +1,5 @@
 ﻿:root {
-	--sessionPanelAreaWidth: 34px;
+	--sessionPanelAreaWidth: 44px;
 	--flapAreaWidth: 0px;
 	--widgetAreaWidth: calc(100% - var(--sessionPanelAreaWidth) - var(--flapAreaWidth));
 }
@@ -154,27 +154,25 @@ div#PresenceList
 
 .uiSession
 {
-	height: 50px;
+	height: 44px;
 	cursor: pointer;
 	background-color: transparent;
 }
 
 .iconCircle
 {
-	width: 26px;
-	height: 26px; 
+	width: 28px;
+	height: 28px; 
 	border-radius: 50%;
-	-webkit-border-radius: 50%;
 	text-align: center;
-	margin: 0px 4px;
 }
 
 .initials
 {
 	position: relative;
 	top: 3px;
-	font-size: 14px;
-	line-height: normal;
+	font-size: 12px;
+	line-height: 16px;
 	color: #fff;
 	font-family: Segoe UI;
 }
