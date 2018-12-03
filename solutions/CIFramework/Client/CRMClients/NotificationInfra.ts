@@ -31,11 +31,11 @@ namespace Microsoft.CIFramework.Internal {
 			map = renderSoftNotification(header,body,notificationType[1]);
 		}else{
 			if(eventType.search(Constants.Chat) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/chat_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div><p><br></p></div></div>');
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/chat_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div></div><p><br></p></div></div>');
 			}else if(eventType.search(Constants.Call) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/call_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div><p><br></p></div></div>');
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/call_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div></div><p><br></p></div></div>');
 			}else if(eventType.search(Constants.Case) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/case_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><p tabindex="0" class="body_CIF"><div></div><p><br></p></div></div>');
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/case_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div></div><p><br></p></div></div>');
 			}
 			let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
 			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
@@ -149,7 +149,10 @@ namespace Microsoft.CIFramework.Internal {
 						});
 						label1.style.width = "30%";//(panelWidth * 0.3)+"px";
 						label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
-						notificationBody.appendChild(label2);
+						notificationBody.appendChild(label2); 
+						var divForSpace = document.createElement("div");
+						divForSpace.style.height = "8px";
+						notificationBody.appendChild(divForSpace);
 						var div = document.createElement("div");
 						div.appendChild(document.createElement("br"));
 						notificationBody.appendChild(div);
@@ -333,7 +336,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-		toastDiv.insertAdjacentHTML('afterbegin', '<div tabindex="0" id="CIFSoftToast" class="CIFSoftNotificationToast"><div tabindex="0" id="header_SoftNotification_CIF" class="headerSoftNotification_CIF"><div><br></div></div><div tabindex="0" id="bodyDivSoftToastCIF" class="bodyDivSoftToast_CIF"></div></div>');
+		toastDiv.insertAdjacentHTML('afterbegin', '<div tabindex="0" id="CIFSoftToast" class="CIFSoftNotificationToast"><div tabindex="0" id="header_SoftNotification_CIF" class="headerSoftNotification_CIF"><div style="height:14px"></div></div><div tabindex="0" id="bodyDivSoftToastCIF" class="bodyDivSoftToast_CIF"></div></div>');
 		//Constructing header
 		let panelWidth = "100%";
 		let chatWindowHeader = widgetIFrame.contentWindow.document.getElementById("header_SoftNotification_CIF");
@@ -384,7 +387,7 @@ namespace Microsoft.CIFramework.Internal {
 				for(i = 0; i < body.length; i++){
 					for (let key in body[i]) {
 																									   
-						var label1 = document.createElement("label");
+						/*var label1 = document.createElement("label");
 						notificationBody.appendChild(label1);
 						label1.classList.add("notificationBodyLabel1_CIF");
 						var label2 = document.createElement("label");
@@ -396,6 +399,19 @@ namespace Microsoft.CIFramework.Internal {
 						label2.setAttribute("aria-label", body[i][key]);
 						label1.style.width = "30%";//(panelWidth * 0.3)+"px";
 						label2.style.width = "calc(70% - 30px)";//((panelWidth * 0.7) - 20)+"px";
+						div = document.createElement("div");
+						div.classList.add("chatWindowHeaderDiv_CIF");
+						notificationBody.appendChild(div);*/
+
+						div = document.createElement("div");
+						div.classList.add("chatWindowHeaderDiv_CIF");
+						notificationBody.appendChild(div);
+						var label1 = document.createElement("label");
+																									 
+						notificationBody.appendChild(label1);
+						label1.classList.add("notificationBodyCIF");
+						label1.innerText = body[i][key];
+						label1.setAttribute("aria-label", body[i][key]);
 						div = document.createElement("div");
 						div.classList.add("chatWindowHeaderDiv_CIF");
 						notificationBody.appendChild(div);
