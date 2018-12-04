@@ -277,10 +277,14 @@ namespace Microsoft.CIFramework.Internal {
 						else {
 							// Open the Search Page with the Search String from the OData Parameters if the records != 1. Opens blank search page if the $search parameter has no value
 							try {
-								var searchPageInput: XrmClientApi.SearchPageInput;
-								searchPageInput.searchText = Microsoft.CIFramework.Utility.extractParameter(queryParmeters, "$search");
-								searchPageInput.searchType = 1;
-								searchPageInput.EntityNames.push(entityName);
+								const searchPageInput: XrmClientApi.PageInput = {
+									pageType: "search" as any,
+									searchText: Microsoft.CIFramework.Utility.extractParameter(queryParmeters, "$search"),
+									searchType: 1,
+									EntityNames: [entityName],
+									EntityGroupName: "",
+								};
+
 								Xrm.Navigation.navigateTo(searchPageInput);
 							}
 							catch (error) { }
@@ -416,10 +420,13 @@ namespace Microsoft.CIFramework.Internal {
 			let startTime;
 			return new Promise<void>((resolve, reject) => {
 				try {
-					var searchPageInput: XrmClientApi.SearchPageInput;
-					searchPageInput.searchText = searchString;
-					searchPageInput.EntityNames.push(entityName);
-					searchPageInput.searchType = 1;
+					const searchPageInput: XrmClientApi.PageInput = {
+						pageType: "search" as any,
+						searchText: searchString,
+						searchType: 1,
+						EntityNames: [entityName],
+						EntityGroupName: "",
+					};
 
 					startTime = new Date();
 					Xrm.Navigation.navigateTo(searchPageInput);
