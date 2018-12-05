@@ -625,13 +625,13 @@
 }
 [dir='ltr'] .notesHeaderSpan_CIF
 {
-	margin-left: calc(100% - calc(97% - 20px) - 7%);
+	margin-left: calc(100% - calc(97% - 20px) - 6%);
 	float:left;
 }
 
 [dir='rtl'] .notesHeaderSpan_CIF
 {
-	margin-left: calc(100% - calc(97% - 20px) - 7%);
+	margin-left: calc(100% - calc(97% - 20px) - 6%);
 	float:right;
 }
 .notesbodyDivider_CIF{
@@ -644,13 +644,13 @@
 }
 [dir='ltr'] .newTextAreaCIF
 {
-	margin-left: calc(100% - calc(97% - 20px) - 7%);
+	margin-left: calc(100% - calc(97% - 20px) - 6%);
 	float:left;
 }
 
 [dir='rtl'] .newTextAreaCIF
 {
-	margin-right: calc(100% - calc(97% - 20px) - 7%);
+	margin-right: calc(100% - calc(97% - 20px) - 6%);
 	float:right;
 }
 .notesSaveButtonCIF{
@@ -669,13 +669,13 @@
 [dir='ltr'] .notesSaveButtonCIF
 {
 	float: right;
-	margin-right: calc(100% - calc(97% - 20px) - 7%);
+	margin-right: calc(100% - calc(97% - 20px) - 6%);
 }
 
 [dir='rtl'] .notesSaveButtonCIF
 {
 	float: left;
-	margin-left: calc(100% - calc(97% - 20px) - 7%);
+	margin-left: calc(100% - calc(97% - 20px) - 6%);
 }
 .notesCancelButtonCIF{
 	color: #315FA2;
@@ -714,14 +714,14 @@
 [dir='ltr'] .closeNotes_CIF
 {
 	float:right;
-	margin-right:calc(100% - calc(97% - 20px) - 7%);
+	margin-right:calc(100% - calc(97% - 20px) - 6%);
     left: calc(97% - 20px);
 }
 
 [dir='rtl'] .closeNotes_CIF
 {
 	float: left;
-	margin-left: calc(100% - calc(97% - 20px) - 7%);
+	margin-left: calc(100% - calc(97% - 20px) - 6%);
 	right: calc(97% - 20px);
 }
 .hardNotificationLabel2{
