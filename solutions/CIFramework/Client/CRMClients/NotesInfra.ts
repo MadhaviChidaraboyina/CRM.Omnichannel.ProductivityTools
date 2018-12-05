@@ -49,11 +49,11 @@ namespace Microsoft.CIFramework.Internal {
 		return new Promise(function (resolve,reject) {
 			//expandFlap(width,state);
 			//widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
-			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" tabindex="0" class="CIFNotes"><div id="notesHeaderIdCIF" tabindex="0" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close" style="margin-left:18px"><br/>Add Notes</div></div></div>');
+			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" tabindex="0" class="CIFNotes"><div id="notesHeaderIdCIF" tabindex="0" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close"><br/>Add Notes</div></div><div class="notesbodyDivider_CIF"></div><div style="height: 14px;"></div></div>');
 			notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
 			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
 			let availNotesHeight = widgetIFrame.clientHeight - 26;
-			widgetIFrame.contentWindow.document.getElementById("notesHeaderIdCIF").style.height = (availNotesHeight * 0.14)+"px";
+			widgetIFrame.contentWindow.document.getElementById("notesHeaderIdCIF").style.height = (availNotesHeight * 0.1)+"px";
 			var span = document.createElement("span");
 			span.classList.add("closeNotes_CIF");
 			span.classList.add("FontIcons-closeSoftNotification_CIF");
@@ -64,9 +64,9 @@ namespace Microsoft.CIFramework.Internal {
 			notesElement.appendChild(newTextArea);
 			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = "calc(100% - 7px)";//(width-7)+"px";
 			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.height = availNotesHeight.toString() + "px";
-			newTextArea.setAttribute('placeholder','Start adding notes');
+			newTextArea.setAttribute('placeholder','  Start adding notes');
 			newTextArea.classList.add("newTextAreaCIF");
-			var textAreaWidth = "calc(87.5% - 15px)";//width - width/8 - 15;
+			var textAreaWidth = "calc(97% - 20px)";//width - width/8 - 15;
 			newTextArea.id = "notesTextAreaCIF";
 			newTextArea.style.width = textAreaWidth;
 			newTextArea.style.height = (availNotesHeight * 0.7)+"px";
@@ -76,8 +76,7 @@ namespace Microsoft.CIFramework.Internal {
 			saveBtn.innerText = "Add Note";
 			saveBtn.tabIndex = 0;
 			saveBtn.setAttribute("aria-label", "Add Note");
-			var cancelBtn = document.createElement('a');
-			cancelBtn.setAttribute('href',"#");
+			var cancelBtn = document.createElement("BUTTON");
 			notesElement.appendChild(cancelBtn);
 			cancelBtn.classList.add("notesCancelButtonCIF");
 			cancelBtn.innerText = "Cancel";

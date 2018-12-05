@@ -31,11 +31,11 @@ namespace Microsoft.CIFramework.Internal {
 			map = renderSoftNotification(header,body,notificationType[1]);
 		}else{
 			if(eventType.search(Constants.Chat) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/chat_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div></div><p><br></p></div></div>');
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/chat_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div><br></div></div></div>');
 			}else if(eventType.search(Constants.Call) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/call_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div></div><p><br></p></div></div>');
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/call_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div><br></div></div></div>');
 			}else if(eventType.search(Constants.Case) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/case_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div tabindex="0" class="headerDetailsCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div></div><p><br></p></div></div>');
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/case_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div><br></div></div></div>');
 			}
 			let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
 			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
@@ -130,8 +130,10 @@ namespace Microsoft.CIFramework.Internal {
 				for( i = 0; i < body.length; i++){
 					for (let key in body[i]) {
 						let notificationBody = toastDiv.getElementsByClassName("body_CIF")[len-1];
+						var outerDiv = document.createElement("div");	
+						outerDiv.classList.add("bodyContentDiv");
 						var label1 = document.createElement("label");
-						notificationBody.appendChild(label1);
+						outerDiv.appendChild(label1);
 						label1.classList.add("body_CIFLabel1");
 						var label2 = document.createElement("label");
 						label2.classList.add("body_CIFLabel2");
@@ -139,23 +141,21 @@ namespace Microsoft.CIFramework.Internal {
 						label1.setAttribute("aria-label", key);
 						label2.innerText = body[i][key];
 						label2.setAttribute("aria-label", body[i][key]);
-						label2.addEventListener("mouseover", function mouseOverListener() {
+						/*label2.addEventListener("mouseover", function mouseOverListener() {
 							this.classList.add("body_CIFLabel2_mouseover");
 							label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
 						});
 						label2.addEventListener("mouseout", function mouseoutListener() {
 							this.classList.add("body_CIFLabel2_mouseout");
 							label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
-						});
+						});*/
 						label1.style.width = "30%";//(panelWidth * 0.3)+"px";
-						label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
-						notificationBody.appendChild(label2); 
+						label2.style.width = "calc(60% - 20px)";//((panelWidth * 0.7) - 20)+"px";
+						outerDiv.appendChild(label2); 
+						notificationBody.appendChild(outerDiv);
 						var divForSpace = document.createElement("div");
 						divForSpace.style.height = "8px";
 						notificationBody.appendChild(divForSpace);
-						var div = document.createElement("div");
-						div.appendChild(document.createElement("br"));
-						notificationBody.appendChild(div);
 					}
 				}
 			}else{
@@ -165,8 +165,6 @@ namespace Microsoft.CIFramework.Internal {
 			widgetIFrame.contentWindow.document.getElementById("CIFToastDivider_" + len).style.width = panelWidth;//panelWidth+"px";
 			toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].id = "CIFToastDividerInvisible_"+len;
 			widgetIFrame.contentWindow.document.getElementById("CIFToastDividerInvisible_" + len).style.width = panelWidth;//panelWidth+"px";
-			toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].innerHTML = headerVal;
-			toastDiv.getElementsByClassName("headerDetailsCIF")[len-1].setAttribute("aria-label", headerVal);
 			let chatWindowBody = toastDiv.getElementsByClassName("bodyDivCIF")[len-1];
 			if(actions != null && actions != "undefined"){
 				let accept = false;
@@ -257,19 +255,15 @@ namespace Microsoft.CIFramework.Internal {
 							childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:none;');
 							childDiv.getElementsByClassName("headerTimerCIF")[0].setAttribute('style', 'display:block;');
 						}
-						if(childDiv.getElementsByClassName("headerDetailsCIF")[0] != null){
-							childDiv.getElementsByClassName("headerDetailsCIF")[0].setAttribute('style', 'display:none;');
-						}
-						if(childDiv.getElementsByClassName("header_NotificationType_CIF")[0] != null){
-							childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:none;');
+						if(childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0] != null){
+							childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:none;');
 						}
 					}
 					this.parentElement.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
 					this.parentElement.getElementsByClassName("headerTimerCIF")[0].style.display = "none";
-					this.parentElement.getElementsByClassName("headerDetailsCIF")[0].setAttribute('style', 'display:block;');
-					this.parentElement.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:block;');
-					if(isTimeOut == false){
-						this.parentElement.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:none;');
+					this.parentElement.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:block;');
+					if(this.parentElement.getElementsByClassName("timeOutCIF")[0] == null || this.parentElement.getElementsByClassName("timeOutCIF")[0] == "undefined"){
+						this.parentElement.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:none;');
 					}
 				}
 			});
@@ -290,24 +284,20 @@ namespace Microsoft.CIFramework.Internal {
 					}
 					countBodyDisp++;
 				}
-				if(childDiv.getElementsByClassName("headerDetailsCIF")[0] != null){
-					childDiv.getElementsByClassName("headerDetailsCIF")[0].setAttribute('style', 'display:none;');
-				}
-				if(childDiv.getElementsByClassName("header_NotificationType_CIF")[0] != null){
+				if(childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0] != null){
 					if(countNotificationTypeDisp == 0){
 						if(isTimeOut == true){
-							childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:block;');
+							childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:block;');
 						}
 					}else{
-						childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:none;');
+						childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:none;');
 					}
 					countNotificationTypeDisp++;
 				}
 			}
 			for( i=0; i< childDivs.length; i++ ){
 				let childDiv = childDivs[i];
-				if(childDiv.getElementsByClassName("headerDetailsCIF")[0] != null){
-					childDiv.getElementsByClassName("headerDetailsCIF")[0].setAttribute('style', 'display:block;');
+				if(childDiv.getElementsByClassName("headerTimerCIF")[0] != null){
 					childDiv.getElementsByClassName("headerTimerCIF")[0].setAttribute('style', 'display:none;');
 					break;
 				}
@@ -515,7 +505,7 @@ namespace Microsoft.CIFramework.Internal {
 			}else{
 				len = toastDiv.getElementsByClassName("CIFToastDiv").length;
 				if(waitTime == -1){
-					(toastDiv.getElementsByClassName("header_NotificationType_CIF")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]).setAttribute('style', 'display:none;');
+					(toastDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]).setAttribute('style', 'display:none;');
 				}
 				for(let [key,value] of map){
 					if(key == toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]){
@@ -540,15 +530,11 @@ namespace Microsoft.CIFramework.Internal {
 												if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
 													childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:none;');
 												}
-												if(childDiv.getElementsByClassName("headerDetailsCIF")[0] != null){
-													childDiv.getElementsByClassName("headerDetailsCIF")[0].setAttribute('style', 'display:none;');
-												}
-												if(childDiv.getElementsByClassName("header_NotificationType_CIF")[0] != null){
-													childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:none;');
+												if(childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0] != null){
+													childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:none;');
 												}
 											}
 											let isBodyDisp = 0;
-											let isHeaderDetailsDisp = 0;
 											let isNotificationTypeDisp = 0;
 											for( i=0; i< childDivs.length; i++ ){
 												let childDiv = childDivs[i];
@@ -557,15 +543,11 @@ namespace Microsoft.CIFramework.Internal {
 													childDiv.getElementsByClassName("headerTimerCIF")[0].setAttribute('style', 'display:none;');
 													isBodyDisp = 1;
 												}
-												if(childDiv.getElementsByClassName("headerDetailsCIF")[0] != null){
-													childDiv.getElementsByClassName("headerDetailsCIF")[0].setAttribute('style', 'display:block;');
-													isHeaderDetailsDisp = 1;
-												}
-												if(childDiv.getElementsByClassName("header_NotificationType_CIF")[0] != null){
-													childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:block;');
+												if(childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0] != null){
+													childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:block;');
 													isNotificationTypeDisp = 1;
 												}
-												if(isBodyDisp == 1 && isHeaderDetailsDisp == 1 && isNotificationTypeDisp == 1){
+												if(isBodyDisp == 1 && isNotificationTypeDisp == 1){
 													break;
 												}
 											}
@@ -590,7 +572,6 @@ namespace Microsoft.CIFramework.Internal {
 							var childDivs = toastDiv.getElementsByTagName('div');
 							if(childDivs != null){
 								let isBodyDisp = 0;
-								let isHeaderDetailsDisp = 0;
 								let isNotificationTypeDisp = 0;
 								for( i=0; i< childDivs.length; i++ ){
 									let childDiv = childDivs[i];
@@ -599,17 +580,13 @@ namespace Microsoft.CIFramework.Internal {
 										childDiv.getElementsByClassName("headerTimerCIF")[0].setAttribute('style', 'display:none;');
 										isBodyDisp = 1;
 									}
-									if(childDiv.getElementsByClassName("headerDetailsCIF")[0] != null){
-										childDiv.getElementsByClassName("headerDetailsCIF")[0].setAttribute('style', 'display:block;');
-										isHeaderDetailsDisp = 1;
-									}
-									if(childDiv.getElementsByClassName("header_NotificationType_CIF")[0] != null){
+									if(childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0] != null){
 										if(waitTime != -1){
-											childDiv.getElementsByClassName("header_NotificationType_CIF")[0].setAttribute('style', 'display:block;');
+											childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:block;');
 										}
 										isNotificationTypeDisp = 1;
 									}
-									if(isBodyDisp == 1 && isHeaderDetailsDisp == 1 && isNotificationTypeDisp == 1){
+									if(isBodyDisp == 1 && isNotificationTypeDisp == 1){
 										break;
 									}
 								}

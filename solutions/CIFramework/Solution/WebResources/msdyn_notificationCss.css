@@ -5,7 +5,7 @@
 	border-radius: 4px;
 	background-color: #003D60;
 	padding-bottom: 13px;
-	box-shadow: 0px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 	margin-bottom: 4px;
 }
 .internalCommunication_CIFToastDiv{
@@ -95,6 +95,7 @@
 	font-size:12px;
 	color:#D8D8D8;
 	display:none;
+	margin-top: 5px;
 }
 [dir='ltr'] .headerTimerCIF
 {
@@ -159,6 +160,7 @@
 	font-size:11px;
 	height:13px;
 	color:#FFFFFF;
+	margin-top: 2px;
 }
 [dir='ltr'] .broadCastLabel1
 {
@@ -261,19 +263,16 @@
 	float:right;
 }
 .body_CIFLabel2{
-	font-family:Segoe UI;
-	font-style:Semibold;
-	font-weight: 600;
-	font-size:14px;
-	height:16px; 
-	color:#FFFFFF;
-	display: inline-block;
-	position: absolute;
-	height: 40px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	word-break: break-all;
+	font-family: Segoe UI;
+    font-style: Semibold;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-inline-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 [dir='ltr'] .body_CIFLabel2
 {
@@ -408,7 +407,7 @@
 	width:16px; 
 	height:16px;  
 	font-style:Regular; 
-	font-size:12px; 
+	font-size:10px; 
 	font-family: CRM MDL2 ASSETS;
 	color:#FFFFFF;
 }
@@ -427,7 +426,7 @@
 	width:16px; 
 	height:16px;  
 	font-style:Regular; 
-	font-size:12px; 
+	font-size:10px; 
 	font-family: CRM MDL2 ASSETS;
 	color:#FFFFFF;
 }
@@ -608,7 +607,7 @@
 	padding-bottom: 10px;
 	min-height: 120px;
 	background-color: #FFFFFF;
-	border-style: solid;
+	border: 1px solid;
 	border-color: #E5E5E5;
 }
 .notesHeaderCIF{
@@ -619,18 +618,39 @@
 	font-style: Semibold;
 	font-weight: 600;
 }
+.notesHeaderSpan_CIF{
+    font-size: 16px;
+    line-height: normal;
+    color: #333333;
+}
+[dir='ltr'] .notesHeaderSpan_CIF
+{
+	margin-left: calc(100% - calc(97% - 20px) - 6%);
+	float:left;
+}
+
+[dir='rtl'] .notesHeaderSpan_CIF
+{
+	margin-left: calc(100% - calc(97% - 20px) - 6%);
+	float:right;
+}
+.notesbodyDivider_CIF{
+	border-color: #F1F1F1;
+	border-width: 1px;
+	border-style: solid;
+}
 .newTextAreaCIF{
 	background-color: #FFFAE9;
 }
 [dir='ltr'] .newTextAreaCIF
 {
-	margin-left: 20px;
+	margin-left: calc(100% - calc(97% - 20px) - 6%);
 	float:left;
 }
 
 [dir='rtl'] .newTextAreaCIF
 {
-	margin-right: 20px;
+	margin-right: calc(100% - calc(97% - 20px) - 6%);
 	float:right;
 }
 .notesSaveButtonCIF{
@@ -642,18 +662,20 @@
 	font-size: 12px;
 	line-height: 14px;
 	height: 28px;
-	border-color: #315FA2;
+	border: none;
+	margin-top: 10px;
+	width: 70px;
 }
 [dir='ltr'] .notesSaveButtonCIF
 {
 	float: right;
-	margin-right: 20px;
+	margin-right: calc(100% - calc(97% - 20px) - 6%);
 }
 
 [dir='rtl'] .notesSaveButtonCIF
 {
 	float: left;
-	margin-left: 20px;
+	margin-left: calc(100% - calc(97% - 20px) - 6%);
 }
 .notesCancelButtonCIF{
 	color: #315FA2;
@@ -665,32 +687,42 @@
 	height: 28px;
 	margin-top: 10px;
 	text-decoration: none;
+	width: 70px;
+	border-color: #315FA2;
+	border-width: 1px;
+	border-style: solid;
 }
 [dir='ltr'] .notesCancelButtonCIF
 {
 	float: right;
-	margin-right: 12px;
+	margin-right: 8px;
 }
 
 [dir='rtl'] .notesCancelButtonCIF
 {
 	float: left;
-	margin-left: 12px;
+	margin-left: 8px;
 }
 .closeNotes_CIF{
 	font-family: CRM MDL2 ASSETS;
-	color:#333333;
+	font-size: 16px;
+	line-height: normal;
+	color: #333333;
+	height: 16px;
+	position: absolute;
 }
 [dir='ltr'] .closeNotes_CIF
 {
 	float:right;
-	margin-right:10px;
+	margin-right:calc(100% - calc(97% - 20px) - 6%);
+	left: calc(97% - 20px);
 }
 
 [dir='rtl'] .closeNotes_CIF
 {
 	float: left;
-	margin-left: 10px;
+	margin-left: calc(100% - calc(97% - 20px) - 6%);
+	right: calc(97% - 20px);
 }
 .hardNotificationLabel2{
 	font-family:Segoe UI;
@@ -709,6 +741,9 @@
 {
 	float: right;
 	text-align:right;
+}
+.bodyContentDiv{
+	
 }
 @font-face{font-family:"CRMMDL2";src:url('/uclient/resources/styles/CRMMDL2.woff') format('woff');font-weight: normal;font-style: normal;}
 .FontIcons-closeSoftNotification_CIF:before {font-family: "CRMMDL2"; content: "\E711";}
