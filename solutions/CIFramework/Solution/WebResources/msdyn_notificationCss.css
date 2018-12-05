@@ -706,8 +706,8 @@
 .closeNotes_CIF{
 	font-family: CRM MDL2 ASSETS;
 	font-size: 16px;
-    line-height: normal;
-    color: #333333;
+	line-height: normal;
+	color: #333333;
 	height: 16px;
 	position: absolute;
 }
@@ -715,7 +715,7 @@
 {
 	float:right;
 	margin-right:calc(100% - calc(97% - 20px) - 6%);
-    left: calc(97% - 20px);
+	left: calc(97% - 20px);
 }
 
 [dir='rtl'] .closeNotes_CIF
