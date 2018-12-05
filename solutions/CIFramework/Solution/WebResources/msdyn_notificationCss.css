@@ -263,14 +263,16 @@
 	float:right;
 }
 .body_CIFLabel2{
-	font-family:Segoe UI;
-	font-style:Semibold;
-	font-weight: 600;
-	font-size:14px;
-	height:16px; 
-	color:#FFFFFF;
-	display: inline-table;
-	position: absolute;
+	font-family: Segoe UI;
+    font-style: Semibold;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-inline-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 [dir='ltr'] .body_CIFLabel2
 {
@@ -605,7 +607,7 @@
 	padding-bottom: 10px;
 	min-height: 120px;
 	background-color: #FFFFFF;
-	border-style: solid;
+	border: 1px solid;
 	border-color: #E5E5E5;
 }
 .notesHeaderCIF{
@@ -616,18 +618,39 @@
 	font-style: Semibold;
 	font-weight: 600;
 }
+.notesHeaderSpan_CIF{
+    font-size: 16px;
+    line-height: normal;
+    color: #333333;
+}
+[dir='ltr'] .notesHeaderSpan_CIF
+{
+	margin-left: calc(100% - calc(97% - 20px) - 7%);
+	float:left;
+}
+
+[dir='rtl'] .notesHeaderSpan_CIF
+{
+	margin-left: calc(100% - calc(97% - 20px) - 7%);
+	float:right;
+}
+.notesbodyDivider_CIF{
+	border-color: #F1F1F1;
+	border-width: 1px;
+	border-style: solid;
+}
 .newTextAreaCIF{
 	background-color: #FFFAE9;
 }
 [dir='ltr'] .newTextAreaCIF
 {
-	margin-left: 18px;
+	margin-left: calc(100% - calc(97% - 20px) - 7%);
 	float:left;
 }
 
 [dir='rtl'] .newTextAreaCIF
 {
-	margin-right: 18px;
+	margin-right: calc(100% - calc(97% - 20px) - 7%);
 	float:right;
 }
 .notesSaveButtonCIF{
@@ -640,17 +663,19 @@
 	line-height: 14px;
 	height: 28px;
 	border: none;
+	margin-top: 10px;
+	width: 70px;
 }
 [dir='ltr'] .notesSaveButtonCIF
 {
 	float: right;
-	margin-right: 20px;
+	margin-right: calc(100% - calc(97% - 20px) - 7%);
 }
 
 [dir='rtl'] .notesSaveButtonCIF
 {
 	float: left;
-	margin-left: 20px;
+	margin-left: calc(100% - calc(97% - 20px) - 7%);
 }
 .notesCancelButtonCIF{
 	color: #315FA2;
@@ -662,32 +687,42 @@
 	height: 28px;
 	margin-top: 10px;
 	text-decoration: none;
+	width: 70px;
+	border-color: #315FA2;
+	border-width: 1px;
+	border-style: solid;
 }
 [dir='ltr'] .notesCancelButtonCIF
 {
 	float: right;
-	margin-right: 12px;
+	margin-right: 8px;
 }
 
 [dir='rtl'] .notesCancelButtonCIF
 {
 	float: left;
-	margin-left: 12px;
+	margin-left: 8px;
 }
 .closeNotes_CIF{
 	font-family: CRM MDL2 ASSETS;
-	color:#333333;
+	font-size: 16px;
+    line-height: normal;
+    color: #333333;
+	height: 16px;
+	position: absolute;
 }
 [dir='ltr'] .closeNotes_CIF
 {
 	float:right;
-	margin-right:10px;
+	margin-right:calc(100% - calc(97% - 20px) - 7%);
+    left: calc(97% - 20px);
 }
 
 [dir='rtl'] .closeNotes_CIF
 {
 	float: left;
-	margin-left: 10px;
+	margin-left: calc(100% - calc(97% - 20px) - 7%);
+	right: calc(97% - 20px);
 }
 .hardNotificationLabel2{
 	font-family:Segoe UI;
@@ -706,6 +741,9 @@
 {
 	float: right;
 	text-align:right;
+}
+.bodyContentDiv{
+	
 }
 @font-face{font-family:"CRMMDL2";src:url('/uclient/resources/styles/CRMMDL2.woff') format('woff');font-weight: normal;font-style: normal;}
 .FontIcons-closeSoftNotification_CIF:before {font-family: "CRMMDL2"; content: "\E711";}
