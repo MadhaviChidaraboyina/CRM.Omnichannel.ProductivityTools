@@ -743,7 +743,10 @@
 	text-align:right;
 }
 .bodyContentDiv{
-	
+	display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    display: flex;   
+    flex-wrap: wrap;
 }
 @font-face{font-family:"CRMMDL2";src:url('/uclient/resources/styles/CRMMDL2.woff') format('woff');font-weight: normal;font-style: normal;}
 .FontIcons-closeSoftNotification_CIF:before {font-family: "CRMMDL2"; content: "\E711";}

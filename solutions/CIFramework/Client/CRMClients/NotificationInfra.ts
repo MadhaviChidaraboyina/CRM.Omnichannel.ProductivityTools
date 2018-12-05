@@ -150,7 +150,7 @@ namespace Microsoft.CIFramework.Internal {
 							label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
 						});*/
 						label1.style.width = "30%";//(panelWidth * 0.3)+"px";
-						label2.style.width = "calc(60% - 20px)";//((panelWidth * 0.7) - 20)+"px";
+						label2.style.width = "calc(50% - 20px)";//((panelWidth * 0.7) - 20)+"px";
 						outerDiv.appendChild(label2); 
 						notificationBody.appendChild(outerDiv);
 						var divForSpace = document.createElement("div");
