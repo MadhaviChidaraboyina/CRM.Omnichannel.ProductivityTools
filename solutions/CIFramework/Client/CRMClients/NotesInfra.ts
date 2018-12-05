@@ -64,9 +64,9 @@ namespace Microsoft.CIFramework.Internal {
 			notesElement.appendChild(newTextArea);
 			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = "calc(100% - 7px)";//(width-7)+"px";
 			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.height = availNotesHeight.toString() + "px";
-			newTextArea.setAttribute('placeholder','Start adding notes');
+			newTextArea.setAttribute('placeholder','  Start adding notes');
 			newTextArea.classList.add("newTextAreaCIF");
-			var textAreaWidth = "calc(87.5% - 15px)";//width - width/8 - 15;
+			var textAreaWidth = "calc(97% - 20px)";//width - width/8 - 15;
 			newTextArea.id = "notesTextAreaCIF";
 			newTextArea.style.width = textAreaWidth;
 			newTextArea.style.height = (availNotesHeight * 0.7)+"px";

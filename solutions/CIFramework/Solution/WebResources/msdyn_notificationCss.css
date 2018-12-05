@@ -5,7 +5,7 @@
 	border-radius: 4px;
 	background-color: #003D60;
 	padding-bottom: 13px;
-	box-shadow: 0px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 	margin-bottom: 4px;
 }
 .internalCommunication_CIFToastDiv{
@@ -95,6 +95,7 @@
 	font-size:12px;
 	color:#D8D8D8;
 	display:none;
+	margin-top: 5px;
 }
 [dir='ltr'] .headerTimerCIF
 {
@@ -159,6 +160,7 @@
 	font-size:11px;
 	height:13px;
 	color:#FFFFFF;
+	margin-top: 2px;
 }
 [dir='ltr'] .broadCastLabel1
 {
@@ -267,13 +269,8 @@
 	font-size:14px;
 	height:16px; 
 	color:#FFFFFF;
-	display: inline-block;
+	display: inline-table;
 	position: absolute;
-	height: 40px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	word-break: break-all;
 }
 [dir='ltr'] .body_CIFLabel2
 {
@@ -408,7 +405,7 @@
 	width:16px; 
 	height:16px;  
 	font-style:Regular; 
-	font-size:12px; 
+	font-size:10px; 
 	font-family: CRM MDL2 ASSETS;
 	color:#FFFFFF;
 }
@@ -427,7 +424,7 @@
 	width:16px; 
 	height:16px;  
 	font-style:Regular; 
-	font-size:12px; 
+	font-size:10px; 
 	font-family: CRM MDL2 ASSETS;
 	color:#FFFFFF;
 }
@@ -624,13 +621,13 @@
 }
 [dir='ltr'] .newTextAreaCIF
 {
-	margin-left: 20px;
+	margin-left: 18px;
 	float:left;
 }
 
 [dir='rtl'] .newTextAreaCIF
 {
-	margin-right: 20px;
+	margin-right: 18px;
 	float:right;
 }
 .notesSaveButtonCIF{
@@ -642,7 +639,7 @@
 	font-size: 12px;
 	line-height: 14px;
 	height: 28px;
-	border-color: #315FA2;
+	border: none;
 }
 [dir='ltr'] .notesSaveButtonCIF
 {
