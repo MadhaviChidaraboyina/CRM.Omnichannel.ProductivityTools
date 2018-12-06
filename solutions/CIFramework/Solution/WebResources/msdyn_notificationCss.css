@@ -641,6 +641,7 @@
 }
 .newTextAreaCIF{
 	background-color: #FFFAE9;
+	resize: none;
 }
 [dir='ltr'] .newTextAreaCIF
 {
@@ -691,6 +692,7 @@
 	border-color: #315FA2;
 	border-width: 1px;
 	border-style: solid;
+	background-color: #FFFFFF;
 }
 [dir='ltr'] .notesCancelButtonCIF
 {
