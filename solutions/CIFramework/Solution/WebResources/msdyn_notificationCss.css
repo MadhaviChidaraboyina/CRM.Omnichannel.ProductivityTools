@@ -603,12 +603,11 @@
 	display:table;
 	background-color: rgba(102, 102, 102, 0.5);
 	z-index: 2;
-	border-radius: 4px;
 	padding-bottom: 10px;
 	min-height: 120px;
 	background-color: #FFFFFF;
 	border: 1px solid;
-	border-color: #E5E5E5;
+	border-color: #F5F5F5;
 }
 .notesHeaderCIF{
 	color: #333333;
@@ -635,9 +634,7 @@
 	float:right;
 }
 .notesbodyDivider_CIF{
-	border-color: #F1F1F1;
-	border-width: 0.9px;
-	border-style: solid;
+	border-bottom: 1px solid #F1F1F1;
 }
 .newTextAreaCIF{
 	background-color: #FFFAE9;
