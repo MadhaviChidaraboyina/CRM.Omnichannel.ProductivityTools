@@ -619,7 +619,7 @@
 	font-weight: 600;
 }
 .notesHeaderSpan_CIF{
-    font-size: 16px;
+    font-size: 14px;
     line-height: normal;
     color: #333333;
 }
@@ -636,7 +636,7 @@
 }
 .notesbodyDivider_CIF{
 	border-color: #F1F1F1;
-	border-width: 1px;
+	border-width: 0.9px;
 	border-style: solid;
 }
 .newTextAreaCIF{
@@ -705,11 +705,12 @@
 }
 .closeNotes_CIF{
 	font-family: CRM MDL2 ASSETS;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: normal;
 	color: #333333;
 	height: 16px;
 	position: absolute;
+	margin-top: 4px;
 }
 [dir='ltr'] .closeNotes_CIF
 {

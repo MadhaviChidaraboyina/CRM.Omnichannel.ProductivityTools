@@ -20,6 +20,7 @@ div#PresenceList
 	font-size: 14px;
 	line-height: 19px;
 	font-weight: 600;
+	color: #000000;
 }
 
 .ColorNode
@@ -97,11 +98,12 @@ div#PresenceList
 .agentPresenceColorNode
 {
 	border-radius: 50%;
-	border: 2px solid white;
+	border: 2px solid transparent;
 	width: 10px;
 	height: 10px;
 	position: absolute;
 	margin-top: 17px;
+	background-color: transparent;
 }
 
 [dir='ltr'] .agentPresenceColorNode
