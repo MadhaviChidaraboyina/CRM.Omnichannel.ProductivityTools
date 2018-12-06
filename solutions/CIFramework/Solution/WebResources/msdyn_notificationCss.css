@@ -631,7 +631,7 @@
 
 [dir='rtl'] .notesHeaderSpan_CIF
 {
-	margin-left: calc(100% - calc(97% - 20px) - 6%);
+	margin-right: calc(100% - calc(97% - 20px) - 6%);
 	float:right;
 }
 .notesbodyDivider_CIF{
