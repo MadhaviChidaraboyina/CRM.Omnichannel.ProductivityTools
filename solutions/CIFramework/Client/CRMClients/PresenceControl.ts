@@ -37,7 +37,14 @@ namespace Microsoft.CIFramework.Internal {
 		public setAllPresences(presenceList: PresenceInfo[]): HTMLDivElement {
 			if (presenceList != null) {
 				var presenceListNode = document.createElement('div');
-				presenceListNode.classList.add("PresenceListInnerNode")
+				presenceListNode.classList.add("PresenceListInnerNode");
+
+				// Appends the Header to the List
+				var headerDiv = document.createElement('div');
+				headerDiv.classList.add("headerDiv");
+				headerDiv.innerText = "Set Presence";
+				presenceListNode.appendChild(headerDiv);
+
 				for (var i = 0; i < presenceList.length; i++) {
 					var presenceNode = document.createElement('div');
 					presenceNode.id = presenceList[i].presenceId;
@@ -121,6 +128,10 @@ namespace Microsoft.CIFramework.Internal {
 			let updatedPresence: any = {};
 
 			let actualElement = e.target;
+
+			// Don't call setAgentPresence if click is on the Header or any area of the Parent Div
+			if (actualElement.className == "headerDiv" || actualElement.className == "PresenceListInnerNode")
+				return;
 			if (!isNullOrUndefined(actualElement.getAttribute("id")) && actualElement.getAttribute("id") != "") {
 				updatedPresence.presenceId = actualElement.getAttribute("id");
 				updatedPresence.presenceText = actualElement.firstElementChild.nextSibling.innerText;

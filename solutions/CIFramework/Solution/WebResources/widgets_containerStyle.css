@@ -9,28 +9,57 @@ div#PresenceList
 	display:none;
 }
 
+.headerDiv
+{
+	margin-left: 14px;
+	margin-right: 14px;
+	margin-bottom: 8px;
+	padding: 8px 0px;
+	border-bottom: 1px solid #EFEFEF;
+	font-family: 'Segoe UI';
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 600;
+}
+
 .ColorNode
 {
 	height:12px;
 	width:12px;
 	border-radius: 50%;
 	vertical-align: middle;
+	margin-top: 8px;
+}
+
+[dir='ltr'] .ColorNode
+{
+	margin-left: 14px;
+}
+
+[dir='rtl'] .ColorNode 
+{
+	margin-right: 14px;
 }
 
 .textNode
 {
-	overflow: auto;
 	font-size: 10px;
 	font-family: 'Segoe UI';
 	font-style: normal;
-	line-height: 13px;
 	overflow: hidden;
+	margin-top: 4px;
 }
 
 .agentPresenceDiv
 {
+	background-color: transparent;
+	padding-top: 5px;
+	cursor: pointer;
+}
+
+.agentPresenceDiv:hover
+{
 	background-color: #FFFFFF;
-	padding: 5px 0px;
 }
 
 .innerDiv {
@@ -48,20 +77,9 @@ div#PresenceList
 	text-align: center;
 }
 
-[dir='ltr'] .backgroundColorDiv
-{
-	right: 2px;
-}
-
-[dir='rtl'] .backgroundColorDiv
-{
-	left: 2px;
-}
-
 .agentPresenceDiv .textNode 
 {
-	width: 30px;
-	margin: 2px;
+	margin: 2px 4px;
 	text-align: center;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -83,17 +101,17 @@ div#PresenceList
 	width: 10px;
 	height: 10px;
 	position: absolute;
-	margin-top: 18px;
+	margin-top: 17px;
 }
 
 [dir='ltr'] .agentPresenceColorNode
 {
-	right: 1px;
+	right: 4px;
 }
 
 [dir='rtl'] .agentPresenceColorNode
 {
-	left: 1px;
+	left: 4px;
 }
 
 .widgetArea
@@ -187,6 +205,13 @@ div#PresenceList
 {
 	display: flex;
 	height: 28px;
+	cursor: pointer;
+	background-color: #FFFFFF;
+}
+
+.PresenceListItem:hover
+{
+	background-color: #EFEFEF;
 }
 
 .PresenceListItem .textNode
@@ -205,9 +230,9 @@ div#PresenceList
 	padding-right: 7px;
 }
 
-.PresenceListInnerNode:first-child
+.PresenceListInnerNode:last-child
 {
-	padding-top: 10px;
+	padding-bottom: 12px;
 }
 
 .PresenceListInnerNode
@@ -216,19 +241,17 @@ div#PresenceList
 	position: fixed;
 	bottom: 10px;
 	width: 191px;
-	padding: 5px;
+	box-shadow:0px 0px 8px rgba(0,0,0,0.1);
 }
 
 [dir='ltr'] .PresenceListInnerNode
 {
-	right: 40px;
-	box-shadow: -2px -2px 10px grey;
+	right: calc(var(--sessionPanelAreaWidth));
 }
 
 [dir='rtl'] .PresenceListInnerNode
 {
-	left: 40px;
-	box-shadow: 2px -2px 10px grey;
+	left: calc(var(--sessionPanelAreaWidth));
 }
 
 .notesDiv
