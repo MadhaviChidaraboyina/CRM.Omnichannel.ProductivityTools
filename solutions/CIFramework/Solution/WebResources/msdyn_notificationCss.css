@@ -603,12 +603,11 @@
 	display:table;
 	background-color: rgba(102, 102, 102, 0.5);
 	z-index: 2;
-	border-radius: 4px;
 	padding-bottom: 10px;
 	min-height: 120px;
 	background-color: #FFFFFF;
 	border: 1px solid;
-	border-color: #E5E5E5;
+	border-color: #F5F5F5;
 }
 .notesHeaderCIF{
 	color: #333333;
@@ -619,7 +618,7 @@
 	font-weight: 600;
 }
 .notesHeaderSpan_CIF{
-    font-size: 16px;
+    font-size: 14px;
     line-height: normal;
     color: #333333;
 }
@@ -631,16 +630,15 @@
 
 [dir='rtl'] .notesHeaderSpan_CIF
 {
-	margin-left: calc(100% - calc(97% - 20px) - 6%);
+	margin-right: calc(100% - calc(97% - 20px) - 6%);
 	float:right;
 }
 .notesbodyDivider_CIF{
-	border-color: #F1F1F1;
-	border-width: 1px;
-	border-style: solid;
+	border-bottom: 1px solid #F1F1F1;
 }
 .newTextAreaCIF{
 	background-color: #FFFAE9;
+	resize: none;
 }
 [dir='ltr'] .newTextAreaCIF
 {
@@ -691,6 +689,7 @@
 	border-color: #315FA2;
 	border-width: 1px;
 	border-style: solid;
+	background-color: #FFFFFF;
 }
 [dir='ltr'] .notesCancelButtonCIF
 {
@@ -705,11 +704,12 @@
 }
 .closeNotes_CIF{
 	font-family: CRM MDL2 ASSETS;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: normal;
 	color: #333333;
 	height: 16px;
 	position: absolute;
+	margin-top: 4px;
 }
 [dir='ltr'] .closeNotes_CIF
 {
