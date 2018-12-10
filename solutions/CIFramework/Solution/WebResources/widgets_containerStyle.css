@@ -58,9 +58,10 @@ div#PresenceList
 	cursor: pointer;
 }
 
-.agentPresenceDiv:hover
+.agentPresenceDiv:hover ~ .agentPresenceColorNode
 {
 	background-color: #FFFFFF;
+	border-color: #FFFFFF;
 }
 
 .innerDiv {
@@ -98,12 +99,12 @@ div#PresenceList
 .agentPresenceColorNode
 {
 	border-radius: 50%;
-	border: 2px solid transparent;
+	border: 2px solid gray;
 	width: 10px;
 	height: 10px;
 	position: absolute;
 	margin-top: 17px;
-	background-color: transparent;
+	background-color: gray;
 }
 
 [dir='ltr'] .agentPresenceColorNode
