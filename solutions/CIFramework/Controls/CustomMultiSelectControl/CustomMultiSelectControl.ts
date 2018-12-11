@@ -62,16 +62,19 @@ module MscrmControls.Service.CIProvider {
 			this.notifyOutputChanged = notifyOutputChanged;
 			this.elementList = [];
 			this.currentSelectedElements = [];
+			this.initParamsFromContext(context);
+			this.getOptionsList();
+		}
+
+		private initParamsFromContext(context: Mscrm.ControlData<IConfigControlInputBag>): void {
+			this.context = context;
 			this.fieldName = this.context.parameters.elementUniqueNames.attributes.LogicalName;
 			this.currentselectedElementsString = this.isNullOrUndefined(this.context.parameters.elementUniqueNames) ? "" : this.context.parameters.elementUniqueNames.raw;
 
 			if (!this.isNullOrUndefined(this.currentselectedElementsString) && this.currentselectedElementsString != "") {
 				this.currentSelectedElements = this.currentselectedElementsString.split(elementSeparator, 200);
 			}
-			this.getOptionsList();
 		}
-
-
 		/**
 		 * This method checks if object is null or undefined.
 		 * @param object object to be checked
@@ -131,7 +134,9 @@ module MscrmControls.Service.CIProvider {
 						}
 						
 					}
-					this.notifyOutputChanged();
+					if (this.currentSelectedElements.length <= 0) {
+						this.notifyOutputChanged();
+					}
 					this.context.utils.requestRender();
 				},
 				(error) => {
@@ -152,6 +157,7 @@ module MscrmControls.Service.CIProvider {
 			if (this.elementList.length == 0) {
 				return null;
 			}
+			this.initParamsFromContext(context);
 			const MultipleAppSelector = this.createMultipleAppSelector();
 
 
@@ -216,8 +222,8 @@ module MscrmControls.Service.CIProvider {
 				"MscrmControls.MultiSelectPicklist.MultiSelectPicklistControl",
 				"MultipleAppSelector_AppModule" + this.fieldName,
 				{
-                    parameters: { value: autoCompleteProps }
-                });
+					parameters: { value: autoCompleteProps }
+				});
 		}
 
 
