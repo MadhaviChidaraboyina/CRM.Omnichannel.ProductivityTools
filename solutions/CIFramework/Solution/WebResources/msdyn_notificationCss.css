@@ -710,7 +710,8 @@
 	margin-top: 14px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
-	width: 92px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 [dir='ltr'] .notesSaveButtonCIF
 {
@@ -734,12 +735,13 @@
 	margin-top: 14px;
 	margin-bottom: 20px;
 	text-decoration: none;
-	width: 92px;
 	border-color: #3B79B7;
 	border-width: 1px;
 	border-style: solid;
 	background-color: #FFFFFF;
 	box-sizing: border-box;
+	padding-left: 18px;
+	padding-right: 18px;
 }
 [dir='ltr'] .notesCancelButtonCIF
 {
@@ -795,11 +797,19 @@
 	float: right;
     margin-right: 36px;
 }
-
 [dir='rtl'] .notesCloseSpanDiv
 {
 	float: left;
 	margin-left: 36px;
+}
+textarea::-webkit-input-placeholder {
+	color: #9D7E1B;
+	font-family: Segoe UI;
+	line-height: normal;
+	font-size: 14px;
+	opacity: 0.5;
+	padding-left: 12px;
+	padding-right:12px;
 }
 @font-face{font-family:"CRMMDL2";src:url('/uclient/resources/styles/CRMMDL2.woff') format('woff');font-weight: normal;font-style: normal;}
 .FontIcons-closeSoftNotification_CIF:before {font-family: "CRMMDL2"; content: "\E711";}
