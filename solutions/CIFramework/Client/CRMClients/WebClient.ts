@@ -274,7 +274,7 @@ namespace Microsoft.CIFramework.Internal {
 								Xrm.Navigation.openForm(fo);
 							}
 						}
-						else {
+						else if (searchOnly == false) {
 							// Open the Search Page with the Search String from the OData Parameters if the records != 1. Opens blank search page if the $search parameter has no value
 							try {
 								const searchPageInput: XrmClientApi.PageInput = {
