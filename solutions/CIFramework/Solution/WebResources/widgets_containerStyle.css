@@ -58,9 +58,13 @@ div#PresenceList
 	cursor: pointer;
 }
 
-.agentPresenceDiv:hover + .agentPresenceColorNode:hover
+.agentPresenceDiv:hover
 {
 	background-color: #FFFFFF;
+}
+
+.agentPresenceDiv:hover .agentPresenceColorNode
+{
 	border-color: #FFFFFF;
 }
 
