@@ -49,8 +49,8 @@ namespace Microsoft.CIFramework.Internal {
 		return new Promise(function (resolve,reject) {
 			//expandFlap(width,state);
 			//widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
-			notesDiv.insertAdjacentHTML('beforeend', '<div id="CIFActivityNotes" tabindex="0" class="CIFNotes"><div id="notesHeaderIdCIF" tabindex="0" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close">Add Notes</div><div class="notesCloseSpanDiv"></div></div><div class="notesbodyDivider_CIF"></div><div style="height: 14px;"></div></div>');
-			notesDiv.getElementsByClassName("CIFNotes")[0].classList.add("notesDivCIF");
+			notesDiv.insertAdjacentHTML('beforeend', '<div id="notesHeaderIdCIF" tabindex="0" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close">Add Notes</div><div class="notesCloseSpanDiv"></div></div><div class="notesbodyDivider_CIF"></div><div style="height: 14px;"></div>');
+			notesDiv.classList.add("notesDivCIF");
 			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
 			let availNotesHeight = widgetIFrame.clientHeight - 26;
 			widgetIFrame.contentWindow.document.getElementById("notesHeaderIdCIF").style.height = "58px";
@@ -60,10 +60,8 @@ namespace Microsoft.CIFramework.Internal {
 			span.setAttribute("aria-label", "Close");
 			notesDiv.getElementsByClassName("notesCloseSpanDiv")[0].appendChild(span);
 			var newTextArea = document.createElement('TextArea');
-			let notesElement = notesDiv.getElementsByClassName("CIFNotes")[0];
+			let notesElement = notesDiv;
 			notesElement.appendChild(newTextArea);
-			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.width = "calc(100% - 7px)";//(width-7)+"px";
-			widgetIFrame.contentWindow.document.getElementById("CIFActivityNotes").style.height = "calc(100% - 10px)";
 			newTextArea.setAttribute('placeholder','Start adding notes');
 			newTextArea.classList.add("newTextAreaCIF");
 			var textAreaWidth = "calc(100% - 40px)";//width - width/8 - 15;
@@ -191,7 +189,7 @@ namespace Microsoft.CIFramework.Internal {
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
 		if(!isNullOrUndefined(notesDiv)){
-			notesDiv.removeChild(notesDiv.getElementsByClassName("CIFNotes")[0]);
+			notesDiv.innerHTML = '';
 		}
 	}
 }
