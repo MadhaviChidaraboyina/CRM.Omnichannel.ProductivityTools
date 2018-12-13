@@ -214,7 +214,7 @@ namespace Microsoft.CIFramework.Internal {
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
-							iFrame.setAttribute("style", "border: 0px;");
+							iFrame.setAttribute("style", "border-top: 1px solid;border-color: #F5F5F5;");
 							iFrame.height = "100%";
 							iFrame.width = "100%";
 							iFrame.src = key;

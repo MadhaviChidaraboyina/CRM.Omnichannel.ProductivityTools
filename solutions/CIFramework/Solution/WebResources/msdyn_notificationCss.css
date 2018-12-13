@@ -685,6 +685,7 @@
 	border: 1px solid #FBE5BA;
 	border-radius: 4px;
 	box-sizing: border-box;
+	padding: 12px;
 }
 [dir='ltr'] .newTextAreaCIF
 {
@@ -801,15 +802,6 @@
 {
 	float: left;
 	margin-left: 36px;
-}
-textarea::-webkit-input-placeholder {
-	color: #9D7E1B;
-	font-family: Segoe UI;
-	line-height: normal;
-	font-size: 14px;
-	opacity: 0.5;
-	padding-left: 12px;
-	padding-right:12px;
 }
 @font-face{font-family:"CRMMDL2";src:url('/uclient/resources/styles/CRMMDL2.woff') format('woff');font-weight: normal;font-style: normal;}
 .FontIcons-closeSoftNotification_CIF:before {font-family: "CRMMDL2"; content: "\E711";}
