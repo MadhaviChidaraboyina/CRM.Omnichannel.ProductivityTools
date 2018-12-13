@@ -214,7 +214,7 @@ namespace Microsoft.CIFramework.Internal {
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin allow-modals"); //TODO: make configurable?
-							iFrame.setAttribute("style", "border-top: 1px solid;border-color: #F5F5F5;");
+							widgetIFrame.setAttribute("style", "border-top: 1px solid;border-color: #F5F5F5;");
 							iFrame.height = "100%";
 							iFrame.width = "100%";
 							iFrame.src = key;
@@ -524,7 +524,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			if (visible) {
 				sessionElement.style.backgroundColor = "#FFFFFF";
-				sessionElement.style.boxShadow = "0px 4px 8px rgba(102, 102, 102, 0.2)";
+				sessionElement.style.boxShadow = "8px 4px 10px rgba(102, 102, 102, 0.2)";
 				sessionIcon.style.display = "none";
 				crossIcon.style.display = "flex";
 				sessionElement.setAttribute("tabindex", 0);
