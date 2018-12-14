@@ -213,7 +213,7 @@ namespace Microsoft.CIFramework.Internal {
 							containerDiv.setAttribute("style", "height: 100%");
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
-							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin allow-modals"); //TODO: make configurable?
+							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
 							iFrame.setAttribute("style", "border: 0px;");
 							iFrame.height = "100%";
 							iFrame.width = "100%";
@@ -274,7 +274,7 @@ namespace Microsoft.CIFramework.Internal {
 								Xrm.Navigation.openForm(fo);
 							}
 						}
-						else if (searchOnly == false) {
+						else {
 							// Open the Search Page with the Search String from the OData Parameters if the records != 1. Opens blank search page if the $search parameter has no value
 							try {
 								const searchPageInput: XrmClientApi.PageInput = {
