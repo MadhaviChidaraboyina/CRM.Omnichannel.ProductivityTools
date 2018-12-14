@@ -63,6 +63,11 @@ div#PresenceList
 	background-color: #FFFFFF;
 }
 
+.agentPresenceDiv:hover .agentPresenceColorNode
+{
+	border-color: #FFFFFF;
+}
+
 .innerDiv {
 	display: flex;
 	height: 28px;
@@ -98,12 +103,11 @@ div#PresenceList
 .agentPresenceColorNode
 {
 	border-radius: 50%;
-	border: 2px solid transparent;
+	border: 2px solid #efefef;
 	width: 10px;
 	height: 10px;
 	position: absolute;
 	margin-top: 17px;
-	background-color: transparent;
 }
 
 [dir='ltr'] .agentPresenceColorNode

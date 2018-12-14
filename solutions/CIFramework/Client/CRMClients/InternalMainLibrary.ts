@@ -319,8 +319,9 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters, [Constants.value]);
 		if(provider)
 		{
+			cancelNotes();
+			state.client.collapseFlap();
 			let ret = state.client.setWidgetMode("setWidgetMode", parameters.get(Constants.value) as number, telemetryData);
-
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "setMode", telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, ret));
