@@ -214,7 +214,7 @@ namespace Microsoft.CIFramework.Internal {
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin allow-modals"); //TODO: make configurable?
-							widgetIFrame.setAttribute("style", "border-top: 1px solid;border-color: #F5F5F5;");
+							iFrame.setAttribute("style", "border: 0px;");
 							iFrame.height = "100%";
 							iFrame.width = "100%";
 							iFrame.src = key;
@@ -447,7 +447,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (sessionPanel == null)
 				return;
 
-			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="Ongoing session" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div></div><div id="' + id + 'CrossIcon" class="flexJustify" title="End session" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
+			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div></div><div id="' + id + 'CrossIcon" class="flexJustify" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
 			var parser = new DOMParser();
 			var el = parser.parseFromString(sessionElementHtml, "text/html");
 			var sessionElement = el.getElementById(id);
@@ -524,7 +524,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			if (visible) {
 				sessionElement.style.backgroundColor = "#FFFFFF";
-				sessionElement.style.boxShadow = "8px 4px 10px rgba(102, 102, 102, 0.2)";
+				sessionElement.style.boxShadow = "0px 4px 8px rgba(102, 102, 102, 0.2)";
 				sessionIcon.style.display = "none";
 				crossIcon.style.display = "flex";
 				sessionElement.setAttribute("tabindex", 0);
