@@ -69,6 +69,13 @@ namespace Microsoft.CIFramework.Internal {
 		context: any;
 		applicationTabs: Map<string, ApplicationTab>;
 		initials: string;
+		notesInfo: NotesInfo;
+	}
+
+	export type NotesInfo = {
+		notesDetails: Map<string,any>;
+		resolve: any;
+		reject: any;
 	}
 
 	/*Class to store CI providers information locally*/
@@ -152,7 +159,8 @@ namespace Microsoft.CIFramework.Internal {
 				sessionId: sessionId,
 				context: context,
 				applicationTabs: null,
-				initials: initials
+				initials: initials,
+				notesInfo: null
 			};
 
 			this.uiSessions.set(sessionId, session);
@@ -180,7 +188,6 @@ namespace Microsoft.CIFramework.Internal {
 				error.sourceFunc = switchUISession.name;
 				return [null, error];
 			}
-
 			SessionPanel.getInstance().switchUISession(sessionId);
 			return [sessionId, null];
 		}

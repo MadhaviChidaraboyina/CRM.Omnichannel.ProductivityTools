@@ -80,6 +80,12 @@ namespace Microsoft.CIFramework.Internal {
 			saveBtn.innerText = "Add Note";
 			saveBtn.tabIndex = 0;
 			saveBtn.setAttribute("aria-label", "Add Note");
+			//Saving notes info locally
+			let sessionId: string = this._state.messageLibrary.getCorrelationId();
+			let session = this.uiSessions.get(sessionId);
+			session.notesInfo.notesDetails = notesDetails;
+			session.notesInfo.resolve = resolve;
+			session.notesInfo.reject = reject;
 			saveBtn.addEventListener("click", function clickListener() {
 				saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
 					cancelNotes();

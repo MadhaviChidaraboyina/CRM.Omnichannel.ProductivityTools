@@ -561,8 +561,16 @@ namespace Microsoft.CIFramework.Internal {
 			if (!this.flapExpanded) {
 				return 0;
 			}
-			client.setPanelWidth("setPanelWidth", this.origWidth);
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let newTextArea = widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF");
+			let sessionId: string = this._state.messageLibrary.getCorrelationId();
+			let session = this.uiSessions.get(sessionId);
+			let resolve = session.notesInfo.resolve;
+			saveNotes(session.notesInfo.notesDetails,newTextArea).then(function (retval: Map<string, any>) {
+				cancelNotes();
+				resolve(new Map().set(Constants.value,retval));
+			});
+			client.setPanelWidth("setPanelWidth", this.origWidth);
 			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', "0px");
 			this.flapExpanded = false;
 			//client.registerHandler(Constants.ModeChangeHandler, this.savedModeChangeHandler);
