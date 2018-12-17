@@ -270,6 +270,7 @@
 	text-align:right;
 	margin-left:11px;
 	float:right;
+	order:2;
 }
 .body_CIFLabel2{
 	font-family: Segoe UI;
@@ -291,7 +292,8 @@
 
 [dir='rtl'] .body_CIFLabel2
 {
-	text-align:right;
+	text-align:left;
+	margin-left: 16px;
 	float:left;
 }
 .body_CIFLabel2_mouseover{
