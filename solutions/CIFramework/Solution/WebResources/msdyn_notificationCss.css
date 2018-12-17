@@ -84,11 +84,15 @@
 [dir='ltr'] .headerKeyCIF
 {
 	text-align:left;
+	margin-left:78px;
+	margin-right:20px;
 }
 
 [dir='rtl'] .headerKeyCIF
 {
 	text-align:right;
+	margin-right:78px;
+	margin-left:20px;
 }
 .headerTimerCIF{
 	font-family:Segoe UI;
@@ -121,11 +125,15 @@
 [dir='ltr'] .headerNameCIF
 {
 	text-align:left;
+	margin-right: 20px;
+	margin-left: 78px;
 }
 
 [dir='rtl'] .headerNameCIF
 {
 	text-align:right;
+	margin-left: 20px;
+	margin-right: 78px;
 }
 .headerDetailsCIF{
 	font-family:Segoe UI;
