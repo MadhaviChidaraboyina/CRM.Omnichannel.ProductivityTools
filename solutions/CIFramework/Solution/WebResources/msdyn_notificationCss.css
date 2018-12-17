@@ -121,11 +121,15 @@
 [dir='ltr'] .headerNameCIF
 {
 	text-align:left;
+	margin-right: 20px;
+	margin-left: 78px;
 }
 
 [dir='rtl'] .headerNameCIF
 {
 	text-align:right;
+	margin-left: 20px;
+	margin-right: 78px;
 }
 .headerDetailsCIF{
 	font-family:Segoe UI;
