@@ -84,11 +84,13 @@
 [dir='ltr'] .headerKeyCIF
 {
 	text-align:left;
+	margin-left:78px;
 }
 
 [dir='rtl'] .headerKeyCIF
 {
 	text-align:right;
+	margin-right:78px;
 }
 .headerTimerCIF{
 	font-family:Segoe UI;
