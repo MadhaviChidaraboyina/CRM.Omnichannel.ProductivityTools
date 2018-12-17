@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.Crm.Sdk.Samples;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -67,7 +68,7 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 					parameters = "{'functionName':'updateRecord','isStringify': true, 'parameters':{'entityName': 'account', 'data' : {'name':'Updated Sample Account','creditonhold':false,'address1_latitude':80.639583,'description':'This is the description of the updated sample account','revenue':70000000,'accountcategorycode':1} }}";
 					break;
 				case Constants.OPEN_FORM:
-					parameters = "{'functionName':'openForm', 'isStringify': true,'parameters':{'param1': {'entityName':'contact','useQuickCreateForm':true} , 'param2' : {'firstname':'Sample','lastname':'Contact','fullname':'Sample Contact','emailaddress1':'contact@adventure-works.com','jobtitle':'Sr. Marketing Manager','donotemail':'1','description':'Default values for this record were set programmatically.'} }}";
+					parameters = "{'functionName':'openForm', 'isStringify': true,'parameters':{'param1': {'entityName':'contact','useQuickCreateForm':false} , 'param2' : {'firstname':'Sample','lastname':'Contact','fullname':'Sample Contact','emailaddress1':'contact@adventure-works.com','jobtitle':'Sr. Marketing Manager','donotemail':'1','description':'Default values for this record were set programmatically.'} }}";
 					break;
 				case Constants.OPEN_SEARCH_RECORDS:
 					parameters = "{\"functionName\":\"searchAndOpenRecords\",\"isStringify\":false,\"parameters\":{\"param1\":\"account\",\"param2\":\"?$filter=contains(name,'Sample Account')\",\"param3\":true}}";
@@ -90,51 +91,18 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 
 		public void LaunchConversationControl(IWebDriver driver)
 		{
-			driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(120);
-			try
-			{
-				driver.Manage().Window.Maximize();
-				Thread.Sleep(5000);
-				var value = Environment.GetEnvironmentVariable("Config_Path");
-
-				ExeConfigurationFileMap configFileMap =
-						new ExeConfigurationFileMap();
-				configFileMap.ExeConfigFilename = value;
-
-				// Get the mapped configuration file.
-				Configuration config =
-				  ConfigurationManager.OpenMappedExeConfiguration(
-					configFileMap, ConfigurationUserLevel.None);
-
-				Constants.USER_NAME = config.AppSettings.Settings["UserName"].Value;
-				Constants.PASSWORD = config.AppSettings.Settings["UserPassword"].Value;
-				Constants.CLIENT_URL = config.AppSettings.Settings["RootDiscoveryServiceUrl"].Value;
-
-				string httpString = "http://";
-				string getUrl = Constants.CLIENT_URL.Replace(httpString, "");
-				string loginUrl = "http://" + Constants.USER_NAME + ":" + Constants.PASSWORD + "@" + getUrl;
-
-				IWait<IWebDriver> waitBeforeUrl = new DefaultWait<IWebDriver>(driver);
-				waitBeforeUrl.PollingInterval = TimeSpan.FromMilliseconds(30000);
-				driver.Navigate().GoToUrl(loginUrl);
-				Thread.Sleep(5000);
-				driver.Navigate().GoToUrl(Constants.CLIENT_URL);
-
-				Thread.Sleep(5000);
-				Console.WriteLine("launching Conversation Control- " + Constants.CLIENT_URL);
-			}
-			catch (Exception ex)
-			{
-				Assert.IsTrue(false, "failed to launch Conversation Control");
-				throw ex;
-			}
+			WorkWithSolutions.LaunchControl(driver, Constants.CUSTOMER_SERVICE_HUB);
 			Console.WriteLine("driver windows count - " + driver.WindowHandles.Count());
 			IWait<IWebDriver> wait = new DefaultWait<IWebDriver>(driver);
 			wait.Timeout = TimeSpan.FromSeconds(120);
 			wait.PollingInterval = TimeSpan.FromMilliseconds(30000);
 			wait.Until(d =>
 			{
+				Thread.Sleep(5000);
 				driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
+				Thread.Sleep(10000);
+				driver.SwitchTo().Frame(driver.FindElement(By.XPath("//*[@id='widgetControlDiv']/div/iframe")));
+				Thread.Sleep(5000);
 				var el = d.FindElement(By.XPath("//*[@id='outputJson']"));
 				return el != null;
 			});

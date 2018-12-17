@@ -50,6 +50,8 @@ set PATH=%WSRoot%\.tools;%WSRoot%\.tools\VSS.NuGet.AuthHelper;%PATH%
 
 echo Package directory is: %WSRoot%\packages
 nuget restore %WSRoot%\build\config\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
+nuget restore %WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFramework.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
+nuget restore %WSRoot%\solutions\CIFramework\Microsoft.OmniChannel.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
 
 @echo.
 echo Setting user variables..

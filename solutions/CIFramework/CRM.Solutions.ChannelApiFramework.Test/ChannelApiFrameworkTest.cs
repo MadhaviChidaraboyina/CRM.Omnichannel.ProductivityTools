@@ -103,6 +103,8 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 
 			driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
 			Thread.Sleep(3000);
+			driver.SwitchTo().Frame(driver.FindElement(By.XPath("//*[@id='widgetControlDiv']/div/iframe")));
+			Thread.Sleep(3000);
 			string outputString = helper.clearTextBoxesHelper(driver);
 			Assert.AreEqual(Constants.GET_MODE_ASSERT_VALUE_1, outputString);
 
@@ -110,6 +112,8 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 			Thread.Sleep(3000);
 
 			driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
+			Thread.Sleep(3000);
+			driver.SwitchTo().Frame(driver.FindElement(By.XPath("//*[@id='widgetControlDiv']/div/iframe")));
 			Thread.Sleep(3000);
 			string inputRemoveJson = helper.getJson(Constants.REMOVE_HANDLER);
 			string outputRemoveJson = helper.PerformAction(driver, inputRemoveJson);
@@ -123,6 +127,8 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 			sidePanelButton.Click();
 
 			driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
+			Thread.Sleep(3000);
+			driver.SwitchTo().Frame(driver.FindElement(By.XPath("//*[@id='widgetControlDiv']/div/iframe")));
 			Thread.Sleep(3000);
 			string getModeInputJson = helper.getJson(Constants.GET_MODE);
 			string getModeOutputJson = helper.PerformAction(driver, getModeInputJson);
