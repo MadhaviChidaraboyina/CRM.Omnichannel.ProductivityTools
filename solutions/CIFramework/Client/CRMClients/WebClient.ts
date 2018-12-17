@@ -400,7 +400,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		client.checkCIFCapability = (): boolean => {
-			if (Xrm.Utility.getGlobalContext().client.getClient() === "UnifiedServiceDesk") {
+			if ((window.top as any).Xrm.Utility.getGlobalContext().client.getClient() === "UnifiedServiceDesk") {
 				return false;
 			}
 			try {
