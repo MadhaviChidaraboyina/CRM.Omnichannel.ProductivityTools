@@ -3,10 +3,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 //using SalesInsightsTest.Utility;
 using OpenQA.Selenium.Support.UI;
 using System;
-using CRM.Solutions.ChannelApiFramework.Test.Utility;
+using CRM.Solutions.OmniChannel.Test.Utility;
 using Microsoft.Crm.Sdk.Samples;
 
-namespace CRM.Solutions.ChannelApiFramework.Test
+namespace CRM.Solutions.OmniChannel.Test
 {
 	[TestClass]
 	public class TestCasesBase
@@ -33,12 +33,11 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 		[TestInitialize()]
 		public void Initialize()
 		{
-			WorkWithSolutions.ImportWebResource();
+			WorkWithSolutions.createServiceProxy();
 			selUtil = new SeleniumDriverManager();
 			driver = selUtil.Driver;
 			waitForPageLoad = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
 			waitForElementLoad = new WebDriverWait(driver, TimeSpan.FromSeconds(200));
-			WorkWithSolutions.CreateChannelApiFrameWorkEntity(driver);
 		}
 
 		/// <summary>
@@ -47,8 +46,6 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 		[TestCleanup()]
 		public void Cleanup()
 		{
-			WorkWithSolutions.RemoveWebResource();
-			WorkWithSolutions.RemoveChannelApiFramworkEntity(driver);
 			selUtil.DriverCleanup();
 		}
 	}

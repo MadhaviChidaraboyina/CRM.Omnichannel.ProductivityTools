@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIFrameworkPlugins", "Plugi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Solutions.ChannelApiFramework.Test", "CRM.Solutions.ChannelApiFramework.Test\CRM.Solutions.ChannelApiFramework.Test.csproj", "{7624E9ED-248B-40D1-A0A3-1E2BFA62FF49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmniChannel.Test", "Microsoft.OmniChannel.Test\OmniChannel.Test.csproj", "{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		debug|amd64 = debug|amd64
@@ -106,6 +108,18 @@ Global
 		{7624E9ED-248B-40D1-A0A3-1E2BFA62FF49}.release|Any CPU.ActiveCfg = Debug|Any CPU
 		{7624E9ED-248B-40D1-A0A3-1E2BFA62FF49}.retail|amd64.ActiveCfg = Debug|Any CPU
 		{7624E9ED-248B-40D1-A0A3-1E2BFA62FF49}.retail|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.debug|amd64.ActiveCfg = Debug|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.debug|amd64.Build.0 = Debug|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.release|amd64.ActiveCfg = Release|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.release|amd64.Build.0 = Release|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.release|Any CPU.Build.0 = Release|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.retail|amd64.ActiveCfg = Release|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.retail|amd64.Build.0 = Release|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.retail|Any CPU.ActiveCfg = Release|Any CPU
+		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.retail|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

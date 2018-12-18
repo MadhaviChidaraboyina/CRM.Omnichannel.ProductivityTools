@@ -3,11 +3,12 @@ using System.Linq;
 using System.IO;
 using System.Xml.Linq;
 
-namespace CRM.Solutions.ChannelApiFramework.Test.Utility
+namespace CRM.Solutions.OmniChannel.Test.Utility
 {
 	public static class ConfigUtil
 	{
-		public static string Username, Password, Hostname, Browser, OrgName, DomainName, AuthenticationType, RootDiscoveryServiceUrl;
+		public static string Username, Password, Hostname, Browser, OrgName, DomainName, AuthenticationType;
+		public static string serverCredentialFilePath;
 		private static XElement configurationsFromFile;
 		/// <summary>
 		/// Reads a server configuration file.
@@ -16,17 +17,18 @@ namespace CRM.Solutions.ChannelApiFramework.Test.Utility
 		/// <returns>Is configuration settings already available on disk.</returns>
 		public static void ReadConfigurations()
 		{
-			var configFilePath = Environment.GetEnvironmentVariable("CONFIG_PATH");
-			System.Configuration.ExeConfigurationFileMap fileMap = new System.Configuration.ExeConfigurationFileMap();
-			fileMap.ExeConfigFilename = configFilePath; //Path to your config file
-			var config = System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(fileMap, System.Configuration.ConfigurationUserLevel.None);
-			Browser = config.AppSettings.Settings["BrowserToLaunch"].Value;
-			DomainName = config.AppSettings.Settings["OrgUniqueName"].Value;
-			Username = config.AppSettings.Settings["OrgAdminUserName"].Value;
-			Password = config.AppSettings.Settings["OrgAdminPassword"].Value;
-			AuthenticationType = config.AppSettings.Settings["AuthenticationType"].Value;
-			RootDiscoveryServiceUrl = config.AppSettings.Settings["ServerAddress"].Value;
-			Hostname = "serverName"; //dummy string
+			serverCredentialFilePath = Environment.GetEnvironmentVariable("CONFIG_PATH");
+			if (File.Exists(serverCredentialFilePath))
+			{
+				configurationsFromFile = XElement.Load(serverCredentialFilePath);
+				Browser = GetNodeValueByKey("BrowserToLaunch");
+				DomainName = GetNodeValueByKey("ServerDomain");
+				Username = GetNodeValueByKey("ServerUserName");
+				Password = GetNodeValueByKey("ServerPassword");
+				Hostname = GetNodeValueByKey("ServerName");
+				OrgName = GetNodeValueByKey("OrganizationName");
+				AuthenticationType = GetNodeValueByKey("AuthenticationType");
+			}
 		}
 
 		/// <summary>
@@ -34,9 +36,9 @@ namespace CRM.Solutions.ChannelApiFramework.Test.Utility
 		/// </summary>
 		/// <param name="key"></param>
 		/// <returns></returns>
-		private static string GetNodeValueByKey(XElement config, string key)
+		private static string GetNodeValueByKey(string key)
 		{
-			XElement add = config.Element("appSettings").Elements("add").FirstOrDefault(a => (string)a.Attribute("key") == key);
+			XElement add = configurationsFromFile.Element("appSettings").Elements("add").FirstOrDefault(a => (string)a.Attribute("key") == key);
 			if (add != null)
 			{
 				return (string)add.Attribute("value");
