@@ -400,10 +400,10 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		client.checkCIFCapability = (): boolean => {
-			if ((window.top as any).Xrm.Utility.getGlobalContext().client.getClient() === "UnifiedServiceDesk") {
-				return false;
-			}
 			try {
+				if ((window.top as any).Xrm.Utility.getGlobalContext().client.getClient() === "UnifiedServiceDesk") {
+					return false;
+				}
 				if (window.top.document.getElementById(Constants.widgetIframeId)) {
 					//The side panel already exists. Don't load another
 					return false;
