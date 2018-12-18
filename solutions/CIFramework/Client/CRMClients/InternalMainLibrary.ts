@@ -661,7 +661,7 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(notesDetails, [Constants.value]);
 		if (provider) {
 			return new Promise<any>((resolve, reject) => {
-				let width = state.client.expandFlap();
+				let width = state.client.expandFlap(intermediateSaveNotes);
 				if (!width) {
 					return reject(new Map<string, string>().set(Constants.value, "Flap already expanded"));
 				}

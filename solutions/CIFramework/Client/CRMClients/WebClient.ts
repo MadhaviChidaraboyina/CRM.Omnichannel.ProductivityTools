@@ -542,7 +542,7 @@ namespace Microsoft.CIFramework.Internal {
 			sessionElement.setAttribute("aria-selected", visible);
 		}
 
-		client.expandFlap = (): number => {
+		client.expandFlap = (handler: EventHandler): number => {
 			if (this.flapExpanded) {
 				return 0;
 			}
@@ -553,6 +553,7 @@ namespace Microsoft.CIFramework.Internal {
 			let widgetWidth = client.getWidgetWidth() as number;
 			this.origWidth = widgetWidth + sessionPanelArea.clientWidth;
 			this.flapExpanded = true;
+			client.registerHandler(Constants.CollapseFlapHandler, handler);
 			client.setPanelWidth("setPanelWidth", (2 * this.origWidth - sessionPanelArea.clientWidth));
 			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', widgetWidth.toString() + "px");
 			return this.origWidth;
@@ -561,16 +562,10 @@ namespace Microsoft.CIFramework.Internal {
 			if (!this.flapExpanded) {
 				return 0;
 			}
-			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
-			let newTextArea = widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF");
-			let sessionId: string = SessionPanel.getInstance().getvisibleUISession();
-			let session = SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions.get(sessionId);
-			let resolve = session.notesInfo.resolve;
-			saveNotes(session.notesInfo.notesDetails,newTextArea).then(function (retval: Map<string, any>) {
-				cancelNotes();
-				resolve(new Map().set(Constants.value,retval));
-			});
+			let handler = this.eventHandlers.get(Constants.CollapseFlapHandler);
+			handler();
 			client.setPanelWidth("setPanelWidth", this.origWidth);
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', "0px");
 			this.flapExpanded = false;
 			//client.registerHandler(Constants.ModeChangeHandler, this.savedModeChangeHandler);

@@ -198,4 +198,16 @@ namespace Microsoft.CIFramework.Internal {
 			notesDiv.innerHTML = '';
 		}
 	}
+
+	export function intermediateSaveNotes(): void{	
+		let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+		let newTextArea = widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF");
+		let sessionId: string = SessionPanel.getInstance().getvisibleUISession();
+		let session = SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions.get(sessionId);
+		let resolve = session.notesInfo.resolve;
+		saveNotes(session.notesInfo.notesDetails,newTextArea).then(function (retval: Map<string, any>) {
+			cancelNotes();
+			resolve(new Map().set(Constants.value,retval));
+		});
+	}
 }

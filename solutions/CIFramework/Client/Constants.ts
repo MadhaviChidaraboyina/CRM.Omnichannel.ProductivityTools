@@ -53,6 +53,7 @@ namespace Microsoft.CIFramework
 		public static hardNotification = "hardNotification";
 		public static removeGenericHandler = "removeGenericHandler";
 		public static addGenericHandler = "addGenericHandler";
+		public static onCollapseFlap = "onCollapseFlap";
 	}
 
 	/**
@@ -157,6 +158,7 @@ namespace Microsoft.CIFramework
 		public static entitySetName = "entitySetName";
 		public static annotationId = "annotationid";
 		public static secRemaining = "secs remaining";
+		public static CollapseFlapHandler = "collapseFlapHandler";
 	}
 
 	/**
