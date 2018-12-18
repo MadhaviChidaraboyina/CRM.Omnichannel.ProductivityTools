@@ -81,8 +81,8 @@ namespace Microsoft.CIFramework.Internal {
 			saveBtn.tabIndex = 0;
 			saveBtn.setAttribute("aria-label", "Add Note");
 			//Saving notes info locally
-			let sessionId: string = this._state.messageLibrary.getCorrelationId();
-			let session = this.uiSessions.get(sessionId);
+			let sessionId: string = SessionPanel.getInstance().getvisibleUISession();
+			let session = SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions.get(sessionId);
 			session.notesInfo.notesDetails = notesDetails;
 			session.notesInfo.resolve = resolve;
 			session.notesInfo.reject = reject;

@@ -155,12 +155,17 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			let sessionId: string = this._state.messageLibrary.getCorrelationId();
+			let notesInformation: NotesInfo = {
+				notesDetails: new Map(),
+				resolve: null,
+				reject: null,
+			}
 			let session: UISession = {
 				sessionId: sessionId,
 				context: context,
 				applicationTabs: null,
 				initials: initials,
-				notesInfo: null
+				notesInfo: notesInformation
 			};
 
 			this.uiSessions.set(sessionId, session);

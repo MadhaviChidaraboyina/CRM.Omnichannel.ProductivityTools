@@ -731,7 +731,6 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			state.client.collapseFlap();
 			const [sessionId, errorData] = provider.switchUISession(parameters.get(Constants.sessionId));
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "switchUISession", telemetryData);
 			setPerfData(perfData);

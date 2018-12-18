@@ -223,7 +223,7 @@ namespace Microsoft.CIFramework
 				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
 			}
 			if(isNullOrUndefined(entityId) || entityId == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+				return postMessageNamespace.rejectWithErrorMessage("The EntityId parameter is blank. Provide a value to the parameter.");
 			}
 		}
 	}
