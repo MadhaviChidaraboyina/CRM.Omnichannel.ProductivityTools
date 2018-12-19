@@ -197,6 +197,7 @@ namespace Microsoft.CIFramework.Internal {
 		if(!isNullOrUndefined(notesDiv)){
 			notesDiv.innerHTML = '';
 		}
+		SessionPanel.getInstance().getState().client.removeHandler(Constants.CollapseFlapHandler);
 	}
 
 	export function intermediateSaveNotes(): void{	
