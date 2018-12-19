@@ -91,6 +91,10 @@ namespace Microsoft.CIFramework.Internal {
 					cancelNotes();
 					//state.setWidgetWidth("setWidgetWidth", width);
 					return resolve(new Map().set(Constants.value,retval));
+				},
+				(error: IErrorHandler) => {
+						postMessageNamespace.rejectWithErrorMessage("Failed in saving notes.");
+						return false;
 				});
 			});
 			cancelBtn.addEventListener("click", function clickListener() {
