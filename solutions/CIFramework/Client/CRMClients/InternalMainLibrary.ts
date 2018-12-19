@@ -38,6 +38,7 @@ namespace Microsoft.CIFramework.Internal {
 		["getclicktoact", [getClickToAct]],
 		["renderSearchPage", [renderSearchPage]],
 		["startUISession", [startUISession]],
+		["notifyIncoming", [notifyIncoming]],
 		["switchUISession", [switchUISession]],
 		["endUISession", [endUISession]],
 		["setAgentPresence", [setAgentPresence]],
@@ -723,6 +724,26 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, "startUISession", appId, true, errorData);
+		}
+	}
+
+	export function notifyIncoming(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			const [sessionId, errorData] = provider.notifyIncoming(parameters.get(Constants.sessionId), parameters.get(Constants.messagesCount));
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "notifyIncoming", telemetryData);
+			setPerfData(perfData);
+			if (sessionId != null) {
+				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
+			}
+			else {
+				return rejectWithErrorMessage(errorData.errorMsg, "notifyIncoming", appId, true, errorData);
+			}
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, "notifyIncoming", appId, true, errorData);
 		}
 	}
 

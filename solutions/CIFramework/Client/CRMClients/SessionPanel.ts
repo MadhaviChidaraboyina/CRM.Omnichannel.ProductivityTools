@@ -84,6 +84,14 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
+		notifyIncoming(sessionId: string, messagesCount: number) {
+			if (this.visibleUISession == sessionId || !this.UIsessions.has(sessionId)) {
+				return;
+			}
+
+			this.state.client.notifyUISession(sessionId, messagesCount);
+		}
+
 		removeUISession(sessionId: string): void {
 			if (this.UIsessions.has(sessionId)) {
 				this.UIsessions.delete(sessionId);

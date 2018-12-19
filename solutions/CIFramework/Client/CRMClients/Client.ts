@@ -104,6 +104,11 @@ namespace Microsoft.CIFramework.Internal
 	type updateUISessionFunction = (id: string, visible: boolean) => void;
 
 	/**
+	 * Func type to update UISession on unread messages
+	*/
+	type notifyUISessionFunction = (id: string, messagesCount: number) => void;
+
+	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
 	 * This type specifies all the functions that are exposed to clients for impl. 
 	*/
@@ -167,6 +172,8 @@ namespace Microsoft.CIFramework.Internal
 		getUISessionColor: getUISessionColorFunction;
 
 		updateUISession: updateUISessionFunction;
+
+		notifyUISession: notifyUISessionFunction;
 
 		flapInUse: flapInUseFunction;
 		}

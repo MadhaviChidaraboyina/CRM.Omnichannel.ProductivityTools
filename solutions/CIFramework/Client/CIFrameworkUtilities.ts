@@ -92,4 +92,28 @@ namespace Microsoft.CIFramework.Utility {
 	export function getElementsByClassName(iFrameObject: HTMLIFrameElement, className: string): any {
 		return iFrameObject.contentWindow.document.getElementsByClassName(className);
 	}
+
+	export function blinkBrowserTab(iFrameObject: HTMLIFrameElement) {
+		if (iFrameObject.contentWindow.document.hasFocus()) {
+			return;
+		}
+
+		let originalTitle = window.top.document.title;  // save original title
+		let animatedTitle = "Incoming notification";
+		let timer = setInterval(startAnimation, 800);
+
+		function startAnimation() {
+			// animate between the original and the new title
+			window.top.document.title = window.top.document.title == animatedTitle ? originalTitle : animatedTitle;
+		}
+
+		let restoreTitleFunction = function restoreTitle() {
+			clearInterval(timer);
+			window.top.document.title = originalTitle; // restore original title
+			iFrameObject.contentWindow.removeEventListener("focus", restoreTitleFunction);
+		}
+
+		// Change page title back on focus
+		iFrameObject.contentWindow.addEventListener("focus", restoreTitleFunction);
+	}
 }

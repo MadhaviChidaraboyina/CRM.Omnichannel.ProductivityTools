@@ -447,7 +447,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (sessionPanel == null)
 				return;
 
-			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="Ongoing session" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div></div><div id="' + id + 'CrossIcon" class="flexJustify" title="End session" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
+			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="Ongoing session" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div><span class="uiSessionNotification" id="' + id + '_UiSessionNotification" style="display:none"></span><</div><div id="' + id + 'CrossIcon" class="flexJustify" title="End session" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
 			var parser = new DOMParser();
 			var el = parser.parseFromString(sessionElementHtml, "text/html");
 			var sessionElement = el.getElementById(id);
@@ -491,6 +491,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			let uiSessions = Utility.getElementFromIframe(sidePanelIFrame, "uiSessions");
 			uiSessions.appendChild(sessionElement);
+			Utility.blinkBrowserTab(sidePanelIFrame);
 		}
 
 		client.removeUISession = (id: string): void => {
@@ -520,12 +521,16 @@ namespace Microsoft.CIFramework.Internal {
 			var providerId = sessionElement.getAttribute("aria-controls");
 			let providerElement = Utility.getElementFromIframe(sidePanelIFrame, providerId);
 			let sessionIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "UiSessionIcon");
+			let sessionNotification = Utility.getElementFromIframe(sidePanelIFrame, id + "_UiSessionNotification");
 			let crossIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "CrossIcon");
 
 			if (visible) {
 				sessionElement.style.backgroundColor = "#FFFFFF";
 				sessionElement.style.boxShadow = "8px 4px 10px rgba(102, 102, 102, 0.2)";
+				sessionElement.focus();
 				sessionIcon.style.display = "none";
+				sessionNotification.style.display = "none";
+				sessionNotification.innerText = "";
 				crossIcon.style.display = "flex";
 				sessionElement.setAttribute("tabindex", 0);
 				providerElement.setAttribute("aria-labelledby", id);
@@ -540,6 +545,22 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			sessionElement.setAttribute("aria-selected", visible);
+		}
+
+		client.notifyUISession = (id: string, messagesCount: number): void => {
+			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let sessionNotification = Utility.getElementFromIframe(sidePanelIFrame, id + "_UiSessionNotification");
+
+			if (messagesCount != null) {
+				if (messagesCount > 99) {
+					messagesCount = 99;
+				}
+
+				sessionNotification.innerText = messagesCount;
+			}
+
+			sessionNotification.style.display = "block";
+			Utility.blinkBrowserTab(sidePanelIFrame);
 		}
 
 		client.expandFlap = (): number => {

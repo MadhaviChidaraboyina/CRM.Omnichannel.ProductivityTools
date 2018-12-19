@@ -647,6 +647,22 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+	 * API to notify incoming on an invisible UISession
+	 */
+	export function notifyIncoming(sessionId: string, messagesCount?: number): Promise<string> {
+		if (!isNullOrUndefined(sessionId)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.notifyIncoming,
+				messageData: new Map().set(Constants.sessionId, sessionId).set(Constants.messagesCount, messagesCount)
+			}
+			return sendMessage<string>(notifyIncoming.name, payload, false);
+		}
+		else {
+			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");
+		}
+	}
+
+	/**
 	 * API to switch UI Session
 	 */
 	export function switchUISession(sessionId: string): Promise<string> {

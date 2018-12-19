@@ -41,6 +41,7 @@ namespace Microsoft.CIFramework
 		public static transfer = "transfer";
 		public static escalation = "escalation";
 		public static renderSearchPage = "renderSearchPage";
+		public static notifyIncoming = "notifyIncoming";
 		public static startUISession = "startUISession";
 		public static switchUISession = "switchUISession";
 		public static endUISession = "endUISession";
@@ -140,6 +141,7 @@ namespace Microsoft.CIFramework
 		public static context = "context";
 		public static initials = "initials";
 		public static sessionId = "sessionId";
+		public static messagesCount = "messagesCount";
 		public static MaxUISessions = 5;
 		public static sessionColors = ["#2A757D", "#70278B", "#FF8C00", "#427825", "#B4009E", "#B4A0FF"];
 		public static sessionPanel = "sessionPanel";

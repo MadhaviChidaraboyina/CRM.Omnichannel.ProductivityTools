@@ -201,6 +201,29 @@ div#PresenceList
 	font-family: Segoe UI;
 }
 
+.uiSessionNotification {
+	height: 10px;
+	width: 10px;
+	background-color: #56CCF2;
+	position: absolute;
+	border-radius: 50%;
+	border: 2px solid white;
+	margin-top: 10px;
+	font-size: 7px;
+	color: white;
+	text-align: center;
+}
+
+[dir='ltr'] .uiSessionNotification
+{
+	right: 4px;
+}
+
+[dir='rtl'] .uiSessionNotification
+{
+	left: 4px;
+}
+
 .crossIconFont
 {
 	font-size: 20px;

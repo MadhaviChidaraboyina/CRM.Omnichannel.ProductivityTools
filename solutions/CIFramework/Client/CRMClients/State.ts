@@ -162,6 +162,29 @@ namespace Microsoft.CIFramework.Internal {
 			return [sessionId, null];
 		}
 
+		notifyIncoming(sessionId: string, messagesCount: number): [string, IErrorHandler] {
+			if (!this.uiSessions.has(sessionId)) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Session with ID:" + sessionId + " does not exist";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = switchUISession.name;
+				return [null, error];
+			}
+
+			if (SessionPanel.getInstance().getvisibleUISession() == sessionId) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Session with ID:" + sessionId + " is already visible. Notifications are rendered only for invisible UISessions";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = switchUISession.name;
+				return [null, error];
+			}
+
+			SessionPanel.getInstance().notifyIncoming(sessionId, messagesCount);
+			return [sessionId, null];
+		}
+
 		switchUISession(sessionId: string): [string, IErrorHandler] {
 			if (!this.uiSessions.has(sessionId)) {
 				let error = {} as IErrorHandler;
