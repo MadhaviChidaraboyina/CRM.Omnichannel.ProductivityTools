@@ -566,6 +566,7 @@ namespace Microsoft.CIFramework.Internal {
 			if(handler != null && handler != "undefined"){
 				handler();
 			}
+			client.removeHandler(Constants.CollapseFlapHandler);
 			client.setPanelWidth("setPanelWidth", this.origWidth);
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', "0px");
