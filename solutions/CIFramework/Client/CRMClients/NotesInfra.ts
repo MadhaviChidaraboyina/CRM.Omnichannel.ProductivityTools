@@ -213,6 +213,10 @@ namespace Microsoft.CIFramework.Internal {
 		saveNotes(session.notesInfo.notesDetails,newTextArea).then(function (retval: Map<string, any>) {
 			cancelNotes();
 			resolve(new Map().set(Constants.value,retval));
+		},
+		(error: IErrorHandler) => {
+				postMessageNamespace.rejectWithErrorMessage("Failed in saving notes.");
+				return false;
 		});
 	}
 }
