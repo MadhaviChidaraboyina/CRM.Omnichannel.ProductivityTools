@@ -483,20 +483,20 @@ namespace Microsoft.CIFramework.Internal {
 						key.addEventListener("click", function clickListener() {
 							key.removeEventListener("click", clickListener);
 							key.parentElement.removeChild(key);
-							var mapReturn = new Map().set(Constants.value,new Map().set(Constants.value,Constants.Accept));
+							var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Accept));
 							return resolve(mapReturn);
 						});
 					}else{
 						key.addEventListener("click", function clickListener() {
 							key.removeEventListener("click", clickListener);
 							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-							var mapReturn = new Map().set(Constants.value,new Map().set(Constants.value,Constants.Reject));
+							var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
 							return resolve(mapReturn);
 						});
 						setTimeout(function(){
 							if(key.parentElement.parentElement.parentElement != null){
 								key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-								var mapReturn = new Map().set(Constants.value,new Map().set(Constants.value,Constants.Reject));
+								var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
 								return resolve(mapReturn);
 							}
 						}, 20000);

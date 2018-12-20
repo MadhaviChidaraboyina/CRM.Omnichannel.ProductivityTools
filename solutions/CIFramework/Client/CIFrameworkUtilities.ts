@@ -94,13 +94,14 @@ namespace Microsoft.CIFramework.Utility {
 	}
 
 	export function blinkBrowserTab(iFrameObject: HTMLIFrameElement) {
-		if (iFrameObject.contentWindow.document.hasFocus()) {
+		if (iFrameObject.contentWindow.document.hasFocus() || (window.top as any).titleAnimation == true) {
 			return;
 		}
 
 		let originalTitle = window.top.document.title;  // save original title
 		let animatedTitle = "Incoming notification";
 		let timer = setInterval(startAnimation, 800);
+		(window.top as any).titleAnimation = true;
 
 		function startAnimation() {
 			// animate between the original and the new title
@@ -110,6 +111,7 @@ namespace Microsoft.CIFramework.Utility {
 		let restoreTitleFunction = function restoreTitle() {
 			clearInterval(timer);
 			window.top.document.title = originalTitle; // restore original title
+			(window.top as any).titleAnimation = false;
 			iFrameObject.contentWindow.removeEventListener("focus", restoreTitleFunction);
 		}
 
