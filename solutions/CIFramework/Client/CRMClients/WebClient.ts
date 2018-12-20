@@ -563,7 +563,7 @@ namespace Microsoft.CIFramework.Internal {
 			Utility.blinkBrowserTab(sidePanelIFrame);
 		}
 
-		client.expandFlap = (handler: EventHandler): number => {
+		client.expandFlap = (): number => {
 			if (this.flapExpanded) {
 				return 0;
 			}
@@ -574,7 +574,6 @@ namespace Microsoft.CIFramework.Internal {
 			let widgetWidth = client.getWidgetWidth() as number;
 			this.origWidth = widgetWidth + sessionPanelArea.clientWidth;
 			this.flapExpanded = true;
-			client.registerHandler(Constants.CollapseFlapHandler, handler);
 			client.setPanelWidth("setPanelWidth", (2 * this.origWidth - sessionPanelArea.clientWidth));
 			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', widgetWidth.toString() + "px");
 			return this.origWidth;
@@ -582,10 +581,6 @@ namespace Microsoft.CIFramework.Internal {
 		client.collapseFlap = (): number => {
 			if (!this.flapExpanded) {
 				return 0;
-			}
-			let handler = this.eventHandlers.get(Constants.CollapseFlapHandler);
-			if(handler != null && handler != "undefined"){
-				handler();
 			}
 			client.setPanelWidth("setPanelWidth", this.origWidth);
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
