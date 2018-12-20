@@ -93,8 +93,7 @@ namespace Microsoft.CIFramework.Internal {
 					return resolve(new Map().set(Constants.value,retval));
 				},
 				(error: IErrorHandler) => {
-						postMessageNamespace.rejectWithErrorMessage("Failed in saving notes.");
-						return false;
+						return postMessageNamespace.rejectWithErrorMessage("Failed in saving notes.");
 				});
 			});
 			cancelBtn.addEventListener("click", function clickListener() {
@@ -212,11 +211,10 @@ namespace Microsoft.CIFramework.Internal {
 		let resolve = session.notesInfo.resolve;
 		saveNotes(session.notesInfo.notesDetails,newTextArea).then(function (retval: Map<string, any>) {
 			cancelNotes();
-			resolve(new Map().set(Constants.value,retval));
+			return resolve(new Map().set(Constants.value,retval));
 		},
 		(error: IErrorHandler) => {
-				postMessageNamespace.rejectWithErrorMessage("Failed in saving notes.");
-				return false;
+				return postMessageNamespace.rejectWithErrorMessage("Failed in saving notes.");
 		});
 	}
 }
