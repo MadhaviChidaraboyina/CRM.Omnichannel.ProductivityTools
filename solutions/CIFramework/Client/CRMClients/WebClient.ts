@@ -187,14 +187,14 @@ namespace Microsoft.CIFramework.Internal {
 			return Xrm.Utility.getGlobalContext().userSettings.userId;
 		}
 
-		client.loadWidgets = (ciProviders: Map<string, CIProvider>, title): Promise<Map<string, boolean | string>> => {
+		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> => {
 			const options: XrmClientApi.PanelOptions = {
 				defaultCollapsedBehavior: false,
 				onSizeChangeHandler: client.sizeChanged,
 				onStateChangeHandler: client.modeChanged
 			};
 			return new Promise<Map<string, boolean | string>>((resolve, reject) => {
-				return Xrm.Panel.loadPanel("/webresources/widgets_container.html", title, options).then(function () {
+				return Xrm.Panel.loadPanel("/webresources/widgets_container.html", "", options).then(function () {
 					Xrm.Navigation.addOnPreNavigation(client.navigationHandler);
 					let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 					let targetWindow = window.parent;
@@ -213,8 +213,8 @@ namespace Microsoft.CIFramework.Internal {
 							containerDiv.setAttribute("style", "height: 100%");
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
-							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
-							iFrame.setAttribute("style", "border: 0px;");
+							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin allow-modals"); //TODO: make configurable?
+							widgetIFrame.setAttribute("style", "border-top: 1px solid;border-color: #F5F5F5;");
 							iFrame.height = "100%";
 							iFrame.width = "100%";
 							iFrame.src = key;
@@ -274,7 +274,7 @@ namespace Microsoft.CIFramework.Internal {
 								Xrm.Navigation.openForm(fo);
 							}
 						}
-						else {
+						else if (searchOnly == false) {
 							// Open the Search Page with the Search String from the OData Parameters if the records != 1. Opens blank search page if the $search parameter has no value
 							try {
 								const searchPageInput: XrmClientApi.PageInput = {
@@ -400,10 +400,10 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		client.checkCIFCapability = (): boolean => {
-			if (Xrm.Utility.getGlobalContext().client.getClient() === "UnifiedServiceDesk") {
-				return false;
-			}
 			try {
+				if ((window.top as any).Xrm.Utility.getGlobalContext().client.getClient() === "UnifiedServiceDesk") {
+					return false;
+				}
 				if (window.top.document.getElementById(Constants.widgetIframeId)) {
 					//The side panel already exists. Don't load another
 					return false;
@@ -447,7 +447,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (sessionPanel == null)
 				return;
 
-			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div></div><div id="' + id + 'CrossIcon" class="flexJustify" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
+			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="Ongoing session" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div><span class="uiSessionNotification" id="' + id + '_UiSessionNotification" style="display:none"></span></div><div id="' + id + 'CrossIcon" class="flexJustify" title="End session" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
 			var parser = new DOMParser();
 			var el = parser.parseFromString(sessionElementHtml, "text/html");
 			var sessionElement = el.getElementById(id);
@@ -491,6 +491,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			let uiSessions = Utility.getElementFromIframe(sidePanelIFrame, "uiSessions");
 			uiSessions.appendChild(sessionElement);
+			Utility.blinkBrowserTab(sidePanelIFrame);
 		}
 
 		client.removeUISession = (id: string): void => {
@@ -520,12 +521,16 @@ namespace Microsoft.CIFramework.Internal {
 			var providerId = sessionElement.getAttribute("aria-controls");
 			let providerElement = Utility.getElementFromIframe(sidePanelIFrame, providerId);
 			let sessionIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "UiSessionIcon");
+			let sessionNotification = Utility.getElementFromIframe(sidePanelIFrame, id + "_UiSessionNotification");
 			let crossIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "CrossIcon");
 
 			if (visible) {
 				sessionElement.style.backgroundColor = "#FFFFFF";
-				sessionElement.style.boxShadow = "0px 4px 8px rgba(102, 102, 102, 0.2)";
+				sessionElement.style.boxShadow = "8px 4px 10px rgba(102, 102, 102, 0.2)";
+				sessionElement.focus();
 				sessionIcon.style.display = "none";
+				sessionNotification.style.display = "none";
+				sessionNotification.innerText = "";
 				crossIcon.style.display = "flex";
 				sessionElement.setAttribute("tabindex", 0);
 				providerElement.setAttribute("aria-labelledby", id);
@@ -540,6 +545,22 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			sessionElement.setAttribute("aria-selected", visible);
+		}
+
+		client.notifyUISession = (id: string, messagesCount: number): void => {
+			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let sessionNotification = Utility.getElementFromIframe(sidePanelIFrame, id + "_UiSessionNotification");
+
+			if (messagesCount != null) {
+				if (messagesCount > 99) {
+					messagesCount = 99;
+				}
+
+				sessionNotification.innerText = messagesCount;
+			}
+
+			sessionNotification.style.display = "block";
+			Utility.blinkBrowserTab(sidePanelIFrame);
 		}
 
 		client.expandFlap = (): number => {
@@ -591,8 +612,11 @@ namespace Microsoft.CIFramework.Internal {
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let agentPresenceParent = widgetIFrame.contentWindow.document.getElementById("CurrentStatus");
 			if (agentPresenceParent != null) {
-				agentPresenceParent.innerHTML = "";
-				agentPresenceParent.appendChild(agentPresence);
+				var currentPresenceId = agentPresenceParent.firstElementChild.id;
+				if (currentPresenceId != presenceInfo.presenceId) {
+					agentPresenceParent.innerHTML = "";
+					agentPresenceParent.appendChild(agentPresence);
+				}
 				return true;
 			}
 			return false;
