@@ -31,6 +31,10 @@ namespace Microsoft.CIFramework.Internal {
 			this.state = state;
 		}
 
+		getState() {
+			return this.state;
+		}
+
 		getvisibleUISession() {
 			return this.visibleUISession;
 		}
@@ -39,7 +43,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (this.visibleUISession == sessionId || !this.UIsessions.has(sessionId)) {
 				return;
 			}
-
+			this.state.client.collapseFlap();
 			let switchProvider = true;
 			let oldProvider: CIProvider;
 			let newProvider: CIProvider = this.UIsessions.get(sessionId);

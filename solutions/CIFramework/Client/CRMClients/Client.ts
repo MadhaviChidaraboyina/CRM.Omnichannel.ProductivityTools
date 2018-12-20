@@ -77,7 +77,7 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for using the flap for rendering any control
 	*/
-	type expandFlapFunction = () => number;
+	type expandFlapFunction = (handler: EventHandler) => number;
 
 	type collapseFlapFunction = () => number;
 

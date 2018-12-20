@@ -80,11 +80,20 @@ namespace Microsoft.CIFramework.Internal {
 			saveBtn.innerText = "Add Note";
 			saveBtn.tabIndex = 0;
 			saveBtn.setAttribute("aria-label", "Add Note");
+			//Saving notes info locally
+			let sessionId: string = SessionPanel.getInstance().getvisibleUISession();
+			let session = SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions.get(sessionId);
+			session.notesInfo.notesDetails = notesDetails;
+			session.notesInfo.resolve = resolve;
+			session.notesInfo.reject = reject;
 			saveBtn.addEventListener("click", function clickListener() {
 				saveNotes(notesDetails,newTextArea).then(function (retval: Map<string, any>) {
 					cancelNotes();
 					//state.setWidgetWidth("setWidgetWidth", width);
 					return resolve(new Map().set(Constants.value,retval));
+				},
+				(error: IErrorHandler) => {
+						return postMessageNamespace.rejectWithErrorMessage("Failed in saving notes.");
 				});
 			});
 			cancelBtn.addEventListener("click", function clickListener() {
@@ -191,5 +200,21 @@ namespace Microsoft.CIFramework.Internal {
 		if(!isNullOrUndefined(notesDiv)){
 			notesDiv.innerHTML = '';
 		}
+		SessionPanel.getInstance().getState().client.removeHandler(Constants.CollapseFlapHandler);
+	}
+
+	export function intermediateSaveNotes(): void{	
+		let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+		let newTextArea = widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF");
+		let sessionId: string = SessionPanel.getInstance().getvisibleUISession();
+		let session = SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions.get(sessionId);
+		let resolve = session.notesInfo.resolve;
+		saveNotes(session.notesInfo.notesDetails,newTextArea).then(function (retval: Map<string, any>) {
+			cancelNotes();
+			return resolve(new Map().set(Constants.value,retval));
+		},
+		(error: IErrorHandler) => {
+				return postMessageNamespace.rejectWithErrorMessage("Failed in saving notes.");
+		});
 	}
 }

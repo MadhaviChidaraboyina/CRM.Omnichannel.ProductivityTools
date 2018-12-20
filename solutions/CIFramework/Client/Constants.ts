@@ -159,6 +159,7 @@ namespace Microsoft.CIFramework
 		public static entitySetName = "entitySetName";
 		public static annotationId = "annotationid";
 		public static secRemaining = "secs remaining";
+		public static CollapseFlapHandler = "collapseFlapHandler";
 	}
 
 	/**
