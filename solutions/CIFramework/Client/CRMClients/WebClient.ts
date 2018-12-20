@@ -187,14 +187,14 @@ namespace Microsoft.CIFramework.Internal {
 			return Xrm.Utility.getGlobalContext().userSettings.userId;
 		}
 
-		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> => {
+		client.loadWidgets = (ciProviders: Map<string, CIProvider>, title): Promise<Map<string, boolean | string>> => {
 			const options: XrmClientApi.PanelOptions = {
 				defaultCollapsedBehavior: false,
 				onSizeChangeHandler: client.sizeChanged,
 				onStateChangeHandler: client.modeChanged
 			};
 			return new Promise<Map<string, boolean | string>>((resolve, reject) => {
-				return Xrm.Panel.loadPanel("/webresources/widgets_container.html", "", options).then(function () {
+				return Xrm.Panel.loadPanel("/webresources/widgets_container.html", title, options).then(function () {
 					Xrm.Navigation.addOnPreNavigation(client.navigationHandler);
 					let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 					let targetWindow = window.parent;
@@ -213,8 +213,8 @@ namespace Microsoft.CIFramework.Internal {
 							containerDiv.setAttribute("style", "height: 100%");
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
-							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin allow-modals"); //TODO: make configurable?
-							widgetIFrame.setAttribute("style", "border-top: 1px solid;border-color: #F5F5F5;");
+							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin"); //TODO: make configurable?
+							iFrame.setAttribute("style", "border: 0px;");
 							iFrame.height = "100%";
 							iFrame.width = "100%";
 							iFrame.src = key;
@@ -274,7 +274,7 @@ namespace Microsoft.CIFramework.Internal {
 								Xrm.Navigation.openForm(fo);
 							}
 						}
-						else if (searchOnly == false) {
+						else {
 							// Open the Search Page with the Search String from the OData Parameters if the records != 1. Opens blank search page if the $search parameter has no value
 							try {
 								const searchPageInput: XrmClientApi.PageInput = {
@@ -447,7 +447,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (sessionPanel == null)
 				return;
 
-			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="Ongoing session" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div></div><div id="' + id + 'CrossIcon" class="flexJustify" title="End session" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
+			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div></div><div id="' + id + 'CrossIcon" class="flexJustify" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
 			var parser = new DOMParser();
 			var el = parser.parseFromString(sessionElementHtml, "text/html");
 			var sessionElement = el.getElementById(id);
@@ -524,7 +524,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			if (visible) {
 				sessionElement.style.backgroundColor = "#FFFFFF";
-				sessionElement.style.boxShadow = "8px 4px 10px rgba(102, 102, 102, 0.2)";
+				sessionElement.style.boxShadow = "0px 4px 8px rgba(102, 102, 102, 0.2)";
 				sessionIcon.style.display = "none";
 				crossIcon.style.display = "flex";
 				sessionElement.setAttribute("tabindex", 0);
@@ -542,7 +542,7 @@ namespace Microsoft.CIFramework.Internal {
 			sessionElement.setAttribute("aria-selected", visible);
 		}
 
-		client.expandFlap = (handler: EventHandler): number => {
+		client.expandFlap = (): number => {
 			if (this.flapExpanded) {
 				return 0;
 			}
@@ -553,7 +553,6 @@ namespace Microsoft.CIFramework.Internal {
 			let widgetWidth = client.getWidgetWidth() as number;
 			this.origWidth = widgetWidth + sessionPanelArea.clientWidth;
 			this.flapExpanded = true;
-			client.registerHandler(Constants.CollapseFlapHandler, handler);
 			client.setPanelWidth("setPanelWidth", (2 * this.origWidth - sessionPanelArea.clientWidth));
 			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', widgetWidth.toString() + "px");
 			return this.origWidth;
@@ -561,10 +560,6 @@ namespace Microsoft.CIFramework.Internal {
 		client.collapseFlap = (): number => {
 			if (!this.flapExpanded) {
 				return 0;
-			}
-			let handler = this.eventHandlers.get(Constants.CollapseFlapHandler);
-			if(handler != null && handler != "undefined"){
-				handler();
 			}
 			client.setPanelWidth("setPanelWidth", this.origWidth);
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
@@ -596,11 +591,8 @@ namespace Microsoft.CIFramework.Internal {
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let agentPresenceParent = widgetIFrame.contentWindow.document.getElementById("CurrentStatus");
 			if (agentPresenceParent != null) {
-				var currentPresenceId = agentPresenceParent.firstElementChild.id;
-				if (currentPresenceId != presenceInfo.presenceId) {
-					agentPresenceParent.innerHTML = "";
-					agentPresenceParent.appendChild(agentPresence);
-				}
+				agentPresenceParent.innerHTML = "";
+				agentPresenceParent.appendChild(agentPresence);
 				return true;
 			}
 			return false;
