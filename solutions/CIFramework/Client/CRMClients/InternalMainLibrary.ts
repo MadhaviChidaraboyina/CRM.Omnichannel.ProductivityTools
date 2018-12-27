@@ -712,7 +712,7 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			const [sessionId, errorData] = provider.startUISession(parameters.get(Constants.context), parameters.get(Constants.initials), parameters.get(Constants.customerName));
+			const [sessionId, errorData] = provider.startUISession(parameters.get(Constants.context), parameters.get(Constants.customerName));
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "startUISession", telemetryData);
 			setPerfData(perfData);
 			if (sessionId != null) {
