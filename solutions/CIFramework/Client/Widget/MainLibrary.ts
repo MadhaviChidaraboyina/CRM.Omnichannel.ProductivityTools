@@ -642,7 +642,7 @@ namespace Microsoft.CIFramework
 			return sendMessage<string>(startUISession.name, payload, false);
 		}
 		else {
-			return postMessageNamespace.rejectWithErrorMessage("context or initials is null");
+			return postMessageNamespace.rejectWithErrorMessage("context or initials or customerName is null");
 		}
 	}
 
