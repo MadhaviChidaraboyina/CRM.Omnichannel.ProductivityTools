@@ -140,6 +140,7 @@ namespace Microsoft.CIFramework
 		public static SearchString = "searchString";
 		public static context = "context";
 		public static initials = "initials";
+		public static customerName = "customerName";
 		public static sessionId = "sessionId";
 		public static messagesCount = "messagesCount";
 		public static MaxUISessions = 5;

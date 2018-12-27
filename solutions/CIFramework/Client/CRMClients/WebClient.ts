@@ -441,13 +441,13 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		client.addUISession = (id: string, initials: string, sessionColor: string, providerId: string): void => {
+		client.addUISession = (id: string, initials: string, sessionColor: string, providerId: string, customerName: string): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionPanel = Utility.getElementFromIframe(sidePanelIFrame, Constants.sessionPanel);
 			if (sessionPanel == null)
 				return;
 
-			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="Ongoing session" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div><span class="uiSessionNotification" id="' + id + '_UiSessionNotification" style="display:none"></span></div><div id="' + id + 'CrossIcon" class="flexJustify" title="End session" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
+			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="' + customerName + '" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div><span class="uiSessionNotification" id="' + id + '_UiSessionNotification" style="display:none"></span></div><div id="' + id + 'CrossIcon" class="flexJustify" title="' + customerName + '" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
 			var parser = new DOMParser();
 			var el = parser.parseFromString(sessionElementHtml, "text/html");
 			var sessionElement = el.getElementById(id);

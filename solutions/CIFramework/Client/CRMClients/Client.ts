@@ -86,7 +86,7 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type to add UISession
 	*/
-	type addUISessionFunction = (id: string, initials: string, sessionColor: string, providerId: string) => void;
+	type addUISessionFunction = (id: string, initials: string, sessionColor: string, providerId: string, customerName: string) => void;
 
 	/**
 	 * Func type to remove UISession

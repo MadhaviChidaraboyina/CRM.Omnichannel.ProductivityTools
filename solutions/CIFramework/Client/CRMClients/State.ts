@@ -142,7 +142,7 @@ namespace Microsoft.CIFramework.Internal {
 			this._minimizedHeight = minimizedHeight;
 		}
 
-		startUISession(context: any, initials: string): [string, IErrorHandler] {
+		startUISession(context: any, initials: string, customerName:string): [string, IErrorHandler] {
 			if (!SessionPanel.getInstance().canAddUISession()) {
 				//raise notification
 
@@ -165,11 +165,11 @@ namespace Microsoft.CIFramework.Internal {
 				context: context,
 				applicationTabs: null,
 				initials: initials,
-				notesInfo: notesInformation
+				notesInfo: notesInformation,
 			};
 
 			this.uiSessions.set(sessionId, session);
-			SessionPanel.getInstance().addUISession(sessionId, this, initials);
+			SessionPanel.getInstance().addUISession(sessionId, this, initials, customerName);
 
 			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleUISession == sessionId).set("context", context), MessageType.onUISessionStarted);
 			return [sessionId, null];
