@@ -165,7 +165,7 @@ namespace Microsoft.CIFramework.Internal {
 				context: context,
 				applicationTabs: null,
 				initials: initials,
-				notesInfo: notesInformation,
+				notesInfo: notesInformation
 			};
 
 			this.uiSessions.set(sessionId, session);
