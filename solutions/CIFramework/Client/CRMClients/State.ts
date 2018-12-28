@@ -142,7 +142,7 @@ namespace Microsoft.CIFramework.Internal {
 			this._minimizedHeight = minimizedHeight;
 		}
 
-		startUISession(context: any, initials: string): [string, IErrorHandler] {
+		startUISession(context: any, customerName:string): [string, IErrorHandler] {
 			if (!SessionPanel.getInstance().canAddUISession()) {
 				//raise notification
 
@@ -152,6 +152,14 @@ namespace Microsoft.CIFramework.Internal {
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = startUISession.name;
 				return [null, error];
+			}
+
+			let initials = "";
+			var splittedName = customerName.split(" ");
+			if(splittedName.length == 1){
+				initials = splittedName[0][0] + splittedName[0][1];
+			}else{
+				initials = splittedName[0][0] + splittedName[splittedName.length - 1][0];
 			}
 
 			let sessionId: string = this._state.messageLibrary.getCorrelationId();
@@ -169,7 +177,7 @@ namespace Microsoft.CIFramework.Internal {
 			};
 
 			this.uiSessions.set(sessionId, session);
-			SessionPanel.getInstance().addUISession(sessionId, this, initials);
+			SessionPanel.getInstance().addUISession(sessionId, this, initials, customerName);
 
 			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleUISession == sessionId).set("context", context), MessageType.onUISessionStarted);
 			return [sessionId, null];

@@ -73,11 +73,11 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		addUISession(sessionId: string, provider: CIProvider, initials: string): void {
+		addUISession(sessionId: string, provider: CIProvider, initials: string, customerName: string): void {
 			this.UIsessions.set(sessionId, provider);
 
 			let sessionColor = Constants.sessionColors[this.counter++ % Constants.sessionColors.length];
-			this.state.client.addUISession(sessionId, initials, sessionColor, provider.providerId);
+			this.state.client.addUISession(sessionId, initials, sessionColor, provider.providerId, customerName);
 
 			if (this.visibleUISession == '') {
 				this.switchUISession(sessionId);
