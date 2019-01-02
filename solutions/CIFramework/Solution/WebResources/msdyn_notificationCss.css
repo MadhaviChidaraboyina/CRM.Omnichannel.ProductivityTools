@@ -671,8 +671,8 @@
     font-size: 14px;
     line-height: 18px;
     color: #333333;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
 [dir='ltr'] .notesHeaderSpan_CIF
 {
@@ -799,8 +799,8 @@
 }
 .notesCloseSpanDiv{
     height: 16px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 [dir='ltr'] .notesCloseSpanDiv
 {

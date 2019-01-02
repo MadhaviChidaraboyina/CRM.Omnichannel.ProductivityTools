@@ -53,7 +53,7 @@ namespace Microsoft.CIFramework.Internal {
 			notesDiv.classList.add("notesDivCIF");
 			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
 			let availNotesHeight = widgetIFrame.clientHeight - 26;
-			widgetIFrame.contentWindow.document.getElementById("notesHeaderIdCIF").style.height = "58px";
+			widgetIFrame.contentWindow.document.getElementById("notesHeaderIdCIF").style.height = "49px";
 			var span = document.createElement("span");
 			span.classList.add("closeNotes_CIF");
 			span.classList.add("FontIcons-closeSoftNotification_CIF");
