@@ -159,7 +159,7 @@
 }
 .bodyDivider_CIF{ 
 	height:1px; 
-	background-color: #F1F1F1;
+	background-color: #E2E2E2;
 	opacity: .14;
 }
 .broadCastLabel1{
@@ -695,6 +695,7 @@
 	border-radius: 4px;
 	box-sizing: border-box;
 	padding: 12px;
+	-webkit-text-fill-color: #9D7E1B;
 }
 [dir='ltr'] .newTextAreaCIF
 {
@@ -710,14 +711,13 @@
 .notesSaveButtonCIF{
 	color: #FFFFFF;
 	background-color: #3B79B7;
-	font-style: Semibold;
-	font-weight: 600;
+	font-style: normal;
 	font-family: Segoe UI;
 	font-size: 12px;
 	line-height: 14px;
 	height: 28px;
 	border: none;
-	margin-top: 14px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
 	padding-left: 10px;
@@ -736,13 +736,12 @@
 }
 .notesCancelButtonCIF{
 	color: #3B79B7;
-	font-style: Semibold;
-	font-weight: 600;
+	font-style: normal;
 	font-family: Segoe UI;
 	font-size: 12px;
 	line-height: 14px;
 	height: 28px;
-	margin-top: 14px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 	text-decoration: none;
 	border-color: #3B79B7;
