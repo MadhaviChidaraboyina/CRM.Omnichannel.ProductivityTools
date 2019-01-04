@@ -49,6 +49,9 @@ namespace Microsoft.CIFramework.Internal {
 					var presenceNode = document.createElement('div');
 					presenceNode.id = presenceList[i].presenceId;
 					presenceNode.classList.add("PresenceListItem");
+					presenceNode.tabIndex = 0;
+					presenceNode.setAttribute("role", "button");
+					presenceNode.setAttribute("aria-label", presenceList[i].presenceText);
 
 					var presenceColorNode = document.createElement('div');
 					presenceColorNode.classList.add('ColorNode');
@@ -66,6 +69,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 
 				presenceListNode.addEventListener("click", this.raiseSetPresence, false);
+				presenceListNode.addEventListener("keypress", this.keyboardSetPresence, false);
 				return presenceListNode;
 			}
 			else {
@@ -79,8 +83,12 @@ namespace Microsoft.CIFramework.Internal {
 			var updatedPresenceNode = document.createElement('div');
 			updatedPresenceNode.classList.add("agentPresenceDiv");
 			updatedPresenceNode.title = presenceInfo.presenceText;
-			updatedPresenceNode.addEventListener("click", this.toggleList, false);
+			updatedPresenceNode.tabIndex = 0;
+			updatedPresenceNode.setAttribute("role", "button");
+			updatedPresenceNode.setAttribute("aria-label", updatedPresenceNode.title);
 			updatedPresenceNode.id = presenceInfo.presenceId;
+			updatedPresenceNode.addEventListener("click", this.toggleList, false);
+			updatedPresenceNode.addEventListener("keypress", this.keyboardToggleList, false);
 
 			var innerDiv = document.createElement('div');
 			innerDiv.classList.add("innerDiv");
@@ -114,14 +122,23 @@ namespace Microsoft.CIFramework.Internal {
 			return updatedPresenceNode;
 		}
 
+		// Toggles the visibility of the Presence List
 		private toggleList() {
-		var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
-		if (window.getComputedStyle(presenceList).display === "none")
-			presenceList.style.display = "block";
-		else
-			presenceList.style.display = "none";
+			var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
+			if (window.getComputedStyle(presenceList).display === "none")
+				presenceList.style.display = "block";
+			else
+				presenceList.style.display = "none";
 		}
 
+		// Enter and Space KeyPress Handler for Presence List Menu Toggle
+		private keyboardToggleList(e: any) {
+			if (e.keyCode == 13 || e.keyCode == 32) {
+				Microsoft.CIFramework.Internal.PresenceControl.Instance.toggleList();
+			}
+		}
+
+		// Raises the Set Presence Event when click or keypress happens on Presence List Items
 		private raiseSetPresence(e:any): any {
 			var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
 			presenceList.style.display = "none";
@@ -148,6 +165,13 @@ namespace Microsoft.CIFramework.Internal {
 				detail: { "presenceId": e.target.parentElement.getAttribute("id"), "presenceInfo": updatedPresence }
 			});
 			window.parent.dispatchEvent(setPresenceEvent);
+		}
+
+		// Enter and Space KeyPress Handler for Presence List Items
+		private keyboardSetPresence(e: any): any {
+			if (e.keyCode == 13 || e.keyCode == 32) {
+				Microsoft.CIFramework.Internal.PresenceControl.Instance.raiseSetPresence(e);
+			}
 		}
 	}
 }
