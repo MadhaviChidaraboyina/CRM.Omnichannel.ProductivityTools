@@ -521,6 +521,7 @@ namespace Microsoft.CIFramework.Internal {
 			var providerId = sessionElement.getAttribute("aria-controls");
 			let providerElement = Utility.getElementFromIframe(sidePanelIFrame, providerId);
 			let sessionIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "UiSessionIcon");
+			let sessionNotification = Utility.getElementFromIframe(sidePanelIFrame, id + "_UiSessionNotification");
 			let crossIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "CrossIcon");
 
 			if (visible) {
@@ -528,6 +529,8 @@ namespace Microsoft.CIFramework.Internal {
 				sessionElement.style.boxShadow = "8px 4px 10px rgba(102, 102, 102, 0.2)";
 				sessionElement.setAttribute("tabindex", 0);
 				providerElement.setAttribute("aria-labelledby", id);
+				sessionNotification.style.display = "none";
+				sessionNotification.innerText = "";
 				sessionElement.focus();
 			}
 			else {
@@ -538,7 +541,6 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			let sessionOnMouseOverHandler = function() {
 				if (visible) {
-					sessionElement.style.backgroundColor = "#FFFFFF";
 					sessionElement.style.boxShadow = "0px 4px 8px rgba(102, 102, 102, 0.2)";
 					sessionIcon.style.display = "none";
 					crossIcon.style.display = "flex";
@@ -546,7 +548,6 @@ namespace Microsoft.CIFramework.Internal {
 			};
 			let sessionOnMouseOutHandler = function() {
 				if (visible) {
-					sessionElement.style.backgroundColor = "#FFFFFF";
 					sessionElement.style.boxShadow = "none";
 					sessionIcon.style.display = "flex";
 					crossIcon.style.display = "none";
@@ -556,14 +557,9 @@ namespace Microsoft.CIFramework.Internal {
 			if (visible) {
 				sessionElement.onmouseover = sessionOnMouseOverHandler;
 				sessionElement.onmouseout = sessionOnMouseOutHandler;
-			}
-
-			for (let [key, value] of SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions) {
-				if(key.search(id) == -1){
-					let currentSessionElement = Utility.getElementFromIframe(sidePanelIFrame, key);
-					currentSessionElement.onmouseover = null;
-					currentSessionElement.onmouseout = null; 
-				}
+			}else {
+				sessionElement.onmouseover = null;
+				sessionElement.onmouseout = null;
 			}
 
 			sessionElement.setAttribute("aria-selected", visible);
