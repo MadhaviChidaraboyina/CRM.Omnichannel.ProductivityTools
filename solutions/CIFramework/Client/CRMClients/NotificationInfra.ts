@@ -338,6 +338,10 @@ namespace Microsoft.CIFramework.Internal {
 			chatWindowHeader.getElementsByTagName("span")[0].classList.add("FontIcons_smsWindowHeaderSpan_CIF");
 		}else if(notificationType.search(Constants.Chat) != -1){
 			chatWindowHeader.getElementsByTagName("span")[0].classList.add("FontIcons_chatWindowHeaderSpan_CIF");
+		}else if(notificationType.search(Constants.Informational) != -1){
+			chatWindowHeader.getElementsByTagName("span")[0].classList.add("FontIcons_linkToConversationSuccessWindowHeaderSpan_CIF");
+		}else if(notificationType.search(Constants.Failure) != -1){
+			chatWindowHeader.getElementsByTagName("span")[0].classList.add("FontIcons_linkToConversationFailWindowHeaderSpan_CIF");
 		}
 		var label = document.createElement("label");
 		chatWindowHeader.appendChild(label);
