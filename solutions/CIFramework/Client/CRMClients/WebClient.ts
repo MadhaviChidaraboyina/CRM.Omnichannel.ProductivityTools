@@ -489,6 +489,14 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			};
 
+			sessionElement.onkeyup = function(e: KeyboardEvent) {
+				if (e.altKey && e.keyCode == 88) {
+					if (id == Microsoft.CIFramework.Internal.SessionPanel.getInstance().getvisibleUISession()) {
+						Microsoft.CIFramework.Internal.SessionPanel.getInstance().endUISession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+					}
+				}
+			};
+
 			let uiSessions = Utility.getElementFromIframe(sidePanelIFrame, "uiSessions");
 			uiSessions.appendChild(sessionElement);
 			Utility.blinkBrowserTab(sidePanelIFrame);
