@@ -122,15 +122,22 @@ namespace Microsoft.CIFramework.Internal {
 			return updatedPresenceNode;
 		}
 
-		// Toggles the visibility of the Presence List
 		private toggleList() {
 			var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
-			if (window.getComputedStyle(presenceList).display === "none")
+			if (window.getComputedStyle(presenceList).display === "none") {
+				if ((window.top as any).Xrm) {
+					if (!(window.top as any).Xrm.Panel.state) {
+						(window.top as any).Xrm.Panel.state = 1;//setting dock the panel mode before display list
+					}
+				}
 				presenceList.style.display = "block";
-			else
+			}
+			else {
 				presenceList.style.display = "none";
+			}
 		}
 
+		// Toggles the visibility of the Presence List
 		// Enter and Space KeyPress Handler for Presence List Menu Toggle
 		private keyboardToggleList(e: any) {
 			if (e.keyCode == 13 || e.keyCode == 32) {
