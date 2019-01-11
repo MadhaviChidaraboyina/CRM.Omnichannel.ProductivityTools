@@ -65,7 +65,7 @@ namespace Microsoft.CIFramework.Internal {
 				//ToDo: postmessagewrapper - raiseEvent(new Map<string, any>().set('Limit', Constants.MaxSessions), MessageType.onMaxSessionsReached);
 			}
 
-			provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleSession == sessionId).set("context", context), MessageType.onUISessionStarted);
+			provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleSession == sessionId).set("context", context), MessageType.SessionCreated);
 			return Promise.resolve(sessionId);
 		}
 
@@ -84,7 +84,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			var provider = this.Sessions.get(sessionId);
-			return provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleSession == sessionId).set("context", provider.sessions.get(sessionId).context), MessageType.onUISessionEnded, true)
+			return provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleSession == sessionId).set("context", provider.sessions.get(sessionId).context), MessageType.SessionClosed, true)
 				.then(function () {
 					this.Sessions.delete(sessionId);
 					state.client.closeSession(sessionId);

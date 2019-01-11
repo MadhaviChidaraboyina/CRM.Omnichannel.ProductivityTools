@@ -29,9 +29,9 @@ namespace Microsoft.CIFramework
 		public static onPageNavigate = "onpagenavigate";
 		public static onSendKBArticle = "onsendkbarticle";
 		public static onSetPresence = "onSetPresence";
-		public static onUISessionVisibilityChanged = "onUISessionVisibilityChanged";
-		public static onUISessionStarted = "onUISessionStarted";
-		public static onUISessionEnded = "onUISessionEnded";
+		public static SessionSwitched = "SessionSwitched";
+		public static SessionCreated = "SessionCreated";
+		public static SessionClosed = "SessionClosed";
 		public static getEntityMetadata = "getEntityMetadata";
 		public static notifyEvent = "notifyEvent";
 		public static softNotification = "softNotification";
