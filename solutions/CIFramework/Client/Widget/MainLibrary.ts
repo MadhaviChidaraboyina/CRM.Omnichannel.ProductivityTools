@@ -631,15 +631,15 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
-	 * API to start UI Session
+	 * API to create Session
 	 */
-	export function startUISession(context: any, initials: string): Promise<string> {
+	export function createSession(context: any, initials: string): Promise<string> {
 		if (!isNullOrUndefined(context) && !isNullOrUndefined(initials)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.startUISession,
+				messageType: MessageType.createSession,
 				messageData: new Map().set(Constants.context, context).set(Constants.initials, initials)
 			}
-			return sendMessage<string>(startUISession.name, payload, false);
+			return sendMessage<string>(createSession.name, payload, false);
 		}
 		else {
 			return postMessageNamespace.rejectWithErrorMessage("context or initials is null");
@@ -647,15 +647,15 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
-	 * API to notify incoming on an invisible UISession
+	 * API to notify incoming on an invisible Session
 	 */
-	export function notifyIncoming(sessionId: string, messagesCount?: number): Promise<string> {
+	export function requestSessionFocus(sessionId: string, messagesCount?: number): Promise<string> {
 		if (!isNullOrUndefined(sessionId)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.notifyIncoming,
+				messageType: MessageType.requestSessionFocus,
 				messageData: new Map().set(Constants.sessionId, sessionId).set(Constants.messagesCount, messagesCount)
 			}
-			return sendMessage<string>(notifyIncoming.name, payload, false);
+			return sendMessage<string>(requestSessionFocus.name, payload, false);
 		}
 		else {
 			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");
@@ -663,15 +663,15 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
-	 * API to switch UI Session
+	 * API to switch Session
 	 */
-	export function switchUISession(sessionId: string): Promise<string> {
+	export function focusSession(sessionId: string): Promise<string> {
 		if (!isNullOrUndefined(sessionId)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.switchUISession,
+				messageType: MessageType.focusSession,
 				messageData: new Map().set(Constants.sessionId, sessionId)
 			}
-			return sendMessage<string>(switchUISession.name, payload, false);
+			return sendMessage<string>(focusSession.name, payload, false);
 		}
 		else {
 			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");
@@ -679,15 +679,15 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
-	 * API to end UI Session
+	 * API to close Session
 	 */
-	export function endUISession(sessionId: string): Promise<string> {
+	export function closeSession(sessionId: string): Promise<string> {
 		if (!isNullOrUndefined(sessionId)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.endUISession,
+				messageType: MessageType.closeSession,
 				messageData: new Map().set(Constants.sessionId, sessionId)
 			}
-			return sendMessage<string>(endUISession.name, payload, false);
+			return sendMessage<string>(closeSession.name, payload, false);
 		}
 		else {
 			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");

@@ -84,29 +84,29 @@ namespace Microsoft.CIFramework.Internal
 	type flapInUseFunction = () => boolean;
 
 	/**
-	 * Func type to add UISession
+	 * Func type to add Session
 	*/
-	type addUISessionFunction = (id: string, initials: string, sessionColor: string, providerId: string) => void;
+	type createSessionFunction = (id: string, initials: string, sessionColor: string, providerId: string) => void;
 
 	/**
-	 * Func type to remove UISession
+	 * Func type to remove Session
 	*/
-	type removeUISessionFunction = (id: string) => void;
+	type closeSessionFunction = (id: string) => void;
 
 	/**
-	 * Func type to get color of UISession
+	 * Func type to get color of Session
 	*/
-	type getUISessionColorFunction = (id: string) => string;
+	type getSessionColorFunction = (id: string) => string;
 
 	/**
-	 * Func type to update UISession
+	 * Func type to update Session
 	*/
-	type updateUISessionFunction = (id: string, visible: boolean) => void;
+	type updateSessionFunction = (id: string, visible: boolean) => void;
 
 	/**
-	 * Func type to update UISession on unread messages
+	 * Func type to update Session on unread messages
 	*/
-	type notifyUISessionFunction = (id: string, messagesCount: number) => void;
+	type notifySessionFunction = (id: string, messagesCount: number) => void;
 
 	/**
 	 * Client interface/type which all clients will be extending and implementing for client specific logic.
@@ -165,15 +165,15 @@ namespace Microsoft.CIFramework.Internal
 
 		collapseFlap: collapseFlapFunction;
 
-		addUISession: addUISessionFunction;
+		createSession: createSessionFunction;
 
-		removeUISession: removeUISessionFunction;
+		closeSession: closeSessionFunction;
 
-		getUISessionColor: getUISessionColorFunction;
+		getSessionColor: getSessionColorFunction;
 
-		updateUISession: updateUISessionFunction;
+		updateSession: updateSessionFunction;
 
-		notifyUISession: notifyUISessionFunction;
+		notifySession: notifySessionFunction;
 
 		flapInUse: flapInUseFunction;
 		}

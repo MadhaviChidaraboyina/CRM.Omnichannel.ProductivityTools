@@ -7,6 +7,8 @@
 /// <reference path="NotificationInfra.ts" />
 /// <reference path="NotesInfra.ts" />
 /// <reference path="../Constants.ts" />
+/// <reference path="SessionManager.ts" />
+/// <reference path="SessionPanel.ts" />
 /// <reference path="State.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 /// <reference path="aria-webjs-sdk-1.6.2.d.ts" />
@@ -37,10 +39,10 @@ namespace Microsoft.CIFramework.Internal {
 		["getwidth", [getWidth]],
 		["getclicktoact", [getClickToAct]],
 		["renderSearchPage", [renderSearchPage]],
-		["startUISession", [startUISession]],
-		["notifyIncoming", [notifyIncoming]],
-		["switchUISession", [switchUISession]],
-		["endUISession", [endUISession]],
+		["createSession", [createSession]],
+		["requestSessionFocus", [requestSessionFocus]],
+		["focusSession", [focusSession]],
+		["closeSession", [closeSession]],
 		["setAgentPresence", [setAgentPresence]],
 		["initializeAgentPresenceList", [initializeAgentPresenceList]],
 		["addGenericHandler", [addGenericHandler]],
@@ -52,7 +54,7 @@ namespace Microsoft.CIFramework.Internal {
 	/**
 	 * Variable that will store all the info needed for library. There should be no other global variables in the library. Any info that needs to be stored should go into this.
 	 */
-	let state = {} as IState;
+	export var state = {} as IState;
 	let presence = {} as IPresenceManager;
 	const listenerWindow = window.parent;
 
@@ -73,7 +75,7 @@ namespace Microsoft.CIFramework.Internal {
 			return false;
 		}
 
-		SessionPanel.getInstance().setState(state);
+		state.sessionManager = GetSessionManager(clientType);
 		presence = GetPresenceManager(clientType);
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
@@ -707,83 +709,83 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	export function startUISession(parameters: Map<string, any>): Promise<Map<string, any>> {
+	export function createSession(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			const [sessionId, errorData] = provider.startUISession(parameters.get(Constants.context), parameters.get(Constants.initials));
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "startUISession", telemetryData);
-			setPerfData(perfData);
-			if (sessionId != null) {
-				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
-			}
-			else {
-				return rejectWithErrorMessage(errorData.errorMsg, "startUISession", appId, true, errorData, provider.providerId, provider.name);
-			}
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				provider.createSession(parameters.get(Constants.context), parameters.get(Constants.initials)).then(function (sessionId) {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "createSession", telemetryData);
+					setPerfData(perfData);
+					return resolve(new Map<string, any>().set(Constants.value, sessionId));
+				}, function (errorData) {
+					return rejectWithErrorMessage(errorData.errorMsg, "createSession", appId, true, errorData, provider.providerId, provider.name);
+				});
+			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "startUISession", appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "createSession", appId, true, errorData);
 		}
 	}
 
-	export function notifyIncoming(parameters: Map<string, any>): Promise<Map<string, any>> {
+	export function requestSessionFocus(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			const [sessionId, errorData] = provider.notifyIncoming(parameters.get(Constants.sessionId), parameters.get(Constants.messagesCount));
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "notifyIncoming", telemetryData);
-			setPerfData(perfData);
-			if (sessionId != null) {
-				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
-			}
-			else {
-				return rejectWithErrorMessage(errorData.errorMsg, "notifyIncoming", appId, true, errorData);
-			}
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				provider.requestSessionFocus(parameters.get(Constants.sessionId), parameters.get(Constants.messagesCount)).then(function () {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "requestSessionFocus", telemetryData);
+					setPerfData(perfData);
+					return Promise.resolve(new Map<string, any>());
+				}, function (errorData) {
+					return rejectWithErrorMessage(errorData.errorMsg, "requestSessionFocus", appId, true, errorData, provider.providerId, provider.name);
+				});
+			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "notifyIncoming", appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "requestSessionFocus", appId, true, errorData);
 		}
 	}
 
-	export function switchUISession(parameters: Map<string, any>): Promise<Map<string, any>> {
+	export function focusSession(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			const [sessionId, errorData] = provider.switchUISession(parameters.get(Constants.sessionId));
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "switchUISession", telemetryData);
-			setPerfData(perfData);
-			if (sessionId != null) {
-				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
-			}
-			else {
-				return rejectWithErrorMessage(errorData.errorMsg, "switchUISession", appId, true, errorData, provider.providerId, provider.name);
-			}
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				provider.focusSession(parameters.get(Constants.sessionId)).then(function () {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "focusSession", telemetryData);
+					setPerfData(perfData);
+					return Promise.resolve(new Map<string, any>());
+				}, function (errorData) {
+					return rejectWithErrorMessage(errorData.errorMsg, "focusSession", appId, true, errorData, provider.providerId, provider.name);
+				});
+			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "switchUISession", appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "focusSession", appId, true, errorData);
 		}
 	}
 
-	export function endUISession(parameters: Map<string, any>): Promise<Map<string, any>> {
+	export function closeSession(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			const [sessionId, errorData] = provider.endUISession(parameters.get(Constants.sessionId));
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "endUISession", telemetryData);
-			setPerfData(perfData);
-			if (sessionId != null) {
-				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
-			}
-			else {
-				return rejectWithErrorMessage(errorData.errorMsg, "endUISession", appId, true, errorData, provider.providerId, provider.name);
-			}
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				provider.closeSession(parameters.get(Constants.sessionId)).then(function () {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "closeSession", telemetryData);
+					setPerfData(perfData);
+					return Promise.resolve(new Map<string, any>());
+				}, function (errorData) {
+					return rejectWithErrorMessage(errorData.errorMsg, "closeSession", appId, true, errorData, provider.providerId, provider.name);
+				});
+			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "endUISession", appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "closeSession", appId, true, errorData);
 		}
 	}
 

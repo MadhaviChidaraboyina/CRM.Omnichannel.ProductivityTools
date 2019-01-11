@@ -41,11 +41,11 @@ namespace Microsoft.CIFramework
 		public static transfer = "transfer";
 		public static escalation = "escalation";
 		public static renderSearchPage = "renderSearchPage";
-		public static notifyIncoming = "notifyIncoming";
-		public static startUISession = "startUISession";
-		public static switchUISession = "switchUISession";
-		public static endUISession = "endUISession";
-		public static onMaxUISessionsReached = "onMaxUISessionsReached";
+		public static requestSessionFocus = "requestSessionFocus";
+		public static createSession = "createSession";
+		public static focusSession = "focusSession";
+		public static closeSession = "closeSession";
+		public static onMaxSessionsReached = "onMaxSessionsReached";
 		public static setAgentPresence = "setAgentPresence";
 		public static initializeAgentPresenceList = "initializeAgentPresenceList";
 		public static insertNotes = "insertNotes";
@@ -142,7 +142,7 @@ namespace Microsoft.CIFramework
 		public static initials = "initials";
 		public static sessionId = "sessionId";
 		public static messagesCount = "messagesCount";
-		public static MaxUISessions = 5;
+		public static MaxSessions = 5;
 		public static sessionColors = ["#2A757D", "#70278B", "#FF8C00", "#427825", "#B4009E", "#B4A0FF"];
 		public static sessionPanel = "sessionPanel";
 		public static DEFAULT_WIDGET_WIDTH = 378;

@@ -9,6 +9,7 @@
 		"../TelemetryHelper.ts",
 		"../PostMsgWrapper.ts",
 		"Client.ts",
+		"SessionManager.ts",
 		"SessionPanel.ts",
 		"State.ts",
 		"WebClient.ts",

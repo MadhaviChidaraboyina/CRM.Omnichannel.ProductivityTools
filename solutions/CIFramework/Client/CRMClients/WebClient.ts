@@ -441,32 +441,32 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		client.addUISession = (id: string, initials: string, sessionColor: string, providerId: string): void => {
+		client.createSession = (id: string, initials: string, sessionColor: string, providerId: string): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionPanel = Utility.getElementFromIframe(sidePanelIFrame, Constants.sessionPanel);
 			if (sessionPanel == null)
 				return;
 
-			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="Ongoing session" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div><span class="uiSessionNotification" id="' + id + '_UiSessionNotification" style="display:none"></span></div><div id="' + id + 'CrossIcon" class="flexJustify" title="End session" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
+			let sessionElementHtml = '<div class="session flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="Ongoing session" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div><span class="uiSessionNotification" id="' + id + '_UiSessionNotification" style="display:none"></span></div><div id="' + id + 'CrossIcon" class="flexJustify" title="End session" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
 			var parser = new DOMParser();
 			var el = parser.parseFromString(sessionElementHtml, "text/html");
 			var sessionElement = el.getElementById(id);
 			sessionElement.onclick = function (event: MouseEvent) {
-				if (id == Microsoft.CIFramework.Internal.SessionPanel.getInstance().getvisibleUISession()) {
-					Microsoft.CIFramework.Internal.SessionPanel.getInstance().endUISession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+				if (id == Microsoft.CIFramework.Internal.state.sessionManager.getVisibleSession()) {
+					(Microsoft.CIFramework.Internal.state.sessionManager as SessionPanel).closeSessionFromUI((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
 				}
 				else {
-					Microsoft.CIFramework.Internal.SessionPanel.getInstance().switchUISession((event.currentTarget as HTMLElement).id);
+					Microsoft.CIFramework.Internal.state.sessionManager.focusSession((event.currentTarget as HTMLElement).id);
 				}
 			};
 
 			sessionElement.onkeydown = function (event: KeyboardEvent) {
 				if (event.keyCode == 13) {
-					if (id == Microsoft.CIFramework.Internal.SessionPanel.getInstance().getvisibleUISession()) {
-						Microsoft.CIFramework.Internal.SessionPanel.getInstance().endUISession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+					if (id == Microsoft.CIFramework.Internal.state.sessionManager.getVisibleSession()) {
+						(Microsoft.CIFramework.Internal.state.sessionManager as SessionPanel).closeSessionFromUI((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
 					}
 					else {
-						Microsoft.CIFramework.Internal.SessionPanel.getInstance().switchUISession((event.currentTarget as HTMLElement).id);
+						Microsoft.CIFramework.Internal.state.sessionManager.focusSession((event.currentTarget as HTMLElement).id);
 					}
 				}
 				else if (event.keyCode == 37) {
@@ -474,27 +474,27 @@ namespace Microsoft.CIFramework.Internal {
 						(<HTMLElement>sessionElement.previousElementSibling).focus();
 					}
 					else {
-						let uiSessions = Utility.getElementsByClassName(sidePanelIFrame, "uiSession");
-						(<HTMLElement>uiSessions[uiSessions.length - 1]).focus();
+						let sessions = Utility.getElementsByClassName(sidePanelIFrame, "session");
+						(<HTMLElement>sessions[sessions.length - 1]).focus();
 					}
 				}
 				else if (event.keyCode == 39) {
-					if (sessionElement.nextElementSibling != null && sessionElement.nextElementSibling.className.indexOf("uiSession") != -1) {
+					if (sessionElement.nextElementSibling != null && sessionElement.nextElementSibling.className.indexOf("session") != -1) {
 						(<HTMLElement>sessionElement.nextElementSibling).focus();
 					}
 					else {
-						let uiSessions = Utility.getElementsByClassName(sidePanelIFrame, "uiSession");
-						(<HTMLElement>uiSessions[0]).focus();
+						let sessions = Utility.getElementsByClassName(sidePanelIFrame, "session");
+						(<HTMLElement>sessions[0]).focus();
 					}
 				}
 			};
 
-			let uiSessions = Utility.getElementFromIframe(sidePanelIFrame, "uiSessions");
-			uiSessions.appendChild(sessionElement);
+			let sessions = Utility.getElementFromIframe(sidePanelIFrame, "sessions");
+			sessions.appendChild(sessionElement);
 			Utility.blinkBrowserTab(sidePanelIFrame);
 		}
 
-		client.removeUISession = (id: string): void => {
+		client.closeSession = (id: string): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionElement = Utility.getElementFromIframe(sidePanelIFrame, id);
 			if (sessionElement == null)
@@ -503,7 +503,7 @@ namespace Microsoft.CIFramework.Internal {
 			sessionElement.parentNode.removeChild(sessionElement);
 		}
 
-		client.getUISessionColor = (id: string): string => {
+		client.getSessionColor = (id: string): string => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionElementCircle = Utility.getElementFromIframe(sidePanelIFrame, id + "IconCircle");
 			if (sessionElementCircle == null)
@@ -512,7 +512,7 @@ namespace Microsoft.CIFramework.Internal {
 			return Utility.rgb2hex(sessionElementCircle.style.backgroundColor);
 		}
 
-		client.updateUISession = (id: string, visible: boolean): void => {
+		client.updateSession = (id: string, visible: boolean): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionElement = Utility.getElementFromIframe(sidePanelIFrame, id);
 			if (sessionElement == null)
@@ -547,7 +547,7 @@ namespace Microsoft.CIFramework.Internal {
 			sessionElement.setAttribute("aria-selected", visible);
 		}
 
-		client.notifyUISession = (id: string, messagesCount: number): void => {
+		client.notifySession = (id: string, messagesCount: number): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionNotification = Utility.getElementFromIframe(sidePanelIFrame, id + "_UiSessionNotification");
 

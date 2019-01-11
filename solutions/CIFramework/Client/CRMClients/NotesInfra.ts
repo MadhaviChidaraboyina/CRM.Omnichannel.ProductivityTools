@@ -81,8 +81,8 @@ namespace Microsoft.CIFramework.Internal {
 			saveBtn.tabIndex = 0;
 			saveBtn.setAttribute("aria-label", "Add Note");
 			//Saving notes info locally
-			let sessionId: string = SessionPanel.getInstance().getvisibleUISession();
-			let session = SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions.get(sessionId);
+			let sessionId: string = state.sessionManager.getVisibleSession();
+			let session = state.providerManager._activeProvider.sessions.get(sessionId);
 			session.notesInfo.notesDetails = notesDetails;
 			session.notesInfo.resolve = resolve;
 			session.notesInfo.reject = reject;
@@ -200,14 +200,14 @@ namespace Microsoft.CIFramework.Internal {
 		if(!isNullOrUndefined(notesDiv)){
 			notesDiv.innerHTML = '';
 		}
-		SessionPanel.getInstance().getState().client.removeHandler(Constants.CollapseFlapHandler);
+		state.client.removeHandler(Constants.CollapseFlapHandler);
 	}
 
 	export function intermediateSaveNotes(): void{	
 		let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 		let newTextArea = widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF");
-		let sessionId: string = SessionPanel.getInstance().getvisibleUISession();
-		let session = SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions.get(sessionId);
+		let sessionId: string = state.sessionManager.getVisibleSession();
+		let session = state.providerManager._activeProvider.sessions.get(sessionId);
 		let resolve = session.notesInfo.resolve;
 		saveNotes(session.notesInfo.notesDetails,newTextArea).then(function (retval: Map<string, any>) {
 			cancelNotes();

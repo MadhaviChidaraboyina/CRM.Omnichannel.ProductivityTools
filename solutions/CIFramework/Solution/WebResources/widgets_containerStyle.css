@@ -170,13 +170,13 @@ div#PresenceList
 	left: 0px;
 }
 
-.uiSessions
+.sessions
 {
 	display: flex;
 	flex-direction: column;
 }
 
-.uiSession
+.session
 {
 	height: 44px;
 	cursor: pointer;

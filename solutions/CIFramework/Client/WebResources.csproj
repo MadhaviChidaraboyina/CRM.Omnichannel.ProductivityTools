@@ -32,6 +32,7 @@
     <TypeScriptCompile Include="CIFrameworkUtilities.ts" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.6.2.d.ts" />
     <TypeScriptCompile Include="CRMClients\IErrorHandler.ts" />
+    <TypeScriptCompile Include="CRMClients\SessionManager.ts" />
     <TypeScriptCompile Include="CRMClients\SessionPanel.ts" />
     <TypeScriptCompile Include="CRMClients\PresenceControl.ts" />
     <TypeScriptCompile Include="CRMClients\TelemetryConstants.ts" />
