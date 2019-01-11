@@ -500,7 +500,7 @@ namespace Microsoft.CIFramework.Internal {
 						setTimeout(function(){
 							if(key.parentElement.parentElement.parentElement != null){
 								key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-								var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
+								var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Timeout));
 								return resolve(mapReturn);
 							}
 						}, 20000);
