@@ -252,7 +252,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		setVisibleSession(sessionId: string, showWidget?: boolean): void {
-			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", true).set("context", this.sessions.get(sessionId).context), MessageType.SessionSwitched);
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", true).set("context", this.sessions.get(sessionId).context), MessageType.onSessionSwitched);
 			this.visibleSession = sessionId;
 
 			if (showWidget) {
@@ -262,7 +262,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		setInvisibleSession(sessionId: string, hideWidget?: boolean): void {
-			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", false).set("context", this.sessions.get(sessionId).context), MessageType.SessionSwitched);
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", false).set("context", this.sessions.get(sessionId).context), MessageType.onSessionSwitched);
 			this.visibleSession = '';
 
 			if (hideWidget) {

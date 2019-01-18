@@ -19,7 +19,12 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		getProvider(sessionId: string) {
-			return this.Sessions.get(sessionId);
+			if (this.Sessions.has(sessionId)) {
+				return this.Sessions.get(sessionId);
+			}
+			else {
+				return null;
+			}
 		}
 
 		abstract createSession(provider: CIProvider, input: any, context: any, initials: string): Promise<string>;

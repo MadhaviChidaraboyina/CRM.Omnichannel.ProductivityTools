@@ -29,9 +29,9 @@ namespace Microsoft.CIFramework
 		public static onPageNavigate = "onpagenavigate";
 		public static onSendKBArticle = "onsendkbarticle";
 		public static onSetPresence = "onSetPresence";
-		public static SessionSwitched = "SessionSwitched";
-		public static SessionCreated = "SessionCreated";
-		public static SessionClosed = "SessionClosed";
+		public static onSessionSwitched = "onSessionSwitched";
+		public static onSessionCreated = "onSessionCreated";
+		public static onSessionClosed = "onSessionClosed";
 		public static getEntityMetadata = "getEntityMetadata";
 		public static notifyEvent = "notifyEvent";
 		public static softNotification = "softNotification";
@@ -161,6 +161,8 @@ namespace Microsoft.CIFramework
 		public static annotationId = "annotationid";
 		public static secRemaining = "secs remaining";
 		public static CollapseFlapHandler = "collapseFlapHandler";
+		public static newSessionId = "newSessionId";
+		public static previousSessionId = "previousSessionId";
 	}
 
 	/**
