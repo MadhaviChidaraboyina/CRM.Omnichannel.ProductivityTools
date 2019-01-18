@@ -22,23 +22,27 @@ namespace Microsoft.CIFramework.Internal {
 			return this.Sessions.get(sessionId);
 		}
 
-		abstract canCreateSession(): boolean;
+		abstract createSession(provider: CIProvider, input: any, context: any, initials: string): Promise<string>;
 
-		abstract createSession(provider: CIProvider, context: any, initials: string): Promise<any>;
+		abstract focusSession(sessionId: string): Promise<void>;
 
-		abstract focusSession(sessionId: string): Promise<any>;
+		abstract requestSessionFocus(sessionId: string, messagesCount: number): Promise<void>;
 
-		abstract requestSessionFocus(sessionId: string, messagesCount: number): Promise<any>;
+		abstract closeSession(sessionId: string): Promise<boolean>;
 
-		abstract closeSession(sessionId: string): Promise<any>;
+		abstract createSessionTab(sessionId: string, input: any): Promise<string>
+
+		abstract focusSessionTab(sessionId: string, tabId: string): Promise<void>;
+
+		abstract closeSessionTab(sessionId: string, tabId: string): Promise<boolean>;
 	}
 
-	export function GetSessionManager(clientType: number): SessionManager {
+	export function GetSessionManager(clientType: string): SessionManager {
 		switch (clientType) {
-			case ClientType.WebClient:
-				return new SessionPanel();
+			case ClientType.UnifiedClient:
+				return new ConsoleAppSessionManager();
 			default:
-				return new SessionPanel();
+				return new ConsoleAppSessionManager();
 		}
 	}
 }

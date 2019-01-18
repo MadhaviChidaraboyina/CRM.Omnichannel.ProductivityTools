@@ -15,9 +15,8 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Enum defining the different client types available for CI
 	*/
-	export const enum ClientType
+	export class ClientType
 	{
-		WebClient,
-		UCClient
+		public static UnifiedClient = "4";
 	}
 }

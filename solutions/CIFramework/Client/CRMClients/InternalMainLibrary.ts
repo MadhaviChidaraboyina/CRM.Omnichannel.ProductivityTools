@@ -8,6 +8,7 @@
 /// <reference path="NotesInfra.ts" />
 /// <reference path="../Constants.ts" />
 /// <reference path="SessionManager.ts" />
+/// <reference path="ConsoleAppSessionManager.ts" />
 /// <reference path="SessionPanel.ts" />
 /// <reference path="State.ts" />
 /// <reference path="../TelemetryHelper.ts" />
@@ -65,7 +66,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
 	 * returns false to disable the button visibility
 	 */
-	export function initializeCI(clientType: number): boolean {
+	export function initializeCI(clientType: string): boolean {
 		let startTime = new Date();
 		let trustedDomains: string[] = [];
 
@@ -715,7 +716,7 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.createSession(parameters.get(Constants.context), parameters.get(Constants.initials)).then(function (sessionId) {
+				provider.createSession(parameters.get(Constants.input), parameters.get(Constants.context), parameters.get(Constants.initials)).then(function (sessionId) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "createSession", telemetryData);
 					setPerfData(perfData);
 					return resolve(new Map<string, any>().set(Constants.value, sessionId));
@@ -775,10 +776,10 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.closeSession(parameters.get(Constants.sessionId)).then(function () {
+				provider.closeSession(parameters.get(Constants.sessionId)).then(function (closeStatus: boolean) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "closeSession", telemetryData);
 					setPerfData(perfData);
-					return Promise.resolve(new Map<string, any>());
+					return Promise.resolve(new Map<string, any>().set(Constants.value, closeStatus));
 				}, function (errorData) {
 					return rejectWithErrorMessage(errorData.errorMsg, "closeSession", appId, true, errorData, provider.providerId, provider.name);
 				});

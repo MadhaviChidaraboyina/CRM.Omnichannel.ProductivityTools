@@ -189,21 +189,21 @@ namespace Microsoft.CIFramework.Internal
 	 * Set the actual client implementation based on client type passed.
 	 * @param clientType type of client
 	 */
-	export function setClient(clientType: number) : IClient
+	export function setClient(clientType: string) : IClient
 	{
 		switch(clientType)
 		{
-			case ClientType.WebClient:
-				return webClient();
+			case ClientType.UnifiedClient:
+				return unifiedClient();
 			default:
 				// log error - not able to identify the client, falling back to webclient impl.
-				return webClient();
+				return unifiedClient();
 		}
 	}
 
-	export function GetPresenceManager(clientType: number): IPresenceManager {
+	export function GetPresenceManager(clientType: string): IPresenceManager {
 		switch (clientType) {
-			case ClientType.WebClient:
+			case ClientType.UnifiedClient:
 				return UCIPresenceManager();
 			default:
 				return UCIPresenceManager();

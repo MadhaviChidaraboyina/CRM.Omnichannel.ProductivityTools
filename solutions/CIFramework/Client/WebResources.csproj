@@ -23,7 +23,7 @@
     <Content Include="CRMClients\NotificationInfra.ts" />
 	<Content Include="CRMClients\NotesInfra.ts" />
     <Content Include="CRMClients\State.ts" />
-    <Content Include="CRMClients\WebClient.ts" />
+    <Content Include="CRMClients\UnifiedClient.ts" />
     <Content Include="PostMsgWrapper.ts" />
     <Content Include="Widget\MainLibrary.ts" />
     <Content Include="Constants.ts" />
@@ -33,6 +33,7 @@
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.6.2.d.ts" />
     <TypeScriptCompile Include="CRMClients\IErrorHandler.ts" />
     <TypeScriptCompile Include="CRMClients\SessionManager.ts" />
+    <TypeScriptCompile Include="CRMClients\ConsoleAppSessionManager.ts" />
     <TypeScriptCompile Include="CRMClients\SessionPanel.ts" />
     <TypeScriptCompile Include="CRMClients\PresenceControl.ts" />
     <TypeScriptCompile Include="CRMClients\TelemetryConstants.ts" />

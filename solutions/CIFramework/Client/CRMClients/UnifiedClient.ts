@@ -14,7 +14,7 @@ namespace Microsoft.CIFramework.Internal {
 	/**
 	 * Actual implementation of IClient for web client 
 	*/
-	export function webClient(): IClient {
+	export function unifiedClient(): IClient {
 		let client = {} as IClient;
 
 		client.registerHandler = (eventName: string, handler: EventHandler): boolean => {

@@ -138,6 +138,7 @@ namespace Microsoft.CIFramework
 		public static Call = "call";
 		public static Case = "case";
 		public static SearchString = "searchString";
+		public static input = "input";
 		public static context = "context";
 		public static initials = "initials";
 		public static sessionId = "sessionId";

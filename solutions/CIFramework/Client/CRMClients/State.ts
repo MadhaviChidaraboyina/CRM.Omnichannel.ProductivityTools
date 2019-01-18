@@ -3,7 +3,7 @@
  */
 
 /// <reference path="Constants.ts" />
-/// <reference path="WebClient.ts" />
+/// <reference path="UnifiedClient.ts" />
 /// <reference path="WidgetIFrame.ts" />
 /// <reference path="../PostMsgWrapper.ts" />
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
@@ -70,6 +70,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	export type Session = {
 		sessionId: string;
+		input: any;
 		context: any;
 		applicationTabs: Map<string, ApplicationTab>;
 		initials: string;
@@ -146,7 +147,7 @@ namespace Microsoft.CIFramework.Internal {
 			this._minimizedHeight = minimizedHeight;
 		}
 
-		createSession(context: any, initials: string): Promise<any> {
+		createSession(input: any, context: any, initials: string): Promise<string> {
 			let notesInformation: NotesInfo = {
 				notesDetails: new Map(),
 				resolve: null,
@@ -154,9 +155,10 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			return new Promise(function (resolve: any, reject: any) {
-				this._state.sessionManager.createSession(this, context, initials).then(function (sessionId: string) {
+				this._state.sessionManager.createSession(this, input, context, initials).then(function (sessionId: string) {
 					let session: Session = {
 						sessionId: sessionId,
+						input: input,
 						context: context,
 						applicationTabs: null,
 						initials: initials,
@@ -183,7 +185,7 @@ namespace Microsoft.CIFramework.Internal {
 				error.errorMsg = "Session with ID:" + sessionId + " does not exist";
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = requestSessionFocus.name;
-				Promise.reject(error);
+				return Promise.reject(error);
 			}
 
 			return new Promise(function (resolve: any, reject: any) {
@@ -207,7 +209,7 @@ namespace Microsoft.CIFramework.Internal {
 				error.errorMsg = "Session with ID:" + sessionId + " does not exist";
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = focusSession.name;
-				Promise.reject(error);
+				return Promise.reject(error);
 			}
 
 			return new Promise(function (resolve: any, reject: any) {
@@ -224,20 +226,20 @@ namespace Microsoft.CIFramework.Internal {
 			}.bind(this));
 		}
 
-		closeSession(sessionId: string): Promise<any> {
+		closeSession(sessionId: string): Promise<boolean> {
 			if (!this.sessions.has(sessionId)) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
 				error.errorMsg = "Session with ID:" + sessionId + "does not exist";
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = closeSession.name;
-				Promise.reject(error);
+				return Promise.reject(error);
 			}
 
 			return new Promise(function (resolve: any, reject: any) {
-				this._state.sessionManager.closeSession(sessionId).then(function () {
+				this._state.sessionManager.closeSession(sessionId).then(function (closeStatus: boolean) {
 					this.sessions.delete(sessionId);
-					resolve();
+					resolve(closeStatus);
 				}.bind(this), function (errorMessage: string) {
 					let error = {} as IErrorHandler;
 					error.reportTime = new Date().toUTCString();
