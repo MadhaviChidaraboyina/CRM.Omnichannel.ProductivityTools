@@ -31,6 +31,8 @@ namespace Microsoft.CIFramework
 		public static onSetPresence = "onSetPresence";
 		public static onSessionSwitched = "onSessionSwitched";
 		public static onSessionCreated = "onSessionCreated";
+		//TODO - Confirm if two different events are required for ZFP and Sliver Close Sessions
+		public static onBeforeSessionClosed = "onBeforeSessionClosed";
 		public static onSessionClosed = "onSessionClosed";
 		public static getEntityMetadata = "getEntityMetadata";
 		public static notifyEvent = "notifyEvent";

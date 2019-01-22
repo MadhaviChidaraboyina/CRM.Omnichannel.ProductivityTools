@@ -85,7 +85,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			var provider = this.Sessions.get(sessionId);
 			return new Promise(function (resolve: any, reject: any) {
-				provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleSession == sessionId).set("context", provider.sessions.get(sessionId).context), MessageType.onSessionClosed, true)
+				provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleSession == sessionId).set("context", provider.sessions.get(sessionId).context), MessageType.onBeforeSessionClosed, true)
 					.then(function () {
 						this.Sessions.delete(sessionId);
 						state.client.closeSession(sessionId);

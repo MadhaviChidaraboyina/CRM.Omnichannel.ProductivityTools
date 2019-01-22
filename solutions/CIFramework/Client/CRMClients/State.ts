@@ -270,5 +270,9 @@ namespace Microsoft.CIFramework.Internal {
 				//update iframe visibility
 			}
 		}
+
+		closeSessionListener(sessionId: string): void {
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("context", this.sessions.get(sessionId).context), MessageType.onSessionClosed);
+		}
 	}
 }

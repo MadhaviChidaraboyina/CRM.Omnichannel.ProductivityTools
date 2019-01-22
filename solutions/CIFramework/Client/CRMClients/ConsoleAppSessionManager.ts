@@ -9,10 +9,12 @@ namespace Microsoft.CIFramework.Internal {
 
 	export class ConsoleAppSessionManager extends SessionManager {
 		sessionSwitchHandlerID: string;
+		sessionCloseHandlerID: string;
 
 		constructor() {
 			super();
-			this.sessionSwitchHandlerID = Xrm.App.sessions.addOnAfterSessionSwitch(this.onSessionSwitch);
+			this.sessionSwitchHandlerID = Xrm.App.sessions.addOnAfterSessionSwitch(this.onSessionSwitched);
+			this.sessionCloseHandlerID = Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClosed);
 		}
 
 		getVisibleSession(): string {
@@ -28,7 +30,7 @@ namespace Microsoft.CIFramework.Internal {
 		* 'oldSessionId is the ID of the Session which is currently focussed and the newSessionId is the ID of the Session
 		* which is to be focussed now
 		*/
-		onSessionSwitch(event: any): void {
+		onSessionSwitched(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
 			let previousSessionId = eventMap.get(Constants.previousSessionId);
 			let newSessionId = eventMap.get(Constants.newSessionId);
@@ -45,6 +47,23 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			if (newProvider != null) {
 				newProvider.setVisibleSession(newSessionId, switchProvider);
+			}
+		}
+
+		/**
+		 * The handler called by the client for SessionClosed event. The client is expected
+		* to pass a SessionEventArguments object with details of the event. This handler will pass the
+		* sessionClosed message to the widget as an event resulting in the registered widget-side
+		* handler, if any, being invoked.
+		 * @param event event detail will be set to a map {"sessionId": sessionId} where sessionId is the ID
+		 * of the session which is being closed
+		 */
+		onSessionClosed(event: any): void {
+			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
+			let sessionId = eventMap.get(Constants.sessionId);
+			let provider = state.sessionManager.getProvider(sessionId);
+			if (provider != null) {
+				provider.closeSessionListener(sessionId);
 			}
 		}
 
