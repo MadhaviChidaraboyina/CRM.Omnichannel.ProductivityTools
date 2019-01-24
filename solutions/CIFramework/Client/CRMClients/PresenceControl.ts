@@ -113,6 +113,7 @@ namespace Microsoft.CIFramework.Internal {
 			// Creates the Text Div for Agent Presence
 			var updatedPresenceTextNode = document.createElement('div');
 			updatedPresenceTextNode.innerText = presenceInfo.presenceText;
+			updatedPresenceTextNode.id = 'TextNode';
 			updatedPresenceTextNode.classList.add('textNode');
 
 			updatedPresenceNode.appendChild(innerDiv);
