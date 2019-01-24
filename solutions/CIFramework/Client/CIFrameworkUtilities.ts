@@ -38,7 +38,18 @@ namespace Microsoft.CIFramework.Utility {
 			return map;
 		}
 	}
-
+	export function flatten(obj: XrmClientApi.WebApi.Entity): XrmClientApi.WebApi.Entity {
+		let ret: XrmClientApi.WebApi.Entity = {};
+		for (let prop in obj) {
+			if (typeof (obj[prop]) === "object") {
+				ret[prop] = flatten(obj[prop]);
+			}
+			else {
+				ret[prop] = obj[prop];
+			}
+		}
+		return ret;
+	}
 	/**
 	 * Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
 	 * @param map Object to build the entity for.

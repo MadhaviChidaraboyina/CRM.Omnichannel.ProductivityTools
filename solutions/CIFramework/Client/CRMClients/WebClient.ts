@@ -117,7 +117,7 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise<string>((resolve, reject) => {
 				return Xrm.Utility.getEntityMetadata(entityName, attrs).then(
 					(result: Object) => {
-						return resolve(JSON.stringify(result));
+						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.flatten(result)));
 					},
 					(error: Error) => {
 						return rejectWithErrorMessage(error.message, "getEntityMetadata");
