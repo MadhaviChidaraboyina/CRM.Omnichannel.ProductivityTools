@@ -110,7 +110,7 @@ namespace Microsoft.CIFramework.Utility {
 		}
 
 		let originalTitle = window.top.document.title;  // save original title
-		let animatedTitle = "Incoming notification";
+		let animatedTitle = "New notification";
 		let timer = setInterval(startAnimation, 800);
 		(window.top as any).titleAnimation = true;
 
