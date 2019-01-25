@@ -10,11 +10,13 @@ namespace Microsoft.CIFramework.Internal {
 	export class ConsoleAppSessionManager extends SessionManager {
 		sessionSwitchHandlerID: string;
 		sessionCloseHandlerID: string;
+		sessionCreateHandlerID: string;
 
 		constructor() {
 			super();
 			this.sessionSwitchHandlerID = Xrm.App.sessions.addOnAfterSessionSwitch(this.onSessionSwitched);
 			this.sessionCloseHandlerID = Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClosed);
+			this.sessionCreateHandlerID = Xrm.App.sessions.addOnAfterSessionCreate(this.onSessionCreated);
 		}
 
 		getVisibleSession(): string {
@@ -47,6 +49,10 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			if (newProvider != null) {
 				newProvider.setVisibleSession(newSessionId, switchProvider);
+				(window.top as any).Xrm.Panel.state = 1;
+			}
+			else {
+				(window.top as any).Xrm.Panel.state = 0;
 			}
 		}
 
@@ -64,6 +70,25 @@ namespace Microsoft.CIFramework.Internal {
 			let provider = state.sessionManager.getProvider(sessionId);
 			if (provider != null) {
 				provider.closeSessionListener(sessionId);
+			}
+		}
+
+		/**
+		 * The handler called by the client for SessionCreated event. The client is expected
+		* to pass a SessionEventArguments object with details of the event. This handler will collapse
+		* the SidePanel if the created session does not have an attached conversation
+		 * @param event event detail will be set to a map {"sessionId": sessionId} where sessionId is the ID
+		 * of the session which was created
+		 */
+		onSessionCreated(event: any): void {
+			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
+			let sessionId = eventMap.get(Constants.sessionId);
+			let provider = state.sessionManager.getProvider(sessionId);
+			if (provider == null) {
+				//TODO - Check if the page need to be set to Landing Page when collapsing the SidePanel
+				//TODO - Way to differentiate between the sessions created from Widget and the sessions created from UC and collapse the SidePanel accordingly
+				// Currently the provider will be null for every session. SidePanel will expand back for conversation sessions due to platform focusSession call
+				(window.top as any).Xrm.Panel.state = 0;
 			}
 		}
 
