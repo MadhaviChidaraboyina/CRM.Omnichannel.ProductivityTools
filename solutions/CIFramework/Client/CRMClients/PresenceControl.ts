@@ -169,7 +169,7 @@ namespace Microsoft.CIFramework.Internal {
 				updatedPresence.basePresenceStatus = actualElement.parentElement.firstElementChild.nextSibling.innerText;
 			}
 			var setPresenceEvent = new CustomEvent('setPresenceEvent', {
-				detail: { "presenceId": e.target.parentElement.getAttribute("id"), "presenceInfo": updatedPresence }
+				detail: { "presenceId": updatedPresence.presenceId, "presenceInfo": updatedPresence }
 			});
 			window.parent.dispatchEvent(setPresenceEvent);
 		}
