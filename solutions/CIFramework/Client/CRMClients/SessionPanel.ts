@@ -46,7 +46,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		createSession(provider: CIProvider, input: any, context: any, initials: string): Promise<string> {
+		createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string> {
 			if (!this.canCreateSession()) {
 				return Promise.reject("Cannot add the Session. Maximum Sessions limit reached. Limit: " + Constants.MaxSessions);
 			}
@@ -55,7 +55,16 @@ namespace Microsoft.CIFramework.Internal {
 			this.Sessions.set(sessionId, provider);
 
 			let sessionColor = Constants.sessionColors[this.counter++ % Constants.sessionColors.length];
-			state.client.createSession(sessionId, initials, sessionColor, provider.providerId);
+			let initials = "";
+			var splittedName = customerName.split(" ");
+			if (splittedName.length == 1) {
+				initials = splittedName[0][0] + splittedName[0][1];
+			}
+			else {
+				initials = splittedName[0][0] + splittedName[splittedName.length - 1][0];
+			}
+
+			state.client.createSession(sessionId, initials, sessionColor, provider.providerId, customerName);
 
 			if (this.visibleSession == '') {
 				window.setTimeout(this.focusSession.bind(this), 0, sessionId);

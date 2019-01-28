@@ -716,7 +716,7 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.createSession(parameters.get(Constants.input), parameters.get(Constants.context), parameters.get(Constants.initials)).then(function (sessionId) {
+				provider.createSession(parameters.get(Constants.input), parameters.get(Constants.context), parameters.get(Constants.customerName)).then(function (sessionId) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "createSession", telemetryData);
 					setPerfData(perfData);
 					return resolve(new Map<string, any>().set(Constants.value, sessionId));

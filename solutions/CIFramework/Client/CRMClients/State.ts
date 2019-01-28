@@ -73,7 +73,7 @@ namespace Microsoft.CIFramework.Internal {
 		input: any;
 		context: any;
 		applicationTabs: Map<string, ApplicationTab>;
-		initials: string;
+		customerName: string;
 		notesInfo: NotesInfo;
 	}
 
@@ -147,7 +147,7 @@ namespace Microsoft.CIFramework.Internal {
 			this._minimizedHeight = minimizedHeight;
 		}
 
-		createSession(input: any, context: any, initials: string): Promise<string> {
+		createSession(input: any, context: any, customerName: string): Promise<string> {
 			let notesInformation: NotesInfo = {
 				notesDetails: new Map(),
 				resolve: null,
@@ -155,13 +155,13 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			return new Promise(function (resolve: any, reject: any) {
-				this._state.sessionManager.createSession(this, input, context, initials).then(function (sessionId: string) {
+				this._state.sessionManager.createSession(this, input, context, customerName).then(function (sessionId: string) {
 					let session: Session = {
 						sessionId: sessionId,
 						input: input,
 						context: context,
 						applicationTabs: null,
-						initials: initials,
+						customerName: customerName,
 						notesInfo: notesInformation
 					};
 

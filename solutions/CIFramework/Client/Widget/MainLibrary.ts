@@ -633,11 +633,11 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to create Session
 	 */
-	export function createSession(input: any, context: any, initials: string): Promise<string> {
-		if (!isNullOrUndefined(input) || (!isNullOrUndefined(context) && !isNullOrUndefined(initials))) {
+	export function createSession(input: any, context: any, customerName: string): Promise<string> {
+		if (!isNullOrUndefined(input) || (!isNullOrUndefined(context) && !isNullOrUndefined(customerName))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.createSession,
-				messageData: new Map().set(Constants.input, input).set(Constants.context, context).set(Constants.initials, initials)
+				messageData: new Map().set(Constants.input, input).set(Constants.context, context).set(Constants.customerName, customerName)
 			}
 			return sendMessage<string>(createSession.name, payload, false);
 		}

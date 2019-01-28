@@ -92,7 +92,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		createSession(provider: CIProvider, input: any, context: any, initials: string): Promise<string> {
+		createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string> {
 			return new Promise(function (resolve: any, reject: any) {
 				Xrm.App.sessions.createSession(input).then(function (sessionId: string) {
 					this.Sessions.set(sessionId, provider);

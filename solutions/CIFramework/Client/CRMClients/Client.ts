@@ -86,7 +86,7 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type to add Session
 	*/
-	type createSessionFunction = (id: string, initials: string, sessionColor: string, providerId: string) => void;
+	type createSessionFunction = (id: string, initials: string, sessionColor: string, providerId: string, customerName: string) => void;
 
 	/**
 	 * Func type to remove Session

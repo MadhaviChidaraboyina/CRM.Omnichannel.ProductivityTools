@@ -27,7 +27,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		abstract createSession(provider: CIProvider, input: any, context: any, initials: string): Promise<string>;
+		abstract createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string>;
 
 		abstract focusSession(sessionId: string): Promise<void>;
 

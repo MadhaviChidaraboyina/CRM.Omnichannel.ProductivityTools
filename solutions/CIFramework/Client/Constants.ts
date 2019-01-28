@@ -138,11 +138,13 @@ namespace Microsoft.CIFramework
 		public static SMS = "sms";
 		public static Chat = "chat";
 		public static Call = "call";
+		public static Informational = "informational";
+		public static Failure = "failure";
 		public static Case = "case";
 		public static SearchString = "searchString";
 		public static input = "input";
 		public static context = "context";
-		public static initials = "initials";
+		public static customerName = "customerName";
 		public static sessionId = "sessionId";
 		public static messagesCount = "messagesCount";
 		public static MaxSessions = 5;

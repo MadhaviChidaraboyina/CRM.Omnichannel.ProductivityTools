@@ -158,6 +158,7 @@ div#PresenceList
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	z-index: 1;
 }
 
 [dir='ltr'] .sessionPanel
@@ -178,7 +179,7 @@ div#PresenceList
 
 .session
 {
-	height: 44px;
+	height: 49px;
 	cursor: pointer;
 	background-color: transparent;
 }

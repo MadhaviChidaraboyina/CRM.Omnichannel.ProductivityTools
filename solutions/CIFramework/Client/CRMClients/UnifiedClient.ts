@@ -441,13 +441,13 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		client.createSession = (id: string, initials: string, sessionColor: string, providerId: string): void => {
+		client.createSession = (id: string, initials: string, sessionColor: string, providerId: string, customerName: string): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionPanel = Utility.getElementFromIframe(sidePanelIFrame, Constants.sessionPanel);
 			if (sessionPanel == null)
 				return;
 
-			let sessionElementHtml = '<div class="session flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="Ongoing session" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div><span class="uiSessionNotification" id="' + id + '_UiSessionNotification" style="display:none"></span></div><div id="' + id + 'CrossIcon" class="flexJustify" title="End session" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
+			let sessionElementHtml = '<div class="session flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="' + customerName + '" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div><span class="uiSessionNotification" id="' + id + '_UiSessionNotification" style="display:none"></span></div><div id="' + id + 'CrossIcon" class="flexJustify" title="' + customerName + '" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
 			var parser = new DOMParser();
 			var el = parser.parseFromString(sessionElementHtml, "text/html");
 			var sessionElement = el.getElementById(id);
@@ -485,6 +485,14 @@ namespace Microsoft.CIFramework.Internal {
 					else {
 						let sessions = Utility.getElementsByClassName(sidePanelIFrame, "session");
 						(<HTMLElement>sessions[0]).focus();
+					}
+				}
+			};
+
+			sessionElement.onkeyup = function(e: KeyboardEvent) {
+				if (e.altKey && e.keyCode == 88) {
+					if (id == Microsoft.CIFramework.Internal.state.sessionManager.getVisibleSession()) {
+						Microsoft.CIFramework.Internal.state.sessionManager.closeSession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
 					}
 				}
 			};
@@ -527,21 +535,39 @@ namespace Microsoft.CIFramework.Internal {
 			if (visible) {
 				sessionElement.style.backgroundColor = "#FFFFFF";
 				sessionElement.style.boxShadow = "8px 4px 10px rgba(102, 102, 102, 0.2)";
-				sessionElement.focus();
-				sessionIcon.style.display = "none";
-				sessionNotification.style.display = "none";
-				sessionNotification.innerText = "";
-				crossIcon.style.display = "flex";
 				sessionElement.setAttribute("tabindex", 0);
 				providerElement.setAttribute("aria-labelledby", id);
+				sessionNotification.style.display = "none";
+				sessionNotification.innerText = "";
+				sessionElement.focus();
 			}
 			else {
 				sessionElement.style.backgroundColor = "transparent";
 				sessionElement.style.boxShadow = "none";
-				sessionIcon.style.display = "flex";
-				crossIcon.style.display = "none";
 				sessionElement.setAttribute("tabindex", -1);
 				providerElement.setAttribute("aria-labelledby", "");
+			}
+			let sessionOnMouseOverHandler = function() {
+				if (visible) {
+					sessionElement.style.boxShadow = "0px 4px 8px rgba(102, 102, 102, 0.2)";
+					sessionIcon.style.display = "none";
+					crossIcon.style.display = "flex";
+				}
+			};
+			let sessionOnMouseOutHandler = function() {
+				if (visible) {
+					sessionElement.style.boxShadow = "none";
+					sessionIcon.style.display = "flex";
+					crossIcon.style.display = "none";
+				}
+			};
+			
+			if (visible) {
+				sessionElement.onmouseover = sessionOnMouseOverHandler;
+				sessionElement.onmouseout = sessionOnMouseOutHandler;
+			}else {
+				sessionElement.onmouseover = null;
+				sessionElement.onmouseout = null;
 			}
 
 			sessionElement.setAttribute("aria-selected", visible);

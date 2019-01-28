@@ -49,11 +49,11 @@ namespace Microsoft.CIFramework.Internal {
 		return new Promise(function (resolve,reject) {
 			//expandFlap(width,state);
 			//widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
-			notesDiv.insertAdjacentHTML('beforeend', '<div id="notesHeaderIdCIF" tabindex="0" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close">Add Notes</div><div class="notesCloseSpanDiv"></div></div><div class="notesbodyDivider_CIF"></div><div style="height: 14px;"></div>');
+			notesDiv.insertAdjacentHTML('beforeend', '<div id="notesHeaderIdCIF" tabindex="0" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close">Add notes</div><div class="notesCloseSpanDiv"></div></div><div class="notesbodyDivider_CIF"></div><div style="height: 14px;"></div>');
 			notesDiv.classList.add("notesDivCIF");
 			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
 			let availNotesHeight = widgetIFrame.clientHeight - 26;
-			widgetIFrame.contentWindow.document.getElementById("notesHeaderIdCIF").style.height = "58px";
+			widgetIFrame.contentWindow.document.getElementById("notesHeaderIdCIF").style.height = "49px";
 			var span = document.createElement("span");
 			span.classList.add("closeNotes_CIF");
 			span.classList.add("FontIcons-closeSoftNotification_CIF");
@@ -77,9 +77,9 @@ namespace Microsoft.CIFramework.Internal {
 			var saveBtn = document.createElement("BUTTON");
 			notesElement.appendChild(saveBtn);
 			saveBtn.classList.add("notesSaveButtonCIF");
-			saveBtn.innerText = "Add Note";
+			saveBtn.innerText = "Add note";
 			saveBtn.tabIndex = 0;
-			saveBtn.setAttribute("aria-label", "Add Note");
+			saveBtn.setAttribute("aria-label", "Add note");
 			//Saving notes info locally
 			let sessionId: string = state.sessionManager.getVisibleSession();
 			let session = state.providerManager._activeProvider.sessions.get(sessionId);
