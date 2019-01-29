@@ -69,7 +69,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 
 				presenceListNode.addEventListener("click", this.raiseSetPresence, false);
-				presenceListNode.addEventListener("keypress", this.keyboardSetPresence, false);
+				presenceListNode.addEventListener("keydown", this.keyboardPresenceHandler, false);
 				return presenceListNode;
 			}
 			else {
@@ -174,10 +174,15 @@ namespace Microsoft.CIFramework.Internal {
 			window.parent.dispatchEvent(setPresenceEvent);
 		}
 
-		// Enter and Space KeyPress Handler for Presence List Items
-		private keyboardSetPresence(e: any): any {
+		// Enter,Space and Escape KeyDown Handler for Presence List Items
+		private keyboardPresenceHandler(e: any): any {
 			if (e.keyCode == 13 || e.keyCode == 32) {
 				Microsoft.CIFramework.Internal.PresenceControl.Instance.raiseSetPresence(e);
+			}
+			if (e.keyCode == 27) {
+				var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
+				if (presenceList)
+					presenceList.style.display = "none";
 			}
 		}
 	}
