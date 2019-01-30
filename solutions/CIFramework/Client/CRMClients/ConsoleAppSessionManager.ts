@@ -81,21 +81,14 @@ namespace Microsoft.CIFramework.Internal {
 		 * of the session which was created
 		 */
 		onSessionCreated(event: any): void {
-			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
-			let sessionId = eventMap.get(Constants.sessionId);
-			let provider = state.sessionManager.getProvider(sessionId);
-			if (provider == null) {
-				//TODO - Check if the page need to be set to Landing Page when collapsing the SidePanel
-				//TODO - Way to differentiate between the sessions created from Widget and the sessions created from UC and collapse the SidePanel accordingly
-				// Currently the provider will be null for every session. SidePanel will expand back for conversation sessions due to platform focusSession call
-				(window.top as any).Xrm.Panel.state = 0;
-			}
+			(window.top as any).Xrm.Panel.state = 0;
 		}
 
 		createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string> {
 			return new Promise(function (resolve: any, reject: any) {
 				Xrm.App.sessions.createSession(input).then(function (sessionId: string) {
 					this.Sessions.set(sessionId, provider);
+					(window.top as any).Xrm.Panel.state = 1;
 					resolve(sessionId);
 				}.bind(this), function (errorMessage: string) {
 					let error = {} as IErrorHandler;
