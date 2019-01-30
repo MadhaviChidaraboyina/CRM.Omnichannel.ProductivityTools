@@ -68,18 +68,22 @@ namespace Microsoft.CIFramework.Internal {
 			newTextArea.id = "notesTextAreaCIF";
 			newTextArea.style.width = textAreaWidth;
 			newTextArea.style.height = "calc(100% - 120px)";
-			var cancelBtn = document.createElement("BUTTON");
-			notesElement.appendChild(cancelBtn);
-			cancelBtn.classList.add("notesCancelButtonCIF");
-			cancelBtn.innerText = "Cancel";
-			cancelBtn.tabIndex = 0;
-			cancelBtn.setAttribute("aria-label", "Cancel");
 			var saveBtn = document.createElement("BUTTON");
-			notesElement.appendChild(saveBtn);
 			saveBtn.classList.add("notesSaveButtonCIF");
 			saveBtn.innerText = "Add note";
 			saveBtn.tabIndex = 0;
 			saveBtn.setAttribute("aria-label", "Add note");
+			var cancelBtn = document.createElement("BUTTON");
+			cancelBtn.classList.add("notesCancelButtonCIF");
+			cancelBtn.innerText = "Cancel";
+			cancelBtn.tabIndex = 0;
+			cancelBtn.setAttribute("aria-label", "Cancel");
+			var addCancelButtonContainer = document.createElement("DIV");
+			addCancelButtonContainer.classList.add("addCancelButtonContainer");
+			addCancelButtonContainer.appendChild(saveBtn);
+			addCancelButtonContainer.appendChild(cancelBtn);
+			notesElement.appendChild(addCancelButtonContainer);
+			
 			//Saving notes info locally
 			let sessionId: string = SessionPanel.getInstance().getvisibleUISession();
 			let session = SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions.get(sessionId);

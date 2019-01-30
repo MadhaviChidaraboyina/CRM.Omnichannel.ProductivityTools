@@ -709,6 +709,12 @@
 	margin-right: 20px;
 	float:right;
 }
+
+.addCancelButtonContainer{
+	text-align: right;
+	padding: 0 20px;
+}
+
 .notesSaveButtonCIF{
 	color: #FFFFFF;
 	background-color: #3B79B7;
@@ -726,7 +732,6 @@
 }
 [dir='ltr'] .notesSaveButtonCIF
 {
-	float: right;
 	margin-right: 8px;
 }
 
@@ -756,7 +761,6 @@
 [dir='ltr'] .notesCancelButtonCIF
 {
 	float: right;
-	margin-right: 20px;
 }
 
 [dir='rtl'] .notesCancelButtonCIF
