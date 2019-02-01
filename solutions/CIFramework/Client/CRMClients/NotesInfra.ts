@@ -58,6 +58,7 @@ namespace Microsoft.CIFramework.Internal {
 			span.classList.add("closeNotes_CIF");
 			span.classList.add("FontIcons-closeSoftNotification_CIF");
 			span.setAttribute("aria-label", "Close");
+			span.setAttribute("tabindex", "0");
 			notesDiv.getElementsByClassName("notesCloseSpanDiv")[0].appendChild(span);
 			var newTextArea = document.createElement('TextArea');
 			let notesElement = notesDiv;
@@ -109,6 +110,12 @@ namespace Microsoft.CIFramework.Internal {
 				cancelNotes();
 				//state.setWidgetWidth("setWidgetWidth", width);
 				return resolve(new Map().set(Constants.value,new Map().set(Constants.value,"")));
+			});
+			span.addEventListener("keydown", function clickListener(event) {
+				if (event.keyCode == 32 || event.keyCode == 13){
+					cancelNotes();
+					return resolve(new Map().set(Constants.value,new Map().set(Constants.value,"")));
+				}
 			});
 		});
 	}
