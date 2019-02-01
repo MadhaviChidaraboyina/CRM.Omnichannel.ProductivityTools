@@ -352,6 +352,7 @@ namespace Microsoft.CIFramework.Internal {
 		span = document.createElement("span");
 		span.classList.add("closeSoftNotification_CIF");
 		span.classList.add("FontIcons-closeSoftNotification_CIF");
+		span.setAttribute("tabindex", "0");
 		span.setAttribute("aria-label", "Close");
 		chatWindowHeader.appendChild(span);
 		chatWindowHeader.getElementsByTagName("span")[1].id = "closeSoftNotificationCIF";
@@ -496,6 +497,14 @@ namespace Microsoft.CIFramework.Internal {
 							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
 							var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
 							return resolve(mapReturn);
+						});
+						key.addEventListener("keydown", function clickListener(event: any) {
+							if (event.keyCode == 32 || event.keyCode == 13) {
+								key.removeEventListener("keydown", clickListener);
+								key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
+								var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
+								return resolve(mapReturn);
+							}
 						});
 						setTimeout(function(){
 							if(key.parentElement.parentElement.parentElement != null){
