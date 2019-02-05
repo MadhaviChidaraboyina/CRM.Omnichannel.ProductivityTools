@@ -1,15 +1,12 @@
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
 <meta name=Generator content="Microsoft Word 15 (filtered)">
 <style>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
 	{font-family:"MS Mincho";
 	panose-1:2 2 6 9 4 2 5 8 3 4;}
 @font-face
@@ -22,17 +19,17 @@
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;}
 @font-face
-	{font-family:"Trebuchet MS";
-	panose-1:2 11 6 3 2 2 2 2 2 4;}
-@font-face
 	{font-family:Tahoma;
 	panose-1:2 11 6 4 3 5 4 4 2 4;}
 @font-face
-	{font-family:"\@SimSun";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;}
 @font-face
 	{font-family:"\@MS Mincho";
 	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin-top:0in;
@@ -130,16 +127,21 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	text-indent:-17.9pt;
 	font-size:10.0pt;
 	font-family:"Tahoma",sans-serif;}
-p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
-	{mso-style-link:"Comment Text Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	font-size:10.0pt;
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;}
 a:link, span.MsoHyperlink
-	{font-family:"Times New Roman",serif;
+	{mso-style-name:"Hyperlink\,Char Char7";
+	font-family:"Times New Roman",serif;
 	color:blue;
 	text-decoration:underline;}
 a:visited, span.MsoHyperlinkFollowed
@@ -155,44 +157,6 @@ p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
 	{margin:0in;
 	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{mso-style-link:"List Paragraph Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:10.0pt;
-	margin-left:.5in;
-	line-height:115%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{mso-style-link:"List Paragraph Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	margin-bottom:.0001pt;
-	line-height:115%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{mso-style-link:"List Paragraph Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	margin-bottom:.0001pt;
-	line-height:115%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{mso-style-link:"List Paragraph Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:10.0pt;
-	margin-left:.5in;
-	line-height:115%;
 	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;}
 span.Heading1Char
@@ -283,13 +247,22 @@ p.PreambleBorderAbove, li.PreambleBorderAbove, div.PreambleBorderAbove
 	font-size:10.0pt;
 	font-family:"Tahoma",sans-serif;
 	font-weight:bold;}
-span.CommentTextChar
-	{mso-style-name:"Comment Text Char";
-	mso-style-link:"Comment Text";
-	font-family:"Calibri",sans-serif;}
-span.ListParagraphChar
-	{mso-style-name:"List Paragraph Char";
-	mso-style-link:"List Paragraph";}
+span.LogoportMarkup
+	{mso-style-name:LogoportMarkup;
+	font-family:"Courier New";
+	color:red;}
+span.LogoportDoNotTranslate
+	{mso-style-name:LogoportDoNotTranslate;
+	font-family:"Courier New";
+	color:gray;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;
+	font-family:"Times New Roman",serif;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;
+	font-family:"Times New Roman",serif;}
 .MsoChpDefault
 	{font-family:"Calibri",sans-serif;}
 .MsoPapDefault
@@ -298,7 +271,7 @@ span.ListParagraphChar
  /* Page Definitions */
  @page WordSection1
 	{size:8.5in 11.0in;
-	margin:45.0pt 1.0in 0in 1.0in;}
+	margin:1.0in 1.0in 1.0in 1.0in;}
 div.WordSection1
 	{page:WordSection1;}
  /* List Definitions */
@@ -315,81 +288,64 @@ ul
 
 <div class=WordSection1>
 
-<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
-lang=FR style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>&nbsp;</span></p>
-
 <p class=Preamble><span lang=FR>REMARQUE&nbsp;: </span><span lang=FR
-style='font-weight:normal'>Microsoft Corporation (ou, en fonction du lieu oÃ¹
-vous vivez, lâ€™un de ses affiliÃ©s) vous accorde une licence pour ce supplÃ©ment.
-Vous pouvez utiliser ce supplÃ©ment avec chaque abonnement concÃ©dÃ© sous licence
-valide des services </span><span lang=FR style='font-weight:normal'>Microsoft
-Dynamics&nbsp;365 en ligne (le Â«&nbsp;service en ligne&nbsp;Â»)</span><span
-lang=FR style='font-weight:normal'>. Vous nâ€™Ãªtes pas autorisÃ© Ã  utiliser ce
-supplÃ©ment si vous nâ€™Ãªtes pas titulaire dâ€™une licence pour le service en ligne.
-Les termes du contrat de licence du service en ligne sâ€™appliquent Ã 
-lâ€™utilisation de ce supplÃ©ment. Nonobstant toute disposition contraire dans les
-conditions de licence applicables ou dans la DÃ©claration de confidentialitÃ© des
-Services en ligne de Microsoft (disponible Ã  l'adresse </span><span lang=FR><a
-href="http://go.microsoft.com/fwlink/?LinkId=512132"><span style='font-weight:
-normal'>http://go.microsoft.com/fwlink/?LinkId=512132</span></a></span><span
-lang=FR style='font-weight:normal'>), les conditions supplÃ©mentaires suivantes
-rÃ©gissent votre utilisation du supplÃ©ment.</span></p>
+style='font-weight:normal'>Microsoft Corporation (ou, en fonction du lieu où
+vous vivez, l’un de ses affiliés) vous accorde une licence pour ce supplément. Vous
+pouvez utiliser ce supplément uniquement avec chaque copie concédée sous
+licence valable du logiciel Microsoft Dynamics&nbsp;365 auquel s’applique le
+présent supplément (le «&nbsp;logiciel&nbsp;») ou chaque abonnement concédé
+sous licence valable des </span><span lang=FR style='font-weight:normal'>services
+Microsoft Dynamics&nbsp;365 (le «&nbsp;service en ligne&nbsp;»)</span><span
+lang=FR style='font-weight:normal'>. Vous n’êtes pas autorisé à utiliser ce
+supplément si vous n’êtes pas titulaire d’une licence pour le logiciel ou le
+service en ligne. Les termes du contrat de licence du logiciel ou des services
+s’appliquent à l’utilisation de ce supplément. Microsoft fournit des services
+d’assistance technique pour ce supplément, tels que décrits sur le site </span><span
+class=MsoHyperlink><span lang=FR style='font-family:"Tahoma",sans-serif;
+font-weight:normal'><a
+href="../../prj/Legal_Convert/Loc/Supp_Dynamics365/support.microsoft.com/common/international.aspx">support.microsoft.com/common/international.aspx</a></span></span><span
+lang=FR style='font-weight:normal'>.</span></p>
 
-<p class=MsoListParagraphCxSpFirst style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;line-height:normal'><span lang=FR
-style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>Le prÃ©sent supplÃ©ment
-nâ€™est pas fourni dans un centre de donnÃ©es dÃ©diÃ© pour votre usage exclusif et
-ne fait pas partie et nâ€™est pas un composant du service en ligne. L'utilisation
-du prÃ©sent supplÃ©ment n'est pas soumise aux conditions gÃ©nÃ©rales spÃ©cifiques au
-produit applicables Ã  Dynamics 365 Online pour le Secteur Public ou Ã  d'autres
-Services en Ligne pour lesquels les conditions gÃ©nÃ©rales spÃ©cifiques au produit
-peuvent Ãªtre incluses dans l'Accord de Mise en Å“uvre ou le Contrat (notamment
-leurs Avenants, les Droits d'utilisation ou les Conditions applicables aux
-Produits).Â  Nonobstant toute disposition contraire prÃ©vue dans les Conditions de
-Services en ligne ou la DÃ©claration de confidentialitÃ© de Microsoft, ce
-supplÃ©ment n'est pas proposÃ© au titre des Conditions de traitement des donnÃ©es
-des Conditions des Services en ligne. Ce supplÃ©ment n'est Ã©galement pas soumis
-Ã  des rÃ©fÃ©rences ou Ã  des dÃ©clarations effectuÃ©es sur le Centre de Gestion de
-la ConfidentialitÃ©.</span></p>
+<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;line-height:normal'><span lang=FR
-style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>&nbsp;</span></p>
+<h1 style='margin-left:0in;text-indent:0in'><span lang=FR>COLLECTE DES DONNÉES.
+</span><span lang=FR style='font-weight:normal'>Le logiciel peut collecter des
+informations sur vous et votre utilisation du logiciel et les envoyer à
+Microsoft. Microsoft est susceptible d’utiliser ces informations pour fournir
+des services et améliorer ses produits et services. Vos droits de
+désactivation, le cas échéant, sont indiqués dans la documentation du produit.
+Certaines fonctionnalités du logiciel peuvent permettre la collecte de données
+auprès des utilisateurs des applications qui accèdent au logiciel ou
+l'utilisent. Si vous utilisez ces fonctionnalités pour permettre la collecte de
+données dans vos applications, vous devez le faire en toute conformité avec la
+réglementation applicable, notamment en obtenant le consentement de
+l'utilisateur et en maintenant une politique de confidentialité bien visible
+qui informe les utilisateurs de l'utilisation, de la collecte et du partage de
+leurs données. Pour en savoir plus sur la collecte et l'utilisation des données
+par Microsoft, consultez la documentation du produit et la </span><span
+lang=FR style='font-weight:normal'>Déclaration de confidentialité de Microsoft</span><span
+lang=FR style='font-weight:normal'> à l'adresse </span><span
+class=MsoHyperlink><span lang=FR style='font-family:"Tahoma",sans-serif;
+font-weight:normal'><a href="http://go.microsoft.com/fwlink/?LinkID=521839">http://go.microsoft.com/fwlink/?LinkID=521839</a></span></span><span
+lang=FR style='font-weight:normal'>. </span><span lang=FR style='font-weight:
+normal'>Vous acceptez de vous conformer à toutes les provisions applicables de
+la Déclaration de Confidentialité de Microsoft</span><span lang=FR
+style='font-weight:normal'>.</span></h1>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;line-height:normal'><span lang=FR
-style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>LE PRÃ‰SENT SUPPLÃ‰MENT
-EST FOURNI Â«&nbsp;EN L'Ã‰TAT&nbsp;Â», Â«&nbsp;AVEC TOUTES SES IMPERFECTIONS&nbsp;Â»
-ET Â«&nbsp;TEL QUE DISPONIBLE&nbsp;Â». IL EST Ã‰GALEMENT EXCLU DES SLA ET DE TOUTE
-GARANTIE LIMITÃ‰E dÃ©crits dans les Conditions des Services en Ligne et documents
-rÃ©fÃ©rencÃ©s dans celles-ci. Le prÃ©sent supplÃ©ment peut ne pas Ãªtre couvert par
-des services dâ€™assistance client.</span></p>
+<h1 style='margin-left:0in;text-indent:0in'><span lang=FR>&nbsp;</span></h1>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;line-height:normal'><span lang=FR
-style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>&nbsp;</span></p>
+<h1 style='margin-left:0in;text-indent:0in'><span lang=FR>Traitement des
+données personnelles. </span><span lang=FR style='font-weight:normal'>Dans la
+mesure où Microsoft est un processeur ou un sous-processeur de données
+personnelles dans le cadre du logiciel, Microsoft s'engage à respecter les
+Conditions générales du règlement relatif à la Protection des données de
+l'Union européenne des Conditions d'Online Services pour tous les clients à
+compter du 25&nbsp;mai&nbsp;2018, disponibles à l'adresse <span
+class=MsoHyperlink><span style='font-family:"Tahoma",sans-serif'><a
+href="http://go.microsoft.com/?linkid=9840733">http://go.microsoft.com/?linkid=9840733</a></span></span>.</span><u><span
+lang=FR style='color:blue;font-weight:normal'> </span></u></h1>
 
-<p class=MsoListParagraphCxSpLast style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;line-height:normal'><span lang=FR
-style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>Si vous nâ€™acceptez pas
-ces conditions supplÃ©mentaires, nâ€™installez pas ou n'utilisez pas ce supplÃ©ment.</span></p>
-
-<p class=PreambleCxSpFirst><span lang=FR>IMPORTANT&nbsp;:</span><span lang=FR
-style='font-weight:normal'> En installant ou en utilisant le prÃ©sent
-supplÃ©ment, vous consentez Ã  autoriser les utilisateurs autorisÃ©s des services
-Microsoft Dynamics&nbsp;365 en ligne Ã  activer, configurer et activer certaines
-fonctionnalitÃ©s qui transmettent les DonnÃ©es Client Ã  des systÃ¨mes externes.
-Veuillez consulter la documentation technique de la fonctionnalitÃ© pour obtenir
-des informations supplÃ©mentaires.</span></p>
-
-<p class=PreambleCxSpMiddle><span lang=FR style='font-weight:normal'>&nbsp;</span></p>
-
-<p class=PreambleCxSpLast><span lang=FR style='font-weight:normal'>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR style='font-size:10.0pt;line-height:115%;
-font-family:"Tahoma",sans-serif'>Mentions de tiers&nbsp;: </span><span lang=FR><a
-href="http://go.microsoft.com/fwlink/?LinkId=828060"><span style='font-size:
-10.0pt;line-height:115%;font-family:"Tahoma",sans-serif'>http://go.microsoft.com/fwlink/?LinkId=828060</span></a></span></p>
+<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
 
 </div>
 

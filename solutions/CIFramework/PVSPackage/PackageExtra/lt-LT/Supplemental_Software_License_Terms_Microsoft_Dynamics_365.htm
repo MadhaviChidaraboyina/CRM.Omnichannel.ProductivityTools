@@ -1,15 +1,12 @@
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
 <meta name=Generator content="Microsoft Word 15 (filtered)">
 <style>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
 	{font-family:"MS Mincho";
 	panose-1:2 2 6 9 4 2 5 8 3 4;}
 @font-face
@@ -22,17 +19,17 @@
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;}
 @font-face
-	{font-family:"Trebuchet MS";
-	panose-1:2 11 6 3 2 2 2 2 2 4;}
-@font-face
 	{font-family:Tahoma;
 	panose-1:2 11 6 4 3 5 4 4 2 4;}
 @font-face
-	{font-family:"\@SimSun";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;}
 @font-face
 	{font-family:"\@MS Mincho";
 	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin-top:0in;
@@ -130,14 +127,6 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	text-indent:-17.9pt;
 	font-size:10.0pt;
 	font-family:"Tahoma",sans-serif;}
-p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
-	{mso-style-link:"Comment Text Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
 p.MsoHeader, li.MsoHeader, div.MsoHeader
 	{mso-style-link:"Header Char";
 	margin:0in;
@@ -151,7 +140,8 @@ p.MsoFooter, li.MsoFooter, div.MsoFooter
 	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;}
 a:link, span.MsoHyperlink
-	{font-family:"Times New Roman",serif;
+	{mso-style-name:"Hyperlink\,Char Char7";
+	font-family:"Times New Roman",serif;
 	color:blue;
 	text-decoration:underline;}
 a:visited, span.MsoHyperlinkFollowed
@@ -167,44 +157,6 @@ p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
 	{margin:0in;
 	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{mso-style-link:"List Paragraph Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:10.0pt;
-	margin-left:.5in;
-	line-height:115%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{mso-style-link:"List Paragraph Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	margin-bottom:.0001pt;
-	line-height:115%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{mso-style-link:"List Paragraph Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	margin-bottom:.0001pt;
-	line-height:115%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{mso-style-link:"List Paragraph Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:10.0pt;
-	margin-left:.5in;
-	line-height:115%;
 	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;}
 span.Heading1Char
@@ -295,13 +247,16 @@ p.PreambleBorderAbove, li.PreambleBorderAbove, div.PreambleBorderAbove
 	font-size:10.0pt;
 	font-family:"Tahoma",sans-serif;
 	font-weight:bold;}
-span.CommentTextChar
-	{mso-style-name:"Comment Text Char";
-	mso-style-link:"Comment Text";
-	font-family:"Calibri",sans-serif;}
-span.ListParagraphChar
-	{mso-style-name:"List Paragraph Char";
-	mso-style-link:"List Paragraph";}
+span.LogoportMarkup
+	{mso-style-name:LogoportMarkup;
+	font-family:"Courier New";
+	color:red;
+	font-weight:normal;}
+span.LogoportDoNotTranslate
+	{mso-style-name:LogoportDoNotTranslate;
+	font-family:"Courier New";
+	color:gray;
+	font-weight:normal;}
 span.HeaderChar
 	{mso-style-name:"Header Char";
 	mso-style-link:Header;}
@@ -316,7 +271,7 @@ span.FooterChar
  /* Page Definitions */
  @page WordSection1
 	{size:8.5in 11.0in;
-	margin:45.0pt 1.0in 0in 1.0in;}
+	margin:1.0in 1.0in 1.0in 1.0in;}
 div.WordSection1
 	{page:WordSection1;}
  /* List Definitions */
@@ -333,78 +288,65 @@ ul
 
 <div class=WordSection1>
 
-<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
-lang=LT style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>&nbsp;</span></p>
+<p class=Preamble><span lang=LT>ATKREIPKITE D&#278;MES&#302;: </span><span
+lang=LT style='font-weight:normal'>�Microsoft Corporation� (arba, atsi�velgiant
+&#303; j&#363;s&#371; gyvenam&#261;j&#261; viet&#261;, viena i� su ja
+susijusi&#371; &#303;moni&#371;) suteikia jums �ios papildomos programos
+licencij&#261;. J&#261; galite naudoti su kiekviena tinkamai licencijuota
+�Microsoft Dynamics 365� programin&#279;s &#303;rangos kopija (kuriai �i
+papildoma programa taikoma) (�programin&#279; &#303;ranga�) arba kiekviena
+tinkamai licencijuota </span><span lang=LT style='font-weight:normal'>�Microsoft
+Dynamics 365� paslaug&#371; prenumerata (�internete teikiama paslauga�)</span><span
+lang=LT style='font-weight:normal'>. Jei neturite programin&#279;s &#303;rangos
+ar internete teikiamos paslaugos licencijos, priedo naudoti negalite. J&#363;s&#371;
+naudojimuisi �iuo priedu taikomos programin&#279;s &#303;rangos ar
+paslaug&#371; licencijos s&#261;lygos. �Microsoft� teikia priedo palaikymo paslaugas,
+kaip nurodyta </span><span class=MsoHyperlink><span lang=LT style='font-family:
+"Tahoma",sans-serif;font-weight:normal'><a
+href="http://support.microsoft.com/common/international.aspx">http://support.microsoft.com/common/international.aspx</a></span></span><span
+lang=LT style='font-weight:normal'>.</span></p>
 
-<p class=Preamble><span lang=LT>ATKREIPKITE DĖMESĮ: </span><span lang=LT
-style='font-weight:normal'>„Microsoft Corporation“ (arba, atsižvelgiant į jūsų
-gyvenamąją vietą, viena iš su ja susijusių įmonių) suteikia jums šios
-papildomos programos licenciją. Ją galite naudoti su kiekviena teisėtai
-licencijuota </span><span lang=LT style='font-weight:normal'>„Microsoft
-Dynamics 365“ internete teikiamų paslaugų (toliau – Internete teikiamos
-paslaugos)</span><span lang=LT style='font-weight:normal'> prenumerata. Jei
-Internete teikiamų paslaugų licencijos neturite, papildomos programos naudoti
-negalite. Jūsų naudojimuisi šia papildoma programa taikomos internete teikiamos
-paslaugos licencijos sąlygos. Neatsižvelgiant į jokius taikytinų licencijos
-sąlygų ir „Microsoft“ internete teikiamų paslaugų privatumo nuostatų (jas
-galima rasti </span><span lang=LT><a
-href="http://go.microsoft.com/fwlink/?LinkId=512132"><span style='font-weight:
-normal'>http://go.microsoft.com/fwlink/?LinkId=512132</span></a></span><span
-lang=LT style='font-weight:normal'>) prieštaravimus, jums naudojantis papildoma
-programa taikomos toliau nurodytos papildomos sąlygos.</span></p>
+<p class=Preamble><span lang=LT style='font-weight:normal'>&nbsp;</span></p>
 
-<p class=MsoListParagraphCxSpFirst style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;line-height:normal'><span lang=LT
-style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>Ši papildoma programa
-nėra sukonfigūruota skirtajame duomenų centre naudoti išskirtinai jums ir ji
-nėra nei internete teikiamų paslaugų dalis, nei jų komponentas. Jums naudojantis
-šia papildoma programa nebus taikomos jokios konkretaus produkto sąlygos,
-kurios taikomos internetinės „Dynamics 365“ valstybinėms institucijoms arba
-kitoms internete teikiamoms paslaugoms, kurių sąlygos gali būti įtrauktos į
-Registracijos sutartį ar Sutartį (įskaitant jų pakeitimus, naudojimo teises ar
-produktų naudojimo sąlygas).  Neatsižvelgiant į jokius Internete teikiamų
-paslaugų arba „Microsoft“ privatumo patvirtinimo prieštaravimus, ši papildoma
-programa nėra teikiama taikant Internete teikiamų paslaugų Duomenų apdorojimas
-sąlygas. Šiai papildomai programai taip pat nėra taikomos jokios „Microsoft“
-patikimumo centre pateiktos nuorodos ar pareiškimai.</span></p>
+<h1 style='margin-left:0in;text-indent:0in'><span lang=LT>DUOMEN&#370;
+RINKIMAS. </span><span lang=LT style='font-weight:normal'>Programin&#279;
+&#303;ranga gali rinkti informacij&#261; apie jus ir tai, kaip naudojat&#279;s
+programine &#303;ranga, ir j&#261; si&#371;sti bendrovei �Microsoft�.
+�Microsoft� gali naudoti �i&#261; informacija siekdama teikti paslaugas ir
+tobulinti �Microsoft� produktus bei paslaugas. J&#363;s&#371; teis&#279;s
+atsisakyti, jei toki&#371; yra, apra�ytos produkto dokumentacijoje. Kai kurios
+programin&#279;s &#303;rangos funkcijos gali suteikti galimyb&#281; rinkti
+duomenis i� j&#363;s&#371; program&#371;, kurios turi prieig&#261; prie
+programin&#279;s &#303;rangos ar j&#261; naudoja, vartotoj&#371;. Jei naudojate
+tokias funkcijas siekdami &#303;galinti duomen&#371; rinkim&#261; savo
+programose, turite laikytis taikytinos teis&#279;s, &#303;skaitant
+reikalavim&#261; gauti bet kok&#303; reikiam&#261; vartotojo sutikim&#261;, ir
+taikyti tinkam&#261; privatumo strategij&#261;, kuri tiksliai informuoja
+vartotojus, kaip j&#363;s naudojate, renkate j&#371; duomenis ir jais dalijat&#279;s.
+Daugiau apie �Microsoft� duomen&#371; rinkim&#261; ir naudojim&#261; galite
+su�inoti produkto dokumentacijoje ir </span><span lang=LT style='font-weight:
+normal'>�Microsoft� privatumo patvirtinime</span><span lang=LT
+style='font-weight:normal'>, pateiktame </span><span class=MsoHyperlink><span
+lang=LT style='font-family:"Tahoma",sans-serif;font-weight:normal'><a
+href="http://go.microsoft.com/fwlink/?LinkID=521839">http://go.microsoft.com/fwlink/?LinkID=521839</a></span></span><span
+lang=LT style='font-weight:normal'>. </span><span lang=LT style='font-weight:
+normal'>J&#363;s sutinkate laikytis vis&#371; taikytin&#371; �Microsoft�
+privatumo patvirtinimo nuostat&#371;</span><span lang=LT style='font-weight:
+normal'>.</span></h1>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;line-height:normal'><span lang=LT
-style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>&nbsp;</span></p>
+<h1 style='margin-left:0in;text-indent:0in'><span lang=LT>&nbsp;</span></h1>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;line-height:normal'><span lang=LT
-style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>ŠI PAPILDOMA PROGRAMA
-PATEIKIAMA TOKIA, KOKIA YRA, SU VISAIS TRŪKUMAIS IR TOKIA, KOKIA PRIEINAMA, IR
-JI NEĮTRAUKIAMA Į SLA IR RIBOTĄJĄ GARANTIJĄ, aprašytą Internete teikiamų
-paslaugų sąlygose ir jose nurodytoje medžiagoje. Pagalba papildomą programą
-naudojantiems klientams gali būti neteikiama.</span></p>
+<p class=Preamble><span lang=LT>Asmens duomen&#371; apdorojimas. </span><span
+lang=LT style='font-weight:normal'>Tiek, kiek �Microsoft� veikia kaip asmens
+duomen&#371; apdorotoja ar antrin&#279; apdorotoja programin&#279;s
+&#303;rangos teikimo tikslais, �Microsoft� nuo 2018 m. gegu�&#279;s 25 d.
+&#303;sipareigoja visiems klientams pagal Internete teikiam&#371; paslaug&#371;
+s&#261;lygose pateiktas Europos S&#261;jungos Bendrojo duomen&#371; apsaugos
+reglamento s&#261;lygas, kurias galima rasti <span class=MsoHyperlink><span
+style='font-family:"Tahoma",sans-serif'><a
+href="http://go.microsoft.com/?linkid=9840733">http://go.microsoft.com/?linkid=9840733</a></span></span>.</span></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;line-height:normal'><span lang=LT
-style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>&nbsp;</span></p>
-
-<p class=MsoListParagraphCxSpLast style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;line-height:normal'><span lang=LT
-style='font-size:10.0pt;font-family:"Tahoma",sans-serif'>Jei su šiomis
-papildomomis sąlygomis nesutinkate, šios papildomos programos nediekite ir
-nenaudokite.</span></p>
-
-<p class=PreambleCxSpFirst><span lang=LT>SVARBU.</span><span lang=LT
-style='font-weight:normal'> Įdiegdami ar naudodami šią papildomą programą
-sutinkate, kad įgaliotiesiems „Microsoft Dynamics 365“ internete teikiamų
-paslaugų vartotojams yra leidžiama suaktyvinti, konfigūruoti ir įjungti tam
-tikras funkcijas, kurios perduoda klientų duomenis išorinėms sistemoms. Daugiau
-informacijos ieškokite funkcijos techniniuose dokumentuose.</span></p>
-
-<p class=PreambleCxSpMiddle><span lang=LT style='font-weight:normal'>&nbsp;</span></p>
-
-<p class=PreambleCxSpLast><span lang=LT style='font-weight:normal'>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=LT style='font-size:10.0pt;line-height:115%;
-font-family:"Tahoma",sans-serif'>Trečiosios šalies pranešimai: </span><span
-lang=LT><a href="http://go.microsoft.com/fwlink/?LinkId=828060"><span
-style='font-size:10.0pt;line-height:115%;font-family:"Tahoma",sans-serif'>http://go.microsoft.com/fwlink/?LinkId=828060</span></a></span></p>
+<p class=MsoNormal><span lang=LT style='font-family:"Tahoma",sans-serif'>&nbsp;</span></p>
 
 </div>
 
