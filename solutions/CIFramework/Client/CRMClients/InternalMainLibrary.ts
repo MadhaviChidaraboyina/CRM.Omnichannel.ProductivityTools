@@ -772,15 +772,18 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			const [sessionId, errorData] = provider.endUISession(parameters.get(Constants.sessionId));
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "endUISession", telemetryData);
-			setPerfData(perfData);
-			if (sessionId != null) {
-				return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
-			}
-			else {
-				return rejectWithErrorMessage(errorData.errorMsg, "endUISession", appId, true, errorData, provider.providerId, provider.name);
-			}
+			var result = confirm("Do you want to close the session ?");
+			if(result == true){
+				const [sessionId, errorData] = provider.endUISession(parameters.get(Constants.sessionId));
+				var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "endUISession", telemetryData);
+				setPerfData(perfData);
+				if (sessionId != null) {
+					return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
+				}
+				else {
+					return rejectWithErrorMessage(errorData.errorMsg, "endUISession", appId, true, errorData, provider.providerId, provider.name);
+				}
+			}			
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, "endUISession", appId, true, errorData);
