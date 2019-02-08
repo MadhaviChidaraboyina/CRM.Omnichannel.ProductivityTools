@@ -271,6 +271,30 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
+		createSessionTab(sessionId: string, input: any): Promise<string> {
+			if (!this.sessions.has(sessionId)) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Session with ID: " + sessionId + "does not exist";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = "createSessionTab";
+				return Promise.reject(error);
+			}
+
+			return new Promise(function (resolve: any, reject: any) {
+				this._state.sessionManager.createSessionTab(sessionId, input).then(function (tabId: string) {
+					resolve(tabId);
+				}, function (errorMsg: string) {
+					let error = {} as IErrorHandler;
+					error.reportTime = new Date().toUTCString();
+					error.errorMsg = errorMsg;
+					error.errorType = errorTypes.GenericError;
+					error.sourceFunc = "createSessionTab";
+					reject(error);
+				});
+			}.bind(this));
+		}
+
 		closeSessionListener(sessionId: string): void {
 			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("context", this.sessions.get(sessionId).context), MessageType.onSessionClosed);
 		}

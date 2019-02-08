@@ -44,6 +44,7 @@ namespace Microsoft.CIFramework.Internal {
 		["requestSessionFocus", [requestSessionFocus]],
 		["focusSession", [focusSession]],
 		["closeSession", [closeSession]],
+		["createSessionTab", [createSessionTab]],
 		["setAgentPresence", [setAgentPresence]],
 		["initializeAgentPresenceList", [initializeAgentPresenceList]],
 		["addGenericHandler", [addGenericHandler]],
@@ -787,6 +788,26 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return rejectWithErrorMessage(errorData.errorMsg, "closeSession", appId, true, errorData);
+		}
+	}
+
+	export function createSessionTab(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				provider.createSessionTab(parameters.get(Constants.sessionId), parameters.get(Constants.input)).then(function (tabId) {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "createSessionTab", telemetryData);
+					setPerfData(perfData);
+					return resolve(new Map<string, any>().set(Constants.value, tabId));
+				}, function (errorData) {
+					return rejectWithErrorMessage(errorData.errorMsg, "createSessionTab", appId, true, errorData, provider.providerId, provider.name);
+				});
+			});
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, "createSessionTab", appId, true, errorData);
 		}
 	}
 

@@ -695,12 +695,28 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
- * API to set all the presences
- * Invokes the API initializeAgentPresenceList(presenceList)
- * @param presenceList - Array containing all the available Presences
+	 * API to create a Session Tab
+	 */
+	export function createSessionTab(sessionId: string, input: any): Promise<string> {
+		if (!isNullOrUndefined(sessionId) && !isNullOrUndefined(input)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.createSessionTab,
+				messageData: new Map().set(Constants.sessionId, sessionId).set(Constants.input, input)
+			}
+			return sendMessage<string>(createSessionTab.name, payload, false);
+		}
+		else {
+			postMessageNamespace.rejectWithErrorMessage("Some of the required parameters are Null");
+		}
+	}
 
- * @returns a Promise: Boolean Status after setting the list of presences
- */
+	/**
+	 * API to set all the presences
+	* Invokes the API initializeAgentPresenceList(presenceList)
+	* @param presenceList - Array containing all the available Presences
+
+	* @returns a Promise: Boolean Status after setting the list of presences
+	*/
 	export function initializeAgentPresenceList(presenceList: any): Promise<boolean> {
 		if (!(isNullOrUndefined(presenceList))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {

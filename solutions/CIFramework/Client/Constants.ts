@@ -56,6 +56,7 @@ namespace Microsoft.CIFramework
 		public static hardNotification = "hardNotification";
 		public static removeGenericHandler = "removeGenericHandler";
 		public static addGenericHandler = "addGenericHandler";
+		public static createSessionTab = "createSessionTab";
 	}
 
 	/**
