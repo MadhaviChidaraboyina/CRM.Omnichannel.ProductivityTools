@@ -8,7 +8,7 @@ module CIFramework {
 		try
 		{
 			let landingURL: URL = new URL(Xrm.Page.getAttribute("msdyn_landingurl").getValue());
-			if (!urlRegExp.test(landingURL.hostname) && !protocolRegExp.test(landingURL.protocol)) {
+			if (!urlRegExp.test(landingURL.hostname) || !protocolRegExp.test(landingURL.protocol)) {
 				let alertMessage: string = "Enter a valid URL";
 				let buttonText: string = "OK";
 				let alertStrings: any = { confirmButtonLabel: buttonText, text: alertMessage };
@@ -25,7 +25,7 @@ module CIFramework {
 		try
 		{
 		let trustedDomain: URL = new URL(Xrm.Page.getAttribute("msdyn_trusteddomain").getValue());
-			if (!urlRegExp.test(trustedDomain.hostname) && !protocolRegExp.test(trustedDomain.protocol)) {
+			if (!urlRegExp.test(trustedDomain.hostname) || !protocolRegExp.test(trustedDomain.protocol)) {
 			let alertMessage: string = "Enter a valid Trusted Domain URL";
 			let buttonText: string = "OK";
 			let alertStrings: any = { confirmButtonLabel: buttonText, text: alertMessage };
