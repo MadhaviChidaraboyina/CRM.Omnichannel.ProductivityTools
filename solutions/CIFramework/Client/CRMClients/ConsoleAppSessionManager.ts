@@ -3,6 +3,7 @@
  */
 
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2587-manual/clientapi/XrmClientApi.d.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
 	declare var Xrm: any;
@@ -20,7 +21,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		getVisibleSession(): string {
-			return Xrm.App.Sessions.GetFocusedSession();
+			return Xrm.App.sessions.getFocusedSession();
 		}
 
 		/**

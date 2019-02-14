@@ -6,7 +6,7 @@
 /// <reference path="Constants.ts" />
 /// <reference path="WidgetIFrame.ts" />
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
-/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2522-manual/clientapi/XrmClientApi.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2587-manual/clientapi/XrmClientApi.d.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 
 /** @internal */
@@ -366,7 +366,7 @@ namespace Microsoft.CIFramework.Internal {
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Utility.getGlobalContext";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
-
+			
 			data.set(Constants.ClientUrl, context.getClientUrl());
 			data.set(Constants.AppUrl, context.getCurrentAppUrl());
 			data.set(Constants.OrgLcid, context.organizationSettings.languageId);
