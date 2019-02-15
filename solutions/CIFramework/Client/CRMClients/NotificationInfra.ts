@@ -205,6 +205,7 @@ namespace Microsoft.CIFramework.Internal {
 									btn.classList.add("singleButtonAccept_CIF");
 									btn.style.width = "calc(50% - 20px)";//((panelWidth / 2) - 20) + "px";
 								}
+								btn.focus();
 								btn.appendChild(span);
 								btn.getElementsByTagName("span")[0].classList.add("acceptButtonSpan_CIF");
 								btn.getElementsByTagName("span")[0].classList.add("FontIcons_acceptButtonSpan_CIF");
@@ -317,6 +318,7 @@ namespace Microsoft.CIFramework.Internal {
 		let map = new Map();
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("softToastDiv");
+		toastDiv.setAttribute("role","alert");
 		var childDivs = toastDiv.getElementsByTagName('div');
 		let i = 0;
 		if(childDivs != null){
@@ -429,6 +431,7 @@ namespace Microsoft.CIFramework.Internal {
 	export function notifyEventClient(notificationUX: Map<string,Map<string,any>>): Promise<any>{
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
+		toastDiv.setAttribute("role","alert");
 		let i = 0;
 		let header,body,actions;
 		let eventType;
