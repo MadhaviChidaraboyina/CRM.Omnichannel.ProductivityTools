@@ -14,7 +14,7 @@ namespace Microsoft.CIFramework.Internal
 
 	export function initializeTelemetry() {
 		let domain = getDomain();
-		if (domain == "Normal") {
+		if (domain == "Public") {
 			defaultLogger = AWTLogManager.initialize(prodIngestionKey);
 		}
 		else if (domain == "Dev") {
@@ -56,7 +56,7 @@ namespace Microsoft.CIFramework.Internal
 		else if (hostValue.endsWith("extest.microsoft.com"))
 			return "Dev";
 		else
-			return "Normal";
+			return "Public";
 	}
 
 	// Returns the ARIA configuration for the environment type
