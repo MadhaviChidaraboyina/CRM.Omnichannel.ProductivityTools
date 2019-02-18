@@ -7,7 +7,7 @@
 /// <reference path="../Constants.ts" />
 /// <reference path="State.ts" />
 /// <reference path="../TelemetryHelper.ts" />
-/// <reference path="aria-webjs-sdk-1.6.2.d.ts" />
+/// <reference path="aria-webjs-sdk-1.8.3.d.ts" />
 
 namespace Microsoft.CIFramework.Internal {
 	let Constants = Microsoft.CIFramework.Constants;

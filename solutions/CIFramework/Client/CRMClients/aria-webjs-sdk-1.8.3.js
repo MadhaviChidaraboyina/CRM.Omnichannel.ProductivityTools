@@ -86,7 +86,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
 * Enums.ts
 * @author Abhilash Panwar (abpanwar)
-* @copyright Microsoft 2017
+* @copyright Microsoft 2018
 * File containing the enums.
 */
 /**
@@ -115,6 +115,10 @@ var AWTPropertyType;
      * A boolean.
      */
     AWTPropertyType[AWTPropertyType["Boolean"] = 4] = "Boolean";
+    /**
+     * A date.
+     */
+    AWTPropertyType[AWTPropertyType["Date"] = 5] = "Date";
 })(AWTPropertyType = exports.AWTPropertyType || (exports.AWTPropertyType = {}));
 /**
  * The AWTPiiKind enumeration contains a set of values that specify the kind of PII (Personal Identifiable Information).
@@ -272,13 +276,14 @@ var Enums_1 = __webpack_require__(0);
 var GuidRegex = /[xy]/g;
 var MSTillUnixEpoch = 62135596800000;
 var MSToTicksMultiplier = 10000;
+var NullValue = null;
 exports.EventNameAndTypeRegex = /^[a-zA-Z]([a-zA-Z0-9]|_){2,98}[a-zA-Z0-9]$/;
 exports.EventNameDotRegex = /\./g;
 exports.PropertyNameRegex = /^[a-zA-Z](([a-zA-Z0-9|_|\.]){0,98}[a-zA-Z0-9])?$/;
 exports.StatsApiKey = 'a387cfcf60114a43a7699f9fbb49289e-9bceb9fe-1c06-460f-96c5-6a0b247358bc-7238';
-var beaconsSupported = null;
-var uInt8ArraySupported = null;
-var useXDR = null;
+var beaconsSupported = NullValue;
+var uInt8ArraySupported = NullValue;
+var useXDR = NullValue;
 /**
  * Converts a number to Bond Int64.
  * @param {number} value - The number to be converted.
@@ -331,6 +336,15 @@ function isBoolean(value) {
 }
 exports.isBoolean = isBoolean;
 /**
+ * Check if the type of value is a date.
+ * @param {any} value - Value to be checked.
+ * @return {boolean} True if the value is a date, false otherwise.
+ */
+function isDate(value) {
+    return value instanceof Date;
+}
+exports.isDate = isDate;
+/**
  * Converts milliseconds to ticks since 00:00:00 Jan 1, 0001.
  * @param {number} msToTicks - The milliseconds value to be converted.
  * @return {number} The value of the milliseconds in .Net Ticks.
@@ -357,7 +371,7 @@ exports.getTenantId = getTenantId;
  * @return {boolean} True if supported, false otherwise.
  */
 function isBeaconsSupported() {
-    if (beaconsSupported === null) {
+    if (beaconsSupported === NullValue) {
         beaconsSupported = typeof navigator !== 'undefined' && Boolean(navigator.sendBeacon);
     }
     return beaconsSupported;
@@ -369,7 +383,7 @@ exports.isBeaconsSupported = isBeaconsSupported;
  * @return {boolean} True if available, false otherwise.
  */
 function isUint8ArrayAvailable() {
-    if (uInt8ArraySupported === null) {
+    if (uInt8ArraySupported === NullValue) {
         uInt8ArraySupported = typeof Uint8Array !== 'undefined' && !isSafariOrFirefox() && !isReactNative();
     }
     return uInt8ArraySupported;
@@ -390,41 +404,39 @@ exports.isPriority = isPriority;
 /**
  * Sanitizes the Property. It checks the that the property name and value are valid. It also
  * checks/populates the correct type and pii of the property value.
- * @param {string} name                           - The property name.
- * @param {string|number|boolean|object} property - The property value or an AWTEventProperty containing value,
+ * @param {string} name                                - The property name.
+ * @param {string|number|boolean|Date|object} property - The property value or an AWTEventProperty containing value,
  * type ,pii and customer content.
  * @return {object} AWTEventProperty containing valid name, value, pii and type or null if invalid.
  */
 function sanitizeProperty(name, property) {
     //Check that property is valid
-    if (!exports.PropertyNameRegex.test(name) || property === undefined || property === null || property === '') {
-        return null;
+    if (!exports.PropertyNameRegex.test(name) || isNotDefined(property)) {
+        return NullValue;
     }
-    //If the property isn't AWTEventProperty, convert it into one.
-    if (isString(property) || isNumber(property) || isBoolean(property)) {
+    //Check if type is AWTEventProperty. If not convert to AWTEventProperty
+    if (isNotDefined(property.value)) {
         property = { value: property, type: Enums_1.AWTPropertyType.Unspecified };
-    }
-    else if (property.value === undefined || property.value === null
-        || property.value === '' || (!isString(property.value)
-        && !isNumber(property.value) && !isBoolean(property.value))) {
-        //Since property is AWTEventProperty, we need to validate its value
-        return null;
     }
     property.type = sanitizePropertyType(property.value, property.type);
     if (!property.type) {
-        return null;
+        return NullValue;
+    }
+    //If value is date. Then convert to number in Ticks.
+    if (isDate(property.value)) {
+        property.value = msToTicks(property.value.getTime());
     }
     //Ensure that only one of pii or customer content can be set
     if (property.pii > 0 && property.cc > 0) {
-        return null;
+        return NullValue;
     }
     //If pii is set we need to validate its enum value.
     if (property.pii) {
-        return isPii(property.pii) ? property : null;
+        return isPii(property.pii) ? property : NullValue;
     }
     //If cc is set we need to validate its enum value.
     if (property.cc) {
-        return isCustomerContent(property.cc) ? property : null;
+        return isCustomerContent(property.cc) ? property : NullValue;
     }
     return property;
 }
@@ -446,7 +458,7 @@ function getISOString(date) {
 }
 exports.getISOString = getISOString;
 function useXDomainRequest() {
-    if (useXDR === null) {
+    if (useXDR === NullValue) {
         var conn = new XMLHttpRequest();
         if (typeof conn.withCredentials === 'undefined' &&
             typeof XDomainRequest !== 'undefined') {
@@ -482,23 +494,22 @@ function threeDigit(n) {
     return n.toString();
 }
 function sanitizePropertyType(value, type) {
-    if (!isPropertyType(type) || type === Enums_1.AWTPropertyType.Unspecified) {
-        return getCorrectType(value);
+    type = !isPropertyType(type) ? Enums_1.AWTPropertyType.Unspecified : type;
+    switch (type) {
+        case Enums_1.AWTPropertyType.Unspecified:
+            return getCorrectType(value);
+        case Enums_1.AWTPropertyType.String:
+            return isString(value) ? type : NullValue;
+        case Enums_1.AWTPropertyType.Boolean:
+            return isBoolean(value) ? type : NullValue;
+        case Enums_1.AWTPropertyType.Date:
+            return isDate(value) && value.getTime() !== NaN ? type : NullValue;
+        case Enums_1.AWTPropertyType.Int64:
+            return isNumber(value) && value % 1 === 0 ? type : NullValue;
+        case Enums_1.AWTPropertyType.Double:
+            return isNumber(value) ? type : NullValue;
     }
-    if (type === Enums_1.AWTPropertyType.String && typeof value === 'string') {
-        return type;
-    }
-    if ((type === Enums_1.AWTPropertyType.Double || type === Enums_1.AWTPropertyType.Int64) && typeof value === 'number') {
-        if (type === Enums_1.AWTPropertyType.Int64 && value % 1 !== 0) {
-            return null;
-        }
-        else {
-            return type;
-        }
-    }
-    if (type === Enums_1.AWTPropertyType.Boolean && typeof value === 'boolean') {
-        return type;
-    }
+    return NullValue;
 }
 function getCorrectType(value) {
     switch (typeof value) {
@@ -508,8 +519,10 @@ function getCorrectType(value) {
             return Enums_1.AWTPropertyType.Boolean;
         case 'number':
             return Enums_1.AWTPropertyType.Double;
+        case 'object':
+            return isDate(value) ? Enums_1.AWTPropertyType.Date : NullValue;
     }
-    return Enums_1.AWTPropertyType.Unspecified;
+    return NullValue;
 }
 function isPii(value) {
     if (isNumber(value) && value >= 0 && value <= 13) {
@@ -538,6 +551,9 @@ function isSafariOrFirefox() {
         }
     }
     return false;
+}
+function isNotDefined(value) {
+    return value === undefined || value === NullValue || value === '';
 }
 
 
@@ -724,7 +740,7 @@ var AWTTransmissionManagerCore = /** @class */ (function () {
         var _this = this;
         this._newEventsAllowed = true;
         this._config = config;
-        this._eventHandler = new AWTQueueManager_1.default(config.collectorUri, config.cacheMemorySizeLimitInNumberOfEvents, config.httpXHROverride);
+        this._eventHandler = new AWTQueueManager_1.default(config.collectorUri, config.cacheMemorySizeLimitInNumberOfEvents, config.httpXHROverride, config.clockSkewRefreshDurationInMins);
         this._initializeProfiles();
         AWTStatsManager_1.default.initialize(function (stats, tenantId) {
             if (_this._config.canSendStatEvent(StatName)) {
@@ -995,7 +1011,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
 * AWTEventProperties.ts
 * @author Abhilash Panwar (abpanwar)
-* @copyright Microsoft 2017
+* @copyright Microsoft 2018
 */
 var Utils = __webpack_require__(1);
 var Enums_1 = __webpack_require__(0);
@@ -1073,9 +1089,9 @@ var AWTEventProperties = /** @class */ (function () {
     };
     /**
      * Sets a property with a name and value. Optionally sets the property type.
-     * @param {string} name                 - The name of the property.
-     * @param {string|number|boolean} value - The property's value.
-     * @param {enum} type                   - [Optional] One of the AWTPropertyType enumeration values that specifies
+     * @param {string} name                      - The name of the property.
+     * @param {string|number|boolean|Date} value - The property's value.
+     * @param {enum} type                        - [Optional] One of the AWTPropertyType enumeration values that specifies
      * the type for the property.
      */
     AWTEventProperties.prototype.setProperty = function (name, value, type) {
@@ -1090,10 +1106,10 @@ var AWTEventProperties = /** @class */ (function () {
     };
     /**
      * Sets a property with a name, a value, and a PII. Optionally sets the property type.
-     * @param {string} name                 - The name of the property.
-     * @param {string|number|boolean} value - The property's value.
-     * @param {enum} pii                    - The kind of PII for the property.
-     * @param {enum} type                   - [Optional] One of the AWTPropertyType enumeration values that specifies
+     * @param {string} name                      - The name of the property.
+     * @param {string|number|boolean|Date} value - The property's value.
+     * @param {enum} pii                         - The kind of PII for the property.
+     * @param {enum} type                        - [Optional] One of the AWTPropertyType enumeration values that specifies
      * the type for the property.
      */
     AWTEventProperties.prototype.setPropertyWithPii = function (name, value, pii, type) {
@@ -1108,10 +1124,10 @@ var AWTEventProperties = /** @class */ (function () {
     };
     /**
      * Sets a property with name, value and customer content. Optionally set the property type of the value.
-     * @param {string} name                 - The name of the property.
-     * @param {string|number|boolean} value - The property's value.
-     * @param {enum} customerContent        - The customer content kind for the property.
-     * @param {enum} type                   - [Optional] One of the AWTPropertyType enumeration values that specifies
+     * @param {string} name                      - The name of the property.
+     * @param {string|number|boolean|Date} value - The property's value.
+     * @param {enum} customerContent             - The customer content kind for the property.
+     * @param {enum} type                        - [Optional] One of the AWTPropertyType enumeration values that specifies
      * the type for the property.
      */
     AWTEventProperties.prototype.setPropertyWithCustomerContent = function (name, value, customerContent, type) {
@@ -1343,11 +1359,13 @@ var AWTAutoCollection = /** @class */ (function () {
     AWTAutoCollection.checkAndSaveDeviceId = function (deviceId) {
         if (deviceId) {
             var oldDeviceId = this._getData(DEVICE_ID_COOKIE);
+            var flt = this._getData(FIRSTLAUNCHTIME_COOKIE);
             if (oldDeviceId !== deviceId) {
-                this._saveData(DEVICE_ID_COOKIE, deviceId);
-                this._saveData(FIRSTLAUNCHTIME_COOKIE, Utils.getISOString(new Date()));
+                flt = Utils.getISOString(new Date());
             }
-            this._setFirstLaunchTime(this._getData(FIRSTLAUNCHTIME_COOKIE));
+            this._saveData(DEVICE_ID_COOKIE, deviceId);
+            this._saveData(FIRSTLAUNCHTIME_COOKIE, flt);
+            this._setFirstLaunchTime(flt);
         }
     };
     /**
@@ -1357,10 +1375,6 @@ var AWTAutoCollection = /** @class */ (function () {
         var deviceId = this._getData(DEVICE_ID_COOKIE);
         if (!deviceId) {
             deviceId = Utils.newGuid();
-            this.checkAndSaveDeviceId(deviceId);
-        }
-        else {
-            this._setFirstLaunchTime(this._getData(FIRSTLAUNCHTIME_COOKIE));
         }
         this._semanticContext.setDeviceId(deviceId);
     };
@@ -1900,6 +1914,7 @@ var AWTSerializer = /** @class */ (function () {
                             requestDictionary[token] = dataPackage.splice(0, i);
                             remainingRequest[token] = dataPackage;
                             this._addNewDataPackageSize(requestDictionary[token].length, stream, dpSizeSerialized, dpSizePos);
+                            requestFull = true;
                             break;
                         }
                     }
@@ -1957,6 +1972,8 @@ var AWTSerializer = /** @class */ (function () {
         var propDoubleCount = 0;
         var propsBool = {};
         var propBoolCount = 0;
+        var propsDate = {};
+        var propDateCount = 0;
         var piiProps = {};
         var piiPropCount = 0;
         var ccProps = {};
@@ -1990,6 +2007,10 @@ var AWTSerializer = /** @class */ (function () {
                         case Enums_1.AWTPropertyType.Boolean:
                             propsBool[key] = property.value;
                             propBoolCount++;
+                            break;
+                        case Enums_1.AWTPropertyType.Date:
+                            propsDate[key] = property.value;
+                            propDateCount++;
                             break;
                     }
                 }
@@ -2038,6 +2059,18 @@ var AWTSerializer = /** @class */ (function () {
                     var value = propsBool[key];
                     writer._WriteString(key);
                     writer._WriteBool(value);
+                }
+            }
+        }
+        //TypedExtensionDateTime map
+        if (propDateCount) {
+            writer._WriteFieldBegin(Bond._BondDataType._BT_MAP, 32, null);
+            writer._WriteMapContainerBegin(propDateCount, Bond._BondDataType._BT_STRING, Bond._BondDataType._BT_INT64);
+            for (var key in propsDate) {
+                if (propsDate.hasOwnProperty(key)) {
+                    var value = propsDate[key];
+                    writer._WriteString(key);
+                    writer._WriteInt64(Utils.numberToBondInt64(value));
                 }
             }
         }
@@ -2435,6 +2468,9 @@ var AWTLogManager = /** @class */ (function () {
         if (config.enableAutoUserSession && typeof window !== 'undefined' && window.addEventListener) {
             this._config.enableAutoUserSession = config.enableAutoUserSession;
         }
+        if (config.clockSkewRefreshDurationInMins > 0) {
+            this._config.clockSkewRefreshDurationInMins = config.clockSkewRefreshDurationInMins;
+        }
     };
     AWTLogManager._loggers = {};
     AWTLogManager._isInitialized = false;
@@ -2443,7 +2479,8 @@ var AWTLogManager = /** @class */ (function () {
         collectorUri: 'https://browser.pipe.aria.microsoft.com/Collector/3.0/',
         cacheMemorySizeLimitInNumberOfEvents: 10000,
         disableCookiesUsage: false,
-        canSendStatEvent: function (eventName) { return true; }
+        canSendStatEvent: function (eventName) { return true; },
+        clockSkewRefreshDurationInMins: 0
     };
     return AWTLogManager;
 }());
@@ -2821,21 +2858,21 @@ var AWTLogger = /** @class */ (function () {
         AWTTransmissionManagerCore_1.default.sendEvent(event);
     };
     AWTLogger._getInternalEvent = function (event, apiKey, sanitizeProperties) {
-        var internalEvent = event;
-        internalEvent.id = Utils.newGuid();
-        internalEvent.apiKey = apiKey;
-        internalEvent.properties = internalEvent.properties || {};
+        event.properties = event.properties || {};
         if (sanitizeProperties) {
             // Event Properties 
-            for (var name_3 in internalEvent.properties) {
-                if (internalEvent.properties.hasOwnProperty(name_3)) {
-                    internalEvent.properties[name_3] = Utils.sanitizeProperty(name_3, internalEvent.properties[name_3]);
-                    if (internalEvent.properties[name_3] === null) {
-                        delete internalEvent.properties[name_3];
+            for (var name_3 in event.properties) {
+                if (event.properties.hasOwnProperty(name_3)) {
+                    event.properties[name_3] = Utils.sanitizeProperty(name_3, event.properties[name_3]);
+                    if (event.properties[name_3] === null) {
+                        delete event.properties[name_3];
                     }
                 }
             }
         }
+        var internalEvent = event;
+        internalEvent.id = Utils.newGuid();
+        internalEvent.apiKey = apiKey;
         return internalEvent;
     };
     AWTLogger._getInitId = function (apiKey) {
@@ -2879,7 +2916,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 * @copyright Microsoft 2018
 * File for SDK version.
 */
-exports.Version = '1.6.2';
+exports.Version = '1.8.3';
 exports.FullVersionString = 'AWT-Web-JS-' + exports.Version;
 
 
@@ -3412,12 +3449,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 * Class to manage clock skew correction.
 */
 var AWTClockSkewManager = /** @class */ (function () {
-    function AWTClockSkewManager() {
-        this._allowRequestSending = true;
-        this._shouldAddClockSkewHeaders = true;
-        this._isFirstRequest = true;
-        this._clockSkewHeaderValue = 'use-collector-delta';
-        this._clockSkewSet = false;
+    function AWTClockSkewManager(clockSkewRefreshDurationInMins) {
+        this.clockSkewRefreshDurationInMins = clockSkewRefreshDurationInMins;
+        this._reset();
     }
     /**
      * Determine if the request can be sent.
@@ -3460,6 +3494,17 @@ var AWTClockSkewManager = /** @class */ (function () {
             }
             this._clockSkewSet = true;
             this._allowRequestSending = true;
+        }
+    };
+    AWTClockSkewManager.prototype._reset = function () {
+        var _this = this;
+        this._isFirstRequest = true;
+        this._clockSkewSet = false;
+        this._allowRequestSending = true;
+        this._shouldAddClockSkewHeaders = true;
+        this._clockSkewHeaderValue = 'use-collector-delta';
+        if (this.clockSkewRefreshDurationInMins > 0) {
+            setTimeout(function () { return _this._reset(); }, this.clockSkewRefreshDurationInMins * 60000);
         }
     };
     return AWTClockSkewManager;
@@ -3684,7 +3729,7 @@ var AWTHttpManager = /** @class */ (function () {
      * @param {object} _queueManager  - The queue manager that we should add requests back to if needed.
      * @param {object} _httpInterface - The http interface that should be used to send HTTP requests.
      */
-    function AWTHttpManager(_requestQueue, collectorUrl, _queueManager, _httpInterface) {
+    function AWTHttpManager(_requestQueue, collectorUrl, _queueManager, _httpInterface, clockSkewRefreshDurationInMins) {
         var _this = this;
         this._requestQueue = _requestQueue;
         this._queueManager = _queueManager;
@@ -3693,9 +3738,9 @@ var AWTHttpManager = /** @class */ (function () {
             + Version.FullVersionString;
         this._killSwitch = new AWTKillSwitch_1.default();
         this._paused = false;
-        this._clockSkewManager = new AWTClockSkewManager_1.default();
         this._useBeacons = false;
         this._activeConnections = 0;
+        this._clockSkewManager = new AWTClockSkewManager_1.default(clockSkewRefreshDurationInMins);
         if (!Utils.isUint8ArrayAvailable()) {
             this._urlString += '&content-encoding=base64';
         }
@@ -3704,56 +3749,62 @@ var AWTHttpManager = /** @class */ (function () {
             this._useBeacons = !Utils.isReactNative(); //Only use beacons if not running in React Native
             this._httpInterface = {
                 sendPOST: function (urlString, data, ontimeout, onerror, onload, sync) {
-                    if (Utils.useXDomainRequest()) {
-                        var xdr = new XDomainRequest();
-                        xdr.open(Method, urlString);
-                        //can't get the status code in xdr.
-                        xdr.onload = function () {
-                            // we will assume onload means the request succeeded.
-                            onload(200, null);
-                        };
-                        xdr.onerror = function () {
-                            // we will assume onerror means we need to drop the events.
-                            onerror(400, null);
-                        };
-                        xdr.ontimeout = function () {
-                            // we will assume ontimeout means we need to retry the events.
-                            ontimeout(500, null);
-                        };
-                        xdr.send(data);
+                    try {
+                        if (Utils.useXDomainRequest()) {
+                            var xdr = new XDomainRequest();
+                            xdr.open(Method, urlString);
+                            //can't get the status code in xdr.
+                            xdr.onload = function () {
+                                // we will assume onload means the request succeeded.
+                                onload(200, null);
+                            };
+                            xdr.onerror = function () {
+                                // we will assume onerror means we need to drop the events.
+                                onerror(400, null);
+                            };
+                            xdr.ontimeout = function () {
+                                // we will assume ontimeout means we need to retry the events.
+                                ontimeout(500, null);
+                            };
+                            xdr.send(data);
+                        }
+                        else if (Utils.isReactNative()) {
+                            //Use the fetch API to send events in React Native
+                            fetch(urlString, {
+                                body: data,
+                                method: Method
+                            }).then(function (response) {
+                                var headerMap = {};
+                                if (response.headers) {
+                                    response.headers.forEach(function (value, name) {
+                                        headerMap[name] = value;
+                                    });
+                                }
+                                onload(response.status, headerMap);
+                            }).catch(function (error) {
+                                //In case there is an error in the request. Set the status to 0
+                                //so that the events can be retried later.
+                                onerror(0, {});
+                            });
+                        }
+                        else {
+                            var xhr_1 = new XMLHttpRequest();
+                            xhr_1.open(Method, urlString, !sync);
+                            xhr_1.onload = function () {
+                                onload(xhr_1.status, _this._convertAllHeadersToMap(xhr_1.getAllResponseHeaders()));
+                            };
+                            xhr_1.onerror = function () {
+                                onerror(xhr_1.status, _this._convertAllHeadersToMap(xhr_1.getAllResponseHeaders()));
+                            };
+                            xhr_1.ontimeout = function () {
+                                ontimeout(xhr_1.status, _this._convertAllHeadersToMap(xhr_1.getAllResponseHeaders()));
+                            };
+                            xhr_1.send(data);
+                        }
                     }
-                    else if (Utils.isReactNative()) {
-                        //Use the fetch API to send events in React Native
-                        fetch(urlString, {
-                            body: data,
-                            method: Method
-                        }).then(function (response) {
-                            var headerMap = {};
-                            if (response.headers) {
-                                response.headers.forEach(function (value, name) {
-                                    headerMap[name] = value;
-                                });
-                            }
-                            onload(response.status, headerMap);
-                        }).catch(function (error) {
-                            //In case there is an error in the request. Set the status to 0
-                            //so that the events can be retried later.
-                            onerror(0, {});
-                        });
-                    }
-                    else {
-                        var xhr_1 = new XMLHttpRequest();
-                        xhr_1.open(Method, urlString, !sync);
-                        xhr_1.onload = function () {
-                            onload(xhr_1.status, _this._convertAllHeadersToMap(xhr_1.getAllResponseHeaders()));
-                        };
-                        xhr_1.onerror = function () {
-                            onerror(xhr_1.status, _this._convertAllHeadersToMap(xhr_1.getAllResponseHeaders()));
-                        };
-                        xhr_1.ontimeout = function () {
-                            ontimeout(xhr_1.status, _this._convertAllHeadersToMap(xhr_1.getAllResponseHeaders()));
-                        };
-                        xhr_1.send(data);
+                    catch (e) {
+                        // we will assume exception means we need to drop the events.
+                        onerror(400, null);
                     }
                 }
             };
@@ -3840,71 +3891,77 @@ var AWTHttpManager = /** @class */ (function () {
     AWTHttpManager.prototype._sendRequest = function (request, retryCount, isTeardown, isSynchronous) {
         var _this = this;
         if (isSynchronous === void 0) { isSynchronous = false; }
-        if (this._paused) {
-            this._activeConnections--;
-            this._queueManager.addBackRequest(request);
-            return;
-        }
-        var tokenCount = 0;
-        var apikey = '';
-        for (var token in request) {
-            if (request.hasOwnProperty(token)) {
-                if (!this._killSwitch.isTenantKilled(token)) {
-                    if (apikey.length > 0) {
-                        apikey += ',';
-                    }
-                    apikey += token;
-                    tokenCount++;
-                }
-                else {
-                    AWTNotificationManager_1.default.eventsRejected(request[token], Enums_1.AWTEventsRejectedReason.KillSwitch);
-                    delete request[token];
-                }
+        try {
+            if (this._paused) {
+                this._activeConnections--;
+                this._queueManager.addBackRequest(request);
+                return;
             }
-        }
-        if (tokenCount > 0) {
-            var payloadResult = AWTSerializer_1.default.getPayloadBlob(request, tokenCount);
-            if (payloadResult.remainingRequest) {
-                this._requestQueue.push(payloadResult.remainingRequest);
-            }
-            var urlString = this._urlString + '&x-apikey=' + apikey + '&client-time-epoch-millis='
-                + Date.now().toString();
-            if (this._clockSkewManager.shouldAddClockSkewHeaders()) {
-                urlString = urlString + '&time-delta-to-apply-millis=' + this._clockSkewManager.getClockSkewHeaderValue();
-            }
-            var data = void 0;
-            if (!Utils.isUint8ArrayAvailable()) {
-                data = AWTSerializer_1.default.base64Encode(payloadResult.payloadBlob);
-            }
-            else {
-                data = new Uint8Array(payloadResult.payloadBlob);
-            }
+            var tokenCount_1 = 0;
+            var apikey_1 = '';
             for (var token in request) {
                 if (request.hasOwnProperty(token)) {
-                    //Increment the send attempt count
-                    for (var i = 0; i < request[token].length; ++i) {
-                        request[token][i].sendAttempt > 0 ? request[token][i].sendAttempt++ : request[token][i].sendAttempt = 1;
+                    if (!this._killSwitch.isTenantKilled(token)) {
+                        if (apikey_1.length > 0) {
+                            apikey_1 += ',';
+                        }
+                        apikey_1 += token;
+                        tokenCount_1++;
+                    }
+                    else {
+                        AWTNotificationManager_1.default.eventsRejected(request[token], Enums_1.AWTEventsRejectedReason.KillSwitch);
+                        delete request[token];
                     }
                 }
             }
-            //beacons will not be used if an http interface was passed by the customer
-            if (this._useBeacons && isTeardown && Utils.isBeaconsSupported()) {
-                if (navigator.sendBeacon(urlString, data)) {
-                    //Request sent via beacon.
-                    return;
+            if (tokenCount_1 > 0) {
+                var payloadResult = AWTSerializer_1.default.getPayloadBlob(request, tokenCount_1);
+                if (payloadResult.remainingRequest) {
+                    this._requestQueue.push(payloadResult.remainingRequest);
                 }
+                var urlString = this._urlString + '&x-apikey=' + apikey_1 + '&client-time-epoch-millis='
+                    + Date.now().toString();
+                if (this._clockSkewManager.shouldAddClockSkewHeaders()) {
+                    urlString = urlString + '&time-delta-to-apply-millis=' + this._clockSkewManager.getClockSkewHeaderValue();
+                }
+                var data = void 0;
+                if (!Utils.isUint8ArrayAvailable()) {
+                    data = AWTSerializer_1.default.base64Encode(payloadResult.payloadBlob);
+                }
+                else {
+                    data = new Uint8Array(payloadResult.payloadBlob);
+                }
+                for (var token in request) {
+                    if (request.hasOwnProperty(token)) {
+                        //Increment the send attempt count
+                        for (var i = 0; i < request[token].length; ++i) {
+                            request[token][i].sendAttempt > 0 ? request[token][i].sendAttempt++ : request[token][i].sendAttempt = 1;
+                        }
+                    }
+                }
+                //beacons will not be used if an http interface was passed by the customer
+                if (this._useBeacons && isTeardown && Utils.isBeaconsSupported()) {
+                    if (navigator.sendBeacon(urlString, data)) {
+                        //Request sent via beacon.
+                        return;
+                    }
+                }
+                //Send sync requests if the request is immediate or we are tearing down telemetry.
+                this._httpInterface.sendPOST(urlString, data, function (status, headers) {
+                    _this._retryRequestIfNeeded(status, headers, request, tokenCount_1, apikey_1, retryCount, isTeardown, isSynchronous);
+                }, function (status, headers) {
+                    _this._retryRequestIfNeeded(status, headers, request, tokenCount_1, apikey_1, retryCount, isTeardown, isSynchronous);
+                }, function (status, headers) {
+                    _this._retryRequestIfNeeded(status, headers, request, tokenCount_1, apikey_1, retryCount, isTeardown, isSynchronous);
+                }, isTeardown || isSynchronous);
             }
-            //Send sync requests if the request is immediate or we are tearing down telemetry.
-            this._httpInterface.sendPOST(urlString, data, function (status, headers) {
-                _this._retryRequestIfNeeded(status, headers, request, tokenCount, apikey, retryCount, isTeardown, isSynchronous);
-            }, function (status, headers) {
-                _this._retryRequestIfNeeded(status, headers, request, tokenCount, apikey, retryCount, isTeardown, isSynchronous);
-            }, function (status, headers) {
-                _this._retryRequestIfNeeded(status, headers, request, tokenCount, apikey, retryCount, isTeardown, isSynchronous);
-            }, isTeardown || isSynchronous);
+            else if (!isTeardown) {
+                this._handleRequestFinished(false, {}, isTeardown, isSynchronous);
+            }
         }
-        else if (!isTeardown) {
-            this._handleRequestFinished(null, {}, isTeardown, isSynchronous);
+        catch (e) {
+            //If we catch any error while sending the request, drop the request.
+            this._handleRequestFinished(false, {}, isTeardown, isSynchronous);
         }
     };
     AWTHttpManager.prototype._retryRequestIfNeeded = function (status, headers, request, tokenCount, apikey, retryCount, isTeardown, isSynchronous) {
@@ -4009,6 +4066,7 @@ var AWTHttpManager_1 = __webpack_require__(27);
 var AWTTransmissionManagerCore_1 = __webpack_require__(3);
 var AWTRecordBatcher_1 = __webpack_require__(25);
 var AWTNotificationManager_1 = __webpack_require__(2);
+var Utils = __webpack_require__(1);
 var UploadNowCheckTimer = 250;
 var MaxNumberEventPerBatch = 500;
 var MaxSendAttempts = 6;
@@ -4021,7 +4079,7 @@ var AWTQueueManager = /** @class */ (function () {
      * @constructor
      * @param {string} collectorUrl - The collector url to which the requests must be sent.
      */
-    function AWTQueueManager(collectorUrl, _queueSizeLimit, xhrOverride) {
+    function AWTQueueManager(collectorUrl, _queueSizeLimit, xhrOverride, clockSkewRefreshDurationInMins) {
         this._queueSizeLimit = _queueSizeLimit;
         this._isCurrentlyUploadingNow = false;
         this._uploadNowQueue = [];
@@ -4035,13 +4093,17 @@ var AWTQueueManager = /** @class */ (function () {
         this._inboundQueues[Enums_1.AWTEventPriority.Low] = [];
         this._addEmptyQueues();
         this._batcher = new AWTRecordBatcher_1.default(this._outboundQueue, MaxNumberEventPerBatch);
-        this._httpManager = new AWTHttpManager_1.default(this._outboundQueue, collectorUrl, this, xhrOverride);
+        this._httpManager = new AWTHttpManager_1.default(this._outboundQueue, collectorUrl, this, xhrOverride, clockSkewRefreshDurationInMins);
     }
     /**
      * Add an event to the appropriate inbound queue based on its priority.
      * @param {object} event - The event to be added to the queue.
      */
     AWTQueueManager.prototype.addEvent = function (event) {
+        if (!Utils.isPriority(event.priority)) {
+            //If invalid priority, then send it with normal priority
+            event.priority = Enums_1.AWTEventPriority.Normal;
+        }
         if (event.priority === Enums_1.AWTEventPriority.Immediate_sync) {
             //Log event synchronously
             this._httpManager.sendSynchronousRequest(this._batcher.addEventToBatch(event), event.apiKey);
@@ -4295,4 +4357,4 @@ module.exports = __webpack_require__(16);
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=aria-webjs-sdk-1.6.2.js.map
+//# sourceMappingURL=aria-webjs-sdk-1.8.3.js.map

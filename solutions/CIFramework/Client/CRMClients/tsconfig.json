@@ -15,7 +15,7 @@
 		"WidgetIFrame.ts",
 		"InternalMainLibrary.ts",
 		"NotificationInfra.ts",
-		"aria-webjs-sdk-1.6.2.js",
+		"aria-webjs-sdk-1.8.3.js",
 		"PresenceControl.ts",
 		"NotesInfra.ts"
 	],

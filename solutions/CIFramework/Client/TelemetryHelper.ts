@@ -1,15 +1,77 @@
 /// <reference path="CRMClients/TelemetryConstants.ts" />
 /// <reference path="CRMClients/State.ts" />
-/// <reference path="CRMClients/aria-webjs-sdk-1.6.2.d.ts" />
+/// <reference path="CRMClients/aria-webjs-sdk-1.8.3.d.ts" />
 /// <reference path="CRMClients/IErrorHandler.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal
 {
 	declare var Xrm: any;
 	declare var defaultLogger: any;
-	//var projectIngestionKey = "39f156fe0f00465288756928db675fe0-fef5dc1c-14bd-4361-9259-5f10f8ef5040-7209";
-	var projectIngestionKey = "c9c1194c87c94526aec78723b69b8f74-9f92422f-af44-4fcd-b617-fef8519423e8-7331";
-	defaultLogger = AWTLogManager.initialize(projectIngestionKey);
+	let prodIngestionKey = "39f156fe0f00465288756928db675fe0-fef5dc1c-14bd-4361-9259-5f10f8ef5040-7209";
+	let devIngestionKey = "d129926264ad4dcc891eaf004fb351de-9bb27fd5-7e89-42a5-960c-c397c94ce2af-7153";
+	let GERMANY_ENDPOINT = "https://de.pipe.aria.microsoft.com/Collector/3.0/";
+	let GCCH_ENDPOINT = "https://tb.pipe.aria.microsoft.com/Collector/3.0/";
+
+	export function initializeTelemetry() {
+		let domain = getDomain();
+		if (domain == "Normal") {
+			defaultLogger = AWTLogManager.initialize(prodIngestionKey);
+		}
+		else if (domain == "Dev") {
+			defaultLogger = AWTLogManager.initialize(devIngestionKey);
+		}
+		else {
+			let logConfig = getConfiguration(domain);
+			defaultLogger = AWTLogManager.initialize(prodIngestionKey, logConfig);
+		}
+
+		AWTLogManager.addNotificationListener({
+			eventsSent: (events) => {
+				console.log("CIF Telemetry - Number of Events Sent: " + events.length);
+			},
+			eventsDropped: (events, reason) => {
+				console.log("CIF Telemetry - Number of Events Dropped: " + events.length);
+			}
+		});
+	}
+
+	// Returns the Host Name
+	function getHost(): string {
+		let hostValue = window.location.host;
+		if (!hostValue) {
+			hostValue = window.parent.location.host;
+		}
+		return hostValue;
+	}
+
+	// Returns the Domain of the Org
+	function getDomain(): string {
+		let hostValue = getHost();
+
+		// Need to add checks for MoonCake(China) and Europe Orgs, if needed
+		if (hostValue.endsWith("crm9.dynamics.com"))
+			return "GCC";
+		else if (hostValue.endsWith("crm.microsoftdynamics.de"))
+			return "BlackForest";
+		else if (hostValue.endsWith("extest.microsoft.com"))
+			return "Dev";
+		else
+			return "Normal";
+	}
+
+	// Returns the ARIA configuration for the environment type
+	function getConfiguration(domain: string): AWTLogConfiguration {
+		let logConfiguration: AWTLogConfiguration;
+		switch (domain) {
+			case "GCC":
+				logConfiguration.collectorUri = GCCH_ENDPOINT;
+				break;
+			case "BlackForest":
+				logConfiguration.collectorUri = GERMANY_ENDPOINT;
+				break;
+		}
+		return logConfiguration;
+	}
 
 	// Generates the IErrorHandler for logging purpose
 	export function generateErrorObject(error: any, sourceFunction: string, errorType: errorTypes): IErrorHandler {
