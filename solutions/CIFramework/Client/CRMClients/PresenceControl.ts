@@ -132,6 +132,7 @@ namespace Microsoft.CIFramework.Internal {
 					}
 				}
 				presenceList.style.display = "block";
+				(<HTMLElement>((<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementsByClassName("PresenceListItem")[0])).focus();
 			}
 			else {
 				presenceList.style.display = "none";
@@ -143,6 +144,11 @@ namespace Microsoft.CIFramework.Internal {
 		private keyboardToggleList(e: any) {
 			if (e.keyCode == 13 || e.keyCode == 32) {
 				Microsoft.CIFramework.Internal.PresenceControl.Instance.toggleList();
+			}
+			if (e.keyCode == 27) {
+				var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
+				if (presenceList)
+					presenceList.style.display = "none";
 			}
 		}
 
