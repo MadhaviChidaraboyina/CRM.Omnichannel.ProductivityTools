@@ -66,7 +66,6 @@ namespace Microsoft.CIFramework.Internal {
 	 */
 	export function initializeCI(clientType: number): boolean {
 		let startTime = new Date();
-		let trustedDomains: string[] = [];
 
 		initializeTelemetry();
 		// set the client implementation.
@@ -80,14 +79,26 @@ namespace Microsoft.CIFramework.Internal {
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		appId = top.location.search.split('appid=')[1].split('&')[0];
-		Xrm.WebApi.retrieveMultipleRecords("solution", "?$filter=uniquename eq 'ChannelAPIIntegrationFramework'&$select=version").then(function (response: any) {
-			cifVersion = response.entities[0].version;
-		});
+		Xrm.WebApi.retrieveMultipleRecords("solution", "?$filter=uniquename eq 'ChannelAPIIntegrationFramework'&$select=version").then(
+			(response: any) => {
+				cifVersion = response.entities[0].version;
+				loadProvider();
+			},
+			(error: Error) => {
+				let errorData = generateErrorObject(error, "initializeCI - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
+				logFailure(appId, true, errorData, "initializeCI", cifVersion);
+				loadProvider();
+			}
+		);
+		return false;
+	}
 
+	function loadProvider() {
+		let trustedDomains: string[] = [];
 		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=contains(" + Constants.appSelectorFieldName + ",'" + appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
-		(result : any) => {
+			(result: any) => {
 
-			if (result && result.entities) {
+				if (result && result.entities) {
 					//event listener for the onCliCkToAct event
 					listenerWindow.removeEventListener(Constants.CIClickToAct, onClickToAct);
 					listenerWindow.addEventListener(Constants.CIClickToAct, onClickToAct);
@@ -124,24 +135,23 @@ namespace Microsoft.CIFramework.Internal {
 							state.providerManager.addProvider(x[Constants.landingUrl], provider);
 						}
 
-						var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], "initializeCI", x[Constants.SortOrder], appId, cifVersion, false, null);
+						var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], "loadProvider", x[Constants.SortOrder], appId, cifVersion, false, null);
 						setUsageData(usageData);
 					}
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
 					// load the widgets onto client. 
 					state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
-						var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, "initializeCI - loadWidgets", provider.sortOrder, appId, cifVersion, false, null);
+						var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, "loadProvider - loadWidgets", provider.sortOrder, appId, cifVersion, false, null);
 						setUsageData(usageData);
 					});
 				}
 			},
 			(error: Error) => {
-				let errorData = generateErrorObject(error, "initializeCI - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
-				logFailure(appId, true, errorData, "initializeCI", cifVersion);
+				let errorData = generateErrorObject(error, "loadProvider - Xrm.WebApi.retrieveMultipleRecords - providerRecords", errorTypes.XrmApiError);
+				logFailure(appId, true, errorData, "loadProvider", cifVersion);
 			}
 		);
-		return false;
 	}
 
 	/* Utility function to raise events registered for the framework */
