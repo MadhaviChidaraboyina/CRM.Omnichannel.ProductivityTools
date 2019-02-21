@@ -6,32 +6,28 @@
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
 	export abstract class SessionManager {
-		protected Sessions: Map<string, CIProvider>;
-		protected visibleSession: string;
+		protected sessions: Map<string, CIProvider>;
 
 		constructor() {
-			this.Sessions = new Map<string, CIProvider>();
-			this.visibleSession = '';
-		}
-
-		getVisibleSession() {
-			return this.visibleSession;
+			this.sessions = new Map<string, CIProvider>();
 		}
 
 		getProvider(sessionId: string) {
-			if (this.Sessions.has(sessionId)) {
-				return this.Sessions.get(sessionId);
+			if (this.sessions.has(sessionId)) {
+				return this.sessions.get(sessionId);
 			}
 			else {
 				return null;
 			}
 		}
 
+		abstract getFocusedSession(): string;
+
 		abstract createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string>;
 
 		abstract focusSession(sessionId: string): Promise<void>;
 
-		abstract requestSessionFocus(sessionId: string, messagesCount: number): Promise<void>;
+		abstract requestFocusSession(sessionId: string, messagesCount: number): Promise<void>;
 
 		abstract closeSession(sessionId: string): Promise<boolean>;
 

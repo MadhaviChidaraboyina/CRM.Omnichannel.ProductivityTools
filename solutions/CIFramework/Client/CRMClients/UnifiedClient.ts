@@ -302,7 +302,7 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		client.setWidgetMode = (name: string, mode: number, telemetryData?: Object|any): number =>
+		client.setPanelMode = (name: string, mode: number, telemetryData?: Object|any): number =>
 		{
 			let startTime = new Date();
 
@@ -452,8 +452,8 @@ namespace Microsoft.CIFramework.Internal {
 			var el = parser.parseFromString(sessionElementHtml, "text/html");
 			var sessionElement = el.getElementById(id);
 			sessionElement.onclick = function (event: MouseEvent) {
-				if (id == Microsoft.CIFramework.Internal.state.sessionManager.getVisibleSession()) {
-					(Microsoft.CIFramework.Internal.state.sessionManager as SessionPanel).closeSessionFromUI((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+				if (id == Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession()) {
+					(Microsoft.CIFramework.Internal.state.sessionManager as SessionPanel).closeSession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
 				}
 				else {
 					Microsoft.CIFramework.Internal.state.sessionManager.focusSession((event.currentTarget as HTMLElement).id);
@@ -462,8 +462,8 @@ namespace Microsoft.CIFramework.Internal {
 
 			sessionElement.onkeydown = function (event: KeyboardEvent) {
 				if (event.keyCode == 13) {
-					if (id == Microsoft.CIFramework.Internal.state.sessionManager.getVisibleSession()) {
-						(Microsoft.CIFramework.Internal.state.sessionManager as SessionPanel).closeSessionFromUI((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+					if (id == Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession()) {
+						(Microsoft.CIFramework.Internal.state.sessionManager as SessionPanel).closeSession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
 					}
 					else {
 						Microsoft.CIFramework.Internal.state.sessionManager.focusSession((event.currentTarget as HTMLElement).id);
@@ -491,7 +491,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			sessionElement.onkeyup = function(e: KeyboardEvent) {
 				if (e.altKey && e.keyCode == 88) {
-					if (id == Microsoft.CIFramework.Internal.state.sessionManager.getVisibleSession()) {
+					if (id == Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession()) {
 						Microsoft.CIFramework.Internal.state.sessionManager.closeSession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
 					}
 				}
@@ -520,7 +520,7 @@ namespace Microsoft.CIFramework.Internal {
 			return Utility.rgb2hex(sessionElementCircle.style.backgroundColor);
 		}
 
-		client.updateSession = (id: string, visible: boolean): void => {
+		client.updateSession = (id: string, focused: boolean): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionElement = Utility.getElementFromIframe(sidePanelIFrame, id);
 			if (sessionElement == null)
@@ -532,7 +532,7 @@ namespace Microsoft.CIFramework.Internal {
 			let sessionNotification = Utility.getElementFromIframe(sidePanelIFrame, id + "_UiSessionNotification");
 			let crossIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "CrossIcon");
 
-			if (visible) {
+			if (focused) {
 				sessionElement.style.backgroundColor = "#FFFFFF";
 				sessionElement.style.boxShadow = "8px 4px 10px rgba(102, 102, 102, 0.2)";
 				sessionElement.setAttribute("tabindex", 0);
@@ -548,21 +548,21 @@ namespace Microsoft.CIFramework.Internal {
 				providerElement.setAttribute("aria-labelledby", "");
 			}
 			let sessionOnMouseOverHandler = function() {
-				if (visible) {
+				if (focused) {
 					sessionElement.style.boxShadow = "0px 4px 8px rgba(102, 102, 102, 0.2)";
 					sessionIcon.style.display = "none";
 					crossIcon.style.display = "flex";
 				}
 			};
 			let sessionOnMouseOutHandler = function() {
-				if (visible) {
+				if (focused) {
 					sessionElement.style.boxShadow = "none";
 					sessionIcon.style.display = "flex";
 					crossIcon.style.display = "none";
 				}
 			};
 			
-			if (visible) {
+			if (focused) {
 				sessionElement.onmouseover = sessionOnMouseOverHandler;
 				sessionElement.onmouseout = sessionOnMouseOutHandler;
 			}else {
@@ -570,7 +570,7 @@ namespace Microsoft.CIFramework.Internal {
 				sessionElement.onmouseout = null;
 			}
 
-			sessionElement.setAttribute("aria-selected", visible);
+			sessionElement.setAttribute("aria-selected", focused);
 		}
 
 		client.notifySession = (id: string, messagesCount: number): void => {

@@ -40,10 +40,10 @@ namespace Microsoft.CIFramework.Internal {
 		["getwidth", [getWidth]],
 		["getclicktoact", [getClickToAct]],
 		["renderSearchPage", [renderSearchPage]],
+		['getAllSessions', [getAllSessions]],
+		['getFocusedSession', [getFocusedSession]],
 		["createSession", [createSession]],
-		["requestSessionFocus", [requestSessionFocus]],
-		["focusSession", [focusSession]],
-		["closeSession", [closeSession]],
+		["requestFocusSession", [requestFocusSession]],
 		["createSessionTab", [createSessionTab]],
 		["setAgentPresence", [setAgentPresence]],
 		["initializeAgentPresenceList", [initializeAgentPresenceList]],
@@ -326,7 +326,7 @@ namespace Microsoft.CIFramework.Internal {
 		{
 			cancelNotes();
 			state.client.collapseFlap();
-			let ret = state.client.setWidgetMode("setWidgetMode", parameters.get(Constants.value) as number, telemetryData);
+			let ret = state.client.setPanelMode("setPanelMode", parameters.get(Constants.value) as number, telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "setMode", telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, ret));
@@ -711,6 +711,36 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
+	export function getAllSessions(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			var sessionIds = provider.getAllSessions();
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getAllSessions", telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map<string, any>().set(Constants.value, sessionIds));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, "getAllSessions", appId, true, errorData);
+		}
+	}
+
+	export function getFocusedSession(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			var sessionId = provider.getFocusedSession();
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getFocusedSession", telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, "getFocusedSession", appId, true, errorData);
+		}
+	}
+
 	export function createSession(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
@@ -731,63 +761,23 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	export function requestSessionFocus(parameters: Map<string, any>): Promise<Map<string, any>> {
+	export function requestFocusSession(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.requestSessionFocus(parameters.get(Constants.sessionId), parameters.get(Constants.messagesCount)).then(function () {
-					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "requestSessionFocus", telemetryData);
+				provider.requestFocusSession(parameters.get(Constants.sessionId), parameters.get(Constants.messagesCount)).then(function () {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "requestFocusSession", telemetryData);
 					setPerfData(perfData);
-					return Promise.resolve(new Map<string, any>());
+					return resolve(new Map<string, any>());
 				}, function (errorData) {
-					return rejectWithErrorMessage(errorData.errorMsg, "requestSessionFocus", appId, true, errorData, provider.providerId, provider.name);
+					return rejectWithErrorMessage(errorData.errorMsg, "requestFocusSession", appId, true, errorData, provider.providerId, provider.name);
 				});
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "requestSessionFocus", appId, true, errorData);
-		}
-	}
-
-	export function focusSession(parameters: Map<string, any>): Promise<Map<string, any>> {
-		let telemetryData: any = new Object();
-		let startTime = new Date();
-		const [provider, errorData] = getProvider(parameters);
-		if (provider) {
-			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.focusSession(parameters.get(Constants.sessionId)).then(function () {
-					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "focusSession", telemetryData);
-					setPerfData(perfData);
-					return Promise.resolve(new Map<string, any>());
-				}, function (errorData) {
-					return rejectWithErrorMessage(errorData.errorMsg, "focusSession", appId, true, errorData, provider.providerId, provider.name);
-				});
-			});
-		}
-		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "focusSession", appId, true, errorData);
-		}
-	}
-
-	export function closeSession(parameters: Map<string, any>): Promise<Map<string, any>> {
-		let telemetryData: any = new Object();
-		let startTime = new Date();
-		const [provider, errorData] = getProvider(parameters);
-		if (provider) {
-			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.closeSession(parameters.get(Constants.sessionId)).then(function (closeStatus: boolean) {
-					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "closeSession", telemetryData);
-					setPerfData(perfData);
-					return Promise.resolve(new Map<string, any>().set(Constants.value, closeStatus));
-				}, function (errorData) {
-					return rejectWithErrorMessage(errorData.errorMsg, "closeSession", appId, true, errorData, provider.providerId, provider.name);
-				});
-			});
-		}
-		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "closeSession", appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, "requestFocusSession", appId, true, errorData);
 		}
 	}
 

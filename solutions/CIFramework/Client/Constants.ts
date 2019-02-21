@@ -31,7 +31,6 @@ namespace Microsoft.CIFramework
 		public static onSetPresence = "onSetPresence";
 		public static onSessionSwitched = "onSessionSwitched";
 		public static onSessionCreated = "onSessionCreated";
-		//TODO - Confirm if two different events are required for ZFP and Sliver Close Sessions
 		public static onBeforeSessionClosed = "onBeforeSessionClosed";
 		public static onSessionClosed = "onSessionClosed";
 		public static getEntityMetadata = "getEntityMetadata";
@@ -43,10 +42,10 @@ namespace Microsoft.CIFramework
 		public static transfer = "transfer";
 		public static escalation = "escalation";
 		public static renderSearchPage = "renderSearchPage";
-		public static requestSessionFocus = "requestSessionFocus";
+		public static requestFocusSession = "requestFocusSession";
+		public static getAllSessions = "getAllSessions";
+		public static getFocusedSession = "getFocusedSession";
 		public static createSession = "createSession";
-		public static focusSession = "focusSession";
-		public static closeSession = "closeSession";
 		public static onMaxSessionsReached = "onMaxSessionsReached";
 		public static setAgentPresence = "setAgentPresence";
 		public static initializeAgentPresenceList = "initializeAgentPresenceList";

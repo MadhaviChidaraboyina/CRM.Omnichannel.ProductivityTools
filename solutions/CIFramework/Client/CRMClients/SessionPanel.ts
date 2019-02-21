@@ -8,37 +8,43 @@
 namespace Microsoft.CIFramework.Internal {
 	export class SessionPanel extends SessionManager {
 		public counter: number = 0;
+		protected focusedSession: string;
 
 		focusSession(sessionId: string): Promise<void> {
-			if (this.visibleSession == sessionId || !this.Sessions.has(sessionId)) {
-				return Promise.reject("Session Id is wrong or Session is already visible");
+			if (this.focusedSession == sessionId || !this.sessions.has(sessionId)) {
+				return Promise.reject("Session Id is wrong or Session is already focused");
 			}
 
 			state.client.collapseFlap();
 			let switchProvider = true;
 			let oldProvider: CIProvider;
-			let newProvider: CIProvider = this.Sessions.get(sessionId);
-			if (this.visibleSession != '') {
-				oldProvider = this.Sessions.get(this.visibleSession);
-				if (oldProvider == newProvider) {
-					switchProvider = false;
-				}
+			let newProvider: CIProvider = this.getProvider(sessionId);
+			if (!isNullOrUndefined(this.focusedSession)) {
+				oldProvider = this.getProvider(this.focusedSession);
+				if (oldProvider != null) {
+					if (oldProvider == newProvider) {
+						switchProvider = false;
+					}
 
-				oldProvider.setInvisibleSession(this.visibleSession, switchProvider);
-				state.client.updateSession(this.visibleSession, false);
+					oldProvider.setUnfocusedSession(this.focusedSession, switchProvider);
+					state.client.updateSession(this.focusedSession, false);
+				}
 			}
 
-			this.visibleSession = sessionId;
-			newProvider.setVisibleSession(this.visibleSession, switchProvider);
-			
-			let sessionColor = state.client.getSessionColor(this.visibleSession);
-			state.client.updateSession(this.visibleSession, true);
+			this.focusedSession = sessionId;
+			newProvider.setFocusedSession(this.focusedSession, switchProvider);
+
+			state.client.updateSession(this.focusedSession, true);
 
 			return Promise.resolve();
 		}
 
+		getFocusedSession(): string {
+			return this.focusedSession;
+		}
+
 		canCreateSession(): boolean {
-			if (this.Sessions.size < Constants.MaxSessions) {
+			if (this.sessions.size < Constants.MaxSessions) {
 				return true;
 			}
 			else {
@@ -48,11 +54,11 @@ namespace Microsoft.CIFramework.Internal {
 
 		createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string> {
 			if (!this.canCreateSession()) {
-				return Promise.reject("Cannot add the Session. Maximum Sessions limit reached. Limit: " + Constants.MaxSessions);
+				return Promise.reject("Cannot add the Session. Maximum sessions limit reached. Limit: " + Constants.MaxSessions);
 			}
 
 			let sessionId: string = state.messageLibrary.getCorrelationId();
-			this.Sessions.set(sessionId, provider);
+			this.sessions.set(sessionId, provider);
 
 			let sessionColor = Constants.sessionColors[this.counter++ % Constants.sessionColors.length];
 			let initials = "";
@@ -65,22 +71,20 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			state.client.createSession(sessionId, initials, sessionColor, provider.providerId, customerName);
+			window.setTimeout(this.focusSession.bind(this), 0, sessionId);
 
-			if (this.visibleSession == '') {
-				window.setTimeout(this.focusSession.bind(this), 0, sessionId);
-			}
-
-			if (this.Sessions.size == Constants.MaxSessions) {
+			if (this.sessions.size == Constants.MaxSessions) {
 				//ToDo: postmessagewrapper - raiseEvent(new Map<string, any>().set('Limit', Constants.MaxSessions), MessageType.onMaxSessionsReached);
 			}
 
-			provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleSession == sessionId).set("context", context), MessageType.onSessionCreated);
+			provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("focused", this.focusedSession == sessionId).set("context", context), MessageType.onSessionCreated);
 			return Promise.resolve(sessionId);
 		}
 
-		requestSessionFocus(sessionId: string, messagesCount: number): Promise<void> {
-			if (this.visibleSession == sessionId || !this.Sessions.has(sessionId)) {
-				return Promise.reject("Session Id is wrong or Session is already visible");
+		requestFocusSession(sessionId: string, messagesCount: number): Promise<void> {
+			var provider = this.getProvider(sessionId);
+			if (this.focusedSession == sessionId || provider == null) {
+				return Promise.reject("Session Id is wrong or Session is already focused");
 			}
 
 			state.client.notifySession(sessionId, messagesCount);
@@ -88,37 +92,31 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		closeSession(sessionId: string): Promise<boolean> {
-			if (!this.Sessions.has(sessionId)) {
+			var provider = this.getProvider(sessionId);
+			if (provider == null) {
 				return Promise.reject("Session Id is wrong");
 			}
 
-			var provider = this.Sessions.get(sessionId);
 			return new Promise(function (resolve: any, reject: any) {
-				provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleSession == sessionId).set("context", provider.sessions.get(sessionId).context), MessageType.onBeforeSessionClosed, true)
+				provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("focused", this.focusedSession == sessionId).set("context", provider.sessions.get(sessionId).context), MessageType.onBeforeSessionClosed, true)
 					.then(function () {
-						this.Sessions.delete(sessionId);
+						this.sessions.delete(sessionId);
 						state.client.closeSession(sessionId);
 
-						if (this.visibleSession == sessionId) {
-							this.visibleSession = '';
-							if (this.Sessions.size > 0) {
-								//setting last in the Map as visible
-								this.focusSession(Array.from(this.Sessions.keys()).pop());
+						if (this.focusedSession == sessionId) {
+							this.focusedSession = null;
+							if (this.sessions.size > 0) {
+								//setting last in the Map as focused
+								this.focusSession(Array.from(this.sessions.keys()).pop());
 							}
 						}
 
+						provider.closeSession(sessionId);
 						resolve(true);
-					}.bind(this), function () {
+					}.bind(this, provider), function () {
 						reject("Session not closed");
 					});
 			}.bind(this));
-		}
-
-		closeSessionFromUI(sessionId: string): void {
-			if (this.Sessions.has(sessionId)) {
-				let provider: CIProvider = this.Sessions.get(sessionId);
-				closeSession(new Map().set(Constants.sessionId, sessionId).set(Constants.originURL, provider.landingUrl));
-			}
 		}
 
 		createSessionTab(sessionId: string, input: any): Promise<string> {

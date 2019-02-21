@@ -101,7 +101,7 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type to update Session
 	*/
-	type updateSessionFunction = (id: string, visible: boolean) => void;
+	type updateSessionFunction = (id: string, focused: boolean) => void;
 
 	/**
 	 * Func type to update Session on unread messages
@@ -139,7 +139,7 @@ namespace Microsoft.CIFramework.Internal
 
 		retrieveMultipleAndOpenRecords: RetrieveMultipleAndOpenFunction;
 
-		setWidgetMode: SetSettingFunction;
+		setPanelMode: SetSettingFunction;
 
 		setWidgetWidth: SetSettingFunction;
 
