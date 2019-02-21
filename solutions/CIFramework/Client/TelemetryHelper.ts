@@ -9,8 +9,11 @@ namespace Microsoft.CIFramework.Internal
 	declare var defaultLogger: any;
 	let prodIngestionKey = "39f156fe0f00465288756928db675fe0-fef5dc1c-14bd-4361-9259-5f10f8ef5040-7209";
 	let devIngestionKey = "d129926264ad4dcc891eaf004fb351de-9bb27fd5-7e89-42a5-960c-c397c94ce2af-7153";
+
 	let GERMANY_ENDPOINT = "https://de.pipe.aria.microsoft.com/Collector/3.0/";
 	let GCCH_ENDPOINT = "https://tb.pipe.aria.microsoft.com/Collector/3.0/";
+	let DOD_ENDPOINT = "https://pf.pipe.aria.microsoft.com/Collector/3.0";
+	let MOONCAKE_ENDPOINT = ""; // Add MoonCake ARIA Endpoint whenever available
 
 	export function initializeTelemetry() {
 		let domain = getDomain();
@@ -49,10 +52,14 @@ namespace Microsoft.CIFramework.Internal
 		let hostValue = getHost();
 
 		// Need to add checks for MoonCake(China) and Europe Orgs, if needed
-		if (hostValue.endsWith("crm9.dynamics.com"))
-			return "GCC";
+		if (hostValue.endsWith("dod-crm.microsoftdynamics.us"))
+			return "DoD";
+		else if (hostValue.endsWith("crm9.dynamics.com") || hostValue.endsWith("crm.microsoftdynamics.us"))
+			return "GCCHigh";
 		else if (hostValue.endsWith("crm.microsoftdynamics.de"))
 			return "BlackForest";
+		else if (hostValue.endsWith("crm.dynamics.cn"))
+			return "MoonCake";
 		else if (hostValue.endsWith("extest.microsoft.com"))
 			return "Dev";
 		else
@@ -63,11 +70,17 @@ namespace Microsoft.CIFramework.Internal
 	function getConfiguration(domain: string): AWTLogConfiguration {
 		let logConfiguration: AWTLogConfiguration;
 		switch (domain) {
-			case "GCC":
+			case "GCCHigh":
 				logConfiguration.collectorUri = GCCH_ENDPOINT;
+				break;
+			case "DoD":
+				logConfiguration.collectorUri = DOD_ENDPOINT;
 				break;
 			case "BlackForest":
 				logConfiguration.collectorUri = GERMANY_ENDPOINT;
+				break;
+			case "MoonCake":
+				logConfiguration.collectorUri = MOONCAKE_ENDPOINT;
 				break;
 		}
 		return logConfiguration;
