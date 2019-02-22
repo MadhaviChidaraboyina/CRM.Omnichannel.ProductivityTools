@@ -547,6 +547,7 @@ namespace Microsoft.CIFramework.Internal {
 				sessionElement.setAttribute("tabindex", -1);
 				providerElement.setAttribute("aria-labelledby", "");
 			}
+
 			let sessionOnMouseOverHandler = function() {
 				if (focused) {
 					sessionElement.style.boxShadow = "0px 4px 8px rgba(102, 102, 102, 0.2)";
@@ -561,11 +562,12 @@ namespace Microsoft.CIFramework.Internal {
 					crossIcon.style.display = "none";
 				}
 			};
-			
+
 			if (focused) {
 				sessionElement.onmouseover = sessionOnMouseOverHandler;
 				sessionElement.onmouseout = sessionOnMouseOutHandler;
-			}else {
+			}
+			else {
 				sessionElement.onmouseover = null;
 				sessionElement.onmouseout = null;
 			}

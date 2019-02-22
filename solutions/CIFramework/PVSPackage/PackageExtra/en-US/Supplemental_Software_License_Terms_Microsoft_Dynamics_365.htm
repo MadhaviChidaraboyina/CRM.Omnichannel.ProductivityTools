@@ -28,11 +28,11 @@
 	{font-family:"Trebuchet MS";
 	panose-1:2 11 6 3 2 2 2 2 2 4;}
 @font-face
-	{font-family:"\@SimSun";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
 	{font-family:"\@MS Mincho";
 	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin-top:0in;
@@ -130,16 +130,9 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	text-indent:-17.9pt;
 	font-size:10.0pt;
 	font-family:"Tahoma",sans-serif;}
-p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
-	{mso-style-link:"Comment Text Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
 a:link, span.MsoHyperlink
-	{font-family:"Times New Roman",serif;
+	{mso-style-name:"Hyperlink\,Char Char7";
+	font-family:"Times New Roman",serif;
 	color:blue;
 	text-decoration:underline;}
 a:visited, span.MsoHyperlinkFollowed
@@ -152,45 +145,6 @@ p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	margin-bottom:.0001pt;
 	font-size:8.0pt;
 	font-family:"Tahoma",sans-serif;}
-p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:10.0pt;
-	margin-left:.5in;
-	line-height:115%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	margin-bottom:.0001pt;
-	line-height:115%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	margin-bottom:.0001pt;
-	line-height:115%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:10.0pt;
-	margin-left:.5in;
-	line-height:115%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
 span.Heading1Char
 	{mso-style-name:"Heading 1 Char";
 	mso-style-link:"Heading 1";
@@ -279,16 +233,22 @@ p.PreambleBorderAbove, li.PreambleBorderAbove, div.PreambleBorderAbove
 	font-size:10.0pt;
 	font-family:"Tahoma",sans-serif;
 	font-weight:bold;}
-span.CommentTextChar
-	{mso-style-name:"Comment Text Char";
-	mso-style-link:"Comment Text";
-	font-family:"Calibri",sans-serif;}
+p.Bullet1, li.Bullet1, div.Bullet1
+	{mso-style-name:"Bullet 1";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:17.85pt;
+	text-indent:-17.85pt;
+	font-size:9.5pt;
+	font-family:"Tahoma",sans-serif;}
 .MsoChpDefault
 	{font-family:"Calibri",sans-serif;}
 .MsoPapDefault
 	{margin-bottom:10.0pt;
 	line-height:115%;}
-@page WordSection1
+ /* Page Definitions */
+ @page WordSection1
 	{size:8.5in 11.0in;
 	margin:1.0in 1.0in 1.0in 1.0in;}
 div.WordSection1
@@ -307,25 +267,41 @@ ul
 
 <div class=WordSection1>
 
-<p>
-<strong>PLEASE NOTE:</strong> Microsoft Corporation (or based on where you live, one of its affiliates) licenses this supplement to you. You may use it with each validly
-licensed subscription of Microsoft Dynamics 365 online services (the “online service”). You may not use this supplement if you do not have a license for the
-online service. The license terms for the online service apply to your use of this supplement. Notwithstanding anything to the contrary in the applicable license terms or in the Microsoft Online Services Privacy Statement (which can
-be found at <a href="http://go.microsoft.com/fwlink/?LinkId=512132" data-linktype="external">http://go.microsoft.com/fwlink/?LinkId=512132</a>), the following
-additional terms will govern your use of the supplement.
-</p>
+<p class=MsoNormal><b>PLEASE NOTE:</b>  Microsoft Corporation (or based on
+where you live, one of its affiliates) licenses this supplement to you.  You
+may use it with each validly licensed copy of Microsoft Dynamics 365 software
+(for which this supplement is applicable) (the “software”) or each validly
+licensed subscription of Microsoft Dynamics 365 services (the “online
+service”).  You may not use the supplement if you do not have a license for the
+software or the online service.  The license terms for the software or the
+services apply to your use of this supplement.  Microsoft provides support
+services for the supplement as described at <span class=MsoHyperlink><span
+style='font-family:"Calibri",sans-serif'><a
+href="http://support.microsoft.com/common/international.aspx">http://support.microsoft.com/common/international.aspx</a></span></span>.</p>
 
-<p>This supplement is not provisioned in a dedicated data center for exclusive use by you and it is neither part of, nor a component of the online service. Your use of this supplement shall not be subject to any product-specific terms and conditions applicable to Dynamics 365 online for Government or other Online Services for which product-specific terms and conditions may be included in the Enrollment or Agreement (including Amendments thereto, the Use Rights, or the Product Terms). Notwithstanding anything to the contrary provided for in the Online Services Terms or the Microsoft Privacy Statement, this supplement is not offered subject to the Data Processing Terms of the Online Services Terms. This supplement is also not subject to any references or statements made on the Microsoft Trust Center.
+<p class=MsoNormal><b>DATA COLLECTION.</b> The software may collect information
+about you and your use of the software and send that to Microsoft. Microsoft
+may use this information to provide services and improve Microsoft’s products
+and services. Your opt-out rights, if any, are described in the product documentation.
+Some features in the software may enable collection of data from users of your
+applications that access or use the software. If you use these features to
+enable data collection in your applications, you must comply with applicable
+law, including getting any required user consent, and maintain a prominent
+privacy policy that accurately informs users about how you use, collect, and
+share their data. You can learn more about Microsoft’s data collection and use
+in the product documentation and the Microsoft Privacy Statement at <span
+class=MsoHyperlink><span style='font-family:"Calibri",sans-serif'><a
+href="http://go.microsoft.com/fwlink/?LinkID=521839">http://go.microsoft.com/fwlink/?LinkID=521839</a></span></span>.
+You agree to comply with all applicable provisions of the Microsoft Privacy
+Statement.</p>
 
-<p>THIS SUPPLEMENT IS PROVIDED "AS-IS," "WITH ALL FAULTS," AND "AS AVAILABLE," AND ARE EXCLUDED FROM THE SLAS AND LIMITED WARRANTY described in the Online Services Terms and materials referenced therein. This supplement may not be covered by customer support.</p>
-
-<p>If you do not agree to these additional terms, do not install or use this supplement.</p>
-
-<p>IMPORTANT: By installing or using this supplement, you consent to allow authorized users of Microsoft Dynamics 365 online services to activate, configure and enable certain functionality which transmits Customer Data to external systems. Please consult the feature technical documentation for more information.</p>
-
-<p>Third Party Notices:<a href="http://go.microsoft.com/fwlink/?LinkId=828060" data-linktype="external">http://go.microsoft.com/fwlink/?LinkId=828060</a> </p>
-
-</p>
+<p class=MsoNormal><b>Processing of Personal Data.</b> To the extent Microsoft
+is a processor or subprocessor of personal data in connection with the
+software, Microsoft makes the commitments in the European Union General Data
+Protection Regulation Terms of the Online Services Terms to all customers
+effective May 25, 2018, at <span class=MsoHyperlink><span style='font-family:
+"Calibri",sans-serif'><a href="http://go.microsoft.com/?linkid=9840733">http://go.microsoft.com/?linkid=9840733</a></span></span>.
+ </p>
 
 </div>
 

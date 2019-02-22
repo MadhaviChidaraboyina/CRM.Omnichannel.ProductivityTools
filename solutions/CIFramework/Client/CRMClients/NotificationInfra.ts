@@ -31,11 +31,13 @@ namespace Microsoft.CIFramework.Internal {
 			map = renderSoftNotification(header,body,notificationType[1]);
 		}else{
 			if(eventType.search(Constants.Chat) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/chat_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div style="height:8px;"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div style="height: 2px;"></div></div></div>');
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" role="region" aria-label="Notification" class="CIFToastDiv"><div class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/chat_icon.svg" alt="CIF Header Image"></div><div class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div class="headerNameCIF"></div><div style="height:8px;"></div></div><div></div><div aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p class="body_CIF"><div style="height: 2px;"></div></div></div>');
 			}else if(eventType.search(Constants.Call) != -1){
 				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/call_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div style="height:8px;"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div style="height: 2px;"></div></div></div>');
 			}else if(eventType.search(Constants.Case) != -1){
 				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/case_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div style="height:8px;"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div style="height: 2px;"></div></div></div>');
+			}else if(eventType.search(Constants.SMS) != -1){
+				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/sms_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div style="height:8px;"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div style="height: 2px;"></div></div></div>');
 			}
 			let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
 			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
@@ -203,6 +205,7 @@ namespace Microsoft.CIFramework.Internal {
 									btn.classList.add("singleButtonAccept_CIF");
 									btn.style.width = "calc(50% - 20px)";//((panelWidth / 2) - 20) + "px";
 								}
+								btn.focus();
 								btn.appendChild(span);
 								btn.getElementsByTagName("span")[0].classList.add("acceptButtonSpan_CIF");
 								btn.getElementsByTagName("span")[0].classList.add("FontIcons_acceptButtonSpan_CIF");
@@ -226,7 +229,6 @@ namespace Microsoft.CIFramework.Internal {
 							var span = document.createElement('span');
 							span.innerText = actions[i][key];
 							span.classList.add("actionDisplayText_CIF");
-							span.tabIndex = 0;
 							span.setAttribute("aria-label", actions[i][key]);
 							btn.appendChild(span);
 						}else if(key.search(Constants.actionName) != -1){
@@ -316,6 +318,7 @@ namespace Microsoft.CIFramework.Internal {
 		let map = new Map();
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("softToastDiv");
+		toastDiv.setAttribute("role","alert");
 		var childDivs = toastDiv.getElementsByTagName('div');
 		let i = 0;
 		if(childDivs != null){
@@ -352,6 +355,7 @@ namespace Microsoft.CIFramework.Internal {
 		span = document.createElement("span");
 		span.classList.add("closeSoftNotification_CIF");
 		span.classList.add("FontIcons-closeSoftNotification_CIF");
+		span.setAttribute("tabindex", "0");
 		span.setAttribute("aria-label", "Close");
 		chatWindowHeader.appendChild(span);
 		chatWindowHeader.getElementsByTagName("span")[1].id = "closeSoftNotificationCIF";
@@ -427,6 +431,7 @@ namespace Microsoft.CIFramework.Internal {
 	export function notifyEventClient(notificationUX: Map<string,Map<string,any>>): Promise<any>{
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
+		toastDiv.setAttribute("role","alert");
 		let i = 0;
 		let header,body,actions;
 		let eventType;
@@ -496,6 +501,14 @@ namespace Microsoft.CIFramework.Internal {
 							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
 							var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
 							return resolve(mapReturn);
+						});
+						key.addEventListener("keydown", function clickListener(event: any) {
+							if (event.keyCode == 32 || event.keyCode == 13) {
+								key.removeEventListener("keydown", clickListener);
+								key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
+								var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
+								return resolve(mapReturn);
+							}
 						});
 						setTimeout(function(){
 							if(key.parentElement.parentElement.parentElement != null){

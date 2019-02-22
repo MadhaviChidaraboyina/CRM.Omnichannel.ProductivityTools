@@ -10,20 +10,20 @@
 </head>
 <body style="margin: 0px;">
 	<div id="sessionPanel" class="sessionPanel" role="tablist">
-		<div id="sessions" class="sessions">
+		<div id="sessions" class="sessions" role="region" aria-label="Sessions">
 		</div>
-		<div id="presenceArea" class="MainDiv">
+		<div id="presenceArea" class="MainDiv" role="region" aria-label="Agent Presence">
 			<div id="CurrentStatus" aria-expanded="false" aria-labelledby="TextNode">
 				<div class="agentPresenceDiv">
 					<div class="innerDiv">
 						<div class="backgroundColorDiv">
-							<img class="userImageNode" src="/_imgs/svg_2.svg" />
+							<img class="userImageNode" src="/_imgs/svg_2.svg" alt="Agent Image"/>
 						</div>
 						<div class="agentPresenceColorNode" style="background-color: white;">
 							<div style="border: 2px solid #BBCED6; border-radius: 50%; height: 6px; width: 6px;"></div>
 						</div>
 					</div>
-					<div class="textNode">Unknown</div>
+					<div id='TextNode' class="textNode">Unknown</div>
 				</div>
 			</div>
 			<div id="PresenceList"></div>
@@ -36,7 +36,7 @@
 		<div id="softToastDiv" style="position:absolute;top:1px;z-index:1;width:100%;"></div>
 	</div>
 	<div id="flapArea" style="width: calc(var(--flapAreaWidth)); height: calc(100% - 10px);">
-		<div id="notesDiv" class="notesDiv" tabindex="0" style="width: calc(var(--flapAreaWidth)); height: calc(100% - 10px);"></div>
+		<div id="notesDiv" class="notesDiv" tabindex="0" style="width: calc(var(--flapAreaWidth)); height: calc(100% - 10px);" role="region" aria-label="Notes Panel"></div>
 	</div>
 </body>
 </html>

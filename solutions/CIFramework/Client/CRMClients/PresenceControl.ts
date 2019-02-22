@@ -69,7 +69,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 
 				presenceListNode.addEventListener("click", this.raiseSetPresence, false);
-				presenceListNode.addEventListener("keypress", this.keyboardSetPresence, false);
+				presenceListNode.addEventListener("keydown", this.keyboardPresenceHandler, false);
 				return presenceListNode;
 			}
 			else {
@@ -86,7 +86,6 @@ namespace Microsoft.CIFramework.Internal {
 			updatedPresenceNode.tabIndex = 0;
 			updatedPresenceNode.setAttribute("role", "button");
 			updatedPresenceNode.setAttribute("aria-label", updatedPresenceNode.title);
-			updatedPresenceNode.id = presenceInfo.presenceId;
 			updatedPresenceNode.addEventListener("click", this.toggleList, false);
 			updatedPresenceNode.addEventListener("keypress", this.keyboardToggleList, false);
 
@@ -100,6 +99,7 @@ namespace Microsoft.CIFramework.Internal {
 			var updatedPresenceImageNode = document.createElement('img');
 			updatedPresenceImageNode.classList.add('userImageNode');
 			updatedPresenceImageNode.src = "/_imgs/svg_2.svg";
+			updatedPresenceImageNode.alt = "Agent Image";
 			backgroundColorDiv.appendChild(updatedPresenceImageNode);
 			innerDiv.appendChild(backgroundColorDiv);
 
@@ -114,6 +114,7 @@ namespace Microsoft.CIFramework.Internal {
 			// Creates the Text Div for Agent Presence
 			var updatedPresenceTextNode = document.createElement('div');
 			updatedPresenceTextNode.innerText = presenceInfo.presenceText;
+			updatedPresenceTextNode.id = 'TextNode';
 			updatedPresenceTextNode.classList.add('textNode');
 
 			updatedPresenceNode.appendChild(innerDiv);
@@ -131,6 +132,7 @@ namespace Microsoft.CIFramework.Internal {
 					}
 				}
 				presenceList.style.display = "block";
+				(<HTMLElement>((<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementsByClassName("PresenceListItem")[0])).focus();
 			}
 			else {
 				presenceList.style.display = "none";
@@ -142,6 +144,11 @@ namespace Microsoft.CIFramework.Internal {
 		private keyboardToggleList(e: any) {
 			if (e.keyCode == 13 || e.keyCode == 32) {
 				Microsoft.CIFramework.Internal.PresenceControl.Instance.toggleList();
+			}
+			if (e.keyCode == 27) {
+				var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
+				if (presenceList)
+					presenceList.style.display = "none";
 			}
 		}
 
@@ -169,15 +176,20 @@ namespace Microsoft.CIFramework.Internal {
 				updatedPresence.basePresenceStatus = actualElement.parentElement.firstElementChild.nextSibling.innerText;
 			}
 			var setPresenceEvent = new CustomEvent('setPresenceEvent', {
-				detail: { "presenceId": e.target.parentElement.getAttribute("id"), "presenceInfo": updatedPresence }
+				detail: { "presenceId": updatedPresence.presenceId, "presenceInfo": updatedPresence }
 			});
 			window.parent.dispatchEvent(setPresenceEvent);
 		}
 
-		// Enter and Space KeyPress Handler for Presence List Items
-		private keyboardSetPresence(e: any): any {
+		// Enter,Space and Escape KeyDown Handler for Presence List Items
+		private keyboardPresenceHandler(e: any): any {
 			if (e.keyCode == 13 || e.keyCode == 32) {
 				Microsoft.CIFramework.Internal.PresenceControl.Instance.raiseSetPresence(e);
+			}
+			if (e.keyCode == 27) {
+				var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
+				if (presenceList)
+					presenceList.style.display = "none";
 			}
 		}
 	}

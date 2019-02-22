@@ -58,28 +58,34 @@ namespace Microsoft.CIFramework.Internal {
 			span.classList.add("closeNotes_CIF");
 			span.classList.add("FontIcons-closeSoftNotification_CIF");
 			span.setAttribute("aria-label", "Close");
+			span.setAttribute("tabindex", "0");
 			notesDiv.getElementsByClassName("notesCloseSpanDiv")[0].appendChild(span);
 			var newTextArea = document.createElement('TextArea');
 			let notesElement = notesDiv;
 			notesElement.appendChild(newTextArea);
-			newTextArea.setAttribute('placeholder','Start adding notes');
+			newTextArea.setAttribute('placeholder', 'Start adding notes');
+			newTextArea.setAttribute("aria-label", "Take Notes");
 			newTextArea.classList.add("newTextAreaCIF");
 			var textAreaWidth = "calc(100% - 40px)";//width - width/8 - 15;
 			newTextArea.id = "notesTextAreaCIF";
 			newTextArea.style.width = textAreaWidth;
 			newTextArea.style.height = "calc(100% - 120px)";
-			var cancelBtn = document.createElement("BUTTON");
-			notesElement.appendChild(cancelBtn);
-			cancelBtn.classList.add("notesCancelButtonCIF");
-			cancelBtn.innerText = "Cancel";
-			cancelBtn.tabIndex = 0;
-			cancelBtn.setAttribute("aria-label", "Cancel");
 			var saveBtn = document.createElement("BUTTON");
-			notesElement.appendChild(saveBtn);
 			saveBtn.classList.add("notesSaveButtonCIF");
 			saveBtn.innerText = "Add note";
 			saveBtn.tabIndex = 0;
 			saveBtn.setAttribute("aria-label", "Add note");
+			var cancelBtn = document.createElement("BUTTON");
+			cancelBtn.classList.add("notesCancelButtonCIF");
+			cancelBtn.innerText = "Cancel";
+			cancelBtn.tabIndex = 0;
+			cancelBtn.setAttribute("aria-label", "Cancel");
+			var addCancelButtonContainer = document.createElement("DIV");
+			addCancelButtonContainer.classList.add("addCancelButtonContainer");
+			addCancelButtonContainer.appendChild(saveBtn);
+			addCancelButtonContainer.appendChild(cancelBtn);
+			notesElement.appendChild(addCancelButtonContainer);
+
 			//Saving notes info locally
 			let sessionId: string = state.sessionManager.getFocusedSession();
 			let session = state.providerManager._activeProvider.sessions.get(sessionId);
@@ -105,6 +111,12 @@ namespace Microsoft.CIFramework.Internal {
 				cancelNotes();
 				//state.setWidgetWidth("setWidgetWidth", width);
 				return resolve(new Map().set(Constants.value,new Map().set(Constants.value,"")));
+			});
+			span.addEventListener("keydown", function clickListener(event) {
+				if (event.keyCode == 32 || event.keyCode == 13){
+					cancelNotes();
+					return resolve(new Map().set(Constants.value,new Map().set(Constants.value,"")));
+				}
 			});
 		});
 	}

@@ -53,16 +53,17 @@
     <Content Include="WebResources\EventHandlersLib\msdyn_EventHandlersLib.js.data.xml" />
     <Content Include="WebResources\msdyn_CIFIcon.svg" />
     <Content Include="WebResources\msdyn_Callprovider.svg" />
-	<Content Include="WebResources\call_icon.svg" />
-	<Content Include="WebResources\case_icon.svg" />
-	<Content Include="WebResources\chat_icon.svg" />
+    <Content Include="WebResources\call_icon.svg" />
+    <Content Include="WebResources\case_icon.svg" />
+    <Content Include="WebResources\chat_icon.svg" />
+    <Content Include="WebResources\sms_icon.svg" />
     <Content Include="WebResources\widgets_container.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="WebResources\widgets_container.html.data.xml" />
-	<Content Include="WebResources\msdyn_notificationCss.css.data.xml" />
+    <Content Include="WebResources\msdyn_notificationCss.css.data.xml" />
     <Content Include="WebResources\msdyn_notificationCss.css">
-	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="WebResources\msdyn_ProviderIcon.svg" />
     <Content Include="WebResources\widgets_containerStyle.css.data.xml" />
