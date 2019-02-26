@@ -51,7 +51,7 @@ namespace Microsoft.CIFramework.Internal {
 					presenceNode.classList.add("PresenceListItem");
 					presenceNode.tabIndex = 0;
 					presenceNode.setAttribute("role", "button");
-					presenceNode.setAttribute("aria-label", presenceList[i].presenceText);
+					presenceNode.setAttribute("aria-label", "set Agent Presence current Presence Status is"+presenceList[i].presenceText);
 
 					var presenceColorNode = document.createElement('div');
 					presenceColorNode.classList.add('ColorNode');
