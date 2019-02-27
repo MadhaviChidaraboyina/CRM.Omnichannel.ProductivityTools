@@ -7,24 +7,22 @@ namespace Microsoft.CIFramework.Internal
 {
 	declare var Xrm: any;
 	declare var defaultLogger: any;
-	let prodIngestionKey = "39f156fe0f00465288756928db675fe0-fef5dc1c-14bd-4361-9259-5f10f8ef5040-7209";
+	let prodIngestionKey = "0cd345da5c484bff8b75c696a3ac2159-3a768593-5759-4630-a59e-a75af2a7bf20-6631";
 	let devIngestionKey = "d129926264ad4dcc891eaf004fb351de-9bb27fd5-7e89-42a5-960c-c397c94ce2af-7153";
 
 	let GERMANY_ENDPOINT = "https://de.pipe.aria.microsoft.com/Collector/3.0/";
 	let GCCH_ENDPOINT = "https://tb.pipe.aria.microsoft.com/Collector/3.0/";
 	let DOD_ENDPOINT = "https://pf.pipe.aria.microsoft.com/Collector/3.0";
+	let EUROPE_ENDPOINT = "https://eu.pipe.aria.microsoft.com/Collector/3.0/";
 	let MOONCAKE_ENDPOINT = ""; // Add MoonCake ARIA Endpoint whenever available
 
 	export function initializeTelemetry() {
 		let domain = getDomain();
-		if (domain == "Public") {
-			defaultLogger = AWTLogManager.initialize(prodIngestionKey);
-		}
-		else if (domain == "Dev") {
-			defaultLogger = AWTLogManager.initialize(devIngestionKey);
+		let logConfig = getConfiguration(domain);
+		if (domain == "Dev") {
+			defaultLogger = AWTLogManager.initialize(devIngestionKey, logConfig);
 		}
 		else {
-			let logConfig = getConfiguration(domain);
 			defaultLogger = AWTLogManager.initialize(prodIngestionKey, logConfig);
 		}
 
@@ -60,6 +58,8 @@ namespace Microsoft.CIFramework.Internal
 			return "BlackForest";
 		else if (hostValue.endsWith("crm.dynamics.cn"))
 			return "MoonCake";
+		else if (hostValue.endsWith("crm4.dynamics.com"))
+			return "Europe";
 		else if (hostValue.endsWith("extest.microsoft.com"))
 			return "Dev";
 		else
@@ -68,7 +68,10 @@ namespace Microsoft.CIFramework.Internal
 
 	// Returns the ARIA configuration for the environment type
 	function getConfiguration(domain: string): AWTLogConfiguration {
-		let logConfiguration: AWTLogConfiguration;
+		let logConfiguration: AWTLogConfiguration = {};
+
+		// Disables the logging of Device ID
+		logConfiguration.disableCookiesUsage = true;
 		switch (domain) {
 			case "GCCHigh":
 				logConfiguration.collectorUri = GCCH_ENDPOINT;
@@ -79,9 +82,12 @@ namespace Microsoft.CIFramework.Internal
 			case "BlackForest":
 				logConfiguration.collectorUri = GERMANY_ENDPOINT;
 				break;
-			case "MoonCake":
-				logConfiguration.collectorUri = MOONCAKE_ENDPOINT;
+			case "Europe":
+				logConfiguration.collectorUri = EUROPE_ENDPOINT;
 				break;
+			//case "MoonCake":
+			//	logConfiguration.collectorUri = MOONCAKE_ENDPOINT;
+			//	break;
 		}
 		return logConfiguration;
 	}
