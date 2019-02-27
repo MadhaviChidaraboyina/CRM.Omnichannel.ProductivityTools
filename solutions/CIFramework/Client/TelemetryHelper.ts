@@ -60,7 +60,10 @@ namespace Microsoft.CIFramework.Internal
 			return "MoonCake";
 		else if (hostValue.endsWith("crm4.dynamics.com"))
 			return "Europe";
-		else if (hostValue.endsWith("extest.microsoft.com"))
+		else if (hostValue.endsWith("extest.microsoft.com") || hostValue.endsWith("crm10.dynamics.com") || hostValue.endsWith("crm.crmlivetie.com")
+			|| hostValue.endsWith("crm2.crmlivetie.com") || hostValue.endsWith("contoso.com:444") || hostValue.endsWith("microsoft.com")
+			|| hostValue.endsWith("msmecrm.com") || hostValue.endsWith("crm.crmlivetoday.com") || hostValue.endsWith("crm.1boxtest.com")
+			|| hostValue.endsWith("crm.crmifd.com") || hostValue.endsWith("msmecrm.com:444") || hostValue.search("localhost") == 0)
 			return "Dev";
 		else
 			return "Public";
