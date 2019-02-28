@@ -695,7 +695,7 @@
 	border-radius: 4px;
 	box-sizing: border-box;
 	padding: 12px;
-	-webkit-text-fill-color: #9D7E1B;
+	-webkit-text-fill-color: #000000;
 	color: #666666;
 }
 [dir='ltr'] .newTextAreaCIF
@@ -735,6 +735,11 @@
 	margin-right: 8px;
 }
 
+.notesSaveButtonCIF:focus,
+{
+	outline: 2px solid;
+}
+
 [dir='rtl'] .notesSaveButtonCIF
 {
 	float: left;
@@ -761,6 +766,11 @@
 [dir='ltr'] .notesCancelButtonCIF
 {
 	float: right;
+}
+
+.notesCancelButtonCIF:focus,
+{
+	outline: 2px solid;
 }
 
 [dir='rtl'] .notesCancelButtonCIF
