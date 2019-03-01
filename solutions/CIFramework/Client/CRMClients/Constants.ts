@@ -19,4 +19,12 @@ namespace Microsoft.CIFramework.Internal
 	{
 		public static UnifiedClient = "4";
 	}
+	/**
+	 * Enum defining the different session types available for CI
+	*/
+	export class SessionType
+	{
+		public static SingleSession = "0";
+		public static MultiSession = "1";
+	}
 }

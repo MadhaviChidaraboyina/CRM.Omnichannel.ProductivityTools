@@ -95,14 +95,14 @@ module MscrmControls.Service.CIProvider {
 		public getAppList(): void {
 
 			var queryParam = "(clienttype eq 4)";
-			var query = "?$select=name,appmoduleid,uniquename,eventhandlers&$filter=" + queryParam;
+			var query = "?$select=name,appmoduleid,uniquename,eventhandlers,navigationtype&$filter=" + queryParam;
 			this.context.webAPI.retrieveMultipleRecords("appmodule", query).then(
 				(data: any) => {
 						//To-Do - Add Telemetry
 					for (let app of data.entities) {
 						console.log(app);
 						if (this.invalidAppsForCif.indexOf(app.uniquename) == -1) {
-							this.elementList.push({ ElementId: app.appmoduleid, ElementUniqueName: app.uniquename, ElementName: app.name, EventHandlers: JSON.parse(app.eventhandlers) });
+							this.elementList.push({ ElementId: app.appmoduleid, ElementUniqueName: app.uniquename, ElementName: app.name, NavigationType: app.navigationtype, EventHandlers: JSON.parse(app.eventhandlers) });
 						}
 					}
 					this.context.utils.requestRender();
@@ -130,7 +130,7 @@ module MscrmControls.Service.CIProvider {
 							this.sysAdminCustomizerRoles.push(roleItem);
 						}
 						else {
-							this.elementList.push({ ElementId: role.roleid, ElementUniqueName: role.name, ElementName: role.name });
+							this.elementList.push({ ElementId: role.roleid, ElementUniqueName: role.name, ElementName: role.name, NavigationType: role.navigationtype });
 						}
 						
 					}

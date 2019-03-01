@@ -67,7 +67,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
 	 * returns false to disable the button visibility
 	 */
-	export function initializeCI(clientType: string): boolean {
+	export function initializeCI(clientType: string, navigationType: string): boolean {
 		let startTime = new Date();
 		let trustedDomains: string[] = [];
 
@@ -77,7 +77,7 @@ namespace Microsoft.CIFramework.Internal {
 			return false;
 		}
 
-		state.sessionManager = GetSessionManager(clientType);
+		state.sessionManager = GetSessionManager(clientType, navigationType);
 		presence = GetPresenceManager(clientType);
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
