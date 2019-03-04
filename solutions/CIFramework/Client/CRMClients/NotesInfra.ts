@@ -49,7 +49,7 @@ namespace Microsoft.CIFramework.Internal {
 		return new Promise(function (resolve,reject) {
 			//expandFlap(width,state);
 			//widgetIFrame.contentWindow.document.getElementsByTagName("iframe")[0].setAttribute('style','position: absolute;right: 0px;');
-			notesDiv.insertAdjacentHTML('beforeend', '<div id="notesHeaderIdCIF" tabindex="-1" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close">Add notes</div><div class="notesCloseSpanDiv"></div></div><div class="notesbodyDivider_CIF"></div><div style="height: 14px;"></div>');
+			notesDiv.insertAdjacentHTML('beforeend', '<div id="notesHeaderIdCIF" class="notesHeader"><div class="notesHeaderSpan_CIF" aria-label="Close">Add notes</div><div class="notesCloseSpanDiv"></div></div><div class="notesbodyDivider_CIF"></div><div style="height: 14px;"></div>');
 			notesDiv.classList.add("notesDivCIF");
 			notesDiv.getElementsByClassName("notesHeader")[0].classList.add("notesHeaderCIF");
 			let availNotesHeight = widgetIFrame.clientHeight - 26;
