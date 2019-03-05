@@ -85,7 +85,7 @@ namespace Microsoft.CIFramework.Internal {
 			updatedPresenceNode.title = presenceInfo.presenceText;
 			updatedPresenceNode.tabIndex = 0;
 			updatedPresenceNode.setAttribute("role", "button");
-			updatedPresenceNode.setAttribute("aria-label", updatedPresenceNode.title);
+			updatedPresenceNode.setAttribute("aria-label", "set your presence status . current presence status is "+updatedPresenceNode.title);
 			updatedPresenceNode.addEventListener("click", this.toggleList, false);
 			updatedPresenceNode.addEventListener("keypress", this.keyboardToggleList, false);
 
