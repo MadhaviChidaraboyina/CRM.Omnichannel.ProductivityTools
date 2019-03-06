@@ -418,7 +418,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-		if(childDivs.length > 0 && childDivs[0]!= null){
+		if(childDivs!=null && childDivs.length > 0 && childDivs[0]!= null){
 			childDivs[0].focus();
 			childDivs[0].setAttribute("aria-label", header[0]);
 			childDivs[0].setAttribute("role","presentation");
