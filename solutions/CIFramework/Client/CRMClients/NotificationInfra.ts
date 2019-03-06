@@ -357,6 +357,7 @@ namespace Microsoft.CIFramework.Internal {
 		span.classList.add("FontIcons-closeSoftNotification_CIF");
 		span.setAttribute("tabindex", "0");
 		span.setAttribute("aria-label", "Close");
+		span.setAttribute("role", "button");
 		chatWindowHeader.appendChild(span);
 		chatWindowHeader.getElementsByTagName("span")[1].id = "closeSoftNotificationCIF";
 		var div = document.createElement("div");
