@@ -357,6 +357,7 @@ namespace Microsoft.CIFramework.Internal {
 		span.classList.add("FontIcons-closeSoftNotification_CIF");
 		span.setAttribute("tabindex", "0");
 		span.setAttribute("aria-label", "Close");
+		span.setAttribute("role", "button");
 		chatWindowHeader.appendChild(span);
 		chatWindowHeader.getElementsByTagName("span")[1].id = "closeSoftNotificationCIF";
 		var div = document.createElement("div");
@@ -417,7 +418,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-		if(childDivs != null){
+		if(childDivs.length > 0 && childDivs[0]!= null){
 			childDivs[0].focus();
 			childDivs[0].setAttribute("aria-label", header[0]);
 			childDivs[0].setAttribute("role","presentation");
