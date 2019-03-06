@@ -329,7 +329,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-		toastDiv.insertAdjacentHTML('afterbegin', '<div tabindex="0" id="CIFSoftToast" class="CIFSoftNotificationToast"><div id="header_SoftNotification_CIF" class="headerSoftNotification_CIF"><div><br></div></div><div id="bodyDivSoftToastCIF" class="bodyDivSoftToast_CIF"></div></div>')
+		toastDiv.insertAdjacentHTML('afterbegin', '<div tabindex="0" id="CIFSoftToast" class="CIFSoftNotificationToast"><div id="header_SoftNotification_CIF" class="headerSoftNotification_CIF"><div style="height:14px"></div></div><div id="bodyDivSoftToastCIF" class="bodyDivSoftToast_CIF"></div></div>');
 		//Constructing header
 		let panelWidth = "100%";
 		let chatWindowHeader = widgetIFrame.contentWindow.document.getElementById("header_SoftNotification_CIF");
@@ -421,7 +421,6 @@ namespace Microsoft.CIFramework.Internal {
 			childDivs[0].focus();
 			childDivs[0].setAttribute("aria-label", header[0]);
 			childDivs[0].setAttribute("role","presentation");
-
 		}
 		map.set(widgetIFrame.contentWindow.document.getElementById("closeSoftNotificationCIF"),toastDiv);
 		map.set(widgetIFrame.contentWindow.document.getElementById("CIFSoftToast"),toastDiv);
