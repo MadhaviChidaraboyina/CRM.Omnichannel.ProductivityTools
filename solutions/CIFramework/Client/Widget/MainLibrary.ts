@@ -653,9 +653,31 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+	 * API to get Session details
+	 */
+	export function getSession(sessionId: string): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getSession,
+			messageData: new Map().set(Constants.sessionId, sessionId)
+		}
+		return sendMessage<string>(getSession.name, payload, false);
+	}
+
+	/**
+	 * API to check if a new Session can be created
+	 */
+	export function canCreateSession(): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.canCreateSession,
+			messageData: new Map()
+		}
+		return sendMessage<string>(canCreateSession.name, payload, false);
+	}
+
+	/**
 	 * API to create Session
 	 */
-	export function createSession(input: any, context: any, customerName: string): Promise<string> {
+	export function createSession(input: any, context: string, customerName: string): Promise<string> {
 		if (!isNullOrUndefined(input) || (!isNullOrUndefined(context) && !isNullOrUndefined(customerName))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.createSession,
@@ -685,18 +707,45 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
-	 * API to create a Session Tab
+	 * API to get the focused tab in focused Session
 	 */
-	export function createSessionTab(sessionId: string, input: any): Promise<string> {
-		if (!isNullOrUndefined(sessionId) && !isNullOrUndefined(input)) {
+	export function getFocusedTab(): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getFocusedTab,
+			messageData: new Map()
+		}
+		return sendMessage<string>(getFocusedTab.name, payload, false);
+	}
+
+	/**
+	 * API to create a Tab in focused Session
+	 */
+	export function createTab(input: any): Promise<string> {
+		if (!isNullOrUndefined(input)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.createSessionTab,
-				messageData: new Map().set(Constants.sessionId, sessionId).set(Constants.input, input)
+				messageType: MessageType.createTab,
+				messageData: new Map().set(Constants.input, input)
 			}
-			return sendMessage<string>(createSessionTab.name, payload, false);
+			return sendMessage<string>(createTab.name, payload, false);
 		}
 		else {
 			postMessageNamespace.rejectWithErrorMessage("Some of the required parameters are Null");
+		}
+	}
+
+	/**
+	 * API to focus a Tab in focused Session
+	 */
+	export function focusTab(tabId: string): Promise<string> {
+		if (!isNullOrUndefined(tabId)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.focusTab,
+				messageData: new Map().set(Constants.tabId, tabId)
+			}
+			return sendMessage<string>(focusTab.name, payload, false);
+		}
+		else {
+			postMessageNamespace.rejectWithErrorMessage("tabId is null or undefined");
 		}
 	}
 

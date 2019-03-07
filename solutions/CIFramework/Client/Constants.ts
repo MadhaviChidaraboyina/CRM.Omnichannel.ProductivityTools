@@ -45,7 +45,12 @@ namespace Microsoft.CIFramework
 		public static requestFocusSession = "requestFocusSession";
 		public static getAllSessions = "getAllSessions";
 		public static getFocusedSession = "getFocusedSession";
+		public static getSession = "getSession";
+		public static canCreateSession = "canCreateSession";
 		public static createSession = "createSession";
+		public static getFocusedTab = "getFocusedTab";
+		public static createTab = "createTab";
+		public static focusTab = "focusTab";
 		public static onMaxSessionsReached = "onMaxSessionsReached";
 		public static setAgentPresence = "setAgentPresence";
 		public static initializeAgentPresenceList = "initializeAgentPresenceList";
@@ -55,7 +60,6 @@ namespace Microsoft.CIFramework
 		public static hardNotification = "hardNotification";
 		public static removeGenericHandler = "removeGenericHandler";
 		public static addGenericHandler = "addGenericHandler";
-		public static createSessionTab = "createSessionTab";
 	}
 
 	/**
@@ -146,6 +150,7 @@ namespace Microsoft.CIFramework
 		public static context = "context";
 		public static customerName = "customerName";
 		public static sessionId = "sessionId";
+		public static tabId = "tabId";
 		public static messagesCount = "messagesCount";
 		public static MaxSessions = 5;
 		public static sessionColors = ["#2A757D", "#70278B", "#FF8C00", "#427825", "#B4009E", "#B4A0FF"];

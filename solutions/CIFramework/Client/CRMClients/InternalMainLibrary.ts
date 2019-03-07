@@ -42,9 +42,13 @@ namespace Microsoft.CIFramework.Internal {
 		["renderSearchPage", [renderSearchPage]],
 		['getAllSessions', [getAllSessions]],
 		['getFocusedSession', [getFocusedSession]],
+		['getSession', [getSession]],
+		["canCreateSession", [canCreateSession]],
 		["createSession", [createSession]],
 		["requestFocusSession", [requestFocusSession]],
-		["createSessionTab", [createSessionTab]],
+		["getFocusedTab", [getFocusedTab]],
+		["createTab", [createTab]],
+		["focusTab", [focusTab]],
 		["setAgentPresence", [setAgentPresence]],
 		["initializeAgentPresenceList", [initializeAgentPresenceList]],
 		["addGenericHandler", [addGenericHandler]],
@@ -717,12 +721,12 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			var sessionIds = provider.getAllSessions();
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getAllSessions", telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getAllSessions, telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map<string, any>().set(Constants.value, sessionIds));
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "getAllSessions", appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, MessageType.getAllSessions, appId, true, errorData);
 		}
 	}
 
@@ -732,12 +736,47 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			var sessionId = provider.getFocusedSession();
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getFocusedSession", telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getFocusedSession, telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "getFocusedSession", appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, MessageType.getFocusedSession, appId, true, errorData);
+		}
+	}
+
+	export function getSession(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				provider.getSession(parameters.get(Constants.sessionId)).then(function (session) {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getSession, telemetryData);
+					setPerfData(perfData);
+					return resolve(new Map<string, any>().set(Constants.value, session));
+				}, function (errorData) {
+					return rejectWithErrorMessage(errorData.errorMsg, MessageType.getSession, appId, true, errorData, provider.providerId, provider.name);
+				});
+			});
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, MessageType.getSession, appId, true, errorData);
+		}
+	}
+
+	export function canCreateSession(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			var canCreate = provider.canCreateSession();
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.canCreateSession, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map<string, any>().set(Constants.value, canCreate));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, MessageType.canCreateSession, appId, true, errorData);
 		}
 	}
 
@@ -748,16 +787,16 @@ namespace Microsoft.CIFramework.Internal {
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				provider.createSession(parameters.get(Constants.input), parameters.get(Constants.context), parameters.get(Constants.customerName)).then(function (sessionId) {
-					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "createSession", telemetryData);
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createSession, telemetryData);
 					setPerfData(perfData);
 					return resolve(new Map<string, any>().set(Constants.value, sessionId));
 				}, function (errorData) {
-					return rejectWithErrorMessage(errorData.errorMsg, "createSession", appId, true, errorData, provider.providerId, provider.name);
+					return rejectWithErrorMessage(errorData.errorMsg, MessageType.createSession, appId, true, errorData, provider.providerId, provider.name);
 				});
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "createSession", appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, MessageType.createSession, appId, true, errorData);
 		}
 	}
 
@@ -768,36 +807,71 @@ namespace Microsoft.CIFramework.Internal {
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				provider.requestFocusSession(parameters.get(Constants.sessionId), parameters.get(Constants.messagesCount)).then(function () {
-					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "requestFocusSession", telemetryData);
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.requestFocusSession, telemetryData);
 					setPerfData(perfData);
 					return resolve(new Map<string, any>());
 				}, function (errorData) {
-					return rejectWithErrorMessage(errorData.errorMsg, "requestFocusSession", appId, true, errorData, provider.providerId, provider.name);
+					return rejectWithErrorMessage(errorData.errorMsg, MessageType.requestFocusSession, appId, true, errorData, provider.providerId, provider.name);
 				});
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "requestFocusSession", appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, MessageType.requestFocusSession, appId, true, errorData);
 		}
 	}
 
-	export function createSessionTab(parameters: Map<string, any>): Promise<Map<string, any>> {
+	export function getFocusedTab(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			var tabId = provider.getFocusedTab();
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getFocusedTab, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map<string, any>().set(Constants.value, tabId));
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, MessageType.getFocusedTab, appId, true, errorData);
+		}
+	}
+
+	export function createTab(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.createSessionTab(parameters.get(Constants.sessionId), parameters.get(Constants.input)).then(function (tabId) {
-					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "createSessionTab", telemetryData);
+				provider.createTab(parameters.get(Constants.input)).then(function (tabId) {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createTab, telemetryData);
 					setPerfData(perfData);
 					return resolve(new Map<string, any>().set(Constants.value, tabId));
 				}, function (errorData) {
-					return rejectWithErrorMessage(errorData.errorMsg, "createSessionTab", appId, true, errorData, provider.providerId, provider.name);
+					return rejectWithErrorMessage(errorData.errorMsg, MessageType.createTab, appId, true, errorData, provider.providerId, provider.name);
 				});
 			});
 		}
 		else {
-			return rejectWithErrorMessage(errorData.errorMsg, "createSessionTab", appId, true, errorData);
+			return rejectWithErrorMessage(errorData.errorMsg, MessageType.createTab, appId, true, errorData);
+		}
+	}
+
+	export function focusTab(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				provider.focusTab(parameters.get(Constants.tabId)).then(function () {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.focusTab, telemetryData);
+					setPerfData(perfData);
+					return resolve(new Map<string, any>());
+				}, function (errorData) {
+					return rejectWithErrorMessage(errorData.errorMsg, MessageType.focusTab, appId, true, errorData, provider.providerId, provider.name);
+				});
+			});
+		}
+		else {
+			return rejectWithErrorMessage(errorData.errorMsg, MessageType.focusTab, appId, true, errorData);
 		}
 	}
 

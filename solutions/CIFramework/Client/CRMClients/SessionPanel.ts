@@ -11,14 +11,18 @@ namespace Microsoft.CIFramework.Internal {
 		protected focusedSession: string;
 
 		focusSession(sessionId: string): Promise<void> {
-			if (this.focusedSession == sessionId || !this.sessions.has(sessionId)) {
-				return Promise.reject("Session Id is wrong or Session is already focused");
-			}
-
-			state.client.collapseFlap();
 			let switchProvider = true;
 			let oldProvider: CIProvider;
 			let newProvider: CIProvider = this.getProvider(sessionId);
+			if (isNullOrUndefined(newProvider)) {
+				return Promise.reject("Session Id is wrong");
+			}
+
+			if (this.focusedSession == sessionId) {
+				return Promise.resolve();
+			}
+
+			state.client.collapseFlap();
 			if (!isNullOrUndefined(this.focusedSession)) {
 				oldProvider = this.getProvider(this.focusedSession);
 				if (oldProvider != null) {
@@ -73,27 +77,26 @@ namespace Microsoft.CIFramework.Internal {
 			state.client.createSession(sessionId, initials, sessionColor, provider.providerId, customerName);
 			window.setTimeout(this.focusSession.bind(this), 0, sessionId);
 
-			if (this.sessions.size == Constants.MaxSessions) {
-				//ToDo: postmessagewrapper - raiseEvent(new Map<string, any>().set('Limit', Constants.MaxSessions), MessageType.onMaxSessionsReached);
-			}
-
 			provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("focused", this.focusedSession == sessionId).set("context", context), MessageType.onSessionCreated);
 			return Promise.resolve(sessionId);
 		}
 
 		requestFocusSession(sessionId: string, messagesCount: number): Promise<void> {
 			var provider = this.getProvider(sessionId);
-			if (this.focusedSession == sessionId || provider == null) {
-				return Promise.reject("Session Id is wrong or Session is already focused");
+			if (isNullOrUndefined(provider)) {
+				return Promise.reject("Session Id is wrong");
 			}
 
-			state.client.notifySession(sessionId, messagesCount);
+			if (this.focusedSession != sessionId) {
+				state.client.notifySession(sessionId, messagesCount);
+			}
+
 			return Promise.resolve();
 		}
 
 		closeSession(sessionId: string): Promise<boolean> {
 			var provider = this.getProvider(sessionId);
-			if (provider == null) {
+			if (isNullOrUndefined(provider)) {
 				return Promise.reject("Session Id is wrong");
 			}
 
@@ -119,15 +122,19 @@ namespace Microsoft.CIFramework.Internal {
 			}.bind(this));
 		}
 
-		createSessionTab(sessionId: string, input: any): Promise<string> {
+		getFocusedTab(sessionId: string): string {
+			return null;
+		}
+
+		createTab(sessionId: string, input: any): Promise<string> {
 			return Promise.reject("Not implemented");
 		}
 
-		focusSessionTab(sessionId: string, tabId: string): Promise<any> {
+		focusTab(sessionId: string, tabId: string): Promise<any> {
 			return Promise.reject("Not implemented");
 		}
 
-		closeSessionTab(sessionId: string, tabId: string): Promise<boolean> {
+		closeTab(sessionId: string, tabId: string): Promise<boolean> {
 			return Promise.reject("Not implemented");
 		}
 	}

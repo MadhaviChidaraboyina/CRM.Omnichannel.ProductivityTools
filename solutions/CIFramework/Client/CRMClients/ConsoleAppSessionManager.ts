@@ -85,19 +85,19 @@ namespace Microsoft.CIFramework.Internal {
 			return (Xrm.App.sessions.getFocusedSession() as any)._sessionId;
 		}
 
+		canCreateSession(): boolean {
+			return Xrm.App.sessions.canCreateSession();
+		}
+
 		createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string> {
 			return new Promise(function (resolve: any, reject: any) {
 				Xrm.App.sessions.createSession(input).then(function (sessionId: string) {
 					this.sessions.set(sessionId, provider);
+					window.setTimeout(provider.setFocusedSession.bind(provider), 0, sessionId, true);
 					state.client.setPanelMode("setPanelMode", 1);
 					resolve(sessionId);
 				}.bind(this), function (errorMessage: string) {
-					let error = {} as IErrorHandler;
-					error.reportTime = new Date().toUTCString();
-					error.errorMsg = errorMessage;
-					error.errorType = errorTypes.GenericError;
-					error.sourceFunc = this.createSession.name;
-					reject(error);
+					reject(errorMessage);
 				});
 			}.bind(this));
 		}
@@ -118,47 +118,36 @@ namespace Microsoft.CIFramework.Internal {
 					this.sessions.delete(sessionId);
 					resolve(closeStatus);
 				}.bind(this), function (errorMessage: string) {
-					let error = {} as IErrorHandler;
-					error.reportTime = new Date().toUTCString();
-					error.errorMsg = errorMessage;
-					error.errorType = errorTypes.GenericError;
-					error.sourceFunc = this.closeSession.name;
-					reject(error);
+					reject(errorMessage);
 				});
 			}.bind(this))
 		}
 
-		createSessionTab(sessionId: string, input: any): Promise<string> {
+		getFocusedTab(sessionId: string): string {
+			return (Xrm.App.sessions.getSession(sessionId).tabs.getFocusedTab() as any)._tabId;
+		}
+
+		createTab(sessionId: string, input: any): Promise<string> {
 			return new Promise(function (resolve: any, reject: any) {
 				Xrm.App.sessions.getSession(sessionId).tabs.createTab(input).then(function (tabId: string) {
 					resolve(tabId);
 				}, function (errorMessage: string) {
-					let error = {} as IErrorHandler;
-					error.reportTime = new Date().toUTCString();
-					error.errorMsg = errorMessage;
-					error.errorType = errorTypes.GenericError;
-					error.sourceFunc = this.createSessionTab.name;
-					reject(error);
+					reject(errorMessage);
 				});
 			});
 		}
 
-		focusSessionTab(sessionId: string, tabId: string): Promise<void> {
+		focusTab(sessionId: string, tabId: string): Promise<void> {
 			Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).focus();
 			return Promise.resolve();
 		}
 
-		closeSessionTab(sessionId: string, tabId: string): Promise<boolean> {
+		closeTab(sessionId: string, tabId: string): Promise<boolean> {
 			return new Promise(function (resolve: any, reject: any) {
 				Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).close().then(function (closeStatus: boolean) {
 					resolve(closeStatus);
 				}, function (errorMessage: string) {
-					let error = {} as IErrorHandler;
-					error.reportTime = new Date().toUTCString();
-					error.errorMsg = errorMessage;
-					error.errorType = errorTypes.GenericError;
-					error.sourceFunc = this.closeSessionTab.name;
-					reject(error);
+					reject(errorMessage);
 				});
 			});
 		}

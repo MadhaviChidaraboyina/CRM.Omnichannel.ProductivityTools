@@ -23,6 +23,8 @@ namespace Microsoft.CIFramework.Internal {
 
 		abstract getFocusedSession(): string;
 
+		abstract canCreateSession(): boolean;
+
 		abstract createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string>;
 
 		abstract focusSession(sessionId: string): Promise<void>;
@@ -31,11 +33,13 @@ namespace Microsoft.CIFramework.Internal {
 
 		abstract closeSession(sessionId: string): Promise<boolean>;
 
-		abstract createSessionTab(sessionId: string, input: any): Promise<string>
+		abstract getFocusedTab(sessionId: string): string;
 
-		abstract focusSessionTab(sessionId: string, tabId: string): Promise<void>;
+		abstract createTab(sessionId: string, input: any): Promise<string>
 
-		abstract closeSessionTab(sessionId: string, tabId: string): Promise<boolean>;
+		abstract focusTab(sessionId: string, tabId: string): Promise<void>;
+
+		abstract closeTab(sessionId: string, tabId: string): Promise<boolean>;
 	}
 
 	export function GetSessionManager(clientType: string, navigationType: string): SessionManager {
