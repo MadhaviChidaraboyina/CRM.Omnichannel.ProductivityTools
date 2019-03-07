@@ -38,6 +38,23 @@ namespace Microsoft.CIFramework.Utility {
 			return map;
 		}
 	}
+	/**
+	 * Generic method to convert map data into string
+	 * @param map 
+	 */
+	export function mapToString(map: Map<string, any>, exclusionList: string[] = []): string {
+		let result: string = "";
+		if (!map) {
+			return "";
+		}
+		map.forEach((value, key) => {
+			if (exclusionList.indexOf(key) == -1) {
+				result += key + " : " + value + ", ";
+			}
+		});
+		return result;
+	}
+
 	export function flatten(obj: XrmClientApi.WebApi.Entity): XrmClientApi.WebApi.Entity {
 		let ret: XrmClientApi.WebApi.Entity = {};
 		for (let prop in obj) {

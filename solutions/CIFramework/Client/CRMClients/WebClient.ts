@@ -38,7 +38,12 @@ namespace Microsoft.CIFramework.Internal {
 
 		client.createRecord = (entityName: string, entityId?: string, telemetryData?: Object|any, valuesToUpdate?: Map<string, any> | string): Promise<Map<string, any>> => {
 			if (!valuesToUpdate) {
-				return rejectWithErrorMessage("Need values to create for createRecord", "createRecord");
+				let errorData = {} as IErrorHandler;
+				errorData.errorMsg = "Need values to create for createRecord";
+				errorData.errorType = errorTypes.InvalidParams;
+				errorData.reportTime = new Date().toUTCString();
+				errorData.sourceFunc = "client.createRecord";
+				return Promise.reject(errorData);
 			}
 			let data: Map<string, any> = null;
 			if (typeof (valuesToUpdate) == "string") {
@@ -57,7 +62,8 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(Microsoft.CIFramework.Utility.buildMap(result)); 
 					},
 					(error: Error) => {
-						return rejectWithErrorMessage(error.message, "createRecord");
+						let errorData = generateErrorObject(error, "client.createRecord - Xrm.WebApi.createRecord", errorTypes.XrmApiError);
+						return reject(errorData);
 					});
 			});
 		}
@@ -66,7 +72,12 @@ namespace Microsoft.CIFramework.Internal {
 		{
 			if (!valuesToUpdate)
 			{
-				return rejectWithErrorMessage("Need values to update for updateRecord", "updateRecord");
+				let errorData = {} as IErrorHandler;
+				errorData.errorMsg = "Need values to Update for updateRecord";
+				errorData.errorType = errorTypes.InvalidParams;
+				errorData.reportTime = new Date().toUTCString();
+				errorData.sourceFunc = "client.updateRecord";
+				return Promise.reject(errorData);
 			}
 			let data: Map<string, any> = null;
 			if (typeof (valuesToUpdate) == "string") {
@@ -87,7 +98,8 @@ namespace Microsoft.CIFramework.Internal {
 					},
 					(error: Error) =>
 					{
-						return rejectWithErrorMessage(error.message, "updateRecord");
+						let errorData = generateErrorObject(error, "client.updateRecord - Xrm.WebApi.updateRecord", errorTypes.XrmApiError);
+						return reject(errorData);
 					});
 			});
 		}
@@ -101,12 +113,13 @@ namespace Microsoft.CIFramework.Internal {
 					(result: XrmClientApi.WebApi.Entity) =>
 					{
 						let timeTaken = Date.now() - startTime.getTime();
-						let apiName = "Xrm.WebApi.updateRecord";
+						let apiName = "Xrm.WebApi.retrieveRecord";
 						logApiData(telemetryData, startTime, timeTaken, apiName);
 						return resolve(Microsoft.CIFramework.Utility.buildMap(result));
 					},
 					(error: Error) => {
-						return rejectWithErrorMessage(error.message, "retrieveRecord");
+						let errorData = generateErrorObject(error, "client.retrieveRecord - Xrm.WebApi.retrieveRecord", errorTypes.XrmApiError);
+						return reject(errorData);
 					});
 			});
 
@@ -120,7 +133,8 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.flatten(result)));
 					},
 					(error: Error) => {
-						return rejectWithErrorMessage(error.message, "getEntityMetadata");
+						let errorData = generateErrorObject(error, "client.getEntityMetadata - Xrm.Utility.getEntityMetadata", errorTypes.XrmApiError);
+						return reject(errorData);
 					});
 			});
 		}
@@ -136,7 +150,8 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(Microsoft.CIFramework.Utility.buildMap(result));
 					},
 					(error: Error) => {
-						return rejectWithErrorMessage(error.message, "deleteRecord");
+						let errorData = generateErrorObject(error, "client.deleteRecord - Xrm.WebApi.deleteRecord", errorTypes.XrmApiError);
+						return reject(errorData);
 					});
 			});
 		}
@@ -253,8 +268,9 @@ namespace Microsoft.CIFramework.Internal {
 				return Xrm.Navigation.openForm(fo, fp).then(function (res) {
 					return resolve(new Map<string, any>().set(Constants.value, res));
 				},
-					function (err) {
-						return reject(err);
+					function (error: Error) {
+						let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
+						return reject(errorData);
 					}
 				);
 			});
@@ -296,7 +312,8 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(new Map<string, any>().set(Constants.value, result.entities));
 					},
 					(error: Error) => {
-						return rejectWithErrorMessage(error.message, "retrieveMultipleAndOpenRecords");
+						let errorData = generateErrorObject(error, "client.retrieveMultipleAndOpenRecords - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
+						return reject(errorData);
 					}
 				);
 			});
@@ -436,7 +453,8 @@ namespace Microsoft.CIFramework.Internal {
 					return resolve();
 				}
 				catch (error) {
-					return rejectWithErrorMessage(error.message, "renderSearchPage");
+					let errorData = generateErrorObject(error, "client.renderSearchPage - Xrm.Navigation.navigateTo", errorTypes.XrmApiError);
+					return reject(errorData);
 				}
 			});
 		}
