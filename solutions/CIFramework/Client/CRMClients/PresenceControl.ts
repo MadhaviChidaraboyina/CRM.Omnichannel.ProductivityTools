@@ -38,6 +38,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (presenceList != null) {
 				var presenceListNode = document.createElement('div');
 				presenceListNode.classList.add("PresenceListInnerNode");
+				presenceListNode.setAttribute("role","menu");
 
 				// Appends the Header to the List
 				var headerDiv = document.createElement('div');
@@ -50,7 +51,7 @@ namespace Microsoft.CIFramework.Internal {
 					presenceNode.id = presenceList[i].presenceId;
 					presenceNode.classList.add("PresenceListItem");
 					presenceNode.tabIndex = 0;
-					presenceNode.setAttribute("role", "button");
+					presenceNode.setAttribute("role","menuitem");
 					presenceNode.setAttribute("aria-label", presenceList[i].presenceText);
 
 					var presenceColorNode = document.createElement('div');
@@ -181,8 +182,10 @@ namespace Microsoft.CIFramework.Internal {
 			window.parent.dispatchEvent(setPresenceEvent);
 		}
 
-		// Enter,Space and Escape KeyDown Handler for Presence List Items
+		// Enter,Space,Escape,Up and Down Arrow KeyDown Handler for Presence List Items
 		private keyboardPresenceHandler(e: any): any {
+			let activeElement: any = e.target;
+			let presenceListInnerNode: any = e.currentTarget;
 			if (e.keyCode == 13 || e.keyCode == 32) {
 				Microsoft.CIFramework.Internal.PresenceControl.Instance.raiseSetPresence(e);
 			}
@@ -190,6 +193,23 @@ namespace Microsoft.CIFramework.Internal {
 				var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
 				if (presenceList)
 					presenceList.style.display = "none";
+			}
+			if (e.keyCode == 38) {
+				if (activeElement.previousSibling.classList.contains("headerDiv")) {
+					let presenceListItems: any = presenceListInnerNode.getElementsByClassName("PresenceListItem");
+					presenceListItems[presenceListItems.length - 1].focus();
+				}
+				else {
+					activeElement.previousSibling.focus();
+				}
+			}
+			if (e.keyCode == 40) {
+				if (activeElement.nextSibling == null) {
+					presenceListInnerNode.getElementsByClassName("PresenceListItem")[0].focus();
+				}
+				else {
+					activeElement.nextSibling.focus();
+				}
 			}
 		}
 	}
