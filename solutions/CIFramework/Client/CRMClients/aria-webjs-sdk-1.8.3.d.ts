@@ -380,6 +380,9 @@ declare class AWTEventProperties {
  * statistics can be sent. The SDK calls this method before sending statistics.
  * @property {boolean} enableAutoUserSession               - [Optional] A boolean that indicates if we should auto instrument session
  *  events. Note: This setting is only respected for browsers where window events are accessible.
+ * @property {number} clockSkewRefreshDurationInMins       - [Optional] A number that identifies the time in minutes after which the clock
+ *  skew value should be refreshed. By default the value is 0, which means there is no refreshing of the clock skew value obtained at the
+ *  start of the AWTLogManager.
  */
 declare interface AWTLogConfiguration {
     collectorUri?: string;
@@ -390,6 +393,7 @@ declare interface AWTLogConfiguration {
     disableCookiesUsage?: boolean;
     canSendStatEvent?: (eventName: string) => boolean;
     enableAutoUserSession?: boolean;
+	clockSkewRefreshDurationInMins?: number;
 }
 /**
  * The AWTPropertyStorageOverride interface provides a custom interface for storing internal SDK properties - otherwise they are

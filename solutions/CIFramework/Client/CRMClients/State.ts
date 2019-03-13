@@ -263,7 +263,12 @@ namespace Microsoft.CIFramework.Internal {
 		createTab(input: any): Promise<string> {
 			var focusedSessionId = this.getFocusedSession();
 			if (focusedSessionId == null) {
-				return Promise.reject("Focused session does not belong to the provider");
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = MessageType.createTab;
+				return Promise.reject(error);
 			}
 
 			return new Promise(function (resolve: any, reject: any) {
@@ -283,7 +288,12 @@ namespace Microsoft.CIFramework.Internal {
 		focusTab(tabId: string): Promise<string> {
 			var focusedSessionId = this.getFocusedSession();
 			if (focusedSessionId == null) {
-				return Promise.reject("Focused session does not belong to the provider");
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = MessageType.focusTab;
+				return Promise.reject(error);
 			}
 
 			return new Promise(function (resolve: any, reject: any) {

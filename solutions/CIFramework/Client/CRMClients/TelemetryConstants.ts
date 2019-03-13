@@ -29,5 +29,6 @@ namespace Microsoft.CIFramework.Internal {
 		export const perfTable = "D365_CIF_Perf";
 		export const usageTable = "D365_CIF_Usage";
 		export const userId = "User_ID";
+		export const CIFVersion = "CIF_Version";
 	}
 }
