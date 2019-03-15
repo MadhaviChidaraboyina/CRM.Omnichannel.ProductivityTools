@@ -59,6 +59,7 @@ namespace Microsoft.CIFramework.Internal {
 	declare var Xrm: any;
 	declare var appId: string;
 	declare var cifVersion: string;
+	cifVersion = "";
 
 	/**
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
@@ -85,9 +86,9 @@ namespace Microsoft.CIFramework.Internal {
 				loadProvider();
 			},
 			(error: Error) => {
+				loadProvider();
 				let errorData = generateErrorObject(error, "initializeCI - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
 				logFailure(appId, true, errorData, "initializeCI", cifVersion);
-				loadProvider();
 			}
 		);
 		return false;

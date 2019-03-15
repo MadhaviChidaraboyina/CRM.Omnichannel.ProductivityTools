@@ -99,7 +99,10 @@
 				string[] roleArray = new string[rolesCount];
 				for (int index = 0; index < userRoles.Entities.Count; index++)
 				{
-					roleArray[index] = userRoles.Entities[index]["roleid"].ToString();
+					// Get the ParentRoleId of the current Role
+					var parentRoleId = ((EntityReference)(userRoles.Entities[index]["parentroleid"])).Id;
+					// Add only the ParentRoles to the roleArray
+					roleArray[index] = (parentRoleId == null) ? userRoles.Entities[index]["roleid"].ToString() : parentRoleId.ToString();
 				}
 				return roleArray;
 			}
