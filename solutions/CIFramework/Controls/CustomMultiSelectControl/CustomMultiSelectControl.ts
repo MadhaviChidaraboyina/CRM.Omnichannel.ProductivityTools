@@ -115,8 +115,8 @@ module MscrmControls.Service.CIProvider {
 
 		private getRoleList(): void {
 
-
-			var query = "?$select=name,roleid,_roletemplateid_value";
+			var queryParam = "(parentroleid eq null)";
+			var query = "?$select=name,roleid,_roletemplateid_value&$filter=" + queryParam;
 			this.context.webAPI.retrieveMultipleRecords("role", query).then(
 				(data: any) => {
 					this.sysAdminCustomizerRoles = [];
