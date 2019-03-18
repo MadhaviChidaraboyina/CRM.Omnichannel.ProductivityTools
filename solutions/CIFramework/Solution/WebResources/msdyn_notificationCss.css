@@ -3,7 +3,7 @@
 	display:table;
 	z-index: 2;
 	border-radius: 4px;
-	background-color: #003D60;
+	background-color: #26345A;
 	padding-bottom: 10px;
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 	margin-bottom: 4px;
@@ -376,7 +376,7 @@
 	border-radius: 2px;
 }
 .singleButtonAccept_CIF{
-	background-color:#08BD08;
+	background-color:#0F8A0F;
 	height:33px;
 	border: none;
 	border-radius: 2px;
