@@ -195,12 +195,16 @@ namespace Microsoft.CIFramework.Internal {
 					presenceList.style.display = "none";
 			}
 			if (e.keyCode == 38) {
-				if (activeElement.previousSibling.classList.contains("headerDiv")) {
-					let presenceListItems: any = presenceListInnerNode.getElementsByClassName("PresenceListItem");
-					presenceListItems[presenceListItems.length - 1].focus();
-				}
-				else {
-					activeElement.previousSibling.focus();
+				if (activeElement.previousSibling != null) {
+					if (activeElement.previousSibling.classList.length > 0) {
+						if (activeElement.previousSibling.classList.contains("headerDiv")) {
+							let presenceListItems: any = presenceListInnerNode.getElementsByClassName("PresenceListItem");
+							presenceListItems[presenceListItems.length - 1].focus();
+						}
+						else {
+							activeElement.previousSibling.focus();
+						}
+					}
 				}
 			}
 			if (e.keyCode == 40) {
