@@ -5,6 +5,7 @@
   <Workflows />
   <FieldSecurityProfiles />
   <Templates />
+  <RibbonDiffXml />
   <EntityMaps />
   <EntityRelationships />
   <OrganizationSettings />
@@ -115,6 +116,7 @@
       </options>
     </optionset>
   </optionsets>
+  <Dialogs />
   <WebResources />
 	<CustomControls />
   <SolutionPluginAssemblies />

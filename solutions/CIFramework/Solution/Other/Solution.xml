@@ -132,6 +132,8 @@
       <RootComponent type="92" id="{39281539-2b18-411a-8a7e-2b78040752b3}" behavior="0" />
       <RootComponent type="92" id="{9c55d373-a9e4-4d76-b344-860ef1eb0501}" behavior="0" />
       <RootComponent type="92" id="{fc42a104-1671-46cd-bfcb-fdf0d642bdfe}" behavior="0" />
+			<RootComponent type="50" schemaName=":RibbonDiffXml" behavior="0" />
+			<RootComponent type="60" id="{e02fac01-dd62-4886-8f07-042ad67ee299}" behavior="0" />
 		</RootComponents>
 		<MissingDependencies />
 	</SolutionManifest>
