@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dialog>
+  <FormId>{e02fac01-dd62-4886-8f07-042ad67ee299}</FormId>
+  <LocalizedNames>
+    <LocalizedName description="Set Your Status" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Shows the Set Your status Dialog in Dynamics 365" languagecode="1033" />
+  </Descriptions>
+  <IsCustomizable>0</IsCustomizable>
+  <UniqueName>SetAgentPresenceMDD</UniqueName>
+  <IsTabletEnabled>1</IsTabletEnabled>
+  <CanBeDeleted>0</CanBeDeleted>
+  <FormXml>
+    <forms type="dialog">
+      <form>
+          <header id="{e48c165e-435a-4448-848f-29a48076e937}">
+          <rows>
+            <row>
+              <cell id="{27ab568e-6561-4bb7-b6bc-4fa7100a1173}">
+                <labels>
+                  <label description="Set Your Status" languagecode="1033" />
+                </labels>
+                <control id="lbl_resolvecase" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                  <parameters>
+                    <IsTitle>true</IsTitle>
+                  </parameters>
+                </control>
+              </cell>
+            </row>
+          </rows>
+        </header>
+        <tabs>
+          <tab verticallayout="true" id="{ac414e88-c791-424b-ba52-51a20e263bae}" name="{cc414c88-c791-424b-ba52-51c20a263bae}" locklevel="0" expanded="true">
+            <columns>
+              <column width="100%">
+                <sections>
+                  <section showbar="false" columns="1" id="{9ae058d6-4986-4c70-a7fb-25ddae83138a}" name="{9ea058d6-4986-4c70-a7fb-25ddba83138a}">
+                    <rows>
+                      <row>
+                        <cell id="{57a8ec35-eedd-4820-a3d3-2ed5acbaf18e}">
+                          <labels>
+                            <label description="Resolution Type" languagecode="1033" />
+                          </labels>
+                          <control id="resolutionType_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                            <parameters>
+                              <DefaultValue>-1</DefaultValue>
+                              <OptionSetName>incident_statuscode</OptionSetName>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{ea9a96a4-157e-4539-b67b-84d47ea7f6af}">
+                          <labels>
+                            <label description="Resolution" languagecode="1033" />
+                          </labels>
+                          <control id="resolution_id" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                            <parameters>
+                              <MaxLength>200</MaxLength>
+                              <Format>SingleLineOfText</Format>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{8e921a38-ea41-41f4-abd0-717a7404869e}">
+                          <labels>
+                            <label description="Total Time" languagecode="1033" />
+                          </labels>
+                          <control id="totaltime_id" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true">
+                            <parameters>
+                              <MinValue>0</MinValue>
+                              <MaxValue>2147483647</MaxValue>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{3a8272e3-117b-4e49-ab7d-a690f2cced7e}">
+                          <labels>
+                            <label description="Billable Time" languagecode="1033" />
+                          </labels>
+                          <control id="billabletime_id" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" disabled="false" isrequired="true">
+                            <parameters>
+                              <MinValue>0</MinValue>
+                              <MaxValue>2147483647</MaxValue>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{4a60624e-4797-4cde-b427-99a835398068}">
+                          <labels>
+                            <label description="Remarks" languagecode="1033" />
+                          </labels>
+                          <control id="remarks_id" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true">
+                            <parameters>
+                              <MaxLength>4000</MaxLength>
+                              <Format>SingleLineOfText</Format>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+            </columns>
+          </tab>
+        </tabs>
+        <footer id="{473a8216-9cd0-435b-879b-542a0f705bfe}">
+          <rows>
+            <row>
+              <cell id="{a2635e65-adcb-498e-8b9e-a51cd25b523e}">
+                <labels>
+                  <label description="Resolve" languagecode="1033" />
+                </labels>
+                <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+              </cell>
+              <cell id="{36a52be7-c6b8-4615-acfe-6901a6164e96}">
+                <labels>
+                  <label description="Cancel" languagecode="1033" />
+                </labels>
+                <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+              </cell>
+            </row>
+          </rows>
+        </footer>
+        <events>
+          <!-- <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+              <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.resolveClose" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{441ec7ff-a8f0-4736-a4c7-33c6c400b433}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+          </event>
+          <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+              <Handler functionName="CrmService.CommandBarActions.Instance.closeResolveDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{db16b500-8ca3-4503-8dee-462f148b78f7}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+          </event>
+          <event name="onload" application="false" active="false">
+            <Handlers>
+              <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.DialogCloseCancelOnLoad" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{dab73a90-cbf8-4bd0-9b6f-3be0633aa5a7}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+          </event> -->
+        </events>
+        <formparameters>
+          <querystringparameter name="param_is_time_allotment" type="Integer" />
+          <querystringparameter name="param_allotments_remaining" type="Integer" />
+          <querystringparameter name="param_time_spent" type="Integer" />
+          <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+          <querystringparameter name="param_entityId" type="UniqueId" />
+        </formparameters>
+        <clientresources>
+          <internalresources>
+            <clientincludes>
+			  <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+              <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+            </clientincludes>
+          </internalresources>
+        </clientresources>
+      </form>
+    </forms>
+  </FormXml>
+  <IntroducedVersion>7.1.0.0</IntroducedVersion>
+</Dialog>

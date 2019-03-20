@@ -107,6 +107,8 @@
 			<RootComponent type="92" id="{0d01b3be-4fc2-e811-8149-000d3a3aa233}" behavior="0" />
 			<RootComponent type="92" id="{2c8df2b8-43d7-e811-8158-000d3a069351}" behavior="0" />
 			<RootComponent type="92" id="{528b24b0-43d7-e811-8158-000d3a069351}" behavior="0" />
+			<RootComponent type="50" schemaName=":RibbonDiffXml" behavior="0" />
+			<RootComponent type="60" id="{e02fac01-dd62-4886-8f07-042ad67ee299}" behavior="0" />
 		</RootComponents>
 		<MissingDependencies />
 	</SolutionManifest>

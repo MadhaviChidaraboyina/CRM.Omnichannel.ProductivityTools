@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml>
+	<CustomActions>
+		<!-- Global ribbon commands -->
+		<CustomAction Id="Microsoft.Dynamics.Service.CIFramework.Presence" Location="Mscrm.GlobalTab.New.Controls._children">
+			<CommandUIDefinition>
+				<Button
+					Id="Microsoft.Dynamics.Service.CIFramework.Presence.Dialog"
+					Command="Microsoft.Dynamics.Service.CIFramework.Presence.DialogCommand"
+					Sequence="6"
+					LabelText="Launch Presence Dialog"
+					ToolTipTitle="Launch Presence Dialog"
+					TemplateAlias="o1"
+					ModernImage="InsertKbArticle"
+				/>
+				<!--<FlyoutAnchor
+					Id="Microsoft.Dynamics.Service.CIFramework.Presence.Flyout"
+					Command="Microsoft.Dynamics.Service.CIFramework.Presence.FlyoutCommand"
+					Sequence="1"
+					LabelText="Presence Flyout"
+					ToolTipTitle="Presence Flyout"
+					TemplateAlias="o1"
+					ModernImage="ApplyTemplate"
+				>
+					<CardFeedContainerFlyout key="MscrmControls.CardFeedContainerWrapper.CardFeedContainerWrapper" id="PresenceFlyout" controlId="MscrmControls.CardFeedContainerWrapper.CardFeedContainerWrapper" />
+					<Menu Id="Microsoft.Dynamics.Service.CIFramework.Presence.Flyout.Menu">
+						<MenuSection Id="Microsoft.Dynamics.Service.CIFramework.Presence.Flyout.Menu.MenuSection">
+							<Controls Id="Microsoft.Dynamics.Service.CIFramework.Presence.Flyout.Menu.MenuSection.Controls">
+								<Button
+									Id="Microsoft.Dynamics.Service.CIFramework.Presence.Flyout.Menu.MenuSection.Controls.AddEmailTemplate"
+									Command="MailApp.AddEmailTemplateCommand"
+									LabelText="Presence Flyout Item1"
+									ToolTipTitle="Presence Flyout Item1"
+									ModernImage="ApplyTemplate"
+								/>
+								<Button
+									Id="Microsoft.Dynamics.Service.CIFramework.Presence.Flyout.Menu.MenuSection.Controls.AddSalesLiterature"
+									Command="MailApp.AddSalesLiteratureCommand"
+									LabelText="Presence Flyout Item2"
+									ToolTipTitle="Presence Flyout Item2"
+									ModernImage="SalesLiterature"
+								/>
+								<Button
+									Id="Microsoft.Dynamics.Service.CIFramework.Presence.Flyout.Menu.MenuSection.Controls.AddKnowledgeArticle"
+									Command="MailApp.AddKnowledgeArticleCommand"
+									LabelText="Presence Flyout Item3"
+									ToolTipTitle="Presence Flyout Item3"
+									ModernImage="InsertKbArticle"
+								/>
+							</Controls>
+						</MenuSection>
+					</Menu>
+				</FlyoutAnchor>-->
+			</CommandUIDefinition>
+		</CustomAction>
+	</CustomActions>
+	<CommandDefinitions>
+		<CommandDefinition Id="Microsoft.Dynamics.Service.CIFramework.Presence.DialogCommand">
+			<EnableRules />
+			<DisplayRules />
+			<Actions>
+				<JavaScriptFunction FunctionName="Microsoft.CIFramework.Internal.LoadPresenceDialog" Library="$webresource:CRMClients/msdyn_internal_ci_library.js" />
+			</Actions>
+		</CommandDefinition>
+	</CommandDefinitions>
+  </RibbonDiffXml>
