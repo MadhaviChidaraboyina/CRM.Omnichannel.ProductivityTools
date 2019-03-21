@@ -4,6 +4,7 @@
 
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2587-manual/clientapi/XrmClientApi.d.ts" />
+/// <reference path="SessionTemplatesInfra.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
 
@@ -17,6 +18,7 @@ namespace Microsoft.CIFramework.Internal {
 			this.sessionSwitchHandlerID = Xrm.App.sessions.addOnAfterSessionSwitch(this.onSessionSwitched);
 			this.sessionCloseHandlerID = Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClosed);
 			this.sessionCreateHandlerID = Xrm.App.sessions.addOnAfterSessionCreate(this.onSessionCreated);
+			UCISessionTemplate.InitSessionTemplates();
 		}
 
 		/**
@@ -91,15 +93,88 @@ namespace Microsoft.CIFramework.Internal {
 
 		createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string> {
 			return new Promise(function (resolve: any, reject: any) {
-				Xrm.App.sessions.createSession(input).then(function (sessionId: string) {
-					this.sessions.set(sessionId, provider);
-					window.setTimeout(provider.setFocusedSession.bind(provider), 0, sessionId, true);
-					state.client.setPanelMode("setPanelMode", 1);
-					resolve(sessionId);
-				}.bind(this), function (errorMessage: string) {
-					reject(errorMessage);
-				});
-			}.bind(this));
+				//let sessionName = input.sessionName;   //TODO: Need to define the public function signature
+				let fetchTask: Promise<UCISessionTemplate> = null;
+				if (!isNullOrUndefined(input.templateName)) {
+					fetchTask = UCISessionTemplate.getTemplateByName(input.templateName);
+				}
+				else {
+					fetchTask = UCISessionTemplate.getTemplateByTag(input.templateTag)
+				}
+				let templateParams = input.templateParameters;
+				//let session = UCISessionTemplate.getTemplate(sessionName);
+				fetchTask.then(
+					function (session: UCISessionTemplate) {
+						session.instantiateTemplate(templateParams).then(
+							function (sessionInput: XrmClientApi.SessionInput) {
+								Xrm.App.sessions.createSession(sessionInput).then(function (sessionId: string) {
+									this.sessions.set(sessionId, provider);
+									state.client.setPanelMode("setPanelMode", session.panelState);
+									window.setTimeout(provider.setFocusedSession.bind(provider), 0, sessionId, true);
+									session.appTabs.then(
+										function (appTabs: UCIApplicationTabTemplate[]) {
+											let tabsRendered: Promise<string>[] = [];
+											appTabs.forEach(
+												function (tab: UCIApplicationTabTemplate) {
+													tabsRendered.push(new Promise<string>(function (resolve: any, reject: any) {
+														//tabsRendered.push(tabPromise)
+													//});
+													tab.instantiateTemplate(templateParams).then(
+														function (result: XrmClientApi.TabInput) {
+															this.createTab(sessionId, result).then(
+																function (result: string) {
+																	//TODO: Add the tabId to our tracking
+																	//return Promise.resolve(tabPromise);
+																	//return tabPromise.then()
+																	return resolve(result);
+																}.bind(this),
+																function (error: Error) {
+																	return reject(error);
+																}.bind(this));
+														}.bind(this),
+														function (error: Error) {
+															//TODO: log error
+															return reject(error);
+														}.bind(this));
+												}.bind(this)));
+												}.bind(this));
+											Promise.all(tabsRendered).then(
+												function (result: string) {
+													Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).focus();
+												}.bind(this),
+												function (error: Error) {
+													Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).focus();
+												}.bind(this));
+										}.bind(this),
+										function (error: Error) {
+											//TODO: log error
+										}.bind(this));
+									//}
+									resolve(sessionId);
+								}.bind(this),
+									function (errorMessage: string) {
+										let error = {} as IErrorHandler;
+										error.reportTime = new Date().toUTCString();
+										error.errorMsg = errorMessage;
+										error.errorType = errorTypes.GenericError;
+										error.sourceFunc = this.createSession.name;
+										reject(error);
+									}.bind(this)
+								);
+							}.bind(this),
+							function (error: Error) {
+								//TODO: Add telemetry
+								return reject(error);
+							}.bind(this)
+						);
+					}.bind(this),
+					function (error: Error) {
+						//TODO: Add telemetry
+						return reject(error);
+					}.bind(this)
+				);
+			}.bind(this)
+			);
 		}
 
 		requestFocusSession(sessionId: string, messagesCount: number): Promise<void> {

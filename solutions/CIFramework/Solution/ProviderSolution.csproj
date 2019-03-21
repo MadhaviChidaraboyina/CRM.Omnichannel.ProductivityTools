@@ -32,6 +32,79 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Entities\ConsoleAppTemplateTag\Entity.xml" />
+    <Content Include="Entities\ConsoleAppTemplateTag\FormXml\main\{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}_managed.xml" />
+    <Content Include="Entities\ConsoleAppTemplateTag\SavedQueries\{320c44e2-e1ba-4901-b51e-447230eb45e4}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateTag\SavedQueries\{13c30f0f-1c09-4670-9811-d5b8afd42c45}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateTag\SavedQueries\{2698d840-213c-426d-8cd0-f455fd00b034}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateTag\SavedQueries\{79914b72-54d0-4f15-aedd-bc0b9367e014}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateTag\SavedQueries\{ad7358b6-7641-e911-8190-000d3afe6c36}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateTag\SavedQueries\{9df2ec08-02cf-4399-84f0-e3dce19f8f85}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateTag\SavedQueries\{0bd6d418-377a-434b-b456-4e00cab168df}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateParameter\Entity.xml" />
+    <Content Include="Entities\ConsoleAppTemplateParameter\FormXml\main\{d00da6ab-1789-4a9d-ac44-da3ea8d75800}_managed.xml" />
+    <Content Include="Entities\ConsoleAppTemplateParameter\SavedQueries\{293785bc-4b34-4997-9158-99ecad3770fc}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateParameter\SavedQueries\{5547444c-2bd6-4a0b-b517-a7b34738b01b}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateParameter\SavedQueries\{88137b29-0c3b-e911-8187-000d3afe5f6b}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateParameter\SavedQueries\{4ca518f9-41e9-4896-a379-02e6e36cd07f}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateParameter\SavedQueries\{b0c83e9f-edba-4c11-a428-7b48d8821b03}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateParameter\SavedQueries\{9bffd5e4-38a9-4913-9627-38bdc0a535a6}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateParameter\SavedQueries\{6c123545-4983-491b-8967-ac6402dfb131}.xml" />
+    <Content Include="Entities\ConsoleAppParameterDefinition\Entity.xml" />
+    <Content Include="Entities\ConsoleAppParameterDefinition\FormXml\main\{215a1395-743d-4dfb-b552-c51d65fdb423}_managed.xml" />
+    <Content Include="Entities\ConsoleAppParameterDefinition\SavedQueries\{bff92427-895f-4a13-9f7e-28eb0084fcc5}.xml" />
+    <Content Include="Entities\ConsoleAppParameterDefinition\SavedQueries\{782fbe7a-365e-43c3-ac25-6494701d8cdf}.xml" />
+    <Content Include="Entities\ConsoleAppParameterDefinition\SavedQueries\{e4f856b6-7030-4357-bf3d-d7e155ff1032}.xml" />
+    <Content Include="Entities\ConsoleAppParameterDefinition\SavedQueries\{d5572dac-20ad-44cd-b8c0-3f6237fe0a7b}.xml" />
+    <Content Include="Entities\ConsoleAppParameterDefinition\SavedQueries\{e519c146-6836-e911-8191-000d3a06071c}.xml" />
+    <Content Include="Entities\ConsoleAppParameterDefinition\SavedQueries\{e4519c82-55dc-4721-afff-92cea9fcf969}.xml" />
+    <Content Include="Entities\ConsoleAppParameterDefinition\SavedQueries\{0b692db3-e5b0-4f56-84b4-bbf74a5f32ee}.xml" />
+    <Content Include="Entities\ConsoleAppType\Entity.xml" />
+    <Content Include="Entities\ConsoleAppType\FormXml\main\{e5c56ff7-4104-46e5-93d6-223fef077785}_managed.xml" />
+    <Content Include="Entities\ConsoleAppType\SavedQueries\{f1d3c88b-9874-4d92-a0d1-717718332eec}.xml" />
+    <Content Include="Entities\ConsoleAppType\SavedQueries\{e66f8fee-3538-466c-935b-04900c1c7afe}.xml" />
+    <Content Include="Entities\ConsoleAppType\SavedQueries\{efd3c03b-2333-49cf-a2d9-5aa25980ba03}.xml" />
+    <Content Include="Entities\ConsoleAppType\SavedQueries\{11fbced5-a41f-4589-b674-8cb6c8a03ba0}.xml" />
+    <Content Include="Entities\ConsoleAppType\SavedQueries\{ba8f5f7e-6b36-e911-8191-000d3a06071c}.xml" />
+    <Content Include="Entities\ConsoleAppType\SavedQueries\{7517c692-ce68-4a5e-bfd9-d036a3395640}.xml" />
+    <Content Include="Entities\ConsoleAppType\SavedQueries\{ea1a0a35-b395-46c7-a04a-d416a652cc3d}.xml" />
+    <Content Include="Entities\ConsoleAppTemplate\Entity.xml" />
+    <Content Include="Entities\ConsoleAppTemplate\FormXml\main\{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}_managed.xml" />
+    <Content Include="Entities\ConsoleAppTemplate\SavedQueries\{916523b1-6e7f-49a0-9580-8d20c95444e9}.xml" />
+    <Content Include="Entities\ConsoleAppTemplate\SavedQueries\{4e7abf48-30ea-4441-a7e7-ebdaea0421e9}.xml" />
+    <Content Include="Entities\ConsoleAppTemplate\SavedQueries\{c9df2b82-83e4-4401-bd6b-cdac8367e3e6}.xml" />
+    <Content Include="Entities\ConsoleAppTemplate\SavedQueries\{67d0e507-d88e-44d1-8665-b49436c2a4a4}.xml" />
+    <Content Include="Entities\ConsoleAppTemplate\SavedQueries\{37fd3926-6e36-e911-8191-000d3a06071c}.xml" />
+    <Content Include="Entities\ConsoleAppTemplate\SavedQueries\{577a3f3b-bfb9-49ee-b238-1741fa1edd0f}.xml" />
+    <Content Include="Entities\ConsoleAppTemplate\SavedQueries\{d6f56a89-23f2-4215-a7bf-59d4c2a0c11b}.xml" />
+    <Content Include="Entities\ConsoleAppSessionTemplate\Entity.xml" />
+    <Content Include="Entities\ConsoleAppSessionTemplate\FormXml\main\{7e7e29c0-bc24-40c2-938b-941554da4c4e}_managed.xml" />
+    <Content Include="Entities\ConsoleAppSessionTemplate\SavedQueries\{3df411a7-e4b9-412a-8626-3fea8ce1ae55}.xml" />
+    <Content Include="Entities\ConsoleAppSessionTemplate\SavedQueries\{a82cc2a5-25b7-4f2f-bdd2-082cb1c1f27c}.xml" />
+    <Content Include="Entities\ConsoleAppSessionTemplate\SavedQueries\{7d861b13-dfc1-447f-9799-54662a6f7104}.xml" />
+    <Content Include="Entities\ConsoleAppSessionTemplate\SavedQueries\{829540ca-a91c-481b-998e-ee01a8f0a400}.xml" />
+    <Content Include="Entities\ConsoleAppSessionTemplate\SavedQueries\{aaca7bd5-eb07-42c1-81ed-44c95cfc7eaf}.xml" />
+    <Content Include="Entities\ConsoleAppSessionTemplate\SavedQueries\{0f0185db-6f36-e911-8191-000d3a06071c}.xml" />
+    <Content Include="Entities\ConsoleAppSessionTemplate\SavedQueries\{c32dcbe2-3dbd-4861-99db-f2faceec233c}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationTemplate\Entity.xml" />
+    <Content Include="Entities\ConsoleAppNotificationTemplate\FormXml\main\{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}_managed.xml" />
+    <Content Include="Entities\ConsoleAppNotificationTemplate\SavedQueries\{b3c61bd1-b4ee-4416-b7ba-d45c90ea3304}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationTemplate\SavedQueries\{0989a562-3208-44fa-883e-8cd232f8868f}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationTemplate\SavedQueries\{8c04ada1-02d6-4d35-a3c6-f7b1a7e48801}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationTemplate\SavedQueries\{92ebf49c-b5ec-4bb2-9452-3f6ff1f4b553}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationTemplate\SavedQueries\{2b409f89-7336-e911-8191-000d3a06071c}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationTemplate\SavedQueries\{1f4e9cd2-1dc1-46c1-9fdd-b64d1d70540c}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationTemplate\SavedQueries\{d6bb8dfd-ea34-4f16-8f90-0681c4a48f6d}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationField\Entity.xml" />
+    <Content Include="Entities\ConsoleAppNotificationField\FormXml\main\{92b56288-9844-4608-b6e7-d9362c325d68}_managed.xml" />
+    <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{c71c236b-b4da-479a-8143-b660425adf43}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{23624635-e24e-4d8a-922e-7ac88b16a304}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{ac1a4464-e2a5-43fc-b8af-aef84b8fff2b}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{e48410d6-7236-e911-8191-000d3a06071c}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{fac01a35-64fb-4822-bbda-4ddfec81f385}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{6a8bc071-4b56-4eac-877c-dbdbdd4d975f}.xml" />
+    <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{ceef7e89-404a-4746-8735-a09e0114d232}.xml" />
+    <Content Include="Other\Relationships\SessionTemplates.xml" />
     <Content Include="packageMap.xml">
       <Link>packageMap.xml</Link>
     </Content>
@@ -68,7 +141,7 @@
     <Content Include="WebResources\msdyn_ProviderIcon.svg" />
     <Content Include="WebResources\widgets_containerStyle.css.data.xml" />
     <Content Include="WebResources\widgets_containerStyle.css">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="WebResources\Widget\msdyn_ciLibrary.js.data.xml" />
     <Content Include="WebResources\CRMClients\msdyn_internal_ci_library.js.data.xml" />
