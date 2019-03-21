@@ -8,7 +8,113 @@
   <EntityMaps />
   <EntityRelationships />
   <OrganizationSettings />
-  <optionsets/>
+  <optionsets>
+    <optionset Name="msdyn_consoleapplicationnotificationaction" localizedName="ConsoleApplicationNotificationAction" description="The set of allowed actions in a notification template">
+      <OptionSetType>picklist</OptionSetType>
+      <IsGlobal>1</IsGlobal>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <ExternalTypeName>ConsoleApplicationNotificationAction</ExternalTypeName>
+      <displaynames>
+        <displayname description="ConsoleApplicationNotificationAction" languagecode="1033" />
+      </displaynames>
+      <Descriptions>
+        <Description description="The set of allowed actions in a notification template" languagecode="1033" />
+      </Descriptions>
+      <options>
+        <option value="100000000" ExternalValue="Allow" Color="#0000ff">
+          <labels>
+            <label description="Allow" languagecode="1033" />
+          </labels>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </option>
+        <option value="100000001" ExternalValue="Deny" Color="#0000ff">
+          <labels>
+            <label description="Deny" languagecode="1033" />
+          </labels>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </option>
+      </options>
+    </optionset>
+    <optionset Name="msdyn_consoleapplicationparameterruntimetype" localizedName="ConsoleApplicationParameterRuntimeType" description="The set of allowed runtime types for parameter values">
+      <OptionSetType>picklist</OptionSetType>
+      <IsGlobal>1</IsGlobal>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <ExternalTypeName>ConsoleApplicationParameterRuntimeType</ExternalTypeName>
+      <displaynames>
+        <displayname description="ConsoleApplicationParameterRuntimeType" languagecode="1033" />
+      </displaynames>
+      <Descriptions>
+        <Description description="The set of allowed runtime types for parameter values" languagecode="1033" />
+      </Descriptions>
+      <options>
+        <option value="110000000" ExternalValue="string" Color="#0000ff">
+          <labels>
+            <label description="string" languagecode="1033" />
+          </labels>
+        </option>
+        <option value="110000001" ExternalValue="number" Color="#0000ff">
+          <labels>
+            <label description="number" languagecode="1033" />
+          </labels>
+        </option>
+        <option value="110000002" ExternalValue="boolean" Color="#0000ff">
+          <labels>
+            <label description="boolean" languagecode="1033" />
+          </labels>
+        </option>
+        <option value="110000003" ExternalValue="json" Color="#0000ff">
+          <labels>
+            <label description="json" languagecode="1033" />
+          </labels>
+        </option>
+      </options>
+    </optionset>
+    <optionset Name="msdyn_panestate" localizedName="PaneState" description="The panel state for a session">
+      <OptionSetType>picklist</OptionSetType>
+      <IsGlobal>1</IsGlobal>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <ExternalTypeName>panelState</ExternalTypeName>
+      <displaynames>
+        <displayname description="PaneState" languagecode="1033" />
+      </displaynames>
+      <Descriptions>
+        <Description description="The panel state for a session" languagecode="1033" />
+      </Descriptions>
+      <options>
+        <option value="100000000" ExternalValue="docked" Color="#0000ff">
+          <labels>
+            <label description="Docked" languagecode="1033" />
+          </labels>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </option>
+        <option value="100000001" ExternalValue="minimized" Color="#0000ff">
+          <labels>
+            <label description="Minimized" languagecode="1033" />
+          </labels>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </option>
+        <option value="100000002" ExternalValue="hidden" Color="#0000ff">
+          <labels>
+            <label description="Hidden" languagecode="1033" />
+          </labels>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </option>
+      </options>
+    </optionset>
+  </optionsets>
   <WebResources />
 	<CustomControls />
   <SolutionPluginAssemblies />

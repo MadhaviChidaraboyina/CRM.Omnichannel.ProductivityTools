@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms>
+
+	<systemform>
+		<formid>{92b56288-9844-4608-b6e7-d9362c325d68}</formid>
+		<IntroducedVersion>1.0.0.0</IntroducedVersion>
+		<FormPresentation>1</FormPresentation>
+		<FormActivationState>1</FormActivationState>
+		<form>
+			<tabs>
+				<tab verticallayout="true" id="{d6df0d89-7b66-450a-8916-377c7e683e23}" IsUserDefined="1">
+					<labels>
+						<label description="General" languagecode="1033" />
+					</labels>
+					<columns>
+						<column width="100%">
+							<sections>
+								<section showlabel="false" showbar="false" IsUserDefined="0" id="{cd441dbf-27f6-4ccb-aeb9-8c0b8a3f1f30}">
+									<labels>
+										<label description="General" languagecode="1033" />
+									</labels>
+									<rows>
+										<row>
+											<cell id="{8e2770be-ceed-48c8-a3e3-18fad627f551}">
+												<labels>
+													<label description="" languagecode="1033" />
+												</labels>
+												<control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{ca715140-33b6-4147-91a0-85a2c320f7dd}">
+												<labels>
+													<label description="" languagecode="1033" />
+												</labels>
+												<control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{653dcd92-16cd-7741-2720-8c7cc7068ae3}" showlabel="true" locklevel="0">
+												<labels>
+													<label description="" languagecode="1033" />
+												</labels>
+												<control id="msdyn_lineheader" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_lineheader" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{81b5e8e3-9082-6913-d7ba-e7713d426cc0}" showlabel="true" locklevel="0">
+												<labels>
+													<label description="" languagecode="1033" />
+												</labels>
+												<control id="msdyn_value" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_value" disabled="false" />
+											</cell>
+										</row>
+									</rows>
+								</section>
+							</sections>
+						</column>
+					</columns>
+				</tab>
+			</tabs>
+			<Navigation>
+				<NavBar></NavBar>
+				<NavBarAreas>
+					<NavBarArea Id="Info">
+						<Titles>
+							<Title LCID="1033" Text="Common" />
+						</Titles>
+					</NavBarArea>
+					<NavBarArea Id="Sales">
+						<Titles>
+							<Title LCID="1033" Text="Sales" />
+						</Titles>
+					</NavBarArea>
+					<NavBarArea Id="Service">
+						<Titles>
+							<Title LCID="1033" Text="Service" />
+						</Titles>
+					</NavBarArea>
+					<NavBarArea Id="Marketing">
+						<Titles>
+							<Title LCID="1033" Text="Marketing" />
+						</Titles>
+					</NavBarArea>
+					<NavBarArea Id="ProcessCenter">
+						<Titles>
+							<Title LCID="1033" Text="Process Sessions" />
+						</Titles>
+					</NavBarArea>
+				</NavBarAreas>
+			</Navigation>
+		</form>
+		<IsCustomizable>1</IsCustomizable>
+		<CanBeDeleted>1</CanBeDeleted>
+		<LocalizedNames>
+			<LocalizedName description="Information" languagecode="1033" />
+		</LocalizedNames>
+		<Descriptions>
+			<Description description="A form for this entity." languagecode="1033" />
+		</Descriptions>
+	</systemform>
+</forms>
