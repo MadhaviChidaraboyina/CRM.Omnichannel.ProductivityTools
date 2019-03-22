@@ -86,6 +86,15 @@ namespace Microsoft.CIFramework.Internal {
 			addCancelButtonContainer.appendChild(cancelBtn);
 			notesElement.appendChild(addCancelButtonContainer);
 
+			if(isConsoleAppInternal() == true){
+				let widgetAreaDiv =  widgetIFrame.contentWindow.document.getElementById("widgetArea");
+				let flapAreaDiv =  widgetIFrame.contentWindow.document.getElementById("flapArea");
+				widgetAreaDiv.classList.remove("widgetArea");
+				widgetAreaDiv.classList.add("widgetAreaZFP");
+				flapAreaDiv.classList.add("flapAreaZFP");
+			}
+
+
 			//Saving notes info locally
 			let sessionId: string = state.sessionManager.getFocusedSession();
 			let session = state.providerManager._activeProvider.sessions.get(sessionId);

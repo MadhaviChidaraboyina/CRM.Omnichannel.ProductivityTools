@@ -1,9 +1,9 @@
 {
   "files": [
-		"../../Packages/Crm.ClientApiTypings.1.0.2587-manual/clientapi/XrmClientApi.d.ts",
-		"../../Packages/Crm.ClientApiTypings.1.0.2587-manual/clientapi/XrmClientApiInternal.d.ts",
-		"../../Packages/Crm.ClientApiTypings.1.0.2587-manual/clientapi/XrmClientApiDeprecated.d.ts",
-		"../../Packages/Crm.ClientApiTypings.1.0.2587-manual/clientapi/XrmClientApiInternal.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApi.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApiInternal.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApiDeprecated.d.ts",
+		"../../Packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApiInternal.d.ts",
 		"../../references/internal/TypeDefinitions/XrmClientApi/XrmClientApiGap.d.ts",
 		"../../references/internal/TypeDefinitions/XrmClientApi/XrmClientApiCommand.d.ts",
 		"../../references/external/TypeDefinitions/microsoft.ajax.d.ts",

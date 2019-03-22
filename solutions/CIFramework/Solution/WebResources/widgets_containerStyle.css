@@ -137,6 +137,36 @@ div#PresenceList
 	left: calc(var(--sessionPanelAreaWidth));
 }
 
+.widgetAreaZFP
+{
+	width: calc(var(--widgetAreaWidth));
+	height: calc(100% - 10px);
+	position: absolute;
+}
+
+[dir='ltr'] .widgetAreaZFP
+{
+	left: calc(var(--sessionPanelAreaWidth));
+}
+
+[dir='rtl'] .widgetAreaZFP
+{
+	right: calc(var(--sessionPanelAreaWidth));
+}
+
+.flapAreaZFP{
+	position: absolute;
+}
+[dir='ltr'] .flapAreaZFP
+{
+	right: 0;
+}
+
+[dir='rtl'] .flapAreaZFP
+{
+	left: 0;
+}
+
 .widgetControl 
 {
 	height: 100%;

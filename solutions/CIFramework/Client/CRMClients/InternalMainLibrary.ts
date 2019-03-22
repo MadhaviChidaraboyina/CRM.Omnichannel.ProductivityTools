@@ -31,8 +31,10 @@ namespace Microsoft.CIFramework.Internal {
 		["deleterecord", [deleteRecord]],
 		["openform", [openForm]],
 		["setmode", [setMode]],
+		["setPosition", [setPosition]],
 		["getmode", [getMode]],
 		["setwidth", [setWidth]],
+		["isConsoleApp", [isConsoleApp]],
 		["getwidth", [getWidth]],
 		["addGenericHandler", [addGenericHandler]],
 		["removeGenericHandler", [removeGenericHandler]],
@@ -68,6 +70,7 @@ namespace Microsoft.CIFramework.Internal {
 	declare var appId: string;
 	declare var cifVersion: string;
 	cifVersion = "";
+	var navigationType: string;
 
 	/**
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
@@ -83,7 +86,8 @@ namespace Microsoft.CIFramework.Internal {
 			return false;
 		}
 
-		state.sessionManager = GetSessionManager(clientType, navigationType);
+		this.navigationType = navigationType;
+		state.sessionManager = GetSessionManager(clientType);
 		presence = GetPresenceManager(clientType);
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
@@ -149,8 +153,9 @@ namespace Microsoft.CIFramework.Internal {
 					}
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
+					let panelPosition = getPosition(provider);
 					// load the widgets onto client. 
-					state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
+					state.client.loadWidgets(state.providerManager.ciProviders, panelPosition as number).then(function (widgetLoadStatus) {
 						var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, "loadProvider - loadWidgets", provider.sortOrder, appId, cifVersion, false, null);
 						setUsageData(usageData);
 					});
@@ -161,6 +166,80 @@ namespace Microsoft.CIFramework.Internal {
 				logFailure(appId, true, errorData, "loadProvider", cifVersion);
 			}
 		);
+	}
+
+	/**
+	 * IsConsoleApp API's client side handler that post message library will invoke.
+	*/
+	export function isConsoleAppInternal(): boolean {
+		let ret: boolean;
+		if(this.navigationType == SessionType.MultiSession)
+		{
+			ret = true;
+		}
+		else
+		{
+			ret = false;
+		}
+		return ret;
+	}
+
+	/**
+	 * IsConsoleApp API's client side handler that post message library will invoke.
+	*/
+	export function isConsoleApp(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let ret: boolean;
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.SearchString]);
+		if (provider) {
+			if(this.navigationType == SessionType.MultiSession)
+			{
+				ret = true;
+			}
+			else
+			{
+				ret = false;
+			}
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "isConsoleApp", cifVersion, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, ret));
+		}
+		else {
+			return logFailure(appId, true, errorData, "isConsoleApp", cifVersion);
+		}
+	}
+
+	/**
+	 * setPosition API's client side handler that post message library will invoke. 
+	*/
+	export function setPosition(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.value]);
+		if(provider)
+		{
+			let ret = state.client.setPanelPosition("setPanelPosition", parameters.get(Constants.value) as number, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "setPosition", cifVersion, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, ret));
+		}
+		else
+		{
+			return logFailure(appId, true, errorData, "setPosition", cifVersion);
+		}
+	}
+
+	/**
+	 * getPosition API's client side handler that post message library will invoke.
+	*/
+	export function getPosition(provider: CIProvider): number {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		let ret = state.client.getPanelPosition(telemetryData);
+		var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getPosition", telemetryData);
+		setPerfData(perfData);
+		return ret as number;
 	}
 
 	/* Utility function to raise events registered for the framework */

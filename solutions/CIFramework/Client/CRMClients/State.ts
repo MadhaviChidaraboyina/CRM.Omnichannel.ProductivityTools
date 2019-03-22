@@ -7,7 +7,7 @@
 /// <reference path="WidgetIFrame.ts" />
 /// <reference path="../PostMsgWrapper.ts" />
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
-/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2587-manual/clientapi/XrmClientApi.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApi.d.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
 	/**
@@ -51,6 +51,9 @@ namespace Microsoft.CIFramework.Internal {
 
 		addProvider(url: string, provider: CIProvider) {
 			this.ciProviders.set(url, provider);
+			if(isNullOrUndefined(this._activeProvider)){
+				this._activeProvider = provider;
+			}
 		}
 
 		setActiveProvider(provider: CIProvider): void {
