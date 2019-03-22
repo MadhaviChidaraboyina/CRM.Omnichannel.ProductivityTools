@@ -201,12 +201,12 @@ namespace Microsoft.CIFramework.Internal {
 			{
 				ret = false;
 			}
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "isConsoleApp", cifVersion, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.isConsoleApp, cifVersion, telemetryData);
 			setPerfData(perfData);
 			return Promise.resolve(new Map().set(Constants.value, ret));
 		}
 		else {
-			return logFailure(appId, true, errorData, "isConsoleApp", cifVersion);
+			return logFailure(appId, true, errorData, MessageType.isConsoleApp, cifVersion);
 		}
 	}
 
