@@ -339,7 +339,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			Xrm.Panel.position = position;
 			let timeTaken = Date.now() - startTime.getTime();
-			let apiName = "Xrm.Panel.setPosition"
+			let apiName = "Xrm.Panel.setPosition";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
 
 			return position;
@@ -351,7 +351,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			let position = Xrm.Panel.position;
 			let timeTaken = Date.now() - startTime.getTime();
-			let apiName = "Xrm.Panel.getPosition"
+			let apiName = "Xrm.Panel.getPosition";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
 
 			return position;
