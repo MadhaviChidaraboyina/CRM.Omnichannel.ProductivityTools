@@ -75,6 +75,22 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+	 * API to to check value of IsConsoleApp for a widget
+	 *
+	 * @param value. When set to 'true', then it's a console App.
+	 *
+	*/
+	export function isConsoleApp(): Promise<boolean> {
+		let startTime = Date.now();
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.isConsoleApp,
+			messageData: new Map()
+		}
+
+		return sendMessage<boolean>(isConsoleApp.name, payload, false);
+	}
+
+	/**
 	 * API to set/reset value of ClickToAct for a widget
 	 *
 	 * @param value. When set to 'true', invoke the registered 'onclicktoact' handler.

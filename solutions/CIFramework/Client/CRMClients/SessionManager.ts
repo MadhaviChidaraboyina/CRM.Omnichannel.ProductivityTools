@@ -42,10 +42,10 @@ namespace Microsoft.CIFramework.Internal {
 		abstract closeTab(sessionId: string, tabId: string): Promise<boolean>;
 	}
 
-	export function GetSessionManager(clientType: string, navigationType: string): SessionManager {
+	export function GetSessionManager(clientType: string): SessionManager {
 		switch (clientType) {
 			case ClientType.UnifiedClient:
-				if(navigationType == SessionType.MultiSession)
+				if(isConsoleAppInternal() == true)
 					return new ConsoleAppSessionManager();
 				else
 					return new SessionPanel();
