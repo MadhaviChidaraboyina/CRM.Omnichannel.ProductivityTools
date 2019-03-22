@@ -333,6 +333,30 @@ namespace Microsoft.CIFramework.Internal {
 			return mode;
 		}
 
+		client.setPanelPosition = (name: string, position: number, telemetryData?: Object|any): number =>
+		{
+			let startTime = new Date();
+
+			Xrm.Panel.position = position;
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Panel.setPosition";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			return position;
+		}
+
+		client.getPanelPosition = (telemetryData?: Object): number =>
+		{
+			let startTime = new Date();
+
+			let position = Xrm.Panel.position;
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Panel.getPosition";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			return position;
+		}
+
 		client.setWidgetWidth = (name: string, width: number, telemetryData?: Object | any): number => {
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionPanelArea = (<HTMLDivElement>widgetIFrame.contentDocument.getElementById("sessionPanel"));
