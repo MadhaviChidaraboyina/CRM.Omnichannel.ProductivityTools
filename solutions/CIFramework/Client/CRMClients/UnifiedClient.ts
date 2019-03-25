@@ -202,12 +202,15 @@ namespace Microsoft.CIFramework.Internal {
 			return Xrm.Utility.getGlobalContext().userSettings.userId;
 		}
 
-		client.loadWidgets = (ciProviders: Map<string, CIProvider>, panelPosition: number): Promise<Map<string, boolean | string>> => {
+		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> => {
 			const options: XrmClientApi.NewPanelOptions = {
-				position: panelPosition,
+				position: Constants.right,
 				defaultCollapsedBehavior: false,
 				url: "/webresources/widgets_container.html"
 			};
+			if(isConsoleAppInternal() == true){
+				options.position = Constants.left;
+			}
 			return new Promise<Map<string, boolean | string>>((resolve, reject) => {
 				return Xrm.Panel.loadPanel(options).then(function () {
 					Xrm.Panel.addOnSizeChange(client.sizeChanged);

@@ -71,6 +71,7 @@ namespace Microsoft.CIFramework.Internal {
 	declare var cifVersion: string;
 	cifVersion = "";
 	var navigationType: string;
+	export var isHiddenPanel: boolean;
 
 	/**
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
@@ -85,6 +86,10 @@ namespace Microsoft.CIFramework.Internal {
 		if (!state.client.checkCIFCapability()) {
 			return false;
 		}
+
+		let pageUrl: any = new URL(eval("window.top.Xrm.Page.getUrl()") as string);
+
+		isHiddenPanel = pageUrl.searchParams.get("flags") as boolean;
 
 		this.navigationType = navigationType;
 		state.sessionManager = GetSessionManager(clientType);
@@ -153,9 +158,8 @@ namespace Microsoft.CIFramework.Internal {
 					}
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
-					let panelPosition = getPosition(provider);
 					// load the widgets onto client. 
-					state.client.loadWidgets(state.providerManager.ciProviders, panelPosition as number).then(function (widgetLoadStatus) {
+					state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
 						var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, "loadProvider - loadWidgets", provider.sortOrder, appId, cifVersion, false, null);
 						setUsageData(usageData);
 					});

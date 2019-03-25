@@ -174,6 +174,8 @@ namespace Microsoft.CIFramework
 		public static CollapseFlapHandler = "collapseFlapHandler";
 		public static newSessionId = "newSessionId";
 		public static previousSessionId = "previousSessionId";
+		public static left = 1;
+		public static right = 2;
 	}
 
 	/**
