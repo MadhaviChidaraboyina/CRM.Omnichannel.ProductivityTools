@@ -8,7 +8,7 @@
 		<Descriptions>
 			<Description description="Bring your communication channels and build immersive experience with Dynamics 365" languagecode="1033"/>
 		</Descriptions>
-		<Version>1.0.0.0</Version>
+		<Version>1.0.0.1</Version>
 		<Managed>2</Managed>
 		<Publisher>
 			<UniqueName>microsoftdynamics</UniqueName>
@@ -134,6 +134,7 @@
       <RootComponent type="92" id="{fc42a104-1671-46cd-bfcb-fdf0d642bdfe}" behavior="0" />
 			<RootComponent type="50" schemaName=":RibbonDiffXml" behavior="0" />
 			<RootComponent type="60" id="{e02fac01-dd62-4886-8f07-042ad67ee299}" behavior="0" />
+			<RootComponent type="9" schemaName="msdyn_presencestatus" behavior="0" />
 		</RootComponents>
 		<MissingDependencies />
 	</SolutionManifest>

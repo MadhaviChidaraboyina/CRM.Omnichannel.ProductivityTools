@@ -176,6 +176,8 @@ namespace Microsoft.CIFramework
 		public static previousSessionId = "previousSessionId";
 		public static left = 1;
 		public static right = 2;
+		public static GLOBAL_PRESENCE_LIST = "GlobalToolBar_PresenceList";
+		public static presenceText = "presenceText";
 	}
 
 	/**

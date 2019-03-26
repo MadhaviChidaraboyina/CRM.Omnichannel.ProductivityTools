@@ -11,7 +11,7 @@
 					LabelText="Launch Presence Dialog"
 					ToolTipTitle="Launch Presence Dialog"
 					TemplateAlias="o1"
-					ModernImage="InsertKbArticle"
+					ModernImage="Save"
 				/>
 				<!--<FlyoutAnchor
 					Id="Microsoft.Dynamics.Service.CIFramework.Presence.Flyout"
@@ -59,7 +59,7 @@
 			<EnableRules />
 			<DisplayRules />
 			<Actions>
-				<JavaScriptFunction FunctionName="Microsoft.CIFramework.Internal.LoadPresenceDialog" Library="$webresource:CRMClients/msdyn_internal_ci_library.js" />
+				<JavaScriptFunction FunctionName="Microsoft.CIFramework.Internal.PresenceControl.Instance.openPresenceDialog" Library="$webresource:CRMClients/msdyn_internal_ci_library.js" />
 			</Actions>
 		</CommandDefinition>
 	</CommandDefinitions>
