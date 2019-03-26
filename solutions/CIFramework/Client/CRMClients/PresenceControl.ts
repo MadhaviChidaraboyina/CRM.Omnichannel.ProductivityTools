@@ -6,6 +6,9 @@
 /// <reference path="InternalMainLibrary.ts" />
 
 namespace Microsoft.CIFramework.Internal {
+
+	declare const Xrm: any;
+
 	export type PresenceInfo = {
 		presenceId: string;
 		presenceColor: string;
@@ -85,7 +88,7 @@ namespace Microsoft.CIFramework.Internal {
 			updatedPresenceNode.title = presenceInfo.presenceText;
 			updatedPresenceNode.tabIndex = 0;
 			updatedPresenceNode.setAttribute("role", "button");
-			updatedPresenceNode.setAttribute("aria-label", "set your presence status . current presence status is "+updatedPresenceNode.title);
+			updatedPresenceNode.setAttribute("aria-label", "set your presence status . current presence status is " + updatedPresenceNode.title);
 			updatedPresenceNode.addEventListener("click", this.toggleList, false);
 			updatedPresenceNode.addEventListener("keypress", this.keyboardToggleList, false);
 
@@ -153,7 +156,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		// Raises the Set Presence Event when click or keypress happens on Presence List Items
-		private raiseSetPresence(e:any): any {
+		private raiseSetPresence(e: any): any {
 			var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
 			presenceList.style.display = "none";
 			let updatedPresence: any = {};
@@ -191,6 +194,45 @@ namespace Microsoft.CIFramework.Internal {
 				if (presenceList)
 					presenceList.style.display = "none";
 			}
+		}
+
+		public openPresenceDialog(e: any): any {
+			const that = this;
+			const dialogParams: XrmClientApi.DialogParameters = {};
+			dialogParams["param_lastButtonClicked"] = "";
+			const dialogOptions: XrmClientApi.DialogOptions = { width: 300, height: 300, position: XrmClientApi.Constants.WindowPosition.center };
+			Xrm.Navigation.openDialog("SetAgentPresenceMDD", dialogOptions, dialogParams).then(function (dialogParams: any) {
+				if (dialogParams.parameters["param_lastButtonClicked"] === "ok_id") {
+					that.raiseSetPresence();
+				}
+			});
+		}
+
+		public openPresenceDialogonLoad(e: any): any {
+			const presenceControl: XrmClientApi.Controls.OptionSetControl = Xrm.Page.getControl("presence_id");
+			const presenceOptions_str: string = window.localStorage[Constants.GLOBAL_PRESENCE_LIST];
+			if (presenceOptions_str) {
+				const presenceOptions = JSON.parse(presenceOptions_str);
+				if (presenceControl && presenceOptions) {
+					for (let i: number = 0; i < presenceOptions.length; i++) {
+						const item: XrmClientApi.OptionSetItem = {
+							text: presenceOptions[i][Constants.presenceText],
+							value: i
+						}
+						presenceControl.addOption(item);
+					}
+				}
+			}
+		}
+
+		public openPresenceDialogOKClick(e: any): any {
+			Xrm.Page.data.attributes.get("param_lastButtonClicked").setValue("ok_id");
+			Xrm.Page.ui.close();
+		}
+
+		public openPresenceDialogCancelClick(e: any): any {
+			Xrm.Page.data.attributes.get("param_lastButtonClicked").setValue("cancel_id");
+			Xrm.Page.ui.close();
 		}
 	}
 }

@@ -9,7 +9,7 @@
   <EntityMaps />
   <EntityRelationships />
   <OrganizationSettings />
-  <optionsets/>
+  <optionsets />
   <Dialogs />
   <WebResources />
 	<CustomControls />

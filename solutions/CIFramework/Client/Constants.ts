@@ -172,6 +172,8 @@ namespace Microsoft.CIFramework
 		public static CollapseFlapHandler = "collapseFlapHandler";
 		public static newSessionId = "newSessionId";
 		public static previousSessionId = "previousSessionId";
+		public static GLOBAL_PRESENCE_LIST = "GlobalToolBar_PresenceList";
+		public static presenceText = "presenceText";
 	}
 
 	/**
