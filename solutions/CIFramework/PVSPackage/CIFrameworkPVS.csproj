@@ -56,6 +56,12 @@
       <Link>msdyn_CIFramework\CIFramework_managed.zip</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+	<Content Include="msdyn_CIFramework\CmtDataFiles\data_1033\data.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+	<Content Include="msdyn_CIFramework\CmtDataFiles\data_1033\data_schema.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="msdyn_CIFramework\Content\en-us\EndHtml\CSS\common.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
