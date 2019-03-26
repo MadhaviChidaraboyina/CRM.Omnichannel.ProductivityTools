@@ -1,24 +1,153 @@
 <entities >
-  <entity name="msdyn_consoleappparameterdefinition" displayname="ConsoleAppParameterDefinition" etc="10043" primaryidfield="msdyn_consoleappparameterdefinitionid" primarynamefield="msdyn_name" disableplugins="false">
+  <entity name="msdyn_consoleapplicationnotificationfield" displayname="ConsoleApplicationNotificationField" etc="10041" primaryidfield="msdyn_consoleapplicationnotificationfieldid" primarynamefield="msdyn_name" disableplugins="false">
     <fields>
-      <field displayname="ConsoleAppParameterDefinition" name="msdyn_consoleappparameterdefinitionid" type="guid" primaryKey="true" />
+      <field displayname="ConsoleApplicationNotificationField" name="msdyn_consoleapplicationnotificationfieldid" type="guid" primaryKey="true" />
       <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
       <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
       <field displayname="Created On" name="createdon" type="datetime" />
-      <field displayname="DefaultValue" name="msdyn_defaultvalue" type="string" customfield="true" />
       <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
-      <field displayname="IsRuntime" name="msdyn_isruntime" type="bool" customfield="true" />
+      <field displayname="LineHeader" name="msdyn_lineheader" type="string" customfield="true" />
       <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
       <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
       <field displayname="Modified On" name="modifiedon" type="datetime" />
       <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
-      <field displayname="Organization Id" name="organizationid" type="entityreference" lookupType="organization" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Value" name="msdyn_value" type="string" customfield="true" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+    </fields>
+    <relationships />
+  </entity>
+  <entity name="msdyn_consoleapplicationnotificationtemplate" displayname="ConsoleApplicationNotificationTemplate" etc="10042" primaryidfield="msdyn_consoleapplicationnotificationtemplateid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="ActionButtons" name="msdyn_actionbuttons" type="optionsetvaluecollection" customfield="true" />
+      <field displayname="ConsoleApplicationNotificationTemplate" name="msdyn_consoleapplicationnotificationtemplateid" type="guid" primaryKey="true" />
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="Icon" name="msdyn_icon" type="string" customfield="true" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="RenderingOrder" name="msdyn_renderingorder" type="number" customfield="true" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="Timeout" name="msdyn_timeout" type="number" customfield="true" />
+      <field displayname="Title" name="msdyn_title" type="string" customfield="true" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+    </fields>
+    <relationships>
+      <relationship name="msdyn_msdyn_consoleapplicationnotificationtem" manyToMany="true" isreflexive="false" relatedEntityName="msdyn_msdyn_consoleapplicationnotificationtem" m2mTargetEntity="msdyn_consoleapplicationnotificationfield" m2mTargetEntityPrimaryKey="msdyn_consoleapplicationnotificationfieldid" />
+      <relationship name="msdyn_msdyn_consoleapplicationnotificationtag" manyToMany="true" isreflexive="false" relatedEntityName="msdyn_msdyn_consoleapplicationnotificationtag" m2mTargetEntity="msdyn_templatetags" m2mTargetEntityPrimaryKey="msdyn_templatetagsid" />
+    </relationships>
+  </entity>
+  <entity name="msdyn_consoleapplicationsessiontemplate" displayname="ConsoleApplicationSessionTemplate" etc="10044" primaryidfield="msdyn_consoleapplicationsessiontemplateid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="AnchorTab" name="msdyn_anchortab" type="entityreference" lookupType="msdyn_consoleapplicationtemplate" customfield="true" />
+      <field displayname="ConsoleApplicationSessionTemplate" name="msdyn_consoleapplicationsessiontemplateid" type="guid" primaryKey="true" />
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="icon" name="msdyn_icon" type="string" customfield="true" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="IsPanelHidden" name="msdyn_ispanelhidden" type="bool" customfield="true" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="PanelState" name="msdyn_panelstate" type="optionsetvalue" customfield="true" />
+      <field displayname="Pinned" name="msdyn_pinned" type="bool" customfield="true" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="RenderingOrder" name="msdyn_renderingorder" type="number" customfield="true" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="Title" name="msdyn_title" type="string" customfield="true" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+    </fields>
+    <relationships>
+      <relationship name="msdyn_msdyn_consoleapplicationsessiontemplate" manyToMany="true" isreflexive="false" relatedEntityName="msdyn_msdyn_consoleapplicationsessiontemplate" m2mTargetEntity="msdyn_consoleapplicationtemplate" m2mTargetEntityPrimaryKey="msdyn_consoleapplicationtemplateid" />
+      <relationship name="msdyn_msdyn_consoleapplicationsessiontemp_tag" manyToMany="true" isreflexive="false" relatedEntityName="msdyn_msdyn_consoleapplicationsessiontemp_tag" m2mTargetEntity="msdyn_templatetags" m2mTargetEntityPrimaryKey="msdyn_templatetagsid" />
+    </relationships>
+  </entity>
+  <entity name="msdyn_consoleapplicationtemplate" displayname="ConsoleApplicationTemplate" etc="10045" primaryidfield="msdyn_consoleapplicationtemplateid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="ConsoleApplicationTemplate" name="msdyn_consoleapplicationtemplateid" type="guid" primaryKey="true" />
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="icon" name="msdyn_icon" type="string" customfield="true" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="IsStale" name="msdyn_isstale" type="bool" customfield="true" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="PageType" name="msdyn_pagetype" type="entityreference" lookupType="msdyn_consoleapplicationtype" customfield="true" />
+      <field displayname="Pinned" name="msdyn_pinned" type="bool" customfield="true" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="TemplateParameters" name="msdyn_templateparameters" type="string" customfield="true" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="Title" name="msdyn_title" type="string" customfield="true" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+    </fields>
+    <relationships>
+      <relationship name="msdyn_msdyn_consoleapplicationtemplate_msdyn_" manyToMany="true" isreflexive="false" relatedEntityName="msdyn_msdyn_consoleapplicationtemplate_msdyn_" m2mTargetEntity="msdyn_consoleapplicationtemplateparameter" m2mTargetEntityPrimaryKey="msdyn_consoleapplicationtemplateparameterid" />
+      <relationship name="msdyn_msdyn_consoleapplicationtemplate_tags" manyToMany="true" isreflexive="false" relatedEntityName="msdyn_msdyn_consoleapplicationtemplate_tags" m2mTargetEntity="msdyn_templatetags" m2mTargetEntityPrimaryKey="msdyn_templatetagsid" />
+    </relationships>
+  </entity>
+  <entity name="msdyn_consoleapplicationtemplateparameter" displayname="ConsoleApplicationTemplateParameter" etc="10046" primaryidfield="msdyn_consoleapplicationtemplateparameterid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="ConsoleApplicationTemplateParameter" name="msdyn_consoleapplicationtemplateparameterid" type="guid" primaryKey="true" />
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="IsRunTime" name="msdyn_isruntime" type="bool" customfield="true" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="ParameterName" name="msdyn_parametername" type="string" customfield="true" />
       <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
       <field displayname="RuntimeType" name="msdyn_runtimetype" type="optionsetvalue" customfield="true" />
       <field displayname="Status" name="statecode" type="state" />
       <field displayname="Status Reason" name="statuscode" type="status" />
       <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
       <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Value" name="msdyn_value" type="string" customfield="true" />
       <field displayname="Version Number" name="versionnumber" type="bigint" />
     </fields>
     <relationships />
@@ -47,5 +176,53 @@
     <relationships>
       <relationship name="msdyn_msdyn_consoleapplicationtype_msdyn_cons" manyToMany="true" isreflexive="false" relatedEntityName="msdyn_msdyn_consoleapplicationtype_msdyn_cons" m2mTargetEntity="msdyn_consoleappparameterdefinition" m2mTargetEntityPrimaryKey="msdyn_consoleappparameterdefinitionid" />
     </relationships>
+  </entity>
+  <entity name="msdyn_consoleappparameterdefinition" displayname="ConsoleAppParameterDefinition" etc="10043" primaryidfield="msdyn_consoleappparameterdefinitionid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="ConsoleAppParameterDefinition" name="msdyn_consoleappparameterdefinitionid" type="guid" primaryKey="true" />
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="DefaultValue" name="msdyn_defaultvalue" type="string" customfield="true" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="IsRuntime" name="msdyn_isruntime" type="bool" customfield="true" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Organization Id" name="organizationid" type="entityreference" lookupType="organization" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="RuntimeType" name="msdyn_runtimetype" type="optionsetvalue" customfield="true" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+    </fields>
+    <relationships />
+  </entity>
+  <entity name="msdyn_templatetags" displayname="TemplateTag" etc="10047" primaryidfield="msdyn_templatetagsid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="TemplateTag" name="msdyn_templatetagsid" type="guid" primaryKey="true" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+    </fields>
+    <relationships />
   </entity>
 </entities>
