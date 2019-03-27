@@ -43,7 +43,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Crm.Sdk.Proxy">
-      <HintPath>..\..\..\packages\Microsoft.Dynamics.XrmSolutions.Tools.1.1.280\tools\Tests\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.Dynamics.XrmSolutions.Tools.1.1.430\tools\Tests\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Xrm.Sdk">
