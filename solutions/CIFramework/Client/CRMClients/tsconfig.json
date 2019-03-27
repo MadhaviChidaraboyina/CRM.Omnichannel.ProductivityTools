@@ -1,5 +1,6 @@
 {
 	"extends":  "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+<<<<<<< HEAD
   "include": [
     "../Constants.ts",
     "Constants.ts",
@@ -21,6 +22,7 @@
     "NotificationInfra.ts",
     "aria-webjs-sdk-1.8.3.js",
     "PresenceControl.ts",
+    "PresenceDialogControl.ts",
     "NotesInfra.ts"
   ],
 	"compilerOptions": {

@@ -178,6 +178,12 @@ namespace Microsoft.CIFramework
 		public static right = 2;
 		public static GLOBAL_PRESENCE_LIST = "GlobalToolBar_PresenceList";
 		public static presenceText = "presenceText";
+		public static presenceSelectControl = "presence_id";
+		public static OK_BUTTON_ID = "ok_id";
+		public static CANCEL_BUTTON_ID = "cancel_id";
+		public static LAST_BUTTON_CLICKED = "param_lastButtonClicked";
+		public static SET_PRESENCE_MDD = "SetAgentPresenceMDD";
+		public static PRESENCE_SELECTED_VALUE = "param_selectedValue";
 	}
 
 	/**
