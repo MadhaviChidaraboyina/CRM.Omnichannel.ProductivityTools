@@ -6,9 +6,6 @@
 /// <reference path="InternalMainLibrary.ts" />
 
 namespace Microsoft.CIFramework.Internal {
-
-	declare const Xrm: any;
-
 	export type PresenceInfo = {
 		presenceId: string;
 		presenceColor: string;
@@ -41,6 +38,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (presenceList != null) {
 				var presenceListNode = document.createElement('div');
 				presenceListNode.classList.add("PresenceListInnerNode");
+				presenceListNode.setAttribute("role","menu");
 
 				// Appends the Header to the List
 				var headerDiv = document.createElement('div');
@@ -53,7 +51,7 @@ namespace Microsoft.CIFramework.Internal {
 					presenceNode.id = presenceList[i].presenceId;
 					presenceNode.classList.add("PresenceListItem");
 					presenceNode.tabIndex = 0;
-					presenceNode.setAttribute("role", "button");
+					presenceNode.setAttribute("role","menuitem");
 					presenceNode.setAttribute("aria-label", presenceList[i].presenceText);
 
 					var presenceColorNode = document.createElement('div');
@@ -88,7 +86,7 @@ namespace Microsoft.CIFramework.Internal {
 			updatedPresenceNode.title = presenceInfo.presenceText;
 			updatedPresenceNode.tabIndex = 0;
 			updatedPresenceNode.setAttribute("role", "button");
-			updatedPresenceNode.setAttribute("aria-label", "set your presence status . current presence status is " + updatedPresenceNode.title);
+			updatedPresenceNode.setAttribute("aria-label", "set your presence status . current presence status is "+updatedPresenceNode.title);
 			updatedPresenceNode.addEventListener("click", this.toggleList, false);
 			updatedPresenceNode.addEventListener("keypress", this.keyboardToggleList, false);
 
@@ -156,7 +154,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		// Raises the Set Presence Event when click or keypress happens on Presence List Items
-		private raiseSetPresence(e: any): any {
+		private raiseSetPresence(e:any): any {
 			var presenceList = (<HTMLIFrameElement>(window.top.document.getElementById("SidePanelIFrame"))).contentDocument.getElementById("PresenceList");
 			presenceList.style.display = "none";
 			let updatedPresence: any = {};
@@ -184,8 +182,10 @@ namespace Microsoft.CIFramework.Internal {
 			window.parent.dispatchEvent(setPresenceEvent);
 		}
 
-		// Enter,Space and Escape KeyDown Handler for Presence List Items
+		// Enter,Space,Escape,Up and Down Arrow KeyDown Handler for Presence List Items
 		private keyboardPresenceHandler(e: any): any {
+			let activeElement: any = e.target;
+			let presenceListInnerNode: any = e.currentTarget;
 			if (e.keyCode == 13 || e.keyCode == 32) {
 				Microsoft.CIFramework.Internal.PresenceControl.Instance.raiseSetPresence(e);
 			}
@@ -194,45 +194,27 @@ namespace Microsoft.CIFramework.Internal {
 				if (presenceList)
 					presenceList.style.display = "none";
 			}
-		}
-
-		public openPresenceDialog(e: any): any {
-			const that = this;
-			const dialogParams: XrmClientApi.DialogParameters = {};
-			dialogParams["param_lastButtonClicked"] = "";
-			const dialogOptions: XrmClientApi.DialogOptions = { width: 300, height: 300, position: XrmClientApi.Constants.WindowPosition.center };
-			Xrm.Navigation.openDialog("SetAgentPresenceMDD", dialogOptions, dialogParams).then(function (dialogParams: any) {
-				if (dialogParams.parameters["param_lastButtonClicked"] === "ok_id") {
-					that.raiseSetPresence();
-				}
-			});
-		}
-
-		public openPresenceDialogonLoad(e: any): any {
-			const presenceControl: XrmClientApi.Controls.OptionSetControl = Xrm.Page.getControl("presence_id");
-			const presenceOptions_str: string = window.localStorage[Constants.GLOBAL_PRESENCE_LIST];
-			if (presenceOptions_str) {
-				const presenceOptions = JSON.parse(presenceOptions_str);
-				if (presenceControl && presenceOptions) {
-					for (let i: number = 0; i < presenceOptions.length; i++) {
-						const item: XrmClientApi.OptionSetItem = {
-							text: presenceOptions[i][Constants.presenceText],
-							value: i
+			if (e.keyCode == 38) {
+				if (activeElement.previousSibling != null) {
+					if (activeElement.previousSibling.classList.length > 0) {
+						if (activeElement.previousSibling.classList.contains("headerDiv")) {
+							let presenceListItems: any = presenceListInnerNode.getElementsByClassName("PresenceListItem");
+							presenceListItems[presenceListItems.length - 1].focus();
 						}
-						presenceControl.addOption(item);
+						else {
+							activeElement.previousSibling.focus();
+						}
 					}
 				}
 			}
-		}
-
-		public openPresenceDialogOKClick(e: any): any {
-			Xrm.Page.data.attributes.get("param_lastButtonClicked").setValue("ok_id");
-			Xrm.Page.ui.close();
-		}
-
-		public openPresenceDialogCancelClick(e: any): any {
-			Xrm.Page.data.attributes.get("param_lastButtonClicked").setValue("cancel_id");
-			Xrm.Page.ui.close();
+			if (e.keyCode == 40) {
+				if (activeElement.nextSibling == null) {
+					presenceListInnerNode.getElementsByClassName("PresenceListItem")[0].focus();
+				}
+				else {
+					activeElement.nextSibling.focus();
+				}
+			}
 		}
 	}
 }

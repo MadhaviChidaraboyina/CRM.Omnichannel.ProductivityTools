@@ -14,14 +14,14 @@
   <FormXml>
     <forms type="dialog">
       <form>
-          <header id="{e48c165e-435a-4448-848f-29a48076e937}">
+        <header id="{e48c165e-435a-4448-848f-29a48076e937}">
           <rows>
             <row>
               <cell id="{27ab568e-6561-4bb7-b6bc-4fa7100a1173}">
                 <labels>
                   <label description="Set Your Status" languagecode="1033" />
                 </labels>
-                <control id="lbl_resolvecase" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                <control id="lbl_setyourstatus" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
                   <parameters>
                     <IsTitle>true</IsTitle>
                   </parameters>
@@ -43,9 +43,9 @@
                             <label description="Status" languagecode="1033" />
                           </labels>
                           <control id="presence_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
-                          <parameters>
+                            <parameters>
                               <OptionSetName>msdyn_presencestatus</OptionSetName>
-                          </parameters>
+                            </parameters>
                           </control>
                         </cell>
                       </row>
@@ -77,37 +77,33 @@
         <events>
           <event name="onclick" application="false" active="false" attribute="ok_id">
             <Handlers>
-              <Handler functionName="Microsoft.CIFramework.Internal.PresenceControl.Instance.openPresenceDialogOKClick" libraryName="$webresource:CRMClients/msdyn_internal_ci_library.js" handlerUniqueId="{4a1eceff-a8f0-4736-a4c7-a3c6c400e433}" enabled="true" parameters="" passExecutionContext="false" />
+              <Handler functionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialogOKClick" libraryName="$webresource:CRMClients/msdyn_internal_ci_library.js" handlerUniqueId="{4a1eceff-a8f0-4736-a4c7-a3c6c400e433}" enabled="true" parameters="" passExecutionContext="false" />
             </Handlers>
           </event>
           <event name="onclick" application="false" active="false" attribute="cancel_id">
             <Handlers>
-              <Handler functionName="Microsoft.CIFramework.Internal.PresenceControl.Instance.openPresenceDialogCancelClick" libraryName="$webresource:CRMClients/msdyn_internal_ci_library.js" handlerUniqueId="{ab16b50e-8ca3-4503-8dee-4a2f148b78fe}" enabled="true" parameters="" passExecutionContext="false" />
+              <Handler functionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialogCancelClick" libraryName="$webresource:CRMClients/msdyn_internal_ci_library.js" handlerUniqueId="{ab16b50e-8ca3-4503-8dee-4a2f148b78fe}" enabled="true" parameters="" passExecutionContext="false" />
             </Handlers>
           </event>
           <event name="onload" application="false" active="false">
             <Handlers>
-              <Handler functionName="Microsoft.CIFramework.Internal.PresenceControl.Instance.openPresenceDialogonLoad" libraryName="$webresource:CRMClients/msdyn_internal_ci_library.js" handlerUniqueId="{eab73ae0-cbf8-4bd0-9b6f-3ba0633aa5e7}" enabled="true" parameters="" passExecutionContext="false" />
+              <Handler functionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialogonLoad" libraryName="$webresource:CRMClients/msdyn_internal_ci_library.js" handlerUniqueId="{eab73ae0-cbf8-4bd0-9b6f-3ba0633aa5e7}" enabled="true" parameters="" passExecutionContext="false" />
             </Handlers>
-          </event> 
+          </event>
         </events>
         <formparameters>
-          <querystringparameter name="param_is_time_allotment" type="Integer" />
-          <querystringparameter name="param_allotments_remaining" type="Integer" />
-          <querystringparameter name="param_time_spent" type="Integer" />
           <querystringparameter name="param_lastButtonClicked" type="SafeString" />
-          <querystringparameter name="param_entityId" type="UniqueId" />
+          <querystringparameter name="param_selectedValue" type="SafeString" />
         </formparameters>
         <clientresources>
           <internalresources>
             <clientincludes>
-			  <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
-              <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+              <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
             </clientincludes>
           </internalresources>
         </clientresources>
       </form>
     </forms>
   </FormXml>
-  <IntroducedVersion>7.1.0.0</IntroducedVersion>
+  <IntroducedVersion>9.0.0.0</IntroducedVersion>
 </Dialog>
