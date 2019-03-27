@@ -47,7 +47,7 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for loading all widgets.
 	*/
-	type LoadWidgetsFunction = (ciProviders: Map<string, CIProvider>) => Promise<Map<string, boolean | string>>;
+	type LoadWidgetsFunction = (ciProviders: Map<string, CIProvider>, panelPosition: number) => Promise<Map<string, boolean | string>>;
 
 	/**
 	 * Func type for get Metadata about an entity
