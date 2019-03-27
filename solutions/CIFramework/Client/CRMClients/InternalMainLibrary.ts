@@ -31,8 +31,10 @@ namespace Microsoft.CIFramework.Internal {
 		["deleterecord", [deleteRecord]],
 		["openform", [openForm]],
 		["setmode", [setMode]],
+		["setPosition", [setPosition]],
 		["getmode", [getMode]],
 		["setwidth", [setWidth]],
+		["isConsoleApp", [isConsoleApp]],
 		["getwidth", [getWidth]],
 		["addGenericHandler", [addGenericHandler]],
 		["removeGenericHandler", [removeGenericHandler]],
@@ -67,6 +69,8 @@ namespace Microsoft.CIFramework.Internal {
 	declare var Xrm: any;
 	declare var appId: string;
 	declare var cifVersion: string;
+	cifVersion = "";
+	var navigationType: string;
 
 	/**
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
@@ -82,7 +86,8 @@ namespace Microsoft.CIFramework.Internal {
 			return false;
 		}
 
-		state.sessionManager = GetSessionManager(clientType, navigationType);
+		this.navigationType = navigationType;
+		state.sessionManager = GetSessionManager(clientType);
 		presence = GetPresenceManager(clientType);
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
@@ -93,9 +98,9 @@ namespace Microsoft.CIFramework.Internal {
 				loadProvider();
 			},
 			(error: Error) => {
+				loadProvider();
 				let errorData = generateErrorObject(error, "initializeCI - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
 				logFailure(appId, true, errorData, "initializeCI", cifVersion);
-				loadProvider();
 			}
 		);
 		return false;
@@ -148,8 +153,9 @@ namespace Microsoft.CIFramework.Internal {
 					}
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
+					let panelPosition = getPosition(provider);
 					// load the widgets onto client. 
-					state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
+					state.client.loadWidgets(state.providerManager.ciProviders, panelPosition as number).then(function (widgetLoadStatus) {
 						var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, "loadProvider - loadWidgets", provider.sortOrder, appId, cifVersion, false, null);
 						setUsageData(usageData);
 					});
@@ -160,6 +166,80 @@ namespace Microsoft.CIFramework.Internal {
 				logFailure(appId, true, errorData, "loadProvider", cifVersion);
 			}
 		);
+	}
+
+	/**
+	 * IsConsoleApp API's client side handler that post message library will invoke.
+	*/
+	export function isConsoleAppInternal(): boolean {
+		let ret: boolean;
+		if(this.navigationType == SessionType.MultiSession)
+		{
+			ret = true;
+		}
+		else
+		{
+			ret = false;
+		}
+		return ret;
+	}
+
+	/**
+	 * IsConsoleApp API's client side handler that post message library will invoke.
+	*/
+	export function isConsoleApp(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let ret: boolean;
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.SearchString]);
+		if (provider) {
+			if(this.navigationType == SessionType.MultiSession)
+			{
+				ret = true;
+			}
+			else
+			{
+				ret = false;
+			}
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.isConsoleApp, cifVersion, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, ret));
+		}
+		else {
+			return logFailure(appId, true, errorData, MessageType.isConsoleApp, cifVersion);
+		}
+	}
+
+	/**
+	 * setPosition API's client side handler that post message library will invoke. 
+	*/
+	export function setPosition(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.value]);
+		if(provider)
+		{
+			let ret = state.client.setPanelPosition("setPanelPosition", parameters.get(Constants.value) as number, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "setPosition", cifVersion, telemetryData);
+			setPerfData(perfData);
+			return Promise.resolve(new Map().set(Constants.value, ret));
+		}
+		else
+		{
+			return logFailure(appId, true, errorData, "setPosition", cifVersion);
+		}
+	}
+
+	/**
+	 * getPosition API's client side handler that post message library will invoke.
+	*/
+	export function getPosition(provider: CIProvider): number {
+		let telemetryData: any = new Object();
+		let startTime = new Date();
+		let ret = state.client.getPanelPosition(telemetryData);
+		var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getPosition", telemetryData);
+		setPerfData(perfData);
+		return ret as number;
 	}
 
 	/* Utility function to raise events registered for the framework */
@@ -837,6 +917,8 @@ namespace Microsoft.CIFramework.Internal {
 			var sessionIds = provider.getAllSessions();
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getAllSessions, cifVersion, telemetryData);
 			setPerfData(perfData);
+			var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.getAllSessions, provider.sortOrder, appId, cifVersion, false, null);
+			setUsageData(usageData);
 			return Promise.resolve(new Map<string, any>().set(Constants.value, sessionIds));
 		}
 		else {
@@ -852,6 +934,8 @@ namespace Microsoft.CIFramework.Internal {
 			var sessionId = provider.getFocusedSession();
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getFocusedSession, cifVersion, telemetryData);
 			setPerfData(perfData);
+			var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.getFocusedSession, provider.sortOrder, appId, cifVersion, false, null);
+			setUsageData(usageData);
 			return Promise.resolve(new Map<string, any>().set(Constants.value, sessionId));
 		}
 		else {
@@ -861,6 +945,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function getSession(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
+		let telemetryParameter: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
@@ -868,14 +953,18 @@ namespace Microsoft.CIFramework.Internal {
 				provider.getSession(parameters.get(Constants.sessionId)).then(function (session) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getSession, cifVersion, telemetryData);
 					setPerfData(perfData);
+					logParameterData(telemetryParameter, MessageType.getSession, {"sessionId": parameters.get(Constants.sessionId)});
+					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.getSession, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+					setUsageData(usageData);
 					return resolve(new Map<string, any>().set(Constants.value, session));
 				}, function (errorData) {
-					return logFailure(appId, true, errorData, MessageType.getSession, cifVersion, provider.providerId, provider.name);
+					logFailure(appId, true, errorData, MessageType.getSession, cifVersion, provider.providerId, provider.name, telemetryParameter);
+					return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.getSession))
 				});
 			});
 		}
 		else {
-			return logFailure(appId, true, errorData, MessageType.getSession, cifVersion);
+			return logFailure(appId, true, errorData, MessageType.getSession, cifVersion, "", "", telemetryParameter);
 		}
 	}
 
@@ -887,6 +976,8 @@ namespace Microsoft.CIFramework.Internal {
 			var canCreate = provider.canCreateSession();
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.canCreateSession, cifVersion, telemetryData);
 			setPerfData(perfData);
+			var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.canCreateSession, provider.sortOrder, appId, cifVersion, false, null);
+			setUsageData(usageData);
 			return Promise.resolve(new Map<string, any>().set(Constants.value, canCreate));
 		}
 		else {
@@ -896,6 +987,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function createSession(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
+		let telemetryParameter: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
@@ -903,19 +995,24 @@ namespace Microsoft.CIFramework.Internal {
 				provider.createSession(parameters.get(Constants.input), parameters.get(Constants.context), parameters.get(Constants.customerName)).then(function (sessionId) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createSession, cifVersion, telemetryData);
 					setPerfData(perfData);
+					logParameterData(telemetryParameter, MessageType.createSession, {"input": parameters.get(Constants.input), "context": parameters.get(Constants.context)});
+					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.createSession, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+					setUsageData(usageData);
 					return resolve(new Map<string, any>().set(Constants.value, sessionId));
 				}, function (errorData) {
-					return logFailure(appId, true, errorData, MessageType.createSession, cifVersion, provider.providerId, provider.name);
+					logFailure(appId, true, errorData, MessageType.createSession, cifVersion, provider.providerId, provider.name, telemetryParameter);
+					return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.createSession))
 				});
 			});
 		}
 		else {
-			return logFailure(appId, true, errorData, MessageType.createSession, cifVersion);
+			return logFailure(appId, true, errorData, MessageType.createSession, cifVersion, "", "", telemetryParameter);
 		}
 	}
 
 	export function requestFocusSession(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
+		let telemetryParameter: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
@@ -923,14 +1020,18 @@ namespace Microsoft.CIFramework.Internal {
 				provider.requestFocusSession(parameters.get(Constants.sessionId), parameters.get(Constants.messagesCount)).then(function () {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.requestFocusSession, cifVersion, telemetryData);
 					setPerfData(perfData);
+					logParameterData(telemetryParameter, MessageType.requestFocusSession, {"sessionId": parameters.get(Constants.sessionId), "messagesCount": parameters.get(Constants.messagesCount)});
+					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.requestFocusSession, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+					setUsageData(usageData);
 					return resolve(new Map<string, any>());
 				}, function (errorData) {
-					return logFailure(appId, true, errorData, MessageType.requestFocusSession, cifVersion, provider.providerId, provider.name);
+					logFailure(appId, true, errorData, MessageType.requestFocusSession, cifVersion, provider.providerId, provider.name, telemetryParameter);
+					return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.requestFocusSession))
 				});
 			});
 		}
 		else {
-			return logFailure(appId, true, errorData, MessageType.requestFocusSession, cifVersion);
+			return logFailure(appId, true, errorData, MessageType.requestFocusSession, cifVersion, "", "", telemetryParameter);
 		}
 	}
 
@@ -942,6 +1043,8 @@ namespace Microsoft.CIFramework.Internal {
 			var tabId = provider.getFocusedTab();
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getFocusedTab, cifVersion, telemetryData);
 			setPerfData(perfData);
+			var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.getFocusedTab, provider.sortOrder, appId, cifVersion, false, null);
+			setUsageData(usageData);
 			return Promise.resolve(new Map<string, any>().set(Constants.value, tabId));
 		}
 		else {
@@ -951,6 +1054,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function createTab(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
+		let telemetryParameter: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
@@ -958,19 +1062,24 @@ namespace Microsoft.CIFramework.Internal {
 				provider.createTab(parameters.get(Constants.input)).then(function (tabId) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createTab, cifVersion, telemetryData);
 					setPerfData(perfData);
+					logParameterData(telemetryParameter, MessageType.createTab, {"input": parameters.get(Constants.input)});
+					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.createTab, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+					setUsageData(usageData);
 					return resolve(new Map<string, any>().set(Constants.value, tabId));
 				}, function (errorData) {
-					return logFailure(appId, true, errorData, MessageType.createTab, cifVersion, provider.providerId, provider.name);
+					logFailure(appId, true, errorData, MessageType.createTab, cifVersion, provider.providerId, provider.name, telemetryParameter);
+					return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.createTab))
 				});
 			});
 		}
 		else {
-			return logFailure(appId, true, errorData, MessageType.createTab, cifVersion);
+			return logFailure(appId, true, errorData, MessageType.createTab, cifVersion, "", "", telemetryParameter);
 		}
 	}
 
 	export function focusTab(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
+		let telemetryParameter: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
@@ -978,14 +1087,18 @@ namespace Microsoft.CIFramework.Internal {
 				provider.focusTab(parameters.get(Constants.tabId)).then(function () {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.focusTab, cifVersion, telemetryData);
 					setPerfData(perfData);
+					logParameterData(telemetryParameter, MessageType.focusTab, {"tabId": parameters.get(Constants.tabId)});
+					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.focusTab, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+					setUsageData(usageData);
 					return resolve(new Map<string, any>());
 				}, function (errorData) {
-					return logFailure(appId, true, errorData, MessageType.focusTab, cifVersion, provider.providerId, provider.name);
+					logFailure(appId, true, errorData, MessageType.focusTab, cifVersion, provider.providerId, provider.name, telemetryParameter);
+					return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.focusTab))
 				});
 			});
 		}
 		else {
-			return logFailure(appId, true, errorData, MessageType.focusTab, cifVersion);
+			return logFailure(appId, true, errorData, MessageType.focusTab, cifVersion, "", "", telemetryParameter);
 		}
 	}
 }

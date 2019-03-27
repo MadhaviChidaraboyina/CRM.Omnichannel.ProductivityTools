@@ -111,8 +111,8 @@ namespace Microsoft.CIFramework.Internal
 	}
 
 	// Logs Failure Events to the d365_cif_usage table
-	export function logFailure(appId: string, isError: boolean, error: IErrorHandler, apiName: string, cifVersion: string, providerID?: string, providerName?: string): Promise<Map<string, any>> {
-		var usageData = new UsageTelemetryData(providerID ? providerID : "", providerName ? providerName : "", null, apiName, null, appId ? appId : "", cifVersion, isError ? isError : false, error ? error : null);
+	export function logFailure(appId: string, isError: boolean, error: IErrorHandler, apiName: string, cifVersion: string, providerID?: string, providerName?: string, customParameters?: Object): Promise<Map<string, any>> {
+		var usageData = new UsageTelemetryData(providerID ? providerID : "", providerName ? providerName : "", null, apiName, null, appId ? appId : "", cifVersion, isError ? isError : false, error ? error : null, customParameters ? customParameters : null);
 		setUsageData(usageData);
 		return Promise.reject(Microsoft.CIFramework.Utility.createErrorMap(error.errorMsg, apiName));
 	}
@@ -139,6 +139,7 @@ namespace Microsoft.CIFramework.Internal
 		UsageTelemetry.setPropertyWithPii(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId, AWTPiiKind.Identity);
 		UsageTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		UsageTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
+		UsageTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? data.customParameters : null);
 
 		defaultLogger.logEvent(UsageTelemetry);
 	}
@@ -149,6 +150,15 @@ namespace Microsoft.CIFramework.Internal
 		ApiData["TimeTaken"] = timetaken;
 		if (telemetryData) {
 			telemetryData[apiName] = ApiData;
+		}
+	}
+
+	export function logParameterData(telemetryParameter:Object | any, apiName: any, parameters: Object){
+		let parameterData: any = new Object();
+		parameterData["apiName"] = apiName;
+		parameterData["parameters"] = parameters;
+		if (telemetryParameter) {
+			telemetryParameter[apiName] = parameterData;
 		}
 	}
 
@@ -165,7 +175,7 @@ namespace Microsoft.CIFramework.Internal
 		PerfTelemetry.setPropertyWithPii(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId, AWTPiiKind.Identity);
 		PerfTelemetry.setProperty(TelemetryConstants.orgName, data.providerData.orgName ? data.providerData.orgName : "");
 		PerfTelemetry.setProperty(TelemetryConstants.startTime, data.startTime ? data.startTime.toUTCString() : "");
-		PerfTelemetry.setProperty(TelemetryConstants.timeTaken, data.timeTaken ? data.timeTaken : "");
+		PerfTelemetry.setProperty(TelemetryConstants.timeTaken, data.timeTaken ? data.timeTaken : 0);
 		PerfTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		PerfTelemetry.setProperty(TelemetryConstants.telemetryData, data.telemetryData ? JSON.stringify(data.telemetryData) : "");
 		PerfTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
@@ -183,7 +193,8 @@ namespace Microsoft.CIFramework.Internal
 		isError: boolean;
 		errorObject: IErrorHandler;
 		cifVersion: string;
-		constructor(providerId?: string, providerName?: string, apiVersion?: string, apiName?: string, sortOrder?: any, appId?: string, cifVersion?: string, isError?: boolean, errorObject?: IErrorHandler) {
+		customParameters: any;
+		constructor(providerId?: string, providerName?: string, apiVersion?: string, apiName?: string, sortOrder?: any, appId?: string, cifVersion?: string, isError?: boolean, errorObject?: IErrorHandler, customParameters?:Object) {
 			this.providerId = providerId ? providerId : "";
 			this.providerName = providerName ? providerName : "";
 			this.apiVersion = apiVersion ? apiVersion : "";
@@ -193,6 +204,7 @@ namespace Microsoft.CIFramework.Internal
 			this.isError = isError ? isError : false;
 			this.errorObject = errorObject ? errorObject : null;
 			this.cifVersion = cifVersion ? cifVersion : "";
+			this.customParameters = customParameters ? customParameters : null;
 		}
 	}
 
@@ -206,7 +218,7 @@ namespace Microsoft.CIFramework.Internal
 		constructor(providerData?: CIProvider, startTime?: any, timeTaken?: any, apiName?: string, cifVersion?: string, telemetryData?: Object) {
 			this.providerData = providerData ? providerData : null;
 			this.startTime = startTime ? startTime : "";
-			this.timeTaken = timeTaken ? timeTaken : "";
+			this.timeTaken = timeTaken ? timeTaken : 0;
 			this.apiName = apiName ? apiName : "";
 			this.telemetryData = telemetryData ? telemetryData : null;
 			this.cifVersion = cifVersion ? cifVersion : "";

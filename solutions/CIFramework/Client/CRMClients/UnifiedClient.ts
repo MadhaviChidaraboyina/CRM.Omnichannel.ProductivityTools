@@ -6,7 +6,7 @@
 /// <reference path="Constants.ts" />
 /// <reference path="WidgetIFrame.ts" />
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
-/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2587-manual/clientapi/XrmClientApi.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApi.d.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 
 /** @internal */
@@ -202,14 +202,16 @@ namespace Microsoft.CIFramework.Internal {
 			return Xrm.Utility.getGlobalContext().userSettings.userId;
 		}
 
-		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> => {
-			const options: XrmClientApi.PanelOptions = {
+		client.loadWidgets = (ciProviders: Map<string, CIProvider>, panelPosition: number): Promise<Map<string, boolean | string>> => {
+			const options: XrmClientApi.NewPanelOptions = {
+				position: panelPosition,
 				defaultCollapsedBehavior: false,
-				onSizeChangeHandler: client.sizeChanged,
-				onStateChangeHandler: client.modeChanged
+				url: "/webresources/widgets_container.html"
 			};
 			return new Promise<Map<string, boolean | string>>((resolve, reject) => {
-				return Xrm.Panel.loadPanel("/webresources/widgets_container.html", "", options).then(function () {
+				return Xrm.Panel.loadPanel(options).then(function () {
+					Xrm.Panel.addOnSizeChange(client.sizeChanged);
+					Xrm.Panel.addOnStateChange(client.modeChanged);
 					Xrm.Navigation.addOnPreNavigation(client.navigationHandler);
 					let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 					let targetWindow = window.parent;
@@ -329,6 +331,30 @@ namespace Microsoft.CIFramework.Internal {
 			logApiData(telemetryData, startTime, timeTaken, apiName);
 
 			return mode;
+		}
+
+		client.setPanelPosition = (name: string, position: number, telemetryData?: Object|any): number =>
+		{
+			let startTime = new Date();
+
+			Xrm.Panel.position = position;
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Panel.setPosition";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			return position;
+		}
+
+		client.getPanelPosition = (telemetryData?: Object): number =>
+		{
+			let startTime = new Date();
+
+			let position = Xrm.Panel.position;
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Panel.getPosition";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			return position;
 		}
 
 		client.setWidgetWidth = (name: string, width: number, telemetryData?: Object | any): number => {
