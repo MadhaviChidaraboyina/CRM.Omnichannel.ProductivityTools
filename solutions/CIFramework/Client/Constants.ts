@@ -184,6 +184,7 @@ namespace Microsoft.CIFramework
 		public static LAST_BUTTON_CLICKED = "param_lastButtonClicked";
 		public static SET_PRESENCE_MDD = "SetAgentPresenceMDD";
 		public static PRESENCE_SELECTED_VALUE = "param_selectedValue";
+		public static CURRENT_PRESENCE_INFO = "GlobalToolBar_CurrentPresenceInfo";
 	}
 
 	/**

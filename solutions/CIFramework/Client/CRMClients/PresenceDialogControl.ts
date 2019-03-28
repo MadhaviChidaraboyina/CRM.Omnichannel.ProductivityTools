@@ -38,8 +38,10 @@ namespace Microsoft.CIFramework.Internal {
         public openPresenceDialogonLoad(e: any): any {
             const presenceControl: XrmClientApi.Controls.OptionSetControl = Xrm.Page.getControl(Constants.presenceSelectControl);
             const presenceOptions_str: string = window.localStorage[Constants.GLOBAL_PRESENCE_LIST];
-            if (presenceOptions_str) {
+            const currentPresence_str: string = window.localStorage[Constants.CURRENT_PRESENCE_INFO];
+            if (presenceOptions_str && currentPresence_str) {
                 const presenceOptions = JSON.parse(presenceOptions_str);
+                const currentPresence = JSON.parse(currentPresence_str);
                 if (presenceControl && presenceOptions) {
                     for (let i: number = 0; i < presenceOptions.length; i++) {
                         const item: XrmClientApi.OptionSetItem = {
@@ -47,6 +49,9 @@ namespace Microsoft.CIFramework.Internal {
                             value: i
                         }
                         presenceControl.addOption(item);
+                        if (presenceOptions[i][Constants.presenceText] == currentPresence.presenceText) {
+                            presenceControl.getAttribute().setValue(i);
+                        }
                     }
                 }
             }
