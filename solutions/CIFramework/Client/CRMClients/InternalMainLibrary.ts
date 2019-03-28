@@ -153,9 +153,8 @@ namespace Microsoft.CIFramework.Internal {
 					}
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
-					let panelPosition = getPosition(provider);
 					// load the widgets onto client. 
-					state.client.loadWidgets(state.providerManager.ciProviders, panelPosition as number).then(function (widgetLoadStatus) {
+					state.client.loadWidgets(state.providerManager.ciProviders).then(function (widgetLoadStatus) {
 						var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, "loadProvider - loadWidgets", provider.sortOrder, appId, cifVersion, false, null);
 						setUsageData(usageData);
 					});
