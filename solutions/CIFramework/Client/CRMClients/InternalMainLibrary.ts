@@ -70,13 +70,14 @@ namespace Microsoft.CIFramework.Internal {
 	declare var appId: string;
 	declare var cifVersion: string;
 	cifVersion = "";
-	var navigationType: string;
+	declare var navigationType: string;
+	navigationType = "";
 
 	/**
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
 	 * returns false to disable the button visibility
 	 */
-	export function initializeCI(clientType: string, navigationType: string): boolean {
+	export function initializeCI(clientType: string, navigationTypeValue: string): boolean {
 		let startTime = new Date();
 
 		initializeTelemetry();
@@ -86,7 +87,7 @@ namespace Microsoft.CIFramework.Internal {
 			return false;
 		}
 
-		this.navigationType = navigationType;
+		navigationType = navigationTypeValue;
 		state.sessionManager = GetSessionManager(clientType);
 		presence = GetPresenceManager(clientType);
 
@@ -173,7 +174,7 @@ namespace Microsoft.CIFramework.Internal {
 	*/
 	export function isConsoleAppInternal(): boolean {
 		let ret: boolean;
-		if(this.navigationType == SessionType.MultiSession)
+		if(navigationType == SessionType.MultiSession)
 		{
 			ret = true;
 		}
@@ -193,7 +194,7 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.SearchString]);
 		if (provider) {
-			if(this.navigationType == SessionType.MultiSession)
+			if(navigationType == SessionType.MultiSession)
 			{
 				ret = true;
 			}
