@@ -12,6 +12,7 @@ module MscrmControls.Service.CIProvider {
 		ElementId: string;
 		ElementUniqueName: string;
 		ElementName: string;
+		NavigationType: string;
 		EventHandlers?: AppEventhandlers[];
 	}
 
@@ -108,13 +109,13 @@ module MscrmControls.Service.CIProvider {
 		private getAppsList(): void {
 
 			var queryParam = "(clienttype eq 4)";
-			var query = "?$select=name,appmoduleid,uniquename,eventhandlers&$filter=" + queryParam;
+			var query = "?$select=name,appmoduleid,uniquename,eventhandlers,navigationtype&$filter=" + queryParam;
 			Xrm.WebApi.retrieveMultipleRecords("appmodule", query).then(
 				(data: any) => {
 						//To-Do - Add Telemetry
 					this.appsList = [];
 					for (let app of data.entities) {
-						this.appsList.push({ ElementId: app.appmoduleid, ElementUniqueName: app.uniquename, ElementName: app.name, EventHandlers: JSON.parse(app.eventhandlers) });
+						this.appsList.push({ ElementId: app.appmoduleid, ElementUniqueName: app.uniquename, ElementName: app.name, NavigationType: app.navigationtype, EventHandlers: JSON.parse(app.eventhandlers) });
 					}
 					this.batchUpdateAppModuleBase();
 				},
@@ -126,15 +127,17 @@ module MscrmControls.Service.CIProvider {
 
 		private batchUpdateAppModuleBase(): void {
 			this.selectedAppsToUpdate = [];
+			var params: string = "";
 			for (let i = 0; i < this.selectedApps.length; i++) {
 				var selectedApp: ElementInformation[] = this.appsList.filter(app => app.ElementId === this.selectedApps[i]);
 				if (selectedApp && selectedApp.length > 0) {
 					if (selectedApp[0] && !this.containsEventHandler(selectedApp[0])) {
+						params =  "\"4\",\""+selectedApp[0].NavigationType.toString()+"\"";
 						var handler = <AppEventhandlers>{};
 						handler.EventName = "onload";
 						handler.LibraryName = "CRMClients/msdyn_internal_ci_library.js";
 						handler.FunctionName = "Microsoft.CIFramework.Internal.initializeCI";
-						handler.Parameters = "\"4\"";
+						handler.Parameters = params;
 						handler.Enabled = true;
 						if (!selectedApp[0].EventHandlers) {
 							selectedApp[0].EventHandlers = [];

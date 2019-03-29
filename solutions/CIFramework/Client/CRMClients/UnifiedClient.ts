@@ -6,7 +6,7 @@
 /// <reference path="Constants.ts" />
 /// <reference path="WidgetIFrame.ts" />
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
-/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2522-manual/clientapi/XrmClientApi.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApi.d.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 
 /** @internal */
@@ -14,7 +14,7 @@ namespace Microsoft.CIFramework.Internal {
 	/**
 	 * Actual implementation of IClient for web client 
 	*/
-	export function webClient(): IClient {
+	export function unifiedClient(): IClient {
 		let client = {} as IClient;
 
 		client.registerHandler = (eventName: string, handler: EventHandler): boolean => {
@@ -203,13 +203,18 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> => {
-			const options: XrmClientApi.PanelOptions = {
+			const options: XrmClientApi.NewPanelOptions = {
+				position: Constants.right,
 				defaultCollapsedBehavior: false,
-				onSizeChangeHandler: client.sizeChanged,
-				onStateChangeHandler: client.modeChanged
+				url: "/webresources/widgets_container.html"
 			};
+			if(isConsoleAppInternal() == true){
+				options.position = Constants.left;
+			}
 			return new Promise<Map<string, boolean | string>>((resolve, reject) => {
-				return Xrm.Panel.loadPanel("/webresources/widgets_container.html", "", options).then(function () {
+				return Xrm.Panel.loadPanel(options).then(function () {
+					Xrm.Panel.addOnSizeChange(client.sizeChanged);
+					Xrm.Panel.addOnStateChange(client.modeChanged);
 					Xrm.Navigation.addOnPreNavigation(client.navigationHandler);
 					let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 					let targetWindow = window.parent;
@@ -319,7 +324,7 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		client.setWidgetMode = (name: string, mode: number, telemetryData?: Object|any): number =>
+		client.setPanelMode = (name: string, mode: number, telemetryData?: Object|any): number =>
 		{
 			let startTime = new Date();
 
@@ -329,6 +334,30 @@ namespace Microsoft.CIFramework.Internal {
 			logApiData(telemetryData, startTime, timeTaken, apiName);
 
 			return mode;
+		}
+
+		client.setPanelPosition = (name: string, position: number, telemetryData?: Object|any): number =>
+		{
+			let startTime = new Date();
+
+			Xrm.Panel.position = position;
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Panel.setPosition";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			return position;
+		}
+
+		client.getPanelPosition = (telemetryData?: Object): number =>
+		{
+			let startTime = new Date();
+
+			let position = Xrm.Panel.position;
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "Xrm.Panel.getPosition";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			return position;
 		}
 
 		client.setWidgetWidth = (name: string, width: number, telemetryData?: Object | any): number => {
@@ -383,7 +412,7 @@ namespace Microsoft.CIFramework.Internal {
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Utility.getGlobalContext";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
-
+			
 			data.set(Constants.ClientUrl, context.getClientUrl());
 			data.set(Constants.AppUrl, context.getCurrentAppUrl());
 			data.set(Constants.OrgLcid, context.organizationSettings.languageId);
@@ -459,32 +488,32 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		client.addUISession = (id: string, initials: string, sessionColor: string, providerId: string, customerName: string): void => {
+		client.createSession = (id: string, initials: string, sessionColor: string, providerId: string, customerName: string): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionPanel = Utility.getElementFromIframe(sidePanelIFrame, Constants.sessionPanel);
 			if (sessionPanel == null)
 				return;
 
-			let sessionElementHtml = '<div class="uiSession flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="' + customerName + '" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div><span class="uiSessionNotification" id="' + id + '_UiSessionNotification" style="display:none"></span></div><div id="' + id + 'CrossIcon" class="flexJustify" title="' + customerName + '" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
+			let sessionElementHtml = '<div class="session flexJustify" role="tab" tabindex="-1" aria-controls="' + providerId + '" aria-label="' + initials + '" id="' + id + '"><div class="flexJustify" id="' + id + 'UiSessionIcon"><div class="iconCircle" id="' + id + 'IconCircle" title="' + customerName + '" style="background-color: ' + sessionColor + ';"><span class="initials">' + initials + '</span></div><span class="uiSessionNotification" id="' + id + '_UiSessionNotification" style="display:none"></span></div><div id="' + id + 'CrossIcon" class="flexJustify" title="' + customerName + '" style="display:none"><span class="symbolFont Cancel-symbol crossIconFont"></span></div></div>';
 			var parser = new DOMParser();
 			var el = parser.parseFromString(sessionElementHtml, "text/html");
 			var sessionElement = el.getElementById(id);
 			sessionElement.onclick = function (event: MouseEvent) {
-				if (id == Microsoft.CIFramework.Internal.SessionPanel.getInstance().getvisibleUISession()) {
-					Microsoft.CIFramework.Internal.SessionPanel.getInstance().endUISession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+				if (id == Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession()) {
+					(Microsoft.CIFramework.Internal.state.sessionManager as SessionPanel).closeSession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
 				}
 				else {
-					Microsoft.CIFramework.Internal.SessionPanel.getInstance().switchUISession((event.currentTarget as HTMLElement).id);
+					Microsoft.CIFramework.Internal.state.sessionManager.focusSession((event.currentTarget as HTMLElement).id);
 				}
 			};
 
 			sessionElement.onkeydown = function (event: KeyboardEvent) {
 				if (event.keyCode == 13) {
-					if (id == Microsoft.CIFramework.Internal.SessionPanel.getInstance().getvisibleUISession()) {
-						Microsoft.CIFramework.Internal.SessionPanel.getInstance().endUISession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+					if (id == Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession()) {
+						(Microsoft.CIFramework.Internal.state.sessionManager as SessionPanel).closeSession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
 					}
 					else {
-						Microsoft.CIFramework.Internal.SessionPanel.getInstance().switchUISession((event.currentTarget as HTMLElement).id);
+						Microsoft.CIFramework.Internal.state.sessionManager.focusSession((event.currentTarget as HTMLElement).id);
 					}
 				}
 				else if (event.keyCode == 37) {
@@ -492,35 +521,35 @@ namespace Microsoft.CIFramework.Internal {
 						(<HTMLElement>sessionElement.previousElementSibling).focus();
 					}
 					else {
-						let uiSessions = Utility.getElementsByClassName(sidePanelIFrame, "uiSession");
-						(<HTMLElement>uiSessions[uiSessions.length - 1]).focus();
+						let sessions = Utility.getElementsByClassName(sidePanelIFrame, "session");
+						(<HTMLElement>sessions[sessions.length - 1]).focus();
 					}
 				}
 				else if (event.keyCode == 39) {
-					if (sessionElement.nextElementSibling != null && sessionElement.nextElementSibling.className.indexOf("uiSession") != -1) {
+					if (sessionElement.nextElementSibling != null && sessionElement.nextElementSibling.className.indexOf("session") != -1) {
 						(<HTMLElement>sessionElement.nextElementSibling).focus();
 					}
 					else {
-						let uiSessions = Utility.getElementsByClassName(sidePanelIFrame, "uiSession");
-						(<HTMLElement>uiSessions[0]).focus();
+						let sessions = Utility.getElementsByClassName(sidePanelIFrame, "session");
+						(<HTMLElement>sessions[0]).focus();
 					}
 				}
 			};
 
 			sessionElement.onkeyup = function(e: KeyboardEvent) {
 				if (e.altKey && e.keyCode == 88) {
-					if (id == Microsoft.CIFramework.Internal.SessionPanel.getInstance().getvisibleUISession()) {
-						Microsoft.CIFramework.Internal.SessionPanel.getInstance().endUISession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
+					if (id == Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession()) {
+						Microsoft.CIFramework.Internal.state.sessionManager.closeSession((event.currentTarget as HTMLElement).id.replace('CrossIcon', ''));
 					}
 				}
 			};
 
-			let uiSessions = Utility.getElementFromIframe(sidePanelIFrame, "uiSessions");
-			uiSessions.appendChild(sessionElement);
+			let sessions = Utility.getElementFromIframe(sidePanelIFrame, "sessions");
+			sessions.appendChild(sessionElement);
 			Utility.blinkBrowserTab(sidePanelIFrame);
 		}
 
-		client.removeUISession = (id: string): void => {
+		client.closeSession = (id: string): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionElement = Utility.getElementFromIframe(sidePanelIFrame, id);
 			if (sessionElement == null)
@@ -529,7 +558,7 @@ namespace Microsoft.CIFramework.Internal {
 			sessionElement.parentNode.removeChild(sessionElement);
 		}
 
-		client.getUISessionColor = (id: string): string => {
+		client.getSessionColor = (id: string): string => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionElementCircle = Utility.getElementFromIframe(sidePanelIFrame, id + "IconCircle");
 			if (sessionElementCircle == null)
@@ -538,7 +567,7 @@ namespace Microsoft.CIFramework.Internal {
 			return Utility.rgb2hex(sessionElementCircle.style.backgroundColor);
 		}
 
-		client.updateUISession = (id: string, visible: boolean): void => {
+		client.updateSession = (id: string, focused: boolean): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionElement = Utility.getElementFromIframe(sidePanelIFrame, id);
 			if (sessionElement == null)
@@ -550,7 +579,7 @@ namespace Microsoft.CIFramework.Internal {
 			let sessionNotification = Utility.getElementFromIframe(sidePanelIFrame, id + "_UiSessionNotification");
 			let crossIcon = Utility.getElementFromIframe(sidePanelIFrame, id + "CrossIcon");
 
-			if (visible) {
+			if (focused) {
 				sessionElement.style.backgroundColor = "#FFFFFF";
 				sessionElement.style.boxShadow = "8px 4px 10px rgba(102, 102, 102, 0.2)";
 				sessionElement.setAttribute("tabindex", 0);
@@ -565,33 +594,35 @@ namespace Microsoft.CIFramework.Internal {
 				sessionElement.setAttribute("tabindex", -1);
 				providerElement.setAttribute("aria-labelledby", "");
 			}
+
 			let sessionOnMouseOverHandler = function() {
-				if (visible) {
+				if (focused) {
 					sessionElement.style.boxShadow = "0px 4px 8px rgba(102, 102, 102, 0.2)";
 					sessionIcon.style.display = "none";
 					crossIcon.style.display = "flex";
 				}
 			};
 			let sessionOnMouseOutHandler = function() {
-				if (visible) {
+				if (focused) {
 					sessionElement.style.boxShadow = "none";
 					sessionIcon.style.display = "flex";
 					crossIcon.style.display = "none";
 				}
 			};
-			
-			if (visible) {
+
+			if (focused) {
 				sessionElement.onmouseover = sessionOnMouseOverHandler;
 				sessionElement.onmouseout = sessionOnMouseOutHandler;
-			}else {
+			}
+			else {
 				sessionElement.onmouseover = null;
 				sessionElement.onmouseout = null;
 			}
 
-			sessionElement.setAttribute("aria-selected", visible);
+			sessionElement.setAttribute("aria-selected", focused);
 		}
 
-		client.notifyUISession = (id: string, messagesCount: number): void => {
+		client.notifySession = (id: string, messagesCount: number): void => {
 			var sidePanelIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionNotification = Utility.getElementFromIframe(sidePanelIFrame, id + "_UiSessionNotification");
 

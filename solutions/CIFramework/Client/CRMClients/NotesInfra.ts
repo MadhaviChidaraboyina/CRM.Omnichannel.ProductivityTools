@@ -63,7 +63,7 @@ namespace Microsoft.CIFramework.Internal {
 			var newTextArea = document.createElement('TextArea');
 			let notesElement = notesDiv;
 			notesElement.appendChild(newTextArea);
-			newTextArea.setAttribute('placeholder','Start adding notes');
+			newTextArea.setAttribute('placeholder', 'Start adding notes');
 			newTextArea.setAttribute("aria-label", "Take Notes");
 			newTextArea.classList.add("newTextAreaCIF");
 			var textAreaWidth = "calc(100% - 40px)";//width - width/8 - 15;
@@ -85,10 +85,19 @@ namespace Microsoft.CIFramework.Internal {
 			addCancelButtonContainer.appendChild(saveBtn);
 			addCancelButtonContainer.appendChild(cancelBtn);
 			notesElement.appendChild(addCancelButtonContainer);
-			
+
+			if(isConsoleAppInternal() == true){
+				let widgetAreaDiv =  widgetIFrame.contentWindow.document.getElementById("widgetArea");
+				let flapAreaDiv =  widgetIFrame.contentWindow.document.getElementById("flapArea");
+				widgetAreaDiv.classList.remove("widgetArea");
+				widgetAreaDiv.classList.add("widgetAreaZFP");
+				flapAreaDiv.classList.add("flapAreaZFP");
+			}
+
+
 			//Saving notes info locally
-			let sessionId: string = SessionPanel.getInstance().getvisibleUISession();
-			let session = SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions.get(sessionId);
+			let sessionId: string = state.sessionManager.getFocusedSession();
+			let session = state.providerManager._activeProvider.sessions.get(sessionId);
 			session.notesInfo.notesDetails = notesDetails;
 			session.notesInfo.resolve = resolve;
 			session.notesInfo.reject = reject;
@@ -212,14 +221,14 @@ namespace Microsoft.CIFramework.Internal {
 		if(!isNullOrUndefined(notesDiv)){
 			notesDiv.innerHTML = '';
 		}
-		SessionPanel.getInstance().getState().client.removeHandler(Constants.CollapseFlapHandler);
+		state.client.removeHandler(Constants.CollapseFlapHandler);
 	}
 
 	export function intermediateSaveNotes(): void{	
 		let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 		let newTextArea = widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF");
-		let sessionId: string = SessionPanel.getInstance().getvisibleUISession();
-		let session = SessionPanel.getInstance().getState().providerManager._activeProvider.uiSessions.get(sessionId);
+		let sessionId: string = state.sessionManager.getFocusedSession();
+		let session = state.providerManager._activeProvider.sessions.get(sessionId);
 		let resolve = session.notesInfo.resolve;
 		saveNotes(session.notesInfo.notesDetails,newTextArea).then(function (retval: Map<string, any>) {
 			cancelNotes();

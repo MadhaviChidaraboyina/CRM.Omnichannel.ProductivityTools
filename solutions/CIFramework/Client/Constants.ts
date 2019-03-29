@@ -29,9 +29,10 @@ namespace Microsoft.CIFramework
 		public static onPageNavigate = "onpagenavigate";
 		public static onSendKBArticle = "onsendkbarticle";
 		public static onSetPresence = "onSetPresence";
-		public static onUISessionVisibilityChanged = "onUISessionVisibilityChanged";
-		public static onUISessionStarted = "onUISessionStarted";
-		public static onUISessionEnded = "onUISessionEnded";
+		public static onSessionSwitched = "onSessionSwitched";
+		public static onSessionCreated = "onSessionCreated";
+		public static onBeforeSessionClosed = "onBeforeSessionClosed";
+		public static onSessionClosed = "onSessionClosed";
 		public static getEntityMetadata = "getEntityMetadata";
 		public static notifyEvent = "notifyEvent";
 		public static softNotification = "softNotification";
@@ -41,11 +42,16 @@ namespace Microsoft.CIFramework
 		public static transfer = "transfer";
 		public static escalation = "escalation";
 		public static renderSearchPage = "renderSearchPage";
-		public static notifyIncoming = "notifyIncoming";
-		public static startUISession = "startUISession";
-		public static switchUISession = "switchUISession";
-		public static endUISession = "endUISession";
-		public static onMaxUISessionsReached = "onMaxUISessionsReached";
+		public static requestFocusSession = "requestFocusSession";
+		public static getAllSessions = "getAllSessions";
+		public static getFocusedSession = "getFocusedSession";
+		public static getSession = "getSession";
+		public static canCreateSession = "canCreateSession";
+		public static createSession = "createSession";
+		public static getFocusedTab = "getFocusedTab";
+		public static createTab = "createTab";
+		public static focusTab = "focusTab";
+		public static onMaxSessionsReached = "onMaxSessionsReached";
 		public static setAgentPresence = "setAgentPresence";
 		public static initializeAgentPresenceList = "initializeAgentPresenceList";
 		public static insertNotes = "insertNotes";
@@ -54,6 +60,8 @@ namespace Microsoft.CIFramework
 		public static hardNotification = "hardNotification";
 		public static removeGenericHandler = "removeGenericHandler";
 		public static addGenericHandler = "addGenericHandler";
+		public static setPosition = "setPosition";
+		public static isConsoleApp = "isConsoleApp";
 	}
 
 	/**
@@ -140,12 +148,13 @@ namespace Microsoft.CIFramework
 		public static Failure = "failure";
 		public static Case = "case";
 		public static SearchString = "searchString";
+		public static input = "input";
 		public static context = "context";
-		public static initials = "initials";
 		public static customerName = "customerName";
 		public static sessionId = "sessionId";
+		public static tabId = "tabId";
 		public static messagesCount = "messagesCount";
-		public static MaxUISessions = 5;
+		public static MaxSessions = 5;
 		public static sessionColors = ["#2A757D", "#70278B", "#FF8C00", "#427825", "#B4009E", "#B4A0FF"];
 		public static sessionPanel = "sessionPanel";
 		public static DEFAULT_WIDGET_WIDTH = 378;
@@ -163,6 +172,10 @@ namespace Microsoft.CIFramework
 		public static annotationId = "annotationid";
 		public static secRemaining = "secs remaining";
 		public static CollapseFlapHandler = "collapseFlapHandler";
+		public static newSessionId = "newSessionId";
+		public static previousSessionId = "previousSessionId";
+		public static left = 1;
+		public static right = 2;
 	}
 
 	/**

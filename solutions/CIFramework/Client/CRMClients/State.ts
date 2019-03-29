@@ -3,12 +3,11 @@
  */
 
 /// <reference path="Constants.ts" />
-/// <reference path="WebClient.ts" />
+/// <reference path="UnifiedClient.ts" />
 /// <reference path="WidgetIFrame.ts" />
-/// <reference path="SessionPanel.ts" />
 /// <reference path="../PostMsgWrapper.ts" />
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
-/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2522-manual/clientapi/XrmClientApi.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApi.d.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
 	/**
@@ -22,7 +21,12 @@ namespace Microsoft.CIFramework.Internal {
 			client: IClient;
 
 			/**
-			 *  Information about current active sessions
+			 *  Information about sessions
+			*/
+			sessionManager: SessionManager;
+
+			/**
+			 *  Information about providers
 			*/
 			providerManager: ProviderManager;
 
@@ -47,6 +51,9 @@ namespace Microsoft.CIFramework.Internal {
 
 		addProvider(url: string, provider: CIProvider) {
 			this.ciProviders.set(url, provider);
+			if(isNullOrUndefined(this._activeProvider)){
+				this._activeProvider = provider;
+			}
 		}
 
 		setActiveProvider(provider: CIProvider): void {
@@ -58,18 +65,13 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	export type ApplicationTab = {
-		applicationTabId: string;
-		entityFormOptions: {};
-		formParameters: {};
-	}
-
-	export type UISession = {
+	export type Session = {
 		sessionId: string;
-		context: any;
-		applicationTabs: Map<string, ApplicationTab>;
-		initials: string;
+		input: any;
+		context: string;
+		customerName: string;
 		notesInfo: NotesInfo;
+		focused: boolean;
 	}
 
 	export type NotesInfo = {
@@ -88,15 +90,14 @@ namespace Microsoft.CIFramework.Internal {
 		_minimizedHeight: number;
 		clickToAct: boolean;		//Boolean flag to enable or disable Click to act functionality , it can be changed through setClickToAct API
 		_widgetContainer: WidgetContainer;  //The iFrame hosting this widget
-		sortOrder : string;	//Sort Order
-		apiVersion : string;	//API Version
-		orgId : string;	//Organization ID
-		orgName : string;	//Organization Name
-		crmVersion : string;	//CRM version
+		sortOrder: string;	//Sort Order
+		apiVersion: string;	//API Version
+		orgId: string;	//Organization ID
+		orgName: string;	//Organization Name
+		crmVersion: string;	//CRM version
 		appId: string;	//App Id
 		trustedDomain: string;	// Domain to be whitelisted
-		uiSessions: Map<string, UISession>;
-		visibleUISession: string;
+		sessions: Map<string, Session>;
 
 		constructor(x: XrmClientApi.WebApi.Entity, state: IState, environmentInfo: any) {
 			this._state = state;
@@ -113,7 +114,7 @@ namespace Microsoft.CIFramework.Internal {
 			this.orgName = environmentInfo["orgName"];
 			this.crmVersion = environmentInfo["crmVersion"];
 			this.appId = environmentInfo["appId"];
-			this.uiSessions = new Map<string, UISession>();
+			this.sessions = new Map<string, Session>();
 		}
 
 		raiseEvent(data: Map<string, any>, messageType: string, noTimeout?: boolean): Promise<Map<string, any>> {
@@ -142,114 +143,95 @@ namespace Microsoft.CIFramework.Internal {
 			this._minimizedHeight = minimizedHeight;
 		}
 
-		startUISession(context: any, customerName:string): [string, IErrorHandler] {
-			if (!SessionPanel.getInstance().canAddUISession()) {
-				//raise notification
+		getAllSessions(): string[] {
+			return Array.from(this.sessions.keys());
+		}
 
+		getFocusedSession(): string {
+			var sessionId = this._state.sessionManager.getFocusedSession();
+			if (Array.from(this.sessions.keys()).indexOf(sessionId) == -1) {
+				return null;
+			}
+
+			return sessionId;
+		}
+
+		getSession(sessionId: string): Promise<Map<string, any>>{
+			if (!this.sessions.has(sessionId)) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Cannot add the UISession. Maximum UISessions limit reached. Limit: " + Constants.MaxUISessions;
+				error.errorMsg = "Session with ID:" + sessionId + " does not exist";
 				error.errorType = errorTypes.GenericError;
-				error.sourceFunc = startUISession.name;
-				return [null, error];
+				error.sourceFunc = MessageType.getSession;
+				return Promise.reject(error);
 			}
 
-			let initials = "";
-			var splittedName = customerName.split(" ");
-			if(splittedName.length == 1){
-				initials = splittedName[0][0] + splittedName[0][1];
-			}else{
-				initials = splittedName[0][0] + splittedName[splittedName.length - 1][0];
-			}
+			var session: Session = this.sessions.get(sessionId);
+			return Promise.resolve(new Map<string, any>().set("sessionId", sessionId).set("focused", session.focused).set("context", session.context));
+		}
 
-			let sessionId: string = this._state.messageLibrary.getCorrelationId();
+		canCreateSession(): boolean {
+			return this._state.sessionManager.canCreateSession();
+		}
+
+		createSession(input: any, context: any, customerName: string): Promise<string> {
 			let notesInformation: NotesInfo = {
 				notesDetails: new Map(),
 				resolve: null,
 				reject: null,
 			}
-			let session: UISession = {
-				sessionId: sessionId,
-				context: context,
-				applicationTabs: null,
-				initials: initials,
-				notesInfo: notesInformation
-			};
 
-			this.uiSessions.set(sessionId, session);
-			SessionPanel.getInstance().addUISession(sessionId, this, initials, customerName);
+			return new Promise(function (resolve: any, reject: any) {
+				this._state.sessionManager.createSession(this, input, context, customerName).then(function (sessionId: string) {
+					let session: Session = {
+						sessionId: sessionId,
+						input: input,
+						context: context,
+						customerName: customerName,
+						notesInfo: notesInformation,
+						focused: true
+					};
 
-			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleUISession == sessionId).set("context", context), MessageType.onUISessionStarted);
-			return [sessionId, null];
+					this.sessions.set(sessionId, session);
+					resolve(sessionId);
+				}.bind(this), function (errorMessage: string) {
+					let error = {} as IErrorHandler;
+					error.reportTime = new Date().toUTCString();
+					error.errorMsg = errorMessage;
+					error.errorType = errorTypes.GenericError;
+					error.sourceFunc = MessageType.createSession;
+					reject(error);
+				});
+			}.bind(this));
 		}
 
-		notifyIncoming(sessionId: string, messagesCount: number): [string, IErrorHandler] {
-			if (!this.uiSessions.has(sessionId)) {
+		requestFocusSession(sessionId: string, messagesCount: number): Promise<any> {
+			if (!this.sessions.has(sessionId)) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
 				error.errorMsg = "Session with ID:" + sessionId + " does not exist";
 				error.errorType = errorTypes.GenericError;
-				error.sourceFunc = switchUISession.name;
-				return [null, error];
+				error.sourceFunc = MessageType.requestFocusSession;
+				return Promise.reject(error);
 			}
 
-			if (SessionPanel.getInstance().getvisibleUISession() == sessionId) {
-				let error = {} as IErrorHandler;
-				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Session with ID:" + sessionId + " is already visible. Notifications are rendered only for invisible UISessions";
-				error.errorType = errorTypes.GenericError;
-				error.sourceFunc = switchUISession.name;
-				return [null, error];
-			}
-
-			SessionPanel.getInstance().notifyIncoming(sessionId, messagesCount);
-			return [sessionId, null];
+			return new Promise(function (resolve: any, reject: any) {
+				this._state.sessionManager.requestFocusSession(sessionId, messagesCount).then(function () {
+					resolve();
+				}, function (errorMessage: string) {
+					let error = {} as IErrorHandler;
+					error.reportTime = new Date().toUTCString();
+					error.errorMsg = errorMessage;
+					error.errorType = errorTypes.GenericError;
+					error.sourceFunc = MessageType.requestFocusSession;
+					reject(error);
+				});
+			}.bind(this));
 		}
 
-		switchUISession(sessionId: string): [string, IErrorHandler] {
-			if (!this.uiSessions.has(sessionId)) {
-				let error = {} as IErrorHandler;
-				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Session with ID:" + sessionId + " does not exist";
-				error.errorType = errorTypes.GenericError;
-				error.sourceFunc = switchUISession.name;
-				return [null, error];
-			}
-
-			if (SessionPanel.getInstance().getvisibleUISession() == sessionId) {
-				let error = {} as IErrorHandler;
-				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Session with ID:" + sessionId + " is already visible";
-				error.errorType = errorTypes.GenericError;
-				error.sourceFunc = switchUISession.name;
-				return [null, error];
-			}
-			SessionPanel.getInstance().switchUISession(sessionId);
-			return [sessionId, null];
-		}
-
-		endUISession(sessionId: string): [string, IErrorHandler] {
-			if (!this.uiSessions.has(sessionId)) {
-				let error = {} as IErrorHandler;
-				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Session with ID:" + sessionId + "does not exist";
-				error.errorType = errorTypes.GenericError;
-				error.sourceFunc = endUISession.name;
-				return [null, error];
-			}
-
-			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", this.visibleUISession == sessionId).set("context", this.uiSessions.get(sessionId).context), MessageType.onUISessionEnded, true)
-				.then(function () {
-					this.uiSessions.delete(sessionId);
-					SessionPanel.getInstance().removeUISession(sessionId);
-				}.bind(this));
-
-			return [sessionId, null];
-		}
-
-		setVisibleUISession(sessionId: string, showWidget?: boolean): void {
-			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", true).set("context", this.uiSessions.get(sessionId).context), MessageType.onUISessionVisibilityChanged);
-			this.visibleUISession = sessionId;
+		setFocusedSession(sessionId: string, showWidget?: boolean): void {
+			this.sessions.get(sessionId).focused = true;
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("focused", true).set("context", this.sessions.get(sessionId).context), MessageType.onSessionSwitched);
 
 			if (showWidget) {
 				this._state.providerManager.setActiveProvider(this);
@@ -257,14 +239,78 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		setInvisibleUISession(sessionId: string, hideWidget?: boolean): void {
-			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("visible", false).set("context", this.uiSessions.get(sessionId).context), MessageType.onUISessionVisibilityChanged);
-			this.visibleUISession = '';
+		setUnfocusedSession(sessionId: string, hideWidget?: boolean): void {
+			this.sessions.get(sessionId).focused = false;
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("focused", false).set("context", this.sessions.get(sessionId).context), MessageType.onSessionSwitched);
 
 			if (hideWidget) {
 				this._state.providerManager.setActiveProvider(null);
 				//update iframe visibility
 			}
+		}
+
+		closeSession(sessionId: string): void {
+			this.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("context", this.sessions.get(sessionId).context), MessageType.onSessionClosed);
+			this.sessions.delete(sessionId);
+		}
+
+		getFocusedTab(): string {
+			var focusedSessionId = this.getFocusedSession();
+			if (focusedSessionId == null) {
+				return null;
+			}
+
+			return this._state.sessionManager.getFocusedTab(focusedSessionId);
+		}
+
+		createTab(input: any): Promise<string> {
+			var focusedSessionId = this.getFocusedSession();
+			if (focusedSessionId == null) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = MessageType.createTab;
+				return Promise.reject(error);
+			}
+
+			return new Promise(function (resolve: any, reject: any) {
+				this._state.sessionManager.createTab(focusedSessionId, input).then(function (tabId: string) {
+					resolve(tabId);
+				}, function (errorMsg: string) {
+					let error = {} as IErrorHandler;
+					error.reportTime = new Date().toUTCString();
+					error.errorMsg = errorMsg;
+					error.errorType = errorTypes.GenericError;
+					error.sourceFunc = MessageType.createTab;
+					reject(error);
+				});
+			}.bind(this));
+		}
+
+		focusTab(tabId: string): Promise<string> {
+			var focusedSessionId = this.getFocusedSession();
+			if (focusedSessionId == null) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = MessageType.focusTab;
+				return Promise.reject(error);
+			}
+
+			return new Promise(function (resolve: any, reject: any) {
+				this._state.sessionManager.focusTab(focusedSessionId, tabId).then(function () {
+					resolve();
+				}, function (errorMsg: string) {
+					let error = {} as IErrorHandler;
+					error.reportTime = new Date().toUTCString();
+					error.errorMsg = errorMsg;
+					error.errorType = errorTypes.GenericError;
+					error.sourceFunc = MessageType.focusTab;
+					reject(error);
+				});
+			}.bind(this));
 		}
 	}
 }

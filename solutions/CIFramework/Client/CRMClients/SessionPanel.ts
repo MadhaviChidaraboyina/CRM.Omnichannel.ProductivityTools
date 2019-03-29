@@ -6,66 +6,49 @@
 /// <reference path="../CIFrameworkUtilities.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
-	export class SessionPanel {
-		private state: IState;
-		private UIsessions: Map<string, CIProvider>;
-		private visibleUISession: string;
+	export class SessionPanel extends SessionManager {
 		public counter: number = 0;
+		protected focusedSession: string;
 
-		private static instance: SessionPanel;
-
-		private constructor() {
-			this.UIsessions = new Map<string, CIProvider>();
-			this.visibleUISession = '';
-		}
-
-		static getInstance() {
-			if (!SessionPanel.instance) {
-				SessionPanel.instance = new SessionPanel();
-			}
-
-			return SessionPanel.instance;
-		}
-
-		setState(state: IState) {
-			this.state = state;
-		}
-
-		getState() {
-			return this.state;
-		}
-
-		getvisibleUISession() {
-			return this.visibleUISession;
-		}
-
-		switchUISession(sessionId: string) {
-			if (this.visibleUISession == sessionId || !this.UIsessions.has(sessionId)) {
-				return;
-			}
-			this.state.client.collapseFlap();
+		focusSession(sessionId: string): Promise<void> {
 			let switchProvider = true;
 			let oldProvider: CIProvider;
-			let newProvider: CIProvider = this.UIsessions.get(sessionId);
-			if (this.visibleUISession != '') {
-				oldProvider = this.UIsessions.get(this.visibleUISession);
-				if (oldProvider == newProvider) {
-					switchProvider = false;
-				}
-
-				oldProvider.setInvisibleUISession(this.visibleUISession, switchProvider);
-				this.state.client.updateUISession(this.visibleUISession, false);
+			let newProvider: CIProvider = this.getProvider(sessionId);
+			if (isNullOrUndefined(newProvider)) {
+				return Promise.reject("Session Id is wrong");
 			}
 
-			this.visibleUISession = sessionId;
-			newProvider.setVisibleUISession(this.visibleUISession, switchProvider);
-			
-			let sessionColor = this.state.client.getUISessionColor(this.visibleUISession);
-			this.state.client.updateUISession(this.visibleUISession, true);
+			if (this.focusedSession == sessionId) {
+				return Promise.resolve();
+			}
+
+			state.client.collapseFlap();
+			if (!isNullOrUndefined(this.focusedSession)) {
+				oldProvider = this.getProvider(this.focusedSession);
+				if (oldProvider != null) {
+					if (oldProvider == newProvider) {
+						switchProvider = false;
+					}
+
+					oldProvider.setUnfocusedSession(this.focusedSession, switchProvider);
+					state.client.updateSession(this.focusedSession, false);
+				}
+			}
+
+			this.focusedSession = sessionId;
+			newProvider.setFocusedSession(this.focusedSession, switchProvider);
+
+			state.client.updateSession(this.focusedSession, true);
+
+			return Promise.resolve();
 		}
 
-		canAddUISession(): boolean {
-			if (this.UIsessions.size < Constants.MaxUISessions) {
+		getFocusedSession(): string {
+			return this.focusedSession;
+		}
+
+		canCreateSession(): boolean {
+			if (this.sessions.size < Constants.MaxSessions) {
 				return true;
 			}
 			else {
@@ -73,49 +56,86 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		addUISession(sessionId: string, provider: CIProvider, initials: string, customerName: string): void {
-			this.UIsessions.set(sessionId, provider);
+		createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string> {
+			if (!this.canCreateSession()) {
+				return Promise.reject("Cannot add the Session. Maximum sessions limit reached. Limit: " + Constants.MaxSessions);
+			}
+
+			let sessionId: string = state.messageLibrary.getCorrelationId();
+			this.sessions.set(sessionId, provider);
 
 			let sessionColor = Constants.sessionColors[this.counter++ % Constants.sessionColors.length];
-			this.state.client.addUISession(sessionId, initials, sessionColor, provider.providerId, customerName);
-
-			if (this.visibleUISession == '') {
-				this.switchUISession(sessionId);
+			let initials = "";
+			var splittedName = customerName.split(" ");
+			if (splittedName.length == 1) {
+				initials = splittedName[0][0] + splittedName[0][1];
+			}
+			else {
+				initials = splittedName[0][0] + splittedName[splittedName.length - 1][0];
 			}
 
-			if (this.UIsessions.size == Constants.MaxUISessions) {
-				//ToDo: postmessagewrapper - raiseEvent(new Map<string, any>().set('Limit', Constants.MaxUISessions), MessageType.onMaxUISessionsReached);
-			}
+			state.client.createSession(sessionId, initials, sessionColor, provider.providerId, customerName);
+			window.setTimeout(this.focusSession.bind(this), 0, sessionId);
+
+			provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("focused", this.focusedSession == sessionId).set("context", context), MessageType.onSessionCreated);
+			return Promise.resolve(sessionId);
 		}
 
-		notifyIncoming(sessionId: string, messagesCount: number) {
-			if (this.visibleUISession == sessionId || !this.UIsessions.has(sessionId)) {
-				return;
+		requestFocusSession(sessionId: string, messagesCount: number): Promise<void> {
+			var provider = this.getProvider(sessionId);
+			if (isNullOrUndefined(provider)) {
+				return Promise.reject("Session Id is wrong");
 			}
 
-			this.state.client.notifyUISession(sessionId, messagesCount);
+			if (this.focusedSession != sessionId) {
+				state.client.notifySession(sessionId, messagesCount);
+			}
+
+			return Promise.resolve();
 		}
 
-		removeUISession(sessionId: string): void {
-			if (this.UIsessions.has(sessionId)) {
-				this.UIsessions.delete(sessionId);
-				this.state.client.removeUISession(sessionId);
-
-				if (this.visibleUISession == sessionId) {
-					this.visibleUISession = '';
-					if (this.UIsessions.size > 0) {
-						//setting last in the Map as visible
-						this.switchUISession(Array.from(this.UIsessions.keys()).pop());
-					}
-				}
+		closeSession(sessionId: string): Promise<boolean> {
+			var provider = this.getProvider(sessionId);
+			if (isNullOrUndefined(provider)) {
+				return Promise.reject("Session Id is wrong");
 			}
+
+			return new Promise(function (resolve: any, reject: any) {
+				provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("focused", this.focusedSession == sessionId).set("context", provider.sessions.get(sessionId).context), MessageType.onBeforeSessionClosed, true)
+					.then(function () {
+						this.sessions.delete(sessionId);
+						state.client.closeSession(sessionId);
+
+						if (this.focusedSession == sessionId) {
+							this.focusedSession = null;
+							if (this.sessions.size > 0) {
+								//setting last in the Map as focused
+								this.focusSession(Array.from(this.sessions.keys()).pop());
+							}
+						}
+
+						provider.closeSession(sessionId);
+						resolve(true);
+					}.bind(this, provider), function () {
+						reject("Session not closed");
+					});
+			}.bind(this));
 		}
 
-		endUISession(sessionId: string): void {
-			if (this.UIsessions.has(sessionId)) {
-				let provider: CIProvider = this.UIsessions.get(sessionId);
-				endUISession(new Map().set(Constants.sessionId, sessionId).set(Constants.originURL, provider.landingUrl));
-			}
+		getFocusedTab(sessionId: string): string {
+			return null;
+		}
+
+		createTab(sessionId: string, input: any): Promise<string> {
+			return Promise.reject("Not implemented");
+		}
+
+		focusTab(sessionId: string, tabId: string): Promise<any> {
+			return Promise.reject("Not implemented");
+		}
+
+		closeTab(sessionId: string, tabId: string): Promise<boolean> {
+			return Promise.reject("Not implemented");
 		}
 	}
 }

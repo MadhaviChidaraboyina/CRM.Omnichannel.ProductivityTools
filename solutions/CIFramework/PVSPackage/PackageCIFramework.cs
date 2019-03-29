@@ -99,7 +99,7 @@ namespace PVSPackage
         /// <returns>Name of import</returns>
         public override string GetNameOfImport(bool plural)
         {
-            return "msdyn_CIFramework";
+            return "CIFramework";
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace PVSPackage
         {
             get
             {
-                return "msdyn_CIFramework";
+                return "CIFramework";
             }
         }
 
@@ -118,7 +118,7 @@ namespace PVSPackage
         /// </summary>
         public override string GetImportPackageDescriptionText
         {
-            get { return "Package Description"; }
+            get { return "Channel Integration Framework"; }
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace PVSPackage
         /// </summary>
         public override string GetLongNameOfImport
         {
-            get { return "Package Long Name"; }
+            get { return "Channel Integration Framework"; }
         }
 
         #endregion

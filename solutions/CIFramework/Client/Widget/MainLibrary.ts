@@ -75,6 +75,22 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+	 * API to to check value of IsConsoleApp for a widget
+	 *
+	 * @param value. When set to 'true', then it's a console App.
+	 *
+	*/
+	export function isConsoleApp(): Promise<boolean> {
+		let startTime = Date.now();
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.isConsoleApp,
+			messageData: new Map()
+		}
+
+		return sendMessage<boolean>(isConsoleApp.name, payload, false);
+	}
+
+	/**
 	 * API to set/reset value of ClickToAct for a widget
 	 *
 	 * @param value. When set to 'true', invoke the registered 'onclicktoact' handler.
@@ -631,31 +647,79 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
-	 * API to start UI Session
+	 * API to get all Sessions
 	 */
-	export function startUISession(context: any, customerName: string): Promise<string> {
-		if (!isNullOrUndefined(context) && !isNullOrUndefined(customerName)) {
-			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.startUISession,
-				messageData: new Map().set(Constants.context, context).set(Constants.customerName, customerName)
+	export function getAllSessions(): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getAllSessions,
+			messageData: new Map()
+		}
+		return sendMessage<string>(getAllSessions.name, payload, false);
+	}
+
+	/**
+	 * API to get focused Session
+	 */
+	export function getFocusedSession(): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getFocusedSession,
+			messageData: new Map()
+		}
+		return sendMessage<string>(getFocusedSession.name, payload, false);
+	}
+
+	/**
+	 * API to get Session details
+	 */
+	export function getSession(sessionId: string): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getSession,
+			messageData: new Map().set(Constants.sessionId, sessionId)
+		}
+		return sendMessage<string>(getSession.name, payload, false);
+	}
+
+	/**
+	 * API to check if a new Session can be created
+	 */
+	export function canCreateSession(): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.canCreateSession,
+			messageData: new Map()
+		}
+		return sendMessage<string>(canCreateSession.name, payload, false);
+	}
+
+	/**
+	 * API to create Session
+	 */
+	export function createSession(input: any): Promise<string> {
+		if (!isNullOrUndefined(input)) {
+			let customerName = input.customerName;
+			if (isNullOrUndefined(customerName) && !isNullOrUndefined(input.templateParameters)) {
+				customerName = input.templateParameters.customerName;
 			}
-			return sendMessage<string>(startUISession.name, payload, false);
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.createSession,
+				messageData: new Map().set(Constants.input, input).set(Constants.context, input.context).set(Constants.customerName, customerName)
+			}
+			return sendMessage<string>(createSession.name, payload, false);
 		}
 		else {
-			return postMessageNamespace.rejectWithErrorMessage("context or customerName is null");
+			return postMessageNamespace.rejectWithErrorMessage("Some of required parameters are null");
 		}
 	}
 
 	/**
-	 * API to notify incoming on an invisible UISession
+	 * API to notify incoming on an invisible Session
 	 */
-	export function notifyIncoming(sessionId: string, messagesCount?: number): Promise<string> {
+	export function requestFocusSession(sessionId: string, messagesCount?: number): Promise<string> {
 		if (!isNullOrUndefined(sessionId)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.notifyIncoming,
+				messageType: MessageType.requestFocusSession,
 				messageData: new Map().set(Constants.sessionId, sessionId).set(Constants.messagesCount, messagesCount)
 			}
-			return sendMessage<string>(notifyIncoming.name, payload, false);
+			return sendMessage<string>(requestFocusSession.name, payload, false);
 		}
 		else {
 			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");
@@ -663,44 +727,55 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
-	 * API to switch UI Session
+	 * API to get the focused tab in focused Session
 	 */
-	export function switchUISession(sessionId: string): Promise<string> {
-		if (!isNullOrUndefined(sessionId)) {
-			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.switchUISession,
-				messageData: new Map().set(Constants.sessionId, sessionId)
-			}
-			return sendMessage<string>(switchUISession.name, payload, false);
+	export function getFocusedTab(): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getFocusedTab,
+			messageData: new Map()
 		}
-		else {
-			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");
-		}
+		return sendMessage<string>(getFocusedTab.name, payload, false);
 	}
 
 	/**
-	 * API to end UI Session
+	 * API to create a Tab in focused Session
 	 */
-	export function endUISession(sessionId: string): Promise<string> {
-		if (!isNullOrUndefined(sessionId)) {
+	export function createTab(input: any): Promise<string> {
+		if (!isNullOrUndefined(input)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.endUISession,
-				messageData: new Map().set(Constants.sessionId, sessionId)
+				messageType: MessageType.createTab,
+				messageData: new Map().set(Constants.input, input)
 			}
-			return sendMessage<string>(endUISession.name, payload, false);
+			return sendMessage<string>(createTab.name, payload, false);
 		}
 		else {
-			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");
+			postMessageNamespace.rejectWithErrorMessage("Some of the required parameters are Null");
 		}
 	}
 
 	/**
- * API to set all the presences
- * Invokes the API initializeAgentPresenceList(presenceList)
- * @param presenceList - Array containing all the available Presences
+	 * API to focus a Tab in focused Session
+	 */
+	export function focusTab(tabId: string): Promise<string> {
+		if (!isNullOrUndefined(tabId)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.focusTab,
+				messageData: new Map().set(Constants.tabId, tabId)
+			}
+			return sendMessage<string>(focusTab.name, payload, false);
+		}
+		else {
+			postMessageNamespace.rejectWithErrorMessage("tabId is null or undefined");
+		}
+	}
 
- * @returns a Promise: Boolean Status after setting the list of presences
- */
+	/**
+	 * API to set all the presences
+	* Invokes the API initializeAgentPresenceList(presenceList)
+	* @param presenceList - Array containing all the available Presences
+
+	* @returns a Promise: Boolean Status after setting the list of presences
+	*/
 	export function initializeAgentPresenceList(presenceList: any): Promise<boolean> {
 		if (!(isNullOrUndefined(presenceList))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {

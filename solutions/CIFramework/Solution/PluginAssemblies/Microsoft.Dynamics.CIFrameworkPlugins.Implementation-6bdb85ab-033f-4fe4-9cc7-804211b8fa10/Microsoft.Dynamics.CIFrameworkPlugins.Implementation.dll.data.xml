@@ -14,5 +14,14 @@
 		<PluginType AssemblyQualifiedName="Microsoft.Dynamics.CIFrameworkPlugins.WildcardForUrlOnProviderEntity, Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" PluginTypeId="e033a753-a535-4903-9601-6ddad3e34f8f" Name="Microsoft.Dynamics.CIFrameworkPlugins.WildcardForUrlOnProviderEntity">
 			<FriendlyName>041405c1-730d-45cf-9223-5236994a31f2</FriendlyName>
 		</PluginType>
+		<PluginType AssemblyQualifiedName="Microsoft.Dynamics.CIFrameworkPlugins.GenTemplateParamStringOnConsoleApplicationTypeEntity, Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" PluginTypeId="6fd4b398-e8cd-46cf-9242-b92fe90611eb" Name="Microsoft.Dynamics.CIFrameworkPlugins.GenTemplateParamStringOnConsoleApplicationTypeEntity">
+			<FriendlyName>b7f2214d-4d85-47dd-aefd-0ff86847d80a</FriendlyName>
+		</PluginType>
+		<PluginType AssemblyQualifiedName="Microsoft.Dynamics.CIFrameworkPlugins.CreateOrUpdateApplicationTemplate, Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" PluginTypeId="eae3dfeb-87d2-47e2-ac9c-8c4f51e6934f" Name="Microsoft.Dynamics.CIFrameworkPlugins.CreateOrUpdateApplicationTemplate">
+			<FriendlyName>ae6cbcc9-df72-4a13-b8a6-3da6513a8945</FriendlyName>
+		</PluginType>
+		<PluginType AssemblyQualifiedName="Microsoft.Dynamics.CIFrameworkPlugins.CreateOrUpdateApplicationTemplateParameter, Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" PluginTypeId="6460cfcb-88b4-425c-9aff-dde244dd675d" Name="Microsoft.Dynamics.CIFrameworkPlugins.CreateOrUpdateApplicationTemplateParameter">
+			<FriendlyName>4e695335-fb7f-4009-8568-acc806d43a1f</FriendlyName>
+		</PluginType>
 	</PluginTypes>
 </PluginAssembly>

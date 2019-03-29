@@ -83,6 +83,24 @@
 		</Publisher>
 		<RootComponents>
 			<RootComponent type="1" schemaName="msdyn_ciprovider" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_consoleapplicationnotificationtemplate" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_consoleappparameterdefinition" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_consoleapplicationsessiontemplate" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_consoleapplicationtemplate" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_consoleapplicationtype" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_consoleapplicationnotificationfield" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_consoleapplicationtemplateparameter" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_templatetags" behavior="0" />
+      <RootComponent type="9" schemaName="msdyn_consoleapplicationnotificationaction" behavior="0" />
+      <RootComponent type="9" schemaName="msdyn_consoleapplicationparameterruntimetype" behavior="0" />
+      <RootComponent type="9" schemaName="msdyn_panestate" behavior="0" />
+      <RootComponent type="60" id="{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" behavior="0" />
+      <RootComponent type="60" id="{215a1395-743d-4dfb-b552-c51d65fdb423}" behavior="0" />
+      <RootComponent type="60" id="{7e7e29c0-bc24-40c2-938b-941554da4c4e}" behavior="0" />
+      <RootComponent type="60" id="{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" behavior="0" />
+      <RootComponent type="60" id="{92b56288-9844-4608-b6e7-d9362c325d68}" behavior="0" />
+      <RootComponent type="60" id="{e5c56ff7-4104-46e5-93d6-223fef077785}" behavior="0" />
+      <RootComponent type="60" id="{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" behavior="0" />
 			<RootComponent type="61" schemaName="Widget/msdyn_ciLibrary.js" behavior="0" />
 			<RootComponent type="61" schemaName="CRMClients/msdyn_internal_ci_library.js" behavior="0" />
 			<RootComponent type="61" schemaName="EventHandlersLib/msdyn_EventHandlersLib.js" behavior="0" />
@@ -94,19 +112,26 @@
 			<RootComponent type="61" schemaName="case_icon.svg" behavior="0" />
 			<RootComponent type="61" schemaName="chat_icon.svg" behavior="0" />
 			<RootComponent type="61" schemaName="sms_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="widgets_container.html" behavior="0" />
+      <RootComponent type="61" schemaName="widgets_containerStyle.css" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_notificationCss.css" behavior="0" />
 			<RootComponent type="62" schemaName="msdyn_ChannelIntegrationFrameworkSitemap" behavior="0" />
 			<RootComponent type="66" schemaName="MscrmControls.Service.CIProvider.CustomMultiSelectControl" />
 			<RootComponent type="66" schemaName="MscrmControls.FieldControls.AgentClickToActControl" />
 			<RootComponent type="80" schemaName="msdyn_ChannelIntegrationFrameworkApp" behavior="0" />
-			<RootComponent type="61" schemaName="widgets_container.html" behavior="0" />
-			<RootComponent type="61" schemaName="widgets_containerStyle.css" behavior="0" />
-			<RootComponent type="61" schemaName="msdyn_notificationCss.css" behavior="0" />
 			<RootComponent type="91" id="{6bdb85ab-033f-4fe4-9cc7-804211b8fa10}" schemaName="Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" behavior="0" />
 			<RootComponent type="92" id="{36f97e86-7ec0-e811-814c-000d3afd7b11}" behavior="0" />
 			<RootComponent type="92" id="{e018463a-8abd-e811-814c-000d3afd7b11}" behavior="0" />
 			<RootComponent type="92" id="{0d01b3be-4fc2-e811-8149-000d3a3aa233}" behavior="0" />
 			<RootComponent type="92" id="{2c8df2b8-43d7-e811-8158-000d3a069351}" behavior="0" />
 			<RootComponent type="92" id="{528b24b0-43d7-e811-8158-000d3a069351}" behavior="0" />
+      <RootComponent type="92" id="{d6f42acb-3ed3-44c7-9c38-9a402c296a4f}" behavior="0" />
+      <RootComponent type="92" id="{5ca0d211-5ac3-49ce-b780-7dd131fae6ec}" behavior="0" />
+      <RootComponent type="92" id="{81c334f6-57cc-4abb-a0b4-8e519687e29f}" behavior="0" />
+      <RootComponent type="92" id="{9986cd35-d94a-4d43-ba2a-6de3f68725bf}" behavior="0" />
+      <RootComponent type="92" id="{39281539-2b18-411a-8a7e-2b78040752b3}" behavior="0" />
+      <RootComponent type="92" id="{9c55d373-a9e4-4d76-b344-860ef1eb0501}" behavior="0" />
+      <RootComponent type="92" id="{fc42a104-1671-46cd-bfcb-fdf0d642bdfe}" behavior="0" />
 		</RootComponents>
 		<MissingDependencies />
 	</SolutionManifest>

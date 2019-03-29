@@ -38,6 +38,7 @@ namespace Microsoft.CIFramework.Utility {
 			return map;
 		}
 	}
+
 	/**
 	 * Generic method to convert map data into string
 	 * @param map 

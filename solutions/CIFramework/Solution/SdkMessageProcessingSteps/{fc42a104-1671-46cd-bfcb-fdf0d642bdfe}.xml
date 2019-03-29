@@ -1,0 +1,19 @@
+<SdkMessageProcessingStep Name="Microsoft.Dynamics.CIFrameworkPlugins.GenTemplateParamStringOnConsoleApplicationTypeEntity: Create of ConsoleApplicationTemplate" SdkMessageProcessingStepId="{fc42a104-1671-46cd-bfcb-fdf0d642bdfe}">
+      <PluginTypeName>Microsoft.Dynamics.CIFrameworkPlugins.GenTemplateParamStringOnConsoleApplicationTypeEntity, Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</PluginTypeName>
+      <PluginTypeId>6fd4b398-e8cd-46cf-9242-b92fe90611eb</PluginTypeId>
+	  <PrimaryEntity>msdyn_consoleapplicationtemplate</PrimaryEntity>
+      <AsyncAutoDelete>0</AsyncAutoDelete>
+      <Description>Microsoft.Dynamics.CIFrameworkPlugins.GenTemplateParamStringOnConsoleApplicationTypeEntity: Create of ConsoleApplicationTemplate</Description>
+      <FilteringAttributes>msdyn_templateparameters,msdyn_isstale</FilteringAttributes>
+      <InvocationSource>1</InvocationSource>
+      <Mode>0</Mode>
+      <Rank>2</Rank>
+      <SdkMessageId>{9ebdbb1b-ea3e-db11-86a7-000a3a5473e8}</SdkMessageId>
+      <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+      <Stage>40</Stage>
+      <IsCustomizable>1</IsCustomizable>
+      <IsHidden>0</IsHidden>
+      <SupportedDeployment>0</SupportedDeployment>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <SdkMessageProcessingStepImages />
+    </SdkMessageProcessingStep>
