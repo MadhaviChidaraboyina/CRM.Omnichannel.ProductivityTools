@@ -1,0 +1,12 @@
+{
+	"extends": "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+	"include": [
+		"PresenceDialogControl.ts"
+	],
+	"compilerOptions": {
+		"sourceMap": true,
+		"outFile": "msdyn_internal_presence_ci_library.js",
+		"module": "amd",
+		"allowJs": true
+	}
+}
