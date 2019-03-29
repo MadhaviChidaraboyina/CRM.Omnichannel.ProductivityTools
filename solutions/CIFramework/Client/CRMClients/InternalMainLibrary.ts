@@ -29,7 +29,8 @@ namespace Microsoft.CIFramework.Internal {
 		["retrieverecord", [retrieveRecord]],
 		["updaterecord", [updateRecord]],
 		["deleterecord", [deleteRecord]],
-		["openform", [openForm]],
+        ["openform", [openForm]],
+        ["refreshform", [refreshForm]],
 		["setmode", [setMode]],
 		["setPosition", [setPosition]],
 		["getmode", [getMode]],
@@ -790,6 +791,21 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
+    export function refreshForm(parameters: Map<string, any>): Promise<Map<string, any>> {
+        const [provider, errorData] = getProvider(parameters, [Constants.Save]);
+        if (provider) {
+            return new Promise<Map<string, any>>((resolve, reject) => {
+                state.client.refreshForm(parameters.get(Constants.Save)).then(function (res) {
+                    return resolve(new Map<string, any>().set(Constants.value, res));
+                }, function (error) {
+                    return reject(new Map<string, any>().set(Constants.value, error));
+                });
+            });            
+        }
+        else {
+            return logFailure(appId, true, errorData, "refreshForm", cifVersion);
+        }
+    }
 	export function getEntityMetadata(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();

@@ -209,6 +209,37 @@ namespace Microsoft.CIFramework
 		}
 	}
 
+    /**
+	 * API to refresh the main page if an entity form is currently opened
+	 * 
+	 *
+	 * @param save. Optional boolean on whether to save the form on refresh	 
+	 * returns a boolean Promise
+	*/
+    export function refreshForm(save?: boolean): Promise<string> {
+        //if (!(isNullOrUndefined(entityFormOptions) || entityFormOptions == "")) {
+            const payload: postMessageNamespace.IExternalRequestMessageType = {
+                messageType: MessageType.refreshForm,
+                messageData: new Map().set(Constants.Save, save)
+            }
+
+            return new Promise((resolve, reject) => {
+                return sendMessage<Object>(refreshForm.name, payload, false, false).then(
+                    function (result: Object) {
+                        return resolve(JSON.stringify(result));
+                    },
+                    function (error: Map<string, any>) {
+                        return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+                    });
+            });
+
+        /*} else {
+            if (isNullOrUndefined(entityFormOptions) || entityFormOptions == "") {
+                return postMessageNamespace.rejectWithErrorMessage("The EntityFormOptions parameter is blank. Provide a value to the parameter.");
+            }
+        }*/
+    }
+
 	/**
 	 * API to retrieve a given entity record based on entityId and oData query
 	 * Invokes the api Xrm.WebApi.retrieveRecord(entityName, entityId, options)

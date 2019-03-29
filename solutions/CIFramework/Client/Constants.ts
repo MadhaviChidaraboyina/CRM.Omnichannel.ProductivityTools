@@ -13,6 +13,7 @@ namespace Microsoft.CIFramework
 		public static getClickToAct = "getclicktoact";
 		public static searchAndOpenRecords = "searchandopenrecords";
 		public static openForm = "openform";
+		public static refreshForm = "refreshform";
 		public static createRecord = "createrecord";
 		public static deleteRecord = "deleterecord";
 		public static retrieveRecord = "retrieverecord";
@@ -77,6 +78,7 @@ namespace Microsoft.CIFramework
 		public static searchOnly = "searchOnly";
 		public static entityFormOptions = "entityFormOptions";
 		public static entityFormParameters = "entityFormParameters";
+		public static Save = "save";
 		public static ScriptIdAttributeName = "data-cifid";
 		public static ScriptIdAttributeValue = "CIFMainLibrary";
 		public static ScriptCRMUrlAttributeName = "data-crmurl";
