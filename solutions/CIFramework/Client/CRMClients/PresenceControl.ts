@@ -216,41 +216,5 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-
-		public openPresenceDialog(e: any): any {
-			const that = this;
-			const dialogParams: XrmClientApi.DialogParameters = {};
-			dialogParams["param_lastButtonClicked"] = "";
-			const dialogOptions: XrmClientApi.DialogOptions = { width: 300, height: 300, position: XrmClientApi.Constants.WindowPosition.center };
-			Xrm.Navigation.openDialog("SetAgentPresenceMDD", dialogOptions, dialogParams).then(function (dialogParams: any) {
-				if (dialogParams.parameters["param_lastButtonClicked"] === "ok_id") {
-					that.raiseSetPresence();
-				}
-			});
-		}
-
-		public openPresenceDialogonLoad(e: any): any {
-			const presenceControl: XrmClientApi.Controls.OptionSetControl = Xrm.Page.getControl("presence_id");
-			const presenceOptions_str: string = window.localStorage[Constants.GLOBAL_PRESENCE_LIST];
-			if (presenceOptions_str) {
-				const presenceOptions = JSON.parse(presenceOptions_str);
-				if (presenceControl && presenceOptions) {
-					for (let i: number = 0; i < presenceOptions.length; i++) {
-						const item: XrmClientApi.OptionSetItem = {
-							text: presenceOptions[i][Constants.presenceText],
-							value: i
-						}
-					}
-				}
-			}
-			if (e.keyCode == 40) {
-				if (activeElement.nextSibling == null) {
-					presenceListInnerNode.getElementsByClassName("PresenceListItem")[0].focus();
-				}
-				else {
-					activeElement.nextSibling.focus();
-				}
-			}
-		}
 	}
 }

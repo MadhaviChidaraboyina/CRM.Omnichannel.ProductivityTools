@@ -113,15 +113,9 @@
 			<RootComponent type="61" schemaName="case_icon.svg" behavior="0" />
 			<RootComponent type="61" schemaName="chat_icon.svg" behavior="0" />
 			<RootComponent type="61" schemaName="sms_icon.svg" behavior="0" />
-<<<<<<< HEAD
-      <RootComponent type="61" schemaName="widgets_container.html" behavior="0" />
-      <RootComponent type="61" schemaName="widgets_containerStyle.css" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_notificationCss.css" behavior="0" />
-=======
 			<RootComponent type="61" schemaName="widgets_container.html" behavior="0" />
 			<RootComponent type="61" schemaName="widgets_containerStyle.css" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_notificationCss.css" behavior="0" />
->>>>>>> 7f74668... Conflicts resolved
 			<RootComponent type="62" schemaName="msdyn_ChannelIntegrationFrameworkSitemap" behavior="0" />
 			<RootComponent type="66" schemaName="MscrmControls.Service.CIProvider.CustomMultiSelectControl" />
 			<RootComponent type="66" schemaName="MscrmControls.FieldControls.AgentClickToActControl" />
@@ -132,15 +126,6 @@
 			<RootComponent type="92" id="{0d01b3be-4fc2-e811-8149-000d3a3aa233}" behavior="0" />
 			<RootComponent type="92" id="{2c8df2b8-43d7-e811-8158-000d3a069351}" behavior="0" />
 			<RootComponent type="92" id="{528b24b0-43d7-e811-8158-000d3a069351}" behavior="0" />
-<<<<<<< HEAD
-      <RootComponent type="92" id="{d6f42acb-3ed3-44c7-9c38-9a402c296a4f}" behavior="0" />
-      <RootComponent type="92" id="{5ca0d211-5ac3-49ce-b780-7dd131fae6ec}" behavior="0" />
-      <RootComponent type="92" id="{81c334f6-57cc-4abb-a0b4-8e519687e29f}" behavior="0" />
-      <RootComponent type="92" id="{9986cd35-d94a-4d43-ba2a-6de3f68725bf}" behavior="0" />
-      <RootComponent type="92" id="{39281539-2b18-411a-8a7e-2b78040752b3}" behavior="0" />
-      <RootComponent type="92" id="{9c55d373-a9e4-4d76-b344-860ef1eb0501}" behavior="0" />
-      <RootComponent type="92" id="{fc42a104-1671-46cd-bfcb-fdf0d642bdfe}" behavior="0" />
-=======
 			<RootComponent type="92" id="{d6f42acb-3ed3-44c7-9c38-9a402c296a4f}" behavior="0" />
 			<RootComponent type="92" id="{5ca0d211-5ac3-49ce-b780-7dd131fae6ec}" behavior="0" />
 			<RootComponent type="92" id="{81c334f6-57cc-4abb-a0b4-8e519687e29f}" behavior="0" />
@@ -148,7 +133,6 @@
 			<RootComponent type="92" id="{39281539-2b18-411a-8a7e-2b78040752b3}" behavior="0" />
 			<RootComponent type="92" id="{9c55d373-a9e4-4d76-b344-860ef1eb0501}" behavior="0" />
 			<RootComponent type="92" id="{fc42a104-1671-46cd-bfcb-fdf0d642bdfe}" behavior="0" />
->>>>>>> 7f74668... Conflicts resolved
 			<RootComponent type="50" schemaName=":RibbonDiffXml" behavior="0" />
 			<RootComponent type="60" id="{e02fac01-dd62-4886-8f07-042ad67ee299}" behavior="0" />
 			<RootComponent type="9" schemaName="msdyn_presencestatus" behavior="0" />

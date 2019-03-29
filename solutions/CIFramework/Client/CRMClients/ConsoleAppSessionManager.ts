@@ -37,11 +37,6 @@ namespace Microsoft.CIFramework.Internal {
 			let previousProvider = state.sessionManager.getProvider(previousSessionId);
 			let newProvider = state.sessionManager.getProvider(newSessionId);
 			let switchProvider = false;
-			if(!isNullOrUndefined(isHiddenPanel) && isHiddenPanel == false){
-				state.client.setPanelMode("setPanelMode", 0);
-			}else{
-				state.client.setPanelMode("setPanelMode", 2);
-			}
 
 			if (previousProvider != null) {
 				if (previousProvider != newProvider) {
@@ -53,6 +48,10 @@ namespace Microsoft.CIFramework.Internal {
 
 			if (newProvider != null) {
 				newProvider.setFocusedSession(newSessionId, switchProvider);
+				state.client.setPanelMode("setPanelMode", 1);
+			}
+			else {
+				state.client.setPanelMode("setPanelMode", 0);
 			}
 		}
 
@@ -81,11 +80,7 @@ namespace Microsoft.CIFramework.Internal {
 		 * of the session which was created
 		 */
 		onSessionCreated(event: any): void {
-			if(!isNullOrUndefined(isHiddenPanel) && isHiddenPanel == false){
-				state.client.setPanelMode("setPanelMode", 0);
-			}else{
-				state.client.setPanelMode("setPanelMode", 2);
-			}
+			state.client.setPanelMode("setPanelMode", 0);
 		}
 
 		getFocusedSession(): string {
