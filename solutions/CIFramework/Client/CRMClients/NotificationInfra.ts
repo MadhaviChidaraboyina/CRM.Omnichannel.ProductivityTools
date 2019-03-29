@@ -14,6 +14,7 @@ namespace Microsoft.CIFramework.Internal {
 	const listenerWindow = window.parent;
 	let noOfNotifications = 0;
 	let len = 0;
+	let closeId = "";
 	
 	/**
 	 * API to invoke toast popup widget
@@ -439,8 +440,8 @@ namespace Microsoft.CIFramework.Internal {
 		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
 		toastDiv.setAttribute("role","alert");
 		let i = 0;
-		let header,body,actions;
-		let eventType;
+		let header: any,body: any,actions: any;
+		let eventType: any;
 		let waitTime = -1;
 		let notificationType: any = [];
 		for (let [key, value] of notificationUX) {
@@ -462,11 +463,11 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-		if(header == null || header == "undefined"){
+		if (header == null || header == "undefined"){
 			return postMessageNamespace.rejectWithErrorMessage("The header value is blank. Provide a value to the parameter.");
 		}
 		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
-			if(body == null || body == "undefined"){
+			if (body == null || body == "undefined"){
 				return postMessageNamespace.rejectWithErrorMessage("The body value is blank. Provide a value to the parameter.");
 			}
 		}
@@ -480,9 +481,87 @@ namespace Microsoft.CIFramework.Internal {
 				noOfNotifications--;
 			}
 		}
+
+		/* get notification type based on actions*/
+		let accept = false;
+		let decline = false;
+		if (actions != null && actions != "undefined") {
+
+			for (i = 0; i < actions.length; i++) {
+				for (let key in actions[i]) {
+					if (key.search(Constants.actionType) != -1) {
+						if (actions[i][key].search(Constants.Accept) != -1) {
+							accept = true;
+						}
+						if (actions[i][key].search(Constants.Reject) != -1) {
+							decline = true;
+						}
+					}
+				}
+			}
+		}
+
+			/* set timer text*/
+		if (actions != null && actions != "undefined") {
+			for (i = 0; i < actions.length; i++) {
+				for (let key in actions[i]) {
+					if (key.search(Constants.Timer) != -1) {
+						waitTime = actions[i][key];
+					}
+				}
+			}
+		}
+
+
+		// Xrm.Panel.state = 0;
+		if (isConsoleAppInternal() == true && (eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+			if (closeId != "") {
+				var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
+				return Promise.resolve(mapReturn);
+			}
+
+			return new Promise(function (resolve, reject) {
+				waitTime = waitTime / 1000;
+				let title = "Chat Request from " + header[0]["Chat request from"][0];
+				let details = { "Comment": body[0]["Comment"], "Wait time": waitTime.toString() + " sec"};
+				let type = 0;
+				let image = "/webresources/chat_icon.svg";
+				if (accept && decline) {
+					type = 0;
+				}
+				else {
+					type = 1;
+				}
+				let onAcceptHandler = function () {
+					var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
+					(Xrm.Internal as any).clearPopupNotification(closeId);
+					closeId = "";
+					//alert("accepted"); // remove
+					return resolve(mapReturn);
+				}.bind(this);
+				let onDeclineHandler = function () {
+					var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
+					(Xrm.Internal as any).clearPopupNotification(closeId);
+					closeId = "";
+					//alert("declined"); // remove
+					return resolve(mapReturn);
+				}.bind(this);
+				let acceptAction = {
+					actionLabel: "Accept",
+					eventHandler: onAcceptHandler
+				};
+				let declineAction = {
+					actionLabel: "Reject",
+					eventHandler: onDeclineHandler
+				};
+				let popupnotification = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
+				(Xrm.Internal as any).addPopupNotification(popupnotification).then((id: string) => { closeId = id; console.log(id) }).catch((e: any) => console.log(e))
+			});
+		}
+
 		let map = new Map();
 		map = renderEventNotification(header,body,actions,notificationType,eventType);
-		if(actions != null && actions != "undefined"){
+		/*if(actions != null && actions != "undefined"){
 			for( i = 0; i < actions.length; i++){
 				for (let key in actions[i]) {
 					if(key.search(Constants.Timer) != -1){
@@ -490,7 +569,7 @@ namespace Microsoft.CIFramework.Internal {
 					}
 				}
 			}
-		}
+		}*/
 		return new Promise(function (resolve,reject) {
 			if(notificationType[0].search(MessageType.softNotification) != -1){
 				for(let [key,value] of map){
@@ -625,6 +704,6 @@ namespace Microsoft.CIFramework.Internal {
 					}
 				}
 			}
-		});
+		}); 
     }
 }
