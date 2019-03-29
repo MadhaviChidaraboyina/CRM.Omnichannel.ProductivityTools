@@ -50,6 +50,7 @@ namespace Microsoft.CIFramework
 		public static canCreateSession = "canCreateSession";
 		public static createSession = "createSession";
 		public static getFocusedTab = "getFocusedTab";
+		public static getTabsByTag = "getTabsByTag";
 		public static createTab = "createTab";
 		public static focusTab = "focusTab";
 		public static onMaxSessionsReached = "onMaxSessionsReached";
@@ -91,6 +92,7 @@ namespace Microsoft.CIFramework
 		public static widgetIframeId = "SidePanelIFrame";
 		public static clickToActAttributeName = "msdyn_clicktoact";
 		public static systemUserLogicalName = "systemuser";
+		public static templateTag = "templateTag";
 		public static appSelectorFieldName = "msdyn_appselector";
 		public static sortOrderFieldName = "msdyn_sortorder";
 		public static roleSelectorFieldName = "msdyn_roleselector";

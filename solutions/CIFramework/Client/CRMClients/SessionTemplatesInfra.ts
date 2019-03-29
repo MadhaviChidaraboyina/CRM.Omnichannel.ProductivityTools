@@ -8,7 +8,23 @@
 
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
+	export class UCIAppTemplateTagTuple {
+		private _tag: string;
+		private _template: UCIApplicationTabTemplate;
 
+		public get tag(): string {
+			return this._tag;
+		}
+
+		public get template(): UCIApplicationTabTemplate {
+			return this._template;
+		}
+
+		public constructor(tag: string, template: UCIApplicationTabTemplate) {
+			this._tag = tag;
+			this._template = template;
+		}
+	}
 	class UCIApplicationType {
 		private _name: XrmClientApi.PageType;
 		private _order: number;
@@ -391,7 +407,7 @@ namespace Microsoft.CIFramework.Internal {
 		private _anchorTabName: string;
 		private _icon: string;
 		private _pinned: boolean;
-		private _appTabs: Promise<UCIApplicationTabTemplate[]>;
+		private _appTabs: Promise<UCIAppTemplateTagTuple[]>;
 
 		private static _panelOptionToState: Map<number, number> = new Map<number, number>([
 			[100000000, 1], //Docked (Expanded)
@@ -406,11 +422,11 @@ namespace Microsoft.CIFramework.Internal {
 			this._icon = icon;
 			this._pinned = pinned;
 			this._anchorTabName = anchorTab;
-			let apps: Promise<UCIApplicationTabTemplate>[] = [];
+			let apps: Promise<UCIAppTemplateTagTuple>[] = [];
 			appTabs.forEach(function (tab) {
 				apps.push(UCIApplicationTabTemplate.getTemplate(tab).then(
 					function (result) {
-						return Promise.resolve(result);
+						return Promise.resolve(new UCIAppTemplateTagTuple(tab, result));
 					},
 					function (error) {
 						//TODO: log error
@@ -418,10 +434,10 @@ namespace Microsoft.CIFramework.Internal {
 					}));
 			});
 			this._appTabs = Promise.all(apps).then(
-				function (allApps: UCIApplicationTabTemplate[]) {
+				function (allApps: UCIAppTemplateTagTuple[]) {
 					let appTabs = allApps.sort(
-						function (a: UCIApplicationTabTemplate, b: UCIApplicationTabTemplate) {
-							return (a.order - b.order);
+						function (a: UCIAppTemplateTagTuple, b: UCIAppTemplateTagTuple) {
+							return (a.template.order - b.template.order);
 						});
 					return Promise.resolve(appTabs);
 				}.bind(this),
@@ -463,7 +479,7 @@ namespace Microsoft.CIFramework.Internal {
 			return this._anchorTabName;
 		}
 
-		public get appTabs(): Promise<UCIApplicationTabTemplate[]> {
+		public get appTabs(): Promise<UCIAppTemplateTagTuple[]> {
 			return this._appTabs;
 		}
 	}

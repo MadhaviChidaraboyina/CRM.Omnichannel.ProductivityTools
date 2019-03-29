@@ -5,22 +5,58 @@
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
-	export abstract class SessionManager {
-		protected sessions: Map<string, CIProvider>;
+	export class SessionInfo {
+		private _associatedProvider: CIProvider = null;
+		private _tabsByTag: Map<string, string[]>;
 
-		constructor() {
-			this.sessions = new Map<string, CIProvider>();
+		public constructor(provider: CIProvider) {
+			this._associatedProvider = provider;
+			this._tabsByTag = new Map<string, string[]>();
 		}
 
-		getProvider(sessionId: string) {
+		public get accociatedProvider(): CIProvider {
+			return this._associatedProvider;
+		}
+
+		public setTab(tag: string, tabid: string): void {
+			if (!this._tabsByTag.has(tag)) {
+				this._tabsByTag.set(tag, []);
+			}
+			this._tabsByTag.get(tag).push(tabid);
+		}
+
+		public getTab(tag: string): string[] {
+			return this._tabsByTag.get(tag);
+		}
+	}
+	export abstract class SessionManager {
+		protected sessions: Map<string, SessionInfo>;
+
+		constructor() {
+			this.sessions = new Map<string, SessionInfo>();
+		}
+
+		getProvider(sessionId: string): CIProvider {
 			if (this.sessions.has(sessionId)) {
-				return this.sessions.get(sessionId);
+				return this.sessions.get(sessionId).accociatedProvider;
 			}
 			else {
 				return null;
 			}
 		}
 
+		associateTabWithSession(sessionId: string, tag: string, tabId: string) {
+			if (this.sessions.has(sessionId)) {
+				this.sessions.get(sessionId).setTab(tag, tabId);
+			}
+		}
+
+		public getTabsByTag(sessionId: string, tag: string): string[] {
+			if (this.sessions.has(sessionId)) {
+				return this.sessions.get(sessionId).getTab(tag);
+			}
+			return null;
+		}
 		abstract getFocusedSession(): string;
 
 		abstract canCreateSession(): boolean;
