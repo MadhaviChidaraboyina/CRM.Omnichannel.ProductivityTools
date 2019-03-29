@@ -1,5 +1,5 @@
 ﻿:root {
-	--sessionPanelAreaWidth: 44px;
+	--sessionPanelAreaWidth: 0px;
 	--flapAreaWidth: 0px;
 	--widgetAreaWidth: calc(100% - var(--sessionPanelAreaWidth) - var(--flapAreaWidth));
 }
@@ -69,7 +69,7 @@ div#PresenceList
 }
 
 .innerDiv {
-	display: flex;
+	display: none;
 	height: 28px;
 	width: 28px;
 	margin: auto;
