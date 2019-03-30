@@ -727,6 +727,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		presence.setAgentPresence = (presenceInfo: any, telemetryData?: Object | any): boolean => {
 			let startTime = new Date();
+			window.localStorage[Constants.CURRENT_PRESENCE_INFO] = JSON.stringify(presenceInfo);
 			//let agentPresence = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAgentPresence(presenceInfo);
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "PresenceControl.setAgentPresence";
@@ -746,7 +747,7 @@ namespace Microsoft.CIFramework.Internal {
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "PresenceControl.initializeAgentPresenceList";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
-            window.localStorage[Constants.GLOBAL_PRESENCE_LIST] = JSON.stringify(presenceList);
+			window.localStorage[Constants.GLOBAL_PRESENCE_LIST] = JSON.stringify(presenceList);
 			/*let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let presenceListParent = widgetIFrame.contentWindow.document.getElementById("PresenceList");
 			if (presenceListParent != null) {
@@ -755,7 +756,7 @@ namespace Microsoft.CIFramework.Internal {
 				return true;
 			}
 			return false;*/
-            return true;
+			return true;
 		}
 		return presence;
 	}
