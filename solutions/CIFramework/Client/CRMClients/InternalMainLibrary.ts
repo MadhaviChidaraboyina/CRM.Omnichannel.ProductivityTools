@@ -895,9 +895,9 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	export function initializeAgentPresenceList(parameters: Map<string, any>): Promise<Map<string, any>> {
-		if (parameters && parameters.has(Constants.presenceList)) {
+		/*if (parameters && parameters.has(Constants.presenceList)) {
 			window.localStorage[Constants.GLOBAL_PRESENCE_LIST] = parameters.get(Constants.presenceList);
-		}
+		}*/
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.entityName]);

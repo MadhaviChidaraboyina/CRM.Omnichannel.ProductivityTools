@@ -21,7 +21,6 @@
 		"NotificationInfra.ts",
 		"aria-webjs-sdk-1.8.3.js",
 		"PresenceControl.ts",
-		"PresenceDialogControl.ts",
 		"NotesInfra.ts"
 	],
 	"compilerOptions": {

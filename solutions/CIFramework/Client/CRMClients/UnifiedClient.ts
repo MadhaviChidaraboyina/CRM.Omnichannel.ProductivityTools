@@ -742,19 +742,20 @@ namespace Microsoft.CIFramework.Internal {
 
 		presence.initializeAgentPresenceList = (presenceList: any, telemetryData?: Object | any): boolean => {
 			let startTime = new Date();
-			let presenceListDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAllPresences(presenceList);
+			//let presenceListDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAllPresences(presenceList);
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "PresenceControl.initializeAgentPresenceList";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
-
-			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+            window.localStorage[Constants.GLOBAL_PRESENCE_LIST] = presenceList;
+			/*let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let presenceListParent = widgetIFrame.contentWindow.document.getElementById("PresenceList");
 			if (presenceListParent != null) {
 				presenceListParent.innerHTML = "";
 				presenceListParent.appendChild(presenceListDiv);
 				return true;
 			}
-			return false;
+			return false;*/
+            return true;
 		}
 		return presence;
 	}

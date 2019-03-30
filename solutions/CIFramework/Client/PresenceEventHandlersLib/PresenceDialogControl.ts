@@ -3,7 +3,7 @@
 */
 /** @internal */
 
-/// <reference path="../CrmClients/InternalMainLibrary.ts" />
+/// <reference path="../../Client/Constants.ts" />
 
 namespace Microsoft.CIFramework.Internal {
 
