@@ -29,9 +29,9 @@ namespace Microsoft.CIFramework.Internal {
             dialogParams[Constants.LAST_BUTTON_CLICKED] = "";
             const dialogOptions: XrmClientApi.DialogOptions = { width: 300, height: 300, position: XrmClientApi.Constants.WindowPosition.center };
             Xrm.Navigation.openDialog(Constants.SET_PRESENCE_MDD, dialogOptions, dialogParams).then(function (dialogParams: any) {
-                if (dialogParams.parameters[Constants.LAST_BUTTON_CLICKED] === Constants.OK_BUTTON_ID) {
+                /*if (dialogParams.parameters[Constants.LAST_BUTTON_CLICKED] === Constants.OK_BUTTON_ID) {
                     that.raiseSetPresenceFromDialog(dialogParams.parameters[Constants.PRESENCE_SELECTED_VALUE]);
-                }
+                }*/
             });
         }
 
@@ -66,11 +66,13 @@ namespace Microsoft.CIFramework.Internal {
                 for (let i: number = 0; i < presenceControlOptions.length; i++) {
                     if (presenceControlOptions[i].value === presenceValue) {
                         Xrm.Page.data.attributes.get(Constants.PRESENCE_SELECTED_VALUE).setValue(presenceControlOptions[i].text);
+                        this.raiseSetPresenceFromDialog(presenceControlOptions[i].text);
                         break;
                     }
                 }
             }
             Xrm.Page.data.attributes.get(Constants.LAST_BUTTON_CLICKED).setValue(Constants.OK_BUTTON_ID);
+            
             Xrm.Page.ui.close();
         }
 
