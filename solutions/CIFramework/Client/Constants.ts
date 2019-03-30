@@ -185,6 +185,7 @@ namespace Microsoft.CIFramework
 		public static SET_PRESENCE_MDD = "SetAgentPresenceMDD";
 		public static PRESENCE_SELECTED_VALUE = "param_selectedValue";
 		public static CURRENT_PRESENCE_INFO = "GlobalToolBar_CurrentPresenceInfo";
+		public static PRESENCE_BUTTON_DATA_ID = "[data-id='Microsoft.Dynamics.Service.CIFramework.Presence.Dialog']";
 	}
 
 	/**

@@ -208,7 +208,10 @@ namespace Microsoft.CIFramework.Internal
 	export function GetPresenceManager(clientType: string): IPresenceManager {
 		switch (clientType) {
 			case ClientType.UnifiedClient:
-				return UCIPresenceManager();
+				if (Internal.isConsoleAppInternal())
+					return UCIConsoleAppManager();
+				else
+					return UCIPresenceManager();
 			default:
 				return UCIPresenceManager();
 		}
