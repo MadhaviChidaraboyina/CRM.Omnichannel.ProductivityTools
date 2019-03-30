@@ -59,7 +59,7 @@
 			<EnableRules />
 			<DisplayRules />
 			<Actions>
-				<JavaScriptFunction FunctionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialog" Library="$webresource:CRMClients/msdyn_internal_ci_library.js" />
+				<JavaScriptFunction FunctionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialog" Library="$webresource:PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" />
 			</Actions>
 		</CommandDefinition>
 	</CommandDefinitions>
