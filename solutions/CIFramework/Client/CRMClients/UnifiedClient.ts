@@ -746,7 +746,7 @@ namespace Microsoft.CIFramework.Internal {
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "PresenceControl.initializeAgentPresenceList";
 			logApiData(telemetryData, startTime, timeTaken, apiName);
-            window.localStorage[Constants.GLOBAL_PRESENCE_LIST] = presenceList;
+            window.localStorage[Constants.GLOBAL_PRESENCE_LIST] = JSON.stringify(presenceList);
 			/*let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let presenceListParent = widgetIFrame.contentWindow.document.getElementById("PresenceList");
 			if (presenceListParent != null) {
