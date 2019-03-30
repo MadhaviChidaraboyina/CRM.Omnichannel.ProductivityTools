@@ -54,7 +54,6 @@ namespace Microsoft.CIFramework.Internal {
 							let presenceButton = (<HTMLButtonElement>window.top.document.querySelector(Constants.PRESENCE_BUTTON_DATA_ID));
 							if (presenceButton) {
 								presenceButton.style.background = currentPresence.presenceColor;
-								return true;
 							}
 						}
 					}
