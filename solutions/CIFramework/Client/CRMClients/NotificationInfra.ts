@@ -450,10 +450,10 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function getImageUrl(eventType: any, notificationType: any): string {
 		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
-			return "/webresources/chat_icon.svg";
+			return "/webresources/msdyn_chat_icon_zfp.svg";
 		}
 		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
-			return "/webresources/case_icon.svg";
+			return "/webresources/msdyn_entity_icon_zfp.svg";
 		}
 	}
 
