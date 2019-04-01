@@ -263,13 +263,13 @@ namespace Microsoft.CIFramework.Internal {
 			return this._state.sessionManager.getFocusedTab(focusedSessionId);
 		}
 
-		getTabsByTag(tag: string): Promise<string[]> {
+		getTabsByTagOrName(name: string, tag: string): Promise<string[]> {
 			var focusedSessionId = this.getFocusedSession();
 			if (focusedSessionId == null) {
 				return Promise.reject("Session not in focus");
 			}
 
-			return Promise.resolve(this._state.sessionManager.getTabsByTag(focusedSessionId, tag));
+			return Promise.resolve(this._state.sessionManager.getTabsByTagOrName(focusedSessionId, name, tag));
 		}
 
 		createTab(input: any): Promise<string> {

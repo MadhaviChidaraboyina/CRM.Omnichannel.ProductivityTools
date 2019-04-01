@@ -8,22 +8,8 @@
 
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
-	export class UCIAppTemplateTagTuple {
-		private _tag: string;
-		private _template: UCIApplicationTabTemplate;
-
-		public get tag(): string {
-			return this._tag;
-		}
-
-		public get template(): UCIApplicationTabTemplate {
-			return this._template;
-		}
-
-		public constructor(tag: string, template: UCIApplicationTabTemplate) {
-			this._tag = tag;
-			this._template = template;
-		}
+	export interface SessionTemplateSessionInput extends XrmClientApi.SessionInput {
+		anchorTabTags: string[];
 	}
 	class UCIApplicationType {
 		private _name: XrmClientApi.PageType;
@@ -74,7 +60,7 @@ namespace Microsoft.CIFramework.Internal {
 						if (UCIApplicationTabTemplate._appTemplates.size > 0) {
 							return resolve(true);
 						}
-						Xrm.WebApi.retrieveMultipleRecords("msdyn_consoleapplicationtemplate", "?$select=msdyn_name,msdyn_icon,msdyn_pinned,msdyn_title,_msdyn_pagetype_value,msdyn_templateparameters").then(
+						Xrm.WebApi.retrieveMultipleRecords("msdyn_consoleapplicationtemplate", "?$select=msdyn_name,msdyn_icon,msdyn_pinned,msdyn_title,_msdyn_pagetype_value,msdyn_templateparameters&$expand=msdyn_msdyn_consoleapplicationtemplate_tags($select=msdyn_name)").then(
 							function (result) {
 								result.entities.forEach(function (value, index, array) {
 									UCIApplicationTabTemplate._appTemplates.set(value["msdyn_name"], new UCIApplicationTabTemplate(
@@ -84,7 +70,8 @@ namespace Microsoft.CIFramework.Internal {
 										value["msdyn_icon"],
 										value["msdyn_pinned"],
 										UCIApplicationTabTemplate._UCIPageTypes.get(value["_msdyn_pagetype_value"]),
-										value["msdyn_templateparameters"]));
+										value["msdyn_templateparameters"],
+										value["msdyn_msdyn_consoleapplicationtemplate_tags"].map(function (tag: {msdyn_name: string}) { return tag.msdyn_name;})));
 								});
 								return resolve(true);
 							},
@@ -214,6 +201,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		private _name: string;
+		private _tags: string[];
 		private _templateId: string;
 		private _uciAppType: UCIApplicationType;
 		private _template: any;
@@ -244,7 +232,10 @@ namespace Microsoft.CIFramework.Internal {
 		protected get icon(): string {
 			return this._icon;
 		}
-		private constructor(templateId: string, name: string, title: string, icon: string, pinned: boolean, appType: UCIApplicationType, templateParameters: string) {
+		public get tags(): string[] {
+			return this._tags;
+		}
+		private constructor(templateId: string, name: string, title: string, icon: string, pinned: boolean, appType: UCIApplicationType, templateParameters: string, tags: string[]) {
 			this._name = name;
 			this._uciAppType = appType;
 			this._template = JSON.parse(templateParameters);
@@ -252,6 +243,7 @@ namespace Microsoft.CIFramework.Internal {
 			this._title = title; //TODO: temporary - need to add title attribute to the entity
 			this._isPinned = pinned; //TODO: need to add pinned attribute to the entity
 			this._icon = icon;
+			this._tags = tags;
 		}
 	}
 
@@ -313,11 +305,12 @@ namespace Microsoft.CIFramework.Internal {
 			);
 		}
 
-		public instantiateTemplate(templateParams: any): Promise<XrmClientApi.SessionInput> {   //TODO: make this a promise
-			return new Promise<XrmClientApi.SessionInput>(function (resolve: (value?: XrmClientApi.SessionInput | PromiseLike<XrmClientApi.SessionInput>) => void, reject: (error: Error) => void) {
+		public instantiateTemplate(templateParams: any): Promise<SessionTemplateSessionInput> {   //TODO: make this a promise
+			return new Promise<SessionTemplateSessionInput>(function (resolve: (value?: SessionTemplateSessionInput | PromiseLike<SessionTemplateSessionInput>) => void, reject: (error: Error) => void) {
 
 				UCIApplicationTabTemplate.getTemplate(this.anchorTabName).then(
 					function (result: UCIApplicationTabTemplate) {
+						let tags: string[] = result.tags;
 						let options: XrmClientApi.SessionOptions = {
 							canBeClosed: this.canBeClosed,
 						};
@@ -352,7 +345,8 @@ namespace Microsoft.CIFramework.Internal {
 							function (result: any) {
 								return resolve({
 									pageInput: pageInput,
-									options: options
+									options: options,
+									anchorTabTags: tags
 								});
 							}.bind(this),
 							function (error: Error) {
@@ -407,7 +401,7 @@ namespace Microsoft.CIFramework.Internal {
 		private _anchorTabName: string;
 		private _icon: string;
 		private _pinned: boolean;
-		private _appTabs: Promise<UCIAppTemplateTagTuple[]>;
+		private _appTabs: Promise<UCIApplicationTabTemplate[]>;
 
 		private static _panelOptionToState: Map<number, number> = new Map<number, number>([
 			[100000000, 1], //Docked (Expanded)
@@ -422,11 +416,11 @@ namespace Microsoft.CIFramework.Internal {
 			this._icon = icon;
 			this._pinned = pinned;
 			this._anchorTabName = anchorTab;
-			let apps: Promise<UCIAppTemplateTagTuple>[] = [];
+			let apps: Promise<UCIApplicationTabTemplate>[] = [];
 			appTabs.forEach(function (tab) {
 				apps.push(UCIApplicationTabTemplate.getTemplate(tab).then(
 					function (result) {
-						return Promise.resolve(new UCIAppTemplateTagTuple(tab, result));
+						return Promise.resolve(result);
 					},
 					function (error) {
 						//TODO: log error
@@ -434,10 +428,10 @@ namespace Microsoft.CIFramework.Internal {
 					}));
 			});
 			this._appTabs = Promise.all(apps).then(
-				function (allApps: UCIAppTemplateTagTuple[]) {
+				function (allApps: UCIApplicationTabTemplate[]) {
 					let appTabs = allApps.sort(
-						function (a: UCIAppTemplateTagTuple, b: UCIAppTemplateTagTuple) {
-							return (a.template.order - b.template.order);
+						function (a: UCIApplicationTabTemplate, b: UCIApplicationTabTemplate) {
+							return (a.order - b.order);
 						});
 					return Promise.resolve(appTabs);
 				}.bind(this),
@@ -479,7 +473,7 @@ namespace Microsoft.CIFramework.Internal {
 			return this._anchorTabName;
 		}
 
-		public get appTabs(): Promise<UCIAppTemplateTagTuple[]> {
+		public get appTabs(): Promise<UCIApplicationTabTemplate[]> {
 			return this._appTabs;
 		}
 	}

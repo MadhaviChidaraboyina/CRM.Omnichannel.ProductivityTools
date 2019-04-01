@@ -764,12 +764,12 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get the focused tab in focused Session
 	 */
-	export function getTabsByTag(tag: string): Promise<string[]> {
+	export function getTabs(name: string, tag: string): Promise<string[]> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
-			messageType: MessageType.getTabsByTag,
-			messageData: new Map().set(Constants.templateTag, tag)
+			messageType: MessageType.getTabsByTagOrName,
+			messageData: new Map().set(Constants.templateTag, tag).set(Constants.name, name)
 		}
-		return sendMessage<string[]>(getTabsByTag.name, payload, false);
+		return sendMessage<string[]>(getTabs.name, payload, false);
 	}
 	/**
 	 * API to create a Tab in focused Session

@@ -51,7 +51,7 @@ namespace Microsoft.CIFramework.Internal {
 		["createSession", [createSession]],
 		["requestFocusSession", [requestFocusSession]],
 		["getFocusedTab", [getFocusedTab]],
-		["getTabsByTag", [getTabsByTag]],
+		["getTabsByTagOrName", [getTabsByTagOrName]],
 		["createTab", [createTab]],
 		["focusTab", [focusTab]],
 		["openkbsearchcontrol", [openKBSearchControl]],
@@ -1072,28 +1072,28 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	export function getTabsByTag(parameters: Map<string, any>): Promise<Map<string, any>> {
+	export function getTabsByTagOrName(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let telemetryParameter: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.getTabsByTag(parameters.get(Constants.templateTag)).then(function (tabIds: string[]) {
+				provider.getTabsByTagOrName(parameters.get(Constants.name), parameters.get(Constants.templateTag)).then(function (tabIds: string[]) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createTab, cifVersion, telemetryData);
 					setPerfData(perfData);
-					logParameterData(telemetryParameter, MessageType.getTabsByTag, { "input": parameters.get(Constants.templateTag) });
+					logParameterData(telemetryParameter, MessageType.getTabsByTagOrName, { "input": parameters.get(Constants.templateTag) });
 					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.createTab, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
 					setUsageData(usageData);
 					return resolve(new Map<string, any>().set(Constants.value, tabIds));
-				}, function (errorData) {
-					logFailure(appId, true, errorData, MessageType.getTabsByTag, cifVersion, provider.providerId, provider.name, telemetryParameter);
-					return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.getTabsByTag))
+				}, function (errorData: IErrorHandler) {
+					logFailure(appId, true, errorData, MessageType.getTabsByTagOrName, cifVersion, provider.providerId, provider.name, telemetryParameter);
+					return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.getTabsByTagOrName))
 				});
 			});
 		}
 		else {
-			return logFailure(appId, true, errorData, MessageType.getTabsByTag, cifVersion, "", "", telemetryParameter);
+			return logFailure(appId, true, errorData, MessageType.getTabsByTagOrName, cifVersion, "", "", telemetryParameter);
 		}
 	}
 

@@ -8,25 +8,53 @@ namespace Microsoft.CIFramework.Internal {
 	export class SessionInfo {
 		private _associatedProvider: CIProvider = null;
 		private _tabsByTag: Map<string, string[]>;
+		private _tabsByName: Map<string, string[]>;
 
 		public constructor(provider: CIProvider) {
 			this._associatedProvider = provider;
 			this._tabsByTag = new Map<string, string[]>();
+			this._tabsByName = new Map<string, string[]>();
 		}
 
-		public get accociatedProvider(): CIProvider {
+		public get associatedProvider(): CIProvider {
 			return this._associatedProvider;
 		}
 
-		public setTab(tag: string, tabid: string): void {
-			if (!this._tabsByTag.has(tag)) {
-				this._tabsByTag.set(tag, []);
+		public setTab(tabid: string, name: string, tags?: string[]): void {
+			if (!this._tabsByName.has(name)) {
+				this._tabsByName.set(name, []);
 			}
-			this._tabsByTag.get(tag).push(tabid);
+			this._tabsByName.get(name).push(tabid);
+
+			tags.forEach(function (tag) {
+				if (!this._tabsByTag.has(tag)) {
+					this._tabsByTag.set(tag, []);
+				}
+				this._tabsByTag.get(tag).push(tabid);
+			});
 		}
 
-		public getTab(tag: string): string[] {
+		public removeTab(tabid: string): void {
+			this._tabsByName.forEach(function (vals) {
+				let index = vals.indexOf(tabid);
+				if (index > -1) {
+					vals.splice(index, 1);
+				}
+			});
+
+			this._tabsByTag.forEach(function (vals) {
+				let index = vals.indexOf(tabid);
+				if (index > -1) {
+					vals.splice(index, 1);
+				}
+			});
+		}
+		public getTabsByTag(tag: string): string[] {
 			return this._tabsByTag.get(tag);
+		}
+
+		public getTabsByName(name: string): string[] {
+			return this._tabsByName.get(name);
 		}
 	}
 	export abstract class SessionManager {
@@ -38,22 +66,38 @@ namespace Microsoft.CIFramework.Internal {
 
 		getProvider(sessionId: string): CIProvider {
 			if (this.sessions.has(sessionId)) {
-				return this.sessions.get(sessionId).accociatedProvider;
+				return this.sessions.get(sessionId).associatedProvider;
 			}
 			else {
 				return null;
 			}
 		}
 
-		associateTabWithSession(sessionId: string, tag: string, tabId: string) {
+		associateTabWithSession(sessionId: string, tabId: string, name: string, tags?: string[]) {
 			if (this.sessions.has(sessionId)) {
-				this.sessions.get(sessionId).setTab(tag, tabId);
+				this.sessions.get(sessionId).setTab(tabId, name, tags);
 			}
 		}
 
-		public getTabsByTag(sessionId: string, tag: string): string[] {
+		dissacoiateTab(sessionId: string, tabId: string) {
 			if (this.sessions.has(sessionId)) {
-				return this.sessions.get(sessionId).getTab(tag);
+				this.sessions.get(sessionId).removeTab(tabId);
+			}
+		}
+		public getTabsByTagOrName(sessionId: string, name: string, tag: string): string[] {
+			if (this.sessions.has(sessionId)) {
+				let tabId: string[] = this.sessions.get(sessionId).getTabsByName(name);
+				if (!isNullOrUndefined(tabId) && tabId.length > 0) {
+					return tabId;
+				}
+				return this.sessions.get(sessionId).getTabsByTag(tag);
+			}
+			return null;
+		}
+
+		public getTabsByName(sessionId: string, name: string): string[] {
+			if (this.sessions.has(sessionId)) {
+				return this.sessions.get(sessionId).getTabsByName(name);
 			}
 			return null;
 		}
