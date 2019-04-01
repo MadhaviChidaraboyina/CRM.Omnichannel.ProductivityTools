@@ -23,6 +23,23 @@ namespace Microsoft.CIFramework.Internal {
 			return this.instance;
 		}
 
+		public setPresenceDialogueToApp(e: any): any {
+			var solnName: any = "";
+			return new Promise((resolve, reject) =>
+			{
+				var globalContext = Xrm.Utility.getGlobalContext();
+				globalContext.getCurrentAppName().then(
+				(response: any) => {
+					solnName = response;
+					if(solnName === "Omni-channel Engagement Hub-Preview"){
+						resolve(true);
+					}else{
+						resolve(false);
+					}
+				});
+			});
+		}
+
 		public openPresenceDialog(e: any): any {
 			const that = this;
 			const dialogParams: XrmClientApi.DialogParameters = {};
