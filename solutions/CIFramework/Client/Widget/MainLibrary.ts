@@ -210,6 +210,30 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+	 * API to refresh the main page if an entity form is currently opened
+	 * 
+	 *
+	 * @param save. Optional boolean on whether to save the form on refresh	 
+	 * returns a boolean Promise
+	*/
+	export function refreshForm(save?: boolean): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.refreshForm,
+			messageData: new Map().set(Constants.Save, save)
+		}
+
+		return new Promise((resolve, reject) => {
+			return sendMessage<Object>(refreshForm.name, payload, false, false).then(
+				function (result: Object) {
+					return resolve(JSON.stringify(result));
+				},
+				function (error: Map<string, any>) {
+					return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+				});
+		});
+	}
+
+	/**
 	 * API to retrieve a given entity record based on entityId and oData query
 	 * Invokes the api Xrm.WebApi.retrieveRecord(entityName, entityId, options)
 	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-webapi/retrieverecord
@@ -737,6 +761,16 @@ namespace Microsoft.CIFramework
 		return sendMessage<string>(getFocusedTab.name, payload, false);
 	}
 
+	/**
+	 * API to get the focused tab in focused Session
+	 */
+	export function getTabsByTag(tag: string): Promise<string[]> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getTabsByTag,
+			messageData: new Map().set(Constants.templateTag, tag)
+		}
+		return sendMessage<string[]>(getTabsByTag.name, payload, false);
+	}
 	/**
 	 * API to create a Tab in focused Session
 	 */

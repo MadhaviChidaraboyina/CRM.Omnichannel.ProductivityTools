@@ -281,6 +281,25 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
+		client.refreshForm = (save?: boolean): Promise<Object> => {            
+			return new Promise<Object>((resolve, reject) => {
+				try {
+					let val = eval("window.top.Xrm.Page.data.refresh(" + save + ")");
+					return val.then(
+						function (res: Object) {
+							return resolve(res);
+						},
+						function (error: Error) {
+							let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
+							return reject(errorData);
+						});
+				}
+				catch (error) {
+					return reject(error);
+				}
+			});
+		}
+
 		client.retrieveMultipleAndOpenRecords = (entityName: string, queryParmeters: string, searchOnly: boolean, telemetryData?: Object|any): Promise<Map<string, any>> =>
 		{
 			return new Promise<Map<string,any>>((resolve, reject) =>

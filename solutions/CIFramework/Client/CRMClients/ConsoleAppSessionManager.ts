@@ -108,14 +108,16 @@ namespace Microsoft.CIFramework.Internal {
 						session.instantiateTemplate(templateParams).then(
 							function (sessionInput: XrmClientApi.SessionInput) {
 								Xrm.App.sessions.createSession(sessionInput).then(function (sessionId: string) {
-									this.sessions.set(sessionId, provider);
+									this.sessions.set(sessionId, new SessionInfo(provider));
 									state.client.setPanelMode("setPanelMode", session.panelState);
 									window.setTimeout(provider.setFocusedSession.bind(provider), 0, sessionId, true);
 									session.appTabs.then(
-										function (appTabs: UCIApplicationTabTemplate[]) {
+										function (appTabs: UCIAppTemplateTagTuple[]) {
 											let tabsRendered: Promise<string>[] = [];
 											appTabs.forEach(
-												function (tab: UCIApplicationTabTemplate) {
+												function (tabTuple: UCIAppTemplateTagTuple) {
+													let tab: UCIApplicationTabTemplate = tabTuple.template;
+													let tag: string = tabTuple.tag;
 													tabsRendered.push(new Promise<string>(function (resolve: any, reject: any) {
 														//tabsRendered.push(tabPromise)
 													//});
@@ -126,6 +128,7 @@ namespace Microsoft.CIFramework.Internal {
 																	//TODO: Add the tabId to our tracking
 																	//return Promise.resolve(tabPromise);
 																	//return tabPromise.then()
+																	this.associateTabWithSession(sessionId, tag, result);
 																	return resolve(result);
 																}.bind(this),
 																function (error: Error) {
@@ -205,10 +208,13 @@ namespace Microsoft.CIFramework.Internal {
 		createTab(sessionId: string, input: any): Promise<string> {
 			return new Promise(function (resolve: any, reject: any) {
 				Xrm.App.sessions.getSession(sessionId).tabs.createTab(input).then(function (tabId: string) {
+					if (!isNullOrUndefined(input.tag)) {
+						this.associateTabWithSession(sessionId, input.tag, tabId);
+					}
 					resolve(tabId);
-				}, function (errorMessage: string) {
+				}.bind(this), function (errorMessage: string) {
 					reject(errorMessage);
-				});
+				}.bind(this));
 			});
 		}
 

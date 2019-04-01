@@ -62,7 +62,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			let sessionId: string = state.messageLibrary.getCorrelationId();
-			this.sessions.set(sessionId, provider);
+			this.sessions.set(sessionId, new SessionInfo(provider));
 
 			let sessionColor = Constants.sessionColors[this.counter++ % Constants.sessionColors.length];
 			let initials = "";

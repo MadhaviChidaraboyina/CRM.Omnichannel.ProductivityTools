@@ -13,6 +13,7 @@ namespace Microsoft.CIFramework
 		public static getClickToAct = "getclicktoact";
 		public static searchAndOpenRecords = "searchandopenrecords";
 		public static openForm = "openform";
+		public static refreshForm = "refreshform";
 		public static createRecord = "createrecord";
 		public static deleteRecord = "deleterecord";
 		public static retrieveRecord = "retrieverecord";
@@ -49,6 +50,7 @@ namespace Microsoft.CIFramework
 		public static canCreateSession = "canCreateSession";
 		public static createSession = "createSession";
 		public static getFocusedTab = "getFocusedTab";
+		public static getTabsByTag = "getTabsByTag";
 		public static createTab = "createTab";
 		public static focusTab = "focusTab";
 		public static onMaxSessionsReached = "onMaxSessionsReached";
@@ -77,6 +79,7 @@ namespace Microsoft.CIFramework
 		public static searchOnly = "searchOnly";
 		public static entityFormOptions = "entityFormOptions";
 		public static entityFormParameters = "entityFormParameters";
+		public static Save = "save";
 		public static ScriptIdAttributeName = "data-cifid";
 		public static ScriptIdAttributeValue = "CIFMainLibrary";
 		public static ScriptCRMUrlAttributeName = "data-crmurl";
@@ -89,6 +92,7 @@ namespace Microsoft.CIFramework
 		public static widgetIframeId = "SidePanelIFrame";
 		public static clickToActAttributeName = "msdyn_clicktoact";
 		public static systemUserLogicalName = "systemuser";
+		public static templateTag = "templateTag";
 		public static appSelectorFieldName = "msdyn_appselector";
 		public static sortOrderFieldName = "msdyn_sortorder";
 		public static roleSelectorFieldName = "msdyn_roleselector";
