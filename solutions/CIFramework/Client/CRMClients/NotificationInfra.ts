@@ -429,6 +429,109 @@ namespace Microsoft.CIFramework.Internal {
 		return map;
 	}
 
+	export function getNotificationTitle(header: any, eventType: any, notificationType: any): string {
+		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+			return "Chat Request from " + header[0]["Chat request from"][0];
+		}
+		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
+			return header[0];
+		}
+
+	}
+
+	export function getNotificationDetails(body: any, eventType: any, notificationType: any, waitTime: number): any {
+		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+			return { "Comment": "Incoming conversation"/* commenting for demo Bug-1440992 body[0]["Comment"]*/, "Wait time": waitTime.toString() + " sec" };
+		}
+		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
+			return "";
+		}
+	}
+
+	export function getImageUrl(eventType: any, notificationType: any): string {
+		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+			return "/webresources/chat_icon.svg";
+		}
+		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
+			return "/webresources/case_icon.svg";
+		}
+	}
+
+	export function getAcceptButtonText(eventType: any, notificationType: any): string {
+		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+			return "Accept";
+		}
+		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
+			return "Open Item";
+		}
+	}
+
+	export function launchZFPNotification(header: any, body: any, notificationType: any, eventType: any, actions: any, closeId: string, waitTime: number): Promise<any> {
+
+		/* get notification type based on actions*/
+		let accept = false;
+		let decline = false;
+		let i = 0;
+		if (actions != null && actions != "undefined") {
+
+			for (i = 0; i < actions.length; i++) {
+				for (let key in actions[i]) {
+					if (key.search(Constants.actionType) != -1) {
+						if (actions[i][key].search(Constants.Accept) != -1) {
+							accept = true;
+						}
+						if (actions[i][key].search(Constants.Reject) != -1) {
+							decline = true;
+						}
+					}
+				}
+			}
+		}
+
+		if (closeId != "") {
+			var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
+			return Promise.resolve(mapReturn);
+		}
+
+		return new Promise(function (resolve, reject) {
+			Xrm.Panel.state = 0;
+			waitTime = waitTime / 1000;
+			let title = getNotificationTitle(header, eventType, notificationType);
+			let details = getNotificationDetails(body, eventType, notificationType, waitTime);
+			let type = 0;
+			let image = getImageUrl(eventType, notificationType); // "/webresources/chat_icon.svg";
+			if (accept && decline) {
+				type = 0;
+			}
+			else {
+				type = 1;
+			}
+			let onAcceptHandler = function () {
+				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
+				(Xrm.Internal as any).clearPopupNotification(closeId);
+				closeId = "";
+				return resolve(mapReturn);
+			}.bind(this);
+			let onDeclineHandler = function () {
+				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
+				(Xrm.Internal as any).clearPopupNotification(closeId);
+				closeId = "";
+				return resolve(mapReturn);
+			}.bind(this);
+			let acceptAction = {
+				actionLabel: getAcceptButtonText(eventType, notificationType),
+				eventHandler: onAcceptHandler
+			};
+			let declineAction = {
+				actionLabel: "Reject",
+				eventHandler: onDeclineHandler
+			};
+			let popupnotification = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
+			(Xrm.Internal as any).addPopupNotification(popupnotification).then((id: string) => { closeId = id; console.log(id) }).catch((e: any) => console.log(e))
+		});
+	}
+
+
 	/**
 	 * API to invoke toast popup widget
 	 *
@@ -482,25 +585,6 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		/* get notification type based on actions*/
-		let accept = false;
-		let decline = false;
-		if (actions != null && actions != "undefined") {
-
-			for (i = 0; i < actions.length; i++) {
-				for (let key in actions[i]) {
-					if (key.search(Constants.actionType) != -1) {
-						if (actions[i][key].search(Constants.Accept) != -1) {
-							accept = true;
-						}
-						if (actions[i][key].search(Constants.Reject) != -1) {
-							decline = true;
-						}
-					}
-				}
-			}
-		}
-
 			/* set timer text*/
 		if (actions != null && actions != "undefined") {
 			for (i = 0; i < actions.length; i++) {
@@ -513,63 +597,14 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 
-		// Xrm.Panel.state = 0;
-		if (isConsoleAppInternal() == true && (eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
-			if (closeId != "") {
-				var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
-				return Promise.resolve(mapReturn);
-			}
-
-			return new Promise(function (resolve, reject) {
-				waitTime = waitTime / 1000;
-				let title = "Chat Request from " + header[0]["Chat request from"][0];
-				let details = { "Comment": body[0]["Comment"], "Wait time": waitTime.toString() + " sec"};
-				let type = 0;
-				let image = "/webresources/chat_icon.svg";
-				if (accept && decline) {
-					type = 0;
-				}
-				else {
-					type = 1;
-				}
-				let onAcceptHandler = function () {
-					var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
-					(Xrm.Internal as any).clearPopupNotification(closeId);
-					closeId = "";
-					//alert("accepted"); // remove
-					return resolve(mapReturn);
-				}.bind(this);
-				let onDeclineHandler = function () {
-					var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
-					(Xrm.Internal as any).clearPopupNotification(closeId);
-					closeId = "";
-					//alert("declined"); // remove
-					return resolve(mapReturn);
-				}.bind(this);
-				let acceptAction = {
-					actionLabel: "Accept",
-					eventHandler: onAcceptHandler
-				};
-				let declineAction = {
-					actionLabel: "Reject",
-					eventHandler: onDeclineHandler
-				};
-				let popupnotification = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
-				(Xrm.Internal as any).addPopupNotification(popupnotification).then((id: string) => { closeId = id; console.log(id) }).catch((e: any) => console.log(e))
-			});
+		if (isConsoleAppInternal() == true && (eventType.search(Constants.Chat) != -1) &&
+			((notificationType[0].search(MessageType.notification) != -1) || (notificationType[0].search(MessageType.softNotification) != -1))) {
+			return launchZFPNotification(header, body, notificationType, eventType, actions, closeId, waitTime);
 		}
 
 		let map = new Map();
 		map = renderEventNotification(header,body,actions,notificationType,eventType);
-		/*if(actions != null && actions != "undefined"){
-			for( i = 0; i < actions.length; i++){
-				for (let key in actions[i]) {
-					if(key.search(Constants.Timer) != -1){
-						waitTime = actions[i][key];
-					}
-				}
-			}
-		}*/
+
 		return new Promise(function (resolve,reject) {
 			if(notificationType[0].search(MessageType.softNotification) != -1){
 				for(let [key,value] of map){
