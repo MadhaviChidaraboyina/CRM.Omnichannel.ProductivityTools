@@ -69,9 +69,6 @@ namespace Microsoft.CIFramework.Internal {
 						if (presenceOptions[i][Constants.presenceText] == currentPresence.presenceText) {
 							presenceControl.getAttribute().setValue(i);
 							let presenceButton = (<HTMLButtonElement>window.top.document.querySelector(Constants.PRESENCE_BUTTON_DATA_ID));
-							if (presenceButton) {
-								presenceButton.style.background = currentPresence.presenceColor;
-							}
 						}
 					}
 				}
