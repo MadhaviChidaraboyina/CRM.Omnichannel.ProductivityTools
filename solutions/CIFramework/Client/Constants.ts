@@ -86,7 +86,7 @@ namespace Microsoft.CIFramework
 		public static ScriptIdAttributeName = "data-cifid";
 		public static ScriptIdAttributeValue = "CIFMainLibrary";
 		public static ScriptCRMUrlAttributeName = "data-crmurl";
-		public static name = "msdyn_name";
+		public static nameParameter = "msdyn_name";
 
 		public static originURL = "originURL";
 		public static CIClickToAct = "CIClickToAct";

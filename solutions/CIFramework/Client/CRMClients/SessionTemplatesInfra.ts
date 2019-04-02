@@ -114,20 +114,26 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 		private static convertValue(value: string, runtimeType: string, templateParams: any, scope: string): Promise<any> {
-			if (isNullOrUndefined(value)) {
-				return Promise.resolve(null);
+			try {
+				if (isNullOrUndefined(value)) {
+					return Promise.resolve(null);
+				}
+				switch (runtimeType) {
+					case "number":
+						return Promise.resolve(Number(value));
+					case "boolean":
+						return Promise.resolve(Boolean(value));
+					case "json":
+						return Promise.resolve(JSON.parse(value));
+					case "string":
+						return TemplatesUtility.resolveTemplateString(value, templateParams, scope);
+					default:
+						return Promise.resolve(value);
+				}
 			}
-			switch (runtimeType) {
-				case "number":
-					return Promise.resolve(Number(value));
-				case "boolean":
-					return Promise.resolve(Boolean(value));
-				case "json":
-					return Promise.resolve(JSON.parse(value));
-				case "string":
-					return TemplatesUtility.resolveTemplateString(value, templateParams, scope);
-				default:
-					return Promise.resolve(value);
+			catch (error) {
+				console.log("Parse error resolving value '" + value + "' of type '" + runtimeType + " in scope " + scope);
+				Promise.resolve(null);
 			}
 		}
 		public instantiateTemplate(templateParams: any): Promise<XrmClientApi.TabInput> {
