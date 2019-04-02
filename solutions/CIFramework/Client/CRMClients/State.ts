@@ -263,6 +263,90 @@ namespace Microsoft.CIFramework.Internal {
 			return this._state.sessionManager.getFocusedTab(focusedSessionId);
 		}
 
+		getTabsByTagOrName(name: string, tag: string): Promise<string[]> {
+			var focusedSessionId = this.getFocusedSession();
+			if (focusedSessionId == null) {
+				return Promise.reject("Session not in focus");
+			}
+
+			return Promise.resolve(this._state.sessionManager.getTabsByTagOrName(focusedSessionId, name, tag));
+		}
+
+		refreshTab(tabId: string): Promise<boolean> {
+			var focusedSessionId = this.getFocusedSession();
+			if (focusedSessionId == null) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = MessageType.refreshTab;
+				return Promise.reject(error);
+			}
+
+			return new Promise(function (resolve: any, reject: any) {
+				this._state.sessionManager.refreshTab(focusedSessionId, tabId).then(function (result: boolean) {
+					resolve(result);
+				}, function (errorMsg: string) {
+					let error = {} as IErrorHandler;
+					error.reportTime = new Date().toUTCString();
+					error.errorMsg = errorMsg;
+					error.errorType = errorTypes.GenericError;
+					error.sourceFunc = MessageType.refreshTab;
+					reject(error);
+				});
+			}.bind(this));
+		}
+
+		setSessionTitle(input: any): Promise<string> {
+			var focusedSessionId = this.getFocusedSession();
+			if (focusedSessionId == null) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = MessageType.setSessionTitle;
+				return Promise.reject(error);
+			}
+
+			return new Promise(function (resolve: any, reject: any) {
+				this._state.sessionManager.setSessionTitle(focusedSessionId, input).then(function (result: string) {
+					resolve(result);
+				}, function (errorMsg: string) {
+					let error = {} as IErrorHandler;
+					error.reportTime = new Date().toUTCString();
+					error.errorMsg = errorMsg;
+					error.errorType = errorTypes.GenericError;
+					error.sourceFunc = MessageType.setSessionTitle;
+					reject(error);
+				});
+			}.bind(this));
+		}
+
+		setTabTitle(tabId: string, input: any): Promise<string> {
+			var focusedSessionId = this.getFocusedSession();
+			if (focusedSessionId == null) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = MessageType.setSessionTitle;
+				return Promise.reject(error);
+			}
+
+			return new Promise(function (resolve: any, reject: any) {
+				this._state.sessionManager.setTabTitle(focusedSessionId, tabId, input).then(function (result: string) {
+					resolve(result);
+				}, function (errorMsg: string) {
+					let error = {} as IErrorHandler;
+					error.reportTime = new Date().toUTCString();
+					error.errorMsg = errorMsg;
+					error.errorType = errorTypes.GenericError;
+					error.sourceFunc = MessageType.setSessionTitle;
+					reject(error);
+				});
+			}.bind(this));
+		}
+
 		createTab(input: any): Promise<string> {
 			var focusedSessionId = this.getFocusedSession();
 			if (focusedSessionId == null) {

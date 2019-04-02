@@ -8,7 +8,9 @@
 
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
-
+	export interface SessionTemplateSessionInput extends XrmClientApi.SessionInput {
+		anchorTabTemplate: UCIApplicationTabTemplate;
+	}
 	class UCIApplicationType {
 		private _name: XrmClientApi.PageType;
 		private _order: number;
@@ -26,7 +28,7 @@ namespace Microsoft.CIFramework.Internal {
 			this._order = order;
 		}
 	}
-	export class UCIApplicationTabTemplate {
+	export class UCIApplicationTabTemplate implements AppConfig {
 		private static _appTemplates = new Map<string, UCIApplicationTabTemplate>();
 
 		private static _UCIPageTypes = new Map<string, UCIApplicationType>();
@@ -58,7 +60,7 @@ namespace Microsoft.CIFramework.Internal {
 						if (UCIApplicationTabTemplate._appTemplates.size > 0) {
 							return resolve(true);
 						}
-						Xrm.WebApi.retrieveMultipleRecords("msdyn_consoleapplicationtemplate", "?$select=msdyn_name,msdyn_icon,msdyn_pinned,msdyn_title,_msdyn_pagetype_value,msdyn_templateparameters").then(
+						Xrm.WebApi.retrieveMultipleRecords("msdyn_consoleapplicationtemplate", "?$select=msdyn_name,msdyn_icon,msdyn_pinned,msdyn_title,_msdyn_pagetype_value,msdyn_templateparameters&$expand=msdyn_msdyn_consoleapplicationtemplate_tags($select=msdyn_name)").then(
 							function (result) {
 								result.entities.forEach(function (value, index, array) {
 									UCIApplicationTabTemplate._appTemplates.set(value["msdyn_name"], new UCIApplicationTabTemplate(
@@ -68,7 +70,8 @@ namespace Microsoft.CIFramework.Internal {
 										value["msdyn_icon"],
 										value["msdyn_pinned"],
 										UCIApplicationTabTemplate._UCIPageTypes.get(value["_msdyn_pagetype_value"]),
-										value["msdyn_templateparameters"]));
+										value["msdyn_templateparameters"],
+										value["msdyn_msdyn_consoleapplicationtemplate_tags"].map(function (tag: {msdyn_name: string}) { return tag.msdyn_name;})));
 								});
 								return resolve(true);
 							},
@@ -175,7 +178,6 @@ namespace Microsoft.CIFramework.Internal {
 							},
 							function (error) {
 								//TODO: Log the error
-								//ret[prop] = null;
 								console.log("Error retrieving " + prop + " for templ: " + name + " : " + error);
 								return Promise.resolve(val);
 							}));
@@ -198,6 +200,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		private _name: string;
+		private _tags: string[];
 		private _templateId: string;
 		private _uciAppType: UCIApplicationType;
 		private _template: any;
@@ -228,7 +231,10 @@ namespace Microsoft.CIFramework.Internal {
 		protected get icon(): string {
 			return this._icon;
 		}
-		private constructor(templateId: string, name: string, title: string, icon: string, pinned: boolean, appType: UCIApplicationType, templateParameters: string) {
+		public get tags(): string[] {
+			return this._tags;
+		}
+		private constructor(templateId: string, name: string, title: string, icon: string, pinned: boolean, appType: UCIApplicationType, templateParameters: string, tags: string[]) {
 			this._name = name;
 			this._uciAppType = appType;
 			this._template = JSON.parse(templateParameters);
@@ -236,10 +242,15 @@ namespace Microsoft.CIFramework.Internal {
 			this._title = title; //TODO: temporary - need to add title attribute to the entity
 			this._isPinned = pinned; //TODO: need to add pinned attribute to the entity
 			this._icon = icon;
+			this._tags = tags;
+		}
+
+		public resolveTitle(input: any): Promise<string> {
+			return TemplatesUtility.resolveTemplateString(this.title, input, this.name);
 		}
 	}
 
-	export class UCISessionTemplate {
+	export class UCISessionTemplate implements AppConfig {
 		private static _sessionTemplates = new Map<string, UCISessionTemplate>();
 		private static _templateBytag = new Map<string, string[]>();
 		public static InitSessionTemplates(): Promise<boolean> {
@@ -297,11 +308,12 @@ namespace Microsoft.CIFramework.Internal {
 			);
 		}
 
-		public instantiateTemplate(templateParams: any): Promise<XrmClientApi.SessionInput> {   //TODO: make this a promise
-			return new Promise<XrmClientApi.SessionInput>(function (resolve: (value?: XrmClientApi.SessionInput | PromiseLike<XrmClientApi.SessionInput>) => void, reject: (error: Error) => void) {
+		public instantiateTemplate(templateParams: any): Promise<SessionTemplateSessionInput> {
+			return new Promise<SessionTemplateSessionInput>(function (resolve: (value?: SessionTemplateSessionInput | PromiseLike<SessionTemplateSessionInput>) => void, reject: (error: Error) => void) {
 
 				UCIApplicationTabTemplate.getTemplate(this.anchorTabName).then(
 					function (result: UCIApplicationTabTemplate) {
+						let anchorTemplate: UCIApplicationTabTemplate = result;
 						let options: XrmClientApi.SessionOptions = {
 							canBeClosed: this.canBeClosed,
 						};
@@ -336,7 +348,8 @@ namespace Microsoft.CIFramework.Internal {
 							function (result: any) {
 								return resolve({
 									pageInput: pageInput,
-									options: options
+									options: options,
+									anchorTabTemplate: anchorTemplate
 								});
 							}.bind(this),
 							function (error: Error) {
@@ -465,6 +478,10 @@ namespace Microsoft.CIFramework.Internal {
 
 		public get appTabs(): Promise<UCIApplicationTabTemplate[]> {
 			return this._appTabs;
+		}
+
+		public resolveTitle(input: any): Promise<string> {
+			return TemplatesUtility.resolveTemplateString(this.title, input, this.name);
 		}
 	}
 }

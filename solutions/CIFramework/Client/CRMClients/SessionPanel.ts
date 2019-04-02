@@ -62,7 +62,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			let sessionId: string = state.messageLibrary.getCorrelationId();
-			this.sessions.set(sessionId, provider);
+			this.sessions.set(sessionId, new SessionInfo(provider));
 
 			let sessionColor = Constants.sessionColors[this.counter++ % Constants.sessionColors.length];
 			let initials = "";
@@ -135,6 +135,18 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		closeTab(sessionId: string, tabId: string): Promise<boolean> {
+			return Promise.reject("Not implemented");
+		}
+
+		refreshTab(sessionId: string, tabId: string): Promise<boolean> {
+			return Promise.reject("Not implemented");
+		}
+
+		setSessionTitle(sessionId: string, input: any): Promise<string> {
+			return Promise.reject("Not implemented");
+		}
+
+		setTabTitle(sessionId: string, tabId: string, input: any): Promise<string> {
 			return Promise.reject("Not implemented");
 		}
 	}
