@@ -753,8 +753,26 @@ namespace Microsoft.CIFramework.Internal {
 			logApiData(telemetryData, startTime, timeTaken, apiName);
 
 			let presenceButton = (<HTMLButtonElement>window.top.document.querySelector(Constants.PRESENCE_BUTTON_DATA_ID));
+			let presenceStatus = presenceInfo.basePresenceStatus;
 			if (presenceButton) {
-				presenceButton.style.background = presenceInfo.presenceColor;
+				let presence : any;
+				switch(presenceStatus){
+					case "AWAY" : let awayPresence = presenceButton.getElementsByTagName("img")
+									awayPresence[0].src = "/WebResources/msdyn_Away.svg"
+									break;
+					case "AVAILABLE" : let availablePresence = presenceButton.getElementsByTagName("img")
+									availablePresence[0].src = "/WebResources/msdyn_Available.svg"
+									break;
+					case "OFFLINE" : let offlinePresence = presenceButton.getElementsByTagName("img")
+									offlinePresence[0].src = "/WebResources/msdyn_Offline.svg"
+									break;
+					case "BUSY" : let busyPresence = presenceButton.getElementsByTagName("img")
+									busyPresence[0].src = "/WebResources/msdyn_BusyIcon.svg"
+									break;
+					case "BUSY_DO_NOT_DISTURB" : let dndPresence = presenceButton.getElementsByTagName("img")
+									dndPresence[0].src = "/WebResources/msdyn_BusyDND.svg"
+									break;
+				}
 				return true;
 			}
 			return false;

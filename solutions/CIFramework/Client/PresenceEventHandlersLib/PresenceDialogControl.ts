@@ -23,6 +23,23 @@ namespace Microsoft.CIFramework.Internal {
 			return this.instance;
 		}
 
+		public AddPresenceCommand(e: any): any {
+			var appName: any = "";
+			return new Promise((resolve, reject) =>
+			{
+				var globalContext = Xrm.Utility.getGlobalContext();
+				globalContext.getCurrentAppName().then(
+				(response: any) => {
+					appName = response;
+					if(appName === "Omni-channel Engagement Hub-Preview"){
+						resolve(true);
+					}else{
+						resolve(false);
+					}
+				});
+			});
+		}
+
 		public openPresenceDialog(e: any): any {
 			const that = this;
 			const dialogParams: XrmClientApi.DialogParameters = {};
@@ -52,9 +69,6 @@ namespace Microsoft.CIFramework.Internal {
 						if (presenceOptions[i][Constants.presenceText] == currentPresence.presenceText) {
 							presenceControl.getAttribute().setValue(i);
 							let presenceButton = (<HTMLButtonElement>window.top.document.querySelector(Constants.PRESENCE_BUTTON_DATA_ID));
-							if (presenceButton) {
-								presenceButton.style.background = currentPresence.presenceColor;
-							}
 						}
 					}
 				}
