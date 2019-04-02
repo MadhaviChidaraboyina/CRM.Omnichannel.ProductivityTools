@@ -154,7 +154,7 @@ namespace Microsoft.CIFramework.Internal {
 							state.providerManager.addProvider(x[Constants.landingUrl], provider);
 						}
 
-						var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.name], x[Constants.APIVersion], "loadProvider", x[Constants.SortOrder], appId, cifVersion, false, null);
+						var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.nameParameter], x[Constants.APIVersion], "loadProvider", x[Constants.SortOrder], appId, cifVersion, false, null);
 						setUsageData(usageData);
 					}
 					// initialize and set post message wrapper.
@@ -1132,7 +1132,7 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.getTabsByTagOrName(parameters.get(Constants.name), parameters.get(Constants.templateTag)).then(function (tabIds: string[]) {
+				provider.getTabsByTagOrName(parameters.get(Constants.nameParameter), parameters.get(Constants.templateTag)).then(function (tabIds: string[]) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createTab, cifVersion, telemetryData);
 					setPerfData(perfData);
 					logParameterData(telemetryParameter, MessageType.getTabsByTagOrName, { "input": parameters.get(Constants.templateTag) });
