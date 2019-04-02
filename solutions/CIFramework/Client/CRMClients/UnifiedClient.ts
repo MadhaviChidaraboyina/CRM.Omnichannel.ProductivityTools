@@ -244,6 +244,11 @@ namespace Microsoft.CIFramework.Internal {
 							doc.getElementById("widgetControlDiv").appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
 							//console.log("AMEYA loading - " + key + " height = " + widgetHeight + " minheight "  + minimizedHeight);
+
+							if (!isConsoleAppInternal()) {
+								widgetIFrame.contentDocument.documentElement.style.setProperty('--sessionPanelAreaWidth', "44px");
+								(widgetIFrame.contentDocument.getElementsByClassName('innerDiv')[0] as HTMLElement).style.display = "flex";
+							}
 						}
 					}
 					return resolve(status);
