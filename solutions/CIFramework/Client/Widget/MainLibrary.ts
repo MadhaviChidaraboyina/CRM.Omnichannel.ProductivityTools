@@ -767,7 +767,7 @@ namespace Microsoft.CIFramework
 	export function getTabs(name: string, tag: string): Promise<string[]> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getTabsByTagOrName,
-			messageData: new Map().set(Constants.templateTag, tag).set(Constants.name, name)
+			messageData: new Map().set(Constants.templateTag, tag).set(Constants.nameParameter, name)
 		}
 		return sendMessage<string[]>(getTabs.name, payload, false);
 	}
