@@ -431,12 +431,21 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function getNotificationTitle(header: any, eventType: any, notificationType: any): string {
 		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
-			return "Chat Request from " + header[0]["Chat request from"][0];
+
+			if (!isNullOrUndefined(header[0]["Chat request from"]) && header[0]["Chat request from"].length > 0) {
+				return "Chat request from " + header[0]["Chat request from"][0];
+			}
+			else if (!isNullOrUndefined(header[0]["Transfer request from"]) && header[0]["Transfer request from"].length > 0) {
+				return "Transfer request from " + header[0]["Transfer request from"][0];
+			}
+			else if (!isNullOrUndefined(header[0]["Consult request from"]) && header[0]["Consult request from"].length > 0) {
+				return "Consult request from " + header[0]["Consult request from"][0];
+			}
 		}
 		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return header[0];
 		}
-
+		return "";
 	}
 
 	export function getNotificationDetails(body: any, eventType: any, notificationType: any, waitTime: number): any {
