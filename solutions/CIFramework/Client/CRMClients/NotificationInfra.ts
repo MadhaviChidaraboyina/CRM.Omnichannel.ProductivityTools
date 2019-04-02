@@ -431,7 +431,16 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function getNotificationTitle(header: any, eventType: any, notificationType: any): string {
 		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
-			return "Chat Request from " + header[0]["Chat request from"][0];
+
+			if (header[0].search("Chat request from") != 1) {
+				return "Chat request from " + header[0]["Chat request from"][0];
+			}
+			else if (header[0].search("Transfer request from") != 1) {
+				return "Transfer request from " + header[0]["Transfer request from"][0];
+			}
+			else if (header[0].search("Consult request from") != 1) {
+				return "Consult request from " + header[0]["Consult request from"][0];
+			}
 		}
 		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return header[0];
