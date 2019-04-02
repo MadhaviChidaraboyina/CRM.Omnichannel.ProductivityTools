@@ -771,6 +771,40 @@ namespace Microsoft.CIFramework
 		}
 		return sendMessage<string[]>(getTabs.name, payload, false);
 	}
+
+	export function refreshTab(tabId: string): Promise<string[]> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.refreshTab,
+			messageData: new Map().set(Constants.tabId, tabId)
+		}
+		return sendMessage<string[]>(refreshTab.name, payload, false);
+	}
+
+	export function setSessionTitle(input: any): Promise<string> {
+		if (!isNullOrUndefined(input)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.setSessionTitle,
+				messageData: new Map().set(Constants.input, input)
+			}
+			return sendMessage<string>(setSessionTitle.name, payload, false);
+		}
+		else {
+			postMessageNamespace.rejectWithErrorMessage("Some of the required parameters are Null");
+		}
+	}
+
+	export function setTabTitle(tabId: string, input: any): Promise<string> {
+		if (!isNullOrUndefined(input) && !isNullOrUndefined(tabId)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.setTabTitle,
+				messageData: new Map().set(Constants.input, input).set(Constants.tabId, tabId)
+			}
+			return sendMessage<string>(setTabTitle.name, payload, false);
+		}
+		else {
+			postMessageNamespace.rejectWithErrorMessage("Some of the required parameters are Null");
+		}
+	}
 	/**
 	 * API to create a Tab in focused Session
 	 */

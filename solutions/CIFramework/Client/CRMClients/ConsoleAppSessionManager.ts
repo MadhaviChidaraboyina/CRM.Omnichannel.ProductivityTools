@@ -93,7 +93,6 @@ namespace Microsoft.CIFramework.Internal {
 
 		createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string> {
 			return new Promise(function (resolve: any, reject: any) {
-				//let sessionName = input.sessionName;   //TODO: Need to define the public function signature
 				let fetchTask: Promise<UCISessionTemplate> = null;
 				if (!isNullOrUndefined(input.templateName)) {
 					fetchTask = UCISessionTemplate.getTemplateByName(input.templateName);
@@ -102,32 +101,26 @@ namespace Microsoft.CIFramework.Internal {
 					fetchTask = UCISessionTemplate.getTemplateByTag(input.templateTag)
 				}
 				let templateParams = input.templateParameters;
-				//let session = UCISessionTemplate.getTemplate(sessionName);
 				fetchTask.then(
 					function (session: UCISessionTemplate) {
 						session.instantiateTemplate(templateParams).then(
 							function (sessionInput: SessionTemplateSessionInput) {
 								Xrm.App.sessions.createSession(sessionInput).then(function (sessionId: string) {
-									this.sessions.set(sessionId, new SessionInfo(provider));
+									this.sessions.set(sessionId, new SessionInfo(provider, session));
 									state.client.setPanelMode("setPanelMode", session.panelState);
 									window.setTimeout(provider.setFocusedSession.bind(provider), 0, sessionId, true);
-									this.associateTabWithSession(sessionId, Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId, session.anchorTabName, sessionInput.anchorTabTags);
+									this.associateTabWithSession(sessionId, Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId, sessionInput.anchorTabTemplate, session.anchorTabName, sessionInput.anchorTabTemplate.tags);
 									session.appTabs.then(
 										function (appTabs: UCIApplicationTabTemplate[]) {
 											let tabsRendered: Promise<string>[] = [];
 											appTabs.forEach(
 												function (tab: UCIApplicationTabTemplate) {
 													tabsRendered.push(new Promise<string>(function (resolve: any, reject: any) {
-														//tabsRendered.push(tabPromise)
-													//});
 													tab.instantiateTemplate(templateParams).then(
 														function (result: XrmClientApi.TabInput) {
 															this.createTab(sessionId, result).then(
 																function (result: string) {
-																	//TODO: Add the tabId to our tracking
-																	//return Promise.resolve(tabPromise);
-																	//return tabPromise.then() associateTabWithSession(sessionId: string, tabId: string, name: string, tags?: string[]) {
-																	this.associateTabWithSession(sessionId, result, tab.name, tab.tags);
+																	this.associateTabWithSession(sessionId, result, tab, tab.name, tab.tags);
 																	return resolve(result);
 																}.bind(this),
 																function (error: Error) {
@@ -151,7 +144,6 @@ namespace Microsoft.CIFramework.Internal {
 										function (error: Error) {
 											//TODO: log error
 										}.bind(this));
-									//}
 									resolve(sessionId);
 								}.bind(this),
 									function (errorMessage: string) {
@@ -226,6 +218,16 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise(function (resolve: any, reject: any) {
 				Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).close().then(function (closeStatus: boolean) {
 					resolve(closeStatus);
+				}, function (errorMessage: string) {
+					reject(errorMessage);
+				});
+			});
+		}
+
+		refreshTab(sessionId: string, tabId: string): Promise<boolean> {
+			return new Promise(function (resolve: any, reject: any) {
+				Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).refresh().then(function () {
+					resolve(true);
 				}, function (errorMessage: string) {
 					reject(errorMessage);
 				});

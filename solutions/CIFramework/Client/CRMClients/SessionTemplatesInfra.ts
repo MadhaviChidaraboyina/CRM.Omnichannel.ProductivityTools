@@ -9,7 +9,7 @@
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
 	export interface SessionTemplateSessionInput extends XrmClientApi.SessionInput {
-		anchorTabTags: string[];
+		anchorTabTemplate: UCIApplicationTabTemplate;
 	}
 	class UCIApplicationType {
 		private _name: XrmClientApi.PageType;
@@ -28,7 +28,7 @@ namespace Microsoft.CIFramework.Internal {
 			this._order = order;
 		}
 	}
-	export class UCIApplicationTabTemplate {
+	export class UCIApplicationTabTemplate implements AppConfig {
 		private static _appTemplates = new Map<string, UCIApplicationTabTemplate>();
 
 		private static _UCIPageTypes = new Map<string, UCIApplicationType>();
@@ -178,7 +178,6 @@ namespace Microsoft.CIFramework.Internal {
 							},
 							function (error) {
 								//TODO: Log the error
-								//ret[prop] = null;
 								console.log("Error retrieving " + prop + " for templ: " + name + " : " + error);
 								return Promise.resolve(val);
 							}));
@@ -245,9 +244,13 @@ namespace Microsoft.CIFramework.Internal {
 			this._icon = icon;
 			this._tags = tags;
 		}
+
+		public resolveTitle(input: any): Promise<string> {
+			return TemplatesUtility.resolveTemplateString(this.title, input, this.name);
+		}
 	}
 
-	export class UCISessionTemplate {
+	export class UCISessionTemplate implements AppConfig {
 		private static _sessionTemplates = new Map<string, UCISessionTemplate>();
 		private static _templateBytag = new Map<string, string[]>();
 		public static InitSessionTemplates(): Promise<boolean> {
@@ -305,12 +308,12 @@ namespace Microsoft.CIFramework.Internal {
 			);
 		}
 
-		public instantiateTemplate(templateParams: any): Promise<SessionTemplateSessionInput> {   //TODO: make this a promise
+		public instantiateTemplate(templateParams: any): Promise<SessionTemplateSessionInput> {
 			return new Promise<SessionTemplateSessionInput>(function (resolve: (value?: SessionTemplateSessionInput | PromiseLike<SessionTemplateSessionInput>) => void, reject: (error: Error) => void) {
 
 				UCIApplicationTabTemplate.getTemplate(this.anchorTabName).then(
 					function (result: UCIApplicationTabTemplate) {
-						let tags: string[] = result.tags;
+						let anchorTemplate: UCIApplicationTabTemplate = result;
 						let options: XrmClientApi.SessionOptions = {
 							canBeClosed: this.canBeClosed,
 						};
@@ -346,7 +349,7 @@ namespace Microsoft.CIFramework.Internal {
 								return resolve({
 									pageInput: pageInput,
 									options: options,
-									anchorTabTags: tags
+									anchorTabTemplate: anchorTemplate
 								});
 							}.bind(this),
 							function (error: Error) {
@@ -475,6 +478,10 @@ namespace Microsoft.CIFramework.Internal {
 
 		public get appTabs(): Promise<UCIApplicationTabTemplate[]> {
 			return this._appTabs;
+		}
+
+		public resolveTitle(input: any): Promise<string> {
+			return TemplatesUtility.resolveTemplateString(this.title, input, this.name);
 		}
 	}
 }

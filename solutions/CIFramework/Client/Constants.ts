@@ -51,6 +51,9 @@ namespace Microsoft.CIFramework
 		public static createSession = "createSession";
 		public static getFocusedTab = "getFocusedTab";
 		public static getTabsByTagOrName = "getTabsByTagOrName";
+		public static refreshTab = "refreshTab";
+		public static setSessionTitle = "setSessionTitle";
+		public static setTabTitle = "setTabTitle";
 		public static createTab = "createTab";
 		public static focusTab = "focusTab";
 		public static onMaxSessionsReached = "onMaxSessionsReached";

@@ -52,6 +52,9 @@ namespace Microsoft.CIFramework.Internal {
 		["requestFocusSession", [requestFocusSession]],
 		["getFocusedTab", [getFocusedTab]],
 		["getTabsByTagOrName", [getTabsByTagOrName]],
+		["refreshTab", [refreshTab]],
+		["setSessionTitle", [setSessionTitle]],
+		["setTabTitle", [setTabTitle]],
 		["createTab", [createTab]],
 		["focusTab", [focusTab]],
 		["openkbsearchcontrol", [openKBSearchControl]],
@@ -1030,6 +1033,56 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
+	export function setSessionTitle(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let telemetryParameter: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				provider.setSessionTitle(parameters.get(Constants.input)).then(function (result: string) {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.setSessionTitle, cifVersion, telemetryData);
+					setPerfData(perfData);
+					logParameterData(telemetryParameter, MessageType.setSessionTitle, { "input": parameters.get(Constants.input)});
+					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.setSessionTitle, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+					setUsageData(usageData);
+					return resolve(new Map<string, any>().set(Constants.value, result));
+				}, function (errorData: IErrorHandler) {
+					logFailure(appId, true, errorData, MessageType.setSessionTitle, cifVersion, provider.providerId, provider.name, telemetryParameter);
+					return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.setSessionTitle))
+				});
+			});
+		}
+		else {
+			return logFailure(appId, true, errorData, MessageType.setSessionTitle, cifVersion, "", "", telemetryParameter);
+		}
+	}
+
+	export function setTabTitle(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let telemetryParameter: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				provider.setTabTitle(parameters.get(Constants.tabId), parameters.get(Constants.input)).then(function (result: string) {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.setTabTitle, cifVersion, telemetryData);
+					setPerfData(perfData);
+					logParameterData(telemetryParameter, MessageType.setSessionTitle, { "tabId": parameters.get(Constants.tabId), "input": parameters.get(Constants.input) });
+					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.setTabTitle, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+					setUsageData(usageData);
+					return resolve(new Map<string, any>().set(Constants.value, result));
+				}, function (errorData: IErrorHandler) {
+					logFailure(appId, true, errorData, MessageType.setTabTitle, cifVersion, provider.providerId, provider.name, telemetryParameter);
+					return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.setTabTitle))
+				});
+			});
+		}
+		else {
+			return logFailure(appId, true, errorData, MessageType.setTabTitle, cifVersion, "", "", telemetryParameter);
+		}
+	}
+
 	export function requestFocusSession(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let telemetryParameter: any = new Object();
@@ -1094,6 +1147,31 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else {
 			return logFailure(appId, true, errorData, MessageType.getTabsByTagOrName, cifVersion, "", "", telemetryParameter);
+		}
+	}
+
+	export function refreshTab(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let telemetryParameter: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters);
+		if (provider) {
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				provider.refreshTab(parameters.get(Constants.tabId)).then(function () {
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.refreshTab, cifVersion, telemetryData);
+					setPerfData(perfData);
+					logParameterData(telemetryParameter, MessageType.refreshTab, { "tabId": parameters.get(Constants.tabId) });
+					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.focusTab, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+					setUsageData(usageData);
+					return resolve(new Map<string, any>());
+				}, function (errorData: IErrorHandler) {
+					logFailure(appId, true, errorData, MessageType.refreshTab, cifVersion, provider.providerId, provider.name, telemetryParameter);
+					return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.refreshTab))
+				});
+			});
+		}
+		else {
+			return logFailure(appId, true, errorData, MessageType.focusTab, cifVersion, "", "", telemetryParameter);
 		}
 	}
 

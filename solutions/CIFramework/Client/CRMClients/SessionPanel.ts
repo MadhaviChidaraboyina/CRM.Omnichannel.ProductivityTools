@@ -137,5 +137,17 @@ namespace Microsoft.CIFramework.Internal {
 		closeTab(sessionId: string, tabId: string): Promise<boolean> {
 			return Promise.reject("Not implemented");
 		}
+
+		refreshTab(sessionId: string, tabId: string): Promise<boolean> {
+			return Promise.reject("Not implemented");
+		}
+
+		setSessionTitle(sessionId: string, input: any): Promise<string> {
+			return Promise.reject("Not implemented");
+		}
+
+		setTabTitle(sessionId: string, tabId: string, input: any): Promise<string> {
+			return Promise.reject("Not implemented");
+		}
 	}
 }
