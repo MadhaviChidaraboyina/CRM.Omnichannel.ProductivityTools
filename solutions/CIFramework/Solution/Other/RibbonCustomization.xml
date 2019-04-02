@@ -19,7 +19,7 @@
 	<CommandDefinitions>
 		<CommandDefinition Id="Microsoft.Dynamics.Service.CIFramework.Presence.DialogCommand">
 			<EnableRules>
-				<EnableRule Id="Mscrm.ShowOnOEngagementHub" />
+				<EnableRule Id="Mscrm.ShowOnOCEngagementHub" />
 			</EnableRules>
 			<DisplayRules />
 			<Actions>
@@ -31,8 +31,8 @@
     <TabDisplayRules />
     <DisplayRules />
 	<EnableRules>
-		<EnableRule Id="Mscrm.ShowOnOEngagementHub">
-			<CustomRule FunctionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.setPresenceDialogueToApp" Library="$webresource:PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" />
+		<EnableRule Id="Mscrm.ShowOnOCEngagementHub">
+			<CustomRule FunctionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.AddPresenceCommand" Library="$webresource:PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" />
 		</EnableRule>
 	</EnableRules>
   </RuleDefinitions>
