@@ -128,8 +128,8 @@ namespace Microsoft.CIFramework.Internal {
 					state.client.registerHandler(Constants.ModeChangeHandler, onModeChanged);
 					state.client.registerHandler(Constants.SizeChangeHandler, onSizeChanged);
 					state.client.registerHandler(Constants.NavigationHandler, onPageNavigation);
-					let telemetryData: any = new Object();
-					var defaultMode = state.client.getWidgetMode(telemetryData) as number;
+					//let telemetryData: any = new Object();
+					//var defaultMode = state.client.getWidgetMode(telemetryData) as number;
 					var first: boolean = true;
 
 					var environmentInfo: any = [];
