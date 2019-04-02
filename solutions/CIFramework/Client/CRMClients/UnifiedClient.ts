@@ -767,10 +767,10 @@ namespace Microsoft.CIFramework.Internal {
 									offlinePresence[0].src = "/WebResources/msdyn_Offline.svg"
 									break;
 					case "BUSY" : let busyPresence = presenceButton.getElementsByTagName("img")
-									busyPresence[0].src = "/WebResources/msdyn_Busy.svg"
+									busyPresence[0].src = "/WebResources/msdyn_BusyIcon.svg"
 									break;
 					case "BUSY_DO_NOT_DISTURB" : let dndPresence = presenceButton.getElementsByTagName("img")
-									dndPresence[0].src = "/WebResources/msdyn_Busy.svg"
+									dndPresence[0].src = "/WebResources/msdyn_BusyDND.svg"
 									break;
 				}
 				return true;

@@ -136,7 +136,8 @@
     </Content>
     <Content Include="WebResources\msdyn_Available.svg" />
     <Content Include="WebResources\msdyn_Away.svg" />
-    <Content Include="WebResources\msdyn_Busy.svg" />
+    <Content Include="WebResources\msdyn_BusyDND.svg" />
+    <Content Include="WebResources\msdyn_BusyIcon.svg" />
     <Content Include="WebResources\msdyn_Offline.svg" />
     <Content Include="WebResources\widgets_container.html.data.xml" />
     <Content Include="WebResources\msdyn_notificationCss.css.data.xml" />
