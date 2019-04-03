@@ -114,6 +114,11 @@
 			<RootComponent type="61" schemaName="case_icon.svg" behavior="0" />
 			<RootComponent type="61" schemaName="chat_icon.svg" behavior="0" />
 			<RootComponent type="61" schemaName="sms_icon.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_Available.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_Away.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_BusyDND.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_BusyIcon.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_Offline.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_chat_icon_zfp.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_entity_icon_zfp.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_sms_icon_zfp.svg" behavior="0" />

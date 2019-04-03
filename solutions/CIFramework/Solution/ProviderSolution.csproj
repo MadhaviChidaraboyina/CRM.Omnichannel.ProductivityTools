@@ -134,6 +134,11 @@
     <Content Include="WebResources\widgets_container.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="WebResources\msdyn_Available.svg" />
+    <Content Include="WebResources\msdyn_Away.svg" />
+    <Content Include="WebResources\msdyn_BusyDND.svg" />
+    <Content Include="WebResources\msdyn_BusyIcon.svg" />
+    <Content Include="WebResources\msdyn_Offline.svg" />
     <Content Include="WebResources\widgets_container.html.data.xml" />
     <Content Include="WebResources\msdyn_notificationCss.css.data.xml" />
     <Content Include="WebResources\msdyn_notificationCss.css">
