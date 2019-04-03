@@ -695,23 +695,23 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get Session details
 	 */
-	export function getSession(sessionId: string): Promise<string> {
+	export function getSession(sessionId: string): Promise<any> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getSession,
 			messageData: new Map().set(Constants.sessionId, sessionId)
 		}
-		return sendMessage<string>(getSession.name, payload, false);
+		return sendMessage<any>(getSession.name, payload, false);
 	}
 
 	/**
 	 * API to check if a new Session can be created
 	 */
-	export function canCreateSession(): Promise<string> {
+	export function canCreateSession(): Promise<boolean> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.canCreateSession,
 			messageData: new Map()
 		}
-		return sendMessage<string>(canCreateSession.name, payload, false);
+		return sendMessage<boolean>(canCreateSession.name, payload, false);
 	}
 
 	/**
@@ -772,12 +772,12 @@ namespace Microsoft.CIFramework
 		return sendMessage<string[]>(getTabs.name, payload, false);
 	}
 
-	export function refreshTab(tabId: string): Promise<string[]> {
+	export function refreshTab(tabId: string): Promise<void> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.refreshTab,
 			messageData: new Map().set(Constants.tabId, tabId)
 		}
-		return sendMessage<string[]>(refreshTab.name, payload, false);
+		return sendMessage<void>(refreshTab.name, payload, false);
 	}
 
 	export function setSessionTitle(input: any): Promise<string> {
