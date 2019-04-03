@@ -113,6 +113,22 @@ namespace Microsoft.CIFramework.Internal {
 				);
 			});
 		}
+		private static convertBoolean(value: string): boolean {
+			if (!value) {
+				//null, undefined, ""
+				return false;
+			}
+			let lowerVal = value.toLowerCase();
+			switch (lowerVal) {
+				case "0":
+				case "no":
+				case "false":
+					return false;
+				default:
+					//everything else is true
+					return true;
+			}
+		}
 		private static convertValue(value: string, runtimeType: string, templateParams: any, scope: string): Promise<any> {
 			try {
 				if (isNullOrUndefined(value)) {
@@ -122,7 +138,7 @@ namespace Microsoft.CIFramework.Internal {
 					case "number":
 						return Promise.resolve(Number(value));
 					case "boolean":
-						return Promise.resolve(Boolean(value));
+						return Promise.resolve(UCIApplicationTabTemplate.convertBoolean(value));
 					case "json":
 						return Promise.resolve(JSON.parse(value));
 					case "string":
