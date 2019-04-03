@@ -101,7 +101,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		constructor(x: XrmClientApi.WebApi.Entity, state: IState, environmentInfo: any) {
 			this._state = state;
-			this.name = x[Constants.name];
+			this.name = x[Constants.nameParameter];
 			this.providerId = x[Constants.providerId];
 			this.label = x[Constants.label];
 			this.landingUrl = x[Constants.landingUrl];
