@@ -58,7 +58,8 @@
 							{
 								AttributeName = "name",
 								Operator = ConditionOperator.In,
-								Values = { "prvReadmsdyn_ciprovider" }
+								Values = { "prvReadmsdyn_ciprovider",  "prvReadmsdyn_consoleapplicationnotificationfield", "prvReadmsdyn_consoleapplicationnotificationtemplate", "prvReadmsdyn_consoleappparameterdefinition" ,
+											"prvReadmsdyn_consoleapplicationsessiontemplate", "prvReadmsdyn_consoleapplicationtemplate", "prvReadmsdyn_consoleapplicationtemplateparameter", "prvReadmsdyn_templatetags", "prvReadmsdyn_consoleapplicationtype"}
 							}
 						}
 						}
