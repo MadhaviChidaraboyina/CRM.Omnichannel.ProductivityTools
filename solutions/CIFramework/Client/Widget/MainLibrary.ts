@@ -673,12 +673,12 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get all Sessions
 	 */
-	export function getAllSessions(): Promise<string> {
+	export function getAllSessions(): Promise<string[]> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getAllSessions,
 			messageData: new Map()
 		}
-		return sendMessage<string>(getAllSessions.name, payload, false);
+		return sendMessage<string[]>(getAllSessions.name, payload, false);
 	}
 
 	/**

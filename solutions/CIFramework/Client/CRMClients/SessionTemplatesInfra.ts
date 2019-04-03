@@ -189,7 +189,7 @@ namespace Microsoft.CIFramework.Internal {
 						else if (templateParams.hasOwnProperty(prop)) {
 							runtimeVal = templateParams[prop];
 						}
-						let val = (data.isRuntime && !data.value ? runtimeVal : data.value);  //TODO: Need to resolve parameterized string here
+						let val = (data.isRuntime && isNullOrUndefined(data.value) ? runtimeVal : data.value);
 						stringResolvers.push(UCIApplicationTabTemplate.convertValue(val, data.type, templateParams, this.name).then(
 							function (result) {
 								if (!isNullOrUndefined(result)) {

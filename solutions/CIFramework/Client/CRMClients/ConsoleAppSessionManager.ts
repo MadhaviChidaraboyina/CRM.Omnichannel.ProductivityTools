@@ -147,12 +147,7 @@ namespace Microsoft.CIFramework.Internal {
 									resolve(sessionId);
 								}.bind(this),
 									function (errorMessage: string) {
-										let error = {} as IErrorHandler;
-										error.reportTime = new Date().toUTCString();
-										error.errorMsg = errorMessage;
-										error.errorType = errorTypes.GenericError;
-										error.sourceFunc = this.createSession.name;
-										reject(error);
+										reject(errorMessage);
 									}.bind(this)
 								);
 							}.bind(this),
