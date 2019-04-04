@@ -3,7 +3,8 @@
 */
 /** @internal */
 
-/// <reference path="../CrmClients/InternalMainLibrary.ts" />
+/// <reference path="../../Client/Constants.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApi.d.ts" />
 
 namespace Microsoft.CIFramework.Internal {
 
