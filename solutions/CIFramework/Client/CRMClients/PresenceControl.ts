@@ -92,6 +92,9 @@ namespace Microsoft.CIFramework.Internal {
 
 			var innerDiv = document.createElement('div');
 			innerDiv.classList.add("innerDiv");
+			if (!isConsoleAppInternal()) {
+				innerDiv.style.display = "flex";
+			}
 
 			var backgroundColorDiv = document.createElement('div');
 			backgroundColorDiv.classList.add('backgroundColorDiv');

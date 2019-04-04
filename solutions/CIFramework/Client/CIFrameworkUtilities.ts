@@ -11,7 +11,7 @@ namespace Microsoft.CIFramework.Utility {
 	 * utility func to create a error map with the error message and optional error code
 	*/
 	export function createErrorMap(errorMessage: string, apiName?: string) {
-		return new Map().set(Constants.message, errorMessage).set(Constants.name, apiName);
+		return new Map().set(Constants.message, errorMessage).set(Constants.nameParameter, apiName);
 	}
 
 	/**

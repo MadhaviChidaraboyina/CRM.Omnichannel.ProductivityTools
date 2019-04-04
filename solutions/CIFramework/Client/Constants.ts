@@ -13,6 +13,7 @@ namespace Microsoft.CIFramework
 		public static getClickToAct = "getclicktoact";
 		public static searchAndOpenRecords = "searchandopenrecords";
 		public static openForm = "openform";
+		public static refreshForm = "refreshform";
 		public static createRecord = "createrecord";
 		public static deleteRecord = "deleterecord";
 		public static retrieveRecord = "retrieverecord";
@@ -49,6 +50,10 @@ namespace Microsoft.CIFramework
 		public static canCreateSession = "canCreateSession";
 		public static createSession = "createSession";
 		public static getFocusedTab = "getFocusedTab";
+		public static getTabsByTagOrName = "getTabsByTagOrName";
+		public static refreshTab = "refreshTab";
+		public static setSessionTitle = "setSessionTitle";
+		public static setTabTitle = "setTabTitle";
 		public static createTab = "createTab";
 		public static focusTab = "focusTab";
 		public static onMaxSessionsReached = "onMaxSessionsReached";
@@ -77,10 +82,11 @@ namespace Microsoft.CIFramework
 		public static searchOnly = "searchOnly";
 		public static entityFormOptions = "entityFormOptions";
 		public static entityFormParameters = "entityFormParameters";
+		public static Save = "save";
 		public static ScriptIdAttributeName = "data-cifid";
 		public static ScriptIdAttributeValue = "CIFMainLibrary";
 		public static ScriptCRMUrlAttributeName = "data-crmurl";
-		public static name = "msdyn_name";
+		public static nameParameter = "msdyn_name";
 
 		public static originURL = "originURL";
 		public static CIClickToAct = "CIClickToAct";
@@ -89,6 +95,7 @@ namespace Microsoft.CIFramework
 		public static widgetIframeId = "SidePanelIFrame";
 		public static clickToActAttributeName = "msdyn_clicktoact";
 		public static systemUserLogicalName = "systemuser";
+		public static templateTag = "templateTag";
 		public static appSelectorFieldName = "msdyn_appselector";
 		public static sortOrderFieldName = "msdyn_sortorder";
 		public static roleSelectorFieldName = "msdyn_roleselector";
@@ -176,6 +183,16 @@ namespace Microsoft.CIFramework
 		public static previousSessionId = "previousSessionId";
 		public static left = 1;
 		public static right = 2;
+		public static GLOBAL_PRESENCE_LIST = "GlobalToolBar_PresenceList";
+		public static presenceText = "presenceText";
+		public static presenceSelectControl = "presence_id";
+		public static OK_BUTTON_ID = "ok_id";
+		public static CANCEL_BUTTON_ID = "cancel_id";
+		public static LAST_BUTTON_CLICKED = "param_lastButtonClicked";
+		public static SET_PRESENCE_MDD = "SetAgentPresenceMDD";
+		public static PRESENCE_SELECTED_VALUE = "param_selectedValue";
+		public static CURRENT_PRESENCE_INFO = "GlobalToolBar_CurrentPresenceInfo";
+		public static PRESENCE_BUTTON_DATA_ID = "[data-id='Microsoft.Dynamics.Service.CIFramework.Presence.Dialog']";
 	}
 
 	/**

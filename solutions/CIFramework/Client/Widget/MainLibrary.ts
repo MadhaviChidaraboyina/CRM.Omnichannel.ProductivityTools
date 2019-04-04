@@ -210,6 +210,30 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+	 * API to refresh the main page if an entity form is currently opened
+	 * 
+	 *
+	 * @param save. Optional boolean on whether to save the form on refresh	 
+	 * returns a boolean Promise
+	*/
+	export function refreshForm(save?: boolean): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.refreshForm,
+			messageData: new Map().set(Constants.Save, save)
+		}
+
+		return new Promise((resolve, reject) => {
+			return sendMessage<Object>(refreshForm.name, payload, false, false).then(
+				function (result: Object) {
+					return resolve(JSON.stringify(result));
+				},
+				function (error: Map<string, any>) {
+					return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+				});
+		});
+	}
+
+	/**
 	 * API to retrieve a given entity record based on entityId and oData query
 	 * Invokes the api Xrm.WebApi.retrieveRecord(entityName, entityId, options)
 	 * https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-webapi/retrieverecord
@@ -649,12 +673,12 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get all Sessions
 	 */
-	export function getAllSessions(): Promise<string> {
+	export function getAllSessions(): Promise<string[]> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getAllSessions,
 			messageData: new Map()
 		}
-		return sendMessage<string>(getAllSessions.name, payload, false);
+		return sendMessage<string[]>(getAllSessions.name, payload, false);
 	}
 
 	/**
@@ -671,23 +695,23 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get Session details
 	 */
-	export function getSession(sessionId: string): Promise<string> {
+	export function getSession(sessionId: string): Promise<any> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getSession,
 			messageData: new Map().set(Constants.sessionId, sessionId)
 		}
-		return sendMessage<string>(getSession.name, payload, false);
+		return sendMessage<any>(getSession.name, payload, false);
 	}
 
 	/**
 	 * API to check if a new Session can be created
 	 */
-	export function canCreateSession(): Promise<string> {
+	export function canCreateSession(): Promise<boolean> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.canCreateSession,
 			messageData: new Map()
 		}
-		return sendMessage<string>(canCreateSession.name, payload, false);
+		return sendMessage<boolean>(canCreateSession.name, payload, false);
 	}
 
 	/**
@@ -737,6 +761,50 @@ namespace Microsoft.CIFramework
 		return sendMessage<string>(getFocusedTab.name, payload, false);
 	}
 
+	/**
+	 * API to get the focused tab in focused Session
+	 */
+	export function getTabs(name: string, tag: string): Promise<string[]> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.getTabsByTagOrName,
+			messageData: new Map().set(Constants.templateTag, tag).set(Constants.nameParameter, name)
+		}
+		return sendMessage<string[]>(getTabs.name, payload, false);
+	}
+
+	export function refreshTab(tabId: string): Promise<void> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.refreshTab,
+			messageData: new Map().set(Constants.tabId, tabId)
+		}
+		return sendMessage<void>(refreshTab.name, payload, false);
+	}
+
+	export function setSessionTitle(input: any): Promise<string> {
+		if (!isNullOrUndefined(input)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.setSessionTitle,
+				messageData: new Map().set(Constants.input, input)
+			}
+			return sendMessage<string>(setSessionTitle.name, payload, false);
+		}
+		else {
+			postMessageNamespace.rejectWithErrorMessage("Some of the required parameters are Null");
+		}
+	}
+
+	export function setTabTitle(tabId: string, input: any): Promise<string> {
+		if (!isNullOrUndefined(input) && !isNullOrUndefined(tabId)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.setTabTitle,
+				messageData: new Map().set(Constants.input, input).set(Constants.tabId, tabId)
+			}
+			return sendMessage<string>(setTabTitle.name, payload, false);
+		}
+		else {
+			postMessageNamespace.rejectWithErrorMessage("Some of the required parameters are Null");
+		}
+	}
 	/**
 	 * API to create a Tab in focused Session
 	 */

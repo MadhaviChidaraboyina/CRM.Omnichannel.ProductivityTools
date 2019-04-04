@@ -5,6 +5,7 @@
   <Workflows />
   <FieldSecurityProfiles />
   <Templates />
+  <RibbonDiffXml />
   <EntityMaps />
   <EntityRelationships />
   <OrganizationSettings />
@@ -114,9 +115,21 @@
         </option>
       </options>
     </optionset>
+    <optionset Name="msdyn_presencestatus" localizedName="msdyn_presencestatus">
+      <OptionSetType>picklist</OptionSetType>
+      <IsCustomizable>0</IsCustomizable>
+      <displaynames>
+        <displayname description="Set Agent Status" languagecode="1033" />
+      </displaynames>
+      <Descriptions>
+        <Description description="Setting the status of Agent" languagecode="1033" />
+      </Descriptions>
+      <options />
+    </optionset>
   </optionsets>
+  <Dialogs />
   <WebResources />
-	<CustomControls />
+  <CustomControls />
   <SolutionPluginAssemblies />
   <SdkMessageProcessingSteps />
   <AppModuleSiteMaps />

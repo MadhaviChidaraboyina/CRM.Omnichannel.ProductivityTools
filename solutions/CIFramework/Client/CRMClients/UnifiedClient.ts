@@ -244,6 +244,11 @@ namespace Microsoft.CIFramework.Internal {
 							doc.getElementById("widgetControlDiv").appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
 							//console.log("AMEYA loading - " + key + " height = " + widgetHeight + " minheight "  + minimizedHeight);
+
+							if (!isConsoleAppInternal()) {
+								widgetIFrame.contentDocument.documentElement.style.setProperty('--sessionPanelAreaWidth', "44px");
+								(widgetIFrame.contentDocument.getElementsByClassName('innerDiv')[0] as HTMLElement).style.display = "flex";
+							}
 						}
 					}
 					return resolve(status);
@@ -278,6 +283,25 @@ namespace Microsoft.CIFramework.Internal {
 						return reject(errorData);
 					}
 				);
+			});
+		}
+
+		client.refreshForm = (save?: boolean): Promise<Object> => {            
+			return new Promise<Object>((resolve, reject) => {
+				try {
+					let val = eval("window.top.Xrm.Page.data.refresh(" + save + ")");
+					return val.then(
+						function (res: Object) {
+							return resolve(res);
+						},
+						function (error: Error) {
+							let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
+							return reject(errorData);
+						});
+				}
+				catch (error) {
+					return reject(error);
+				}
 			});
 		}
 
@@ -719,6 +743,63 @@ namespace Microsoft.CIFramework.Internal {
 			return false;
 		}
 
+		return presence;
+	}
+
+	export function UCIConsoleAppManager(): IPresenceManager {
+		let presence = {} as IPresenceManager;
+
+		presence.setAgentPresence = (presenceInfo: any, telemetryData?: Object | any): boolean => {
+			let startTime = new Date();
+			window.localStorage[Constants.CURRENT_PRESENCE_INFO] = JSON.stringify(presenceInfo);
+			//let agentPresence = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAgentPresence(presenceInfo);
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "PresenceControl.setAgentPresence";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+
+			let presenceButton = (<HTMLButtonElement>window.top.document.querySelector(Constants.PRESENCE_BUTTON_DATA_ID));
+			let presenceStatus = presenceInfo.basePresenceStatus;
+			if (presenceButton) {
+				let presence : any;
+				switch(presenceStatus){
+					case "AWAY" : let awayPresence = presenceButton.getElementsByTagName("img")
+									awayPresence[0].src = "/WebResources/msdyn_Away.svg"
+									break;
+					case "AVAILABLE" : let availablePresence = presenceButton.getElementsByTagName("img")
+									availablePresence[0].src = "/WebResources/msdyn_Available.svg"
+									break;
+					case "OFFLINE" : let offlinePresence = presenceButton.getElementsByTagName("img")
+									offlinePresence[0].src = "/WebResources/msdyn_Offline.svg"
+									break;
+					case "BUSY" : let busyPresence = presenceButton.getElementsByTagName("img")
+									busyPresence[0].src = "/WebResources/msdyn_BusyIcon.svg"
+									break;
+					case "BUSY_DO_NOT_DISTURB" : let dndPresence = presenceButton.getElementsByTagName("img")
+									dndPresence[0].src = "/WebResources/msdyn_BusyDND.svg"
+									break;
+				}
+				return true;
+			}
+			return false;
+		}
+
+		presence.initializeAgentPresenceList = (presenceList: any, telemetryData?: Object | any): boolean => {
+			let startTime = new Date();
+			//let presenceListDiv = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAllPresences(presenceList);
+			let timeTaken = Date.now() - startTime.getTime();
+			let apiName = "PresenceControl.initializeAgentPresenceList";
+			logApiData(telemetryData, startTime, timeTaken, apiName);
+			window.localStorage[Constants.GLOBAL_PRESENCE_LIST] = JSON.stringify(presenceList);
+			/*let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let presenceListParent = widgetIFrame.contentWindow.document.getElementById("PresenceList");
+			if (presenceListParent != null) {
+				presenceListParent.innerHTML = "";
+				presenceListParent.appendChild(presenceListDiv);
+				return true;
+			}
+			return false;*/
+			return true;
+		}
 		return presence;
 	}
 }

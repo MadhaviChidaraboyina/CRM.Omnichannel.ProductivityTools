@@ -40,6 +40,11 @@ namespace Microsoft.CIFramework.Internal
 	type OpenFormFunction = (entityFormOptions: string, entityFormParameters?: string, telemetryData?: Object) => Promise<Map<string, any>>;
 
 	/**
+	 * Func type for opening a new or an existing form page
+	*/
+	type RefreshFormFunction = (save: boolean, telemetryData?: Object) => Promise<Object>;
+
+	/**
 	 * Func type for opening a KB serach control 
 	*/
 	type openKBSearchControlFunction = (searchString: string,telemetryData?: Object) => boolean;
@@ -156,6 +161,8 @@ namespace Microsoft.CIFramework.Internal
 		getWidgetWidth: GetContextFunction;
 
 		openForm: OpenFormFunction;
+
+		refreshForm: RefreshFormFunction;
 		
 		openKBSearchControl:openKBSearchControlFunction;		
 
@@ -208,7 +215,10 @@ namespace Microsoft.CIFramework.Internal
 	export function GetPresenceManager(clientType: string): IPresenceManager {
 		switch (clientType) {
 			case ClientType.UnifiedClient:
-				return UCIPresenceManager();
+				if (Internal.isConsoleAppInternal())
+					return UCIConsoleAppManager();
+				else
+					return UCIPresenceManager();
 			default:
 				return UCIPresenceManager();
 		}
