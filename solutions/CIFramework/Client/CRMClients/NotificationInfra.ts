@@ -503,6 +503,20 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		return new Promise(function (resolve, reject) {
+			let notificationExpiryTime = -1;
+			if (notificationType[0].search(MessageType.softNotification) != -1) {
+				notificationExpiryTime = 20000;
+			}
+			else if (waitTime != -1) {
+				notificationExpiryTime = waitTime;
+			}
+			setTimeout(function () {
+				var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Timeout));
+				(Xrm.Internal as any).clearPopupNotification(closeId);
+				closeId = "";
+				return resolve(mapReturn);
+			}, notificationExpiryTime);
+
 			Xrm.Panel.state = 0;
 			waitTime = waitTime / 1000;
 			let title = getNotificationTitle(header, eventType, notificationType);
