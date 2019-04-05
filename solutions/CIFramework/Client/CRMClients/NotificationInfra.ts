@@ -445,7 +445,18 @@ namespace Microsoft.CIFramework.Internal {
 		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return header[0];
 		}
+		else if (eventType.search(Constants.Informational) != -1 && (notificationType[0].search(Constants.Informational) || (notificationType[0].search(Constants.Failure)))) {
+			return header[0];
+		}
 		return "";
+	}
+
+	export function isInformationalNotification(notificationType: any): boolean {
+		return (notificationType.length == 2 && notificationType[1].search(Constants.Informational) != -1); 
+	}
+
+	export function isFailureInformationNotification(notificationType: any): boolean {
+		return (notificationType.length == 2 && notificationType[1].search(Constants.Failure) != -1);
 	}
 
 	export function getNotificationDetails(body: any, eventType: any, notificationType: any, waitTime: number): any {
@@ -454,6 +465,9 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return "";
+		}
+		else if (eventType.search(Constants.Informational) != -1 && (isInformationalNotification(notificationType) || isFailureInformationNotification(notificationType))) {
+			return body;
 		}
 	}
 
@@ -477,7 +491,6 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function launchZFPNotification(header: any, body: any, notificationType: any, eventType: any, actions: any, closeId: string, waitTime: number): Promise<any> {
 
-		/* get notification type based on actions*/
 		let accept = false;
 		let decline = false;
 		let i = 0;
@@ -505,7 +518,12 @@ namespace Microsoft.CIFramework.Internal {
 		return new Promise(function (resolve, reject) {
 			let notificationExpiryTime = -1;
 			if (notificationType[0].search(MessageType.softNotification) != -1) {
-				notificationExpiryTime = 20000;
+				if (waitTime == -1) {
+					notificationExpiryTime = 20000;
+				}
+				else {
+					notificationExpiryTime = waitTime;
+				}
 			}
 			else if (waitTime != -1) {
 				notificationExpiryTime = waitTime;
@@ -522,7 +540,33 @@ namespace Microsoft.CIFramework.Internal {
 			let title = getNotificationTitle(header, eventType, notificationType);
 			let details = getNotificationDetails(body, eventType, notificationType, waitTime);
 			let type = 0;
-			let image = getImageUrl(eventType, notificationType); // "/webresources/chat_icon.svg";
+			let image = getImageUrl(eventType, notificationType);
+
+			if (eventType.search(Constants.Informational) != -1 && isInformationalNotification(notificationType)) {
+				Xrm.UI.addGlobalNotification(1, 4, title, details, null, null).then(
+					function (response: any) {
+						// success
+					},
+					function (error: any) {
+						console.error("Failed to show notification");
+					}
+				);
+				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
+				return resolve(mapReturn);
+			}
+			else if (eventType.search(Constants.Informational) != -1 && isFailureInformationNotification(notificationType)) {
+				Xrm.UI.addGlobalNotification(1, 2, title, details, null, null).then(
+					function (response: any) {
+						// success
+					},
+					function (error: any) {
+						console.error("Failed to show notification");
+					}
+				);
+				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
+				return resolve(mapReturn);
+			}
+
 			if (accept && decline) {
 				type = 0;
 			}
@@ -620,8 +664,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 
-		if (isConsoleAppInternal() == true && (eventType.search(Constants.Chat) != -1) &&
-			((notificationType[0].search(MessageType.notification) != -1) || (notificationType[0].search(MessageType.softNotification) != -1))) {
+		if (isConsoleAppInternal() == true) {
 			return launchZFPNotification(header, body, notificationType, eventType, actions, closeId, waitTime);
 		}
 
