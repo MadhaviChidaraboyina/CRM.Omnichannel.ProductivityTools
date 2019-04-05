@@ -528,12 +528,14 @@ namespace Microsoft.CIFramework.Internal {
 			else if (waitTime != -1) {
 				notificationExpiryTime = waitTime;
 			}
-			setTimeout(function () {
-				var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Timeout));
-				(Xrm.Internal as any).clearPopupNotification(closeId);
-				closeId = "";
-				return resolve(mapReturn);
-			}, notificationExpiryTime);
+			if (notificationExpiryTime != -1 && eventType.search(Constants.Informational) == -1) { // informational notifications are handled by toasts
+				setTimeout(function () {
+					var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Timeout));
+					(Xrm.Internal as any).clearPopupNotification(closeId);
+					closeId = "";
+					return resolve(mapReturn);
+				}, notificationExpiryTime);
+			}
 
 			Xrm.Panel.state = 0;
 			waitTime = waitTime / 1000;
