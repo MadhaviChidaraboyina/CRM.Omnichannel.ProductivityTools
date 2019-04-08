@@ -243,7 +243,6 @@ module MscrmControls.FieldControls {
 				key: AgentClickToActControl.PHONE_INPUT_ID_SEED,
 				value: this.context.parameters.value.raw,
 				placeholder: this.placeholder(),
-				readOnly: false,
 				style: {
 					height: "28px",
 					width: "100%",
