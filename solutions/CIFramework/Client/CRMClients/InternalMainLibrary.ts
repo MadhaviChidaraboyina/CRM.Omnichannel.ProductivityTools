@@ -114,7 +114,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	function loadProvider() {
 		let trustedDomains: string[] = [];
-		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=contains(" + Constants.appSelectorFieldName + ",'" + appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
+		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=statecode eq 0 and contains(" + Constants.appSelectorFieldName + ",'" + appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
 			(result: any) => {
 
 				if (result && result.entities) {
