@@ -125,6 +125,7 @@
     <Content Include="Other\Relationships\CTIProvider.xml" />
     <Content Include="WebResources\EventHandlersLib\msdyn_EventHandlersLib.js.data.xml" />
     <Content Include="WebResources\PresenceEventHandlersLib\msdyn_internal_presence_ci_library.js.data.xml" />
+    <Content Include="WebResources\OpenDialogLib\msdyn_internal_openDialog_ci_library.js.data.xml" />
     <Content Include="WebResources\msdyn_CIFIcon.svg" />
     <Content Include="WebResources\msdyn_Callprovider.svg" />
     <Content Include="WebResources\call_icon.svg" />

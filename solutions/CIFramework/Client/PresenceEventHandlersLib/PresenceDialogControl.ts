@@ -40,18 +40,6 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		public openPresenceDialog(e: any): any {
-			const that = this;
-			const dialogParams: XrmClientApi.DialogParameters = {};
-			dialogParams[Constants.LAST_BUTTON_CLICKED] = "";
-			const dialogOptions: XrmClientApi.DialogOptions = { width: 300, height: 300, position: XrmClientApi.Constants.WindowPosition.center };
-			Xrm.Navigation.openDialog(Constants.SET_PRESENCE_MDD, dialogOptions, dialogParams).then(function (dialogParams: any) {
-				/*if (dialogParams.parameters[Constants.LAST_BUTTON_CLICKED] === Constants.OK_BUTTON_ID) {
-					that.raiseSetPresenceFromDialog(dialogParams.parameters[Constants.PRESENCE_SELECTED_VALUE]);
-				}*/
-			});
-		}
-
 		public openPresenceDialogonLoad(e: any): any {
 			const presenceControl: XrmClientApi.Controls.OptionSetControl = Xrm.Page.getControl(Constants.presenceSelectControl);
 			const presenceOptions_str: string = window.localStorage[Constants.GLOBAL_PRESENCE_LIST];
