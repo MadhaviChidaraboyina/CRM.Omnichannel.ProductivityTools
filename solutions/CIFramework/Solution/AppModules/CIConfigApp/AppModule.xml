@@ -10,6 +10,7 @@
        <AppModuleComponent type="1" schemaName="msdyn_ciprovider" />
      </AppModuleComponents>
      <AppModuleRoleMaps>
+       <Role id="{a2cccf01-f964-449c-a827-9b66e03f7fc8}" />
        <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
        <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
      </AppModuleRoleMaps>
