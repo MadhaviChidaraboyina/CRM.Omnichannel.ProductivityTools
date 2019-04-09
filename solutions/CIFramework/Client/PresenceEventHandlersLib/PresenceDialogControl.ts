@@ -3,7 +3,7 @@
 */
 /** @internal */
 
-/// <reference path="../../Client/Constants.ts" />
+/// <reference path="../Constants.ts" />
 
 namespace Microsoft.CIFramework.Internal {
 
@@ -23,21 +23,12 @@ namespace Microsoft.CIFramework.Internal {
 			return this.instance;
 		}
 
-		public AddPresenceCommand(e: any): any {
-			var appName: any = "";
-			return new Promise((resolve, reject) =>
-			{
-				var globalContext = Xrm.Utility.getGlobalContext();
-				globalContext.getCurrentAppName().then(
-				(response: any) => {
-					appName = response;
-					if(appName === "Omni-channel Engagement Hub-Preview"){
-						resolve(true);
-					}else{
-						resolve(false);
-					}
-				});
-			});
+		/**
+		 * utility func to check whether an object is null or undefined
+		 */
+		/** @internal */
+		public isNullOrUndefined(obj: any) {
+			return (obj == null || typeof obj === "undefined");
 		}
 
 		public openPresenceDialogonLoad(e: any): any {
@@ -63,11 +54,11 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		public openPresenceDialogOKClick(e: any): any {
+		public openPresenceDialogOKClick(executionContext: any): any {
 			const presenceSelectControl: XrmClientApi.Controls.OptionSetControl = Xrm.Page.getControl(Constants.presenceSelectControl);
 			const presenceSelectControlAttr = presenceSelectControl ? presenceSelectControl.getAttribute() : console.log("presenceSelectControl is null");
 			const presenceValue = presenceSelectControlAttr ? presenceSelectControlAttr.getValue() : console.log("presenceSelectControlAttr is null");
-			if (!isNullOrUndefined(presenceValue)) {
+			if (!this.isNullOrUndefined(presenceValue)) {
 				const presenceControlOptions: XrmClientApi.OptionSetItem[] = presenceSelectControl.getOptions();
 				for (let i: number = 0; i < presenceControlOptions.length; i++) {
 					if (presenceControlOptions[i].value === presenceValue) {
@@ -79,12 +70,14 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			Xrm.Page.data.attributes.get(Constants.LAST_BUTTON_CLICKED).setValue(Constants.OK_BUTTON_ID);
 			
-			Xrm.Page.ui.close();
+			const formContext = executionContext.getFormContext();
+			formContext.ui.close();
 		}
-
-		public openPresenceDialogCancelClick(e: any): any {
+		
+		public openPresenceDialogCancelClick(executionContext: any): any {
 			Xrm.Page.data.attributes.get(Constants.LAST_BUTTON_CLICKED).setValue(Constants.CANCEL_BUTTON_ID);
-			Xrm.Page.ui.close();
+			const formContext = executionContext.getFormContext();
+			formContext.ui.close();
 		}
 
 		private raiseSetPresenceFromDialog(searchText: string): any {

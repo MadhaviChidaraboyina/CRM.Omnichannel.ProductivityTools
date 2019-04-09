@@ -32,7 +32,7 @@
     <DisplayRules />
 	<EnableRules>
 		<EnableRule Id="Mscrm.ShowOnOCEngagementHub">
-			<CustomRule FunctionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.AddPresenceCommand" Library="$webresource:PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" />
+			<CustomRule FunctionName="Microsoft.CIFramework.Internal.OpenPresenceDialogControl.Instance.addPresenceCommand" Library="$webresource:OpenDialogLib/msdyn_internal_openDialog_ci_library.js" />
 		</EnableRule>
 	</EnableRules>
   </RuleDefinitions>

@@ -12,6 +12,14 @@ namespace Microsoft.CIFramework
 
 	let Constants = Microsoft.CIFramework.Constants;
 
+	/**
+	 * utility func to check whether an object is null or undefined
+	 */
+	/** @internal */
+	export function isNullOrUndefined(obj: any) {
+		return (obj == null || typeof obj === "undefined");
+	}
+
 	/** @internal */
 	function initialize()
 	{

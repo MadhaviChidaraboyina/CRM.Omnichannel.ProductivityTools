@@ -79,6 +79,14 @@ namespace Microsoft.CIFramework.Internal {
 	navigationType = "";
 
 	/**
+	 * utility func to check whether an object is null or undefined
+	 */
+	/** @internal */
+	export function isNullOrUndefined(obj: any) {
+		return (obj == null || typeof obj === "undefined");
+	}
+
+	/**
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
 	 * returns false to disable the button visibility
 	 */

@@ -77,12 +77,12 @@
         <events>
           <event name="onclick" application="false" active="false" attribute="ok_id">
             <Handlers>
-              <Handler functionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialogOKClick" libraryName="$webresource:PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" handlerUniqueId="{4a1eceff-a8f0-4736-a4c7-a3c6c400e433}" enabled="true" parameters="" passExecutionContext="false" />
+              <Handler functionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialogOKClick" libraryName="$webresource:PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" handlerUniqueId="{4a1eceff-a8f0-4736-a4c7-a3c6c400e433}" enabled="true" parameters="" passExecutionContext="true" />
             </Handlers>
           </event>
           <event name="onclick" application="false" active="false" attribute="cancel_id">
             <Handlers>
-              <Handler functionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialogCancelClick" libraryName="$webresource:PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" handlerUniqueId="{ab16b50e-8ca3-4503-8dee-4a2f148b78fe}" enabled="true" parameters="" passExecutionContext="false" />
+              <Handler functionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialogCancelClick" libraryName="$webresource:PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" handlerUniqueId="{ab16b50e-8ca3-4503-8dee-4a2f148b78fe}" enabled="true" parameters="" passExecutionContext="true" />
             </Handlers>
           </event>
           <event name="onload" application="false" active="false">

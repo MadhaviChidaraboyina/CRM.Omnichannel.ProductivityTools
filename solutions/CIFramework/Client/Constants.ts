@@ -194,13 +194,4 @@ namespace Microsoft.CIFramework
 		public static CURRENT_PRESENCE_INFO = "GlobalToolBar_CurrentPresenceInfo";
 		public static PRESENCE_BUTTON_DATA_ID = "[data-id='Microsoft.Dynamics.Service.CIFramework.Presence.Dialog']";
 	}
-
-	/**
-	 * utility func to check whether an object is null or undefined
-	*/
-	/** @internal */
-	export function isNullOrUndefined(obj: any)
-	{
-		return (obj == null || typeof obj === "undefined");
-	}
 }

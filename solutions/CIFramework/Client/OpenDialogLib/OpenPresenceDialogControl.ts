@@ -3,7 +3,7 @@
 */
 /** @internal */
 
-/// <reference path="../../Client/Constants.ts" />
+/// <reference path="../Constants.ts" />
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApi.d.ts" />
 
 namespace Microsoft.CIFramework.Internal {
@@ -30,10 +30,23 @@ namespace Microsoft.CIFramework.Internal {
             dialogParams[Constants.LAST_BUTTON_CLICKED] = "";
             const dialogOptions: XrmClientApi.DialogOptions = { width: 300, height: 300, position: XrmClientApi.Constants.WindowPosition.center };
             Xrm.Navigation.openDialog(Constants.SET_PRESENCE_MDD, dialogOptions, dialogParams).then(function (dialogParams: any) {
-                /*if (dialogParams.parameters[Constants.LAST_BUTTON_CLICKED] === Constants.OK_BUTTON_ID) {
-                    that.raiseSetPresenceFromDialog(dialogParams.parameters[Constants.PRESENCE_SELECTED_VALUE]);
-                }*/
             });
         }
+
+		public addPresenceCommand(e: any): any {
+			var appName: any = "";
+			return new Promise((resolve, reject) => {
+				var globalContext = Xrm.Utility.getGlobalContext();
+				globalContext.getCurrentAppName().then(
+					(response: any) => {
+						appName = response;
+						if (appName === "Omni-channel Engagement Hub-Preview") {
+							resolve(true);
+						} else {
+							resolve(false);
+						}
+					});
+			});
+		}
     }
 }
