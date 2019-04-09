@@ -120,23 +120,23 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			return null;
 		}
-		abstract getFocusedSession(): string;
+		abstract getFocusedSession(telemetryData?: Object): string;
 
-		abstract canCreateSession(): boolean;
+		abstract canCreateSession(telemetryData?: Object): boolean;
 
-		abstract createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string>;
+		abstract createSession(provider: CIProvider, input: any, context: any, customerName: string ,telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string>;
 
 		abstract focusSession(sessionId: string): Promise<void>;
 
-		abstract requestFocusSession(sessionId: string, messagesCount: number): Promise<void>;
+		abstract requestFocusSession(sessionId: string, messagesCount: number, telemetryData?: Object): Promise<void>;
 
 		abstract closeSession(sessionId: string): Promise<boolean>;
 
-		abstract getFocusedTab(sessionId: string): string;
+		abstract getFocusedTab(sessionId: string, telemetryData?: Object): string;
 
-		abstract createTab(sessionId: string, input: any): Promise<string>
+		abstract createTab(sessionId: string, input: any, telemetryData?: Object): Promise<string>
 
-		abstract focusTab(sessionId: string, tabId: string): Promise<void>;
+		abstract focusTab(sessionId: string, tabId: string, telemetryData?: Object): Promise<void>;
 
 		abstract closeTab(sessionId: string, tabId: string): Promise<boolean>;
 

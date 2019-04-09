@@ -117,6 +117,13 @@ namespace Microsoft.CIFramework.Internal
 		return Promise.reject(Microsoft.CIFramework.Utility.createErrorMap(error.errorMsg, apiName));
 	}
 
+	// Logs Failure Events to the d365_cif_apiusage table
+	export function logAPIFailure(appId: string, isError: boolean, error: IErrorHandler, apiName: string, cifVersion: string, providerID?: string, providerName?: string, customParameters?: Object): Promise<Map<string, any>> {
+		var usageData = new APIUsageTelemetry(providerID ? providerID : "", providerName ? providerName : "", null, apiName, null, appId ? appId : "", cifVersion, isError ? isError : false, error ? error : null, customParameters ? customParameters : null);
+		setAPIUsageTelemetry(usageData);
+		return Promise.reject(Microsoft.CIFramework.Utility.createErrorMap(error.errorMsg, apiName));
+	}
+
 	// Function to populate the Usage Data Telemetry
 	export function setUsageData(data: UsageTelemetryData): void {
 		var UsageTelemetry = new AWTEventProperties();
@@ -139,7 +146,7 @@ namespace Microsoft.CIFramework.Internal
 		UsageTelemetry.setPropertyWithPii(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId, AWTPiiKind.Identity);
 		UsageTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		UsageTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
-		UsageTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? data.customParameters : null);
+		UsageTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters) : null);
 
 		defaultLogger.logEvent(UsageTelemetry);
 	}
@@ -183,6 +190,33 @@ namespace Microsoft.CIFramework.Internal
 		defaultLogger.logEvent(PerfTelemetry);
 	}
 
+	// Function to populate the Parameter Data Telemetry
+	export function setAPIUsageTelemetry(data: APIUsageTelemetry): void {
+		var ParamTelemetry = new AWTEventProperties();
+		ParamTelemetry.setName(TelemetryConstants.apiUsageTable);
+
+		ParamTelemetry.setProperty(TelemetryConstants.apiVersion, data.apiVersion ? data.apiVersion : "");
+		ParamTelemetry.setProperty(TelemetryConstants.appId, data.appId ? data.appId : "");
+		ParamTelemetry.setProperty(TelemetryConstants.channelOrder, data.sortOrder ? data.sortOrder : "");
+		ParamTelemetry.setProperty(TelemetryConstants.clientType, Xrm.Utility.getGlobalContext().client.getClient());
+		ParamTelemetry.setProperty(TelemetryConstants.crmVersion, Xrm.Utility.getGlobalContext().getVersion());
+		ParamTelemetry.setPropertyWithPii(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId, AWTPiiKind.Identity);
+		ParamTelemetry.setProperty(TelemetryConstants.orgName, Xrm.Utility.getGlobalContext().organizationSettings.uniqueName);
+		ParamTelemetry.setProperty(TelemetryConstants.providerId, data.providerId ? data.providerId : "");
+		ParamTelemetry.setProperty(TelemetryConstants.providerName, data.providerName ? data.providerName : "");
+		ParamTelemetry.setProperty(TelemetryConstants.isError, data.isError ? data.isError : false);
+		ParamTelemetry.setProperty(TelemetryConstants.errorMessage, data.errorObject ? data.errorObject.errorMsg : "");
+		ParamTelemetry.setProperty(TelemetryConstants.errorType, data.errorObject ? errorTypes[data.errorObject.errorType] : "");
+		ParamTelemetry.setProperty(TelemetryConstants.errorReportTime, data.errorObject ? data.errorObject.reportTime : "");
+		ParamTelemetry.setProperty(TelemetryConstants.errorFunction, data.errorObject ? data.errorObject.sourceFunc : "");
+		ParamTelemetry.setPropertyWithPii(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId, AWTPiiKind.Identity);
+		ParamTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
+		ParamTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
+		ParamTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters): null);
+
+		defaultLogger.logEvent(ParamTelemetry);
+	}
+
 	export class UsageTelemetryData {
 		providerId: string;
 		providerName: string;
@@ -193,7 +227,7 @@ namespace Microsoft.CIFramework.Internal
 		isError: boolean;
 		errorObject: IErrorHandler;
 		cifVersion: string;
-		customParameters: any;
+		customParameters: Object;
 		constructor(providerId?: string, providerName?: string, apiVersion?: string, apiName?: string, sortOrder?: any, appId?: string, cifVersion?: string, isError?: boolean, errorObject?: IErrorHandler, customParameters?:Object) {
 			this.providerId = providerId ? providerId : "";
 			this.providerName = providerName ? providerName : "";
@@ -222,6 +256,31 @@ namespace Microsoft.CIFramework.Internal
 			this.apiName = apiName ? apiName : "";
 			this.telemetryData = telemetryData ? telemetryData : null;
 			this.cifVersion = cifVersion ? cifVersion : "";
+		}
+	}
+
+	export class APIUsageTelemetry {
+		providerId: string;
+		providerName: string;
+		apiVersion: string;
+		apiName: string;
+		sortOrder: any;
+		appId: string;
+		isError: boolean;
+		errorObject: IErrorHandler;
+		cifVersion: string;
+		customParameters: any;
+		constructor(providerId?: string, providerName?: string, apiVersion?: string, apiName?: string, sortOrder?: any, appId?: string, cifVersion?: string, isError?: boolean, errorObject?: IErrorHandler, customParameters?:Object) {
+			this.providerId = providerId ? providerId : "";
+			this.providerName = providerName ? providerName : "";
+			this.apiVersion = apiVersion ? apiVersion : "";
+			this.apiName = apiName ? apiName : "";
+			this.sortOrder = sortOrder ? sortOrder : "";
+			this.appId = appId ? appId : "";
+			this.isError = isError ? isError : false;
+			this.errorObject = errorObject ? errorObject : null;
+			this.cifVersion = cifVersion ? cifVersion : "";
+			this.customParameters = customParameters ? customParameters : null;
 		}
 	}
 }
