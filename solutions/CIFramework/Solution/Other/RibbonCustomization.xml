@@ -11,7 +11,7 @@
 					LabelText="Launch Presence Dialog"
 					ToolTipTitle="Launch Presence Dialog"
 					TemplateAlias="o1"
-					ModernImage="$webresource:/WebResources/msdyn_Available.svg"
+					ModernImage="$webresource:/WebResources/msdyn_UnknownStatus.svg"
 				/>
 			</CommandUIDefinition>
 		</CustomAction>
