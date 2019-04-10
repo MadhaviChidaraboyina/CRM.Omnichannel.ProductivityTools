@@ -185,16 +185,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * IsConsoleApp API's client side handler that post message library will invoke.
 	*/
 	export function isConsoleAppInternal(): boolean {
-		let ret: boolean;
-		if(navigationType == SessionType.MultiSession)
-		{
-			ret = true;
-		}
-		else
-		{
-			ret = false;
-		}
-		return ret;
+		return navigationType == SessionType.MultiSession;
 	}
 
 	/**
@@ -206,14 +197,7 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.SearchString]);
 		if (provider) {
-			if(navigationType == SessionType.MultiSession)
-			{
-				ret = true;
-			}
-			else
-			{
-				ret = false;
-			}
+			ret = isConsoleAppInternal();
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.isConsoleApp, cifVersion, telemetryData);
 			setPerfData(perfData);
 			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.isConsoleApp, provider.sortOrder, appId, cifVersion, false, null);
@@ -567,7 +551,8 @@ namespace Microsoft.CIFramework.Internal {
 		{
 			cancelNotes();
 			state.client.collapseFlap();
-			let ret = state.client.setPanelMode("setPanelMode", parameters.get(Constants.value) as number, telemetryData);
+			let mode: number = parameters.get(Constants.value) as number;
+			let ret = state.client.setPanelMode("setPanelMode", mode, telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.setMode, cifVersion, telemetryData);
 			setPerfData(perfData);
 			logParameterData(telemetryParameter, MessageType.setMode, {"value":parameters.get(Constants.value)});

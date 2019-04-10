@@ -204,13 +204,10 @@ namespace Microsoft.CIFramework.Internal {
 
 		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> => {
 			const options: XrmClientApi.NewPanelOptions = {
-				position: Constants.right,
+				position: isConsoleAppInternal() ? Constants.left : Constants.right,
 				defaultCollapsedBehavior: false,
 				url: "/webresources/widgets_container.html"
 			};
-			if(isConsoleAppInternal() == true){
-				options.position = Constants.left;
-			}
 			return new Promise<Map<string, boolean | string>>((resolve, reject) => {
 				return Xrm.Panel.loadPanel(options).then(function () {
 					Xrm.Panel.addOnSizeChange(client.sizeChanged);
@@ -351,7 +348,9 @@ namespace Microsoft.CIFramework.Internal {
 		client.setPanelMode = (name: string, mode: number, telemetryData?: Object|any): number =>
 		{
 			let startTime = new Date();
-
+			if (mode == Constants.sidePanelHiddenState && !isConsoleAppInternal()) {
+				mode = Constants.sidePanelCollapsedState;
+			}
 			Xrm.Panel.state = mode;
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Panel.setState"

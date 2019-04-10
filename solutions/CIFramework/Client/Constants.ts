@@ -193,5 +193,8 @@ namespace Microsoft.CIFramework
 		public static PRESENCE_SELECTED_VALUE = "param_selectedValue";
 		public static CURRENT_PRESENCE_INFO = "GlobalToolBar_CurrentPresenceInfo";
 		public static PRESENCE_BUTTON_DATA_ID = "[data-id='Microsoft.Dynamics.Service.CIFramework.Presence.Dialog']";
+		public static sidePanelCollapsedState = 0;
+		public static sidePanelExpandedState = 1;
+		public static sidePanelHiddenState = 2;
 	}
 }

@@ -48,10 +48,10 @@ namespace Microsoft.CIFramework.Internal {
 
 			if (newProvider != null) {
 				newProvider.setFocusedSession(newSessionId, switchProvider);
-				state.client.setPanelMode("setPanelMode", 1);
+				state.client.setPanelMode("setPanelMode", state.sessionManager.getPanelState(newSessionId));
 			}
 			else {
-				state.client.setPanelMode("setPanelMode", 0);
+				state.client.setPanelMode("setPanelMode", Constants.sidePanelHiddenState);
 			}
 		}
 
@@ -80,13 +80,13 @@ namespace Microsoft.CIFramework.Internal {
 		 * of the session which was created
 		 */
 		onSessionCreated(event: any): void {
-			state.client.setPanelMode("setPanelMode", 0);
+			state.client.setPanelMode("setPanelMode", Constants.sidePanelHiddenState);
 		}
 
 		getFocusedSession(telemetryData?: Object): string {
 			let startTime = new Date();
 			let apiName = "Xrm.App.sessions.getFocusedSession"
-			let res = (Xrm.App.sessions.getFocusedSession() as any)._sessionId;
+			let res = Xrm.App.sessions.getFocusedSession().sessionId;
 			logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
 			return res;
 		}
@@ -208,7 +208,7 @@ namespace Microsoft.CIFramework.Internal {
 		getFocusedTab(sessionId: string, telemetryData?: Object): string {
 			let startTime = new Date();
 			let apiName = "Xrm.App.sessions.getSession(sessionId).tabs.getFocusedTab"
-			let res = (Xrm.App.sessions.getSession(sessionId).tabs.getFocusedTab() as any)._tabId;
+			let res = Xrm.App.sessions.getSession(sessionId).tabs.getFocusedTab().tabId;
 			logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
 			return res;
 		}

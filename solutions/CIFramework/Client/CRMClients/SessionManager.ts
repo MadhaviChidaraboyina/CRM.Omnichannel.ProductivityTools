@@ -8,14 +8,17 @@ namespace Microsoft.CIFramework.Internal {
 	export interface AppConfig {
 		resolveTitle(input: any): Promise<string>;
 	}
+	export interface SessionConfig extends AppConfig {
+		panelState: number;
+	}
 	export class SessionInfo {
 		private _associatedProvider: CIProvider = null;
 		private _tabsByTag: Map<string, string[]>;
 		private _tabsByName: Map<string, string[]>;
 		private _tabConfigs: Map<string, AppConfig>;
-		private _sessionConfig: AppConfig;
+		private _sessionConfig: SessionConfig;
 
-		public constructor(provider: CIProvider, config?: AppConfig) {
+		public constructor(provider: CIProvider, config?: SessionConfig) {
 			this._associatedProvider = provider;
 			this._tabsByTag = new Map<string, string[]>();
 			this._tabsByName = new Map<string, string[]>();
@@ -75,6 +78,9 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			return this._tabConfigs.get(tabid).resolveTitle(input);
 		}
+		public getPanelState(): number {
+			return this._sessionConfig.panelState;
+		}
 	}
 	export abstract class SessionManager {
 		protected sessions: Map<string, SessionInfo>;
@@ -113,7 +119,12 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			return null;
 		}
-
+		public getPanelState(sessionId: string): number {
+			if (this.sessions.has(sessionId)) {
+				return this.sessions.get(sessionId).getPanelState();
+			}
+			return 1;
+		}
 		public getTabsByName(sessionId: string, name: string): string[] {
 			if (this.sessions.has(sessionId)) {
 				return this.sessions.get(sessionId).getTabsByName(name);

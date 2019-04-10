@@ -523,12 +523,12 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to set the Panel State
 	 *
-	 * @params value. The mode to set on the panel, '0' - minimized, '1' - docked
+	 * @params value. The mode to set on the panel, '0' - minimized, '1' - docked, '2' - hidden
 	*/
 	export function setMode(value : number) : Promise<void>
 	{
 		let startTime = Date.now();
-		if(!isNullOrUndefined(value) && (value == 0 || value == 1)){
+		if(!isNullOrUndefined(value) && (value == 0 || value == 1 || value == 2)){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.setMode,
 				messageData: new Map().set(Constants.value, value)

@@ -104,7 +104,7 @@ namespace Microsoft.CIFramework.Internal {
 				}else if(notificationType[0].search(MessageType.notification) != -1){
 					headerElement.classList.add("header_NotificationType_CIF_Broadcast");
 					toastDiv.getElementsByClassName("header_NotificationType_CIF_Broadcast")[len-1].id = "CIFToastType_"+len;
-                    widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = panelWidth;
+					widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = panelWidth;
 					var label1 = document.createElement("label");
 					headerElement.appendChild(label1);
 					label1.classList.add("broadCastLabel1");
@@ -537,7 +537,6 @@ namespace Microsoft.CIFramework.Internal {
 				}, notificationExpiryTime);
 			}
 
-			Xrm.Panel.state = 0;
 			waitTime = waitTime / 1000;
 			let title = getNotificationTitle(header, eventType, notificationType);
 			let details = getNotificationDetails(body, eventType, notificationType, waitTime);
@@ -672,7 +671,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		let map = new Map();
 		map = renderEventNotification(header,body,actions,notificationType,eventType);
-
+		state.client.setPanelMode("setPanelMode", Constants.sidePanelExpandedState); //For legacy sliver based implementation, we nee to expand the panel first
 		return new Promise(function (resolve,reject) {
 			if(notificationType[0].search(MessageType.softNotification) != -1){
 				for(let [key,value] of map){
@@ -723,7 +722,7 @@ namespace Microsoft.CIFramework.Internal {
 								counterDecr--;
 								key.getElementsByClassName("broadCastLabel1")[0].innerHTML = counterDecr+"";
 								key.getElementsByClassName("headerTimerCIF")[0].innerHTML = counterDecr+" sec ";
-    							if (counterDecr < 0) {
+								if (counterDecr < 0) {
 									clearInterval(interval);
 									if(key != null && key.parentElement != null){
 										key.parentElement.removeChild(key);
@@ -808,5 +807,5 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}); 
-    }
+	}
 }

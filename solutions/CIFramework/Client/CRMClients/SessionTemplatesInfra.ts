@@ -283,7 +283,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	export class UCISessionTemplate implements AppConfig {
+	export class UCISessionTemplate implements SessionConfig {
 		private static _sessionTemplates = new Map<string, UCISessionTemplate>();
 		private static _templateBytag = new Map<string, string[]>();
 		private static appId = top.location.search.split('appid=')[1].split('&')[0];
