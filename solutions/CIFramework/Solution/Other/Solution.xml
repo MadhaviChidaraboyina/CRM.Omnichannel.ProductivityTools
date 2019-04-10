@@ -95,7 +95,6 @@
 			<RootComponent type="9" schemaName="msdyn_consoleapplicationnotificationaction" behavior="0" />
 			<RootComponent type="9" schemaName="msdyn_consoleapplicationparameterruntimetype" behavior="0" />
 			<RootComponent type="9" schemaName="msdyn_panestate" behavior="0" />
-			<RootComponent type="20" id="{a2cccf01-f964-449c-a827-9b66e03f7fc8}" behavior="0" />
 			<RootComponent type="60" id="{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" behavior="0" />
 			<RootComponent type="60" id="{215a1395-743d-4dfb-b552-c51d65fdb423}" behavior="0" />
 			<RootComponent type="60" id="{7e7e29c0-bc24-40c2-938b-941554da4c4e}" behavior="0" />

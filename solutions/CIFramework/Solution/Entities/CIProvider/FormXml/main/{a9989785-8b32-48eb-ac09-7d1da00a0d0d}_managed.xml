@@ -73,7 +73,7 @@
 						</column>
 						<column width="33%">
 							<sections>
-								<section name="{c8623d8d-affd-453d-8cae-3da82648ccf0}_section_4" visible="false" showlabel="true" showbar="false" locklevel="0" id="{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+								<section name="{c8623d8d-affd-453d-8cae-3da82648ccf0}_section_4" showlabel="true" showbar="false" locklevel="0" id="{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
 									<labels>
 										<label description="Select the Roles for the Channel" languagecode="1033" />
 									</labels>
