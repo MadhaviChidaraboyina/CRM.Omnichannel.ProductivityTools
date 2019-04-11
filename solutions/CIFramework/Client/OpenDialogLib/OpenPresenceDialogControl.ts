@@ -40,13 +40,13 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		public addPresenceCommand(e: any): any {
-			var appName: any = "";
+			var appUniqueName: any = "";
 			return new Promise((resolve, reject) => {
 				var globalContext = Xrm.Utility.getGlobalContext();
-				globalContext.getCurrentAppName().then(
+				globalContext.getCurrentAppProperties().then(
 					(response: any) => {
-						appName = response;
-						if (appName === "Omni-channel Engagement Hub-Preview") {
+						appUniqueName = response.uniqueName;
+						if (appUniqueName === "OmniChannelEngagementHub") {
 							resolve(true);
 						} else {
 							resolve(false);
