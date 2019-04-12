@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-	<control namespace="MscrmControls.Service.CIProvider" constructor="CustomMultiSelectControl" version="1.0.3" display-name-key="CC_CIProviderCustomMultiSelectControlControl_Name" control-type="virtual">
+	<control namespace="MscrmControls.Service.CIProvider" constructor="CustomMultiSelectControl" version="1.0.4" display-name-key="CC_CIProviderCustomMultiSelectControlControl_Name" control-type="virtual">
 		<modes>
 		</modes>
 		<type-group name="Text">

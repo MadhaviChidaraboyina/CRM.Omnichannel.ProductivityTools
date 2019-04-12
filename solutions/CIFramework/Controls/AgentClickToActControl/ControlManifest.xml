@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-	<control namespace="MscrmControls.FieldControls" constructor="AgentClickToActControl" version="1.0.1" display-name-key="CC_ChannelCommunicationControl_Name" control-type="virtual">
+	<control namespace="MscrmControls.FieldControls" constructor="AgentClickToActControl" version="1.0.2" display-name-key="CC_ChannelCommunicationControl_Name" control-type="virtual">
 		<modes>
 		</modes>
 		<type-group name="Text">
