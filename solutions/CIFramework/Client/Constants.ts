@@ -67,6 +67,10 @@ namespace Microsoft.CIFramework
 		public static addGenericHandler = "addGenericHandler";
 		public static setPosition = "setPosition";
 		public static isConsoleApp = "isConsoleApp";
+		public static getPosition = "getPosition";
+		public static doSearch = "doSearch";
+		public static initializeCI = "initializeCI";
+		public static loadProvider = "loadProvider";
 	}
 
 	/**

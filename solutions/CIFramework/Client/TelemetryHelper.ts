@@ -111,15 +111,15 @@ namespace Microsoft.CIFramework.Internal
 	}
 
 	// Logs Failure Events to the d365_cif_usage table
-	export function logFailure(appId: string, isError: boolean, error: IErrorHandler, apiName: string, cifVersion: string, providerID?: string, providerName?: string, customParameters?: Object): Promise<Map<string, any>> {
-		var usageData = new UsageTelemetryData(providerID ? providerID : "", providerName ? providerName : "", null, apiName, null, appId ? appId : "", cifVersion, isError ? isError : false, error ? error : null, customParameters ? customParameters : null);
+	export function logFailure(appId: string, isError: boolean, error: IErrorHandler, apiName: string, cifVersion: string, providerID?: string, providerName?: string, customParameters?: string): Promise<Map<string, any>> {
+		var usageData = new UsageTelemetryData(providerID ? providerID : "", providerName ? providerName : "", null, apiName, null, appId ? appId : "", cifVersion, isError ? isError : false, error ? error : null, customParameters ? customParameters : "");
 		setUsageData(usageData);
 		return Promise.reject(Microsoft.CIFramework.Utility.createErrorMap(error.errorMsg, apiName));
 	}
 
 	// Logs Failure Events to the d365_cif_apiusage table
-	export function logAPIFailure(appId: string, isError: boolean, error: IErrorHandler, apiName: string, cifVersion: string, providerID?: string, providerName?: string, customParameters?: Object): Promise<Map<string, any>> {
-		var usageData = new APIUsageTelemetry(providerID ? providerID : "", providerName ? providerName : "", null, apiName, null, appId ? appId : "", cifVersion, isError ? isError : false, error ? error : null, customParameters ? customParameters : null);
+	export function logAPIFailure(appId: string, isError: boolean, error: IErrorHandler, apiName: string, cifVersion: string, providerID?: string, providerName?: string, customParameters?: string): Promise<Map<string, any>> {
+		var usageData = new APIUsageTelemetry(providerID ? providerID : "", providerName ? providerName : "", null, apiName, null, appId ? appId : "", cifVersion, isError ? isError : false, error ? error : null, customParameters ? customParameters : "");
 		setAPIUsageTelemetry(usageData);
 		return Promise.reject(Microsoft.CIFramework.Utility.createErrorMap(error.errorMsg, apiName));
 	}
@@ -146,7 +146,7 @@ namespace Microsoft.CIFramework.Internal
 		UsageTelemetry.setPropertyWithPii(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId, AWTPiiKind.Identity);
 		UsageTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		UsageTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
-		UsageTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters) : null);
+		UsageTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters) : "");
 
 		defaultLogger.logEvent(UsageTelemetry);
 	}
@@ -212,7 +212,7 @@ namespace Microsoft.CIFramework.Internal
 		ParamTelemetry.setPropertyWithPii(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId, AWTPiiKind.Identity);
 		ParamTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		ParamTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
-		ParamTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters): null);
+		ParamTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters): "");
 
 		defaultLogger.logEvent(ParamTelemetry);
 	}
@@ -227,8 +227,8 @@ namespace Microsoft.CIFramework.Internal
 		isError: boolean;
 		errorObject: IErrorHandler;
 		cifVersion: string;
-		customParameters: Object;
-		constructor(providerId?: string, providerName?: string, apiVersion?: string, apiName?: string, sortOrder?: any, appId?: string, cifVersion?: string, isError?: boolean, errorObject?: IErrorHandler, customParameters?:Object) {
+		customParameters: string;
+		constructor(providerId?: string, providerName?: string, apiVersion?: string, apiName?: string, sortOrder?: any, appId?: string, cifVersion?: string, isError?: boolean, errorObject?: IErrorHandler, customParameters?:string) {
 			this.providerId = providerId ? providerId : "";
 			this.providerName = providerName ? providerName : "";
 			this.apiVersion = apiVersion ? apiVersion : "";
@@ -238,7 +238,7 @@ namespace Microsoft.CIFramework.Internal
 			this.isError = isError ? isError : false;
 			this.errorObject = errorObject ? errorObject : null;
 			this.cifVersion = cifVersion ? cifVersion : "";
-			this.customParameters = customParameters ? customParameters : null;
+			this.customParameters = customParameters ? customParameters : "";
 		}
 	}
 
@@ -269,8 +269,8 @@ namespace Microsoft.CIFramework.Internal
 		isError: boolean;
 		errorObject: IErrorHandler;
 		cifVersion: string;
-		customParameters: any;
-		constructor(providerId?: string, providerName?: string, apiVersion?: string, apiName?: string, sortOrder?: any, appId?: string, cifVersion?: string, isError?: boolean, errorObject?: IErrorHandler, customParameters?:Object) {
+		customParameters: string;
+		constructor(providerId?: string, providerName?: string, apiVersion?: string, apiName?: string, sortOrder?: any, appId?: string, cifVersion?: string, isError?: boolean, errorObject?: IErrorHandler, customParameters?:string) {
 			this.providerId = providerId ? providerId : "";
 			this.providerName = providerName ? providerName : "";
 			this.apiVersion = apiVersion ? apiVersion : "";
@@ -280,7 +280,7 @@ namespace Microsoft.CIFramework.Internal
 			this.isError = isError ? isError : false;
 			this.errorObject = errorObject ? errorObject : null;
 			this.cifVersion = cifVersion ? cifVersion : "";
-			this.customParameters = customParameters ? customParameters : null;
+			this.customParameters = customParameters ? customParameters : "";
 		}
 	}
 }

@@ -114,7 +114,7 @@ namespace Microsoft.CIFramework.Internal {
 			(error: Error) => {
 				loadProvider();
 				let errorData = generateErrorObject(error, "initializeCI - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
-				logAPIFailure(appId, true, errorData, "initializeCI", cifVersion);
+				logAPIFailure(appId, true, errorData, MessageType.initializeCI, cifVersion);
 			}
 		);
 		return false;
@@ -176,7 +176,7 @@ namespace Microsoft.CIFramework.Internal {
 			},
 			(error: Error) => {
 				let errorData = generateErrorObject(error, "loadProvider - Xrm.WebApi.retrieveMultipleRecords - providerRecords", errorTypes.XrmApiError);
-				logFailure(appId, true, errorData, "loadProvider", cifVersion);
+				logFailure(appId, true, errorData, MessageType.loadProvider, cifVersion);
 			}
 		);
 	}
@@ -227,7 +227,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		else
 		{
-			return logAPIFailure(appId, true, errorData, "setPosition", cifVersion);
+			return logAPIFailure(appId, true, errorData, MessageType.setPosition, cifVersion);
 		}
 	}
 
@@ -238,7 +238,7 @@ namespace Microsoft.CIFramework.Internal {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		let ret = state.client.getPanelPosition(telemetryData);
-		var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "getPosition", telemetryData);
+		var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getPosition, telemetryData);
 		setPerfData(perfData);
 		return ret as number;
 	}
@@ -350,7 +350,7 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			let messageType: string = parameters.get(Constants.eventType);
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), "addGenericHandler", cifVersion, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.addGenericHandler, cifVersion, telemetryData);
 			setPerfData(perfData);
 			logParameterData(telemetryParameter, MessageType.addGenericHandler, {"eventType": parameters.get(Constants.eventType)});
 			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.addGenericHandler, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
@@ -400,7 +400,7 @@ namespace Microsoft.CIFramework.Internal {
 			return Promise.resolve(new Map().set(Constants.value, true));
 		}
 		else {
-			return logAPIFailure(appId, true, errorData, "removeGenericHandler", cifVersion, "", "", telemetryParameter);
+			return logAPIFailure(appId, true, errorData, MessageType.removeGenericHandler, cifVersion, "", "", telemetryParameter);
 		}
 	}
 
@@ -653,10 +653,10 @@ namespace Microsoft.CIFramework.Internal {
 	export function searchAndOpenRecords(parameters: Map<string, any>): Promise<Map<string, any>> {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			return doSearch(parameters, false, "searchAndOpenRecords");
+			return doSearch(parameters, false, MessageType.searchAndOpenRecords);
 		}
 		else {
-			return logAPIFailure(appId, true, errorData, "searchAndOpenRecords", cifVersion);
+			return logAPIFailure(appId, true, errorData, MessageType.searchAndOpenRecords, cifVersion);
 		}
 	}
 
@@ -667,25 +667,25 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters, [Constants.entityName, Constants.queryParameters]);
 		if (provider) {
 			let searchResult = state.client.retrieveMultipleAndOpenRecords(parameters.get(Constants.entityName), parameters.get(Constants.queryParameters), searchOnly, telemetryData);
-			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), callerName ? callerName : "doSearch", cifVersion, telemetryData);
+			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), callerName ? callerName : MessageType.doSearch, cifVersion, telemetryData);
 			setPerfData(perfData);
-			logParameterData(telemetryParameter, "doSearch", {"searchOnly" : searchOnly});
-			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, callerName ? callerName : "doSearch", provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+			logParameterData(telemetryParameter, MessageType.doSearch, {"searchOnly" : searchOnly});
+			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, callerName ? callerName : MessageType.doSearch, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
 			setAPIUsageTelemetry(paramData);
 			return searchResult;
 		}
 		else {
-			return logAPIFailure(appId, true, errorData, callerName ? callerName : "doSearch", cifVersion, "", "", telemetryParameter);
+			return logAPIFailure(appId, true, errorData, callerName ? callerName : MessageType.doSearch, cifVersion, "", "", telemetryParameter);
 		}
 	}
 
 	export function search(parameters: Map<string, any>): Promise<Map<string, any>> {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
-			return doSearch(parameters, true, "search");
+			return doSearch(parameters, true, MessageType.search);
 		}
 		else {
-			return logAPIFailure(appId, true, errorData, "search", cifVersion);
+			return logAPIFailure(appId, true, errorData, MessageType.search, cifVersion);
 		}
 	}
 
@@ -841,7 +841,7 @@ namespace Microsoft.CIFramework.Internal {
 			return res;
 		}
 		else {
-			return logAPIFailure(appId, true, errorData, "openForm", cifVersion, "", "", telemetryParameter);
+			return logAPIFailure(appId, true, errorData, MessageType.openForm, cifVersion, "", "", telemetryParameter);
 		}
 	}
 
@@ -857,7 +857,7 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 		else {
-			return logFailure(appId, true, errorData, "refreshForm", cifVersion);
+			return logFailure(appId, true, errorData, MessageType.refreshForm, cifVersion);
 		}
 	}
 	export function getEntityMetadata(parameters: Map<string, any>): Promise<Map<string, any>> {
@@ -1131,7 +1131,7 @@ namespace Microsoft.CIFramework.Internal {
 				provider.setTabTitle(parameters.get(Constants.tabId), parameters.get(Constants.input)).then(function (result: string) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.setTabTitle, cifVersion, telemetryData);
 					setPerfData(perfData);
-					logParameterData(telemetryParameter, MessageType.setSessionTitle, { "tabId": parameters.get(Constants.tabId), "input": parameters.get(Constants.input) });
+					logParameterData(telemetryParameter, MessageType.setTabTitle, { "tabId": parameters.get(Constants.tabId), "input": parameters.get(Constants.input) });
 					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.setTabTitle, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
 					setUsageData(usageData);
 					return resolve(new Map<string, any>().set(Constants.value, result));
@@ -1196,10 +1196,10 @@ namespace Microsoft.CIFramework.Internal {
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				provider.getTabsByTagOrName(parameters.get(Constants.nameParameter), parameters.get(Constants.templateTag)).then(function (tabIds: string[]) {
-					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createTab, cifVersion, telemetryData);
+					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getTabsByTagOrName, cifVersion, telemetryData);
 					setPerfData(perfData);
 					logParameterData(telemetryParameter, MessageType.getTabsByTagOrName, { "input": parameters.get(Constants.templateTag) });
-					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.createTab, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.getTabsByTagOrName, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
 					setUsageData(usageData);
 					return resolve(new Map<string, any>().set(Constants.value, tabIds));
 				}, function (errorData: IErrorHandler) {
@@ -1224,7 +1224,7 @@ namespace Microsoft.CIFramework.Internal {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.refreshTab, cifVersion, telemetryData);
 					setPerfData(perfData);
 					logParameterData(telemetryParameter, MessageType.refreshTab, { "tabId": parameters.get(Constants.tabId) });
-					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.focusTab, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
+					var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, MessageType.refreshTab, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter);
 					setUsageData(usageData);
 					return resolve(new Map<string, any>());
 				}, function (errorData: IErrorHandler) {
@@ -1234,7 +1234,7 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 		else {
-			return logFailure(appId, true, errorData, MessageType.focusTab, cifVersion, "", "", telemetryParameter);
+			return logFailure(appId, true, errorData, MessageType.refreshTab, cifVersion, "", "", telemetryParameter);
 		}
 	}
 
