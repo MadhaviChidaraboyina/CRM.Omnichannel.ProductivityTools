@@ -1238,13 +1238,23 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
+	function isOCSupervisor(): boolean {
+		var userRoles = Xrm.Utility.getGlobalContext().userSettings.securityRoles;
+		if (userRoles.indexOf(Constants.OCSupervisorRoleId) != -1)
+			return true;
+		return false;
+	}
+
 	export function createTab(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
+		if (parameters.get(Constants.isAppModuleLoad) && !isOCSupervisor()) {
+			Promise.reject(Microsoft.CIFramework.Utility.createErrorMap("User is not a supervisor", "createTab"));
+		}
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.createTab(parameters.get(Constants.input), telemetryData).then(function (tabId) {
+				provider.createTab(parameters.get(Constants.input), parameters.get(Constants.isAppModuleLoad), telemetryData).then(function (tabId) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createTab, cifVersion, telemetryData);
 					setPerfData(perfData);
 					var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.createTab, provider.sortOrder, appId, cifVersion, false, null);

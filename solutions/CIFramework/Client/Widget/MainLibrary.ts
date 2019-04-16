@@ -816,11 +816,11 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to create a Tab in focused Session
 	 */
-	export function createTab(input: any): Promise<string> {
+	export function createTab(input: any, isAppModuleLoad: boolean = false): Promise<string> {
 		if (!isNullOrUndefined(input)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.createTab,
-				messageData: new Map().set(Constants.input, input)
+				messageData: new Map().set(Constants.input, input).set(Constants.isAppModuleLoad, isAppModuleLoad)
 			}
 			return sendMessage<string>(createTab.name, payload, false);
 		}

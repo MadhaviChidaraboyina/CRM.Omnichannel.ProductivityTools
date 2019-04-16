@@ -147,9 +147,9 @@ namespace Microsoft.CIFramework.Internal {
 			return Array.from(this.sessions.keys());
 		}
 
-		getFocusedSession(telemetryData?: Object): string {
+		getFocusedSession(isAppModuleLoad?: boolean, telemetryData?: Object): string {
 			var sessionId = this._state.sessionManager.getFocusedSession(telemetryData);
-			if (Array.from(this.sessions.keys()).indexOf(sessionId) == -1) {
+			if (!isAppModuleLoad && Array.from(this.sessions.keys()).indexOf(sessionId) == -1) {
 				return null;
 			}
 
@@ -347,8 +347,14 @@ namespace Microsoft.CIFramework.Internal {
 			}.bind(this));
 		}
 
-		createTab(input: any, telemetryData?: Object): Promise<string> {
-			var focusedSessionId = this.getFocusedSession();
+		createTab(input: any, isAppModuleLoad?: boolean, telemetryData?: Object): Promise<string> {
+			let focusedSessionId: any;
+			if (isAppModuleLoad) {
+				focusedSessionId = this.getFocusedSession(isAppModuleLoad);
+			}
+			else {
+				focusedSessionId = this.getFocusedSession();
+			}
 			if (focusedSessionId == null) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();

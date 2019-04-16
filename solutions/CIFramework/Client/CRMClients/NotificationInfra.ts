@@ -17,7 +17,6 @@ namespace Microsoft.CIFramework.Internal {
 	const listenerWindow = window.parent;
 	let noOfNotifications = 0;
 	let len = 0;
-	let closeId = "";
 
 	/**
 	 * API to invoke toast popup widget
@@ -511,8 +510,8 @@ namespace Microsoft.CIFramework.Internal {
 		);
 	}
 
-	export function launchZFPNotification(header: any, body: any, notificationType: any, eventType: any, actions: any, closeId: string, waitTime: number): Promise<any> {
-
+	export function launchZFPNotification(header: any, body: any, notificationType: any, eventType: any, actions: any, waitTime: number): Promise<any> {
+		let closeId = "";
 		let accept = false;
 		let decline = false;
 		let i = 0;
@@ -530,11 +529,6 @@ namespace Microsoft.CIFramework.Internal {
 					}
 				}
 			}
-		}
-
-		if (closeId != "") {
-			var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
-			return Promise.resolve(mapReturn);
 		}
 
 		return new Promise(function (resolve, reject) {
@@ -608,7 +602,11 @@ namespace Microsoft.CIFramework.Internal {
 				eventHandler: onDeclineHandler
 			};
 			let popupnotification = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
-			Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => { closeId = id; console.log(id) }).catch((e: any) => console.log(e))
+			Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => { closeId = id; console.log(id) }).catch((e: any) => {
+				console.log(e);
+				var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
+				return Promise.resolve(mapReturn);
+			})
 		});
 	}
 
@@ -670,7 +668,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		if (isConsoleAppInternal() == true) {
-			return launchZFPNotification(header, body, notificationType, eventType, actions, closeId, waitTime);
+			return launchZFPNotification(header, body, notificationType, eventType, actions, waitTime);
 		}
 
 		if (notificationType[0].search(MessageType.softNotification) == -1) { //For Soft notification
