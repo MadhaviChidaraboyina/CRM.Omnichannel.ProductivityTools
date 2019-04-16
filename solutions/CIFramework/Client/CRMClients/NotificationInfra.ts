@@ -658,15 +658,7 @@ namespace Microsoft.CIFramework.Internal {
 		if(notificationType == null || notificationType == "undefined"  || notificationType.length <= 0){
 			return postMessageNamespace.rejectWithErrorMessage("The notificationType value is blank. Provide a value to the parameter.");
 		}
-		if(notificationType[0].search(MessageType.softNotification) == -1){ //For Soft notification
-			noOfNotifications++;
-			if(noOfNotifications > 5){
-				toastDiv.removeChild(toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]);
-				noOfNotifications--;
-			}
-		}
-
-			/* set timer text*/
+		/* set timer text*/
 		if (actions != null && actions != "undefined") {
 			for (i = 0; i < actions.length; i++) {
 				for (let key in actions[i]) {
@@ -677,9 +669,16 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-
 		if (isConsoleAppInternal() == true) {
 			return launchZFPNotification(header, body, notificationType, eventType, actions, closeId, waitTime);
+		}
+
+		if (notificationType[0].search(MessageType.softNotification) == -1) { //For Soft notification
+			noOfNotifications++;
+			if (noOfNotifications > 5) {
+				toastDiv.removeChild(toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length - 1]);
+				noOfNotifications--;
+			}
 		}
 
 		let map = new Map();

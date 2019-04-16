@@ -319,28 +319,40 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 				}
 
 				this.messageHandlers.get(data.messageType).forEach((handlerFunction: Handler) => {
-					(<Handler>handlerFunction)(data.messageData).then(
-						function(result: Map<string, any>)  {
-							if (trackingCorrelationId) {
-								msg = {
-									messageOutcome: messageSuccess,
-									messageData: result,
-									messageCorrelationId: trackingCorrelationId
-								};
-								this.sendResponseMsg(responseTargetWindow, msg, event.origin);
-							}
-						}.bind(this),
-						function(error: Map<string, any>)  {
-							if (trackingCorrelationId) {
-								msg = {
-									messageOutcome: messageFailure,
-									messageData: error,
-									messageCorrelationId: trackingCorrelationId
-								};
-								this.sendResponseMsg(responseTargetWindow, msg, event.origin);
-							}
-						}.bind(this)
-					);
+					try {
+						(<Handler>handlerFunction)(data.messageData).then(
+							function (result: Map<string, any>) {
+								if (trackingCorrelationId) {
+									msg = {
+										messageOutcome: messageSuccess,
+										messageData: result,
+										messageCorrelationId: trackingCorrelationId
+									};
+									this.sendResponseMsg(responseTargetWindow, msg, event.origin);
+								}
+							}.bind(this),
+							function (error: Map<string, any>) {
+								if (trackingCorrelationId) {
+									msg = {
+										messageOutcome: messageFailure,
+										messageData: Microsoft.CIFramework.Utility.buildMap(error),
+										messageCorrelationId: trackingCorrelationId
+									};
+									this.sendResponseMsg(responseTargetWindow, msg, event.origin);
+								}
+							}.bind(this)
+						);
+					}
+					catch (error) {
+						if (trackingCorrelationId) {
+							msg = {
+								messageOutcome: messageFailure,
+								messageData: Microsoft.CIFramework.Utility.buildMap(error),
+								messageCorrelationId: trackingCorrelationId
+							};
+							this.sendResponseMsg(responseTargetWindow, msg, event.origin);
+						}
+					}
 				})
 
 			}
