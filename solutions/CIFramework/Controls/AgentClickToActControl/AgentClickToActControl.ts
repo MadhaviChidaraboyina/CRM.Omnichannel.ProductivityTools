@@ -238,11 +238,13 @@ module MscrmControls.FieldControls {
 		 * @return Dictionary containing all necessary props for given mode.
 		 */
 		protected propsForMode(): Mscrm.Dictionary {
+			var disabled = this.isControlDisabled();
 			return {
 				id: AgentClickToActControl.PHONE_INPUT_ID_SEED,
 				key: AgentClickToActControl.PHONE_INPUT_ID_SEED,
 				value: this.context.parameters.value.raw,
 				placeholder: this.placeholder(),
+				readOnly: disabled,
 				style: {
 					height: "28px",
 					width: "100%",
@@ -251,10 +253,18 @@ module MscrmControls.FieldControls {
 					"margin-top": "0.15rem"
 				},
 				selectValueOnFocus: true,
-				onChange: this._changeHandler,
+				onChange: (disabled) ? null : this._changeHandler,
 				onKeyDown: this._keyDownInputHandler,
 			};
 		}
+		
+		/**
+		 * Returns true if control should be disabled
+		 * @returns {boolean|IPageBag}
+		 */
+		protected isControlDisabled(): boolean {
+			return this.context.mode.isControlDisabled || !this.context.parameters.value.security.editable || (this.context.page && this.context.page.isPageReadOnly);
+		};
 
 		/**
 		 * Creates hierarchy for the component in current mode.
