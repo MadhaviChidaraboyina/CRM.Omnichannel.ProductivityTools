@@ -8,14 +8,17 @@
 /// <reference path="State.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 /// <reference path="aria-webjs-sdk-1.8.3.d.ts" />
+/// <reference path="../../../TypeDefinitions/mscrm.d.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
+	declare var Xrm: any;
+
 	let Constants = Microsoft.CIFramework.Constants;
 	const listenerWindow = window.parent;
 	let noOfNotifications = 0;
 	let len = 0;
 	let closeId = "";
-	
+
 	/**
 	 * API to invoke toast popup widget
 	 *
@@ -445,10 +448,14 @@ namespace Microsoft.CIFramework.Internal {
 		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return header[0];
 		}
-		else if (eventType.search(Constants.Informational) != -1 && (notificationType[0].search(Constants.Informational) || (notificationType[0].search(Constants.Failure)))) {
+		else if (eventType.search(Constants.Informational) != -1 && (isInformationalNotification(notificationType) || isFailureInformationNotification(notificationType) || isInformationChatSoftNotification(notificationType))) {
 			return header[0];
 		}
 		return "";
+	}
+
+	export function isInformationChatSoftNotification(notificationType: any): boolean {
+		return (notificationType.length == 2 && notificationType[0].search(MessageType.softNotification) != -1 && notificationType[1].search(Constants.Chat) != -1); 
 	}
 
 	export function isInformationalNotification(notificationType: any): boolean {
@@ -461,14 +468,15 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function getNotificationDetails(body: any, eventType: any, notificationType: any, waitTime: number): any {
 		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
-			return { "Comment": "Incoming conversation"/* commenting for demo Bug-1440992 body[0]["Comment"]*/, "Wait time": waitTime.toString() + " sec" };
+			return { "Comment": body[0]["Comment"], "Wait time": waitTime.toString() + " sec" };
 		}
-		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
-			return "";
+		else if (eventType.search(Constants.Informational) != -1 && isInformationChatSoftNotification(notificationType)) {
+			return body[0]["Comment"];
 		}
 		else if (eventType.search(Constants.Informational) != -1 && (isInformationalNotification(notificationType) || isFailureInformationNotification(notificationType))) {
 			return body;
 		}
+		return "";
 	}
 
 	export function getImageUrl(eventType: any, notificationType: any): string {
@@ -487,6 +495,20 @@ namespace Microsoft.CIFramework.Internal {
 		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return "Open Item";
 		}
+	}
+
+	function showGlobalToastNotification(notificationLevel: number, title: string, message: string): any {
+
+		let toastMessage = title + ". " + message;
+	
+		Xrm.UI.addGlobalNotification(1, notificationLevel, toastMessage, null, null).then(
+			function (response: any) {
+				// success
+			},
+			function (error: any) {
+				console.error("Failed to show notification");
+			}
+		);
 	}
 
 	export function launchZFPNotification(header: any, body: any, notificationType: any, eventType: any, actions: any, closeId: string, waitTime: number): Promise<any> {
@@ -531,7 +553,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (notificationExpiryTime != -1 && eventType.search(Constants.Informational) == -1) { // informational notifications are handled by toasts
 				setTimeout(function () {
 					var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Timeout));
-					(Xrm.Internal as any).clearPopupNotification(closeId);
+					Xrm.Internal.clearPopupNotification(closeId);
 					closeId = "";
 					return resolve(mapReturn);
 				}, notificationExpiryTime);
@@ -542,28 +564,19 @@ namespace Microsoft.CIFramework.Internal {
 			let details = getNotificationDetails(body, eventType, notificationType, waitTime);
 			let type = 0;
 			let image = getImageUrl(eventType, notificationType);
-
+			 
 			if (eventType.search(Constants.Informational) != -1 && isInformationalNotification(notificationType)) {
-				Xrm.UI.addGlobalNotification(1, 4, title, details, null, null).then(
-					function (response: any) {
-						// success
-					},
-					function (error: any) {
-						console.error("Failed to show notification");
-					}
-				);
+				showGlobalToastNotification(Mscrm.GlobalNotificationLevel.success, title, details);
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
 				return resolve(mapReturn);
 			}
 			else if (eventType.search(Constants.Informational) != -1 && isFailureInformationNotification(notificationType)) {
-				Xrm.UI.addGlobalNotification(1, 2, title, details, null, null).then(
-					function (response: any) {
-						// success
-					},
-					function (error: any) {
-						console.error("Failed to show notification");
-					}
-				);
+				showGlobalToastNotification(Mscrm.GlobalNotificationLevel.error, title, details);
+				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
+				return resolve(mapReturn);
+			}
+			else if (eventType.search(Constants.Informational) != -1 && isInformationChatSoftNotification(notificationType)) {
+				showGlobalToastNotification(Mscrm.GlobalNotificationLevel.information, title, details);
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
 				return resolve(mapReturn);
 			}
@@ -576,13 +589,13 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			let onAcceptHandler = function () {
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
-				(Xrm.Internal as any).clearPopupNotification(closeId);
+				Xrm.Internal.clearPopupNotification(closeId);
 				closeId = "";
 				return resolve(mapReturn);
 			}.bind(this);
 			let onDeclineHandler = function () {
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
-				(Xrm.Internal as any).clearPopupNotification(closeId);
+				Xrm.Internal.clearPopupNotification(closeId);
 				closeId = "";
 				return resolve(mapReturn);
 			}.bind(this);
@@ -595,7 +608,7 @@ namespace Microsoft.CIFramework.Internal {
 				eventHandler: onDeclineHandler
 			};
 			let popupnotification = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
-			(Xrm.Internal as any).addPopupNotification(popupnotification).then((id: string) => { closeId = id; console.log(id) }).catch((e: any) => console.log(e))
+			Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => { closeId = id; console.log(id) }).catch((e: any) => console.log(e))
 		});
 	}
 
