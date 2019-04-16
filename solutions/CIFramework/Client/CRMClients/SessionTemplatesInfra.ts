@@ -349,9 +349,10 @@ namespace Microsoft.CIFramework.Internal {
 				UCIApplicationTabTemplate.getTemplate(this.anchorTabName).then(
 					function (result: UCIApplicationTabTemplate) {
 						let anchorTemplate: UCIApplicationTabTemplate = result;
-						let options: XrmClientApi.SessionOptions = {
-							canBeClosed: this.canBeClosed,
-						};
+						let options: XrmClientApi.SessionOptions = {};
+						if (this.canBeClosed == false) {
+							options.canBeClosed = this.canBeClosed;
+						}
 						if (!isNullOrUndefined(this.title) && this.title.length > 0) {
 							options.title = this.title;
 						}
