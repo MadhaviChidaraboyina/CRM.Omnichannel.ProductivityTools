@@ -432,10 +432,12 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	export function getNotificationTitle(header: any, eventType: any, notificationType: any): string {
-		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
-
+		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
 			if (!isNullOrUndefined(header[0]["Chat request from"]) && header[0]["Chat request from"].length > 0) {
 				return "Chat request from " + header[0]["Chat request from"][0];
+			}
+			else if (!isNullOrUndefined(header[0]["SMS request from"]) && header[0]["SMS request from"].length > 0) {
+				return "SMS request from " + header[0]["SMS request from"][0];
 			}
 			else if (!isNullOrUndefined(header[0]["Transfer request from"]) && header[0]["Transfer request from"].length > 0) {
 				return "Transfer request from " + header[0]["Transfer request from"][0];
@@ -444,7 +446,7 @@ namespace Microsoft.CIFramework.Internal {
 				return "Consult request from " + header[0]["Consult request from"][0];
 			}
 		}
-		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
+		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return header[0];
 		}
 		else if (eventType.search(Constants.Informational) != -1 && (isInformationalNotification(notificationType) || isFailureInformationNotification(notificationType) || isInformationChatSoftNotification(notificationType))) {
@@ -466,7 +468,7 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	export function getNotificationDetails(body: any, eventType: any, notificationType: any, waitTime: number): any {
-		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
 			return { "Comment": body[0]["Comment"], "Wait time": waitTime.toString() + " sec" };
 		}
 		else if (eventType.search(Constants.Informational) != -1 && isInformationChatSoftNotification(notificationType)) {
@@ -482,16 +484,19 @@ namespace Microsoft.CIFramework.Internal {
 		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
 			return "/webresources/msdyn_chat_icon_zfp.svg";
 		}
-		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
+		else if ((eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+			return "/webresources/msdyn_sms_icon_zfp.svg";
+		}
+		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return "/webresources/msdyn_entity_icon_zfp.svg";
 		}
 	}
 
 	export function getAcceptButtonText(eventType: any, notificationType: any): string {
-		if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
 			return "Accept";
 		}
-		else if ((eventType.search(Constants.Chat) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
+		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return "Open Item";
 		}
 	}
