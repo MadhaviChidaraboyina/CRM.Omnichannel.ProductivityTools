@@ -439,11 +439,11 @@ namespace Microsoft.CIFramework.Internal {
 			else if (!isNullOrUndefined(header[0]["SMS request from"]) && header[0]["SMS request from"].length > 0) {
 				return "SMS request from " + header[0]["SMS request from"][0];
 			}
-			else if (!isNullOrUndefined(header[0]["Transfer request from"]) && header[0]["Transfer request from"].length > 0) {
-				return "Transfer request from " + header[0]["Transfer request from"][0];
+			else if (!isNullOrUndefined(header[0]["Transfer request for"]) && header[0]["Transfer request for"].length > 0) {
+				return "Transfer request for " + header[0]["Transfer request for"][0];
 			}
-			else if (!isNullOrUndefined(header[0]["Consult request from"]) && header[0]["Consult request from"].length > 0) {
-				return "Consult request from " + header[0]["Consult request from"][0];
+			else if (!isNullOrUndefined(header[0]["Consult request for"]) && header[0]["Consult request for"].length > 0) {
+				return "Consult request for " + header[0]["Consult request for"][0];
 			}
 		}
 		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
