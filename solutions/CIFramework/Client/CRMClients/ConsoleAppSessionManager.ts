@@ -91,6 +91,14 @@ namespace Microsoft.CIFramework.Internal {
 			return res;
 		}
 
+		isDefaultSession(sessionId: string, telemetryData?: Object): boolean {
+			let startTime = new Date();
+			let apiName = "Xrm.App.sessions.getSession"
+			let res = Xrm.App.sessions.getSession(sessionId).isDefault;
+			logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
+			return res;
+		}
+
 		canCreateSession(telemetryData?: Object): boolean {
 			let startTime = new Date();
 			let apiName = "Xrm.App.sessions.canCreateSession"
@@ -100,8 +108,6 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		createSession(provider: CIProvider, input: any, context: any, customerName: string, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string> {
-			let startTime = new Date();
-			let apiName = "Xrm.App.sessions.createSession"
 			return new Promise(function (resolve: any, reject: any) {
 				let fetchTask: Promise<UCISessionTemplate> = null;
 				if (!isNullOrUndefined(input.templateName)) {
@@ -115,6 +121,8 @@ namespace Microsoft.CIFramework.Internal {
 					function (session: UCISessionTemplate) {
 						session.instantiateTemplate(templateParams).then(
 							function (sessionInput: SessionTemplateSessionInput) {
+								let startTime = new Date();
+								let apiName = "Xrm.App.sessions.createSession";
 								Xrm.App.sessions.createSession(sessionInput).then(function (sessionId: string) {
 									logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
 									this.sessions.set(sessionId, new SessionInfo(provider, session));
@@ -128,11 +136,11 @@ namespace Microsoft.CIFramework.Internal {
 												function (tab: UCIApplicationTabTemplate) {
 													tabsRendered.push(new Promise<string>(function (resolve: any, reject: any) {
 													tab.instantiateTemplate(templateParams).then(
-														function (result: XrmClientApi.TabInput) {
-															this.createTab(sessionId, result, telemetryData).then(
-																function (result: string) {
-																	this.associateTabWithSession(sessionId, result, tab, tab.name, tab.tags);
-																	return resolve(result);
+														function (tabInput: XrmClientApi.TabInput) {
+															this.createTabInternal(sessionId, tabInput, telemetryData).then(
+																function (tabId: string) {
+																	this.associateTabWithSession(sessionId, tabId, tab, tab.name, tab.tags);
+																	return resolve(tabId);
 																}.bind(this),
 																function (error: Error) {
 																	return reject(error);
@@ -183,7 +191,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		requestFocusSession(sessionId: string, messagesCount: number, telemetryData?: Object): Promise<void> {
 			let startTime = new Date();
-			let apiName = "Xrm.App.sessions.getSession(sessionId).requestFocus"
+			let apiName = "Xrm.App.sessions.getSession(sessionId).requestFocus";
 			Xrm.App.sessions.getSession(sessionId).requestFocus();
 			logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
 			return Promise.resolve();
@@ -207,21 +215,54 @@ namespace Microsoft.CIFramework.Internal {
 
 		getFocusedTab(sessionId: string, telemetryData?: Object): string {
 			let startTime = new Date();
-			let apiName = "Xrm.App.sessions.getSession(sessionId).tabs.getFocusedTab"
+			let apiName = "Xrm.App.sessions.getSession(sessionId).tabs.getFocusedTab";
 			let res = Xrm.App.sessions.getSession(sessionId).tabs.getFocusedTab().tabId;
 			logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
 			return res;
 		}
 
-		createTab(sessionId: string, input: any, telemetryData?: Object): Promise<string> {
+		createTab(sessionId: string, input: any, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string> {
+			return new Promise(function (resolve: any, reject: any) {
+				let fetchTask: Promise<UCIApplicationTabTemplate> = null;
+				if (!isNullOrUndefined(input.templateName)) {
+					fetchTask = UCIApplicationTabTemplate.getTemplate(input.templateName);
+				}
+				let templateParams = input.templateParameters;
+				if (isNullOrUndefined(input.templateParameters)) {
+					templateParams = {};
+				}
+				fetchTask.then(
+					function (tab: UCIApplicationTabTemplate) {
+						tab.instantiateTemplate(templateParams).then(
+							function (tabInput: XrmClientApi.TabInput) {
+								this.createTabInternal(sessionId, tabInput, telemetryData).then(
+									function (tabId: string) {
+										this.associateTabWithSession(sessionId, tabId, tab, tab.name, tab.tags);
+										return resolve(tabId);
+									}.bind(this),
+									function (error: Error) {
+										return reject(error);
+									}.bind(this));
+							}.bind(this),
+							function (error: Error) {
+								let errorData = generateErrorObject(error, "ConsoleAppSessionManager - tab.instantiateTemplate", errorTypes.XrmApiError);
+								logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion);
+								return reject(error);
+							}.bind(this));
+					}.bind(this),
+					function (error: Error) {
+						let errorData = generateErrorObject(error, "ConsoleAppSessionManager - UCIApplicationTabTemplate.getTemplate", errorTypes.XrmApiError);
+						logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion);
+					}.bind(this));
+			}.bind(this));
+		}
+
+		createTabInternal(sessionId: string, input: any, telemetryData?: Object): Promise<string> {
 			let startTime = new Date();
-			let apiName = "Xrm.App.sessions.getSession(sessionId).tabs.createTab(input)"
+			let apiName = "Xrm.App.sessions.getSession(sessionId).tabs.createTab";
 			return new Promise(function (resolve: any, reject: any) {
 				Xrm.App.sessions.getSession(sessionId).tabs.createTab(input).then(function (tabId: string) {
 					logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
-					if (!isNullOrUndefined(input.tag)) {
-						this.associateTabWithSession(sessionId, tabId, input.name, input.tags);
-					}
 					resolve(tabId);
 				}.bind(this), function (errorMessage: string) {
 					reject(errorMessage);
@@ -231,7 +272,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		focusTab(sessionId: string, tabId: string, telemetryData?: Object): Promise<void> {
 			let startTime = new Date();
-			let apiName = "Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).focus"
+			let apiName = "Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).focus";
 			Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).focus();
 			logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
 			return Promise.resolve();

@@ -104,11 +104,12 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		dissacoiateTab(sessionId: string, tabId: string) {
+		disassociateTab(sessionId: string, tabId: string) {
 			if (this.sessions.has(sessionId)) {
 				this.sessions.get(sessionId).removeTab(tabId);
 			}
 		}
+
 		public getTabsByTagOrName(sessionId: string, name: string, tag: string): string[] {
 			if (this.sessions.has(sessionId)) {
 				let tabId: string[] = this.sessions.get(sessionId).getTabsByName(name);
@@ -119,19 +120,24 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			return null;
 		}
+
 		public getPanelState(sessionId: string): number {
 			if (this.sessions.has(sessionId)) {
 				return this.sessions.get(sessionId).getPanelState();
 			}
 			return 1;
 		}
+
 		public getTabsByName(sessionId: string, name: string): string[] {
 			if (this.sessions.has(sessionId)) {
 				return this.sessions.get(sessionId).getTabsByName(name);
 			}
 			return null;
 		}
+
 		abstract getFocusedSession(telemetryData?: Object): string;
+
+		abstract isDefaultSession(sessionId: string, telemetryData?: Object): boolean;
 
 		abstract canCreateSession(telemetryData?: Object): boolean;
 
@@ -145,7 +151,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		abstract getFocusedTab(sessionId: string, telemetryData?: Object): string;
 
-		abstract createTab(sessionId: string, input: any, telemetryData?: Object): Promise<string>
+		abstract createTab(sessionId: string, input: any, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string>
 
 		abstract focusTab(sessionId: string, tabId: string, telemetryData?: Object): Promise<void>;
 

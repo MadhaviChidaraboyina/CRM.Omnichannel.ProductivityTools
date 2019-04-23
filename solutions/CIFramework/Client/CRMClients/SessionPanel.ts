@@ -47,6 +47,10 @@ namespace Microsoft.CIFramework.Internal {
 			return this.focusedSession;
 		}
 
+		isDefaultSession(sessionId: string): boolean {
+			return false;
+		}
+
 		canCreateSession(): boolean {
 			if (this.sessions.size < Constants.MaxSessions) {
 				return true;

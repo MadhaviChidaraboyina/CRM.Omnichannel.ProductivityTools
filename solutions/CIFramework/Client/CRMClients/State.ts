@@ -147,9 +147,9 @@ namespace Microsoft.CIFramework.Internal {
 			return Array.from(this.sessions.keys());
 		}
 
-		getFocusedSession(isAppModuleLoad?: boolean, telemetryData?: Object): string {
+		getFocusedSession(telemetryData?: Object): string {
 			var sessionId = this._state.sessionManager.getFocusedSession(telemetryData);
-			if (!isAppModuleLoad && Array.from(this.sessions.keys()).indexOf(sessionId) == -1) {
+			if (Array.from(this.sessions.keys()).indexOf(sessionId) == -1 && !this._state.sessionManager.isDefaultSession(sessionId, telemetryData)) {
 				return null;
 			}
 
@@ -277,7 +277,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (focusedSessionId == null) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorMsg = Constants.sessionNotValidErrorMessage;
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = MessageType.refreshTab;
 				return Promise.reject(error);
@@ -302,7 +302,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (focusedSessionId == null) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorMsg = Constants.sessionNotValidErrorMessage;
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = MessageType.setSessionTitle;
 				return Promise.reject(error);
@@ -327,7 +327,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (focusedSessionId == null) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorMsg = Constants.sessionNotValidErrorMessage;
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = MessageType.setSessionTitle;
 				return Promise.reject(error);
@@ -347,25 +347,19 @@ namespace Microsoft.CIFramework.Internal {
 			}.bind(this));
 		}
 
-		createTab(input: any, isAppModuleLoad?: boolean, telemetryData?: Object): Promise<string> {
-			let focusedSessionId: any;
-			if (isAppModuleLoad) {
-				focusedSessionId = this.getFocusedSession(isAppModuleLoad);
-			}
-			else {
-				focusedSessionId = this.getFocusedSession();
-			}
+		createTab(input: any, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string> {
+			var focusedSessionId = this.getFocusedSession();
 			if (focusedSessionId == null) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorMsg = Constants.sessionNotValidErrorMessage;
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = MessageType.createTab;
 				return Promise.reject(error);
 			}
 
 			return new Promise(function (resolve: any, reject: any) {
-				this._state.sessionManager.createTab(focusedSessionId, input, telemetryData).then(function (tabId: string) {
+				this._state.sessionManager.createTab(focusedSessionId, input, telemetryData, appId, cifVersion).then(function (tabId: string) {
 					resolve(tabId);
 				}, function (errorMsg: string) {
 					let error = {} as IErrorHandler;
@@ -383,7 +377,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (focusedSessionId == null) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
-				error.errorMsg = "Focused session does not belong to the provider";
+				error.errorMsg = Constants.sessionNotValidErrorMessage;
 				error.errorType = errorTypes.GenericError;
 				error.sourceFunc = MessageType.focusTab;
 				return Promise.reject(error);

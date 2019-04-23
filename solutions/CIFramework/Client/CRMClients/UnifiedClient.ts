@@ -444,6 +444,7 @@ namespace Microsoft.CIFramework.Internal {
 			data.set(Constants.UserId, context.userSettings.userId);
 			data.set(Constants.UserLcid, context.userSettings.languageId);
 			data.set(Constants.UserName, context.userSettings.userName);
+			data.set(Constants.UserRoles, context.userSettings.securityRoles);
 			data.set(Constants.crmVersion, context.getVersion());
 			return data;
 		}

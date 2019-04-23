@@ -123,6 +123,7 @@ namespace Microsoft.CIFramework
 		public static UserId = "userId";
 		public static UserLcid = "userLcid";
 		public static UserName = "username";
+		public static UserRoles = "userRoles";
 		public static DefaultCountryCode = "defaultCountryCode";
 		public static MinimizedHeight = 34;
 		public static DefaultFullWidth = 100;
@@ -200,7 +201,6 @@ namespace Microsoft.CIFramework
 		public static sidePanelCollapsedState = 0;
 		public static sidePanelExpandedState = 1;
 		public static sidePanelHiddenState = 2;
-		public static OCSupervisorRoleId = "e4435009-7653-e811-8147-000d3aa39708";
-		public static isAppModuleLoad = "isAppModuleLoad";
+		public static sessionNotValidErrorMessage = "Focused session is neither the default session nor it belongs to the provider";
 	}
 }
