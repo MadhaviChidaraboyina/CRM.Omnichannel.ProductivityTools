@@ -609,8 +609,8 @@ namespace Microsoft.CIFramework.Internal {
 			let popupnotification = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
 			Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => { closeId = id; console.log(id) }).catch((e: any) => {
 				console.log(e);
-				var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
-				return Promise.resolve(mapReturn);
+				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
+				return resolve(mapReturn);
 			})
 		});
 	}
