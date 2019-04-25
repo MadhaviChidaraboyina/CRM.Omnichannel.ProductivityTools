@@ -9,9 +9,9 @@
 /// <reference path="../TelemetryHelper.ts" />
 /// <reference path="aria-webjs-sdk-1.8.3.d.ts" />
 /// <reference path="../../../TypeDefinitions/mscrm.d.ts" />
+/// <reference path="../../../../Packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApiInternal.d.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
-	declare var Xrm: any;
 
 	let Constants = Microsoft.CIFramework.Constants;
 	const listenerWindow = window.parent;
@@ -505,7 +505,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		let toastMessage = title + ". " + message;
 	
-		Xrm.UI.addGlobalNotification(1, notificationLevel, toastMessage, null, null).then(
+		Xrm.UI.addGlobalNotification(1, notificationLevel, toastMessage, null, null, null).then(
 			function (response: any) {
 				// success
 			},
