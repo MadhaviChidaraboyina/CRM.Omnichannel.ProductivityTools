@@ -141,7 +141,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		abstract canCreateSession(telemetryData?: Object): boolean;
 
-		abstract createSession(provider: CIProvider, input: any, context: any, customerName: string ,telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string>;
+		abstract createSession(provider: CIProvider, input: any, context: any, customerName: string, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string>;
 
 		abstract focusSession(sessionId: string): Promise<void>;
 
@@ -170,9 +170,9 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			let sessionInfo = this.sessions.get(sessionId);
 			return sessionInfo.resolveTitle(input).then(
-				function (result: string) {
-					Xrm.App.sessions.getSession(sessionId).title = result;
-					return Promise.resolve(result);
+				function (title: string) {
+					Xrm.App.sessions.getSession(sessionId).title = title;
+					return Promise.resolve(title);
 				},
 				function (error) {
 					return Promise.reject(error);
@@ -190,12 +190,16 @@ namespace Microsoft.CIFramework.Internal {
 			}
 			let sessionInfo = this.sessions.get(sessionId);
 			return sessionInfo.resolveTabTitle(tabId, input).then(
-				function (result: string) {
-					Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).title = result;
-					return Promise.resolve(result);
-				}, function (error) {
+				function (title: string) {
+					return this.setTabTitleInternal(sessionId, tabId, title);
+				}.bind(this), function (error) {
 					return Promise.reject(error);
 				});
+		}
+
+		setTabTitleInternal(sessionId: string, tabId: string, title: string): Promise<string> {
+			Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).title = title;
+			return Promise.resolve(title);
 		}
 	}
 

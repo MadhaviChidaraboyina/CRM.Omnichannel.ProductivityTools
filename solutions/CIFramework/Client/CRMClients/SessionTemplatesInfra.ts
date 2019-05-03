@@ -246,7 +246,7 @@ namespace Microsoft.CIFramework.Internal {
 		public get name(): string {
 			return this._name;
 		}
-		protected get title(): string {
+		public get title(): string {
 			return this._title;
 		}
 		protected get template(): any {
