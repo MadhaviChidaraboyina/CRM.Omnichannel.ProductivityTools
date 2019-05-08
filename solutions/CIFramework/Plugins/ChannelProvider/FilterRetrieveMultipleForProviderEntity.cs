@@ -1,11 +1,11 @@
 ﻿namespace Microsoft.Dynamics.CIFrameworkPlugins
 {
 	using System;
+	using System.Collections.Generic;
 	using Microsoft.Xrm.Sdk;
 	using Microsoft.Crm.Sdk.Messages;
 	using Microsoft.Xrm.Sdk.Query;
-	using System.Linq;
-	using System.Xml;
+
 	public class FilterRetrieveMultipleForProviderEntity : IPlugin
 	{
 		public void Execute(IServiceProvider serviceProvider)
@@ -17,7 +17,7 @@
 			IPluginExecutionContext context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
 			ITracingService trace = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
 			IOrganizationServiceFactory serviceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-			IOrganizationService organizationService = serviceFactory.CreateOrganizationService(context.InitiatingUserId);
+			IOrganizationService organizationService = serviceFactory.CreateOrganizationService(null);
 			
 			try
 			{
@@ -92,19 +92,14 @@
 		private string[] GetUserRoles(IOrganizationService organizationService, IPluginExecutionContext context, ITracingService trace)
 		{
 			EntityCollection userRoles = organizationService.RetrieveMultiple(this.QueryUserRoles(context.InitiatingUserId, trace));
-			trace.Trace("Roles Record count {0}", userRoles.Entities.Count.ToString());
+			trace.Trace("Roles Record count {0} for initiating user {1}", userRoles.Entities.Count.ToString(), context.InitiatingUserId);
 			int rolesCount = userRoles.Entities.Count;
 			if (rolesCount > 0)
 			{
-				string[] roleArray = new string[rolesCount];
-				for (int index = 0; index < userRoles.Entities.Count; index++)
-				{
-					// Get the ParentRoleId of the current Role
-					var parentRoleId = ((EntityReference)(userRoles.Entities[index]["parentroleid"])).Id;
-					// Add only the ParentRoles to the roleArray
-					roleArray[index] = (parentRoleId == null) ? userRoles.Entities[index]["roleid"].ToString() : parentRoleId.ToString();
-				}
-				return roleArray;
+				List<Guid> finalRoles = getRootRoles(organizationService, context, trace, userRoles);
+				string[] ret = finalRoles.ConvertAll<string>(new Converter<Guid, string>(guid => guid.ToString())).ToArray();
+				trace.Trace("Final list of root role Ids to match " + String.Join(";", ret));
+				return ret;
 			}
 			else
 			{
@@ -112,11 +107,48 @@
 			}
 		}
 
+		private List<Guid> getRootRoles(IOrganizationService organizationService, IPluginExecutionContext context, ITracingService trace, EntityCollection userRoles)
+		{
+			if(userRoles.Entities.Count <= 0)
+			{
+				return new List<Guid>(1);
+			}
+			List<Guid> finalRoles = new List<Guid>(userRoles.Entities.Count / 2);
+			List<string> needParentRoles = new List<string>(userRoles.Entities.Count / 2);
+			for (int index = 0; index < userRoles.Entities.Count; index++)
+			{
+				Entity role = userRoles.Entities[index];
+				Guid parentRoleId = Guid.Empty;
+				if (role.Contains("parentroleid"))
+				{
+					parentRoleId = ((EntityReference)(role["parentroleid"])).Id;
+				}
+				if ((parentRoleId == null) || (parentRoleId == Guid.Empty)|| parentRoleId == role.Id)
+				{   // This is a root role (has no parent)
+					finalRoles.Add(role.Id);
+				}
+				else {
+					needParentRoles.Add(parentRoleId.ToString());
+				}
+			}
+			if (needParentRoles.Count > 0)
+			{
+				QueryExpression query = new QueryExpression();
+				query.EntityName = "role";
+				string[] cols = { "parentroleid" };
+				query.ColumnSet = new ColumnSet(cols);
+				query.Criteria.AddCondition("roleid", ConditionOperator.In, needParentRoles.ToArray());
+				EntityCollection parentRoles = organizationService.RetrieveMultiple(query);
+				finalRoles.AddRange(getRootRoles(organizationService, context, trace, parentRoles));
+			}
+			return finalRoles;
+		}
 		private QueryExpression QueryUserRoles(Guid userid, ITracingService trace)
 		{
 			QueryExpression query = new QueryExpression();
 			query.EntityName = "role";
-			query.ColumnSet = new ColumnSet(true);
+			string[] cols = { "parentroleid" };
+			query.ColumnSet = new ColumnSet(cols);
 
 			LinkEntity linkEntity1 = new LinkEntity();
 			linkEntity1.LinkFromEntityName = "role";
