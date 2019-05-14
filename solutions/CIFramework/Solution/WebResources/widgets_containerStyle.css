@@ -123,7 +123,7 @@ div#PresenceList
 .widgetArea
 {
 	width: calc(var(--widgetAreaWidth));
-	height: calc(100% - 10px);
+	height: calc(100% - 4px);
 	position: absolute;
 }
 
@@ -140,7 +140,7 @@ div#PresenceList
 .widgetAreaZFP
 {
 	width: calc(var(--widgetAreaWidth));
-	height: calc(100% - 10px);
+	height: calc(100% - 4px);
 	position: absolute;
 }
 
@@ -184,7 +184,7 @@ div#PresenceList
 	background-color: #EFEFEF;
 	width: calc(var(--sessionPanelAreaWidth));
 	position: fixed;
-	height: calc(100% - 10px);
+	height: calc(100% - 4px);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
