@@ -695,7 +695,7 @@
 	border-radius: 4px;
 	box-sizing: border-box;
 	padding: 12px;
-	-webkit-text-fill-color: #000000;
+	-webkit-text-fill-color: inherit !important;
 	color: #666666;
 }
 [dir='ltr'] .newTextAreaCIF
@@ -723,7 +723,7 @@
 	font-size: 12px;
 	line-height: 14px;
 	height: 28px;
-	border: none;
+	border: 1px solid transparent !important;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
