@@ -1,5 +1,4 @@
 ﻿/// <reference path="../../../../TypeDefinitions/mscrm.d.ts" />
-/// <reference path="../../../../../references/internal/TypeDefinitions/CommonControl/CommonControl.d.ts" />
 
 module MscrmControls.Service.CIProvider {
 	'use strict';
@@ -64,7 +63,7 @@ module MscrmControls.Service.CIProvider {
 		public AppModuleId: any;
 
 		public constructor(payload: any) {
-			this.AppModuleId = new Guid(payload);
+			this.AppModuleId = new (window.top as any).Guid(payload);
 		}
 
 		public getMetadata(): WebApi.ODataContractMetadata {
