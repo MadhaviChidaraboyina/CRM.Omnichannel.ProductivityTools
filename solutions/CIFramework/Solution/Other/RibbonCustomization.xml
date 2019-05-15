@@ -8,8 +8,8 @@
 					Id="Microsoft.Dynamics.Service.CIFramework.Presence.Dialog"
 					Command="Microsoft.Dynamics.Service.CIFramework.Presence.DialogCommand"
 					Sequence="6"
-					LabelText="Launch Presence Dialog"
-					ToolTipTitle="Launch Presence Dialog"
+					LabelText="Launch presence dialog"
+					ToolTipTitle="Launch presence dialog"
 					TemplateAlias="o1"
 					ModernImage="$webresource:/WebResources/msdyn_UnknownStatus.svg"
 				/>
