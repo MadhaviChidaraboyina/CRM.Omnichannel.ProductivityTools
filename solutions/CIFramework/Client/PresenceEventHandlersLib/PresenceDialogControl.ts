@@ -33,6 +33,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		public openPresenceDialogonLoad(e: any): any {
 			const presenceControl: XrmClientApi.Controls.OptionSetControl = Xrm.Page.getControl(Constants.presenceSelectControl);
+			presenceControl.setFocus();
 			const presenceOptions_str: string = window.localStorage[Constants.GLOBAL_PRESENCE_LIST];
 			const currentPresence_str: string = window.localStorage[Constants.CURRENT_PRESENCE_INFO];
 			if (presenceOptions_str && currentPresence_str) {
