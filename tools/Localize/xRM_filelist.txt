@@ -1,2 +1,3 @@
+solutions\CIFramework\Client\Localization\CIF_webresource_strings.1033.resx
 solutions\CIFramework\Controls\AgentClickToActControl\strings\AgentClickToActControl.1033.resx
 solutions\CIFramework\Solution\Resources\en-us\resources.en-US.resx
