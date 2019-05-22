@@ -335,7 +335,7 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 								if (trackingCorrelationId) {
 									msg = {
 										messageOutcome: messageFailure,
-										messageData: Microsoft.CIFramework.Utility.buildMap(error),
+										messageData: error,
 										messageCorrelationId: trackingCorrelationId
 									};
 									this.sendResponseMsg(responseTargetWindow, msg, event.origin);

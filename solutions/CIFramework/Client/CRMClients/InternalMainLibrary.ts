@@ -911,7 +911,7 @@ namespace Microsoft.CIFramework.Internal {
 					},
 					(error: IErrorHandler) => {
 						logAPIFailure(appId, true, error as IErrorHandler, MessageType.notifyEvent, cifVersion, provider.providerId, provider.name);
-						return reject(error);
+						return reject(Microsoft.CIFramework.Utility.createErrorMap(error.errorMsg, MessageType.notifyEvent));
 					}
 				);
 			});

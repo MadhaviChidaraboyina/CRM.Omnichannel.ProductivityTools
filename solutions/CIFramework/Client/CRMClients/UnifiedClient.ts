@@ -307,31 +307,42 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise<Map<string,any>>((resolve, reject) =>
 			{
 				let retrieveMultipleStartTime = new Date();
-				Xrm.WebApi.retrieveMultipleRecords(entityName, queryParmeters).then(
+				let splitQuery = Microsoft.CIFramework.Utility.splitQueryForSearch(queryParmeters);
+				if (splitQuery[0].length <= 1) {
+					if (searchOnly) {
+						let errorData = {} as IErrorHandler;
+						errorData.errorMsg = "Error. Either the seach query is empty or searchOnly is true for search query";
+						errorData.errorType = errorTypes.InvalidParams;
+						errorData.reportTime = new Date().toUTCString();
+						errorData.sourceFunc = "client.retrieveMultipleAndOpenRecords";
+						return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.searchAndOpenRecords));
+					}
+					else {
+						Microsoft.CIFramework.Utility.launchSearchPage(splitQuery[1], entityName);
+						return resolve(new Map<string, any>().set(Constants.value, []));
+					}
+				}
+				Xrm.WebApi.retrieveMultipleRecords(entityName, splitQuery[0]).then(
 					(result: XrmClientApi.WebApi.RetrieveMultipleResponse) => {
 						if (result.entities.length == 1) {
 							let resultItem = result.entities[0];
 							if (searchOnly == false) {
-								var fo: XrmClientApi.EntityFormOptions = { entityName: entityName, entityId: resultItem[entityName + "id"] };
-								Xrm.Navigation.openForm(fo);
+								Xrm.Utility.getEntityMetadata(entityName, null).then(
+									(response: XrmClientApi.EntityMetadata) => {
+										var fo: XrmClientApi.EntityFormOptions = { entityName: entityName, entityId: resultItem[response.PrimaryIdAttribute] };
+										Xrm.Navigation.openForm(fo);
+									},
+									(error: Error) => {
+										let errorData = generateErrorObject(error, "client.retrieveMultipleAndOpenRecords - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
+										return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.searchAndOpenRecords));
+									}
+								);
 							}
 						}
 						else if (searchOnly == false) {
 							// Open the Search Page with the Search String from the OData Parameters if the records != 1. Opens blank search page if the $search parameter has no value
-							try {
-								const searchPageInput: XrmClientApi.PageInput = {
-									pageType: "search" as any,
-									searchText: Microsoft.CIFramework.Utility.extractParameter(queryParmeters, "$search"),
-									searchType: 1,
-									EntityNames: [entityName],
-									EntityGroupName: "",
-								};
-
-								Xrm.Navigation.navigateTo(searchPageInput);
-							}
-							catch (error) { }
+							Microsoft.CIFramework.Utility.launchSearchPage(splitQuery[1], entityName);
 						}
-
 						let retrieveMultipleTimeTaken = Date.now() - retrieveMultipleStartTime.getTime();
 						let retrieveMultipleApiName = "Xrm.WebApi.retrieveMultipleRecords"
 						logApiData(telemetryData, retrieveMultipleStartTime, retrieveMultipleTimeTaken, retrieveMultipleApiName);
@@ -339,7 +350,10 @@ namespace Microsoft.CIFramework.Internal {
 					},
 					(error: Error) => {
 						let errorData = generateErrorObject(error, "client.retrieveMultipleAndOpenRecords - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
-						return reject(errorData);
+						if (searchOnly == false) {
+							Microsoft.CIFramework.Utility.launchSearchPage(splitQuery[1], entityName);
+						}
+						return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.searchAndOpenRecords));
 					}
 				);
 			});

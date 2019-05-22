@@ -22,6 +22,20 @@ namespace Microsoft.CIFramework.Utility {
 		return ((<Error>arg).message !== undefined);
 	}
 
+	export function launchSearchPage(searchQuery: string, entityName: string): void {
+		try {
+				const searchPageInput: XrmClientApi.PageInput = {
+					pageType: "search" as any,
+					searchText: Microsoft.CIFramework.Utility.extractSearchText(searchQuery),
+					searchType: 1,
+					EntityNames: [entityName],
+					EntityGroupName: "",
+				};
+				Xrm.Navigation.navigateTo(searchPageInput);
+			}
+		catch (error) { }
+	}
+
 	/**
 	 * Given a key-value object, this func returns an equivalent Map object for it.
 	 * @param dict Object to build the map for.
@@ -82,7 +96,7 @@ namespace Microsoft.CIFramework.Utility {
 
 	export function extractParameter(queryString: string, parameterName: string): string {
 		var params: any = {};
-		if (queryString != null && queryString != "") {
+		if (queryString) {
 			var queryStringArray = queryString.substr(1).split("&");
 			queryStringArray.forEach((query) => {
 				var queryPair = query.split("=");
@@ -95,6 +109,41 @@ namespace Microsoft.CIFramework.Utility {
 			return params.parameterName;
 		else
 			return "";
+	}
+
+	export function extractSearchText(queryString: string): string {
+		var emptyString = "";
+		if (queryString) {
+			let query = queryString.split("=");
+			return (query[1] != null && query[1] != "") ? query[1] : emptyString;
+		}
+		return emptyString;
+	}
+
+
+	export function splitQueryForSearch(queryString: string): Array<string> {
+
+		var splitQuery: Array<string> = [];
+		if (queryString) {
+			splitQuery = queryString.split("&");
+		}
+		let splitSearchQuery = ["",""] ;
+
+		splitQuery.forEach((query) => {
+			if (!query.startsWith("$search") && !query.startsWith("?$search")) {
+				splitSearchQuery[0] == "" ? splitSearchQuery[0] += query : splitSearchQuery[0] += "&" + query;
+			}
+			else {
+				splitSearchQuery[1] = query;
+			}
+		});
+		if (!splitSearchQuery[0].startsWith("?")) {
+			splitSearchQuery[0] = "?" + splitSearchQuery[0];
+		}
+		if (splitSearchQuery[1].startsWith("?")) {
+			splitSearchQuery[1] = splitSearchQuery[1].substr(1);
+		}
+		return splitSearchQuery;
 	}
 
 	/**
