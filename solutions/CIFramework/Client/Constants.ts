@@ -203,5 +203,6 @@ namespace Microsoft.CIFramework
 		public static sidePanelExpandedState = 1;
 		public static sidePanelHiddenState = 2;
 		public static sessionNotValidErrorMessage = "Focused session is neither the default session nor it belongs to the provider";
+		public static cifSolVersion = "msdyn_cifsolversion";
 	}
 }

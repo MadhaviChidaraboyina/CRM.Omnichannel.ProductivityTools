@@ -212,6 +212,10 @@
     <value>Select Unified Interface Apps for the Channel</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_AppSelector' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_cifsolversion" xml:space="preserve">
+    <value>Version of the CIF Solution</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_cifsolversion' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderapiversion" xml:space="preserve">
     <value>API Version</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
@@ -315,6 +319,10 @@
   <data name="1:displayname,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
     <value>App Selector</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_AppSelector' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_cifsolversion" xml:space="preserve">
+    <value>CIF Sol Version</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_cifsolversion' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderapiversion" xml:space="preserve">
     <value>API Version</value>

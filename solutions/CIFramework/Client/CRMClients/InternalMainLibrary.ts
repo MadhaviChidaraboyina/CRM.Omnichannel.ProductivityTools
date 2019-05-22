@@ -106,17 +106,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		appId = top.location.search.split('appid=')[1].split('&')[0];
-		Xrm.WebApi.retrieveMultipleRecords("solution", "?$filter=uniquename eq 'ChannelAPIIntegrationFramework'&$select=version").then(
-			(response: any) => {
-				cifVersion = response.entities[0].version;
-				loadProvider();
-			},
-			(error: Error) => {
-				loadProvider();
-				let errorData = generateErrorObject(error, "initializeCI - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
-				logAPIFailure(appId, true, errorData, MessageType.initializeCI, cifVersion);
-			}
-		);
+		loadProvider();
 		return false;
 	}
 
@@ -146,6 +136,7 @@ namespace Microsoft.CIFramework.Internal {
 					environmentInfo["crmVersion"] = Xrm.Utility.getGlobalContext().getVersion();
 					environmentInfo["appId"] = appId;
 					for (var x of result.entities) {
+						cifVersion = x[Constants.cifSolVersion];
 						var currRoles = x[Constants.roleSelectorFieldName];
 						currRoles = (currRoles != null) ? currRoles.split(";") : null;
 						trustedDomains.push(x[Constants.landingUrl]);

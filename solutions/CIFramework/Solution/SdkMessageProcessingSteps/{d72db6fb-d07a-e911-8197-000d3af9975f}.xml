@@ -1,0 +1,19 @@
+<SdkMessageProcessingStep Name="Microsoft.Dynamics.CIFrameworkPlugins.FilterRetrieveMultipleForProviderEntity: RetrieveMultiple of msdyn_ciprovider" SdkMessageProcessingStepId="{d72db6fb-d07a-e911-8197-000d3af9975f}">
+      <PluginTypeName>Microsoft.Dynamics.Plugins.FilterRetrieveMultipleForProviderEntity, Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</PluginTypeName>
+      <PluginTypeId>6955ba36-5d2c-427e-ac18-45400bc3e268</PluginTypeId>
+      <PrimaryEntity>msdyn_ciprovider</PrimaryEntity>
+      <AsyncAutoDelete>0</AsyncAutoDelete>
+      <Description>Microsoft.Dynamics.CIFrameworkPlugins.FilterRetrieveMultipleForProviderEntity: RetrieveMultiple of msdyn_ciprovider</Description>
+      <FilteringAttributes></FilteringAttributes>
+      <InvocationSource>0</InvocationSource>
+      <Mode>0</Mode>
+      <Rank>1</Rank>
+      <SdkMessageId>{03bebb1b-ea3e-db11-86a7-000a3a5473e8}</SdkMessageId>
+      <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+      <Stage>40</Stage>
+      <IsCustomizable>1</IsCustomizable>
+      <IsHidden>0</IsHidden>
+      <SupportedDeployment>0</SupportedDeployment>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <SdkMessageProcessingStepImages />
+    </SdkMessageProcessingStep>

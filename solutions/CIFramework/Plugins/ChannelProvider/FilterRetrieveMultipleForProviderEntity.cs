@@ -31,47 +31,68 @@
 					//	trace.Trace("inside contains query contains {0}", context.InputParameters["Query"].ToString());
 						if (context.InputParameters["Query"] is FetchExpression)
 						{
-							trace.Trace("FilterRetrieveMultipleForProviderEntity Inside query updater");
-							var expression = (FetchExpression)context.InputParameters["Query"];
-
-							string[] userRoles = this.GetUserRoles(organizationService, context, trace);
-
-							trace.Trace("Initial Query {0}", expression.Query.ToString());
-							// Convert to query expression
-							var conversionRequest = new FetchXmlToQueryExpressionRequest {
-								FetchXml = expression.Query
-							};
-							var conversionResponse = (FetchXmlToQueryExpressionResponse)organizationService.Execute(conversionRequest);
-							QueryExpression queryExpression = conversionResponse.Query;
-							trace.Trace("Converted to query expression {0}", queryExpression.ToString());
-							// Add filter with role conditions
-
-							var filter = new FilterExpression(LogicalOperator.Or);
-
-							for (int rolecount=0; rolecount < userRoles.Length; rolecount++)
+							if (context.Stage == 10)
 							{
-								ConditionExpression filterbyRoles = new ConditionExpression
+								trace.Trace("FilterRetrieveMultipleForProviderEntity Inside query updater");
+								var expression = (FetchExpression)context.InputParameters["Query"];
+
+								string[] userRoles = this.GetUserRoles(organizationService, context, trace);
+
+								trace.Trace("Initial Query {0}", expression.Query.ToString());
+								// Convert to query expression
+								var conversionRequest = new FetchXmlToQueryExpressionRequest
 								{
-									AttributeName = "msdyn_roleselector",
-									Operator = ConditionOperator.Like,
-									Values = { "%" + userRoles[rolecount] + "%" }
+									FetchXml = expression.Query
 								};
-								filter.AddCondition(filterbyRoles);
+								var conversionResponse = (FetchXmlToQueryExpressionResponse)organizationService.Execute(conversionRequest);
+								QueryExpression queryExpression = conversionResponse.Query;
+								trace.Trace("Converted to query expression {0}", queryExpression.ToString());
+								// Add filter with role conditions
+
+								var filter = new FilterExpression(LogicalOperator.Or);
+
+								for (int rolecount = 0; rolecount < userRoles.Length; rolecount++)
+								{
+									ConditionExpression filterbyRoles = new ConditionExpression
+									{
+										AttributeName = "msdyn_roleselector",
+										Operator = ConditionOperator.Like,
+										Values = { "%" + userRoles[rolecount] + "%" }
+									};
+									filter.AddCondition(filterbyRoles);
+								}
+
+								queryExpression.Criteria.AddFilter(filter);
+								trace.Trace("Added condition {0}", queryExpression.ToString());
+								//convert to Fetch Expression
+								var FetchconversionRequest = new QueryExpressionToFetchXmlRequest
+								{
+									Query = queryExpression
+								};
+
+								var FetchConversionResponse = (QueryExpressionToFetchXmlResponse)organizationService.Execute(FetchconversionRequest);
+								var finalexp = new FetchExpression(FetchConversionResponse.FetchXml);
+
+								context.InputParameters["Query"] = finalexp;
+
+								trace.Trace("Final Query {0}", finalexp.Query.ToString());
 							}
 
-							queryExpression.Criteria.AddFilter(filter);
-							trace.Trace("Added condition {0}", queryExpression.ToString());
-							//convert to Fetch Expression
-							var FetchconversionRequest = new QueryExpressionToFetchXmlRequest
+							else if (context.Stage == 40)
 							{
-								Query = queryExpression
-							};
+								if (context.OutputParameters.Contains("BusinessEntityCollection") && context.OutputParameters["BusinessEntityCollection"] != null)
+								{
+									var cifVersion = GetCIFVersion(organizationService, context, trace);
+									trace.Trace("CIF Version {0}", cifVersion);
 
-							var FetchConversionResponse = (QueryExpressionToFetchXmlResponse)organizationService.Execute(FetchconversionRequest);
-							var finalexp = new FetchExpression(FetchConversionResponse.FetchXml);
-							context.InputParameters["Query"] = finalexp;
-
-							trace.Trace("Final Query {0}", finalexp.Query.ToString());
+									var retrievedResult = (EntityCollection)context.OutputParameters["BusinessEntityCollection"];
+									foreach (Entity entity in retrievedResult.Entities)
+									{
+										entity.Attributes["msdyn_cifsolversion"] = cifVersion;
+										trace.Trace("CifVersion added. Updated value: {0}", entity.GetAttributeValue<string>("msdyn_cifsolversion"));
+									}
+								}
+							}
 						}
 					}
 				}
@@ -177,6 +198,32 @@
 			query.LinkEntities.AddRange(new LinkEntity[] { linkEntity1 });
 
 			return query;
+		}
+
+		// Get the CIF Version
+		private string GetCIFVersion(IOrganizationService organizationService, IPluginExecutionContext context, ITracingService trace)
+		{
+			QueryExpression query = new QueryExpression
+			{
+				EntityName = "solution",
+				ColumnSet = new ColumnSet("version"),
+				Criteria = new FilterExpression
+				{
+					Conditions =
+					{
+						new ConditionExpression
+						{
+							AttributeName = "uniquename",
+							Operator = ConditionOperator.Equal,
+							Values = { "ChannelAPIIntegrationFramework" }
+						}
+					}
+				}
+			};
+
+			EntityCollection cifVersion = organizationService.RetrieveMultiple(query);
+			trace.Trace("CIF Version Retrieved: {0} by User ID {1}", cifVersion[0].GetAttributeValue<string>("version").ToString(), context.InitiatingUserId);
+			return cifVersion[0].GetAttributeValue<string>("version").ToString();
 		}
 	}
 }
