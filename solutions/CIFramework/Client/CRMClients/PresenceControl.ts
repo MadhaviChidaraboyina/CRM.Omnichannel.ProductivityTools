@@ -103,7 +103,7 @@ namespace Microsoft.CIFramework.Internal {
 			var updatedPresenceImageNode = document.createElement('img');
 			updatedPresenceImageNode.classList.add('userImageNode');
 			updatedPresenceImageNode.src = "/_imgs/svg_2.svg";
-			updatedPresenceImageNode.alt = "Agent Image";
+			updatedPresenceImageNode.alt = Utility.getResourceString("AGENT_IMAGE_ALT_TEXT");
 			backgroundColorDiv.appendChild(updatedPresenceImageNode);
 			innerDiv.appendChild(backgroundColorDiv);
 

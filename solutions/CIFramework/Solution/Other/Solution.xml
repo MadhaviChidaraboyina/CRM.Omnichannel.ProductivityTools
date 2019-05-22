@@ -108,6 +108,7 @@
 			<RootComponent type="61" schemaName="EventHandlersLib/msdyn_EventHandlersLib.js" behavior="0" />
 			<RootComponent type="61" schemaName="PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" behavior="0" />
 			<RootComponent type="61" schemaName="OpenDialogLib/msdyn_internal_openDialog_ci_library.js" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1033.resx" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_Callprovider.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_Defaultprovider.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_CIFIcon.svg" behavior="0" />

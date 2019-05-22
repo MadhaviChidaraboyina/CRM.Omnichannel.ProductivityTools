@@ -777,34 +777,40 @@ namespace Microsoft.CIFramework.Internal {
 			if (presenceButton) {
 				let presence : any;
 				switch(presenceStatus){
-					case "AWAY" : let awayPresence = presenceButton.getElementsByTagName("img")
-									awayPresence[0].src = "/WebResources/msdyn_Away.svg"
-									awayPresence[0].title = "Away"
-									presenceList.title = "Away\n\nLaunch presence dialog"
-									break;
-					case "AVAILABLE" : let availablePresence = presenceButton.getElementsByTagName("img")
-									availablePresence[0].src = "/WebResources/msdyn_Available.svg"
-									availablePresence[0].title = "Available"
-									presenceList.title = "Available\n\nLaunch presence dialog"
-									break;
-					case "OFFLINE" : let offlinePresence = presenceButton.getElementsByTagName("img")
-									offlinePresence[0].src = "/WebResources/msdyn_Offline.svg"
-									offlinePresence[0].title = "Offline"
-									presenceList.title = "Offline\n\nLaunch presence dialog"
-									break;
-					case "BUSY" : let busyPresence = presenceButton.getElementsByTagName("img")
-									busyPresence[0].src = "/WebResources/msdyn_BusyIcon.svg"
-									busyPresence[0].title = "Busy"
-									presenceList.title = "Busy\n\nLaunch presence dialog"
-									break;
-					case "BUSY_DO_NOT_DISTURB" : let dndPresence = presenceButton.getElementsByTagName("img")
-									dndPresence[0].src = "/WebResources/msdyn_BusyDND.svg"
-									dndPresence[0].title = "Do Not Disturb"
-									presenceList.title = "Do Not Disturb\n\nLaunch presence dialog"
-									break;
-					default : let presence = presenceButton.getElementsByTagName("img")
-									presence[0].title = "Presence"
-									presenceList.title = "Unknown\n\nLaunch presence dialog"
+					case "AWAY":
+						let awayPresence = presenceButton.getElementsByTagName("img");
+						awayPresence[0].src = "/WebResources/msdyn_Away.svg";
+						awayPresence[0].title = Utility.getResourceString("PRESENCE_AWAY_TEXT");
+						presenceList.title = Utility.getResourceString("PRESENCE_AWAY_TOOLTIP");
+						break;
+					case "AVAILABLE":
+						let availablePresence = presenceButton.getElementsByTagName("img");
+						availablePresence[0].src = "/WebResources/msdyn_Available.svg";
+						availablePresence[0].title = Utility.getResourceString("PRESENCE_AVAILABLE_TEXT");
+						presenceList.title = Utility.getResourceString("PRESENCE_AVAILABLE_TOOLTIP");
+						break;
+					case "OFFLINE":
+						let offlinePresence = presenceButton.getElementsByTagName("img")
+						offlinePresence[0].src = "/WebResources/msdyn_Offline.svg";
+						offlinePresence[0].title = Utility.getResourceString("PRESENCE_OFFLINE_TEXT");
+						presenceList.title = Utility.getResourceString("PRESENCE_OFFLINE_TOOLTIP");
+						break;
+					case "BUSY":
+						let busyPresence = presenceButton.getElementsByTagName("img");
+						busyPresence[0].src = "/WebResources/msdyn_BusyIcon.svg";
+						busyPresence[0].title = Utility.getResourceString("PRESENCE_BUSY_TEXT");
+						presenceList.title = Utility.getResourceString("PRESENCE_BUSY_TOOLTIP");
+						break;
+					case "BUSY_DO_NOT_DISTURB":
+						let dndPresence = presenceButton.getElementsByTagName("img")
+						dndPresence[0].src = "/WebResources/msdyn_BusyDND.svg";
+						dndPresence[0].title = Utility.getResourceString("PRESENCE_DO_NOT_DISTURB_TEXT");
+						presenceList.title = Utility.getResourceString("PRESENCE_DO_NOT_DISTURB_TOOLTIP");
+						break;
+					default:
+						let presence = presenceButton.getElementsByTagName("img");
+						presence[0].title = Utility.getResourceString("PRESENCE_BUTTON_TEXT");
+						presenceList.title = Utility.getResourceString("PRESENCE_UNKNOWN_TOOLTIP");
 				}
 				return true;
 			}

@@ -10,6 +10,7 @@
 /// <reference path="aria-webjs-sdk-1.8.3.d.ts" />
 /// <reference path="../../../TypeDefinitions/mscrm.d.ts" />
 /// <reference path="../../../../Packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApiInternal.d.ts" />
+/// <reference path="../CIFrameworkUtilities.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
 
@@ -17,7 +18,7 @@ namespace Microsoft.CIFramework.Internal {
 	const listenerWindow = window.parent;
 	let noOfNotifications = 0;
 	let len = 0;
-
+	
 	/**
 	 * API to invoke toast popup widget
 	 *
@@ -468,8 +469,12 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	export function getNotificationDetails(body: any, eventType: any, notificationType: any, waitTime: number): any {
+
 		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
-			return { "Comment": body[0]["Comment"], "Wait time": waitTime.toString() + " sec" };
+			var details: any = {};
+			details[Utility.getResourceString("NOTIFICATION_DETAIL_COMMENT_TEXT")] = body[0]["Comment"];
+			details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = waitTime.toString() + " sec";
+			return details;
 		}
 		else if (eventType.search(Constants.Informational) != -1 && isInformationChatSoftNotification(notificationType)) {
 			return body[0]["Comment"];
@@ -494,10 +499,10 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function getAcceptButtonText(eventType: any, notificationType: any): string {
 		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
-			return "Accept";
+			return Utility.getResourceString("ACCEPT_BUTTON_TEXT");
 		}
 		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
-			return "Open Item";
+			return Utility.getResourceString("OPEN_ITEM_BUTTON_TEXT");
 		}
 	}
 

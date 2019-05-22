@@ -81,6 +81,19 @@
     <Content Include="OpenDialogLib\tsconfig.json" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\CIF_webresource_strings.1033.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CIF_webresource_strings.1033.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Localization\CIF_webresource_strings.1033.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CIF_webresource_strings.1033.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
   <Target Name="CopyStatic">
     <ItemGroup>
       <StaticWebResources Include="**\*.svg;**\*.png;**\*.jpg;**\*.jpeg;**\*.gif;**\*.htm;**\*.html;**\*.css;**\*.less;**\*.js;**\*.d.ts;**\*.resx;" Exclude="bin\**\*.*;obj\**\*.*;node_modules\**\*.*" />

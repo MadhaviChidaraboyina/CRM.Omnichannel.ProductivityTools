@@ -7,6 +7,7 @@
   <IntroducedVersion>1.0</IntroducedVersion>
   <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
   <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"&gt;&lt;Library name="Localization/CIF_webresource_strings.1033.resx" displayName="Localization/CIF_webresource_strings.1033.resx" languagecode="English(1033)" description="This resx file contains strings for CIF." libraryUniqueId="{d0da9437-0699-4f1a-ae84-6ebe3e2c3409}" /&gt;&lt;/Dependency&gt;&lt;DependencyGraph componentType="WebResource"&gt;&lt;Library name="Localization/CIF_webresource_strings.1033.resx" languagecode="1033" type="12" webresourceid="098fb6ee-af1a-4845-a47e-e0a8eec0dcfa" /&gt;&lt;/DependencyGraph&gt;&lt;/Dependencies&gt;</DependencyXml>
   <IsCustomizable>1</IsCustomizable>
   <CanBeDeleted>0</CanBeDeleted>
   <IsHidden>0</IsHidden>
