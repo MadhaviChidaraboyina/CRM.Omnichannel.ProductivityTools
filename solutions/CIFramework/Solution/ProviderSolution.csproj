@@ -122,6 +122,7 @@
     </Content>
     <Content Include="Other\Relationships.xml" />
     <Content Include="Other\Solution.xml" />
+    <Content Include="Other\RibbonCustomization.xml" />
     <Content Include="Other\Relationships\CTIProvider.xml" />
     <Content Include="WebResources\EventHandlersLib\msdyn_EventHandlersLib.js.data.xml" />
     <Content Include="WebResources\PresenceEventHandlersLib\msdyn_internal_presence_ci_library.js.data.xml" />

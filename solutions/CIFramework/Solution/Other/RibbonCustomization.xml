@@ -8,8 +8,8 @@
 					Id="Microsoft.Dynamics.Service.CIFramework.Presence.Dialog"
 					Command="Microsoft.Dynamics.Service.CIFramework.Presence.DialogCommand"
 					Sequence="6"
-					LabelText="Launch presence dialog"
-					ToolTipTitle="Launch presence dialog"
+					LabelText="$LocLabels:msdyn.ApplicationRibbon.Presence.Button.LabelText"
+					ToolTipTitle="$LocLabels:msdyn.ApplicationRibbon.Presence.Button.LabelText"
 					TemplateAlias="o1"
 					ModernImage="$webresource:/WebResources/msdyn_UnknownStatus.svg"
 				/>
@@ -28,12 +28,19 @@
 		</CommandDefinition>
 	</CommandDefinitions>
 	<RuleDefinitions>
-    <TabDisplayRules />
-    <DisplayRules />
+		<TabDisplayRules />
+		<DisplayRules />
 	<EnableRules>
 		<EnableRule Id="Mscrm.ShowOnOCEngagementHub">
 			<CustomRule FunctionName="Microsoft.CIFramework.Internal.OpenPresenceDialogControl.Instance.addPresenceCommand" Library="$webresource:OpenDialogLib/msdyn_internal_openDialog_ci_library.js" />
 		</EnableRule>
 	</EnableRules>
-  </RuleDefinitions>
-  </RibbonDiffXml>
+	</RuleDefinitions>
+	<LocLabels>
+		<LocLabel Id="msdyn.ApplicationRibbon.Presence.Button.LabelText">
+			<Titles>
+				<Title description="Launch presence dialog" languagecode="1033" />
+			</Titles>
+		</LocLabel>
+	</LocLabels>
+</RibbonDiffXml>
