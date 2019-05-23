@@ -73,7 +73,7 @@ namespace Microsoft.CIFramework.Internal {
 
 	declare var Xrm: any;
 	declare var appId: string;
-	declare var cifVersion: string;
+	export var cifVersion: string;
 	cifVersion = "";
 	declare var navigationType: string;
 	navigationType = "";
