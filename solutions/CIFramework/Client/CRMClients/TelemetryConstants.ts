@@ -32,5 +32,8 @@ namespace Microsoft.CIFramework.Internal {
 		export const userId = "User_ID";
 		export const CIFVersion = "CIF_Version";
 		export const customParameters = "customParameters";
+		export const navigationType = "Nav_Type";
+		export const multiSession = "Multi Session";
+		export const singleSession = "Single Session";
 	}
 }

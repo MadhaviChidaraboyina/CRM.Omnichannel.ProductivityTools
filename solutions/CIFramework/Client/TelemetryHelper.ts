@@ -95,6 +95,13 @@ namespace Microsoft.CIFramework.Internal
 		return logConfiguration;
 	}
 
+	function getNavigationType(): string {
+		if (Microsoft.CIFramework.Internal.isConsoleAppInternal())
+			return TelemetryConstants.multiSession;
+		else
+			return TelemetryConstants.singleSession;
+	}
+
 	// Generates the IErrorHandler for logging purpose
 	export function generateErrorObject(error: any, sourceFunction: string, errorType: errorTypes): IErrorHandler {
 		let errorData = {} as IErrorHandler;
@@ -147,6 +154,7 @@ namespace Microsoft.CIFramework.Internal
 		UsageTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		UsageTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
 		UsageTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters) : "");
+		UsageTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
 
 		defaultLogger.logEvent(UsageTelemetry);
 	}
@@ -186,6 +194,7 @@ namespace Microsoft.CIFramework.Internal
 		PerfTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		PerfTelemetry.setProperty(TelemetryConstants.telemetryData, data.telemetryData ? JSON.stringify(data.telemetryData) : "");
 		PerfTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
+		PerfTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
 
 		defaultLogger.logEvent(PerfTelemetry);
 	}
@@ -213,6 +222,7 @@ namespace Microsoft.CIFramework.Internal
 		ParamTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		ParamTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
 		ParamTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters): "");
+		ParamTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
 
 		defaultLogger.logEvent(ParamTelemetry);
 	}
