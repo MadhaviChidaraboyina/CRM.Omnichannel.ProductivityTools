@@ -298,7 +298,8 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		setSessionTitle(input: any): Promise<string> {
-			var focusedSessionId = this.getFocusedSession();
+			//if a sessionId was passed, use it, else use the current focused session
+			var focusedSessionId = input.sessionId && input.sessionId || this.getFocusedSession();
 			if (focusedSessionId == null) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
@@ -307,7 +308,14 @@ namespace Microsoft.CIFramework.Internal {
 				error.sourceFunc = MessageType.setSessionTitle;
 				return Promise.reject(error);
 			}
-
+			if (!this.sessions.has(focusedSessionId)) {
+				let error = {} as IErrorHandler;
+				error.reportTime = new Date().toUTCString();
+				error.errorMsg = "Session with ID:" + focusedSessionId + " does not exist";
+				error.errorType = errorTypes.GenericError;
+				error.sourceFunc = MessageType.setSessionTitle;
+				return Promise.reject(error);
+			}
 			return new Promise(function (resolve: any, reject: any) {
 				this._state.sessionManager.setSessionTitle(focusedSessionId, input).then(function (result: string) {
 					resolve(result);
