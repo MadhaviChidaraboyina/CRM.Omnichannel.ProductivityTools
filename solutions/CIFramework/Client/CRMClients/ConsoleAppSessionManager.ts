@@ -5,6 +5,7 @@
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApi.d.ts" />
 /// <reference path="SessionTemplatesInfra.ts" />
+/// <reference path="NotificationTemplatesInfra.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
 
@@ -19,6 +20,7 @@ namespace Microsoft.CIFramework.Internal {
 			this.sessionCloseHandlerID = Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClosed);
 			this.sessionCreateHandlerID = Xrm.App.sessions.addOnAfterSessionCreate(this.onSessionCreated);
 			UCISessionTemplate.InitSessionTemplates();
+			UCINotificationTemplate.InitTemplates();
 		}
 
 		/**

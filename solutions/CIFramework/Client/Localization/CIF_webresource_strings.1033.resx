@@ -149,6 +149,10 @@
     <value>Wait time</value>
     <comment>Text for notification waittime detail</comment>
   </data>
+  <data name="NOTIFICATION_WAIT_TIME_SECONDS" xml:space="preserve">
+    <value>secs</value>
+    <comment>Seconds unit to denote notification wait time</comment>
+  </data>
   <data name="OPEN_ITEM_BUTTON_TEXT" xml:space="preserve">
     <value>Open Item</value>
     <comment>Text for launching work item assigned.</comment>
@@ -200,6 +204,10 @@
   <data name="PRESENCE_UNKNOWN_TOOLTIP" xml:space="preserve">
     <value>Unknown\n\nLaunch presence dialog</value>
     <comment>Tooltip for unknown presence</comment>
+  </data>
+  <data name="REJECT_BUTTON_TEXT" xml:space="preserve">
+    <value>Reject</value>
+    <comment>Reject Button Text</comment>
   </data>
   <data name="START_NOTES_TOOLTIP_TEXT" xml:space="preserve">
     <value>Start adding notes</value>

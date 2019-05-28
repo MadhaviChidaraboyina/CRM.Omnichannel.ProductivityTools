@@ -27,6 +27,7 @@
     <Content Include="PostMsgWrapper.ts" />
     <Content Include="Widget\MainLibrary.ts" />
     <Content Include="Constants.ts" />
+    <Content Include="Queue.ts" />
     <Content Include="EventHandlersLib\msdyn_EventHandlersLib.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="CIFrameworkUtilities.ts" />

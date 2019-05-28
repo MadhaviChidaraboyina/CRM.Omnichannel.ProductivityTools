@@ -19,4 +19,12 @@ namespace Microsoft.CIFramework.Internal
 		public static SingleSession = "0";
 		public static MultiSession = "1";
 	}
+
+	export interface INotificationItem {
+		popUpNotificationItem: XrmClientApi.IPopupNotificationItem,
+		notificationCreatedAt: number,
+		notificationExpiryTime: number,
+		timeOutMethod: any,
+		queueTimeOutMethod: any;
+	}
 }

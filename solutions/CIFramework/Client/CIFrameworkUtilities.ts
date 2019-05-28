@@ -8,7 +8,7 @@
 /** @internal */
 namespace Microsoft.CIFramework.Utility {
 
-	var webresourceName = "Localization/CIF_webresource_strings.1033.resx";
+	var webresourceName = "Localization/CIF_webresource_strings";
 
 	export function getResourceString(key: any) {
 		var value = key;

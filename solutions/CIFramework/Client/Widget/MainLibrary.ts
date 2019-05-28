@@ -156,11 +156,11 @@ namespace Microsoft.CIFramework
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-	export function notifyEvent(eventType: string, notificationUX: string): Promise<string> {	
-		if(!(isNullOrUndefined(eventType) || isNullOrUndefined(notificationUX))){
+	export function notifyEvent(input: any): Promise<string> {	
+		if (!isNullOrUndefined(input)){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.notifyEvent,
-				messageData: new Map().set(Constants.eventType,eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(notificationUX)))
+				messageData: new Map().set(Constants.eventType, input.eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(input.notificationUXObject)))
 			}
 			return new Promise((resolve, reject) => {
 				return sendMessage<Map<string, any>>(notifyEvent.name, payload, false, true).then(
@@ -172,10 +172,10 @@ namespace Microsoft.CIFramework
 					});
 			});
 		}else{
-			if(isNullOrUndefined(eventType)){
+			if (isNullOrUndefined(input.eventType)){
 				return postMessageNamespace.rejectWithErrorMessage("The EventType parameter is blank. Provide a value to the parameter.");
 			}
-			if(isNullOrUndefined(notificationUX)){
+			if (isNullOrUndefined(input.notificationUXObject)){
 				return postMessageNamespace.rejectWithErrorMessage("The notificationUX parameter is blank. Provide a value to the parameter.");
 			}
 		}

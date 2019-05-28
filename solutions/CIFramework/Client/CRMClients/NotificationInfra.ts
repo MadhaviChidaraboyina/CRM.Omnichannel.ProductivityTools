@@ -10,441 +10,31 @@
 /// <reference path="aria-webjs-sdk-1.8.3.d.ts" />
 /// <reference path="../../../TypeDefinitions/mscrm.d.ts" />
 /// <reference path="../../../../Packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApiInternal.d.ts" />
+/// <reference path= "../Queue.ts" />
 /// <reference path="../CIFrameworkUtilities.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
-
+	let queue = new Microsoft.CIFramework.Queue<INotificationItem>();
+	let closeId = "";
 	let Constants = Microsoft.CIFramework.Constants;
 	const listenerWindow = window.parent;
 	let noOfNotifications = 0;
 	let len = 0;
-	
-	/**
-	 * API to invoke toast popup widget
-	 *
-	 * @param value. It's a string which contains header,body of the popup
-	 *
-	*/
-	export function renderEventNotification(header:any,body:any,actions:any,notificationType:any,eventType:any): Map<any,any>{
-		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
-		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
-		let i = 0;
-		let isTimeOut = false;
-		let map = new Map();
-		if(notificationType[0].search(MessageType.softNotification) != -1){ //For Soft notification
-			map = renderSoftNotification(header,body,notificationType[1]);
-		}else{
-			if(eventType.search(Constants.Chat) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" role="region" aria-label="Notification" class="CIFToastDiv"><div class="header_NotificationType_CIF"></div><div aria-label="Notification Header"  class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/chat_icon.svg" alt="CIF Header Image"></div><div class="headerKeyCIF"></div><div id="headerTimerCIFId" class="headerTimerCIF"></div><div class="headerNameCIF"></div><div style="height:8px;"></div></div><div></div><div aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p class="body_CIF"><div style="height: 2px;"></div></div></div>');
-			}else if(eventType.search(Constants.Call) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/call_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div style="height:8px;"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div style="height: 2px;"></div></div></div>');
-			}else if(eventType.search(Constants.Case) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/case_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div style="height:8px;"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div style="height: 2px;"></div></div></div>');
-			}else if(eventType.search(Constants.SMS) != -1){
-				toastDiv.insertAdjacentHTML('beforeend', '<div id="CIFToast" tabindex="0" aria-label="Notification Window" class="CIFToastDiv"><div tabindex="0" class="header_NotificationType_CIF"></div><div aria-label="Notification Header" tabindex="0" class="header_CIF"><div class="CIFHeaderIconDiv"><img class="CIFHeaderImage" src="/webresources/sms_icon.svg"></div><div tabindex="0" class="headerKeyCIF"></div><div tabindex="0" id="headerTimerCIFId" class="headerTimerCIF"></div><div tabindex="0" class="headerNameCIF"></div><div style="height:8px;"></div></div><div></div><div tabindex="0" aria-label="Notification Body" class="bodyDivCIF"><div class="bodyDivider_CIF"></div><div style="height:8px"></div><p tabindex="0" class="body_CIF"><div style="height: 2px;"></div></div></div>');
-			}
-			let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
-			let currentToast = toastDiv.getElementsByClassName("CIFToastDiv")[len-1];
-			toastDiv.getElementsByClassName("CIFToastDiv")[len-1].id = "CIFToastDiv_"+len;
-			let panelWidth = "100%";
-			widgetIFrame.contentWindow.document.getElementById("CIFToastDiv_" + len).style.width = panelWidth;//panelWidth+"px";
-			if(notificationType != null && notificationType != "undefined"  && notificationType.length > 0){
-				let headerElement = toastDiv.getElementsByClassName("header_NotificationType_CIF")[len-1];
-				if(notificationType[0].search(MessageType.broadCast) != -1 && notificationType.length == 3){
-					headerElement.classList.add("header_NotificationType_CIF_Broadcast");
-					toastDiv.getElementsByClassName("header_NotificationType_CIF_Broadcast")[len-1].id = "CIFToastType_"+len;
-					widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = panelWidth;//panelWidth+"px";
-					var label1 = document.createElement("label");
-					headerElement.appendChild(label1);
-					label1.classList.add("broadCastLabel1");
-					label1.innerText = notificationType[1];
-					label1.setAttribute("aria-label", notificationType[1]);
-					var label2 = document.createElement("label");
-					headerElement.appendChild(label2);
-					label2.classList.add("broadCastLabel2");
-					label2.innerText = notificationType[2];
-					label2.setAttribute("aria-label", notificationType[2]);
-				}else if((notificationType[0].search(MessageType.notification) != -1 || notificationType[0].search(MessageType.escalation)) != -1 && notificationType.length == 2){
-					headerElement.classList.add("header_NotificationType_CIF_notification");
-					toastDiv.getElementsByClassName("header_NotificationType_CIF_notification")[len-1].id = "CIFToastType_"+len;
-					widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = panelWidth;//panelWidth+"px";
-					var span = document.createElement("span");
-					headerElement.appendChild(span);
-					headerElement.getElementsByTagName("span")[0].classList.add("notificationSpan");
-					if(notificationType[0].search(MessageType.escalation) != -1){
-						headerElement.getElementsByTagName("span")[0].classList.add("FontIcons_escalationSpan");
-					}else{
-						headerElement.getElementsByTagName("span")[0].classList.add("FontIcons_notificationSpan");
-					}
-					var label = document.createElement("label");
-					headerElement.appendChild(label);
-					label.classList.add("notificationLabel");
-					label.innerText = notificationType[1];
-					label.setAttribute("aria-label", notificationType[1]);
-				}else if(notificationType[0].search(MessageType.transfer) != -1 && notificationType.length == 2){
-					headerElement.classList.add("header_NotificationType_CIF_transfer");
-					toastDiv.getElementsByClassName("header_NotificationType_CIF_transfer")[len-1].id = "CIFToastType_"+len;
-					widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = panelWidth;//panelWidth+"px";
-					var label1 = document.createElement("label");
-					headerElement.appendChild(label1);
-					label1.classList.add("transferLabel");
-					label1.innerText = notificationType[1];
-					label1.setAttribute("aria-label", notificationType[1]);
-				}else if(notificationType[0].search(MessageType.internalCommunication) != -1 && notificationType.length == 2){
-					headerElement.classList.add("header_NotificationType_CIF_internalCommunication");
-					toastDiv.getElementsByClassName("header_NotificationType_CIF_internalCommunication")[len-1].id = "CIFToastType_"+len;
-					widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = panelWidth;//panelWidth+"px";
-					var span = document.createElement("span");
-					headerElement.appendChild(span);
-					headerElement.getElementsByTagName("span")[0].classList.add("internalCommunicationSpan");
-					headerElement.getElementsByTagName("span")[0].classList.add("FontIcons_internalCommunicationSpan");
-					var label = document.createElement("label");
-					headerElement.appendChild(label);
-					label.classList.add("internalCommunicationLabel");
-					label.innerText = notificationType[1];
-					label.setAttribute("aria-label", notificationType[1]);
-					currentToast.classList.add("internalCommunication_CIFToastDiv");
-				}else if(notificationType[0].search(MessageType.notification) != -1){
-					headerElement.classList.add("header_NotificationType_CIF_Broadcast");
-					toastDiv.getElementsByClassName("header_NotificationType_CIF_Broadcast")[len-1].id = "CIFToastType_"+len;
-					widgetIFrame.contentWindow.document.getElementById("CIFToastType_" + len).style.width = panelWidth;
-					var label1 = document.createElement("label");
-					headerElement.appendChild(label1);
-					label1.classList.add("broadCastLabel1");
-					var label2 = document.createElement("label");
-					headerElement.appendChild(label2);
-					label2.innerText = "secs remaining";
-					label2.classList.add("hardNotificationLabel2");
-					label2.setAttribute("aria-label", "secs remaining");
-				}
-			}
-			let headerVal = "";
-			let bodyVal = "";
-			for( i = 0; i < header.length; i++){
-				for (let key in header[i]) {
-					toastDiv.getElementsByClassName("headerKeyCIF")[len-1].innerHTML = key;
-					for(let j = 0; j < header[i][key].length; j++){
-						if(j == 0){
-							toastDiv.getElementsByClassName("headerNameCIF")[len-1].innerHTML = header[i][key][j];
-						}else{
-							headerVal += header[i][key][j] + "\n";
-						}
-					}
-				}
-			}
-			if(body != null && body != "undefined"){
-				for( i = 0; i < body.length; i++){
-					for (let key in body[i]) {
-						let notificationBody = toastDiv.getElementsByClassName("body_CIF")[len-1];
-						var outerDiv = document.createElement("div");	
-						outerDiv.classList.add("bodyContentDiv");
-						var label1 = document.createElement("label");
-						outerDiv.appendChild(label1);
-						label1.classList.add("body_CIFLabel1");
-						var label2 = document.createElement("label");
-						label2.classList.add("body_CIFLabel2");
-						label1.innerText = key;
-						label1.setAttribute("aria-label", key);
-						label2.innerText = body[i][key];
-						label2.setAttribute("aria-label", body[i][key]);
-						/*label2.addEventListener("mouseover", function mouseOverListener() {
-							this.classList.add("body_CIFLabel2_mouseover");
-							label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
-						});
-						label2.addEventListener("mouseout", function mouseoutListener() {
-							this.classList.add("body_CIFLabel2_mouseout");
-							label2.style.width = "calc(70% - 20px)";//((panelWidth * 0.7) - 20)+"px";
-						});*/
-						label1.style.width = "30%";//(panelWidth * 0.3)+"px";
-						label2.style.width = "50%";//((panelWidth * 0.7) - 20)+"px";
-						outerDiv.appendChild(label2); 
-						notificationBody.appendChild(outerDiv);
-						var divForSpace = document.createElement("div");
-						divForSpace.style.height = "8px";
-						notificationBody.appendChild(divForSpace);
-					}
-				}
-			}else{
-				toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].classList.add("bodyDivider_CIF_invisible");
-			}
-			toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].id = "CIFToastDivider_"+len;
-			widgetIFrame.contentWindow.document.getElementById("CIFToastDivider_" + len).style.width = panelWidth;//panelWidth+"px";
-			toastDiv.getElementsByClassName("bodyDivider_CIF")[len-1].id = "CIFToastDividerInvisible_"+len;
-			widgetIFrame.contentWindow.document.getElementById("CIFToastDividerInvisible_" + len).style.width = panelWidth;//panelWidth+"px";
-			let chatWindowBody = toastDiv.getElementsByClassName("bodyDivCIF")[len-1];
-			if(actions != null && actions != "undefined"){
-				let accept = false;
-				let reject = false;
-				for( i = 0; i < actions.length; i++){
-					for (let key in actions[i]) {
-						if(key.search(Constants.actionType) != -1){
-							if(actions[i][key].search(Constants.Accept) != -1){
-								accept = true;
-							}
-							if(actions[i][key].search(Constants.Reject) != -1){
-								reject = true;
-							}
-						}
-					}
-				}
-				for( i = 0; i < actions.length; i++){
-					var btn = document.createElement("BUTTON");
-					var span = document.createElement('span');
-					chatWindowBody.appendChild(btn);
-					let actionParam = new Map();
-					let k = 0;
-					isTimeOut = false;
-					let actionNameCIF,actionReturnValueCIF;
-					let bothButtons = false;
-					if(accept == true && reject == true){
-						bothButtons = true;
-					}
-					for (let key in actions[i]) {
-						if(key.search(Constants.actionType) != -1){
-							if(actions[i][key].search(Constants.Accept) != -1){
-								if(bothButtons == false){
-									btn.classList.add("bothButtonsAccept_CIF");
-									btn.style.width = "calc(100% - 30px)";//(panelWidth - 30) + "px";
-								}else{
-									btn.classList.add("singleButtonAccept_CIF");
-									btn.style.width = "calc(50% - 20px)";//((panelWidth / 2) - 20) + "px";
-								}
-								btn.focus();
-								btn.appendChild(span);
-								btn.getElementsByTagName("span")[0].classList.add("acceptButtonSpan_CIF");
-								btn.getElementsByTagName("span")[0].classList.add("FontIcons_acceptButtonSpan_CIF");
-							}else if(actions[i][key].search(Constants.Reject) != -1){
-								if(bothButtons == false){
-									btn.classList.add("bothButtonsReject_CIF");
-									btn.style.width = "calc(100% - 30px)";//(panelWidth - 30) + "px";
-								}else{
-									btn.classList.add("singleButtonReject_CIF");
-									btn.style.width = "calc(50% - 20px)";//((panelWidth / 2) - 20) + "px";
-								}
-								btn.appendChild(span);
-								btn.getElementsByTagName("span")[0].classList.add("rejectButtonSpan_CIF");
-								btn.getElementsByTagName("span")[0].classList.add("FontIcons-rejectHardNotification_CIF");
-							} else if (actions[i][key].search(Constants.Timeout) != -1) {
-								btn.classList.add("timeOutCIF");
-								isTimeOut = true;
-							}
-						}
-						if(key.search(Constants.actionDisplayText) != -1){
-							var span = document.createElement('span');
-							span.innerText = actions[i][key];
-							span.classList.add("actionDisplayText_CIF");
-							span.setAttribute("aria-label", actions[i][key]);
-							btn.appendChild(span);
-						}else if(key.search(Constants.actionName) != -1){
-							actionNameCIF = actions[i][key];
-						}else if(key.search(Constants.actionReturnValue) != -1){
-							actionReturnValueCIF = actions[i][key];
-						}else if(key.search(Constants.actionColor) != -1){
-							btn.style.backgroundColor = actions[i][key];
-						}
-					}
-					actionParam.set(Constants.actionName,actionNameCIF);
-					actionParam.set(Constants.actionReturnValue,actionReturnValueCIF);
-					if(isTimeOut){
-						map.set(currentToast,actionParam);
-					}else{
-						map.set(btn,actionParam);
-					}
-				}
-			}
-			toastDiv.getElementsByClassName("header_CIF")[len-1].addEventListener("click", function() {
-				childDivs = toastDiv.getElementsByTagName('div');
-				if(childDivs != null){
-					for( i=0; i< childDivs.length; i++ ){
-						let childDiv = childDivs[i];
-						if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
-							childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:none;');
-							childDiv.getElementsByClassName("headerTimerCIF")[0].setAttribute('style', 'display:block;');
-						}
-						if(childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0] != null){
-							childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:none;');
-						}
-					}
-					this.parentElement.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
-					this.parentElement.getElementsByClassName("headerTimerCIF")[0].style.display = "none";
-					this.parentElement.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:block;');
-					if(this.parentElement.getElementsByClassName("timeOutCIF")[0] == null || this.parentElement.getElementsByClassName("timeOutCIF")[0] == "undefined"){
-						this.parentElement.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:none;');
-					}
-				}
-			});
-		}
-		var childDivs = toastDiv.getElementsByTagName('div');
-		if(childDivs != null){
-			let countBodyDisp = 0;
-			let countNotificationTypeDisp = 0;
-			for( i=0; i< childDivs.length; i++ ){
-				let childDiv = childDivs[i];
-				if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
-					if(countBodyDisp == 0){
-						childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
-						childDiv.getElementsByClassName("headerTimerCIF")[0].setAttribute('style', 'display:none;');
-					}else{
-						childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:none;');
-						childDiv.getElementsByClassName("headerTimerCIF")[0].setAttribute('style', 'display:block;');
-					}
-					countBodyDisp++;
-				}
-				if(childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0] != null){
-					if(countNotificationTypeDisp == 0){
-						if(isTimeOut == true){
-							childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:block;');
-						}
-					}else{
-						childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:none;');
-					}
-					countNotificationTypeDisp++;
-				}
-			}
-			for( i=0; i< childDivs.length; i++ ){
-				let childDiv = childDivs[i];
-				if(childDiv.getElementsByClassName("headerTimerCIF")[0] != null){
-					childDiv.getElementsByClassName("headerTimerCIF")[0].setAttribute('style', 'display:none;');
-					break;
-				}
-			}
-		}
-		return map;
-	}
+	let maxNotificationCount = 10;
+	let queuedNotificationExpirtyTime = 30000;
+	var displayedNotificationTimer: any;
+	var interval: any;
 
-	/**
-	 * Method to construct soft toast popup widget
-	 *
-	 * @param contains header,body of the popup
-	 *
-	*/
-	export function renderSoftNotification(header: any, body: any, notificationType: string): Map<string,any>{
-		let map = new Map();
-		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
-		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("softToastDiv");
-		toastDiv.setAttribute("role","alert");
-		var childDivs = toastDiv.getElementsByTagName('div');
-		let i = 0;
-		if(childDivs != null){
-			for( i=0; i< childDivs.length; i++ ){
-				let childDiv = childDivs[i];
-				if(childDiv != null){
-					childDiv.setAttribute('style','display:none;');
-				}
-			}
-		}
-		toastDiv.insertAdjacentHTML('afterbegin', '<div tabindex="0" id="CIFSoftToast" class="CIFSoftNotificationToast"><div id="header_SoftNotification_CIF" class="headerSoftNotification_CIF"><div style="height:14px"></div></div><div id="bodyDivSoftToastCIF" class="bodyDivSoftToast_CIF"></div></div>');
-		//Constructing header
-		let panelWidth = "100%";
-		let chatWindowHeader = widgetIFrame.contentWindow.document.getElementById("header_SoftNotification_CIF");
-		var span = document.createElement("span");
-		chatWindowHeader.appendChild(span);
-		chatWindowHeader.getElementsByTagName("span")[0].classList.add("chatWindowHeaderSpan_CIF");
-		widgetIFrame.contentWindow.document.getElementById("CIFSoftToast").style.width = panelWidth;//panelWidth+"px";
-		if(notificationType.search(Constants.SMS) != -1){
-			chatWindowHeader.getElementsByTagName("span")[0].classList.add("FontIcons_smsWindowHeaderSpan_CIF");
-		}else if(notificationType.search(Constants.Chat) != -1){
-			chatWindowHeader.getElementsByTagName("span")[0].classList.add("FontIcons_chatWindowHeaderSpan_CIF");
-		}else if(notificationType.search(Constants.Informational) != -1){
-			chatWindowHeader.getElementsByTagName("span")[0].classList.add("FontIcons_linkToConversationSuccessWindowHeaderSpan_CIF");
-		}else if(notificationType.search(Constants.Failure) != -1){
-			chatWindowHeader.getElementsByTagName("span")[0].classList.add("FontIcons_linkToConversationFailWindowHeaderSpan_CIF");
-		}
-		var label = document.createElement("label");
-		chatWindowHeader.appendChild(label);
-		label.classList.add("chatWindowHeaderLabel_CIF");
-		label.innerText = header[0];
-		label.setAttribute("aria-label", header[0]);
-		//label.style.width = panelWidth+"px";
-		span = document.createElement("span");
-		span.classList.add("closeSoftNotification_CIF");
-		span.classList.add("FontIcons-closeSoftNotification_CIF");
-		span.setAttribute("tabindex", "0");
-		span.setAttribute("aria-label", "Close");
-		span.setAttribute("role", "button");
-		chatWindowHeader.appendChild(span);
-		chatWindowHeader.getElementsByTagName("span")[1].id = "closeSoftNotificationCIF";
-		var div = document.createElement("div");
-		div.classList.add("chatWindowHeaderDiv_CIF");
-		chatWindowHeader.appendChild(div);
-		//Constructing body
-		if(body != null && body != "undefined"){
-			let notificationBody = widgetIFrame.contentWindow.document.getElementById("bodyDivSoftToastCIF");
-			if(typeof body == "string"){
-				div = document.createElement("div");
-				div.classList.add("chatWindowHeaderDiv_CIF");
-				notificationBody.appendChild(div);
-				var label1 = document.createElement("label");
-																									 
-				notificationBody.appendChild(label1);
-				label1.classList.add("notificationBodyCIF");
-				label1.innerText = body;
-				label1.setAttribute("aria-label", body);
-				div = document.createElement("div");
-				div.classList.add("chatWindowHeaderDiv_CIF");
-				notificationBody.appendChild(div);
-			}else{
-				div = document.createElement("div");
-				div.classList.add("chatWindowHeaderDiv_CIF");
-				notificationBody.appendChild(div);
-				for(i = 0; i < body.length; i++){
-					for (let key in body[i]) {
-																									   
-						/*var label1 = document.createElement("label");
-						notificationBody.appendChild(label1);
-						label1.classList.add("notificationBodyLabel1_CIF");
-						var label2 = document.createElement("label");
-						notificationBody.appendChild(label2);
-						label2.classList.add("notificationBodyLabel2_CIF");
-						label1.innerText = key;
-						label1.setAttribute("aria-label", key);
-						label2.innerText = body[i][key];
-						label2.setAttribute("aria-label", body[i][key]);
-						label1.style.width = "30%";//(panelWidth * 0.3)+"px";
-						label2.style.width = "calc(70% - 30px)";//((panelWidth * 0.7) - 20)+"px";
-						div = document.createElement("div");
-						div.classList.add("chatWindowHeaderDiv_CIF");
-						notificationBody.appendChild(div);*/
 
-						div = document.createElement("div");
-						div.classList.add("chatWindowHeaderDiv_CIF");
-						notificationBody.appendChild(div);
-						var label1 = document.createElement("label");
-																									 
-						notificationBody.appendChild(label1);
-						label1.classList.add("notificationBodyCIF");
-						label1.innerText = body[i][key];
-						label1.setAttribute("aria-label", body[i][key]);
-						div = document.createElement("div");
-						div.classList.add("chatWindowHeaderDiv_CIF");
-						notificationBody.appendChild(div);
-					}
-				}
-			}
-		}
-		if(childDivs!=null && childDivs.length > 0 && childDivs[0]!= null){
-			childDivs[0].focus();
-			childDivs[0].setAttribute("aria-label", header[0]);
-			childDivs[0].setAttribute("role","presentation");
-		}
-		map.set(widgetIFrame.contentWindow.document.getElementById("closeSoftNotificationCIF"),toastDiv);
-		map.set(widgetIFrame.contentWindow.document.getElementById("CIFSoftToast"),toastDiv);
-		return map;
+	function getKeyFromObject(objectArg: any): string {
+		return Object.keys(objectArg[0])[0];
 	}
 
 	export function getNotificationTitle(header: any, eventType: any, notificationType: any): string {
 		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
-			if (!isNullOrUndefined(header[0]["Chat request from"]) && header[0]["Chat request from"].length > 0) {
-				return "Chat request from " + header[0]["Chat request from"][0];
-			}
-			else if (!isNullOrUndefined(header[0]["SMS request from"]) && header[0]["SMS request from"].length > 0) {
-				return "SMS request from " + header[0]["SMS request from"][0];
-			}
-			else if (!isNullOrUndefined(header[0]["Transfer request for"]) && header[0]["Transfer request for"].length > 0) {
-				return "Transfer request for " + header[0]["Transfer request for"][0];
-			}
-			else if (!isNullOrUndefined(header[0]["Consult request for"]) && header[0]["Consult request for"].length > 0) {
-				return "Consult request for " + header[0]["Consult request for"][0];
+			let key = getKeyFromObject(header);
+			if (!isNullOrUndefined(key)) {
+				return key + " " + header[0][key][0];
 			}
 		}
 		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
@@ -470,14 +60,17 @@ namespace Microsoft.CIFramework.Internal {
 
 	export function getNotificationDetails(body: any, eventType: any, notificationType: any, waitTime: number): any {
 
+		var key: string = "";
 		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+			key = getKeyFromObject(body);
 			var details: any = {};
-			details[Utility.getResourceString("NOTIFICATION_DETAIL_COMMENT_TEXT")] = body[0]["Comment"];
-			details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = waitTime.toString() + " sec";
+			details[Utility.getResourceString("NOTIFICATION_DETAIL_COMMENT_TEXT")] = body[0][key];
+			details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = waitTime.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
 			return details;
 		}
 		else if (eventType.search(Constants.Informational) != -1 && isInformationChatSoftNotification(notificationType)) {
-			return body[0]["Comment"];
+			key = getKeyFromObject(body);
+			return body[0][key];
 		}
 		else if (eventType.search(Constants.Informational) != -1 && (isInformationalNotification(notificationType) || isFailureInformationNotification(notificationType))) {
 			return body;
@@ -521,7 +114,7 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	export function launchZFPNotification(header: any, body: any, notificationType: any, eventType: any, actions: any, waitTime: number): Promise<any> {
-		let closeId = "";
+	
 		let accept = false;
 		let decline = false;
 		let i = 0;
@@ -542,33 +135,13 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		return new Promise(function (resolve, reject) {
-			let notificationExpiryTime = -1;
-			if (notificationType[0].search(MessageType.softNotification) != -1) {
-				if (waitTime == -1) {
-					notificationExpiryTime = 20000;
-				}
-				else {
-					notificationExpiryTime = waitTime;
-				}
-			}
-			else if (waitTime != -1) {
-				notificationExpiryTime = waitTime;
-			}
-			if (notificationExpiryTime != -1 && eventType.search(Constants.Informational) == -1) { // informational notifications are handled by toasts
-				setTimeout(function () {
-					var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Timeout));
-					Xrm.Internal.clearPopupNotification(closeId);
-					closeId = "";
-					return resolve(mapReturn);
-				}, notificationExpiryTime);
-			}
-
-			waitTime = waitTime / 1000;
+			
+			let waitTimeSeconds = waitTime / 1000;
 			let title = getNotificationTitle(header, eventType, notificationType);
-			let details = getNotificationDetails(body, eventType, notificationType, waitTime);
+			let details = getNotificationDetails(body, eventType, notificationType, waitTimeSeconds);
 			let type = 0;
 			let image = getImageUrl(eventType, notificationType);
-			 
+
 			if (eventType.search(Constants.Informational) != -1 && isInformationalNotification(notificationType)) {
 				showGlobalToastNotification(Mscrm.GlobalNotificationLevel.success, title, details);
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
@@ -591,16 +164,26 @@ namespace Microsoft.CIFramework.Internal {
 			else {
 				type = 1;
 			}
+
+			//accept handler
 			let onAcceptHandler = function () {
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
 				Xrm.Internal.clearPopupNotification(closeId);
 				closeId = "";
+				clearTimeout(displayedNotificationTimer);
+				console.log("[NotifyEvent] Notification accepted. Timer cleared");
+				showPopUpNotification();
 				return resolve(mapReturn);
 			}.bind(this);
+
+			//decline handler
 			let onDeclineHandler = function () {
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
 				Xrm.Internal.clearPopupNotification(closeId);
 				closeId = "";
+				clearTimeout(displayedNotificationTimer);
+				console.log("[NotifyEvent] Notification rejected.Timer cleared");
+				showPopUpNotification();
 				return resolve(mapReturn);
 			}.bind(this);
 			let acceptAction = {
@@ -608,18 +191,115 @@ namespace Microsoft.CIFramework.Internal {
 				eventHandler: onAcceptHandler
 			};
 			let declineAction = {
-				actionLabel: "Reject",
+				actionLabel: Utility.getResourceString("REJECT_BUTTON_TEXT"),
 				eventHandler: onDeclineHandler
 			};
-			let popupnotification = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
-			Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => { closeId = id; console.log(id) }).catch((e: any) => {
-				console.log(e);
+			// set notification expiry time
+			let notificationExpiryTime = -1;
+			if (notificationType[0].search(MessageType.softNotification) != -1) {
+				if (waitTime == -1) {
+					notificationExpiryTime = 20000;
+				}
+				else {
+					notificationExpiryTime = waitTime;
+				}
+			}
+			else if (waitTime != -1) {
+				notificationExpiryTime = waitTime;
+			}
+
+			// timeout reject function
+			let rejectAfterTimeout = function () {
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
+				Xrm.Internal.clearPopupNotification(closeId);
+				closeId = "";
+				clearTimeout(displayedNotificationTimer);
+				console.log("[NotifyEvent] Notification Timed out. Rejecting...");
+				showPopUpNotification();
 				return resolve(mapReturn);
-			})
+			};
+
+			//  reject new notification if queue has 10 items.
+			if (queue.count >= maxNotificationCount) {
+				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
+				console.log("[NotifyEvent] Queue has " + queue.count + " items. Rejecting new Incoming...");
+				return resolve(mapReturn);
+			}
+
+			let rejectAfterQueueLimitExceeded = function () {
+				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
+				console.log("[NotifyEvent] Notification exceeded time limit in queue. Rejecting...");
+				return resolve(mapReturn);
+			};
+
+			var popUpNotificationItem: XrmClientApi.IPopupNotificationItem = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
+
+			var notificationItem: INotificationItem = {
+				popUpNotificationItem: popUpNotificationItem,
+				notificationCreatedAt: Date.now(),
+				notificationExpiryTime: notificationExpiryTime,
+				queueTimeOutMethod: rejectAfterQueueLimitExceeded,
+				timeOutMethod: rejectAfterTimeout
+			};
+			
+			queue.enqueue(notificationItem);
+			console.log("[NotifyEvent] Queued new notification. queue length - " + queue.count);
+			
+			// start interval check to see if notification in queue has expired, i.e. spent 30 secs in queue. Remove such notifications.
+			if (!interval) {
+				console.log("[NotifyEvent] starting interval to check for expired notifications in queue");
+				interval = setInterval(function () {
+					removeExpiredNotificationsFromQueue();
+				}, 1000);
+			}
+
+			if (closeId == "") {
+				showPopUpNotification();
+			}
 		});
 	}
 
+	function removeExpiredNotificationsFromQueue(): void {
+		if (queue.count < 1) {
+			return;
+		}
+		for (let i = 0; i < queue.count; i++) {
+			if (Date.now() - queuedNotificationExpirtyTime > queue.getItemAtIndex(i).notificationCreatedAt) {
+				console.log("[NotifyEvent] removing item at index " + i + ". Rejecting Notification...");
+				queue.getItemAtIndex(i).queueTimeOutMethod;
+				queue.removeItem(i);
+			}
+		}
+	}
+
+	function showPopUpNotification(): void {
+		
+		let show = function () {
+			if (queue.count > 0) {
+				let popUpItem = queue.dequeue();
+				console.log("[NotifyEvent] dequeued notification. queue length - " + queue.count);
+				let popupnotification = popUpItem.popUpNotificationItem;
+				let createdAtTime = popUpItem.notificationCreatedAt;
+				let notificationExpiryTime = popUpItem.notificationExpiryTime;
+				var spentInQueueTime = Date.now() - createdAtTime;
+				console.log("[NotifyEvent] - The notification spent " + spentInQueueTime / 1000 + " seconds in queue");
+				var leftTime = notificationExpiryTime - spentInQueueTime;
+
+				if (leftTime > 0) {
+					let leftTimeSec = Math.floor(leftTime / 1000);
+					popupnotification.details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = leftTimeSec.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
+				}
+
+				Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => {
+					closeId = id; console.log(id);
+					displayedNotificationTimer = setTimeout(popUpItem.timeOutMethod, leftTime);
+				}).catch((e: any) => {
+					console.log("[NotifyEvent] Error creating new notification: " + e);
+				})
+			}
+		}
+		setTimeout(show, 2000); // show the next notification after a delay of 2 seconds, so that user does not confuse it with the previous notifcation
+	}
 
 	/**
 	 * API to invoke toast popup widget
@@ -628,9 +308,6 @@ namespace Microsoft.CIFramework.Internal {
 	 *
 	*/
 	export function notifyEventClient(notificationUX: Map<string,Map<string,any>>): Promise<any>{
-		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
-		let toastDiv =  widgetIFrame.contentWindow.document.getElementById("toastDiv");
-		toastDiv.setAttribute("role","alert");
 		let i = 0;
 		let header: any,body: any,actions: any;
 		let eventType: any;
@@ -676,156 +353,6 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-
-		if (isConsoleAppInternal() == true) {
-			return launchZFPNotification(header, body, notificationType, eventType, actions, waitTime);
-		}
-
-		if (notificationType[0].search(MessageType.softNotification) == -1) { //For Soft notification
-			noOfNotifications++;
-			if (noOfNotifications > 5) {
-				toastDiv.removeChild(toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length - 1]);
-				noOfNotifications--;
-			}
-		}
-
-		let map = new Map();
-		map = renderEventNotification(header,body,actions,notificationType,eventType);
-		state.client.setPanelMode("setPanelMode", Constants.sidePanelExpandedState); //For legacy sliver based implementation, we nee to expand the panel first
-		return new Promise(function (resolve,reject) {
-			if(notificationType[0].search(MessageType.softNotification) != -1){
-				for(let [key,value] of map){
-					if(key == widgetIFrame.contentWindow.document.getElementById("CIFSoftToast")){
-						key.addEventListener("click", function clickListener() {
-							key.removeEventListener("click", clickListener);
-							key.parentElement.removeChild(key);
-							var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Accept));
-							return resolve(mapReturn);
-						});
-					}else{
-						key.addEventListener("click", function clickListener() {
-							key.removeEventListener("click", clickListener);
-							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-							var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
-							return resolve(mapReturn);
-						});
-						key.addEventListener("keydown", function clickListener(event: any) {
-							if (event.keyCode == 32 || event.keyCode == 13) {
-								key.removeEventListener("keydown", clickListener);
-								key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-								var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Reject));
-								return resolve(mapReturn);
-							}
-						});
-						setTimeout(function(){
-							if(key.parentElement.parentElement.parentElement != null){
-								key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-								var mapReturn = new Map().set(Constants.value, new Map().set(Constants.actionName, Constants.Timeout));
-								return resolve(mapReturn);
-							}
-						}, 20000);
-					}
-				}
-			}else{
-				len = toastDiv.getElementsByClassName("CIFToastDiv").length;
-				if(waitTime == -1){
-					(toastDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]).setAttribute('style', 'display:none;');
-				}
-				for(let [key,value] of map){
-					if(key == toastDiv.getElementsByClassName("CIFToastDiv")[toastDiv.getElementsByClassName("CIFToastDiv").length-1]){
-						if(waitTime != -1){
-							var counter = waitTime/1000;
-							key.getElementsByClassName("broadCastLabel1")[0].innerHTML = counter+"";
-							key.getElementsByClassName("headerTimerCIF")[0].innerHTML = counter+" sec ";
-							var interval = setInterval(function() {
-								var counterDecr = +(key.getElementsByClassName("broadCastLabel1")[0].innerHTML);
-								counterDecr--;
-								key.getElementsByClassName("broadCastLabel1")[0].innerHTML = counterDecr+"";
-								key.getElementsByClassName("headerTimerCIF")[0].innerHTML = counterDecr+" sec ";
-								if (counterDecr < 0) {
-									clearInterval(interval);
-									if(key != null && key.parentElement != null){
-										key.parentElement.removeChild(key);
-										noOfNotifications--;
-										var childDivs = toastDiv.getElementsByTagName('div');
-										if(childDivs != null){
-											for( i=0; i< childDivs.length; i++ ){
-												let childDiv = childDivs[i];
-												if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
-													childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:none;');
-												}
-												if(childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0] != null){
-													childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:none;');
-												}
-											}
-											let isBodyDisp = 0;
-											let isNotificationTypeDisp = 0;
-											for( i=0; i< childDivs.length; i++ ){
-												let childDiv = childDivs[i];
-												if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
-													childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
-													childDiv.getElementsByClassName("headerTimerCIF")[0].setAttribute('style', 'display:none;');
-													isBodyDisp = 1;
-												}
-												if(childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0] != null){
-													childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:block;');
-													isNotificationTypeDisp = 1;
-												}
-												if(isBodyDisp == 1 && isNotificationTypeDisp == 1){
-													break;
-												}
-											}
-										}
-									}
-									let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
-									let x = 0;
-									for(x = 1; x <= len; x++){
-										toastDiv.getElementsByClassName("CIFToastDiv")[x-1].id = "CIFToastDiv_"+x;			
-									}
-									var mapReturn = new Map().set(Constants.value,value);
-									return resolve(mapReturn);
-								}
-							}, 1000);
-						}
-					}else{
-						key.addEventListener("click", function clickListener() {
-							key.removeEventListener("click", clickListener);
-							key.parentElement.parentElement.style.display = "none";
-							key.parentElement.parentElement.parentElement.removeChild(key.parentElement.parentElement);
-							noOfNotifications--;
-							var childDivs = toastDiv.getElementsByTagName('div');
-							if(childDivs != null){
-								let isBodyDisp = 0;
-								let isNotificationTypeDisp = 0;
-								for( i=0; i< childDivs.length; i++ ){
-									let childDiv = childDivs[i];
-									if(childDiv.getElementsByClassName("bodyDivCIF")[0] != null){
-										childDiv.getElementsByClassName("bodyDivCIF")[0].setAttribute('style', 'display:block;');
-										childDiv.getElementsByClassName("headerTimerCIF")[0].setAttribute('style', 'display:none;');
-										isBodyDisp = 1;
-									}
-									if(childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0] != null){
-										if(waitTime != -1){
-											childDiv.getElementsByClassName("header_NotificationType_CIF header_NotificationType_CIF_Broadcast")[0].setAttribute('style', 'display:block;');
-										}
-										isNotificationTypeDisp = 1;
-									}
-									if(isBodyDisp == 1 && isNotificationTypeDisp == 1){
-										break;
-									}
-								}
-							}
-							let len = toastDiv.getElementsByClassName("CIFToastDiv").length;
-							let x = 0;
-							for(x = 1; x <= len; x++){
-								toastDiv.getElementsByClassName("CIFToastDiv")[x-1].id = "CIFToastDiv_"+x;
-							}
-							var mapReturn = new Map().set(Constants.value,value);
-							return resolve(mapReturn);
-						});
-					}
-				}
-			}
-		}); 
+			return launchZFPNotification(header, body, notificationType, eventType, actions, waitTime);		
 	}
 }

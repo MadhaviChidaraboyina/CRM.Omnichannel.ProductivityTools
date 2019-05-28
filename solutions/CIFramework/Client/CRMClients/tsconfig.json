@@ -12,6 +12,7 @@
 		"Templatesutility.ts",
 		"SessionTemplatesInfra.ts",
 		"NotificationTemplatesInfra.ts",
+		"ConsoleAppSessionManager.ts",
 		"SessionManager.ts",
 		"SessionPanel.ts",
 		"State.ts",
@@ -21,7 +22,8 @@
 		"NotificationInfra.ts",
 		"aria-webjs-sdk-1.8.3.js",
 		"PresenceControl.ts",
-		"NotesInfra.ts"
+		"NotesInfra.ts",
+		"../Queue.ts"
 	],
 	"compilerOptions": {
 		"sourceMap": true,

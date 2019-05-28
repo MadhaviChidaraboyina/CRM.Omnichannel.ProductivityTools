@@ -134,6 +134,15 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to secs.
+        /// </summary>
+        internal static string NOTIFICATION_WAIT_TIME_SECONDS {
+            get {
+                return ResourceManager.GetString("NOTIFICATION_WAIT_TIME_SECONDS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open Item.
         /// </summary>
         internal static string OPEN_ITEM_BUTTON_TEXT {
@@ -247,6 +256,15 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         internal static string PRESENCE_UNKNOWN_TOOLTIP {
             get {
                 return ResourceManager.GetString("PRESENCE_UNKNOWN_TOOLTIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reject.
+        /// </summary>
+        internal static string REJECT_BUTTON_TEXT {
+            get {
+                return ResourceManager.GetString("REJECT_BUTTON_TEXT", resourceCulture);
             }
         }
         
