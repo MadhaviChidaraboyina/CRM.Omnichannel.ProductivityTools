@@ -203,11 +203,14 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> => {
-			const options: XrmClientApi.NewPanelOptions = {
+			const options: any = {   //TODO: To be strong-typed to XrmClientApi.NewPanelOptions once the updated .d.ts with correct type definition is published by platform
 				position: isConsoleAppInternal() ? Constants.left : Constants.right,
 				defaultCollapsedBehavior: false,
-				url: "/webresources/widgets_container.html"
+				url: "/webresources/widgets_container.html",				
 			};
+			if (isConsoleAppInternal()) {
+				options.state = Constants.sidePanelHiddenState;
+			}
 			return new Promise<Map<string, boolean | string>>((resolve, reject) => {
 				return Xrm.Panel.loadPanel(options).then(function () {
 					Xrm.Panel.addOnSizeChange(client.sizeChanged);

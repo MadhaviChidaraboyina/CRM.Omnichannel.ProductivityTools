@@ -116,13 +116,13 @@ namespace Microsoft.CIFramework.Utility {
 			var queryStringArray = queryString.substr(1).split("&");
 			queryStringArray.forEach((query) => {
 				var queryPair = query.split("=");
-				var queryKey = decodeURIComponent(queryPair[0]);
-				var queryValue = decodeURIComponent(queryPair.length > 1 ? queryPair[1] : "");
+				var queryKey = decodeURIComponent(queryPair.shift());
+				var queryValue = decodeURIComponent(queryPair.join("="));
 				params[queryKey] = queryValue;
 			});
 		}
 		if (params.hasOwnProperty(parameterName))
-			return params.parameterName;
+			return params[parameterName];
 		else
 			return "";
 	}

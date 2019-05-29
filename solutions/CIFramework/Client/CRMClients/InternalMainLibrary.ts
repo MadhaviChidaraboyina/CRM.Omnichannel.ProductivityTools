@@ -99,8 +99,22 @@ namespace Microsoft.CIFramework.Internal {
 		if (!state.client.checkCIFCapability()) {
 			return false;
 		}
-
-		navigationType = navigationTypeValue;
+		var flags = Utility.extractParameter(window.top.location.search, "flags");
+		if (flags) {
+			let lflags = flags.toLowerCase();
+			if (lflags.includes("navigationtype=multisession")) {
+				navigationType = SessionType.MultiSession;
+			}
+			else if (lflags.includes("navigationtype=singlesession")) {
+				navigationType = SessionType.SingleSession;
+			}
+			else {
+				navigationType = navigationTypeValue;
+			}
+		}
+		else {
+			navigationType = navigationTypeValue;
+		}
 		state.sessionManager = GetSessionManager(clientType);
 		presence = GetPresenceManager(clientType);
 
