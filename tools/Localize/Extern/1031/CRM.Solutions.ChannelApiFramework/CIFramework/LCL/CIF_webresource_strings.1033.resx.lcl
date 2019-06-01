@@ -24,200 +24,386 @@
       <Item ItemId=";ACCEPT_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Accept]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Akzeptieren]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000653Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for notification button.]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";ADD_NOTE_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Add note]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Notiz hinzufügen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for adding notes]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";AGENT_IMAGE_ALT_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent Image]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Agentenbild]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Alt text for Agent Image.]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";CANCEL_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cancel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Abbrechen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Cancel Button Text]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";CLOSE_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Schließen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for close button.]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";NOTES_TOOLTIP_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Take Notes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Notizen machen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for assisting user for notes.]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";NOTIFICATION_DETAIL_COMMENT_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Comment]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kommentar]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for notification comment detail]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";NOTIFICATION_DETAIL_WAIT_TIME_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Wait time]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Wartezeit]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for notification waittime detail]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";NOTIFICATION_WAIT_TIME_SECONDS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[secs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sek.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Seconds unit to denote notification wait time]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";OPEN_ITEM_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Open Item]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Element öffnen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for launching work item assigned.]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_AVAILABLE_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Available]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Verfügbar]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote available presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_AVAILABLE_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Available\n\nLaunch presence dialog]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Verfügbar\n\nDialog zur Anwesenheit aufrufen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Tooltip for available presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_AWAY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Away]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Abwesend]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote away presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_AWAY_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Away\n\nLaunch presence dialog]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Abwesend\n\nDialog zur Anwesenheit aufrufen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000782Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Tooltip for away presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_BUSY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Busy]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Beschäftigt]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000772Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote busy presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_BUSY_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Busy\n\nLaunch presence dialog]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Beschäftigt\n\nDialog zur Anwesenheit aufrufen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000772Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Tooltip for busy presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Presence]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Anwesenheit]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000772Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for presence button]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_DO_NOT_DISTURB_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Do Not Disturb]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nicht stören]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000772Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote do not disturb presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_DO_NOT_DISTURB_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Do Not Disturb\n\nLaunch presence dialog]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nicht stören\n\nDialog zur Anwesenheit aufrufen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000772Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Tooltip for do not disturb presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_OFFLINE_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Offline]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Offline]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000772Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote offline presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_OFFLINE_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Offline\n\nLaunch presence dialog]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Offline\n\nDialog zur Anwesenheit aufrufen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000772Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Tooltip for offline presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";PRESENCE_UNKNOWN_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unknown\n\nLaunch presence dialog]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Unbekannt\n\nDialog zur Anwesenheit aufrufen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000772Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Tooltip for unknown presence]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";REJECT_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reject]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ablehnen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000772Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Reject Button Text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
       <Item ItemId=";START_NOTES_TOOLTIP_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Start adding notes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mit Notieren beginnen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000772Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for assisting user for notes.]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
       </Item>
     </Item>
   </Item>

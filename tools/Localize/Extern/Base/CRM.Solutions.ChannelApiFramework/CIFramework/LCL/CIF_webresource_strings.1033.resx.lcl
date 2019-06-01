@@ -84,6 +84,15 @@
           <Cmt Name="Dev"><![CDATA[Text for notification waittime detail]]></Cmt>
         </Cmts>
       </Item>
+      <Item ItemId=";NOTIFICATION_WAIT_TIME_SECONDS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[secs]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Seconds unit to denote notification wait time]]></Cmt>
+        </Cmts>
+      </Item>
       <Item ItemId=";OPEN_ITEM_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Open Item]]></Val>
@@ -199,6 +208,15 @@
         <Disp Icon="Str" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Tooltip for unknown presence]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";REJECT_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reject]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Reject Button Text]]></Cmt>
         </Cmts>
       </Item>
       <Item ItemId=";START_NOTES_TOOLTIP_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
