@@ -24,6 +24,7 @@ namespace Microsoft.CIFramework.Internal {
 	let queuedNotificationExpirtyTime = 30000;
 	var displayedNotificationTimer: any;
 	var interval: any;
+	let displayDelayTimeMs = 2000;
 
 
 	function getKeyFromObject(objectArg: any): string {
@@ -58,14 +59,16 @@ namespace Microsoft.CIFramework.Internal {
 		return (notificationType.length == 2 && notificationType[1].search(Constants.Failure) != -1);
 	}
 
-	export function getNotificationDetails(body: any, eventType: any, notificationType: any, waitTime: number): any {
+	export function getNotificationDetails(body: any, eventType: any, notificationType: any, waitTime?: number): any {
 
 		var key: string = "";
 		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
 			key = getKeyFromObject(body);
 			var details: any = {};
 			details[Utility.getResourceString("NOTIFICATION_DETAIL_COMMENT_TEXT")] = body[0][key];
-			details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = waitTime.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
+			if (!IsPlatformNotificationTimeoutInfra) {
+				details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = waitTime.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
+			}
 			return details;
 		}
 		else if (eventType.search(Constants.Informational) != -1 && isInformationChatSoftNotification(notificationType)) {
@@ -135,7 +138,6 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		return new Promise(function (resolve, reject) {
-			
 			let waitTimeSeconds = waitTime / 1000;
 			let title = getNotificationTitle(header, eventType, notificationType);
 			let details = getNotificationDetails(body, eventType, notificationType, waitTimeSeconds);
@@ -170,7 +172,9 @@ namespace Microsoft.CIFramework.Internal {
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
 				Xrm.Internal.clearPopupNotification(closeId);
 				closeId = "";
-				clearTimeout(displayedNotificationTimer);
+				if (!IsPlatformNotificationTimeoutInfra) {
+					clearTimeout(displayedNotificationTimer);
+				}
 				console.log("[NotifyEvent] Notification accepted. Timer cleared");
 				showPopUpNotification();
 				return resolve(mapReturn);
@@ -181,15 +185,35 @@ namespace Microsoft.CIFramework.Internal {
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
 				Xrm.Internal.clearPopupNotification(closeId);
 				closeId = "";
-				clearTimeout(displayedNotificationTimer);
+				if (!IsPlatformNotificationTimeoutInfra) {
+					clearTimeout(displayedNotificationTimer);
+				}
 				console.log("[NotifyEvent] Notification rejected.Timer cleared");
 				showPopUpNotification();
 				return resolve(mapReturn);
 			}.bind(this);
+
+				//Timeout handler
+				let onTimeoutHandler = function () {
+					var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
+					Xrm.Internal.clearPopupNotification(closeId);
+					closeId = "";
+					console.log("[NotifyEvent] Notification rejected due to timeout");
+					showPopUpNotification();
+					return resolve(mapReturn);
+				}.bind(this);
+
+				let timeoutAction = {
+					actionLabel: Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT"),
+					eventHandler: onTimeoutHandler,
+					timeout: waitTime
+				};
+
 			let acceptAction = {
 				actionLabel: getAcceptButtonText(eventType, notificationType),
 				eventHandler: onAcceptHandler
 			};
+
 			let declineAction = {
 				actionLabel: Utility.getResourceString("REJECT_BUTTON_TEXT"),
 				eventHandler: onDeclineHandler
@@ -232,7 +256,8 @@ namespace Microsoft.CIFramework.Internal {
 				return resolve(mapReturn);
 			};
 
-			var popUpNotificationItem: XrmClientApi.IPopupNotificationItem = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
+			//TO-DO - strongly type after updates Xrm.ClientApi.d.ts is available
+			var popUpNotificationItem: IPopUpNotificationItem = { title: title, acceptAction: acceptAction, declineAction: declineAction, timeoutAction: timeoutAction, details: details, type: type, imageUrl: image };
 
 			var notificationItem: INotificationItem = {
 				popUpNotificationItem: popUpNotificationItem,
@@ -286,19 +311,26 @@ namespace Microsoft.CIFramework.Internal {
 				var leftTime = notificationExpiryTime - spentInQueueTime;
 
 				if (leftTime > 0) {
-					let leftTimeSec = Math.floor(leftTime / 1000);
-					popupnotification.details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = leftTimeSec.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
+					if (IsPlatformNotificationTimeoutInfra) {
+						popupnotification.timeoutAction["timeout"] = leftTime + displayDelayTimeMs; //adding 2 secs since consecutive notifications are delayed by 2 secs to break continuity.
+					}
+					else {
+						let leftTimeSec = Math.ceil((leftTime + displayDelayTimeMs)/ 1000); //adding 2 secs since consecutive notifications are delayed by 2 secs to break continuity.
+						popupnotification.details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = leftTimeSec.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
+					}
 				}
 
 				Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => {
 					closeId = id; console.log(id);
-					displayedNotificationTimer = setTimeout(popUpItem.timeOutMethod, leftTime);
+					if (!IsPlatformNotificationTimeoutInfra) {
+						displayedNotificationTimer = setTimeout(popUpItem.timeOutMethod, leftTime);
+					}
 				}).catch((e: any) => {
 					console.log("[NotifyEvent] Error creating new notification: " + e);
 				})
 			}
 		}
-		setTimeout(show, 2000); // show the next notification after a delay of 2 seconds, so that user does not confuse it with the previous notifcation
+		setTimeout(show, displayDelayTimeMs); // show the next notification after a delay of 2 seconds, so that user does not confuse it with the previous notifcation
 	}
 
 	/**

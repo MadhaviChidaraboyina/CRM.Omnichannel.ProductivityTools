@@ -212,4 +212,28 @@ namespace Microsoft.CIFramework.Utility {
 		// Change page title back on focus
 		iFrameObject.contentWindow.addEventListener("focus", restoreTitleFunction);
 	}
+
+	/**
+	 * Utility to compare crm versions. Returns true if version1 >= version2, false if version1 < version2
+	 */
+	export function compareVersion(version1: string, version2: string): boolean{
+		var version1parts = version1.split('.');
+		var version2parts = version2.split('.');
+
+		if (version1parts.length != version2parts.length) {
+			return false;
+		}
+
+		for (let i = 0; i < version1parts.length; ++i) {
+			let v1 = parseInt(version1parts[i], 10);
+			let v2 = parseInt(version2parts[i], 10);
+			if (v1 > v2) {
+				return true;
+			}
+			else if (v1 < v2) {
+				return false;
+			}
+		}
+		return true;
+	}
 }

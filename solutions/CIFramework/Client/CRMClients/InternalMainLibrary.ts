@@ -77,6 +77,8 @@ namespace Microsoft.CIFramework.Internal {
 	cifVersion = "";
 	declare var navigationType: string;
 	navigationType = "";
+	export var crmVersion: string = "";
+	export var IsPlatformNotificationTimeoutInfra: boolean = false;
 
 	/**
 	 * utility func to check whether an object is null or undefined
@@ -121,7 +123,19 @@ namespace Microsoft.CIFramework.Internal {
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		appId = top.location.search.split('appid=')[1].split('&')[0];
 		loadProvider();
+		setNotificationTimeoutVersion();
 		return false;
+	}
+
+	function setNotificationTimeoutVersion() {
+		crmVersion = Xrm.Utility.getGlobalContext().getVersion();
+		if (IsNotificationTimeoutInfraPresent()) {
+			IsPlatformNotificationTimeoutInfra = true;
+		}
+	}
+
+	function IsNotificationTimeoutInfraPresent() {
+		return Utility.compareVersion(crmVersion, "9.1.0000.5911");
 	}
 
 	function loadProvider() {

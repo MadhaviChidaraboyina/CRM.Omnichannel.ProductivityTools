@@ -20,11 +20,21 @@ namespace Microsoft.CIFramework.Internal
 		public static MultiSession = "1";
 	}
 
+	export interface IPopUpNotificationItem {
+		title: string,
+		acceptAction: any,
+		declineAction: any,
+		timeoutAction: any,
+		details: { [key: string]: string },
+		type: any,
+		imageUrl: string;
+	}
+
 	export interface INotificationItem {
-		popUpNotificationItem: XrmClientApi.IPopupNotificationItem,
+		popUpNotificationItem: IPopUpNotificationItem,
 		notificationCreatedAt: number,
 		notificationExpiryTime: number,
-		timeOutMethod: any,
 		queueTimeOutMethod: any;
+		timeOutMethod: any
 	}
 }
