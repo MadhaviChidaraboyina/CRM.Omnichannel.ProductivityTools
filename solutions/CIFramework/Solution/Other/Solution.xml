@@ -109,6 +109,50 @@
 			<RootComponent type="61" schemaName="PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" behavior="0" />
 			<RootComponent type="61" schemaName="OpenDialogLib/msdyn_internal_openDialog_ci_library.js" behavior="0" />
 			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1033.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1025.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1026.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1027.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1028.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1029.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1030.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1031.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1032.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1035.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1036.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1037.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1038.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1040.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1041.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1042.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1043.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1044.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1045.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1046.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1048.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1049.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1050.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1051.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1053.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1054.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1055.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1057.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1058.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1060.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1061.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1062.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1063.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1066.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1069.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1081.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1086.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1087.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1110.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.2052.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.2070.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.3076.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.3082.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.2074.resx" behavior="0" />
+			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.3098.resx" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_Callprovider.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_Defaultprovider.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_CIFIcon.svg" behavior="0" />

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+  <WebResourceId>{be95f1ac-876a-4f76-b55e-aa9e35d51c46}</WebResourceId>
+  <Name>Localization/CIF_webresource_strings.1036.resx</Name>
+  <DisplayName>Localization/CIF_webresource_strings.1036.resx</DisplayName>
+  <Description>This resx file contains strings for CIF.</Description>
+  <LanguageCode>1036</LanguageCode>
+  <WebResourceType>12</WebResourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>0</IsCustomizable>
+  <CanBeDeleted>0</CanBeDeleted>
+  <IsHidden>1</IsHidden>
+  <FileName>/WebResources/Localization/CIF_webresource_strings.1036.resx</FileName>
+</WebResource>
