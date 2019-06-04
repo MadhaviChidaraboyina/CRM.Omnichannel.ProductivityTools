@@ -24,7 +24,7 @@ namespace Microsoft.CIFramework.Internal
 		title: string,
 		acceptAction: any,
 		declineAction: any,
-		timeoutAction: any,
+		timeoutAction?: any,
 		details: { [key: string]: string },
 		type: any,
 		imageUrl: string;

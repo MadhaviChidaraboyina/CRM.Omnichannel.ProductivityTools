@@ -784,36 +784,36 @@ namespace Microsoft.CIFramework.Internal {
 						let awayPresence = presenceButton.getElementsByTagName("img");
 						awayPresence[0].src = "/WebResources/msdyn_Away.svg";
 						awayPresence[0].title = Utility.getResourceString("PRESENCE_AWAY_TEXT");
-						presenceList.title = Utility.getResourceString("PRESENCE_AWAY_TOOLTIP");
+						presenceList.title = Utility.getResourceString("PRESENCE_AWAY_TEXT") + "\n\n" + Utility.getResourceString("LAUNCH_PRESENCE_DIALOG_TOOLTIP");
 						break;
 					case "AVAILABLE":
 						let availablePresence = presenceButton.getElementsByTagName("img");
 						availablePresence[0].src = "/WebResources/msdyn_Available.svg";
 						availablePresence[0].title = Utility.getResourceString("PRESENCE_AVAILABLE_TEXT");
-						presenceList.title = Utility.getResourceString("PRESENCE_AVAILABLE_TOOLTIP");
+						presenceList.title = Utility.getResourceString("PRESENCE_AVAILABLE_TEXT") + "\n\n" + Utility.getResourceString("LAUNCH_PRESENCE_DIALOG_TOOLTIP");
 						break;
 					case "OFFLINE":
 						let offlinePresence = presenceButton.getElementsByTagName("img")
 						offlinePresence[0].src = "/WebResources/msdyn_Offline.svg";
 						offlinePresence[0].title = Utility.getResourceString("PRESENCE_OFFLINE_TEXT");
-						presenceList.title = Utility.getResourceString("PRESENCE_OFFLINE_TOOLTIP");
+						presenceList.title = Utility.getResourceString("PRESENCE_OFFLINE_TEXT") + "\n\n" + Utility.getResourceString("LAUNCH_PRESENCE_DIALOG_TOOLTIP");
 						break;
 					case "BUSY":
 						let busyPresence = presenceButton.getElementsByTagName("img");
 						busyPresence[0].src = "/WebResources/msdyn_BusyIcon.svg";
 						busyPresence[0].title = Utility.getResourceString("PRESENCE_BUSY_TEXT");
-						presenceList.title = Utility.getResourceString("PRESENCE_BUSY_TOOLTIP");
+						presenceList.title = Utility.getResourceString("PRESENCE_BUSY_TEXT") + "\n\n" + Utility.getResourceString("LAUNCH_PRESENCE_DIALOG_TOOLTIP");
 						break;
 					case "BUSY_DO_NOT_DISTURB":
 						let dndPresence = presenceButton.getElementsByTagName("img")
 						dndPresence[0].src = "/WebResources/msdyn_BusyDND.svg";
 						dndPresence[0].title = Utility.getResourceString("PRESENCE_DO_NOT_DISTURB_TEXT");
-						presenceList.title = Utility.getResourceString("PRESENCE_DO_NOT_DISTURB_TOOLTIP");
+						presenceList.title = Utility.getResourceString("PRESENCE_DO_NOT_DISTURB_TEXT") + "\n\n" + Utility.getResourceString("LAUNCH_PRESENCE_DIALOG_TOOLTIP");
 						break;
 					default:
 						let presence = presenceButton.getElementsByTagName("img");
 						presence[0].title = Utility.getResourceString("PRESENCE_BUTTON_TEXT");
-						presenceList.title = Utility.getResourceString("PRESENCE_UNKNOWN_TOOLTIP");
+						presenceList.title = Utility.getResourceString("PRESENCE_UNKOWN_TEXT");
 				}
 				return true;
 			}

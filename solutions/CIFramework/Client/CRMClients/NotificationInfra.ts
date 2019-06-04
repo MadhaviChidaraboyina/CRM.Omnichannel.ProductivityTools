@@ -257,7 +257,12 @@ namespace Microsoft.CIFramework.Internal {
 			};
 
 			//TO-DO - strongly type after updates Xrm.ClientApi.d.ts is available
-			var popUpNotificationItem: IPopUpNotificationItem = { title: title, acceptAction: acceptAction, declineAction: declineAction, timeoutAction: timeoutAction, details: details, type: type, imageUrl: image };
+			if (IsPlatformNotificationTimeoutInfra) {
+				var popUpNotificationItem: IPopUpNotificationItem = { title: title, acceptAction: acceptAction, declineAction: declineAction, timeoutAction: timeoutAction, details: details, type: type, imageUrl: image };
+			}
+			else {
+				var popUpNotificationItem: IPopUpNotificationItem = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
+			}
 
 			var notificationItem: INotificationItem = {
 				popUpNotificationItem: popUpNotificationItem,

@@ -107,6 +107,15 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Launch presence dialog.
+        /// </summary>
+        internal static string LAUNCH_PRESENCE_DIALOG_TOOLTIP {
+            get {
+                return ResourceManager.GetString("LAUNCH_PRESENCE_DIALOG_TOOLTIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Take Notes.
         /// </summary>
         internal static string NOTES_TOOLTIP_TEXT {
@@ -161,15 +170,6 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Available\n\nLaunch presence dialog.
-        /// </summary>
-        internal static string PRESENCE_AVAILABLE_TOOLTIP {
-            get {
-                return ResourceManager.GetString("PRESENCE_AVAILABLE_TOOLTIP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Away.
         /// </summary>
         internal static string PRESENCE_AWAY_TEXT {
@@ -179,29 +179,11 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Away\n\nLaunch presence dialog.
-        /// </summary>
-        internal static string PRESENCE_AWAY_TOOLTIP {
-            get {
-                return ResourceManager.GetString("PRESENCE_AWAY_TOOLTIP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Busy.
         /// </summary>
         internal static string PRESENCE_BUSY_TEXT {
             get {
                 return ResourceManager.GetString("PRESENCE_BUSY_TEXT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Busy\n\nLaunch presence dialog.
-        /// </summary>
-        internal static string PRESENCE_BUSY_TOOLTIP {
-            get {
-                return ResourceManager.GetString("PRESENCE_BUSY_TOOLTIP", resourceCulture);
             }
         }
         
@@ -224,15 +206,6 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do Not Disturb\n\nLaunch presence dialog.
-        /// </summary>
-        internal static string PRESENCE_DO_NOT_DISTURB_TOOLTIP {
-            get {
-                return ResourceManager.GetString("PRESENCE_DO_NOT_DISTURB_TOOLTIP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Offline.
         /// </summary>
         internal static string PRESENCE_OFFLINE_TEXT {
@@ -242,20 +215,11 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Offline\n\nLaunch presence dialog.
+        ///   Looks up a localized string similar to Unknown.
         /// </summary>
-        internal static string PRESENCE_OFFLINE_TOOLTIP {
+        internal static string PRESENCE_UNKOWN_TEXT {
             get {
-                return ResourceManager.GetString("PRESENCE_OFFLINE_TOOLTIP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unknown\n\nLaunch presence dialog.
-        /// </summary>
-        internal static string PRESENCE_UNKNOWN_TOOLTIP {
-            get {
-                return ResourceManager.GetString("PRESENCE_UNKNOWN_TOOLTIP", resourceCulture);
+                return ResourceManager.GetString("PRESENCE_UNKOWN_TEXT", resourceCulture);
             }
         }
         
