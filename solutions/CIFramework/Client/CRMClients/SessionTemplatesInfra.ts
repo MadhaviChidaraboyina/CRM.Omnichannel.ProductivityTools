@@ -277,6 +277,11 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		public resolveTitle(input: any): Promise<string> {
+			if (isNullOrUndefined(this.title)) {
+				return new Promise<string>(function (resolve, reject) {
+					return resolve(input.title);
+				});
+			};
 			return TemplatesUtility.resolveTemplateString(this.title, input, this.name);
 		}
 	}
