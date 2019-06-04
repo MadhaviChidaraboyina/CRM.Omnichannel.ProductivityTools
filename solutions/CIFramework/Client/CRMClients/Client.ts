@@ -84,7 +84,7 @@ namespace Microsoft.CIFramework.Internal
 	*/
 	type expandFlapFunction = (handler: EventHandler) => number;
 
-	type collapseFlapFunction = () => number;
+	type collapseFlapFunction = (sessionId?: string) => number;
 
 	type flapInUseFunction = () => boolean;
 

@@ -98,7 +98,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			//Saving notes info locally
 			let sessionId: string = state.sessionManager.getFocusedSession();
-			let session = state.providerManager._activeProvider.sessions.get(sessionId);
+			let session = state.providerManager.getActiveProvider().sessions.get(sessionId);
 			session.notesInfo.notesDetails = notesDetails;
 			session.notesInfo.resolve = resolve;
 			session.notesInfo.reject = reject;
@@ -172,12 +172,12 @@ namespace Microsoft.CIFramework.Internal {
 					let notesMap = new Map().set(odataBindPropertyName,odataBind);
 					let updateMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.entityId, annotationId).set(Constants.value, notesMap).set(Constants.originURL,originURL);
 					updateRecord(updateMap).then(function (updatedAnnotation: Map<string, any>) {
-						for(let [key,value] of updatedAnnotation){
-							if(key.search(Constants.value) != -1){
+						for (let [key, value] of updatedAnnotation) {
+							if (key.search(Constants.value) != -1) {
 								returnUpdateValue = value;
 							}
 						}
-						var mapReturn = new Map().set(Constants.value,annotationId);
+						var mapReturn = new Map().set(Constants.value, annotationId);
 						resolve(mapReturn);
 					});
 				});
@@ -216,7 +216,7 @@ namespace Microsoft.CIFramework.Internal {
 		});
 	}
 
-	export function cancelNotes(): void{	
+	export function cancelNotes(): void {
 		let widgetIFrame = (<HTMLIFrameElement>listenerWindow.document.getElementById(Constants.widgetIframeId));
 		let notesDiv =  widgetIFrame.contentWindow.document.getElementById("notesDiv");
 		if(!isNullOrUndefined(notesDiv)){
@@ -225,18 +225,37 @@ namespace Microsoft.CIFramework.Internal {
 		state.client.removeHandler(Constants.CollapseFlapHandler);
 	}
 
-	export function intermediateSaveNotes(): void{	
+	export function intermediateSaveNotes(event?: CustomEvent): void {
 		let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 		let newTextArea = widgetIFrame.contentWindow.document.getElementById("notesTextAreaCIF");
-		let sessionId: string = state.sessionManager.getFocusedSession();
-		let session = state.providerManager._activeProvider.sessions.get(sessionId);
-		let resolve = session.notesInfo.resolve;
-		saveNotes(session.notesInfo.notesDetails,newTextArea).then(function (retval: Map<string, any>) {
+
+		let sessionId: string = '';
+		//Take the sessionId if present in event args, otherwise take the current focused session
+		if (!isNullOrUndefined(event) && !isNullOrUndefined(event.detail.sessionId)) {
+			sessionId = event.detail.sessionId;
+		}
+		else {
+			sessionId = state.sessionManager.getFocusedSession();
+		}
+
+		let provider: CIProvider = state.sessionManager.getProvider(sessionId);
+		if (isNullOrUndefined(provider)) {
 			cancelNotes();
-			return resolve(new Map().set(Constants.value,retval));
-		},
-		(error: IErrorHandler) => {
-				return postMessageNamespace.rejectWithErrorMessage("Failed in saving notes.");
-		});
+			return; //We persist only if the session was a provider session, otherwise we ignore
+		}
+
+		let session = provider.sessions.get(sessionId);
+		let resolve = session.notesInfo.resolve;
+		let reject = session.notesInfo.reject;
+		saveNotes(session.notesInfo.notesDetails, newTextArea).then(
+			function (retval: Map<string, any>) {
+				cancelNotes();
+				return resolve(new Map().set(Constants.value, retval));
+			},
+			(error: IErrorHandler) => {
+				return reject(new Map().set(Constants.value, "Failed in saving notes."));
+			}
+		);
+
 	}
 }

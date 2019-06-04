@@ -683,8 +683,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (this.flapExpanded) {
 				return 0;
 			}
-			//this.savedModeChangeHandler = client.removeHandler(Constants.ModeChangeHandler);
-			//this.savedSizeChangeHandler = client.removeHandler(Constants.SizeChangeHandler);
+			
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			let sessionPanelArea = (<HTMLDivElement>widgetIFrame.contentDocument.getElementById("sessionPanel"));
 			let widgetWidth = client.getWidgetWidth() as number;
@@ -695,22 +694,24 @@ namespace Microsoft.CIFramework.Internal {
 			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', widgetWidth.toString() + "px");
 			return this.origWidth;
 		}
-		client.collapseFlap = (): number => {
+		client.collapseFlap = (sessionId?: string): number => {
 			if (!this.flapExpanded) {
 				return 0;
 			}
 			let handler = this.eventHandlers.get(Constants.CollapseFlapHandler);
-			if(handler != null && handler != "undefined"){
-				handler();
+			if (handler != null && handler != "undefined") {
+				if (isNullOrUndefined(sessionId)) {
+					handler();
+				}
+				else {
+					handler(new CustomEvent(Constants.CollapseFlapHandler, { detail: { sessionId: sessionId } }));
+				}
 			}
 			client.setPanelWidth("setPanelWidth", this.origWidth);
 			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
 			widgetIFrame.contentDocument.documentElement.style.setProperty('--flapAreaWidth', "0px");
 			this.flapExpanded = false;
-			//client.registerHandler(Constants.ModeChangeHandler, this.savedModeChangeHandler);
-			//client.registerHandler(Constants.SizeChangeHandler, this.savedSizeChangeHandler);
-			//this.savedSizeChangeHandler = null;
-			//this.savedModeChangeHandler = null;
+
 			return this.origWidth;
 		}
 		client.flapInUse = (): boolean => {

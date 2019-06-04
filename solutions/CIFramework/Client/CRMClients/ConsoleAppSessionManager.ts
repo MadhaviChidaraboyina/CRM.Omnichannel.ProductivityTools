@@ -39,12 +39,13 @@ namespace Microsoft.CIFramework.Internal {
 			let previousProvider = state.sessionManager.getProvider(previousSessionId);
 			let newProvider = state.sessionManager.getProvider(newSessionId);
 			let switchProvider = false;
-
+			
 			if (previousProvider != null) {
+				//Persist and close the Notes flap before switching the session, only if the previous session was a provider session
+				state.client.collapseFlap(previousSessionId);
 				if (previousProvider != newProvider) {
 					switchProvider = true;
 				}
-
 				previousProvider.setUnfocusedSession(previousSessionId, switchProvider);
 			}
 
@@ -68,6 +69,10 @@ namespace Microsoft.CIFramework.Internal {
 		onSessionClosed(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
 			let sessionId = eventMap.get(Constants.sessionId);
+
+			//Persist and close the Notes flap before closing the session
+			state.client.collapseFlap(sessionId);
+
 			let provider = state.sessionManager.getProvider(sessionId);
 			if (provider != null) {
 				provider.closeSession(sessionId);
@@ -110,6 +115,10 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		createSession(provider: CIProvider, input: any, context: any, customerName: string, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string> {
+			//Before we create the new session, we persist the current notes if any and close the flap
+			var currentSessionId: string = state.sessionManager.getFocusedSession();
+			state.client.collapseFlap(currentSessionId);
+
 			return new Promise(function (resolve: any, reject: any) {
 				let fetchTask: Promise<UCISessionTemplate> = null;
 				if (!isNullOrUndefined(input.templateName)) {

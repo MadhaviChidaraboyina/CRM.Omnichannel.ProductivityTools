@@ -568,7 +568,6 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters, [Constants.value]);
 		if(provider)
 		{
-			cancelNotes();
 			state.client.collapseFlap();
 			let mode: number = parameters.get(Constants.value) as number;
 			let ret = state.client.setPanelMode("setPanelMode", mode, telemetryData);
