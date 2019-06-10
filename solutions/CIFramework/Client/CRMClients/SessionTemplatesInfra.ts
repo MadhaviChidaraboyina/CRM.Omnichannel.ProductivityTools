@@ -55,7 +55,7 @@ namespace Microsoft.CIFramework.Internal {
 			);
 			return promise;
 		}
-		public static InitTemplates(): Promise<boolean> {
+		public static InitTemplates(correlationId?: string): Promise<boolean> {
 			//UCIApplicationTabTemplate._appTemplates.
 			return new Promise<boolean>(function (resolve, reject) {
 				UCIApplicationTabTemplate.InitPageTypes().then(
@@ -80,7 +80,7 @@ namespace Microsoft.CIFramework.Internal {
 							},
 							function (error) {
 								let errorData = generateErrorObject(error, "InitTemplates - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
-								logAPIFailure(UCIApplicationTabTemplate.appId, true, errorData, "InitTemplates", Microsoft.CIFramework.Internal.cifVersion);
+								logAPIFailure(UCIApplicationTabTemplate.appId, true, errorData, "InitTemplates", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 								console.error(error);
 								return reject(error);
 							});
@@ -157,7 +157,7 @@ namespace Microsoft.CIFramework.Internal {
 				Promise.resolve(null);
 			}
 		}
-		public instantiateTemplate(templateParams: any): Promise<XrmClientApi.TabInput> {
+		public instantiateTemplate(templateParams: any, correlationId?: string): Promise<XrmClientApi.TabInput> {
 			return new Promise<XrmClientApi.TabInput>(function (resolve: (value?: XrmClientApi.TabInput | PromiseLike<XrmClientApi.TabInput>) => void, reject: (error: Error) => void) {
 				try {   //TODO: Parameterized apptab title
 					let ret: any = {};
@@ -181,7 +181,7 @@ namespace Microsoft.CIFramework.Internal {
 						},
 						function (error) {
 							let errorData = generateErrorObject(error, "instantiateTemplate - TemplatesUtility.resolveTemplateString", errorTypes.GenericError);
-							logAPIFailure(UCIApplicationTabTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion);
+							logAPIFailure(UCIApplicationTabTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 							return Promise.resolve(this.title);
 						}));
 					let name = this.name;
@@ -206,7 +206,7 @@ namespace Microsoft.CIFramework.Internal {
 							},
 							function (error) {
 								let errorData = generateErrorObject(error, "instantiateTemplate - UCIApplicationTabTemplate.convertValue", errorTypes.GenericError);
-								logAPIFailure(UCIApplicationTabTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion);
+								logAPIFailure(UCIApplicationTabTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 								//ret[prop] = null;
 								console.log("Error retrieving " + prop + " for templ: " + name + " : " + error);
 								return Promise.resolve(val);
@@ -219,7 +219,7 @@ namespace Microsoft.CIFramework.Internal {
 						}.bind(this),
 						function (error: Error) {
 							let errorData = generateErrorObject(error, "instantiateTemplate - Promise.all", errorTypes.GenericError);
-							logAPIFailure(UCIApplicationTabTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion);
+							logAPIFailure(UCIApplicationTabTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 							console.log("All params for templ " + name + " are done with error " + error);
 							return resolve({ pageInput: ret, options: options });
 						}.bind(this));
@@ -290,7 +290,7 @@ namespace Microsoft.CIFramework.Internal {
 		private static _sessionTemplates = new Map<string, UCISessionTemplate>();
 		private static _templateBytag = new Map<string, string[]>();
 		private static appId = top.location.search.split('appid=')[1].split('&')[0];
-		public static InitSessionTemplates(): Promise<boolean> {
+		public static InitSessionTemplates(correlationId?: string): Promise<boolean> {
 			return new Promise<boolean>(
 				function (resolve, reject) {
 					UCIApplicationTabTemplate.InitTemplates().then(
@@ -323,7 +323,7 @@ namespace Microsoft.CIFramework.Internal {
 													},
 													function (error) {
 														let errorData = generateErrorObject(error, "InitSessionTemplates - UCIApplicationTabTemplate.getAppTemplateById", errorTypes.GenericError);
-														logAPIFailure(UCISessionTemplate.appId, true, errorData, "InitSessionTemplates", Microsoft.CIFramework.Internal.cifVersion);
+														logAPIFailure(UCISessionTemplate.appId, true, errorData, "InitSessionTemplates", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 													}
 												);
 												for (let index in value["msdyn_msdyn_consoleapplicationsessiontemp_tag"]) {
@@ -346,7 +346,7 @@ namespace Microsoft.CIFramework.Internal {
 			);
 		}
 
-		public instantiateTemplate(templateParams: any): Promise<SessionTemplateSessionInput> {
+		public instantiateTemplate(templateParams: any, correlationId?: string): Promise<SessionTemplateSessionInput> {
 			return new Promise<SessionTemplateSessionInput>(function (resolve: (value?: SessionTemplateSessionInput | PromiseLike<SessionTemplateSessionInput>) => void, reject: (error: Error) => void) {
 
 				UCIApplicationTabTemplate.getTemplate(this.anchorTabName).then(
@@ -371,7 +371,7 @@ namespace Microsoft.CIFramework.Internal {
 							},
 							function (error) {
 								let errorData = generateErrorObject(error, "instantiateTemplate - TemplatesUtility.resolveTemplateString", errorTypes.GenericError);
-								logAPIFailure(UCISessionTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion);
+								logAPIFailure(UCISessionTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 								return Promise.resolve(true);
 							}));
 						promises.push(
@@ -382,7 +382,7 @@ namespace Microsoft.CIFramework.Internal {
 								}.bind(this),
 								function (error: Error) {
 									let errorData = generateErrorObject(error, "instantiateTemplate - result.instantiateTemplate", errorTypes.GenericError);
-									logAPIFailure(UCISessionTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion);
+									logAPIFailure(UCISessionTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 									return Promise.reject(error);
 								}.bind(this)));
 						Promise.all(promises).then(
@@ -395,18 +395,18 @@ namespace Microsoft.CIFramework.Internal {
 							}.bind(this),
 							function (error: Error) {
 								let errorData = generateErrorObject(error, "instantiateTemplate - Promise.all", errorTypes.GenericError);
-								logAPIFailure(UCISessionTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion);
+								logAPIFailure(UCISessionTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 							}.bind(this));
 					}.bind(this),
 					function (error: Error) {
 						let errorData = generateErrorObject(error, "instantiateTemplate - UCIApplicationTabTemplate.getTemplate", errorTypes.GenericError);
-						logAPIFailure(UCISessionTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion);
+						logAPIFailure(UCISessionTemplate.appId, true, errorData, "instantiateTemplate", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 						return reject(error);
 					}.bind(this));
 			}.bind(this));
 		}
 
-		public static getTemplateByTag(tag: string): Promise<UCISessionTemplate> {
+		public static getTemplateByTag(tag: string, correlationId?: string): Promise<UCISessionTemplate> {
 			return new Promise<UCISessionTemplate>(function (resolve, reject) {
 				UCISessionTemplate.InitSessionTemplates().then(
 					function (result) {
@@ -416,13 +416,13 @@ namespace Microsoft.CIFramework.Internal {
 						}
 						catch (error) {
 							let errorData = generateErrorObject(error, "getTemplateByTag - UCISessionTemplate._sessionTemplates", errorTypes.GenericError);
-							logAPIFailure(UCISessionTemplate.appId, true, errorData, "getTemplateByTag", Microsoft.CIFramework.Internal.cifVersion);
+							logAPIFailure(UCISessionTemplate.appId, true, errorData, "getTemplateByTag", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 							return reject(new Error("Error retrieving template by tag (" + tag + ") : " + error));
 						}
 					},
 					function (error) {
 						let errorData = generateErrorObject(error, "getTemplateByTag - UCISessionTemplate.InitSessionTemplates", errorTypes.GenericError);
-						logAPIFailure(UCISessionTemplate.appId, true, errorData, "getTemplateByTag", Microsoft.CIFramework.Internal.cifVersion);
+						logAPIFailure(UCISessionTemplate.appId, true, errorData, "getTemplateByTag", Microsoft.CIFramework.Internal.cifVersion, "", "", "", correlationId);
 						return reject(error);
 					});
 			});

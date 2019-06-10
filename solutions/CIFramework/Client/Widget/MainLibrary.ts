@@ -104,13 +104,13 @@ namespace Microsoft.CIFramework
 	 * @param value. When set to 'true', invoke the registered 'onclicktoact' handler.
 	 *
 	*/
-	export function setClickToAct(value: boolean): Promise<void> {
+	export function setClickToAct(value: boolean, correlationId?: string): Promise<void> {
 		if (isNullOrUndefined(value)) {
 			value = false;
 		}
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.setClickToAct,
-			messageData: new Map().set(Constants.value, value)
+			messageData: new Map().set(Constants.value, value).set(Constants.correlationId, correlationId)
 		}
 
 		return sendMessage<void>(setClickToAct.name, payload, false);
@@ -122,11 +122,11 @@ namespace Microsoft.CIFramework
 	 * @param value. It's a string which contains session,activity details
 	 *
 	*/
-	export function insertNotes(entityName: string, entitySetName: string, entityId: string, annotationId: string): Promise<string> {	
+	export function insertNotes(entityName: string, entitySetName: string, entityId: string, annotationId: string, correlationId?: string): Promise<string> {	
 		if(!(isNullOrUndefined(entityName) || isNullOrUndefined(entitySetName) || isNullOrUndefined(entityId))){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.insertNotes,
-				messageData: new Map().set(Constants.entityName,entityName).set(Constants.entitySetName,entitySetName).set(Constants.entityId,entityId).set(Constants.annotationId,annotationId)
+				messageData: new Map().set(Constants.entityName,entityName).set(Constants.entitySetName,entitySetName).set(Constants.entityId,entityId).set(Constants.annotationId,annotationId).set(Constants.correlationId, correlationId)
 			}
 			return new Promise((resolve, reject) => {
 				return sendMessage<Map<string, any>>(insertNotes.name, payload, false, true).then(
@@ -156,11 +156,11 @@ namespace Microsoft.CIFramework
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-	export function notifyEvent(input: any): Promise<string> {	
+	export function notifyEvent(input: any, correlationId?: string): Promise<string> {	
 		if (!isNullOrUndefined(input)){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.notifyEvent,
-				messageData: new Map().set(Constants.eventType, input.eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(input.notificationUXObject)))
+				messageData: new Map().set(Constants.eventType, input.eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(input.notificationUXObject))).set(Constants.correlationId, correlationId)
 			}
 			return new Promise((resolve, reject) => {
 				return sendMessage<Map<string, any>>(notifyEvent.name, payload, false, true).then(
@@ -193,11 +193,11 @@ namespace Microsoft.CIFramework
 	 *
 	 * returns an Object Promise: The returned Object has the same structure as the underlying Xrm.Navigation.openForm() API
 	*/
-	export function openForm(entityFormOptions: string, entityFormParameters?: string): Promise<string> {
+	export function openForm(entityFormOptions: string, entityFormParameters?: string, correlationId?: string): Promise<string> {
 		if(!(isNullOrUndefined(entityFormOptions) || entityFormOptions == "")){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.openForm,
-				messageData: new Map().set(Constants.entityFormOptions, entityFormOptions).set(Constants.entityFormParameters, entityFormParameters)
+				messageData: new Map().set(Constants.entityFormOptions, entityFormOptions).set(Constants.entityFormParameters, entityFormParameters).set(Constants.correlationId, correlationId)
 			}
 
 			return new Promise((resolve, reject) => {
@@ -224,10 +224,10 @@ namespace Microsoft.CIFramework
 	 * @param save. Optional boolean on whether to save the form on refresh	 
 	 * returns a boolean Promise
 	*/
-	export function refreshForm(save?: boolean): Promise<string> {
+	export function refreshForm(save?: boolean, correlationId?: string): Promise<string> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.refreshForm,
-			messageData: new Map().set(Constants.Save, save)
+			messageData: new Map().set(Constants.Save, save).set(Constants.correlationId, correlationId)
 		}
 
 		return new Promise((resolve, reject) => {
@@ -251,11 +251,11 @@ namespace Microsoft.CIFramework
 	 *
 	 * @returns a map Promise: the result of the retrieve operation depending upon the query
 	*/
-	export function retrieveRecord(entityName: string, entityId: string, query?: string): Promise<string> {
+	export function retrieveRecord(entityName: string, entityId: string, query?: string, correlationId?: string): Promise<string> {
 		if(!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(entityId) || entityId == "")){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.retrieveRecord,
-				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.queryParameters, query)
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.queryParameters, query).set(Constants.correlationId, correlationId)
 			}
 			return new Promise((resolve, reject) => {
 				return sendMessage<Map<string, any>>(retrieveRecord.name, payload, false).then(
@@ -287,11 +287,11 @@ namespace Microsoft.CIFramework
 	 *
 	 * @returns a map Promise: the result of the update operation
 	*/
-	export function updateRecord(entityName: string, entityId: string, data: string): Promise<string> {
+	export function updateRecord(entityName: string, entityId: string, data: string, correlationId?: string): Promise<string> {
 		if(!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(entityId) || entityId == "") && !isNullOrUndefined(data)){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.updateRecord,
-				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.value, Microsoft.CIFramework.Utility.buildMap(JSON.parse(data)))
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.value, Microsoft.CIFramework.Utility.buildMap(JSON.parse(data))).set(Constants.correlationId, correlationId)
 			}
 
 			return new Promise((resolve, reject) => {
@@ -326,11 +326,11 @@ namespace Microsoft.CIFramework
 	 *
 	 * @returns a map Promise: the result of the create operation
 	*/
-	export function createRecord(entityName: string, data: string): Promise<string> {
+	export function createRecord(entityName: string, data: string, correlationId?: string): Promise<string> {
 		if(!(isNullOrUndefined(entityName) || entityName == "") && !isNullOrUndefined(data)){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.createRecord,
-				messageData: new Map().set(Constants.entityName, entityName).set(Constants.value, Microsoft.CIFramework.Utility.buildMap(JSON.parse(data)))
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.value, Microsoft.CIFramework.Utility.buildMap(JSON.parse(data))).set(Constants.correlationId, correlationId)
 			}
 
 			return new Promise((resolve, reject) => {
@@ -362,11 +362,11 @@ namespace Microsoft.CIFramework
 	 *
 	 * @returns a map Promise: the result of the delete operation
 	*/
-	export function deleteRecord(entityName: string, entityId: string): Promise<string> {
+	export function deleteRecord(entityName: string, entityId: string, correlationid?: string): Promise<string> {
 		if(!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(entityId) || entityId == "")){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.deleteRecord,
-				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId)
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.entityId, entityId).set(Constants.correlationId, correlationid)
 			}
 
 			return new Promise((resolve, reject) => {
@@ -398,12 +398,12 @@ namespace Microsoft.CIFramework
 	 *
 	 * Returns a map Promise representing the search results as per the search query
 	*/
-	export function searchAndOpenRecords(entityName: string, queryParmeters: string, searchOnly: boolean) : Promise<string>
+	export function searchAndOpenRecords(entityName: string, queryParmeters: string, searchOnly: boolean, correlationid?: string) : Promise<string>
 	{
 		if(!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(queryParmeters) || queryParmeters == "") && !(isNullOrUndefined(searchOnly))){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: searchOnly ? MessageType.search : MessageType.searchAndOpenRecords,
-				messageData: new Map().set(Constants.entityName, entityName).set(Constants.queryParameters, queryParmeters).set(Constants.searchOnly, searchOnly)
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.queryParameters, queryParmeters).set(Constants.searchOnly, searchOnly).set(Constants.correlationId, correlationid)
 			}
 
 			return new Promise((resolve, reject) => {
@@ -433,10 +433,10 @@ namespace Microsoft.CIFramework
 	 *
 	 * @returns a Promise: '0' for minimized and '1' for docked mode
 	*/
-	export function getMode(): Promise<number> {
+	export function getMode(correlationid?: string): Promise<number> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getMode,
-			messageData: new Map()
+			messageData: new Map().set(Constants.correlationId, correlationid)
 		}
 
 		return sendMessage<number>(getMode.name, payload, false);
@@ -449,10 +449,10 @@ namespace Microsoft.CIFramework
 	 *  'appid', 'pagetype', 'record-id' (if available), 'clientUrl', 'appUrl',
 	 * 'orgLcid', 'orgUniqueName', 'userId', 'userLcid', 'username', orgId
 	*/
-	export function getEnvironment(): Promise<string> {
+	export function getEnvironment(correlationId?: string): Promise<string> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getEnvironment,
-			messageData: new Map()
+			messageData: new Map().set(Constants.correlationId, correlationId)
 		}
 
 		return new Promise((resolve, reject) => {
@@ -471,11 +471,11 @@ namespace Microsoft.CIFramework
 	 *
 	 * @returns a Promise with the panel width
 	*/
-	export function getWidth(): Promise<number> {
+	export function getWidth(correlationId?: string): Promise<number> {
 		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getWidth,
-			messageData: new Map()
+			messageData: new Map().set(Constants.correlationId, correlationId)
 		}
 
 		return sendMessage<number>(getWidth.name, payload, false);
@@ -485,13 +485,13 @@ namespace Microsoft.CIFramework
 	 *
 	 * @params value. search string
 	*/
-	export function openKBSearchControl(value : string) : Promise<boolean>
+	export function openKBSearchControl(value : string, correlationId?: string) : Promise<boolean>
 	{
 		let startTime = Date.now();
 		if(!isNullOrUndefined(value)){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.openKBSearchControl,
-				messageData: new Map().set(Constants.SearchString, value)
+				messageData: new Map().set(Constants.SearchString, value).set(Constants.correlationId, correlationId)
 			}
 
 			return sendMessage<boolean>(openKBSearchControl.name, payload, false);
@@ -525,13 +525,13 @@ namespace Microsoft.CIFramework
 	 *
 	 * @params value. The mode to set on the panel, '0' - minimized, '1' - docked, '2' - hidden
 	*/
-	export function setMode(value : number) : Promise<void>
+	export function setMode(value : number, correlationId?: string) : Promise<void>
 	{
 		let startTime = Date.now();
 		if(!isNullOrUndefined(value) && (value == 0 || value == 1 || value == 2)){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.setMode,
-				messageData: new Map().set(Constants.value, value)
+				messageData: new Map().set(Constants.value, value).set(Constants.correlationId, correlationId)
 			}
 
 			return sendMessage<void>(setMode.name, payload, false);
@@ -545,11 +545,11 @@ namespace Microsoft.CIFramework
 	 *
 	 * @returns a boolean Promise on whether ClickToAct is currently enabled
 	*/
-	export function getClickToAct(): Promise<boolean> {
+	export function getClickToAct(correlationId?: string): Promise<boolean> {
 		let startTime = Date.now();
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getClickToAct,
-			messageData: new Map()
+			messageData: new Map().set(Constants.correlationId, correlationId)
 		}
 
 		return sendMessage<boolean>(getClickToAct.name, payload, false);
@@ -567,14 +567,14 @@ namespace Microsoft.CIFramework
 	 *  'onsendkbarticle' - triggered when the agent clicks on the 'send KB Article' button on the KB control
 	 * @params func. The handler function to invoke on the event
 	 */
-	export function addHandler(eventName: string, handlerFunction: ((eventData:string) => Promise<Object>))
+	export function addHandler(eventName: string, handlerFunction: ((eventData:string) => Promise<Object>), correlationId?: string)
 	{
 		let startTime = Date.now();
 		if(!(isNullOrUndefined(eventName) || eventName == "") && !isNullOrUndefined(handlerFunction)){
 			postMessage.addHandler(eventName, handlerFunction);
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.addGenericHandler,
-				messageData: new Map().set(Constants.eventType, eventName)
+				messageData: new Map().set(Constants.eventType, eventName).set(Constants.correlationId, correlationId)
 			}
 			sendMessage<boolean>("addGenericHandler", payload, false);
 		}else{
@@ -590,14 +590,14 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to remove the subscriber
 	 */
-	export function removeHandler(eventName: string, handlerFunction: ((eventData: string) => Promise<Object>))
+	export function removeHandler(eventName: string, handlerFunction: ((eventData: string) => Promise<Object>), correlationId?: string)
 	{
 		let startTime = Date.now();
 		if(!(isNullOrUndefined(eventName) || eventName == "") && !isNullOrUndefined(handlerFunction)){
 			postMessage.removeHandler(eventName, handlerFunction);
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.removeGenericHandler,
-				messageData: new Map().set(Constants.eventType, eventName)
+				messageData: new Map().set(Constants.eventType, eventName).set(Constants.correlationId, correlationId)
 			}
 			sendMessage<boolean>("removeGenericHandler", payload, false);
 		}else{
@@ -619,11 +619,11 @@ namespace Microsoft.CIFramework
 	 * 
 	 * @returns a Promise: JSON String with available metadata of the current entity
 	*/
-	export function getEntityMetadata(entityName: string, attributes?: Array<string>): Promise<string> {
+	export function getEntityMetadata(entityName: string, attributes?: Array<string>, correlationId?: string): Promise<string> {
 		if (!(isNullOrUndefined(entityName) || entityName == "")) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.getEntityMetadata,
-				messageData: new Map().set(Constants.entityName, entityName).set(Constants.Attributes, attributes)
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.Attributes, attributes).set(Constants.correlationId, correlationId)
 			}
 			return sendMessage<string>(getEntityMetadata.name, payload, false);
 		}
@@ -640,11 +640,11 @@ namespace Microsoft.CIFramework
 	 * @param entityName -Name of the Entity for which the records are to be fetched
 	 * @param searchString - String based on which the search is to be made
 	 */
-	export function renderSearchPage(entityName: string, searchString: string): Promise<void> {
+	export function renderSearchPage(entityName: string, searchString: string, correlationId?: string): Promise<void> {
 		if (!(isNullOrUndefined(entityName) || entityName == "") && !(isNullOrUndefined(searchString))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.renderSearchPage,
-				messageData: new Map().set(Constants.entityName, entityName).set(Constants.SearchString, searchString)
+				messageData: new Map().set(Constants.entityName, entityName).set(Constants.SearchString, searchString).set(Constants.correlationId, correlationId)
 			}
 			return sendMessage<void>(renderSearchPage.name, payload, false);
 		}
@@ -665,11 +665,11 @@ namespace Microsoft.CIFramework
 
 	 * @returns a Promise: Boolean Status after setting the Agent Presence
 	 */
-	export function setAgentPresence(presenceInfo: string): Promise<boolean> {
+	export function setAgentPresence(presenceInfo: string, correlationId?: string): Promise<boolean> {
 		if (!(isNullOrUndefined(presenceInfo))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.setAgentPresence,
-				messageData: new Map().set(Constants.presenceInfo, presenceInfo)
+				messageData: new Map().set(Constants.presenceInfo, presenceInfo).set(Constants.correlationId, correlationId)
 			}
 			return sendMessage<boolean>(setAgentPresence.name, payload, false);
 		}
@@ -681,10 +681,10 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get all Sessions
 	 */
-	export function getAllSessions(): Promise<string[]> {
+	export function getAllSessions(correlationId?: string): Promise<string[]> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getAllSessions,
-			messageData: new Map()
+			messageData: new Map().set(Constants.correlationId)
 		}
 		return sendMessage<string[]>(getAllSessions.name, payload, false);
 	}
@@ -692,10 +692,10 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get focused Session
 	 */
-	export function getFocusedSession(): Promise<string> {
+	export function getFocusedSession(correlationid?: string): Promise<string> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getFocusedSession,
-			messageData: new Map()
+			messageData: new Map().set(Constants.correlationId, correlationid)
 		}
 		return sendMessage<string>(getFocusedSession.name, payload, false);
 	}
@@ -703,10 +703,10 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get Session details
 	 */
-	export function getSession(sessionId: string): Promise<any> {
+	export function getSession(sessionId: string, correlationid?: string): Promise<any> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getSession,
-			messageData: new Map().set(Constants.sessionId, sessionId)
+			messageData: new Map().set(Constants.sessionId, sessionId).set(Constants.correlationId, correlationid)
 		}
 		return sendMessage<any>(getSession.name, payload, false);
 	}
@@ -714,10 +714,10 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to check if a new Session can be created
 	 */
-	export function canCreateSession(): Promise<boolean> {
+	export function canCreateSession(correlationId?: string): Promise<boolean> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.canCreateSession,
-			messageData: new Map()
+			messageData: new Map().set(Constants.correlationId, correlationId)
 		}
 		return sendMessage<boolean>(canCreateSession.name, payload, false);
 	}
@@ -725,7 +725,7 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to create Session
 	 */
-	export function createSession(input: any): Promise<string> {
+	export function createSession(input: any, correlationId?: string): Promise<string> {
 		if (!isNullOrUndefined(input)) {
 			let customerName = input.customerName;
 			if (isNullOrUndefined(customerName) && !isNullOrUndefined(input.templateParameters)) {
@@ -733,23 +733,23 @@ namespace Microsoft.CIFramework
 			}
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.createSession,
-				messageData: new Map().set(Constants.input, input).set(Constants.context, input.context).set(Constants.customerName, customerName)
+				messageData: new Map().set(Constants.input, input).set(Constants.context, input.context).set(Constants.customerName, customerName).set(Constants.correlationId, correlationId)
 			}
 			return sendMessage<string>(createSession.name, payload, false);
 		}
 		else {
-			return postMessageNamespace.rejectWithErrorMessage("Some of required parameters are null");
+			return postMessageNamespace.rejectWithErrorMessage("Some of required parameters are null " + correlationId);
 		}
 	}
 
 	/**
 	 * API to notify incoming on an invisible Session
 	 */
-	export function requestFocusSession(sessionId: string, messagesCount?: number): Promise<string> {
+	export function requestFocusSession(sessionId: string, messagesCount?: number, correlationId?: string): Promise<string> {
 		if (!isNullOrUndefined(sessionId)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.requestFocusSession,
-				messageData: new Map().set(Constants.sessionId, sessionId).set(Constants.messagesCount, messagesCount)
+				messageData: new Map().set(Constants.sessionId, sessionId).set(Constants.messagesCount, messagesCount).set(Constants.correlationId, correlationId)
 			}
 			return sendMessage<string>(requestFocusSession.name, payload, false);
 		}
@@ -761,10 +761,10 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get the focused tab in focused Session
 	 */
-	export function getFocusedTab(): Promise<string> {
+	export function getFocusedTab(correlationId?: string): Promise<string> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getFocusedTab,
-			messageData: new Map()
+			messageData: new Map().set(Constants.correlationId, correlationId)
 		}
 		return sendMessage<string>(getFocusedTab.name, payload, false);
 	}
@@ -772,27 +772,27 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get the focused tab in focused Session
 	 */
-	export function getTabs(name: string, tag: string): Promise<string[]> {
+	export function getTabs(name: string, tag: string, correlationId?: string): Promise<string[]> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getTabsByTagOrName,
-			messageData: new Map().set(Constants.templateTag, tag).set(Constants.nameParameter, name)
+			messageData: new Map().set(Constants.templateTag, tag).set(Constants.nameParameter, name).set(Constants.correlationId, correlationId)
 		}
 		return sendMessage<string[]>(getTabs.name, payload, false);
 	}
 
-	export function refreshTab(tabId: string): Promise<void> {
+	export function refreshTab(tabId: string, correlationId?: string): Promise<void> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.refreshTab,
-			messageData: new Map().set(Constants.tabId, tabId)
+			messageData: new Map().set(Constants.tabId, tabId).set(Constants.correlationId, correlationId)
 		}
 		return sendMessage<void>(refreshTab.name, payload, false);
 	}
 
-	export function setSessionTitle(input: any): Promise<string> {
+	export function setSessionTitle(input: any, correlationId?: string): Promise<string> {
 		if (!isNullOrUndefined(input)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.setSessionTitle,
-				messageData: new Map().set(Constants.input, input)
+				messageData: new Map().set(Constants.input, input).set(Constants.correlationId, correlationId)
 			}
 			return sendMessage<string>(setSessionTitle.name, payload, false);
 		}
@@ -801,11 +801,11 @@ namespace Microsoft.CIFramework
 		}
 	}
 
-	export function setTabTitle(tabId: string, input: any): Promise<string> {
+	export function setTabTitle(tabId: string, input: any, correlationId?: string): Promise<string> {
 		if (!isNullOrUndefined(input) && !isNullOrUndefined(tabId)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.setTabTitle,
-				messageData: new Map().set(Constants.input, input).set(Constants.tabId, tabId)
+				messageData: new Map().set(Constants.input, input).set(Constants.tabId, tabId).set(Constants.correlationId, correlationId)
 			}
 			return sendMessage<string>(setTabTitle.name, payload, false);
 		}
@@ -816,11 +816,11 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to create a Tab in focused Session
 	 */
-	export function createTab(input: any): Promise<string> {
+	export function createTab(input: any, correlationId?: string): Promise<string> {
 		if (!isNullOrUndefined(input)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.createTab,
-				messageData: new Map().set(Constants.input, input)
+				messageData: new Map().set(Constants.input, input).set(Constants.correlationId, correlationId)
 			}
 			return sendMessage<string>(createTab.name, payload, false);
 		}
@@ -832,11 +832,11 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to focus a Tab in focused Session
 	 */
-	export function focusTab(tabId: string): Promise<string> {
+	export function focusTab(tabId: string, correlationId?: string): Promise<string> {
 		if (!isNullOrUndefined(tabId)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.focusTab,
-				messageData: new Map().set(Constants.tabId, tabId)
+				messageData: new Map().set(Constants.tabId, tabId).set(Constants.correlationId, correlationId)
 			}
 			return sendMessage<string>(focusTab.name, payload, false);
 		}
@@ -852,11 +852,11 @@ namespace Microsoft.CIFramework
 
 	* @returns a Promise: Boolean Status after setting the list of presences
 	*/
-	export function initializeAgentPresenceList(presenceList: any): Promise<boolean> {
+	export function initializeAgentPresenceList(presenceList: any, correlationId?: string): Promise<boolean> {
 		if (!(isNullOrUndefined(presenceList))) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.initializeAgentPresenceList,
-				messageData: new Map().set(Constants.presenceList, presenceList)
+				messageData: new Map().set(Constants.presenceList, presenceList).set(Constants.correlationId, correlationId)
 			}
 			return sendMessage<boolean>(initializeAgentPresenceList.name, payload, false);
 		}

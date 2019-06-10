@@ -114,7 +114,7 @@ namespace Microsoft.CIFramework.Internal {
 			return res;
 		}
 
-		createSession(provider: CIProvider, input: any, context: any, customerName: string, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string> {
+		createSession(provider: CIProvider, input: any, context: any, customerName: string, telemetryData?: Object, appId?: any, cifVersion?: any, correlationId?: string): Promise<string> {
 			//Before we create the new session, we persist the current notes if any and close the flap
 			var currentSessionId: string = state.sessionManager.getFocusedSession();
 			state.client.collapseFlap(currentSessionId);
@@ -130,7 +130,7 @@ namespace Microsoft.CIFramework.Internal {
 				let templateParams = input.templateParameters;
 				fetchTask.then(
 					function (session: UCISessionTemplate) {
-						session.instantiateTemplate(templateParams).then(
+						session.instantiateTemplate(templateParams, correlationId).then(
 							function (sessionInput: SessionTemplateSessionInput) {
 								let startTime = new Date();
 								let apiName = "Xrm.App.sessions.createSession";
@@ -147,7 +147,7 @@ namespace Microsoft.CIFramework.Internal {
 											appTabs.forEach(
 												function (tab: UCIApplicationTabTemplate) {
 													tabsRendered.push(new Promise<string>(function (resolve: any, reject: any) {
-													tab.instantiateTemplate(templateParams).then(
+													tab.instantiateTemplate(templateParams, correlationId).then(
 														function (tabInput: XrmClientApi.TabInput) {
 															this.createTabInternal(sessionId, tabInput, telemetryData).then(
 																function (tabId: string) {
@@ -160,7 +160,7 @@ namespace Microsoft.CIFramework.Internal {
 														}.bind(this),
 														function (error: Error) {
 															let errorData = generateErrorObject(error, "ConsoleAppSessionManager - tab.instantiateTemplate", errorTypes.XrmApiError);
-															logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion);
+															logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
 															return reject(error);
 														}.bind(this));
 												}.bind(this)));
@@ -175,7 +175,7 @@ namespace Microsoft.CIFramework.Internal {
 										}.bind(this),
 										function (error: Error) {
 											let errorData = generateErrorObject(error, "ConsoleAppSessionManager - session.appTabs", errorTypes.XrmApiError);
-											logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion);
+											logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
 										}.bind(this));
 									resolve(sessionId);
 								}.bind(this),
@@ -186,14 +186,14 @@ namespace Microsoft.CIFramework.Internal {
 							}.bind(this),
 							function (error: Error) {
 								let errorData = generateErrorObject(error, "ConsoleAppSessionManager - session.instantiateTemplate", errorTypes.XrmApiError);
-								logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion);
+								logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
 								return reject(error);
 							}.bind(this)
 						);
 					}.bind(this),
 					function (error: Error) {
 						let errorData = generateErrorObject(error, "ConsoleAppSessionManager - UCISessionTemplate.getTemplateByName/Tag", errorTypes.XrmApiError);
-						logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion);
+						logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
 						return reject(error);
 					}.bind(this)
 				);
@@ -233,7 +233,7 @@ namespace Microsoft.CIFramework.Internal {
 			return res;
 		}
 
-		createTab(sessionId: string, input: any, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string> {
+		createTab(sessionId: string, input: any, telemetryData?: Object, appId?: any, cifVersion?: any, correlationId?: string): Promise<string> {
 			return new Promise(function (resolve: any, reject: any) {
 				let fetchTask: Promise<UCIApplicationTabTemplate> = null;
 				if (!isNullOrUndefined(input.templateName)) {
@@ -245,7 +245,7 @@ namespace Microsoft.CIFramework.Internal {
 				}
 				fetchTask.then(
 					function (tab: UCIApplicationTabTemplate) {
-						tab.instantiateTemplate(templateParams).then(
+						tab.instantiateTemplate(templateParams, correlationId).then(
 							function (tabInput: XrmClientApi.TabInput) {
 								this.createTabInternal(sessionId, tabInput, telemetryData).then(
 									function (tabId: string) {
@@ -261,13 +261,13 @@ namespace Microsoft.CIFramework.Internal {
 							}.bind(this),
 							function (error: Error) {
 								let errorData = generateErrorObject(error, "ConsoleAppSessionManager - tab.instantiateTemplate", errorTypes.XrmApiError);
-								logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion);
+								logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
 								return reject(error);
 							}.bind(this));
 					}.bind(this),
 					function (error: Error) {
 						let errorData = generateErrorObject(error, "ConsoleAppSessionManager - UCIApplicationTabTemplate.getTemplate", errorTypes.XrmApiError);
-						logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion);
+						logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
 					}.bind(this));
 			}.bind(this));
 		}

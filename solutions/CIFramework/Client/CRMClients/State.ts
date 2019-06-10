@@ -174,7 +174,7 @@ namespace Microsoft.CIFramework.Internal {
 			return this._state.sessionManager.canCreateSession(telemetryData);
 		}
 
-		createSession(input: any, context: any, customerName: string, telemetryData: Object, appId?: any, cifVersion?: any): Promise<string> {
+		createSession(input: any, context: any, customerName: string, telemetryData: Object, appId?: any, cifVersion?: any, correlationId?: string): Promise<string> {
 			let notesInformation: NotesInfo = {
 				notesDetails: new Map(),
 				resolve: null,
@@ -182,7 +182,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			return new Promise(function (resolve: any, reject: any) {
-				this._state.sessionManager.createSession(this, input, context, customerName, telemetryData, appId, cifVersion).then(function (sessionId: string) {
+				this._state.sessionManager.createSession(this, input, context, customerName, telemetryData, appId, cifVersion, correlationId).then(function (sessionId: string) {
 					let session: Session = {
 						sessionId: sessionId,
 						input: input,
@@ -355,7 +355,7 @@ namespace Microsoft.CIFramework.Internal {
 			}.bind(this));
 		}
 
-		createTab(input: any, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string> {
+		createTab(input: any, telemetryData?: Object, appId?: any, cifVersion?: any, correlationId?: string): Promise<string> {
 			var focusedSessionId = this.getFocusedSession();
 			if (focusedSessionId == null) {
 				let error = {} as IErrorHandler;
@@ -367,7 +367,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			return new Promise(function (resolve: any, reject: any) {
-				this._state.sessionManager.createTab(focusedSessionId, input, telemetryData, appId, cifVersion).then(function (tabId: string) {
+				this._state.sessionManager.createTab(focusedSessionId, input, telemetryData, appId, cifVersion, correlationId).then(function (tabId: string) {
 					resolve(tabId);
 				}, function (errorMsg: string) {
 					let error = {} as IErrorHandler;

@@ -35,5 +35,6 @@ namespace Microsoft.CIFramework.Internal {
 		export const navigationType = "Nav_Type";
 		export const multiSession = "Multi Session";
 		export const singleSession = "Single Session";
+		export const correlationId = "correlationId";
 	}
 }

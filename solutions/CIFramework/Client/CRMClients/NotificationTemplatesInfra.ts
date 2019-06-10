@@ -74,7 +74,7 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		public instantiateTemplate(templateParams: any, acceptHandler: XrmClientApi.EventHandler, rejectHandler: XrmClientApi.EventHandler): Promise<CIFPopupNotification> { //TODO: The return type here will change based on platform definition
+		public instantiateTemplate(templateParams: any, acceptHandler: XrmClientApi.EventHandler, rejectHandler: XrmClientApi.EventHandler, correlationId?: string): Promise<CIFPopupNotification> { //TODO: The return type here will change based on platform definition
 			return new Promise<any>(function (resolve: (value?: CIFPopupNotification | PromiseLike<CIFPopupNotification>) => void, reject: (error: Error) => void) {
 				try {   //TODO: Parameterized apptab title
 					let ret: CIFPopupNotification = {
