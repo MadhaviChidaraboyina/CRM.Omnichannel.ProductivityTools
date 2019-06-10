@@ -250,6 +250,9 @@ namespace Microsoft.CIFramework.Internal {
 								this.createTabInternal(sessionId, tabInput, telemetryData).then(
 									function (tabId: string) {
 										this.associateTabWithSession(sessionId, tabId, tab, tab.name, tab.tags);
+										if (input.injectOnSave) {
+											(window.top as any).Xrm.Page.data.entity.addOnSave(Microsoft.CIFramework.Utility.onFormSaveHandler);
+										}
 										return resolve(tabId);
 									}.bind(this),
 									function (error: Error) {

@@ -236,4 +236,27 @@ namespace Microsoft.CIFramework.Utility {
 		}
 		return true;
 	}
+
+	export function onFormSaveHandler(context: any) {
+		var intervalFunction = setInterval(function () {
+			try {
+				var formContext = context.getFormContext();
+				var entityId = formContext.data.entity.getId();
+				if (entityId != "") {
+					clearInterval(intervalFunction);
+					window.top.dispatchEvent(new CustomEvent("entityRecordSaved", {
+						detail: {
+							entityLogicalName: formContext.data.entity.getEntityName(),
+							entityId: entityId
+						}
+					}));
+				}
+			}
+			catch (error) {
+				clearInterval(intervalFunction);
+				console.log("Error in onFormSaveHandler. " + error);
+			}
+		}, 100);
+		(window.top as any).Xrm.Page.data.entity.removeOnSave(Microsoft.CIFramework.Utility.onFormSaveHandler);
+	}
 }
