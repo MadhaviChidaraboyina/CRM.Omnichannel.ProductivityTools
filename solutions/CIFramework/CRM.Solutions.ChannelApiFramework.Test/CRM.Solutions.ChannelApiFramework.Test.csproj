@@ -68,8 +68,8 @@
       <HintPath>..\..\..\packages\SpecFlow.1.4.0\lib\TechTalk.SpecFlow.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WebDriver, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Selenium.WebDriver.3.14.0\lib\net45\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SELENIUM_WEBDRIVER)\lib\net45\WebDriver.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WebDriver.Support, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -148,9 +148,11 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\..\packages\Selenium.Chrome.WebDriver.2.41\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.2.41\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('$(CHROME_WEBDRIVER)\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(CHROME_WEBDRIVER)\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('$(WEBDRIVER_CHROMEDRIVER)\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(WEBDRIVER_CHROMEDRIVER)\build\Selenium.WebDriver.ChromeDriver.targets'))" />
   </Target>
-  <Import Project="..\..\..\packages\Selenium.Chrome.WebDriver.2.41\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\..\..\packages\Selenium.Chrome.WebDriver.2.41\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="$(CHROME_WEBDRIVER)\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('$(CHROME_WEBDRIVER)\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="$(WEBDRIVER_CHROMEDRIVER)\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('$(WEBDRIVER_CHROMEDRIVER)\build\Selenium.WebDriver.ChromeDriver.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
