@@ -139,7 +139,13 @@ namespace Microsoft.CIFramework.Internal {
 									this.sessions.set(sessionId, new SessionInfo(provider, session));
 									state.client.setPanelMode("setPanelMode", session.panelState);
 									window.setTimeout(provider.setFocusedSession.bind(provider), 0, sessionId, true);
-									this.setTabTitleInternal(sessionId, Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId, sessionInput.anchorTabTemplate.title);
+									sessionInput.anchorTabTemplate.resolveTitle(templateParams).then(
+										function (result: string) {
+											this.setTabTitleInternal(sessionId, Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId, result);
+										}.bind(this),
+										function (error: Error) {
+											this.setTabTitleInternal(sessionId, Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId, sessionInput.anchorTabTemplate.title);
+										}.bind(this));
 									this.associateTabWithSession(sessionId, Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId, sessionInput.anchorTabTemplate, session.anchorTabName, sessionInput.anchorTabTemplate.tags);
 									session.appTabs.then(
 										function (appTabs: UCIApplicationTabTemplate[]) {
