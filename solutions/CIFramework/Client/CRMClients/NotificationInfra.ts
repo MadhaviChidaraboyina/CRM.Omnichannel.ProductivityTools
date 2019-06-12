@@ -9,7 +9,7 @@
 /// <reference path="../TelemetryHelper.ts" />
 /// <reference path="aria-webjs-sdk-1.8.3.d.ts" />
 /// <reference path="../../../TypeDefinitions/mscrm.d.ts" />
-/// <reference path="../../../../Packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApiInternal.d.ts" />
+/// <reference path="../../../../Packages/Crm.ClientApiTypings.1.3.1937/clientapi/XrmClientApiInternal.d.ts" />
 /// <reference path= "../Queue.ts" />
 /// <reference path="../CIFrameworkUtilities.ts" />
 /** @internal */
@@ -258,10 +258,10 @@ namespace Microsoft.CIFramework.Internal {
 
 			//TO-DO - strongly type after updates Xrm.ClientApi.d.ts is available
 			if (IsPlatformNotificationTimeoutInfra) {
-				var popUpNotificationItem: IPopUpNotificationItem = { title: title, acceptAction: acceptAction, declineAction: declineAction, timeoutAction: timeoutAction, details: details, type: type, imageUrl: image };
+				var popUpNotificationItem: XrmClientApi.IPopupNotificationItem = { title: title, acceptAction: acceptAction, declineAction: declineAction, timeoutAction: timeoutAction, details: details, type: type, imageUrl: image };
 			}
 			else {
-				var popUpNotificationItem: IPopUpNotificationItem = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
+				var popUpNotificationItem: XrmClientApi.IPopupNotificationItem = { title: title, acceptAction: acceptAction, declineAction: declineAction, details: details, type: type, imageUrl: image };
 			}
 
 			var notificationItem: INotificationItem = {

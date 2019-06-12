@@ -6,7 +6,7 @@
 /// <reference path="Constants.ts" />
 /// <reference path="WidgetIFrame.ts" />
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
-/// <reference path="../../../../packages/Crm.ClientApiTypings.1.0.2611-manual/clientapi/XrmClientApi.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.1937/clientapi/XrmClientApi.d.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 
 /** @internal */
@@ -203,7 +203,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> => {
-			const options: any = {   //TODO: To be strong-typed to XrmClientApi.NewPanelOptions once the updated .d.ts with correct type definition is published by platform
+			const options: XrmClientApi.NewPanelOptions = {
 				position: isConsoleAppInternal() ? Constants.left : Constants.right,
 				defaultCollapsedBehavior: false,
 				url: "/webresources/widgets_container.html",				
