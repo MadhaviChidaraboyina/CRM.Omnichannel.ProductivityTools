@@ -769,7 +769,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		presence.setAgentPresence = (presenceInfo: any, telemetryData?: Object | any): boolean => {
 			let startTime = new Date();
-			window.localStorage[Constants.CURRENT_PRESENCE_INFO] = JSON.stringify(presenceInfo);
+			
 			//let agentPresence = Microsoft.CIFramework.Internal.PresenceControl.Instance.setAgentPresence(presenceInfo);
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "PresenceControl.setAgentPresence";
@@ -778,6 +778,7 @@ namespace Microsoft.CIFramework.Internal {
 			let presenceButton = (<HTMLButtonElement>window.top.document.querySelector(Constants.PRESENCE_BUTTON_DATA_ID));
 			let presenceList = (<HTMLButtonElement>window.top.document.querySelector(Constants.PRESENCE_LIST_ID));
 			let presenceStatus = presenceInfo.basePresenceStatus;
+			window.localStorage[Constants.CURRENT_PRESENCE_INFO] = JSON.stringify(presenceInfo);
 			if (presenceButton) {
 				let presence : any;
 				switch(presenceStatus){

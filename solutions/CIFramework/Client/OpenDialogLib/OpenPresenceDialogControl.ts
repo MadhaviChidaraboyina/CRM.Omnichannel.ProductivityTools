@@ -9,6 +9,7 @@
 namespace Microsoft.CIFramework.Internal {
 
 	declare const Xrm: any;
+	const emptyString: string = "";
 
 	export class OpenPresenceDialogControl {
 
@@ -25,12 +26,9 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		public openPresenceDialog(e: any): void {
-			let presenceButton = (<HTMLButtonElement>window.top.document.querySelector(Constants.PRESENCE_BUTTON_DATA_ID));
-			let presence_img = presenceButton.getElementsByTagName("img");
-			if (presence_img[0].src.indexOf("/WebResources/msdyn_UnknownStatus.svg") != -1) {
+			if (!window.localStorage[Constants.CURRENT_PRESENCE_INFO]) {
 				return;
 			}
-
 			const that = this;
 			const dialogParams: XrmClientApi.DialogParameters = {};
 			dialogParams[Constants.LAST_BUTTON_CLICKED] = "";
@@ -47,6 +45,7 @@ namespace Microsoft.CIFramework.Internal {
 					(response: any) => {
 						appUniqueName = response.uniqueName;
 						if (appUniqueName === "OmniChannelEngagementHub") {
+							window.localStorage[Constants.CURRENT_PRESENCE_INFO] = emptyString;
 							resolve(true);
 						} else {
 							resolve(false);
