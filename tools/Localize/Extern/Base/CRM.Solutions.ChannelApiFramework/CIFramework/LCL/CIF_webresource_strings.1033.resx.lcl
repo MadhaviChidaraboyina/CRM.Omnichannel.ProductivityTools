@@ -57,6 +57,15 @@
           <Cmt Name="Dev"><![CDATA[Text for close button.]]></Cmt>
         </Cmts>
       </Item>
+      <Item ItemId=";LAUNCH_PRESENCE_DIALOG_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Launch presence dialog]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Tooltip for presence control in navbar]]></Cmt>
+        </Cmts>
+      </Item>
       <Item ItemId=";NOTES_TOOLTIP_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Take Notes]]></Val>
@@ -111,15 +120,6 @@
           <Cmt Name="Dev"><![CDATA[Text to denote available presence]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";PRESENCE_AVAILABLE_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Available\n\nLaunch presence dialog]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for available presence]]></Cmt>
-        </Cmts>
-      </Item>
       <Item ItemId=";PRESENCE_AWAY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Away]]></Val>
@@ -129,15 +129,6 @@
           <Cmt Name="Dev"><![CDATA[Text to denote away presence]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";PRESENCE_AWAY_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Away\n\nLaunch presence dialog]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for away presence]]></Cmt>
-        </Cmts>
-      </Item>
       <Item ItemId=";PRESENCE_BUSY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Busy]]></Val>
@@ -145,15 +136,6 @@
         <Disp Icon="Str" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote busy presence]]></Cmt>
-        </Cmts>
-      </Item>
-      <Item ItemId=";PRESENCE_BUSY_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Busy\n\nLaunch presence dialog]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for busy presence]]></Cmt>
         </Cmts>
       </Item>
       <Item ItemId=";PRESENCE_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -174,15 +156,6 @@
           <Cmt Name="Dev"><![CDATA[Text to denote do not disturb presence]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";PRESENCE_DO_NOT_DISTURB_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Do Not Disturb\n\nLaunch presence dialog]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for do not disturb presence]]></Cmt>
-        </Cmts>
-      </Item>
       <Item ItemId=";PRESENCE_OFFLINE_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Offline]]></Val>
@@ -192,22 +165,13 @@
           <Cmt Name="Dev"><![CDATA[Text to denote offline presence]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";PRESENCE_OFFLINE_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+      <Item ItemId=";PRESENCE_UNKOWN_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Offline\n\nLaunch presence dialog]]></Val>
+          <Val><![CDATA[Unknown]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for offline presence]]></Cmt>
-        </Cmts>
-      </Item>
-      <Item ItemId=";PRESENCE_UNKNOWN_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unknown\n\nLaunch presence dialog]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for unknown presence]]></Cmt>
+          <Cmt Name="Dev"><![CDATA[Text to denote unknown presence]]></Cmt>
         </Cmts>
       </Item>
       <Item ItemId=";REJECT_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

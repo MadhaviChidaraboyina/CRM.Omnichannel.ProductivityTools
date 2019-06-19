@@ -137,6 +137,10 @@
     <value>關閉</value>
     <comment>Text for close button.</comment>
   </data>
+  <data name="LAUNCH_PRESENCE_DIALOG_TOOLTIP" xml:space="preserve">
+    <value>啟動 [目前狀態] 對話方塊</value>
+    <comment>Tooltip for presence control in navbar</comment>
+  </data>
   <data name="NOTES_TOOLTIP_TEXT" xml:space="preserve">
     <value>做筆記</value>
     <comment>Text for assisting user for notes.</comment>
@@ -161,25 +165,13 @@
     <value>線上</value>
     <comment>Text to denote available presence</comment>
   </data>
-  <data name="PRESENCE_AVAILABLE_TOOLTIP" xml:space="preserve">
-    <value>線上\n\n啟動 [目前狀態] 對話方塊</value>
-    <comment>Tooltip for available presence</comment>
-  </data>
   <data name="PRESENCE_AWAY_TEXT" xml:space="preserve">
     <value>離開</value>
     <comment>Text to denote away presence</comment>
   </data>
-  <data name="PRESENCE_AWAY_TOOLTIP" xml:space="preserve">
-    <value>離開\n\n啟動 [目前狀態] 對話方塊</value>
-    <comment>Tooltip for away presence</comment>
-  </data>
   <data name="PRESENCE_BUSY_TEXT" xml:space="preserve">
     <value>忙碌</value>
     <comment>Text to denote busy presence</comment>
-  </data>
-  <data name="PRESENCE_BUSY_TOOLTIP" xml:space="preserve">
-    <value>忙碌\n\n啟動 [目前狀態] 對話方塊</value>
-    <comment>Tooltip for busy presence</comment>
   </data>
   <data name="PRESENCE_BUTTON_TEXT" xml:space="preserve">
     <value>目前狀態</value>
@@ -189,21 +181,13 @@
     <value>請勿打擾</value>
     <comment>Text to denote do not disturb presence</comment>
   </data>
-  <data name="PRESENCE_DO_NOT_DISTURB_TOOLTIP" xml:space="preserve">
-    <value>請勿打擾\n\n啟動 [目前狀態] 對話方塊</value>
-    <comment>Tooltip for do not disturb presence</comment>
-  </data>
   <data name="PRESENCE_OFFLINE_TEXT" xml:space="preserve">
     <value>離線</value>
     <comment>Text to denote offline presence</comment>
   </data>
-  <data name="PRESENCE_OFFLINE_TOOLTIP" xml:space="preserve">
-    <value>離線\n\n啟動 [目前狀態] 對話方塊</value>
-    <comment>Tooltip for offline presence</comment>
-  </data>
-  <data name="PRESENCE_UNKNOWN_TOOLTIP" xml:space="preserve">
-    <value>不明\n\n啟動 [目前狀態] 對話方塊</value>
-    <comment>Tooltip for unknown presence</comment>
+  <data name="PRESENCE_UNKOWN_TEXT" xml:space="preserve">
+    <value>不明</value>
+    <comment>Text to denote unknown presence</comment>
   </data>
   <data name="REJECT_BUTTON_TEXT" xml:space="preserve">
     <value>拒絕</value>

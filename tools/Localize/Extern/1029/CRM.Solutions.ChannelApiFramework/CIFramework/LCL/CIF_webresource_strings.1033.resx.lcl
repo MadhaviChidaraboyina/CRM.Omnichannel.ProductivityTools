@@ -101,6 +101,22 @@
           <Str Name="Custom3" Val="WO18898_20190528" />
         </Props>
       </Item>
+      <Item ItemId=";LAUNCH_PRESENCE_DIALOG_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Launch presence dialog]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Otevřít dialogové okno pro volbu přítomnosti]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-06-12T13:32:47.0009829Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Tooltip for presence control in navbar]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19059_20190610" />
+        </Props>
+      </Item>
       <Item ItemId=";NOTES_TOOLTIP_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Take Notes]]></Val>
@@ -197,22 +213,6 @@
           <Str Name="Custom3" Val="WO18898_20190528" />
         </Props>
       </Item>
-      <Item ItemId=";PRESENCE_AVAILABLE_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Available\n\nLaunch presence dialog]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[K dispozici\n\nOtevře dialogové okno pro volbu přítomnosti.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000882Z" />
-        <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for available presence]]></Cmt>
-        </Cmts>
-        <Props>
-          <Str Name="Custom3" Val="WO18898_20190528" />
-        </Props>
-      </Item>
       <Item ItemId=";PRESENCE_AWAY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Away]]></Val>
@@ -229,22 +229,6 @@
           <Str Name="Custom3" Val="WO18898_20190528" />
         </Props>
       </Item>
-      <Item ItemId=";PRESENCE_AWAY_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Away\n\nLaunch presence dialog]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Pryč\n\nOtevře dialogové okno pro volbu přítomnosti.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000882Z" />
-        <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for away presence]]></Cmt>
-        </Cmts>
-        <Props>
-          <Str Name="Custom3" Val="WO18898_20190528" />
-        </Props>
-      </Item>
       <Item ItemId=";PRESENCE_BUSY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Busy]]></Val>
@@ -256,22 +240,6 @@
         <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000882Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote busy presence]]></Cmt>
-        </Cmts>
-        <Props>
-          <Str Name="Custom3" Val="WO18898_20190528" />
-        </Props>
-      </Item>
-      <Item ItemId=";PRESENCE_BUSY_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Busy\n\nLaunch presence dialog]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nemá čas\n\nOtevře dialogové okno pro volbu přítomnosti.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000882Z" />
-        <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for busy presence]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
@@ -309,22 +277,6 @@
           <Str Name="Custom3" Val="WO18898_20190528" />
         </Props>
       </Item>
-      <Item ItemId=";PRESENCE_DO_NOT_DISTURB_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Do Not Disturb\n\nLaunch presence dialog]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nerušit\n\nOtevře dialogové okno pro volbu přítomnosti.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000882Z" />
-        <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for do not disturb presence]]></Cmt>
-        </Cmts>
-        <Props>
-          <Str Name="Custom3" Val="WO18898_20190528" />
-        </Props>
-      </Item>
       <Item ItemId=";PRESENCE_OFFLINE_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Offline]]></Val>
@@ -341,36 +293,20 @@
           <Str Name="Custom3" Val="WO18898_20190528" />
         </Props>
       </Item>
-      <Item ItemId=";PRESENCE_OFFLINE_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+      <Item ItemId=";PRESENCE_UNKOWN_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Offline\n\nLaunch presence dialog]]></Val>
+          <Val><![CDATA[Unknown]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Offline\n\nOtevře dialogové okno pro volbu přítomnosti.]]></Val>
+            <Val><![CDATA[Neznámé]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000882Z" />
+        <Modified By="v-rondai" DateTime="2019-06-12T13:32:47.0009829Z" />
         <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for offline presence]]></Cmt>
+          <Cmt Name="Dev"><![CDATA[Text to denote unknown presence]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO18898_20190528" />
-        </Props>
-      </Item>
-      <Item ItemId=";PRESENCE_UNKNOWN_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unknown\n\nLaunch presence dialog]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Není známo\n\nOtevře dialogové okno pro volbu přítomnosti.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000882Z" />
-        <Cmts>
-          <Cmt Name="Dev"><![CDATA[Tooltip for unknown presence]]></Cmt>
-        </Cmts>
-        <Props>
-          <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom3" Val="WO19059_20190610" />
         </Props>
       </Item>
       <Item ItemId=";REJECT_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
