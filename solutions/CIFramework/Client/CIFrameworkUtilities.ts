@@ -88,7 +88,9 @@ namespace Microsoft.CIFramework.Utility {
 
 	export function flatten(obj: XrmClientApi.WebApi.Entity): XrmClientApi.WebApi.Entity {
 		let ret: XrmClientApi.WebApi.Entity = {};
-		for (let prop in obj) {
+		let propNames = Object.getOwnPropertyNames(Object.getPrototypeOf(obj)).filter(n => n != 'constructor')
+		for (let pi in propNames) {
+			let prop = propNames[pi];
 			if (typeof (obj[prop]) === "object") {
 				ret[prop] = flatten(obj[prop]);
 			}
