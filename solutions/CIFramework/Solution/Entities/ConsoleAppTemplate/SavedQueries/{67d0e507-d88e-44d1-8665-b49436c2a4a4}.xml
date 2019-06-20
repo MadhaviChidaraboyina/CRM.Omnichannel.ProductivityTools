@@ -11,7 +11,10 @@
       <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
         <row name="result" id="msdyn_consoleapplicationtemplateid">
           <cell name="msdyn_name" width="300" />
-          <cell name="createdon" width="125" />
+            <cell name="msdyn_title" width="100" />
+            <cell name="msdyn_pagetype" width="100" />
+            <cell name="msdyn_pinned" width="100" />
+            <cell name="modifiedon" width="100" />
         </row>
       </grid>
     </layoutxml>
@@ -19,13 +22,16 @@
     <fetchxml>
       <fetch version="1.0" mapping="logical">
         <entity name="msdyn_consoleapplicationtemplate">
-          <attribute name="msdyn_consoleapplicationtemplateid" />
           <attribute name="msdyn_name" />
-          <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="1" />
           </filter>
+            <attribute name="msdyn_title" />
+            <attribute name="msdyn_pinned" />
+            <attribute name="msdyn_pagetype" />
+            <attribute name="modifiedon" />
+            <attribute name="msdyn_consoleapplicationtemplateid" />
         </entity>
       </fetch>
     </fetchxml>

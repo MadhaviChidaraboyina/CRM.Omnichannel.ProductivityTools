@@ -4,10 +4,10 @@
   <EntityInfo>
     <entity Name="msdyn_consoleapplicationtemplateparameter">
       <LocalizedNames>
-        <LocalizedName description="ConsoleApplicationTemplateParameter" languagecode="1033" />
+        <LocalizedName description="Parameter" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="ConsoleApplicationTemplateParameters" languagecode="1033" />
+        <LocalizedCollectionName description="Parameters" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="Template parameter values for a given application template" languagecode="1033" />

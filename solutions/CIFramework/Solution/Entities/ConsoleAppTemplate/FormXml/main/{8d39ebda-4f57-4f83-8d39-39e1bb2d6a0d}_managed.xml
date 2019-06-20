@@ -1,171 +1,170 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <forms>
-  <systemform>
-    <formid>{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}</formid>
-    <IntroducedVersion>1.0.0.0</IntroducedVersion>
-    <FormPresentation>1</FormPresentation>
-    <FormActivationState>1</FormActivationState>
-    <form>
-      <tabs>
-        <tab verticallayout="true" id="{1c7ca199-5627-4de2-b6c4-83d0be0be5be}" IsUserDefined="1">
-          <labels>
-            <label description="General" languagecode="1033" />
-          </labels>
-          <columns>
-            <column width="100%">
-              <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}">
-                  <labels>
-                    <label description="General" languagecode="1033" />
-                  </labels>
-                  <rows>
-                    <row>
-                      <cell id="{40736098-8d9c-443a-b6ce-85335c739b61}">
-                        <labels>
-                          <label description="" languagecode="1033" />
-                        </labels>
-                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{a4bd1f84-bc33-4df0-bb12-3c6cefc25fcd}" showlabel="true" locklevel="0">
-                        <labels>
-                          <label description="" languagecode="1033" />
-                        </labels>
-                        <control id="msdyn_title" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_title" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{51f4cad0-723f-4065-bd12-cc4fc7ac4cd8}">
-                        <labels>
-                          <label description="" languagecode="1033" />
-                        </labels>
-                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{275a9039-b619-6781-3d78-478ee443d9e8}" showlabel="true" locklevel="0">
-                        <labels>
-                          <label description="" languagecode="1033" />
-                        </labels>
-                        <control id="msdyn_pagetype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_pagetype" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{379c8712-d7cb-0257-b7be-7c7125e6341c}" showlabel="true" locklevel="0">
-                        <labels>
-                          <label description="" languagecode="1033" />
-                        </labels>
-                        <control id="msdyn_pinned" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_pinned" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{75819513-1e68-ee7d-3d85-7a44ee81dac0}" showlabel="true" locklevel="0">
-                        <labels>
-                          <label description="" languagecode="1033" />
-                        </labels>
-                        <control id="msdyn_icon" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_icon" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{e880347e-8a94-0009-9904-8a0242bd720c}" showlabel="false" colspan="1" auto="false" rowspan="6">
-                        <labels>
-                          <label description="" languagecode="1033" />
-                        </labels>
-                        <control id="TemplateTags" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
-                          <parameters>
-                            <ViewId>{0BD6D418-377A-434B-B456-4E00CAB168DF}</ViewId>
-                            <IsUserView>false</IsUserView>
-                            <RelationshipName>msdyn_msdyn_consoleapplicationtemplate_tags</RelationshipName>
-                            <TargetEntityType>msdyn_templatetags</TargetEntityType>
-                            <AutoExpand>Fixed</AutoExpand>
-                            <EnableQuickFind>false</EnableQuickFind>
-                            <EnableViewPicker>false</EnableViewPicker>
-                            <ViewIds>{0BD6D418-377A-434B-B456-4E00CAB168DF}</ViewIds>
-                            <EnableJumpBar>false</EnableJumpBar>
-                            <ChartGridMode>All</ChartGridMode>
-                            <VisualizationId />
-                            <IsUserChart>false</IsUserChart>
-                            <EnableChartPicker>true</EnableChartPicker>
-                            <RecordsPerPage>4</RecordsPerPage>
-                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
-                            <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
-                          </parameters>
-                        </control>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{d081059e-481c-9059-3106-a4102e3d986e}" showlabel="false" colspan="1" auto="false" rowspan="6">
-                        <labels>
-                          <label description="" languagecode="1033" />
-                        </labels>
-                        <control id="ApplicationTemplateParameters" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
-                          <parameters>
-                            <ViewId>{6C123545-4983-491B-8967-AC6402DFB131}</ViewId>
-                            <IsUserView>false</IsUserView>
-                            <RelationshipName>msdyn_msdyn_consoleapplicationtemplate_msdyn_co</RelationshipName>
-                            <TargetEntityType>msdyn_consoleapplicationtemplateparameter</TargetEntityType>
-                            <AutoExpand>Fixed</AutoExpand>
-                            <EnableQuickFind>false</EnableQuickFind>
-                            <EnableViewPicker>false</EnableViewPicker>
-                            <ViewIds>{6C123545-4983-491B-8967-AC6402DFB131}</ViewIds>
-                            <EnableJumpBar>false</EnableJumpBar>
-                            <ChartGridMode>All</ChartGridMode>
-                            <VisualizationId />
-                            <IsUserChart>false</IsUserChart>
-                            <EnableChartPicker>true</EnableChartPicker>
-                            <RecordsPerPage>4</RecordsPerPage>
-                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
-                            <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
-                          </parameters>
-                        </control>
-                      </cell>
-                    </row>
-                  </rows>
-                </section>
-              </sections>
-            </column>
-          </columns>
-        </tab>
-      </tabs>
-      <Navigation>
-        <NavBar></NavBar>
-        <NavBarAreas>
-          <NavBarArea Id="Info">
-            <Titles>
-              <Title LCID="1033" Text="Common" />
-            </Titles>
-          </NavBarArea>
-          <NavBarArea Id="Sales">
-            <Titles>
-              <Title LCID="1033" Text="Sales" />
-            </Titles>
-          </NavBarArea>
-          <NavBarArea Id="Service">
-            <Titles>
-              <Title LCID="1033" Text="Service" />
-            </Titles>
-          </NavBarArea>
-          <NavBarArea Id="Marketing">
-            <Titles>
-              <Title LCID="1033" Text="Marketing" />
-            </Titles>
-          </NavBarArea>
-          <NavBarArea Id="ProcessCenter">
-            <Titles>
-              <Title LCID="1033" Text="Process Sessions" />
-            </Titles>
-          </NavBarArea>
-        </NavBarAreas>
-      </Navigation>
-    </form>
-    <IsCustomizable>1</IsCustomizable>
-    <CanBeDeleted>1</CanBeDeleted>
-    <LocalizedNames>
-      <LocalizedName description="Information" languagecode="1033" />
-    </LocalizedNames>
-    <Descriptions>
-      <Description description="A form for this entity." languagecode="1033" />
-    </Descriptions>
-  </systemform>
+		<systemform>
+				<formid>{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}</formid>
+				<IntroducedVersion>1.0.0.0</IntroducedVersion>
+				<FormPresentation>1</FormPresentation>
+				<FormActivationState>1</FormActivationState>
+				<form>
+						<tabs>
+								<tab verticallayout="true" id="{1c7ca199-5627-4de2-b6c4-83d0be0be5be}" IsUserDefined="1" name="{1c7ca199-5627-4de2-b6c4-83d0be0be5be}" locklevel="0" expanded="true" showlabel="true">
+										<labels>
+												<label description="General" languagecode="1033" />
+										</labels>
+										<columns>
+												<column width="34%">
+														<sections>
+																<section showlabel="false" showbar="false" IsUserDefined="0" id="{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}">
+																		<labels>
+																				<label description="General" languagecode="1033" />
+																		</labels>
+																		<rows>
+																				<row>
+																						<cell id="{40736098-8d9c-443a-b6ce-85335c739b61}">
+																								<labels>
+																										<label description="" languagecode="1033" />
+																								</labels>
+																								<control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+																						</cell>
+																				</row>
+																				<row>
+																						<cell id="{75819513-1e68-ee7d-3d85-7a44ee81dac0}" showlabel="true" locklevel="0">
+																								<labels>
+																										<label description="" languagecode="1033" />
+																								</labels>
+																								<control id="msdyn_icon" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_icon" disabled="false" />
+																						</cell>
+																				</row>
+																				<row>
+																						<cell id="{a4bd1f84-bc33-4df0-bb12-3c6cefc25fcd}" showlabel="true" locklevel="0">
+																								<labels>
+																										<label description="" languagecode="1033" />
+																								</labels>
+																								<control id="msdyn_title" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_title" disabled="false" />
+																						</cell>
+																				</row>
+																				<row>
+																						<cell id="{275a9039-b619-6781-3d78-478ee443d9e8}" showlabel="true" locklevel="0">
+																								<labels>
+																										<label description="" languagecode="1033" />
+																								</labels>
+																								<control id="msdyn_pagetype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_pagetype" disabled="false" />
+																						</cell>
+																				</row>
+																				<row>
+																						<cell id="{379c8712-d7cb-0257-b7be-7c7125e6341c}" showlabel="true" locklevel="0">
+																								<labels>
+																										<label description="" languagecode="1033" />
+																								</labels>
+																								<control id="msdyn_pinned" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_pinned" disabled="false" />
+																						</cell>
+																				</row>
+																				<row>
+																						<cell id="{89210d67-7701-576d-3723-4390303a64bc}" showlabel="true" locklevel="0" rowspan="3">
+																								<labels>
+																										<label description="" languagecode="1033" />
+																								</labels>
+																								<control id="msdyn_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_description" disabled="false" />
+																						</cell>
+																				</row>
+																				<row>
+																						<cell id="{51f4cad0-723f-4065-bd12-cc4fc7ac4cd8}" visible="false">
+																								<labels>
+																										<label description="" languagecode="1033" />
+																								</labels>
+																								<control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+																						</cell>
+																				</row>
+																		</rows>
+																</section>
+														</sections>
+												</column>
+												<column width="66%">
+														<sections>
+																<section name="{1c7ca199-5627-4de2-b6c4-83d0be0be5be}_section_2" showlabel="false" showbar="false" locklevel="0" id="{3eb84e18-6c5a-0c41-bcde-171e7da8347e}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+																		<labels>
+																				<label description="Section" languagecode="1033" />
+																		</labels>
+																		<rows>
+																				<row>
+																						<cell id="{db2a537d-5522-9de6-943d-4d5c07542e92}" showlabel="true" colspan="1" auto="false" rowspan="8">
+																								<labels>
+																										<label description="Parameters" languagecode="1033" />
+																								</labels>
+																								<control id="Parameters" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{2be7dd85-d3b0-7e7b-15ea-b0916cb60764}">
+																										<parameters>
+																												<ViewId>{6C123545-4983-491B-8967-AC6402DFB131}</ViewId>
+																												<IsUserView>false</IsUserView>
+																												<RelationshipName>msdyn_msdyn_consoleapplicationtemplate_msdyn_co</RelationshipName>
+																												<TargetEntityType>msdyn_consoleapplicationtemplateparameter</TargetEntityType>
+																												<AutoExpand>Fixed</AutoExpand>
+																												<EnableQuickFind>false</EnableQuickFind>
+																												<EnableViewPicker>false</EnableViewPicker>
+																												<ViewIds>{6C123545-4983-491B-8967-AC6402DFB131}</ViewIds>
+																												<EnableJumpBar>false</EnableJumpBar>
+																												<ChartGridMode>All</ChartGridMode>
+																												<VisualizationId />
+																												<IsUserChart>false</IsUserChart>
+																												<EnableChartPicker>true</EnableChartPicker>
+																												<RecordsPerPage>5</RecordsPerPage>
+																												<HeaderColorCode>#F3F3F3</HeaderColorCode>
+																												<RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+																										</parameters>
+																								</control>
+																						</cell>
+																				</row>
+																				<row />
+																				<row />
+																				<row />
+																				<row />
+																				<row />
+																				<row />
+																				<row />
+																		</rows>
+																</section>
+														</sections>
+												</column>
+										</columns>
+								</tab>
+						</tabs>
+						<Navigation>
+								<NavBar></NavBar>
+								<NavBarAreas>
+										<NavBarArea Id="Info">
+												<Titles>
+														<Title LCID="1033" Text="Common" />
+												</Titles>
+										</NavBarArea>
+										<NavBarArea Id="Sales">
+												<Titles>
+														<Title LCID="1033" Text="Sales" />
+												</Titles>
+										</NavBarArea>
+										<NavBarArea Id="Service">
+												<Titles>
+														<Title LCID="1033" Text="Service" />
+												</Titles>
+										</NavBarArea>
+										<NavBarArea Id="Marketing">
+												<Titles>
+														<Title LCID="1033" Text="Marketing" />
+												</Titles>
+										</NavBarArea>
+										<NavBarArea Id="ProcessCenter">
+												<Titles>
+														<Title LCID="1033" Text="Process Sessions" />
+												</Titles>
+										</NavBarArea>
+								</NavBarAreas>
+						</Navigation>
+				</form>
+				<IsCustomizable>1</IsCustomizable>
+				<CanBeDeleted>1</CanBeDeleted>
+				<LocalizedNames>
+						<LocalizedName description="Information" languagecode="1033" />
+				</LocalizedNames>
+				<Descriptions>
+						<Description description="A form for this entity." languagecode="1033" />
+				</Descriptions>
+		</systemform>
 </forms>

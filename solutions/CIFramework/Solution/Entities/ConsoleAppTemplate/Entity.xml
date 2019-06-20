@@ -402,7 +402,7 @@
           <LookupStyle>single</LookupStyle>
           <LookupTypes />
           <displaynames>
-            <displayname description="PageType" languagecode="1033" />
+            <displayname description="Page type" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="The console application type to be instantiated" languagecode="1033" />
@@ -826,7 +826,7 @@
               <MaxLength>100</MaxLength>
               <Length>200</Length>
               <displaynames>
-                <displayname description="icon" languagecode="1033" />
+                <displayname description="Icon" languagecode="1033" />
               </displaynames>
               <Descriptions>
                 <Description description="The icon for the application template" languagecode="1033" />
@@ -925,7 +925,56 @@
             <Description description="The title to be displayed for this application template" languagecode="1033" />
           </Descriptions>
         </attribute>
+          <attribute PhysicalName="msdyn_description">
+              <Type>ntext</Type>
+              <Name>msdyn_description</Name>
+              <LogicalName>msdyn_description</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>1</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <Format></Format>
+              <MaxLength>2000</MaxLength>
+              <displaynames>
+                  <displayname description="Description" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                  <Description description="Description of the record" languagecode="1033" />
+              </Descriptions>
+          </attribute>
       </attributes>
+				<EntityKeys>
+						<EntityKey>
+								<Name>msdyn_NameKey</Name>
+								<LogicalName>msdyn_namekey</LogicalName>
+								<IntroducedVersion>1.0.0.0</IntroducedVersion>
+								<IsCustomizable>0</IsCustomizable>
+								<EntityKeyAttributes>
+										<AttributeName>msdyn_name</AttributeName>
+								</EntityKeyAttributes>
+								<displaynames>
+										<displayname description="Key to avoid duplication on Name" languagecode="1033" />
+								</displaynames>
+						</EntityKey>
+				</EntityKeys>
       <EntitySetName>msdyn_consoleapplicationtemplates</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
