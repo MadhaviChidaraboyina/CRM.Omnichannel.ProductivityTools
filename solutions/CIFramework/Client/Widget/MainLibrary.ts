@@ -684,7 +684,7 @@ namespace Microsoft.CIFramework
 	export function getAllSessions(correlationId?: string): Promise<string[]> {
 		const payload: postMessageNamespace.IExternalRequestMessageType = {
 			messageType: MessageType.getAllSessions,
-			messageData: new Map().set(Constants.correlationId)
+			messageData: new Map().set(Constants.correlationId, correlationId)
 		}
 		return sendMessage<string[]>(getAllSessions.name, payload, false);
 	}

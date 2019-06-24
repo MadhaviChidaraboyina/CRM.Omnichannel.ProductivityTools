@@ -116,7 +116,7 @@ namespace Microsoft.CIFramework.Internal {
 		);
 	}
 
-	export function launchZFPNotification(header: any, body: any, notificationType: any, eventType: any, actions: any, waitTime: number): Promise<any> {
+	export function launchZFPNotification(header: any, body: any, notificationType: any, eventType: any, actions: any, waitTime: number, correlationId: string): Promise<any> {
 	
 		let accept = false;
 		let decline = false;
@@ -176,6 +176,7 @@ namespace Microsoft.CIFramework.Internal {
 					clearTimeout(displayedNotificationTimer);
 				}
 				console.log("[NotifyEvent] Notification accepted. Timer cleared");
+				logInfoToTelemetry("Notification Accepted on Agent Accept", correlationId);
 				showPopUpNotification();
 				return resolve(mapReturn);
 			}.bind(this);
@@ -189,6 +190,7 @@ namespace Microsoft.CIFramework.Internal {
 					clearTimeout(displayedNotificationTimer);
 				}
 				console.log("[NotifyEvent] Notification rejected.Timer cleared");
+				logInfoToTelemetry("Notification Rejected on Agent Decline", correlationId);
 				showPopUpNotification();
 				return resolve(mapReturn);
 			}.bind(this);
@@ -199,6 +201,7 @@ namespace Microsoft.CIFramework.Internal {
 					Xrm.Internal.clearPopupNotification(closeId);
 					closeId = "";
 					console.log("[NotifyEvent] Notification rejected due to timeout");
+					logInfoToTelemetry("Notification Rejected on display timeout", correlationId);
 					showPopUpNotification();
 					return resolve(mapReturn);
 				}.bind(this);
@@ -239,6 +242,7 @@ namespace Microsoft.CIFramework.Internal {
 				closeId = "";
 				clearTimeout(displayedNotificationTimer);
 				console.log("[NotifyEvent] Notification Timed out. Rejecting...");
+				logInfoToTelemetry("Notification Rejected on Display Timeout", correlationId);
 				showPopUpNotification();
 				return resolve(mapReturn);
 			};
@@ -247,12 +251,14 @@ namespace Microsoft.CIFramework.Internal {
 			if (queue.count >= maxNotificationCount) {
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
 				console.log("[NotifyEvent] Queue has " + queue.count + " items. Rejecting new Incoming...");
+				logInfoToTelemetry("Notification Rejected as queue is full", correlationId);
 				return resolve(mapReturn);
 			}
 
 			let rejectAfterQueueLimitExceeded = function () {
 				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
-				console.log("[NotifyEvent] Notification exceeded time limit in queue. Rejecting...");
+				console.log("[NotifyEvent] Queue item timeout or addpopupNotification failed. Rejecting notification...");
+				logInfoToTelemetry("Notification Rejected QueueTimeout or addpopupNotification failed", correlationId);
 				return resolve(mapReturn);
 			};
 
@@ -269,10 +275,12 @@ namespace Microsoft.CIFramework.Internal {
 				notificationCreatedAt: Date.now(),
 				notificationExpiryTime: notificationExpiryTime,
 				queueTimeOutMethod: rejectAfterQueueLimitExceeded,
-				timeOutMethod: rejectAfterTimeout
+				timeOutMethod: rejectAfterTimeout,
+				correlationId: correlationId
 			};
 			
 			queue.enqueue(notificationItem);
+			logInfoToTelemetry("Notification Queued", correlationId);
 			console.log("[NotifyEvent] Queued new notification. queue length - " + queue.count);
 			
 			// start interval check to see if notification in queue has expired, i.e. spent 30 secs in queue. Remove such notifications.
@@ -283,8 +291,9 @@ namespace Microsoft.CIFramework.Internal {
 				}, 1000);
 			}
 
-			if (closeId == "") {
-				showPopUpNotification();
+			if (closeId == "" && queue.count == 1) {
+				console.log("[NotifyEvent] calling show popup notification closeid = empty");
+				show();
 			}
 		});
 	}
@@ -296,46 +305,68 @@ namespace Microsoft.CIFramework.Internal {
 		for (let i = 0; i < queue.count; i++) {
 			if (Date.now() - queuedNotificationExpirtyTime > queue.getItemAtIndex(i).notificationCreatedAt) {
 				console.log("[NotifyEvent] removing item at index " + i + ". Rejecting Notification...");
-				queue.getItemAtIndex(i).queueTimeOutMethod;
+				queue.getItemAtIndex(i).queueTimeOutMethod();
 				queue.removeItem(i);
 			}
 		}
 	}
 
-	function showPopUpNotification(): void {
-		
-		let show = function () {
-			if (queue.count > 0) {
-				let popUpItem = queue.dequeue();
-				console.log("[NotifyEvent] dequeued notification. queue length - " + queue.count);
-				let popupnotification = popUpItem.popUpNotificationItem;
-				let createdAtTime = popUpItem.notificationCreatedAt;
-				let notificationExpiryTime = popUpItem.notificationExpiryTime;
-				var spentInQueueTime = Date.now() - createdAtTime;
-				console.log("[NotifyEvent] - The notification spent " + spentInQueueTime / 1000 + " seconds in queue");
-				var leftTime = notificationExpiryTime - spentInQueueTime;
+	function show(): void {
+		if (queue.count > 0) {
+			let popUpItem = queue.getItemAtIndex(0);
+			console.log("[NotifyEvent] peeked notification. queue length - " + queue.count);
+			let popupnotification = popUpItem.popUpNotificationItem;
+			let createdAtTime = popUpItem.notificationCreatedAt;
+			let notificationExpiryTime = popUpItem.notificationExpiryTime;
+			var spentInQueueTime = Date.now() - createdAtTime;
+			console.log("[NotifyEvent] - The notification spent " + spentInQueueTime / 1000 + " seconds in queue");
+			var leftTime = notificationExpiryTime - spentInQueueTime;
 
-				if (leftTime > 0) {
-					if (IsPlatformNotificationTimeoutInfra) {
-						popupnotification.timeoutAction["timeout"] = leftTime + displayDelayTimeMs; //adding 2 secs since consecutive notifications are delayed by 2 secs to break continuity.
-					}
-					else {
-						let leftTimeSec = Math.ceil((leftTime + displayDelayTimeMs)/ 1000); //adding 2 secs since consecutive notifications are delayed by 2 secs to break continuity.
-						popupnotification.details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = leftTimeSec.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
-					}
+			if (leftTime > 0) {
+				if (IsPlatformNotificationTimeoutInfra) {
+					popupnotification.timeoutAction["timeout"] = leftTime + displayDelayTimeMs; //adding 2 secs since consecutive notifications are delayed by 2 secs to break continuity.
 				}
+				else {
+					let leftTimeSec = Math.ceil((leftTime) / 1000);
+					popupnotification.details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = leftTimeSec.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
+				}
+			}
 
-				Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => {
-					closeId = id; console.log(id);
-					if (!IsPlatformNotificationTimeoutInfra) {
-						displayedNotificationTimer = setTimeout(popUpItem.timeOutMethod, leftTime);
-					}
-				}).catch((e: any) => {
-					console.log("[NotifyEvent] Error creating new notification: " + e);
-				})
+			Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => {
+				closeId = id; console.log(id);
+				CheckAndDequeueNotification(popUpItem);
+				if (!IsPlatformNotificationTimeoutInfra) {
+					displayedNotificationTimer = setTimeout(popUpItem.timeOutMethod, leftTime);
+				}
+			}).catch((e: any) => {
+				console.log("[NotifyEvent] Error creating new notification: " + e);
+				logInfoToTelemetry("Error creating popup notification: " + e, popUpItem.correlationId);
+				popUpItem.queueTimeOutMethod(); // queueTimeOut function name to be more generic post GA. This functions resolves the promise with a reject.
+				CheckAndDequeueNotification(popUpItem);
+			})
+		}
+	}
+
+	function CheckAndDequeueNotification(popUpItem: INotificationItem): void {
+		if (queue.count > 0) {
+			let currentTopItem = queue.getItemAtIndex(0);
+			if (popUpItem.notificationCreatedAt == currentTopItem.notificationCreatedAt) {
+				queue.dequeue();
+				logInfoToTelemetry("Dequeued", popUpItem.correlationId);
+				console.log("[NotifyEvent] Dequeued. Queue Length is " + queue.count);
+			}
+			else {
+				console.log("[NotifyEvent] CurrentQueueTop and Displayed Notification are different. Not Dequeuing");
 			}
 		}
+	}
+
+	function showPopUpNotification(): void {
 		setTimeout(show, displayDelayTimeMs); // show the next notification after a delay of 2 seconds, so that user does not confuse it with the previous notifcation
+	}
+
+	function logInfoToTelemetry(information: string, correlationId: string): void {
+		logAPIInternalInfo(appId, false, null, MessageType.notifyEvent + "-" + information, cifVersion, "", "", "", correlationId);
 	}
 
 	/**
@@ -350,6 +381,7 @@ namespace Microsoft.CIFramework.Internal {
 		let eventType: any;
 		let waitTime = -1;
 		let notificationType: any = [];
+		let correlationId: any;
 		for (let [key, value] of notificationUX) {
 			if(key.search(Constants.eventType) != -1){
 				console.log(value);
@@ -367,6 +399,12 @@ namespace Microsoft.CIFramework.Internal {
 						notificationType = value1;
 					}
 				}
+			}
+			if (key.search(Constants.correlationId) != -1) {
+				correlationId = value;
+			}
+			else {
+				correlationId = "";
 			}
 		}
 		if (header == null || header == "undefined"){
@@ -390,6 +428,6 @@ namespace Microsoft.CIFramework.Internal {
 				}
 			}
 		}
-			return launchZFPNotification(header, body, notificationType, eventType, actions, waitTime);		
+		return launchZFPNotification(header, body, notificationType, eventType, actions, waitTime, correlationId);		
 	}
 }

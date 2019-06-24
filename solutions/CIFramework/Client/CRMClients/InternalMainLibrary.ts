@@ -72,7 +72,7 @@ namespace Microsoft.CIFramework.Internal {
 	const listenerWindow = window.parent;
 
 	declare var Xrm: any;
-	declare var appId: string;
+	export declare var appId: string;
 	export var cifVersion: string;
 	cifVersion = "";
 	declare var navigationType: string;

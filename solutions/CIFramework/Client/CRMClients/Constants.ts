@@ -24,7 +24,8 @@ namespace Microsoft.CIFramework.Internal
 		popUpNotificationItem: XrmClientApi.IPopupNotificationItem,
 		notificationCreatedAt: number,
 		notificationExpiryTime: number,
-		queueTimeOutMethod: any;
-		timeOutMethod: any
+		queueTimeOutMethod: any,
+		timeOutMethod: any,
+		correlationId: string
 	}
 }

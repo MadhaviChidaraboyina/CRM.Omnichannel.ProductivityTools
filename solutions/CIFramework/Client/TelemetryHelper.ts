@@ -131,6 +131,12 @@ namespace Microsoft.CIFramework.Internal
 		return Promise.reject(Microsoft.CIFramework.Utility.createErrorMap(error.errorMsg, apiName));
 	}
 
+	//Logs Failure API internal error/informational Events to the d365_cif_apiusage table without rejecting the promise
+	export function logAPIInternalInfo(appId: string, isError: boolean, error: IErrorHandler, apiName: string, cifVersion: string, providerID?: string, providerName?: string, customParameters?: string, correlationId?: string): void {
+		var usageData = new APIUsageTelemetry(providerID ? providerID : "", providerName ? providerName : "", null, apiName, null, appId ? appId : "", cifVersion, isError ? isError : false, error ? error : null, customParameters ? customParameters : "", correlationId);
+		setAPIUsageTelemetry(usageData);
+	}
+
 	// Function to populate the Usage Data Telemetry
 	export function setUsageData(data: UsageTelemetryData): void {
 		var UsageTelemetry = new AWTEventProperties();
