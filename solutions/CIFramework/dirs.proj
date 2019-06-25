@@ -5,6 +5,7 @@
 		<ProjectToBuild Include="Controls\AgentClickToActControl\AgentClickToActControl.csproj" />
 		<ProjectToBuild Include="Plugins\CIFrameworkPlugins.csproj" />
 		<ProjectToBuild Include="CRM.Solutions.ChannelApiFramework.Test\CRM.Solutions.ChannelApiFramework.Test.csproj" />
+		<ProjectToBuild Include="CRM.Solutions.ChannelApiFrameworkV2.Test\CRM.Solutions.ChannelApiFrameworkV2.Test.csproj" />
 		<ProjectToBuild Include="Microsoft.OmniChannel.Test\OmniChannel.Test.csproj" />
 		<ProjectToBuild Include="Solution\ProviderSolution.csproj" />
 		<ProjectToBuild Include="solutions.proj" Condition="'$(EnableSigning)'!='true'" /> 
