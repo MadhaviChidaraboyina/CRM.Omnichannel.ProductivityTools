@@ -240,6 +240,12 @@ namespace Microsoft.CIFramework.Utility {
 	}
 
 	export function onFormSaveHandler(context: any) {
+		var sessionId = (window.top as any).Xrm.App.sessions.getFocusedSession().sessionId;
+		var tabId = (window.top as any).Xrm.App.sessions.getFocusedSession().tabs.getFocusedTab().tabId;
+		var preNavigateHandler = function (event: any) {
+			(window.top as any).Xrm.Navigation.removeOnPreNavigation(preNavigateHandler);
+			(window.top as any).Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).close();
+		};
 		var intervalFunction = setInterval(function () {
 			try {
 				var formContext = context.getFormContext();
@@ -252,6 +258,10 @@ namespace Microsoft.CIFramework.Utility {
 							entityId: entityId
 						}
 					}));
+
+					if (context.getEventArgs().getSaveMode() == 2) { //save and close
+						(window.top as any).Xrm.Navigation.addOnPreNavigation(preNavigateHandler);
+					}
 				}
 			}
 			catch (error) {
