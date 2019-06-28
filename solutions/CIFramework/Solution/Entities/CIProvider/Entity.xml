@@ -852,7 +852,7 @@
 					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
 					<IsDataSourceSecret>0</IsDataSourceSecret>
 					<AutoNumberFormat></AutoNumberFormat>
-					<Format></Format>
+					<Format>url</Format>
 					<MaxLength>2000</MaxLength>
 					<displaynames>
 						<displayname description="Trusted Domain" languagecode="1033" />

@@ -241,134 +241,140 @@ namespace Microsoft.CIFramework.postMessageNamespace {
 		 * Common function on caller and receiver to process requests and responses
 		 */
 		private processMessage(event: MessageEvent) {
-			let responseTargetWindow = this.responseTargetWindow || event.source;
-			let whiteListedOrigin = this.listWhitelistedDomains.find((whiteListedDomain) => {
-				//TODO - Replace URL with some other supported object if IE support becomes mandatory. URL is not supported by IE11
-				var domainUrl = new URL(event.origin);
-				var domainHostName = decodeURIComponent(domainUrl.hostname);
-				var whiteListedDomainUrl;
-				var whiteListedDomainHostName = "";
-				if (whiteListedDomain != null) {
-					whiteListedDomainUrl = new URL(whiteListedDomain);
-					whiteListedDomainHostName = decodeURIComponent(whiteListedDomainUrl.hostname);
+			try {
+				let responseTargetWindow = this.responseTargetWindow || event.source;
+				let whiteListedOrigin = this.listWhitelistedDomains.find((whiteListedDomain) => {
+					//TODO - Replace URL with some other supported object if IE support becomes mandatory. URL is not supported by IE11
+					var domainUrl = new URL(event.origin);
+					var domainHostName = decodeURIComponent(domainUrl.hostname);
+					var whiteListedDomainUrl;
+					var whiteListedDomainHostName = "";
+					if (whiteListedDomain != null) {
+						whiteListedDomainUrl = new URL(whiteListedDomain);
+						whiteListedDomainHostName = decodeURIComponent(whiteListedDomainUrl.hostname);
+					}
+					if (whiteListedDomainHostName != "" && whiteListedDomainHostName == domainHostName)
+						return true;
+					else if (whiteListedDomain != null && whiteListedDomainHostName.startsWith("*"))
+						return (domainHostName.endsWith(whiteListedDomainHostName.substr(2)));
+					return false;
+				});
+
+				let trackingCorrelationId = event.data[messageCorrelationId];
+				let msg: IResponseMessageType;
+
+				let messageData = null;
+				if (!event.origin || event.origin === "*" || !event.source) {
+					messageData = Microsoft.CIFramework.Utility.createErrorMap("Origin/Source of the message cant be null or all");
 				}
-				if (whiteListedDomainHostName != "" && whiteListedDomainHostName == domainHostName)
-					return true;
-				else if (whiteListedDomain != null && whiteListedDomainHostName.startsWith("*"))
-					return (domainHostName.endsWith(whiteListedDomainHostName.substr(2)));
-				return false;
-			});
-
-			let trackingCorrelationId = event.data[messageCorrelationId];
-			let msg: IResponseMessageType;
-
-			let messageData = null;
-			if (!event.origin || event.origin === "*" || !event.source) {
-				messageData = Microsoft.CIFramework.Utility.createErrorMap("Origin/Source of the message cant be null or all");
-			}
-			if (!whiteListedOrigin) {
-				messageData = Microsoft.CIFramework.Utility.createErrorMap("Sender domain is not a recognised or is invalid and hence the message cant be processed");
-			}
-
-			if (!trackingCorrelationId) {
-				if (messageData) {
-					// log message recieved has no correlation id, with origin & msg details
-					console.trace("Ignoring message from unknown event source: " + event.origin);
-					return;
+				if (!whiteListedOrigin) {
+					messageData = Microsoft.CIFramework.Utility.createErrorMap("Sender domain is not a recognised or is invalid and hence the message cant be processed");
 				}
-			}
-			else {
-				// correlation id exists, but the domain was not whitelisted. Return an error response
-				if (messageData) {
-					msg = {
-						messageOutcome: messageFailure,
-						messageData: messageData,
-						messageCorrelationId: trackingCorrelationId
-					};
-					return this.sendResponseMsg(responseTargetWindow, msg, event.origin);
+
+				if (!trackingCorrelationId) {
+					if (messageData) {
+						// log message recieved has no correlation id, with origin & msg details
+						console.trace("Ignoring message from unknown event source: " + event.origin);
+						return;
+					}
 				}
-			}
-
-			let pendingPromise: IDeferred;
-			if (trackingCorrelationId && this.pendingPromises) {
-				pendingPromise = this.pendingPromises.get(trackingCorrelationId);
-			}
-			/**
-			 * If an open promise against this message's correlation Id does not exist, 
-			 * then invoke registered message handlers and send their result back
-			 */
-			if (!pendingPromise) {
-				let data = <IExternalRequestMessageType>event.data;
-				if(typeof(data.messageData) != "string")
-					data.messageData.set(originURL, whiteListedOrigin);
-
-				/**
-				 * Iterate through the handler list and invoke them all nd handle if there are no handlers
-				 */
-				if (!this.messageHandlers.get(data.messageType)) {
-					if (trackingCorrelationId) {
+				else {
+					// correlation id exists, but the domain was not whitelisted. Return an error response
+					if (messageData) {
 						msg = {
-							messageOutcome: messageSuccess,
-							messageData: Microsoft.CIFramework.Utility.createErrorMap("No handlers found to process the request."),
+							messageOutcome: messageFailure,
+							messageData: messageData,
 							messageCorrelationId: trackingCorrelationId
 						};
-						this.sendResponseMsg(responseTargetWindow, msg, event.origin);
+						return this.sendResponseMsg(responseTargetWindow, msg, event.origin);
 					}
-					// todo - log that no handler was found alongwith message & origin details, and if we are sending back a response or silently ignoring.
-					return;
 				}
 
-				this.messageHandlers.get(data.messageType).forEach((handlerFunction: Handler) => {
-					try {
-						(<Handler>handlerFunction)(data.messageData).then(
-							function (result: Map<string, any>) {
-								if (trackingCorrelationId) {
-									msg = {
-										messageOutcome: messageSuccess,
-										messageData: result,
-										messageCorrelationId: trackingCorrelationId
-									};
-									this.sendResponseMsg(responseTargetWindow, msg, event.origin);
-								}
-							}.bind(this),
-							function (error: Map<string, any>) {
-								if (trackingCorrelationId) {
-									msg = {
-										messageOutcome: messageFailure,
-										messageData: error,
-										messageCorrelationId: trackingCorrelationId
-									};
-									this.sendResponseMsg(responseTargetWindow, msg, event.origin);
-								}
-							}.bind(this)
-						);
-					}
-					catch (error) {
+				let pendingPromise: IDeferred;
+				if (trackingCorrelationId && this.pendingPromises) {
+					pendingPromise = this.pendingPromises.get(trackingCorrelationId);
+				}
+				/**
+				 * If an open promise against this message's correlation Id does not exist, 
+				 * then invoke registered message handlers and send their result back
+				 */
+				if (!pendingPromise) {
+					let data = <IExternalRequestMessageType>event.data;
+					if (typeof (data.messageData) != "string")
+						data.messageData.set(originURL, whiteListedOrigin);
+
+					/**
+					 * Iterate through the handler list and invoke them all nd handle if there are no handlers
+					 */
+					if (!this.messageHandlers.get(data.messageType)) {
 						if (trackingCorrelationId) {
 							msg = {
-								messageOutcome: messageFailure,
-								messageData: Microsoft.CIFramework.Utility.buildMap(error),
+								messageOutcome: messageSuccess,
+								messageData: Microsoft.CIFramework.Utility.createErrorMap("No handlers found to process the request."),
 								messageCorrelationId: trackingCorrelationId
 							};
 							this.sendResponseMsg(responseTargetWindow, msg, event.origin);
 						}
+						// todo - log that no handler was found alongwith message & origin details, and if we are sending back a response or silently ignoring.
+						return;
 					}
-				})
 
-			}
-			/**
-			 * If an open promise against this message's correlation Id does exist, 
-			 * then process response as success/failure of an earlier request
-			 * and delete the open promise from pendingPromises collection
-			 */
-			else {
-				let data = <IExternalResponseMessageType>event.data;
-				if (data.messageOutcome === messageSuccess) {
-					pendingPromise.resolve(data.messageData);
+					this.messageHandlers.get(data.messageType).forEach((handlerFunction: Handler) => {
+						try {
+							(<Handler>handlerFunction)(data.messageData).then(
+								function (result: Map<string, any>) {
+									if (trackingCorrelationId) {
+										msg = {
+											messageOutcome: messageSuccess,
+											messageData: result,
+											messageCorrelationId: trackingCorrelationId
+										};
+										this.sendResponseMsg(responseTargetWindow, msg, event.origin);
+									}
+								}.bind(this),
+								function (error: Map<string, any>) {
+									if (trackingCorrelationId) {
+										msg = {
+											messageOutcome: messageFailure,
+											messageData: error,
+											messageCorrelationId: trackingCorrelationId
+										};
+										this.sendResponseMsg(responseTargetWindow, msg, event.origin);
+									}
+								}.bind(this)
+							);
+						}
+						catch (error) {
+							if (trackingCorrelationId) {
+								msg = {
+									messageOutcome: messageFailure,
+									messageData: Microsoft.CIFramework.Utility.buildMap(error),
+									messageCorrelationId: trackingCorrelationId
+								};
+								this.sendResponseMsg(responseTargetWindow, msg, event.origin);
+							}
+						}
+					})
+
 				}
+				/**
+				 * If an open promise against this message's correlation Id does exist, 
+				 * then process response as success/failure of an earlier request
+				 * and delete the open promise from pendingPromises collection
+				 */
 				else {
-					pendingPromise.reject(data.messageData);
+					let data = <IExternalResponseMessageType>event.data;
+					if (data.messageOutcome === messageSuccess) {
+						pendingPromise.resolve(data.messageData);
+					}
+					else {
+						pendingPromise.reject(data.messageData);
+					}
 				}
+			}
+
+			catch (e) {
+				console.error("Error in PostMsgWrapper - processMessage. " + e);
 			}
 		}
 	}

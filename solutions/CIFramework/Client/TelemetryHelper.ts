@@ -1,4 +1,4 @@
-/// <reference path="CRMClients/TelemetryConstants.ts" />
+/// <reference path="TelemetryConstants.ts" />
 /// <reference path="CRMClients/State.ts" />
 /// <reference path="CRMClients/aria-webjs-sdk-1.8.3.d.ts" />
 /// <reference path="CRMClients/IErrorHandler.ts" />
@@ -147,7 +147,7 @@ namespace Microsoft.CIFramework.Internal
 		UsageTelemetry.setProperty(TelemetryConstants.channelOrder, data.sortOrder ? data.sortOrder : "");
 		UsageTelemetry.setProperty(TelemetryConstants.clientType, Xrm.Utility.getGlobalContext().client.getClient());
 		UsageTelemetry.setProperty(TelemetryConstants.crmVersion, Xrm.Utility.getGlobalContext().getVersion());
-		UsageTelemetry.setPropertyWithPii(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId, AWTPiiKind.Identity);
+		UsageTelemetry.setProperty(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId);
 		UsageTelemetry.setProperty(TelemetryConstants.orgName, Xrm.Utility.getGlobalContext().organizationSettings.uniqueName);
 		UsageTelemetry.setProperty(TelemetryConstants.providerId, data.providerId ? data.providerId : "");
 		UsageTelemetry.setProperty(TelemetryConstants.providerName, data.providerName ? data.providerName : "");
@@ -156,7 +156,7 @@ namespace Microsoft.CIFramework.Internal
 		UsageTelemetry.setProperty(TelemetryConstants.errorType, data.errorObject ? errorTypes[data.errorObject.errorType] : "");
 		UsageTelemetry.setProperty(TelemetryConstants.errorReportTime, data.errorObject ? data.errorObject.reportTime : "");
 		UsageTelemetry.setProperty(TelemetryConstants.errorFunction, data.errorObject ? data.errorObject.sourceFunc : "");
-		UsageTelemetry.setPropertyWithPii(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId, AWTPiiKind.Identity);
+		UsageTelemetry.setProperty(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId);
 		UsageTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		UsageTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
 		UsageTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters) : "");
@@ -194,7 +194,7 @@ namespace Microsoft.CIFramework.Internal
 		PerfTelemetry.setProperty(TelemetryConstants.crmVersion, data.providerData.crmVersion ? data.providerData.crmVersion : "");
 		PerfTelemetry.setProperty(TelemetryConstants.appId, data.providerData.appId ? data.providerData.appId : "");
 		PerfTelemetry.setProperty(TelemetryConstants.apiVersion, data.providerData.apiVersion ? data.providerData.apiVersion : "");
-		PerfTelemetry.setPropertyWithPii(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId, AWTPiiKind.Identity);
+		PerfTelemetry.setProperty(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId);
 		PerfTelemetry.setProperty(TelemetryConstants.orgName, data.providerData.orgName ? data.providerData.orgName : "");
 		PerfTelemetry.setProperty(TelemetryConstants.startTime, data.startTime ? data.startTime.toUTCString() : "");
 		PerfTelemetry.setProperty(TelemetryConstants.timeTaken, data.timeTaken ? data.timeTaken : 0);
@@ -217,7 +217,7 @@ namespace Microsoft.CIFramework.Internal
 		ParamTelemetry.setProperty(TelemetryConstants.channelOrder, data.sortOrder ? data.sortOrder : "");
 		ParamTelemetry.setProperty(TelemetryConstants.clientType, Xrm.Utility.getGlobalContext().client.getClient());
 		ParamTelemetry.setProperty(TelemetryConstants.crmVersion, Xrm.Utility.getGlobalContext().getVersion());
-		ParamTelemetry.setPropertyWithPii(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId, AWTPiiKind.Identity);
+		ParamTelemetry.setProperty(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId);
 		ParamTelemetry.setProperty(TelemetryConstants.orgName, Xrm.Utility.getGlobalContext().organizationSettings.uniqueName);
 		ParamTelemetry.setProperty(TelemetryConstants.providerId, data.providerId ? data.providerId : "");
 		ParamTelemetry.setProperty(TelemetryConstants.providerName, data.providerName ? data.providerName : "");
@@ -226,7 +226,7 @@ namespace Microsoft.CIFramework.Internal
 		ParamTelemetry.setProperty(TelemetryConstants.errorType, data.errorObject ? errorTypes[data.errorObject.errorType] : "");
 		ParamTelemetry.setProperty(TelemetryConstants.errorReportTime, data.errorObject ? data.errorObject.reportTime : "");
 		ParamTelemetry.setProperty(TelemetryConstants.errorFunction, data.errorObject ? data.errorObject.sourceFunc : "");
-		ParamTelemetry.setPropertyWithPii(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId, AWTPiiKind.Identity);
+		ParamTelemetry.setProperty(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId);
 		ParamTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		ParamTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
 		ParamTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters): "");

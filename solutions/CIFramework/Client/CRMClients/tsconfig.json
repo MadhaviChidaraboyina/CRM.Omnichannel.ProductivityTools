@@ -5,7 +5,7 @@
 		"Constants.ts",
 		"../CIFrameworkUtilities.ts",
 		"../CIFrameworkConstants.ts",
-		"TelemetryConstants.ts",
+		"../TelemetryConstants.ts",
 		"../TelemetryHelper.ts",
 		"../PostMsgWrapper.ts",
 		"Client.ts",
