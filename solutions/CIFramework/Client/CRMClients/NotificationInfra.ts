@@ -324,7 +324,7 @@ namespace Microsoft.CIFramework.Internal {
 
 			if (leftTime > 0) {
 				if (IsPlatformNotificationTimeoutInfra) {
-					popupnotification.timeoutAction["timeout"] = leftTime + displayDelayTimeMs; //adding 2 secs since consecutive notifications are delayed by 2 secs to break continuity.
+					popupnotification.timeoutAction["timeout"] = leftTime;
 				}
 				else {
 					let leftTimeSec = Math.ceil((leftTime) / 1000);
