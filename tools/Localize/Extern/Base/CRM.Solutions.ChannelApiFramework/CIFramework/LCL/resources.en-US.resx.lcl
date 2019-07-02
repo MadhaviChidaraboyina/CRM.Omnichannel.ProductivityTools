@@ -1241,6 +1241,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationtemplatemsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Description of the record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:Description,msdyn_consoleapplicationtemplatemsdyn_icon" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The icon for the application template]]></Val>
@@ -1825,7 +1831,7 @@
       </Item>
       <Item ItemId=";1:LocalizedCollectionName,msdyn_consoleapplicationtemplateparameterentitymsdyn_consoleapplicationtemplateparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[ConsoleApplicationTemplateParameters]]></Val>
+          <Val><![CDATA[Parameters]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2311,7 +2317,7 @@
       </Item>
       <Item ItemId=";1:LocalizedName,msdyn_consoleapplicationtemplateparameterentitymsdyn_consoleapplicationtemplateparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[ConsoleApplicationTemplateParameter]]></Val>
+          <Val><![CDATA[Parameter]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3253,7 +3259,7 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationtemplatemsdyn_PageType" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[PageType]]></Val>
+          <Val><![CDATA[Page type]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3305,9 +3311,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationtemplatemsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Description]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationtemplatemsdyn_icon" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[icon]]></Val>
+          <Val><![CDATA[Icon]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4115,6 +4127,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:label,ConsoleApplicationTemplate{3eb84e18-6c5a-0c41-bcde-171e7da8347e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Section]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:label,ConsoleApplicationTemplate{40736098-8d9c-443a-b6ce-85335c739b61}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[]]></Val>
@@ -4133,27 +4151,27 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:label,ConsoleApplicationTemplate{89210d67-7701-576d-3723-4390303a64bc}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:label,ConsoleApplicationTemplate{a4bd1f84-bc33-4df0-bb12-3c6cefc25fcd}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,ConsoleApplicationTemplate{d081059e-481c-9059-3106-a4102e3d986e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,ConsoleApplicationTemplate{db2a537d-5522-9de6-943d-4d5c07542e92}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Parameters]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:label,ConsoleApplicationTemplate{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[General]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:label,ConsoleApplicationTemplate{e880347e-8a94-0009-9904-8a0242bd720c}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

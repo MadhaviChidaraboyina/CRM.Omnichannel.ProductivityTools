@@ -888,6 +888,10 @@
     <value>ConsoleApplicationTemplate күйінің себебі</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for OptionSet 'msdyn_consoleapplicationtemplate_statuscode' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_description" xml:space="preserve">
+    <value>Жазба сипаттамасы</value>
+    <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_description' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_icon" xml:space="preserve">
     <value>Бағдарлама үлгісінің белгішесі</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_icon' on Entity</comment>
@@ -1778,8 +1782,12 @@
     <value>Күйінің себебі</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_statuscode' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_description" xml:space="preserve">
+    <value>Сипаттамасы</value>
+    <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_description' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_icon" xml:space="preserve">
-    <value>белгіше</value>
+    <value>Белгіше</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_icon' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_IsStale" xml:space="preserve">
@@ -1791,7 +1799,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_PageType" xml:space="preserve">
-    <value>PageType</value>
+    <value>Бет түрі</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_PageType' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_Pinned" xml:space="preserve">
@@ -2342,6 +2350,10 @@
     <value />
     <comment>'ConsoleApplicationTemplate' : label for cell in Entity FormXml ID: '{379c8712-d7cb-0257-b7be-7c7125e6341c}'</comment>
   </data>
+  <data name="1:label,ConsoleApplicationTemplate{3eb84e18-6c5a-0c41-bcde-171e7da8347e}" xml:space="preserve">
+    <value>Бөлім</value>
+    <comment>'ConsoleApplicationTemplate' : label for section in Entity FormXml ID: '{3eb84e18-6c5a-0c41-bcde-171e7da8347e}'</comment>
+  </data>
   <data name="1:label,ConsoleApplicationTemplate{40736098-8d9c-443a-b6ce-85335c739b61}" xml:space="preserve">
     <value />
     <comment>'ConsoleApplicationTemplate' : label for cell in Entity FormXml ID: '{40736098-8d9c-443a-b6ce-85335c739b61}'</comment>
@@ -2354,21 +2366,21 @@
     <value />
     <comment>'ConsoleApplicationTemplate' : label for cell in Entity FormXml ID: '{75819513-1e68-ee7d-3d85-7a44ee81dac0}'</comment>
   </data>
+  <data name="1:label,ConsoleApplicationTemplate{89210d67-7701-576d-3723-4390303a64bc}" xml:space="preserve">
+    <value />
+    <comment>'ConsoleApplicationTemplate' : label for cell in Entity FormXml ID: '{89210d67-7701-576d-3723-4390303a64bc}'</comment>
+  </data>
   <data name="1:label,ConsoleApplicationTemplate{a4bd1f84-bc33-4df0-bb12-3c6cefc25fcd}" xml:space="preserve">
     <value />
     <comment>'ConsoleApplicationTemplate' : label for cell in Entity FormXml ID: '{a4bd1f84-bc33-4df0-bb12-3c6cefc25fcd}'</comment>
   </data>
-  <data name="1:label,ConsoleApplicationTemplate{d081059e-481c-9059-3106-a4102e3d986e}" xml:space="preserve">
-    <value />
-    <comment>'ConsoleApplicationTemplate' : label for cell in Entity FormXml ID: '{d081059e-481c-9059-3106-a4102e3d986e}'</comment>
+  <data name="1:label,ConsoleApplicationTemplate{db2a537d-5522-9de6-943d-4d5c07542e92}" xml:space="preserve">
+    <value>Параметрлер</value>
+    <comment>'ConsoleApplicationTemplate' : label for cell in Entity FormXml ID: '{db2a537d-5522-9de6-943d-4d5c07542e92}'</comment>
   </data>
   <data name="1:label,ConsoleApplicationTemplate{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}" xml:space="preserve">
     <value>Жалпы</value>
     <comment>'ConsoleApplicationTemplate' : label for section in Entity FormXml ID: '{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}'</comment>
-  </data>
-  <data name="1:label,ConsoleApplicationTemplate{e880347e-8a94-0009-9904-8a0242bd720c}" xml:space="preserve">
-    <value />
-    <comment>'ConsoleApplicationTemplate' : label for cell in Entity FormXml ID: '{e880347e-8a94-0009-9904-8a0242bd720c}'</comment>
   </data>
   <data name="1:label,ConsoleApplicationType{74fe1b2a-ddd9-466d-b06c-f68467da8370}" xml:space="preserve">
     <value />
@@ -2655,7 +2667,7 @@
     <comment> 'msdyn_consoleapplicationtemplate' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_consoleapplicationtemplateparameterentitymsdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>ConsoleApplicationTemplateParameters</value>
+    <value>Параметрлер</value>
     <comment> 'msdyn_consoleapplicationtemplateparameter' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_consoleapplicationtypeentitymsdyn_consoleapplicationtype" xml:space="preserve">
@@ -2947,7 +2959,7 @@
     <comment> 'msdyn_consoleapplicationtemplate' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_consoleapplicationtemplateparameterentitymsdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>ConsoleApplicationTemplateParameter</value>
+    <value>Параметр</value>
     <comment> 'msdyn_consoleapplicationtemplateparameter' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_consoleapplicationtypeentitymsdyn_consoleapplicationtype" xml:space="preserve">
@@ -3167,11 +3179,11 @@
     <comment> 'msdyn_ChannelIntegrationFrameworkApp' : Description for AppModule</comment>
   </data>
   <data name="80:LocalizedName,msdyn_ChannelIntegrationFrameworkApp" xml:space="preserve">
-    <value>Channel Integration Framework</value>
+    <value>Арнаны біріктіру құрылымы</value>
     <comment> 'msdyn_ChannelIntegrationFrameworkApp' : LocalizedName for AppModule</comment>
   </data>
   <data name="81:LocalizedName,msdyn_ChannelIntegrationFrameworkSitemap" xml:space="preserve">
-    <value>Channel Integration Framework</value>
+    <value>Арнаны біріктіру құрылымы</value>
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
