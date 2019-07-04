@@ -59,7 +59,8 @@ namespace Microsoft.CIFramework.Internal {
 		["focusTab", [focusTab]],
 		["openkbsearchcontrol", [openKBSearchControl]],
 		["notifyEvent", [notifyEvent]],
-		["insertNotes", [insertNotes]]
+		["insertNotes", [insertNotes]],
+		["logErrorsAndReject", [logErrorsAndReject]]
 	]);
 
 	let genericEventRegistrations = new Map<string, CIProvider[]>();
@@ -1297,5 +1298,15 @@ namespace Microsoft.CIFramework.Internal {
 		else {
 			return logAPIFailure(appId, true, errorData, MessageType.focusTab, cifVersion, "", "", "", parameters.get(Constants.correlationId));
 		}
+	}
+
+	export function logErrorsAndReject(parameters: Map<string, any>): Promise<any> {
+		let error = {} as IErrorHandler;
+		error.reportTime = new Date().toUTCString();
+		error.errorMsg = parameters.get(Constants.errorMessage);
+		error.errorType = errorTypes.InvalidParams;
+		error.sourceFunc = parameters.get(Constants.functionName);
+		logAPIInternalInfo(appId, true, error, MessageType.logErrorsAndReject, cifVersion, "", "", "", parameters.get(Constants.correlationId));
+		return Promise.resolve();
 	}
 }

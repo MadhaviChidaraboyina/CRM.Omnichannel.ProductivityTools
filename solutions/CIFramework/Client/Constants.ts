@@ -71,6 +71,7 @@ namespace Microsoft.CIFramework
 		public static doSearch = "doSearch";
 		public static initializeCI = "initializeCI";
 		public static loadProvider = "loadProvider";
+		public static logErrorsAndReject = "logErrorsAndReject";
 	}
 
 	/**
@@ -205,5 +206,7 @@ namespace Microsoft.CIFramework
 		public static sessionNotValidErrorMessage = "Focused session is neither the default session nor it belongs to the provider";
 		public static cifSolVersion = "msdyn_cifsolversion";
 		public static correlationId = "correlationId";
+		public static errorMessage = "errorMsg";
+		public static functionName = "functName";
 	}
 }

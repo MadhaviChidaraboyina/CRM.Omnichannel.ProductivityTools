@@ -83,6 +83,18 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+	* API to log telemetry errors for API failures
+	*/
+	function logErrorsAndReject<T>(errorMsg: string, messageType: string, correlationid?: string): Promise<T>{
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.logErrorsAndReject,
+			messageData: new Map().set(Constants.errorMessage, errorMsg).set(Constants.correlationId, correlationid).set(Constants.functionName, messageType)
+		}
+		sendMessage<T>(logErrorsAndReject.name, payload, false);
+		return postMessageNamespace.rejectWithErrorMessage(errorMsg);
+	}
+
+	/**
 	 * API to to check value of IsConsoleApp for a widget
 	 *
 	 * @param value. When set to 'true', then it's a console App.
@@ -138,14 +150,17 @@ namespace Microsoft.CIFramework
 					});
 			});
 		}else{
-			if(isNullOrUndefined(entityName)){
-				return postMessageNamespace.rejectWithErrorMessage("The entityName parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityName)) {
+				let errorMsg = "The entityName parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.insertNotes, correlationId);
 			}
-			if(isNullOrUndefined(entitySetName)){
-				return postMessageNamespace.rejectWithErrorMessage("The entitySetName parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entitySetName)) {
+				let errorMsg = "The entitySetName parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.insertNotes, correlationId);
 			}
-			if(isNullOrUndefined(entityId)){
-				return postMessageNamespace.rejectWithErrorMessage("The entityId parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityId)) {
+				let errorMsg = "The entityId parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.insertNotes, correlationId);
 			}
 		}
 	}
@@ -172,11 +187,13 @@ namespace Microsoft.CIFramework
 					});
 			});
 		}else{
-			if (isNullOrUndefined(input.eventType)){
-				return postMessageNamespace.rejectWithErrorMessage("The EventType parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(input.eventType)) {
+				let errorMsg = "The EventType parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.notifyEvent, correlationId);
 			}
-			if (isNullOrUndefined(input.notificationUXObject)){
-				return postMessageNamespace.rejectWithErrorMessage("The notificationUX parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(input.notificationUXObject)) {
+				let errorMsg = "The notificationUX parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.notifyEvent, correlationId);
 			}
 		}
 	}
@@ -211,8 +228,9 @@ namespace Microsoft.CIFramework
 			});
 
 		}else{
-			if(isNullOrUndefined(entityFormOptions) || entityFormOptions == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EntityFormOptions parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityFormOptions) || entityFormOptions == "") {
+				let errorMsg = "The EntityFormOptions parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.openForm, correlationId);
 			}
 		}
 	}
@@ -267,11 +285,13 @@ namespace Microsoft.CIFramework
 					});
 			});
 		}else{
-			if(isNullOrUndefined(entityName) || entityName == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityName) || entityName == "") {
+				let errorMsg = "The EntityName parameter is blank.Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.retrieveRecord, correlationId);
 			}
-			if(isNullOrUndefined(entityId) || entityId == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EntityId parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityId) || entityId == "") {
+				let errorMsg = "The EntityId parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.retrieveRecord, correlationId);
 			}
 		}
 	}
@@ -304,14 +324,17 @@ namespace Microsoft.CIFramework
 					});
 			});
 		}else{
-			if(isNullOrUndefined(entityName) || entityName == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityName) || entityName == "") {
+				let errorMsg = "The EntityName parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.updateRecord, correlationId);
 			}
-			if(isNullOrUndefined(entityId) || entityId == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EntityId parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityId) || entityId == "") {
+				let errorMsg = "The EntityId parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.updateRecord, correlationId);
 			}
-			if(isNullOrUndefined(data)){
-				return postMessageNamespace.rejectWithErrorMessage("The parameter is blank. Provide a value to the parameter to update the record.");
+			if (isNullOrUndefined(data)) {
+				let errorMsg = "The data parameter is blank. Provide a value to the parameter to update the record.";
+				return logErrorsAndReject(errorMsg, MessageType.updateRecord, correlationId);
 			}
 		}
 	}
@@ -343,11 +366,13 @@ namespace Microsoft.CIFramework
 					});
 			});
 		}else{
-			if(isNullOrUndefined(entityName) || entityName == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityName) || entityName == "") {
+				let errorMsg = "The EntityName parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.createRecord, correlationId);
 			}
-			if(isNullOrUndefined(data)){
-				return postMessageNamespace.rejectWithErrorMessage("Provide a value to the parameter to create record.");
+			if (isNullOrUndefined(data)) {
+				let errorMsg = "Provide a value to the data parameter to create record.";
+				return logErrorsAndReject(errorMsg, MessageType.createRecord, correlationId);
 			}
 		}
 	}
@@ -379,11 +404,13 @@ namespace Microsoft.CIFramework
 					});
 			});
 		}else{
-			if(isNullOrUndefined(entityName) || entityName == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityName) || entityName == "") {
+				let errorMsg = "The EntityName parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.deleteRecord, correlationid);
 			}
-			if(isNullOrUndefined(entityId) || entityId == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EntityId parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityId) || entityId == "") {
+				let errorMsg = "The EntityId parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.deleteRecord, correlationid);
 			}
 		}
 	}
@@ -416,14 +443,17 @@ namespace Microsoft.CIFramework
 					});
 			});
 		}else{
-			if(isNullOrUndefined(entityName) || entityName == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(entityName) || entityName == "") {
+				let errorMsg = "The EntityName parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.searchAndOpenRecords, correlationid);
 			}
-			if(isNullOrUndefined(queryParmeters) || queryParmeters == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The queryParmeters parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(queryParmeters) || queryParmeters == "") {
+				let errorMsg = "The queryParmeters parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.searchAndOpenRecords, correlationid);
 			}
-			if(isNullOrUndefined(searchOnly)){
-				return postMessageNamespace.rejectWithErrorMessage("The searchOnly parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(searchOnly)) {
+				let errorMsg = "The searchOnly parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.searchAndOpenRecords, correlationid);
 			}
 		}
 	}
@@ -495,8 +525,9 @@ namespace Microsoft.CIFramework
 			}
 
 			return sendMessage<boolean>(openKBSearchControl.name, payload, false);
-		}else{
-			return postMessageNamespace.rejectWithErrorMessage("The openKBSearchControl parameter value is invalid. Provide a positive number to the parameter.");
+		} else {
+			let errorMsg = "The openKBSearchControl parameter value is invalid. Provide a positive number to the parameter.";
+			return logErrorsAndReject(errorMsg, MessageType.openKBSearchControl, correlationId);
 		}
 	}
 
@@ -515,8 +546,9 @@ namespace Microsoft.CIFramework
 			}
 
 			return sendMessage<void>(setWidth.name, payload, false);
-		}else{
-			return postMessageNamespace.rejectWithErrorMessage("The setWidth parameter value is invalid. Provide a positive number to the parameter.");
+		} else {
+			let errorMsg = "The setWidth parameter value is invalid. Provide a positive number to the parameter.";
+			return logErrorsAndReject<void>(errorMsg, MessageType.setWidth, "");
 		}
 	}
 
@@ -535,8 +567,9 @@ namespace Microsoft.CIFramework
 			}
 
 			return sendMessage<void>(setMode.name, payload, false);
-		}else{
-			return postMessageNamespace.rejectWithErrorMessage("The setMode paramter value must be 0 or 1.");
+		} else {
+			let errorMsg = "The setMode paramter value must be 0, 1 or 2.";
+			return logErrorsAndReject<void>(errorMsg, MessageType.setMode, correlationId);
 		}
 	}
 
@@ -578,11 +611,13 @@ namespace Microsoft.CIFramework
 			}
 			sendMessage<boolean>("addGenericHandler", payload, false);
 		}else{
-			if(isNullOrUndefined(eventName) || eventName == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The parameter EventName is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(eventName) || eventName == "") {
+				let errorMsg = "The parameter EventName is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.addGenericHandler, correlationId);
 			}
-			if(isNullOrUndefined(handlerFunction)){
-				return postMessageNamespace.rejectWithErrorMessage("Passing data parameters to addHandler is mandatory.");
+			if (isNullOrUndefined(handlerFunction)) {
+				let errorMsg = "Passing data parameters to addHandler is mandatory.";
+				return logErrorsAndReject(errorMsg, MessageType.addGenericHandler, correlationId);
 			}
 		}
 	}
@@ -601,11 +636,13 @@ namespace Microsoft.CIFramework
 			}
 			sendMessage<boolean>("removeGenericHandler", payload, false);
 		}else{
-			if(isNullOrUndefined(eventName) || eventName == ""){
-				return postMessageNamespace.rejectWithErrorMessage("The EventName parameter is blank. Provide a value to the parameter.");
+			if (isNullOrUndefined(eventName) || eventName == "") {
+				let errorMsg = "The EventName parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.removeGenericHandler, correlationId);
 			}
-			if(isNullOrUndefined(handlerFunction)){
-				return postMessageNamespace.rejectWithErrorMessage("Passing data parameters to removeHandler is mandatory.");
+			if (isNullOrUndefined(handlerFunction)) {
+				let errorMsg = "Passing data parameters to removeHandler is mandatory.";
+				return logErrorsAndReject(errorMsg, MessageType.removeGenericHandler, correlationId);
 			}
 		}
 	}
@@ -629,7 +666,8 @@ namespace Microsoft.CIFramework
 		}
 		else {
 			if (isNullOrUndefined(entityName) || entityName == "") {
-				return postMessageNamespace.rejectWithErrorMessage("The EntityName parameter is blank. Provide a value to the parameter");
+				let errorMsg = "The EntityName parameter is blank. Provide a value to the parameter";
+				return logErrorsAndReject(errorMsg, MessageType.getEntityMetadata, correlationId);
 			}
 		}
 	}
@@ -650,10 +688,12 @@ namespace Microsoft.CIFramework
 		}
 		else {
 			if (isNullOrUndefined(entityName) || entityName == "") {
-				return postMessageNamespace.rejectWithErrorMessage("The EntityName Parameter is blank. Provide a value to the parameter");
+				let errorMsg = "The EntityName Parameter is blank. Provide a value to the parameter";
+				return logErrorsAndReject<void>(errorMsg, MessageType.renderSearchPage, correlationId);
 			}
 			if (isNullOrUndefined(searchString)) {
-				return postMessageNamespace.rejectWithErrorMessage("The SearchString Parameter cannot be NULL");
+				let errorMsg = "The SearchString Parameter cannot be NULL";
+				return logErrorsAndReject<void>(errorMsg, MessageType.renderSearchPage, correlationId);
 			}
 		}
 	}
@@ -674,7 +714,8 @@ namespace Microsoft.CIFramework
 			return sendMessage<boolean>(setAgentPresence.name, payload, false);
 		}
 		else {
-			return postMessageNamespace.rejectWithErrorMessage("The presenceInfo parameter is null. Provide a value to the parameter");
+			let errorMsg = "The presenceInfo parameter is null. Provide a value to the parameter";
+			return logErrorsAndReject(errorMsg, MessageType.setAgentPresence, correlationId);
 		}
 	}
 
@@ -704,11 +745,17 @@ namespace Microsoft.CIFramework
 	 * API to get Session details
 	 */
 	export function getSession(sessionId: string, correlationid?: string): Promise<any> {
-		const payload: postMessageNamespace.IExternalRequestMessageType = {
-			messageType: MessageType.getSession,
-			messageData: new Map().set(Constants.sessionId, sessionId).set(Constants.correlationId, correlationid)
+		if (!(isNullOrUndefined(sessionId) || sessionId == "")) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.getSession,
+				messageData: new Map().set(Constants.sessionId, sessionId).set(Constants.correlationId, correlationid)
+			}
+			return sendMessage<any>(getSession.name, payload, false);
 		}
-		return sendMessage<any>(getSession.name, payload, false);
+		else {
+			let errorMsg = "The sessionId parameter is null. Provide a value to the parameter";
+			return logErrorsAndReject(errorMsg, MessageType.getSession, correlationid);
+		}	
 	}
 
 	/**
@@ -738,7 +785,8 @@ namespace Microsoft.CIFramework
 			return sendMessage<string>(createSession.name, payload, false);
 		}
 		else {
-			return postMessageNamespace.rejectWithErrorMessage("Some of required parameters are null " + correlationId);
+			let errorMsg = "Some of required parameters are null";
+			return logErrorsAndReject(errorMsg, MessageType.createSession, correlationId);
 		}
 	}
 
@@ -754,7 +802,8 @@ namespace Microsoft.CIFramework
 			return sendMessage<string>(requestFocusSession.name, payload, false);
 		}
 		else {
-			return postMessageNamespace.rejectWithErrorMessage("SessionID is null or undefined");
+			let errorMsg = "SessionID is null or undefined";
+			return logErrorsAndReject(errorMsg, MessageType.requestFocusSession, correlationId);
 		}
 	}
 
@@ -773,19 +822,37 @@ namespace Microsoft.CIFramework
 	 * API to get the focused tab in focused Session
 	 */
 	export function getTabs(name: string, tag: string, correlationId?: string): Promise<string[]> {
-		const payload: postMessageNamespace.IExternalRequestMessageType = {
-			messageType: MessageType.getTabsByTagOrName,
-			messageData: new Map().set(Constants.templateTag, tag).set(Constants.nameParameter, name).set(Constants.correlationId, correlationId)
+		if (!isNullOrUndefined(name) && !isNullOrUndefined(tag)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.getTabsByTagOrName,
+				messageData: new Map().set(Constants.templateTag, tag).set(Constants.nameParameter, name).set(Constants.correlationId, correlationId)
+			}
+			return sendMessage<string[]>(getTabs.name, payload, false);
 		}
-		return sendMessage<string[]>(getTabs.name, payload, false);
+		else {
+			if (isNullOrUndefined(name)) {
+				let errorMsg = "The name parameter is null. Provide a value to the parameter";
+				return logErrorsAndReject(errorMsg, MessageType.getTabsByTagOrName, correlationId);
+			}
+			if (isNullOrUndefined(tag)) {
+				let errorMsg = "The tag parameter is null. Provide a value to the parameter";
+				return logErrorsAndReject(errorMsg, MessageType.getTabsByTagOrName, correlationId);
+			}
+		}
 	}
 
 	export function refreshTab(tabId: string, correlationId?: string): Promise<void> {
-		const payload: postMessageNamespace.IExternalRequestMessageType = {
-			messageType: MessageType.refreshTab,
-			messageData: new Map().set(Constants.tabId, tabId).set(Constants.correlationId, correlationId)
+		if (!isNullOrUndefined(tabId)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.refreshTab,
+				messageData: new Map().set(Constants.tabId, tabId).set(Constants.correlationId, correlationId)
+			}
+			return sendMessage<void>(refreshTab.name, payload, false);
 		}
-		return sendMessage<void>(refreshTab.name, payload, false);
+		else {
+			let errorMsg = "The tabId Parameter is blank. Provide a value to the parameter";
+			return logErrorsAndReject<void>(errorMsg, MessageType.refreshTab, correlationId);
+		}
 	}
 
 	export function setSessionTitle(input: any, correlationId?: string): Promise<string> {
@@ -797,7 +864,8 @@ namespace Microsoft.CIFramework
 			return sendMessage<string>(setSessionTitle.name, payload, false);
 		}
 		else {
-			postMessageNamespace.rejectWithErrorMessage("Some of the required parameters are Null");
+			let errorMsg = "The input Parameter is blank. Provide a value to the parameter";
+			return logErrorsAndReject(errorMsg, MessageType.setSessionTitle, correlationId);
 		}
 	}
 
@@ -810,7 +878,14 @@ namespace Microsoft.CIFramework
 			return sendMessage<string>(setTabTitle.name, payload, false);
 		}
 		else {
-			postMessageNamespace.rejectWithErrorMessage("Some of the required parameters are Null");
+			if (isNullOrUndefined(tabId)) {
+				let errorMsg = "The tabId Parameter is blank. Provide a value to the parameter";
+				return logErrorsAndReject(errorMsg, MessageType.setTabTitle, correlationId);
+			}
+			if (isNullOrUndefined(input)) {
+				let errorMsg = "The input Parameter cannot be NULL";
+				return logErrorsAndReject(errorMsg, MessageType.setTabTitle, correlationId);
+			}
 		}
 	}
 	/**
@@ -825,7 +900,8 @@ namespace Microsoft.CIFramework
 			return sendMessage<string>(createTab.name, payload, false);
 		}
 		else {
-			postMessageNamespace.rejectWithErrorMessage("Some of the required parameters are Null");
+			let errorMsg = "Some of the required parameters are Null";
+			return logErrorsAndReject(errorMsg, MessageType.createTab, correlationId);
 		}
 	}
 
@@ -841,7 +917,8 @@ namespace Microsoft.CIFramework
 			return sendMessage<string>(focusTab.name, payload, false);
 		}
 		else {
-			postMessageNamespace.rejectWithErrorMessage("tabId is null or undefined");
+			let errorMsg = "tabId is null or undefined";
+			return logErrorsAndReject(errorMsg, MessageType.focusTab, correlationId);
 		}
 	}
 
@@ -861,7 +938,8 @@ namespace Microsoft.CIFramework
 			return sendMessage<boolean>(initializeAgentPresenceList.name, payload, false);
 		}
 		else {
-			return postMessageNamespace.rejectWithErrorMessage("The presenceList parameter is null. Provide a value to the parameter");
+			let errorMsg = "The presenceList parameter is null. Provide a value to the parameter";
+			return logErrorsAndReject(errorMsg, MessageType.initializeAgentPresenceList, correlationId);
 		}
 	}
 
