@@ -949,7 +949,7 @@ namespace Microsoft.CIFramework.Internal {
 			return new Promise<any>((resolve, reject) => {
 				let width = state.client.expandFlap(intermediateSaveNotes);
 				if (!width) {
-					return reject(new Map<string, string>().set(Constants.value, "Flap already expanded"));
+					return reject(new Map<string, any>().set(Constants.value, "Flap already expanded").set(Constants.ErrorCode, ErrorCode.Notes_Flap_Already_Expanded));
 				}
 				insertNotesClient(notesDetails).then(
 					function (res) {

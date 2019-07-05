@@ -208,5 +208,10 @@ namespace Microsoft.CIFramework
 		public static correlationId = "correlationId";
 		public static errorMessage = "errorMsg";
 		public static functionName = "functName";
+		public static ErrorCode = "errorCode";
+	}
+
+	export enum ErrorCode {
+		Notes_Flap_Already_Expanded = 101 // Notes flap is already expanded.
 	}
 }
