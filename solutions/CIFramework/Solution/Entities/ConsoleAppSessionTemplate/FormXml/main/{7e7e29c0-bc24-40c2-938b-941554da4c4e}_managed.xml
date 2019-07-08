@@ -9,14 +9,14 @@
       <tabs>
           <tab name="tab_2" id="{d507a7e4-d1a6-a2d3-2dcd-d42055c621cc}" IsUserDefined="0" locklevel="0" showlabel="true">
               <labels>
-                  <label description="Tab" languagecode="1033" />
+                  <label description="General" languagecode="1033" />
               </labels>
               <columns>
                   <column width="34%">
                       <sections>
                           <section name="tab_2_section_1" showlabel="false" showbar="false" locklevel="0" id="{559158ad-2749-a49e-7128-466d84e59a24}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
                               <labels>
-                                  <label description="Section" languagecode="1033" />
+                                  <label description="General" languagecode="1033" />
                               </labels>
                               <rows>
                                   <row>
