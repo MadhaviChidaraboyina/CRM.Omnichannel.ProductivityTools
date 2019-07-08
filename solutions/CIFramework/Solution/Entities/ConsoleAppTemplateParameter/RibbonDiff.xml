@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml>
+		<CustomActions>
+				<!-- Hide Activate,Deactivate,Remove and Add existing template parameter buttons in Subgrid,Mainform and Form-->
+				<HideCustomAction HideActionId="Microsoft.Dynamics.CIFramework.SubGrid.msdyn_consoleapplicationtemplateparameter.Activate.Hide" Location="Mscrm.SubGrid.msdyn_consoleapplicationtemplateparameter.Activate" />
+				<HideCustomAction HideActionId="Microsoft.Dynamics.CIFramework.SubGrid.msdyn_consoleapplicationtemplateparameter.AddExistingAssoc.Hide" Location="Mscrm.SubGrid.msdyn_consoleapplicationtemplateparameter.AddExistingAssoc" />
+				<HideCustomAction HideActionId="Microsoft.Dynamics.CIFramework.SubGrid.msdyn_consoleapplicationtemplateparameter.Deactivate.Hide" Location="Mscrm.SubGrid.msdyn_consoleapplicationtemplateparameter.Deactivate" />
+				<HideCustomAction HideActionId="Microsoft.Dynamics.CIFramework.SubGrid.msdyn_consoleapplicationtemplateparameter.Remove.Hide" Location="Mscrm.SubGrid.msdyn_consoleapplicationtemplateparameter.Remove" />
+				<HideCustomAction HideActionId="Microsoft.Dynamics.CIFramework.Form.msdyn_consoleapplicationtemplateparameter.Activate.Hide" Location="Mscrm.Form.msdyn_consoleapplicationtemplateparameter.Activate" />
+				<HideCustomAction HideActionId="Microsoft.Dynamics.CIFramework.Form.msdyn_consoleapplicationtemplateparameter.Deactivate.Hide" Location="Mscrm.Form.msdyn_consoleapplicationtemplateparameter.Deactivate" />
+				<HideCustomAction HideActionId="Microsoft.Dynamics.CIFramework.Form.msdyn_consoleapplicationtemplateparameter.Delete.Hide" Location="Mscrm.Form.msdyn_consoleapplicationtemplateparameter.Delete" />
+				<HideCustomAction HideActionId="Microsoft.Dynamics.CIFramework.HomepageGrid.msdyn_consoleapplicationtemplateparameter.Activate.Hide" Location="Mscrm.HomepageGrid.msdyn_consoleapplicationtemplateparameter.Activate" />
+				<HideCustomAction HideActionId="Microsoft.Dynamics.CIFramework.HomepageGrid.msdyn_consoleapplicationtemplateparameter.Deactivate.Hide" Location="Mscrm.HomepageGrid.msdyn_consoleapplicationtemplateparameter.Deactivate" />
+				<HideCustomAction HideActionId="Microsoft.Dynamics.CIFramework.HomepageGrid.msdyn_consoleapplicationtemplateparameter.DeleteMenu.Hide" Location="Mscrm.HomepageGrid.msdyn_consoleapplicationtemplateparameter.DeleteMenu" />
+		</CustomActions>
+		<Templates>
+				<RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+		</Templates>
+		<CommandDefinitions />
+		<RuleDefinitions>
+				<TabDisplayRules />
+				<DisplayRules />
+				<EnableRules />
+		</RuleDefinitions>
+		<LocLabels/>
+</RibbonDiffXml>

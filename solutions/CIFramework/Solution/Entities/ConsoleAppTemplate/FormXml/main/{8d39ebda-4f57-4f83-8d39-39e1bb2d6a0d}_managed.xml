@@ -20,6 +20,14 @@
 																		</labels>
 																		<rows>
 																				<row>
+																						<cell id="{51f4cad0-723f-4065-bd12-cc4fc7ac4cd8}" visible="false">
+																								<labels>
+																										<label description="" languagecode="1033" />
+																								</labels>
+																								<control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+																						</cell>
+																				</row>
+																				<row>
 																						<cell id="{40736098-8d9c-443a-b6ce-85335c739b61}">
 																								<labels>
 																										<label description="" languagecode="1033" />
@@ -65,14 +73,6 @@
 																										<label description="" languagecode="1033" />
 																								</labels>
 																								<control id="msdyn_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_description" disabled="false" />
-																						</cell>
-																				</row>
-																				<row>
-																						<cell id="{51f4cad0-723f-4065-bd12-cc4fc7ac4cd8}" visible="false">
-																								<labels>
-																										<label description="" languagecode="1033" />
-																								</labels>
-																								<control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
 																						</cell>
 																				</row>
 																		</rows>
@@ -157,6 +157,68 @@
 										</NavBarArea>
 								</NavBarAreas>
 						</Navigation>
+						<controlDescriptions>
+								<controlDescription forControl="{2be7dd85-d3b0-7e7b-15ea-b0916cb60764}">
+										<customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" formFactor="0">
+												<parameters>
+														<ViewId>{6C123545-4983-491B-8967-AC6402DFB131}</ViewId>
+														<IsUserView>false</IsUserView>
+														<RelationshipName>msdyn_msdyn_consoleapplicationtemplate_msdyn_co</RelationshipName>
+														<TargetEntityType>msdyn_consoleapplicationtemplateparameter</TargetEntityType>
+														<AutoExpand>Fixed</AutoExpand>
+														<EnableQuickFind>false</EnableQuickFind>
+														<EnableViewPicker>false</EnableViewPicker>
+														<ViewIds>{6C123545-4983-491B-8967-AC6402DFB131}</ViewIds>
+														<EnableJumpBar>false</EnableJumpBar>
+														<ChartGridMode>All</ChartGridMode>
+														<VisualizationId />
+														<IsUserChart>false</IsUserChart>
+														<EnableChartPicker>true</EnableChartPicker>
+														<RecordsPerPage>5</RecordsPerPage>
+														<HeaderColorCode>#F3F3F3</HeaderColorCode>
+														<RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+												</parameters>
+										</customControl>
+										<customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+												<parameters>
+														<data-set name="Grid">
+																<ViewId>{6C123545-4983-491B-8967-AC6402DFB131}</ViewId>
+																<columnsDefaultView />
+																<IsUserView>false</IsUserView>
+																<RelationshipName>msdyn_msdyn_consoleapplicationtemplate_msdyn_co</RelationshipName>
+																<RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+																<TargetEntityType>msdyn_consoleapplicationtemplateparameter</TargetEntityType>
+																<EnableViewPicker>false</EnableViewPicker>
+																<FilteredViewIds>{6C123545-4983-491B-8967-AC6402DFB131}</FilteredViewIds>
+														</data-set>
+														<EnableGroupBy static="true" type="Enum">yes</EnableGroupBy>
+														<EnableEditing static="true" type="Enum">yes</EnableEditing>
+														<ReflowBehavior static="true" type="Enum">GridOnly</ReflowBehavior>
+														<EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+														<HideNestedGridColumnHeader static="true" type="Enum">no</HideNestedGridColumnHeader>
+												</parameters>
+										</customControl>
+										<customControl formFactor="2" name="MscrmControls.Grid.GridControl">
+												<parameters>
+														<data-set name="Grid">
+																<ViewId>{6C123545-4983-491B-8967-AC6402DFB131}</ViewId>
+																<columnsDefaultView />
+																<IsUserView>false</IsUserView>
+																<RelationshipName>msdyn_msdyn_consoleapplicationtemplate_msdyn_co</RelationshipName>
+																<RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+																<TargetEntityType>msdyn_consoleapplicationtemplateparameter</TargetEntityType>
+																<EnableViewPicker>false</EnableViewPicker>
+																<FilteredViewIds>{6C123545-4983-491B-8967-AC6402DFB131}</FilteredViewIds>
+														</data-set>
+														<EnableGroupBy static="true" type="Enum">yes</EnableGroupBy>
+														<EnableEditing static="true" type="Enum">yes</EnableEditing>
+														<ReflowBehavior static="true" type="Enum">GridOnly</ReflowBehavior>
+														<EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+														<HideNestedGridColumnHeader static="true" type="Enum">no</HideNestedGridColumnHeader>
+												</parameters>
+										</customControl>
+								</controlDescription>
+						</controlDescriptions>
 				</form>
 				<IsCustomizable>1</IsCustomizable>
 				<CanBeDeleted>1</CanBeDeleted>

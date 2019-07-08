@@ -10,8 +10,11 @@
     <layoutxml>
       <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
         <row name="result" id="msdyn_consoleapplicationsessiontemplateid">
-          <cell name="msdyn_name" width="300" />
-          <cell name="createdon" width="125" />
+          <cell name="msdyn_name" width="200" />
+            <cell name="msdyn_panelstate" width="100" />
+            <cell name="msdyn_anchortab" width="125" />
+            <cell name="msdyn_pinned" width="100" />
+            <cell name="modifiedon" width="100" />
         </row>
       </grid>
     </layoutxml>
@@ -21,7 +24,10 @@
         <entity name="msdyn_consoleapplicationsessiontemplate">
           <attribute name="msdyn_consoleapplicationsessiontemplateid" />
           <attribute name="msdyn_name" />
-          <attribute name="createdon" />
+            <attribute name="msdyn_pinned" />
+            <attribute name="msdyn_panelstate" />
+            <attribute name="modifiedon" />
+            <attribute name="msdyn_anchortab" />
           <order attribute="msdyn_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="1" />

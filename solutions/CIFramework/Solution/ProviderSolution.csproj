@@ -59,6 +59,7 @@
     <Content Include="Entities\ConsoleAppParameterDefinition\SavedQueries\{e519c146-6836-e911-8191-000d3a06071c}.xml" />
     <Content Include="Entities\ConsoleAppParameterDefinition\SavedQueries\{e4519c82-55dc-4721-afff-92cea9fcf969}.xml" />
     <Content Include="Entities\ConsoleAppParameterDefinition\SavedQueries\{0b692db3-e5b0-4f56-84b4-bbf74a5f32ee}.xml" />
+    <Content Include="Entities\ConsoleAppTemplateParameter\RibbonDiff.xml" />
     <Content Include="Entities\ConsoleAppType\Entity.xml" />
     <Content Include="Entities\ConsoleAppType\FormXml\main\{e5c56ff7-4104-46e5-93d6-223fef077785}_managed.xml" />
     <Content Include="Entities\ConsoleAppType\SavedQueries\{f1d3c88b-9874-4d92-a0d1-717718332eec}.xml" />
