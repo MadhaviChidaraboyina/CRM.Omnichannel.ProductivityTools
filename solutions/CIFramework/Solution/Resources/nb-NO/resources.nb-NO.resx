@@ -3187,6 +3187,10 @@ Nei – verdien oppgis under oppretting av en mal som bruker denne parameteren</
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>Leverandør</value>
     <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>

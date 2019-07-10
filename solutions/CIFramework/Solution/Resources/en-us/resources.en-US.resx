@@ -3254,6 +3254,10 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value>Provider</value>
     <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
+  </data>
   <data name="81:Title,New_AreaNew_Group" xml:space="preserve">
     <value>Channel Provider Configuration</value>
     <comment>Title for Area 'New_Area' Group 'New_Group'</comment>

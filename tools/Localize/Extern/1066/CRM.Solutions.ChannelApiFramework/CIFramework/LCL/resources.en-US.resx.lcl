@@ -1521,11 +1521,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Defines a field (key, templateValue) that needs to be populated in a notification template body]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Xác định một trường (khóa, templateValue) cần điền trong nội dung mẫu thông báo]]></Val>
+            <Val><![CDATA[Xác định một trường (key, templateValue) cần điền trong nội dung mẫu thông báo]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T09:06:43.0005508Z" />
+        <Modified By="v-jinsqi" DateTime="2019-07-05T05:30:37Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
         </Props>
@@ -9864,11 +9867,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Launch presence dialog]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Khởi chạy hộp thoại hiện diện]]></Val>
+            <Val><![CDATA[Chạy hộp thoại hiện diện]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T09:06:43.0005238Z" />
+        <Modified By="v-jinsqi" DateTime="2019-07-05T05:30:37Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
         </Props>

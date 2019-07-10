@@ -3190,6 +3190,10 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <value>Provider</value>
     <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
+  </data>
   <data name="81:Title,New_AreaNew_Group" xml:space="preserve">
     <value>Configurazione provider di canali</value>
     <comment>Title for Area 'New_Area' Group 'New_Group'</comment>

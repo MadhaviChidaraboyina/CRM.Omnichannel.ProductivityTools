@@ -3187,6 +3187,10 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>Dobavljač</value>
     <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>

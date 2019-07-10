@@ -533,7 +533,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldentitymsdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Xác định một trường (khóa, templateValue) cần điền trong nội dung mẫu thông báo</value>
+    <value>Xác định một trường (key, templateValue) cần điền trong nội dung mẫu thông báo</value>
     <comment> 'msdyn_consoleapplicationnotificationfield' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldImportSequenceNumber" xml:space="preserve">
@@ -3147,7 +3147,7 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
     <comment>'ConsoleAppParameterDefinition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="50:Title,msdyn.ApplicationRibbon.Presence.Button.LabelText" xml:space="preserve">
-    <value>Khởi chạy hộp thoại hiện diện</value>
+    <value>Chạy hộp thoại hiện diện</value>
     <comment>Title for Ribbon LocLabel 'msdyn.ApplicationRibbon.Presence.Button.LabelText'</comment>
   </data>
   <data name="68:Description,{e02fac01-dd62-4886-8f07-042ad67ee299}" xml:space="preserve">
@@ -3185,6 +3185,10 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
   <data name="81:LocalizedName,msdyn_ChannelIntegrationFrameworkSitemap" xml:space="preserve">
     <value>Khuôn khổ Tích hợp Kênh</value>
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
+  </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>Nhà cung cấp</value>

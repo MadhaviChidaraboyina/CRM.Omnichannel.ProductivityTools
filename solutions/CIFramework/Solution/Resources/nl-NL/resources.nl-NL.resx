@@ -3190,6 +3190,10 @@ Nee: er moet geen waarde worden opgegeven bij het maken van een sjabloon die dez
     <value>Provider</value>
     <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
+  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
+    <value>Provider</value>
+    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
+  </data>
   <data name="81:Title,New_AreaNew_Group" xml:space="preserve">
     <value>Configuratie van kanaalprovider</value>
     <comment>Title for Area 'New_Area' Group 'New_Group'</comment>
