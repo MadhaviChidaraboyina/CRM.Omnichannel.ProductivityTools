@@ -24,56 +24,98 @@
       <Item ItemId=";Accept_Button_Enabled_Switch" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Accept Button Enabled]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Povolené tlačidlo Prijať]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-07-11T02:27:43.0007865Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Accept Button Enabled Switch]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19542_20190708" />
+        </Props>
       </Item>
       <Item ItemId=";Accept_Button_Label" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Accept Button]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tlačidlo Prijať]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-07-11T02:27:43.0007865Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Accept Button Label]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19542_20190708" />
+        </Props>
       </Item>
       <Item ItemId=";FlipSwitch_No_Label" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nie]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-07-11T02:27:43.0007861Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Label for when the flip switch is disabled]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19542_20190708" />
+        </Props>
       </Item>
       <Item ItemId=";FlipSwitch_Yes_Label" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Yes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Áno]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-07-11T02:27:43.0007861Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Label for when the flip switch is enabled]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19542_20190708" />
+        </Props>
       </Item>
       <Item ItemId=";Reject_Button_Enabled_Switch" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Reject Button Enabled]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Povolené tlačidlo Odmietnuť]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-07-11T02:27:43.0007861Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Reject Button Enabled Switch]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19542_20190708" />
+        </Props>
       </Item>
       <Item ItemId=";Reject_Button_Label" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Reject Button]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tlačidlo Odmietnuť]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-07-11T02:27:43.0007861Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Reject Button Label]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19542_20190708" />
+        </Props>
       </Item>
     </Item>
   </Item>
