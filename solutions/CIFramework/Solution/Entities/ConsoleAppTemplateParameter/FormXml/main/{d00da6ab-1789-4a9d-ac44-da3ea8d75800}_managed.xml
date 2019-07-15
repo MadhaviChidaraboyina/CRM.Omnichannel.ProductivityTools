@@ -19,8 +19,16 @@
                     <label description="General" languagecode="1033" />
                   </labels>
                   <rows>
+                      <row>
+                          <cell id="{c9a9d11c-6458-4010-88b4-b2067efe26d3}">
+                              <labels>
+                                  <label description="" languagecode="1033" />
+                              </labels>
+                              <control id="msdyn_parametername" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_parametername" />
+                          </cell>
+                      </row>
                     <row>
-                      <cell id="{c9a9b00c-6458-4010-88b4-b2076efe26d3}">
+                      <cell id="{c9a9b00c-6458-4010-88b4-b2076efe26d3}" visible="false">
                         <labels>
                           <label description="" languagecode="1033" />
                         </labels>
@@ -28,7 +36,7 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{10c387e0-fbb6-442b-b126-b15e8518e03f}">
+                      <cell id="{10c387e0-fbb6-442b-b126-b15e8518e03f}" visible="false">
                         <labels>
                           <label description="" languagecode="1033" />
                         </labels>

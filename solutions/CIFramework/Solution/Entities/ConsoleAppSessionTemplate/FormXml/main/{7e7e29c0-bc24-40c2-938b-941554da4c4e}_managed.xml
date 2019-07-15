@@ -28,7 +28,7 @@
                                       </cell>
                                   </row>
                                   <row>
-                                      <cell id="{bd25aa54-bb39-81ea-a63b-07857ea961aa}" showlabel="true" locklevel="0">
+                                      <cell id="{bd25aa54-bb39-81ea-a63b-07857ea961aa}" showlabel="true" locklevel="0" visible="false">
                                           <labels>
                                               <label description="Owner" languagecode="1033" />
                                           </labels>

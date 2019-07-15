@@ -56,7 +56,17 @@
 																								<labels>
 																										<label description="" languagecode="1033" />
 																								</labels>
-																								<control id="msdyn_pagetype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_pagetype" disabled="false" />
+																								<control id="msdyn_pagetype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_pagetype" disabled="false">
+																										<parameters>
+																												<AutoResolve>true</AutoResolve>
+																												<DisableMru>false</DisableMru>
+																												<DisableQuickFind>false</DisableQuickFind>
+																												<DisableViewPicker>true</DisableViewPicker>
+																												<DefaultViewId>{FBDAE360-D9A3-E911-8199-000D3A6D68D0}</DefaultViewId>
+																												<AllowFilterOff>false</AllowFilterOff>
+																												<IsInlineNewEnabled>false</IsInlineNewEnabled>
+																										</parameters>
+																								</control>
 																						</cell>
 																				</row>
 																				<row>
@@ -93,14 +103,14 @@
 																								</labels>
 																								<control id="Parameters" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{2be7dd85-d3b0-7e7b-15ea-b0916cb60764}">
 																										<parameters>
-																												<ViewId>{6C123545-4983-491B-8967-AC6402DFB131}</ViewId>
+																												<ViewId>{6c123545-4983-491b-8967-ac6402dfb131}</ViewId>
 																												<IsUserView>false</IsUserView>
 																												<RelationshipName>msdyn_msdyn_consoleapplicationtemplate_msdyn_co</RelationshipName>
 																												<TargetEntityType>msdyn_consoleapplicationtemplateparameter</TargetEntityType>
 																												<AutoExpand>Fixed</AutoExpand>
 																												<EnableQuickFind>false</EnableQuickFind>
 																												<EnableViewPicker>false</EnableViewPicker>
-																												<ViewIds>{6C123545-4983-491B-8967-AC6402DFB131}</ViewIds>
+																												<ViewIds>{6c123545-4983-491b-8967-ac6402dfb131}</ViewIds>
 																												<EnableJumpBar>false</EnableJumpBar>
 																												<ChartGridMode>All</ChartGridMode>
 																												<VisualizationId />
@@ -161,14 +171,14 @@
 								<controlDescription forControl="{2be7dd85-d3b0-7e7b-15ea-b0916cb60764}">
 										<customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" formFactor="0">
 												<parameters>
-														<ViewId>{6C123545-4983-491B-8967-AC6402DFB131}</ViewId>
+														<ViewId>{6c123545-4983-491b-8967-ac6402dfb131}</ViewId>
 														<IsUserView>false</IsUserView>
 														<RelationshipName>msdyn_msdyn_consoleapplicationtemplate_msdyn_co</RelationshipName>
 														<TargetEntityType>msdyn_consoleapplicationtemplateparameter</TargetEntityType>
 														<AutoExpand>Fixed</AutoExpand>
 														<EnableQuickFind>false</EnableQuickFind>
 														<EnableViewPicker>false</EnableViewPicker>
-														<ViewIds>{6C123545-4983-491B-8967-AC6402DFB131}</ViewIds>
+														<ViewIds>{6c123545-4983-491b-8967-ac6402dfb131}</ViewIds>
 														<EnableJumpBar>false</EnableJumpBar>
 														<ChartGridMode>All</ChartGridMode>
 														<VisualizationId />
@@ -182,14 +192,14 @@
 										<customControl formFactor="1" name="MscrmControls.Grid.GridControl">
 												<parameters>
 														<data-set name="Grid">
-																<ViewId>{6C123545-4983-491B-8967-AC6402DFB131}</ViewId>
+																<ViewId>{6c123545-4983-491b-8967-ac6402dfb131}</ViewId>
 																<columnsDefaultView />
 																<IsUserView>false</IsUserView>
 																<RelationshipName>msdyn_msdyn_consoleapplicationtemplate_msdyn_co</RelationshipName>
 																<RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
 																<TargetEntityType>msdyn_consoleapplicationtemplateparameter</TargetEntityType>
 																<EnableViewPicker>false</EnableViewPicker>
-																<FilteredViewIds>{6C123545-4983-491B-8967-AC6402DFB131}</FilteredViewIds>
+																<FilteredViewIds>{6c123545-4983-491b-8967-ac6402dfb131}</FilteredViewIds>
 														</data-set>
 														<EnableGroupBy static="true" type="Enum">yes</EnableGroupBy>
 														<EnableEditing static="true" type="Enum">yes</EnableEditing>
@@ -201,14 +211,14 @@
 										<customControl formFactor="2" name="MscrmControls.Grid.GridControl">
 												<parameters>
 														<data-set name="Grid">
-																<ViewId>{6C123545-4983-491B-8967-AC6402DFB131}</ViewId>
+																<ViewId>{6c123545-4983-491b-8967-ac6402dfb131}</ViewId>
 																<columnsDefaultView />
 																<IsUserView>false</IsUserView>
 																<RelationshipName>msdyn_msdyn_consoleapplicationtemplate_msdyn_co</RelationshipName>
 																<RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
 																<TargetEntityType>msdyn_consoleapplicationtemplateparameter</TargetEntityType>
 																<EnableViewPicker>false</EnableViewPicker>
-																<FilteredViewIds>{6C123545-4983-491B-8967-AC6402DFB131}</FilteredViewIds>
+																<FilteredViewIds>{6c123545-4983-491b-8967-ac6402dfb131}</FilteredViewIds>
 														</data-set>
 														<EnableGroupBy static="true" type="Enum">yes</EnableGroupBy>
 														<EnableEditing static="true" type="Enum">yes</EnableEditing>

@@ -32,6 +32,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Entities\ConsoleAppParameterDefinition\RibbonDiff.xml" />
     <Content Include="Entities\ConsoleAppTemplateTag\Entity.xml" />
     <Content Include="Entities\ConsoleAppTemplateTag\FormXml\main\{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}_managed.xml" />
     <Content Include="Entities\ConsoleAppTemplateTag\SavedQueries\{320c44e2-e1ba-4901-b51e-447230eb45e4}.xml" />
@@ -62,6 +63,7 @@
     <Content Include="Entities\ConsoleAppTemplateParameter\RibbonDiff.xml" />
     <Content Include="Entities\ConsoleAppType\Entity.xml" />
     <Content Include="Entities\ConsoleAppType\FormXml\main\{e5c56ff7-4104-46e5-93d6-223fef077785}_managed.xml" />
+    <Content Include="Entities\ConsoleAppType\RibbonDiff.xml" />
     <Content Include="Entities\ConsoleAppType\SavedQueries\{f1d3c88b-9874-4d92-a0d1-717718332eec}.xml" />
     <Content Include="Entities\ConsoleAppType\SavedQueries\{e66f8fee-3538-466c-935b-04900c1c7afe}.xml" />
     <Content Include="Entities\ConsoleAppType\SavedQueries\{efd3c03b-2333-49cf-a2d9-5aa25980ba03}.xml" />
@@ -105,6 +107,7 @@
     <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{fac01a35-64fb-4822-bbda-4ddfec81f385}.xml" />
     <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{6a8bc071-4b56-4eac-877c-dbdbdd4d975f}.xml" />
     <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{ceef7e89-404a-4746-8735-a09e0114d232}.xml" />
+    <Content Include="Entities\ConsoleAppType\SavedQueries\{fbdae360-d9a3-e911-8199-000d3a6d68d0}.xml" />
     <Content Include="Other\Relationships\SessionTemplates.xml" />
     <Content Include="packageMap.xml">
       <Link>packageMap.xml</Link>
@@ -122,7 +125,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Other\Relationships.xml" />
-    <Content Include="Other\Solution.xml" />
+    <Content Include="Other\Solution.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Other\RibbonCustomization.xml" />
     <Content Include="Other\Relationships\CTIProvider.xml" />
     <Content Include="WebResources\EventHandlersLib\msdyn_EventHandlersLib.js.data.xml" />

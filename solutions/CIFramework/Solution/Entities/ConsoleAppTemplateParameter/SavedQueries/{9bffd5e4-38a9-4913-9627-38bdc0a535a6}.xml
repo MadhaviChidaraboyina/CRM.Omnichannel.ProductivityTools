@@ -8,9 +8,9 @@
     <isdefault>1</isdefault>
     <savedqueryid>{9bffd5e4-38a9-4913-9627-38bdc0a535a6}</savedqueryid>
     <layoutxml>
-      <grid name="" jump="msdyn_name" select="1" icon="1" preview="1">
+      <grid name="" jump="msdyn_parametername" select="1" icon="1" preview="1">
         <row name="msdyn_consoleapplicationtemplateparameter" id="msdyn_consoleapplicationtemplateparameterid">
-          <cell name="msdyn_name" width="300" />
+          <cell name="msdyn_parametername" width="300" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
@@ -20,9 +20,9 @@
       <fetch version="1.0" mapping="logical">
         <entity name="msdyn_consoleapplicationtemplateparameter">
           <attribute name="msdyn_consoleapplicationtemplateparameterid" />
-          <attribute name="msdyn_name" />
+          <attribute name="msdyn_parametername" />
           <attribute name="createdon" />
-          <order attribute="msdyn_name" descending="false" />
+          <order attribute="msdyn_parametername" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
