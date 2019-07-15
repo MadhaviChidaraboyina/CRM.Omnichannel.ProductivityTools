@@ -12,6 +12,9 @@ namespace Microsoft.CIFramework.Internal {
 		anchorTabTemplate: UCIApplicationTabTemplate;
 	}
 	class UCIApplicationType {
+		public static ThirdPartyWebSite = "ThirdPartyWebSite";
+		public static webresource = "webresource";
+
 		private _name: XrmClientApi.PageType;
 		private _order: number;
 		
@@ -44,6 +47,12 @@ namespace Microsoft.CIFramework.Internal {
 					return Xrm.WebApi.retrieveMultipleRecords("msdyn_consoleapplicationtype", "?$select=msdyn_name").then(
 						function (result) {
 							result.entities.forEach(function (value, index, array) {
+
+								//ThirdpartyWebsite is loaded inside crm's Webresource. Though externally the pagetype is tracked as thirdpartywebsite, page type is webresource internally.
+								if (value["msdyn_name"] == UCIApplicationType.ThirdPartyWebSite) {
+									value["msdyn_name"] = UCIApplicationType.webresource;
+								}
+
 								UCIApplicationTabTemplate._UCIPageTypes.set(value["msdyn_consoleapplicationtypeid"], new UCIApplicationType(value["msdyn_name"], value["msdyn_renderingorder"]));
 								return resolve(true);
 							});

@@ -42,8 +42,8 @@
 				Entity target = (Entity)context.InputParameters["Target"];
 				Entity targetRef = null;
 				bool found = false;
-				EntityCollection affectedEntities = SessionTemplatePluginUtilities.retrieveRelatedEntities(context, organizationService, trace, target.LogicalName, target.Id, new ColumnSet(SessionTemplatePluginConstants.ENTITY_NAME_ATTRIBUTE),
-					SessionTemplatePluginConstants.APPLICATION_TEMPLATE_ENTITY_NAME, SessionTemplatePluginConstants.APPLICATION_TEMPLATE_PARAMETER_VALUE_RELATION, new ColumnSet(SessionTemplatePluginConstants.APPLICATION_TEMPLATE_IS_STALE_ATTRIBUTE), out targetRef, out found);
+				EntityCollection affectedEntities = TemplatePluginUtility.retrieveRelatedEntities(context, organizationService, trace, target.LogicalName, target.Id, new ColumnSet(TemplatePluginConstants.ENTITY_NAME_ATTRIBUTE),
+					TemplatePluginConstants.APPLICATION_TEMPLATE_ENTITY_NAME, TemplatePluginConstants.APPLICATION_TEMPLATE_PARAMETER_VALUE_RELATION, new ColumnSet(TemplatePluginConstants.APPLICATION_TEMPLATE_IS_STALE_ATTRIBUTE), out targetRef, out found);
 				if(!found)
 				{
 					//No entities related to this one
@@ -52,7 +52,7 @@
 				foreach(Entity entity in affectedEntities.Entities)
 				{
 					Entity updatedEntity = new Entity(entity.LogicalName, entity.Id);
-					updatedEntity.Attributes.Add(SessionTemplatePluginConstants.APPLICATION_TEMPLATE_IS_STALE_ATTRIBUTE, true);
+					updatedEntity.Attributes.Add(TemplatePluginConstants.APPLICATION_TEMPLATE_IS_STALE_ATTRIBUTE, true);
 					trace.Trace("Marked entity " + entity.LogicalName + " " + entity.Id + " as stale");
 					organizationService.Update(updatedEntity);
 				}

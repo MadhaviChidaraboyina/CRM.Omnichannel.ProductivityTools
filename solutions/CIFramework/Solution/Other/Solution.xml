@@ -173,6 +173,7 @@
 			<RootComponent type="61" schemaName="widgets_container.html" behavior="0" />
 			<RootComponent type="61" schemaName="widgets_containerStyle.css" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_notificationCss.css" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_ExternalWebPageContainer.html" behavior ="0"/>
 			<RootComponent type="62" schemaName="msdyn_ChannelIntegrationFrameworkSitemap" behavior="0" />
 			<RootComponent type="66" schemaName="MscrmControls.Service.CIProvider.CustomMultiSelectControl" />
 			<RootComponent type="66" schemaName="MscrmControls.FieldControls.AgentClickToActControl" />

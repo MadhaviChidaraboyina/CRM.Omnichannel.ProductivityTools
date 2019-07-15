@@ -14,7 +14,10 @@ namespace Microsoft.CIFramework.Internal {
 				}
 				let paramVals: Map<string, string> = new Map<string, string>();
 				let paramResolvers: Promise<string>[] = [];
-				let matches = input.match(new RegExp("\\{.*\\}", "g"));
+				//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions : "?" character
+
+				let matches = input.match(new RegExp("\\{.*?\\}", "g")); // "\\{.*?\\}" (non -greedy) allows to resolve "{qp}{param1}" as qp and param1 whereas "\\{.*\\}" (greedy) resolve "{qp}{param1}" as {qp}{param1} itself.
+
 				for (let index in matches) {
 					let param = matches[index];
 					let paramName: string = param.substr(1, param.length - 2);
@@ -76,8 +79,9 @@ namespace Microsoft.CIFramework.Internal {
 							let paramName = key.substr(1, key.length - 2);
 							searchRegexParts.push("\\{" + paramName + "\\}");
 						});
+
 						let regex = searchRegexParts.join("|");
-						let ret = input.replace(new RegExp(regex), function (args) { return paramVals.has(args) && paramVals.get(args) || args });
+						let ret = input.replace(new RegExp(regex,"g"), function (args) { return paramVals.has(args) && paramVals.get(args) || args });
 						return resolve(ret);
 					},
 					function (error) {

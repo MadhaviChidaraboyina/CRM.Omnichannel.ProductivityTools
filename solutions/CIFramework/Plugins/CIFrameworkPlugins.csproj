@@ -66,7 +66,8 @@
     <Compile Include="ChannelProvider\WildCardCheckOnProviderEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionTemplates\CreateOrUpdateApplicationTemplateParameter.cs" />
-    <Compile Include="SessionTemplates\SessionTemplatePluginUtility.cs" />
+    <Compile Include="SessionTemplates\TemplatePluginsConstants.cs" />
+    <Compile Include="SessionTemplates\TemplatePluginUtility.cs" />
     <Compile Include="SessionTemplates\CreateOrUpdateApplicationTemplate.cs" />
     <Compile Include="SessionTemplates\GenTemplateParamStringForConsoleAppType.cs" />
   </ItemGroup>

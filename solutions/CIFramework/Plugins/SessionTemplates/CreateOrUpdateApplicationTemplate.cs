@@ -23,7 +23,17 @@
 			}
 			return currentParams;
 		}
- 		public void Execute(IServiceProvider serviceProvider)
+
+		/// <summary>
+		/// Post create/update actions
+		/// 1. If page type is been changed, this creates the necessary new parameters
+		/// 2. Deletes the currently associated paramters if any (in case of create, none. there will be list of records in case of update)
+		/// 3. Associates the newly created parameters to the current app tab entity record
+		/// 4. In case of update, once parameters are associated, JSON string in the current app tab entity record is updated. for create it is taken in GenTemplateParam plugin 
+		/// 5. Special handling in case of thirdpartywebsite pagetype selection
+		/// </summary>
+		/// <param name="serviceProvider">The service provider</param>
+		public void Execute(IServiceProvider serviceProvider)
 		{
 			IPluginExecutionContext context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
 			ITracingService trace = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
@@ -40,49 +50,56 @@
 			{
 				trace.Trace("Starting plugin execution " + context.MessageName);
 				Entity target = (Entity)context.InputParameters["Target"];
-				EntityReference pageTypeRef = target.GetAttributeValue<EntityReference>(SessionTemplatePluginConstants.APPLICATION_TEMPLATE_ENTITY_PAGETYPE_ATTRIBUTE);
-				
+				EntityReference pageTypeRef = target.GetAttributeValue<EntityReference>(TemplatePluginConstants.APPLICATION_TEMPLATE_ENTITY_PAGETYPE_ATTRIBUTE);
+
+				if(pageTypeRef == null)
+				{
+					trace.Trace("Pagetype reference is not updated or couldnt retrieve pagetype reference by GetAttributeValue on target. Returning..");
+					return;
+				}
+
 				string[] fetchColumns = {
-							SessionTemplatePluginConstants.PARAMETER_COL_NAME,
-							SessionTemplatePluginConstants.PARAMETER_COL_RUNTIME_TYPE,
-							SessionTemplatePluginConstants.PARAMETER_COL_DEFAULT_VALUE,
-							SessionTemplatePluginConstants.PARAMETER_COL_IS_RUNTIME
+							TemplatePluginConstants.PARAMETER_COL_NAME,
+							TemplatePluginConstants.PARAMETER_COL_RUNTIME_TYPE,
+							TemplatePluginConstants.PARAMETER_COL_DEFAULT_VALUE,
+							TemplatePluginConstants.PARAMETER_COL_IS_RUNTIME
 						};
 				bool newParamsFound = false;
 				Entity appTypeEntity = null;
 				trace.Trace("Getting new param definitions for  " + pageTypeRef.Id);
-				EntityCollection newParamDefinitions = SessionTemplatePluginUtilities.retrieveRelatedEntities(context, organizationService, trace, SessionTemplatePluginConstants.APPLICATION_TYPE_ENTITY_NAME,
-					pageTypeRef.Id, new ColumnSet(SessionTemplatePluginConstants.ENTITY_NAME_ATTRIBUTE), SessionTemplatePluginConstants.PARAMETER_DEFINITION_ENTITY_NAME,
-					SessionTemplatePluginConstants.APPLICATION_TYPE_PARAMETER_DEFINITION_RELATION, new ColumnSet(fetchColumns), out appTypeEntity, out newParamsFound);
+				EntityCollection newParamDefinitions = TemplatePluginUtility.retrieveRelatedEntities(context, organizationService, trace, TemplatePluginConstants.APPLICATION_TYPE_ENTITY_NAME,
+					pageTypeRef.Id, new ColumnSet(TemplatePluginConstants.ENTITY_NAME_ATTRIBUTE), TemplatePluginConstants.PARAMETER_DEFINITION_ENTITY_NAME,
+					TemplatePluginConstants.APPLICATION_TYPE_PARAMETER_DEFINITION_RELATION, new ColumnSet(fetchColumns), out appTypeEntity, out newParamsFound);
 
 				if(!newParamsFound)
 				{
-					trace.Trace("Pagetype does not need any params");
+					trace.Trace("Pagetype does not need any params.Returning..");
 					return;
 				}
 
 				string[] templateParamfetchColumns = {
-							SessionTemplatePluginConstants.TEMPLATE_PARAMETER_COL_NAME,
-							SessionTemplatePluginConstants.PARAMETER_COL_RUNTIME_TYPE,
-							SessionTemplatePluginConstants.TEMPLATE_PARAMETER_COL_VALUE,
-							SessionTemplatePluginConstants.PARAMETER_COL_IS_RUNTIME
+							TemplatePluginConstants.TEMPLATE_PARAMETER_COL_NAME,
+							TemplatePluginConstants.PARAMETER_COL_RUNTIME_TYPE,
+							TemplatePluginConstants.TEMPLATE_PARAMETER_COL_VALUE,
+							TemplatePluginConstants.PARAMETER_COL_IS_RUNTIME
 						};
 				bool currentParamsExist = false;
 				Entity targetTemplateEntity = null;
 				trace.Trace("Getting current param definitions for  " + target.Id);
-				EntityCollection currentParamValues = SessionTemplatePluginUtilities.retrieveRelatedEntities(context, organizationService, trace, target.LogicalName, target.Id, new ColumnSet(SessionTemplatePluginConstants.ENTITY_NAME_ATTRIBUTE),
-					SessionTemplatePluginConstants.APPLICATION_TEMPLATE_PARAMETER_ENTITY_NAME, SessionTemplatePluginConstants.APPLICATION_TEMPLATE_PARAMETER_VALUE_RELATION, new ColumnSet(templateParamfetchColumns), out targetTemplateEntity, out currentParamsExist);
+				EntityCollection currentParamValues = TemplatePluginUtility.retrieveRelatedEntities(context, organizationService, trace, target.LogicalName, target.Id, new ColumnSet(TemplatePluginConstants.ENTITY_NAME_ATTRIBUTE),
+					TemplatePluginConstants.APPLICATION_TEMPLATE_PARAMETER_ENTITY_NAME, TemplatePluginConstants.APPLICATION_TEMPLATE_PARAMETER_VALUE_RELATION, new ColumnSet(templateParamfetchColumns), out targetTemplateEntity, out currentParamsExist);
 
 				Dictionary<string, Entity> currentParams = null;
 				if (currentParamsExist)
 				{
-					currentParams = createNameMap(currentParamValues, SessionTemplatePluginConstants.TEMPLATE_PARAMETER_COL_NAME);
+					currentParams = createNameMap(currentParamValues, TemplatePluginConstants.TEMPLATE_PARAMETER_COL_NAME);
 					trace.Trace("Created currrentParamMap");
 				}
 				else {
 					trace.Trace("No current params exist");
 				}
-				Dictionary<string, Entity> requiredParams = createNameMap(newParamDefinitions, SessionTemplatePluginConstants.PARAMETER_COL_NAME);
+
+				Dictionary<string, Entity> requiredParams = createNameMap(newParamDefinitions, TemplatePluginConstants.PARAMETER_COL_NAME);
 				trace.Trace("Created requiredParamMap");
 				List<Entity> paramsToDel = new List<Entity>();
 				List<Entity> paramsToAdd = new List<Entity>();
@@ -103,42 +120,60 @@
 					{
 						Entity entity = new Entity(currentParamValues.EntityName);
 						Entity templateParam = requiredParams[requiredParamName];
-						entity.Attributes.Add(SessionTemplatePluginConstants.TEMPLATE_PARAMETER_COL_NAME, requiredParamName);
+						entity.Attributes.Add(TemplatePluginConstants.TEMPLATE_PARAMETER_COL_NAME, requiredParamName);
 						try
 						{
-							entity.Attributes.Add(SessionTemplatePluginConstants.TEMPLATE_PARAMETER_COL_VALUE, templateParam.GetAttributeValue<string>(SessionTemplatePluginConstants.PARAMETER_COL_DEFAULT_VALUE));
+							entity.Attributes.Add(TemplatePluginConstants.TEMPLATE_PARAMETER_COL_VALUE, templateParam.GetAttributeValue<string>(TemplatePluginConstants.PARAMETER_COL_DEFAULT_VALUE));
 						}
 						catch(Exception)
 						{
 							//No default value set
-							entity.Attributes.Add(SessionTemplatePluginConstants.TEMPLATE_PARAMETER_COL_VALUE, "{" + requiredParamName + "}");
+							entity.Attributes.Add(TemplatePluginConstants.TEMPLATE_PARAMETER_COL_VALUE, "{" + requiredParamName + "}");
 						}
-						entity.Attributes.Add(SessionTemplatePluginConstants.PARAMETER_COL_IS_RUNTIME, templateParam.GetAttributeValue<bool>(SessionTemplatePluginConstants.PARAMETER_COL_IS_RUNTIME));
-						entity.Attributes.Add(SessionTemplatePluginConstants.PARAMETER_COL_RUNTIME_TYPE, templateParam.GetAttributeValue<OptionSetValue>(SessionTemplatePluginConstants.PARAMETER_COL_RUNTIME_TYPE));
-						entity.Attributes.Add(SessionTemplatePluginConstants.ENTITY_NAME_ATTRIBUTE, targetTemplateEntity.GetAttributeValue<string>(SessionTemplatePluginConstants.ENTITY_NAME_ATTRIBUTE).ToLower().Replace(' ', '_') +"_" + requiredParamName);
+						entity.Attributes.Add(TemplatePluginConstants.PARAMETER_COL_IS_RUNTIME, templateParam.GetAttributeValue<bool>(TemplatePluginConstants.PARAMETER_COL_IS_RUNTIME));
+						entity.Attributes.Add(TemplatePluginConstants.PARAMETER_COL_RUNTIME_TYPE, templateParam.GetAttributeValue<OptionSetValue>(TemplatePluginConstants.PARAMETER_COL_RUNTIME_TYPE));
+						entity.Attributes.Add(TemplatePluginConstants.ENTITY_NAME_ATTRIBUTE, targetTemplateEntity.GetAttributeValue<string>(TemplatePluginConstants.ENTITY_NAME_ATTRIBUTE).ToLower().Replace(' ', '_') +"_" + requiredParamName);
+						entity.FormattedValues.Add(TemplatePluginConstants.PARAMETER_COL_RUNTIME_TYPE, templateParam.FormattedValues[TemplatePluginConstants.PARAMETER_COL_RUNTIME_TYPE]);
 						paramsToAdd.Add(entity);
 					}
 				}
 				trace.Trace("Added records to be created " + paramsToAdd.Count);
 				//EntityReferenceCollection relToDel = new EntityReferenceCollection();
-				foreach(Entity entity in paramsToDel)
+
+				foreach (Entity entity in paramsToDel)
 				{
-					//organizationService.Disassociate()
 					organizationService.Delete(entity.LogicalName, entity.Id);
-					//relToDel.Add(new EntityReference(entity.LogicalName, entity.Id));
+					trace.Trace("Deleted " + entity.Id);
 				}
-				trace.Trace("Records deleted");
-				//organizationService.Disassociate(target.LogicalName, target.Id, new Relationship(SessionTemplatePluginConstants.APPLICATION_TEMPLATE_PARAMETER_VALUE_RELATION), relToDel);
+				trace.Trace("Parameter records deletion completed");
+
 				EntityReferenceCollection relToAdd = new EntityReferenceCollection();
 				foreach (Entity entity in paramsToAdd)
 				{
 					Guid entityid = organizationService.Create(entity);
 					relToAdd.Add(new EntityReference(entity.LogicalName, entityid));
+					trace.Trace("Created " + entityid);
 				}
-				trace.Trace("Records created");
-				organizationService.Associate(target.LogicalName, target.Id, new Relationship(SessionTemplatePluginConstants.APPLICATION_TEMPLATE_PARAMETER_VALUE_RELATION), relToAdd);
+				trace.Trace("Parameter records creation completed");
+
+				organizationService.Associate(target.LogicalName, target.Id, new Relationship(TemplatePluginConstants.APPLICATION_TEMPLATE_PARAMETER_VALUE_RELATION), relToAdd);
 				trace.Trace("Records associated");
-				//organizationService.
+
+				Dictionary<string, Parameter> paramInfo = new Dictionary<string, Parameter>(paramsToAdd.Count);
+				Entity updatedEntity = new Entity(target.LogicalName,target.Id);
+				string jsonStr = string.Empty;
+
+				// If there is a change in page type as part of Update operation, update the json string stored in app tab table
+				if (context.MessageName?.ToLower() == "update")
+				{
+					jsonStr = TemplatePluginUtility.GetJsonStringFromParameters(pageTypeRef, paramsToAdd, organizationService, trace);
+					updatedEntity[TemplatePluginConstants.APPLICATION_TEMPLATE_ENTITY_TEMPLATE_PARAMETER_ATTRIBUTE] = jsonStr;
+					trace.Trace(string.Format("Serialized data to be stored to {0} record is {1}",target.Id.ToString(), jsonStr));
+					target.Attributes.Add(TemplatePluginConstants.APPLICATION_TEMPLATE_ENTITY_TEMPLATE_PARAMETER_ATTRIBUTE, jsonStr);
+					organizationService.Update(updatedEntity);
+					trace.Trace("Update of msdyn_templateparameters with json got completed");
+				}
+				
 			}
 			catch (Exception e)
 			{
