@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="ConsoleApplicationTemplate" OriginalName="ConsoleApplicationTemplate">msdyn_consoleapplicationtemplate</Name>
+  <Name LocalizedName="Application Tab Template" OriginalName="ConsoleApplicationTemplate">msdyn_consoleapplicationtemplate</Name>
   <EntityInfo>
     <entity Name="msdyn_consoleapplicationtemplate">
       <LocalizedNames>
-        <LocalizedName description="ConsoleApplicationTemplate" languagecode="1033" />
+        <LocalizedName description="Application Tab Template" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="ConsoleApplicationTemplates" languagecode="1033" />
+        <LocalizedCollectionName description="Application Tab Templates" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="An application template with various template parameters defined" languagecode="1033" />
+        <Description description="An application tab template with various template parameters defined." languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -313,7 +313,7 @@
             <displayname description="Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The name of the custom entity." languagecode="1033" />
+            <Description description="The name of the Application tab." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_IsStale">
@@ -367,7 +367,7 @@
             </options>
           </optionset>
           <displaynames>
-            <displayname description="IsStale" languagecode="1033" />
+            <displayname description="Is Stale" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1033" />
@@ -402,10 +402,10 @@
           <LookupStyle>single</LookupStyle>
           <LookupTypes />
           <displaynames>
-            <displayname description="Page type" languagecode="1033" />
+            <displayname description="Application type" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The console application type to be instantiated" languagecode="1033" />
+            <Description description="Type of the application." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_TemplateParameters">
@@ -438,7 +438,7 @@
           <MaxLength>2048</MaxLength>
           <Length>4096</Length>
           <displaynames>
-            <displayname description="TemplateParameters" languagecode="1033" />
+            <displayname description="Template Parameters" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="A JSON string with all pageType parameters with template values provided" languagecode="1033" />
@@ -648,7 +648,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the ConsoleApplicationTemplate" languagecode="1033" />
+              <Description description="Status of the Application Tab Template" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -667,7 +667,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the ConsoleApplicationTemplate" languagecode="1033" />
+            <Description description="Status of the Application Tab Template" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -704,7 +704,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the ConsoleApplicationTemplate" languagecode="1033" />
+              <Description description="Reason for the status of the Application Tab Template" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -723,7 +723,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the ConsoleApplicationTemplate" languagecode="1033" />
+            <Description description="Reason for the status of the Application Tab Template" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">
@@ -829,7 +829,7 @@
                 <displayname description="Icon" languagecode="1033" />
               </displaynames>
               <Descriptions>
-                <Description description="The icon for the application template" languagecode="1033" />
+                <Description description="Display icon for the application." languagecode="1033" />
               </Descriptions>
             </attribute>
         <attribute PhysicalName="msdyn_Pinned">
@@ -919,10 +919,10 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="Title" languagecode="1033" />
+            <displayname description="Application title" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The title to be displayed for this application template" languagecode="1033" />
+            <Description description="The title of the application displayed on this application tab panel." languagecode="1033" />
           </Descriptions>
         </attribute>
           <attribute PhysicalName="msdyn_description">

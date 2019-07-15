@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="ConsoleAppParameterDefinition" OriginalName="ConsoleAppParameterDefinition">msdyn_consoleappparameterdefinition</Name>
+  <Name LocalizedName="App Parameter Definition" OriginalName="ConsoleAppParameterDefinition">msdyn_consoleappparameterdefinition</Name>
   <EntityInfo>
     <entity Name="msdyn_consoleappparameterdefinition">
       <LocalizedNames>
-        <LocalizedName description="ConsoleAppParameterDefinition" languagecode="1033" />
+        <LocalizedName description="App Parameter Definition" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="ConsoleAppParameterDefinitions" languagecode="1033" />
+        <LocalizedCollectionName description="App Parameter Definitions" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="" languagecode="1033" />
@@ -274,7 +274,7 @@
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <AutoNumberFormat></AutoNumberFormat>
           <displaynames>
-            <displayname description="ConsoleAppParameterDefinition" languagecode="1033" />
+            <displayname description="App Parameter Definition" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Unique identifier for entity instances" languagecode="1033" />
@@ -310,7 +310,7 @@
           <MaxLength>1024</MaxLength>
           <Length>2048</Length>
           <displaynames>
-            <displayname description="DefaultValue" languagecode="1033" />
+            <displayname description="Default Value" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="The default value for this parameter. The plugin for UCIApplicationType will cast to appropriate type before use" languagecode="1033" />
@@ -348,7 +348,7 @@
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
             <displaynames>
-              <displayname description="IsRuntime" languagecode="1033" />
+              <displayname description="Is Runtime" languagecode="1033" />
             </displaynames>
             <Descriptions>
               <Description description="Yes - value will be picked from templateParameters argument at runtime&#xA;No - value must be supplied when creating a template that uses this parameter" languagecode="1033" />
@@ -367,7 +367,7 @@
             </options>
           </optionset>
           <displaynames>
-            <displayname description="IsRuntime" languagecode="1033" />
+            <displayname description="Is Runtime" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Yes - value will be picked from templateParameters argument at runtime&#xA;No - value must be supplied when creating a template that uses this parameter" languagecode="1033" />
@@ -437,7 +437,7 @@
           <AutoNumberFormat></AutoNumberFormat>
           <OptionSetName>msdyn_consoleapplicationparameterruntimetype</OptionSetName>
           <displaynames>
-            <displayname description="RuntimeType" languagecode="1033" />
+            <displayname description="Runtime Type" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="The runtime type of the parameter value" languagecode="1033" />
@@ -542,7 +542,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the ConsoleAppParameterDefinition" languagecode="1033" />
+              <Description description="Status of the App Parameter Definition" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -561,7 +561,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the ConsoleAppParameterDefinition" languagecode="1033" />
+            <Description description="Status of the App Parameter Definition" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">

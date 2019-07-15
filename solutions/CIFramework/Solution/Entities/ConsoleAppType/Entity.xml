@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="ConsoleApplicationType" OriginalName="ConsoleApplicationType">msdyn_consoleapplicationtype</Name>
+  <Name LocalizedName="Application Type" OriginalName="ConsoleApplicationType">msdyn_consoleapplicationtype</Name>
   <EntityInfo>
     <entity Name="msdyn_consoleapplicationtype">
       <LocalizedNames>
-        <LocalizedName description="ConsoleApplicationType" languagecode="1033" />
+        <LocalizedName description="Application Type" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
         <LocalizedCollectionName description="ConsoleApplicationTypes" languagecode="1033" />
@@ -382,7 +382,7 @@
           <MaxLength>2048</MaxLength>
           <Length>4096</Length>
           <displaynames>
-            <displayname description="TemplateParameters" languagecode="1033" />
+            <displayname description="Template Parameters" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Populated by plugin at post-retrieve stage. Computed from the parameters relationship" languagecode="1033" />
@@ -487,7 +487,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the ConsoleApplicationType" languagecode="1033" />
+              <Description description="Status of the Application Type" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -506,7 +506,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the ConsoleApplicationType" languagecode="1033" />
+            <Description description="Status of the Application Type" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -543,7 +543,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the ConsoleApplicationType" languagecode="1033" />
+              <Description description="Reason for the status of the Application Type" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -562,7 +562,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the ConsoleApplicationType" languagecode="1033" />
+            <Description description="Reason for the status of the Application Type" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">
@@ -664,7 +664,7 @@
           <MinValue>0</MinValue>
           <MaxValue>2147483647</MaxValue>
           <displaynames>
-            <displayname description="RenderingOrder" languagecode="1033" />
+            <displayname description="Rendering Order" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="The order between various page-types rendered in a session template" languagecode="1033" />

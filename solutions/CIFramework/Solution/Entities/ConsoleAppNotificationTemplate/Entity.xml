@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="ConsoleApplicationNotificationTemplate" OriginalName="ConsoleApplicationNotificationTemplate">msdyn_consoleapplicationnotificationtemplate</Name>
+  <Name LocalizedName="Notification Template" OriginalName="ConsoleApplicationNotificationTemplate">msdyn_consoleapplicationnotificationtemplate</Name>
   <EntityInfo>
     <entity Name="msdyn_consoleapplicationnotificationtemplate">
       <LocalizedNames>
-        <LocalizedName description="ConsoleApplicationNotificationTemplate" languagecode="1033" />
+        <LocalizedName description="Notification Template" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="ConsoleApplicationNotificationTemplates" languagecode="1033" />
+        <LocalizedCollectionName description="Notification Templates" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="Template for a notification" languagecode="1033" />
@@ -276,10 +276,10 @@
           <AutoNumberFormat></AutoNumberFormat>
           <OptionSetName>msdyn_consoleapplicationnotificationaction</OptionSetName>
           <displaynames>
-            <displayname description="ActionButtons" languagecode="1033" />
+            <displayname description="ActionButtons (Deprecated)" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The action buttons to be displayed" languagecode="1033" />
+            <Description description="The action buttons to be displayed. (Deprecated)" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_consoleapplicationnotificationtemplateId">
@@ -347,7 +347,7 @@
             <displayname description="Icon" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The icon to be rendered for this notification. Can be either an image URL or a font-icon" languagecode="1033" />
+            <Description description="Display icon for this notification. Can be either an image URL or a font-icon" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_name">
@@ -383,7 +383,7 @@
             <displayname description="Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The name of the custom entity." languagecode="1033" />
+            <Description description="The name of this Notification template." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Timeout">
@@ -415,10 +415,10 @@
           <MinValue>0</MinValue>
           <MaxValue>500</MaxValue>
           <displaynames>
-            <displayname description="Timeout" languagecode="1033" />
+            <displayname description="Timeout (seconds)" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Timeout, if any, on the notification" languagecode="1033" />
+            <Description description="Notification time out period." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Title">
@@ -454,7 +454,7 @@
             <displayname description="Title" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The title to be displayed for this notification" languagecode="1033" />
+            <Description description="The title to be displayed for this notification." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OverriddenCreatedOn">
@@ -661,7 +661,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the ConsoleApplicationNotificationTemplate" languagecode="1033" />
+              <Description description="Status of the Notification Template" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -680,7 +680,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the ConsoleApplicationNotificationTemplate" languagecode="1033" />
+            <Description description="Status of the Notification Template" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -717,7 +717,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the ConsoleApplicationNotificationTemplate" languagecode="1033" />
+              <Description description="Reason for the status of the Notification Template" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -736,7 +736,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the ConsoleApplicationNotificationTemplate" languagecode="1033" />
+            <Description description="Reason for the status of the Notification Template" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">
@@ -838,12 +838,84 @@
           <MinValue>0</MinValue>
           <MaxValue>2147483647</MaxValue>
           <displaynames>
-            <displayname description="RenderingOrder" languagecode="1033" />
+            <displayname description="Notification order" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The order of priority between various notification templates" languagecode="1033" />
+            <Description description="Notification display order relative to other notification templates." languagecode="1033" />
           </Descriptions>
         </attribute>
+		<attribute PhysicalName="msdyn_NotificationButtons">
+              <Type>nvarchar</Type>
+              <Name>msdyn_notificationbuttons</Name>
+              <LogicalName>msdyn_notificationbuttons</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>1</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <Format>text</Format>
+              <MaxLength>250</MaxLength>
+              <Length>200</Length>
+              <displaynames>
+                <displayname description="Notification Buttons" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="msdyn_NotificationFieldsPlaceholder">
+              <Type>nvarchar</Type>
+              <Name>msdyn_notificationfieldsplaceholder</Name>
+              <LogicalName>msdyn_notificationfieldsplaceholder</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>1</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <Format>text</Format>
+              <MaxLength>200</MaxLength>
+              <Length>200</Length>
+              <displaynames>
+                <displayname description="Notification Fields" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="" languagecode="1033" />
+              </Descriptions>
+            </attribute>
       </attributes>
       <EntitySetName>msdyn_consoleapplicationnotificationtemplates</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>

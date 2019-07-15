@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-	<Name LocalizedName="ConsoleApplicationNotificationField" OriginalName="ConsoleApplicationNotificationField">msdyn_consoleapplicationnotificationfield</Name>
+	<Name LocalizedName="Notification Fields" OriginalName="ConsoleApplicationNotificationField">msdyn_consoleapplicationnotificationfield</Name>
 	<EntityInfo>
 		<entity Name="msdyn_consoleapplicationnotificationfield">
 			<LocalizedNames>
-				<LocalizedName description="ConsoleApplicationNotificationField" languagecode="1033" />
+				<LocalizedName description="Notification Field" languagecode="1033" />
 			</LocalizedNames>
 			<LocalizedCollectionNames>
-				<LocalizedCollectionName description="ConsoleApplicationNotificationFields" languagecode="1033" />
+				<LocalizedCollectionName description="Notification Fields" languagecode="1033" />
 			</LocalizedCollectionNames>
 			<Descriptions>
-				<Description description="Defines a field (key, templateValue) that needs to be populated in a notification template body" languagecode="1033" />
+				<Description description="Defines a field (key, templateValue) that needs to be populated in the notification body." languagecode="1033" />
 			</Descriptions>
 			<attributes>
 				<attribute PhysicalName="CreatedBy">
@@ -310,10 +310,10 @@
 					<MaxLength>100</MaxLength>
 					<Length>200</Length>
 					<displaynames>
-						<displayname description="LineHeader" languagecode="1033" />
+						<displayname description="Field header" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="The line header to be displayed for this information" languagecode="1033" />
+						<Description description="Field displayed on the notification." languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_name">
@@ -349,7 +349,7 @@
 						<displayname description="Name" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="The name of the custom entity." languagecode="1033" />
+						<Description description="The name of the notification field." languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_Value">
@@ -385,8 +385,43 @@
 						<displayname description="Value" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="The value to be displayed in this row" languagecode="1033" />
+						<Description description="The value for the field to be displayed on the notification." languagecode="1033" />
 					</Descriptions>
+				</attribute>
+				<attribute PhysicalName="msdyn_Priority">
+					  <Type>int</Type>
+					  <Name>msdyn_priority</Name>
+					  <LogicalName>msdyn_priority</LogicalName>
+					  <RequiredLevel>none</RequiredLevel>
+					  <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+					  <ImeMode>auto</ImeMode>
+					  <ValidForUpdateApi>1</ValidForUpdateApi>
+					  <ValidForReadApi>1</ValidForReadApi>
+					  <ValidForCreateApi>1</ValidForCreateApi>
+					  <IsCustomField>1</IsCustomField>
+					  <IsAuditEnabled>1</IsAuditEnabled>
+					  <IsSecured>0</IsSecured>
+					  <IntroducedVersion>1.0</IntroducedVersion>
+					  <IsCustomizable>1</IsCustomizable>
+					  <IsRenameable>1</IsRenameable>
+					  <CanModifySearchSettings>1</CanModifySearchSettings>
+					  <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+					  <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+					  <SourceType>0</SourceType>
+					  <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+					  <IsSortableEnabled>0</IsSortableEnabled>
+					  <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+					  <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+					  <IsDataSourceSecret>0</IsDataSourceSecret>
+					  <AutoNumberFormat></AutoNumberFormat>
+					  <MinValue>0</MinValue>
+					  <MaxValue>2147483647</MaxValue>
+					  <displaynames>
+						<displayname description="Priority" languagecode="1033" />
+					  </displaynames>
+					  <Descriptions>
+						<Description description="" languagecode="1033" />
+					  </Descriptions>
 				</attribute>
 				<attribute PhysicalName="OverriddenCreatedOn">
 					<Type>datetime</Type>
@@ -611,7 +646,7 @@
 						<displayname description="Status" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="Status of the ConsoleApplicationNotificationField" languagecode="1033" />
+						<Description description="Status of the Notification Field" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="statuscode">
@@ -648,7 +683,7 @@
 							<displayname description="Status Reason" languagecode="1033" />
 						</displaynames>
 						<Descriptions>
-							<Description description="Reason for the status of the ConsoleApplicationNotificationField" languagecode="1033" />
+							<Description description="Reason for the status of the Notification Field" languagecode="1033" />
 						</Descriptions>
 						<statuses>
 							<status value="1" state="0">
@@ -667,7 +702,7 @@
 						<displayname description="Status Reason" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="Reason for the status of the ConsoleApplicationNotificationField" languagecode="1033" />
+						<Description description="Reason for the status of the Notification Field" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="TimeZoneRuleVersionNumber">
@@ -774,7 +809,7 @@
 			<MobileOfflineFilters></MobileOfflineFilters>
 			<IsMapiGridEnabled>1</IsMapiGridEnabled>
 			<IsReadingPaneEnabled>0</IsReadingPaneEnabled>
-			<IsQuickCreateEnabled>0</IsQuickCreateEnabled>
+			<IsQuickCreateEnabled>1</IsQuickCreateEnabled>
 			<SyncToExternalSearchIndex>0</SyncToExternalSearchIndex>
 			<IntroducedVersion>1.0.0.0</IntroducedVersion>
 			<IsCustomizable>1</IsCustomizable>

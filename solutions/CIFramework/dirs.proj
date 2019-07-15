@@ -3,6 +3,7 @@
 		<ProjectToBuild Include="Client\WebResources.csproj" />
 		<ProjectToBuild Include="Controls\CustomMultiSelectControl\CustomMultiSelectControl.csproj" />
 		<ProjectToBuild Include="Controls\AgentClickToActControl\AgentClickToActControl.csproj" />
+		<ProjectToBuild Include="Controls\NotificationButtonConfigControl\NotificationButtonConfigControl.csproj" />
 		<ProjectToBuild Include="Plugins\CIFrameworkPlugins.csproj" />
 		<ProjectToBuild Include="CRM.Solutions.ChannelApiFramework.Test\CRM.Solutions.ChannelApiFramework.Test.csproj" />
 		<ProjectToBuild Include="CRM.Solutions.ChannelApiFrameworkV2.Test\CRM.Solutions.ChannelApiFrameworkV2.Test.csproj" />

@@ -11,7 +11,9 @@
       <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
         <row name="result" id="msdyn_consoleapplicationnotificationfieldid">
           <cell name="msdyn_name" width="300" />
-          <cell name="createdon" width="125" />
+		  <cell name="msdyn_lineheader" width="300" />
+		  <cell name="msdyn_value" width="300" />
+		  <cell name="msdyn_priority" width="300" />
         </row>
       </grid>
     </layoutxml>
@@ -21,8 +23,10 @@
         <entity name="msdyn_consoleapplicationnotificationfield">
           <attribute name="msdyn_consoleapplicationnotificationfieldid" />
           <attribute name="msdyn_name" />
-          <attribute name="createdon" />
-          <order attribute="msdyn_name" descending="false" />
+		  <attribute name="msdyn_value" />
+		  <attribute name="msdyn_lineheader" />
+		  <attribute name="msdyn_priority" />
+          <order attribute="msdyn_priority" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
@@ -31,7 +35,7 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Active ConsoleApplicationNotificationFields" languagecode="1033" />
+      <LocalizedName description="Active Notification Fields" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

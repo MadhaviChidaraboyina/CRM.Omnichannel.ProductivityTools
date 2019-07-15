@@ -8,6 +8,8 @@
      <AppModuleComponents>
        <AppModuleComponent type="62" schemaName="msdyn_ChannelIntegrationFrameworkSitemap" />
        <AppModuleComponent type="1" schemaName="msdyn_ciprovider" />
+	   <AppModuleComponent type="1" schemaName="msdyn_consoleapplicationnotificationfield" />
+	   <AppModuleComponent type="1" schemaName="msdyn_consoleapplicationnotificationtemplate" />
      </AppModuleComponents>
      <AppModuleRoleMaps>
        <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />

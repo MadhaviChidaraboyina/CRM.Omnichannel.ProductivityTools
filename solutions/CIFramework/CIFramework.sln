@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmniChannel.Test", "Microso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Solutions.ChannelApiFrameworkV2.Test", "CRM.Solutions.ChannelApiFrameworkV2.Test\CRM.Solutions.ChannelApiFrameworkV2.Test.csproj", "{7B608BCE-B424-4E45-8216-1132D16BD631}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationButtonConfigControl", "Controls\NotificationButtonConfigControl\NotificationButtonConfigControl.csproj", "{CC1ED5DA-3866-4516-B7EE-3D8B7AC9273D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		debug|amd64 = debug|amd64
@@ -122,18 +124,6 @@ Global
 		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.retail|amd64.Build.0 = Release|Any CPU
 		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.retail|Any CPU.ActiveCfg = Release|Any CPU
 		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.retail|Any CPU.Build.0 = Release|Any CPU
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.debug|amd64.ActiveCfg = debug|amd64
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.debug|amd64.Build.0 = debug|amd64
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.debug|Any CPU.ActiveCfg = debug|Any CPU
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.debug|Any CPU.Build.0 = debug|Any CPU
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.release|amd64.ActiveCfg = release|amd64
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.release|amd64.Build.0 = release|amd64
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.release|Any CPU.ActiveCfg = release|Any CPU
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.release|Any CPU.Build.0 = release|Any CPU
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.retail|amd64.ActiveCfg = retail|amd64
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.retail|amd64.Build.0 = retail|amd64
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.retail|Any CPU.ActiveCfg = retail|Any CPU
-		{7B608BCE-B424-4E45-8216-1132D16BD631}.retail|Any CPU.Build.0 = retail|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

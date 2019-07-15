@@ -21,10 +21,10 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="My ConsoleApplicationNotificationFields" languagecode="1033" />
+      <LocalizedName description="My Notification Fields" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="Active ConsoleApplicationNotificationFields owned by me" languagecode="1033" />
+      <Description description="Active Notification Fields owned by me" languagecode="1033" />
     </Descriptions>
   </savedquery>
 </savedqueries>

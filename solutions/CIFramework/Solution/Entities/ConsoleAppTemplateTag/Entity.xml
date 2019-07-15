@@ -4,7 +4,7 @@
   <EntityInfo>
     <entity Name="msdyn_templatetags">
       <LocalizedNames>
-        <LocalizedName description="TemplateTag" languagecode="1033" />
+        <LocalizedName description="Template Tag" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
         <LocalizedCollectionName description="TemplateTags" languagecode="1033" />
@@ -281,7 +281,7 @@
             <displayname description="Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The name of the custom entity." languagecode="1033" />
+            <Description description="The name of the Template Tag." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_templatetagsId">
@@ -520,7 +520,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the TemplateTag" languagecode="1033" />
+              <Description description="Status of the Template Tag" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -539,7 +539,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the TemplateTag" languagecode="1033" />
+            <Description description="Status of the Template Tag" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -576,7 +576,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the TemplateTag" languagecode="1033" />
+              <Description description="Reason for the status of the Template Tag" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -595,7 +595,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the TemplateTag" languagecode="1033" />
+            <Description description="Reason for the status of the Template Tag" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">

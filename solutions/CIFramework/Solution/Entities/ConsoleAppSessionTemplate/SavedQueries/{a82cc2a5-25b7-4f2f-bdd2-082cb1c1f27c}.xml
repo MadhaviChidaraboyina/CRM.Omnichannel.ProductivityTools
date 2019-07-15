@@ -37,7 +37,7 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Inactive ConsoleApplicationSessionTemplates" languagecode="1033" />
+      <LocalizedName description="Inactive Session Templates" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

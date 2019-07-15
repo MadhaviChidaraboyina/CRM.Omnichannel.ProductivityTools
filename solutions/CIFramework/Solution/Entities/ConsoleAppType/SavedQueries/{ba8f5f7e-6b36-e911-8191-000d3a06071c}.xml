@@ -23,7 +23,7 @@
       <LocalizedName description="ConsoleApplicationTypes" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="All active ConsoleApplicationTypes" languagecode="1033" />
+      <Description description="All active Application Types" languagecode="1033" />
     </Descriptions>
   </savedquery>
 </savedqueries>

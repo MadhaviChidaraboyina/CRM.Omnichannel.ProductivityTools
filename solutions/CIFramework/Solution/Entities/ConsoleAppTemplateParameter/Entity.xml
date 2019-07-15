@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="ConsoleApplicationTemplateParameter" OriginalName="ConsoleApplicationTemplateParameter">msdyn_consoleapplicationtemplateparameter</Name>
+  <Name LocalizedName="Application Template Parameter" OriginalName="ConsoleApplicationTemplateParameter">msdyn_consoleapplicationtemplateparameter</Name>
   <EntityInfo>
     <entity Name="msdyn_consoleapplicationtemplateparameter">
       <LocalizedNames>
@@ -312,7 +312,7 @@
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
             <displaynames>
-              <displayname description="IsRunTime" languagecode="1033" />
+              <displayname description="Is Runtime" languagecode="1033" />
             </displaynames>
             <Descriptions>
               <Description description="Whether a value needs to be provided at template creation time" languagecode="1033" />
@@ -331,7 +331,7 @@
             </options>
           </optionset>
           <displaynames>
-            <displayname description="IsRunTime" languagecode="1033" />
+            <displayname description="Is Runtime" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Whether a value needs to be provided at template creation time" languagecode="1033" />
@@ -370,7 +370,7 @@
             <displayname description="Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The name of the custom entity." languagecode="1033" />
+            <Description description="The name of the App Template Parameter." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ParameterName">
@@ -403,7 +403,7 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="ParameterName" languagecode="1033" />
+            <displayname description="Parameter Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="The name of the template parameter" languagecode="1033" />
@@ -437,7 +437,7 @@
           <AutoNumberFormat></AutoNumberFormat>
           <OptionSetName>msdyn_consoleapplicationparameterruntimetype</OptionSetName>
           <displaynames>
-            <displayname description="RuntimeType" languagecode="1033" />
+            <displayname description="Runtime Type" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Runtime type of this field" languagecode="1033" />
@@ -683,7 +683,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the ConsoleApplicationTemplateParameter" languagecode="1033" />
+              <Description description="Status of the Application Template Parameter" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -702,7 +702,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the ConsoleApplicationTemplateParameter" languagecode="1033" />
+            <Description description="Status of the Application Template Parameter" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -739,7 +739,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the ConsoleApplicationTemplateParameter" languagecode="1033" />
+              <Description description="Reason for the status of the Application Template Parameter" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -758,7 +758,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the ConsoleApplicationTemplateParameter" languagecode="1033" />
+            <Description description="Reason for the status of the Application Template Parameter" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<control namespace="MscrmControls.Service.CIProvider" constructor="NotificationButtonConfigControl" version="1.0.0" display-name-key="CC_NotificationButtonConfigControl_Name" control-type="virtual">
+		<modes>
+		</modes>
+		<type-group name="Text">
+			<type>SingleLine.Text</type>
+		</type-group>
+		<property name="value" display-name-key="CC_Field_Value" description-key="CC_Field_Value_Desc" of-type-group="Text" usage="bound" required="true" hidden="true" />
+		<resources>
+			<code path="NotificationButtonConfigControl.js" order="2" />
+			<resx path="strings/NotificationButtonConfigControl.1033.resx" version="1.0.0" />
+		</resources>
+	</control>
+</manifest>

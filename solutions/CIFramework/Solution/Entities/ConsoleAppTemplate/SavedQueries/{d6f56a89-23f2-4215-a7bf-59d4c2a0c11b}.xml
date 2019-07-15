@@ -37,7 +37,7 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Active ConsoleApplicationTemplates" languagecode="1033" />
+      <LocalizedName description="Active Application Tab Templates" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

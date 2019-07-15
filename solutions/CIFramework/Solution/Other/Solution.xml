@@ -103,6 +103,7 @@
 			<RootComponent type="60" id="{92b56288-9844-4608-b6e7-d9362c325d68}" behavior="0" />
 			<RootComponent type="60" id="{e5c56ff7-4104-46e5-93d6-223fef077785}" behavior="0" />
 			<RootComponent type="60" id="{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" behavior="0" />
+			<RootComponent type="60" id="{a9d869fa-ea61-4708-859a-9d9417d9c553}" behavior="0" />
 			<RootComponent type="61" schemaName="Widget/msdyn_ciLibrary.js" behavior="0" />
 			<RootComponent type="61" schemaName="CRMClients/msdyn_internal_ci_library.js" behavior="0" />
 			<RootComponent type="61" schemaName="EventHandlersLib/msdyn_EventHandlersLib.js" behavior="0" />
@@ -177,6 +178,7 @@
 			<RootComponent type="62" schemaName="msdyn_ChannelIntegrationFrameworkSitemap" behavior="0" />
 			<RootComponent type="66" schemaName="MscrmControls.Service.CIProvider.CustomMultiSelectControl" />
 			<RootComponent type="66" schemaName="MscrmControls.FieldControls.AgentClickToActControl" />
+			<RootComponent type="66" schemaName="MscrmControls.Service.CIProvider.NotificationButtonConfigControl" />
 			<RootComponent type="80" schemaName="msdyn_ChannelIntegrationFrameworkApp" behavior="0" />
 			<RootComponent type="91" id="{6bdb85ab-033f-4fe4-9cc7-804211b8fa10}" schemaName="Microsoft.Dynamics.CIFrameworkPlugins.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" behavior="0" />
 			<RootComponent type="92" id="{36f97e86-7ec0-e811-814c-000d3afd7b11}" behavior="0" />

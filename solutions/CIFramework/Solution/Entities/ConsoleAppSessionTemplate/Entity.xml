@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="ConsoleApplicationSessionTemplate" OriginalName="ConsoleApplicationSessionTemplate">msdyn_consoleapplicationsessiontemplate</Name>
+  <Name LocalizedName="Session Templates" OriginalName="ConsoleApplicationSessionTemplate">msdyn_consoleapplicationsessiontemplate</Name>
   <EntityInfo>
     <entity Name="msdyn_consoleapplicationsessiontemplate">
       <LocalizedNames>
-        <LocalizedName description="ConsoleApplicationSessionTemplate" languagecode="1033" />
+        <LocalizedName description="Session Templates" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="ConsoleApplicationSessionTemplates" languagecode="1033" />
+        <LocalizedCollectionName description="Session Templates" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="" languagecode="1033" />
@@ -277,10 +277,10 @@
           <LookupStyle>single</LookupStyle>
           <LookupTypes />
           <displaynames>
-            <displayname description="AnchorTab" languagecode="1033" />
+            <displayname description="Anchor tab" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The anchor tab for this session" languagecode="1033" />
+            <Description description="The anchor tab for this session." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_consoleapplicationsessiontemplateId">
@@ -309,10 +309,10 @@
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <AutoNumberFormat></AutoNumberFormat>
           <displaynames>
-            <displayname description="ConsoleApplicationSessionTemplate" languagecode="1033" />
+            <displayname description="Session Template Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Unique identifier for entity instances" languagecode="1033" />
+            <Description description="Unique identifier for entity instances." languagecode="1033" />
           </Descriptions>
         </attribute>
           <attribute PhysicalName="msdyn_description">
@@ -385,7 +385,7 @@
               <displayname description="IsPanelHidden" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Whether to render the sidepanel for this session" languagecode="1033" />
+              <Description description="Whether to render the sidepanel for this session." languagecode="1033" />
             </Descriptions>
             <options>
               <option value="0" Color="#0000ff">
@@ -440,7 +440,7 @@
             <displayname description="Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The name of the custom entity." languagecode="1033" />
+            <Description description="Name of the session." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Title">
@@ -473,10 +473,10 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="Title" languagecode="1033" />
+            <displayname description="Session title" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The title to be displayed for this session." languagecode="1033" />
+            <Description description="Title of the session displayed in the session panel." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OverriddenCreatedOn">
@@ -549,7 +549,7 @@
             <displayname description="Owner" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Owner Id" languagecode="1033" />
+            <Description description="Owner who created this session." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OwningBusinessUnit">
@@ -702,7 +702,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the ConsoleApplicationSessionTemplate" languagecode="1033" />
+            <Description description="Status of the Session template" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -861,10 +861,10 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="icon" languagecode="1033" />
+            <displayname description="Icon" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The icon for this template" languagecode="1033" />
+            <Description description="Display icon for the session." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_PanelState">
@@ -896,10 +896,10 @@
           <AppDefaultValue>100000000</AppDefaultValue>
           <OptionSetName>msdyn_panestate</OptionSetName>
           <displaynames>
-            <displayname description="PanelState" languagecode="1033" />
+            <displayname description="Communication panel mode" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Whether the panel is docked, minimized or hidden" languagecode="1033" />
+            <Description description="Panel mode when a session is opened." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Pinned">
@@ -937,7 +937,7 @@
               <displayname description="Pinned" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Whether this session should be pinned" languagecode="1033" />
+              <Description description="Whether this session should be pinned." languagecode="1033" />
             </Descriptions>
             <options>
               <option value="0" Color="#0000ff">
@@ -956,7 +956,7 @@
             <displayname description="Pinned" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Whether this session should be pinned" languagecode="1033" />
+            <Description description="Whether this session should be pinned." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_RenderingOrder">
@@ -988,10 +988,10 @@
           <MinValue>0</MinValue>
           <MaxValue>2147483647</MaxValue>
           <displaynames>
-            <displayname description="RenderingOrder" languagecode="1033" />
+            <displayname description="Session order" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="The relative order of all session templates" languagecode="1033" />
+            <Description description="The relative order of all session templates." languagecode="1033" />
           </Descriptions>
         </attribute>
       </attributes>

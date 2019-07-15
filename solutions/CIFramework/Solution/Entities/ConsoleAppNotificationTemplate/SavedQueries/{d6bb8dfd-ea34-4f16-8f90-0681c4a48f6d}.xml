@@ -11,6 +11,7 @@
       <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
         <row name="result" id="msdyn_consoleapplicationnotificationtemplateid">
           <cell name="msdyn_name" width="300" />
+		  <cell name="msdyn_title" width="400" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
@@ -21,6 +22,7 @@
         <entity name="msdyn_consoleapplicationnotificationtemplate">
           <attribute name="msdyn_consoleapplicationnotificationtemplateid" />
           <attribute name="msdyn_name" />
+		  <attribute name="msdyn_title" />
           <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />
           <filter type="and">
@@ -31,7 +33,7 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Active ConsoleApplicationNotificationTemplates" languagecode="1033" />
+      <LocalizedName description="Active Notification Templates" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>
