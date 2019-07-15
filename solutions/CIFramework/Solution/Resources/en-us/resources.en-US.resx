@@ -1096,6 +1096,10 @@
     <value>Reason for the status of the Application Type</value>
     <comment>'msdyn_consoleapplicationtype' : Description for OptionSet 'msdyn_consoleapplicationtype_statuscode' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationtypemsdyn_displayname" xml:space="preserve">
+    <value>The display name of the custom entity.</value>
+    <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
     <value>The name of the custom entity.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_name' on Entity</comment>
@@ -2022,6 +2026,10 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value>Status Reason</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for OptionSet 'msdyn_consoleapplicationtype_statuscode' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_displayname" xml:space="preserve">
+    <value>Display Name</value>
+    <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
     <value>Name</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_name' on Entity</comment>
@@ -2306,6 +2314,10 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value />
     <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{c9a9b00c-6458-4010-88b4-b2076efe26d3}'</comment>
   </data>
+  <data name="1:label,Application Template Parameter{c9a9d11c-6458-4010-88b4-b2067efe26d3}" xml:space="preserve">
+    <value />
+    <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{c9a9d11c-6458-4010-88b4-b2067efe26d3}'</comment>
+  </data>
   <data name="1:label,Application Template Parameter{d74819ae-d950-1e68-593d-72cecb426d49}" xml:space="preserve">
     <value />
     <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{d74819ae-d950-1e68-593d-72cecb426d49}'</comment>
@@ -2314,6 +2326,10 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value />
     <comment>'Application Type' : label for cell in Entity FormXml ID: '{74fe1b2a-ddd9-466d-b06c-f68467da8370}'</comment>
   </data>
+  <data name="1:label,Application Type{74fe1b3b-ddd9-466d-b06c-f66467da8370}" xml:space="preserve">
+    <value />
+    <comment>'Application Type' : label for cell in Entity FormXml ID: '{74fe1b3b-ddd9-466d-b06c-f66467da8370}'</comment>
+  </data>
   <data name="1:label,Application Type{7a9894bd-4d59-4cb5-9dc3-ab6b84ef6ad5}" xml:space="preserve">
     <value>General</value>
     <comment>'Application Type' : label for tab in Entity FormXml ID: '{7a9894bd-4d59-4cb5-9dc3-ab6b84ef6ad5}'</comment>
@@ -2321,10 +2337,6 @@ No - value must be supplied when creating a template that uses this parameter</v
   <data name="1:label,Application Type{9aa87706-f770-4f1e-a905-4379d3517c38}" xml:space="preserve">
     <value>General</value>
     <comment>'Application Type' : label for section in Entity FormXml ID: '{9aa87706-f770-4f1e-a905-4379d3517c38}'</comment>
-  </data>
-  <data name="1:label,Application Type{a2cb749a-4e2b-e70c-d29c-687145a8de30}" xml:space="preserve">
-    <value>Template Parameters</value>
-    <comment>'Application Type' : label for cell in Entity FormXml ID: '{a2cb749a-4e2b-e70c-d29c-687145a8de30}'</comment>
   </data>
   <data name="1:label,Application Type{e403ad33-9951-d007-4358-2673171e868b}" xml:space="preserve">
     <value />
@@ -2630,10 +2642,6 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value>General</value>
     <comment>'Notification Template' : label for tab in Entity FormXml ID: '{9730037d-ab23-4a34-9b05-5a0e50e1c401}'</comment>
   </data>
-  <data name="1:label,Notification Template{c4f91d8b-e778-4d3a-aacc-a43f75cf8632}" xml:space="preserve">
-    <value>Owner</value>
-    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{c4f91d8b-e778-4d3a-aacc-a43f75cf8632}'</comment>
-  </data>
   <data name="1:label,Notification Template{e3634dd8-8a0a-2c9e-49b2-ad872d9d9ba3}" xml:space="preserve">
     <value>Icon</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{e3634dd8-8a0a-2c9e-49b2-ad872d9d9ba3}'</comment>
@@ -2877,6 +2885,10 @@ No - value must be supplied when creating a template that uses this parameter</v
   <data name="1:LocalizedName,Application Type{f1d3c88b-9874-4d92-a0d1-717718332eec}" xml:space="preserve">
     <value>Active Application Types</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{f1d3c88b-9874-4d92-a0d1-717718332eec}'</comment>
+  </data>
+  <data name="1:LocalizedName,Application Type{fbdae360-d9a3-e911-8199-000d3a6d68d0}" xml:space="preserve">
+    <value>App types LookUpView</value>
+    <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{fbdae360-d9a3-e911-8199-000d3a6d68d0}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}" xml:space="preserve">
     <value>Channel Provider Lookup View</value>
@@ -3265,10 +3277,6 @@ No - value must be supplied when creating a template that uses this parameter</v
   <data name="81:Title,New_AreaConsoleSession_SubArea" xml:space="preserve">
     <value>Sessions</value>
     <comment>Title for Area 'New_Area' SubArea 'ConsoleSession_SubArea'</comment>
-  </data>
-  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
-    <value>Provider</value>
-    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>Provider</value>
