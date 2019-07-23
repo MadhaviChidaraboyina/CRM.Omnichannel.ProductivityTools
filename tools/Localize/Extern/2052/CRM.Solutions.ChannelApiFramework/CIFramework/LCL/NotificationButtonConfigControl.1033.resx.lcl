@@ -21,6 +21,22 @@
     <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";Accept_Button_Default_Text" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Accept]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[接受]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-07-18T05:03:22.0007763Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Accept]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19705_20190715" />
+        </Props>
+      </Item>
       <Item ItemId=";Accept_Button_Enabled_Switch" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Accept Button Enabled]]></Val>
@@ -83,6 +99,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO19542_20190708" />
+        </Props>
+      </Item>
+      <Item ItemId=";Reject_Button_Default_Text" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reject]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[拒绝]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-07-18T05:03:22.0007763Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Reject]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19705_20190715" />
         </Props>
       </Item>
       <Item ItemId=";Reject_Button_Enabled_Switch" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

@@ -345,35 +345,35 @@
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
   <data name="1:Description,App Parameter Definition{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>A form for this entity.</value>
+    <value>Un formular pentru această entitate.</value>
     <comment>'App Parameter Definition' : Description for systemform in Entity FormXml ID: '{215a1395-743d-4dfb-b552-c51d65fdb423}'</comment>
   </data>
   <data name="1:Description,App Parameter Definition{e519c146-6836-e911-8191-000d3a06071c}" xml:space="preserve">
-    <value>All active App Parameter Definitions</value>
+    <value>Toate definițiile de parametri de aplicație active</value>
     <comment>'App Parameter Definition' : Description for SavedQuery on Entity QueryId: '{e519c146-6836-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Tab Template{37fd3926-6e36-e911-8191-000d3a06071c}" xml:space="preserve">
-    <value>Active Application Tab Templates owned by me</value>
+    <value>Șabloane pentru file de aplicație active deținute de mine</value>
     <comment>'Application Tab Template' : Description for SavedQuery on Entity QueryId: '{37fd3926-6e36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Tab Template{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>A form for this entity.</value>
+    <value>Un formular pentru această entitate.</value>
     <comment>'Application Tab Template' : Description for systemform in Entity FormXml ID: '{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}'</comment>
   </data>
   <data name="1:Description,Application Template Parameter{88137b29-0c3b-e911-8187-000d3afe5f6b}" xml:space="preserve">
-    <value>Active Application Template Parameters owned by me</value>
+    <value>Parametrii de șablon pentru aplicație activi deținuți de mine</value>
     <comment>'Application Template Parameter' : Description for SavedQuery on Entity QueryId: '{88137b29-0c3b-e911-8187-000d3afe5f6b}'</comment>
   </data>
   <data name="1:Description,Application Template Parameter{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>A form for this entity.</value>
+    <value>Un formular pentru această entitate.</value>
     <comment>'Application Template Parameter' : Description for systemform in Entity FormXml ID: '{d00da6ab-1789-4a9d-ac44-da3ea8d75800}'</comment>
   </data>
   <data name="1:Description,Application Type{ba8f5f7e-6b36-e911-8191-000d3a06071c}" xml:space="preserve">
-    <value>All active Application Types</value>
+    <value>Toate tipurile de aplicație active</value>
     <comment>'Application Type' : Description for SavedQuery on Entity QueryId: '{ba8f5f7e-6b36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Type{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>A form for this entity.</value>
+    <value>Un formular pentru această entitate.</value>
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
@@ -509,7 +509,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldentitymsdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Definește un câmp (cheie, templateValue) care trebuie completat în corpul unui șablon de notificare</value>
+    <value>Definește un câmp (cheie, templateValue) care trebuie completat în corpul unei notificări.</value>
     <comment> 'msdyn_consoleapplicationnotificationfield' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldImportSequenceNumber" xml:space="preserve">
@@ -537,19 +537,23 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for OptionSet 'msdyn_consoleapplicationnotificationfield_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statuscode" xml:space="preserve">
-    <value>Motiv pentru starea ConsoleApplicationNotificationField</value>
+    <value>Motivul pentru starea câmpului de notificare</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for OptionSet 'msdyn_consoleapplicationnotificationfield_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_LineHeader" xml:space="preserve">
-    <value>Antetul linie de afișat pentru această informație</value>
+    <value>Câmp afișat în notificare.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'msdyn_LineHeader' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_name" xml:space="preserve">
-    <value>Numele entității particularizate.</value>
+    <value>Numele câmpului de notificare.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_Priority" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'msdyn_Priority' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_Value" xml:space="preserve">
-    <value>Valoarea de afișat în acest rând</value>
+    <value>Valoarea câmpului care trebuie afișat în notificare.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOverriddenCreatedOn" xml:space="preserve">
@@ -573,11 +577,11 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldstatecode" xml:space="preserve">
-    <value>Starea ConsoleApplicationNotificationField</value>
+    <value>Starea câmpului de notificare</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldstatuscode" xml:space="preserve">
-    <value>Motiv pentru starea ConsoleApplicationNotificationField</value>
+    <value>Motivul pentru starea câmpului de notificare</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -621,7 +625,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
-    <value>Butoanele de acțiune de afișat</value>
+    <value>Butoanele de acțiune care trebuie afișate. (Perimat)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplateId" xml:space="preserve">
@@ -629,19 +633,19 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_consoleapplicationnotificationtemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode" xml:space="preserve">
-    <value>Starea ConsoleApplicationNotificationTemplate</value>
+    <value>Starea șablonului de notificare</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for OptionSet 'msdyn_consoleapplicationnotificationtemplate_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statuscode" xml:space="preserve">
-    <value>Motiv pentru starea ConsoleApplicationNotificationTemplate</value>
+    <value>Motiv pentru starea șablonului de notificare</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for OptionSet 'msdyn_consoleapplicationnotificationtemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Icon" xml:space="preserve">
-    <value>Pictograma de redat pentru această notificare. Poate fi un URL de imagine sau o pictogramă-font</value>
+    <value>Pictograma afișată pentru această notificare. Poate fi un URL de imagine sau o pictogramă-font</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_Icon' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_name" xml:space="preserve">
-    <value>Numele entității particularizate.</value>
+    <value>Numele acestui șablon de notificare.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationButtons" xml:space="preserve">
@@ -653,15 +657,15 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
-    <value>Ordinea priorității între diferitele șabloane de notificare</value>
+    <value>Ordinea de afișare a notificărilor în raport cu alte șabloane de notificare.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Timeout" xml:space="preserve">
-    <value>Expirarea, dacă există, pentru notificare</value>
+    <value>Perioada de expirare a notificării.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_Timeout' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Title" xml:space="preserve">
-    <value>Titlul de afișat pentru această notificare</value>
+    <value>Titlul de afișat pentru această notificare.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOverriddenCreatedOn" xml:space="preserve">
@@ -685,11 +689,11 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatestatecode" xml:space="preserve">
-    <value>Starea ConsoleApplicationNotificationTemplate</value>
+    <value>Starea șablonului de notificare</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatestatuscode" xml:space="preserve">
-    <value>Motiv pentru starea ConsoleApplicationNotificationTemplate</value>
+    <value>Motiv pentru starea șablonului de notificare</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -733,19 +737,19 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_AnchorTab" xml:space="preserve">
-    <value>Fila ancoră pentru această sesiune</value>
+    <value>Fila ancoră pentru această sesiune.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Identificator unic pentru instanțele entității</value>
+    <value>Identificator unic pentru instanțele de entitate.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
-    <value>Dacă se redă panoul lateral pentru această sesiune</value>
+    <value>Dacă se redă panoul lateral pentru această sesiune.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for OptionSet 'msdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_pinned" xml:space="preserve">
-    <value>Dacă sesiunea trebuie fixată</value>
+    <value>Dacă sesiunea trebuie fixată.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for OptionSet 'msdyn_consoleapplicationsessiontemplate_msdyn_pinned' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_statecode" xml:space="preserve">
@@ -761,7 +765,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_description' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_icon" xml:space="preserve">
-    <value>Pictograma pentru acest șablon</value>
+    <value>Pictogramă de afișare pentru sesiune.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_icon' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_IsPanelHidden" xml:space="preserve">
@@ -769,23 +773,23 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_IsPanelHidden' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_name" xml:space="preserve">
-    <value>Numele entității particularizate.</value>
+    <value>Numele sesiunii.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_PanelState" xml:space="preserve">
-    <value>Dacă panoul este andocat, minimalizat sau ascuns</value>
+    <value>Modul Panou când se deschide o sesiune.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_PanelState' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_Pinned" xml:space="preserve">
-    <value>Dacă sesiunea trebuie fixată</value>
+    <value>Dacă sesiunea trebuie fixată.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_Pinned' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_RenderingOrder" xml:space="preserve">
-    <value>Ordinea relativă a tuturor șabloanelor de sesiune</value>
+    <value>Ordinea relativă a tuturor șabloanelor de sesiune.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_Title" xml:space="preserve">
-    <value>Titlul de afișat pentru această sesiune.</value>
+    <value>Titlul sesiunii este afișat în panoul pentru sesiune.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOverriddenCreatedOn" xml:space="preserve">
@@ -793,7 +797,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwnerId" xml:space="preserve">
-    <value>ID proprietar</value>
+    <value>Proprietarul care a creat această sesiune.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
@@ -809,7 +813,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatestatecode" xml:space="preserve">
-    <value>Starea ConsoleApplicationSessionTemplate</value>
+    <value>Starea șablonului de sesiune</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatestatuscode" xml:space="preserve">
@@ -837,7 +841,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateentitymsdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Un șablon de aplicație cu diverși parametri de șablon definiți</value>
+    <value>Un șablon pentru file de aplicație cu diverși parametri de șablon definiți.</value>
     <comment> 'msdyn_consoleapplicationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateImportSequenceNumber" xml:space="preserve">
@@ -869,11 +873,11 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for OptionSet 'msdyn_consoleapplicationtemplate_msdyn_pinned' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode" xml:space="preserve">
-    <value>Starea ConsoleApplicationTemplate</value>
+    <value>Starea șablonului pentru file de aplicație</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for OptionSet 'msdyn_consoleapplicationtemplate_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statuscode" xml:space="preserve">
-    <value>Motiv pentru starea ConsoleApplicationTemplate</value>
+    <value>Motiv pentru starea șablonului pentru fila de aplicație</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for OptionSet 'msdyn_consoleapplicationtemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_description" xml:space="preserve">
@@ -881,7 +885,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_description' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_icon" xml:space="preserve">
-    <value>Pictograma șablonului de aplicație</value>
+    <value>Pictogramă de afișare pentru aplicație.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_icon' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_IsStale" xml:space="preserve">
@@ -889,11 +893,11 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_IsStale' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_name" xml:space="preserve">
-    <value>Numele entității particularizate.</value>
+    <value>Numele filei de aplicație.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_PageType" xml:space="preserve">
-    <value>Tipul de aplicație consolă de instanțiat</value>
+    <value>Tipul de aplicație.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_PageType' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_Pinned" xml:space="preserve">
@@ -905,7 +909,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_TemplateParameters' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_Title" xml:space="preserve">
-    <value>Titlul de afișat pentru acest șablon de aplicație</value>
+    <value>Titlul aplicației afișat pe acest panou al filei de aplicație.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOverriddenCreatedOn" xml:space="preserve">
@@ -969,11 +973,11 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for OptionSet 'msdyn_consoleapplicationtemplateparameter_msdyn_isruntime' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statecode" xml:space="preserve">
-    <value>Starea ConsoleApplicationTemplateParameter</value>
+    <value>Starea parametrului de șablon pentru aplicație</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for OptionSet 'msdyn_consoleapplicationtemplateparameter_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statuscode" xml:space="preserve">
-    <value>Motiv pentru starea ConsoleApplicationTemplateParameter</value>
+    <value>Motiv pentru starea parametrului de șablon pentru aplicație</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for OptionSet 'msdyn_consoleapplicationtemplateparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_IsRunTime" xml:space="preserve">
@@ -981,7 +985,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'msdyn_IsRunTime' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_name" xml:space="preserve">
-    <value>Numele entității particularizate.</value>
+    <value>Numele parametrului de șablon pentru aplicație.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_ParameterName" xml:space="preserve">
@@ -1017,11 +1021,11 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterstatecode" xml:space="preserve">
-    <value>Starea ConsoleApplicationTemplateParameter</value>
+    <value>Starea parametrului de șablon pentru aplicație</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterstatuscode" xml:space="preserve">
-    <value>Motiv pentru starea ConsoleApplicationTemplateParameter</value>
+    <value>Motiv pentru starea parametrului de șablon pentru aplicație</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -1033,11 +1037,11 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
-    <value>Starea ConsoleApplicationTemplate</value>
+    <value>Starea șablonului pentru file de aplicație</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatestatuscode" xml:space="preserve">
-    <value>Motiv pentru starea ConsoleApplicationTemplate</value>
+    <value>Motiv pentru starea șablonului pentru fila de aplicație</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -1085,12 +1089,16 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_consoleapplicationtypeId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statecode" xml:space="preserve">
-    <value>Starea ConsoleApplicationType</value>
+    <value>Starea tipului de aplicație</value>
     <comment>'msdyn_consoleapplicationtype' : Description for OptionSet 'msdyn_consoleapplicationtype_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statuscode" xml:space="preserve">
-    <value>Motiv pentru starea ConsoleApplicationType</value>
+    <value>Motiv pentru starea tipului de aplicație</value>
     <comment>'msdyn_consoleapplicationtype' : Description for OptionSet 'msdyn_consoleapplicationtype_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationtypemsdyn_displayname" xml:space="preserve">
+    <value>Numele afișat al entității particularizate.</value>
+    <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_displayname' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
     <value>Numele entității particularizate.</value>
@@ -1113,11 +1121,11 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypestatecode" xml:space="preserve">
-    <value>Starea ConsoleApplicationType</value>
+    <value>Starea tipului de aplicație</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypestatuscode" xml:space="preserve">
-    <value>Motiv pentru starea ConsoleApplicationType</value>
+    <value>Motiv pentru starea tipului de aplicație</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -1170,7 +1178,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleappparameterdefinition' : Description for OptionSet 'msdyn_consoleappparameterdefinition_msdyn_isruntime' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode" xml:space="preserve">
-    <value>Starea ConsoleAppParameterDefinition</value>
+    <value>Starea definiției de parametru de aplicație</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for OptionSet 'msdyn_consoleappparameterdefinition_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statuscode" xml:space="preserve">
@@ -1203,7 +1211,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionstatecode" xml:space="preserve">
-    <value>Starea ConsoleAppParameterDefinition</value>
+    <value>Starea definiției de parametru de aplicație</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionstatuscode" xml:space="preserve">
@@ -1251,7 +1259,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_name" xml:space="preserve">
-    <value>Numele entității particularizate.</value>
+    <value>Numele etichetei șablonului.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetagsId" xml:space="preserve">
@@ -1259,11 +1267,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : Description for Attribute 'msdyn_templatetagsId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetags_statecode" xml:space="preserve">
-    <value>Starea TemplateTag</value>
+    <value>Starea etichetei șablonului</value>
     <comment>'msdyn_templatetags' : Description for OptionSet 'msdyn_templatetags_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetags_statuscode" xml:space="preserve">
-    <value>Motiv pentru starea TemplateTag</value>
+    <value>Motiv pentru starea etichetei șablonului</value>
     <comment>'msdyn_templatetags' : Description for OptionSet 'msdyn_templatetags_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOverriddenCreatedOn" xml:space="preserve">
@@ -1287,11 +1295,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsstatecode" xml:space="preserve">
-    <value>Starea TemplateTag</value>
+    <value>Starea etichetei șablonului</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsstatuscode" xml:space="preserve">
-    <value>Motiv pentru starea TemplateTag</value>
+    <value>Motiv pentru starea etichetei șablonului</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -1303,31 +1311,31 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>A form for this entity.</value>
+    <value>Un formular pentru această entitate.</value>
     <comment>'Notification Fields' : Description for systemform in Entity FormXml ID: '{92b56288-9844-4608-b6e7-d9362c325d68}'</comment>
   </data>
   <data name="1:Description,Notification Fields{e48410d6-7236-e911-8191-000d3a06071c}" xml:space="preserve">
-    <value>Active Notification Fields owned by me</value>
+    <value>Câmpuri de notificare active deținute de mine</value>
     <comment>'Notification Fields' : Description for SavedQuery on Entity QueryId: '{e48410d6-7236-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Notification Template{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>A form for this entity.</value>
+    <value>Un formular pentru această entitate.</value>
     <comment>'Notification Template' : Description for systemform in Entity FormXml ID: '{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}'</comment>
   </data>
   <data name="1:Description,Notification Template{2b409f89-7336-e911-8191-000d3a06071c}" xml:space="preserve">
-    <value>Active Notification Templates owned by me</value>
+    <value>Șabloane de notificare active deținute de mine</value>
     <comment>'Notification Template' : Description for SavedQuery on Entity QueryId: '{2b409f89-7336-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Session Templates{0f0185db-6f36-e911-8191-000d3a06071c}" xml:space="preserve">
-    <value>Active Session Templates owned by me</value>
+    <value>Șabloane de sesiune active deținute de mine</value>
     <comment>'Session Templates' : Description for SavedQuery on Entity QueryId: '{0f0185db-6f36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Session Templates{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>A form for this entity.</value>
+    <value>Un formular pentru această entitate.</value>
     <comment>'Session Templates' : Description for systemform in Entity FormXml ID: '{7e7e29c0-bc24-40c2-938b-941554da4c4e}'</comment>
   </data>
   <data name="1:Description,TemplateTag{ad7358b6-7641-e911-8190-000d3afe6c36}" xml:space="preserve">
-    <value>TemplateTags active deținute de mine</value>
+    <value>Etichete de șablon active deținute de mine</value>
     <comment>'TemplateTag' : Description for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:Description,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
@@ -1483,12 +1491,16 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for OptionSet 'msdyn_consoleapplicationnotificationfield_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_LineHeader" xml:space="preserve">
-    <value>LineHeader</value>
+    <value>Antet câmp</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_LineHeader' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_name" xml:space="preserve">
     <value>Nume</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_Priority" xml:space="preserve">
+    <value>Prioritate</value>
+    <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_Priority' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_Value" xml:space="preserve">
     <value>Valoare</value>
@@ -1559,7 +1571,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
-    <value>ActionButtons</value>
+    <value>ActionButtons (depreciate)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplateId" xml:space="preserve">
@@ -1583,19 +1595,19 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationButtons" xml:space="preserve">
-    <value>Notification Buttons</value>
+    <value>Butoane de notificare</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationButtons' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
-    <value>Notification Fields</value>
+    <value>Câmpuri de notificare</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
-    <value>RenderingOrder</value>
+    <value>Ordine notificări</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RenderingOrder' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Timeout" xml:space="preserve">
-    <value>Perioadă de expirare</value>
+    <value>Expirare (secunde)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Timeout' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Title" xml:space="preserve">
@@ -1667,11 +1679,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_AnchorTab" xml:space="preserve">
-    <value>AnchorTab</value>
+    <value>Filă ancoră</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>ConsoleApplicationSessionTemplate</value>
+    <value>ID șablon de sesiune</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -1691,11 +1703,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for OptionSet 'msdyn_consoleapplicationsessiontemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_description" xml:space="preserve">
-    <value>Description</value>
+    <value>Descriere</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_description' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_icon" xml:space="preserve">
-    <value>pictogramă</value>
+    <value>Pictogramă</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_icon' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_IsPanelHidden" xml:space="preserve">
@@ -1707,7 +1719,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_PanelState" xml:space="preserve">
-    <value>PanelState</value>
+    <value>Mod panou de comunicație</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_PanelState' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_Pinned" xml:space="preserve">
@@ -1715,11 +1727,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_Pinned' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_RenderingOrder" xml:space="preserve">
-    <value>RenderingOrder</value>
+    <value>Ordine sesiuni</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_RenderingOrder' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_Title" xml:space="preserve">
-    <value>Titlu</value>
+    <value>Titlu sesiune</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOverriddenCreatedOn" xml:space="preserve">
@@ -1815,7 +1827,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_icon' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_IsStale" xml:space="preserve">
-    <value>IsStale</value>
+    <value>Este perimat</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_IsStale' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_name" xml:space="preserve">
@@ -1823,7 +1835,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_PageType" xml:space="preserve">
-    <value>Tip de pagină</value>
+    <value>Tip de aplicație</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_PageType' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_Pinned" xml:space="preserve">
@@ -1831,11 +1843,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_Pinned' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_TemplateParameters" xml:space="preserve">
-    <value>TemplateParameters</value>
+    <value>Parametri șablon</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_TemplateParameters' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_Title" xml:space="preserve">
-    <value>Titlu</value>
+    <value>Titlul aplicației</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOverriddenCreatedOn" xml:space="preserve">
@@ -1891,7 +1903,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_consoleapplicationtemplateparameterId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_msdyn_isruntime" xml:space="preserve">
-    <value>IsRunTime</value>
+    <value>Este runtime</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for OptionSet 'msdyn_consoleapplicationtemplateparameter_msdyn_isruntime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statecode" xml:space="preserve">
@@ -1903,7 +1915,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for OptionSet 'msdyn_consoleapplicationtemplateparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_IsRunTime" xml:space="preserve">
-    <value>IsRunTime</value>
+    <value>Este runtime</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_IsRunTime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_name" xml:space="preserve">
@@ -1911,11 +1923,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_ParameterName" xml:space="preserve">
-    <value>ParameterName</value>
+    <value>Nume parametru</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_ParameterName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_RuntimeType" xml:space="preserve">
-    <value>RuntimeType</value>
+    <value>Tip runtime</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_RuntimeType' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_Value" xml:space="preserve">
@@ -2014,16 +2026,20 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <value>Motiv stare</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for OptionSet 'msdyn_consoleapplicationtype_statuscode' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_displayname" xml:space="preserve">
+    <value>Nume afișat</value>
+    <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
     <value>Nume</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_RenderingOrder" xml:space="preserve">
-    <value>RenderingOrder</value>
+    <value>Ordine de redare</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_RenderingOrder' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_TemplateParameters" xml:space="preserve">
-    <value>TemplateParameters</value>
+    <value>Parametri șablon</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_TemplateParameters' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeOrganizationId" xml:space="preserve">
@@ -2079,11 +2095,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinitionId" xml:space="preserve">
-    <value>ConsoleAppParameterDefinition</value>
+    <value>Definiție parametru de aplicație</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_consoleappparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" xml:space="preserve">
-    <value>IsRuntime</value>
+    <value>Este runtime</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for OptionSet 'msdyn_consoleappparameterdefinition_msdyn_isruntime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode" xml:space="preserve">
@@ -2095,11 +2111,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleappparameterdefinition' : displayname for OptionSet 'msdyn_consoleappparameterdefinition_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_DefaultValue" xml:space="preserve">
-    <value>DefaultValue</value>
+    <value>Valoare implicită</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_DefaultValue' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_IsRuntime" xml:space="preserve">
-    <value>IsRuntime</value>
+    <value>Este runtime</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_IsRuntime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_name" xml:space="preserve">
@@ -2107,7 +2123,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" xml:space="preserve">
-    <value>RuntimeType</value>
+    <value>Tip runtime</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_RuntimeType' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionOrganizationId" xml:space="preserve">
@@ -2251,7 +2267,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{379c8712-d7cb-0257-b7be-7c7125e6341c}'</comment>
   </data>
   <data name="1:label,Application Tab Template{3eb84e18-6c5a-0c41-bcde-171e7da8347e}" xml:space="preserve">
-    <value>Section</value>
+    <value>Secțiune</value>
     <comment>'Application Tab Template' : label for section in Entity FormXml ID: '{3eb84e18-6c5a-0c41-bcde-171e7da8347e}'</comment>
   </data>
   <data name="1:label,Application Tab Template{40736098-8d9c-443a-b6ce-85335c739b61}" xml:space="preserve">
@@ -2275,7 +2291,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{a4bd1f84-bc33-4df0-bb12-3c6cefc25fcd}'</comment>
   </data>
   <data name="1:label,Application Tab Template{db2a537d-5522-9de6-943d-4d5c07542e92}" xml:space="preserve">
-    <value>Parameters</value>
+    <value>Parametri</value>
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{db2a537d-5522-9de6-943d-4d5c07542e92}'</comment>
   </data>
   <data name="1:label,Application Tab Template{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}" xml:space="preserve">
@@ -2298,6 +2314,10 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <value />
     <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{c9a9b00c-6458-4010-88b4-b2076efe26d3}'</comment>
   </data>
+  <data name="1:label,Application Template Parameter{c9a9d11c-6458-4010-88b4-b2067efe26d3}" xml:space="preserve">
+    <value />
+    <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{c9a9d11c-6458-4010-88b4-b2067efe26d3}'</comment>
+  </data>
   <data name="1:label,Application Template Parameter{d74819ae-d950-1e68-593d-72cecb426d49}" xml:space="preserve">
     <value />
     <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{d74819ae-d950-1e68-593d-72cecb426d49}'</comment>
@@ -2306,6 +2326,10 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <value />
     <comment>'Application Type' : label for cell in Entity FormXml ID: '{74fe1b2a-ddd9-466d-b06c-f68467da8370}'</comment>
   </data>
+  <data name="1:label,Application Type{74fe1b3b-ddd9-466d-b06c-f66467da8370}" xml:space="preserve">
+    <value />
+    <comment>'Application Type' : label for cell in Entity FormXml ID: '{74fe1b3b-ddd9-466d-b06c-f66467da8370}'</comment>
+  </data>
   <data name="1:label,Application Type{7a9894bd-4d59-4cb5-9dc3-ab6b84ef6ad5}" xml:space="preserve">
     <value>General</value>
     <comment>'Application Type' : label for tab in Entity FormXml ID: '{7a9894bd-4d59-4cb5-9dc3-ab6b84ef6ad5}'</comment>
@@ -2313,10 +2337,6 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
   <data name="1:label,Application Type{9aa87706-f770-4f1e-a905-4379d3517c38}" xml:space="preserve">
     <value>General</value>
     <comment>'Application Type' : label for section in Entity FormXml ID: '{9aa87706-f770-4f1e-a905-4379d3517c38}'</comment>
-  </data>
-  <data name="1:label,Application Type{a2cb749a-4e2b-e70c-d29c-687145a8de30}" xml:space="preserve">
-    <value>Template Parameters</value>
-    <comment>'Application Type' : label for cell in Entity FormXml ID: '{a2cb749a-4e2b-e70c-d29c-687145a8de30}'</comment>
   </data>
   <data name="1:label,Application Type{e403ad33-9951-d007-4358-2673171e868b}" xml:space="preserve">
     <value />
@@ -2539,11 +2559,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,Notification Fields{3e531709-6501-4936-76bd-d92d22bec5d5}" xml:space="preserve">
-    <value>Field</value>
+    <value>Câmp</value>
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{3e531709-6501-4936-76bd-d92d22bec5d5}'</comment>
   </data>
   <data name="1:label,Notification Fields{5baddc9d-9ca1-406f-8f7f-da7c7946344d}" xml:space="preserve">
-    <value>section</value>
+    <value>secțiune</value>
     <comment>'Notification Fields' : label for section in Entity FormXml ID: '{5baddc9d-9ca1-406f-8f7f-da7c7946344d}'</comment>
   </data>
   <data name="1:label,Notification Fields{653dcd92-16cd-7741-2720-8c7cc7068ae3}" xml:space="preserve">
@@ -2551,12 +2571,16 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{653dcd92-16cd-7741-2720-8c7cc7068ae3}'</comment>
   </data>
   <data name="1:label,Notification Fields{7d96d38b-f98c-4d17-9412-8cf184b9838c}" xml:space="preserve">
-    <value>section</value>
+    <value>secțiune</value>
     <comment>'Notification Fields' : label for section in Entity FormXml ID: '{7d96d38b-f98c-4d17-9412-8cf184b9838c}'</comment>
   </data>
   <data name="1:label,Notification Fields{81b5e8e3-9082-6913-d7ba-e7713d426cc0}" xml:space="preserve">
     <value />
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{81b5e8e3-9082-6913-d7ba-e7713d426cc0}'</comment>
+  </data>
+  <data name="1:label,Notification Fields{81c37674-499b-ba10-7c38-03031dc39433}" xml:space="preserve">
+    <value>Prioritate</value>
+    <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{81c37674-499b-ba10-7c38-03031dc39433}'</comment>
   </data>
   <data name="1:label,Notification Fields{8e2770be-ceed-48c8-a3e3-18fad627f551}" xml:space="preserve">
     <value />
@@ -2567,11 +2591,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{9e1a0e43-e7c1-4934-b493-a5f65b7ae78f}'</comment>
   </data>
   <data name="1:label,Notification Fields{aee172ad-8127-44d5-b3ba-cb032c5381ee}" xml:space="preserve">
-    <value>section</value>
+    <value>secțiune</value>
     <comment>'Notification Fields' : label for section in Entity FormXml ID: '{aee172ad-8127-44d5-b3ba-cb032c5381ee}'</comment>
   </data>
   <data name="1:label,Notification Fields{b535e1bf-9eac-4ee1-a2b8-8477d3cfd6c7}" xml:space="preserve">
-    <value>Tab</value>
+    <value>Filă</value>
     <comment>'Notification Fields' : label for tab in Entity FormXml ID: '{b535e1bf-9eac-4ee1-a2b8-8477d3cfd6c7}'</comment>
   </data>
   <data name="1:label,Notification Fields{ca715140-33b6-4147-91a0-85a2c320f7dd}" xml:space="preserve">
@@ -2591,51 +2615,43 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Notification Fields' : label for tab in Entity FormXml ID: '{d6df0d89-7b66-450a-8916-377c7e683e23}'</comment>
   </data>
   <data name="1:label,Notification Fields{dcd8ee8a-4aac-30bc-d07a-592ad035b9dd}" xml:space="preserve">
-    <value>Name</value>
+    <value>Nume</value>
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{dcd8ee8a-4aac-30bc-d07a-592ad035b9dd}'</comment>
   </data>
   <data name="1:label,Notification Fields{e6416ba8-02c5-42eb-081b-9d09e9ea104e}" xml:space="preserve">
-    <value>Value</value>
+    <value>Valoare</value>
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{e6416ba8-02c5-42eb-081b-9d09e9ea104e}'</comment>
   </data>
   <data name="1:label,Notification Template{49f27467-13e4-4190-ac4a-2a72b97632ad}" xml:space="preserve">
-    <value>Name</value>
+    <value>Nume</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{49f27467-13e4-4190-ac4a-2a72b97632ad}'</comment>
   </data>
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
-    <value>Section</value>
+    <value>Secțiune</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
-  <data name="1:label,Notification Template{625b9de4-6721-44ce-9dd0-6058d1e623c3}" xml:space="preserve">
-    <value>RenderingOrder</value>
-    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{625b9de4-6721-44ce-9dd0-6058d1e623c3}'</comment>
-  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
-    <value>Notification Fields</value>
+    <value>Câmpuri de notificare</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
   </data>
   <data name="1:label,Notification Template{94dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
-    <value>Timeout</value>
+    <value>Expirare (secunde)</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{94dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{9730037d-ab23-4a34-9b05-5a0e50e1c401}" xml:space="preserve">
     <value>General</value>
     <comment>'Notification Template' : label for tab in Entity FormXml ID: '{9730037d-ab23-4a34-9b05-5a0e50e1c401}'</comment>
   </data>
-  <data name="1:label,Notification Template{c4f91d8b-e778-4d3a-aacc-a43f75cf8632}" xml:space="preserve">
-    <value>Owner</value>
-    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{c4f91d8b-e778-4d3a-aacc-a43f75cf8632}'</comment>
-  </data>
   <data name="1:label,Notification Template{e3634dd8-8a0a-2c9e-49b2-ad872d9d9ba3}" xml:space="preserve">
-    <value>Icon</value>
+    <value>Pictogramă</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{e3634dd8-8a0a-2c9e-49b2-ad872d9d9ba3}'</comment>
   </data>
   <data name="1:label,Notification Template{ee47d446-144d-8d00-5094-ecaac28bbb3e}" xml:space="preserve">
-    <value>Title</value>
+    <value>Titlu</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{ee47d446-144d-8d00-5094-ecaac28bbb3e}'</comment>
   </data>
   <data name="1:label,Notification Template{eeb7401d-7729-9db8-8cc1-6d8343052141}" xml:space="preserve">
-    <value>Notification Buttons</value>
+    <value>Butoane de notificare</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{eeb7401d-7729-9db8-8cc1-6d8343052141}'</comment>
   </data>
   <data name="1:label,Notification Template{ff05f569-e51f-4c31-96b2-ae6d20c9364f}" xml:space="preserve">
@@ -2647,15 +2663,15 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{093dd305-a7cc-d998-e489-ac60594b185e}'</comment>
   </data>
   <data name="1:label,Session Templates{196dbc51-0ab0-1da7-555e-35cc732cbda3}" xml:space="preserve">
-    <value>Name</value>
+    <value>Nume</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{196dbc51-0ab0-1da7-555e-35cc732cbda3}'</comment>
   </data>
   <data name="1:label,Session Templates{1d313718-4d90-7004-cbbc-d98c01d6c01d}" xml:space="preserve">
-    <value>Pinned</value>
+    <value>Fixat</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{1d313718-4d90-7004-cbbc-d98c01d6c01d}'</comment>
   </data>
   <data name="1:label,Session Templates{3b39cc03-8ee0-b79b-125d-272c546b6725}" xml:space="preserve">
-    <value>Additional Tabs</value>
+    <value>File suplimentare</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{3b39cc03-8ee0-b79b-125d-272c546b6725}'</comment>
   </data>
   <data name="1:label,Session Templates{559158ad-2749-a49e-7128-466d84e59a24}" xml:space="preserve">
@@ -2667,19 +2683,19 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{5d09b768-575c-d77d-6479-2130abbde22b}'</comment>
   </data>
   <data name="1:label,Session Templates{67e28937-3ab9-4b74-e49b-54660966e25c}" xml:space="preserve">
-    <value>Description</value>
+    <value>Descriere</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{67e28937-3ab9-4b74-e49b-54660966e25c}'</comment>
   </data>
   <data name="1:label,Session Templates{85978531-3836-82b6-4471-e0ecbe36018c}" xml:space="preserve">
-    <value>Title</value>
+    <value>Titlu</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{85978531-3836-82b6-4471-e0ecbe36018c}'</comment>
   </data>
   <data name="1:label,Session Templates{bb564004-e351-9361-283d-ad20d4ad684e}" xml:space="preserve">
-    <value>Section</value>
+    <value>Secțiune</value>
     <comment>'Session Templates' : label for section in Entity FormXml ID: '{bb564004-e351-9361-283d-ad20d4ad684e}'</comment>
   </data>
   <data name="1:label,Session Templates{bd25aa54-bb39-81ea-a63b-07857ea961aa}" xml:space="preserve">
-    <value>Owner</value>
+    <value>Proprietar</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{bd25aa54-bb39-81ea-a63b-07857ea961aa}'</comment>
   </data>
   <data name="1:label,Session Templates{d507a7e4-d1a6-a2d3-2dcd-d42055c621cc}" xml:space="preserve">
@@ -2687,7 +2703,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Session Templates' : label for tab in Entity FormXml ID: '{d507a7e4-d1a6-a2d3-2dcd-d42055c621cc}'</comment>
   </data>
   <data name="1:label,Session Templates{d8c75080-1be0-30ce-1890-903eee8db7e6}" xml:space="preserve">
-    <value>icon</value>
+    <value>pictogramă</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{d8c75080-1be0-30ce-1890-903eee8db7e6}'</comment>
   </data>
   <data name="1:label,TemplateTag{0fb9986c-0562-4c97-b642-8e2ead7badfa}" xml:space="preserve">
@@ -2711,19 +2727,19 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment> 'msdyn_ciprovider' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_consoleapplicationnotificationfieldentitymsdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>ConsoleApplicationNotificationFields</value>
+    <value>Câmpuri de notificare</value>
     <comment> 'msdyn_consoleapplicationnotificationfield' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_consoleapplicationnotificationtemplateentitymsdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>ConsoleApplicationNotificationTemplates</value>
+    <value>Șabloane de notificare</value>
     <comment> 'msdyn_consoleapplicationnotificationtemplate' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_consoleapplicationsessiontemplateentitymsdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>ConsoleApplicationSessionTemplates</value>
+    <value>Șabloane de sesiune</value>
     <comment> 'msdyn_consoleapplicationsessiontemplate' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_consoleapplicationtemplateentitymsdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>ConsoleApplicationTemplates</value>
+    <value>Șabloane pentru file de aplicație</value>
     <comment> 'msdyn_consoleapplicationtemplate' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_consoleapplicationtemplateparameterentitymsdyn_consoleapplicationtemplateparameter" xml:space="preserve">
@@ -2735,7 +2751,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment> 'msdyn_consoleapplicationtype' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_consoleappparameterdefinitionentitymsdyn_consoleappparameterdefinition" xml:space="preserve">
-    <value>ConsoleAppParameterDefinitions</value>
+    <value>Definiții de parametri de aplicație</value>
     <comment> 'msdyn_consoleappparameterdefinition' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_templatetagsentitymsdyn_templatetags" xml:space="preserve">
@@ -2743,31 +2759,31 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment> 'msdyn_templatetags' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedName,App Parameter Definition{0b692db3-e5b0-4f56-84b4-bbf74a5f32ee}" xml:space="preserve">
-    <value>Quick Find Active App Parameter Definitions</value>
+    <value>Găsire rapidă definiții de parametri de aplicație active</value>
     <comment>'App Parameter Definition' : LocalizedName for SavedQuery on Entity QueryId: '{0b692db3-e5b0-4f56-84b4-bbf74a5f32ee}'</comment>
   </data>
   <data name="1:LocalizedName,App Parameter Definition{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Information</value>
+    <value>Informații</value>
     <comment>'App Parameter Definition' : LocalizedName for systemform in Entity FormXml ID: '{215a1395-743d-4dfb-b552-c51d65fdb423}'</comment>
   </data>
   <data name="1:LocalizedName,App Parameter Definition{782fbe7a-365e-43c3-ac25-6494701d8cdf}" xml:space="preserve">
-    <value>App Parameter Definition Advanced Find View</value>
+    <value>Vizualizare găsire complexă definiții de parametri de aplicație</value>
     <comment>'App Parameter Definition' : LocalizedName for SavedQuery on Entity QueryId: '{782fbe7a-365e-43c3-ac25-6494701d8cdf}'</comment>
   </data>
   <data name="1:LocalizedName,App Parameter Definition{bff92427-895f-4a13-9f7e-28eb0084fcc5}" xml:space="preserve">
-    <value>Active App Parameter Definitions</value>
+    <value>Definiții de parametri de aplicație active</value>
     <comment>'App Parameter Definition' : LocalizedName for SavedQuery on Entity QueryId: '{bff92427-895f-4a13-9f7e-28eb0084fcc5}'</comment>
   </data>
   <data name="1:LocalizedName,App Parameter Definition{d5572dac-20ad-44cd-b8c0-3f6237fe0a7b}" xml:space="preserve">
-    <value>App Parameter Definition Lookup View</value>
+    <value>Vizualizare de căutare definiții de parametri de aplicație</value>
     <comment>'App Parameter Definition' : LocalizedName for SavedQuery on Entity QueryId: '{d5572dac-20ad-44cd-b8c0-3f6237fe0a7b}'</comment>
   </data>
   <data name="1:LocalizedName,App Parameter Definition{e4519c82-55dc-4721-afff-92cea9fcf969}" xml:space="preserve">
-    <value>Inactive App Parameter Definitions</value>
+    <value>Definiții de parametri de aplicație inactive</value>
     <comment>'App Parameter Definition' : LocalizedName for SavedQuery on Entity QueryId: '{e4519c82-55dc-4721-afff-92cea9fcf969}'</comment>
   </data>
   <data name="1:LocalizedName,App Parameter Definition{e4f856b6-7030-4357-bf3d-d7e155ff1032}" xml:space="preserve">
-    <value>App Parameter Definition Associated View</value>
+    <value>Vizualizare asociată definiție de parametri de aplicație</value>
     <comment>'App Parameter Definition' : LocalizedName for SavedQuery on Entity QueryId: '{e4f856b6-7030-4357-bf3d-d7e155ff1032}'</comment>
   </data>
   <data name="1:LocalizedName,App Parameter Definition{e519c146-6836-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -2775,75 +2791,75 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'App Parameter Definition' : LocalizedName for SavedQuery on Entity QueryId: '{e519c146-6836-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:LocalizedName,Application Tab Template{37fd3926-6e36-e911-8191-000d3a06071c}" xml:space="preserve">
-    <value>My Application Tab Templates</value>
+    <value>Șabloanele mele pentru file de aplicație</value>
     <comment>'Application Tab Template' : LocalizedName for SavedQuery on Entity QueryId: '{37fd3926-6e36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:LocalizedName,Application Tab Template{4e7abf48-30ea-4441-a7e7-ebdaea0421e9}" xml:space="preserve">
-    <value>Application Tab Template Associated View</value>
+    <value>Vizualizare asociată cu șablonul pentru file de aplicație</value>
     <comment>'Application Tab Template' : LocalizedName for SavedQuery on Entity QueryId: '{4e7abf48-30ea-4441-a7e7-ebdaea0421e9}'</comment>
   </data>
   <data name="1:LocalizedName,Application Tab Template{577a3f3b-bfb9-49ee-b238-1741fa1edd0f}" xml:space="preserve">
-    <value>Quick Find Active Application Tab Templates</value>
+    <value>Găsire rapidă șabloane pentru file de aplicație active</value>
     <comment>'Application Tab Template' : LocalizedName for SavedQuery on Entity QueryId: '{577a3f3b-bfb9-49ee-b238-1741fa1edd0f}'</comment>
   </data>
   <data name="1:LocalizedName,Application Tab Template{67d0e507-d88e-44d1-8665-b49436c2a4a4}" xml:space="preserve">
-    <value>Inactive Application Tab Templates</value>
+    <value>Șabloane pentru file de aplicație inactive</value>
     <comment>'Application Tab Template' : LocalizedName for SavedQuery on Entity QueryId: '{67d0e507-d88e-44d1-8665-b49436c2a4a4}'</comment>
   </data>
   <data name="1:LocalizedName,Application Tab Template{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Information</value>
+    <value>Informații</value>
     <comment>'Application Tab Template' : LocalizedName for systemform in Entity FormXml ID: '{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}'</comment>
   </data>
   <data name="1:LocalizedName,Application Tab Template{916523b1-6e7f-49a0-9580-8d20c95444e9}" xml:space="preserve">
-    <value>Application Tab Template Advanced Find View</value>
+    <value>Vizualizare Găsire complexă șablon pentru file de aplicație</value>
     <comment>'Application Tab Template' : LocalizedName for SavedQuery on Entity QueryId: '{916523b1-6e7f-49a0-9580-8d20c95444e9}'</comment>
   </data>
   <data name="1:LocalizedName,Application Tab Template{c9df2b82-83e4-4401-bd6b-cdac8367e3e6}" xml:space="preserve">
-    <value>Application Tab Template Lookup View</value>
+    <value>Vizualizare de căutare șablon pentru file de aplicație</value>
     <comment>'Application Tab Template' : LocalizedName for SavedQuery on Entity QueryId: '{c9df2b82-83e4-4401-bd6b-cdac8367e3e6}'</comment>
   </data>
   <data name="1:LocalizedName,Application Tab Template{d6f56a89-23f2-4215-a7bf-59d4c2a0c11b}" xml:space="preserve">
-    <value>Active Application Tab Templates</value>
+    <value>Șabloane pentru file de aplicație active</value>
     <comment>'Application Tab Template' : LocalizedName for SavedQuery on Entity QueryId: '{d6f56a89-23f2-4215-a7bf-59d4c2a0c11b}'</comment>
   </data>
   <data name="1:LocalizedName,Application Template Parameter{293785bc-4b34-4997-9158-99ecad3770fc}" xml:space="preserve">
-    <value>Application Template Parameter Advanced Find View</value>
+    <value>Vizualizare Găsire complexă parametru de șablon pentru aplicație</value>
     <comment>'Application Template Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{293785bc-4b34-4997-9158-99ecad3770fc}'</comment>
   </data>
   <data name="1:LocalizedName,Application Template Parameter{4ca518f9-41e9-4896-a379-02e6e36cd07f}" xml:space="preserve">
-    <value>Inactive Application Template Parameters</value>
+    <value>Parametri de șablon pentru aplicație inactivi</value>
     <comment>'Application Template Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{4ca518f9-41e9-4896-a379-02e6e36cd07f}'</comment>
   </data>
   <data name="1:LocalizedName,Application Template Parameter{5547444c-2bd6-4a0b-b517-a7b34738b01b}" xml:space="preserve">
-    <value>Quick Find Active Application Template Parameters</value>
+    <value>Găsire rapidă parametri de șablon pentru aplicație activi</value>
     <comment>'Application Template Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{5547444c-2bd6-4a0b-b517-a7b34738b01b}'</comment>
   </data>
   <data name="1:LocalizedName,Application Template Parameter{6c123545-4983-491b-8967-ac6402dfb131}" xml:space="preserve">
-    <value>Active Application Template Parameters</value>
+    <value>Parametri de șablon pentru aplicație activi</value>
     <comment>'Application Template Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{6c123545-4983-491b-8967-ac6402dfb131}'</comment>
   </data>
   <data name="1:LocalizedName,Application Template Parameter{88137b29-0c3b-e911-8187-000d3afe5f6b}" xml:space="preserve">
-    <value>My Application Template Parameters</value>
+    <value>Parametrii mei de șablon pentru aplicație activi</value>
     <comment>'Application Template Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{88137b29-0c3b-e911-8187-000d3afe5f6b}'</comment>
   </data>
   <data name="1:LocalizedName,Application Template Parameter{9bffd5e4-38a9-4913-9627-38bdc0a535a6}" xml:space="preserve">
-    <value>Application Template Parameter Associated View</value>
+    <value>Vizualizare asociată cu parametri de șablon pentru aplicație</value>
     <comment>'Application Template Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{9bffd5e4-38a9-4913-9627-38bdc0a535a6}'</comment>
   </data>
   <data name="1:LocalizedName,Application Template Parameter{b0c83e9f-edba-4c11-a428-7b48d8821b03}" xml:space="preserve">
-    <value>Application Template Parameter Lookup View</value>
+    <value>Vizualizare de căutare parametri de șablon pentru aplicație</value>
     <comment>'Application Template Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{b0c83e9f-edba-4c11-a428-7b48d8821b03}'</comment>
   </data>
   <data name="1:LocalizedName,Application Template Parameter{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Information</value>
+    <value>Informații</value>
     <comment>'Application Template Parameter' : LocalizedName for systemform in Entity FormXml ID: '{d00da6ab-1789-4a9d-ac44-da3ea8d75800}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{11fbced5-a41f-4589-b674-8cb6c8a03ba0}" xml:space="preserve">
-    <value>Application Type Lookup View</value>
+    <value>Vizualizare de căutare tip de aplicație</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{11fbced5-a41f-4589-b674-8cb6c8a03ba0}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{7517c692-ce68-4a5e-bfd9-d036a3395640}" xml:space="preserve">
-    <value>Inactive Application Types</value>
+    <value>Tipuri de aplicație inactive</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{7517c692-ce68-4a5e-bfd9-d036a3395640}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{ba8f5f7e-6b36-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -2851,24 +2867,28 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{ba8f5f7e-6b36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Information</value>
+    <value>Informații</value>
     <comment>'Application Type' : LocalizedName for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{e66f8fee-3538-466c-935b-04900c1c7afe}" xml:space="preserve">
-    <value>Application Type Advanced Find View</value>
+    <value>Vizualizare Găsire complexă tip de aplicație</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{e66f8fee-3538-466c-935b-04900c1c7afe}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{ea1a0a35-b395-46c7-a04a-d416a652cc3d}" xml:space="preserve">
-    <value>Quick Find Active Application Types</value>
+    <value>Găsire rapidă tipuri de aplicație active</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{ea1a0a35-b395-46c7-a04a-d416a652cc3d}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{efd3c03b-2333-49cf-a2d9-5aa25980ba03}" xml:space="preserve">
-    <value>Application Type Associated View</value>
+    <value>Vizualizare asociată cu tipul de aplicație</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{efd3c03b-2333-49cf-a2d9-5aa25980ba03}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{f1d3c88b-9874-4d92-a0d1-717718332eec}" xml:space="preserve">
-    <value>Active Application Types</value>
+    <value>Tipuri de aplicație active</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{f1d3c88b-9874-4d92-a0d1-717718332eec}'</comment>
+  </data>
+  <data name="1:LocalizedName,Application Type{fbdae360-d9a3-e911-8199-000d3a6d68d0}" xml:space="preserve">
+    <value>LookUpView tipuri de aplicații</value>
+    <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{fbdae360-d9a3-e911-8199-000d3a6d68d0}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}" xml:space="preserve">
     <value>Vizualizare de căutare furnizori de canale</value>
@@ -2907,19 +2927,19 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_consoleapplicationnotificationfieldentitymsdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>ConsoleApplicationNotificationField</value>
+    <value>Câmp de notificare</value>
     <comment> 'msdyn_consoleapplicationnotificationfield' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_consoleapplicationnotificationtemplateentitymsdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>ConsoleApplicationNotificationTemplate</value>
+    <value>Șablon notificare</value>
     <comment> 'msdyn_consoleapplicationnotificationtemplate' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_consoleapplicationsessiontemplateentitymsdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>ConsoleApplicationSessionTemplate</value>
+    <value>Șabloane de sesiune</value>
     <comment> 'msdyn_consoleapplicationsessiontemplate' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_consoleapplicationtemplateentitymsdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>ConsoleApplicationTemplate</value>
+    <value>Șablon pentru file de aplicație</value>
     <comment> 'msdyn_consoleapplicationtemplate' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_consoleapplicationtemplateparameterentitymsdyn_consoleapplicationtemplateparameter" xml:space="preserve">
@@ -2927,143 +2947,143 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment> 'msdyn_consoleapplicationtemplateparameter' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_consoleapplicationtypeentitymsdyn_consoleapplicationtype" xml:space="preserve">
-    <value>ConsoleApplicationType</value>
+    <value>Tip de aplicație</value>
     <comment> 'msdyn_consoleapplicationtype' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_consoleappparameterdefinitionentitymsdyn_consoleappparameterdefinition" xml:space="preserve">
-    <value>ConsoleAppParameterDefinition</value>
+    <value>Definiție parametru de aplicație</value>
     <comment> 'msdyn_consoleappparameterdefinition' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_templatetagsentitymsdyn_templatetags" xml:space="preserve">
-    <value>TemplateTag</value>
+    <value>Etichetă de șablon</value>
     <comment> 'msdyn_templatetags' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,Notification Fields{23624635-e24e-4d8a-922e-7ac88b16a304}" xml:space="preserve">
-    <value>Notification Field Lookup View</value>
+    <value>Vizualizare de căutare câmp de notificare</value>
     <comment>'Notification Fields' : LocalizedName for SavedQuery on Entity QueryId: '{23624635-e24e-4d8a-922e-7ac88b16a304}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Fields{6a8bc071-4b56-4eac-877c-dbdbdd4d975f}" xml:space="preserve">
-    <value>Notification Field Advanced Find View</value>
+    <value>Vizualizare Găsire complexă câmp de notificare</value>
     <comment>'Notification Fields' : LocalizedName for SavedQuery on Entity QueryId: '{6a8bc071-4b56-4eac-877c-dbdbdd4d975f}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Information</value>
+    <value>Informații</value>
     <comment>'Notification Fields' : LocalizedName for systemform in Entity FormXml ID: '{92b56288-9844-4608-b6e7-d9362c325d68}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Fields{a9d869fa-ea61-4708-859a-9d9417d9c553}" xml:space="preserve">
-    <value>Quick Create Form for Notification Fields</value>
+    <value>Formular de creare rapidă pentru câmpuri de notificare</value>
     <comment>'Notification Fields' : LocalizedName for systemform in Entity FormXml ID: '{a9d869fa-ea61-4708-859a-9d9417d9c553}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Fields{ac1a4464-e2a5-43fc-b8af-aef84b8fff2b}" xml:space="preserve">
-    <value>Quick Find Active Notification Fields</value>
+    <value>Găsire rapidă câmpuri de notificare active</value>
     <comment>'Notification Fields' : LocalizedName for SavedQuery on Entity QueryId: '{ac1a4464-e2a5-43fc-b8af-aef84b8fff2b}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Fields{c71c236b-b4da-479a-8143-b660425adf43}" xml:space="preserve">
-    <value>Inactive Notification Fields</value>
+    <value>Câmpuri de notificare inactive</value>
     <comment>'Notification Fields' : LocalizedName for SavedQuery on Entity QueryId: '{c71c236b-b4da-479a-8143-b660425adf43}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Fields{ceef7e89-404a-4746-8735-a09e0114d232}" xml:space="preserve">
-    <value>Active Notification Fields</value>
+    <value>Câmpuri de notificare active</value>
     <comment>'Notification Fields' : LocalizedName for SavedQuery on Entity QueryId: '{ceef7e89-404a-4746-8735-a09e0114d232}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Fields{e48410d6-7236-e911-8191-000d3a06071c}" xml:space="preserve">
-    <value>My Notification Fields</value>
+    <value>Câmpurile mele de notificare</value>
     <comment>'Notification Fields' : LocalizedName for SavedQuery on Entity QueryId: '{e48410d6-7236-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Fields{fac01a35-64fb-4822-bbda-4ddfec81f385}" xml:space="preserve">
-    <value>Notification Field Associated View</value>
+    <value>Vizualizare asociată cu câmpul de notificare</value>
     <comment>'Notification Fields' : LocalizedName for SavedQuery on Entity QueryId: '{fac01a35-64fb-4822-bbda-4ddfec81f385}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Template{0989a562-3208-44fa-883e-8cd232f8868f}" xml:space="preserve">
-    <value>Notification Template Associated View</value>
+    <value>Vizualizare asociată cu șablonul de notificare</value>
     <comment>'Notification Template' : LocalizedName for SavedQuery on Entity QueryId: '{0989a562-3208-44fa-883e-8cd232f8868f}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Template{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Information</value>
+    <value>Informații</value>
     <comment>'Notification Template' : LocalizedName for systemform in Entity FormXml ID: '{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Template{1f4e9cd2-1dc1-46c1-9fdd-b64d1d70540c}" xml:space="preserve">
-    <value>Quick Find Active Notification Templates</value>
+    <value>Găsire rapidă șabloane de notificare active</value>
     <comment>'Notification Template' : LocalizedName for SavedQuery on Entity QueryId: '{1f4e9cd2-1dc1-46c1-9fdd-b64d1d70540c}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Template{2b409f89-7336-e911-8191-000d3a06071c}" xml:space="preserve">
-    <value>My Notification Templates</value>
+    <value>Șabloanele mele de notificare</value>
     <comment>'Notification Template' : LocalizedName for SavedQuery on Entity QueryId: '{2b409f89-7336-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Template{8c04ada1-02d6-4d35-a3c6-f7b1a7e48801}" xml:space="preserve">
-    <value>Notification Template Lookup View</value>
+    <value>Vizualizare de căutare șablon de notificare</value>
     <comment>'Notification Template' : LocalizedName for SavedQuery on Entity QueryId: '{8c04ada1-02d6-4d35-a3c6-f7b1a7e48801}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Template{92ebf49c-b5ec-4bb2-9452-3f6ff1f4b553}" xml:space="preserve">
-    <value>Inactive Notification Templates</value>
+    <value>Șabloane de notificare inactive</value>
     <comment>'Notification Template' : LocalizedName for SavedQuery on Entity QueryId: '{92ebf49c-b5ec-4bb2-9452-3f6ff1f4b553}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Template{b3c61bd1-b4ee-4416-b7ba-d45c90ea3304}" xml:space="preserve">
-    <value>Notification Template Advanced Find View</value>
+    <value>Vizualizare Găsire complexă șablon de notificare</value>
     <comment>'Notification Template' : LocalizedName for SavedQuery on Entity QueryId: '{b3c61bd1-b4ee-4416-b7ba-d45c90ea3304}'</comment>
   </data>
   <data name="1:LocalizedName,Notification Template{d6bb8dfd-ea34-4f16-8f90-0681c4a48f6d}" xml:space="preserve">
-    <value>Active Notification Templates</value>
+    <value>Șabloane de notificare active</value>
     <comment>'Notification Template' : LocalizedName for SavedQuery on Entity QueryId: '{d6bb8dfd-ea34-4f16-8f90-0681c4a48f6d}'</comment>
   </data>
   <data name="1:LocalizedName,Session Templates{0f0185db-6f36-e911-8191-000d3a06071c}" xml:space="preserve">
-    <value>My Session Templates</value>
+    <value>Șabloanele mele de sesiune</value>
     <comment>'Session Templates' : LocalizedName for SavedQuery on Entity QueryId: '{0f0185db-6f36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:LocalizedName,Session Templates{3df411a7-e4b9-412a-8626-3fea8ce1ae55}" xml:space="preserve">
-    <value>Quick Find Active Session Templates</value>
+    <value>Găsire rapidă șabloane de sesiune active</value>
     <comment>'Session Templates' : LocalizedName for SavedQuery on Entity QueryId: '{3df411a7-e4b9-412a-8626-3fea8ce1ae55}'</comment>
   </data>
   <data name="1:LocalizedName,Session Templates{7d861b13-dfc1-447f-9799-54662a6f7104}" xml:space="preserve">
-    <value>Session Template Lookup View</value>
+    <value>Vizualizare de căutare șablon de sesiune</value>
     <comment>'Session Templates' : LocalizedName for SavedQuery on Entity QueryId: '{7d861b13-dfc1-447f-9799-54662a6f7104}'</comment>
   </data>
   <data name="1:LocalizedName,Session Templates{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Information</value>
+    <value>Informații</value>
     <comment>'Session Templates' : LocalizedName for systemform in Entity FormXml ID: '{7e7e29c0-bc24-40c2-938b-941554da4c4e}'</comment>
   </data>
   <data name="1:LocalizedName,Session Templates{829540ca-a91c-481b-998e-ee01a8f0a400}" xml:space="preserve">
-    <value>Session Template Associated View</value>
+    <value>Vizualizare asociată cu șablonul de sesiune</value>
     <comment>'Session Templates' : LocalizedName for SavedQuery on Entity QueryId: '{829540ca-a91c-481b-998e-ee01a8f0a400}'</comment>
   </data>
   <data name="1:LocalizedName,Session Templates{a82cc2a5-25b7-4f2f-bdd2-082cb1c1f27c}" xml:space="preserve">
-    <value>Inactive Session Templates</value>
+    <value>Șabloane de sesiune inactive</value>
     <comment>'Session Templates' : LocalizedName for SavedQuery on Entity QueryId: '{a82cc2a5-25b7-4f2f-bdd2-082cb1c1f27c}'</comment>
   </data>
   <data name="1:LocalizedName,Session Templates{aaca7bd5-eb07-42c1-81ed-44c95cfc7eaf}" xml:space="preserve">
-    <value>Session Template Advanced Find View</value>
+    <value>Vizualizare Găsire complexă șablon de sesiune</value>
     <comment>'Session Templates' : LocalizedName for SavedQuery on Entity QueryId: '{aaca7bd5-eb07-42c1-81ed-44c95cfc7eaf}'</comment>
   </data>
   <data name="1:LocalizedName,Session Templates{c32dcbe2-3dbd-4861-99db-f2faceec233c}" xml:space="preserve">
-    <value>Active Session Templates</value>
+    <value>Șabloane de sesiune active</value>
     <comment>'Session Templates' : LocalizedName for SavedQuery on Entity QueryId: '{c32dcbe2-3dbd-4861-99db-f2faceec233c}'</comment>
   </data>
   <data name="1:LocalizedName,TemplateTag{0bd6d418-377a-434b-b456-4e00cab168df}" xml:space="preserve">
-    <value>TemplateTags active</value>
+    <value>Etichete de șablon active</value>
     <comment>'TemplateTag' : LocalizedName for SavedQuery on Entity QueryId: '{0bd6d418-377a-434b-b456-4e00cab168df}'</comment>
   </data>
   <data name="1:LocalizedName,TemplateTag{13c30f0f-1c09-4670-9811-d5b8afd42c45}" xml:space="preserve">
-    <value>Vizualizare asociată TemplateTag</value>
+    <value>Vizualizare asociată cu etichete de șablon</value>
     <comment>'TemplateTag' : LocalizedName for SavedQuery on Entity QueryId: '{13c30f0f-1c09-4670-9811-d5b8afd42c45}'</comment>
   </data>
   <data name="1:LocalizedName,TemplateTag{2698d840-213c-426d-8cd0-f455fd00b034}" xml:space="preserve">
-    <value>Vizualizare Găsire complexă TemplateTag</value>
+    <value>Vizualizare Găsire complexă etichete de șablon</value>
     <comment>'TemplateTag' : LocalizedName for SavedQuery on Entity QueryId: '{2698d840-213c-426d-8cd0-f455fd00b034}'</comment>
   </data>
   <data name="1:LocalizedName,TemplateTag{320c44e2-e1ba-4901-b51e-447230eb45e4}" xml:space="preserve">
-    <value>Vizualizare de căutare TemplateTag</value>
+    <value>Vizualizare de căutare etichete de șablon</value>
     <comment>'TemplateTag' : LocalizedName for SavedQuery on Entity QueryId: '{320c44e2-e1ba-4901-b51e-447230eb45e4}'</comment>
   </data>
   <data name="1:LocalizedName,TemplateTag{79914b72-54d0-4f15-aedd-bc0b9367e014}" xml:space="preserve">
-    <value>Găsire rapidă TemplateTags active</value>
+    <value>Găsire rapidă etichete de șablon active</value>
     <comment>'TemplateTag' : LocalizedName for SavedQuery on Entity QueryId: '{79914b72-54d0-4f15-aedd-bc0b9367e014}'</comment>
   </data>
   <data name="1:LocalizedName,TemplateTag{9df2ec08-02cf-4399-84f0-e3dce19f8f85}" xml:space="preserve">
-    <value>TemplateTags inactive</value>
+    <value>Etichete de șablon inactive</value>
     <comment>'TemplateTag' : LocalizedName for SavedQuery on Entity QueryId: '{9df2ec08-02cf-4399-84f0-e3dce19f8f85}'</comment>
   </data>
   <data name="1:LocalizedName,TemplateTag{ad7358b6-7641-e911-8190-000d3afe6c36}" xml:space="preserve">
-    <value>Elementele mele TemplateTags</value>
+    <value>Etichetele mele de șablon</value>
     <comment>'TemplateTag' : LocalizedName for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:LocalizedName,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
@@ -3071,7 +3091,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'TemplateTag' : LocalizedName for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionInfo{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Common</value>
+    <value>Comun</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionMarketing{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
@@ -3079,19 +3099,19 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionProcessCenter{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Process Sessions</value>
+    <value>Sesiuni de proces</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionSales{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Sales</value>
+    <value>Vânzări</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionService{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Service</value>
+    <value>Servicii</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateInfo{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Common</value>
+    <value>Comun</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateMarketing{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3099,19 +3119,19 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateProcessCenter{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Process Sessions</value>
+    <value>Sesiuni de proces</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateSales{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Sales</value>
+    <value>Vânzări</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateService{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Service</value>
+    <value>Serviciu</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Template ParameterInfo{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Common</value>
+    <value>Comun</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Template ParameterMarketing{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3119,19 +3139,19 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Application Template ParameterProcessCenter{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Process Sessions</value>
+    <value>Sesiuni de proces</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Application Template ParameterSales{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Sales</value>
+    <value>Vânzări</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application Template ParameterService{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Service</value>
+    <value>Serviciu</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application TypeInfo{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Common</value>
+    <value>Comun</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application TypeMarketing{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3139,19 +3159,19 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Application TypeProcessCenter{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Process Sessions</value>
+    <value>Sesiuni de proces</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Application TypeSales{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Sales</value>
+    <value>Vânzări</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application TypeService{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Service</value>
+    <value>Serviciu</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification FieldsInfo{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Common</value>
+    <value>Comun</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification FieldsMarketing{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3159,19 +3179,19 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Notification FieldsProcessCenter{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Process Sessions</value>
+    <value>Sesiuni de proces</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Notification FieldsSales{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Sales</value>
+    <value>Vânzări</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Notification FieldsService{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Service</value>
+    <value>Serviciu</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification TemplateInfo{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Common</value>
+    <value>Comun</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification TemplateMarketing{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3179,19 +3199,19 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Notification TemplateProcessCenter{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Process Sessions</value>
+    <value>Sesiuni de proces</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Notification TemplateSales{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Sales</value>
+    <value>Vânzări</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Notification TemplateService{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Service</value>
+    <value>Serviciu</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Session TemplatesInfo{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Common</value>
+    <value>Comun</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Session TemplatesMarketing{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
@@ -3199,15 +3219,15 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Session TemplatesProcessCenter{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Process Sessions</value>
+    <value>Sesiuni de proces</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Session TemplatesSales{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Sales</value>
+    <value>Vânzări</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Session TemplatesService{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Service</value>
+    <value>Serviciu</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="50:Title,msdyn.ApplicationRibbon.Presence.Button.LabelText" xml:space="preserve">
@@ -3250,9 +3270,13 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <value>Cadru de lucru pentru integrarea canalelor</value>
     <comment>'msdyn_ChannelIntegrationFrameworkSitemap' : LocalizedName for AppModuleSiteMap</comment>
   </data>
-  <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
-    <value>Provider</value>
-    <comment>Title for Area 'New_Area' Area 'New_Area'</comment>
+  <data name="81:Title,New_AreaConsoleApp_SubArea" xml:space="preserve">
+    <value>File aplicație</value>
+    <comment>Title for Area 'New_Area' SubArea 'ConsoleApp_SubArea'</comment>
+  </data>
+  <data name="81:Title,New_AreaConsoleSession_SubArea" xml:space="preserve">
+    <value>Sesiuni</value>
+    <comment>Title for Area 'New_Area' SubArea 'ConsoleSession_SubArea'</comment>
   </data>
   <data name="81:Title,New_AreaNew_Area" xml:space="preserve">
     <value>Furnizor</value>
@@ -3262,8 +3286,12 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <value>Configurație furnizori de canale</value>
     <comment>Title for Area 'New_Area' Group 'New_Group'</comment>
   </data>
+  <data name="81:Title,New_AreaNew_SubArea" xml:space="preserve">
+    <value>Notificări</value>
+    <comment>Title for Area 'New_Area' SubArea 'New_SubArea'</comment>
+  </data>
   <data name="81:Title,New_AreaSessionTemplate_Group" xml:space="preserve">
-    <value>Șabloane de sesiune</value>
+    <value>Șabloane</value>
     <comment>Title for Area 'New_Area' Group 'SessionTemplate_Group'</comment>
   </data>
   <data name="9:Description,msdyn_consoleapplicationnotificationaction" xml:space="preserve">

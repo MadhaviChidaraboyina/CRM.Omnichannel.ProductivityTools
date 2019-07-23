@@ -12,6 +12,15 @@
     <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";Accept_Button_Default_Text" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Accept]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Accept]]></Cmt>
+        </Cmts>
+      </Item>
       <Item ItemId=";Accept_Button_Enabled_Switch" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Accept Button Enabled]]></Val>
@@ -46,6 +55,15 @@
         <Disp Icon="Str" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Label for when the flip switch is enabled]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";Reject_Button_Default_Text" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reject]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Reject]]></Cmt>
         </Cmts>
       </Item>
       <Item ItemId=";Reject_Button_Enabled_Switch" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

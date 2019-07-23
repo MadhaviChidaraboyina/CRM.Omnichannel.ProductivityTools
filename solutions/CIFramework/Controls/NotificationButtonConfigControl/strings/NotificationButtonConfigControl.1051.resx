@@ -141,4 +141,12 @@
     <value>Nie</value>
     <comment>Label for when the flip switch is disabled</comment>
   </data>
+  <data name="Accept_Button_Default_Text" xml:space="preserve">
+    <value>Prijať</value>
+    <comment>Accept</comment>
+  </data>
+  <data name="Reject_Button_Default_Text" xml:space="preserve">
+    <value>Odmietnuť</value>
+    <comment>Reject</comment>
+  </data>
 </root>
