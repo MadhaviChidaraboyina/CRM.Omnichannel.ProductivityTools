@@ -156,6 +156,7 @@ namespace Microsoft.CIFramework
 		public static NoOfNotifications = "NoOfNotifications";
 		public static SMS = "sms";
 		public static Chat = "chat";
+		public static Facebook = "facebook";
 		public static Call = "call";
 		public static Informational = "informational";
 		public static Failure = "failure";

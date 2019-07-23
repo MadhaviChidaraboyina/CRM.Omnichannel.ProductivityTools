@@ -32,13 +32,13 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	export function getNotificationTitle(header: any, eventType: any, notificationType: any): string {
-		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1 || eventType.search(Constants.Facebook) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
 			let key = getKeyFromObject(header);
 			if (!isNullOrUndefined(key)) {
 				return key + " " + header[0][key][0];
 			}
 		}
-		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
+		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1 || eventType.search(Constants.Facebook) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return header[0];
 		}
 		else if (eventType.search(Constants.Informational) != -1 && (isInformationalNotification(notificationType) || isFailureInformationNotification(notificationType) || isInformationChatSoftNotification(notificationType))) {
@@ -62,7 +62,7 @@ namespace Microsoft.CIFramework.Internal {
 	export function getNotificationDetails(body: any, eventType: any, notificationType: any, waitTime?: number): any {
 
 		var key: string = "";
-		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1 || eventType.search(Constants.Facebook) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
 			key = getKeyFromObject(body);
 			var details: any = {};
 			details[Utility.getResourceString("NOTIFICATION_DETAIL_COMMENT_TEXT")] = body[0][key];
@@ -88,16 +88,19 @@ namespace Microsoft.CIFramework.Internal {
 		else if ((eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
 			return "/webresources/msdyn_sms_icon_zfp.svg";
 		}
-		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
+		else if ((eventType.search(Constants.Facebook) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+			return "/webresources/msdyn_facebook_icon_zfp.svg";
+		}
+		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1 || eventType.search(Constants.Facebook) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return "/webresources/msdyn_entity_icon_zfp.svg";
 		}
 	}
 
 	export function getAcceptButtonText(eventType: any, notificationType: any): string {
-		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
+		if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1 || eventType.search(Constants.Facebook) != -1) && (notificationType[0].search(MessageType.notification) != -1)) {
 			return Utility.getResourceString("ACCEPT_BUTTON_TEXT");
 		}
-		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
+		else if ((eventType.search(Constants.Chat) != -1 || eventType.search(Constants.SMS) != -1 || eventType.search(Constants.Facebook) != -1) && (notificationType[0].search(MessageType.softNotification) != -1)) {
 			return Utility.getResourceString("OPEN_ITEM_BUTTON_TEXT");
 		}
 	}
