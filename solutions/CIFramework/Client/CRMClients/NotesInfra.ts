@@ -155,7 +155,7 @@ namespace Microsoft.CIFramework.Internal {
 		let noteText = "";
 		let createMap = new Map().set(Constants.entityName, Constants.annotation).set(Constants.value, map).set(Constants.originURL,originURL);
 		return new Promise(function (resolve) {
-			if(annotationId == ""){
+			if(!annotationId){
 				createRecord(createMap).then(function (returnValue: Map<string, any>) {	
 					for(let [key,value] of returnValue){
 						if(key.search(Constants.value) != -1){
@@ -188,6 +188,7 @@ namespace Microsoft.CIFramework.Internal {
 					for(let [key,value] of returnSearchResult){
 						if(key.search(Constants.value) != -1){
 							for(let i=0; i< value.length; i++ ){
+								if (value[i].annotationid !== annotationId) continue;
 								for(let key1 in value[i]){
 									if(key1.search(Constants.notetext) != -1){
 										noteText = value[i][key1];
