@@ -3,7 +3,7 @@
  */
 
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
-/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.1937/clientapi/XrmClientApi.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="Templatesutility.ts" />
 
 /** @internal */

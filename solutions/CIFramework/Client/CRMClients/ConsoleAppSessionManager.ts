@@ -3,7 +3,7 @@
  */
 
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
-/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.1937/clientapi/XrmClientApi.d.ts" />
+/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="SessionTemplatesInfra.ts" />
 /// <reference path="NotificationTemplatesInfra.ts" />
 /** @internal */
@@ -87,7 +87,7 @@ namespace Microsoft.CIFramework.Internal {
 		 * of the session which was created
 		 */
 		onSessionCreated(event: any): void {
-			state.client.setPanelMode("setPanelMode", Constants.sidePanelHiddenState);
+			//state.client.setPanelMode("setPanelMode", Constants.sidePanelHiddenState);
 		}
 
 		getFocusedSession(telemetryData?: Object): string {
@@ -134,9 +134,10 @@ namespace Microsoft.CIFramework.Internal {
 							function (sessionInput: SessionTemplateSessionInput) {
 								let startTime = new Date();
 								let apiName = "Xrm.App.sessions.createSession";
+								sessionInput.options.isFocused = true;  //Switch focus to the newly created session by default
 								Xrm.App.sessions.createSession(sessionInput).then(function (sessionId: string) {
 									logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
-									this.sessions.set(sessionId, new SessionInfo(provider, session));
+									this.sessions.set(sessionId, new SessionInfo(provider, session, templateParams));
 									state.client.setPanelMode("setPanelMode", session.panelState);
 									window.setTimeout(provider.setFocusedSession.bind(provider), 0, sessionId, true);
 									sessionInput.anchorTabTemplate.resolveTitle(templateParams).then(
@@ -147,6 +148,7 @@ namespace Microsoft.CIFramework.Internal {
 											this.setTabTitleInternal(sessionId, Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId, sessionInput.anchorTabTemplate.title);
 										}.bind(this));
 									this.associateTabWithSession(sessionId, Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId, sessionInput.anchorTabTemplate, session.anchorTabName, sessionInput.anchorTabTemplate.tags);
+									resolve(sessionId); //Tell the caller the anchor tab is ready; other tabs loaded in the background
 									session.appTabs.then(
 										function (appTabs: UCIApplicationTabTemplate[]) {
 											let tabsRendered: Promise<string>[] = [];
@@ -155,6 +157,7 @@ namespace Microsoft.CIFramework.Internal {
 													tabsRendered.push(new Promise<string>(function (resolve: any, reject: any) {
 													tab.instantiateTemplate(templateParams, correlationId).then(
 														function (tabInput: XrmClientApi.TabInput) {
+															tabInput.options.isFocused = false; //All app-tabs rendered in the background
 															this.createTabInternal(sessionId, tabInput, telemetryData).then(
 																function (tabId: string) {
 																	this.associateTabWithSession(sessionId, tabId, tab, tab.name, tab.tags);
@@ -183,7 +186,6 @@ namespace Microsoft.CIFramework.Internal {
 											let errorData = generateErrorObject(error, "ConsoleAppSessionManager - session.appTabs", errorTypes.XrmApiError);
 											logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
 										}.bind(this));
-									resolve(sessionId);
 								}.bind(this),
 									function (errorMessage: string) {
 										reject(errorMessage);
@@ -253,6 +255,7 @@ namespace Microsoft.CIFramework.Internal {
 					function (tab: UCIApplicationTabTemplate) {
 						tab.instantiateTemplate(templateParams, correlationId).then(
 							function (tabInput: XrmClientApi.TabInput) {
+								tabInput.options.isFocused = input.isFocused || false;
 								this.createTabInternal(sessionId, tabInput, telemetryData).then(
 									function (tabId: string) {
 										this.associateTabWithSession(sessionId, tabId, tab, tab.name, tab.tags);

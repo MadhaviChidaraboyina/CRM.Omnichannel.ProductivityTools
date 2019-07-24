@@ -9,7 +9,7 @@
 /// <reference path="../TelemetryHelper.ts" />
 /// <reference path="aria-webjs-sdk-1.8.3.d.ts" />
 /// <reference path="../../../TypeDefinitions/mscrm.d.ts" />
-/// <reference path="../../../../Packages/Crm.ClientApiTypings.1.3.1937/clientapi/XrmClientApiInternal.d.ts" />
+/// <reference path="../../../../Packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApiInternal.d.ts" />
 /// <reference path= "../Queue.ts" />
 /// <reference path="../CIFrameworkUtilities.ts" />
 /** @internal */

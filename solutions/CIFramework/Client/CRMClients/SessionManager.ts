@@ -17,15 +17,20 @@ namespace Microsoft.CIFramework.Internal {
 		private _tabsByName: Map<string, string[]>;
 		private _tabConfigs: Map<string, AppConfig>;
 		private _sessionConfig: SessionConfig;
+		private _templateParams: any;
 
-		public constructor(provider: CIProvider, config?: SessionConfig) {
+		public constructor(provider: CIProvider, config?: SessionConfig, templateParams?: any) {
 			this._associatedProvider = provider;
 			this._tabsByTag = new Map<string, string[]>();
 			this._tabsByName = new Map<string, string[]>();
 			this._tabConfigs = new Map<string, AppConfig>();
 			this._sessionConfig = config;
+			this._templateParams = templateParams || null;
 		}
 
+		public get templateParams(): any {
+			return this._templateParams;
+		}
 		public get associatedProvider(): CIProvider {
 			return this._associatedProvider;
 		}
