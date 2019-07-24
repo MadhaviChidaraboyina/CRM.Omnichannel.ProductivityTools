@@ -10,23 +10,23 @@
     <Titles>
       <Title LCID="1033" Title="Channel Provider Configuration" />
     </Titles>
-  <SubArea Id="New_SubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" IntroducedVersion="7.0.0.0" Entity="msdyn_ciprovider" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+  <SubArea Id="New_SubArea" IntroducedVersion="7.0.0.0" Entity="msdyn_ciprovider" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
     </Group>
     <Group Id="SessionTemplate_Group" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
       <Titles>
         <Title LCID="1033" Title="Templates" />
       </Titles>
-      <SubArea Id="New_SubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" IntroducedVersion="7.0.0.0" Entity="msdyn_consoleapplicationnotificationtemplate" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+      <SubArea Id="New_SubArea" IntroducedVersion="7.0.0.0" Entity="msdyn_consoleapplicationnotificationtemplate" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
 		<Titles>
 			<Title LCID="1033" Title="Notifications" />
 		</Titles>
 	  </SubArea>
-      <SubArea Id="ConsoleApp_SubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" IntroducedVersion="7.0.0.0" Entity="msdyn_consoleapplicationtemplate" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+      <SubArea Id="ConsoleApp_SubArea" IntroducedVersion="7.0.0.0" Entity="msdyn_consoleapplicationtemplate" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
 		<Titles>
 			<Title LCID="1033" Title="Application Tabs" />
 		</Titles>
 	  </SubArea>
-      <SubArea Id="ConsoleSession_SubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" IntroducedVersion="7.0.0.0" Entity="msdyn_consoleapplicationsessiontemplate" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+      <SubArea Id="ConsoleSession_SubArea" IntroducedVersion="7.0.0.0" Entity="msdyn_consoleapplicationsessiontemplate" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
 		<Titles>
 			<Title LCID="1033" Title="Sessions" />
 		</Titles>

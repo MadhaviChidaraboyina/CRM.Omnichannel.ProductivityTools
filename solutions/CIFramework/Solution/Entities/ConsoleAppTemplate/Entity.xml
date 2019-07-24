@@ -1036,6 +1036,7 @@
       <ChangeTrackingEnabled>0</ChangeTrackingEnabled>
       <CanChangeTrackingBeEnabled>1</CanChangeTrackingBeEnabled>
       <IsEnabledForExternalChannels>0</IsEnabledForExternalChannels>
+      <IconVectorName>msdyn_AppTabTemplates.svg</IconVectorName>
     </entity>
   </EntityInfo>
   <FormXml />

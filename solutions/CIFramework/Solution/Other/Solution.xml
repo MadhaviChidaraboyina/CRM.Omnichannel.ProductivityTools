@@ -172,6 +172,12 @@
 			<RootComponent type="61" schemaName="msdyn_entity_icon_zfp.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_sms_icon_zfp.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_facebook_icon_zfp.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_AppTabTemplates.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_AppType.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_NotificationFields.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_NotificationTemplates.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_Parameters.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_SessionTemplates.svg" behavior="0" />
 			<RootComponent type="61" schemaName="widgets_container.html" behavior="0" />
 			<RootComponent type="61" schemaName="widgets_containerStyle.css" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_notificationCss.css" behavior="0" />

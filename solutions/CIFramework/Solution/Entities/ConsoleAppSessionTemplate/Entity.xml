@@ -1069,6 +1069,7 @@
       <EntityHelpUrl></EntityHelpUrl>
       <ChangeTrackingEnabled>1</ChangeTrackingEnabled>
       <CanChangeTrackingBeEnabled>1</CanChangeTrackingBeEnabled>
+      <IconVectorName>msdyn_SessionTemplates.svg</IconVectorName>
       <IsEnabledForExternalChannels>0</IsEnabledForExternalChannels>
     </entity>
   </EntityInfo>
