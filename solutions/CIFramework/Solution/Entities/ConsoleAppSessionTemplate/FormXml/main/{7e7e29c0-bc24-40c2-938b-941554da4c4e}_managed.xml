@@ -135,7 +135,13 @@
           </tab>
       </tabs>
       <Navigation>
-        <NavBar></NavBar>
+        <NavBar>
+            <NavBarByRelationshipItem RelationshipName="msdyn_msdyn_consoleapplicationsessiontemp_tag" Sequence="10000" Area="Info" Id="nav_msdyn_msdyn_consoleapplicationsessiontemp_tag" Show="false">
+                <Titles>
+                    <Title LCID="1033" Text="TemplateTags" />
+                </Titles>
+            </NavBarByRelationshipItem>
+        </NavBar>
         <NavBarAreas>
           <NavBarArea Id="Info">
             <Titles>
