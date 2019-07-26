@@ -3118,6 +3118,10 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <value>Trženje</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
+  <data name="1:Title,Application Tab Templatenav_msdyn_msdyn_consoleapplicationtemplate_tags{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
+    <value>TemplateTags</value>
+    <comment>'Application Tab Template' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationtemplate_tags'</comment>
+  </data>
   <data name="1:Title,Application Tab TemplateProcessCenter{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
     <value>Seje procesov</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
@@ -3198,6 +3202,10 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <value>Trženje</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
+  <data name="1:Title,Notification Templatenav_msdyn_msdyn_consoleapplicationnotificationtag{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
+    <value>TemplateTags</value>
+    <comment>'Notification Template' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationnotificationtag'</comment>
+  </data>
   <data name="1:Title,Notification TemplateProcessCenter{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
     <value>Seje procesov</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
@@ -3217,6 +3225,10 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
   <data name="1:Title,Session TemplatesMarketing{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
     <value>Trženje</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Session Templatesnav_msdyn_msdyn_consoleapplicationsessiontemp_tag{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
+    <value>TemplateTags</value>
+    <comment>'Session Templates' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationsessiontemp_tag'</comment>
   </data>
   <data name="1:Title,Session TemplatesProcessCenter{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
     <value>Seje procesov</value>

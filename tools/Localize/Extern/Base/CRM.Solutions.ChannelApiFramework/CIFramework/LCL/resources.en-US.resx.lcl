@@ -23,6 +23,24 @@
           <Disp Icon="Str" />
         </Item>
       </Item>
+      <Item ItemId=";1:Title,Application Tab Templatenav_msdyn_msdyn_consoleapplicationtemplate_tags{8d39ebda-4f57-4f83-8d39-39e1bb2d6a" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) 0d}" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[TemplateTags]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+      </Item>
+      <Item ItemId=";1:Title,Notification Templatenav_msdyn_msdyn_consoleapplicationnotificationtag{0ad01d1d-9a81-46f2-afd0-e45a4b6a831" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) 4}" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[TemplateTags]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+      </Item>
       <Item ItemId=";10:CustomLabel,msdyn_ciprovider_systemuser_membershipOrdinal:1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[]]></Val>
@@ -2588,6 +2606,12 @@
       <Item ItemId=";1:Title,Session TemplatesService{7e7e29c0-bc24-40c2-938b-941554da4c4e}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Service]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Title,Session Templatesnav_msdyn_msdyn_consoleapplicationsessiontemp_tag{7e7e29c0-bc24-40c2-938b-941554da4c4e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[TemplateTags]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

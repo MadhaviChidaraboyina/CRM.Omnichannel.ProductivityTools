@@ -3733,18 +3733,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_IsRuntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
-            <Val><![CDATA[예 - 런타임 시 templateParameter 인수에서 값이 선택됨]D;]A;아니요 - 이 매개 변수를 사용하는 템플릿을 만들 때 값을 제공해야 함]]></Val>
+            <Val><![CDATA[예 - 런타임 시 templateParameter 인수에서 값이 선택됨]A;아니요 - 이 매개 변수를 사용하는 템플릿을 만들 때 값을 제공해야 함]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-07-17T13:03:59.0003137Z" />
+        <Modified By="v-rondai" DateTime="2019-07-25T03:55:30.0003999Z" />
         <Props>
-          <Str Name="Custom3" Val="WO19705_20190715" />
+          <Str Name="Custom3" Val="WO19785_20190722" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3775,18 +3775,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
-            <Val><![CDATA[예 - 런타임 시 templateParameter 인수에서 값이 선택됨]D;]A;아니요 - 이 매개 변수를 사용하는 템플릿을 만들 때 값을 제공해야 함]]></Val>
+            <Val><![CDATA[예 - 런타임 시 templateParameter 인수에서 값이 선택됨]A;아니요 - 이 매개 변수를 사용하는 템플릿을 만들 때 값을 제공해야 함]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-07-17T13:03:59.0003137Z" />
+        <Modified By="v-rondai" DateTime="2019-07-25T03:55:30.0003999Z" />
         <Props>
-          <Str Name="Custom3" Val="WO19705_20190715" />
+          <Str Name="Custom3" Val="WO19785_20190722" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
