@@ -90,6 +90,28 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	/**
+	 * utility func to check whether a string is null or empty
+	 */
+	/** @internal */
+	function isNullOrEmpty(value: string): boolean {
+		return value == null || value === "";
+	}
+
+	/**
+	 * utility func to get provider based on a provider name and message type
+	 */
+	/** @internal */
+	function getProviderFromProviderName(providerName: string, messageType: string): CIProvider {
+		let providersForMessage: CIProvider[] = genericEventRegistrations.has(messageType) ? genericEventRegistrations.get(messageType) : [];
+		for (let provider of providersForMessage) {
+			if (provider.name === providerName) {
+				return provider;
+			}
+		}
+		return null;
+	}
+
+	/**
 	 * This method will starting point for CI library and perform setup operations. retrieve the providers from CRM and initialize the Panels, if needed.
 	 * returns false to disable the button visibility
 	 */
@@ -296,6 +318,30 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
+	/* Utility function to raise events registered for the framework and get back the response */
+	function sendMessage(parameters: Map<string, any>, messageType: string, provider?: CIProvider): Promise<any> {
+		if (isNullOrUndefined(provider)) {
+			provider = state.providerManager.getActiveProvider();
+			if (isNullOrUndefined(provider)) {
+				const error = generateErrorObject(new Map().set("message", "No active provider found"), "sendGenericMessage", errorTypes.GenericError);
+				return logAPIFailure(appId, true, error, messageType + " - sendGenericMessage", cifVersion, "", "");
+			}
+		}
+		return new Promise<string>((resolve, reject) => {
+			provider.raiseEvent(parameters, messageType).then(
+				function (result: any) {
+					resolve(result);
+				},
+				function (error: Error) {
+					let errorData = generateErrorObject(error, messageType + " - sendMessage", errorTypes.GenericError);
+					logAPIFailure(appId, true, errorData, messageType + " - sendMessage", cifVersion, provider.providerId, provider.name);
+					reject(error);
+				}
+			);
+		});
+	}
+
+
 	/* Utility function to get the Provider out of the parameters */
 	function getProvider(parameters: Map<string, any>, reqParams?: string[]): [CIProvider, IErrorHandler] {
 		if (!parameters) {
@@ -490,6 +536,20 @@ namespace Microsoft.CIFramework.Internal {
 	*/
 	export function onSendKBArticle(event: CustomEvent): void {
 		raiseEvent(Microsoft.CIFramework.Utility.buildMap(event.detail), MessageType.onSendKBArticle, "onSendKBArticle event recieved from client");
+	}
+
+	/**
+	 * method to send a generic message
+	 */
+	export function sendGenericMessage(parameters: Map<string, any>, messageType: string, providerName?: string): Promise<any> {
+		let provider: CIProvider = isNullOrEmpty(providerName) ? state.providerManager.getActiveProvider() : getProviderFromProviderName(providerName, messageType);
+		if (isNullOrUndefined(provider)) {
+			const error = generateErrorObject(new Map().set("message", `No provider found for provider name ${providerName}`), "sendGenericMessage", errorTypes.InvalidParams);
+			return logAPIFailure(appId, true, error, messageType + " - sendGenericMessage", cifVersion, "", providerName);
+		}
+		var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, messageType, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
+		setAPIUsageTelemetry(paramData);
+		return sendMessage(parameters, messageType, state.providerManager.getActiveProvider());
 	}
 
 	/**
