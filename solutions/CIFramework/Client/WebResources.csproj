@@ -29,6 +29,7 @@
     <Content Include="Constants.ts" />
     <Content Include="Queue.ts" />
     <Content Include="EventHandlersLib\msdyn_EventHandlersLib.ts" />
+    <Content Include="EventHandlersLib\msdyn_NotificationTemplateFormLib.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="CIFrameworkUtilities.ts" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.8.3.d.ts" />

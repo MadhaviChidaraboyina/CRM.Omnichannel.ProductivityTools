@@ -226,6 +226,16 @@
 					</customControl>
 				</controlDescription>
 			</controlDescriptions>
+			<formLibraries>
+				<Library name="EventHandlersLib/msdyn_EventHandlersLib.js" libraryUniqueId="{09ea6a88-1818-9ab0-496b-0ab021d5c0b3}" />
+			</formLibraries>
+			<events>
+				<event name="onload" application="false" active="false">
+					<Handlers>
+						<Handler functionName="CIFramework.populateDefaultValuesNotificationTemplate" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{d3317d08-138b-905e-4631-aab3d746d22a}" enabled="true" parameters="" passExecutionContext="true" />
+					</Handlers>
+				</event>
+			</events>
 		</form>
 		<IsCustomizable>1</IsCustomizable>
 		<CanBeDeleted>1</CanBeDeleted>

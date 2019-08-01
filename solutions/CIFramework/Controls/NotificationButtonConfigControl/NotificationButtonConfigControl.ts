@@ -161,14 +161,56 @@ module MscrmControls.Service.CIProvider {
 						},
 						Value: this.currentState.Reject_Button_Enabled,
 						Type: "boolean"
-					},
-					style: {
-						padding: "7px 3px 0 0"
 					}
 				}
 				
 			};
-			return this.context.factory.createComponent("MscrmControls.FlipSwitch.FlipSwitchControl", "FlipSwitch_RejectButton", props);
+
+			var flipSwitch = this.context.factory.createComponent("MscrmControls.FlipSwitch.FlipSwitchControl", "FlipSwitch_RejectButton", props);
+
+			var flipSwitchContainer = this.context.factory.createElement("CONTAINER", {
+				key: "Reject_Button_FlipSwitchContainer",
+				id: "Reject_Button_FlipSwitchContainer",
+				style: {
+					paddingTop: "10.5px"
+				}
+			}, [flipSwitch]);
+
+			return flipSwitchContainer;
+		}
+
+		protected createLabel(buttonType: NotificationButtonType): Mscrm.Component {
+			var label = this.context.factory.createElement("LABEL", {
+				key: buttonType + "_Label",
+				id: buttonType + "_Label",
+				accessibilityLabel: this.context.resources.getString(buttonType + "_Label"),
+				title: this.context.resources.getString(buttonType + "_Label"),
+				forElementId: 'TextInput_' + buttonType + '-text-box-text',
+
+				style: {
+					fontFamily: this.context.theming.fontfamilies.regular,
+					fontSize: this.context.theming.fontsizes.font100,
+					fontWeight: 400,
+					fontColor: this.context.theming.colors.grays.gray06,
+					height: "21px",
+				}
+			}, this.context.resources.getString(buttonType + "_Label"));
+
+			var labelContainer = this.context.factory.createElement("CONTAINER", {
+				key: buttonType + "_LabelContainer",
+				id: buttonType + "_LabelContainer",
+				style: {
+					display: "flex",
+					flexFlow: "row nowrap",
+					justifyContent: "flex-start",
+					alignItems: "center",
+					width: "160.5px",
+					height: "100%",
+					padding: "10.5px 0px"
+				}
+			}, [label]);
+
+			return labelContainer;
 		}
 
 		protected createTextBox(buttonType: NotificationButtonType): Mscrm.Component {
@@ -202,11 +244,7 @@ module MscrmControls.Service.CIProvider {
 						}
 					},
 					
-				},
-				style:
-				{
-
-				},
+				}
 			};
 
 			return this.context.factory.createComponent("MscrmControls.FieldControls.TextBoxControl", "TextInput_" + buttonType, properties);
@@ -234,29 +272,12 @@ module MscrmControls.Service.CIProvider {
 				style: {
 					display: "flex",
 					flexFlow: "column nowrap",
-					//alignItems: "center",
-					width: "100%"
+					justifyContent: "flex-start",
+					width: "calc(100% - 160.5px)"
 				},
 			}, configContainerComponents);
 
-			var label = this.context.factory.createElement("LABEL", {
-				key: buttonType + "_Label",
-				id: buttonType + "_Label",
-				accessibilityLabel: this.context.resources.getString(buttonType + "_Label"),
-				title: this.context.resources.getString(buttonType + "_Label"),
-				forElementId: 'TextInput_' + buttonType + '-text-box-text',
-
-				style: {
-					fontFamily: this.context.theming.fontfamilies.regular,
-					fontSize: this.context.theming.fontsizes.font100,
-					fontWeight: 400,
-					fontColor: this.context.theming.colors.grays.gray06,
-					width: "150px",
-					height: "35px",
-					padding: "7px 0 4px 0",
-					marginRight: "25px"
-				}
-			}, this.context.resources.getString(buttonType + "_Label"));
+			var label = this.createLabel(buttonType);
 
 			var buttonConfigContainerComponents = [label, configContainer];
 			
@@ -267,10 +288,7 @@ module MscrmControls.Service.CIProvider {
 				style: {
 					display: "flex",
 					borderBottom: buttonType == "Accept_Button" ? "1px solid rgb(216, 216, 216)" : "0px",
-					paddingTop: buttonType == "Reject_Button" ? "3px" : "0px"
-					//flexFlow: "column nowrap"
-					//alignItems: "center",
-					//width: "100%"
+					minHeight: "45.5px",
 				}
 			}, buttonConfigContainerComponents);
 

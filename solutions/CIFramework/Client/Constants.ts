@@ -210,6 +210,10 @@ namespace Microsoft.CIFramework
 		public static errorMessage = "errorMsg";
 		public static functionName = "functName";
 		public static ErrorCode = "errorCode";
+		public static notificationTemplateIconAttribute = "msdyn_icon";
+		public static notificationTemplateIconDefaultValue = "/webresources/msdyn_chat_icon_zfp.svg";
+		public static notificationTemplateTimeoutAttribute = "msdyn_timeout"
+		public static notificationTemplateTimeoutDefaultValue = 120;
 	}
 
 	export enum ErrorCode {

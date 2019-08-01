@@ -1,7 +1,8 @@
 ﻿{
 	"extends": "../../tsconfig/tsconfig.base.uciandclassicweb.json",
 	"include": [
-		"./msdyn_EventHandlersLib.ts"
+		"./msdyn_EventHandlersLib.ts",
+		"./msdyn_NotificationTemplateFormLib.ts"
 	],
 	"compilerOptions": {
 		"sourceMap": true,
