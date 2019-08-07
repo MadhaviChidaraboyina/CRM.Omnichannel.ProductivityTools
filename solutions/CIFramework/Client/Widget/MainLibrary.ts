@@ -175,7 +175,7 @@ namespace Microsoft.CIFramework
 		if (!isNullOrUndefined(input)){
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.notifyEvent,
-				messageData: new Map().set(Constants.eventType, input.eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(input.notificationUXObject))).set(Constants.correlationId, correlationId)
+				messageData: new Map().set(Constants.eventType, input.eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(input.notificationUXObject))).set(Constants.correlationId, correlationId).set(Constants.templateName, input.templateName).set(Constants.templateParameters, input.templateParameters)
 			}
 			return new Promise((resolve, reject) => {
 				return sendMessage<Map<string, any>>(notifyEvent.name, payload, false, true).then(

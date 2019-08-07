@@ -974,30 +974,30 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-	export function notifyEvent(notificationUX: Map<string,any>): Promise<any>{
+	export function notifyEvent(notificationObject: Map<string,any>): Promise<any>{
 		let telemetryData: any = new Object();
 		let startTime = new Date();
-		const [provider, errorData] = getProvider(notificationUX, [Constants.value]);
+		const [provider, errorData] = getProvider(notificationObject, [Constants.value]);
 		if (provider) {
 			return new Promise<any>((resolve, reject) => {
 				//let panelWidth = state.client.getWidgetWidth();
-				notifyEventClient(notificationUX).then(
+				notifyEventClient(notificationObject).then(
 					function (res) {
-						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.notifyEvent, cifVersion, telemetryData, notificationUX.get(Constants.correlationId));
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.notifyEvent, cifVersion, telemetryData, notificationObject.get(Constants.correlationId));
 						setPerfData(perfData);
-						var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.notifyEvent, provider.sortOrder, appId, cifVersion, false, null, "", notificationUX.get(Constants.correlationId));
+						var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.notifyEvent, provider.sortOrder, appId, cifVersion, false, null, "", notificationObject.get(Constants.correlationId));
 						setAPIUsageTelemetry(paramData);
 						return resolve(res);
 					},
 					(error: IErrorHandler) => {
-						logAPIFailure(appId, true, error as IErrorHandler, MessageType.notifyEvent, cifVersion, provider.providerId, provider.name, "", notificationUX.get(Constants.correlationId));
+						logAPIFailure(appId, true, error as IErrorHandler, MessageType.notifyEvent, cifVersion, provider.providerId, provider.name, "", notificationObject.get(Constants.correlationId));
 						return reject(Microsoft.CIFramework.Utility.createErrorMap(error.errorMsg, MessageType.notifyEvent));
 					}
 				);
 			});
 		}
 		else {
-			return logAPIFailure(appId, true, errorData, MessageType.notifyEvent, cifVersion, "", "", "", notificationUX.get(Constants.correlationId));
+			return logAPIFailure(appId, true, errorData, MessageType.notifyEvent, cifVersion, "", "", "", notificationObject.get(Constants.correlationId));
 		}
 	}
 

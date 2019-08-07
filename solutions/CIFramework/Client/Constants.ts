@@ -213,6 +213,9 @@ namespace Microsoft.CIFramework
 		public static notificationTemplateIconAttribute = "msdyn_icon";
 		public static notificationTemplateIconDefaultValue = "/webresources/msdyn_chat_icon_zfp.svg";
 		public static notificationTemplateTimeoutAttribute = "msdyn_timeout"
+		public static templateName = "templateName";
+		public static notificationTemplate = "notificationTemplate";
+		public static templateParameters = "templateParameters";
 		public static notificationTemplateTimeoutDefaultValue = 120;
 	}
 

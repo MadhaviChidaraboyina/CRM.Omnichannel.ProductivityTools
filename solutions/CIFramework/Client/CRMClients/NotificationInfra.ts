@@ -12,19 +12,20 @@
 /// <reference path="../../../../Packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApiInternal.d.ts" />
 /// <reference path= "../Queue.ts" />
 /// <reference path="../CIFrameworkUtilities.ts" />
+/// <reference path="NotificationRuntime.ts" />
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
-	let queue = new Microsoft.CIFramework.Queue<INotificationItem>();
-	let closeId = "";
+	export let queue = new Microsoft.CIFramework.Queue<INotificationItem>();
+	export let closeId = "";
 	let Constants = Microsoft.CIFramework.Constants;
 	const listenerWindow = window.parent;
-	let noOfNotifications = 0;
+	export let noOfNotifications = 0;
 	let len = 0;
-	let maxNotificationCount = 10;
-	let queuedNotificationExpirtyTime = 30000;
-	var displayedNotificationTimer: any;
-	var interval: any;
-	let displayDelayTimeMs = 2000;
+	export let maxNotificationCount = 10;
+	export let queuedNotificationExpirtyTime = 30000;
+	export var displayedNotificationTimer: any;
+	export var interval: any;
+	export let displayDelayTimeMs = 2000;
 
 
 	function getKeyFromObject(objectArg: any): string {
@@ -301,7 +302,7 @@ namespace Microsoft.CIFramework.Internal {
 		});
 	}
 
-	function removeExpiredNotificationsFromQueue(): void {
+	export function removeExpiredNotificationsFromQueue(): void {
 		if (queue.count < 1) {
 			return;
 		}
@@ -314,7 +315,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	function show(): void {
+	export function show(): void {
 		if (queue.count > 0) {
 			let popUpItem = queue.getItemAtIndex(0);
 			console.log("[NotifyEvent] peeked notification. queue length - " + queue.count);
@@ -350,7 +351,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	function CheckAndDequeueNotification(popUpItem: INotificationItem): void {
+	export function CheckAndDequeueNotification(popUpItem: INotificationItem): void {
 		if (queue.count > 0) {
 			let currentTopItem = queue.getItemAtIndex(0);
 			if (popUpItem.notificationCreatedAt == currentTopItem.notificationCreatedAt) {
@@ -364,11 +365,11 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	function showPopUpNotification(): void {
+	export function showPopUpNotification(): void {
 		setTimeout(show, displayDelayTimeMs); // show the next notification after a delay of 2 seconds, so that user does not confuse it with the previous notifcation
 	}
 
-	function logInfoToTelemetry(information: string, correlationId: string): void {
+	export function logInfoToTelemetry(information: string, correlationId: string): void {
 		logAPIInternalInfo(appId, false, null, MessageType.notifyEvent + "-" + information, cifVersion, "", "", "", correlationId);
 	}
 
@@ -385,6 +386,8 @@ namespace Microsoft.CIFramework.Internal {
 		let waitTime = -1;
 		let notificationType: any = [];
 		let correlationId: any;
+		let templateName: any;
+		let templateParameters: any;
 		for (let [key, value] of notificationUX) {
 			if(key.search(Constants.eventType) != -1){
 				console.log(value);
@@ -409,6 +412,12 @@ namespace Microsoft.CIFramework.Internal {
 			else {
 				correlationId = "";
 			}
+			if (key.search(Constants.templateName) != -1) {
+				templateName = value;
+			}
+			if (key.search(Constants.templateParameters) != -1) {
+				templateParameters = value;
+			}
 		}
 		if (header == null || header == "undefined"){
 			return postMessageNamespace.rejectWithErrorMessage("The header value is blank. Provide a value to the parameter.");
@@ -430,6 +439,9 @@ namespace Microsoft.CIFramework.Internal {
 					}
 				}
 			}
+		}
+		if (templateName) {
+			return launchZFPNotificationFromTemplate(templateName, templateParameters, correlationId);
 		}
 		return launchZFPNotification(header, body, notificationType, eventType, actions, waitTime, correlationId);		
 	}

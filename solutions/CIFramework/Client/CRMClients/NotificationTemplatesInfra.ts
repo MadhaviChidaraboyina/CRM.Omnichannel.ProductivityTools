@@ -13,6 +13,7 @@ namespace Microsoft.CIFramework.Internal {
 	};
 	export class UCINotificationTemplate {
 		private static _notificationTemplates = new Map<string, UCINotificationTemplate>();
+		private static _templateBytag = new Map<string, string[]>();
 		private static AcceptAction: string = "100000000";
 		private static RejectAction: string = "100000001";
 
@@ -24,7 +25,7 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(true);
 					}
 					Xrm.WebApi.retrieveMultipleRecords("msdyn_consoleapplicationnotificationtemplate",
-						"?$select=msdyn_name,msdyn_title,msdyn_actionbuttons,msdyn_icon,msdyn_timeout&$expand=msdyn_msdyn_consoleapplicationnotificationtempl($select=msdyn_name,msdyn_lineheader,msdyn_value)").then(
+						"?$select=msdyn_name,msdyn_title,msdyn_notificationbuttons,msdyn_icon,msdyn_timeout&$expand=msdyn_msdyn_consoleapplicationnotificationtempl($select=msdyn_name,msdyn_lineheader,msdyn_value),msdyn_msdyn_consoleapplicationnotificationtag($select=msdyn_name)").then(
 						function (result) {
 							result.entities.forEach(
 								function (value, index, array) {
@@ -32,13 +33,19 @@ namespace Microsoft.CIFramework.Internal {
 										value["msdyn_consoleapplicationnotificationtemplateid"],
 										value["msdyn_name"],
 										value["msdyn_title"],
-										value["msdyn_actionbuttons"],
-										value["msdyn_actionbuttons@OData.Community.Display.V1.FormattedValue"],
+										value["msdyn_notificationbuttons"],
 										value["msdyn_icon"],
 										value["msdyn_timeout"],
 										value["msdyn_msdyn_consoleapplicationnotificationtempl"]
 										));
-								});
+										for (let index in value["msdyn_msdyn_consoleapplicationnotificationtag"]) {
+											let tag: string = value["msdyn_msdyn_consoleapplicationnotificationtag"][index].msdyn_name;
+											if (!UCINotificationTemplate._templateBytag.has(tag)) {
+												UCINotificationTemplate._templateBytag.set(tag, []);
+											}
+											UCINotificationTemplate._templateBytag.get(tag).push(value["msdyn_name"]);
+										}
+									});
 							return resolve(true);
 						},
 						function (error) {
@@ -61,6 +68,25 @@ namespace Microsoft.CIFramework.Internal {
 				});
 			});
 		}
+
+		public static getTemplateByTag(tag: string, correlationId?: string): Promise<UCINotificationTemplate> {
+			return new Promise<UCINotificationTemplate>(function (resolve, reject) {
+				UCINotificationTemplate.InitTemplates().then(
+					function (result) {
+						try {
+							let name: string = UCINotificationTemplate._templateBytag.get(tag)[0];
+							return resolve(UCINotificationTemplate._notificationTemplates.get(name));
+						}
+						catch (error) {
+							return reject(new Error("Error retrieving template by tag (" + tag + ") : " + error));
+						}
+					},
+					function (error) {
+						return reject(error);
+					});
+			});
+		}
+
 		public static getTemplate(name: string): Promise<UCINotificationTemplate> {
 			return new Promise<UCINotificationTemplate>(function (resolve, reject) {
 				UCINotificationTemplate.InitTemplates().then(
@@ -74,24 +100,28 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		public instantiateTemplate(templateParams: any, acceptHandler: XrmClientApi.EventHandler, rejectHandler: XrmClientApi.EventHandler, correlationId?: string): Promise<CIFPopupNotification> { //TODO: The return type here will change based on platform definition
-			return new Promise<any>(function (resolve: (value?: CIFPopupNotification | PromiseLike<CIFPopupNotification>) => void, reject: (error: Error) => void) {
+		public instantiateTemplate(templateParams: any, acceptHandler: XrmClientApi.EventHandler, rejectHandler: XrmClientApi.EventHandler, timeoutHandler: XrmClientApi.EventHandler, correlationId?: string): Promise<CIFPopupNotification> { //TODO: The return type here will change based on platform definition
+			return new Promise<any>(function (resolve: (value?: XrmClientApi.IPopupNotificationItem | PromiseLike<XrmClientApi.IPopupNotificationItem>) => void, reject: (error: Error) => void) {
 				try {   //TODO: Parameterized apptab title
-					let ret: CIFPopupNotification = {
+					let ret: XrmClientApi.IPopupNotificationItem  = {
 						title: this.title,
 						acceptAction: {
 							eventHandler: acceptHandler,
-							actionLabel: this.actionButtons[UCINotificationTemplate.AcceptAction] || "Accept"   //TODO: Need to localize
+							actionLabel: this.actionButtons[UCINotificationTemplate.AcceptAction] || Utility.getResourceString("ACCEPT_BUTTON_TEXT")
 							},
 						declineAction: {
 							eventHandler: rejectHandler,
-							actionLabel: this.actionButtons[UCINotificationTemplate.RejectAction] || "Reject"   //TODO: Need to localize
+							actionLabel: this.actionButtons[UCINotificationTemplate.RejectAction] || Utility.getResourceString("REJECT_BUTTON_TEXT")
+						},
+						timeoutAction: {
+							eventHandler: timeoutHandler,
+							actionLabel: Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT"),
+							timeout: this.timeout
 						},
 						imageUrl: this.icon,
 						details: {},
 						type: isNullOrUndefined(this.actionButtons[UCINotificationTemplate.RejectAction]) ? XrmClientApi.Constants.PopupNotificationType.AcceptOnly : XrmClientApi.Constants.PopupNotificationType.AcceptDecline,
-						entityLookUpValue: null,
-						timeout: this.timeout
+						entityLookUpValue: null
 					};
 					let stringResolvers: Promise<string>[] = [];
 
@@ -160,18 +190,24 @@ namespace Microsoft.CIFramework.Internal {
 		protected get infoFields(): XrmClientApi.Entity[] {
 			return this._infoField;
 		}
-		private constructor(templateId: string, name: string, title: string, actionButtons: string, actionButonLabels: string, icon: string, timeout: number, infoFields: XrmClientApi.Entity[]) {
+		private constructor(templateId: string, name: string, title: string, actionButtons: string, icon: string, timeout: number, infoFields: XrmClientApi.Entity[]) {
 			this._templateId = templateId;
 			this._name = name;
 			this._title = title;
 			this._icon = icon;
-			this._timeout = timeout;
+			this._timeout = timeout*1000; //convert to milliseconds
 			this._infoField = infoFields;
 			this._actionButtons = {};
-			let buttons: string[] = actionButtons.split(",");
-			let labels: string[] = actionButonLabels.split(";");
-			for (let index in buttons) {
-				this._actionButtons[buttons[index]] = labels[index];
+			let buttonsJson = JSON.parse(actionButtons);
+			//let buttons: string[] = actionButtons.split(",");
+			//let labels: string[] = actionButonLabels.split(";");
+			let labels: string[] = [];
+			let buttonsCount = 0;
+			labels.push(buttonsJson.Accept_Button_String ? buttonsJson.Accept_Button_String : "");
+			this._actionButtons[UCINotificationTemplate.AcceptAction] = labels[buttonsCount];
+			if (buttonsJson.Reject_Button_Enabled) {
+				labels.push(buttonsJson.Reject_Button_String ? buttonsJson.Reject_Button_String : "");
+				this._actionButtons[UCINotificationTemplate.RejectAction] = labels[++buttonsCount];
 			}
 		}
 	}

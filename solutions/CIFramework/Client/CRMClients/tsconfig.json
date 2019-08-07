@@ -23,7 +23,8 @@
 		"aria-webjs-sdk-1.8.3.js",
 		"PresenceControl.ts",
 		"NotesInfra.ts",
-		"../Queue.ts"
+		"../Queue.ts",
+		"NotificationRuntime.ts"
 	],
 	"compilerOptions": {
 		"sourceMap": true,

@@ -33,6 +33,7 @@
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="CIFrameworkUtilities.ts" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.8.3.d.ts" />
+    <TypeScriptCompile Include="CRMClients\NotificationRuntime.ts" />
     <TypeScriptCompile Include="CRMClients\NotificationTemplatesInfra.ts" />
     <TypeScriptCompile Include="CRMClients\Templatesutility.ts" />
     <TypeScriptCompile Include="CRMClients\SessionTemplatesInfra.ts" />
