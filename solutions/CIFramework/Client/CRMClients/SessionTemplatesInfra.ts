@@ -12,7 +12,7 @@ namespace Microsoft.CIFramework.Internal {
 		anchorTabTemplate: UCIApplicationTabTemplate;
 	}
 	class UCIApplicationType {
-		public static ThirdPartyWebSite = "ThirdPartyWebSite";
+		public static ThirdPartyWebSite = "ThirdPartyWebsite";
 		public static webresource = "webresource";
 
 		private _name: XrmClientApi.PageType;
