@@ -94,11 +94,12 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 
 			driver.SwitchTo().DefaultContent();
 			Thread.Sleep(3000);
-			var sidePanelButton = driver.FindElement(By.XPath("//*[@id='mainContent']/div[2]/div[2]/div/div[1]/button"));
+			var sidePanelButton = driver.FindElement(By.XPath("//*[@data-id='expand-collapse-button-sidepanel']"));
 			sidePanelButton.Click();
 
 			//For showing Clicking Again
-			Thread.Sleep(3000);
+			Thread.Sleep(5000);
+			sidePanelButton = driver.FindElement(By.XPath("//*[@data-id='expand-collapse-button-sidepanel']"));
 			sidePanelButton.Click();
 
 			driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
@@ -121,9 +122,11 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 
 			driver.SwitchTo().DefaultContent();
 			Thread.Sleep(3000);
+			sidePanelButton = driver.FindElement(By.XPath("//*[@data-id='expand-collapse-button-sidepanel']"));
 			sidePanelButton.Click();
 
-			Thread.Sleep(3000);
+			Thread.Sleep(5000);
+			sidePanelButton = driver.FindElement(By.XPath("//*[@data-id='expand-collapse-button-sidepanel']"));
 			sidePanelButton.Click();
 
 			driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
@@ -180,7 +183,7 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 			string inputJson = helper.getJson(Constants.SET_MODE_FAILURE);
 			string outputJson = helper.PerformAction(driver, inputJson);
 			Dictionary<String, Object> updateJsonOutputJsonObj = JsonConvert.DeserializeObject<Dictionary<String, Object>>(outputJson);
-			Assert.AreEqual("The setMode paramter value must be 0 or 1.", updateJsonOutputJsonObj["message"], "Get Set Mode test case failed");
+			Assert.AreEqual("The setMode paramter value must be 0, 1 or 2.", updateJsonOutputJsonObj["message"], "Get Set Mode test case failed");
 		}
 
 		[TestMethod(), TestCategory("CIFSetWidthFailure")]
@@ -200,7 +203,7 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 			string inputJson = helper.getJson(Constants.CREATE_RECORD_FAILURE);
 			string outputJson = helper.PerformAction(driver, inputJson);
 			Dictionary<String, Object> outputJsonObj = JsonConvert.DeserializeObject<Dictionary<String, Object>>(outputJson);
-			Assert.AreEqual("Provide a value to the parameter to create record.", outputJsonObj["message"], "Create record test case failed");
+			Assert.AreEqual("Provide a value to the data parameter to create record.", outputJsonObj["message"], "Create record test case failed");
 		}
 
 		[TestMethod(), TestCategory("CIFUpdateRecordFailure")]
@@ -216,7 +219,7 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 			string updateInputJson = helper.getJson(Constants.UPDATE_RECORD_FAILURE, AccountID);
 			string updateJsonOutputJson = helper.PerformAction(driver, updateInputJson);
 			Dictionary<String, Object> updateJsonOutputJsonObj = JsonConvert.DeserializeObject<Dictionary<String, Object>>(updateJsonOutputJson);
-			Assert.AreEqual("The parameter is blank. Provide a value to the parameter to update the record.", updateJsonOutputJsonObj["message"], "Update record test case failed");
+			Assert.AreEqual("The data parameter is blank. Provide a value to the parameter to update the record.", updateJsonOutputJsonObj["message"], "Update record test case failed");
 		}
 
 		[TestMethod(), TestCategory("CIFRetrieveRecordFailure")]
@@ -232,7 +235,7 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 			string retrieveInputJson = helper.getJson(Constants.RETRIEVE_RECORD_FAILURE, AccountID);
 			string retrieveOutputJson = helper.PerformAction(driver, retrieveInputJson);
 			Dictionary<String, Object> getClickOutputJsonObj = JsonConvert.DeserializeObject<Dictionary<String, Object>>(retrieveOutputJson);
-			Assert.AreEqual("The EntityName parameter is blank. Provide a value to the parameter.", getClickOutputJsonObj["message"], "Retrieve record test case failed");
+			Assert.AreEqual("The EntityId parameter is blank. Provide a value to the parameter.", getClickOutputJsonObj["message"], "Retrieve record test case failed");
 		}
 
 		[TestMethod(), TestCategory("CIFGetEntityMetadata")]

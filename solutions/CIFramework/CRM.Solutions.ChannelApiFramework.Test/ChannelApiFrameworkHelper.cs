@@ -35,7 +35,7 @@ namespace CRM.Solutions.ChannelApiFramework.Test
 					parameters = "{'functionName':'getMode', 'isStringify': false, 'parameters':{}}";
 					break;
 				case Constants.SET_MODE_FAILURE:
-					parameters = "{'functionName':'setMode', 'isStringify': false, 'parameters':{ 'Mode': 2 }}";
+					parameters = "{'functionName':'setMode', 'isStringify': false, 'parameters':{ 'Mode': 3 }}";
 					break;
 				case Constants.SET_WIDTH:
 					parameters = "{'functionName':'setWidth', 'isStringify': false, 'parameters':{'Width': 300 }}";

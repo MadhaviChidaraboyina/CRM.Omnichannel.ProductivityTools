@@ -228,28 +228,33 @@ namespace Microsoft.Crm.Sdk.Samples
 			CreateChannelButton.Click();
 			Thread.Sleep(10000);
 
+			string name = "CIF Test";
 			IWebElement nameTextBox = driver.FindElement(By.XPath("//*[@data-id='msdyn_name.fieldControl-text-box-text']"));
-			nameTextBox.SendKeys("CIF Test");
+			setInputValue(nameTextBox, name);
 
 			IWebElement labelTextBox = driver.FindElement(By.XPath("//*[@data-id='msdyn_label.fieldControl-text-box-text']"));
-			labelTextBox.SendKeys("CIF Test");
+			setInputValue(labelTextBox, name);
 
 			IWebElement urlTextBox = driver.FindElement(By.XPath("//*[@data-id='msdyn_landingurl.fieldControl-url-text-input']"));
 			if (Constants.CLIENT_URL.IndexOf("http://") > -1)
 			{
-				urlTextBox.SendKeys(ConfigUtil.RootDiscoveryServiceUrl + "/CITTest/WebResources/CIFramework_Test_Case_Helper_File");
+				string url = ConfigUtil.RootDiscoveryServiceUrl + "/CITTest/WebResources/CIFramework_Test_Case_Helper_File";
+				setInputValue(urlTextBox, url);
 			}
 			else
 			{
-				urlTextBox.SendKeys(ConfigUtil.RootDiscoveryServiceUrl + "/WebResources/CIFramework_Test_Case_Helper_File");
+				string url = ConfigUtil.RootDiscoveryServiceUrl + "/WebResources/CIFramework_Test_Case_Helper_File";
+				setInputValue(urlTextBox, url);
 			}
 
+			Thread.Sleep(2000);
 			IWebElement channelOrderTextBox = driver.FindElement(By.XPath("//*[@data-id='msdyn_sortorder.fieldControl-whole-number-text-input']"));
-			channelOrderTextBox.SendKeys("0");
+			setInputValue(channelOrderTextBox, "0");
 
 			IWebElement channelSectionList = driver.FindElement(By.Id("_ledit"));
-			channelSectionList.SendKeys("Customer Service Hub");
-			Thread.Sleep(3000);
+			string channelName = "Customer Service Hub";
+			setInputValue(channelSectionList, channelName);
+			Thread.Sleep(2000);
 
 			IWebElement channelAppsList = driver.FindElement(By.Id("_selectAll"));
 			channelAppsList.Click();
@@ -279,6 +284,17 @@ namespace Microsoft.Crm.Sdk.Samples
 
 			IWebElement dialogDeleteButton = driver.FindElement(By.Id("confirmButton"));
 			dialogDeleteButton.Click();
+		}
+
+		private static void setInputValue(IWebElement element, string value)
+		{
+			element.Click();
+			Thread.Sleep(2000);
+			for (var i = 0; i < value.Length; i++)
+			{
+				element.SendKeys(value[i].ToString());
+			}
+			Thread.Sleep(2000);
 		}
 
 		#endregion Main
