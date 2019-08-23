@@ -224,13 +224,15 @@ namespace Microsoft.CIFramework.Internal {
 					widgetIFrame.onload = function () {
 						widgetIFrame.contentWindow.document.body.dir = window.parent.document.body.dir;
 						var doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
+						var visible = (ciProviders.size == 1);
 						for (let [key, value] of ciProviders) {
 							//TODO: parallelize these loads; add allow attributes for chrome. Also figure out how to set sizes on these
+							var displayStyleAttr = visible ? "display:block" :"display:none";
 							var containerDiv = document.createElement("div");
 							containerDiv.setAttribute("id", value.providerId);
 							containerDiv.setAttribute("tabindex", "-1");    //Needed to receive the focus event
 							containerDiv.setAttribute("role", "tabpanel");
-							containerDiv.setAttribute("style", "height: 100%");
+							containerDiv.setAttribute("style", "height: 100%;" + displayStyleAttr);
 							var iFrame = document.createElement("iframe");
 							iFrame.setAttribute("allow", "microphone; camera; geolocation");    //TODO - should we make these configurable?
 							iFrame.setAttribute("sandbox", "allow-forms allow-popups allow-scripts allow-same-origin allow-modals"); //TODO: make configurable?
@@ -243,8 +245,7 @@ namespace Microsoft.CIFramework.Internal {
 							containerDiv.appendChild(iFrame);
 							doc.getElementById("widgetControlDiv").appendChild(containerDiv);
 							status.set(value.name, true);   //TODO: The status should be set once iFrame.src is loaded
-							//console.log("AMEYA loading - " + key + " height = " + widgetHeight + " minheight "  + minimizedHeight);
-
+							// tslint:disable-line:no-any
 							if (!isConsoleAppInternal()) {
 								widgetIFrame.contentDocument.documentElement.style.setProperty('--sessionPanelAreaWidth', "44px");
 								(widgetIFrame.contentDocument.getElementsByClassName('innerDiv')[0] as HTMLElement).style.display = "flex";
@@ -360,6 +361,22 @@ namespace Microsoft.CIFramework.Internal {
 					}
 				);
 			});
+		}
+
+		client.setProviderVisibility = (ciProviders: Map<string, CIProvider>, providerId: string, telemetryData?: Object | any) => {
+			let widgetIFrame = (<HTMLIFrameElement>window.parent.document.getElementById(Constants.widgetIframeId));
+			let doc = widgetIFrame.contentDocument ? widgetIFrame.contentDocument : widgetIFrame.contentWindow.document;
+			for (let [key, value] of ciProviders) {
+				var ele = doc.getElementById(value.providerId);
+
+				if (value.providerId == providerId) {
+					ele.style.display = "block";
+				}
+				else {
+					ele.style.display = "none";
+				}
+			}
+			
 		}
 
 		client.setPanelMode = (name: string, mode: number, telemetryData?: Object|any): number =>

@@ -34,6 +34,7 @@ namespace Microsoft.CIFramework.Internal
 	*/
 	type RetrieveMultipleAndOpenFunction = (entityName: string, queryParmeters: string, searchOnly: boolean, telemetryData?: Object) => Promise<Map<string, any>>;
 
+
 	/**
 	 * Func type for opening a new or an existing form page
 	*/
@@ -48,7 +49,12 @@ namespace Microsoft.CIFramework.Internal
 	 * Func type for opening a KB serach control 
 	*/
 	type openKBSearchControlFunction = (searchString: string,telemetryData?: Object) => boolean;
-	
+
+	/**
+	 * Func type for showing the current provider chat widget and hide the rest in multi provider scenario
+	*/
+	type SetProviderVisibilityFunction = (ciProviders: Map<string, CIProvider>, provider: string) => void;
+
 	/**
 	 * Func type for loading all widgets.
 	*/
@@ -143,6 +149,8 @@ namespace Microsoft.CIFramework.Internal
 		loadWidgets: LoadWidgetsFunction;
 
 		retrieveMultipleAndOpenRecords: RetrieveMultipleAndOpenFunction;
+
+		setProviderVisibility: SetProviderVisibilityFunction;
 
 		setPanelMode: SetSettingFunction;
 

@@ -48,10 +48,10 @@ namespace Microsoft.CIFramework.Internal {
 				}
 				previousProvider.setUnfocusedSession(previousSessionId, switchProvider);
 			}
-
 			if (newProvider != null) {
 				newProvider.setFocusedSession(newSessionId, switchProvider);
 				state.client.setPanelMode("setPanelMode", state.sessionManager.getPanelState(newSessionId));
+				state.client.setProviderVisibility(state.providerManager.ciProviders, newProvider.providerId);
 			}
 			else {
 				state.client.setPanelMode("setPanelMode", Constants.sidePanelHiddenState);
@@ -139,6 +139,7 @@ namespace Microsoft.CIFramework.Internal {
 									logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
 									this.sessions.set(sessionId, new SessionInfo(provider, session, templateParams));
 									state.client.setPanelMode("setPanelMode", session.panelState);
+									state.client.setProviderVisibility(state.providerManager.ciProviders, provider.providerId);
 									window.setTimeout(provider.setFocusedSession.bind(provider), 0, sessionId, true);
 									sessionInput.anchorTabTemplate.resolveTitle(templateParams).then(
 										function (result: string) {
