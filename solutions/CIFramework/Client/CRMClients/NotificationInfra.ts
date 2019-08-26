@@ -409,9 +409,6 @@ namespace Microsoft.CIFramework.Internal {
 			if (key.search(Constants.correlationId) != -1) {
 				correlationId = value;
 			}
-			else {
-				correlationId = "";
-			}
 			if (key.search(Constants.templateName) != -1) {
 				templateName = value;
 			}
@@ -439,6 +436,9 @@ namespace Microsoft.CIFramework.Internal {
 					}
 				}
 			}
+		}
+		if (!correlationId) {
+			correlationId = "";
 		}
 		if (templateName) {
 			return launchZFPNotificationFromTemplate(templateName, templateParameters, correlationId);

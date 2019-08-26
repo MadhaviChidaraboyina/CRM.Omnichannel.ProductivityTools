@@ -189,6 +189,11 @@ namespace Microsoft.CIFramework.Internal {
 										}.bind(this));
 								}.bind(this),
 									function (errorMessage: string) {
+										let error = {} as Error;
+										error.message = errorMessage;
+										error.name = "createSession";
+										let errorData = generateErrorObject(error, "ConsoleAppSessionManager - Xrm.App.sessions.createSession", errorTypes.XrmApiError);
+										logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
 										reject(errorMessage);
 									}.bind(this)
 								);
