@@ -156,7 +156,9 @@ namespace Microsoft.CIFramework.Internal {
 
 		abstract getFocusedTab(sessionId: string, telemetryData?: Object): string;
 
-		abstract createTab(sessionId: string, input: any, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string>
+		abstract createTab(sessionId: string, input: any, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string>;
+
+		abstract createTabInternal(sessionId: string, input: any): Promise<string>;
 
 		abstract focusTab(sessionId: string, tabId: string, telemetryData?: Object): Promise<void>;
 

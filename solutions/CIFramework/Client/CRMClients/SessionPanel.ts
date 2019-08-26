@@ -134,6 +134,10 @@ namespace Microsoft.CIFramework.Internal {
 			return Promise.reject("Not implemented");
 		}
 
+		createTabInternal(sessionId: string, input: any): Promise<string> {
+			return Promise.reject("Not implemented");
+		}
+
 		focusTab(sessionId: string, tabId: string): Promise<any> {
 			return Promise.reject("Not implemented");
 		}

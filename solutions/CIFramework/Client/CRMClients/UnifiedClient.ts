@@ -273,18 +273,39 @@ namespace Microsoft.CIFramework.Internal {
 		client.openForm = (entityFormOptions: string, entityFormParameters?: string): Promise<Map<string, any>> => {
 			var fo: XrmClientApi.EntityFormOptions = JSON.parse(entityFormOptions);
 			var fp: XrmClientApi.FormParameters = (entityFormParameters ? JSON.parse(entityFormParameters) : null);
-
-			return new Promise<Map<string, any>>((resolve, reject) => {
-
-				return Xrm.Navigation.openForm(fo, fp).then(function (res) {
-					return resolve(new Map<string, any>().set(Constants.value, res));
-				},
+			if (isConsoleAppInternal()) {
+				var tabInput: XrmClientApi.TabInput = {
+					pageInput: { pageType: "entityrecord" as any }, options: { isFocused: true }
+				};
+				Microsoft.CIFramework.Internal.state.sessionManager.createTabInternal(
+					Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession(), tabInput).then(
+					function () {
+						return new Promise<Map<string, any>>((resolve, reject) => {
+							return Xrm.Navigation.openForm(fo, fp).then(function (res) {
+								return resolve(new Map<string, any>().set(Constants.value, res));
+							},
+							function (error: Error) {
+								let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
+								return reject(errorData);
+							});
+						});
+					},
+					function (error: Error) {
+						let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
+						Promise.reject(errorData);
+					}
+				);
+			} else {
+				return new Promise<Map<string, any>>((resolve, reject) => {
+					return Xrm.Navigation.openForm(fo, fp).then(function (res) {
+						return resolve(new Map<string, any>().set(Constants.value, res));
+					},
 					function (error: Error) {
 						let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
 						return reject(errorData);
-					}
-				);
-			});
+					});
+				});
+			}
 		}
 
 		client.refreshForm = (save?: boolean): Promise<Object> => {            
@@ -306,7 +327,7 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		client.retrieveMultipleAndOpenRecords = (entityName: string, queryParmeters: string, searchOnly: boolean, telemetryData?: Object|any): Promise<Map<string, any>> =>
+		client.retrieveMultipleAndOpenRecords = (entityName: string, queryParmeters: string, searchOnly: boolean, telemetryData?: Object | any): Promise<Map<string, any>> =>
 		{
 			return new Promise<Map<string,any>>((resolve, reject) =>
 			{
@@ -322,7 +343,14 @@ namespace Microsoft.CIFramework.Internal {
 						return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.searchAndOpenRecords));
 					}
 					else {
-						Microsoft.CIFramework.Utility.launchSearchPage(splitQuery[1], entityName);
+						if (isConsoleAppInternal()) {
+							var tabInput: XrmClientApi.TabInput = {
+								pageInput: { pageType: "search" as any, searchText: Microsoft.CIFramework.Utility.extractSearchText(splitQuery[1]), searchType: 1, EntityNames: [entityName] }, options: { isFocused: true }
+							};
+							Microsoft.CIFramework.Internal.state.sessionManager.createTabInternal(Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession(), tabInput);
+						} else {
+							Microsoft.CIFramework.Utility.launchSearchPage(splitQuery[1], entityName);
+						}
 						return resolve(new Map<string, any>().set(Constants.value, []));
 					}
 				}
@@ -334,7 +362,14 @@ namespace Microsoft.CIFramework.Internal {
 								Xrm.Utility.getEntityMetadata(entityName, null).then(
 									(response: XrmClientApi.EntityMetadata) => {
 										var fo: XrmClientApi.EntityFormOptions = { entityName: entityName, entityId: resultItem[response.PrimaryIdAttribute] };
-										Xrm.Navigation.openForm(fo);
+										if (isConsoleAppInternal()) {
+											var tabInput: XrmClientApi.TabInput = {
+												pageInput: { pageType: "entityrecord" as any, entityName: entityName, entityId: resultItem[response.PrimaryIdAttribute] }, options: { isFocused: true }
+											};
+											Microsoft.CIFramework.Internal.state.sessionManager.createTabInternal(Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession(), tabInput);
+										} else {
+											Xrm.Navigation.openForm(fo);
+										}
 									},
 									(error: Error) => {
 										let errorData = generateErrorObject(error, "client.retrieveMultipleAndOpenRecords - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
@@ -344,8 +379,15 @@ namespace Microsoft.CIFramework.Internal {
 							}
 						}
 						else if (searchOnly == false) {
-							// Open the Search Page with the Search String from the OData Parameters if the records != 1. Opens blank search page if the $search parameter has no value
-							Microsoft.CIFramework.Utility.launchSearchPage(splitQuery[1], entityName);
+							if (isConsoleAppInternal()) {
+								var tabInput: XrmClientApi.TabInput = {
+									pageInput: { pageType: "search" as any, searchText: Microsoft.CIFramework.Utility.extractSearchText(splitQuery[1]), searchType: 1, EntityNames: [entityName] }, options: { isFocused: true }
+								};
+								Microsoft.CIFramework.Internal.state.sessionManager.createTabInternal(Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession(), tabInput);
+							} else {
+								// Open the Search Page with the Search String from the OData Parameters if the records != 1. Opens blank search page if the $search parameter has no value
+								Microsoft.CIFramework.Utility.launchSearchPage(splitQuery[1], entityName);
+							}
 						}
 						let retrieveMultipleTimeTaken = Date.now() - retrieveMultipleStartTime.getTime();
 						let retrieveMultipleApiName = "Xrm.WebApi.retrieveMultipleRecords"
@@ -355,7 +397,14 @@ namespace Microsoft.CIFramework.Internal {
 					(error: Error) => {
 						let errorData = generateErrorObject(error, "client.retrieveMultipleAndOpenRecords - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
 						if (searchOnly == false) {
-							Microsoft.CIFramework.Utility.launchSearchPage(splitQuery[1], entityName);
+							if (isConsoleAppInternal()) {
+								var tabInput: XrmClientApi.TabInput = {
+									pageInput: { pageType: "search" as any, searchText: Microsoft.CIFramework.Utility.extractSearchText(splitQuery[1]), searchType: 1, EntityNames: [entityName] }, options: { isFocused: true }
+								};
+								Microsoft.CIFramework.Internal.state.sessionManager.createTabInternal(Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession(), tabInput);
+							} else {
+								Microsoft.CIFramework.Utility.launchSearchPage(splitQuery[1], entityName);
+							}
 						}
 						return reject(Microsoft.CIFramework.Utility.createErrorMap(errorData.errorMsg, MessageType.searchAndOpenRecords));
 					}
@@ -445,23 +494,28 @@ namespace Microsoft.CIFramework.Internal {
 			return state;
 		}
 
-		client.getEnvironment = (telemetryData?: Object|any): Map<string, any> => {
+		client.getEnvironment = (provider: CIProvider, telemetryData?: Object|any): Map<string, any> => {
 			//Xrm.Page is deprecated hence definition not available in .d.ts
 			//Using eval(...) to avoid compiler error
 			var data: Map<string, any> = new Map<string, any>();
-			try {
-				let startTime = new Date();
-				let pageUrl: any = new URL(eval("window.top.Xrm.Page.getUrl()") as string);
-				let timeTaken = Date.now() - startTime.getTime();
-				let apiName = "Xrm.Page.getUrl"
-				logApiData(telemetryData, startTime, timeTaken, apiName);
-				
-				for (var entry of pageUrl.searchParams.entries()) {
-					data.set(entry[0], entry[1]);
+			if (isConsoleAppInternal() &&
+				Array.from(provider.getAllSessions()).indexOf(Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession()) == -1) {
+				//Do not add page information
+			} else {
+				try {
+					let startTime = new Date();
+					let pageUrl: any = new URL(eval("window.top.Xrm.Page.getUrl()") as string);
+					let timeTaken = Date.now() - startTime.getTime();
+					let apiName = "Xrm.Page.getUrl"
+					logApiData(telemetryData, startTime, timeTaken, apiName);
+
+					for (var entry of pageUrl.searchParams.entries()) {
+						data.set(entry[0], entry[1]);
+					}
 				}
-			}
-			catch (error) {
-				//geturl not available on this page
+				catch (error) {
+					//geturl not available on this page
+				}
 			}
 
 			let startTime = new Date();
@@ -531,12 +585,19 @@ namespace Microsoft.CIFramework.Internal {
 						EntityNames: [entityName],
 						EntityGroupName: "",
 					};
-
-					startTime = new Date();
-					Xrm.Navigation.navigateTo(searchPageInput);
-					let timeTaken = Date.now() - startTime.getTime();
-					let apiName = "Xrm.Navigation.navigateTo";
-					logApiData(telemetryData, startTime, timeTaken, apiName);
+					if (isConsoleAppInternal()) {
+						var tabInput: XrmClientApi.TabInput = {
+							pageInput: searchPageInput,
+							options: { isFocused: true }
+						};
+						Microsoft.CIFramework.Internal.state.sessionManager.createTabInternal(Microsoft.CIFramework.Internal.state.sessionManager.getFocusedSession(), tabInput);
+					} else {
+						startTime = new Date();
+						Xrm.Navigation.navigateTo(searchPageInput);
+						let timeTaken = Date.now() - startTime.getTime();
+						let apiName = "Xrm.Navigation.navigateTo";
+						logApiData(telemetryData, startTime, timeTaken, apiName);
+					}
 					return resolve();
 				}
 				catch (error) {

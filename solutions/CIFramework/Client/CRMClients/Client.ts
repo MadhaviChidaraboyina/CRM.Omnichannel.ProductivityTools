@@ -27,7 +27,12 @@ namespace Microsoft.CIFramework.Internal
 	/**
 	 * Func type for all get a specific setting/context functions for which we dont need an input param.
 	*/
-	type GetContextFunction = (telemetryData?: Object) => string|number|Map<string,any>;
+	type GetContextFunction = (telemetryData?: Object) => string|number|Map<string, any>;
+
+	/**
+	 * Func type for getting environment details such as org details, user and page specific information
+	*/
+	type GetEnvironment = (provider: CIProvider, telemetryData?: Object) => Map<string, any>;
 
 	/**
 	 * Func type for retrieve multiple reords and open one of them.
@@ -164,7 +169,7 @@ namespace Microsoft.CIFramework.Internal
 
 		getWidgetMode: GetContextFunction;
 
-		getEnvironment: GetContextFunction;
+		getEnvironment: GetEnvironment;
 
 		getWidgetWidth: GetContextFunction;
 
@@ -172,7 +177,7 @@ namespace Microsoft.CIFramework.Internal
 
 		refreshForm: RefreshFormFunction;
 		
-		openKBSearchControl:openKBSearchControlFunction;		
+		openKBSearchControl: openKBSearchControlFunction;
 
 		getEntityMetadata: getMetadataFunction;
 

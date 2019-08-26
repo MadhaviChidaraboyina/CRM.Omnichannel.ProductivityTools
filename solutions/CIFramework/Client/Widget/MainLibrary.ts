@@ -821,8 +821,8 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to get the focused tab in focused Session
 	 */
-	export function getTabs(name: string, tag: string, correlationId?: string): Promise<string[]> {
-		if (!isNullOrUndefined(name) && !isNullOrUndefined(tag)) {
+	export function getTabs(name: string, tag?: string, correlationId?: string): Promise<string[]> {
+		if (!isNullOrUndefined(name)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.getTabsByTagOrName,
 				messageData: new Map().set(Constants.templateTag, tag).set(Constants.nameParameter, name).set(Constants.correlationId, correlationId)
@@ -832,10 +832,6 @@ namespace Microsoft.CIFramework
 		else {
 			if (isNullOrUndefined(name)) {
 				let errorMsg = "The name parameter is null. Provide a value to the parameter";
-				return logErrorsAndReject(errorMsg, MessageType.getTabsByTagOrName, correlationId);
-			}
-			if (isNullOrUndefined(tag)) {
-				let errorMsg = "The tag parameter is null. Provide a value to the parameter";
 				return logErrorsAndReject(errorMsg, MessageType.getTabsByTagOrName, correlationId);
 			}
 		}
