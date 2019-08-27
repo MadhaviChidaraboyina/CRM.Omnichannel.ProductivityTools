@@ -44,7 +44,7 @@
                                       </cell>
                                   </row>
                                   <row>
-                                      <cell id="{1d313718-4d90-7004-cbbc-d98c01d6c01d}" showlabel="true" locklevel="0">
+                                      <cell id="{1d313718-4d90-7004-cbbc-d98c01d6c01d}" showlabel="true" locklevel="0" visible="false">
                                           <labels>
                                               <label description="Pinned" languagecode="1033" />
                                           </labels>
@@ -60,7 +60,7 @@
                                       </cell>
                                   </row>
                                   <row>
-                                      <cell id="{d8c75080-1be0-30ce-1890-903eee8db7e6}" showlabel="true" locklevel="0">
+                                      <cell id="{d8c75080-1be0-30ce-1890-903eee8db7e6}" showlabel="true" locklevel="0" visible="false">
                                           <labels>
                                               <label description="icon" languagecode="1033" />
                                           </labels>

@@ -34,6 +34,7 @@
       <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
       <field displayname="Modified On" name="modifiedon" type="datetime" />
       <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Display Name" name="msdyn_displayname" type="string" customfield="true" />
       <field displayname="Organization Id" name="organizationid" type="entityreference" lookupType="organization" />
       <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
       <field displayname="RenderingOrder" name="msdyn_renderingorder" type="number" customfield="true" />

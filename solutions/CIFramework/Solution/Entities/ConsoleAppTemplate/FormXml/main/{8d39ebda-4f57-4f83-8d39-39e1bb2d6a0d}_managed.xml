@@ -36,7 +36,7 @@
 																						</cell>
 																				</row>
 																				<row>
-																						<cell id="{75819513-1e68-ee7d-3d85-7a44ee81dac0}" showlabel="true" locklevel="0">
+																						<cell id="{75819513-1e68-ee7d-3d85-7a44ee81dac0}" showlabel="true" locklevel="0" visible="false">
 																								<labels>
 																										<label description="" languagecode="1033" />
 																								</labels>
@@ -70,7 +70,7 @@
 																						</cell>
 																				</row>
 																				<row>
-																						<cell id="{379c8712-d7cb-0257-b7be-7c7125e6341c}" showlabel="true" locklevel="0">
+																						<cell id="{379c8712-d7cb-0257-b7be-7c7125e6341c}" showlabel="true" locklevel="0" visible="false">
 																								<labels>
 																										<label description="" languagecode="1033" />
 																								</labels>
