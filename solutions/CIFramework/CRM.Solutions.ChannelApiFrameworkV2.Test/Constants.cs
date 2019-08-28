@@ -17,7 +17,7 @@ namespace CRM.Solutions.ChannelApiFrameworkV2.Test
 		public const string GET_MODE_ASSERT_VALUE_0 = "0";
 		public const string GET_MODE_ASSERT_VALUE_1 = "1";
 		public const string FORM_DOM_ELEMENT_ID = "DataSetHostContainer";
-		public const string WEB_RESOURCE_NAME = "CIFramework_Test_Case_Helper_File";
+		public const string WEB_RESOURCE_NAME = "CIFramework_Test_Case_Helper_File_V2";
 		public const string CHANNEL_INTEGRATION_FRAMEWORK = "Channel Integration Framework";
 		public const string CUSTOMER_SERVICE_HUB = "Customer Service Hub";
 		public const string CONSOLE_APP = "Console App";

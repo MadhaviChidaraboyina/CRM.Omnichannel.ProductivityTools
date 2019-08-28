@@ -81,9 +81,9 @@ namespace Microsoft.Crm.Sdk.Samples
 			var content = getEncodedFileContent(resouceFileString);
 			Entity wr = new Entity("webresource");
 			wr["content"] = content;
-			wr["displayname"] = "CIFramework_Test_Case_Helper_File";
+			wr["displayname"] = "CIFramework_Test_Case_Helper_File_V1";
 			wr["description"] = "File required to run the automation test cases for CIFramework";
-			wr["name"] = "CIFramework_Test_Case_Helper_File";
+			wr["name"] = "CIFramework_Test_Case_Helper_File_V1";
 			wr["webresourcetype"] = new OptionSetValue(1);
 			QueryByAttribute qba = new QueryByAttribute("webresource");
 			qba.ColumnSet = new ColumnSet(true);
@@ -238,12 +238,12 @@ namespace Microsoft.Crm.Sdk.Samples
 			IWebElement urlTextBox = driver.FindElement(By.XPath("//*[@data-id='msdyn_landingurl.fieldControl-url-text-input']"));
 			if (Constants.CLIENT_URL.IndexOf("http://") > -1)
 			{
-				string url = ConfigUtil.RootDiscoveryServiceUrl + "/CITTest/WebResources/CIFramework_Test_Case_Helper_File";
+				string url = ConfigUtil.RootDiscoveryServiceUrl + "/CITTest/WebResources/CIFramework_Test_Case_Helper_File_V1";
 				setInputValue(urlTextBox, url);
 			}
 			else
 			{
-				string url = ConfigUtil.RootDiscoveryServiceUrl + "/WebResources/CIFramework_Test_Case_Helper_File";
+				string url = ConfigUtil.RootDiscoveryServiceUrl + "/WebResources/CIFramework_Test_Case_Helper_File_V1";
 				setInputValue(urlTextBox, url);
 			}
 
