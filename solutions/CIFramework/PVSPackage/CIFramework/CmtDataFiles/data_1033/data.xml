@@ -28,19 +28,6 @@
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
-      <record id="bcff94ed-0f46-e911-8190-000d3a6cc47a">
-        <field name="msdyn_consoleappparameterdefinitionid" value="bcff94ed-0f46-e911-8190-000d3a6cc47a" />
-        <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="3/14/2019 4:16:24 AM" />
-        <field name="msdyn_isruntime" value="False" />
-        <field name="modifiedby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="3/14/2019 4:16:24 AM" />
-        <field name="msdyn_name" value="navigationPath" />
-        <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
-        <field name="msdyn_runtimetype" value="110000000" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      </record>
       <record id="19d9c3f6-0f46-e911-8190-000d3a6cc47a">
         <field name="msdyn_consoleappparameterdefinitionid" value="19d9c3f6-0f46-e911-8190-000d3a6cc47a" />
         <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -77,19 +64,6 @@
         <field name="msdyn_name" value="type" />
         <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
         <field name="msdyn_runtimetype" value="110000000" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      </record>
-      <record id="ea55e01f-1046-e911-8190-000d3a6cc47a">
-        <field name="msdyn_consoleappparameterdefinitionid" value="ea55e01f-1046-e911-8190-000d3a6cc47a" />
-        <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="3/14/2019 4:17:48 AM" />
-        <field name="msdyn_isruntime" value="False" />
-        <field name="modifiedby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="3/14/2019 4:17:48 AM" />
-        <field name="msdyn_name" value="canOverride" />
-        <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
-        <field name="msdyn_runtimetype" value="110000002" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
@@ -184,19 +158,6 @@
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
-      <record id="f1e82ea2-1046-e911-8190-000d3a6cc47a">
-        <field name="msdyn_consoleappparameterdefinitionid" value="f1e82ea2-1046-e911-8190-000d3a6cc47a" />
-        <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="3/14/2019 4:21:27 AM" />
-        <field name="msdyn_isruntime" value="False" />
-        <field name="modifiedby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="3/14/2019 4:21:27 AM" />
-        <field name="msdyn_name" value="isCrossEntityNavigate" />
-        <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
-        <field name="msdyn_runtimetype" value="110000002" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      </record>
       <record id="64063bb8-1046-e911-8190-000d3a6cc47a">
         <field name="msdyn_consoleappparameterdefinitionid" value="64063bb8-1046-e911-8190-000d3a6cc47a" />
         <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -207,20 +168,6 @@
         <field name="msdyn_name" value="relationship" />
         <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
         <field name="msdyn_runtimetype" value="110000003" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      </record>
-      <record id="568a46c2-1046-e911-8190-000d3a6cc47a">
-        <field name="msdyn_consoleappparameterdefinitionid" value="568a46c2-1046-e911-8190-000d3a6cc47a" />
-        <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="3/14/2019 4:22:21 AM" />
-        <field name="msdyn_defaultvalue" value="0" />
-        <field name="msdyn_isruntime" value="True" />
-        <field name="modifiedby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="3/14/2019 4:22:38 AM" />
-        <field name="msdyn_name" value="isOfflineSyncError" />
-        <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
-        <field name="msdyn_runtimetype" value="110000002" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
@@ -276,59 +223,33 @@
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
-      <record id="9ad54202-1146-e911-8190-000d3a6cc47a">
-        <field name="msdyn_consoleappparameterdefinitionid" value="9ad54202-1146-e911-8190-000d3a6cc47a" />
-        <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="3/14/2019 4:24:08 AM" />
-        <field name="msdyn_isruntime" value="True" />
-        <field name="modifiedby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="3/14/2019 4:24:08 AM" />
-        <field name="msdyn_name" value="searchText" />
-        <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
-        <field name="msdyn_runtimetype" value="110000000" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      </record>
-      <record id="9ef92c13-1146-e911-8190-000d3a6cc47a">
-        <field name="msdyn_consoleappparameterdefinitionid" value="9ef92c13-1146-e911-8190-000d3a6cc47a" />
-        <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="3/14/2019 4:24:37 AM" />
-        <field name="msdyn_defaultvalue" value="0" />
-        <field name="msdyn_isruntime" value="False" />
-        <field name="modifiedby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="3/14/2019 4:24:37 AM" />
-        <field name="msdyn_name" value="searchType" />
-        <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
-        <field name="msdyn_runtimetype" value="110000001" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      </record>
-      <record id="bc37111f-1146-e911-8190-000d3a6cc47a">
-        <field name="msdyn_consoleappparameterdefinitionid" value="bc37111f-1146-e911-8190-000d3a6cc47a" />
-        <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="3/14/2019 4:24:57 AM" />
-        <field name="msdyn_isruntime" value="False" />
-        <field name="modifiedby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="3/14/2019 4:24:57 AM" />
-        <field name="msdyn_name" value="EntityNames" />
-        <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
-        <field name="msdyn_runtimetype" value="110000003" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      </record>
-      <record id="a3e52d25-1146-e911-8190-000d3a6cc47a">
-        <field name="msdyn_consoleappparameterdefinitionid" value="a3e52d25-1146-e911-8190-000d3a6cc47a" />
-        <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="3/14/2019 4:25:07 AM" />
-        <field name="msdyn_isruntime" value="False" />
-        <field name="modifiedby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="3/14/2019 4:25:07 AM" />
-        <field name="msdyn_name" value="EntityGroupName" />
-        <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
-        <field name="msdyn_runtimetype" value="110000000" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      </record>
+	  <record id="9ad54202-1146-e911-8190-000d3a6cc47a">
+		<field name="msdyn_consoleappparameterdefinitionid" value="9ad54202-1146-e911-8190-000d3a6cc47a" />
+		<field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
+		<field name="createdon" value="3/14/2019 4:24:08 AM" />
+		<field name="msdyn_isruntime" value="True" />
+		<field name="modifiedby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
+		<field name="modifiedon" value="3/14/2019 4:24:08 AM" />
+		<field name="msdyn_name" value="searchText" />
+		<field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
+		<field name="msdyn_runtimetype" value="110000000" />
+		<field name="statecode" value="0" />
+		<field name="statuscode" value="1" />
+	  </record>
+	  <record id="9ef92c13-1146-e911-8190-000d3a6cc47a">
+		<field name="msdyn_consoleappparameterdefinitionid" value="9ef92c13-1146-e911-8190-000d3a6cc47a" />
+		<field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
+		<field name="createdon" value="3/14/2019 4:24:37 AM" />
+		<field name="msdyn_defaultvalue" value="0" />
+		<field name="msdyn_isruntime" value="False" />
+		<field name="modifiedby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
+		<field name="modifiedon" value="3/14/2019 4:24:37 AM" />
+		<field name="msdyn_name" value="searchType" />
+		<field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
+		<field name="msdyn_runtimetype" value="110000001" />
+		<field name="statecode" value="0" />
+		<field name="statuscode" value="1" />
+	  </record>
       <record id="723a5026-2646-e911-8190-000d3a6cc47a">
         <field name="msdyn_consoleappparameterdefinitionid" value="723a5026-2646-e911-8190-000d3a6cc47a" />
         <field name="createdby" value="701a9681-f345-e911-818f-000d3a6cc47a" lookupentity="systemuser" lookupentityname="First name Last name" />
