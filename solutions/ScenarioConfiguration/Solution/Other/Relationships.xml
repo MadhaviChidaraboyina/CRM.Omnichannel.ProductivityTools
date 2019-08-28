@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships>
+  <EntityRelationship Name="msdyn_msdyn_ciprovider_msdyn_channel" />
+  <EntityRelationship Name="msdyn_msdyn_channel_msdyn_scenario" />
+  <EntityRelationship Name="msdyn_msdyn_consoleapplicationnotificationtemplate_msdyn_scenario_NotificationTemplate" />
+  <EntityRelationship Name="msdyn_msdyn_consoleapplicationsessiontemplate_msdyn_scenario_SessionTemplate" />
+</EntityRelationships>
