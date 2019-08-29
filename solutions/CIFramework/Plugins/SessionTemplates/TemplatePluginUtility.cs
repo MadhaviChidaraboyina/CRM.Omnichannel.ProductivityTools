@@ -9,6 +9,7 @@
 	using System.Runtime.Serialization.Json;
 	using System.IO;
 	using System.Text;
+	using System.Text.RegularExpressions;
 
 
 	public class TemplatePluginUtility
@@ -150,9 +151,37 @@
 			{
 				webresourcedatavalue = webresourcedatavalue + "&" + data;
 			}
-			webresourcedatavalue = webresourcedatavalue.Replace("&", "%26");
-			webresourcedatavalue = webresourcedatavalue.Replace("=", "%3D");
-			webresourceData.value = @"url={0}".Replace("{0}", webresourcedatavalue);
+
+			string finalUrlString = string.Empty;
+			int noOfParanthesis = 0;
+			// if there are = and & inside slug, don't replace with %3D and %26
+			foreach(char ch in webresourcedatavalue)
+			{
+				switch (ch)
+				{
+					case '{':
+						noOfParanthesis++;
+						finalUrlString = string.Concat(finalUrlString, ch);
+						break;
+					case '}':
+						noOfParanthesis--;
+						finalUrlString = string.Concat(finalUrlString, ch);
+						break;
+					case '=':
+					case '&':
+						if(noOfParanthesis == 0)
+							finalUrlString = (ch == '=' ? string.Concat(finalUrlString, "%3D"):string.Concat(finalUrlString, "%26"));
+						else
+							finalUrlString = string.Concat(finalUrlString, ch);
+						break;
+					default:
+						finalUrlString = string.Concat(finalUrlString, ch);
+						break;
+				}
+			}
+			//webresourcedatavalue = webresourcedatavalue.Replace("&", "%26");
+			//webresourcedatavalue = webresourcedatavalue.Replace("=", "%3D");
+			webresourceData.value = @"url={0}".Replace("{0}", finalUrlString);
 			paramInfo.Add(TemplatePluginConstants.WEBRESOURCEDATA_PARAMETER, webresourceData);
 			return paramInfo;
 		}

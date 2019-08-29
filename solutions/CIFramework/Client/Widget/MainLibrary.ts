@@ -172,10 +172,18 @@ namespace Microsoft.CIFramework
 	 *
 	*/
 	export function notifyEvent(input: any, correlationId?: string): Promise<string> {	
-		if (!isNullOrUndefined(input)){
+		if (!isNullOrUndefined(input)) {
+			var notificationMap = new Map();
+			notificationMap.set(Constants.eventType, input.eventType);
+			notificationMap.set(Constants.correlationId, correlationId);
+			notificationMap.set(Constants.templateName, input.templateName)
+			notificationMap.set(Constants.templateParameters, input.templateParameters);
+			if (!isNullOrUndefined(input.notificationUXObject) )
+			notificationMap.set(Constants.notificationUXObject,Microsoft.CIFramework.Utility.buildMap(JSON.parse(input.notificationUXObject)));
+
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.notifyEvent,
-				messageData: new Map().set(Constants.eventType, input.eventType).set(Constants.notificationUXObject, Microsoft.CIFramework.Utility.buildMap(JSON.parse(input.notificationUXObject))).set(Constants.correlationId, correlationId).set(Constants.templateName, input.templateName).set(Constants.templateParameters, input.templateParameters)
+				messageData: notificationMap
 			}
 			return new Promise((resolve, reject) => {
 				return sendMessage<Map<string, any>>(notifyEvent.name, payload, false, true).then(
@@ -186,17 +194,12 @@ namespace Microsoft.CIFramework
 						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
 					});
 			});
-		}else{
-			if (isNullOrUndefined(input.eventType)) {
-				let errorMsg = "The EventType parameter is blank. Provide a value to the parameter.";
-				return logErrorsAndReject(errorMsg, MessageType.notifyEvent, correlationId);
-			}
-			if (isNullOrUndefined(input.notificationUXObject)) {
-				let errorMsg = "The notificationUX parameter is blank. Provide a value to the parameter.";
+		}
+		else {
+				let errorMsg = "The Input parameter is blank. Provide a value.";
 				return logErrorsAndReject(errorMsg, MessageType.notifyEvent, correlationId);
 			}
 		}
-	}
 
 	/**
 	 * API to open the create form for given entity with data passed in pre-populated

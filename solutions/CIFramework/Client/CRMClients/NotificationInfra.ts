@@ -416,6 +416,15 @@ namespace Microsoft.CIFramework.Internal {
 				templateParameters = value;
 			}
 		}
+
+		if (!correlationId) {
+			correlationId = "";
+		}
+
+		if (templateName) {
+			return launchZFPNotificationFromTemplate(templateName, templateParameters, correlationId);
+		}
+
 		if (header == null || header == "undefined"){
 			return postMessageNamespace.rejectWithErrorMessage("The header value is blank. Provide a value to the parameter.");
 		}
@@ -436,12 +445,6 @@ namespace Microsoft.CIFramework.Internal {
 					}
 				}
 			}
-		}
-		if (!correlationId) {
-			correlationId = "";
-		}
-		if (templateName) {
-			return launchZFPNotificationFromTemplate(templateName, templateParameters, correlationId);
 		}
 		return launchZFPNotification(header, body, notificationType, eventType, actions, waitTime, correlationId);		
 	}
