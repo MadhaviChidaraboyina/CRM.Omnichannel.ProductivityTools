@@ -6,7 +6,7 @@
 	],
 	"compilerOptions": {
 		"sourceMap": true,
-		"outFile": "msdyn_EventHandlersLib.js",
+		"outFile": "../../Solution/WebResources/EventHandlersLib/msdyn_EventHandlersLib.js",
 		"module": "amd"
 	}
 }

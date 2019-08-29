@@ -2,4 +2,5 @@
 <Mapping>
   <!-- Match specific named files to an alternate folder -->
   <Folder map="WebResources" to="%XrmSolutionsRoot%\solutions\CIFramework\Package\WebResources" />
+  <Folder map="WebResources" to="%XrmSolutionsRoot%\solutions\CIFramework\Solution\WebResources" />
 </Mapping>

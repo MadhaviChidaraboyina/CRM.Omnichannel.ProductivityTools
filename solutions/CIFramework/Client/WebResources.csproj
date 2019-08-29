@@ -12,7 +12,7 @@
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <NOTARGET>true</NOTARGET>
-    <SolutionPackagePath>$(XrmSolutionsRoot)\solutions\CIFramework\Package\WebResources</SolutionPackagePath>
+    <SolutionPackagePath>$(XrmSolutionsRoot)\solutions\CIFramework\Package\WebResources\CIFramework</SolutionPackagePath>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="CIFrameworkConstants.ts" />
@@ -99,10 +99,13 @@
   </ItemGroup>
   <Target Name="CopyStatic">
     <ItemGroup>
-      <StaticWebResources Include="**\*.svg;**\*.png;**\*.jpg;**\*.jpeg;**\*.gif;**\*.htm;**\*.html;**\*.css;**\*.less;**\*.js;**\*.d.ts;**\*.resx;" Exclude="bin\**\*.*;obj\**\*.*;node_modules\**\*.*" />
+      <StaticWebResources Include="**\*.svg;**\*.png;**\*.jpg;**\*.jpeg;**\*.gif;**\*.htm;**\*.html;**\*.css;**\*.less;**\*.js;**\*.d.ts;**\*.resx;" Exclude="bin\**\*.*;obj\**\*.*;**\node_modules\**\*.*" />
     </ItemGroup>
     <Copy SourceFiles="@(StaticWebResources)" DestinationFiles="@(StaticWebResources->'$(TypeScriptOutDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="True" />
   </Target>
+     <ItemGroup>
+      <LocResx Include="Localization\CIF_webresource_strings.*.resx" />
+    </ItemGroup>
   <Target Name="SelectedOutputs" DependsOnTargets="CopyStatic">
     <ItemGroup>
       <WebResources Include="$(TypeScriptOutDir)\**\*.svg" />
@@ -119,12 +122,14 @@
     </ItemGroup>
   </Target>
   <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)\%(RecursiveDir)')">
+  <Message Text="$(TestProperty)" Importance="high"/>
+    <Copy SourceFiles="@(LocResx)" DestinationFolder="$(XrmSolutionsRoot)\solutions\CIFramework\Solution\WebResources\Localization" Retries="3" RetryDelayMilliseconds="300" />
     <PropertyGroup>
       <ExcludedFromMinification>$(TypeScriptOutDir)\**\*.js</ExcludedFromMinification>
     </PropertyGroup>
     <Copy SourceFiles="@(WebResources)" DestinationFolder="$(SolutionPackagePath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
-    <Exec Condition="$(Configuration) == 'Retail'" Command="npm run minifyClient" WorkingDirectory="..\" />
-    <Exec Condition="$(Configuration) == 'Retail'" Command="npm run minifyWidget" WorkingDirectory="..\" />
+    <Exec Condition="$(Configuration) == 'Retail'" Command="npm run minifyClient" WorkingDirectory="..\..\" />
+    <Exec Condition="$(Configuration) == 'Retail'" Command="npm run minifyWidget" WorkingDirectory="..\..\" />
     <Copy SourceFiles="@(TypeDefinitions)" DestinationFolder="$(XrmSolutionsRoot)\solutions\TypeDefinitions\CIFramework\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
   </Target>
 </Project>

@@ -11,7 +11,7 @@
 		"sourceMap": true,
 		"declaration": true,
 		"stripInternal": true,
-		"outFile": "msdyn_ciLibrary.js",
+		"outFile": "../../Solution/WebResources/Widget/msdyn_ciLibrary.js",
 		"module":"amd"
 	}
 }

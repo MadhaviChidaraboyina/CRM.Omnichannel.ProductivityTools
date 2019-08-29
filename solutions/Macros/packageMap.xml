@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mapping>
+  <!-- Match specific named files to an alternate folder -->
+  <Folder map="WebResources" to="%XrmSolutionsRoot%\solutions\Macros\Package\WebResources" />
+  <Folder map="WebResources" to="%XrmSolutionsRoot%\solutions\Macros\Solution\WebResources" />
+</Mapping>

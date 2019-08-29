@@ -5,7 +5,7 @@
 	],
 	"compilerOptions": {
 		"sourceMap": true,
-		"outFile": "msdyn_internal_presence_ci_library.js",
+		"outFile": "../../Solution/WebResources/PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js",
 		"module": "amd",
 		"allowJs": true
 	}

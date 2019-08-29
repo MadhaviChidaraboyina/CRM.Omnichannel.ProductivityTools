@@ -5,9 +5,10 @@
 	],
 	"compilerOptions": {
 		"sourceMap": true,
-		"outFile": "msdyn_internal_openDialog_ci_library.js",
+		"outFile": "../../Solution/WebResources/OpenDialogLib/msdyn_internal_openDialog_ci_library.js",
 		"module": "amd",
 		"allowJs": true,
 		"target": "es5"
 	}
 }
+

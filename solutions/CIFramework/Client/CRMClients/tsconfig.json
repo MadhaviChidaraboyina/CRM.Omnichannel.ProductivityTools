@@ -28,7 +28,7 @@
 	],
 	"compilerOptions": {
 		"sourceMap": true,
-		"outFile": "msdyn_internal_ci_library.js",
+		"outFile": "../../Solution/WebResources/CRMClients/msdyn_internal_ci_library.js",
 		"module": "amd",
 		"allowJs": true
 	}
