@@ -332,10 +332,6 @@
     <value />
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_Type' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_scenariomsdyn_WorkStreamId" xml:space="preserve">
-    <value>Unique identifier for Work Stream associated with Scenario.</value>
-    <comment>'msdyn_scenario' : Description for Attribute 'msdyn_WorkStreamId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_scenarioOverriddenCreatedOn" xml:space="preserve">
     <value>Date and time that the record was migrated.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
@@ -531,10 +527,6 @@
   <data name="1:displayname,msdyn_scenariomsdyn_Type" xml:space="preserve">
     <value>Type</value>
     <comment>'msdyn_scenario' : displayname for Attribute 'msdyn_Type' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_scenariomsdyn_WorkStreamId" xml:space="preserve">
-    <value>WorkStream</value>
-    <comment>'msdyn_scenario' : displayname for Attribute 'msdyn_WorkStreamId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioOverriddenCreatedOn" xml:space="preserve">
     <value>Record Created On</value>
