@@ -800,6 +800,7 @@
 						<CanChangeTrackingBeEnabled>1</CanChangeTrackingBeEnabled>
 						<IsEnabledForExternalChannels>0</IsEnabledForExternalChannels>
 						<IsSolutionAware>0</IsSolutionAware>
+						<IconVectorName>msdyn_channel.svg</IconVectorName>
 				</entity>
 		</EntityInfo>
 		<FormXml />

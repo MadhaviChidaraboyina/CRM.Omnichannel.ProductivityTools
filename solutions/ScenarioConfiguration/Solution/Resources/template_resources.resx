@@ -121,7 +121,7 @@
     <value>1033</value>
   </metadata>
   <metadata name="Source file" xml:space="preserve">
-    <value>msdyn_ScenarioConfiguration_managed.zip</value>
+    <value>ScenariosAndChannels_managed.zip</value>
   </metadata>
   <metadata name="Source package type" xml:space="preserve">
     <value>Both</value>
@@ -152,17 +152,17 @@
     <value>Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
-  <data name="15062:Description,ScenarioConfiguration" xml:space="preserve">
-    <value>Add on CIF</value>
-    <comment> 'ScenarioConfiguration' : Description for Solution</comment>
+  <data name="15062:Description,ScenariosAndChannels" xml:space="preserve">
+    <value>This solution provides web resources to use scenarios and configure channels.</value>
+    <comment> 'ScenariosAndChannels' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
     <value>Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,ScenarioConfiguration" xml:space="preserve">
-    <value>ScenarioConfiguration</value>
-    <comment> 'ScenarioConfiguration' : LocalizedName for Solution</comment>
+  <data name="15062:LocalizedName,ScenariosAndChannels" xml:space="preserve">
+    <value>Scenarios and Channels</value>
+    <comment> 'ScenariosAndChannels' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,channel{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" xml:space="preserve">
     <value>A form for this entity.</value>
