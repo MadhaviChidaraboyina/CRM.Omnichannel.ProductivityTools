@@ -87,7 +87,16 @@ namespace Microsoft.CIFramework.Internal {
 		 * of the session which was created
 		 */
 		onSessionCreated(event: any): void {
-			//state.client.setPanelMode("setPanelMode", Constants.sidePanelHiddenState);
+			//state.client.setPanelMode("setPanelMode", Constants.sidePanelHiddenState);  
+			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
+			let newSessionId = eventMap.get(Constants.newSessionId);
+			let newProvider = state.sessionManager.getProvider(newSessionId);
+			if (newProvider != null) {             
+				state.client.setPanelMode("setPanelMode", state.sessionManager.getPanelState(newSessionId));
+			}
+			else {
+				state.client.setPanelMode("setPanelMode", Constants.sidePanelHiddenState);
+			}
 		}
 
 		getFocusedSession(telemetryData?: Object): string {
