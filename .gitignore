@@ -86,9 +86,13 @@ solutions/TypeDefinitions/CIFramework/
 
 #Copied webresources after build
 /solutions/CIFramework/Package/WebResources/
-/solutions/CIFramework/Solution/WebResources/
+/solutions/CIFramework/Solution/WebResources/**/*.js
+/solutions/CIFramework/Solution/WebResources/**/*.map
+/solutions/CIFramework/Solution/WebResources/**/*.resx
 /solutions/Macros/Package/WebResources/
-/solutions/Macros/Solution/WebResources/
+/solutions/Macros/Solution/WebResources/**/*.js
+/solutions/Macros/Solution/WebResources/**/*.map
+/solutions/Macros/Solution/WebResources/**/*.resx
 
 #stylecop files being generated in project folders after build 
 /solutions/CIFramework/Client/Settings.StyleCop
