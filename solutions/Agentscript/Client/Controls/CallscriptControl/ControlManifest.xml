@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+	<control namespace="MscrmControls.ProductivityPanel" constructor="CallscriptControl" version="1.0.0" display-name-key="CC_Callscript_Control" control-type="virtual">
+		<property name="FieldControl" display-name-key="CC_FieldControl" description-key="CC_FieldControl_Desc" usage="bound" of-type="SingleLine.Text" hidden="false"/>
+		<modes>
+		</modes>
+		
+		<resources>
+			<!--Should match the control project name-->
+			<library name="mscommon" version=">=1" order="1">
+				<packaged_library path="libs/mscommonlib-1.0.0.js" version="1.2.22" />
+			</library>
+			<code path="CallscriptControl.js" order="2" />
+			<resx path="strings/CallscriptControl.1033.resx" version="1.0.1" />
+		</resources>
+	</control>
+</manifest>

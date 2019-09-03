@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>0</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{08acace2-86c5-e911-a81c-000d3a6d8160}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="msdyn_name" select="1" preview="1" icon="1">
+        <row name="result" id="msdyn_agentscriptstepid">
+          <cell name="msdyn_order" width="100" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="msdyn_name" width="150" />
+          <cell name="msdyn_actiontype" width="100" />
+          <cell name="msdyn_textinstruction" width="100" disableSorting="1" />
+          <cell name="msdyn_macroactionid" width="100" />
+          <cell name="msdyn_routeactionid" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="msdyn_agentscriptstep">
+          <attribute name="msdyn_name" />
+          <order attribute="msdyn_order" descending="false" />
+          <attribute name="msdyn_routeactionid" />
+          <attribute name="msdyn_macroactionid" />
+          <attribute name="msdyn_actiontype" />
+          <attribute name="msdyn_order" />
+          <attribute name="msdyn_textinstruction" />
+          <attribute name="msdyn_agentscriptstepid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Agent Script Steps" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

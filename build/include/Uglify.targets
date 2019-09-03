@@ -13,7 +13,7 @@
 
   <Target Name="CollectScriptWebResourcesToMinify" AfterTargets="AfterBuild">
     <ItemGroup>
-      <ScriptWebResources Include="$(TypeScriptOutDir)\**\*.js" Exclude="$(ExcludedFromMinification)" />
+      <ScriptWebResources Include="$(TypeScriptOutDir)\**\*.js" Exclude="$(ExcludedFromMinification)" Condition="'$(TypeScriptOutDir)'!=''" />
     </ItemGroup>
     <Message text="ScriptWebResources directory: $(TypeScriptOutDir)" Importance="High" />
   </Target>

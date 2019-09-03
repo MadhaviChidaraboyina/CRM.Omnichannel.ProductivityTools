@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships>
+	<EntityRelationship Name="business_unit_msdyn_agentscript" />
+	<EntityRelationship Name="business_unit_msdyn_agentscriptstep" />
+	<EntityRelationship Name="lk_msdyn_agentscript_createdby" />
+	<EntityRelationship Name="lk_msdyn_agentscript_modifiedby" />
+	<EntityRelationship Name="lk_msdyn_agentscriptstep_createdby" />
+	<EntityRelationship Name="lk_msdyn_agentscriptstep_modifiedby" />
+	<EntityRelationship Name="msdyn_msdyn_agentscript_msdyn_agentscriptstep" />
+	<EntityRelationship Name="msdyn_msdyn_agentscript_routeaction" />
+	<EntityRelationship Name="msdyn_workflow_msdyn_agentscriptstep" />
+	<EntityRelationship Name="owner_msdyn_agentscript" />
+	<EntityRelationship Name="owner_msdyn_agentscriptstep" />
+	<EntityRelationship Name="team_msdyn_agentscript" />
+	<EntityRelationship Name="team_msdyn_agentscriptstep" />
+	<EntityRelationship Name="user_msdyn_agentscript" />
+	<EntityRelationship Name="user_msdyn_agentscriptstep" />
+</EntityRelationships>

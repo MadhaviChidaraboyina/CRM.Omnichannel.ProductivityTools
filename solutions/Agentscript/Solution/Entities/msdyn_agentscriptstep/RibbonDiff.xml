@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_agentscriptstep.Activate.Hide" Location="Mscrm.Form.msdyn_agentscriptstep.Activate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_agentscriptstep.Deactivate.Hide" Location="Mscrm.Form.msdyn_agentscriptstep.Deactivate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_agentscriptstep.WordTemplate.Hide" Location="Mscrm.Form.msdyn_agentscriptstep.WordTemplate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_agentscriptstep.Flows.RefreshCommandBar.Hide" Location="Mscrm.Form.msdyn_agentscriptstep.Flows.RefreshCommandBar" />
+    
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_agentscriptstep.Activate.Hide" Location="Mscrm.HomepageGrid.msdyn_agentscriptstep.Activate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_agentscriptstep.Deactivate.Hide" Location="Mscrm.HomepageGrid.msdyn_agentscriptstep.Deactivate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_agentscriptstep.WordTemplate.Hide" Location="Mscrm.HomepageGrid.msdyn_agentscriptstep.WordTemplate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_agentscriptstep.DocumentTemplate.Hide" Location="Mscrm.HomepageGrid.msdyn_agentscriptstep.DocumentTemplate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_agentscriptstep.Flows.RefreshCommandBar.Hide" Location="Mscrm.HomepageGrid.msdyn_agentscriptstep.Flows.RefreshCommandBar" />
+
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_agentscriptstep.Activate.Hide" Location="Mscrm.SubGrid.msdyn_agentscriptstep.Activate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_agentscriptstep.Deactivate.Hide" Location="Mscrm.SubGrid.msdyn_agentscriptstep.Deactivate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_agentscriptstep.WordTemplate.Hide" Location="Mscrm.SubGrid.msdyn_agentscriptstep.WordTemplate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_agentscriptstep.DocumentTemplate.Hide" Location="Mscrm.SubGrid.msdyn_agentscriptstep.DocumentTemplate" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions />
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\Packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props" />
+  <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{4ACD11F0-7724-4469-A849-F6F0B99032D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agentscript.Xrm.IntegrationTests</RootNamespace>
+    <AssemblyName>Agentscript.Xrm.IntegrationTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Dynamics.Solution.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>$(PKG_XRMAPP_SOLUTIONCOMMON)\$(SCPATH)\Microsoft.Dynamics.Solution.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Test">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>$(PKG_XRMTESTSDK)\lib\net452\Microsoft.Xrm.Sdk.Test.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Test.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>$(PKG_CDSXRMSERVER)\lib\net452\Microsoft.Xrm.Test.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>$(PKG_MOQ)\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Framework\DefaultTestCollection.cs" />
+    <Compile Include="Framework\IntegrationTest.cs" />
+    <Compile Include="Framework\SolutionFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\AgentscriptCommon.csproj">
+      <Project>{14D5A07C-BF4C-4CAF-AA28-ACD97221C2EE}</Project>
+      <Name>AgentscriptCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestCommon\AgentscriptTestCommon.csproj">
+      <Project>{2B5435A0-A313-4473-8A2D-D0E1184B90DF}</Project>
+      <Name>AgentscriptTestCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\ServerTests.targets" />
+  <Import Project="$(PKG_STYLECOP)\build\StyleCop.MSBuild.Targets" Condition=" '$(EnableStyleCopCheck)' == 'true' " />
+</Project>
