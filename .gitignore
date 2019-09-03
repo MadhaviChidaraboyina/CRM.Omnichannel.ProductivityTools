@@ -7,6 +7,7 @@
 *.o
 *.obj
 *.StyleCop
+*.Cache
 
 # Precompiled Headers
 *.gch
@@ -79,11 +80,15 @@ solutions/TypeDefinitions/CIFramework/
 /src/**/tsconfig.json
 
 #Generated js files 
-/solutions/CIFramework/Package/WebResources/
 /solutions/CIFramework/Client/**/*.js
 /solutions/CIFramework/Client/**/*.map
-/solutions/CIFramework/Solution/WebResources/*.js
 /solutions/CIFramework/Client.UnitTests/*.js
+
+#Copied webresources after build
+/solutions/CIFramework/Package/WebResources/
+/solutions/CIFramework/Solution/WebResources/
+/solutions/Macros/Package/WebResources/
+/solutions/Macros/Solution/WebResources/
 
 #stylecop files being generated in project folders after build 
 /solutions/CIFramework/Client/Settings.StyleCop
