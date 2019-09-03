@@ -15,6 +15,7 @@
 		"ConsoleAppSessionManager.ts",
 		"SessionManager.ts",
 		"SessionPanel.ts",
+		"CIFExternalUtility.ts",
 		"State.ts",
 		"WebClient.ts",
 		"WidgetIFrame.ts",

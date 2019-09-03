@@ -42,6 +42,7 @@
     <TypeScriptCompile Include="CRMClients\ConsoleAppSessionManager.ts" />
     <TypeScriptCompile Include="CRMClients\SessionPanel.ts" />
     <TypeScriptCompile Include="CRMClients\PresenceControl.ts" />
+    <TypeScriptCompile Include="CRMClients\CIFExternalUtility.ts" />
     <TypeScriptCompile Include="TelemetryConstants.ts" />
     <TypeScriptCompile Include="PresenceEventHandlersLib\PresenceDialogControl.ts" />
     <TypeScriptCompile Include="TelemetryHelper.ts" />
