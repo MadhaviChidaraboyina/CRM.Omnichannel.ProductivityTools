@@ -74,7 +74,7 @@
       <SelectedLibsOutputs Include="libs\*.*" />
       <SelectedcssOutputs Include="css\*.*" />
       <SelectedOutputs Include="$(TypeScriptOutFile)" />
-      <SelectedOutputs Include="MinifiedWebResources\$(TypeScriptOutFile)" Condition="'$(Configuration)' == 'retail' OR '$(MinifyOnDebug)' == 'true'" />
+      <!--<SelectedOutputs Include="MinifiedWebResources\$(TypeScriptOutFile)" Condition="'$(Configuration)' == 'retail' OR '$(MinifyOnDebug)' == 'true'" />-->
       <SelectedOutputs Include="ControlManifest.xml" />
       <SelectedimgOutputs Include="img\*.*" />
       <SelectedStringOutputs Include="strings\*.*" />

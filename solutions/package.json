@@ -6,7 +6,7 @@
   "scripts": {
     "minifyClient": "minify CIFramework/Solution/WebResources/CRMClients -d CIFramework/Solution/WebResources/CRMClients",
     "minifyWidget": "minify CIFramework/Solution/WebResources/Widget -d CIFramework/Solution/WebResources/Widget",
-    "minifyMacrosClient": "minify Macros/Solution/WebResources/CRMClients -d Macros/Solution/WebResources/CRMClients"
+    "minifyMacrosClient": "minify ProductivityMacros/Solution/WebResources/CRMClients -d ProductivityMacros/Solution/WebResources/CRMClients"
   },
   "author": "",
   "license": "ISC",
