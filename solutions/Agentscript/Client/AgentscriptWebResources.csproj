@@ -21,6 +21,7 @@
       <Link>TypeDefinitions\microsoft.ajax.d.ts</Link>
     </TypeScriptCompile>
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
+    <TypeScriptCompile Include="AgentscriptFormScript\AgentscriptFormScript.ts" />
     <TypeScriptCompile Include="FormScripts\AgentScriptStepFormScript.ts" />
     <TypeScriptCompile Include="FormScripts\Constants.ts" />
     <TypeScriptCompile Include="Localization\Provider\StringProvider.ts" />
@@ -44,6 +45,7 @@
     <Content Include="Localization\Provider\tsconfig.json" />
     <Content Include="DummyWebResource\tsconfig.json" />
     <Content Include="FormScripts\tsconfig.json" />
+    <Content Include="AgentscriptFormScript\tsconfig.json" />
   </ItemGroup>
   <Target Name="CopyResource">
     <Copy SourceFiles="Localization\Languages\Agentscript.resx" DestinationFiles="Localization\Languages\Agentscript.1033.resx" SkipUnchangedFiles="True" />
