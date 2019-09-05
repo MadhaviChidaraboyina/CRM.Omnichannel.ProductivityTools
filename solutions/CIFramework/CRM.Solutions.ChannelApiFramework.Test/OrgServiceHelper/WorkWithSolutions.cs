@@ -161,8 +161,8 @@ namespace Microsoft.Crm.Sdk.Samples
 			string loginUrl = "http://" + Constants.USER_NAME + ":" + Constants.PASSWORD + "@" + getUrl;
 
 			Guid appId = GetAppID(appModuleName);
-			Constants.CLIENT_URL += "/CITTest/main.aspx?appid=" + appId;
-			loginUrl = string.Format("{0}/CITTest/main.aspx?appid={1}", loginUrl, appId);
+			Constants.CLIENT_URL += string.Format("/{0}/main.aspx?appid=", ConfigUtil.DomainName) + appId;
+			loginUrl = string.Format("{0}/{2}/main.aspx?appid={1}", loginUrl, appId, ConfigUtil.DomainName);
 			return loginUrl;
 
 		}
@@ -238,7 +238,7 @@ namespace Microsoft.Crm.Sdk.Samples
 			IWebElement urlTextBox = driver.FindElement(By.XPath("//*[@data-id='msdyn_landingurl.fieldControl-url-text-input']"));
 			if (Constants.CLIENT_URL.IndexOf("http://") > -1)
 			{
-				string url = ConfigUtil.RootDiscoveryServiceUrl + "/CITTest/WebResources/CIFramework_Test_Case_Helper_File_V1";
+				string url = ConfigUtil.RootDiscoveryServiceUrl + string.Format("/{0}/WebResources/CIFramework_Test_Case_Helper_File_V1", ConfigUtil.DomainName);
 				setInputValue(urlTextBox, url);
 			}
 			else
