@@ -2,7 +2,7 @@
 	<ItemGroup>
 		<ProjectToBuild Include="CIFramework\dirs.proj" />
 		<ProjectToBuild Include="ScenarioConfiguration\dirs.proj" />
-		<ProjectToBuild Include="Macros\dirs.proj" />
+		<ProjectToBuild Include="ProductivityMacros\dirs.proj" />
 		<ProjectToBuild Include="Agentscript\dirs.proj" />
 	</ItemGroup>
 	<Target Name="Clean">

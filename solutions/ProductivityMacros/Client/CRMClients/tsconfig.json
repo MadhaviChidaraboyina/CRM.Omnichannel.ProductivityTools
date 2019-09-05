@@ -1,0 +1,11 @@
+{
+	"extends":  "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+  "include": [
+    "../ProductivityMacrosUtilities.ts"
+  ],
+  "compilerOptions": {
+    "sourceMap": true,
+    "outFile": "../../Solution/WebResources/CRMClients/msdyn_ProductivityMacros_internal_library.js",
+    "module": "amd"
+  }
+}
