@@ -1,45 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
-  <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
-  <PropertyGroup>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <NOTARGET>true</NOTARGET>
-    <SolutionFileNamePrefix>msdyn_ProductivityMacros</SolutionFileNamePrefix>
-    <ApplicationFolder>$(XrmSolutionsRoot)\solutions\ProductivityMacros</ApplicationFolder>
-    <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
-    <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
-    <ProjectGuid>{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}</ProjectGuid>
-    <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls</CustomControlsPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>$(WSRoot)\drop\debug\AnyCPU\Solutions</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug\Sales_LinkedInIntegration.XML</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>$(WSRoot)\drop\Release\AnyCPU\Solutions</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <ItemGroup>
-    <Content Include="Other\Customizations.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Other\Solution.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="WebResources\Localization\ProductivityMacros_webresource_strings.1033.resx.data.xml" />
-  </ItemGroup>
-  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
-  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
+	<Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
+	<PropertyGroup>
+		<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+		<NOTARGET>true</NOTARGET>
+		<SolutionFileNamePrefix>msdyn_ProductivityMacros</SolutionFileNamePrefix>
+		<ApplicationFolder>$(XrmSolutionsRoot)\solutions\ProductivityMacros</ApplicationFolder>
+		<SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
+		<PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
+		<ProjectGuid>{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}</ProjectGuid>
+		<CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls</CustomControlsPath>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>$(WSRoot)\drop\debug\AnyCPU\Solutions</OutputPath>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<Prefer32Bit>false</Prefer32Bit>
+		<DocumentationFile>bin\Debug\Sales_LinkedInIntegration.XML</DocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<OutputPath>$(WSRoot)\drop\Release\AnyCPU\Solutions</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<Prefer32Bit>false</Prefer32Bit>
+	</PropertyGroup>
+	<ItemGroup>
+		<Content Include="Entities\MacroActionTemplate\Entity.xml" />
+		<Content Include="Entities\MacroActionTemplate\FormXml\main\{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}_managed.xml" />
+		<Content Include="Entities\MacroActionTemplate\SavedQueries\{7edfc44b-9171-4b03-b3fa-8f98c144543c}.xml" />
+		<Content Include="Entities\MacroActionTemplate\SavedQueries\{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}.xml" />
+		<Content Include="Entities\MacroActionTemplate\SavedQueries\{728594b5-08ae-442b-b4c5-36baa67c2e52}.xml" />
+		<Content Include="Entities\MacroActionTemplate\SavedQueries\{2fc6654b-0626-475b-ba71-dba1a5b84ddd}.xml" />
+		<Content Include="Entities\MacroActionTemplate\SavedQueries\{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}.xml" />
+		<Content Include="Entities\MacroActionTemplate\SavedQueries\{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}.xml" />
+		<Content Include="Entities\MacroActionTemplate\SavedQueries\{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}.xml" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="Other\Customizations.xml">
+			<SubType>Designer</SubType>
+		</Content>
+		<Content Include="Other\Solution.xml">
+			<SubType>Designer</SubType>
+		</Content>
+		<Content Include="WebResources\Localization\ProductivityMacros_webresource_strings.1033.resx.data.xml" />
+	</ItemGroup>
+	<Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
+	<Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
 </Project>

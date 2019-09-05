@@ -70,9 +70,9 @@
     </ItemGroup>
     <Copy SourceFiles="@(StaticWebResources)" DestinationFiles="@(StaticWebResources->'$(TypeScriptOutDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="True" />
   </Target>
-       <ItemGroup>
-      <LocResx Include="Localization\ProductivityMacros_webresource_strings.*.resx" />
-    </ItemGroup>
+  <ItemGroup>
+    <LocResx Include="Localization\ProductivityMacros_webresource_strings.*.resx" />
+  </ItemGroup>
   <Target Name="SelectedOutputs" DependsOnTargets="CopyStatic">
     <ItemGroup>
       <WebResources Include="$(TypeScriptOutDir)\**\*.svg" />
@@ -89,7 +89,7 @@
     </ItemGroup>
   </Target>
   <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)\%(RecursiveDir)')">
-  <Copy SourceFiles="@(LocResx)" DestinationFolder="$(XrmSolutionsRoot)\solutions\ProductivityMacros\Solution\WebResources\Localization" Retries="3" RetryDelayMilliseconds="300" />
+    <Copy SourceFiles="@(LocResx)" DestinationFolder="$(XrmSolutionsRoot)\solutions\ProductivityMacros\Solution\WebResources\Localization" Retries="3" RetryDelayMilliseconds="300" />
     <PropertyGroup>
       <ExcludedFromMinification>$(TypeScriptOutDir)\**\*.js</ExcludedFromMinification>
     </PropertyGroup>
