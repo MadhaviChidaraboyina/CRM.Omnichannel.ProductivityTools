@@ -3,7 +3,7 @@
   <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
   <PropertyGroup>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <SolutionFileNamePrefix>ScenariosAndChannels</SolutionFileNamePrefix>
+    <SolutionFileNamePrefix>msdyn_ScenariosAndChannels</SolutionFileNamePrefix>
     <ApplicationFolder>$(XrmSolutionsRoot)\solutions\ScenarioConfiguration</ApplicationFolder>
     <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
     <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
