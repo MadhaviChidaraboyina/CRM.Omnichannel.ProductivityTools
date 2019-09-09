@@ -1,5 +1,5 @@
 
-<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" timestamp="9/9/2019 6:02:49 PM">
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" timestamp="9/9/2019 8:11:20 PM">
   <entity name="msdyn_actioninputparameter" displayname="Action Input Parameter">
     <records>
       <record id="f530a3d1-f9d2-e911-a81e-000d3a015920">
@@ -115,29 +115,29 @@
       <record id="01a02947-f9d2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 11:59:30 AM" />
-        <field name="msdyn_actionDescription" value="Open an entity form to create a new record" />
+        <field name="msdyn_actionDescription" value="Open a new form to create a record." />
         <field name="msdyn_displayname" value="Create New" />
         <field name="msdyn_macroactiontemplateid" value="01a02947-f9d2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 11:59:30 AM" />
+        <field name="modifiedon" value="9/9/2019 2:30:21 PM" />
         <field name="msdyn_name" value="Create_New" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Create New" />
-        <field name="msdyn_summary" value="Open an entity form to create a new record" />
-        <field name="msdyn_title" value="Open a form to create a new record" />
+        <field name="msdyn_subtitle" value="Create new" />
+        <field name="msdyn_summary" value="Open a new form to create a record" />
+        <field name="msdyn_title" value="Open a new form to create a record" />
       </record>
       <record id="e6c81912-fad2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 12:05:10 PM" />
-        <field name="msdyn_actionDescription" value="Open an existing entity record" />
-        <field name="msdyn_displayname" value="Open Form" />
+        <field name="msdyn_actionDescription" value="Open an existing record" />
+        <field name="msdyn_displayname" value="Open form" />
         <field name="msdyn_macroactiontemplateid" value="e6c81912-fad2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 12:05:10 PM" />
+        <field name="modifiedon" value="9/9/2019 2:33:15 PM" />
         <field name="msdyn_name" value="Open_Form" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
@@ -145,26 +145,26 @@
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_subtitle" value="Open Form" />
-        <field name="msdyn_summary" value="Open an existing entity record" />
-        <field name="msdyn_title" value="Open Entity Form" />
+        <field name="msdyn_summary" value="Open an existing record" />
+        <field name="msdyn_title" value="Open an existing record" />
       </record>
       <record id="1c1af956-fad2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 12:07:06 PM" />
-        <field name="msdyn_actionDescription" value="Open an entity grid" />
-        <field name="msdyn_displayname" value="Open Grid" />
+        <field name="msdyn_actionDescription" value="Open a record grid" />
+        <field name="msdyn_displayname" value="Open grid" />
         <field name="msdyn_macroactiontemplateid" value="1c1af956-fad2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 12:07:06 PM" />
+        <field name="modifiedon" value="9/9/2019 2:33:57 PM" />
         <field name="msdyn_name" value="Open_Grid" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Open Grid" />
-        <field name="msdyn_summary" value="Open an entity grid" />
-        <field name="msdyn_title" value="Open an entity grid" />
+        <field name="msdyn_subtitle" value="Open grid" />
+        <field name="msdyn_summary" value="Open a record grid" />
+        <field name="msdyn_title" value="Open a record grid" />
       </record>
       <record id="baa326ad-fad2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -241,38 +241,38 @@
       <record id="85ab814a-fcd2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 12:21:04 PM" />
-        <field name="msdyn_actionDescription" value="Search the knowledge base for the provided phrase" />
-        <field name="msdyn_displayname" value="Search knowledge base" />
+        <field name="msdyn_actionDescription" value="Search the knowledge base for the populated phrase" />
+        <field name="msdyn_displayname" value="Search knowledge base article" />
         <field name="msdyn_macroactiontemplateid" value="85ab814a-fcd2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 12:21:04 PM" />
+        <field name="modifiedon" value="9/9/2019 2:37:49 PM" />
         <field name="msdyn_name" value="Search_knowledge_base" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Search knowledge base" />
-        <field name="msdyn_summary" value="Search knowledge base" />
-        <field name="msdyn_title" value="Search knowledge base" />
+        <field name="msdyn_subtitle" value="Search the knowledge base for the populated phrase" />
+        <field name="msdyn_summary" value="Search the knowledge base for the populated phrase" />
+        <field name="msdyn_title" value="Search the knowledge base for the populated phrase" />
       </record>
       <record id="16fc3387-fcd2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 12:22:46 PM" />
-        <field name="msdyn_actionDescription" value="Perform CRM relevance search on search string" />
+        <field name="msdyn_actionDescription" value="Do a relevance search based on the phrase" />
         <field name="msdyn_displayname" value="Search by relevance" />
         <field name="msdyn_macroactiontemplateid" value="16fc3387-fcd2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 12:22:46 PM" />
+        <field name="modifiedon" value="9/9/2019 2:36:34 PM" />
         <field name="msdyn_name" value="Search_by_relevance" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Search by relevance" />
-        <field name="msdyn_summary" value="CRM relevance search" />
-        <field name="msdyn_title" value="CRM relevance search" />
+        <field name="msdyn_subtitle" value="Do a relevance search based on the phrase" />
+        <field name="msdyn_summary" value="Do a relevance search based on the phrase" />
+        <field name="msdyn_title" value="Do a relevance search based on the phrase" />
       </record>
       <record id="101c73b5-fcd2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -281,14 +281,14 @@
         <field name="msdyn_displayname" value="Save" />
         <field name="msdyn_macroactiontemplateid" value="101c73b5-fcd2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 12:24:03 PM" />
+        <field name="modifiedon" value="9/9/2019 2:35:34 PM" />
         <field name="msdyn_name" value="Save" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Save" />
+        <field name="msdyn_subtitle" value="Save the record" />
         <field name="msdyn_summary" value="Save the record" />
         <field name="msdyn_title" value="Save the record" />
       </record>
@@ -299,34 +299,34 @@
         <field name="msdyn_displayname" value="Refresh" />
         <field name="msdyn_macroactiontemplateid" value="19c8c1c6-fcd2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 12:24:32 PM" />
+        <field name="modifiedon" value="9/9/2019 2:35:16 PM" />
         <field name="msdyn_name" value="Refresh" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Refresh" />
+        <field name="msdyn_subtitle" value="Refresh the page" />
         <field name="msdyn_summary" value="Refresh the page" />
         <field name="msdyn_title" value="Refresh the page" />
       </record>
       <record id="ce3390dd-fcd2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 12:25:11 PM" />
-        <field name="msdyn_actionDescription" value="Update an existing CRM record" />
-        <field name="msdyn_displayname" value="Update Record" />
+        <field name="msdyn_actionDescription" value="Update an existing record" />
+        <field name="msdyn_displayname" value="Update record" />
         <field name="msdyn_macroactiontemplateid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 12:25:11 PM" />
+        <field name="modifiedon" value="9/9/2019 2:39:43 PM" />
         <field name="msdyn_name" value="Update_Record" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Update Record" />
-        <field name="msdyn_summary" value="Update CRM Record" />
-        <field name="msdyn_title" value="Update Record" />
+        <field name="msdyn_subtitle" value="Update an existing record" />
+        <field name="msdyn_summary" value="Update an existing record" />
+        <field name="msdyn_title" value="Update an existing record" />
       </record>
       <record id="d965ea11-fdd2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -349,56 +349,56 @@
       <record id="e903922e-fdd2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 12:27:27 PM" />
-        <field name="msdyn_actionDescription" value="Open an email form with preconfigured template" />
-        <field name="msdyn_displayname" value="Draft Email" />
+        <field name="msdyn_actionDescription" value="Open an email form with predefined template" />
+        <field name="msdyn_displayname" value="Email" />
         <field name="msdyn_macroactiontemplateid" value="e903922e-fdd2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 12:27:27 PM" />
+        <field name="modifiedon" value="9/9/2019 2:31:31 PM" />
         <field name="msdyn_name" value="Draft_Email" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Draft Email" />
-        <field name="msdyn_summary" value="Open draft email" />
-        <field name="msdyn_title" value="Draft Email" />
+        <field name="msdyn_subtitle" value="Open an email form with predefined template" />
+        <field name="msdyn_summary" value="Open an email form with predefined template" />
+        <field name="msdyn_title" value="Open an email form with predefined template" />
       </record>
       <record id="0e59ec44-fdd2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 12:28:04 PM" />
-        <field name="msdyn_actionDescription" value="Send Knowledge Base Article" />
-        <field name="msdyn_displayname" value="Send KB" />
+        <field name="msdyn_actionDescription" value="Send knowledge base article" />
+        <field name="msdyn_displayname" value="Send knowledge base" />
         <field name="msdyn_macroactiontemplateid" value="0e59ec44-fdd2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 12:28:04 PM" />
+        <field name="modifiedon" value="9/9/2019 2:38:44 PM" />
         <field name="msdyn_name" value="Send_KB" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Send KB" />
-        <field name="msdyn_summary" value="Send KB" />
-        <field name="msdyn_title" value="Send KB" />
+        <field name="msdyn_subtitle" value="Send knowledge base article" />
+        <field name="msdyn_summary" value="Send knowledge base article" />
+        <field name="msdyn_title" value="Send knowledge base article" />
       </record>
       <record id="68e92456-fdd2-e911-a81e-000d3a015920">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 12:28:33 PM" />
-        <field name="msdyn_actionDescription" value="Create a clone of the given record and open it in the session" />
+        <field name="msdyn_actionDescription" value="Clone a record and open it in a session" />
         <field name="msdyn_displayname" value="Clone record" />
         <field name="msdyn_macroactiontemplateid" value="68e92456-fdd2-e911-a81e-000d3a015920" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 12:28:33 PM" />
+        <field name="modifiedon" value="9/9/2019 2:29:00 PM" />
         <field name="msdyn_name" value="Clone_record" />
         <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Clone record" />
-        <field name="msdyn_summary" value="Clone record" />
-        <field name="msdyn_title" value="Clone record" />
+        <field name="msdyn_subtitle" value="Clone a record and open it in a session" />
+        <field name="msdyn_summary" value="Clone a record and open it in a session" />
+        <field name="msdyn_title" value="Clone a record and open it in a session" />
       </record>
     </records>
     <m2mrelationships />
