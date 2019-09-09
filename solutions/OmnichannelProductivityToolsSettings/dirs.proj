@@ -1,11 +1,10 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<ProjectToBuild Include="CIFramework\dirs.proj" />
-		<ProjectToBuild Include="ScenarioConfiguration\dirs.proj" />
-		<ProjectToBuild Include="ProductivityMacros\dirs.proj" />
-		<ProjectToBuild Include="Agentscript\dirs.proj" />
-		<ProjectToBuild Include="OmnichannelProductivityToolsSettings\dirs.proj" />
+		<ProjectToBuild Include="solutions.proj" Condition="'$(EnableSigning)'!='true'" /> 
 	</ItemGroup>
+	<PropertyGroup>
+		<SolutionOutputPath>$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions</SolutionOutputPath>
+  	</PropertyGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
 	</Target>

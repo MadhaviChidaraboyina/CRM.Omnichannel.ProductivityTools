@@ -107,6 +107,168 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to View and access all the customer information at your fingertips at one place to deliver a faster service..
+        /// </summary>
+        internal static string FRE_COMPREHENSIVEVIEW_DESC {
+            get {
+                return ResourceManager.GetString("FRE_COMPREHENSIVEVIEW_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comprehensive view of your customers&apos; journey.
+        /// </summary>
+        internal static string FRE_COMPREHENSIVEVIEW_TITLE {
+            get {
+                return ResourceManager.GetString("FRE_COMPREHENSIVEVIEW_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invite other agents, supervisors to collaborate and solve the issues faster..
+        /// </summary>
+        internal static string FRE_CONSULT_DESC {
+            get {
+                return ResourceManager.GetString("FRE_CONSULT_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Consult with users.
+        /// </summary>
+        internal static string FRE_CONSULT_TITLE {
+            get {
+                return ResourceManager.GetString("FRE_CONSULT_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access and manage sitemap applications that lie within the context of a session..
+        /// </summary>
+        internal static string FRE_CONTEXTUALAPPS_DESC {
+            get {
+                return ResourceManager.GetString("FRE_CONTEXTUALAPPS_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contextual applications.
+        /// </summary>
+        internal static string FRE_CONTEXTUALAPPS_TITLE {
+            get {
+                return ResourceManager.GetString("FRE_CONTEXTUALAPPS_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t show me again.
+        /// </summary>
+        internal static string FRE_DONTSHOWMEAGAIN {
+            get {
+                return ResourceManager.GetString("FRE_DONTSHOWMEAGAIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quickly open work items with keyboard and mouse-click gesture and maximize your productivity..
+        /// </summary>
+        internal static string FRE_GETMOREDONE_DESC {
+            get {
+                return ResourceManager.GetString("FRE_GETMOREDONE_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get more done.
+        /// </summary>
+        internal static string FRE_GETMOREDONE_TITLE {
+            get {
+                return ResourceManager.GetString("FRE_GETMOREDONE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get Started.
+        /// </summary>
+        internal static string FRE_GETSTARTED {
+            get {
+                return ResourceManager.GetString("FRE_GETSTARTED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string FRE_INTRO_SLIDE_DESC {
+            get {
+                return ResourceManager.GetString("FRE_INTRO_SLIDE_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string FRE_INTRO_SLIDE_TITLE {
+            get {
+                return ResourceManager.GetString("FRE_INTRO_SLIDE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Done.
+        /// </summary>
+        internal static string FRE_LASTSLIDE_TITLE {
+            get {
+                return ResourceManager.GetString("FRE_LASTSLIDE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to of.
+        /// </summary>
+        internal static string FRE_PAGINATION_OF {
+            get {
+                return ResourceManager.GetString("FRE_PAGINATION_OF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfer the conversations smoothly to the best-qualified agents to resolve them fast..
+        /// </summary>
+        internal static string FRE_TRANSFER_DESC {
+            get {
+                return ResourceManager.GetString("FRE_TRANSFER_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfer the conversation.
+        /// </summary>
+        internal static string FRE_TRANSFER_TITLE {
+            get {
+                return ResourceManager.GetString("FRE_TRANSFER_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage multiple customer conversations simultaneously with complete control of the context and customer details..
+        /// </summary>
+        internal static string FRE_WORKWITHMULTIPLE_DESC {
+            get {
+                return ResourceManager.GetString("FRE_WORKWITHMULTIPLE_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Work with multiple customers.
+        /// </summary>
+        internal static string FRE_WORKWITHMULTIPLE_TITLE {
+            get {
+                return ResourceManager.GetString("FRE_WORKWITHMULTIPLE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Launch presence dialog.
         /// </summary>
         internal static string LAUNCH_PRESENCE_DIALOG_TOOLTIP {

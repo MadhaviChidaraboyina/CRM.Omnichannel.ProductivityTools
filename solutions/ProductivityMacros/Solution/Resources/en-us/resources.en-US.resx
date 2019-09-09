@@ -148,4 +148,536 @@
     <value>Macros</value>
     <comment> 'ProductivityMacros' : LocalizedName for Solution</comment>
   </data>
+  <data name="1:Description,Macro Action Template{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" xml:space="preserve">
+    <value>A form for this entity.</value>
+    <comment>'Macro Action Template' : Description for systemform in Entity FormXml ID: '{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}'</comment>
+  </data>
+  <data name="1:Description,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
+    <value>Active Macro Action Templates owned by me</value>
+    <comment>'Macro Action Template' : Description for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
+  </data>
+  <data name="1:Description,Macros Designer{35aad22a-8dd0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
+    <value>Active Macros Designers owned by me</value>
+    <comment>'Macros Designer' : Description for SavedQuery on Entity QueryId: '{35aad22a-8dd0-e911-a81c-000d3a6e50b0}'</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateCreatedBy" xml:space="preserve">
+    <value>Unique identifier of the user who created the record.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateCreatedOn" xml:space="preserve">
+    <value>Date and time when the record was created.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
+    <value>Unique identifier of the delegate user who created the record.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_macroactiontemplate' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateImportSequenceNumber" xml:space="preserve">
+    <value>Sequence number of the import that created this record.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateModifiedBy" xml:space="preserve">
+    <value>Unique identifier of the user who modified the record.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateModifiedOn" xml:space="preserve">
+    <value>Date and time when the record was modified.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
+    <value>Unique identifier of the delegate user who modified the record.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_InputParameters" xml:space="preserve">
+    <value>Input parameters for the macro action template</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_InputParameters' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplateId" xml:space="preserve">
+    <value>Unique identifier for entity instances</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_macroactiontemplateId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode" xml:space="preserve">
+    <value>Status of the Macro Action Template</value>
+    <comment>'msdyn_macroactiontemplate' : Description for OptionSet 'msdyn_macroactiontemplate_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Macro Action Template</value>
+    <comment>'msdyn_macroactiontemplate' : Description for OptionSet 'msdyn_macroactiontemplate_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_name" xml:space="preserve">
+    <value>The name of this Macro template.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_OutputParameters" xml:space="preserve">
+    <value>Output parameters for macro action template entity</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_OutputParameters' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOverriddenCreatedOn" xml:space="preserve">
+    <value>Date and time that the record was migrated.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwnerId" xml:space="preserve">
+    <value>Owner Id</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwningBusinessUnit" xml:space="preserve">
+    <value>Unique identifier for the business unit that owns the record</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwningTeam" xml:space="preserve">
+    <value>Unique identifier for the team that owns the record.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwningUser" xml:space="preserve">
+    <value>Unique identifier for the user that owns the record.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatestatecode" xml:space="preserve">
+    <value>Status of the Macro Action Template</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatestatuscode" xml:space="preserve">
+    <value>Reason for the status of the Macro Action Template</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>For internal use only.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Time zone code that was in use when the record was created.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerCreatedBy" xml:space="preserve">
+    <value>Unique identifier of the user who created the record.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerCreatedOn" xml:space="preserve">
+    <value>Date and time when the record was created.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerCreatedOnBehalfBy" xml:space="preserve">
+    <value>Unique identifier of the delegate user who created the record.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerentitymsdyn_macrosdesigner" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_macrosdesigner' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerImportSequenceNumber" xml:space="preserve">
+    <value>Sequence number of the import that created this record.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerModifiedBy" xml:space="preserve">
+    <value>Unique identifier of the user who modified the record.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerModifiedOn" xml:space="preserve">
+    <value>Date and time when the record was modified.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerModifiedOnBehalfBy" xml:space="preserve">
+    <value>Unique identifier of the delegate user who modified the record.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignernew_MacroDescription" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'new_MacroDescription' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignernew_MacroName" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'new_MacroName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignernew_macrosdesignerId" xml:space="preserve">
+    <value>Unique identifier for entity instances</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'new_macrosdesignerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignernew_macrosdesigner_statecode" xml:space="preserve">
+    <value>Status of the Macros Designer</value>
+    <comment>'msdyn_macrosdesigner' : Description for OptionSet 'new_macrosdesigner_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignernew_macrosdesigner_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Macros Designer</value>
+    <comment>'msdyn_macrosdesigner' : Description for OptionSet 'new_macrosdesigner_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignernew_name" xml:space="preserve">
+    <value>The name of the custom entity.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'new_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerOverriddenCreatedOn" xml:space="preserve">
+    <value>Date and time that the record was migrated.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerOwnerId" xml:space="preserve">
+    <value>Owner Id</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerOwningBusinessUnit" xml:space="preserve">
+    <value>Unique identifier for the business unit that owns the record</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerOwningTeam" xml:space="preserve">
+    <value>Unique identifier for the team that owns the record.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerOwningUser" xml:space="preserve">
+    <value>Unique identifier for the user that owns the record.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerstatecode" xml:space="preserve">
+    <value>Status of the Macros Designer</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerstatuscode" xml:space="preserve">
+    <value>Reason for the status of the Macros Designer</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>For internal use only.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosdesignerUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Time zone code that was in use when the record was created.</value>
+    <comment>'msdyn_macrosdesigner' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateCreatedBy" xml:space="preserve">
+    <value>Created By</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateCreatedOn" xml:space="preserve">
+    <value>Created On</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
+    <value>Created By (Delegate)</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateImportSequenceNumber" xml:space="preserve">
+    <value>Import Sequence Number</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateModifiedOn" xml:space="preserve">
+    <value>Modified On</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
+    <value>Modified By (Delegate)</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_InputParameters" xml:space="preserve">
+    <value>Input Parameters</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_InputParameters' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplateId" xml:space="preserve">
+    <value>Macro Action Template</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_macroactiontemplateId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for OptionSet 'msdyn_macroactiontemplate_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for OptionSet 'msdyn_macroactiontemplate_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_name" xml:space="preserve">
+    <value>Name</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_OutputParameters" xml:space="preserve">
+    <value>Output Parameters</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_OutputParameters' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOverriddenCreatedOn" xml:space="preserve">
+    <value>Record Created On</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwnerId" xml:space="preserve">
+    <value>Owner</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwningBusinessUnit" xml:space="preserve">
+    <value>Owning Business Unit</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwningTeam" xml:space="preserve">
+    <value>Owning Team</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwningUser" xml:space="preserve">
+    <value>Owning User</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatestatecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatestatuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Time Zone Rule Version Number</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC Conversion Time Zone Code</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerCreatedBy" xml:space="preserve">
+    <value>Created By</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerCreatedOn" xml:space="preserve">
+    <value>Created On</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerCreatedOnBehalfBy" xml:space="preserve">
+    <value>Created By (Delegate)</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerImportSequenceNumber" xml:space="preserve">
+    <value>Import Sequence Number</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerModifiedOn" xml:space="preserve">
+    <value>Modified On</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerModifiedOnBehalfBy" xml:space="preserve">
+    <value>Modified By (Delegate)</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignernew_MacroDescription" xml:space="preserve">
+    <value>Description</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'new_MacroDescription' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignernew_MacroName" xml:space="preserve">
+    <value>Name</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'new_MacroName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignernew_macrosdesignerId" xml:space="preserve">
+    <value>Macros Designer</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'new_macrosdesignerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignernew_macrosdesigner_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macrosdesigner' : displayname for OptionSet 'new_macrosdesigner_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignernew_macrosdesigner_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_macrosdesigner' : displayname for OptionSet 'new_macrosdesigner_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignernew_name" xml:space="preserve">
+    <value>Name</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'new_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerOverriddenCreatedOn" xml:space="preserve">
+    <value>Record Created On</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerOwnerId" xml:space="preserve">
+    <value>Owner</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerOwningBusinessUnit" xml:space="preserve">
+    <value>Owning Business Unit</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerOwningTeam" xml:space="preserve">
+    <value>Owning Team</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerOwningUser" xml:space="preserve">
+    <value>Owning User</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerstatecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerstatuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Time Zone Rule Version Number</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosdesignerUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC Conversion Time Zone Code</value>
+    <comment>'msdyn_macrosdesigner' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:label,Macro Action Template{053712c5-2c8b-0eda-53c8-2967a31382bd}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{053712c5-2c8b-0eda-53c8-2967a31382bd}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{6847c20d-dec5-cd63-b60d-745ab79a0560}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{6847c20d-dec5-cd63-b60d-745ab79a0560}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{842e8684-f6c1-4495-9c20-679734e10d10}" xml:space="preserve">
+    <value>General</value>
+    <comment>'Macro Action Template' : label for tab in Entity FormXml ID: '{842e8684-f6c1-4495-9c20-679734e10d10}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{98d6eba1-4297-487f-8583-50b681240d86}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{98d6eba1-4297-487f-8583-50b681240d86}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{a4341c8f-be9d-4e30-b2dd-a98c437f943a}" xml:space="preserve">
+    <value>General</value>
+    <comment>'Macro Action Template' : label for section in Entity FormXml ID: '{a4341c8f-be9d-4e30-b2dd-a98c437f943a}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{f5ea473e-8d09-4798-b801-b56fbbbe1238}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{f5ea473e-8d09-4798-b801-b56fbbbe1238}'</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode0" xml:space="preserve">
+    <value>Active</value>
+    <comment>'msdyn_macroactiontemplate' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode1" xml:space="preserve">
+    <value>Inactive</value>
+    <comment>'msdyn_macroactiontemplate' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode1" xml:space="preserve">
+    <value>Active</value>
+    <comment>'msdyn_macroactiontemplate' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode2" xml:space="preserve">
+    <value>Inactive</value>
+    <comment>'msdyn_macroactiontemplate' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosdesignernew_macrosdesigner_statecode0" xml:space="preserve">
+    <value>Active</value>
+    <comment>'msdyn_macrosdesigner' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosdesignernew_macrosdesigner_statecode1" xml:space="preserve">
+    <value>Inactive</value>
+    <comment>'msdyn_macrosdesigner' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosdesignernew_macrosdesigner_statuscode1" xml:space="preserve">
+    <value>Active</value>
+    <comment>'msdyn_macrosdesigner' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosdesignernew_macrosdesigner_statuscode2" xml:space="preserve">
+    <value>Inactive</value>
+    <comment>'msdyn_macrosdesigner' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
+    <value>Macro Action Templates</value>
+    <comment> 'msdyn_macroactiontemplate' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_macrosdesignerentitymsdyn_macrosdesigner" xml:space="preserve">
+    <value>Macros Designers</value>
+    <comment> 'msdyn_macrosdesigner' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{2fc6654b-0626-475b-ba71-dba1a5b84ddd}" xml:space="preserve">
+    <value>Inactive Macro Action Templates</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{2fc6654b-0626-475b-ba71-dba1a5b84ddd}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" xml:space="preserve">
+    <value>Information</value>
+    <comment>'Macro Action Template' : LocalizedName for systemform in Entity FormXml ID: '{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{728594b5-08ae-442b-b4c5-36baa67c2e52}" xml:space="preserve">
+    <value>Macro Action Template Lookup View</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{728594b5-08ae-442b-b4c5-36baa67c2e52}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{7edfc44b-9171-4b03-b3fa-8f98c144543c}" xml:space="preserve">
+    <value>Quick Find Active Macro Action Templates</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{7edfc44b-9171-4b03-b3fa-8f98c144543c}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}" xml:space="preserve">
+    <value>Macro Action Template Associated View</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
+    <value>My Macro Action Templates</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}" xml:space="preserve">
+    <value>Active Macro Action Templates</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}" xml:space="preserve">
+    <value>Macro Action Template Advanced Find View</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macros Designer{034b2796-1b38-4ed8-886a-1024a8142519}" xml:space="preserve">
+    <value>Quick Find Active Macros Designers</value>
+    <comment>'Macros Designer' : LocalizedName for SavedQuery on Entity QueryId: '{034b2796-1b38-4ed8-886a-1024a8142519}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macros Designer{2cf4608c-8e87-4619-b34b-ddd1a094047a}" xml:space="preserve">
+    <value>Macros Designer Lookup View</value>
+    <comment>'Macros Designer' : LocalizedName for SavedQuery on Entity QueryId: '{2cf4608c-8e87-4619-b34b-ddd1a094047a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macros Designer{35aad22a-8dd0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
+    <value>My Macros Designers</value>
+    <comment>'Macros Designer' : LocalizedName for SavedQuery on Entity QueryId: '{35aad22a-8dd0-e911-a81c-000d3a6e50b0}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macros Designer{3feea0e6-3e4c-49f2-b016-3a79800c46fd}" xml:space="preserve">
+    <value>Macros Designer Advanced Find View</value>
+    <comment>'Macros Designer' : LocalizedName for SavedQuery on Entity QueryId: '{3feea0e6-3e4c-49f2-b016-3a79800c46fd}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macros Designer{4f066785-3bea-493e-8610-7bfb2b39453a}" xml:space="preserve">
+    <value>Macros Designer Associated View</value>
+    <comment>'Macros Designer' : LocalizedName for SavedQuery on Entity QueryId: '{4f066785-3bea-493e-8610-7bfb2b39453a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macros Designer{582c1735-5467-4469-b8d0-3c755e347203}" xml:space="preserve">
+    <value>Inactive Macros Designers</value>
+    <comment>'Macros Designer' : LocalizedName for SavedQuery on Entity QueryId: '{582c1735-5467-4469-b8d0-3c755e347203}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macros Designer{d53b1126-ca68-463c-b9c7-a16dacec858f}" xml:space="preserve">
+    <value>Active Macros Designers</value>
+    <comment>'Macros Designer' : LocalizedName for SavedQuery on Entity QueryId: '{d53b1126-ca68-463c-b9c7-a16dacec858f}'</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
+    <value>Macro Action Template</value>
+    <comment> 'msdyn_macroactiontemplate' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_macrosdesignerentitymsdyn_macrosdesigner" xml:space="preserve">
+    <value>Macros Designer</value>
+    <comment> 'msdyn_macrosdesigner' : LocalizedName for Entity</comment>
+  </data>
+  <data name="68:Description,{10D2D95F-2C8A-43F8-9281-C53E51F242C9}" xml:space="preserve">
+    <value>Allows you to create Macros</value>
+    <comment> '{10D2D95F-2C8A-43F8-9281-C53E51F242C9}' : Description for Dialog</comment>
+  </data>
+  <data name="68:label,{10D2D95F-2C8A-43F8-9281-C53E51F242C9}{40CD6F62-813A-4B65-973B-D7EA47FC42EA}" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>'{10D2D95F-2C8A-43F8-9281-C53E51F242C9}' : label for cell in Dialog FormXml ID: '{40CD6F62-813A-4B65-973B-D7EA47FC42EA}'</comment>
+  </data>
+  <data name="68:label,{10D2D95F-2C8A-43F8-9281-C53E51F242C9}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" xml:space="preserve">
+    <value>Create Macros</value>
+    <comment>'{10D2D95F-2C8A-43F8-9281-C53E51F242C9}' : label for cell in Dialog FormXml ID: '{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}'</comment>
+  </data>
+  <data name="68:label,{10D2D95F-2C8A-43F8-9281-C53E51F242C9}{78D5B1F0-A25E-44E1-ADAB-6A56637ED941}" xml:space="preserve">
+    <value>Description</value>
+    <comment>'{10D2D95F-2C8A-43F8-9281-C53E51F242C9}' : label for cell in Dialog FormXml ID: '{78D5B1F0-A25E-44E1-ADAB-6A56637ED941}'</comment>
+  </data>
+  <data name="68:label,{10D2D95F-2C8A-43F8-9281-C53E51F242C9}{A1062551-F4DD-48D0-925C-04255452DC2D}" xml:space="preserve">
+    <value>Save and Close</value>
+    <comment>'{10D2D95F-2C8A-43F8-9281-C53E51F242C9}' : label for cell in Dialog FormXml ID: '{A1062551-F4DD-48D0-925C-04255452DC2D}'</comment>
+  </data>
+  <data name="68:label,{10D2D95F-2C8A-43F8-9281-C53E51F242C9}{BC53D472-1587-4980-944E-F55DFE5D3F0A}" xml:space="preserve">
+    <value>Name</value>
+    <comment>'{10D2D95F-2C8A-43F8-9281-C53E51F242C9}' : label for cell in Dialog FormXml ID: '{BC53D472-1587-4980-944E-F55DFE5D3F0A}'</comment>
+  </data>
+  <data name="68:LocalizedName,{10D2D95F-2C8A-43F8-9281-C53E51F242C9}" xml:space="preserve">
+    <value>Create Macros</value>
+    <comment> '{10D2D95F-2C8A-43F8-9281-C53E51F242C9}' : LocalizedName for Dialog</comment>
+  </data>
 </root>
