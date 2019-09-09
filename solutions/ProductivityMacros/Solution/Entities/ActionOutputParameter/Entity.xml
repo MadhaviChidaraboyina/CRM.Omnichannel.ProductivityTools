@@ -1,306 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-	<Name LocalizedName="Macro Action Template" OriginalName="Macro Action Template">msdyn_macroactiontemplate</Name>
+	<Name LocalizedName="Action Output Parameter" OriginalName="Action Output Parameter">msdyn_actionoutputparameter</Name>
 	<EntityInfo>
-		<entity Name="msdyn_macroactiontemplate">
+		<entity Name="msdyn_actionoutputparameter">
 			<LocalizedNames>
-				<LocalizedName description="Macro Action Template" languagecode="1033" />
+				<LocalizedName description="Action Output Parameter" languagecode="1033" />
 			</LocalizedNames>
 			<LocalizedCollectionNames>
-				<LocalizedCollectionName description="Macro Action Templates" languagecode="1033" />
+				<LocalizedCollectionName description="Action Output Parameters" languagecode="1033" />
 			</LocalizedCollectionNames>
 			<Descriptions>
 				<Description description="" languagecode="1033" />
 			</Descriptions>
 			<attributes>
-				<attribute PhysicalName="msdyn_InputParameters">
-					<Type>nvarchar</Type>
-					<Name>msdyn_inputparameters</Name>
-					<LogicalName>msdyn_inputparameters</LogicalName>
-					<RequiredLevel>none</RequiredLevel>
-					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-					<ImeMode>auto</ImeMode>
-					<ValidForUpdateApi>1</ValidForUpdateApi>
-					<ValidForReadApi>1</ValidForReadApi>
-					<ValidForCreateApi>1</ValidForCreateApi>
-					<IsCustomField>1</IsCustomField>
-					<IsAuditEnabled>1</IsAuditEnabled>
-					<IsSecured>0</IsSecured>
-					<IntroducedVersion>1.0</IntroducedVersion>
-					<IsCustomizable>1</IsCustomizable>
-					<IsRenameable>1</IsRenameable>
-					<CanModifySearchSettings>1</CanModifySearchSettings>
-					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-					<SourceType>0</SourceType>
-					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-					<IsSortableEnabled>0</IsSortableEnabled>
-					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-					<IsDataSourceSecret>0</IsDataSourceSecret>
-					<AutoNumberFormat></AutoNumberFormat>
-					<Format>text</Format>
-					<MaxLength>4000</MaxLength>
-					<Length>8000</Length>
-					<displaynames>
-						<displayname description="Input Parameters" languagecode="1033" />
-					</displaynames>
-					<Descriptions>
-						<Description description="Input parameters for the macro action template" languagecode="1033" />
-					</Descriptions>
-				</attribute>
-				<attribute PhysicalName="msdyn_OutputParameters">
-					<Type>nvarchar</Type>
-					<Name>msdyn_outputparameters</Name>
-					<LogicalName>msdyn_outputparameters</LogicalName>
-					<RequiredLevel>none</RequiredLevel>
-					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-					<ImeMode>auto</ImeMode>
-					<ValidForUpdateApi>1</ValidForUpdateApi>
-					<ValidForReadApi>1</ValidForReadApi>
-					<ValidForCreateApi>1</ValidForCreateApi>
-					<IsCustomField>1</IsCustomField>
-					<IsAuditEnabled>1</IsAuditEnabled>
-					<IsSecured>0</IsSecured>
-					<IntroducedVersion>1.0</IntroducedVersion>
-					<IsCustomizable>1</IsCustomizable>
-					<IsRenameable>1</IsRenameable>
-					<CanModifySearchSettings>1</CanModifySearchSettings>
-					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-					<SourceType>0</SourceType>
-					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-					<IsSortableEnabled>0</IsSortableEnabled>
-					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-					<IsDataSourceSecret>0</IsDataSourceSecret>
-					<AutoNumberFormat></AutoNumberFormat>
-					<Format>text</Format>
-					<MaxLength>4000</MaxLength>
-					<Length>8000</Length>
-					<displaynames>
-						<displayname description="Output Parameters" languagecode="1033" />
-					</displaynames>
-					<Descriptions>
-						<Description description="Output parameters for macro action template entity" languagecode="1033" />
-					</Descriptions>
-				</attribute>
-				<attribute PhysicalName="msdyn_brandcolor">
-					<Type>nvarchar</Type>
-					<Name>msdyn_brandcolor</Name>
-					<LogicalName>msdyn_brandcolor</LogicalName>
-					<RequiredLevel>none</RequiredLevel>
-					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-					<ImeMode>auto</ImeMode>
-					<ValidForUpdateApi>1</ValidForUpdateApi>
-					<ValidForReadApi>1</ValidForReadApi>
-					<ValidForCreateApi>1</ValidForCreateApi>
-					<IsCustomField>1</IsCustomField>
-					<IsAuditEnabled>1</IsAuditEnabled>
-					<IsSecured>0</IsSecured>
-					<IntroducedVersion>1.0</IntroducedVersion>
-					<IsCustomizable>1</IsCustomizable>
-					<IsRenameable>1</IsRenameable>
-					<CanModifySearchSettings>1</CanModifySearchSettings>
-					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-					<SourceType>0</SourceType>
-					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-					<IsSortableEnabled>0</IsSortableEnabled>
-					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-					<IsDataSourceSecret>0</IsDataSourceSecret>
-					<AutoNumberFormat></AutoNumberFormat>
-					<Format>text</Format>
-					<MaxLength>100</MaxLength>
-					<Length>200</Length>
-					<displaynames>
-						<displayname description="Brand Color" languagecode="1033" />
-					</displaynames>
-					<Descriptions>
-						<Description description="" languagecode="1033" />
-					</Descriptions>
-				</attribute>
-				<attribute PhysicalName="msdyn_displayname">
-					<Type>nvarchar</Type>
-					<Name>msdyn_displayname</Name>
-					<LogicalName>msdyn_displayname</LogicalName>
-					<RequiredLevel>none</RequiredLevel>
-					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-					<ImeMode>auto</ImeMode>
-					<ValidForUpdateApi>1</ValidForUpdateApi>
-					<ValidForReadApi>1</ValidForReadApi>
-					<ValidForCreateApi>1</ValidForCreateApi>
-					<IsCustomField>1</IsCustomField>
-					<IsAuditEnabled>1</IsAuditEnabled>
-					<IsSecured>0</IsSecured>
-					<IntroducedVersion>1.0</IntroducedVersion>
-					<IsCustomizable>1</IsCustomizable>
-					<IsRenameable>1</IsRenameable>
-					<CanModifySearchSettings>1</CanModifySearchSettings>
-					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-					<SourceType>0</SourceType>
-					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-					<IsSortableEnabled>0</IsSortableEnabled>
-					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-					<IsDataSourceSecret>0</IsDataSourceSecret>
-					<AutoNumberFormat></AutoNumberFormat>
-					<Format>text</Format>
-					<MaxLength>1000</MaxLength>
-					<Length>2000</Length>
-					<displaynames>
-						<displayname description="Display  Name" languagecode="1033" />
-					</displaynames>
-					<Descriptions>
-						<Description description="" languagecode="1033" />
-					</Descriptions>
-				</attribute>
-				<attribute PhysicalName="msdyn_icon">
-					<Type>nvarchar</Type>
-					<Name>msdyn_icon</Name>
-					<LogicalName>msdyn_icon</LogicalName>
-					<RequiredLevel>none</RequiredLevel>
-					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-					<ImeMode>auto</ImeMode>
-					<ValidForUpdateApi>1</ValidForUpdateApi>
-					<ValidForReadApi>1</ValidForReadApi>
-					<ValidForCreateApi>1</ValidForCreateApi>
-					<IsCustomField>1</IsCustomField>
-					<IsAuditEnabled>1</IsAuditEnabled>
-					<IsSecured>0</IsSecured>
-					<IntroducedVersion>1.0</IntroducedVersion>
-					<IsCustomizable>1</IsCustomizable>
-					<IsRenameable>1</IsRenameable>
-					<CanModifySearchSettings>1</CanModifySearchSettings>
-					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-					<SourceType>0</SourceType>
-					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-					<IsSortableEnabled>0</IsSortableEnabled>
-					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-					<IsDataSourceSecret>0</IsDataSourceSecret>
-					<AutoNumberFormat></AutoNumberFormat>
-					<Format>text</Format>
-					<MaxLength>1000</MaxLength>
-					<Length>2000</Length>
-					<displaynames>
-						<displayname description="Icon" languagecode="1033" />
-					</displaynames>
-					<Descriptions>
-						<Description description="" languagecode="1033" />
-					</Descriptions>
-				</attribute>
-				<attribute PhysicalName="msdyn_subtitle">
-					<Type>nvarchar</Type>
-					<Name>msdyn_subtitle</Name>
-					<LogicalName>msdyn_subtitle</LogicalName>
-					<RequiredLevel>none</RequiredLevel>
-					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-					<ImeMode>auto</ImeMode>
-					<ValidForUpdateApi>1</ValidForUpdateApi>
-					<ValidForReadApi>1</ValidForReadApi>
-					<ValidForCreateApi>1</ValidForCreateApi>
-					<IsCustomField>1</IsCustomField>
-					<IsAuditEnabled>1</IsAuditEnabled>
-					<IsSecured>0</IsSecured>
-					<IntroducedVersion>1.0</IntroducedVersion>
-					<IsCustomizable>1</IsCustomizable>
-					<IsRenameable>1</IsRenameable>
-					<CanModifySearchSettings>1</CanModifySearchSettings>
-					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-					<SourceType>0</SourceType>
-					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-					<IsSortableEnabled>0</IsSortableEnabled>
-					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-					<IsDataSourceSecret>0</IsDataSourceSecret>
-					<AutoNumberFormat></AutoNumberFormat>
-					<Format>text</Format>
-					<MaxLength>1000</MaxLength>
-					<Length>2000</Length>
-					<displaynames>
-						<displayname description="Subtitle" languagecode="1033" />
-					</displaynames>
-					<Descriptions>
-						<Description description="" languagecode="1033" />
-					</Descriptions>
-				</attribute>
-				<attribute PhysicalName="msdyn_summary">
-					<Type>nvarchar</Type>
-					<Name>msdyn_summary</Name>
-					<LogicalName>msdyn_summary</LogicalName>
-					<RequiredLevel>none</RequiredLevel>
-					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-					<ImeMode>auto</ImeMode>
-					<ValidForUpdateApi>1</ValidForUpdateApi>
-					<ValidForReadApi>1</ValidForReadApi>
-					<ValidForCreateApi>1</ValidForCreateApi>
-					<IsCustomField>1</IsCustomField>
-					<IsAuditEnabled>1</IsAuditEnabled>
-					<IsSecured>0</IsSecured>
-					<IntroducedVersion>1.0</IntroducedVersion>
-					<IsCustomizable>1</IsCustomizable>
-					<IsRenameable>1</IsRenameable>
-					<CanModifySearchSettings>1</CanModifySearchSettings>
-					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-					<SourceType>0</SourceType>
-					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-					<IsSortableEnabled>0</IsSortableEnabled>
-					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-					<IsDataSourceSecret>0</IsDataSourceSecret>
-					<AutoNumberFormat></AutoNumberFormat>
-					<Format>text</Format>
-					<MaxLength>2000</MaxLength>
-					<Length>4000</Length>
-					<displaynames>
-						<displayname description="Summary" languagecode="1033" />
-					</displaynames>
-					<Descriptions>
-						<Description description="" languagecode="1033" />
-					</Descriptions>
-				</attribute>
-				<attribute PhysicalName="msdyn_visibility">
-					<Type>nvarchar</Type>
-					<Name>msdyn_visibility</Name>
-					<LogicalName>msdyn_visibility</LogicalName>
-					<RequiredLevel>none</RequiredLevel>
-					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-					<ImeMode>auto</ImeMode>
-					<ValidForUpdateApi>1</ValidForUpdateApi>
-					<ValidForReadApi>1</ValidForReadApi>
-					<ValidForCreateApi>1</ValidForCreateApi>
-					<IsCustomField>1</IsCustomField>
-					<IsAuditEnabled>1</IsAuditEnabled>
-					<IsSecured>0</IsSecured>
-					<IntroducedVersion>1.0</IntroducedVersion>
-					<IsCustomizable>1</IsCustomizable>
-					<IsRenameable>1</IsRenameable>
-					<CanModifySearchSettings>1</CanModifySearchSettings>
-					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-					<SourceType>0</SourceType>
-					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-					<IsSortableEnabled>0</IsSortableEnabled>
-					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-					<IsDataSourceSecret>0</IsDataSourceSecret>
-					<AutoNumberFormat></AutoNumberFormat>
-					<Format>text</Format>
-					<MaxLength>100</MaxLength>
-					<Length>200</Length>
-					<displaynames>
-						<displayname description="Visibility" languagecode="1033" />
-					</displaynames>
-					<Descriptions>
-						<Description description="" languagecode="1033" />
-					</Descriptions>
-				</attribute>
 				<attribute PhysicalName="CreatedBy">
 					<Type>lookup</Type>
 					<Name>createdby</Name>
@@ -536,10 +248,10 @@
 						<Description description="Unique identifier of the delegate user who modified the record." languagecode="1033" />
 					</Descriptions>
 				</attribute>
-				<attribute PhysicalName="msdyn_macroactiontemplateId">
+				<attribute PhysicalName="msdyn_actionoutputparameterId">
 					<Type>primarykey</Type>
-					<Name>msdyn_macroactiontemplateid</Name>
-					<LogicalName>msdyn_macroactiontemplateid</LogicalName>
+					<Name>msdyn_actionoutputparameterid</Name>
+					<LogicalName>msdyn_actionoutputparameterid</LogicalName>
 					<RequiredLevel>systemrequired</RequiredLevel>
 					<DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
 					<ImeMode>auto</ImeMode>
@@ -562,10 +274,44 @@
 					<IsDataSourceSecret>0</IsDataSourceSecret>
 					<AutoNumberFormat></AutoNumberFormat>
 					<displaynames>
-						<displayname description="Macro Action Template" languagecode="1033" />
+						<displayname description="Action Output Parameter" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
 						<Description description="Unique identifier for entity instances" languagecode="1033" />
+					</Descriptions>
+				</attribute>
+				<attribute PhysicalName="msdyn_actiontemplateoutputparameterid">
+					<Type>lookup</Type>
+					<Name>msdyn_actiontemplateoutputparameterid</Name>
+					<LogicalName>msdyn_actiontemplateoutputparameterid</LogicalName>
+					<RequiredLevel>none</RequiredLevel>
+					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+					<ValidForUpdateApi>1</ValidForUpdateApi>
+					<ValidForReadApi>1</ValidForReadApi>
+					<ValidForCreateApi>1</ValidForCreateApi>
+					<IsCustomField>1</IsCustomField>
+					<IsAuditEnabled>0</IsAuditEnabled>
+					<IsSecured>0</IsSecured>
+					<IntroducedVersion>1.0</IntroducedVersion>
+					<IsCustomizable>1</IsCustomizable>
+					<IsRenameable>1</IsRenameable>
+					<CanModifySearchSettings>1</CanModifySearchSettings>
+					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+					<SourceType>0</SourceType>
+					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+					<IsSortableEnabled>0</IsSortableEnabled>
+					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+					<IsDataSourceSecret>0</IsDataSourceSecret>
+					<AutoNumberFormat></AutoNumberFormat>
+					<LookupStyle>single</LookupStyle>
+					<LookupTypes />
+					<displaynames>
+						<displayname description="Action Template Output Parameter" languagecode="1033" />
+					</displaynames>
+					<Descriptions>
+						<Description description="Unique identifier for Macro Action Template associated with Action Output Parameter." languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_name">
@@ -601,79 +347,7 @@
 						<displayname description="Name" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="The name of this Macro template." languagecode="1033" />
-					</Descriptions>
-				</attribute>
-				<attribute PhysicalName="msdyn_title">
-					<Type>nvarchar</Type>
-					<Name>msdyn_title</Name>
-					<LogicalName>msdyn_title</LogicalName>
-					<RequiredLevel>none</RequiredLevel>
-					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-					<ImeMode>auto</ImeMode>
-					<ValidForUpdateApi>1</ValidForUpdateApi>
-					<ValidForReadApi>1</ValidForReadApi>
-					<ValidForCreateApi>1</ValidForCreateApi>
-					<IsCustomField>1</IsCustomField>
-					<IsAuditEnabled>1</IsAuditEnabled>
-					<IsSecured>0</IsSecured>
-					<IntroducedVersion>1.0</IntroducedVersion>
-					<IsCustomizable>1</IsCustomizable>
-					<IsRenameable>1</IsRenameable>
-					<CanModifySearchSettings>1</CanModifySearchSettings>
-					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-					<SourceType>0</SourceType>
-					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-					<IsSortableEnabled>0</IsSortableEnabled>
-					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-					<IsDataSourceSecret>0</IsDataSourceSecret>
-					<AutoNumberFormat></AutoNumberFormat>
-					<Format>text</Format>
-					<MaxLength>100</MaxLength>
-					<Length>200</Length>
-					<displaynames>
-						<displayname description="Title" languagecode="1033" />
-					</displaynames>
-					<Descriptions>
-						<Description description="The title of this macro action." languagecode="1033" />
-					</Descriptions>
-				</attribute>
-				<attribute PhysicalName="msdyn_actionDescription">
-					<Type>nvarchar</Type>
-					<Name>msdyn_actionDescription</Name>
-					<LogicalName>msdyn_actionDescription</LogicalName>
-					<RequiredLevel>none</RequiredLevel>
-					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-					<ImeMode>auto</ImeMode>
-					<ValidForUpdateApi>1</ValidForUpdateApi>
-					<ValidForReadApi>1</ValidForReadApi>
-					<ValidForCreateApi>1</ValidForCreateApi>
-					<IsCustomField>1</IsCustomField>
-					<IsAuditEnabled>1</IsAuditEnabled>
-					<IsSecured>0</IsSecured>
-					<IntroducedVersion>1.0</IntroducedVersion>
-					<IsCustomizable>1</IsCustomizable>
-					<IsRenameable>1</IsRenameable>
-					<CanModifySearchSettings>1</CanModifySearchSettings>
-					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-					<SourceType>0</SourceType>
-					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-					<IsSortableEnabled>0</IsSortableEnabled>
-					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-					<IsDataSourceSecret>0</IsDataSourceSecret>
-					<AutoNumberFormat></AutoNumberFormat>
-					<Format>text</Format>
-					<MaxLength>100</MaxLength>
-					<Length>200</Length>
-					<displaynames>
-						<displayname description="Description" languagecode="1033" />
-					</displaynames>
-					<Descriptions>
-						<Description description="The description of this macro action." languagecode="1033" />
+						<Description description="The name of the custom entity." languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="OverriddenCreatedOn">
@@ -872,7 +546,7 @@
 					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
 					<IsDataSourceSecret>0</IsDataSourceSecret>
 					<AutoNumberFormat></AutoNumberFormat>
-					<optionset Name="msdyn_macroactiontemplate_statecode">
+					<optionset Name="msdyn_actionoutputparameter_statecode">
 						<OptionSetType>state</OptionSetType>
 						<IntroducedVersion>1.0</IntroducedVersion>
 						<IsCustomizable>1</IsCustomizable>
@@ -880,7 +554,7 @@
 							<displayname description="Status" languagecode="1033" />
 						</displaynames>
 						<Descriptions>
-							<Description description="Status of the Macro Action Template" languagecode="1033" />
+							<Description description="Status of the Action Output Parameter" languagecode="1033" />
 						</Descriptions>
 						<states>
 							<state value="0" defaultstatus="1" invariantname="Active">
@@ -899,7 +573,7 @@
 						<displayname description="Status" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="Status of the Macro Action Template" languagecode="1033" />
+						<Description description="Status of the Action Output Parameter" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="statuscode">
@@ -928,7 +602,7 @@
 					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
 					<IsDataSourceSecret>0</IsDataSourceSecret>
 					<AutoNumberFormat></AutoNumberFormat>
-					<optionset Name="msdyn_macroactiontemplate_statuscode">
+					<optionset Name="msdyn_actionoutputparameter_statuscode">
 						<OptionSetType>status</OptionSetType>
 						<IntroducedVersion>1.0</IntroducedVersion>
 						<IsCustomizable>1</IsCustomizable>
@@ -936,7 +610,7 @@
 							<displayname description="Status Reason" languagecode="1033" />
 						</displaynames>
 						<Descriptions>
-							<Description description="Reason for the status of the Macro Action Template" languagecode="1033" />
+							<Description description="Reason for the status of the Action Output Parameter" languagecode="1033" />
 						</Descriptions>
 						<statuses>
 							<status value="1" state="0">
@@ -955,7 +629,7 @@
 						<displayname description="Status Reason" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="Reason for the status of the Macro Action Template" languagecode="1033" />
+						<Description description="Reason for the status of the Action Output Parameter" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="TimeZoneRuleVersionNumber">
@@ -1029,7 +703,7 @@
 					</Descriptions>
 				</attribute>
 			</attributes>
-			<EntitySetName>msdyn_macroactiontemplates</EntitySetName>
+			<EntitySetName>msdyn_actionoutputparameters</EntitySetName>
 			<IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
 			<IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
 			<IsRequiredOffline>0</IsRequiredOffline>

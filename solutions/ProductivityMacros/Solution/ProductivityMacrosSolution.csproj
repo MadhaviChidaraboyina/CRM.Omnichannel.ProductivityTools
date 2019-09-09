@@ -1,56 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
-	<Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
-	<PropertyGroup>
-		<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-		<NOTARGET>true</NOTARGET>
-		<SolutionFileNamePrefix>msdyn_ProductivityMacros</SolutionFileNamePrefix>
-		<ApplicationFolder>$(XrmSolutionsRoot)\solutions\ProductivityMacros</ApplicationFolder>
-		<SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
-		<PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
-		<ProjectGuid>{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}</ProjectGuid>
-		<CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls</CustomControlsPath>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>$(WSRoot)\drop\debug\AnyCPU\Solutions</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-		<Prefer32Bit>false</Prefer32Bit>
-		<DocumentationFile>bin\Debug\Sales_LinkedInIntegration.XML</DocumentationFile>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<DebugType>pdbonly</DebugType>
-		<Optimize>true</Optimize>
-		<OutputPath>$(WSRoot)\drop\Release\AnyCPU\Solutions</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-		<Prefer32Bit>false</Prefer32Bit>
-	</PropertyGroup>
-	<ItemGroup>
-		<Content Include="Entities\MacroActionTemplate\Entity.xml" />
-		<Content Include="Entities\MacroActionTemplate\FormXml\main\{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}_managed.xml" />
-		<Content Include="Entities\MacroActionTemplate\SavedQueries\{7edfc44b-9171-4b03-b3fa-8f98c144543c}.xml" />
-		<Content Include="Entities\MacroActionTemplate\SavedQueries\{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}.xml" />
-		<Content Include="Entities\MacroActionTemplate\SavedQueries\{728594b5-08ae-442b-b4c5-36baa67c2e52}.xml" />
-		<Content Include="Entities\MacroActionTemplate\SavedQueries\{2fc6654b-0626-475b-ba71-dba1a5b84ddd}.xml" />
-		<Content Include="Entities\MacroActionTemplate\SavedQueries\{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}.xml" />
-		<Content Include="Entities\MacroActionTemplate\SavedQueries\{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}.xml" />
-		<Content Include="Entities\MacroActionTemplate\SavedQueries\{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}.xml" />
-	</ItemGroup>
-	<ItemGroup>
-		<Content Include="Other\Customizations.xml">
-			<SubType>Designer</SubType>
-		</Content>
-		<Content Include="Other\Solution.xml">
-			<SubType>Designer</SubType>
-		</Content>
-		<Content Include="WebResources\Localization\ProductivityMacros_webresource_strings.1033.resx.data.xml" />
-	</ItemGroup>
-	<Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
-	<Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
+  <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
+  <PropertyGroup>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <NOTARGET>true</NOTARGET>
+    <SolutionFileNamePrefix>msdyn_ProductivityMacros</SolutionFileNamePrefix>
+    <ApplicationFolder>$(XrmSolutionsRoot)\solutions\ProductivityMacros</ApplicationFolder>
+    <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
+    <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
+    <ProjectGuid>{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}</ProjectGuid>
+    <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls</CustomControlsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(WSRoot)\drop\debug\AnyCPU\Solutions</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\Sales_LinkedInIntegration.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(WSRoot)\drop\Release\AnyCPU\Solutions</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Entities\MacroActionTemplate\Entity.xml" />
+    <Content Include="Entities\MacroActionTemplate\FormXml\main\{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}_managed.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{7edfc44b-9171-4b03-b3fa-8f98c144543c}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{728594b5-08ae-442b-b4c5-36baa67c2e52}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{2fc6654b-0626-475b-ba71-dba1a5b84ddd}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}.xml" />
+    <Content Include="Entities\ActionInputParameter\Entity.xml" />
+    <Content Include="Entities\ActionInputParameter\FormXml\main\{15079f0d-d34e-4cad-9fa3-a1fab0783eac}_managed.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{5b965e27-ff23-48cc-9fa8-5f870282d801}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{220c95e7-e853-4196-bcf5-0195392aae41}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{641c26b7-2180-4bd6-86e0-ae67d20f87be}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{68335c03-9c8e-4941-b3de-3117bba3e5fb}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{a3cd66c8-212c-4117-a9ec-fe905795224a}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}.xml" />
+    <Content Include="Entities\ActionOutputParameter\Entity.xml" />
+    <Content Include="Entities\ActionOutputParameter\FormXml\main\{d4000272-4cda-436a-a678-cd3fe08ea2f6}_managed.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{9d540704-b34f-4ecc-b9d8-412acae74cf8}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{81a129b3-29df-4bbb-827b-37b6747f8e9b}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{358d764d-f167-46f4-864c-f147de16f5a4}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{5557f657-0457-4b1b-bef5-b3a20a701cd6}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{be58538e-d1d2-e911-a81f-000d3a6d6cb7}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{de3156ab-1834-4782-a0d8-97869badb58b}.xml" />
+    <Content Include="Entities\ParameterDefinition\Entity.xml" />
+    <Content Include="Entities\ParameterDefinition\FormXml\main\{a1b84754-82c8-4d2e-afe6-bceae91df1ca}_managed.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{07a33cec-34c5-447a-b091-76a54ea8dcc0}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{52db0469-ff43-48fb-af2f-69f8355a174c}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{5811f646-830b-4439-aecd-0b1eb4c4910f}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{57347866-53ad-4011-9024-d5161ce8391e}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}.xml" />
+    <Content Include="Other\Relationships\msdyn_macroactiontemplate.xml" />
+	  <Content Include="Other\Relationships\msdyn_parameterdefinition.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Other\Customizations.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Other\Solution.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebResources\Localization\ProductivityMacros_webresource_strings.1033.resx.data.xml" />
+  </ItemGroup>
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
 </Project>

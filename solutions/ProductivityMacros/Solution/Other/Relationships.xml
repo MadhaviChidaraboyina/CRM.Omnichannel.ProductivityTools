@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships>
+  <EntityRelationship Name="msdyn_msdyn_macroactiontemplate_msdyn_actioninput" />
+  <EntityRelationship Name="msdyn_msdyn_macroactiontemplate_msdyn_actionout" />
+  <EntityRelationship Name="msdyn_msdyn_paramdef_msdyn_actionoutputparam" />
+  <EntityRelationship Name="msdyn_msdyn_paramdef_msdyn_actioninputparam" />
+</EntityRelationships>
