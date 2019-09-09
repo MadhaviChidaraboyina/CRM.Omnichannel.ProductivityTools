@@ -178,10 +178,12 @@
     <comment>Get Started Button Text for FRE</comment>
   </data>
   <data name="FRE_INTRO_SLIDE_DESC" xml:space="preserve">
-    <value />
+    <value>Take a quick tour to learn how to deliver fast, personalized service to your customers.</value>
+    <comment>Description for the First Slide on FRE</comment>
   </data>
   <data name="FRE_INTRO_SLIDE_TITLE" xml:space="preserve">
-    <value />
+    <value>Welcome to Omnichannel for Dynamics 365 Customer Service</value>
+    <comment>Title for the First Slide on FRE</comment>
   </data>
   <data name="FRE_LASTSLIDE_TITLE" xml:space="preserve">
     <value>All Done</value>

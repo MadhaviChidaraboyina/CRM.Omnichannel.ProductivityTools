@@ -669,7 +669,7 @@
     <comment>'{10D2D95F-2C8A-43F8-9281-C53E51F242C9}' : label for cell in Dialog FormXml ID: '{78D5B1F0-A25E-44E1-ADAB-6A56637ED941}'</comment>
   </data>
   <data name="68:label,{10D2D95F-2C8A-43F8-9281-C53E51F242C9}{A1062551-F4DD-48D0-925C-04255452DC2D}" xml:space="preserve">
-    <value>Save and Close</value>
+    <value>Save and close</value>
     <comment>'{10D2D95F-2C8A-43F8-9281-C53E51F242C9}' : label for cell in Dialog FormXml ID: '{A1062551-F4DD-48D0-925C-04255452DC2D}'</comment>
   </data>
   <data name="68:label,{10D2D95F-2C8A-43F8-9281-C53E51F242C9}{BC53D472-1587-4980-944E-F55DFE5D3F0A}" xml:space="preserve">
