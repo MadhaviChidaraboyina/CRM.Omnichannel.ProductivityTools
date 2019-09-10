@@ -1,0 +1,14 @@
+<entities xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<entity name="msdyn_macroactiontemplate">
+		<field name="msdyn_actionDescription" localizableAttribute="value" loc="Yes" />
+		<field name="msdyn_displayname" localizableAttribute="value" loc="Yes" />
+		<field name="msdyn_subtitle" localizableAttribute="value" loc="Yes" />
+		<field name="msdyn_summary" localizableAttribute="value" loc="Yes" />
+		<field name="msdyn_title" localizableAttribute="value" loc="Yes" />
+	</entity>
+	<entity name="msdyn_parameterdefinition">
+		<field name="msdyn_description" localizableAttribute="value" loc="Yes" />
+		<field name="msdyn_displayname" localizableAttribute="value" loc="Yes" />
+		<field name="msdyn_parametertype" localizableAttribute="value" loc="Yes" />
+	</entity>
+</entities>
