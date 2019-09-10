@@ -4,3 +4,6 @@ solutions\CIFramework\Controls\NotificationButtonConfigControl\strings\Notificat
 solutions\CIFramework\Solution\Resources\en-us\resources.en-US.resx
 solutions\ScenarioConfiguration\Solution\Resources\en-us\resources.en-US.resx
 solutions\ScenarioConfiguration\Controls\ScenarioMappingControl\strings\ScenarioMappingControl.1033.resx
+solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_1033\data.xml
+solutions\ProductivityMacros\Solution\Resources\en-us\resources.en-US.resx
+solutions\OmnichannelProductivityToolsSettings\Solution\Resources\en-us\resources.en-US.resx
