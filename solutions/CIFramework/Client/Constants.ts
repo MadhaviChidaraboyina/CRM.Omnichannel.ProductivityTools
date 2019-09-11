@@ -217,6 +217,7 @@ namespace Microsoft.CIFramework
 		public static notificationTemplate = "notificationTemplate";
 		public static templateParameters = "templateParameters";
 		public static notificationTemplateTimeoutDefaultValue = 120;
+		public static templateNameResolver = "templateNameResolver";
 	}
 
 	export enum ErrorCode {

@@ -129,9 +129,18 @@ namespace Microsoft.CIFramework.Internal {
 			state.client.collapseFlap(currentSessionId);
 
 			return new Promise(function (resolve: any, reject: any) {
+
+				// Consumer can pass either templatename or templatename resolver.
+				// Template name resolver should contain webresourcename , functionname and parameters(if any).
+				let templateNameResolver: Promise<TemplateNameResolverResult> = TemplatesUtility.resolveTemplateName(input.templateNameResolver, input.templateName);
+				templateNameResolver.then(function (response: TemplateNameResolverResult) {
+					let templateName = input.templateName;
+					if (response.isFoundByResolver && !isNullOrUndefined(response.templateName)) {
+						templateName = response.templateName;
+					}
 				let fetchTask: Promise<UCISessionTemplate> = null;
-				if (!isNullOrUndefined(input.templateName)) {
-					fetchTask = UCISessionTemplate.getTemplateByName(input.templateName);
+				if (!isNullOrUndefined(templateName)) {
+					fetchTask = UCISessionTemplate.getTemplateByName(templateName);
 				}
 				else {
 					fetchTask = UCISessionTemplate.getTemplateByTag(input.templateTag)
@@ -165,24 +174,24 @@ namespace Microsoft.CIFramework.Internal {
 											appTabs.forEach(
 												function (tab: UCIApplicationTabTemplate) {
 													tabsRendered.push(new Promise<string>(function (resolve: any, reject: any) {
-													tab.instantiateTemplate(templateParams, correlationId).then(
-														function (tabInput: XrmClientApi.TabInput) {
-															tabInput.options.isFocused = false; //All app-tabs rendered in the background
-															this.createTabInternal(sessionId, tabInput, telemetryData).then(
-																function (tabId: string) {
-																	this.associateTabWithSession(sessionId, tabId, tab, tab.name, tab.tags);
-																	return resolve(tabId);
-																}.bind(this),
-																function (error: Error) {
-																	return reject(error);
-																}.bind(this));
-														}.bind(this),
-														function (error: Error) {
-															let errorData = generateErrorObject(error, "ConsoleAppSessionManager - tab.instantiateTemplate", errorTypes.XrmApiError);
-															logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
-															return reject(error);
-														}.bind(this));
-												}.bind(this)));
+														tab.instantiateTemplate(templateParams, correlationId).then(
+															function (tabInput: XrmClientApi.TabInput) {
+																tabInput.options.isFocused = false; //All app-tabs rendered in the background
+																this.createTabInternal(sessionId, tabInput, telemetryData).then(
+																	function (tabId: string) {
+																		this.associateTabWithSession(sessionId, tabId, tab, tab.name, tab.tags);
+																		return resolve(tabId);
+																	}.bind(this),
+																	function (error: Error) {
+																		return reject(error);
+																	}.bind(this));
+															}.bind(this),
+															function (error: Error) {
+																let errorData = generateErrorObject(error, "ConsoleAppSessionManager - tab.instantiateTemplate", errorTypes.XrmApiError);
+																logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
+																return reject(error);
+															}.bind(this));
+													}.bind(this)));
 												}.bind(this));
 											Promise.all(tabsRendered).then(
 												function (result: string) {
@@ -220,6 +229,12 @@ namespace Microsoft.CIFramework.Internal {
 						return reject(error);
 					}.bind(this)
 				);
+				}.bind(this),
+					function (error: Error) {
+						let errorData = generateErrorObject(error, "ConsoleAppSessionManager - UCISessionTemplate.getTemplateByName/Tag", errorTypes.XrmApiError);
+						logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
+						return reject(error);
+					});
 			}.bind(this)
 			);
 		}

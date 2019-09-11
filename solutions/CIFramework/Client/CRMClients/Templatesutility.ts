@@ -98,5 +98,43 @@ namespace Microsoft.CIFramework.Internal {
 					});
 			});
 		}
+
+		/**
+		 * Given the input bag for templates, the function gives the templatename after execueting function mentioned in templateNameResolver property.
+		 * Else it returns input.templateName
+		 * @param input The input bag for APIs like createSession
+		 */
+		public static resolveTemplateName(templateNameResolver: any, templateName: string): Promise<TemplateNameResolverResult> {
+			var promise = new Promise(function (resolve: any, reject: any) {
+				try {
+					if (isNullOrUndefined(templateNameResolver)) {
+						resolve(new TemplateNameResolverResult(templateName, false));
+					}
+					else {
+						Xrm.Utility.executeFunction(
+							templateNameResolver.webresourceName,
+							templateNameResolver.functionName,
+							templateNameResolver.parameters).then((response: any) => {
+								resolve(new TemplateNameResolverResult(response, true));
+							}, (error: any) => {
+								resolve(new TemplateNameResolverResult(templateName, false));
+							});
+					}
+				}
+				catch (error) {
+					resolve(new TemplateNameResolverResult(templateName, false));
+				}
+			});
+			return promise;
+		}
+	}
+
+	export class TemplateNameResolverResult {
+		public templateName: string;
+		public isFoundByResolver: boolean;
+		constructor(templateName: string, isFoundByResolver: boolean) {
+			this.templateName = templateName;
+			this.isFoundByResolver = isFoundByResolver;
+		}
 	}
 }

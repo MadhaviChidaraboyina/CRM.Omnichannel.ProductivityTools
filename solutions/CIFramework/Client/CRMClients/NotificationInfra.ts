@@ -388,6 +388,7 @@ namespace Microsoft.CIFramework.Internal {
 		let correlationId: any;
 		let templateName: any;
 		let templateParameters: any;
+		let templateNameResolver: any;
 		for (let [key, value] of notificationUX) {
 			if(key.search(Constants.eventType) != -1){
 				console.log(value);
@@ -415,14 +416,20 @@ namespace Microsoft.CIFramework.Internal {
 			if (key.search(Constants.templateParameters) != -1) {
 				templateParameters = value;
 			}
+			if (key.search(Constants.templateNameResolver) != -1) {
+				templateNameResolver = value;
+			}
 		}
 
 		if (!correlationId) {
 			correlationId = "";
 		}
 
-		if (templateName) {
-			return launchZFPNotificationFromTemplate(templateName, templateParameters, correlationId);
+		if (templateNameResolver || templateName) {
+
+			// Consumer can pass either templatename or templatename resolver.
+			// Template name resolver should contain webresourcename , functionname and parameters(if any).
+			return launchZFPNotificationFromTemplate(templateName, templateParameters, templateNameResolver,correlationId);
 		}
 
 		if (header == null || header == "undefined"){
