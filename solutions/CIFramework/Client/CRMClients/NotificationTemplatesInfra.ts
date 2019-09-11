@@ -25,7 +25,7 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(true);
 					}
 					Xrm.WebApi.retrieveMultipleRecords("msdyn_consoleapplicationnotificationtemplate",
-						"?$select=msdyn_name,msdyn_title,msdyn_notificationbuttons,msdyn_icon,msdyn_timeout&$expand=msdyn_msdyn_consoleapplicationnotificationtempl($select=msdyn_name,msdyn_lineheader,msdyn_value),msdyn_msdyn_consoleapplicationnotificationtag($select=msdyn_name)").then(
+						"?$select=msdyn_name,msdyn_title,msdyn_notificationbuttons,msdyn_icon,msdyn_timeout&$expand=msdyn_msdyn_consoleapplicationnotificationtempl($select=msdyn_name,msdyn_lineheader,msdyn_value,msdyn_priority),msdyn_msdyn_consoleapplicationnotificationtag($select=msdyn_name)").then(
 						function (result) {
 							result.entities.forEach(
 								function (value, index, array) {
@@ -37,15 +37,15 @@ namespace Microsoft.CIFramework.Internal {
 										value["msdyn_icon"],
 										value["msdyn_timeout"],
 										value["msdyn_msdyn_consoleapplicationnotificationtempl"]
-										));
-										for (let index in value["msdyn_msdyn_consoleapplicationnotificationtag"]) {
-											let tag: string = value["msdyn_msdyn_consoleapplicationnotificationtag"][index].msdyn_name;
-											if (!UCINotificationTemplate._templateBytag.has(tag)) {
-												UCINotificationTemplate._templateBytag.set(tag, []);
-											}
-											UCINotificationTemplate._templateBytag.get(tag).push(value["msdyn_name"]);
+									));
+									for (let index in value["msdyn_msdyn_consoleapplicationnotificationtag"]) {
+										let tag: string = value["msdyn_msdyn_consoleapplicationnotificationtag"][index].msdyn_name;
+										if (!UCINotificationTemplate._templateBytag.has(tag)) {
+											UCINotificationTemplate._templateBytag.set(tag, []);
 										}
-									});
+										UCINotificationTemplate._templateBytag.get(tag).push(value["msdyn_name"]);
+									}
+								});
 							return resolve(true);
 						},
 						function (error) {
@@ -103,12 +103,12 @@ namespace Microsoft.CIFramework.Internal {
 		public instantiateTemplate(templateParams: any, acceptHandler: XrmClientApi.EventHandler, rejectHandler: XrmClientApi.EventHandler, timeoutHandler: XrmClientApi.EventHandler, correlationId?: string): Promise<CIFPopupNotification> { //TODO: The return type here will change based on platform definition
 			return new Promise<any>(function (resolve: (value?: XrmClientApi.IPopupNotificationItem | PromiseLike<XrmClientApi.IPopupNotificationItem>) => void, reject: (error: Error) => void) {
 				try {   //TODO: Parameterized apptab title
-					let ret: XrmClientApi.IPopupNotificationItem  = {
+					let ret: XrmClientApi.IPopupNotificationItem = {
 						title: this.title,
 						acceptAction: {
 							eventHandler: acceptHandler,
 							actionLabel: this.actionButtons[UCINotificationTemplate.AcceptAction] || Utility.getResourceString("ACCEPT_BUTTON_TEXT")
-							},
+						},
 						declineAction: {
 							eventHandler: rejectHandler,
 							actionLabel: this.actionButtons[UCINotificationTemplate.RejectAction] || Utility.getResourceString("REJECT_BUTTON_TEXT")
@@ -136,16 +136,34 @@ namespace Microsoft.CIFramework.Internal {
 							//TODO: log error
 						}));
 
-					for (let i in this.infoFields) {
-						stringResolvers.push(TemplatesUtility.resolveTemplateString(this.infoFields[i]["msdyn_value"], templateParams, this.name).then(
-							function (result: string) {
-								ret.details[this.infoFields[i]["msdyn_lineheader"]] = result;
-							}.bind(this),
-							function (error: Error) {
-								ret.details[this.infoFields[i]["msdyn_lineheader"]] = this.infoFields[i]["msdyn_value"];
-								//TODO: log error
-							}.bind(this)));
+					if (this.infoFields.length > 0) {
+
+						// Sort the fields as per priority for evaluation
+						var notificationFieldList: NotificationField[] = [];
+						for (let i in this.infoFields) {
+							notificationFieldList.push(new NotificationField(this.infoFields[i]["msdyn_lineheader"], this.infoFields[i]["msdyn_value"], this.infoFields[i]["msdyn_priority"]));
+						}
+						notificationFieldList.sort(this.compareInfoFields);
+
+						let noOfNecessaryFields = (notificationFieldList.length > NotificationConstants.NoOfFieldsAllowedInNotification) ? NotificationConstants.NoOfFieldsAllowedInNotification : notificationFieldList.length;
+						let availableFields = 0;
+						var fieldsWithValues: NotificationField[] = [];
+						var promise = new Promise<string>(
+								function (resolve: (fields: NotificationField[]) => void, reject: (fields: NotificationField[]) => void) {
+								this.resolveFields(notificationFieldList, 0, noOfNecessaryFields, templateParams, this.name, fieldsWithValues, availableFields, noOfNecessaryFields).then(
+									function (response: any) {
+										this.updatePopupItemDetailswithOrderedFields(ret, fieldsWithValues);
+											return resolve(fieldsWithValues);
+										}.bind(this),
+										function (error: Error) {
+											console.log(error);
+											this.updatePopupItemDetailswithOrderedFields(ret, fieldsWithValues); // even on error, we wanted fields to be filled with whatever we have and proceed with notification with the available fields.
+											return resolve(fieldsWithValues);
+										}.bind(this));
+								}.bind(this));
+						stringResolvers.push(promise);
 					}
+
 					Promise.all(stringResolvers).then(
 						function (result: any) {
 							return resolve(ret);
@@ -159,6 +177,84 @@ namespace Microsoft.CIFramework.Internal {
 					return reject(error);
 				}
 			}.bind(this));
+		}
+
+		/**
+		 * Resolved the notification fields ordered by priority field 
+		 * @param notificationFieldList The list of notification field ordered by priority
+		 * @param start The start index from where we need to resolve fields.
+		 * @param end The end index till where we need to resolve it together
+		 * @param templateParams The template parameters
+		 * @param name The notification template name
+		 * @param results The result list of notification fields with actual values if resolved.
+		 * @param noOfResolvedFields The number of fields which got resolved successfully
+		 * @param noOfNecessaryFields The number of necessary fields.
+		 */
+		private resolveFields(notificationFieldList: NotificationField[], start: number, end: number, templateParams: any, name: string, results: NotificationField[], noOfResolvedFields: number, noOfNecessaryFields: number): Promise<number> {
+			return new Promise<number>(
+				function (resolve: (noOfResolvedFields: number) => void, reject: (noOfResolvedFields: number) => void) {
+					try {
+						var stringResolversFields: Promise<string>[] = [];
+						for (var i = start; i < end && i < notificationFieldList.length; i++) {
+							var obj: any = { index: i };
+							stringResolversFields.push(TemplatesUtility.resolveTemplateString(notificationFieldList[i].value, templateParams, name).then(function (indexObj: any, result: any) {
+								results.push(new NotificationField(notificationFieldList[indexObj.index].lineheader, result, notificationFieldList[indexObj.index].priority));
+								noOfResolvedFields++;
+								return Promise.resolve("Success");
+							}.bind(this, obj), function (error: any) {
+								return Promise.resolve("Error");
+							}.bind(this)));
+						}
+						Promise.all(stringResolversFields).then(function (response: any) {
+							if (end >= notificationFieldList.length || noOfResolvedFields >= noOfNecessaryFields) { // If we have got necessary no of fields or have completed the evaluation of the full list, resolve with whatever we have.
+								return resolve(noOfResolvedFields);
+							}
+							if (noOfResolvedFields < noOfNecessaryFields) { //if there are  fields for evaluations further, call the same function with start and end index updated.
+								this.resolveFields(notificationFieldList, end, end + 1, templateParams, name, results, noOfResolvedFields, noOfNecessaryFields).then(function (response: any) {
+									return resolve(response);
+								}.bind(this));
+							}
+						}.bind(this), function (error: any) {
+								return resolve(noOfResolvedFields);
+						}.bind(this));
+					}
+					catch (error) {
+						return resolve(noOfResolvedFields);
+					}
+				}.bind(this));
+		}
+
+		/// Updates popupItem. details with the notification fields in the order of priority
+		private updatePopupItemDetailswithOrderedFields(popupItem: XrmClientApi.IPopupNotificationItem, fieldsWithValues: NotificationField[]) {
+			fieldsWithValues.sort(this.compareInfoFields);
+			let avaialableFields: number = 0;
+			for (var field of fieldsWithValues) {
+				if (!isNullOrUndefined(field.value)) {
+					popupItem.details[field.lineheader] = field.value;
+					avaialableFields++;
+				}
+				if (avaialableFields == NotificationConstants.NoOfFieldsAllowedInNotification) {
+					return popupItem;
+				}
+		}
+		return popupItem;
+	}
+		// compare function for notification fields.
+		private compareInfoFields(field1: NotificationField, field2: NotificationField) {
+			if (field1.priority === field2.priority) {
+				return ComparisonResult.EQUAL;
+			}
+
+			// Null checks are for pushing null values to the end of the list on sorting
+			if (isNullOrUndefined(field1.priority)) {
+				return ComparisonResult.GREATER;
+			}
+
+			if (isNullOrUndefined(field2.priority)) {
+				return ComparisonResult.LESSER;
+			}
+
+			return field1.priority > field2.priority ? ComparisonResult.GREATER : ComparisonResult.LESSER;
 		}
 
 		private _name: string;
@@ -209,6 +305,20 @@ namespace Microsoft.CIFramework.Internal {
 				labels.push(buttonsJson.Reject_Button_String ? buttonsJson.Reject_Button_String : "");
 				this._actionButtons[UCINotificationTemplate.RejectAction] = labels[++buttonsCount];
 			}
+		}
+	}
+
+	/**
+	 * Class for holding notification field related properites.
+	 */
+	class NotificationField {
+		public lineheader: string;
+		public value: string;
+		public priority: string;
+		constructor(lineheader: string, value: string, priority: string) {
+			this.lineheader = lineheader;
+			this.value = value;
+			this.priority = priority;
 		}
 	}
 }

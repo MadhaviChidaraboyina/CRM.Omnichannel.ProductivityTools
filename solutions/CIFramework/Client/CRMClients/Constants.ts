@@ -28,4 +28,14 @@ namespace Microsoft.CIFramework.Internal
 		timeOutMethod: any,
 		correlationId: string
 	}
+
+	export class NotificationConstants {
+		public static NoOfFieldsAllowedInNotification = 4;
+	}
+
+	export enum ComparisonResult {
+		EQUAL = 0,
+		GREATER =1,
+		LESSER=-1
+	}
 }
