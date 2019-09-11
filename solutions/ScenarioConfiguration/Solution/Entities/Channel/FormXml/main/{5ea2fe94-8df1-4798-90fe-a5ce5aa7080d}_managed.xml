@@ -20,6 +20,14 @@
 																		</labels>
 																		<rows>
 																				<row>
+																						<cell id="{e2e87fa6-a6a9-4b42-86a7-3c2e074a94e8}">
+																								<labels>
+																										<label description="" languagecode="1033" />
+																								</labels>
+																								<control id="msdyn_displayname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_displayname" />
+																						</cell>
+																				</row>
+																				<row>
 																						<cell id="{f2e73fa6-a6a9-4b42-86a7-3c2e074a94e8}">
 																								<labels>
 																										<label description="" languagecode="1033" />
@@ -44,7 +52,7 @@
 						</tabs>
 				</form>
 				<IsCustomizable>1</IsCustomizable>
-				<CanBeDeleted>1</CanBeDeleted>
+				<CanBeDeleted>0</CanBeDeleted>
 				<LocalizedNames>
 						<LocalizedName description="Information" languagecode="1033" />
 				</LocalizedNames>

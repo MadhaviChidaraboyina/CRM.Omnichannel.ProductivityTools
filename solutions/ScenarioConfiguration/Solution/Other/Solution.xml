@@ -82,12 +82,13 @@
       </Addresses>
     </Publisher>
     <RootComponents>
-				<RootComponent type="1" schemaName="msdyn_channel" behavior="0" />
+			<RootComponent type="1" schemaName="msdyn_channel" behavior="0" />
 			<RootComponent type="1" schemaName="msdyn_scenario" behavior="0" />
 			<RootComponent type="60" id="{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" behavior="0" />
 			<RootComponent type="60" id="{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" behavior="0" />
-						<RootComponent type="61" schemaName="ScenarioFormHandlers/msdyn_TypeFieldChangeHandlers.js" behavior="0" />
-									<RootComponent type="61" schemaName="msdyn_channel.svg" behavior="0" />
+			<RootComponent type="61" schemaName="ScenarioFormHandlers/msdyn_TypeFieldChangeHandlers.js" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_TemplateNameResolver.js" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_channel.svg" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_scenario.svg" behavior="0" />
 
 	</RootComponents>

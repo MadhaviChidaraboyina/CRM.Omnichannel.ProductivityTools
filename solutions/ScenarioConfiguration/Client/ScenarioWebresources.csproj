@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
+  <Import Project="$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.props')" />
+  <PropertyGroup>
+    <ProjectGuid>{CD2AC64C-9F0A-4ACD-AADD-63689C968896}</ProjectGuid>
+    <ProjectTypeGuids>{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Dynamics.ScenariosAndChannels.WebResources</RootNamespace>
+    <AssemblyName>Microsoft.Dynamics.ScenariosAndChannels.WebResources</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <NOTARGET>true</NOTARGET>
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
+    <TypeScriptCompile Include="TemplateNameResolver.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\TypeScript.targets" />
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>None</TypeScriptModuleKind>
+    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\tsconfig\tsconfig.base.classicweb.json">
+      <Link>tsconfig\tsconfig.base.classicweb.json</Link>
+    </None>
+    <None Include="..\..\tsconfig\tsconfig.base.noclientapi.json">
+      <Link>tsconfig\tsconfig.base.noclientapi.json</Link>
+    </None>
+    <None Include="..\..\tsconfig\tsconfig.base.uci.json">
+      <Link>tsconfig\tsconfig.base.uci.json</Link>
+    </None>
+    <None Include="..\..\tsconfig\tsconfig.base.uciandclassicweb.json">
+      <Link>tsconfig\tsconfig.base.uciandclassicweb.json</Link>
+    </None>
+    <Content Include="tsconfig.json" />
+  </ItemGroup>
+  <Target Name="CopyStatic">
+    <ItemGroup>
+      <StaticWebResources Include="**\*.svg;**\*.png;**\*.jpg;**\*.jpeg;**\*.gif;**\*.htm;**\*.html;**\*.css;**\*.less;**\*.js;**\*.d.ts;**\*.resx;" Exclude="bin\**\*.*;obj\**\*.*;**\node_modules\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(StaticWebResources)" DestinationFiles="@(StaticWebResources->'$(TypeScriptOutDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="True" />
+  </Target>
+  <Target Name="SelectedOutputs" DependsOnTargets="CopyStatic">
+    <ItemGroup>
+      <WebResources Include="$(TypeScriptOutDir)\**\*.svg" />
+      <WebResources Include="$(TypeScriptOutDir)\**\*.png" />
+      <WebResources Include="$(TypeScriptOutDir)\**\*.jpg" />
+      <WebResources Include="$(TypeScriptOutDir)\**\*.jpeg" />
+      <WebResources Include="$(TypeScriptOutDir)\**\*.gif" />
+      <WebResources Include="$(TypeScriptOutDir)\**\*.htm" />
+      <WebResources Include="$(TypeScriptOutDir)\**\*.html" />
+      <WebResources Include="$(TypeScriptOutDir)\**\*.css" />
+      <WebResources Include="$(TypeScriptOutDir)\**\*.less" />
+      <WebResources Include="$(TypeScriptOutDir)\**\*.js" />
+      <WebResources Include="$(TypeScriptOutDir)\**\*.resx" />
+    </ItemGroup>
+  </Target>
+  <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)\%(RecursiveDir)')">
+    <Copy SourceFiles="@(LocResx)" DestinationFolder="$(XrmSolutionsRoot)\solutions\ScenarioConfiguration\Solution\WebResources\Localization" Retries="3" RetryDelayMilliseconds="300" />
+    <PropertyGroup>
+      <ExcludedFromMinification>$(TypeScriptOutDir)\**\*.js</ExcludedFromMinification>
+    </PropertyGroup>
+    <Copy SourceFiles="@(WebResources)" DestinationFolder="$(SolutionPackagePath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
+    <Exec Condition="$(Configuration) == 'Retail'" Command="npm run minifyMacrosClient" WorkingDirectory="..\..\" />
+    <Copy SourceFiles="@(TypeDefinitions)" DestinationFolder="$(XrmSolutionsRoot)\solutions\TypeDefinitions\ScenarioConfiguration\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
+  </Target>
+</Project>

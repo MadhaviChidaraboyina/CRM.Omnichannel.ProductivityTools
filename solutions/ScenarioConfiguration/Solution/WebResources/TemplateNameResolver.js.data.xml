@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 		<WebResource>
-			<WebResourceId>{d97a780b-eabc-e911-a81d-000d3a06b227}</WebResourceId>
-			<Name>ScenarioFormHandlers/msdyn_TypeFieldChangeHandlers.js</Name>
-			<DisplayName>ScenarioFormHandlers/msdyn_TypeFieldChangeHandlers.js</DisplayName>     
+			<WebResourceId>{d85a780b-eabc-e911-a81d-000e3a06b227}</WebResourceId>
+			<Name>msdyn_TemplateNameResolver.js</Name>
+			<DisplayName>msdyn_TemplateNameResolver.js</DisplayName>     
 			<WebResourceType>3</WebResourceType>
 			<IntroducedVersion>1.0</IntroducedVersion>
 			<IsEnabledForMobileClient>0</IsEnabledForMobileClient>
@@ -10,5 +10,5 @@
 			<IsCustomizable>0</IsCustomizable>
 			<CanBeDeleted>0</CanBeDeleted>
 			<IsHidden>0</IsHidden>
-			<FileName>/WebResources/ScenarioFormHandlers/msdyn_TypeFieldChangeHandlers.js</FileName>
+			<FileName>/WebResources/msdyn_TemplateNameResolver.js</FileName>
 		</WebResource>
