@@ -10,38 +10,69 @@ import Internal = Microsoft.CIFramework.Internal;
 namespace Microsoft.CIFramework.External {
 
 	export interface CIFExternalUtility {
-		getSessionInfoObject(sessionId: string): Internal.SessionInfo;
-		getCurrentSessionInfoObject(): Internal.SessionInfo;
-		setSessionInfoObject(sessionInfo: Internal.SessionInfo, sessionId?: string): void;
+		getTemplateForSession(sessionId?: string): any;
+		getSessionTemplateParams(sessionId?: string): any;
+		setSessionTemplateParams(data: any, sessionId?: string): void;
 		resolveTemplateString(input: string, templateParams: any, scope: string): Promise<string>;
 	}
 
 	export class CIFExternalUtilityImpl extends Internal.ConsoleAppSessionManager implements CIFExternalUtility {
-		public getSessionInfoObject(sessionId: string): Internal.SessionInfo {
-			if (!Internal.isNullOrUndefined(sessionId) && this.sessions.has(sessionId)) {
-				return this.sessions.get(sessionId);
-			} else {
-				logErrors("Please provide valid session id", "CIFExternalUtility.getSessionInfoObject");
+
+		public getTemplateForSession(sessionId?: string): any {
+			try {
+				let sessionConfig: Internal.UCISessionTemplate;
+				if (sessionId) {
+					if (this.sessions.has(sessionId)) {
+						sessionConfig = this.sessions.get(sessionId).sessionConfig;
+					} else {
+						logErrors("Please provide valid session id", "CIFExternalUtility.getSessionTemplateId");
+					}
+				} else {
+					sessionConfig = this.sessions.get(this.getFocusedSession()).sessionConfig;
+				}
+				return sessionConfig.templateId;
+			} catch (error) {
+				logErrors("Error retrieving sessionTemplateId : " + error, "CIFExternalUtility.getSessionTemplateId");
 			}
 		}
 
-		public getCurrentSessionInfoObject(): Internal.SessionInfo {
-			return this.sessions.get(this.getFocusedSession());
-		}
-
-		public setSessionInfoObject(sessionInfo: Internal.SessionInfo, sessionId?: string) {
-			if (!Internal.isNullOrUndefined(sessionInfo)) {
+		public getSessionTemplateParams(sessionId?: string): any {
+			try {
 				if (sessionId) {
 					if (this.sessions.has(sessionId)) {
-						this.sessions.set(sessionId, sessionInfo);
+						return this.sessions.get(sessionId).templateParams;
 					} else {
-						logErrors("Please provide valid session id", "CIFExternalUtility.setSessionInfoObject");
+						logErrors("Please provide valid session id", "CIFExternalUtility.getSessionTemplateParams");
 					}
 				} else {
-					this.sessions.set(this.getFocusedSession(), sessionInfo);
+					return this.sessions.get(this.getFocusedSession()).templateParams;
+				}
+			} catch (error) {
+				logErrors("Error retrieving sessionTemplateParams : " + error, "CIFExternalUtility.getSessionTemplateParams");
+			}
+		}
+
+		/**
+		* API to set key/value pairs in templateparams dictionary
+		* @param input set of key/value pairs
+		* returns an Object Promise: The returned Object has the same structure as the underlying Xrm.Navigation.openForm() API
+		*/
+		public setSessionTemplateParams(input: any, sessionId?: string): any {
+			if (!Internal.isNullOrUndefined(input)) {
+				if (sessionId) {
+					if (this.sessions.has(sessionId)) {
+						this.sessions.get(sessionId).setTemplateParams(input);
+						return this.sessions.get(sessionId).templateParams;
+					} else {
+						logErrors("Please provide valid session id", "CIFExternalUtility.setSessionTemplateParams");
+					}
+				} else {
+					this.sessions.get(this.getFocusedSession()).setTemplateParams(input);
+					return this.sessions.get(this.getFocusedSession()).templateParams;
 				}
 			} else {
-				logErrors("Parameter sessionInfo is required", "CIFExternalUtility.setSessionInfoObject");
+				logErrors("Parameter input is required", "CIFExternalUtility.setSessionTemplateParams");
+				return null;
 			}
 		}
 

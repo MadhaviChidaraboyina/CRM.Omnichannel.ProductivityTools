@@ -31,8 +31,19 @@ namespace Microsoft.CIFramework.Internal {
 		public get templateParams(): any {
 			return this._templateParams;
 		}
+
+		public get sessionConfig(): any {
+			return this._sessionConfig;
+		}
+
 		public get associatedProvider(): CIProvider {
 			return this._associatedProvider;
+		}
+
+		public setTemplateParams(input: any) {
+			for (let key in input) {
+				this._templateParams[key] = input[key];
+			}
 		}
 
 		public setTab(tabConfig: AppConfig, tabid: string, name: string, tags?: string[]): void {
