@@ -2,11 +2,12 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
   <PropertyGroup>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <SolutionFileNamePrefix>msdyn_ScenariosAndChannels</SolutionFileNamePrefix>
-    <ApplicationFolder>$(XrmSolutionsRoot)\solutions\ScenarioConfiguration</ApplicationFolder>
-    <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
-    <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
+			<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+			<SolutionFileNamePrefix>msdyn_ScenariosAndChannels</SolutionFileNamePrefix>
+			<ApplicationFolder>$(XrmSolutionsRoot)\solutions\ScenarioConfiguration</ApplicationFolder>
+			<SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
+			<PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
+			<CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ScenarioConfigurationControls</CustomControlsPath>
     <ProjectGuid>{0A991BBC-D4E3-4EF5-90C5-E8C36D007C8B}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

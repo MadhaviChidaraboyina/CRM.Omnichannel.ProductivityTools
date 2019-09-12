@@ -1,6 +1,7 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 	       <ProjectToBuild Include="Client\ScenarioWebresources.csproj" />
+	    <ProjectToBuild Include="Controls\ScenarioMappingControl\ScenarioMappingControl.csproj" />
 		<ProjectToBuild Include="solutions.proj" Condition="'$(EnableSigning)'!='true'" /> 
 	</ItemGroup>
 	<PropertyGroup>

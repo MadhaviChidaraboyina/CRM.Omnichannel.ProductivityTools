@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<control namespace="MscrmControls.Service.CIProvider" constructor="ScenarioMappingControl" version="1.2.0" display-name-key="CC_ScenarioMappingControl_Name" control-type="virtual">
+		<modes>
+		</modes>
+		<type-group name="Text">
+			<type>SingleLine.Text</type>
+		</type-group>
+		<property name="value" display-name-key="CC_Field_Value" description-key="CC_Field_Value_Desc" of-type-group="Text" usage="bound" required="true" hidden="true" />
+		<property name="TemplateType" display-name-key="CC_TemplateType" description-key="CC_TemplateType_Desc" of-type="Enum" usage="input" required="true" hidden="false" >
+			<value name="Notification" display-name-key="CC_Notification_Key" description-key="CC_Notification_Desc" default="true">notification</value>
+			<value name="Session" display-name-key="CC_Session_Key" description-key="CC_Session_Desc">session</value>
+		</property>
+		<property name="BoundEntityName" display-name-key="CC_BoundEntityName" description-key="CC_BoundEntityName_Desc" of-type-group="Text" usage="input" required="true" hidden="false" />
+		<resources>
+			<code path="ScenarioMappingControl.js" order="2" />
+			<resx path="strings/ScenarioMappingControl.1033.resx" version="1.0.0" />
+		</resources>
+	</control>
+</manifest>

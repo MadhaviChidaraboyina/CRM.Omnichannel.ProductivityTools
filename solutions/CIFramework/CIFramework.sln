@@ -124,7 +124,7 @@ Global
 		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.retail|amd64.Build.0 = Release|Any CPU
 		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.retail|Any CPU.ActiveCfg = Release|Any CPU
 		{0CBE7F58-D228-4BB0-9770-2ADCAB78E217}.retail|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
+		EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

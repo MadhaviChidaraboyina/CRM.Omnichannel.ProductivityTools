@@ -152,22 +152,22 @@ namespace Microsoft.CIFramework.ScenarioConfiguration {
 
 		/**
 		 * Gets the template name for given scearnio and channel (also accepts additional attributes name to override channel)
-		 * @param parameters The map containing channelName, ScenarioName
+		 * @param parameters The dictionary containing channelName, ScenarioName
 		 * In case of OC, they pass overridingAttribute with attributeName  and attributeValue to get templates on workstream level
 		 */
-		public static GetTemplateName(parameters: Map<string, any>): Promise<string> {
+		public static GetTemplateName(parameters: any): Promise<string> {
 			return new Promise<string>(
 				function (resolve, reject) {
 					try {
-						var channelName: string = parameters.get("channelName");
+						var channelName: string = parameters["channelName"];
 						channelName = channelName.toLowerCase();
-						var scenarioName: string = parameters.get("scenarioName");
+						var scenarioName: string = parameters["scenarioName"];
 						scenarioName = scenarioName.toLowerCase();
 						if (TemplateNameResolver.IsNullOrUndefined(channelName) || TemplateNameResolver.IsNullOrUndefined(scenarioName)) {
 							reject(new Error("Channel or scenario name is not defined"));
 						}
 
-						var additionalAttr: any = parameters.get("overridingAttribute");
+						var additionalAttr: any = parameters["overridingAttribute"];
 						var overridingAttibuteName: string;
 						var overridingAttibuteValue: string;
 						if (additionalAttr != null && additionalAttr != undefined) {

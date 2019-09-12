@@ -178,6 +178,7 @@ namespace Microsoft.CIFramework
 			notificationMap.set(Constants.correlationId, correlationId);
 			notificationMap.set(Constants.templateName, input.templateName)
 			notificationMap.set(Constants.templateParameters, input.templateParameters);
+			notificationMap.set(Constants.templateNameResolver, input.templateNameResolver);
 			if (!isNullOrUndefined(input.notificationUXObject) )
 			notificationMap.set(Constants.notificationUXObject,Microsoft.CIFramework.Utility.buildMap(JSON.parse(input.notificationUXObject)));
 
