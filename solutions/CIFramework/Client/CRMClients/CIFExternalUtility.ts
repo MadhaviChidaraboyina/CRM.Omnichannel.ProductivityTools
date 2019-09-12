@@ -16,19 +16,18 @@ namespace Microsoft.CIFramework.External {
 		resolveTemplateString(input: string, templateParams: any, scope: string): Promise<string>;
 	}
 
-	export class CIFExternalUtilityImpl extends Internal.ConsoleAppSessionManager implements CIFExternalUtility {
-
+	export class CIFExternalUtilityImpl implements CIFExternalUtility {
 		public getTemplateForSession(sessionId?: string): any {
 			try {
 				let sessionConfig: Internal.UCISessionTemplate;
 				if (sessionId) {
-					if (this.sessions.has(sessionId)) {
-						sessionConfig = this.sessions.get(sessionId).sessionConfig;
+					if (Internal.state.sessionManager.sessions.has(sessionId)) {
+						sessionConfig = Internal.state.sessionManager.sessions.get(sessionId).sessionConfig;
 					} else {
 						logErrors("Please provide valid session id", "CIFExternalUtility.getSessionTemplateId");
 					}
 				} else {
-					sessionConfig = this.sessions.get(this.getFocusedSession()).sessionConfig;
+					sessionConfig = Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).sessionConfig;
 				}
 				return sessionConfig.templateId;
 			} catch (error) {
@@ -39,13 +38,13 @@ namespace Microsoft.CIFramework.External {
 		public getSessionTemplateParams(sessionId?: string): any {
 			try {
 				if (sessionId) {
-					if (this.sessions.has(sessionId)) {
-						return this.sessions.get(sessionId).templateParams;
+					if (Internal.state.sessionManager.sessions.has(sessionId)) {
+						return Internal.state.sessionManager.sessions.get(sessionId).templateParams;
 					} else {
 						logErrors("Please provide valid session id", "CIFExternalUtility.getSessionTemplateParams");
 					}
 				} else {
-					return this.sessions.get(this.getFocusedSession()).templateParams;
+					return Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).templateParams;
 				}
 			} catch (error) {
 				logErrors("Error retrieving sessionTemplateParams : " + error, "CIFExternalUtility.getSessionTemplateParams");
@@ -60,15 +59,15 @@ namespace Microsoft.CIFramework.External {
 		public setSessionTemplateParams(input: any, sessionId?: string): any {
 			if (!Internal.isNullOrUndefined(input)) {
 				if (sessionId) {
-					if (this.sessions.has(sessionId)) {
-						this.sessions.get(sessionId).setTemplateParams(input);
-						return this.sessions.get(sessionId).templateParams;
+					if (Internal.state.sessionManager.sessions.has(sessionId)) {
+						Internal.state.sessionManager.sessions.get(sessionId).setTemplateParams(input);
+						Internal.state.sessionManager.sessions.get(sessionId).templateParams;
 					} else {
 						logErrors("Please provide valid session id", "CIFExternalUtility.setSessionTemplateParams");
 					}
 				} else {
-					this.sessions.get(this.getFocusedSession()).setTemplateParams(input);
-					return this.sessions.get(this.getFocusedSession()).templateParams;
+					Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).setTemplateParams(input);
+					Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).templateParams;
 				}
 			} else {
 				logErrors("Parameter input is required", "CIFExternalUtility.setSessionTemplateParams");
@@ -79,9 +78,8 @@ namespace Microsoft.CIFramework.External {
 		public resolveTemplateString(input: string, templateParams: any, scope: string): Promise<string> {
 			return Internal.TemplatesUtility.resolveTemplateString(input, templateParams, scope);
 		}
-
-
 	}
+
 	function logErrors(errorMessage: string, functionName: string) {
 		console.log(errorMessage);
 		let error = {} as Internal.IErrorHandler;

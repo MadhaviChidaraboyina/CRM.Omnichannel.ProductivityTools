@@ -99,7 +99,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 	export abstract class SessionManager {
-		protected sessions: Map<string, SessionInfo>;
+		public sessions: Map<string, SessionInfo>;
 
 		constructor() {
 			this.sessions = new Map<string, SessionInfo>();
