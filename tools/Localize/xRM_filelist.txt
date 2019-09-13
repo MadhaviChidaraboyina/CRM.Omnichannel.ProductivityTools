@@ -8,3 +8,6 @@ solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_103
 solutions\ProductivityMacros\Solution\Resources\en-us\resources.en-US.resx
 solutions\ProductivityMacros\Client\Localization\ProductivityMacros_webresource_strings.1033.resx
 solutions\OmnichannelProductivityToolsSettings\Solution\Resources\en-us\resources.en-US.resx
+solutions\Agentscript\Client\Controls\CallscriptControl\strings\CallscriptControl.1033.resx
+solutions\Agentscript\Client\Localization\Languages\Agentscript.1033.resx
+solutions\Agentscript\Solution\Resources\en-us\resources.en-US.resx
