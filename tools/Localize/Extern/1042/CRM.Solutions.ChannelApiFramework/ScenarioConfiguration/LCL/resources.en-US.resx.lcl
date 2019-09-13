@@ -1,0 +1,1861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="resources.en-US.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="ko-KR" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <Props>
+    <Str Name="CustomName1" Val="Custom 1" />
+    <Str Name="CustomName2" Val="Custom 2" />
+    <Str Name="CustomName3" Val="Custom 3" />
+    <Str Name="CustomName4" Val="Custom 4" />
+    <Str Name="CustomName5" Val="Custom 5" />
+    <Str Name="CustomName6" Val="IQA" />
+  </Props>
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Loc" />
+    <Cmt Name="LPK" />
+    <Cmt Name="Note" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Settings Name="..\LSS\locver.lss" Type="Lss" />
+  <Item ItemId=";resources.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+      <Item ItemId=";10:Description,msdyn_msdyn_channel_msdyn_scenario" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for channel associated with Scenario.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시나리오에 연결된 채널의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004283Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,msdyn_msdyn_ciprovider_msdyn_channel" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for Channel Provider associated with channel.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널과 관련된 채널 공급자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,msdyn_msdyn_consoleapplicationnotificationtemplate_msdyn_scenario_NotificationTemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,msdyn_msdyn_consoleapplicationsessiontemplate_msdyn_scenario_SessionTemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:Description,ScenariosAndChannels" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This solution provides web resources to use scenarios and configure channels.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[이 솔루션은 시나리오를 사용하고 채널을 구성하는 웹 리소스를 제공합니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:Description,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,ScenariosAndChannels" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Scenarios and Channels]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시나리오 및 채널]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A form for this entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[이 엔터티에 대한 양식입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,channel{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A form for this entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[이 엔터티에 대한 양식입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 만든 사용자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 만든 날짜와 시간입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004278Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 만든 대리인 사용자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sequence number of the import that created this record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[이 레코드를 만든 가져오기의 시퀀스 번호입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 수정한 사용자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드가 수정된 날짜와 시간입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 수정한 대리인 사용자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드가 마이그레이션된 날짜와 시간입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[담당자 ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 소유하는 사업부의 고유 식별자]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 소유하는 팀의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 소유하는 사용자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[내부 전용입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 만들 때 사용된 표준 시간대 코드입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelentitymsdyn_channel" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004271Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelmsdyn_ChannelProviderId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for Channel Provider associated with channel.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널과 관련된 채널 공급자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelmsdyn_DisplayName" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelmsdyn_channelId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for entity instances]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[엔터티 인스턴스의 고유 식별자]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelmsdyn_channel_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널의 상태]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelmsdyn_channel_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널의 상태에 대한 설명]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The name of the custom entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[사용자 지정 엔터티의 이름입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널의 상태]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널의 상태에 대한 설명]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 만든 사용자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 만든 날짜와 시간입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 만든 대리인 사용자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sequence number of the import that created this record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[이 레코드를 만든 가져오기의 시퀀스 번호입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004266Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 수정한 사용자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드가 수정된 날짜와 시간입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 수정한 대리인 사용자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드가 마이그레이션된 날짜와 시간입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[담당자 ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 소유하는 사업부의 고유 식별자]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 소유하는 팀의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 소유하는 사용자의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[내부 전용입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 만들 때 사용된 표준 시간대 코드입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenarioentitymsdyn_scenario" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariomsdyn_ChannelId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for channel associated with Scenario.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시나리오에 연결된 채널의 고유 식별자입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariomsdyn_DisplayName" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariomsdyn_NotificationTemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariomsdyn_SessionTemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariomsdyn_Type" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariomsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The name of the custom entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[사용자 지정 엔터티의 이름입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariomsdyn_scenarioId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for entity instances]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[엔터티 인스턴스의 고유 식별자]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariomsdyn_scenario_msdyn_type" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariomsdyn_scenario_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Scenario]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시나리오의 상태]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariomsdyn_scenario_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Scenario]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시나리오의 상태에 대한 설명]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariostatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Scenario]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시나리오의 상태]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_scenariostatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Scenario]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시나리오의 상태에 대한 설명]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_channelentitymsdyn_channel" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[channels]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_scenarioentitymsdyn_scenario" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Scenarios]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시나리오]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Information]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[정보]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,channel{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Information]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[정보]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,msdyn_channelentitymsdyn_channel" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,msdyn_scenarioentitymsdyn_scenario" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Scenario]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시나리오]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,ScenarioInfo{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Common]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[일반]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,ScenarioMarketing{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Marketing]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[마케팅]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,ScenarioProcessCenter{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Process Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[프로세스 세션]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,ScenarioSales{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sales]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[영업]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,ScenarioService{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[서비스]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[만든 사람]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[만든 날짜]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[만든 사람(대리인)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import Sequence Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[가져오기 시퀀스 번호]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004249Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[수정한 사람]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[수정한 날짜]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[수정한 사람(대리인)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 만든 날짜]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[담당자]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Business Unit]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[담당 사업부]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Team]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[담당 팀]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning User]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[담당 사용자]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[표준 시간대 규칙 버전 번호]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[UTC 변환 표준 시간대 코드]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelmsdyn_ChannelProviderId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Provider]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널 공급자]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelmsdyn_DisplayName" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Display Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[표시 이름]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelmsdyn_channelId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004243Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelmsdyn_channel_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[상태]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelmsdyn_channel_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[상태 설명]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[이름]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[상태]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[상태 설명]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[만든 사람]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[만든 날짜]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[만든 사람(대리인)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import Sequence Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[가져오기 시퀀스 번호]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[수정한 사람]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[수정한 날짜]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[수정한 사람(대리인)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[레코드를 만든 날짜]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004239Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[담당자]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Business Unit]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[담당 사업부]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Team]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[담당 팀]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning User]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[담당 사용자]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[표준 시간대 규칙 버전 번호]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenarioUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[UTC 변환 표준 시간대 코드]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariomsdyn_ChannelId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[채널]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariomsdyn_DisplayName" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Display Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[표시 이름]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariomsdyn_NotificationTemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Notification Template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[알림 템플릿]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariomsdyn_SessionTemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[세션 템플릿]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariomsdyn_Type" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[유형]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariomsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[이름]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariomsdyn_scenarioId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Scenario]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시나리오]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004232Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariomsdyn_scenario_msdyn_type" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[유형]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariomsdyn_scenario_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[상태]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariomsdyn_scenario_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[상태 설명]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariostatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[상태]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_scenariostatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[상태 설명]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Scenario{0738a22d-b996-ae41-07bd-50444a4ced2a}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Scenario{0d733225-15b3-4987-a067-cb5d52b3f260}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[일반]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Scenario{25f90570-8ed0-4eb4-98af-71f6daa7a728}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Scenario{37051276-14b3-0e8c-3936-808a908a28da}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Scenario{3dbad7b6-7315-984b-3abd-b6175ed76723}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Scenario{4b42bcb8-3ec6-6370-461a-2b0c01411700}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Scenario{77058de9-9a9b-4dab-b526-8122992d61c2}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Scenario{b6ebc1e6-2047-4764-a854-aca2b738b4c9}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[일반]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,channel{1acbe822-da47-40e4-bb56-b2347e5bc033}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,channel{56144221-cac8-49a9-98e8-df7596306973}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[일반]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,channel{debc7136-3c34-4af3-883c-f07c5a02a571}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[일반]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,channel{f2e73fa6-a6a9-4b42-86a7-3c2e074a94e8}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_channelmsdyn_channel_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[활성]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_channelmsdyn_channel_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[비활성]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_channelmsdyn_channel_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[활성]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_channelmsdyn_channel_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[비활성]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_scenariomsdyn_scenario_msdyn_type0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[세션]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_scenariomsdyn_scenario_msdyn_type1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Notification]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[알림]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_scenariomsdyn_scenario_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[활성]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_scenariomsdyn_scenario_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[비활성]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_scenariomsdyn_scenario_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[활성]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004222Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_scenariomsdyn_scenario_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[비활성]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0004213Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

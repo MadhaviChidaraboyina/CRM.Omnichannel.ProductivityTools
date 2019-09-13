@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="Source LCID" xml:space="preserve">
+    <value>1033</value>
+  </metadata>
+  <metadata name="Source file" xml:space="preserve">
+    <value>msdyn_ScenariosAndChannels_managed.zip</value>
+  </metadata>
+  <metadata name="Source package type" xml:space="preserve">
+    <value>Both</value>
+  </metadata>
+  <metadata name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVp
+        bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </metadata>
+  <data name="10:Description,msdyn_msdyn_channel_msdyn_scenario" xml:space="preserve">
+    <value>시나리오에 연결된 채널의 고유 식별자입니다.</value>
+    <comment>msdyn_scenario Description for EntityRelationship 'msdyn_msdyn_channel_msdyn_scenario'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_ciprovider_msdyn_channel" xml:space="preserve">
+    <value>채널과 관련된 채널 공급자의 고유 식별자입니다.</value>
+    <comment>msdyn_channel Description for EntityRelationship 'msdyn_msdyn_ciprovider_msdyn_channel'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_consoleapplicationnotificationtemplate_msdyn_scenario_NotificationTemplate" xml:space="preserve">
+    <value />
+    <comment>msdyn_scenario Description for EntityRelationship 'msdyn_msdyn_consoleapplicationnotificationtemplate_msdyn_scenario_NotificationTemplate'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_consoleapplicationsessiontemplate_msdyn_scenario_SessionTemplate" xml:space="preserve">
+    <value />
+    <comment>msdyn_scenario Description for EntityRelationship 'msdyn_msdyn_consoleapplicationsessiontemplate_msdyn_scenario_SessionTemplate'</comment>
+  </data>
+  <data name="15062:Description,microsoftdynamicsmsdyn19235" xml:space="preserve">
+    <value>Dynamics 365</value>
+    <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
+  </data>
+  <data name="15062:Description,ScenariosAndChannels" xml:space="preserve">
+    <value>이 솔루션은 시나리오를 사용하고 채널을 구성하는 웹 리소스를 제공합니다.</value>
+    <comment> 'ScenariosAndChannels' : Description for Solution</comment>
+  </data>
+  <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
+    <value>Dynamics 365</value>
+    <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
+  </data>
+  <data name="15062:LocalizedName,ScenariosAndChannels" xml:space="preserve">
+    <value>시나리오 및 채널</value>
+    <comment> 'ScenariosAndChannels' : LocalizedName for Solution</comment>
+  </data>
+  <data name="1:Description,channel{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" xml:space="preserve">
+    <value>이 엔터티에 대한 양식입니다.</value>
+    <comment>'channel' : Description for systemform in Entity FormXml ID: '{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}'</comment>
+  </data>
+  <data name="1:Description,msdyn_channelCreatedBy" xml:space="preserve">
+    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelCreatedOn" xml:space="preserve">
+    <value>레코드를 만든 날짜와 시간입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
+    <value>레코드를 만든 대리인 사용자의 고유 식별자입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelentitymsdyn_channel" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_channel' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelImportSequenceNumber" xml:space="preserve">
+    <value>이 레코드를 만든 가져오기의 시퀀스 번호입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelModifiedBy" xml:space="preserve">
+    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelModifiedOn" xml:space="preserve">
+    <value>레코드가 수정된 날짜와 시간입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelModifiedOnBehalfBy" xml:space="preserve">
+    <value>레코드를 수정한 대리인 사용자의 고유 식별자입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
+    <value>엔터티 인스턴스의 고유 식별자</value>
+    <comment>'msdyn_channel' : Description for Attribute 'msdyn_channelId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelmsdyn_ChannelProviderId" xml:space="preserve">
+    <value>채널과 관련된 채널 공급자의 고유 식별자입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'msdyn_ChannelProviderId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelmsdyn_channel_statecode" xml:space="preserve">
+    <value>채널의 상태</value>
+    <comment>'msdyn_channel' : Description for OptionSet 'msdyn_channel_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelmsdyn_channel_statuscode" xml:space="preserve">
+    <value>채널의 상태에 대한 설명</value>
+    <comment>'msdyn_channel' : Description for OptionSet 'msdyn_channel_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelmsdyn_DisplayName" xml:space="preserve">
+    <value />
+    <comment>'msdyn_channel' : Description for Attribute 'msdyn_DisplayName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelmsdyn_name" xml:space="preserve">
+    <value>사용자 지정 엔터티의 이름입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelOverriddenCreatedOn" xml:space="preserve">
+    <value>레코드가 마이그레이션된 날짜와 시간입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelOwnerId" xml:space="preserve">
+    <value>담당자 ID</value>
+    <comment>'msdyn_channel' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelOwningBusinessUnit" xml:space="preserve">
+    <value>레코드를 소유하는 사업부의 고유 식별자</value>
+    <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
+    <value>레코드를 소유하는 팀의 고유 식별자입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelOwningUser" xml:space="preserve">
+    <value>레코드를 소유하는 사용자의 고유 식별자입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelstatecode" xml:space="preserve">
+    <value>채널의 상태</value>
+    <comment>'msdyn_channel' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelstatuscode" xml:space="preserve">
+    <value>채널의 상태에 대한 설명</value>
+    <comment>'msdyn_channel' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>내부 전용입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>레코드를 만들 때 사용된 표준 시간대 코드입니다.</value>
+    <comment>'msdyn_channel' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioCreatedBy" xml:space="preserve">
+    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioCreatedOn" xml:space="preserve">
+    <value>레코드를 만든 날짜와 시간입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
+    <value>레코드를 만든 대리인 사용자의 고유 식별자입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioentitymsdyn_scenario" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_scenario' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioImportSequenceNumber" xml:space="preserve">
+    <value>이 레코드를 만든 가져오기의 시퀀스 번호입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioModifiedBy" xml:space="preserve">
+    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioModifiedOn" xml:space="preserve">
+    <value>레코드가 수정된 날짜와 시간입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioModifiedOnBehalfBy" xml:space="preserve">
+    <value>레코드를 수정한 대리인 사용자의 고유 식별자입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariomsdyn_ChannelId" xml:space="preserve">
+    <value>시나리오에 연결된 채널의 고유 식별자입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'msdyn_ChannelId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariomsdyn_DisplayName" xml:space="preserve">
+    <value />
+    <comment>'msdyn_scenario' : Description for Attribute 'msdyn_DisplayName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariomsdyn_name" xml:space="preserve">
+    <value>사용자 지정 엔터티의 이름입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariomsdyn_NotificationTemplate" xml:space="preserve">
+    <value />
+    <comment>'msdyn_scenario' : Description for Attribute 'msdyn_NotificationTemplate' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariomsdyn_scenarioId" xml:space="preserve">
+    <value>엔터티 인스턴스의 고유 식별자</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'msdyn_scenarioId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariomsdyn_scenario_msdyn_type" xml:space="preserve">
+    <value />
+    <comment>'msdyn_scenario' : Description for OptionSet 'msdyn_scenario_msdyn_type' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariomsdyn_scenario_statecode" xml:space="preserve">
+    <value>시나리오의 상태</value>
+    <comment>'msdyn_scenario' : Description for OptionSet 'msdyn_scenario_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariomsdyn_scenario_statuscode" xml:space="preserve">
+    <value>시나리오의 상태에 대한 설명</value>
+    <comment>'msdyn_scenario' : Description for OptionSet 'msdyn_scenario_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariomsdyn_SessionTemplate" xml:space="preserve">
+    <value />
+    <comment>'msdyn_scenario' : Description for Attribute 'msdyn_SessionTemplate' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariomsdyn_Type" xml:space="preserve">
+    <value />
+    <comment>'msdyn_scenario' : Description for Attribute 'msdyn_Type' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioOverriddenCreatedOn" xml:space="preserve">
+    <value>레코드가 마이그레이션된 날짜와 시간입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioOwnerId" xml:space="preserve">
+    <value>담당자 ID</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioOwningBusinessUnit" xml:space="preserve">
+    <value>레코드를 소유하는 사업부의 고유 식별자</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">
+    <value>레코드를 소유하는 팀의 고유 식별자입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioOwningUser" xml:space="preserve">
+    <value>레코드를 소유하는 사용자의 고유 식별자입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariostatecode" xml:space="preserve">
+    <value>시나리오의 상태</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenariostatuscode" xml:space="preserve">
+    <value>시나리오의 상태에 대한 설명</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>내부 전용입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>레코드를 만들 때 사용된 표준 시간대 코드입니다.</value>
+    <comment>'msdyn_scenario' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
+    <value>이 엔터티에 대한 양식입니다.</value>
+    <comment>'Scenario' : Description for systemform in Entity FormXml ID: '{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}'</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelCreatedBy" xml:space="preserve">
+    <value>만든 사람</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelCreatedOn" xml:space="preserve">
+    <value>만든 날짜</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
+    <value>만든 사람(대리인)</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelImportSequenceNumber" xml:space="preserve">
+    <value>가져오기 시퀀스 번호</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelModifiedBy" xml:space="preserve">
+    <value>수정한 사람</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelModifiedOn" xml:space="preserve">
+    <value>수정한 날짜</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelModifiedOnBehalfBy" xml:space="preserve">
+    <value>수정한 사람(대리인)</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelmsdyn_channelId" xml:space="preserve">
+    <value>채널</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'msdyn_channelId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelmsdyn_ChannelProviderId" xml:space="preserve">
+    <value>채널 공급자</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'msdyn_ChannelProviderId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelmsdyn_channel_statecode" xml:space="preserve">
+    <value>상태</value>
+    <comment>'msdyn_channel' : displayname for OptionSet 'msdyn_channel_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelmsdyn_channel_statuscode" xml:space="preserve">
+    <value>상태 설명</value>
+    <comment>'msdyn_channel' : displayname for OptionSet 'msdyn_channel_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelmsdyn_DisplayName" xml:space="preserve">
+    <value>표시 이름</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'msdyn_DisplayName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelmsdyn_name" xml:space="preserve">
+    <value>이름</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelOverriddenCreatedOn" xml:space="preserve">
+    <value>레코드를 만든 날짜</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelOwnerId" xml:space="preserve">
+    <value>담당자</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelOwningBusinessUnit" xml:space="preserve">
+    <value>담당 사업부</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelOwningTeam" xml:space="preserve">
+    <value>담당 팀</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelOwningUser" xml:space="preserve">
+    <value>담당 사용자</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelstatecode" xml:space="preserve">
+    <value>상태</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelstatuscode" xml:space="preserve">
+    <value>상태 설명</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>표준 시간대 규칙 버전 번호</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC 변환 표준 시간대 코드</value>
+    <comment>'msdyn_channel' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioCreatedBy" xml:space="preserve">
+    <value>만든 사람</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioCreatedOn" xml:space="preserve">
+    <value>만든 날짜</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
+    <value>만든 사람(대리인)</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioImportSequenceNumber" xml:space="preserve">
+    <value>가져오기 시퀀스 번호</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioModifiedBy" xml:space="preserve">
+    <value>수정한 사람</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioModifiedOn" xml:space="preserve">
+    <value>수정한 날짜</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioModifiedOnBehalfBy" xml:space="preserve">
+    <value>수정한 사람(대리인)</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariomsdyn_ChannelId" xml:space="preserve">
+    <value>채널</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'msdyn_ChannelId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariomsdyn_DisplayName" xml:space="preserve">
+    <value>표시 이름</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'msdyn_DisplayName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariomsdyn_name" xml:space="preserve">
+    <value>이름</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariomsdyn_NotificationTemplate" xml:space="preserve">
+    <value>알림 템플릿</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'msdyn_NotificationTemplate' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariomsdyn_scenarioId" xml:space="preserve">
+    <value>시나리오</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'msdyn_scenarioId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariomsdyn_scenario_msdyn_type" xml:space="preserve">
+    <value>유형</value>
+    <comment>'msdyn_scenario' : displayname for OptionSet 'msdyn_scenario_msdyn_type' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariomsdyn_scenario_statecode" xml:space="preserve">
+    <value>상태</value>
+    <comment>'msdyn_scenario' : displayname for OptionSet 'msdyn_scenario_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariomsdyn_scenario_statuscode" xml:space="preserve">
+    <value>상태 설명</value>
+    <comment>'msdyn_scenario' : displayname for OptionSet 'msdyn_scenario_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariomsdyn_SessionTemplate" xml:space="preserve">
+    <value>세션 템플릿</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'msdyn_SessionTemplate' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariomsdyn_Type" xml:space="preserve">
+    <value>유형</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'msdyn_Type' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioOverriddenCreatedOn" xml:space="preserve">
+    <value>레코드를 만든 날짜</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioOwnerId" xml:space="preserve">
+    <value>담당자</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioOwningBusinessUnit" xml:space="preserve">
+    <value>담당 사업부</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioOwningTeam" xml:space="preserve">
+    <value>담당 팀</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioOwningUser" xml:space="preserve">
+    <value>담당 사용자</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariostatecode" xml:space="preserve">
+    <value>상태</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenariostatuscode" xml:space="preserve">
+    <value>상태 설명</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>표준 시간대 규칙 버전 번호</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC 변환 표준 시간대 코드</value>
+    <comment>'msdyn_scenario' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:label,channel{1acbe822-da47-40e4-bb56-b2347e5bc033}" xml:space="preserve">
+    <value />
+    <comment>'channel' : label for cell in Entity FormXml ID: '{1acbe822-da47-40e4-bb56-b2347e5bc033}'</comment>
+  </data>
+  <data name="1:label,channel{56144221-cac8-49a9-98e8-df7596306973}" xml:space="preserve">
+    <value>일반</value>
+    <comment>'channel' : label for section in Entity FormXml ID: '{56144221-cac8-49a9-98e8-df7596306973}'</comment>
+  </data>
+  <data name="1:label,channel{debc7136-3c34-4af3-883c-f07c5a02a571}" xml:space="preserve">
+    <value>일반</value>
+    <comment>'channel' : label for tab in Entity FormXml ID: '{debc7136-3c34-4af3-883c-f07c5a02a571}'</comment>
+  </data>
+  <data name="1:label,channel{f2e73fa6-a6a9-4b42-86a7-3c2e074a94e8}" xml:space="preserve">
+    <value />
+    <comment>'channel' : label for cell in Entity FormXml ID: '{f2e73fa6-a6a9-4b42-86a7-3c2e074a94e8}'</comment>
+  </data>
+  <data name="1:label,msdyn_channelmsdyn_channel_statecode0" xml:space="preserve">
+    <value>활성</value>
+    <comment>'msdyn_channel' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_channelmsdyn_channel_statecode1" xml:space="preserve">
+    <value>비활성</value>
+    <comment>'msdyn_channel' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_channelmsdyn_channel_statuscode1" xml:space="preserve">
+    <value>활성</value>
+    <comment>'msdyn_channel' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_channelmsdyn_channel_statuscode2" xml:space="preserve">
+    <value>비활성</value>
+    <comment>'msdyn_channel' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_scenariomsdyn_scenario_msdyn_type0" xml:space="preserve">
+    <value>세션</value>
+    <comment>'msdyn_scenario' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_scenariomsdyn_scenario_msdyn_type1" xml:space="preserve">
+    <value>알림</value>
+    <comment>'msdyn_scenario' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_scenariomsdyn_scenario_statecode0" xml:space="preserve">
+    <value>활성</value>
+    <comment>'msdyn_scenario' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_scenariomsdyn_scenario_statecode1" xml:space="preserve">
+    <value>비활성</value>
+    <comment>'msdyn_scenario' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_scenariomsdyn_scenario_statuscode1" xml:space="preserve">
+    <value>활성</value>
+    <comment>'msdyn_scenario' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_scenariomsdyn_scenario_statuscode2" xml:space="preserve">
+    <value>비활성</value>
+    <comment>'msdyn_scenario' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,Scenario{0738a22d-b996-ae41-07bd-50444a4ced2a}" xml:space="preserve">
+    <value />
+    <comment>'Scenario' : label for cell in Entity FormXml ID: '{0738a22d-b996-ae41-07bd-50444a4ced2a}'</comment>
+  </data>
+  <data name="1:label,Scenario{0d733225-15b3-4987-a067-cb5d52b3f260}" xml:space="preserve">
+    <value>일반</value>
+    <comment>'Scenario' : label for section in Entity FormXml ID: '{0d733225-15b3-4987-a067-cb5d52b3f260}'</comment>
+  </data>
+  <data name="1:label,Scenario{25f90570-8ed0-4eb4-98af-71f6daa7a728}" xml:space="preserve">
+    <value />
+    <comment>'Scenario' : label for cell in Entity FormXml ID: '{25f90570-8ed0-4eb4-98af-71f6daa7a728}'</comment>
+  </data>
+  <data name="1:label,Scenario{37051276-14b3-0e8c-3936-808a908a28da}" xml:space="preserve">
+    <value />
+    <comment>'Scenario' : label for cell in Entity FormXml ID: '{37051276-14b3-0e8c-3936-808a908a28da}'</comment>
+  </data>
+  <data name="1:label,Scenario{3dbad7b6-7315-984b-3abd-b6175ed76723}" xml:space="preserve">
+    <value />
+    <comment>'Scenario' : label for cell in Entity FormXml ID: '{3dbad7b6-7315-984b-3abd-b6175ed76723}'</comment>
+  </data>
+  <data name="1:label,Scenario{4b42bcb8-3ec6-6370-461a-2b0c01411700}" xml:space="preserve">
+    <value />
+    <comment>'Scenario' : label for cell in Entity FormXml ID: '{4b42bcb8-3ec6-6370-461a-2b0c01411700}'</comment>
+  </data>
+  <data name="1:label,Scenario{77058de9-9a9b-4dab-b526-8122992d61c2}" xml:space="preserve">
+    <value />
+    <comment>'Scenario' : label for cell in Entity FormXml ID: '{77058de9-9a9b-4dab-b526-8122992d61c2}'</comment>
+  </data>
+  <data name="1:label,Scenario{b6ebc1e6-2047-4764-a854-aca2b738b4c9}" xml:space="preserve">
+    <value>일반</value>
+    <comment>'Scenario' : label for tab in Entity FormXml ID: '{b6ebc1e6-2047-4764-a854-aca2b738b4c9}'</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_channelentitymsdyn_channel" xml:space="preserve">
+    <value>채널</value>
+    <comment> 'msdyn_channel' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_scenarioentitymsdyn_scenario" xml:space="preserve">
+    <value>시나리오</value>
+    <comment> 'msdyn_scenario' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,channel{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" xml:space="preserve">
+    <value>정보</value>
+    <comment>'channel' : LocalizedName for systemform in Entity FormXml ID: '{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}'</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_channelentitymsdyn_channel" xml:space="preserve">
+    <value>채널</value>
+    <comment> 'msdyn_channel' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_scenarioentitymsdyn_scenario" xml:space="preserve">
+    <value>시나리오</value>
+    <comment> 'msdyn_scenario' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
+    <value>정보</value>
+    <comment>'Scenario' : LocalizedName for systemform in Entity FormXml ID: '{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}'</comment>
+  </data>
+  <data name="1:Title,ScenarioInfo{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
+    <value>일반</value>
+    <comment>'Scenario' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,ScenarioMarketing{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
+    <value>마케팅</value>
+    <comment>'Scenario' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,ScenarioProcessCenter{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
+    <value>프로세스 세션</value>
+    <comment>'Scenario' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,ScenarioSales{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
+    <value>영업</value>
+    <comment>'Scenario' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,ScenarioService{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
+    <value>서비스</value>
+    <comment>'Scenario' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+</root>

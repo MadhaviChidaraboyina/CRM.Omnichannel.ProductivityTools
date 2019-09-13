@@ -144,7 +144,10 @@ for /f "tokens=1,2 delims=," %%o in (%xRM_TMPPATH%\target.txt) do (
     set xRM_SOURCE=%%o
     set xRM_TARGET=%%o
     set xRM_COMPNAME=CIFramework\
-
+    if not "!xRM_PATH:ScenarioConfiguration=!"=="!xRM_PATH!" (
+        set xRM_COMPNAME=ScenarioConfiguration\
+    ) 
+	
     if exist "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" (
         if NOT DEFINED xRM_BASEDONE (
             REM ExtractOnly - Copy the source file to Master folder
