@@ -16,6 +16,7 @@
     <DllName>$(AssemblyName).dll</DllName>
     <DropFolder>$(SolutionName)PVS</DropFolder>
     <BuildPVS>true</BuildPVS>
+    <CIFPatchImportConfigFile>..\PatchGenerator\ImportConfig.xml</CIFPatchImportConfigFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Dynamics.Solution.Common">
@@ -52,8 +53,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_CIFramework_managed.zip">
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_CIFramework_managed.zip" Condition="'$(cifEnableGenerator)'!='true'">
       <Link>CIFramework\CIFramework_managed.zip</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(PKG_CIF)\Solutions\msdyn_CIFramework_managed.zip" Condition="'$(cifEnableGenerator)'=='true'">
+      <Link>CIFramework\CIFramework_managed.zip</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_CIFrameworkPatch_managed.zip" Condition="'$(cifEnableGenerator)'=='true'">
+      <Link>CIFramework\CIFrameworkPatch_managed.zip</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
 	<Content Include="CIFramework\CmtDataFiles\data_1033\data.xml">
@@ -134,7 +143,12 @@
     <Content Include="CIFramework\Content\en-us\WelcomeHtml\Images\top_item_selected_bg.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="CIFramework\ImportConfig.xml">
+    <Content Include="CIFramework\ImportConfig.xml" Condition="'$(cifEnableGenerator)'!='true'">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(CIFPatchImportConfigFile)" Condition="'$(cifEnableGenerator)'=='true'">
+      <Link>CIFramework\ImportConfig.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>

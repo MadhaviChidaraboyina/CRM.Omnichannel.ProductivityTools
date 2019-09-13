@@ -279,6 +279,26 @@ echo Checking For node js
 ==================================================
 powershell -ExecutionPolicy Bypass -Command %WSRoot%\scripts\init\Initialize-DownloadNodejs.ps1 %WSRoot%
 
+:initializePatchGeneratorVariables
+if [%enablePatchGenerator%]==[true] (
+	set cifEnableGenerator=true
+	set scenConfigEnablePatchGenerator=false
+	set proToolsEnablePatchGenerator=false
+	) else (
+	set cifEnableGenerator=false
+	set scenConfigEnablePatchGenerator=false
+	set proToolsEnablePatchGenerator=false
+	)
+@echo.
+echo Initializing patch variables
+@echo.
+==========================================================
+
+echo cifEnableGenerator = %cifEnableGenerator%
+echo scenConfigEnablePatchGenerator = %scenConfigEnablePatchGenerator%
+echo proToolsEnablePatchGenerator = %proToolsEnablePatchGenerator%
+@echo.
+
 :eof
 echo Done!
 @echo on
