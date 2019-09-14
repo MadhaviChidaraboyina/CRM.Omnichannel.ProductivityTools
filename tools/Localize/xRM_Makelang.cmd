@@ -32,16 +32,14 @@ if exist "%xRM_TMPPATH%" rd /S /Q "%xRM_TMPPATH%
 
 REM Set language options
 REM if Arabic
-REM - xRM_LCID=1025
+REM - xRM_LCID=1025 
 REM - xRM_CULTURE_NAME=ar-SA
-REM - xRM_LANG=ar
 
 set xRM_LCID=%1
 
-for /f "usebackq  eol=! tokens=1,2,3 delims= " %%i in (%~dp0xRM_language.txt) do (
-   if "%%i"=="%xRM_LCID%" (
+for /f "usebackq  eol=! tokens=1,2 delims= " %%i in (%~dp0xRM_language.txt) do (
+    if "%%i"=="%xRM_LCID%" (
        set xRM_CULTURE_NAME=%%j
-       set xRM_LANG=%%k
     )
 )
 
@@ -50,13 +48,13 @@ REM ----------------------------------------------------------------------
 :CheckArguments
 
 if /i NOT "All"=="%xRM_LCID%" (
-   if NOT DEFINED xRM_CULTURE_NAME (
-       echo.
-       echo Error: Specified LCID is not valid.
-       echo        Please specify all or supported languages in xRM_language.txt.
-       echo.
-       goto :DisplayUsage
-   )
+    if NOT DEFINED xRM_CULTURE_NAME (
+        echo.
+        echo Error: Specified LCID is not valid.
+        echo        Please specify all or supported languages in xRM_language.txt.
+        echo.
+        goto :DisplayUsage
+    )
 )
 
 
@@ -66,6 +64,11 @@ REM ----------------------------------------------------------------------
 
 set inetroot=%~dp0
 set inetroot=%inetroot:\tools\Localize\=%
+if NOT DEFINED PKG_JSON (
+    pushd %inetroot% 
+    call init.cmd
+    popd
+)
 set PKG_LSBUILD=%inetroot%\packages\LSBuild.Corext.6.12.4929.5
 
 set xRM_LOCPATH=%~dp0Extern
@@ -86,30 +89,35 @@ REM Get relative Path
 call :Get_CharCount %inetroot%
 
 setlocal ENABLEDELAYEDEXPANSION
-for /f "usebackq  eol=! tokens=1 delims=" %%i in (%~dp0XRM_filelist.txt) do (
-    call :Get_RelativePath "%xRM_SRCPATH%\%%i" %xRM_charcount%
+for /f "usebackq  eol=! tokens=1,2 delims=," %%i in (%~dp0xRM_filelist.txt) do (
+    set xRM_TRG=%%i
+    if /i "%%~xi"==".json" (
+        set xRM_SRC=!xRM_TRG:json=xml!
+        if exist "%xRM_SRCPATH%\!xRM_TRG!" del "%xRM_SRCPATH%\!xRM_TRG!" /f /q
+        call powershell -noprofile %~dp0DataXml2json.ps1 -mode generate -sourceDataxmlPath %xRM_SRCPATH%\!xRM_SRC! -referenceFilePath %~dp0%%~ni_rules.xml -jsonFilePath %xRM_SRCPATH%\!xRM_TRG!
+    )
+    call :Get_RelativePath "%xRM_SRCPATH%\%%i" %xRM_charcount% %%j
 )
 endlocal
 
 if /i "All"=="%xRM_LCID%" (
-    for /f "tokens=1,2,3" %%i in (%~dp0xRM_language.txt) do (
+    for /f "tokens=1,2" %%i in (%~dp0xRM_language.txt) do (
         set xRM_LCID=%%i
         set xRM_CULTURE_NAME=%%j
-        set xRM_LANG=%%k
         call :RunlsBuild
         set xRM_BASEDONE=true
     )
     call :lsBuildGenerate lsbuild.response
-    call robocopy "%xRM_LOCPATH%\Base\%xRM_PNAME%" "%xRM_TMPPATH%\Base\%xRM_PNAME%" *.lcl /s
+    call :RunCmd genXML.cmd
     call :RunCmd copytarget.cmd
 ) else (
-    for /f "tokens=1,2,3" %%i in (%~dp0xRM_language.txt) do (
+    for /f "tokens=1,2" %%i in (%~dp0xRM_language.txt) do (
         if "%%i" == "%xRM_LCID%" (
             call :RunlsBuild
         )
     )
     call :lsBuildGenerate lsbuild.response
-    call robocopy "%xRM_LOCPATH%\Base\%xRM_PNAME%" "%xRM_TMPPATH%\Base\%xRM_PNAME%" *.lcl /s
+    call :RunCmd genXML.cmd
     call :RunCmd copytarget.cmd
 )
 exit /b
@@ -137,53 +145,74 @@ if exist "%xRM_TMPPATH%\%xRM_LCID%" rd /S /Q "%xRM_TMPPATH%\%xRM_LCID%"
 REM 
 REM Generate target.txt
 REM 
-
-for /f "tokens=1,2 delims=," %%o in (%xRM_TMPPATH%\target.txt) do (
-    set xRM_PATH=%%p
-    set xRM_FILE=%%~no%%~xo
-    set xRM_SOURCE=%%o
-    set xRM_TARGET=%%o
-    set xRM_COMPNAME=CIFramework\
-    if not "!xRM_PATH:ScenarioConfiguration=!"=="!xRM_PATH!" (
-        set xRM_COMPNAME=ScenarioConfiguration\
-    ) 
-	
-    if exist "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" (
-        if NOT DEFINED xRM_BASEDONE (
-            REM ExtractOnly - Copy the source file to Master folder
-            echo "Extracting source"
-            call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE!
-        )
-        REM Set LSBuild Parser and Target file name
-        REM Default to RESX Parser
-        set xRM_PARSER=211
-        if not "!xRM_FILE:1033=!" == "!xRM_FILE!" (
-            set xRM_TARGETFILE=!xRM_FILE:1033=%xRM_LCID%!
-            set xRM_TARGET=!xRM_TARGET:1033=%xRM_LCID%!
-        ) else (
-            if not "!xRM_FILE:en-US=!" == "!xRM_FILE!" (
-                set xRM_TARGETFILE=!xRM_FILE:en-US=%xRM_CULTURE_NAME%!
-                set xRM_PATH=!xRM_PATH:en-US=%xRM_CULTURE_NAME%!
-                set xRM_TARGET=!xRM_TARGET:en-US=%xRM_CULTURE_NAME%!
-            )
-        )
-        if /i "/Pseudo"=="%xRM_PL_FULL%" (
+if Exist "%xRM_TMPPATH%\target.txt" (
+    for /f "tokens=1,2,3 delims=," %%o in (%xRM_TMPPATH%\target.txt) do (
+        set xRM_PATH=%%p
+        set xRM_FILE=%%~no%%~xo
+        set xRM_SOURCE=%%o
+        set xRM_TARGET=%%o
+        set xRM_COMPNAME=%%q\
+        if exist "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" (
             if NOT DEFINED xRM_BASEDONE (
-                echo parse /p !xRM_PARSER! /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /o "%xRM_TMPPATH%\Intermidiate\Parse\!xRM_COMPNAME!\!xRM_FILE!.lcl" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\!xRM_FILE!">>%xRM_TMPPATH%\lsbuild.response
-                echo merge /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /o "%xRM_TMPPATH%\Intermidiate\Merged\!xRM_COMPNAME!\!xRM_FILE!.lcl" /z "%xRM_TMPPATH%\Intermidiate\Parse\!xRM_COMPNAME!\!xRM_FILE!.lcl" /t "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl">>%xRM_TMPPATH%\lsbuild.response
-                echo update /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /i "%xRM_TMPPATH%\Intermidiate\Merged\!xRM_COMPNAME!\!xRM_FILE!.lcl" "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl">>%xRM_TMPPATH%\lsbuild.response
+                REM ExtractOnly - Copy the source file to Master folder
+                echo "Extracting source"
+                if /i "%%~xo"==".json" (
+                    call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE! /MOV
+                ) else (
+                    call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE!
+                )
             )
-            echo update /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /i "%xRM_TMPPATH%\Intermidiate\Merged\!xRM_COMPNAME!\!xRM_FILE!.lcl" "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl">>%xRM_TMPPATH%\lsbuild.response
-        )
-        if NOT DEFINED xRM_EXTRACT (
-            echo generate %xRM_PL_FULL% /novalidate /ol "%xRM_TMPPATH%\%xRM_LCID%\!xRM_COMPNAME!\LCL\target\!xRM_TARGETFILE!.lcl" /d %xRM_LCID% /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /o "%xRM_TMPPATH%\%xRM_LCID%\!xRM_PATH!\!xRM_FILE!" /t "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\!xRM_FILE!">>%xRM_TMPPATH%\lsbuild.response
-            REM Generate copy command
-            if NOT EXIST %xRM_SRCPATH%!xRM_PATH! md %xRM_SRCPATH%!xRM_PATH!
-            echo call copy "%xRM_TMPPATH%\%xRM_LCID%!xRM_PATH!!xRM_FILE!" !xRM_TARGET! /Y>>%xRM_TMPPATH%\copytarget.cmd
+            REM Set LSBuild Parser and Target file name
+            REM Default to RESX Parser
+            set xRM_PARSER=211
+
+            if /i "%%~xo"==".json" (
+                set xRM_PARSER=306
+                set xRM_PATH=!xRM_PATH:1033=%xRM_LCID%!
+                set xRM_TARGET=!xRM_TARGET:1033=%xRM_LCID%!
+                set xRM_TARGET=!xRM_TARGET:json=xml!
+                set xRM_TARGETFILE=!xRM_FILE:json=xml!
+            )
+            if not "!xRM_FILE:1033=!" == "!xRM_FILE!" (
+                set xRM_TARGETFILE=!xRM_FILE:1033=%xRM_LCID%!
+                set xRM_TARGET=!xRM_TARGET:1033=%xRM_LCID%!
+            ) else (
+                if not "!xRM_FILE:en-US=!" == "!xRM_FILE!" (
+                    set xRM_TARGETFILE=!xRM_FILE:en-US=%xRM_CULTURE_NAME%!
+                    set xRM_PATH=!xRM_PATH:en-US=%xRM_CULTURE_NAME%!
+                    set xRM_TARGET=!xRM_TARGET:en-US=%xRM_CULTURE_NAME%!
+                )
+            )
+            if /i "/Pseudo"=="%xRM_PL_FULL%" (
+                if NOT DEFINED xRM_BASEDONE (
+                    echo parse /p !xRM_PARSER! /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /o "%xRM_TMPPATH%\Intermidiate\Parse\!xRM_COMPNAME!\!xRM_FILE!.lcl" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\!xRM_FILE!">>%xRM_TMPPATH%\lsbuild.response
+                    echo merge /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /o "%xRM_TMPPATH%\Intermidiate\Merged\!xRM_COMPNAME!\!xRM_FILE!.lcl" /z "%xRM_TMPPATH%\Intermidiate\Parse\!xRM_COMPNAME!\!xRM_FILE!.lcl" /t "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl">>%xRM_TMPPATH%\lsbuild.response
+                    echo update /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /i "%xRM_TMPPATH%\Intermidiate\Merged\!xRM_COMPNAME!\!xRM_FILE!.lcl" "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl">>%xRM_TMPPATH%\lsbuild.response
+                )
+                echo update /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /i "%xRM_TMPPATH%\Intermidiate\Merged\!xRM_COMPNAME!\!xRM_FILE!.lcl" "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl">>%xRM_TMPPATH%\lsbuild.response
+            )
+            if NOT DEFINED xRM_EXTRACT (
+                echo generate %xRM_PL_FULL% /novalidate /ol "%xRM_TMPPATH%\%xRM_LCID%\!xRM_COMPNAME!\LCL\target\!xRM_TARGETFILE!.lcl" /d %xRM_LCID% /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /o "%xRM_TMPPATH%\%xRM_LCID%\!xRM_PATH!\!xRM_FILE!" /t "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\!xRM_FILE!">>%xRM_TMPPATH%\lsbuild.response
+                if NOT EXIST %xRM_SRCPATH%!xRM_PATH! md %xRM_SRCPATH%!xRM_PATH!
+                if /i "%%~xo"==".json" (
+                    REM Generate PowerShell command to generate dataxml
+                    set xRM_SOURCE=!xRM_SOURCE:json=xml!
+                    echo call powershell -noprofile %~dp0DataXml2json.ps1 -mode importjson -sourceDataxmlPath "!xRM_SOURCE!" -referenceFilePath %~dp0%%~no_rules.xml -jsonFilePath "%xRM_TMPPATH%\%xRM_LCID%\!xRM_PATH!\!xRM_FILE!" -outputDataXmlPath !xRM_TARGET!>>%xRM_TMPPATH%\genXML.cmd
+                ) else ( 
+                    REM Generate copy command
+                    echo call copy "%xRM_TMPPATH%\%xRM_LCID%!xRM_PATH!!xRM_FILE!" !xRM_TARGET! /Y>>%xRM_TMPPATH%\copytarget.cmd
+                )
+            ) else (
+                if NOT DEFINED xRM_BASEDONE (
+                    echo call robocopy "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!LCL" "%xRM_TMPPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!LCL" !xRM_FILE!.lcl /s>>%xRM_TMPPATH%\copytarget.cmd
+                )
+            )
         )
     )
+) else (
+    echo Error - %xRM_TMPPATH%\target.txt not found
+    exit /b
 )
-
 endlocal
 goto :eof
 
@@ -221,6 +250,7 @@ set xRM_PL_FULL=
 set xRM_FILE=
 set xRM_SRCPATH=
 set xRM_EXTRACT=
+set xRM_TCOMP=
 
 shift
 :ArgumentsLoopBegin
@@ -237,9 +267,9 @@ if /i "%~1" EQU "/FullPL" (
             set xRM_EXTRACT=1
             set xRM_PL_FULL=/Pseudo
         ) else (
-            if /i "%~1" EQU "/path" (
+            if /i "%~1" EQU "/component" (
                 if "%~2"=="" goto :DisplayUsage
-                set xRM_SRCPATH=%~2
+                set xRM_TCOMP=%~2
             )
         )
     )
@@ -274,8 +304,12 @@ if not 2==%ch% (
     set /a ch-=1
     goto :LOOP_GRP
 )
-    if not exist "%xRM_TMPPATH%" md "%xRM_TMPPATH%" 
-    echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%
+    if not exist "%xRM_TMPPATH%" md "%xRM_TMPPATH%"
+    if DEFINED xRM_TCOMP (
+        if /I %3 EQU %xRM_TCOMP% echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%,%3
+    ) else (
+        echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%,%3
+    )
 exit /b
 
 
@@ -284,30 +318,29 @@ REM ----------------------------------------------------------------------
 echo ----------------------------------------------------------------------
 echo Usage: xRM_MakeLang LCID [options]
 echo.
-echo        LCID            is a language code such as 1031 or 1036. specify all to process 
+echo  LCID                  is a language code such as 1031 or 1036. specify all to process 
 echo                        all language. (Required)
 echo                        Specify All to process all languages
 echo.
 echo Options:
-echo        /FullPL         indicates that all strings should be pseudo-localized.
+echo  /FullPL               indicates that all strings should be pseudo-localized.
 echo                        With this option, the language-specific LCLs are not used. 
 echo                        The build kit uses generic PL LCLs in conjunction with
 echo                        language-specific LSS settings.
 echo.
-echo        /handoff        For IPE use only.
+echo  /handoff              For IPE use only.
 echo                        With this option, Base file and Master files will be copied to 
 echo                        Temp folder and can be used for localization hand off.
 echo.
-echo        /path folder    indicates root folder which contains target files. (Optional)
-echo                        If omitted, default path (%inetroot%\src) will be used and process
-echo                        all the files exposed to localization.  
+echo  /component compname   indicates generate target solution only. (Optional)
+echo                        If omitted, all solution will be processed and generated.
 echo.
 echo.
 echo Example:
 echo        xRM_MakeLang 1036 /FullPL
 echo          - Result = Generate French Pseudo for all the files exposed to localization.
 echo.
-echo        xRM_MakeLang All /path c:\foo\ver
-echo          - Result = Genererate all the target file under c:\foo\ver for all languages.
+echo        xRM_MakeLang All /component OmnichannelBase\Client
+echo          - Result = Genererate all the target file under OmnichannelBase\Client for all languages.
 echo.
 exit /b 1

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="F:\CTAS_log\Runs\20181112-111747-ns668tsva4\Work\UI\Master\xrmSolutions\CIFramework\resources.en-US.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="de-DE" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Loc" />
+    <Cmt Name="LPK" />
+    <Cmt Name="Note" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";resources.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+      <Item ItemId=";15062:Description,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamics 365]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";15062:Description,msdyn_OmnichannelProductivityToolsSettings" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamics 365]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";15062:LocalizedName,msdyn_OmnichannelProductivityToolsSettings" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Productivity Tools Settings]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";81:LocalizedName,msdyn_OCAPP" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Administration]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";81:Title,NewArea_08255196NewArea_08255196" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Administration]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";81:Title,NewArea_08255196NewGroup_8fcea46e" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent Experience]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";81:Title,NewArea_08255196NewSubArea_386b5beb" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+    </Item>
+  </Item>
+</LCX>

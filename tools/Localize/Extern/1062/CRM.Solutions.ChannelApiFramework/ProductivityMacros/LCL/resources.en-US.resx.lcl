@@ -1,0 +1,4149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="resources.en-US.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="lv-LV" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <Props>
+    <Str Name="CustomName1" Val="Custom 1" />
+    <Str Name="CustomName2" Val="Custom 2" />
+    <Str Name="CustomName3" Val="Custom 3" />
+    <Str Name="CustomName4" Val="Custom 4" />
+    <Str Name="CustomName5" Val="Custom 5" />
+    <Str Name="CustomName6" Val="IQA" />
+  </Props>
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Loc" />
+    <Cmt Name="LPK" />
+    <Cmt Name="Note" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Settings Name="..\LSS\locver.lss" Type="Lss" />
+  <Item ItemId=";resources.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+      <Item ItemId=";10:Description,msdyn_msdyn_macroactiontemplate_msdyn_actioninput" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for Macro Action Template associated with Action Input Parameter.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Unikāls makro darbības veidnes identifikators, kas saistīts ar darbības ievades parametru.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003608Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,msdyn_msdyn_macroactiontemplate_msdyn_actionout" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for Macro Action Template associated with Action Output Parameter.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Unikāls makro darbības veidnes identifikators, kas saistīts ar darbības izvades parametru.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003608Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:Description,ProductivityMacros" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This solution provides web resources to use Macros designer and APIs to automate business process tasks.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Šis risinājums nodrošina tīmekļa resursus, lai izmantotu makro noformētāju un API, lai automatizētu biznesa procesu uzdevumus.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003608Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:Description,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:07.0008375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,ProductivityMacros" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2018-06-28T03:55:07.0008375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO6193_20180625" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Action Input Parameter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A form for this entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Šīs entītijas veidlapa.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Action Input Parameter{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Action Input Parameters owned by me]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Man piederošie aktīvās darbības ievades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Action Output Parameter{be58538e-d1d2-e911-a81f-000d3a6d6cb7}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Action Output Parameters owned by me]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Man piederošie aktīvās darbības izvades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Action Output Parameter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A form for this entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Šīs entītijas veidlapa.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Macro Action Template{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A form for this entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Šīs entītijas veidlapa.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Macro Action Templates owned by me]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Man piederošās aktīvās makro darbības veidnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Parameter definition{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Parameter definitions owned by me]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Man piederošās aktīvās parametru definīcijas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Parameter definition{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A form for this entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Šīs entītijas veidlapa.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kurš izveidoja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta izveidošanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā pārstāvja lietotāja unikālais identifikators, kurš izveidoja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003581Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sequence number of the import that created this record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās importēšanas darbības kārtas numurs, ar kuru tika izveidots šis ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kas modificēja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta modificēšanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā pārstāvja lietotāja unikālais identifikators, kas modificēja šo ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta migrēšanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieka ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās struktūrvienības unikālais identifikators, kurai pieder šis ieraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās darba grupas unikālais identifikators, kura ir šī ieraksta īpašnieks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kuram pieder šis ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izmantošanai tikai iekšējām vajadzībām.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās laika joslas kods, kura tika izmantota, veidojot ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterentitymsdyn_actioninputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_ActionTemplateInputParameterId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for Macro Action Template associated with Action Input Parameter.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Unikāls makro darbības veidnes identifikators, kas saistīts ar darbības ievades parametru.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_actioninputparameterId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for entity instances]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Unikāls identifikators entītiju instancēm]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Action Input Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības ievades parametra statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Action Input Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības ievades parametra statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The name of the custom entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pielāgotās entītijas nosaukums.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_parametertype" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Action Input Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības ievades parametra statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actioninputparameterstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Action Input Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības ievades parametra statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kurš izveidoja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta izveidošanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā pārstāvja lietotāja unikālais identifikators, kurš izveidoja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sequence number of the import that created this record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās importēšanas darbības kārtas numurs, ar kuru tika izveidots šis ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003526Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kas modificēja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta modificēšanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā pārstāvja lietotāja unikālais identifikators, kas modificēja šo ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta migrēšanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieka ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās struktūrvienības unikālais identifikators, kurai pieder šis ieraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās darba grupas unikālais identifikators, kura ir šī ieraksta īpašnieks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kuram pieder šis ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izmantošanai tikai iekšējām vajadzībām.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās laika joslas kods, kura tika izmantota, veidojot ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003502Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparametermsdyn_actionoutputparameterId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for entity instances]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Unikāls identifikators entītiju instancēm]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Action Output Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības izvades parametra statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Action Output Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības izvades parametra statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparametermsdyn_actiontemplateoutputparameterid" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for Macro Action Template associated with Action Output Parameter.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Unikāls makro darbības veidnes identifikators, kas saistīts ar darbības izvades parametru.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparametermsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The name of the custom entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pielāgotās entītijas nosaukums.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Action Output Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības izvades parametra statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_actionoutputparameterstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Action Output Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības izvades parametra statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kurš izveidoja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta izveidošanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā pārstāvja lietotāja unikālais identifikators, kurš izveidoja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sequence number of the import that created this record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās importēšanas darbības kārtas numurs, ar kuru tika izveidots šis ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kas modificēja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta modificēšanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003473Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā pārstāvja lietotāja unikālais identifikators, kas modificēja šo ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta migrēšanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieka ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās struktūrvienības unikālais identifikators, kurai pieder šis ieraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās darba grupas unikālais identifikators, kura ir šī ieraksta īpašnieks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kuram pieder šis ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izmantošanai tikai iekšējām vajadzībām.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās laika joslas kods, kura tika izmantota, veidojot ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_InputParameters" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Input parameters for the macro action template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbības veidnes ievades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_OutputParameters" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Output parameters for macro action template entity]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbības veidnes entītijas izvades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_actionDescription" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The description of this macro action.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Šīs makro darbības apraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_brandcolor" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_displayname" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_icon" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplateId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for entity instances]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Unikāls identifikators entītiju instancēm]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Macro Action Template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbības veidnes statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Macro Action Template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbības veidnes statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The name of this Macro template.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Šīs makro veidnes nosaukums.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_subtitle" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_summary" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_title" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The title of this macro action.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Šīs makro darbības nosaukums.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_visibility" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatestatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Macro Action Template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbības veidnes statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macroactiontemplatestatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Macro Action Template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbības veidnes statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kurš izveidoja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta izveidošanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā pārstāvja lietotāja unikālais identifikators, kurš izveidoja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sequence number of the import that created this record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās importēšanas darbības kārtas numurs, ar kuru tika izveidots šis ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kas modificēja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta modificēšanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā pārstāvja lietotāja unikālais identifikators, kas modificēja šo ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta migrēšanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieka ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās struktūrvienības unikālais identifikators, kurai pieder šis ieraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās darba grupas unikālais identifikators, kura ir šī ieraksta īpašnieks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kuram pieder šis ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003395Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izmantošanai tikai iekšējām vajadzībām.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās laika joslas kods, kura tika izmantota, veidojot ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionmsdyn_DisplayName" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionmsdyn_defaultvalue" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionmsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The name of the custom entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pielāgotās entītijas nosaukums.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionmsdyn_parameterdefinitionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for entity instances]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Unikāls identifikators entītiju instancēm]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Parameter definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametra definīcijas statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Parameter definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametra definīcijas statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionmsdyn_parametertype" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Parameter definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametra definīcijas statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_parameterdefinitionstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Parameter definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametra definīcijas statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003366Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Input Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības ievades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Output Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības izvades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Action Templates]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbību veidnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Parameter definitions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametra definīcijas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Input Parameter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Information]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Input Parameter{220c95e7-e853-4196-bcf5-0195392aae41}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Input Parameter Lookup View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības ievades parametra uzmeklēšanas skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Input Parameter{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[My Action Input Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mani darbības ievades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Input Parameter{5b965e27-ff23-48cc-9fa8-5f870282d801}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive Action Input Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvi darbības ievades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Input Parameter{641c26b7-2180-4bd6-86e0-ae67d20f87be}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Input Parameter Associated View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības ievades parametra saistītais skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Input Parameter{68335c03-9c8e-4941-b3de-3117bba3e5fb}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Action Input Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvi darbības ievades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Input Parameter{a3cd66c8-212c-4117-a9ec-fe905795224a}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Quick Find Active Action Input Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvo darbības ievades parametru ātrā atrašana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Input Parameter{b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Input Parameter Advanced Find View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības ievades parametra detalizētās atrašanas skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003342Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Output Parameter{358d764d-f167-46f4-864c-f147de16f5a4}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Output Parameter Associated View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības izvades parametra saistītais skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Output Parameter{5557f657-0457-4b1b-bef5-b3a20a701cd6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Action Output Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvi darbības izvades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Output Parameter{81a129b3-29df-4bbb-827b-37b6747f8e9b}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Quick Find Active Action Output Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvo darbības izvades parametru ātrā atrašana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Output Parameter{9d540704-b34f-4ecc-b9d8-412acae74cf8}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive Action Output Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvi darbības izvades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Output Parameter{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Output Parameter Lookup View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības izvades parametra uzmeklēšanas skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Output Parameter{be58538e-d1d2-e911-a81f-000d3a6d6cb7}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[My Action Output Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mani darbības izvades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Output Parameter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Information]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Action Output Parameter{de3156ab-1834-4782-a0d8-97869badb58b}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Output Parameter Advanced Find View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības izvades parametra detalizētās atrašanas skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Action Template{2fc6654b-0626-475b-ba71-dba1a5b84ddd}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive Macro Action Templates]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvas makro darbību veidnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Action Template{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Information]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Action Template{728594b5-08ae-442b-b4c5-36baa67c2e52}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Action Template Lookup View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbības veidņu uzmeklēšanas skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Action Template{7edfc44b-9171-4b03-b3fa-8f98c144543c}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Quick Find Active Macro Action Templates]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvo makro darbības veidņu ātrā atrašana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Action Template{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Action Template Associated View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbību veidnes saistītais skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003315Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[My Macro Action Templates]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Manas makro darbību veidnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003286Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Action Template{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Macro Action Templates]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvas makro darbību veidnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003286Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Action Template{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Action Template Advanced Find View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbību veidņu detalizētās atrašanas skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003286Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Parameter definition{07a33cec-34c5-447a-b091-76a54ea8dcc0}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Parameter definitions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvās parametru definīcijas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003286Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Parameter definition{324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Quick Find Active Parameter definitions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvo parametru definīciju ātrā atrašana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003286Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Parameter definition{52db0469-ff43-48fb-af2f-69f8355a174c}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Parameter definition Lookup View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametru definīcijas uzmeklēšanas skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003286Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Parameter definition{57347866-53ad-4011-9024-d5161ce8391e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive Parameter definitions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvās parametru definīcijas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003286Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Parameter definition{5811f646-830b-4439-aecd-0b1eb4c4910f}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Parameter definition Associated View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametru definīcijas saistītais skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003286Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Parameter definition{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[My Parameter definitions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Manas parametru definīcijas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003286Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Parameter definition{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Information]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003286Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Parameter definition{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Parameter definition Advanced Find View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametru definīcijas detalizētās atrašanas skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Input Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības ievades parametrs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Output Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības izvades parametrs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Action Template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbību veidne]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Parameter definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametra definīcija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Action Input ParameterInfo{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Common]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kopējā informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Action Input ParameterMarketing{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Marketing]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mārketings]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Action Input ParameterProcessCenter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Process Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Apstrādes sesijas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Action Input ParameterSales{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sales]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pārdošana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Action Input ParameterService{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Serviss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Action Output ParameterInfo{d4000272-4cda-436a-a678-cd3fe08ea2f6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Common]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kopējā informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Action Output ParameterMarketing{d4000272-4cda-436a-a678-cd3fe08ea2f6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Marketing]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mārketings]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003262Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Action Output ParameterProcessCenter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Process Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Apstrādes sesijas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Action Output ParameterSales{d4000272-4cda-436a-a678-cd3fe08ea2f6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sales]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pārdošana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Action Output ParameterService{d4000272-4cda-436a-a678-cd3fe08ea2f6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Serviss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Parameter definitionInfo{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Common]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kopējā informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Parameter definitionMarketing{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Marketing]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mārketings]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Parameter definitionProcessCenter{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Process Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Apstrādes sesijas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Parameter definitionSales{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sales]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pārdošana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Title,Parameter definitionService{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Serviss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveidotājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveidotājs (pārstāvis)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import Sequence Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Importēšanas secības numurs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003236Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificētājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificēts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificētājs (pārstāvis)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Business Unit]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uzņēmuma struktūrvienība, kas ir īpašniece]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Team]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atbildīgā darba grupa]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning User]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lietotājs īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Laika joslu kārtulas versijas numurs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[UTC pārvēršanas laika joslas kods]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparametermsdyn_ActionTemplateInputParameterId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Template Input Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības veidnes ievades parametrs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparametermsdyn_actioninputparameterId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Input Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības ievades parametrs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003216Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Parameter Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametra tips]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparametermsdyn_actioninputparameter_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparametermsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparametermsdyn_parametertype" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Parameter Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametra tips]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actioninputparameterstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveidotājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveidotājs (pārstāvis)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import Sequence Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Importēšanas secības numurs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificētājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificēts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003181Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificētājs (pārstāvis)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Business Unit]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uzņēmuma struktūrvienība, kas ir īpašniece]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Team]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atbildīgā darba grupa]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning User]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lietotājs īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Laika joslu kārtulas versijas numurs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[UTC pārvēršanas laika joslas kods]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparametermsdyn_actionoutputparameterId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Output Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības izvades parametrs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparametermsdyn_actiontemplateoutputparameterid" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action Template Output Parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbības veidnes izvades parametrs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparametermsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003152Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_actionoutputparameterstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveidotājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveidotājs (pārstāvis)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import Sequence Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Importēšanas secības numurs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificētājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificēts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificētājs (pārstāvis)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Business Unit]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uzņēmuma struktūrvienība, kas ir īpašniece]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Team]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atbildīgā darba grupa]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003125Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning User]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lietotājs īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Laika joslu kārtulas versijas numurs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplateUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[UTC pārvēršanas laika joslas kods]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_InputParameters" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Input Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ievades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_OutputParameters" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Output Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izvades parametri]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_actionDescription" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Description]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Apraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_brandcolor" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Brand Color]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Zīmola krāsa]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_displayname" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Display  Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parādāmais vārds]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_icon" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Icon]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ikona]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplateId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Action Template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro darbību veidne]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003103Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_subtitle" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Subtitle]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Apakšvirsraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_summary" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Summary]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kopsavilkums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_title" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Title]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Virsraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatemsdyn_visibility" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Visibility]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Redzamība]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatestatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macroactiontemplatestatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveidotājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveidotājs (pārstāvis)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import Sequence Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Importēšanas secības numurs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificētājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificēts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificētājs (pārstāvis)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0003077Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Business Unit]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uzņēmuma struktūrvienība, kas ir īpašniece]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Team]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atbildīgā darba grupa]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning User]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lietotājs īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Laika joslu kārtulas versijas numurs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[UTC pārvēršanas laika joslas kods]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionmsdyn_DisplayName" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Title]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Virsraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionmsdyn_defaultvalue" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Default Value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Noklusējuma vērtība]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionmsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Description]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Apraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionmsdyn_parameterdefinitionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Parameter definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametra definīcija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000305Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionmsdyn_parametertype" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Parameter Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Parametra tips]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_parameterdefinitionstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Input Parameter{0bd71d1c-37a0-dc49-8c25-824416047271}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Input Parameter{1db09e91-87dd-4114-9211-ec8dc43882c2}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Input Parameter{59f79de4-9448-47dc-957a-108da2c131e1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vispārīgi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Input Parameter{8716236a-d69e-6a70-e474-5431a2c3a7a1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Input Parameter{a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vispārīgi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Input Parameter{eca182a2-7198-417d-8c54-04fba492cd15}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Output Parameter{23058005-7eb8-11d5-d52e-43c2bb6c11e3}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Output Parameter{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vispārīgi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000302Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Output Parameter{c30d42c3-4d26-4042-8ed4-c811fd2cbd22}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Output Parameter{f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Action Output Parameter{f46781d7-e36b-43b2-9c10-f210b21462e2}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vispārīgi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{745b027e-644b-4c55-4260-c8c4eac84cc6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{842e8684-f6c1-4495-9c20-679734e10d10}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vispārīgi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{8a8ddc6a-b153-ce74-1256-8cea656447e3}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{a4341c8f-be9d-4e30-b2dd-a98c437f943a}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vispārīgi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{ae619791-7ccc-6c47-2469-50d422be151c}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{d431e2bb-2356-1dba-9638-676b3902e396}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{dffe237b-b08c-41d6-a59d-2dd80d65bca9}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{e4ea49e5-4d75-7ee6-e6da-e06e74bab620}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002997Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{e6413e3c-d426-4c99-be2f-9241f99c4122}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Action Template{f5ea473e-8d09-4798-b801-b56fbbbe1238}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Parameter definition{24d326cb-c8c9-48d3-852d-18543ba33602}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vispārīgi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Parameter definition{35e27720-bc40-55a5-1cb0-2a91121ee4ae}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Parameter definition{4efc7cfa-2742-4026-b4b1-ee517663dcb6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Parameter definition{61aea276-465a-b471-4133-acad2b8644cc}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Parameter definition{672695b5-9003-4ef2-b2c0-fc9c15663ae2}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vispārīgi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Parameter definition{e3574eb9-e537-76ed-c9ea-378b0402deda}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Parameter definition{e4d19051-6d96-43b5-84b4-dd8b8f7524d5}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Parameter definition{e78b8199-d1cd-2311-5e67-a36565a7494a}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Optional]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neobligāts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Mandatory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Obligāts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002966Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002917Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002917Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002917Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0002917Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="resources.en-US.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="sk-SK" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <Props>
+    <Str Name="CustomName1" Val="Custom 1" />
+    <Str Name="CustomName2" Val="Custom 2" />
+    <Str Name="CustomName3" Val="Custom 3" />
+    <Str Name="CustomName4" Val="Custom 4" />
+    <Str Name="CustomName5" Val="Custom 5" />
+    <Str Name="CustomName6" Val="IQA" />
+  </Props>
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Loc" />
+    <Cmt Name="LPK" />
+    <Cmt Name="Note" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Settings Name="..\LSS\locver.lss" Type="Lss" />
+  <Item ItemId=";resources.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+      <Item ItemId=";15062:Description,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:24.000681Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:Description,msdyn_OmnichannelProductivityToolsSettings" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:24.000681Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:24.000681Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,msdyn_OmnichannelProductivityToolsSettings" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Productivity Tools Settings]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nastavenia nástrojov produktivity Omnikanála]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:24.000681Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";81:LocalizedName,msdyn_OCAPP" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Administration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Správa Omnikanála]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:24.000681Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";81:Title,NewArea_08255196NewArea_08255196" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Administration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Spravovanie]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:24.000681Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";81:Title,NewArea_08255196NewGroup_8fcea46e" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent Experience]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skúsenosti agentov]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:24.000681Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";81:Title,NewArea_08255196NewSubArea_386b5beb" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makrá]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:24.0006675Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

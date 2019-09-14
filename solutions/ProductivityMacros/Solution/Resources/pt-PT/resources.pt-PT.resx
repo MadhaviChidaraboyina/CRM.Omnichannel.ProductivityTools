@@ -1,0 +1,1407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="Source LCID" xml:space="preserve">
+    <value>1033</value>
+  </metadata>
+  <metadata name="Source file" xml:space="preserve">
+    <value>msdyn_ProductivityMacros_managed.zip</value>
+  </metadata>
+  <metadata name="Source package type" xml:space="preserve">
+    <value>Both</value>
+  </metadata>
+  <metadata name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVp
+        bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </metadata>
+  <data name="10:Description,msdyn_msdyn_macroactiontemplate_msdyn_actioninput" xml:space="preserve">
+    <value>Identificador exclusivo do Modelo de Ação de Macro associado ao Parâmetro de Entrada de Ação.</value>
+    <comment>msdyn_actioninputparameter Description for EntityRelationship 'msdyn_msdyn_macroactiontemplate_msdyn_actioninput'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_macroactiontemplate_msdyn_actionout" xml:space="preserve">
+    <value>Identificador exclusivo do Modelo de Ação de Macro associado ao Parâmetro de Saída de Ação.</value>
+    <comment>msdyn_actionoutputparameter Description for EntityRelationship 'msdyn_msdyn_macroactiontemplate_msdyn_actionout'</comment>
+  </data>
+  <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
+    <value>Microsoft Dynamics 365</value>
+    <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
+  </data>
+  <data name="15062:Description,ProductivityMacros" xml:space="preserve">
+    <value>Esta solução fornece recursos Web para utilização do Estruturador de macros e APIs para automatizar tarefas de processo de negócio.</value>
+    <comment> 'ProductivityMacros' : Description for Solution</comment>
+  </data>
+  <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
+    <value>Microsoft Dynamics 365</value>
+    <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
+  </data>
+  <data name="15062:LocalizedName,ProductivityMacros" xml:space="preserve">
+    <value>Macros</value>
+    <comment> 'ProductivityMacros' : LocalizedName for Solution</comment>
+  </data>
+  <data name="1:Description,Action Input Parameter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Um formulário para esta entidade.</value>
+    <comment>'Action Input Parameter' : Description for systemform in Entity FormXml ID: '{15079f0d-d34e-4cad-9fa3-a1fab0783eac}'</comment>
+  </data>
+  <data name="1:Description,Action Input Parameter{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Parâmetros de Entrada de Ação Ativos de que sou proprietário</value>
+    <comment>'Action Input Parameter' : Description for SavedQuery on Entity QueryId: '{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:Description,Action Output Parameter{be58538e-d1d2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Parâmetros de Saída de Ação Ativos de que sou proprietário</value>
+    <comment>'Action Output Parameter' : Description for SavedQuery on Entity QueryId: '{be58538e-d1d2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:Description,Action Output Parameter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Um formulário para esta entidade.</value>
+    <comment>'Action Output Parameter' : Description for systemform in Entity FormXml ID: '{d4000272-4cda-436a-a678-cd3fe08ea2f6}'</comment>
+  </data>
+  <data name="1:Description,Macro Action Template{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" xml:space="preserve">
+    <value>Um formulário para esta entidade.</value>
+    <comment>'Macro Action Template' : Description for systemform in Entity FormXml ID: '{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}'</comment>
+  </data>
+  <data name="1:Description,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
+    <value>Modelos de Ação de Macro Ativos de que sou proprietário</value>
+    <comment>'Macro Action Template' : Description for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador que criou o registo.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterCreatedOn" xml:space="preserve">
+    <value>Data e hora de criação do registo.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterCreatedOnBehalfBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador delegado que criou o registo.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_actioninputparameter' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterImportSequenceNumber" xml:space="preserve">
+    <value>Número de sequência da importação que criou este registo.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterModifiedBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador que modificou o registo.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterModifiedOn" xml:space="preserve">
+    <value>Data e hora de modificação do registo.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterModifiedOnBehalfBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador delegado que modificou o registo.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_actioninputparameterId" xml:space="preserve">
+    <value>Identificador exclusivo de instâncias de entidade</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_actioninputparameterId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype" xml:space="preserve">
+    <value />
+    <comment>'msdyn_actioninputparameter' : Description for OptionSet 'msdyn_actioninputparameter_msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_statecode" xml:space="preserve">
+    <value>Estado do Parâmetro de Entrada de Ação</value>
+    <comment>'msdyn_actioninputparameter' : Description for OptionSet 'msdyn_actioninputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode" xml:space="preserve">
+    <value>Razão do estado do Parâmetro de Entrada de Ação</value>
+    <comment>'msdyn_actioninputparameter' : Description for OptionSet 'msdyn_actioninputparameter_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_ActionTemplateInputParameterId" xml:space="preserve">
+    <value>Identificador exclusivo do Modelo de Ação de Macro associado ao Parâmetro de Entrada de Ação.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_ActionTemplateInputParameterId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_name" xml:space="preserve">
+    <value>O nome da entidade personalizada.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_parametertype" xml:space="preserve">
+    <value />
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterOverriddenCreatedOn" xml:space="preserve">
+    <value>Data e hora de migração do registo.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterOwnerId" xml:space="preserve">
+    <value>ID do Proprietário</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterOwningBusinessUnit" xml:space="preserve">
+    <value>Identificador exclusivo da unidade de negócio proprietária do registo</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterOwningTeam" xml:space="preserve">
+    <value>Identificador exclusivo da equipa proprietária do registo.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterOwningUser" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador proprietário do registo.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterstatecode" xml:space="preserve">
+    <value>Estado do Parâmetro de Entrada de Ação</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterstatuscode" xml:space="preserve">
+    <value>Razão do estado do Parâmetro de Entrada de Ação</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Apenas para utilização interna.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Código do fuso horário utilizado quando o registo foi criado.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterCreatedBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador que criou o registo.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterCreatedOn" xml:space="preserve">
+    <value>Data e hora de criação do registo.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador delegado que criou o registo.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_actionoutputparameter' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterImportSequenceNumber" xml:space="preserve">
+    <value>Número de sequência da importação que criou este registo.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterModifiedBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador que modificou o registo.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterModifiedOn" xml:space="preserve">
+    <value>Data e hora de modificação do registo.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador delegado que modificou o registo.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparametermsdyn_actionoutputparameterId" xml:space="preserve">
+    <value>Identificador exclusivo de instâncias de entidade</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'msdyn_actionoutputparameterId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode" xml:space="preserve">
+    <value>Estado do Parâmetro de Saída de Ação</value>
+    <comment>'msdyn_actionoutputparameter' : Description for OptionSet 'msdyn_actionoutputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode" xml:space="preserve">
+    <value>Razão do estado do Parâmetro de Saída de Ação</value>
+    <comment>'msdyn_actionoutputparameter' : Description for OptionSet 'msdyn_actionoutputparameter_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
+    <value>Identificador exclusivo do Modelo de Ação de Macro associado ao Parâmetro de Saída de Ação.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'msdyn_actiontemplateoutputparameterid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparametermsdyn_name" xml:space="preserve">
+    <value>O nome da entidade personalizada.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterOverriddenCreatedOn" xml:space="preserve">
+    <value>Data e hora de migração do registo.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterOwnerId" xml:space="preserve">
+    <value>ID do Proprietário</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterOwningBusinessUnit" xml:space="preserve">
+    <value>Identificador exclusivo da unidade de negócio proprietária do registo</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterOwningTeam" xml:space="preserve">
+    <value>Identificador exclusivo da equipa proprietária do registo.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterOwningUser" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador proprietário do registo.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterstatecode" xml:space="preserve">
+    <value>Estado do Parâmetro de Saída de Ação</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterstatuscode" xml:space="preserve">
+    <value>Razão do estado do Parâmetro de Saída de Ação</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Apenas para utilização interna.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Código do fuso horário utilizado quando o registo foi criado.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateCreatedBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador que criou o registo.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateCreatedOn" xml:space="preserve">
+    <value>Data e hora de criação do registo.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador delegado que criou o registo.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_macroactiontemplate' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateImportSequenceNumber" xml:space="preserve">
+    <value>Número de sequência da importação que criou este registo.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateModifiedBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador que modificou o registo.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateModifiedOn" xml:space="preserve">
+    <value>Data e hora de modificação do registo.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador delegado que modificou o registo.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_actionDescription" xml:space="preserve">
+    <value>A descrição desta ação de macro.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_actionDescription' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_brandcolor" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_brandcolor' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_displayname" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_icon" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_icon' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_InputParameters" xml:space="preserve">
+    <value>Parâmetros de entrada para o modelo de ação de macro</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_InputParameters' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplateId" xml:space="preserve">
+    <value>Identificador exclusivo de instâncias de entidade</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_macroactiontemplateId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode" xml:space="preserve">
+    <value>Estado do Modelo de Ação de Macro</value>
+    <comment>'msdyn_macroactiontemplate' : Description for OptionSet 'msdyn_macroactiontemplate_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode" xml:space="preserve">
+    <value>Razão do estado do Modelo de Ação de Macro</value>
+    <comment>'msdyn_macroactiontemplate' : Description for OptionSet 'msdyn_macroactiontemplate_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_name" xml:space="preserve">
+    <value>O nome deste modelo de Macro.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_OutputParameters" xml:space="preserve">
+    <value>Parâmetros de saída para a entidade de modelo de ação de macro</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_OutputParameters' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_subtitle" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_subtitle' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_summary" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_summary' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_title" xml:space="preserve">
+    <value>O título desta ação de macro.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_title' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_visibility" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_visibility' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOverriddenCreatedOn" xml:space="preserve">
+    <value>Data e hora de migração do registo.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwnerId" xml:space="preserve">
+    <value>ID do Proprietário</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwningBusinessUnit" xml:space="preserve">
+    <value>Identificador exclusivo da unidade de negócio proprietária do registo</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwningTeam" xml:space="preserve">
+    <value>Identificador exclusivo da equipa proprietária do registo.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwningUser" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador proprietário do registo.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatestatecode" xml:space="preserve">
+    <value>Estado do Modelo de Ação de Macro</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatestatuscode" xml:space="preserve">
+    <value>Razão do estado do Modelo de Ação de Macro</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Apenas para utilização interna.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Código do fuso horário utilizado quando o registo foi criado.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionCreatedBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador que criou o registo.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionCreatedOn" xml:space="preserve">
+    <value>Data e hora de criação do registo.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador delegado que criou o registo.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_parameterdefinition' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionImportSequenceNumber" xml:space="preserve">
+    <value>Número de sequência da importação que criou este registo.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionModifiedBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador que modificou o registo.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionModifiedOn" xml:space="preserve">
+    <value>Data e hora de modificação do registo.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador delegado que modificou o registo.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_defaultvalue" xml:space="preserve">
+    <value />
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_defaultvalue' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_description" xml:space="preserve">
+    <value />
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_DisplayName" xml:space="preserve">
+    <value />
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_DisplayName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_name" xml:space="preserve">
+    <value>O nome da entidade personalizada.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_parameterdefinitionId" xml:space="preserve">
+    <value>Identificador exclusivo de instâncias de entidade</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_parameterdefinitionId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode" xml:space="preserve">
+    <value>Estado da definição de Parâmetro</value>
+    <comment>'msdyn_parameterdefinition' : Description for OptionSet 'msdyn_parameterdefinition_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode" xml:space="preserve">
+    <value>Razão do estado da definição de Parâmetro</value>
+    <comment>'msdyn_parameterdefinition' : Description for OptionSet 'msdyn_parameterdefinition_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_parametertype" xml:space="preserve">
+    <value />
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionOverriddenCreatedOn" xml:space="preserve">
+    <value>Data e hora de migração do registo.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionOwnerId" xml:space="preserve">
+    <value>ID do Proprietário</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionOwningBusinessUnit" xml:space="preserve">
+    <value>Identificador exclusivo da unidade de negócio proprietária do registo</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionOwningTeam" xml:space="preserve">
+    <value>Identificador exclusivo da equipa proprietária do registo.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionOwningUser" xml:space="preserve">
+    <value>Identificador exclusivo do utilizador proprietário do registo.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionstatecode" xml:space="preserve">
+    <value>Estado da definição de Parâmetro</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionstatuscode" xml:space="preserve">
+    <value>Razão do estado da definição de Parâmetro</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Apenas para utilização interna.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Código do fuso horário utilizado quando o registo foi criado.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,Parameter definition{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Definições de Parâmetro Ativas de que sou proprietário</value>
+    <comment>'Parameter definition' : Description for SavedQuery on Entity QueryId: '{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:Description,Parameter definition{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Um formulário para esta entidade.</value>
+    <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
+    <value>Criado Por</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterCreatedOn" xml:space="preserve">
+    <value>Criado Em</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterCreatedOnBehalfBy" xml:space="preserve">
+    <value>Criado Por (Delegado)</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterImportSequenceNumber" xml:space="preserve">
+    <value>Número de Sequência da Importação</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterModifiedBy" xml:space="preserve">
+    <value>Modificado Por</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterModifiedOn" xml:space="preserve">
+    <value>Modificado Em</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterModifiedOnBehalfBy" xml:space="preserve">
+    <value>Modificado Por (Delegado)</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_actioninputparameterId" xml:space="preserve">
+    <value>Parâmetro de Entrada de Ação</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_actioninputparameterId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype" xml:space="preserve">
+    <value>Tipo de Parâmetro</value>
+    <comment>'msdyn_actioninputparameter' : displayname for OptionSet 'msdyn_actioninputparameter_msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_actioninputparameter_statecode" xml:space="preserve">
+    <value>Estado</value>
+    <comment>'msdyn_actioninputparameter' : displayname for OptionSet 'msdyn_actioninputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode" xml:space="preserve">
+    <value>Razão do Estado</value>
+    <comment>'msdyn_actioninputparameter' : displayname for OptionSet 'msdyn_actioninputparameter_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_ActionTemplateInputParameterId" xml:space="preserve">
+    <value>Parâmetro de Entrada de Modelo de Ação</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_ActionTemplateInputParameterId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_name" xml:space="preserve">
+    <value>Nome</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_parametertype" xml:space="preserve">
+    <value>Tipo de Parâmetro</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterOverriddenCreatedOn" xml:space="preserve">
+    <value>Registo Criado Em</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterOwnerId" xml:space="preserve">
+    <value>Proprietário</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterOwningBusinessUnit" xml:space="preserve">
+    <value>Unidade de Negócio Proprietária</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterOwningTeam" xml:space="preserve">
+    <value>Equipa Proprietária</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterOwningUser" xml:space="preserve">
+    <value>Utilizador Proprietário</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterstatecode" xml:space="preserve">
+    <value>Estado</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterstatuscode" xml:space="preserve">
+    <value>Razão do Estado</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Número de Versão da Regra de Fuso Horário</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Código de Fuso Horário da Conversão UTC</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterCreatedBy" xml:space="preserve">
+    <value>Criado Por</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterCreatedOn" xml:space="preserve">
+    <value>Criado Em</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
+    <value>Criado Por (Delegado)</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterImportSequenceNumber" xml:space="preserve">
+    <value>Número de Sequência da Importação</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterModifiedBy" xml:space="preserve">
+    <value>Modificado Por</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterModifiedOn" xml:space="preserve">
+    <value>Modificado Em</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
+    <value>Modificado Por (Delegado)</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparametermsdyn_actionoutputparameterId" xml:space="preserve">
+    <value>Parâmetro de Saída de Ação</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'msdyn_actionoutputparameterId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode" xml:space="preserve">
+    <value>Estado</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for OptionSet 'msdyn_actionoutputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode" xml:space="preserve">
+    <value>Razão do Estado</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for OptionSet 'msdyn_actionoutputparameter_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
+    <value>Parâmetro de Saída de Modelo de Ação</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'msdyn_actiontemplateoutputparameterid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparametermsdyn_name" xml:space="preserve">
+    <value>Nome</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterOverriddenCreatedOn" xml:space="preserve">
+    <value>Registo Criado Em</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterOwnerId" xml:space="preserve">
+    <value>Proprietário</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterOwningBusinessUnit" xml:space="preserve">
+    <value>Unidade de Negócio Proprietária</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterOwningTeam" xml:space="preserve">
+    <value>Equipa Proprietária</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterOwningUser" xml:space="preserve">
+    <value>Utilizador Proprietário</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterstatecode" xml:space="preserve">
+    <value>Estado</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterstatuscode" xml:space="preserve">
+    <value>Razão do Estado</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Número de Versão da Regra de Fuso Horário</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Código de Fuso Horário da Conversão UTC</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateCreatedBy" xml:space="preserve">
+    <value>Criado Por</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateCreatedOn" xml:space="preserve">
+    <value>Criado Em</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
+    <value>Criado Por (Delegado)</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateImportSequenceNumber" xml:space="preserve">
+    <value>Número de Sequência da Importação</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateModifiedBy" xml:space="preserve">
+    <value>Modificado Por</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateModifiedOn" xml:space="preserve">
+    <value>Modificado Em</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
+    <value>Modificado Por (Delegado)</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_actionDescription" xml:space="preserve">
+    <value>Descrição</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_actionDescription' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_brandcolor" xml:space="preserve">
+    <value>Cor da Marca</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_brandcolor' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_displayname" xml:space="preserve">
+    <value>Nome a Apresentar</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_icon" xml:space="preserve">
+    <value>Ícone</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_icon' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_InputParameters" xml:space="preserve">
+    <value>Parâmetros de Entrada</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_InputParameters' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplateId" xml:space="preserve">
+    <value>Modelo de Ação de Macro</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_macroactiontemplateId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode" xml:space="preserve">
+    <value>Estado</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for OptionSet 'msdyn_macroactiontemplate_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode" xml:space="preserve">
+    <value>Razão do Estado</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for OptionSet 'msdyn_macroactiontemplate_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_name" xml:space="preserve">
+    <value>Nome</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_OutputParameters" xml:space="preserve">
+    <value>Parâmetros de Saída</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_OutputParameters' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_subtitle" xml:space="preserve">
+    <value>Subtítulo</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_subtitle' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_summary" xml:space="preserve">
+    <value>Resumo</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_summary' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_title" xml:space="preserve">
+    <value>Título</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_title' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_visibility" xml:space="preserve">
+    <value>Visibilidade</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_visibility' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOverriddenCreatedOn" xml:space="preserve">
+    <value>Registo Criado Em</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwnerId" xml:space="preserve">
+    <value>Proprietário</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwningBusinessUnit" xml:space="preserve">
+    <value>Unidade de Negócio Proprietária</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwningTeam" xml:space="preserve">
+    <value>Equipa Proprietária</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwningUser" xml:space="preserve">
+    <value>Utilizador Proprietário</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatestatecode" xml:space="preserve">
+    <value>Estado</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatestatuscode" xml:space="preserve">
+    <value>Razão do Estado</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Número de Versão da Regra de Fuso Horário</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Código de Fuso Horário da Conversão UTC</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionCreatedBy" xml:space="preserve">
+    <value>Criada Por</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionCreatedOn" xml:space="preserve">
+    <value>Criada Em</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
+    <value>Criado Por (Delegado)</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionImportSequenceNumber" xml:space="preserve">
+    <value>Número de Sequência da Importação</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionModifiedBy" xml:space="preserve">
+    <value>Modificada Por</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionModifiedOn" xml:space="preserve">
+    <value>Modificada Em</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
+    <value>Modificado Por (Delegado)</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_defaultvalue" xml:space="preserve">
+    <value>Valor Predefinido</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_defaultvalue' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_description" xml:space="preserve">
+    <value>Descrição</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_DisplayName" xml:space="preserve">
+    <value>Título</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_DisplayName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_name" xml:space="preserve">
+    <value>Nome</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_parameterdefinitionId" xml:space="preserve">
+    <value>Definição de parâmetro</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_parameterdefinitionId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode" xml:space="preserve">
+    <value>Estado</value>
+    <comment>'msdyn_parameterdefinition' : displayname for OptionSet 'msdyn_parameterdefinition_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode" xml:space="preserve">
+    <value>Razão do Estado</value>
+    <comment>'msdyn_parameterdefinition' : displayname for OptionSet 'msdyn_parameterdefinition_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_parametertype" xml:space="preserve">
+    <value>Tipo de Parâmetro</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionOverriddenCreatedOn" xml:space="preserve">
+    <value>Registo Criado Em</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionOwnerId" xml:space="preserve">
+    <value>Proprietário</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionOwningBusinessUnit" xml:space="preserve">
+    <value>Unidade de Negócio Proprietária</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionOwningTeam" xml:space="preserve">
+    <value>Equipa Proprietária</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionOwningUser" xml:space="preserve">
+    <value>Utilizador Proprietário</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionstatecode" xml:space="preserve">
+    <value>Estado</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionstatuscode" xml:space="preserve">
+    <value>Razão do Estado</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Número de Versão da Regra de Fuso Horário</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Código de Fuso Horário da Conversão UTC</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{0bd71d1c-37a0-dc49-8c25-824416047271}" xml:space="preserve">
+    <value />
+    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{0bd71d1c-37a0-dc49-8c25-824416047271}'</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{1db09e91-87dd-4114-9211-ec8dc43882c2}" xml:space="preserve">
+    <value />
+    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{1db09e91-87dd-4114-9211-ec8dc43882c2}'</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{59f79de4-9448-47dc-957a-108da2c131e1}" xml:space="preserve">
+    <value>Geral</value>
+    <comment>'Action Input Parameter' : label for tab in Entity FormXml ID: '{59f79de4-9448-47dc-957a-108da2c131e1}'</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{8716236a-d69e-6a70-e474-5431a2c3a7a1}" xml:space="preserve">
+    <value />
+    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{8716236a-d69e-6a70-e474-5431a2c3a7a1}'</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}" xml:space="preserve">
+    <value>Geral</value>
+    <comment>'Action Input Parameter' : label for section in Entity FormXml ID: '{a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}'</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{eca182a2-7198-417d-8c54-04fba492cd15}" xml:space="preserve">
+    <value />
+    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{eca182a2-7198-417d-8c54-04fba492cd15}'</comment>
+  </data>
+  <data name="1:label,Action Output Parameter{23058005-7eb8-11d5-d52e-43c2bb6c11e3}" xml:space="preserve">
+    <value />
+    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{23058005-7eb8-11d5-d52e-43c2bb6c11e3}'</comment>
+  </data>
+  <data name="1:label,Action Output Parameter{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}" xml:space="preserve">
+    <value>Geral</value>
+    <comment>'Action Output Parameter' : label for tab in Entity FormXml ID: '{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}'</comment>
+  </data>
+  <data name="1:label,Action Output Parameter{c30d42c3-4d26-4042-8ed4-c811fd2cbd22}" xml:space="preserve">
+    <value />
+    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{c30d42c3-4d26-4042-8ed4-c811fd2cbd22}'</comment>
+  </data>
+  <data name="1:label,Action Output Parameter{f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}" xml:space="preserve">
+    <value />
+    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}'</comment>
+  </data>
+  <data name="1:label,Action Output Parameter{f46781d7-e36b-43b2-9c10-f210b21462e2}" xml:space="preserve">
+    <value>Geral</value>
+    <comment>'Action Output Parameter' : label for section in Entity FormXml ID: '{f46781d7-e36b-43b2-9c10-f210b21462e2}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{745b027e-644b-4c55-4260-c8c4eac84cc6}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{745b027e-644b-4c55-4260-c8c4eac84cc6}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{842e8684-f6c1-4495-9c20-679734e10d10}" xml:space="preserve">
+    <value>Geral</value>
+    <comment>'Macro Action Template' : label for tab in Entity FormXml ID: '{842e8684-f6c1-4495-9c20-679734e10d10}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{8a8ddc6a-b153-ce74-1256-8cea656447e3}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{8a8ddc6a-b153-ce74-1256-8cea656447e3}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{a4341c8f-be9d-4e30-b2dd-a98c437f943a}" xml:space="preserve">
+    <value>Geral</value>
+    <comment>'Macro Action Template' : label for section in Entity FormXml ID: '{a4341c8f-be9d-4e30-b2dd-a98c437f943a}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{ae619791-7ccc-6c47-2469-50d422be151c}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{ae619791-7ccc-6c47-2469-50d422be151c}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{d431e2bb-2356-1dba-9638-676b3902e396}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{d431e2bb-2356-1dba-9638-676b3902e396}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{dffe237b-b08c-41d6-a59d-2dd80d65bca9}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{dffe237b-b08c-41d6-a59d-2dd80d65bca9}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{e4ea49e5-4d75-7ee6-e6da-e06e74bab620}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{e4ea49e5-4d75-7ee6-e6da-e06e74bab620}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{e6413e3c-d426-4c99-be2f-9241f99c4122}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{e6413e3c-d426-4c99-be2f-9241f99c4122}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{f5ea473e-8d09-4798-b801-b56fbbbe1238}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{f5ea473e-8d09-4798-b801-b56fbbbe1238}'</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype0" xml:space="preserve">
+    <value>Opcional</value>
+    <comment>'msdyn_actioninputparameter' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype1" xml:space="preserve">
+    <value>Obrigatório</value>
+    <comment>'msdyn_actioninputparameter' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statecode0" xml:space="preserve">
+    <value>Ativo</value>
+    <comment>'msdyn_actioninputparameter' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statecode1" xml:space="preserve">
+    <value>Inativo</value>
+    <comment>'msdyn_actioninputparameter' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode1" xml:space="preserve">
+    <value>Ativo</value>
+    <comment>'msdyn_actioninputparameter' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode2" xml:space="preserve">
+    <value>Inativo</value>
+    <comment>'msdyn_actioninputparameter' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode0" xml:space="preserve">
+    <value>Ativo</value>
+    <comment>'msdyn_actionoutputparameter' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode1" xml:space="preserve">
+    <value>Inativo</value>
+    <comment>'msdyn_actionoutputparameter' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode1" xml:space="preserve">
+    <value>Ativo</value>
+    <comment>'msdyn_actionoutputparameter' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode2" xml:space="preserve">
+    <value>Inativo</value>
+    <comment>'msdyn_actionoutputparameter' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode0" xml:space="preserve">
+    <value>Ativo</value>
+    <comment>'msdyn_macroactiontemplate' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode1" xml:space="preserve">
+    <value>Inativo</value>
+    <comment>'msdyn_macroactiontemplate' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode1" xml:space="preserve">
+    <value>Ativo</value>
+    <comment>'msdyn_macroactiontemplate' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode2" xml:space="preserve">
+    <value>Inativo</value>
+    <comment>'msdyn_macroactiontemplate' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode0" xml:space="preserve">
+    <value>Ativa</value>
+    <comment>'msdyn_parameterdefinition' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode1" xml:space="preserve">
+    <value>Inativa</value>
+    <comment>'msdyn_parameterdefinition' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode1" xml:space="preserve">
+    <value>Ativa</value>
+    <comment>'msdyn_parameterdefinition' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode2" xml:space="preserve">
+    <value>Inativa</value>
+    <comment>'msdyn_parameterdefinition' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,Parameter definition{24d326cb-c8c9-48d3-852d-18543ba33602}" xml:space="preserve">
+    <value>Geral</value>
+    <comment>'Parameter definition' : label for tab in Entity FormXml ID: '{24d326cb-c8c9-48d3-852d-18543ba33602}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{35e27720-bc40-55a5-1cb0-2a91121ee4ae}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{35e27720-bc40-55a5-1cb0-2a91121ee4ae}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{4efc7cfa-2742-4026-b4b1-ee517663dcb6}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{4efc7cfa-2742-4026-b4b1-ee517663dcb6}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{61aea276-465a-b471-4133-acad2b8644cc}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{61aea276-465a-b471-4133-acad2b8644cc}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{672695b5-9003-4ef2-b2c0-fc9c15663ae2}" xml:space="preserve">
+    <value>Geral</value>
+    <comment>'Parameter definition' : label for section in Entity FormXml ID: '{672695b5-9003-4ef2-b2c0-fc9c15663ae2}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{e3574eb9-e537-76ed-c9ea-378b0402deda}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{e3574eb9-e537-76ed-c9ea-378b0402deda}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{e4d19051-6d96-43b5-84b4-dd8b8f7524d5}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{e4d19051-6d96-43b5-84b4-dd8b8f7524d5}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{e78b8199-d1cd-2311-5e67-a36565a7494a}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{e78b8199-d1cd-2311-5e67-a36565a7494a}'</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
+    <value>Parâmetros de Entrada de Ação</value>
+    <comment> 'msdyn_actioninputparameter' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" xml:space="preserve">
+    <value>Parâmetros de Saída de Ação</value>
+    <comment> 'msdyn_actionoutputparameter' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
+    <value>Modelos de Ação de Macro</value>
+    <comment> 'msdyn_macroactiontemplate' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
+    <value>Definições de parâmetros</value>
+    <comment> 'msdyn_parameterdefinition' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Informações</value>
+    <comment>'Action Input Parameter' : LocalizedName for systemform in Entity FormXml ID: '{15079f0d-d34e-4cad-9fa3-a1fab0783eac}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{220c95e7-e853-4196-bcf5-0195392aae41}" xml:space="preserve">
+    <value>Vista de Pesquisa de Parâmetros de Entrada de Ação</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{220c95e7-e853-4196-bcf5-0195392aae41}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Os Meus Parâmetros de Entrada de Ação</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{5b965e27-ff23-48cc-9fa8-5f870282d801}" xml:space="preserve">
+    <value>Parâmetros de Entrada de Ação Inativos</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{5b965e27-ff23-48cc-9fa8-5f870282d801}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{641c26b7-2180-4bd6-86e0-ae67d20f87be}" xml:space="preserve">
+    <value>Vista Associada de Parâmetros de Entrada de Ação</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{641c26b7-2180-4bd6-86e0-ae67d20f87be}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{68335c03-9c8e-4941-b3de-3117bba3e5fb}" xml:space="preserve">
+    <value>Parâmetros de Entrada de Ação Ativos</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{68335c03-9c8e-4941-b3de-3117bba3e5fb}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{a3cd66c8-212c-4117-a9ec-fe905795224a}" xml:space="preserve">
+    <value>Localização Rápida de Parâmetros de Entrada de Ação Ativos</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{a3cd66c8-212c-4117-a9ec-fe905795224a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}" xml:space="preserve">
+    <value>Vista Localização Avançada de Parâmetros de Entrada de Ação</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{358d764d-f167-46f4-864c-f147de16f5a4}" xml:space="preserve">
+    <value>Vista Associada de Parâmetros de Saída de Ação</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{358d764d-f167-46f4-864c-f147de16f5a4}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{5557f657-0457-4b1b-bef5-b3a20a701cd6}" xml:space="preserve">
+    <value>Parâmetros de Saída de Ação Ativos</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{5557f657-0457-4b1b-bef5-b3a20a701cd6}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{81a129b3-29df-4bbb-827b-37b6747f8e9b}" xml:space="preserve">
+    <value>Localização Rápida de Parâmetros de Saída de Ação Ativos</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{81a129b3-29df-4bbb-827b-37b6747f8e9b}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{9d540704-b34f-4ecc-b9d8-412acae74cf8}" xml:space="preserve">
+    <value>Parâmetros de Saída de Ação Inativos</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{9d540704-b34f-4ecc-b9d8-412acae74cf8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}" xml:space="preserve">
+    <value>Vista de Pesquisa de Parâmetros de Saída de Ação</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{be58538e-d1d2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Os Meus Parâmetros de Saída de Ação</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{be58538e-d1d2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Informações</value>
+    <comment>'Action Output Parameter' : LocalizedName for systemform in Entity FormXml ID: '{d4000272-4cda-436a-a678-cd3fe08ea2f6}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{de3156ab-1834-4782-a0d8-97869badb58b}" xml:space="preserve">
+    <value>Vista Localização Avançada de Parâmetros de Saída de Ação</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{de3156ab-1834-4782-a0d8-97869badb58b}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{2fc6654b-0626-475b-ba71-dba1a5b84ddd}" xml:space="preserve">
+    <value>Modelos de Ação de Macro Inativos</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{2fc6654b-0626-475b-ba71-dba1a5b84ddd}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" xml:space="preserve">
+    <value>Informações</value>
+    <comment>'Macro Action Template' : LocalizedName for systemform in Entity FormXml ID: '{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{728594b5-08ae-442b-b4c5-36baa67c2e52}" xml:space="preserve">
+    <value>Vista de Pesquisa de Modelos de Ação de Macro</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{728594b5-08ae-442b-b4c5-36baa67c2e52}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{7edfc44b-9171-4b03-b3fa-8f98c144543c}" xml:space="preserve">
+    <value>Localização Rápida de Modelos de Ação de Macro Ativos</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{7edfc44b-9171-4b03-b3fa-8f98c144543c}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}" xml:space="preserve">
+    <value>Vista Associada de Modelos de Ação de Macro</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
+    <value>Os Meus Modelos de Ação de Macro</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}" xml:space="preserve">
+    <value>Modelos de Ação de Macro Ativos</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}" xml:space="preserve">
+    <value>Vista Localização Avançada de Modelos de Ação de Macro</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}'</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
+    <value>Action Input Parameter</value>
+    <comment> 'msdyn_actioninputparameter' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
+    <value>Parâmetro de Entrada de Ação</value>
+    <comment> 'msdyn_actioninputparameter' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" xml:space="preserve">
+    <value>Parâmetro de Saída de Ação</value>
+    <comment> 'msdyn_actionoutputparameter' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
+    <value>Modelo de Ação de Macro</value>
+    <comment> 'msdyn_macroactiontemplate' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
+    <value>Definição de parâmetro</value>
+    <comment> 'msdyn_parameterdefinition' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{07a33cec-34c5-447a-b091-76a54ea8dcc0}" xml:space="preserve">
+    <value>Definições de Parâmetro Ativas</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{07a33cec-34c5-447a-b091-76a54ea8dcc0}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}" xml:space="preserve">
+    <value>Localização Rápida de Definições de Parâmetro Ativas</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{52db0469-ff43-48fb-af2f-69f8355a174c}" xml:space="preserve">
+    <value>Vista de Pesquisa de definições de Parâmetro</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{52db0469-ff43-48fb-af2f-69f8355a174c}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{57347866-53ad-4011-9024-d5161ce8391e}" xml:space="preserve">
+    <value>Definições de Parâmetro Inativas</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{57347866-53ad-4011-9024-d5161ce8391e}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{5811f646-830b-4439-aecd-0b1eb4c4910f}" xml:space="preserve">
+    <value>Vista Associada de definições de Parâmetro</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{5811f646-830b-4439-aecd-0b1eb4c4910f}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>As Minhas definições de Parâmetro</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Informações</value>
+    <comment>'Parameter definition' : LocalizedName for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}" xml:space="preserve">
+    <value>Vista Localização Avançada de definições de Parâmetro</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}'</comment>
+  </data>
+  <data name="1:Title,Action Input ParameterInfo{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Comum</value>
+    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Action Input ParameterMarketing{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Action Input ParameterProcessCenter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Sessões de Processamento</value>
+    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Action Input ParameterSales{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Vendas</value>
+    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Action Input ParameterService{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Serviço</value>
+    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Action Output ParameterInfo{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Comum</value>
+    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Action Output ParameterMarketing{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Action Output ParameterProcessCenter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Sessões de Processamento</value>
+    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Action Output ParameterSales{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Vendas</value>
+    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Action Output ParameterService{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Serviço</value>
+    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Parameter definitionInfo{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Comum</value>
+    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Parameter definitionMarketing{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Parameter definitionProcessCenter{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Sessões de Processamento</value>
+    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Parameter definitionSales{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Vendas</value>
+    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Parameter definitionService{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Serviço</value>
+    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+</root>

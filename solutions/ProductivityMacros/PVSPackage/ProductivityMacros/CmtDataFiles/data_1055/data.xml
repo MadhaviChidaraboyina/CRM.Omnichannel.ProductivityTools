@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" timestamp="9/9/2019 8:11:20 PM">
+  <entity name="msdyn_actioninputparameter" displayname="Action Input Parameter">
+    <records>
+      <record id="f530a3d1-f9d2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="f530a3d1-f9d2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" />
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:03:22 PM" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:03:24 PM" />
+        <field name="msdyn_name" value="Create_New_Input_Params_Mandatory" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="c8d99e29-fad2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="c8d99e29-fad2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="e6c81912-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Form" />
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:05:50 PM" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:05:51 PM" />
+        <field name="msdyn_name" value="Open_Exisiting_Form_Input_Params_Mandatory" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="1d75d16f-fad2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="1d75d16f-fad2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" />
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:07:48 PM" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:07:48 PM" />
+        <field name="msdyn_name" value="Open_Grid_Input_Params_Mandatory" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="1ce921a3-fbd2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="1ce921a3-fbd2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="baa326ad-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Dashboard" />
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:16:23 PM" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:16:24 PM" />
+        <field name="msdyn_name" value="Open_Dashboard_Input_Param_Mandatory" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="c833de57-fcd2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="c833de57-fcd2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="85ab814a-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_knowledge_base" />
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:21:26 PM" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:21:27 PM" />
+        <field name="msdyn_name" value="Search_kb_input_params_madatory" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="62da1195-fcd2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="62da1195-fcd2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="16fc3387-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_by_relevance" />
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:23:09 PM" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:23:10 PM" />
+        <field name="msdyn_name" value="Search_by_relevance_input_parameter" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="d54edfed-fcd2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="d54edfed-fcd2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Record" />
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:25:38 PM" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:25:39 PM" />
+        <field name="msdyn_name" value="Update_record_input_params_mandatory" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+    </records>
+    <m2mrelationships />
+  </entity>
+  <entity name="msdyn_macroactiontemplate" displayname="Macro Action Template">
+    <records>
+      <record id="01a02947-f9d2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 11:59:30 AM" />
+        <field name="msdyn_actionDescription" value="Kayıt oluşturmak için yeni bir form açın." />
+        <field name="msdyn_displayname" value="Yeni Oluştur" />
+        <field name="msdyn_macroactiontemplateid" value="01a02947-f9d2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:30:21 PM" />
+        <field name="msdyn_name" value="Create_New" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Yeni oluştur" />
+        <field name="msdyn_summary" value="Kayıt oluşturmak için yeni bir form aç" />
+        <field name="msdyn_title" value="Kayıt oluşturmak için yeni bir form aç" />
+      </record>
+      <record id="e6c81912-fad2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:05:10 PM" />
+        <field name="msdyn_actionDescription" value="Var olan kaydı aç" />
+        <field name="msdyn_displayname" value="Formu aç" />
+        <field name="msdyn_macroactiontemplateid" value="e6c81912-fad2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:33:15 PM" />
+        <field name="msdyn_name" value="Open_Form" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Formu Aç" />
+        <field name="msdyn_summary" value="Var olan kaydı aç" />
+        <field name="msdyn_title" value="Var olan kaydı aç" />
+      </record>
+      <record id="1c1af956-fad2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:07:06 PM" />
+        <field name="msdyn_actionDescription" value="Kayıt ızgarası aç" />
+        <field name="msdyn_displayname" value="Izgarayı aç" />
+        <field name="msdyn_macroactiontemplateid" value="1c1af956-fad2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:33:57 PM" />
+        <field name="msdyn_name" value="Open_Grid" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Izgarayı aç" />
+        <field name="msdyn_summary" value="Kayıt ızgarası aç" />
+        <field name="msdyn_title" value="Kayıt ızgarası aç" />
+      </record>
+      <record id="baa326ad-fad2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:09:31 PM" />
+        <field name="msdyn_actionDescription" value="Var olan bir panoyu aç" />
+        <field name="msdyn_displayname" value="Panoyu aç" />
+        <field name="msdyn_macroactiontemplateid" value="baa326ad-fad2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:09:31 PM" />
+        <field name="msdyn_name" value="Open_Dashboard" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Panoyu aç" />
+        <field name="msdyn_summary" value="Panoyu aç" />
+        <field name="msdyn_title" value="Var olan bir panoyu aç" />
+      </record>
+      <record id="13a680e2-fbd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:18:10 PM" />
+        <field name="msdyn_actionDescription" value="Bilgi bankası arama sayfasını aç" />
+        <field name="msdyn_displayname" value="Bilgi bankası aramasını aç" />
+        <field name="msdyn_macroactiontemplateid" value="13a680e2-fbd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:18:10 PM" />
+        <field name="msdyn_name" value="Open_knowledge_search" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Bilgi bankası aramasını aç" />
+        <field name="msdyn_summary" value="Bilgi bankası arama sayfasını aç" />
+        <field name="msdyn_title" value="Bilgi bankası arama sayfasını aç" />
+      </record>
+      <record id="48bbc0f3-fbd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:18:38 PM" />
+        <field name="msdyn_actionDescription" value="Oturum oluştur" />
+        <field name="msdyn_displayname" value="Oturum oluştur" />
+        <field name="msdyn_macroactiontemplateid" value="48bbc0f3-fbd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:18:38 PM" />
+        <field name="msdyn_name" value="Create_Session" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Oturum oluştur" />
+        <field name="msdyn_summary" value="Oturum oluştur" />
+        <field name="msdyn_title" value="Oturum oluştur" />
+      </record>
+      <record id="2574de1c-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:19:47 PM" />
+        <field name="msdyn_actionDescription" value="Diğer Tüm Oturumları Kapat" />
+        <field name="msdyn_displayname" value="Diğer Tüm Oturumları Kapat" />
+        <field name="msdyn_macroactiontemplateid" value="2574de1c-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:19:47 PM" />
+        <field name="msdyn_name" value="Close_All_other_Sessions" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Diğer Tüm Oturumları Kapat" />
+        <field name="msdyn_summary" value="Diğer Tüm Oturumları Kapat" />
+        <field name="msdyn_title" value="Diğer Tüm Oturumları Kapat" />
+      </record>
+      <record id="85ab814a-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:21:04 PM" />
+        <field name="msdyn_actionDescription" value="Doldurulan ifade için bilgi bankasında arama yap" />
+        <field name="msdyn_displayname" value="Bilgi bankası makalesini ara" />
+        <field name="msdyn_macroactiontemplateid" value="85ab814a-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:37:49 PM" />
+        <field name="msdyn_name" value="Search_knowledge_base" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Doldurulan ifade için bilgi bankasında arama yap" />
+        <field name="msdyn_summary" value="Doldurulan ifade için bilgi bankasında arama yap" />
+        <field name="msdyn_title" value="Doldurulan ifade için bilgi bankasında arama yap" />
+      </record>
+      <record id="16fc3387-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:22:46 PM" />
+        <field name="msdyn_actionDescription" value="İfadeye göre bir ilgi araması yap" />
+        <field name="msdyn_displayname" value="İlgiye göre ara" />
+        <field name="msdyn_macroactiontemplateid" value="16fc3387-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:36:34 PM" />
+        <field name="msdyn_name" value="Search_by_relevance" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="İfadeye göre bir ilgi araması yap" />
+        <field name="msdyn_summary" value="İfadeye göre bir ilgi araması yap" />
+        <field name="msdyn_title" value="İfadeye göre bir ilgi araması yap" />
+      </record>
+      <record id="101c73b5-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:24:03 PM" />
+        <field name="msdyn_actionDescription" value="Kaydı kaydet" />
+        <field name="msdyn_displayname" value="Kaydet" />
+        <field name="msdyn_macroactiontemplateid" value="101c73b5-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:35:34 PM" />
+        <field name="msdyn_name" value="Save" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Kaydı kaydet" />
+        <field name="msdyn_summary" value="Kaydı kaydet" />
+        <field name="msdyn_title" value="Kaydı kaydet" />
+      </record>
+      <record id="19c8c1c6-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:24:32 PM" />
+        <field name="msdyn_actionDescription" value="Sayfayı yenile" />
+        <field name="msdyn_displayname" value="Yenile" />
+        <field name="msdyn_macroactiontemplateid" value="19c8c1c6-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:35:16 PM" />
+        <field name="msdyn_name" value="Refresh" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Sayfayı yenile" />
+        <field name="msdyn_summary" value="Sayfayı yenile" />
+        <field name="msdyn_title" value="Sayfayı yenile" />
+      </record>
+      <record id="ce3390dd-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:25:11 PM" />
+        <field name="msdyn_actionDescription" value="Var olan kaydı güncelleştir" />
+        <field name="msdyn_displayname" value="Kaydı güncelleştir" />
+        <field name="msdyn_macroactiontemplateid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:39:43 PM" />
+        <field name="msdyn_name" value="Update_Record" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Var olan kaydı güncelleştir" />
+        <field name="msdyn_summary" value="Var olan kaydı güncelleştir" />
+        <field name="msdyn_title" value="Var olan kaydı güncelleştir" />
+      </record>
+      <record id="d965ea11-fdd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:26:39 PM" />
+        <field name="msdyn_actionDescription" value="Oturumdaki belirli bir kayıt için bir türden ilişkili kayıtları aç" />
+        <field name="msdyn_displayname" value="İlişkili Öğeyi Aç" />
+        <field name="msdyn_macroactiontemplateid" value="d965ea11-fdd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 12:26:39 PM" />
+        <field name="msdyn_name" value="Open_Associated" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="İlişkili Öğeyi Aç" />
+        <field name="msdyn_summary" value="Oturumdaki belirli bir kayıt için bir türden ilişkili kayıtları aç" />
+        <field name="msdyn_title" value="İlişkili Öğeyi Aç" />
+      </record>
+      <record id="e903922e-fdd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:27:27 PM" />
+        <field name="msdyn_actionDescription" value="Önceden tanımlanmış şablonla bir e-posta formu aç" />
+        <field name="msdyn_displayname" value="E-posta" />
+        <field name="msdyn_macroactiontemplateid" value="e903922e-fdd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:31:31 PM" />
+        <field name="msdyn_name" value="Draft_Email" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Önceden tanımlanmış şablonla bir e-posta formu aç" />
+        <field name="msdyn_summary" value="Önceden tanımlanmış şablonla bir e-posta formu aç" />
+        <field name="msdyn_title" value="Önceden tanımlanmış şablonla bir e-posta formu aç" />
+      </record>
+      <record id="0e59ec44-fdd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:28:04 PM" />
+        <field name="msdyn_actionDescription" value="Bilgi bankası makalesini gönder" />
+        <field name="msdyn_displayname" value="Bilgi bankasına gönder" />
+        <field name="msdyn_macroactiontemplateid" value="0e59ec44-fdd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:38:44 PM" />
+        <field name="msdyn_name" value="Send_KB" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Bilgi bankası makalesini gönder" />
+        <field name="msdyn_summary" value="Bilgi bankası makalesini gönder" />
+        <field name="msdyn_title" value="Bilgi bankası makalesini gönder" />
+      </record>
+      <record id="68e92456-fdd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 12:28:33 PM" />
+        <field name="msdyn_actionDescription" value="Kaydı kopyala ve bir oturumda aç" />
+        <field name="msdyn_displayname" value="Kaydı kopyala" />
+        <field name="msdyn_macroactiontemplateid" value="68e92456-fdd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 2:29:00 PM" />
+        <field name="msdyn_name" value="Clone_record" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="Kaydı kopyala ve bir oturumda aç" />
+        <field name="msdyn_summary" value="Kaydı kopyala ve bir oturumda aç" />
+        <field name="msdyn_title" value="Kaydı kopyala ve bir oturumda aç" />
+      </record>
+    </records>
+    <m2mrelationships />
+  </entity>
+  <entity name="msdyn_parameterdefinition" displayname="Parameter definition">
+    <records>
+      <record id="d61ae14b-f8d2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 11:52:28 AM" />
+        <field name="msdyn_description" value="Açılacak varlığın mantıksal adı" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 11:52:28 AM" />
+        <field name="msdyn_name" value="EntityName" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parameterdefinitionid" value="d61ae14b-f8d2-e911-a81e-000d3a015920" />
+        <field name="msdyn_parametertype" value="dize" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_displayname" value="Varlık Mantıksal Adı" />
+      </record>
+      <record id="ddf27260-f8d2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 11:53:03 AM" />
+        <field name="msdyn_description" value="Açılacak form kimliği" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 11:53:03 AM" />
+        <field name="msdyn_name" value="FormId" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parameterdefinitionid" value="ddf27260-f8d2-e911-a81e-000d3a015920" />
+        <field name="msdyn_parametertype" value="dize" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_displayname" value="Varlık Formu Kimliği" />
+      </record>
+      <record id="f729e573-f8d2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 11:53:35 AM" />
+        <field name="msdyn_description" value="Açılacak varlık kaydı kimliği" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 11:53:35 AM" />
+        <field name="msdyn_name" value="EntityId" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parameterdefinitionid" value="f729e573-f8d2-e911-a81e-000d3a015920" />
+        <field name="msdyn_parametertype" value="dize" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_displayname" value="Varlık kaydı kimliği" />
+      </record>
+      <record id="6e033082-f8d2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 11:53:59 AM" />
+        <field name="msdyn_description" value="Açılacak görünümün kimliği" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 11:53:59 AM" />
+        <field name="msdyn_name" value="ViewId" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parameterdefinitionid" value="6e033082-f8d2-e911-a81e-000d3a015920" />
+        <field name="msdyn_parametertype" value="dize" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_displayname" value="Görünüm Kimliği" />
+      </record>
+      <record id="474f7494-f8d2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 11:54:30 AM" />
+        <field name="msdyn_description" value="Görünümün türü" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 11:54:30 AM" />
+        <field name="msdyn_name" value="ViewType" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parameterdefinitionid" value="474f7494-f8d2-e911-a81e-000d3a015920" />
+        <field name="msdyn_parametertype" value="dize" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_displayname" value="Görünüm Türü" />
+      </record>
+      <record id="fed739aa-f8d2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 11:55:07 AM" />
+        <field name="msdyn_description" value="Açılacak panonun kimliği" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 11:55:07 AM" />
+        <field name="msdyn_name" value="DashboardId" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parameterdefinitionid" value="fed739aa-f8d2-e911-a81e-000d3a015920" />
+        <field name="msdyn_parametertype" value="dize" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_displayname" value="Pano kimliği" />
+      </record>
+      <record id="32e1acb9-f8d2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 11:55:33 AM" />
+        <field name="msdyn_description" value="Aranacak ifade&quot;" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 11:55:33 AM" />
+        <field name="msdyn_name" value="SearchString" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parameterdefinitionid" value="32e1acb9-f8d2-e911-a81e-000d3a015920" />
+        <field name="msdyn_parametertype" value="dize" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_displayname" value="Arama dizesi" />
+      </record>
+      <record id="ae9b14cb-f8d2-e911-a81e-000d3a015920">
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/9/2019 11:56:02 AM" />
+        <field name="msdyn_description" value="Güncelleştirilecek öznitelikleri ve değerleri temsil eden bir JSON dizesi" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/9/2019 11:56:02 AM" />
+        <field name="msdyn_name" value="UpdateData" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
+        <field name="msdyn_parameterdefinitionid" value="ae9b14cb-f8d2-e911-a81e-000d3a015920" />
+        <field name="msdyn_parametertype" value="dize" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_displayname" value="Anahtar-değer çiftlerinin JSON dizesi" />
+      </record>
+    </records>
+    <m2mrelationships>
+      <m2mrelationship sourceid="d61ae14b-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
+        <targetids>
+          <targetid>f530a3d1-f9d2-e911-a81e-000d3a015920</targetid>
+          <targetid>c8d99e29-fad2-e911-a81e-000d3a015920</targetid>
+          <targetid>1d75d16f-fad2-e911-a81e-000d3a015920</targetid>
+          <targetid>d54edfed-fcd2-e911-a81e-000d3a015920</targetid>
+        </targetids>
+      </m2mrelationship>
+      <m2mrelationship sourceid="ddf27260-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
+        <targetids>
+          <targetid>f530a3d1-f9d2-e911-a81e-000d3a015920</targetid>
+          <targetid>c8d99e29-fad2-e911-a81e-000d3a015920</targetid>
+        </targetids>
+      </m2mrelationship>
+      <m2mrelationship sourceid="f729e573-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
+        <targetids>
+          <targetid>c8d99e29-fad2-e911-a81e-000d3a015920</targetid>
+          <targetid>d54edfed-fcd2-e911-a81e-000d3a015920</targetid>
+        </targetids>
+      </m2mrelationship>
+      <m2mrelationship sourceid="6e033082-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
+        <targetids>
+          <targetid>1d75d16f-fad2-e911-a81e-000d3a015920</targetid>
+        </targetids>
+      </m2mrelationship>
+      <m2mrelationship sourceid="474f7494-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
+        <targetids>
+          <targetid>1d75d16f-fad2-e911-a81e-000d3a015920</targetid>
+        </targetids>
+      </m2mrelationship>
+      <m2mrelationship sourceid="fed739aa-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
+        <targetids>
+          <targetid>1ce921a3-fbd2-e911-a81e-000d3a015920</targetid>
+        </targetids>
+      </m2mrelationship>
+      <m2mrelationship sourceid="32e1acb9-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
+        <targetids>
+          <targetid>c833de57-fcd2-e911-a81e-000d3a015920</targetid>
+          <targetid>62da1195-fcd2-e911-a81e-000d3a015920</targetid>
+        </targetids>
+      </m2mrelationship>
+      <m2mrelationship sourceid="ae9b14cb-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
+        <targetids>
+          <targetid>d54edfed-fcd2-e911-a81e-000d3a015920</targetid>
+        </targetids>
+      </m2mrelationship>
+    </m2mrelationships>
+  </entity>
+</entities>

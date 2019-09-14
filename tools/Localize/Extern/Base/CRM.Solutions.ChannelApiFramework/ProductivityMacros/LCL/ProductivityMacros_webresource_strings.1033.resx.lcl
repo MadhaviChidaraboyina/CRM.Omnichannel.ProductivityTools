@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="F:\CTAS_log\Runs\20180924-172512-q18wcwg6s\Work\UI\Master\xrmSolutions\CIFramework\AgentClickToActControl.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="de-DE" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Loc" />
+    <Cmt Name="LPK" />
+    <Cmt Name="Note" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";ProductivityMacros_webresource_strings.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to close all except present session]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_CREATE_SESSION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create Session]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to create session]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_DASHBOARD" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Dashboard]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open dashboard]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_FORM" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Form]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open form]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_GRID" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Grid]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open grid]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_KB_SEARCH" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Knowledge Search]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open KB search]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_REFRESH" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to refresh]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SAVE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to save]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SEARCH_BY_RELEVANCE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search by Relevance]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to search by relevance]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SEARCH_KB" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search Knowledge Base]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to search KB]]></Cmt>
+        </Cmts>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

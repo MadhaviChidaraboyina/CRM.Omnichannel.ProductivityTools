@@ -1,0 +1,1378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="data.json" PsrId="306" FileType="1" SrcCul="en-US" TgtCul="sv-SE" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <Props>
+    <Str Name="CustomName1" Val="Custom 1" />
+    <Str Name="CustomName2" Val="Custom 2" />
+    <Str Name="CustomName3" Val="Custom 3" />
+    <Str Name="CustomName4" Val="Custom 4" />
+    <Str Name="CustomName5" Val="Custom 5" />
+    <Str Name="CustomName6" Val="IQA" />
+  </Props>
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Loc" />
+    <Cmt Name="Note" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";String Table" ItemType="0" PsrId="306" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
+    <Modified By="v-keikca" DateTime="2017-10-31T18:39:05Z" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="306" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Modified By="v-keikca" DateTime="2017-10-31T18:39:05Z" />
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_01a02947-f9d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna ett nytt formulär för att skapa en post.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006134Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_0e59ec44-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skicka kunskapsbasartikel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006134Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_101c73b5-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Spara posten]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006134Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_13a680e2-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open the knowledge search page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna söksidan för kunskapsbasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006134Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_16fc3387-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Gör en relevanssökning baserat på frasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006134Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_19c8c1c6-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uppdatera sidan]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006134Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_1c1af956-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna ett postrutnät]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006134Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_2574de1c-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Stäng alla andra sessioner]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006134Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_48bbc0f3-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skapa session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006134Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_68e92456-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone a record and open it in a session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Klona en post och öppna den i en session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_85ab814a-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sök i kunskapsbasen efter den ifyllda frasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_baa326ad-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna en befintlig instrumentpanel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uppdatera en befintlig post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open associated records of a type for any given record in the session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna associerade poster för en typ av en given post i sessionen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_e6c81912-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna en befintlig post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_e903922e-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna ett e-postformulär med fördefinierad mall]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_01a02947-f9d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create New]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skapa nytt]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_0e59ec44-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skicka kunskapsbas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_101c73b5-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Spara]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_13a680e2-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open knowledge search]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna kunskapssökning]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_16fc3387-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search by relevance]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sök efter relevans]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006106Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_19c8c1c6-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uppdatera]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_1c1af956-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna rutnät]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_2574de1c-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Stäng alla andra sessioner]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_48bbc0f3-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skapa session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_68e92456-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Klona post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_85ab814a-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sök i kunskapsbasartikel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_baa326ad-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna instrumentpanelen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uppdatera post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Associated]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna associerad]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_e6c81912-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open form]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna formulär]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_e903922e-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[E-post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_01a02947-f9d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create new]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skapa nytt]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006076Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_0e59ec44-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skicka kunskapsbasartikel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_101c73b5-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Spara posten]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_13a680e2-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open knowledge search]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna kunskapssökning]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_16fc3387-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Gör en relevanssökning baserat på frasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_19c8c1c6-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uppdatera sidan]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_1c1af956-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna rutnät]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_2574de1c-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Stäng alla andra sessioner]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_48bbc0f3-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skapa session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_68e92456-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone a record and open it in a session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Klona en post och öppna den i en session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_85ab814a-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sök i kunskapsbasen efter den ifyllda frasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_baa326ad-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna instrumentpanelen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006044Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uppdatera en befintlig post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Associated]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna associerad]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_e6c81912-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Form]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna formulär]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_e903922e-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna ett e-postformulär med fördefinierad mall]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_01a02947-f9d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna ett nytt formulär för att skapa en post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_0e59ec44-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skicka kunskapsbasartikel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_101c73b5-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Spara posten]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_13a680e2-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open the knowledge search page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna söksidan för kunskapsbasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_16fc3387-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Gör en relevanssökning baserat på frasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_19c8c1c6-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uppdatera sidan]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_1c1af956-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna ett postrutnät]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_2574de1c-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Stäng alla andra sessioner]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_48bbc0f3-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skapa session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0006053Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_68e92456-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone a record and open it in a session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Klona en post och öppna den i en session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_85ab814a-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sök i kunskapsbasen efter den ifyllda frasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_baa326ad-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna instrumentpanelen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uppdatera en befintlig post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open associated records of a type for any given record in the session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna associerade poster för en typ av en given post i sessionen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_e6c81912-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna en befintlig post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_e903922e-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna ett e-postformulär med fördefinierad mall]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_01a02947-f9d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna ett nytt formulär för att skapa en post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_0e59ec44-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skicka kunskapsbasartikel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_101c73b5-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Spara posten]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_13a680e2-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open the knowledge search page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna söksidan för kunskapsbasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_16fc3387-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Gör en relevanssökning baserat på frasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005994Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_19c8c1c6-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uppdatera sidan]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_1c1af956-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna ett postrutnät]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_2574de1c-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Stäng alla andra sessioner]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_48bbc0f3-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skapa session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_68e92456-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone a record and open it in a session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Klona en post och öppna den i en session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_85ab814a-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sök i kunskapsbasen efter den ifyllda frasen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_baa326ad-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna en befintlig instrumentpanel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uppdatera en befintlig post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Associated]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna associerad]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_e6c81912-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna en befintlig post]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_e903922e-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Öppna ett e-postformulär med fördefinierad mall]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_32e1acb9-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The phrase to be searched for&quot;]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fras att söka efter"]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005972Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The type of view]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Typ av vy]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_6e033082-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The Id of the view to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID för den vy som ska öppnas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A JSON string representing the attributes and values to be updated]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[En JSON-sträng representerar de attribut och värden som ska uppdateras]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_d61ae14b-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Logical name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Logiskt namn på den entitet som ska öppnas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Form Id to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID för det formulär som ska öppnas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_f729e573-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record id to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID för den entitetspost som ska öppnas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_fed739aa-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ID of the dashboard to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID för den instrumentpanel som ska öppnas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_32e1acb9-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Söksträng]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vytyp]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_6e033082-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vy-ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[JSON string of key-value pairs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[JSON-sträng för nyckel/värde-par]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_d61ae14b-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity Logical Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Logiskt namn för entitet]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.0005941Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity Form Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID för entitetsformulär]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_f729e573-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID för entitetspost]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_fed739aa-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dashboard id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Instrumentpanel-ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_32e1acb9-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[sträng]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[sträng]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_6e033082-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[sträng]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[sträng]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_d61ae14b-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[sträng]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[sträng]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_f729e573-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[sträng]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_fed739aa-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[sträng]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:14.000591Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>
