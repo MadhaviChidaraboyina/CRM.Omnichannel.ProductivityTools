@@ -17,7 +17,7 @@
     <ReferencingAttributeName>msdyn_AgentScriptId</ReferencingAttributeName>
     <RelationshipDescription>
       <Descriptions>
-        <Description description="Unique identifier for Agent Script associated with Agent Script Step." languagecode="1033" />
+        <Description description="Unique identifier for agent script associated with agent script step." languagecode="1033" />
       </Descriptions>
     </RelationshipDescription>
     <EntityRelationshipRoles>
@@ -51,7 +51,7 @@
     <ReferencingAttributeName>msdyn_RouteActionId</ReferencingAttributeName>
     <RelationshipDescription>
       <Descriptions>
-        <Description description="Unique identifier for Agent Script associated with Agent Script Step." languagecode="1033" />
+        <Description description="Unique identifier for target script associated with agent script step." languagecode="1033" />
       </Descriptions>
     </RelationshipDescription>
     <EntityRelationshipRoles>
@@ -65,6 +65,28 @@
       <EntityRelationshipRole>
         <NavigationPropertyName>msdyn_msdyn_agentscript_routeaction</NavigationPropertyName>
         <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="msdyn_msdyn_agentscript_msdyn_sessiontemplate">
+    <EntityRelationshipType>ManyToMany</EntityRelationshipType>
+    <IsCustomizable>0</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <FirstEntityName>msdyn_agentscript</FirstEntityName>
+    <SecondEntityName>msdyn_consoleapplicationsessiontemplate</SecondEntityName>
+    <IntersectEntityName>msdyn_msdyn_agentscript_msdyn_sessiontemplate</IntersectEntityName>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>DoNotDisplay</NavPaneDisplayOption>
+        <NavigationPropertyName>msdyn_msdyn_agentscript_msdyn_sessiontemplate</NavigationPropertyName>
+        <AssociationRoleOrdinal>1</AssociationRoleOrdinal>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>DoNotDisplay</NavPaneDisplayOption>
+        <NavigationPropertyName>msdyn_msdyn_agentscript_msdyn_sessiontemplate</NavigationPropertyName>
+        <AssociationRoleOrdinal>2</AssociationRoleOrdinal>
       </EntityRelationshipRole>
     </EntityRelationshipRoles>
   </EntityRelationship>

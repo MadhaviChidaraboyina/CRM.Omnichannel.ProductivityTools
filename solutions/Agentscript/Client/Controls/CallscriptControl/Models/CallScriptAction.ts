@@ -7,67 +7,126 @@
 module MscrmControls.ProductivityPanel {
 	'use strict';
 
+	/**
+	 * Generic action class
+	 */
 	export class CallScriptAction {
-		public id: string;
-		public name: string;
-		public actionType: CallscriptActionType
-		public configuredDisplayText: string;
-		public resolvedDisplayText: string;
+		// Properties
+		public actionType: CallscriptActionType;
+
+		// Runtime attributes
 		public errorText: string;
 
-		constructor(id: string, name: string, actionType: CallscriptActionType, displayText: string) {
-			this.id = id;
-			this.name = name;
+		constructor(actionType: CallscriptActionType) {
 			this.actionType = actionType;
-			this.configuredDisplayText = displayText;
-			this.resolvedDisplayText = displayText;
 			this.errorText = "";
 		}
 
-		public executeAction(cifUtil?: CIFUtil): Promise<any> {
+		public executeAction(stateManager?: StateManager): Promise<any> {
 			return new Promise<any>((resolve, reject) => {
-				this.errorText = "No implementation found for macro/route action";
-				reject("Cannot find child class");
+				this.errorText = "No execution found for this action type, ActionType=" + this.actionType;
+				reject(this.errorText);
 			});
-		}
-
-		public getDisplayText(): string {
-			return this.resolvedDisplayText;
 		}
 
 		public getErrorText(): string {
 			return this.errorText;
 		}
-	}
 
-	export class TextAction extends CallScriptAction {
-
-		constructor(id: string, name: string, displayText: string) {
-			super(id, name, CallscriptActionType.TextAction, displayText);
+		public resolveInstructionText(cifUtil: CIFUtil): Promise<string> {
+			return new Promise<any>((resolve, reject) => {
+				resolve(""); //No slug resolution for macro and route actions
+			});
 		}
 
-		public executeAction(cifUtil: CIFUtil): Promise<any> {
+		public getResolvedTextInstruction(): string {
+			return ""; //No text instruction for macro and route actions
+		}
+
+		public setResolvedInstructionText(resolvedText: string): void {
+			return; //No text instruction for macro and route actions
+		}
+	}
+
+	/**
+	 * Text action
+	 */
+	export class TextAction extends CallScriptAction {
+		// Properties
+		public configuredTextInstruction: string;
+		public resolvedTextInstruction: string;
+
+		constructor(textInstruction: string) {
+			super(CallscriptActionType.TextAction);
+			this.configuredTextInstruction = textInstruction;
+			this.resolvedTextInstruction = textInstruction;
+		}
+
+		public executeAction(): Promise<any> {
 			return new Promise<any>((resolve, reject) => {
-				resolve(); //do nothing
+				resolve(); //No background processing for text action
+			});
+		}
+
+		public resolveInstructionText(cifUtil: CIFUtil): Promise<string> {
+			return cifUtil.resolveReplaceableParameters(this.configuredTextInstruction);
+		}
+
+		public getResolvedTextInstruction(): string {
+			return this.resolvedTextInstruction;
+		}
+
+		public setResolvedInstructionText(resolvedText: string): void {
+			this.resolvedTextInstruction = resolvedText;
+		}
+	}
+
+	/**
+	 * Macro Action
+	 */
+	export class MacroAction extends CallScriptAction {
+		public macroId: string;
+		private macroName: string;
+
+		constructor(macroId: string, macroName: string) {
+			super(CallscriptActionType.MacroAction);
+			this.macroId = macroId;
+			this.macroName = macroName;
+		}
+
+		public executeAction(): Promise<any> {
+			return new Promise<any>((resolve, reject) => {
+				//added a delay to simulate time taken for macro execution
+				window.setTimeout(() => resolve(), 5000);
 			});
 		}
 	}
 
-	export class MacroAction extends CallScriptAction {
-		public macroId: string;
-
-		constructor(id: string, name: string, macroId: string, displayText: string) {
-			super(id, name, CallscriptActionType.MacroAction, displayText);
-			this.macroId = macroId;
-		}
-	}
-
+	/**
+	 * Route action
+	 */
 	export class RouteAction extends CallScriptAction {
 		public routeCallscriptId: string;
+		private routeCallscriptName: string;
 
-		constructor(id: string, name: string, routeCallscriptId: string, displayText: string) {
-			super(id, name, CallscriptActionType.ReRouteAction, displayText);
+		constructor(routeCallscriptId: string, routeCallscriptName: string) {
+			super(CallscriptActionType.ReRouteAction);
 			this.routeCallscriptId = routeCallscriptId;
+			this.routeCallscriptName = routeCallscriptName;
+		}
+
+		public executeAction(stateManager: StateManager): Promise<any> {
+			for (let script of stateManager.callscriptsForCurrentSession) {
+				if (script.id === this.routeCallscriptId) {
+					script.isCurrent = true;
+				}
+				else {
+					script.isCurrent = false;
+				}
+			}
+			return new Promise<any>((resolve, reject) => {
+				resolve(); //No background processing for route action
+			});
 		}
 	}
 }

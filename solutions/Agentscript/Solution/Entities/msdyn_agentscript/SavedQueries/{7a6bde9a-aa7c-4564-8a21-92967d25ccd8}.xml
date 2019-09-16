@@ -30,7 +30,7 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Agent Script Lookup View" languagecode="1033" />
+      <LocalizedName description="Agent script Lookup View" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

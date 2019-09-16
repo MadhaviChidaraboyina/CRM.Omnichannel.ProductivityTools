@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name LocalizedName="Agent Script" OriginalName="Agent Script">msdyn_agentscript</Name>
+  <Name LocalizedName="Agent script" OriginalName="Agent script">msdyn_agentscript</Name>
   <EntityInfo>
     <entity Name="msdyn_agentscript">
       <LocalizedNames>
-        <LocalizedName description="Agent Script" languagecode="1033" />
+        <LocalizedName description="Agent script" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Agent Scripts" languagecode="1033" />
+        <LocalizedCollectionName description="Agent scripts" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="Agent Script" languagecode="1033" />
+        <Description description="Agent script" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -274,7 +274,7 @@
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <AutoNumberFormat></AutoNumberFormat>
           <displaynames>
-            <displayname description="Agent Script" languagecode="1033" />
+            <displayname description="Agent script" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Unique identifier for entity instances" languagecode="1033" />
@@ -313,7 +313,7 @@
             <displayname description="Description" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Description for the agent script." languagecode="1033" />
+            <Description description="Description of the agent script" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Language">
@@ -349,7 +349,7 @@
             <displayname description="Language" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Language of the Agent Script" languagecode="1033" />
+            <Description description="Language for agent script" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_name">
@@ -592,7 +592,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the Agent Script" languagecode="1033" />
+              <Description description="Status of the Agent script" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -611,7 +611,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the Agent Script" languagecode="1033" />
+            <Description description="Status of the Agent script" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -648,7 +648,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the Agent Script" languagecode="1033" />
+              <Description description="Reason for the status of the Agent script" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -667,7 +667,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the Agent Script" languagecode="1033" />
+            <Description description="Reason for the status of the Agent script" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">

@@ -1,7 +1,6 @@
 ﻿/**
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
-
 module MscrmControls.ProductivityPanel
 {
 	'use strict';
@@ -13,23 +12,22 @@ module MscrmControls.ProductivityPanel
 	{
 		// properties
 		private context: Mscrm.ControlData<IInputBag>;
+		private cifExternalUtil: Microsoft.CIFramework.External.CIFExternalUtilityImpl;
 
 		constructor(context: Mscrm.ControlData<IInputBag>)
 		{
 			this.context = context;
+			this.cifExternalUtil = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
 		}
 
 		/**
-		 * Get session template id for given UCI session id
+		 * Get session template id for focussed session
 		 * @param uciSessionId uci session id
 		 * @returns Session template id
 		 */
-		public getSessionTemplateId(uciSessionId: string): Promise<string>
+		public getSessionTemplateId(): string
 		{
-			return new Promise((resolve, reject) => {
-				// ToDo: Integrate with new CIF API once available
-				resolve(Constants.EmptyString);
-			});
+			return this.cifExternalUtil.getTemplateForSession();
 		}
 
 		/**
@@ -38,12 +36,34 @@ module MscrmControls.ProductivityPanel
 		 * @param uciSessionId uci session id
 		 * @returns Resolved replaceable parameter
 		 */
-		public resolveReplaceableParameters(inputParam: string, uciSessionId?: string): Promise<string>
+		public resolveReplaceableParameters(inputParam: string): Promise<string>
 		{
-			return new Promise((resolve, reject) => {
-				// ToDo: Integrate with new CIF API once available
-				resolve(inputParam);
-			});
+			let templateParams = this.cifExternalUtil.getSessionTemplateParams();
+			return this.cifExternalUtil.resolveTemplateString(inputParam, templateParams, "");
+		}
+
+		/**
+		 * Returns value for key in session template params for focussed session
+		 * @param key key for entry whose value is returned
+		 */
+		public getValueFromSessionTemplateParams(key: string): any {
+			let sessionTemplateParams = this.cifExternalUtil.getSessionTemplateParams();
+			if (!this.context.utils.isNullOrUndefined(sessionTemplateParams) && !this.context.utils.isNullOrUndefined(sessionTemplateParams[key])) {
+				return sessionTemplateParams[key];
+			}
+			return null;
+		}
+
+		/**
+		 * Updates value in session template params for specified session
+		 * @param key key for the new/updated entry in session template params
+		 * @param value value for the new/updated entry in session template params
+		 * @param sessionId id of session whose params are updated
+		 */
+		public setValueInSessionTemplateParams(key: string, value: any, sessionId: string): void {
+			let input: Mscrm.Dictionary = {};
+			input[key] = value;
+			this.cifExternalUtil.setSessionTemplateParams(input, sessionId);
 		}
 	}
 

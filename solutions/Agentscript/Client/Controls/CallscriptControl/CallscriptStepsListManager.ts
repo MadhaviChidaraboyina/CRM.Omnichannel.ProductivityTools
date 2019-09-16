@@ -10,16 +10,14 @@ module MscrmControls.ProductivityPanel {
 	export class CallscriptStepsListManager {
 
 		private context: Mscrm.ControlData<IInputBag>;
-		private controlStyle: ControlStyle;
 		private stepListitemManager: CallscriptStepListitemManager;
 
 		/**
 		 * Constructor.
 		 */
-		constructor(context: Mscrm.ControlData<IInputBag>, callscriptControl: CallscriptControl) {
+		constructor(context: Mscrm.ControlData<IInputBag>, stepListitemManager: CallscriptStepListitemManager) {
 			this.context = context;
-			this.controlStyle = callscriptControl.controlStyle;
-			this.stepListitemManager = callscriptControl.stepListitemManager;
+			this.stepListitemManager = stepListitemManager;
 		}
 
 		/**
@@ -27,7 +25,7 @@ module MscrmControls.ProductivityPanel {
 		 * @param currentScript script whose steps is returned
 		 * @param controlStyle style class instance to get component styles
 		 */
-		public getStepsList(currentScript: CallScript, controlStyle: ControlStyle): Mscrm.Component {
+		public getStepsList(currentScript: CallScript): Mscrm.Component {
 			var listItems: Mscrm.Component[] = [];
 
 			for (let step of currentScript.steps) {
@@ -38,13 +36,13 @@ module MscrmControls.ProductivityPanel {
 				key: "CallscriptStepsListKey",
 				id: "CallscriptStepsListId",
 				role: "list",
-				style: controlStyle.listStyle
+				style: ControlStyle.getListStyle()
 			}, listItems);
 
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallscriptStepsListContainerKey",
 				id: "CallscriptStepsListContainerId",
-				style: controlStyle.listComponentStyle
+				style: ControlStyle.getListComponentStyle()
 			}, list);
 		}
 	}

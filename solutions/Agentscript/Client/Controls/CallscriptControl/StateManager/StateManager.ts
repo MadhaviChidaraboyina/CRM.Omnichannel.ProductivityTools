@@ -8,13 +8,15 @@ module MscrmControls.ProductivityPanel {
 	export class StateManager {
 
 		private context: Mscrm.ControlData<IInputBag>;
-		private sessions: { [id: string]: CallScript[] };
-		private requestedSessionIds: string[];
 		private dataManager: DataManager;
+		private cifUtil: CIFUtil;
+		private telemetryContext: string;
+		private telemetryLogger: TelemetryLogger;
 
+		private isScriptsDataRequested: boolean;
+		private currentUciSessionId: string;
 		public selectedScriptForCurrentSession: CallScript;
 		public callscriptsForCurrentSession: CallScript[];
-		public currentUciSessionId: string;
 
 		/**
 		 * Constructor
@@ -22,71 +24,61 @@ module MscrmControls.ProductivityPanel {
 		 */
 		constructor(context: Mscrm.ControlData<IInputBag>) {
 			this.context = context;
-			this.sessions = {};
-			this.currentUciSessionId = "";
 			this.dataManager = new DataManager(context);
+			this.cifUtil = new CIFUtil(context);
+			this.callscriptsForCurrentSession = null;
 			this.selectedScriptForCurrentSession = null;
-			this.requestedSessionIds = [];
+			this.telemetryContext = TelemetryComponents.StateManager;
+			this.telemetryLogger = new TelemetryLogger(this.context);
+			this.isScriptsDataRequested = false;
+
+			this.setCurrentUciSessionId();
+			this.initializeControlStateFromCIF();
 		}
 
 		/**
-		 * Returns boolean value indicating whether session data is available in state
-		 * @param sessionId id of session whose data is to be checked
+		 * Sets the value of sessionId to id of focussed session for this control instance
 		 */
-		private isSessionDataAvailable(sessionId: string): boolean {
-			let callScriptData = this.sessions[sessionId];
-			if (this.context.utils.isNullOrUndefined(callScriptData)) {
-				return false;
+		private setCurrentUciSessionId(): void {
+			let methodName = "setCurrentUciSessionId";
+			try {
+				this.currentUciSessionId = (window as any).top.Xrm.App.sessions.getFocusedSession().sessionId;
 			}
-			return true;
-		}
-
-		/**
-		 * Returns callscript array for session 
-		 * @param sessionId id of session whose callscripts are returned
-		 */
-		public getCallScriptForSession(sessionId: string): CallScript[] {
-			if (this.isSessionDataAvailable(sessionId) == false) {
-				return null;
+			catch(error) {
+				this.currentUciSessionId = "";
+				let eventParams = new EventParameters();
+				eventParams.addParameter("message", "Failed to retrieve UCI session id");
+				this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
 			}
-
-			let callScriptToRender = this.sessions[sessionId];
-			return callScriptToRender;
 		}
 
 		/**
-		 * Updated/Adds callscripts for session in dictionary
-		 * @param sessionId id of session as key in dictionary
-		 * @param callScripts callscripts for session as value in dictionary
+		 * Initializes control state from CIF session template params
 		 */
-		public setCallScriptForSession(sessionId: string, callScripts: CallScript[]): void {
-			this.sessions[sessionId] = callScripts;
+		private initializeControlStateFromCIF(): void {
+			this.callscriptsForCurrentSession = this.cifUtil.getValueFromSessionTemplateParams(Constants.ControlStateKey);
 		}
 
 		/**
-		 * Removes closed session data from dictionary
-		 * @param sessionId id of closed session whose value is removed
+		 *  Updates/Adds control state into CIF session template params
 		 */
-		public removeClosedSession(sessionId: string): void {
-			if (this.isSessionDataAvailable(sessionId) == false) {
-				console.log("Invalid session closed");
-				return;
-			}
-
-			delete this.sessions[sessionId];
+		public updateControlStateInCIF(): void {
+			this.cifUtil.setValueInSessionTemplateParams(Constants.ControlStateKey, this.callscriptsForCurrentSession, this.currentUciSessionId);
 		}
 
 		/**
 		 * Returns active callscript for session by checking values in dictionary
 		 * @param sessionId id of session whose current callscript is returned
 		 */
-		public getCurrentCallScriptForSession(sessionId: string) {
-			if (this.isSessionDataAvailable(sessionId)) {
-				for (let script of this.sessions[sessionId]) {
-					if (script.isCurrent) {
-						return script;
-					}
+		public getCurrentCallScript(): CallScript {
+			for (let script of this.callscriptsForCurrentSession) {
+				if (script.isCurrent) {
+					return script;
 				}
+			}
+			if (this.callscriptsForCurrentSession.length > 0) {
+				this.callscriptsForCurrentSession[0].isCurrent = true;
+				return this.callscriptsForCurrentSession[0];
 			}
 			return null;
 		}
@@ -94,60 +86,82 @@ module MscrmControls.ProductivityPanel {
 		/**
 		 * Fetch callscript data from CRM config
 		*/
-		private fetchCallScriptsDataForSession(sessionId: string): void {
-			this.dataManager.retrieveCallScriptsForSession(sessionId).then(
-				(callscriptsResponse: CallScript[]) => {
-					let sessionIdIndex = this.requestedSessionIds.indexOf(sessionId);
-					this.requestedSessionIds.splice(sessionIdIndex, 1);
-					this.setCallScriptForSession(sessionId, callscriptsResponse);
+		private fetchCallScriptsForCurrentSession(): void {
+			let methodName = "fetchCallScriptsForCurrentSession";
+			let dataManagerPromise = this.dataManager.retrieveInitialData();
+
+			dataManagerPromise.then(
+				(callscriptRecords: CallScript[]) => {
+					this.callscriptsForCurrentSession = callscriptRecords;
 					this.context.utils.requestRender();
+
+					let eventParams = new EventParameters();
+					eventParams.addParameter("totalScripts", callscriptRecords.length.toString());
+					eventParams.addParameter("message", "Call script records retrieved for session");
+					this.telemetryLogger.logSuccess(this.telemetryContext, methodName, eventParams);
 				},
-				(error) => {
-					//Log error telemetry
+				(errorString: string) => {
+					let errorMessage = "Failed to retrieve call script records";
+					let errorParam = new EventParameters();
+					errorParam.addParameter("errorDetails", errorString);
+					this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
 				}
 			);
 		}
 
 		/**
-		 * Returns true if data fetch for session has already been initiated
-		 * @param sessionId session id for the query
+		 * Fetch script steps configured for this script from CRM
+		 * @param script whose steps are being retrived
 		 */
-		public isSessionDataRequested(sessionId: string): boolean {
-			let sessionIdIndex = this.requestedSessionIds.indexOf(sessionId);
-			return (sessionIdIndex !== -1);
+		private fetchStepsForCallscript(script: CallScript): void {
+			let methodName = "fetchStepsForCallscript";
+			this.dataManager.retrieveCallScriptStepsData(script.id).then(
+				(stepsResponse: CallScriptStep[]) => {
+					script.steps = stepsResponse;
+					script.isStepsDataRetrieved = true;
+					this.context.utils.requestRender();
+
+					let eventParams = new EventParameters();
+					eventParams.addParameter("callscriptId", script.id);
+					eventParams.addParameter("number of retrieved steps", this.selectedScriptForCurrentSession.steps.length.toString());
+					eventParams.addParameter("message", "Data fetch for callscript steps completed successfully");
+					this.telemetryLogger.logSuccess(this.telemetryContext, methodName, eventParams);
+				},
+				(error) => {
+					//Log error telemetry
+					let eventParams = new EventParameters();
+					eventParams.addParameter("callscriptId", script.id);
+					eventParams.addParameter("message", "Error in retrieving steps for callscript from CRM config");
+					this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
+				}
+			);
 		}
 
 		/**
 		 * Initializes current session callscript variables
 		*/
 		public initializeCallscriptsForCurrentSession(): boolean {
-			if (this.isSessionDataAvailable(this.currentUciSessionId)) {
-				this.callscriptsForCurrentSession = this.getCallScriptForSession(this.currentUciSessionId);
-				this.selectedScriptForCurrentSession = this.getCurrentCallScriptForSession(this.currentUciSessionId);
+			let methodName = "initializeCallscriptsForCurrentSession";
+			if (!this.context.utils.isNullOrUndefined(this.callscriptsForCurrentSession)) {
+				this.selectedScriptForCurrentSession = this.getCurrentCallScript();
+				if (!this.context.utils.isNullOrUndefined(this.selectedScriptForCurrentSession)) {
+					if (this.selectedScriptForCurrentSession.isStepsDataRetrieved) {
+						return true;
+					}
+					else {
+						this.fetchStepsForCallscript(this.selectedScriptForCurrentSession);
+						return false;
+					}
+				}
 				return true;
 			}
 			else {
-				if (!this.isSessionDataRequested(this.currentUciSessionId)) {
-					this.requestedSessionIds.push(this.currentUciSessionId);
-					this.fetchCallScriptsDataForSession(this.currentUciSessionId);
+				if (!this.isScriptsDataRequested) {
+					this.isScriptsDataRequested = true;
+					this.fetchCallScriptsForCurrentSession();
 				}
 				return false;
 			}
 		}
-
-		/**
-		 * Update callscripts for session in dictionary
-		 * Will update the dictionary with updated scripts of current session if no session is specified
-		 * @param sessionId id of session whose state has to be updated
-		 * @param scripts value of updated scripts
-		 */
-		public updateSessionState(sessionId?: string, scripts?: CallScript[]): void {
-			if (this.context.utils.isNullOrUndefined(sessionId)) {
-				sessionId = this.currentUciSessionId;
-				scripts = this.callscriptsForCurrentSession;
-			}
-			this.setCallScriptForSession(sessionId, scripts);
-		}
-
 	}
 }

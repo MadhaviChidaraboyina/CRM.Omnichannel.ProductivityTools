@@ -3,10 +3,10 @@
   <SolutionManifest>
     <UniqueName>Agentscript</UniqueName>
     <LocalizedNames>
-      <LocalizedName description="Agentscript solution name" languagecode="1033" />
+      <LocalizedName description="Agent scripts" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="Dynamics 365 Agentscript workload" languagecode="1033" />
+      <Description description="Agent script components" languagecode="1033" />
     </Descriptions>
     <Version>1.0.0.0</Version>
     <Managed>2</Managed>
@@ -124,6 +124,7 @@
       <RootComponent type="1" schemaName="msdyn_agentscript" behavior="0" />
       <RootComponent type="1" schemaName="msdyn_agentscriptstep" behavior="0" />
       <RootComponent type="1" schemaName="workflow" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_consoleapplicationsessiontemplate" behavior="1" />
       <RootComponent type="60" id="{4eedba34-5c04-49d4-965c-f5fff3d9f592}" behavior="0" />
       <RootComponent type="60" id="{20abb81a-52e0-4ee5-b14b-63357e12e150}" behavior="0" />
       <RootComponent type="60" id="{f23a365e-e46e-4d08-b093-3cd0fc7e0fe6}" behavior="0" />
@@ -131,7 +132,7 @@
       <RootComponent type="60" id="{00419135-4a82-4321-942d-04c7d655d97a}" behavior="0" />
       <RootComponent type="60" id="{75e32c86-1b60-45b1-96a6-27dbed836cbf}" behavior="0" />
       <RootComponent type="60" id="{8057e07c-6d47-4f89-8fd6-22bfe5dc6963}" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_dummywebresource.js" behavior="0" />
+      <RootComponent type="60" id="{7e7e29c0-bc24-40c2-938b-941554da4c4e}" />
       <RootComponent type="61" schemaName="callscript_executed_step_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="callscript_unexecuted_step_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="callscript_failed_step_icon.svg" behavior="0" />
@@ -140,6 +141,9 @@
       <RootComponent type="61" schemaName="callscript_route_action_type_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="callscriptstep_executestep_button_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="callscriptstep_retrystep_button_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="collapsed_accordion_arrow_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="expanded_accordion_arrow_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_progress_spinner.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_AgentScriptStepFormScript.js" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_AgentscriptFormScript.js" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.ProductivityPanel.CallscriptControl" behavior="0" />

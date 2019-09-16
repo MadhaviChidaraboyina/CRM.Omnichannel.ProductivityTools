@@ -6,57 +6,51 @@ module MscrmControls.ProductivityPanel {
 
 	export class ControlStyle {
 
-		private _context: Mscrm.ControlData<IInputBag>;
-
-		public constructor(context: Mscrm.ControlData<IInputBag>) {
-			this._context = context;
-		}
-
-		public get mainComponentStyle() {
+		public static getMainComponentStyle() {
 			return {
 				"height": "100%",
-				"width": "calc(100% - 16px)",
+				"width": "100%",
 				"text-align": "center",
 				"vertical-align": "middle",
 				"flex-direction": "column",
-				paddingLeft: "8px",
-				paddingRight: "8px",
-				overflow: "auto"
+				overflow: "auto",
+				minHeight: "346px",
+				paddingTop: "16px"
 			};
 		}
 
-		public get progressWheelStyle() {
+		public static getProgressWheelStyle() {
 			return {
 				width: "40px",
 				height: "40px",
-				margin: "auto"
+				margin: "auto",
+				position: "inherit !important"
 			}
 		}
 
-		public get headerContainerStyle() {
+		public static getHeaderContainerStyle() {
 			return {
 				"align-items": "left",
-				marginLeft: "8px",
-				marginRight: "8px",
-				marginBottom: "20px",
-				marginTop: "16px",
+				marginLeft: "14px",
+				marginRight: "14px",
+				marginBottom: "12px",
 				minWidth: "234px"
 			}
 		}
 
-		public get controlHeaderStyle() {
+		public static getControlHeaderStyle(context: Mscrm.ControlData<IInputBag>) {
 			return {
-				fontFamily: this._context.theming.fontfamilies.regular,
+				fontFamily: context.theming.fontfamilies.regular,
 				fontSize: "16px",
 				fontWeight: 600,
 				color: "#323130"
 			}
 		}
 
-		public get dropDownArrowComponentStyle() {
+		public static getDropDownArrowComponentStyle() {
 			return {
 				position: "absolute",
-				fontSize: "8px",
+				fontSize: "12px",
 				right: 0,
 				"text-align": "center",
 				height: "8px",
@@ -67,35 +61,35 @@ module MscrmControls.ProductivityPanel {
 			};
 		}
 
-		public get dropDownArrowIconStyle() {
+		public static getDropDownArrowIconStyle() {
 			return {
-				height: "8px",
-				width: "8px",
-				color: "#323130"
+				height: "12px",
+				width: "12px",
+				color: "#000000"
 			};
 		}
 
-		public get dropDownComponentStyle() {
+		public static getDropDownComponentStyle() {
 			return {
 				position: "relative",
 				"float": "left",
-				width: "calc(100% - 16px)",
+				width: "calc(100% - 28px)",
 				height: "32px",
-				marginBottom: "12px",
-				marginLeft: "8px",
-				marginRight: "8px",
+				marginBottom: "8px",
+				marginLeft: "14px",
+				marginRight: "14px",
 				minWidth: "234px"
 			};
 		}
 
-		public selectStyle(): Mscrm.Dictionary {
+		public static getSelectStyle(context: Mscrm.ControlData<IInputBag>): Mscrm.Dictionary {
 			const selectStyle: Mscrm.Dictionary =
 			{
-				"border-color": this._context.theming.colors.base.white,
+				"border-color": context.theming.colors.base.white,
 				"-webkit-appearance": "none",
 				'::-ms-expand': { display: "none" },
 				position: "relative",
-				fontFamily: this._context.theming.fontfamilies.regular,
+				fontFamily: context.theming.fontfamilies.regular,
 				appearance: "none",
 				paddingLeft: "8px",
 				paddingRight: "36px",
@@ -113,7 +107,7 @@ module MscrmControls.ProductivityPanel {
 				paddingLeft: "16px",
 				height: "100%",
 				width: "100%",
-				fontFamily: this._context.theming.fontfamilies.regular
+				fontFamily: context.theming.fontfamilies.regular
 			};
 
 			return <Mscrm.Dictionary>{
@@ -122,17 +116,36 @@ module MscrmControls.ProductivityPanel {
 			};
 		}
 
-		public get listComponentStyle() {
+		public static getScriptDescriptionStyle(context: Mscrm.ControlData<IInputBag>) {
+			return {
+				fontFamily: context.theming.fontfamilies.regular,
+				fontSize: "14px",
+				color: "#666666"
+			}
+		}
+
+		public static getScriptDescriptionContainerStyle() {
+			return {
+				marginLeft: "14px",
+				marginRight: "14px",
+				marginBottom: "12px",
+				height: "auto",
+				minWidth: "234px",
+				textAlign: "justify"
+			}
+		}
+
+		public static getListComponentStyle() {
 			return {
 				position: "relative",
 				"float": "left",
 				width: "100%",
-				height: "calc(100% - 73px)",
-				minWidth: "250px"
+				height: "auto",
+				minWidth: "266px"
 			};
 		}
 
-		public get listStyle() {
+		public static getListStyle() {
 			return {
 				position: "relative",
 				width: "100%",
@@ -140,142 +153,130 @@ module MscrmControls.ProductivityPanel {
 			}
 		}
 
-		public get listItemContainerStyle() {
+		public static getListItemContainerStyle() {
 			return {
 				flexDirection: "row",
 				width: "100%"
 			}
 		}
 
-		public get collapsedListItemOnHoverStyle() {
+		public static getCollapsedListItemOnHoverStyle() {
+			return {
+				background: "#EDEBE9",
+				cursor: "pointer"
+			}
+		}
+
+		public static getExpandedListItemOnHoverStyle() {
 			return {
 				background: "#F3F2F1",
 				cursor: "pointer"
 			}
 		}
 
-		public get expandedListItemOnHoverStyle() {
-			return {
-				cursor: "pointer"
-			}
-		}
-
-		public getListItemStyle(isStepExpanded: boolean, stepExecutionStatus: ExecutionStatus) {
+		public static getListItemStyle(isStepExpanded: boolean, stepExecutionStatus: ExecutionStatus) {
 			let backgroundStyle = "inherit";
 			if (isStepExpanded) {
 				if (stepExecutionStatus === ExecutionStatus.Failed) {
 					backgroundStyle = "#F9F0EF";
 				}
 				else {
-					backgroundStyle = "#EDEBE9";
+					backgroundStyle = "#F3F2F1";
 				}
 			}
-			let onHoverStyle = (isStepExpanded) ? this.expandedListItemOnHoverStyle : this.collapsedListItemOnHoverStyle;
+			let onHoverStyle = (isStepExpanded) ? ControlStyle.getExpandedListItemOnHoverStyle() : ControlStyle.getCollapsedListItemOnHoverStyle();
 			return {
-				width: "100%",
+				width: "calc(100% - 28px)",
 				height: "auto",
 				flexDirection: "column",
 				cursor: "pointer",
 				background: backgroundStyle,
 				":hover": onHoverStyle,
-				":hover .actionTypeIconClass": { "display": "flex" }
+				paddingLeft: "14px",
+				paddingRight: "14px"
 			}
 		}
 
-		public getCheckboxIconStyle(stepExecutionStatus: ExecutionStatus) {
-			let statusIconUrl;
-			if (stepExecutionStatus === ExecutionStatus.Completed) {
-				statusIconUrl = Utility.getIconUrl(this._context, Constants.executedStepIcon);
-			}
-			else if (stepExecutionStatus === ExecutionStatus.NotStarted) {
-				statusIconUrl = Utility.getIconUrl(this._context, Constants.notExecutedStepIcon);
-			}
-			else if (stepExecutionStatus === ExecutionStatus.Failed) {
-				statusIconUrl = Utility.getIconUrl(this._context, Constants.failedStepIcon);
-			}
+		public static getArrowIconStyle(context: Mscrm.ControlData<IInputBag>, isExpandedStep: boolean) {
+			let arrowIconUrl: string;
+			if (isExpandedStep) arrowIconUrl = Utility.getIconUrl(context, Constants.expandedAccordionItemIcon);
+			else arrowIconUrl = Utility.getIconUrl(context, Constants.collapsedAccordionItemIcon);
 			return {
-				width: "18px",
-				height: "18px",
-				"background-image": "url(" + statusIconUrl + ")",
+				width: "14px",
+				height: "14px",
+				"background-image": "url(" + arrowIconUrl + ")",
 				"background-repeat": "no-repeat",
-				marginLeft: "8px",
-				marginRight: "8px",
-				marginTop: "12px",
-				marginBottom: "12px"
+				"background-position": "center",
+				marginTop: "15px",
+				marginBottom: "15px"
 			};
 		}
 
-		public getStepLabelStyle() {
-			return {
-				fontFamily: this._context.theming.fontfamilies.regular,
-				fontSize: "14px",
-				color: "#1F2126",
-				fontWeight: 600,
-				"vertical-align": "middle",
-				"text-align": "justify",
-				paddingTop: "11px",
-				paddingBottom: "11px",
-				cursor: "pointer",
-				width: "calc(100% - 62px)",
-				wordWrap: "break-word"
-			};
-		}
-
-		public getActionTypeIconStyle(actionType: CallscriptActionType) {
-			let actionTypeIconUrl = Utility.getActionIconUrl(this._context, actionType);
+		public static getActionTypeIconStyle(actionType: CallscriptActionType, context: Mscrm.ControlData<IInputBag>) {
+			let actionTypeIconUrl = Utility.getActionIconUrl(context, actionType);
 			return {
 				width: "16px",
 				height: "16px",
 				"background-image": "url(" + actionTypeIconUrl + ")",
 				"background-repeat": "no-repeat",
 				"background-position": "center",
-				marginLeft: "4px",
-				marginRight: "8px",
-				marginTop: "12px",
-				marginBottom: "12px"
+				marginLeft: "14px",
+				marginRight: "14px",
+				marginTop: "14px",
+				marginBottom: "14px"
 			};
 		}
 
-		public getActionTypeIconContainerStyle(isVisible: boolean) {
-			let displayProperty = isVisible ? "flex" : "none";
+		public static getStepLabelStyle(stepExecutionStatus: ExecutionStatus, context: Mscrm.ControlData<IInputBag>) {
+			var labelFontColorStyle = "#333333"; //default
+			if (stepExecutionStatus === ExecutionStatus.Completed) labelFontColorStyle = "#666666";
+			else if (stepExecutionStatus === ExecutionStatus.Failed) labelFontColorStyle = "#A80000";
 			return {
-				display: displayProperty,
-				"text-align": "center",
-				"vertical-align": "middle"
-			};
-		}
-
-		public get actionTextStyle() {
-			return {
-				fontFamily: this._context.theming.fontfamilies.regular,
+				fontFamily: context.theming.fontfamilies.regular,
 				fontSize: "14px",
-				color: "#333333",
+				color: labelFontColorStyle,
+				fontWeight: (stepExecutionStatus === ExecutionStatus.Completed) ? 500 : 600,
 				"vertical-align": "middle",
 				"text-align": "justify",
-				paddingTop: "4px",
-				paddingBottom: "8px",
-				width: "calc(100% - 34px)",
-				marginLeft: "26px",
+				paddingTop: "12px",
+				paddingBottom: "12px",
+				cursor: "pointer",
+				width: "calc(100% - 82px)",
 				wordWrap: "break-word"
-			}
+			};
 		}
 
-		public get actionErrorTextStyle() {
+		public static getCheckboxIconStyle(stepExecutionStatus: ExecutionStatus, context: Mscrm.ControlData<IInputBag>) {
+			let statusIconUrl = "";
+			let displayProperty = "flex";
+			if (stepExecutionStatus === ExecutionStatus.Completed) {
+				statusIconUrl = Utility.getIconUrl(context, Constants.executedStepIcon);
+			}
+			else if (stepExecutionStatus === ExecutionStatus.Failed) {
+				statusIconUrl = Utility.getIconUrl(context, Constants.failedStepIcon);
+			}
+			else if (stepExecutionStatus === ExecutionStatus.Started) {
+				statusIconUrl = Utility.getIconUrl(context, Constants.inprogressStepIcon);
+			}
+			else if (stepExecutionStatus === ExecutionStatus.NotStarted) {
+				displayProperty = "none";
+			}
+			let isRTL = context.client.isRTL;
 			return {
-				fontFamily: this._context.theming.fontfamilies.regular,
-				fontSize: "12px",
-				color: "#A80000",
-				"text-align": "justify",
-				paddingTop: "2px",
-				paddingBottom: "8px",
-				width: "calc(100% - 34px)",
-				marginLeft: "26px",
-				wordWrap: "break-word"
-			}
+				width: "16px",
+				height: "16px",
+				"background-image": "url(" + statusIconUrl + ")",
+				"background-repeat": "no-repeat",
+				marginLeft: isRTL ? "0px" : "8px",
+				marginRight: isRTL ? "8px" : "0px",
+				marginTop: "14px",
+				marginBottom: "14px",
+				display: displayProperty
+			};
 		}
 
-		public getStepActionContainerStyle(isVisible: boolean, stepExecutionStatus: ExecutionStatus) {
-			let backgroundColor = (stepExecutionStatus === ExecutionStatus.Failed) ? "#F9F0EF" : "#EDEBE9";
+		public static getStepActionContainerStyle(isVisible: boolean, stepExecutionStatus: ExecutionStatus) {
+			let backgroundColor = (stepExecutionStatus === ExecutionStatus.Failed) ? "#F9F0EF" : "#F3F2F1";
 			let displayProperty = isVisible ? "flex" : "none";
 			return {
 				display: displayProperty,
@@ -283,48 +284,78 @@ module MscrmControls.ProductivityPanel {
 				"text-align": "justify",
 				"vertical-align": "middle",
 				background: backgroundColor,
-				paddingLeft: "8px",
-				paddingRight: "8px",
-				marginTop: "-7px"
+				marginTop: "-12px"
 			}
 		}
 
-		public get executeActionButtonStyle() {
+		public static getActionTextStyle(stepExecutionStatus: ExecutionStatus, context: Mscrm.ControlData<IInputBag>) {
+			let isRTL = context.client.isRTL;
 			return {
-				"flex-direction": "row",
-				width: "75px", //check
-				height: "28px",
-				background: "inherit",
-				border: "none",
-				marginBottom: "10px",
-				padding: "0px 4px",
-				cursor: "pointer",
-				marginLeft: "18px", //check
-				":hover": { background: "#FFFFFF"}
-			}
-		}
-
-		public getExecuteActionBtnIconStyle(actionTypeIconUrl: string) {
-			return {
-				width: "14px",
-				height: "14px",
-				"background-image": "url(" + actionTypeIconUrl + ")",
-				"background-repeat": "no-repeat",
-				"background-position": "center",
-				margin: "7px 4px"
-			};
-		}
-
-		public get executeActionBtnLabelStyle() {
-			return {
-				color: "#1F2126",
+				fontFamily: context.theming.fontfamilies.regular,
 				fontSize: "14px",
-				fontFamily: this._context.theming.fontfamilies.regular,
-				height: "20px",
-				marginTop: "3px",
-				marginBottom: "5px",
-				marginLeft: "4px",
-				marginRight: "4px"
+				color: (stepExecutionStatus === ExecutionStatus.Completed) ? "#666666" : "#333333",
+				"vertical-align": "middle",
+				"text-align": "justify",
+				paddingTop: "4px",
+				width: "calc(100% - 86px)",
+				marginLeft: isRTL ? "0px" : "58px",
+				marginRight: isRTL ? "58px" : "0px",
+				wordWrap: "break-word",
+				"whiteSpace": "pre-wrap"
+			}
+		}
+
+		public static getActionErrorTextStyle(context: Mscrm.ControlData<IInputBag>) {
+			let isRTL = context.client.isRTL;
+			return {
+				fontFamily: context.theming.fontfamilies.regular,
+				fontSize: "12px",
+				color: "#A80000",
+				"text-align": "justify",
+				paddingTop: "8px",
+				width: "calc(100% - 86px)",
+				marginLeft: isRTL ? "0px" : "58px",
+				marginRight: isRTL ? "58px" : "0px",
+				wordWrap: "break-word"
+			}
+		}
+
+		public static getExecuteActionButtonStyle(step: CallScriptStep, context: Mscrm.ControlData<IInputBag>) {
+			let isRTL = context.client.isRTL;
+			let buttonWidth: string;
+			if (step.action.actionType === CallscriptActionType.TextAction) {
+				buttonWidth = "112px";
+			}
+			else if (step.action.actionType === CallscriptActionType.ReRouteAction) {
+				buttonWidth = "62px";
+			}
+			else {
+				if (step.executionStatus === ExecutionStatus.Failed) buttonWidth = "80px";
+				else if (step.executionStatus === ExecutionStatus.Completed) buttonWidth = "100px";
+				else buttonWidth = "62px";
+			}
+			return {
+				fontFamily: context.theming.fontfamilies.regular,
+				fontSize: "14px",
+				color: "#FFFFFF",
+				background: "#2266E3",
+				border: "none",
+				borderRadius: "2px",
+				minWidth: buttonWidth,
+				maxWidth: "calc(100% - 58px)",
+				width: "fit-content",
+				height: "28px",
+				marginTop: "12px",
+				marginBottom: "14px",
+				display: "inline-block",
+				cursor: "pointer",
+				marginLeft: isRTL ? "0px" : "58px",
+				marginRight: isRTL ? "58px" : "0px",
+				":hover": { background: "#FFFFFF", color: "#2266E3"},
+				":disabled": { background: "#EDEBE9", color: "#A19F9D", width: "80px" },
+				whiteSpace: "nowrap",
+				overflow: "hidden",
+				textOverflow: "ellipsis"
 			}
 		}
 

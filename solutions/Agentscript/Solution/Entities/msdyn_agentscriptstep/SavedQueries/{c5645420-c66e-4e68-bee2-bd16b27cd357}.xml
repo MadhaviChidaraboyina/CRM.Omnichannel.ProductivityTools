@@ -28,7 +28,7 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Agent Script Step Advanced Find View" languagecode="1033" />
+      <LocalizedName description="Agent script step Advanced Find View" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

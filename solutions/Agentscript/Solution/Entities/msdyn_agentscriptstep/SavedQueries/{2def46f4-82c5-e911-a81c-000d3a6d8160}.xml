@@ -24,7 +24,7 @@
       <LocalizedName description="My Agent Script Steps" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="Active Agent Script Steps owned by me" languagecode="1033" />
+      <Description description="Active Agent script steps owned by me" languagecode="1033" />
     </Descriptions>
   </savedquery>
 </savedqueries>

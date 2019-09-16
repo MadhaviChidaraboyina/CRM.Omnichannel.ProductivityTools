@@ -10,7 +10,6 @@ module MscrmControls.ProductivityPanel {
 	export class CallscriptControl implements Mscrm.Control<IInputBag, IOutputBag> {
 
 		private context: Mscrm.ControlData<IInputBag>;
-		public controlStyle: ControlStyle;
 		public stateManager: StateManager;
 		public cifUtil: CIFUtil;
 		public stepsListManager: CallscriptStepsListManager;
@@ -42,12 +41,11 @@ module MscrmControls.ProductivityPanel {
 				this.context = context;
 				this.telemetryLogger = new TelemetryLogger(context);
 				this.cifUtil = new CIFUtil(context);
-				this.controlStyle = new ControlStyle(context);
 				this.stateManager = new StateManager(context);
 
-				this.stepDetailsManager = new CallscriptStepDetailsManager(context, this);
-				this.stepListitemManager = new CallscriptStepListitemManager(context, this);
-				this.stepsListManager = new CallscriptStepsListManager(context, this);
+				this.stepDetailsManager = new CallscriptStepDetailsManager(context, this.stateManager);
+				this.stepListitemManager = new CallscriptStepListitemManager(context, this.stateManager, this.stepDetailsManager);
+				this.stepsListManager = new CallscriptStepsListManager(context, this.stepListitemManager);
 
 				this.initCompleted = true;
 
@@ -61,6 +59,7 @@ module MscrmControls.ProductivityPanel {
 		 * @param selectedOption option selected by agent
 		 */
 		private handleCallscriptOptionChange(selectedOption: ComboBoxItem) {
+			let methodName = "handleCallscriptOptionChange";
 			for (let script of this.stateManager.callscriptsForCurrentSession) {
 				if (selectedOption.id === script.id) {
 					script.isCurrent = true;
@@ -70,8 +69,12 @@ module MscrmControls.ProductivityPanel {
 					script.isCurrent = false;
 				}
 			}
-			this.stateManager.updateSessionState();
 			this.context.utils.requestRender();
+
+			let eventParams = new EventParameters();
+			eventParams.addParameter("callscriptId", selectedOption.id);
+			eventParams.addParameter("message", "callscript selected from options");
+			this.telemetryLogger.logSuccess(this.telemetryContext, methodName, eventParams);
 		}
 
 		/*
@@ -79,12 +82,9 @@ module MscrmControls.ProductivityPanel {
 		 */
 		private getScriptOptions(): ComboBoxItem[] {
 			let options: ComboBoxItem[] = [];
-			let emptyOptionLabel = this.context.resources.getString(LocalizedStrings.ScriptComboboxEmptyOptionLabel);
-			let option = new ComboBoxItem("emptyOptionId", "emptyOptionKey", emptyOptionLabel, false);
-			options.push(option);
 
 			for (let script of this.stateManager.callscriptsForCurrentSession) {
-				let option = new ComboBoxItem(script.id, script.id, script.displayName, script.isCurrent);
+				let option = new ComboBoxItem(script.id, script.id, script.name, script.isCurrent);
 				options.push(option);
 			}
 			return options;
@@ -98,16 +98,22 @@ module MscrmControls.ProductivityPanel {
 				key: "dropDownArrowIconKey",
 				id: "dropDownArrowIconId",
 				type: 72,
-				style: this.controlStyle.dropDownArrowIconStyle
+				style: ControlStyle.getDropDownArrowIconStyle()
 			});
 
 			const dropDownArrowComponent = this.context.factory.createElement("CONTAINER", {
 				key: "dropDownArrowContainerKey",
 				id: "dropDownArrowContainerId",
-				style: this.controlStyle.dropDownArrowComponentStyle
+				style: ControlStyle.getDropDownArrowComponentStyle()
 			}, dropDownArrow);
 
 			let scriptOptions = this.getScriptOptions();
+			//Add empty option in dropdown if no callscript is configured for this session
+			if (scriptOptions.length == 0) {
+				let emptyOption = new ComboBoxItem("emptyOptionId", "emptyOptionId", "", true);
+				scriptOptions.push(emptyOption);
+			}
+
 			let currentOption = null;
 			for (let option of scriptOptions) {
 				if (option.isCurrent) currentOption = option;
@@ -121,7 +127,7 @@ module MscrmControls.ProductivityPanel {
 					accessibilityLabel: currentOption.Label,
 					value: currentOption,
 					options: scriptOptions,
-					style: this.controlStyle.selectStyle(),
+					style: ControlStyle.getSelectStyle(this.context),
 					tabIndex: 0,
 					onChange: this.handleCallscriptOptionChange.bind(this)
 				}
@@ -130,7 +136,7 @@ module MscrmControls.ProductivityPanel {
 			const dropDownComponent = this.context.factory.createElement("CONTAINER", {
 				key: "dropDownContainerKey",
 				id: "dropDownContainerId",
-				style: this.controlStyle.dropDownComponentStyle,
+				style: ControlStyle.getDropDownComponentStyle(),
 				title: currentOption.Label
 			}, [callscriptComboBox, dropDownArrowComponent]);
 
@@ -144,13 +150,13 @@ module MscrmControls.ProductivityPanel {
 			var controlHeaderLabel: Mscrm.Component = this.context.factory.createElement("LABEL", {
 				key: "CallscriptHeaderKey",
 				id: "CallscriptHeaderId",
-				style: this.controlStyle.controlHeaderStyle
+				style: ControlStyle.getControlHeaderStyle(this.context)
 			}, this.context.resources.getString(LocalizedStrings.CallscriptHeader));
 
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallscriptHeaderContainerKey",
 				id: "CallscriptHeaderContainerId",
-				style: this.controlStyle.headerContainerStyle
+				style: ControlStyle.getHeaderContainerStyle()
 			}, controlHeaderLabel);
 		}
 
@@ -162,7 +168,7 @@ module MscrmControls.ProductivityPanel {
 				"PROGRESSINDICATOR", {
 					id: "CallscriptProgressIndicatorId",
 					key: "CallscriptProgressIndicatorKey",
-					style: this.controlStyle.progressWheelStyle,
+					style: ControlStyle.getProgressWheelStyle(),
 					progressType: "ring",
 					active: true
 				}, []
@@ -172,8 +178,21 @@ module MscrmControls.ProductivityPanel {
 				"CONTAINER", {
 					id: "CallscriptProgressIndicatorContainerId",
 					key: "CallscriptProgressIndicatorContainerKey",
-					style: this.controlStyle.mainComponentStyle
+					style: ControlStyle.getMainComponentStyle()
 				}, loadingWheel);
+		}
+
+		private getScriptDescriptionContainer(currentScript: CallScript): Mscrm.Component {
+			var scriptDescriptionComponent = this.context.factory.createElement("TEXT", {
+				key: "CallScriptDescription-" + currentScript.id + "-Key",
+				id: "CallScriptDescription-" + currentScript.id + "-Id",
+				style: ControlStyle.getScriptDescriptionStyle(this.context)
+			}, currentScript.description);
+			return this.context.factory.createElement("CONTAINER", {
+				key: "CallScriptDescriptionContainer-" + currentScript.id + "-Key",
+				id: "CallScriptDescriptionContainer-" + currentScript.id + "-Id",
+				style: ControlStyle.getScriptDescriptionContainerStyle()
+			}, scriptDescriptionComponent);
 		}
 
 		/** 
@@ -191,19 +210,22 @@ module MscrmControls.ProductivityPanel {
 
 			let callscriptComponents: Mscrm.Component[] = [];
 
+			/* Control header not required on form, to be un-commented when control is moved to Panel
 			callscriptComponents.push(this.getControlHeader());
+			*/
 
 			callscriptComponents.push(this.getScriptsDropdown());
 
 			if (this.stateManager.selectedScriptForCurrentSession) {
-				callscriptComponents.push(this.stepsListManager.getStepsList(this.stateManager.selectedScriptForCurrentSession, this.controlStyle));
+				callscriptComponents.push(this.getScriptDescriptionContainer(this.stateManager.selectedScriptForCurrentSession));
+				callscriptComponents.push(this.stepsListManager.getStepsList(this.stateManager.selectedScriptForCurrentSession));
 			}
 
 			return context.factory.createElement(
 				"CONTAINER", {
 					id: "CallScriptContainer",
 					key: "CallScriptContainer",
-					style: this.controlStyle.mainComponentStyle
+					style: ControlStyle.getMainComponentStyle()
 				}, callscriptComponents);
 		}
 
@@ -226,6 +248,7 @@ module MscrmControls.ProductivityPanel {
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
 		public destroy(): void	{
+			this.stateManager.updateControlStateInCIF();
 		}
 	}
 }

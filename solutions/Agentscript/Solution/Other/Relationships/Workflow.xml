@@ -17,7 +17,7 @@
     <ReferencingAttributeName>msdyn_MacroActionId</ReferencingAttributeName>
     <RelationshipDescription>
       <Descriptions>
-        <Description description="Unique identifier for Macro associated with Agent Script Step." languagecode="1033" />
+        <Description description="Unique identifier for macro associated with agent script step." languagecode="1033" />
       </Descriptions>
     </RelationshipDescription>
     <EntityRelationshipRoles>

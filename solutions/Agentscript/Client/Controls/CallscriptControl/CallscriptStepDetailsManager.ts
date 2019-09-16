@@ -11,15 +11,17 @@ module MscrmControls.ProductivityPanel {
 
 		private context: Mscrm.ControlData<IInputBag>;
 		private stateManager: StateManager;
-		private controlStyle: ControlStyle;
+		private telemetryContext: string;
+		private telemetryLogger: TelemetryLogger;
 
 		/**
 		 * Constructor.
 		 */
-		constructor(context: Mscrm.ControlData<IInputBag>, callscriptControl: CallscriptControl) {
+		constructor(context: Mscrm.ControlData<IInputBag>, stateManager: StateManager) {
 			this.context = context;
-			this.controlStyle = callscriptControl.controlStyle;
-			this.stateManager = callscriptControl.stateManager;
+			this.stateManager = stateManager;
+			this.telemetryContext = TelemetryComponents.CallscriptStepListitemManager;
+			this.telemetryLogger = new TelemetryLogger(this.context);
 		}
 
 		/**
@@ -28,23 +30,31 @@ module MscrmControls.ProductivityPanel {
 		 * @param event Jquery event object 
 		 */
 		private handleActionButtonClick(step: CallScriptStep, event: JQueryEventObject): void {
+			let methodName = "handleActionButtonClick";
 			if (step.executionStatus != ExecutionStatus.Started) {
 
-				let sessionid = this.stateManager.currentUciSessionId;
 				let scripts = this.stateManager.callscriptsForCurrentSession;
 
 				step.executionStatus = ExecutionStatus.Started;
-				step.action.executeAction().then(
+				step.action.executeAction(this.stateManager).then(
 					(response) => {
 						step.executionStatus = ExecutionStatus.Completed;
 						step.isExecuted = true;
-						this.stateManager.updateSessionState(sessionid, scripts);
 						this.context.utils.requestRender();
+
+						let eventParams = new EventParameters();
+						eventParams.addParameter("stepId", step.id);
+						eventParams.addParameter("message", "Step executed successfully");
+						this.telemetryLogger.logSuccess(this.telemetryContext, methodName, eventParams);
 					},
 					(error) => {
 						step.executionStatus = ExecutionStatus.Failed;
-						this.stateManager.updateSessionState(sessionid, scripts);
 						this.context.utils.requestRender();
+
+						let eventParams = new EventParameters();
+						eventParams.addParameter("stepId", step.id);
+						eventParams.addParameter("message", "Step execution failed");
+						this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
 					});
 			}
 			this.context.utils.requestRender();
@@ -56,54 +66,48 @@ module MscrmControls.ProductivityPanel {
 		 * @param step step whose button is returned
 		 */
 		public getActionButton(step: CallScriptStep): Mscrm.Component {
-			//change based on step execution status
-			let actionTypeIconUrl: string;
-			let labelText: string;
-			if (step.executionStatus === ExecutionStatus.Failed) {
-				actionTypeIconUrl = Utility.getIconUrl(this.context, Constants.retryBtnIcon);
-				labelText = "Retry";
+			let buttonLabel: string;
+			if (step.action.actionType === CallscriptActionType.TextAction) {
+				buttonLabel = this.context.resources.getString(LocalizedStrings.TextActionLabel);
+			}
+			else if (step.action.actionType === CallscriptActionType.ReRouteAction) {
+				buttonLabel = this.context.resources.getString(LocalizedStrings.RouteActionLabel);
 			}
 			else {
-				actionTypeIconUrl = Utility.getIconUrl(this.context, Constants.executeBtnIcon);
-				labelText = "Apply";
+				buttonLabel = this.context.resources.getString(LocalizedStrings.NotExecutedStepButtonLabel); //default
+				if (step.executionStatus === ExecutionStatus.Completed) {
+					buttonLabel = this.context.resources.getString(LocalizedStrings.CompletedStepButtonLabel);
+				}
+				else if (step.executionStatus === ExecutionStatus.Failed) {
+					buttonLabel = this.context.resources.getString(LocalizedStrings.FailedStepButtonLabel);
+				}
+				else if (step.executionStatus === ExecutionStatus.Started) {
+					buttonLabel = this.context.resources.getString(LocalizedStrings.StartedStepButtonLabel);
+				}
 			}
 
-			var buttonIcon = this.context.factory.createElement("TEXT", {
-				key: "CallScriptStepExecuteBtnIcon-" + step.id + "-Key",
-				id: "CallScriptStepExecuteBtnIcon-" + step.id + "-Id",
-				style: this.controlStyle.getExecuteActionBtnIconStyle(actionTypeIconUrl)
-			}, []);
-
-			var buttonLabel = this.context.factory.createElement("TEXT", {
-				key: "CallScriptStepExecuteBtnLabel-" + step.id + "-Key",
-				id: "CallScriptStepExecuteBtnLabel-" + step.id + "-Id",
-				style: this.controlStyle.executeActionBtnLabelStyle
-			}, labelText);
+			var isDisabled = (step.executionStatus === ExecutionStatus.Started);
 
 			return this.context.factory.createElement("BUTTON", {
 				key: "CallScriptStepExecuteBtn" + step.id + "-Key",
 				id: "CallScriptStepExecuteBtn" + step.id + "-id",
-				style: this.controlStyle.executeActionButtonStyle,
+				style: ControlStyle.getExecuteActionButtonStyle(step, this.context),
+				title: buttonLabel,
+				disabled: isDisabled,
 				onClick: this.handleActionButtonClick.bind(this, step)
-			}, [buttonIcon, buttonLabel]);
+			}, buttonLabel);
 		}
 
 		/**
 		 * Returns container containing error component for failed step
 		 * @param step object of failed step whose error is returned
 		 */
-		private getErrorContainer(step: CallScriptStep): Mscrm.Component {
-			var errorText = this.context.factory.createElement("TEXT", {
+		private getErrorTextComponent(step: CallScriptStep): Mscrm.Component {
+			return this.context.factory.createElement("TEXT", {
 				key: "CallScriptStepError-" + step.id + "-Key",
 				id: "CallScriptStepError-" + step.id + "-Id",
-				style: this.controlStyle.actionErrorTextStyle
+				style: ControlStyle.getActionErrorTextStyle(this.context)
 			}, step.action.getErrorText());
-
-			return this.context.factory.createElement("CONTAINER", {
-				key: "CallScriptStepErrorContainer-" + step.id + "-Key",
-				id: "CallScriptStepErrorContainer-" + step.id + "-Id",
-				style: { display: "flex" }
-			}, errorText);
 		}
 
 		/**
@@ -112,11 +116,11 @@ module MscrmControls.ProductivityPanel {
 		 */
 		private getStepDescriptionContainer(step: CallScriptStep) {
 			// This will be changed to return step descrption as per updated UX specs
-			return this.context.factory.createElement("TEXT", {
+			return this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptStepDescription-" + step.id + "-Key",
 				id: "CallScriptStepDescription-" + step.id + "-Id",
-				style: this.controlStyle.actionTextStyle
-			}, step.action.getDisplayText());
+				style: ControlStyle.getActionTextStyle(step.executionStatus, this.context)
+			}, step.stepDescription);
 		}
 
 		/**
@@ -124,11 +128,11 @@ module MscrmControls.ProductivityPanel {
 		 * @param step step object whose description is contained in returned container
 		 */
 		private getTextInstructionContainer(step: CallScriptStep) {
-			return this.context.factory.createElement("TEXT", {
+			return this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptStepDescription-" + step.id + "-Key",
 				id: "CallScriptStepDescription-" + step.id + "-Id",
-				style: this.controlStyle.actionTextStyle
-			}, step.action.getDisplayText());
+				style: ControlStyle.getActionTextStyle(step.executionStatus, this.context)
+			}, step.action.getResolvedTextInstruction());
 		}
 
 		/**
@@ -140,7 +144,7 @@ module MscrmControls.ProductivityPanel {
 
 			textActionDetailsComponents.push(this.getTextInstructionContainer(step));
 			if (step.executionStatus === ExecutionStatus.Failed) {
-				textActionDetailsComponents.push(this.getErrorContainer(step));
+				textActionDetailsComponents.push(this.getErrorTextComponent(step));
 			}
 			textActionDetailsComponents.push(this.getActionButton(step));
 
@@ -156,7 +160,7 @@ module MscrmControls.ProductivityPanel {
 
 			macroAndRouteActionDetailsComponents.push(this.getStepDescriptionContainer(step));
 			if (step.executionStatus === ExecutionStatus.Failed) {
-				macroAndRouteActionDetailsComponents.push(this.getErrorContainer(step));
+				macroAndRouteActionDetailsComponents.push(this.getErrorTextComponent(step));
 			}
 			macroAndRouteActionDetailsComponents.push(this.getActionButton(step));
 

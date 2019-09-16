@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name LocalizedName="Agent Script Step" OriginalName="Agent Script Step">msdyn_agentscriptstep</Name>
+  <Name LocalizedName="Agent script step" OriginalName="Agent script step">msdyn_agentscriptstep</Name>
   <EntityInfo>
     <entity Name="msdyn_agentscriptstep">
       <LocalizedNames>
-        <LocalizedName description="Agent Script Step" languagecode="1033" />
+        <LocalizedName description="Agent script step" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Agent Script Steps" languagecode="1033" />
+        <LocalizedCollectionName description="Agent script steps" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="Agent Script Step" languagecode="1033" />
+        <Description description="Agent script step" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -280,7 +280,7 @@
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>0</IsCustomizable>
             <displaynames>
-              <displayname description="Action Type" languagecode="1033" />
+              <displayname description="Action type" languagecode="1033" />
             </displaynames>
             <Descriptions>
               <Description description="Action type for agent script step action" languagecode="1033" />
@@ -304,19 +304,19 @@
               </option>
               <option value="192350002" ExternalValue="" Color="#0000ff">
                 <labels>
-                  <label description="Route" languagecode="1033" />
+                  <label description="Script" languagecode="1033" />
                 </labels>
                 <Descriptions>
-                  <Description description="Route action" languagecode="1033" />
+                  <Description description="Script action" languagecode="1033" />
                 </Descriptions>
               </option>
             </options>
           </optionset>
           <displaynames>
-            <displayname description="Action Type" languagecode="1033" />
+            <displayname description="Action type" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Action type for agent script step action" languagecode="1033" />
+            <Description description="Action type for agent script step" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_AgentScriptId">
@@ -347,10 +347,10 @@
           <LookupStyle>single</LookupStyle>
           <LookupTypes />
           <displaynames>
-            <displayname description="Agent Script" languagecode="1033" />
+            <displayname description="Agent script" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Unique identifier for Agent Script associated with Agent Script Step." languagecode="1033" />
+            <Description description="Unique identifier for agent script associated with agent script step." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_agentscriptstepId">
@@ -379,7 +379,7 @@
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <AutoNumberFormat></AutoNumberFormat>
           <displaynames>
-            <displayname description="Agent Script Step" languagecode="1033" />
+            <displayname description="Agent script step" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Unique identifier for entity instances" languagecode="1033" />
@@ -449,10 +449,10 @@
           <LookupStyle>single</LookupStyle>
           <LookupTypes />
           <displaynames>
-            <displayname description="Macro Action" languagecode="1033" />
+            <displayname description="Target macro" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Unique identifier for Macro associated with Agent Script Step." languagecode="1033" />
+            <Description description="Unique identifier for macro associated with agent script step." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_name">
@@ -523,7 +523,7 @@
             <displayname description="Order" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Order of agent script step in agent script" languagecode="1033" />
+            <Description description="Display order" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_RouteActionId">
@@ -554,10 +554,10 @@
           <LookupStyle>single</LookupStyle>
           <LookupTypes />
           <displaynames>
-            <displayname description="Route Action" languagecode="1033" />
+            <displayname description="Target script" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Unique identifier for Agent Script associated with Agent Script Step." languagecode="1033" />
+            <Description description="Unique identifier for target script associated with agent script step." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_TextInstruction">
@@ -589,10 +589,10 @@
           <Format></Format>
           <MaxLength>2000</MaxLength>
           <displaynames>
-            <displayname description="Text Instruction" languagecode="1033" />
+            <displayname description="Text instructions" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Instruction text for Text action type" languagecode="1033" />
+            <Description description="Instruction for text action type" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OverriddenCreatedOn">
@@ -799,7 +799,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the Agent Script Step" languagecode="1033" />
+              <Description description="Status of the Agent script step" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -818,7 +818,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the Agent Script Step" languagecode="1033" />
+            <Description description="Status of the Agent script step" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -855,7 +855,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the Agent Script Step" languagecode="1033" />
+              <Description description="Reason for the status of the Agent script step" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -874,7 +874,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the Agent Script Step" languagecode="1033" />
+            <Description description="Reason for the status of the Agent script step" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">
@@ -959,7 +959,7 @@
             <AttributeName>msdyn_order</AttributeName>
           </EntityKeyAttributes>
           <displaynames>
-            <displayname description="Agent script step unique order in the script" languagecode="1033" />
+            <displayname description="Step order" languagecode="1033" />
           </displaynames>
         </EntityKey>
       </EntityKeys>

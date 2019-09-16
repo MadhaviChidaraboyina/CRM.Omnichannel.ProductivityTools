@@ -11,6 +11,11 @@
     <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_agentscript.WordTemplate.Hide" Location="Mscrm.HomepageGrid.msdyn_agentscript.WordTemplate" />
     <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_agentscript.DocumentTemplate.Hide" Location="Mscrm.HomepageGrid.msdyn_agentscript.DocumentTemplate" />
     <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_agentscript.Flows.RefreshCommandBar.Hide" Location="Mscrm.HomepageGrid.msdyn_agentscript.Flows.RefreshCommandBar" />
+
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_agentscript.Activate.Hide" Location="Mscrm.SubGrid.msdyn_agentscript.Activate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_agentscript.Deactivate.Hide" Location="Mscrm.SubGrid.msdyn_agentscript.Deactivate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_agentscript.WordTemplate.Hide" Location="Mscrm.SubGrid.msdyn_agentscript.WordTemplate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_agentscript.DocumentTemplate.Hide" Location="Mscrm.SubGrid.msdyn_agentscript.DocumentTemplate" />
   </CustomActions>
   <Templates>
     <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>

@@ -22,7 +22,7 @@
                     <row>
                       <cell id="{8b57c049-4750-043c-be83-0c1393a6888a}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="" languagecode="1033" />
+                          <label description="Name" languagecode="1033" />
                         </labels>
                         <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" disabled="false" />
                       </cell>
@@ -30,7 +30,7 @@
                     <row>
                       <cell id="{6ead1c90-ea4d-5190-1d6c-8dac292ba1b2}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="" languagecode="1033" />
+                          <label description="Owner" languagecode="1033" />
                         </labels>
                         <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
                       </cell>
@@ -38,7 +38,7 @@
                     <row>
                       <cell id="{560c5c7a-3518-d34d-725c-4c7e3d3c3c5d}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="" languagecode="1033" />
+                          <label description="Agent script" languagecode="1033" />
                         </labels>
                         <control id="msdyn_agentscriptid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_agentscriptid" disabled="false" />
                       </cell>
@@ -46,7 +46,7 @@
                     <row>
                       <cell id="{b35a7c96-6312-41ba-5e86-34e89eb59ca3}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="" languagecode="1033" />
+                          <label description="Order" languagecode="1033" />
                         </labels>
                         <control id="msdyn_order" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="msdyn_order" disabled="false" />
                       </cell>
@@ -54,7 +54,7 @@
                     <row>
                       <cell id="{25741292-4dc3-0424-75a2-aa477b0d7613}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="" languagecode="1033" />
+                          <label description="Action type" languagecode="1033" />
                         </labels>
                         <control id="msdyn_actiontype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_actiontype" disabled="false" />
                       </cell>
@@ -62,7 +62,7 @@
                     <row>
                       <cell id="{5e32e17e-32a6-c9dc-a2ce-0b0be6e32a47}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="" languagecode="1033" />
+                          <label description="Description" languagecode="1033" />
                         </labels>
                         <control id="msdyn_description" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_description" disabled="false" />
                       </cell>
@@ -70,7 +70,7 @@
                     <row>
                       <cell id="{6c790b26-014d-e507-ba6c-a2c91e21aa90}" showlabel="true" locklevel="0" rowspan="2">
                         <labels>
-                          <label description="" languagecode="1033" />
+                          <label description="Text instructions" languagecode="1033" />
                         </labels>
                         <control id="msdyn_textinstruction" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_textinstruction" disabled="false" />
                       </cell>
@@ -79,7 +79,7 @@
                     <row>
                       <cell id="{adb6c45e-d865-6272-4e74-aad1c7b1b53a}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="" languagecode="1033" />
+                          <label description="Target macro" languagecode="1033" />
                         </labels>
                         <control id="msdyn_macroactionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_macroactionid" disabled="false" uniqueid="{d77305ed-2a64-8c23-c0a4-e5eea3e58acc}">
                           <parameters>
@@ -97,7 +97,7 @@
                     <row>
                       <cell id="{e78bb157-3ead-de94-9673-4586b08c1287}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="" languagecode="1033" />
+                          <label description="Target script" languagecode="1033" />
                         </labels>
                         <control id="msdyn_routeactionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_routeactionid" disabled="false" uniqueid="{13c1d720-1d16-47aa-e8ea-32257aea7a36}" />
                       </cell>

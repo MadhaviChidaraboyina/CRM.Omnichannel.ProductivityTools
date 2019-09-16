@@ -38,7 +38,7 @@
                     <row>
                       <cell id="{748b3784-89a5-57db-03b2-aa228652ab61}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="Agent Script" languagecode="1033" />
+                          <label description="Agent script" languagecode="1033" />
                         </labels>
                         <control id="msdyn_agentscriptid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_agentscriptid" disabled="false" />
                       </cell>
@@ -54,7 +54,7 @@
                     <row>
                       <cell id="{decdd59a-7e4a-5931-b722-2a1d4d40701e}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="Action Type" languagecode="1033" />
+                          <label description="Action type" languagecode="1033" />
                         </labels>
                         <control id="msdyn_actiontype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_actiontype" disabled="false" />
                       </cell>
@@ -70,7 +70,7 @@
                     <row>
                       <cell id="{775313e7-516e-08e6-ec05-612dbdab1cae}" showlabel="true" locklevel="0" rowspan="2">
                         <labels>
-                          <label description="Text Instruction" languagecode="1033" />
+                          <label description="Text instructions" languagecode="1033" />
                         </labels>
                         <control id="msdyn_textinstruction" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_textinstruction" disabled="false" />
                       </cell>
@@ -79,7 +79,7 @@
                     <row>
                       <cell id="{e374a509-b580-d6ae-474c-2e21ce4cb12b}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="Macro Action" languagecode="1033" />
+                          <label description="Target macro" languagecode="1033" />
                         </labels>
                         <control id="msdyn_macroactionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_macroactionid" disabled="false" />
                       </cell>
@@ -87,7 +87,7 @@
                     <row>
                       <cell id="{c55900bb-eba9-a594-237e-0b2b5333729a}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="Route Action" languagecode="1033" />
+                          <label description="Target script" languagecode="1033" />
                         </labels>
                         <control id="msdyn_routeactionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_routeactionid" disabled="false" />
                       </cell>

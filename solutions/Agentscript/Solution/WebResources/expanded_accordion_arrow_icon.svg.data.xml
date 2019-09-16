@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{6999fbbd-c71f-41ae-ba7f-2b6ff35fb188}</WebResourceId>
-  <Name>callscript_executed_step_icon.svg</Name>
-  <DisplayName>Completed step icon</DisplayName>
-  <Description>Completed step icon</Description>
+  <WebResourceId>{91d8be42-98f2-4818-a849-f6dd465c72fd}</WebResourceId>
+  <Name>expanded_accordion_arrow_icon.svg</Name>
+  <DisplayName>Expanded step icon</DisplayName>
+  <Description>Expanded step icon</Description>
   <LanguageCode>1033</LanguageCode>
   <WebResourceType>11</WebResourceType>
   <IntroducedVersion>1.0.0.0</IntroducedVersion>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/callscript_executed_step_iconsvg6999fbbd-c71f-41ae-ba7f-2b6ff35fb188</FileName>
+  <FileName>/WebResources/expanded_accordion_arrow_icon91d8be42-98f2-4818-a849-f6dd465c72fd</FileName>
 </WebResource>

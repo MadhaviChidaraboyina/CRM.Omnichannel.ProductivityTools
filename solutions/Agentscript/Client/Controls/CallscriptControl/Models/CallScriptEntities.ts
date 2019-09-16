@@ -8,49 +8,72 @@ module MscrmControls.ProductivityPanel {
 	'use strict';
 
 	export class CallScript {
+		// Attributes
 		public id: string;
 		public name: string;
-		public displayName: string;
-		public instructionText: string;
+		public description: string;
 		public steps: CallScriptStep[];
 
-		// Runtime attribute
+		// Runtime attributes
 		public isCurrent: boolean;
+		public isStepsDataRetrieved: boolean;
 
-		constructor(id: string, name: string, displayName: string, instructionText: string, steps: CallScriptStep[]) {
+		/**
+		 * Constructor for Call script record
+		 * @param id Id for call script
+		 * @param name Name of the call script
+		 * @param description Description of the call script
+		 * @param isStepsDataRetrieved Is steps data retrieved
+		 * @param steps Steps
+		 */
+		constructor(id: string, name: string, description: string, isStepsDataRetrieved: boolean, steps: CallScriptStep[]) {
 			this.id = id;
 			this.name = name;
-			this.displayName = displayName;
-			this.instructionText = instructionText;
+			this.description = description;
 			this.steps = steps;
 
+			this.isStepsDataRetrieved = isStepsDataRetrieved;
 			this.isCurrent = false;
 		}
 	}
 
 	export class CallScriptStep {
+		// Properties
 		public id: string;
 		public name: string;
-		public displayName: string;
 		public order: number;
 		public action: CallScriptAction;
-		public executedAccessibilityLabel: string;
-		public notExecutedAccessibilityLabel: string;
 
+		
 		// Runtime attributes
 		public isExecuted: boolean;
 		public executionStatus: ExecutionStatus;
+		public executedAccessibilityLabel: string;
+		public notExecutedAccessibilityLabel: string;
+		public stepDescription: string;
 
-		constructor(id: string, name: string, displayName: string, order: number, action: CallScriptAction, context: Mscrm.ControlData<IInputBag>) {
+		/**
+		 * ToDO: Remove context object from constructor. Localized strings can be obtained from utility class.
+		 */
+
+		/**
+		 * Constructor for call script step
+		 * @param id id for the step
+		 * @param name name of the step
+		 * @param order order of the step
+		 * @param stepDescription step description for the step
+		 * @param action action for the step
+		 * @param context control context
+		 */
+		constructor(id: string, name: string, order: number, stepDescription: string, action: CallScriptAction, context: Mscrm.ControlData<IInputBag>) {
 			this.id = id;
 			this.name = name;
-			this.displayName = displayName;
 			this.order = order;
+			this.stepDescription = stepDescription;
 			this.action = action;
-
+			
 			this.isExecuted = false;
 			this.executionStatus = ExecutionStatus.NotStarted;
-
 			this.initializeAccessibilityLabels(context);
 		}
 
@@ -79,8 +102,8 @@ module MscrmControls.ProductivityPanel {
 				}
 			}
 
-			this.executedAccessibilityLabel = MscrmCommon.ControlUtils.String.Format(executedLocalizedLabel, this.displayName);
-			this.notExecutedAccessibilityLabel = MscrmCommon.ControlUtils.String.Format(notExecutedLocalizedLabel, this.displayName);
+			this.executedAccessibilityLabel = StringHelper.Format(executedLocalizedLabel, this.name);
+			this.notExecutedAccessibilityLabel = StringHelper.Format(notExecutedLocalizedLabel, this.name);
 		}
 
 		public getAccessibilityLabel() {
