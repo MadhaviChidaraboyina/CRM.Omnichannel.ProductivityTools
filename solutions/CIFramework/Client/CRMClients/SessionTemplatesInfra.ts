@@ -242,7 +242,7 @@ namespace Microsoft.CIFramework.Internal {
 		private _name: string;
 		private _tags: string[];
 		private _templateId: string;
-		private _uciAppType: UCIApplicationType;
+		public _uciAppType: UCIApplicationType;
 		private _template: any;
 		private _title: string;
 		private _icon: string;
@@ -355,6 +355,12 @@ namespace Microsoft.CIFramework.Internal {
 			);
 		}
 
+		private _templateId: string;
+
+		public get templateId(): string {
+			return this._templateId;
+		}
+
 		public instantiateTemplate(templateParams: any, correlationId?: string): Promise<SessionTemplateSessionInput> {
 			return new Promise<SessionTemplateSessionInput>(function (resolve: (value?: SessionTemplateSessionInput | PromiseLike<SessionTemplateSessionInput>) => void, reject: (error: Error) => void) {
 
@@ -387,6 +393,15 @@ namespace Microsoft.CIFramework.Internal {
 							result.instantiateTemplate(templateParams).then(
 								function (result: XrmClientApi.TabInput) {
 									pageInput = result.pageInput;
+									if (anchorTemplate._uciAppType.name.toString() === "entityrecord" || anchorTemplate._uciAppType.name.toString() === "inlinedialog") {
+										if (!isNullOrUndefined((pageInput as XrmClientApi.FormPageInput).data)) {
+											(pageInput as XrmClientApi.FormPageInput).data["templateId"] = this.templateId;
+										}
+										else {
+											(pageInput as XrmClientApi.FormPageInput).data = {};
+											(pageInput as XrmClientApi.FormPageInput).data["templateId"] = this.templateId;
+										}
+									}
 									return Promise.resolve(true);
 								}.bind(this),
 								function (error: Error) {
@@ -452,7 +467,6 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 		private _name: string;
-		private _templateId: string;
 		private _title: string;
 		private _panelState: number;
 		private _anchorTabName: string;
@@ -502,10 +516,6 @@ namespace Microsoft.CIFramework.Internal {
 
 		public get name(): string {
 			return this._name;
-		}
-
-		public get templateId(): string {
-			return this._templateId;
 		}
 
 		public get title(): string {
