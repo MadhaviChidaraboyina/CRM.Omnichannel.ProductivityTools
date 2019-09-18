@@ -113,16 +113,20 @@ namespace Microsoft.CIFramework.Internal {
 							eventHandler: rejectHandler,
 							actionLabel: this.actionButtons[UCINotificationTemplate.RejectAction] || Utility.getResourceString("REJECT_BUTTON_TEXT")
 						},
-						timeoutAction: {
-							eventHandler: timeoutHandler,
-							actionLabel: Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT"),
-							timeout: this.timeout
-						},
 						imageUrl: this.icon,
 						details: {},
 						type: isNullOrUndefined(this.actionButtons[UCINotificationTemplate.RejectAction]) ? XrmClientApi.Constants.PopupNotificationType.AcceptOnly : XrmClientApi.Constants.PopupNotificationType.AcceptDecline,
 						entityLookUpValue: null
 					};
+					if (!isNullOrUndefined(this.timeout) && this.timeout > 0) {
+						let timeoutAction = {
+						eventHandler: timeoutHandler,
+						actionLabel: Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT"),
+						timeout: this.timeout
+						}
+						ret.timeoutAction = timeoutAction;
+					}
+
 					let stringResolvers: Promise<string>[] = [];
 
 					stringResolvers.push(TemplatesUtility.resolveTemplateString(this.title, templateParams, this.name).then(

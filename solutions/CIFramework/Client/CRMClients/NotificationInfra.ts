@@ -322,24 +322,26 @@ namespace Microsoft.CIFramework.Internal {
 			let popupnotification = popUpItem.popUpNotificationItem;
 			let createdAtTime = popUpItem.notificationCreatedAt;
 			let notificationExpiryTime = popUpItem.notificationExpiryTime;
-			var spentInQueueTime = Date.now() - createdAtTime;
-			console.log("[NotifyEvent] - The notification spent " + spentInQueueTime / 1000 + " seconds in queue");
-			var leftTime = notificationExpiryTime - spentInQueueTime;
+			let leftTime = 0;
+			if (notificationExpiryTime > 0) {
+				var spentInQueueTime = Date.now() - createdAtTime;
+				console.log("[NotifyEvent] - The notification spent " + spentInQueueTime / 1000 + " seconds in queue");
+				leftTime = notificationExpiryTime - spentInQueueTime;
 
-			if (leftTime > 0) {
-				if (IsPlatformNotificationTimeoutInfra) {
-					popupnotification.timeoutAction["timeout"] = leftTime;
-				}
-				else {
-					let leftTimeSec = Math.ceil((leftTime) / 1000);
-					popupnotification.details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = leftTimeSec.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
+				if (leftTime > 0) {
+					if (IsPlatformNotificationTimeoutInfra) {
+						popupnotification.timeoutAction["timeout"] = leftTime;
+					}
+					else {
+						let leftTimeSec = Math.ceil((leftTime) / 1000);
+						popupnotification.details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = leftTimeSec.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
+					}
 				}
 			}
-
 			Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => {
 				closeId = id; console.log(id);
 				CheckAndDequeueNotification(popUpItem);
-				if (!IsPlatformNotificationTimeoutInfra) {
+				if (!IsPlatformNotificationTimeoutInfra && leftTime > 0) {
 					displayedNotificationTimer = setTimeout(popUpItem.timeOutMethod, leftTime);
 				}
 			}).catch((e: any) => {

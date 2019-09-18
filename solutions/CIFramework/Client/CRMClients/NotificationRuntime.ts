@@ -102,7 +102,7 @@ namespace Microsoft.CIFramework.Internal {
 								var popUpItem: XrmClientApi.IPopupNotificationItem = { title: popupNotificationItem.title, acceptAction: popupNotificationItem.acceptAction, declineAction: popupNotificationItem.declineAction, details: popupNotificationItem.details, type: popupNotificationItem.type, imageUrl: popupNotificationItem.imageUrl };
 							}
 
-							let notificationExpiryTime = popupNotificationItem.timeoutAction.timeout;
+							let notificationExpiryTime = !isNullOrUndefined(popupNotificationItem.timeoutAction) ? popupNotificationItem.timeoutAction.timeout: 0;
 							var notificationItem: INotificationItem = {
 								popUpNotificationItem: popUpItem,
 								notificationCreatedAt: Date.now(),
