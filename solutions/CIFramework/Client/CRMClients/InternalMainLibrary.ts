@@ -145,6 +145,11 @@ namespace Microsoft.CIFramework.Internal {
 
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		appId = top.location.search.split('appid=')[1].split('&')[0];
+
+		let macrosLibScript = document.createElement("script");
+		macrosLibScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_macros_internal_library.js";
+		document.getElementsByTagName("body")[0].appendChild(macrosLibScript);
+
 		loadProvider();
 		setNotificationTimeoutVersion();
 		return false;
