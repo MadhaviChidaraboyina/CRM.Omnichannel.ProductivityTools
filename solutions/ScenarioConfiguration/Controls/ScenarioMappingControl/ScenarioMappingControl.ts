@@ -76,16 +76,18 @@ module MscrmControls.Service.CIProvider {
 
 			if (context.parameters.BoundEntityName.raw == "workstream") {
 				this.entityBoundScenario = new WorkstreamBoundScenario();
+				this.workstreamSpecificInit();
 			}
 			else {
-
 				this.entityBoundScenario = new ChannelBoundScenario();
+				this.LoadInitialState();
 			}
 
 			Xrm.Page.data.entity.addOnSave((saveEvent: any) => { this.onSaveHandler(saveEvent);})
+		}
 
-			var templateType: TemplateType = context.parameters.TemplateType.raw == "session" ? TemplateType.Session : TemplateType.Notification;
-
+		public LoadInitialState(): void {
+			var templateType: TemplateType = this.context.parameters.TemplateType.raw == "session" ? TemplateType.Session : TemplateType.Notification;
 			this.entityBoundScenario.LoadInitialState(this.context, this.context.page.entityId, templateType).then(
 				(resp) => {
 					this.scenarioMapState = resp;
@@ -99,7 +101,27 @@ module MscrmControls.Service.CIProvider {
 					this.context.utils.requestRender();
 				}
 			);
-			
+		}
+
+		public workstreamSpecificInit(): void {
+			//We want the following code to run just once even if multiple instance of this control are initialized. So checking for template type
+			if (this.context.parameters.TemplateType.raw == "notification") {
+				Xrm.Utility.executeFunction(
+					ScenarioContolConstants.WorkstreamScenarioHelperWebresource,
+					ScenarioContolConstants.WorkstreamScenarioHelperFunction,
+					[this.context.page.entityId, Xrm.Page.getControl("msdyn_streamsource").getValueInternal().valueString])
+					.then(
+					(resp: any) => {
+						this.LoadInitialState();
+					},
+					(err: any) => {
+						console.error("[ScenarioMappingControl]Error in updating scenarios", err);
+						this.LoadInitialState();
+					});
+			}
+			else {
+				this.LoadInitialState();
+			}
 		}
 
 		/**

@@ -871,8 +871,8 @@
               <IsDataSourceSecret>0</IsDataSourceSecret>
               <AutoNumberFormat></AutoNumberFormat>
               <Format>text</Format>
-              <MaxLength>250</MaxLength>
-              <Length>200</Length>
+              <MaxLength>300</MaxLength>
+              <Length>600</Length>
               <displaynames>
                 <displayname description="Notification Buttons" languagecode="1033" />
               </displaynames>

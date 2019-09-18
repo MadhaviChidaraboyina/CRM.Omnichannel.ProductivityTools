@@ -18,6 +18,9 @@ module MscrmControls.Service.CIProvider {
 		public static NotificationTemplateToScenarioRelationship: string = "msdyn_msdyn_consoleapplicationnotificationtemplate_msdyn_scenario_NotificationTemplate";
 		public static SessionTemplateToScenarioRelationship: string = "msdyn_msdyn_consoleapplicationsessiontemplate_msdyn_scenario_SessionTemplate";
 
+		public static WorkstreamScenarioHelperWebresource: string = "msdyn_LiveWorkStreamToScenarioHelper.js";
+		public static WorkstreamScenarioHelperFunction: string = "OmniChannelPackage.OmniChannelLiveWorkStreamScenarioHelper.Instance.checkAndUpdateWorkStreamScenarios";
+
 		public static ScenarioEntityName: string = "msdyn_scenario";
 
 		public static GetTemplateEntityName(templateType: TemplateType): string {
