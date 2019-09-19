@@ -83,6 +83,7 @@
     </Publisher>
     <RootComponents>
 		<RootComponent type="62" schemaName="msdyn_OCAPP" behavior="0" />
+		<RootComponent type="80" schemaName="msdyn_OCAPP" behavior="0" />
 	</RootComponents>
 	<MissingDependencies>
     </MissingDependencies>
