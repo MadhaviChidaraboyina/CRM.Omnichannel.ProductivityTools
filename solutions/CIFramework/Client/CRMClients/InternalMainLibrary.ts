@@ -147,7 +147,7 @@ namespace Microsoft.CIFramework.Internal {
 		appId = top.location.search.split('appid=')[1].split('&')[0];
 
 		let macrosLibScript = document.createElement("script");
-		macrosLibScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_macros_internal_library.js";
+		macrosLibScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_ProductivityMacros_internal_library.js";
 		document.getElementsByTagName("body")[0].appendChild(macrosLibScript);
 
 		loadProvider();
