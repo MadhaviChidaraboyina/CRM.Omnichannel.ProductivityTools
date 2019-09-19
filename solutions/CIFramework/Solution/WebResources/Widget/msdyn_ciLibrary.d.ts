@@ -70,6 +70,8 @@ declare namespace Microsoft.CIFramework {
         static initializeCI: string;
         static loadProvider: string;
         static logErrorsAndReject: string;
+        static initLogAnalytics: string;
+        static logAnalyticsEvent: string;
     }
     /**
      * All constants for widget side logic should be placed here
@@ -213,9 +215,116 @@ declare namespace Microsoft.CIFramework {
         static templateParameters: string;
         static notificationTemplateTimeoutDefaultValue: number;
         static templateNameResolver: string;
+        static analyticsdata: string;
+        static initLogAnalyticsEventName: string;
+        static analyticsEventType: string;
+        static analyticsEventName: string;
+        static analyticsPlatformEventName: string;
+        static focussedSession: string;
+        static clientSessionId: string;
     }
     enum ErrorCode {
         Notes_Flap_Already_Expanded = 101,
+    }
+}
+/**
+ * @license Copyright (c) Microsoft Corporation. All rights reserved.
+ */
+declare namespace Microsoft.CIFramework.Analytics {
+    enum EventType {
+        SystemEvent = 0,
+        CustomEvent = 1,
+    }
+    enum InternalEventName {
+        InitAnalytics = 0,
+        NotificationReceived = 1,
+        NotificationAccepted = 2,
+        NotificationRejected = 3,
+        NotificationTimedOut = 4,
+        SessionStarted = 5,
+        SessionSwitched = 6,
+        SessionClosed = 7,
+        NewTabOpened = 8,
+        TabClosed = 9,
+        TabSwitched = 10,
+        CustomEvent = 11,
+    }
+    class InitData {
+        conversation: Conversation;
+    }
+    class Conversation {
+        conversationId: string;
+        channel: string;
+        channelContext: string;
+        regionData: string;
+        providerId: string;
+        externalProviderId: string;
+        providerName: string;
+        externalProviderName: string;
+        accountId: string;
+        externalAccountId: string;
+        contactId: string;
+        externalContactId: string;
+        initialQueueName: string;
+        additionalData: string;
+        externalCorrelationId: string;
+        conversationTimestamp: string;
+        customData?: (CustomDataEntity)[] | null;
+        session: Session;
+    }
+    class CustomDataEntity {
+        attribute: string;
+        value: string;
+    }
+    class Session {
+        conversationId: string;
+        sessionId: string;
+        sessionName: string;
+        clientSessionId: string;
+        clientSessionName: string;
+        sessionChannel: string;
+        sessionCreationReason: string;
+        sessionAdditionalData: string;
+        externalCorrelationId: string;
+        sessionCreatedTimestamp: string;
+        customData?: (CustomDataEntity)[] | null;
+        participants?: (ParticipantsEntity)[] | null;
+    }
+    class ParticipantsEntity {
+        sessionId: string;
+        conversationId: string;
+        participantId: string;
+        externalParticipantId: string;
+        participantName: string;
+        externalParticipantName: string;
+        participantMode: string;
+        participantType: string;
+        participantAddedTimestamp: string;
+        customData?: (CustomDataEntity)[] | null;
+    }
+    class EventData {
+        conversationId: string;
+        sessionId: string;
+        clientSessionId: string;
+        eventParticipantId: string;
+        events?: (EventsEntity)[] | null;
+    }
+    class EventsEntity {
+        kpiEventName: string;
+        kpiEventReason: string;
+        eventTimestamp: string;
+        entityName: string;
+        entityRecordId: string;
+        additionalData: string;
+        knowledgeArticleId: string;
+        knowledgeArticleName: string;
+        oldPresence: string;
+        newPresence: string;
+        tabId: string;
+        tabName: string;
+        notificationResponseAction: string;
+        externalCorrelationId: string;
+        customData?: (CustomDataEntity)[] | null;
     }
 }
 /**
@@ -463,4 +572,16 @@ declare namespace Microsoft.CIFramework {
     * @returns a Promise: Boolean Status after setting the list of presences
     */
     function initializeAgentPresenceList(presenceList: any, correlationId?: string): Promise<boolean>;
+    /**
+     * API to initialize the CIF Log Analytics session
+    * @param data - Object containing the init data
+    * @returns a Promise: JSON String with status message
+    */
+    function initLogAnalytics(data: any, correlationId?: string): Promise<string>;
+    /**
+     * API to log a custom analytics event
+    * @param data - Object containing the event data
+    * @returns a Promise: JSON String with status message
+    */
+    function logAnalyticsEvent(data: any, eventName: string, correlationId?: string): Promise<string>;
 }

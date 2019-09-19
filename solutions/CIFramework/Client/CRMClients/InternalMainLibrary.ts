@@ -13,6 +13,7 @@
 /// <reference path="State.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 /// <reference path="aria-webjs-sdk-1.8.3.d.ts" />
+/// <reference path="../Analytics/AnalyticsDataModel.ts" />
 
 /** @internal */
 namespace Microsoft.CIFramework.Internal {
@@ -60,7 +61,9 @@ namespace Microsoft.CIFramework.Internal {
 		["openkbsearchcontrol", [openKBSearchControl]],
 		["notifyEvent", [notifyEvent]],
 		["insertNotes", [insertNotes]],
-		["logErrorsAndReject", [logErrorsAndReject]]
+		["logErrorsAndReject", [logErrorsAndReject]],
+		["initLogAnalytics", [raiseInitAnalyticsEvent]],
+		["logAnalyticsEvent", [raiseAnalyticsEvent]]
 	]);
 
 	let genericEventRegistrations = new Map<string, CIProvider[]>();
@@ -152,6 +155,11 @@ namespace Microsoft.CIFramework.Internal {
 
 		loadProvider();
 		setNotificationTimeoutVersion();
+
+		let cifAnalyticsLibScript = document.createElement("script");
+		cifAnalyticsLibScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_CIFAnalytics_internal_library.js";
+		document.getElementsByTagName("body")[0].appendChild(cifAnalyticsLibScript);
+
 		return false;
 	}
 
@@ -248,7 +256,7 @@ namespace Microsoft.CIFramework.Internal {
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.isConsoleApp, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 			setPerfData(perfData);
 			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.isConsoleApp, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
--			setAPIUsageTelemetry(paramData);
+			-			setAPIUsageTelemetry(paramData);
 			return Promise.resolve(new Map().set(Constants.value, ret));
 		}
 		else {
@@ -263,8 +271,7 @@ namespace Microsoft.CIFramework.Internal {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.value]);
-		if(provider)
-		{
+		if (provider) {
 			let ret = state.client.setPanelPosition("setPanelPosition", parameters.get(Constants.value) as number, telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.setPosition, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 			setPerfData(perfData);
@@ -272,8 +279,7 @@ namespace Microsoft.CIFramework.Internal {
 			setAPIUsageTelemetry(paramData);
 			return Promise.resolve(new Map().set(Constants.value, ret));
 		}
-		else
-		{
+		else {
 			return logAPIFailure(appId, true, errorData, MessageType.setPosition, cifVersion, "", "", "", parameters.get(Constants.correlationId));
 		}
 	}
@@ -392,7 +398,7 @@ namespace Microsoft.CIFramework.Internal {
 			let messageType: string = parameters.get(Constants.eventType);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.addGenericHandler, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 			setPerfData(perfData);
-			logParameterData(telemetryParameter, MessageType.addGenericHandler, {"eventType": parameters.get(Constants.eventType)});
+			logParameterData(telemetryParameter, MessageType.addGenericHandler, { "eventType": parameters.get(Constants.eventType) });
 			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.addGenericHandler, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 			setAPIUsageTelemetry(paramData);
 			if (!isPredefinedMessageType(messageType)) {
@@ -423,7 +429,7 @@ namespace Microsoft.CIFramework.Internal {
 			let messageType: string = parameters.get(Constants.eventType);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.removeGenericHandler, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 			setPerfData(perfData);
-			logParameterData(telemetryParameter, MessageType.removeGenericHandler, {"eventType": parameters.get(Constants.eventType)});
+			logParameterData(telemetryParameter, MessageType.removeGenericHandler, { "eventType": parameters.get(Constants.eventType) });
 			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.removeGenericHandler, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 			setAPIUsageTelemetry(paramData);
 			if (!isPredefinedMessageType(messageType)) {
@@ -469,7 +475,7 @@ namespace Microsoft.CIFramework.Internal {
 		if (!state.client.flapInUse()) {
 			sendMessage(event.detail, MessageType.onSizeChanged, state.providerManager.getActiveProvider());
 		}
-	}	
+	}
 
 	/**
 	 * The handler called by the client for a mode-changed event. The client is expected
@@ -544,37 +550,31 @@ namespace Microsoft.CIFramework.Internal {
 	/**
 	 * setClickToAct API's client side handler that post message library will invoke. 
 	*/
-	export function setClickToAct(parameters: Map<string, any>) : Promise<Map<string,any>>
-	{
+	export function setClickToAct(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.value]);
-		if(provider)
-		{
-			return new Promise<Map<string, any>>((resolve, reject) =>
-			{
+		if (provider) {
+			return new Promise<Map<string, any>>((resolve, reject) => {
 				return state.client.updateRecord(Constants.providerLogicalName, provider.providerId, telemetryData,
 					new Map<string, any>([[Constants.clickToActAttributeName, parameters.get(Constants.value) as boolean]])).then(
-				(result: Map<string, any>) =>
-				{
-					provider.clickToAct = parameters.get(Constants.value) as boolean;
-					state.providerManager.ciProviders.set(parameters.get(Constants.originURL), provider);
+						(result: Map<string, any>) => {
+							provider.clickToAct = parameters.get(Constants.value) as boolean;
+							state.providerManager.ciProviders.set(parameters.get(Constants.originURL), provider);
 
-					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.setClickToAct, cifVersion, telemetryData, parameters.get(Constants.correlationId));
-					setPerfData(perfData);
-					var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.setClickToAct, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
-					setAPIUsageTelemetry(paramData);
-					return resolve(result);
-				},
-				(error: IErrorHandler) =>
-				{
-					logAPIFailure(appId, true, error as IErrorHandler, MessageType.setClickToAct, cifVersion, provider.providerId, provider.name, "", parameters.get(Constants.correlationId));
-					return reject(new Map().set(Constants.value, error));
-				});
+							var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.setClickToAct, cifVersion, telemetryData, parameters.get(Constants.correlationId));
+							setPerfData(perfData);
+							var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.setClickToAct, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
+							setAPIUsageTelemetry(paramData);
+							return resolve(result);
+						},
+						(error: IErrorHandler) => {
+							logAPIFailure(appId, true, error as IErrorHandler, MessageType.setClickToAct, cifVersion, provider.providerId, provider.name, "", parameters.get(Constants.correlationId));
+							return reject(new Map().set(Constants.value, error));
+						});
 			});
 		}
-		else
-		{
+		else {
 			return logAPIFailure(appId, true, errorData, MessageType.setClickToAct, cifVersion, "", "", "", parameters.get(Constants.correlationId));
 		}
 	}
@@ -582,20 +582,17 @@ namespace Microsoft.CIFramework.Internal {
 	/**
 	* API to check ClickToAct is enabled or not
 	*/
-	export function getClickToAct(parameters: Map<string, any>) : Promise<Map<string, any>>
-	{
+	export function getClickToAct(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters);
-		if(provider)
-		{
+		if (provider) {
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getClickToAct, cifVersion, null, parameters.get(Constants.correlationId));
 			setPerfData(perfData);
 			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.getClickToAct, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
 			setAPIUsageTelemetry(paramData);
 			return Promise.resolve(new Map().set(Constants.value, provider.clickToAct));
 		}
-		else
-		{
+		else {
 			return logAPIFailure(appId, true, errorData, MessageType.getClickToAct, cifVersion, "", "", "", parameters.get(Constants.correlationId));
 		}
 	}
@@ -608,8 +605,7 @@ namespace Microsoft.CIFramework.Internal {
 		let telemetryParameter: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.value]);
-		if (provider)
-		{
+		if (provider) {
 			if (isConsoleAppInternal() && provider != state.providerManager.getActiveProvider()) {
 				let error = {} as IErrorHandler;
 				error.reportTime = new Date().toUTCString();
@@ -630,8 +626,7 @@ namespace Microsoft.CIFramework.Internal {
 				return Promise.resolve(new Map().set(Constants.value, ret));
 			}
 		}
-		else
-		{
+		else {
 			return logAPIFailure(appId, true, errorData, MessageType.setMode, cifVersion, "", "", telemetryParameter, parameters.get(Constants.correlationId));
 		}
 	}
@@ -716,7 +711,7 @@ namespace Microsoft.CIFramework.Internal {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters, [Constants.SearchString]);
-		
+
 		if (provider) {
 			if (isConsoleAppInternal() && provider != state.providerManager.getActiveProvider()) {
 				let error = {} as IErrorHandler;
@@ -838,7 +833,7 @@ namespace Microsoft.CIFramework.Internal {
 					function (res) {
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createRecord, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 						setPerfData(perfData);
-						logParameterData(telemetryParameter, MessageType.createRecord, {"entityName": parameters.get(Constants.entityName)});
+						logParameterData(telemetryParameter, MessageType.createRecord, { "entityName": parameters.get(Constants.entityName) });
 						var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.createRecord, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 						setAPIUsageTelemetry(paramData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
@@ -866,7 +861,7 @@ namespace Microsoft.CIFramework.Internal {
 					function (res) {
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.retrieveRecord, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 						setPerfData(perfData);
-						logParameterData(telemetryParameter, MessageType.retrieveRecord, {"entityName": parameters.get(Constants.entityName), "entityId": parameters.get(Constants.entityId)});
+						logParameterData(telemetryParameter, MessageType.retrieveRecord, { "entityName": parameters.get(Constants.entityName), "entityId": parameters.get(Constants.entityId) });
 						var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.retrieveRecord, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 						setAPIUsageTelemetry(paramData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
@@ -894,7 +889,7 @@ namespace Microsoft.CIFramework.Internal {
 					function (res) {
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.updateRecord, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 						setPerfData(perfData);
-						logParameterData(telemetryParameter, MessageType.updateRecord, {"entityName": parameters.get(Constants.entityName), "entityId": parameters.get(Constants.entityId)});
+						logParameterData(telemetryParameter, MessageType.updateRecord, { "entityName": parameters.get(Constants.entityName), "entityId": parameters.get(Constants.entityId) });
 						var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.updateRecord, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 						setAPIUsageTelemetry(paramData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
@@ -922,7 +917,7 @@ namespace Microsoft.CIFramework.Internal {
 					function (res) {
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.deleteRecord, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 						setPerfData(perfData);
-						logParameterData(telemetryParameter, MessageType.deleteRecord, {"entityName": parameters.get(Constants.entityName), "entityId": parameters.get(Constants.entityId)});
+						logParameterData(telemetryParameter, MessageType.deleteRecord, { "entityName": parameters.get(Constants.entityName), "entityId": parameters.get(Constants.entityId) });
 						var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.deleteRecord, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 						setAPIUsageTelemetry(paramData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
@@ -991,7 +986,7 @@ namespace Microsoft.CIFramework.Internal {
 					function (res) {
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getEntityMetadata, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 						setPerfData(perfData);
-						logParameterData(telemetryParameter, MessageType.getEntityMetadata, {"entityName": parameters.get(Constants.entityName), "Attributes":parameters.get(Constants.Attributes)});
+						logParameterData(telemetryParameter, MessageType.getEntityMetadata, { "entityName": parameters.get(Constants.entityName), "Attributes": parameters.get(Constants.Attributes) });
 						var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.getEntityMetadata, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 						setAPIUsageTelemetry(paramData);
 						return resolve(new Map<string, any>().set(Constants.value, res));
@@ -1014,7 +1009,7 @@ namespace Microsoft.CIFramework.Internal {
 	 * @param value. It's a string which contains header,body of the popup
 	 *
 	*/
-	export function notifyEvent(notificationObject: Map<string,any>): Promise<any>{
+	export function notifyEvent(notificationObject: Map<string, any>): Promise<any> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(notificationObject, [Constants.value]);
@@ -1023,6 +1018,7 @@ namespace Microsoft.CIFramework.Internal {
 				//let panelWidth = state.client.getWidgetWidth();
 				notifyEventClient(notificationObject).then(
 					function (res) {
+						raiseAnalyticsEvent(Analytics.InternalEventName.NotificationReceived, notificationObject);
 						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.notifyEvent, cifVersion, telemetryData, notificationObject.get(Constants.correlationId));
 						setPerfData(perfData);
 						var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.notifyEvent, provider.sortOrder, appId, cifVersion, false, null, "", notificationObject.get(Constants.correlationId));
@@ -1041,7 +1037,7 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
-	export function insertNotes(notesDetails: Map<string,any>): Promise<any>{
+	export function insertNotes(notesDetails: Map<string, any>): Promise<any> {
 		let telemetryData: any = new Object();
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(notesDetails, [Constants.value]);
@@ -1085,7 +1081,7 @@ namespace Microsoft.CIFramework.Internal {
 			let agentPresenceStatus = presence.setAgentPresence(JSON.parse(parameters.get(Constants.presenceInfo)), telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.setAgentPresence, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 			setPerfData(perfData);
-			logParameterData(telemetryParameter, MessageType.setAgentPresence, {"presenceInfo": parameters.get(Constants.presenceInfo)});
+			logParameterData(telemetryParameter, MessageType.setAgentPresence, { "presenceInfo": parameters.get(Constants.presenceInfo) });
 			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.setAgentPresence, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 			setAPIUsageTelemetry(paramData);
 			return Promise.resolve(new Map().set(Constants.value, agentPresenceStatus));
@@ -1107,7 +1103,7 @@ namespace Microsoft.CIFramework.Internal {
 			let presenceListDivStatus = presence.initializeAgentPresenceList(JSON.parse(parameters.get(Constants.presenceList)), telemetryData);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.initializeAgentPresenceList, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 			setPerfData(perfData);
-			logParameterData(telemetryParameter, MessageType.initializeAgentPresenceList, {"presenceList": parameters.get(Constants.presenceList)});
+			logParameterData(telemetryParameter, MessageType.initializeAgentPresenceList, { "presenceList": parameters.get(Constants.presenceList) });
 			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.initializeAgentPresenceList, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 			setAPIUsageTelemetry(paramData);
 			return Promise.resolve(new Map().set(Constants.value, presenceListDivStatus));
@@ -1161,7 +1157,7 @@ namespace Microsoft.CIFramework.Internal {
 				provider.getSession(parameters.get(Constants.sessionId)).then(function (session) {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getSession, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 					setPerfData(perfData);
-					logParameterData(telemetryParameter, MessageType.getSession, {"sessionId": parameters.get(Constants.sessionId)});
+					logParameterData(telemetryParameter, MessageType.getSession, { "sessionId": parameters.get(Constants.sessionId) });
 					var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.getSession, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 					setAPIUsageTelemetry(paramData);
 					return resolve(new Map<string, any>().set(Constants.value, session));
@@ -1200,6 +1196,7 @@ namespace Microsoft.CIFramework.Internal {
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				provider.createSession(parameters.get(Constants.input), parameters.get(Constants.context), parameters.get(Constants.customerName), telemetryData, appId, cifVersion, parameters.get(Constants.correlationId)).then(function (sessionId) {
+					raiseAnalyticsEvent(Analytics.InternalEventName.SessionStarted, parameters, new Map<string, any>().set(Constants.clientSessionId, sessionId));
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createSession, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 					setPerfData(perfData);
 					var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.createSession, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
@@ -1272,7 +1269,7 @@ namespace Microsoft.CIFramework.Internal {
 				provider.requestFocusSession(parameters.get(Constants.sessionId), parameters.get(Constants.messagesCount), telemetryData).then(function () {
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.requestFocusSession, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 					setPerfData(perfData);
-					logParameterData(telemetryParameter, MessageType.requestFocusSession, {"sessionId": parameters.get(Constants.sessionId)});
+					logParameterData(telemetryParameter, MessageType.requestFocusSession, { "sessionId": parameters.get(Constants.sessionId) });
 					var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.requestFocusSession, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
 					setAPIUsageTelemetry(paramData);
 					return resolve(new Map<string, any>());
@@ -1361,6 +1358,7 @@ namespace Microsoft.CIFramework.Internal {
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				provider.createTab(parameters.get(Constants.input), telemetryData, appId, cifVersion, parameters.get(Constants.correlationId)).then(function (tabId) {
+					raiseAnalyticsEvent(Analytics.InternalEventName.NewTabOpened, parameters, new Map<string, any>().set(Constants.tabId, tabId));
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createTab, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 					setPerfData(perfData);
 					var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.createTab, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
@@ -1408,5 +1406,35 @@ namespace Microsoft.CIFramework.Internal {
 		error.sourceFunc = parameters.get(Constants.functionName);
 		logAPIInternalInfo(appId, true, error, MessageType.logErrorsAndReject, cifVersion, "", "", "", parameters.get(Constants.correlationId));
 		return Promise.resolve();
+	}
+
+	/**
+	 * Internal method to raise the lLogAnalyticsEvent to Analytics js
+	*/
+	export function raiseAnalyticsEventInternal(parameters: Map<string, any>): void {
+		var eventParams = { bubbles: false, cancelable: false, detail: parameters };
+		var event = new CustomEvent(Constants.analyticsPlatformEventName, eventParams);
+		window.dispatchEvent(event);
+	}
+
+	/**
+	 * LogAnalyticsEvent handler that post message library will invoke.
+	*/
+	export function raiseAnalyticsEvent(eventName: Analytics.InternalEventName, parameters: Map<string, any>, additionalParams?: Map<string, any>): void {
+		if (!isNullOrUndefined(additionalParams))
+		additionalParams.forEach((value, key) => parameters.set(key, value));
+		if (parameters.get(Constants.analyticsEventType) !== Analytics.EventType.CustomEvent) {
+			parameters.set(Constants.analyticsEventType, Analytics.EventType.SystemEvent)
+        }
+        let sessionId = state.sessionManager.getFocusedSession();
+        parameters.set(Constants.analyticsEventName, eventName).set(Constants.focussedSession, sessionId);
+		raiseAnalyticsEventInternal(parameters);
+	}
+
+	/**
+	 * InitLogAnalyticsEvent handler that post message library will invoke.
+	*/
+	export function raiseInitAnalyticsEvent(parameters: Map<string, any>): void {
+		 raiseAnalyticsEventInternal(parameters);
 	}
 }

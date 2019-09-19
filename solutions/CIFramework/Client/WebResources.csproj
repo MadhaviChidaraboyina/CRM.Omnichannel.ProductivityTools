@@ -13,6 +13,8 @@
     <DebugSymbols>true</DebugSymbols>
     <NOTARGET>true</NOTARGET>
     <SolutionPackagePath>$(XrmSolutionsRoot)\solutions\CIFramework\Package\WebResources\CIFramework</SolutionPackagePath>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <TypeScriptBuildMode>true</TypeScriptBuildMode>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="CIFrameworkConstants.ts" />
@@ -31,6 +33,7 @@
     <Content Include="EventHandlersLib\msdyn_EventHandlersLib.ts" />
     <Content Include="EventHandlersLib\msdyn_NotificationTemplateFormLib.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
+    <TypeScriptCompile Include="Analytics\AnalyticsDataModel.ts" />
     <TypeScriptCompile Include="CIFrameworkUtilities.ts" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.8.3.d.ts" />
     <TypeScriptCompile Include="CRMClients\NotificationRuntime.ts" />
@@ -104,9 +107,10 @@
     </ItemGroup>
     <Copy SourceFiles="@(StaticWebResources)" DestinationFiles="@(StaticWebResources->'$(TypeScriptOutDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="True" />
   </Target>
-     <ItemGroup>
-      <LocResx Include="Localization\CIF_webresource_strings.*.resx" />
-    </ItemGroup>
+  <ItemGroup>
+    <LocResx Include="Localization\CIF_webresource_strings.*.resx" />
+  </ItemGroup>
+  <ItemGroup />
   <Target Name="SelectedOutputs" DependsOnTargets="CopyStatic">
     <ItemGroup>
       <WebResources Include="$(TypeScriptOutDir)\**\*.svg" />
@@ -123,7 +127,7 @@
     </ItemGroup>
   </Target>
   <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)\%(RecursiveDir)')">
-  <Message Text="$(TestProperty)" Importance="high"/>
+    <Message Text="$(TestProperty)" Importance="high" />
     <Copy SourceFiles="@(LocResx)" DestinationFolder="$(XrmSolutionsRoot)\solutions\CIFramework\Solution\WebResources\Localization" Retries="3" RetryDelayMilliseconds="300" />
     <PropertyGroup>
       <ExcludedFromMinification>$(TypeScriptOutDir)\**\*.js</ExcludedFromMinification>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
   <Import Project="$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.props')" />
@@ -11,7 +11,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <NoWarn>2008</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(BuildType)' == 'Debug'">

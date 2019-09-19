@@ -18,14 +18,16 @@ namespace Microsoft.CIFramework.Internal {
 		private _tabConfigs: Map<string, AppConfig>;
 		private _sessionConfig: SessionConfig;
 		private _templateParams: any;
+		private _correlationId: string;
 
-		public constructor(provider: CIProvider, config?: SessionConfig, templateParams?: any) {
+		public constructor(provider: CIProvider, config?: SessionConfig, templateParams?: any, correlationId?: string) {
 			this._associatedProvider = provider;
 			this._tabsByTag = new Map<string, string[]>();
 			this._tabsByName = new Map<string, string[]>();
 			this._tabConfigs = new Map<string, AppConfig>();
 			this._sessionConfig = config;
 			this._templateParams = templateParams || null;
+			this._correlationId = correlationId || null;
 		}
 
 		public get templateParams(): any {
@@ -44,6 +46,10 @@ namespace Microsoft.CIFramework.Internal {
 			for (let key in input) {
 				this._templateParams[key] = input[key];
 			}
+		}
+
+		public get correlationId(): string {
+			return this._correlationId;
 		}
 
 		public setTab(tabConfig: AppConfig, tabid: string, name: string, tags?: string[]): void {

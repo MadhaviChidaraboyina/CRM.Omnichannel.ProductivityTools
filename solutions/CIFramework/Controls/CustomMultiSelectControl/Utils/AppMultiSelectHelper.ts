@@ -111,7 +111,7 @@ module MscrmControls.Service.CIProvider {
 			var query = "?$select=name,appmoduleid,uniquename,eventhandlers,navigationtype&$filter=" + queryParam;
 			Xrm.WebApi.retrieveMultipleRecords("appmodule", query).then(
 				(data: any) => {
-						//To-Do - Add Telemetry
+					//To-Do - Add Telemetry
 					this.appsList = [];
 					for (let app of data.entities) {
 						this.appsList.push({ ElementId: app.appmoduleid, ElementUniqueName: app.uniquename, ElementName: app.name, NavigationType: app.navigationtype, EventHandlers: JSON.parse(app.eventhandlers) });
@@ -119,7 +119,7 @@ module MscrmControls.Service.CIProvider {
 					this.batchUpdateAppModuleBase();
 				},
 				(error: any) => {
-						//To-Do - Add Telemetry
+					//To-Do - Add Telemetry
 				}
 			);
 		}
@@ -131,7 +131,7 @@ module MscrmControls.Service.CIProvider {
 				var selectedApp: ElementInformation[] = this.appsList.filter(app => app.ElementId === this.selectedApps[i]);
 				if (selectedApp && selectedApp.length > 0) {
 					if (selectedApp[0] && !this.containsEventHandler(selectedApp[0])) {
-						params =  "\"4\",\""+selectedApp[0].NavigationType.toString()+"\"";
+						params = "\"4\",\"" + selectedApp[0].NavigationType.toString() + "\"";
 						var handler = <AppEventhandlers>{};
 						handler.EventName = "onload";
 						handler.LibraryName = "CRMClients/msdyn_internal_ci_library.js";

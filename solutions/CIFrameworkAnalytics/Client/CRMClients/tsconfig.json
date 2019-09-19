@@ -1,0 +1,15 @@
+{
+  "extends": "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+  "include": [
+    "Constants.ts",
+    "AnalyticsDataModel.ts",
+    "CIFrameworkAnalyticsUtilities.ts",
+    "CIFAnalyticsMainLibrary.ts"
+  ],
+  "compilerOptions": {
+    "sourceMap": true,
+    "outFile": "../../Solution/WebResources/CRMClients/msdyn_CIFAnalytics_internal_library.js",
+    "module": "amd",
+    "allowJs": true
+  }
+}

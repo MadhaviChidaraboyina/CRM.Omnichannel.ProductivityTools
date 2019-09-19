@@ -34,6 +34,7 @@ namespace Microsoft.CIFramework.Internal {
 		*/
 		onSessionSwitched(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
+			raiseAnalyticsEvent(Analytics.InternalEventName.SessionSwitched, eventMap);
 			let previousSessionId = eventMap.get(Constants.previousSessionId);
 			let newSessionId = eventMap.get(Constants.newSessionId);
 			let previousProvider = state.sessionManager.getProvider(previousSessionId);
@@ -68,6 +69,7 @@ namespace Microsoft.CIFramework.Internal {
 		 */
 		onSessionClosed(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
+			raiseAnalyticsEvent(Analytics.InternalEventName.SessionClosed, eventMap);
 			let sessionId = eventMap.get(Constants.sessionId);
 
 			//Persist and close the Notes flap before closing the session
@@ -155,7 +157,7 @@ namespace Microsoft.CIFramework.Internal {
 								sessionInput.options.isFocused = true;  //Switch focus to the newly created session by default
 								Xrm.App.sessions.createSession(sessionInput).then(function (sessionId: string) {
 									logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
-									this.sessions.set(sessionId, new SessionInfo(provider, session, templateParams));
+									this.sessions.set(sessionId, new SessionInfo(provider, session, templateParams, correlationId));
 									state.client.setPanelMode("setPanelMode", session.panelState);
 									state.client.setProviderVisibility(state.providerManager.ciProviders, provider.providerId);
 									var inputObject: any = {};

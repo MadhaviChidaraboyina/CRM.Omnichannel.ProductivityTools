@@ -2,6 +2,7 @@
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
 /// <reference path="../Constants.ts" />
+/// <reference path="../Analytics/AnalyticsDataModel.ts" />
 
 namespace Microsoft.CIFramework
 {
@@ -942,6 +943,49 @@ namespace Microsoft.CIFramework
 			return logErrorsAndReject(errorMsg, MessageType.initializeAgentPresenceList, correlationId);
 		}
 	}
+
+	/**
+	 * API to initialize the CIF Log Analytics session
+	* @param data - Object containing the init data
+	* @returns a Promise: JSON String with status message
+	*/
+	export function initLogAnalytics(data: any, correlationId?: string): Promise<string> {
+		if (!isNullOrUndefined(data)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.initLogAnalytics,
+				messageData: new Map().set(Constants.analyticsdata, data)
+					.set(Constants.correlationId, correlationId)
+					.set(Constants.analyticsEventType, Analytics.EventType.SystemEvent)
+			}
+			return sendMessage<string>(initLogAnalytics.name, payload, false);
+		}
+		else {
+			let errorMsg = "initLogAnalytics payload is not valid. ";
+			return logErrorsAndReject(errorMsg, MessageType.logAnalyticsEvent, correlationId);
+		}
+	}
+
+	/**
+	 * API to log a custom analytics event
+	* @param data - Object containing the event data
+	* @returns a Promise: JSON String with status message
+	*/
+	export function logAnalyticsEvent(data: any, eventName: string, correlationId?: string): Promise<string> {
+		if (!isNullOrUndefined(data) || !isNullOrUndefined(eventName)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.logAnalyticsEvent,
+				messageData: new Map().set(Constants.analyticsdata, data)
+					.set(Constants.correlationId, correlationId)
+					.set(Constants.analyticsEventName, eventName)
+					.set(Constants.analyticsEventType, Analytics.EventType.CustomEvent)
+			}
+			return sendMessage<string>(logAnalyticsEvent.name, payload, false);
+		}
+		else {
+			let errorMsg = "logAnalyticsEvent payload data or eventType is not valid. ";
+			return logErrorsAndReject(errorMsg, MessageType.logAnalyticsEvent, correlationId);
+		}
+	} 
 
 	initialize();
 }

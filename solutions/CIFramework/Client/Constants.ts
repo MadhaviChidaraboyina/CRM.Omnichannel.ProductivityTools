@@ -72,6 +72,8 @@ namespace Microsoft.CIFramework
 		public static initializeCI = "initializeCI";
 		public static loadProvider = "loadProvider";
 		public static logErrorsAndReject = "logErrorsAndReject";
+		public static initLogAnalytics = "initLogAnalytics";
+		public static logAnalyticsEvent = "logAnalyticsEvent";
 	}
 
 	/**
@@ -218,6 +220,13 @@ namespace Microsoft.CIFramework
 		public static templateParameters = "templateParameters";
 		public static notificationTemplateTimeoutDefaultValue = 120;
 		public static templateNameResolver = "templateNameResolver";
+		public static analyticsdata = "analyticsData";
+		public static initLogAnalyticsEventName = "initAnalytics";
+		public static analyticsEventType = "analyticsEventtype";
+		public static analyticsEventName = "analyticsEventname";
+		public static analyticsPlatformEventName = "logCIFAnalytics";
+		public static focussedSession = "focussedSession";
+		public static clientSessionId = "clientSessionId";
 	}
 
 	export enum ErrorCode {
