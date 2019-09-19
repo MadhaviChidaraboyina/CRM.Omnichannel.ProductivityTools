@@ -158,6 +158,10 @@ namespace Microsoft.CIFramework.Internal {
 									this.sessions.set(sessionId, new SessionInfo(provider, session, templateParams));
 									state.client.setPanelMode("setPanelMode", session.panelState);
 									state.client.setProviderVisibility(state.providerManager.ciProviders, provider.providerId);
+									var inputObject: any = {};
+									let tabId = Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId;
+									inputObject[tabId] = { "pageType": sessionInput.pageInput.pageType, "entityName": (sessionInput.pageInput as any).entityName, "entityId": (sessionInput.pageInput as any).entityId };
+									this.updateTabContextInCurrentSession(inputObject);
 									window.setTimeout(provider.setFocusedSession.bind(provider), 0, sessionId, true);
 									sessionInput.anchorTabTemplate.resolveTitle(templateParams).then(
 										function (result: string) {
@@ -319,11 +323,14 @@ namespace Microsoft.CIFramework.Internal {
 					let additionalData: any = {};
 					additionalData["applicationType"] = input.pageInput.pageType;
 					logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName, additionalData);
+					var inputObject: any = {};
+					inputObject[tabId] = {"pageType": input.pageInput.pageType, "entityName": input.pageInput.entityName, "entityId": input.pageInput.entityId};
+					this.updateTabContextInCurrentSession(inputObject);
 					resolve(tabId);
 				}.bind(this), function (errorMessage: string) {
 					reject(errorMessage);
 				}.bind(this));
-			});
+			}.bind(this));
 		}
 
 		focusTab(sessionId: string, tabId: string, telemetryData?: Object): Promise<void> {

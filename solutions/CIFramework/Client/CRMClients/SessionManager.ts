@@ -219,6 +219,11 @@ namespace Microsoft.CIFramework.Internal {
 			Xrm.App.sessions.getSession(sessionId).tabs.getTab(tabId).title = title;
 			return Promise.resolve(title);
 		}
+
+		updateTabContextInCurrentSession(input: any) {
+			let cifExt = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
+			cifExt.setSessionTemplateParams(input);
+		}
 	}
 
 	export function GetSessionManager(clientType: string): SessionManager {

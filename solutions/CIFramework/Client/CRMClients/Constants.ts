@@ -38,4 +38,12 @@ namespace Microsoft.CIFramework.Internal
 		GREATER =1,
 		LESSER=-1
 	}
+
+	export class SlugPrefix {
+		public static CHANNEL_PROVIDER = "ChannelProvider";
+		public static SESSION = "Session";
+		public static CURRENT_TAB = "CurrentTab";
+		public static ANCHOR_TAB = "AnchorTab";
+		public static SPLIT_BY_DOT = ".";
+	}
 }

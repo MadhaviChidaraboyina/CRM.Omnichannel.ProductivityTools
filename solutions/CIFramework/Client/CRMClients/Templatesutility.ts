@@ -27,6 +27,10 @@ namespace Microsoft.CIFramework.Internal {
 					paramVals.set(param, "");
 					try {
 						let val = "";
+						if (paramName.startsWith(Internal.SlugPrefix.CHANNEL_PROVIDER) || paramName.startsWith(Internal.SlugPrefix.SESSION)) {
+							scope = TemplatesUtility.getScopeforSlugPrefix(paramName, scope);
+							paramName = TemplatesUtility.stripSlugPrefix(paramName);
+						}
 						if (templateParams.hasOwnProperty(scope) && templateParams[scope].hasOwnProperty(paramName)) {
 							val = templateParams[scope][paramName];
 						}
@@ -127,7 +131,32 @@ namespace Microsoft.CIFramework.Internal {
 			});
 			return promise;
 		}
+
+		public static stripSlugPrefix(param: string): string {
+			let splitTextArray = param.split(Internal.SlugPrefix.SPLIT_BY_DOT);
+			let len = splitTextArray.length;
+			return splitTextArray[len-1];
+		}
+
+		public static getScopeforSlugPrefix(param: string, scope: string): string {
+			if (param.startsWith(Internal.SlugPrefix.SESSION)) {
+				let splitSlugArray = param.split(Internal.SlugPrefix.SPLIT_BY_DOT);
+				if (splitSlugArray[1] && (splitSlugArray[1] === Internal.SlugPrefix.CURRENT_TAB || splitSlugArray[1] === Internal.SlugPrefix.ANCHOR_TAB)) {
+					scope = TemplatesUtility.getTabId(splitSlugArray[1]);
+				}
+			}
+			return scope;
+		}
+		public static getTabId(tabName: string): string {
+			if (tabName === Internal.SlugPrefix.CURRENT_TAB) {
+				return Xrm.App.sessions.getFocusedSession().tabs.getFocusedTab().tabId;
+			}
+			else {
+				return Xrm.App.sessions.getFocusedSession().tabs.getAll().get(0).tabId;
+			}
+		}
 	}
+
 
 	export class TemplateNameResolverResult {
 		public templateName: string;
