@@ -60,6 +60,22 @@
 												<control id="msdyn_notificationbuttons" datafieldname="msdyn_notificationbuttons" disabled="false" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{98CC6724-AB3D-4145-B2ED-D7C3A3B92B26}" />
 											</cell>
 										</row>
+											<row>
+													<cell id="{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" showlabel="true" locklevel="0"  visible="false">
+															<labels>
+																	<label description="Accept Button Text" languagecode="1033" />
+															</labels>
+															<control id="msdyn_acceptbuttontext" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_acceptbuttontext" disabled="false" />
+													</cell>
+											</row>
+											<row>
+													<cell id="{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" showlabel="true" locklevel="0" visible="false">
+															<labels>
+																	<label description="Reject Button Text"  languagecode="1033" />
+															</labels>
+															<control id="msdyn_rejectbuttontext" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_rejectbuttontext" disabled="false" />
+													</cell>
+											</row>
 									</rows>
 								</section>
 							</sections>
@@ -152,16 +168,22 @@
 					<customControl formFactor="0" name="MscrmControls.Service.CIProvider.NotificationButtonConfigControl">
 						<parameters>
 							<value>msdyn_notificationbuttons</value>
-						</parameters>
+							<accept_buttontext>msdyn_acceptbuttontext</accept_buttontext>
+							<reject_buttontext>msdyn_rejectbuttontext</reject_buttontext>
+					</parameters>
 					</customControl>
 					<customControl formFactor="1" name="MscrmControls.Service.CIProvider.NotificationButtonConfigControl">
 						<parameters>
 							<value>msdyn_notificationbuttons</value>
-						</parameters>
+							<accept_buttontext>msdyn_acceptbuttontext</accept_buttontext>
+							<reject_buttontext>msdyn_rejectbuttontext</reject_buttontext>
+					</parameters>
 					</customControl>
 					<customControl formFactor="2" name="MscrmControls.Service.CIProvider.NotificationButtonConfigControl">
 						<parameters>
 							<value>msdyn_notificationbuttons</value>
+							<accept_buttontext>msdyn_acceptbuttontext</accept_buttontext>
+							<reject_buttontext>msdyn_rejectbuttontext</reject_buttontext>
 						</parameters>
 					</customControl>
 				</controlDescription>

@@ -25,7 +25,7 @@ namespace Microsoft.CIFramework.Internal {
 						return resolve(true);
 					}
 					Xrm.WebApi.retrieveMultipleRecords("msdyn_consoleapplicationnotificationtemplate",
-						"?$select=msdyn_name,msdyn_title,msdyn_notificationbuttons,msdyn_icon,msdyn_timeout&$expand=msdyn_msdyn_consoleapplicationnotificationtempl($select=msdyn_name,msdyn_lineheader,msdyn_value,msdyn_priority),msdyn_msdyn_consoleapplicationnotificationtag($select=msdyn_name)").then(
+						"?$select=msdyn_name,msdyn_title,msdyn_notificationbuttons,msdyn_icon,msdyn_timeout,msdyn_acceptbuttontext,msdyn_rejectbuttontext&$expand=msdyn_msdyn_consoleapplicationnotificationtempl($select=msdyn_name,msdyn_lineheader,msdyn_value,msdyn_priority),msdyn_msdyn_consoleapplicationnotificationtag($select=msdyn_name)").then(
 						function (result) {
 							result.entities.forEach(
 								function (value, index, array) {
@@ -36,6 +36,8 @@ namespace Microsoft.CIFramework.Internal {
 										value["msdyn_notificationbuttons"],
 										value["msdyn_icon"],
 										value["msdyn_timeout"],
+										value["msdyn_acceptbuttontext"],
+										value["msdyn_rejectbuttontext"],
 										value["msdyn_msdyn_consoleapplicationnotificationtempl"]
 									));
 									for (let index in value["msdyn_msdyn_consoleapplicationnotificationtag"]) {
@@ -290,7 +292,7 @@ namespace Microsoft.CIFramework.Internal {
 		protected get infoFields(): XrmClientApi.Entity[] {
 			return this._infoField;
 		}
-		private constructor(templateId: string, name: string, title: string, actionButtons: string, icon: string, timeout: number, infoFields: XrmClientApi.Entity[]) {
+		private constructor(templateId: string, name: string, title: string, actionButtons: string, icon: string, timeout: number, acceptButtonText: string, rejectButtonText: string, infoFields: XrmClientApi.Entity[]) {
 			this._templateId = templateId;
 			this._name = name;
 			this._title = title;
@@ -303,10 +305,12 @@ namespace Microsoft.CIFramework.Internal {
 			//let labels: string[] = actionButonLabels.split(";");
 			let labels: string[] = [];
 			let buttonsCount = 0;
-			labels.push(buttonsJson.Accept_Button_String ? buttonsJson.Accept_Button_String : "");
+
+			// we fallback to JSON to support upgrade scenarios
+			labels.push(acceptButtonText ? acceptButtonText : buttonsJson.Accept_Button_String ? buttonsJson.Accept_Button_String:"");
 			this._actionButtons[UCINotificationTemplate.AcceptAction] = labels[buttonsCount];
 			if (buttonsJson.Reject_Button_Enabled) {
-				labels.push(buttonsJson.Reject_Button_String ? buttonsJson.Reject_Button_String : "");
+				labels.push(rejectButtonText ? rejectButtonText : buttonsJson.Reject_Button_String ? buttonsJson.Reject_Button_String : "");
 				this._actionButtons[UCINotificationTemplate.RejectAction] = labels[++buttonsCount];
 			}
 		}

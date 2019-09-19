@@ -316,7 +316,9 @@ namespace Microsoft.CIFramework.Internal {
 			let apiName = "Xrm.App.sessions.getSession(sessionId).tabs.createTab";
 			return new Promise(function (resolve: any, reject: any) {
 				Xrm.App.sessions.getSession(sessionId).tabs.createTab(input).then(function (tabId: string) {
-					logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
+					let additionalData: any = {};
+					additionalData["applicationType"] = input.pageInput.pageType;
+					logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName, additionalData);
 					resolve(tabId);
 				}.bind(this), function (errorMessage: string) {
 					reject(errorMessage);

@@ -10,6 +10,10 @@ module MscrmControls.Service.CIProvider {
 	'use strict';
 	declare var Xrm: any
 
+	class Constants {
+		public static ACCEPT_BUTTONTEXT_ATTRIBUTE: string = "msdyn_acceptbuttontext";
+		public static REJECT_BUTTONTEXT_ATTRIBUTE: string = "msdyn_rejectbuttontext";
+	}
 	export class NotificationButtonConfigControl implements Mscrm.StandardControl<IInputBag, IOutputBag>
 	{
 
@@ -29,6 +33,8 @@ module MscrmControls.Service.CIProvider {
 		 * Actual value of the control
 		 */
 		private value: string;
+		private acceptButtonText: string;
+		private rejectButtonText: string;
 
 		private currentState: NotificationButtonConfigState;
 
@@ -40,7 +46,9 @@ module MscrmControls.Service.CIProvider {
 		 */
 		public getOutputs(): IOutputBag {
 			return <IOutputBag>{
-				value: (this.value = JSON.stringify(this.currentState))
+				value: (this.value = JSON.stringify(this.currentState.Properties)),
+				accept_buttontext: (this.acceptButtonText = this.currentState.ButtonTexts.Accept_Button_String),
+				reject_buttontext: (this.rejectButtonText = this.currentState.ButtonTexts.Reject_Button_String)
 			};
 		}
 
@@ -66,8 +74,10 @@ module MscrmControls.Service.CIProvider {
 			this.notifyOutputChanged = notifyOutputChanged;
 
 			this.value = context.parameters.value.raw;
+			this.acceptButtonText = context.parameters.accept_buttontext.raw;
+			this.rejectButtonText = context.parameters.reject_buttontext.raw;
 
-			this.currentState = NotificationButtonConfigState.FromJSONString(context, this.value);
+			this.currentState = NotificationButtonConfigState.FromJSONString(context, this.value, this.acceptButtonText, this.rejectButtonText);
 		}
 
 		/**
@@ -95,13 +105,13 @@ module MscrmControls.Service.CIProvider {
 
 		private _changeTextHandler(change: string, buttonType: NotificationButtonType): void {
 			if (change !== null) {
-				(this.currentState as any)[buttonType + "_String"] = change;
+				(this.currentState.ButtonTexts as any)[buttonType + "_String"] = change;
 				this.notifyOutputChanged();
 			}
 		}
 
 		private _changeFlipHandler(value: boolean, buttonType: NotificationButtonType): void {
-			(this.currentState as any)[buttonType + "_Enabled"] = value;
+			(this.currentState.Properties as any)[buttonType + "_Enabled"] = value;
 			/**
 			if (value == false) {
 				(this._currentState as any)[buttonType + "String"] = "";
@@ -159,7 +169,7 @@ module MscrmControls.Service.CIProvider {
 								}
 							]
 						},
-						Value: this.currentState.Reject_Button_Enabled,
+						Value: this.currentState.Properties.Reject_Button_Enabled,
 						Type: "boolean"
 					}
 				}
@@ -235,7 +245,7 @@ module MscrmControls.Service.CIProvider {
 					{
 						Usage: 3 /*PropertyUsage.FalseBound*/,
 						Static: true,
-						Value: (this.currentState as any)[buttonType + "_String"],
+						Value: (this.currentState.ButtonTexts as any)[buttonType + "_String"],
 						Type: "SingleLine.Text",
 						Callback: (change: any) => this._changeTextHandler(change, buttonType),
 						Attributes: {
@@ -261,7 +271,7 @@ module MscrmControls.Service.CIProvider {
 			}
 
 			//We render the text box control only if it is Accept button or if it is Reject button and the flip switch is on
-			if (buttonType == "Accept_Button" || (buttonType == "Reject_Button" && this.currentState.Reject_Button_Enabled)) {
+			if (buttonType == "Accept_Button" || (buttonType == "Reject_Button" && this.currentState.Properties.Reject_Button_Enabled)) {
 				var textBox = this.createTextBox(buttonType);
 				configContainerComponents.push(textBox);
 			}
@@ -300,37 +310,78 @@ module MscrmControls.Service.CIProvider {
 	type NotificationButtonType = 'Accept_Button' | 'Reject_Button';
 
 
-	class NotificationButtonConfigState {
+	class ButtonDisplayText {
 		public Accept_Button_String: string;
-		public Reject_Button_Enabled: boolean;
 		public Reject_Button_String: string;
+	}
 
+	class NotificationProperties {
+		public Reject_Button_Enabled: boolean;
+	}
 
-		static FromJSONString(context: Mscrm.ControlData<IInputBag>, jsonString: string): NotificationButtonConfigState {
-			if (!jsonString) {
-				return NotificationButtonConfigState.getInitialDefaultState(context);
+	class NotificationButtonConfigState {
+		public ButtonTexts: ButtonDisplayText;
+		public Properties: NotificationProperties;
+
+		static FromJSONString(context: Mscrm.ControlData<IInputBag>, jsonString: string, acceptButtonText: string, rejectButtonText: string): NotificationButtonConfigState {
+			if (!jsonString || !acceptButtonText || !rejectButtonText) {
+				return NotificationButtonConfigState.getInitialDefaultState(context, acceptButtonText, rejectButtonText, jsonString);
 			}
 			var parsedJson: any, parsedObject: NotificationButtonConfigState;
 			try {
 				parsedJson = JSON.parse(jsonString);
 				parsedObject = {
-					Accept_Button_String: parsedJson.Accept_Button_String,
-					Reject_Button_Enabled: parsedJson.Reject_Button_Enabled,
-					Reject_Button_String: parsedJson.Reject_Button_String
+					Properties: {
+						Reject_Button_Enabled: parsedJson.Reject_Button_Enabled
+					},
+					ButtonTexts: {
+						Accept_Button_String: acceptButtonText,
+						Reject_Button_String: rejectButtonText
+					}
 				};
 			}
 			catch (ex) {
 				console.log("Error parsing the notification button config. JSON string : " + jsonString); 
-				return NotificationButtonConfigState.getInitialDefaultState(context);
+				return NotificationButtonConfigState.getInitialDefaultState(context, acceptButtonText, rejectButtonText, jsonString);
 			}
 			return parsedObject;
 		}
 
-		static getInitialDefaultState(context: Mscrm.ControlData<IInputBag>) {
+		static getInitialDefaultState(context: Mscrm.ControlData<IInputBag>, acceptButtonText: string, rejectButtonText: string, JSONstring: any): NotificationButtonConfigState {
+			let properties: NotificationProperties ;
+			let buttonTextObj: ButtonDisplayText = { Accept_Button_String: acceptButtonText, Reject_Button_String: rejectButtonText };
+
+			var JSONAcceptString: string;
+			var JSONRejectString: string;
+
+			if (!JSONstring) {
+				properties = {
+					Reject_Button_Enabled: true
+				};
+			}
+			else {
+				var props = JSON.parse(JSONstring);
+				properties = {
+					Reject_Button_Enabled: (props as NotificationProperties).Reject_Button_Enabled
+				}
+				JSONAcceptString = props.Accept_Button_String;
+				JSONRejectString = props.Reject_Button_String;
+			}
+
+			// accept and reject button text fields are introduced post private preview. 
+			// The older records will not have values for accept or reject button fields but  have in JSON bag.
+			// Hence check from JSON as well if field's value is coming to empty
+
+			if (!acceptButtonText) {
+				buttonTextObj.Accept_Button_String = JSONAcceptString ? JSONAcceptString: context ? context.resources.getString("Accept_Button_Default_Text") : "";
+			}
+			if (!rejectButtonText) {
+				buttonTextObj.Reject_Button_String = JSONRejectString ? JSONRejectString :context ? context.resources.getString("Reject_Button_Default_Text") : "";
+			}
+
 			return {
-				Accept_Button_String: context ? context.resources.getString("Accept_Button_Default_Text") : "",
-				Reject_Button_Enabled: true,
-				Reject_Button_String: context ? context.resources.getString("Reject_Button_Default_Text") : ""
+				ButtonTexts: buttonTextObj,
+				Properties: properties
 			}
 		}
 	}

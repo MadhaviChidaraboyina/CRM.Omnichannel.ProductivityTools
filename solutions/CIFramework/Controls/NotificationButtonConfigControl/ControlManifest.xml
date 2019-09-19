@@ -7,7 +7,9 @@
 			<type>SingleLine.Text</type>
 		</type-group>
 		<property name="value" display-name-key="CC_Field_Value" description-key="CC_Field_Value_Desc" of-type-group="Text" usage="bound" required="true" hidden="true" />
-		<resources>
+		<property name="accept_buttontext" display-name-key="CC_Field_accept_buttontext" description-key="CC_Field_accept_buttontext_Desc" of-type-group="Text" usage="bound" hidden="true" />
+		<property name="reject_buttontext" display-name-key="CC_Field_reject_buttontext" description-key="CC_Field_reject_buttontext_Desc" of-type-group="Text" usage="bound" hidden="true" />
+			<resources>
 			<code path="NotificationButtonConfigControl.js" order="2" />
 			<resx path="strings/NotificationButtonConfigControl.1033.resx" version="1.0.0" />
 		</resources>

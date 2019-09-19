@@ -166,10 +166,13 @@ namespace Microsoft.CIFramework.Internal
 		defaultLogger.logEvent(UsageTelemetry);
 	}
 
-	export function logApiData(telemetryData: Object | any, startTime: any, timetaken: any, apiName: string) {
+	export function logApiData(telemetryData: Object | any, startTime: any, timetaken: any, apiName: string, additionalData?: any) {
 		let ApiData: any = new Object();
 		ApiData["StartTime"] = startTime.toUTCString();
 		ApiData["TimeTaken"] = timetaken;
+		if (additionalData) {
+			ApiData["AdditionalDetails"] = additionalData;
+		}
 		if (telemetryData) {
 			telemetryData[apiName] = ApiData;
 		}
