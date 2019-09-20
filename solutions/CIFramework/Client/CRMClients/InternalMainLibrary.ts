@@ -1398,6 +1398,30 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
+	export function updateContext(parameters: Map<string, any>): Promise<any> {
+		let sessionId: string;
+		if (parameters.get(Constants.sessionId)) {
+			sessionId = parameters.get(Constants.sessionId);
+		} else {
+			sessionId = state.sessionManager.getFocusedSession();
+		}
+		const [provider, errorData] = getProvider(parameters);
+		if (provider && provider.sessions.has(sessionId)) {
+			return new Promise<any>((resolve, reject) => {
+				if (state.sessionManager.sessions.has(sessionId)) {
+					state.sessionManager.sessions.get(sessionId).setTemplateParams(parameters.get(Constants.input));
+					return resolve(state.sessionManager.sessions.get(sessionId).templateParams);
+				} else {
+					return reject(Microsoft.CIFramework.Utility.createErrorMap("Please provide valid session id", MessageType.updateContext))
+				}
+			});
+		}
+		else {
+			return Promise.reject(Microsoft.CIFramework.Utility.createErrorMap("Please provide valid session id", MessageType.updateContext))
+		}
+	}
+
+
 	export function logErrorsAndReject(parameters: Map<string, any>): Promise<any> {
 		let error = {} as IErrorHandler;
 		error.reportTime = new Date().toUTCString();

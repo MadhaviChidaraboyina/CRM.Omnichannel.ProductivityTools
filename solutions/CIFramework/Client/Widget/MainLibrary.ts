@@ -985,7 +985,27 @@ namespace Microsoft.CIFramework
 			let errorMsg = "logAnalyticsEvent payload data or eventType is not valid. ";
 			return logErrorsAndReject(errorMsg, MessageType.logAnalyticsEvent, correlationId);
 		}
-	} 
+	}
+
+	/**
+	 * API to set automation dictionary
+	* Invokes the API updateContext
+	* @param input - List of parameters to be updated
+
+	* @returns a Promise: void
+	*/
+	export function updateContext(input: any, sessionId?: string, correlationId?: string): Promise<any> {
+		if (!isNullOrUndefined(input)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.updateContext,
+				messageData: new Map().set(Constants.input, input).set(Constants.sessionId, sessionId).set(Constants.correlationId, correlationId)
+			}
+			return sendMessage<any>(updateContext.name, payload, false);
+		} else {
+			let errorMsg = "The input parameter is null. Provide a value to the parameter";
+			return logErrorsAndReject(errorMsg, MessageType.updateContext, correlationId);
+		}
+	}
 
 	initialize();
 }

@@ -14,6 +14,7 @@ namespace Microsoft.CIFramework.External {
 		getSessionTemplateParams(sessionId?: string): any;
 		setSessionTemplateParams(data: any, sessionId?: string): void;
 		resolveTemplateString(input: string, templateParams: any, scope: string): Promise<string>;
+		createTab(input: XrmClientApi.TabInput): Promise<string>;
 	}
 
 	export class CIFExternalUtilityImpl implements CIFExternalUtility {
@@ -61,13 +62,13 @@ namespace Microsoft.CIFramework.External {
 				if (sessionId) {
 					if (Internal.state.sessionManager.sessions.has(sessionId)) {
 						Internal.state.sessionManager.sessions.get(sessionId).setTemplateParams(input);
-						Internal.state.sessionManager.sessions.get(sessionId).templateParams;
+						return Internal.state.sessionManager.sessions.get(sessionId).templateParams;
 					} else {
 						logErrors("Please provide valid session id", "CIFExternalUtility.setSessionTemplateParams");
 					}
 				} else {
 					Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).setTemplateParams(input);
-					Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).templateParams;
+					return Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).templateParams;
 				}
 			} else {
 				logErrors("Parameter input is required", "CIFExternalUtility.setSessionTemplateParams");
@@ -77,6 +78,10 @@ namespace Microsoft.CIFramework.External {
 
 		public resolveTemplateString(input: string, templateParams: any, scope: string): Promise<string> {
 			return Internal.TemplatesUtility.resolveTemplateString(input, templateParams, scope);
+		}
+
+		public createTab(input: XrmClientApi.TabInput): Promise<string> {
+			return Internal.state.sessionManager.createTabInternal(Internal.state.sessionManager.getFocusedSession(), input);
 		}
 	}
 

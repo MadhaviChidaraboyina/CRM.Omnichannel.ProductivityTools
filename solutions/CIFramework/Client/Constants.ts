@@ -74,6 +74,7 @@ namespace Microsoft.CIFramework
 		public static logErrorsAndReject = "logErrorsAndReject";
 		public static initLogAnalytics = "initLogAnalytics";
 		public static logAnalyticsEvent = "logAnalyticsEvent";
+		public static updateContext = "updateContext";
 	}
 
 	/**

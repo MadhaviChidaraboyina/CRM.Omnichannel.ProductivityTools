@@ -72,6 +72,7 @@ declare namespace Microsoft.CIFramework {
         static logErrorsAndReject: string;
         static initLogAnalytics: string;
         static logAnalyticsEvent: string;
+        static updateContext: string;
     }
     /**
      * All constants for widget side logic should be placed here
@@ -584,4 +585,12 @@ declare namespace Microsoft.CIFramework {
     * @returns a Promise: JSON String with status message
     */
     function logAnalyticsEvent(data: any, eventName: string, correlationId?: string): Promise<string>;
+    /**
+     * API to set automation dictionary
+    * Invokes the API updateContext
+    * @param input - List of parameters to be updated
+
+    * @returns a Promise: void
+    */
+    function updateContext(input: any, sessionId?: string, correlationId?: string): Promise<any>;
 }
