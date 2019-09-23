@@ -228,6 +228,7 @@ namespace Microsoft.CIFramework
 		public static analyticsPlatformEventName = "logCIFAnalytics";
 		public static focussedSession = "focussedSession";
 		public static clientSessionId = "clientSessionId";
+		public static isDelete = "isDelete";
 	}
 
 	export enum ErrorCode {

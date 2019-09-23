@@ -223,6 +223,7 @@ declare namespace Microsoft.CIFramework {
         static analyticsPlatformEventName: string;
         static focussedSession: string;
         static clientSessionId: string;
+        static isDelete: string;
     }
     enum ErrorCode {
         Notes_Flap_Already_Expanded = 101,
@@ -592,5 +593,5 @@ declare namespace Microsoft.CIFramework {
 
     * @returns a Promise: void
     */
-    function updateContext(input: any, sessionId?: string, correlationId?: string): Promise<any>;
+    function updateContext(input: any, sessionId?: string, isDelete?: boolean, correlationId?: string): Promise<any>;
 }

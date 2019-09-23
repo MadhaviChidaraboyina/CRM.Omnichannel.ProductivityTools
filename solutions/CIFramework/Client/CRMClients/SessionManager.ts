@@ -48,6 +48,12 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
+		public removeTemplateParams(input: any) {
+			for (var i = 0; i < input.length; i++) {
+				delete this._templateParams[input[i]];
+			}
+		}
+
 		public get correlationId(): string {
 			return this._correlationId;
 		}

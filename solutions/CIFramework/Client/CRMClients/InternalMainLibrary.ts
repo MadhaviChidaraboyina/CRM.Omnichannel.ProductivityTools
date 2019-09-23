@@ -63,7 +63,8 @@ namespace Microsoft.CIFramework.Internal {
 		["insertNotes", [insertNotes]],
 		["logErrorsAndReject", [logErrorsAndReject]],
 		["initLogAnalytics", [raiseInitAnalyticsEvent]],
-		["logAnalyticsEvent", [raiseAnalyticsEvent]]
+		["logAnalyticsEvent", [raiseAnalyticsEvent]],
+		["updateContext", [updateContext]]
 	]);
 
 	let genericEventRegistrations = new Map<string, CIProvider[]>();
@@ -1409,10 +1410,14 @@ namespace Microsoft.CIFramework.Internal {
 		if (provider && provider.sessions.has(sessionId)) {
 			return new Promise<any>((resolve, reject) => {
 				if (state.sessionManager.sessions.has(sessionId)) {
-					state.sessionManager.sessions.get(sessionId).setTemplateParams(parameters.get(Constants.input));
-					return resolve(state.sessionManager.sessions.get(sessionId).templateParams);
+					if (parameters.get(Constants.isDelete)) {
+						state.sessionManager.sessions.get(sessionId).removeTemplateParams(parameters.get(Constants.input));
+					} else {
+						state.sessionManager.sessions.get(sessionId).setTemplateParams(parameters.get(Constants.input));
+					}
+					resolve(new Map<string, any>().set(Constants.value, state.sessionManager.sessions.get(sessionId).templateParams));
 				} else {
-					return reject(Microsoft.CIFramework.Utility.createErrorMap("Please provide valid session id", MessageType.updateContext))
+					reject(Microsoft.CIFramework.Utility.createErrorMap("Please provide valid session id", MessageType.updateContext))
 				}
 			});
 		}
