@@ -149,7 +149,7 @@
 			string webresourcedatavalue = url;
 			if (data != string.Empty)
 			{
-				webresourcedatavalue = webresourcedatavalue + "&" + data;
+				webresourcedatavalue = webresourcedatavalue + data;
 			}
 
 			string finalUrlString = string.Empty;
@@ -181,7 +181,7 @@
 			}
 			//webresourcedatavalue = webresourcedatavalue.Replace("&", "%26");
 			//webresourcedatavalue = webresourcedatavalue.Replace("=", "%3D");
-			webresourceData.value = @"url={0}".Replace("{0}", finalUrlString);
+			webresourceData.value = @"cif_thirdpartyurl{0}".Replace("{0}", finalUrlString);
 			paramInfo.Add(TemplatePluginConstants.WEBRESOURCEDATA_PARAMETER, webresourceData);
 			return paramInfo;
 		}
