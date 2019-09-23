@@ -53,6 +53,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_CIFrameworkAnalytics_managed.zip">
+      <Link>CIFramework\msdyn_CIFrameworkAnalytics_managed.zip</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_CIFramework_managed.zip" Condition="'$(cifEnableGenerator)'!='true'">
       <Link>CIFramework\CIFramework_managed.zip</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -157,4 +161,7 @@
     <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="BuildAnalytics" BeforeTargets="Compile" Condition="!Exists('$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_CIFrameworkAnalytics_managed.zip')">
+	<MSBuild Projects="..\..\CIFrameworkAnalytics\dirs.proj" />
+ </Target>
  </Project>
