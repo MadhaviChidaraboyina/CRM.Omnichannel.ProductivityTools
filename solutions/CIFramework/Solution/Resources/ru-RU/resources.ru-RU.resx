@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Структура интеграции API каналов</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -381,7 +377,7 @@
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
-    <value>Форма для этой сущности.</value>
+    <value>Форма для данной сущности.</value>
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
@@ -393,7 +389,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Дата и время, когда была создана запись.</value>
+    <value>Дата и время создания записи.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -493,7 +489,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Только для внутреннего пользования.</value>
+    <value>Только для внутреннего использования.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
@@ -593,7 +589,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Часовой пояс, использовавшийся при создании записи.</value>
+    <value>Код часового пояса, который использовался при создании записи.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>Уникальный идентификатор пользователя-представителя, изменившего запись.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Кнопки действий, которые должны отображаться. (Устарело)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Порядок отображения уведомлений относительно других шаблонов уведомлений.</value>
@@ -705,7 +709,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Часовой пояс, использовавшийся при создании записи.</value>
+    <value>Код часового пояса, который использовался при создании записи.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Уникальный код экземпляров сущности.</value>
+    <value>Уникальный идентификатор для экземпляров сущности</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -829,7 +833,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Часовой пояс, использовавшийся при создании записи.</value>
+    <value>Код часового пояса, который использовался при создании записи.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
@@ -1037,7 +1041,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Часовой пояс, использовавшийся при создании записи.</value>
+    <value>Код часового пояса, который использовался при создании записи.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
@@ -1053,7 +1057,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Часовой пояс, использовавшийся при создании записи.</value>
+    <value>Код часового пояса, который использовался при создании записи.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
@@ -1137,7 +1141,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Часовой пояс, использовавшийся при создании записи.</value>
+    <value>Код часового пояса, который использовался при создании записи.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1227,7 +1231,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Часовой пояс, использовавшийся при создании записи.</value>
+    <value>Код часового пояса, который использовался при создании записи.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedBy" xml:space="preserve">
@@ -1311,7 +1315,7 @@
     <comment>'msdyn_templatetags' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Часовой пояс, использовавшийся при создании записи.</value>
+    <value>Код часового пояса, который использовался при создании записи.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -1343,7 +1347,7 @@
     <comment>'TemplateTag' : Description for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:Description,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
-    <value>Форма для этой сущности.</value>
+    <value>Форма для данной сущности.</value>
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
@@ -1351,7 +1355,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Когда создано</value>
+    <value>Дата создания</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -1415,7 +1419,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_LandingUrl' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_name" xml:space="preserve">
-    <value>Название</value>
+    <value>Имя</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_RoleSelector" xml:space="preserve">
@@ -1451,7 +1455,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Идентификатор часового пояса (преобразование в UTC)</value>
+    <value>Код часового пояса (в формате UTC)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -1574,6 +1578,10 @@
     <value>Кем изменено (представитель)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Текст кнопки "Принять"</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (Устарело)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Поля уведомлений</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Текст кнопки "Отклонить"</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Порядок уведомления</value>
@@ -2243,7 +2255,7 @@
     <comment>'App Parameter Definition' : label for cell in Entity FormXml ID: '{831b4552-37aa-9960-3770-ce6606502857}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{907339f9-d1e5-48b6-983d-e55b38ce05dd}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'App Parameter Definition' : label for tab in Entity FormXml ID: '{907339f9-d1e5-48b6-983d-e55b38ce05dd}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{96322715-36cd-1a8e-4b02-ae5a21b755bb}" xml:space="preserve">
@@ -2255,11 +2267,11 @@
     <comment>'App Parameter Definition' : label for cell in Entity FormXml ID: '{aaed2985-e20a-e643-e7d6-ce9b9b459b1a}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{f956a332-f5f8-4577-a104-9f863d694e57}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'App Parameter Definition' : label for section in Entity FormXml ID: '{f956a332-f5f8-4577-a104-9f863d694e57}'</comment>
   </data>
   <data name="1:label,Application Tab Template{1c7ca199-5627-4de2-b6c4-83d0be0be5be}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Application Tab Template' : label for tab in Entity FormXml ID: '{1c7ca199-5627-4de2-b6c4-83d0be0be5be}'</comment>
   </data>
   <data name="1:label,Application Tab Template{275a9039-b619-6781-3d78-478ee443d9e8}" xml:space="preserve">
@@ -2299,7 +2311,7 @@
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{db2a537d-5522-9de6-943d-4d5c07542e92}'</comment>
   </data>
   <data name="1:label,Application Tab Template{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Application Tab Template' : label for section in Entity FormXml ID: '{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{10c387e0-fbb6-442b-b126-b15e8518e03f}" xml:space="preserve">
@@ -2307,11 +2319,11 @@
     <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{10c387e0-fbb6-442b-b126-b15e8518e03f}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{7c173265-af1b-4522-a8b8-6a435cae429a}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Application Template Parameter' : label for tab in Entity FormXml ID: '{7c173265-af1b-4522-a8b8-6a435cae429a}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{7d5d94da-0ab2-41af-a918-403bab13a9bc}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Application Template Parameter' : label for section in Entity FormXml ID: '{7d5d94da-0ab2-41af-a918-403bab13a9bc}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{c9a9b00c-6458-4010-88b4-b2076efe26d3}" xml:space="preserve">
@@ -2335,11 +2347,11 @@
     <comment>'Application Type' : label for cell in Entity FormXml ID: '{74fe1b3b-ddd9-466d-b06c-f66467da8370}'</comment>
   </data>
   <data name="1:label,Application Type{7a9894bd-4d59-4cb5-9dc3-ab6b84ef6ad5}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Application Type' : label for tab in Entity FormXml ID: '{7a9894bd-4d59-4cb5-9dc3-ab6b84ef6ad5}'</comment>
   </data>
   <data name="1:label,Application Type{9aa87706-f770-4f1e-a905-4379d3517c38}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Application Type' : label for section in Entity FormXml ID: '{9aa87706-f770-4f1e-a905-4379d3517c38}'</comment>
   </data>
   <data name="1:label,Application Type{e403ad33-9951-d007-4358-2673171e868b}" xml:space="preserve">
@@ -2371,19 +2383,19 @@
     <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode0" xml:space="preserve">
-    <value>Активный</value>
+    <value>Активно</value>
     <comment>'msdyn_ciprovider' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode1" xml:space="preserve">
-    <value>Неактивный</value>
+    <value>Неактивно</value>
     <comment>'msdyn_ciprovider' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode1" xml:space="preserve">
-    <value>Активный</value>
+    <value>Активно</value>
     <comment>'msdyn_ciprovider' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode2" xml:space="preserve">
-    <value>Неактивный</value>
+    <value>Неактивно</value>
     <comment>'msdyn_ciprovider' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode0" xml:space="preserve">
@@ -2607,7 +2619,7 @@
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{ca715140-33b6-4147-91a0-85a2c320f7dd}'</comment>
   </data>
   <data name="1:label,Notification Fields{cd441dbf-27f6-4ccb-aeb9-8c0b8a3f1f30}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Notification Fields' : label for section in Entity FormXml ID: '{cd441dbf-27f6-4ccb-aeb9-8c0b8a3f1f30}'</comment>
   </data>
   <data name="1:label,Notification Fields{cf8c0f6d-2225-4c33-8f65-13efaf38fda7}" xml:space="preserve">
@@ -2615,7 +2627,7 @@
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{cf8c0f6d-2225-4c33-8f65-13efaf38fda7}'</comment>
   </data>
   <data name="1:label,Notification Fields{d6df0d89-7b66-450a-8916-377c7e683e23}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Notification Fields' : label for tab in Entity FormXml ID: '{d6df0d89-7b66-450a-8916-377c7e683e23}'</comment>
   </data>
   <data name="1:label,Notification Fields{dcd8ee8a-4aac-30bc-d07a-592ad035b9dd}" xml:space="preserve">
@@ -2634,6 +2646,14 @@
     <value>Раздел</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Поля уведомлений</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
@@ -2643,7 +2663,7 @@
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{94dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{9730037d-ab23-4a34-9b05-5a0e50e1c401}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Notification Template' : label for tab in Entity FormXml ID: '{9730037d-ab23-4a34-9b05-5a0e50e1c401}'</comment>
   </data>
   <data name="1:label,Notification Template{e3634dd8-8a0a-2c9e-49b2-ad872d9d9ba3}" xml:space="preserve">
@@ -2659,7 +2679,7 @@
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{eeb7401d-7729-9db8-8cc1-6d8343052141}'</comment>
   </data>
   <data name="1:label,Notification Template{ff05f569-e51f-4c31-96b2-ae6d20c9364f}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{ff05f569-e51f-4c31-96b2-ae6d20c9364f}'</comment>
   </data>
   <data name="1:label,Session Templates{093dd305-a7cc-d998-e489-ac60594b185e}" xml:space="preserve">
@@ -2679,7 +2699,7 @@
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{3b39cc03-8ee0-b79b-125d-272c546b6725}'</comment>
   </data>
   <data name="1:label,Session Templates{559158ad-2749-a49e-7128-466d84e59a24}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Session Templates' : label for section in Entity FormXml ID: '{559158ad-2749-a49e-7128-466d84e59a24}'</comment>
   </data>
   <data name="1:label,Session Templates{5d09b768-575c-d77d-6479-2130abbde22b}" xml:space="preserve">
@@ -2703,7 +2723,7 @@
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{bd25aa54-bb39-81ea-a63b-07857ea961aa}'</comment>
   </data>
   <data name="1:label,Session Templates{d507a7e4-d1a6-a2d3-2dcd-d42055c621cc}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'Session Templates' : label for tab in Entity FormXml ID: '{d507a7e4-d1a6-a2d3-2dcd-d42055c621cc}'</comment>
   </data>
   <data name="1:label,Session Templates{d8c75080-1be0-30ce-1890-903eee8db7e6}" xml:space="preserve">
@@ -2711,11 +2731,11 @@
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{d8c75080-1be0-30ce-1890-903eee8db7e6}'</comment>
   </data>
   <data name="1:label,TemplateTag{0fb9986c-0562-4c97-b642-8e2ead7badfa}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'TemplateTag' : label for tab in Entity FormXml ID: '{0fb9986c-0562-4c97-b642-8e2ead7badfa}'</comment>
   </data>
   <data name="1:label,TemplateTag{11d2b9d4-3f9e-4931-a5c2-f87d878b4ee8}" xml:space="preserve">
-    <value>Общие сведения</value>
+    <value>Общее</value>
     <comment>'TemplateTag' : label for section in Entity FormXml ID: '{11d2b9d4-3f9e-4931-a5c2-f87d878b4ee8}'</comment>
   </data>
   <data name="1:label,TemplateTag{713f58d8-f7c7-44fe-a230-1e0004dc7913}" xml:space="preserve">

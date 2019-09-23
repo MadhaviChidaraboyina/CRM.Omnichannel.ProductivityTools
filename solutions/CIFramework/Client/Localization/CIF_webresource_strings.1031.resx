@@ -137,6 +137,78 @@
     <value>Schließen</value>
     <comment>Text for close button.</comment>
   </data>
+  <data name="FRE_COMPREHENSIVEVIEW_DESC" xml:space="preserve">
+    <value>Alle Kundeninformationen sind an einer zentralen Stelle abruf- und verfügbar. So können Sie Anfragen schneller erledigen.</value>
+    <comment>Description for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_COMPREHENSIVEVIEW_TITLE" xml:space="preserve">
+    <value>Umfassende Ansicht von Kundenkontaktverläufen</value>
+    <comment>Title for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_DESC" xml:space="preserve">
+    <value>Laden Sie andere Agents und Vorgesetzte zur Zusammenarbeit ein. Das verkürzt die Problemlösungsdauer.</value>
+    <comment>Description for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_TITLE" xml:space="preserve">
+    <value>Benutzer ansprechen</value>
+    <comment>Title for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_DESC" xml:space="preserve">
+    <value>Nutzen und verwalten Sie Sitemap-Anwendungen im Zusammenhang mit einer Sitzung.</value>
+    <comment>Description for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_TITLE" xml:space="preserve">
+    <value>Kontextbezogene Anwendungen</value>
+    <comment>Title for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_DONTSHOWMEAGAIN" xml:space="preserve">
+    <value>Nicht mehr anzeigen</value>
+    <comment>Opt-out checkbox label for FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_DESC" xml:space="preserve">
+    <value>Öffnen Sie mittels Tastatur und Mausklicks Arbeitselemente zügig, und steigern Sie so Ihre Produktivität.</value>
+    <comment>Description for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_TITLE" xml:space="preserve">
+    <value>Mehr erledigen</value>
+    <comment>Title for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETSTARTED" xml:space="preserve">
+    <value>Erste Schritte</value>
+    <comment>Get Started Button Text for FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_DESC" xml:space="preserve">
+    <value>Bei einer kurzen Einführung erfahren Sie, wie Sie Ihre Kunden mit einem schnellen und persönlich gestalteten Service begeistern können.</value>
+    <comment>Description for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_TITLE" xml:space="preserve">
+    <value>Willkommen bei Omnichannel für Dynamics 365 Customer Service</value>
+    <comment>Title for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_LASTSLIDE_TITLE" xml:space="preserve">
+    <value>Alles erledigt</value>
+    <comment>Title for the Last Slide on FRE</comment>
+  </data>
+  <data name="FRE_PAGINATION_OF" xml:space="preserve">
+    <value>von</value>
+    <comment>of Word of Pagination on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_DESC" xml:space="preserve">
+    <value>Übertragen Sie Unterhaltungen ohne Probleme an die am besten geeigneten Agents, um Anfragen schnell abzuwickeln.</value>
+    <comment>Description for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_TITLE" xml:space="preserve">
+    <value>Unterhaltung übertragen</value>
+    <comment>Title for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_DESC" xml:space="preserve">
+    <value>Indem Sie die volle Kontrolle über die Kontext- und Kundendaten haben, lassen sich mehrere Kundengespräche gleichzeitig verwalten.</value>
+    <comment>Description for Work With Multiple Customers Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_TITLE" xml:space="preserve">
+    <value>Mit mehrerer Kunden arbeiten</value>
+    <comment>Title for Work With Multiple Customers Slide on FRE</comment>
+  </data>
   <data name="LAUNCH_PRESENCE_DIALOG_TOOLTIP" xml:space="preserve">
     <value>Dialog zur Anwesenheit aufrufen</value>
     <comment>Tooltip for presence control in navbar</comment>

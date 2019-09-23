@@ -137,6 +137,78 @@
     <value>Затвори</value>
     <comment>Text for close button.</comment>
   </data>
+  <data name="FRE_COMPREHENSIVEVIEW_DESC" xml:space="preserve">
+    <value>Прикажите и приступите свим информацијама о клијентима на дохват руке на једном месту како бисте испоручили бржу услугу.</value>
+    <comment>Description for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_COMPREHENSIVEVIEW_TITLE" xml:space="preserve">
+    <value>Свеобухватан приказ пута који пређу клијенти</value>
+    <comment>Title for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_DESC" xml:space="preserve">
+    <value>Позивајте друге агенте, надзорнике на сарадњу и брже решавате проблеме.</value>
+    <comment>Description for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_TITLE" xml:space="preserve">
+    <value>Консултујте се са корисницима</value>
+    <comment>Title for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_DESC" xml:space="preserve">
+    <value>Приступајте и управљајте апликацијама мапе локација које су унутар контекста сесије.</value>
+    <comment>Description for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_TITLE" xml:space="preserve">
+    <value>Контекстуалне апликације</value>
+    <comment>Title for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_DONTSHOWMEAGAIN" xml:space="preserve">
+    <value>Не приказуј ми поново</value>
+    <comment>Opt-out checkbox label for FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_DESC" xml:space="preserve">
+    <value>Брзо отварајте радне ставке тастатуром и гестовима клика мишем и максимално увећајте своју продуктивност.</value>
+    <comment>Description for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_TITLE" xml:space="preserve">
+    <value>Обавите више</value>
+    <comment>Title for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETSTARTED" xml:space="preserve">
+    <value>Први кораци</value>
+    <comment>Get Started Button Text for FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_DESC" xml:space="preserve">
+    <value>Погледајте брзи водич да бисте сазнали како да испоручите брзу, персонализовану услугу клијентима.</value>
+    <comment>Description for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_TITLE" xml:space="preserve">
+    <value>Добро дошли у више канала за Dynamics 365 Customer Service</value>
+    <comment>Title for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_LASTSLIDE_TITLE" xml:space="preserve">
+    <value>Све је готово</value>
+    <comment>Title for the Last Slide on FRE</comment>
+  </data>
+  <data name="FRE_PAGINATION_OF" xml:space="preserve">
+    <value>од</value>
+    <comment>of Word of Pagination on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_DESC" xml:space="preserve">
+    <value>Преносите разговоре без проблема најбоље квалификованим агентима како бисте их брзо разрешили.</value>
+    <comment>Description for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_TITLE" xml:space="preserve">
+    <value>Пренос разговора</value>
+    <comment>Title for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_DESC" xml:space="preserve">
+    <value>Управљате истовремено са више разговора са клијентима са потпуном контролом контекста и детаља о клијенту.</value>
+    <comment>Description for Work With Multiple Customers Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_TITLE" xml:space="preserve">
+    <value>Рад са више клијената</value>
+    <comment>Title for Work With Multiple Customers Slide on FRE</comment>
+  </data>
   <data name="LAUNCH_PRESENCE_DIALOG_TOOLTIP" xml:space="preserve">
     <value>Покретање дијалога о присутности</value>
     <comment>Tooltip for presence control in navbar</comment>

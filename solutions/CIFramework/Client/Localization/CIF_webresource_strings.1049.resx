@@ -137,6 +137,78 @@
     <value>Закрыть</value>
     <comment>Text for close button.</comment>
   </data>
+  <data name="FRE_COMPREHENSIVEVIEW_DESC" xml:space="preserve">
+    <value>Получите удобный доступ к полной информации о клиентах, чтобы быстрее обслуживать их.</value>
+    <comment>Description for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_COMPREHENSIVEVIEW_TITLE" xml:space="preserve">
+    <value>Полное представление цикла взаимодействия с клиентом</value>
+    <comment>Title for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_DESC" xml:space="preserve">
+    <value>Приглашайте других агентов и супервайзеров, чтобы совместными усилиями быстрее решать проблемы.</value>
+    <comment>Description for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_TITLE" xml:space="preserve">
+    <value>Советуйтесь с пользователями</value>
+    <comment>Title for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_DESC" xml:space="preserve">
+    <value>Работайте с приложениями карты сайта в контексте сеанса.</value>
+    <comment>Description for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_TITLE" xml:space="preserve">
+    <value>Контекстные приложения</value>
+    <comment>Title for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_DONTSHOWMEAGAIN" xml:space="preserve">
+    <value>Больше не показывать</value>
+    <comment>Opt-out checkbox label for FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_DESC" xml:space="preserve">
+    <value>Быстро открывайте рабочие элементы с помощью клавиатуры и жестов мыши для максимально эффективной работы.</value>
+    <comment>Description for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_TITLE" xml:space="preserve">
+    <value>Добивайтесь большего</value>
+    <comment>Title for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETSTARTED" xml:space="preserve">
+    <value>Начало работы</value>
+    <comment>Get Started Button Text for FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_DESC" xml:space="preserve">
+    <value>Ознакомьтесь с кратким обзором возможностей для быстрого и персонализированного обслуживания клиентов.</value>
+    <comment>Description for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_TITLE" xml:space="preserve">
+    <value>Многоканальное взаимодействие для Dynamics 365 Customer Service</value>
+    <comment>Title for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_LASTSLIDE_TITLE" xml:space="preserve">
+    <value>Все готово</value>
+    <comment>Title for the Last Slide on FRE</comment>
+  </data>
+  <data name="FRE_PAGINATION_OF" xml:space="preserve">
+    <value>из</value>
+    <comment>of Word of Pagination on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_DESC" xml:space="preserve">
+    <value>Быстро переключайте беседы на наиболее квалифицированных агентов для быстрого разрешения обращений.</value>
+    <comment>Description for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_TITLE" xml:space="preserve">
+    <value>Передавайте разговоры</value>
+    <comment>Title for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_DESC" xml:space="preserve">
+    <value>Управляйте несколькими разговорами одновременно, обладая полной информацией о клиенте.</value>
+    <comment>Description for Work With Multiple Customers Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_TITLE" xml:space="preserve">
+    <value>Работайте с несколькими клиентами</value>
+    <comment>Title for Work With Multiple Customers Slide on FRE</comment>
+  </data>
   <data name="LAUNCH_PRESENCE_DIALOG_TOOLTIP" xml:space="preserve">
     <value>Открыть диалоговое окно присутствия</value>
     <comment>Tooltip for presence control in navbar</comment>

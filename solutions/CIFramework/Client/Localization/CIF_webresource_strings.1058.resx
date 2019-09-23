@@ -137,6 +137,78 @@
     <value>Закрити</value>
     <comment>Text for close button.</comment>
   </data>
+  <data name="FRE_COMPREHENSIVEVIEW_DESC" xml:space="preserve">
+    <value>Переглядайте всі відомості про клієнтів в одному місці, щоб забезпечити швидше обслуговування.</value>
+    <comment>Description for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_COMPREHENSIVEVIEW_TITLE" xml:space="preserve">
+    <value>Комплексне подання шляху клієнтів</value>
+    <comment>Title for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_DESC" xml:space="preserve">
+    <value>Запросіть інших агентів і керівників, щоб співпрацювати та вирішувати питання швидше.</value>
+    <comment>Description for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_TITLE" xml:space="preserve">
+    <value>Консультуйтеся з користувачами</value>
+    <comment>Title for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_DESC" xml:space="preserve">
+    <value>Переглядайте та впорядковуйте програми карти сайту, потрібні протягом сеансу.</value>
+    <comment>Description for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_TITLE" xml:space="preserve">
+    <value>Контекстні програми</value>
+    <comment>Title for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_DONTSHOWMEAGAIN" xml:space="preserve">
+    <value>Більше не відображати</value>
+    <comment>Opt-out checkbox label for FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_DESC" xml:space="preserve">
+    <value>Швидко відкривайте робочі елементи за допомогою клавіатури та миші, щоб підвищити продуктивність.</value>
+    <comment>Description for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_TITLE" xml:space="preserve">
+    <value>Встигайте більше</value>
+    <comment>Title for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETSTARTED" xml:space="preserve">
+    <value>Розпочніть роботу</value>
+    <comment>Get Started Button Text for FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_DESC" xml:space="preserve">
+    <value>Переглянути коротку демонстрацію можливостей для надання швидкого персоналізованого обслуговування.</value>
+    <comment>Description for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_TITLE" xml:space="preserve">
+    <value>Вітаємо в Омніканальності для Dynamics 365 Customer Service</value>
+    <comment>Title for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_LASTSLIDE_TITLE" xml:space="preserve">
+    <value>Усе готово</value>
+    <comment>Title for the Last Slide on FRE</comment>
+  </data>
+  <data name="FRE_PAGINATION_OF" xml:space="preserve">
+    <value>з</value>
+    <comment>of Word of Pagination on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_DESC" xml:space="preserve">
+    <value>Легко передавайте розмови найкваліфікованішим агентам, щоб швидко усувати проблеми.</value>
+    <comment>Description for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_TITLE" xml:space="preserve">
+    <value>Передати розмову</value>
+    <comment>Title for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_DESC" xml:space="preserve">
+    <value>Керуйте кількома розмовами з клієнтами одночасно, зберігаючи доступ до контексту та відомостей про клієнтів.</value>
+    <comment>Description for Work With Multiple Customers Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_TITLE" xml:space="preserve">
+    <value>Працюйте з кількома клієнтами</value>
+    <comment>Title for Work With Multiple Customers Slide on FRE</comment>
+  </data>
   <data name="LAUNCH_PRESENCE_DIALOG_TOOLTIP" xml:space="preserve">
     <value>Діалогове вікно присутності під час запуску</value>
     <comment>Tooltip for presence control in navbar</comment>

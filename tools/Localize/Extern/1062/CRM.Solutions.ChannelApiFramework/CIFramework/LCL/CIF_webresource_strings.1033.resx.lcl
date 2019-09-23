@@ -101,6 +101,294 @@
           <Str Name="Custom3" Val="WO18898_20190528" />
         </Props>
       </Item>
+      <Item ItemId=";FRE_COMPREHENSIVEVIEW_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View and access all the customer information at your fingertips at one place to deliver a faster service.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ātri skatiet visu klientu informāciju un piekļūstiet tai vienuviet, lai ātrāk nodrošinātu pakalpojumu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002924Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Comprehensive View Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_COMPREHENSIVEVIEW_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Comprehensive view of your customers' journey]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Visaptverošs skats uz jūsu klientu kampaņu]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002924Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Comprehensive View Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONSULT_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invite other agents, supervisors to collaborate and solve the issues faster.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uzaicināt citus aģentus un vadītājus, lai sadarbotos un ātrāk atrisinātu problēmas.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002924Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Consult With Users Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONSULT_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Consult with users]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Konsultēties ar lietotājiem]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002924Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Consult With Users Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONTEXTUALAPPS_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Access and manage sitemap applications that lie within the context of a session.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Piekļūstiet vietnes kartes lietojumprogrammām, kas ietilpst sesijas kontekstā, un pārvaldiet tās.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002924Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Contextual Applications Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONTEXTUALAPPS_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Contextual applications]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Konteksta lietojumprogrammas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002924Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Contextual Applications Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_DONTSHOWMEAGAIN" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Don't show me again]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Turpmāk nerādīt]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002924Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Opt-out checkbox label for FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_GETMOREDONE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Quickly open work items with keyboard and mouse-click gesture and maximize your productivity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ātri atveriet darba elementus ar tastatūras un peles klikšķa žestu un maksimāli palieliniet savu produktivitāti.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002924Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Get More Done Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_GETMOREDONE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get more done]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Paveiciet vairāk]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002924Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Get More Done Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_GETSTARTED" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get Started]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darba sākšana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002597Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Get Started Button Text for FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_INTRO_SLIDE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Take a quick tour to learn how to deliver fast, personalized service to your customers.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ātri uzziniet, kā klientiem nodrošināt ātru un personalizētu pakalpojumu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002597Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for the First Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_INTRO_SLIDE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Welcome to Omnichannel for Dynamics 365 Customer Service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Laipni lūdzam programmas Dynamics 365 Customer Service universālajā kanālā!]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002597Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for the First Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_LASTSLIDE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All Done]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Viss izdarīts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002597Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for the Last Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_PAGINATION_OF" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[of]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[no]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002597Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[of Word of Pagination on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_TRANSFER_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transfer the conversations smoothly to the best-qualified agents to resolve them fast.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ērti pārsūtiet sarunas kvalificētākajiem aģentiem, lai tās ātri atrisinātu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002597Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Transfer the Conversation Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_TRANSFER_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transfer the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pārsūtīt sarunu]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000257Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Transfer the Conversation Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_WORKWITHMULTIPLE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Manage multiple customer conversations simultaneously with complete control of the context and customer details.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pārvaldiet vairākas klientu sarunas vienlaicīgi, pilnībā kontrolējot kontekstu un klienta informāciju.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000257Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Work With Multiple Customers Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_WORKWITHMULTIPLE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Work with multiple customers]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Darbs ar vairākiem klientiem]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000257Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Work With Multiple Customers Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
       <Item ItemId=";LAUNCH_PRESENCE_DIALOG_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Launch presence dialog]]></Val>

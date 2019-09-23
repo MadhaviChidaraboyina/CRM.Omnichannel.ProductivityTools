@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Struktura integracji interfejsu API kanału</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -381,7 +377,7 @@
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
-    <value>Formularz dotyczący tej encji.</value>
+    <value>Formularz tej encji.</value>
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
@@ -405,7 +401,7 @@
     <comment> 'msdyn_ciprovider' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Numer sekwencyjny operacji importu, w wyniku której ten rekord został utworzony.</value>
+    <value>Numer sekwencyjny operacji importu, w wyniku której został utworzony ten rekord.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej używanej przy tworzeniu rekordu.</value>
+    <value>Kod strefy czasowej używanej podczas tworzenia rekordu.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>Unikatowy identyfikator użytkownika delegowanego, który zmodyfikował rekord.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Przyciski akcji, które mają być wyświetlane. (Przestarzałe)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Kolejność wyświetlania powiadomień w odniesieniu do innych szablonów powiadomień.</value>
@@ -1543,7 +1547,7 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej konwersji czasu UTC</value>
+    <value>Kod strefy czasowej do konwersji czasu UTC</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
@@ -1573,6 +1577,10 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Zmodyfikowane przez (użytkownik delegowany)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Tekst przycisku Zaakceptuj</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Przyciski akcji (przestarzałe)</value>
@@ -1605,6 +1613,10 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Pola powiadomień</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Tekst przycisku Odrzuć</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Kolejność powiadomień</value>
@@ -1651,7 +1663,7 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej konwersji czasu UTC</value>
+    <value>Kod strefy czasowej do konwersji czasu UTC</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
@@ -1771,7 +1783,7 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej konwersji czasu UTC</value>
+    <value>Kod strefy czasowej do konwersji czasu UTC</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
@@ -1971,7 +1983,7 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej konwersji czasu UTC</value>
+    <value>Kod strefy czasowej do konwersji czasu UTC</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
@@ -1987,7 +1999,7 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej konwersji czasu UTC</value>
+    <value>Kod strefy czasowej do konwersji czasu UTC</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
@@ -2067,7 +2079,7 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej konwersji czasu UTC</value>
+    <value>Kod strefy czasowej do konwersji czasu UTC</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
@@ -2151,7 +2163,7 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej konwersji czasu UTC</value>
+    <value>Kod strefy czasowej do konwersji czasu UTC</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedBy" xml:space="preserve">
@@ -2231,7 +2243,7 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
     <comment>'msdyn_templatetags' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej konwersji czasu UTC</value>
+    <value>Kod strefy czasowej do konwersji czasu UTC</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,App Parameter Definition{07190a27-a07a-4cae-adca-49a091653e41}" xml:space="preserve">
@@ -2633,6 +2645,14 @@ Nie — wartość musi zostać dostarczona podczas tworzenia szablonu, w którym
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Obszar</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Pola powiadomień</value>

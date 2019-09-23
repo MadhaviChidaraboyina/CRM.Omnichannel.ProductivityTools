@@ -137,6 +137,78 @@
     <value>Tutup</value>
     <comment>Text for close button.</comment>
   </data>
+  <data name="FRE_COMPREHENSIVEVIEW_DESC" xml:space="preserve">
+    <value>Lihat dan akses semua maklumat pelanggan di hujung jari anda di bawah satu bumbung untuk menyampaikan perkhidmatan yang lebih pantas.</value>
+    <comment>Description for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_COMPREHENSIVEVIEW_TITLE" xml:space="preserve">
+    <value>Pandangan menyeluruh perjalanan pelanggan anda</value>
+    <comment>Title for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_DESC" xml:space="preserve">
+    <value>Jemput ejen, penyelia lain untuk bekerjasama dan menyelesaikan isu dengan lebih pantas.</value>
+    <comment>Description for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_TITLE" xml:space="preserve">
+    <value>Runding dengan pengguna</value>
+    <comment>Title for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_DESC" xml:space="preserve">
+    <value>Akses dan urus aplikasi peta tapak yang berkaitan dengan konteks sesi.</value>
+    <comment>Description for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_TITLE" xml:space="preserve">
+    <value>Aplikasi kontekstual</value>
+    <comment>Title for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_DONTSHOWMEAGAIN" xml:space="preserve">
+    <value>Jangan tunjukkan kepada saya lagi</value>
+    <comment>Opt-out checkbox label for FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_DESC" xml:space="preserve">
+    <value>Buka item kerja dengan pantas menggunakan papan kekunci serta isyarat klikan tetikus dan maksimumkan produktiviti anda.</value>
+    <comment>Description for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_TITLE" xml:space="preserve">
+    <value>Siapkan lebih banyak kerja</value>
+    <comment>Title for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETSTARTED" xml:space="preserve">
+    <value>Mari Bermula</value>
+    <comment>Get Started Button Text for FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_DESC" xml:space="preserve">
+    <value>Sertai lawatan pantas untuk mempelajari cara menyampaikan perkhidmatan yang cepat dan peribadi kepada pelanggan anda.</value>
+    <comment>Description for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_TITLE" xml:space="preserve">
+    <value>Selamat datang ke Saluran Omni untuk Dynamics 365 Customer Service</value>
+    <comment>Title for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_LASTSLIDE_TITLE" xml:space="preserve">
+    <value>Semua Selesai</value>
+    <comment>Title for the Last Slide on FRE</comment>
+  </data>
+  <data name="FRE_PAGINATION_OF" xml:space="preserve">
+    <value>daripada</value>
+    <comment>of Word of Pagination on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_DESC" xml:space="preserve">
+    <value>Pindahkan perbualan dengan lancar kepada ejen yang layak untuk menyelesaikannya dengan cepat.</value>
+    <comment>Description for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_TITLE" xml:space="preserve">
+    <value>Pindahkan perbualan</value>
+    <comment>Title for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_DESC" xml:space="preserve">
+    <value>Urus berbilang perbualan pelanggan secara serentak dengan kawalan konteks dan butiran pelanggan yang menyeluruh.</value>
+    <comment>Description for Work With Multiple Customers Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_TITLE" xml:space="preserve">
+    <value>Bekerja dengan berbilang pelanggan</value>
+    <comment>Title for Work With Multiple Customers Slide on FRE</comment>
+  </data>
   <data name="LAUNCH_PRESENCE_DIALOG_TOOLTIP" xml:space="preserve">
     <value>Lancarkan dialog kehadiran</value>
     <comment>Tooltip for presence control in navbar</comment>

@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Інфраструктура інтеграції API каналів</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -381,7 +377,7 @@
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
-    <value>Форма для цієї сутності.</value>
+    <value>Форма цієї сутності.</value>
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
@@ -405,7 +401,7 @@
     <comment> 'msdyn_ciprovider' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Порядковий номер імпорту, під час якого створено цей запис.</value>
+    <value>Порядковий номер імпорту, під час якого було створено цей запис.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
@@ -413,7 +409,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Дата й час зміни запису.</value>
+    <value>Дата й час змінення запису.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
@@ -481,7 +477,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Дата й час міграції запису.</value>
+    <value>Дата й час перенесення запису.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -493,11 +489,11 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Тільки для внутрішнього використання.</value>
+    <value>Лише для внутрішнього використання.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Код часового поясу, в якому було створено запис.</value>
+    <value>Код часового поясу, використаний під час створення запису.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>Унікальний ідентифікатор користувача-представника, який змінив запис.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Відображувані кнопки дій. (Вилучено)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Порядок відображення сповіщення відносно інших шаблонів сповіщень.</value>
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Унікальний ідентифікатор екземпляра сутності.</value>
+    <value>Унікальний ідентифікатор одного з екземплярів сутності.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -1343,7 +1347,7 @@
     <comment>'TemplateTag' : Description for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:Description,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
-    <value>Форма для цієї сутності.</value>
+    <value>Форма цієї сутності.</value>
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
@@ -1351,7 +1355,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Час створення</value>
+    <value>Створено</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -1367,7 +1371,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Коли змінено</value>
+    <value>Змінено</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
@@ -1435,7 +1439,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Час створення запису</value>
+    <value>Запис створено</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1519,7 +1523,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>Відповідальна організаційна одиниця</value>
+    <value>Відповідальний підрозділ</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
@@ -1574,6 +1578,10 @@
     <value>Автор змін (представник)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Текст кнопки "Прийняти"</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Кнопки дій (вилучено)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1606,6 +1614,10 @@
     <value>Поля сповіщень</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Текст кнопки "Відхилити"</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Порядок сповіщень</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -1627,7 +1639,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Відповідальна організаційна одиниця</value>
+    <value>Відповідальний підрозділ</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
@@ -1747,7 +1759,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Відповідальна організаційна одиниця</value>
+    <value>Відповідальний підрозділ</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
@@ -1863,7 +1875,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Відповідальна організаційна одиниця</value>
+    <value>Відповідальний підрозділ</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
@@ -1947,7 +1959,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Відповідальна організаційна одиниця</value>
+    <value>Відповідальний підрозділ</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
@@ -2207,7 +2219,7 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>Відповідальна організаційна одиниця</value>
+    <value>Відповідальний підрозділ</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningTeam" xml:space="preserve">
@@ -2633,6 +2645,14 @@
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Розділ</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Поля сповіщень</value>

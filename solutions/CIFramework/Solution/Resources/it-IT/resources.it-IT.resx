@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Framework di integrazione API canale</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -628,6 +624,10 @@
     <value>Identificatore univoco dell'utente delegato che ha modificato il record.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Pulsanti di azione da visualizzare. (Deprecata)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ordine di visualizzazione delle notifiche relativo ad altri modelli di notifica.</value>
@@ -1435,7 +1439,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Data creazione record</value>
+    <value>Data di creazione record</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1511,7 +1515,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOverriddenCreatedOn" xml:space="preserve">
-    <value>Data creazione record</value>
+    <value>Data di creazione record</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwnerId" xml:space="preserve">
@@ -1539,7 +1543,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numero di versione della regola per il fuso orario</value>
+    <value>Numero di versione regola fuso orario</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1574,6 +1578,10 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <value>Autore modifica (delegato)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Testo del pulsante Accetta</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (deprecata)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1606,6 +1614,10 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <value>Campi di notifica</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Testo del pulsante Rifiuta</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ordine notifiche</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -1619,7 +1631,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Data creazione record</value>
+    <value>Data di creazione record</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwnerId" xml:space="preserve">
@@ -1647,7 +1659,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numero di versione della regola per il fuso orario</value>
+    <value>Numero di versione regola fuso orario</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1739,7 +1751,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Data creazione record</value>
+    <value>Data di creazione record</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwnerId" xml:space="preserve">
@@ -1767,7 +1779,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numero di versione della regola per il fuso orario</value>
+    <value>Numero di versione regola fuso orario</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1855,7 +1867,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Data creazione record</value>
+    <value>Data di creazione record</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwnerId" xml:space="preserve">
@@ -1939,7 +1951,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>Data creazione record</value>
+    <value>Data di creazione record</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwnerId" xml:space="preserve">
@@ -1967,7 +1979,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numero di versione della regola per il fuso orario</value>
+    <value>Numero di versione regola fuso orario</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1983,7 +1995,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numero di versione della regola per il fuso orario</value>
+    <value>Numero di versione regola fuso orario</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -2051,7 +2063,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeOverriddenCreatedOn" xml:space="preserve">
-    <value>Data creazione record</value>
+    <value>Data di creazione record</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypestatecode" xml:space="preserve">
@@ -2063,7 +2075,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numero di versione della regola per il fuso orario</value>
+    <value>Numero di versione regola fuso orario</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
@@ -2135,7 +2147,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
-    <value>Data creazione record</value>
+    <value>Data di creazione record</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionstatecode" xml:space="preserve">
@@ -2147,7 +2159,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numero di versione della regola per il fuso orario</value>
+    <value>Numero di versione regola fuso orario</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
@@ -2199,7 +2211,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_templatetags' : displayname for OptionSet 'msdyn_templatetags_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOverriddenCreatedOn" xml:space="preserve">
-    <value>Data creazione record</value>
+    <value>Data di creazione record</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwnerId" xml:space="preserve">
@@ -2227,7 +2239,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'msdyn_templatetags' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numero di versione della regola per il fuso orario</value>
+    <value>Numero di versione regola fuso orario</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
@@ -2633,6 +2645,14 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Sezione</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Campi di notifica</value>
@@ -3099,7 +3119,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'TemplateTag' : LocalizedName for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionInfo{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Comune</value>
+    <value>Elementi comuni</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionMarketing{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
@@ -3119,7 +3139,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateInfo{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Comune</value>
+    <value>Elementi comuni</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateMarketing{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3143,7 +3163,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Template ParameterInfo{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Comune</value>
+    <value>Elementi comuni</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Template ParameterMarketing{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3163,7 +3183,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application TypeInfo{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Comune</value>
+    <value>Elementi comuni</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application TypeMarketing{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3183,7 +3203,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification FieldsInfo{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Comune</value>
+    <value>Elementi comuni</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification FieldsMarketing{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3203,7 +3223,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification TemplateInfo{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Comune</value>
+    <value>Elementi comuni</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification TemplateMarketing{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3227,7 +3247,7 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Session TemplatesInfo{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Comune</value>
+    <value>Elementi comuni</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Session TemplatesMarketing{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">

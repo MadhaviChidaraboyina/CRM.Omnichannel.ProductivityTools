@@ -340,16 +340,12 @@
     <value>Channel API Integration Framework</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
   <data name="1:Description,App Parameter Definition{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Obrazac za taj entitet.</value>
+    <value>Obrazac za entitet.</value>
     <comment>'App Parameter Definition' : Description for systemform in Entity FormXml ID: '{215a1395-743d-4dfb-b552-c51d65fdb423}'</comment>
   </data>
   <data name="1:Description,App Parameter Definition{e519c146-6836-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -361,7 +357,7 @@
     <comment>'Application Tab Template' : Description for SavedQuery on Entity QueryId: '{37fd3926-6e36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Tab Template{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Obrazac za taj entitet.</value>
+    <value>Obrazac za entitet.</value>
     <comment>'Application Tab Template' : Description for systemform in Entity FormXml ID: '{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}'</comment>
   </data>
   <data name="1:Description,Application Template Parameter{88137b29-0c3b-e911-8187-000d3afe5f6b}" xml:space="preserve">
@@ -369,7 +365,7 @@
     <comment>'Application Template Parameter' : Description for SavedQuery on Entity QueryId: '{88137b29-0c3b-e911-8187-000d3afe5f6b}'</comment>
   </data>
   <data name="1:Description,Application Template Parameter{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Obrazac za taj entitet.</value>
+    <value>Obrazac za entitet.</value>
     <comment>'Application Template Parameter' : Description for systemform in Entity FormXml ID: '{d00da6ab-1789-4a9d-ac44-da3ea8d75800}'</comment>
   </data>
   <data name="1:Description,Application Type{ba8f5f7e-6b36-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -377,11 +373,11 @@
     <comment>'Application Type' : Description for SavedQuery on Entity QueryId: '{ba8f5f7e-6b36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Type{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Obrazac za taj entitet.</value>
+    <value>Obrazac za entitet.</value>
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
-    <value>Obrazac za ovaj entitet.</value>
+    <value>Obrazac za entitet.</value>
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
@@ -397,7 +393,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je izradio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je stvorio zapis.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
@@ -417,7 +413,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je izmijenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je izmijenio zapis.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -493,7 +489,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Samo za internu upotrebu.</value>
+    <value>Isključivo za internu upotrebu.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
@@ -509,7 +505,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je stvorio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je stvorio zapis.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldentitymsdyn_consoleapplicationnotificationfield" xml:space="preserve">
@@ -529,7 +525,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je izmijenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je izmijenio zapis.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfieldId" xml:space="preserve">
@@ -605,7 +601,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je stvorio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je stvorio zapis.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateentitymsdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
@@ -625,8 +621,12 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je izmijenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je izmijenio zapis.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Akcijski gumbi koji će se prikazati. (Zastarjelo)</value>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Redoslijed prikaza obavijesti u odnosu na druge predloške obavijesti.</value>
@@ -717,7 +721,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je stvorio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je stvorio zapis.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateentitymsdyn_consoleapplicationsessiontemplate" xml:space="preserve">
@@ -737,7 +741,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je izmijenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je izmijenio zapis.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_AnchorTab" xml:space="preserve">
@@ -841,7 +845,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je stvorio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je stvorio zapis.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateentitymsdyn_consoleapplicationtemplate" xml:space="preserve">
@@ -861,7 +865,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je izmijenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je izmijenio zapis.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplateId" xml:space="preserve">
@@ -945,7 +949,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je stvorio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je stvorio zapis.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterentitymsdyn_consoleapplicationtemplateparameter" xml:space="preserve">
@@ -965,7 +969,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je izmijenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je izmijenio zapis.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameterId" xml:space="preserve">
@@ -1065,7 +1069,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je stvorio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je stvorio zapis.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeentitymsdyn_consoleapplicationtype" xml:space="preserve">
@@ -1085,7 +1089,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je izmijenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je izmijenio zapis.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtypeId" xml:space="preserve">
@@ -1149,7 +1153,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je stvorio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je stvorio zapis.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionentitymsdyn_consoleappparameterdefinition" xml:space="preserve">
@@ -1169,7 +1173,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je izmijenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je izmijenio zapis.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinitionId" xml:space="preserve">
@@ -1239,7 +1243,7 @@ Ne – vrijednost se mora navesti pri izradi predloška koji upotrebljava taj pa
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je stvorio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je stvorio zapis.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsentitymsdyn_templatetags" xml:space="preserve">
@@ -1259,7 +1263,7 @@ Ne – vrijednost se mora navesti pri izradi predloška koji upotrebljava taj pa
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegiranog korisnika koji je izmijenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je izmijenio zapis.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_name" xml:space="preserve">
@@ -1315,7 +1319,7 @@ Ne – vrijednost se mora navesti pri izradi predloška koji upotrebljava taj pa
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Obrazac za taj entitet.</value>
+    <value>Obrazac za entitet.</value>
     <comment>'Notification Fields' : Description for systemform in Entity FormXml ID: '{92b56288-9844-4608-b6e7-d9362c325d68}'</comment>
   </data>
   <data name="1:Description,Notification Fields{e48410d6-7236-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -1323,7 +1327,7 @@ Ne – vrijednost se mora navesti pri izradi predloška koji upotrebljava taj pa
     <comment>'Notification Fields' : Description for SavedQuery on Entity QueryId: '{e48410d6-7236-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Notification Template{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Obrazac za taj entitet.</value>
+    <value>Obrazac za entitet.</value>
     <comment>'Notification Template' : Description for systemform in Entity FormXml ID: '{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}'</comment>
   </data>
   <data name="1:Description,Notification Template{2b409f89-7336-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -1335,7 +1339,7 @@ Ne – vrijednost se mora navesti pri izradi predloška koji upotrebljava taj pa
     <comment>'Session Templates' : Description for SavedQuery on Entity QueryId: '{0f0185db-6f36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Session Templates{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Obrazac za taj entitet.</value>
+    <value>Obrazac za entitet.</value>
     <comment>'Session Templates' : Description for systemform in Entity FormXml ID: '{7e7e29c0-bc24-40c2-938b-941554da4c4e}'</comment>
   </data>
   <data name="1:Description,TemplateTag{ad7358b6-7641-e911-8190-000d3afe6c36}" xml:space="preserve">
@@ -1343,7 +1347,7 @@ Ne – vrijednost se mora navesti pri izradi predloška koji upotrebljava taj pa
     <comment>'TemplateTag' : Description for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:Description,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
-    <value>Obrazac za ovaj entitet.</value>
+    <value>Obrazac za entitet.</value>
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
@@ -1359,7 +1363,7 @@ Ne – vrijednost se mora navesti pri izradi predloška koji upotrebljava taj pa
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Broj slijeda uvoza</value>
+    <value>Uvezi slijedni broj</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedBy" xml:space="preserve">
@@ -1574,6 +1578,10 @@ Ne – vrijednost se mora navesti pri izradi predloška koji upotrebljava taj pa
     <value>Izmijenio (delegat):</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Tekst gumba za prihvaćanje</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (zastarjelo)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@ Ne – vrijednost se mora navesti pri izradi predloška koji upotrebljava taj pa
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Polja obavijesti</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Tekst gumba za odbijanje</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Redoslijed obavijesti</value>
@@ -2633,6 +2645,14 @@ Ne – vrijednost se mora navesti pri izradi predloška koji upotrebljava taj pa
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Odjeljak</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Polja obavijesti</value>

@@ -177,7 +177,7 @@
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationfield_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationfield_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationfield_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationtemplate_createdby" xml:space="preserve">
@@ -185,7 +185,7 @@
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationtemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationtemplate_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationtemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationsessiontemplate_createdby" xml:space="preserve">
@@ -193,7 +193,7 @@
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationsessiontemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationsessiontemplate_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationsessiontemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplateparameter_createdby" xml:space="preserve">
@@ -201,7 +201,7 @@
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplateparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplateparameter_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplateparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplate_createdby" xml:space="preserve">
@@ -209,7 +209,7 @@
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplate_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtype_createdby" xml:space="preserve">
@@ -217,7 +217,7 @@
     <comment>msdyn_consoleapplicationtype Description for EntityRelationship 'lk_msdyn_consoleapplicationtype_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtype_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationtype Description for EntityRelationship 'lk_msdyn_consoleapplicationtype_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleappparameterdefinition_createdby" xml:space="preserve">
@@ -225,7 +225,7 @@
     <comment>msdyn_consoleappparameterdefinition Description for EntityRelationship 'lk_msdyn_consoleappparameterdefinition_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleappparameterdefinition_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>msdyn_consoleappparameterdefinition Description for EntityRelationship 'lk_msdyn_consoleappparameterdefinition_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_templatetags_createdby" xml:space="preserve">
@@ -233,7 +233,7 @@
     <comment>msdyn_templatetags Description for EntityRelationship 'lk_msdyn_templatetags_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_templatetags_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'lk_msdyn_templatetags_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_consoleapplicationtemplate_msdyn_consoleapplicationsessiontemplate_AnchorTab" xml:space="preserve">
@@ -281,51 +281,51 @@
     <comment>msdyn_templatetags Description for EntityRelationship 'owner_msdyn_templatetags'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'team_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'team_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'team_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'team_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'team_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_templatetags" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'team_msdyn_templatetags'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'user_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'user_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'user_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'user_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'user_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_templatetags" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'user_msdyn_templatetags'</comment>
   </data>
   <data name="15062:Description,ChannelAPIIntegrationFramework" xml:space="preserve">
@@ -335,10 +335,6 @@
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Kanalo API integravimo sistema</value>
@@ -397,7 +393,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Unikalusis įrašą sukūrusio atstovaujančio vartotojo identifikatorius.</value>
+    <value>Unikalusis įrašą sukūrusio deleguoto vartotojo identifikatorius.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
@@ -405,7 +401,7 @@
     <comment> 'msdyn_ciprovider' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Šį įrašą sukūrusio importavimo sekos numeris.</value>
+    <value>Importavimo, kuris sukūrė šį įrašą, eilės numeris.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
@@ -417,7 +413,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Unikalusis įrašą modifikavusio atstovaujančio vartotojo identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo atstovo identifikatorius.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -481,7 +477,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Įrašo perkėlimo data ir laikas.</value>
+    <value>Data ir laikas, kada įrašas buvo perkeltas.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -493,7 +489,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Naudoti tik viduje.</value>
+    <value>Naudoti tik įmonėje.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
@@ -521,7 +517,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOn" xml:space="preserve">
@@ -573,11 +569,11 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningUser" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldstatecode" xml:space="preserve">
@@ -593,7 +589,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laiko juostos kodas, kuris buvo naudojamas, kai buvo sukurtas įrašas.</value>
+    <value>Laiko juostos kodas, naudotas kuriant įrašą.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
@@ -617,7 +613,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOn" xml:space="preserve">
@@ -627,6 +623,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Unikalusis įrašą modifikavusio vartotojo atstovo identifikatorius.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Veiksmų mygtukai, kurie bus rodomi. (Netinkama)</value>
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Pranešimų rodymo tvarka, susijusi su kitais pranešimų šablonais.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -685,11 +689,11 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningUser" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatestatecode" xml:space="preserve">
@@ -705,7 +709,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laiko juostos kodas, kuris buvo naudojamas, kai buvo sukurtas įrašas.</value>
+    <value>Laiko juostos kodas, naudotas kuriant įrašą.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
@@ -729,7 +733,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOn" xml:space="preserve">
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Unikalusis objekto egzempliorių identifikatorius.</value>
+    <value>Objekto egzempliorių unikalusis identifikatorius</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -809,11 +813,11 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningUser" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatestatecode" xml:space="preserve">
@@ -829,7 +833,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laiko juostos kodas, kuris buvo naudojamas, kai buvo sukurtas įrašas.</value>
+    <value>Laiko juostos kodas, naudotas kuriant įrašą.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
@@ -853,7 +857,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOn" xml:space="preserve">
@@ -929,11 +933,11 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningUser" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedBy" xml:space="preserve">
@@ -957,7 +961,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOn" xml:space="preserve">
@@ -1017,11 +1021,11 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningUser" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterstatecode" xml:space="preserve">
@@ -1037,7 +1041,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laiko juostos kodas, kuris buvo naudojamas, kai buvo sukurtas įrašas.</value>
+    <value>Laiko juostos kodas, naudotas kuriant įrašą.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
@@ -1053,7 +1057,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laiko juostos kodas, kuris buvo naudojamas, kai buvo sukurtas įrašas.</value>
+    <value>Laiko juostos kodas, naudotas kuriant įrašą.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
@@ -1077,7 +1081,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOn" xml:space="preserve">
@@ -1137,7 +1141,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laiko juostos kodas, kuris buvo naudojamas, kai buvo sukurtas įrašas.</value>
+    <value>Laiko juostos kodas, naudotas kuriant įrašą.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1161,7 +1165,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOn" xml:space="preserve">
@@ -1227,7 +1231,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laiko juostos kodas, kuris buvo naudojamas, kai buvo sukurtas įrašas.</value>
+    <value>Laiko juostos kodas, naudotas kuriant įrašą.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedBy" xml:space="preserve">
@@ -1251,7 +1255,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_templatetags' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOn" xml:space="preserve">
@@ -1291,11 +1295,11 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningTeam" xml:space="preserve">
-    <value>Unikalusis komandos, kuriai priklauso įrašas, identifikatorius.</value>
+    <value>Komandos, kuriai priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningUser" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuriam priklauso įrašas, identifikatorius.</value>
+    <value>Vartotojo, kuriam priklauso įrašas, unikalusis identifikatorius.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsstatecode" xml:space="preserve">
@@ -1311,7 +1315,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_templatetags' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laiko juostos kodas, kuris buvo naudojamas, kai buvo sukurtas įrašas.</value>
+    <value>Laiko juostos kodas, naudotas kuriant įrašą.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -1415,7 +1419,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_LandingUrl' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_name" xml:space="preserve">
-    <value>Pavadinimas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_RoleSelector" xml:space="preserve">
@@ -1451,7 +1455,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_ciprovider' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Konvertuotos UTC laiko juostos kodas</value>
+    <value>UTC konvertavimo laiko juostos kodas</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -1499,7 +1503,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_LineHeader' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_name" xml:space="preserve">
-    <value>Vardas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_Priority" xml:space="preserve">
@@ -1519,7 +1523,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>Valdanti verslo vienetas</value>
+    <value>Valdantis verslo vienetas</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
@@ -1574,6 +1578,10 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <value>Modifikavo (atstovas)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Mygtuko „Priimti” tekstas</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (netinkama)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1595,7 +1603,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Icon' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_name" xml:space="preserve">
-    <value>Vardas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationButtons" xml:space="preserve">
@@ -1605,6 +1613,10 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Pranešimo laukai</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Mygtuko „Atmesti” tekstas</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Pranešimų tvarka</value>
@@ -1627,7 +1639,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Valdanti verslo vienetas</value>
+    <value>Valdantis verslo vienetas</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
@@ -1719,7 +1731,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_IsPanelHidden' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_name" xml:space="preserve">
-    <value>Vardas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_PanelState" xml:space="preserve">
@@ -1747,7 +1759,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Valdanti verslo vienetas</value>
+    <value>Valdantis verslo vienetas</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
@@ -1835,7 +1847,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_IsStale' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_name" xml:space="preserve">
-    <value>Vardas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_PageType" xml:space="preserve">
@@ -1863,7 +1875,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Valdanti verslo vienetas</value>
+    <value>Valdantis verslo vienetas</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
@@ -1923,7 +1935,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_IsRunTime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_name" xml:space="preserve">
-    <value>Vardas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_ParameterName" xml:space="preserve">
@@ -1947,7 +1959,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Valdanti verslo vienetas</value>
+    <value>Valdantis verslo vienetas</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
@@ -2035,7 +2047,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
-    <value>Vardas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_RenderingOrder" xml:space="preserve">
@@ -2123,7 +2135,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_IsRuntime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_name" xml:space="preserve">
-    <value>Vardas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" xml:space="preserve">
@@ -2183,7 +2195,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_name" xml:space="preserve">
-    <value>Vardas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_templatetagsId" xml:space="preserve">
@@ -2207,7 +2219,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>Valdanti verslo vienetas</value>
+    <value>Valdantis verslo vienetas</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningTeam" xml:space="preserve">
@@ -2371,51 +2383,51 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode0" xml:space="preserve">
-    <value>Aktyvu</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_ciprovider' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode1" xml:space="preserve">
-    <value>Neaktyvu</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_ciprovider' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode1" xml:space="preserve">
-    <value>Aktyvu</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_ciprovider' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode2" xml:space="preserve">
-    <value>Neaktyvu</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_ciprovider' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode0" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode1" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statuscode1" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statuscode2" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode0" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode1" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statuscode1" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statuscode2" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden0" xml:space="preserve">
@@ -2435,19 +2447,19 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationsessiontemplate' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_statecode0" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_statecode1" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_statuscode1" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_statuscode2" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_isstale0" xml:space="preserve">
@@ -2467,19 +2479,19 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationtemplate' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode0" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode1" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statuscode1" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statuscode2" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_msdyn_isruntime0" xml:space="preserve">
@@ -2491,35 +2503,35 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleapplicationtemplateparameter' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statecode0" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statecode1" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statuscode1" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statuscode2" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statecode0" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationtype' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statecode1" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationtype' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statuscode1" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleapplicationtype' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statuscode2" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleapplicationtype' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime0" xml:space="preserve">
@@ -2531,35 +2543,35 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'msdyn_consoleappparameterdefinition' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode0" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleappparameterdefinition' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode1" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleappparameterdefinition' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statuscode1" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_consoleappparameterdefinition' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statuscode2" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_consoleappparameterdefinition' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_templatetagsmsdyn_templatetags_statecode0" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_templatetags' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_templatetagsmsdyn_templatetags_statecode1" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_templatetags' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_templatetagsmsdyn_templatetags_statuscode1" xml:space="preserve">
-    <value>Aktyvioji</value>
+    <value>Aktyvusis</value>
     <comment>'msdyn_templatetags' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_templatetagsmsdyn_templatetags_statuscode2" xml:space="preserve">
-    <value>Neaktyvioji</value>
+    <value>Neaktyvusis</value>
     <comment>'msdyn_templatetags' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,Notification Fields{3e531709-6501-4936-76bd-d92d22bec5d5}" xml:space="preserve">
@@ -2619,7 +2631,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'Notification Fields' : label for tab in Entity FormXml ID: '{d6df0d89-7b66-450a-8916-377c7e683e23}'</comment>
   </data>
   <data name="1:label,Notification Fields{dcd8ee8a-4aac-30bc-d07a-592ad035b9dd}" xml:space="preserve">
-    <value>Pavadinimas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{dcd8ee8a-4aac-30bc-d07a-592ad035b9dd}'</comment>
   </data>
   <data name="1:label,Notification Fields{e6416ba8-02c5-42eb-081b-9d09e9ea104e}" xml:space="preserve">
@@ -2627,12 +2639,20 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{e6416ba8-02c5-42eb-081b-9d09e9ea104e}'</comment>
   </data>
   <data name="1:label,Notification Template{49f27467-13e4-4190-ac4a-2a72b97632ad}" xml:space="preserve">
-    <value>Pavadinimas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{49f27467-13e4-4190-ac4a-2a72b97632ad}'</comment>
   </data>
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Skyrius</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Pranešimo laukai</value>
@@ -2667,7 +2687,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{093dd305-a7cc-d998-e489-ac60594b185e}'</comment>
   </data>
   <data name="1:label,Session Templates{196dbc51-0ab0-1da7-555e-35cc732cbda3}" xml:space="preserve">
-    <value>Pavadinimas</value>
+    <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{196dbc51-0ab0-1da7-555e-35cc732cbda3}'</comment>
   </data>
   <data name="1:label,Session Templates{1d313718-4d90-7004-cbbc-d98c01d6c01d}" xml:space="preserve">
@@ -3115,7 +3135,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionService{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Paslauga</value>
+    <value>Aptarnavimas</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateInfo{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3139,7 +3159,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateService{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Paslauga</value>
+    <value>Aptarnavimas</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Template ParameterInfo{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3159,7 +3179,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application Template ParameterService{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Paslauga</value>
+    <value>Aptarnavimas</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application TypeInfo{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3179,7 +3199,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application TypeService{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Paslauga</value>
+    <value>Aptarnavimas</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification FieldsInfo{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3199,7 +3219,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Notification FieldsService{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Paslauga</value>
+    <value>Aptarnavimas</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification TemplateInfo{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3223,7 +3243,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Notification TemplateService{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Paslauga</value>
+    <value>Aptarnavimas</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Session TemplatesInfo{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
@@ -3247,7 +3267,7 @@ Ne – reikšmė turi būti pateikta kuriant šabloną, kuris naudoja šį param
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Session TemplatesService{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Paslauga</value>
+    <value>Aptarnavimas</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="50:Title,msdyn.ApplicationRibbon.Presence.Button.LabelText" xml:space="preserve">

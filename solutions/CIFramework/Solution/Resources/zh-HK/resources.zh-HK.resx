@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>管道 API 整合架構</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -393,7 +389,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>記錄的建立日期與時間。</value>
+    <value>建立記錄時的日期與時間。</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -413,7 +409,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>記錄的修改日期與時間。</value>
+    <value>修改記錄時的日期與時間。</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>修改記錄之代理人使用者的唯一識別碼。</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>要顯示的動作按鈕。(已取代)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>相對於其他通知範本的通知顯示順序。</value>
@@ -1574,6 +1578,10 @@
     <value>修改者 (代理人)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>[接受] 按鈕文字</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (已取代)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>通知欄位</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>[拒絕] 按鈕文字</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>通知順序</value>
@@ -2634,6 +2646,14 @@
     <value>區段</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>通知欄位</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
@@ -3379,7 +3399,7 @@
     <comment>'msdyn_consoleapplicationparameterruntimetype' : label for OptionSet Value '110000000'</comment>
   </data>
   <data name="9:label,msdyn_consoleapplicationparameterruntimetype110000001" xml:space="preserve">
-    <value>number</value>
+    <value>數值</value>
     <comment>'msdyn_consoleapplicationparameterruntimetype' : label for OptionSet Value '110000001'</comment>
   </data>
   <data name="9:label,msdyn_consoleapplicationparameterruntimetype110000002" xml:space="preserve">

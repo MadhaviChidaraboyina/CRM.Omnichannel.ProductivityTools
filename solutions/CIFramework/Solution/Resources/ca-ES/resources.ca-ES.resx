@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Integration Framework de l'API de canal</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -589,7 +585,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>Identificador únic de l'usuari delegat que ha modificat el registre.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Els botons d'acció que es mostraran. (Obsolet)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ordre de visualització de notificacions relatiu a altres plantilles de notificació.</value>
@@ -701,7 +705,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -825,7 +829,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1033,7 +1037,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1049,7 +1053,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1133,7 +1137,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1223,7 +1227,7 @@ No: el valor s'ha de subministrar en crear una plantilla que utilitzi aquest par
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1307,7 +1311,7 @@ No: el valor s'ha de subministrar en crear una plantilla que utilitzi aquest par
     <comment>'msdyn_templatetags' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1574,6 +1578,10 @@ No: el valor s'ha de subministrar en crear una plantilla que utilitzi aquest par
     <value>Modificat per (delegat)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Text del botó Accepta</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (obsolet)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@ No: el valor s'ha de subministrar en crear una plantilla que utilitzi aquest par
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Camps de notificació</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Text del botó Rebutja</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ordre de notificació</value>
@@ -2633,6 +2645,14 @@ No: el valor s'ha de subministrar en crear una plantilla que utilitzi aquest par
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Secció</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Camps de notificació</value>

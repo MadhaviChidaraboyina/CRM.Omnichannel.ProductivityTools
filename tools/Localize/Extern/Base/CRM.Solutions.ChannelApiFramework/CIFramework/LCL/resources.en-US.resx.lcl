@@ -869,6 +869,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The action buttons to be displayed. (Deprecated)]]></Val>
@@ -888,6 +894,12 @@
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[]]></Val>
         </Str>
@@ -2999,6 +3011,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Accept Button Text]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[ActionButtons (Deprecated)]]></Val>
@@ -3020,6 +3038,12 @@
       <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Notification Fields]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reject Button Text]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4238,6 +4262,18 @@
       <Item ItemId=";1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Section]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reject Button Text]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Accept Button Text]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

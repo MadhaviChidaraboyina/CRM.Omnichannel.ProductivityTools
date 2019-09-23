@@ -145,95 +145,95 @@
     <comment>msdyn_msdyn_consoleapplicationnotificationtem CustomLabel for EntityRelationship 'msdyn_msdyn_consoleapplicationnotificationtempl'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunniste.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_modifiedby" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunniste.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationfield_createdby" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationfield_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationfield_modifiedby" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationfield_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationtemplate_createdby" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationtemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationtemplate_modifiedby" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationtemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationsessiontemplate_createdby" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationsessiontemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationsessiontemplate_modifiedby" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationsessiontemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplateparameter_createdby" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplateparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplateparameter_modifiedby" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplateparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplate_createdby" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplate_modifiedby" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtype_createdby" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationtype Description for EntityRelationship 'lk_msdyn_consoleapplicationtype_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtype_modifiedby" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationtype Description for EntityRelationship 'lk_msdyn_consoleapplicationtype_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleappparameterdefinition_createdby" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleappparameterdefinition Description for EntityRelationship 'lk_msdyn_consoleappparameterdefinition_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleappparameterdefinition_modifiedby" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleappparameterdefinition Description for EntityRelationship 'lk_msdyn_consoleappparameterdefinition_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_templatetags_createdby" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'lk_msdyn_templatetags_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_templatetags_modifiedby" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'lk_msdyn_templatetags_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_consoleapplicationtemplate_msdyn_consoleapplicationsessiontemplate_AnchorTab" xml:space="preserve">
@@ -245,15 +245,15 @@
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'msdyn_msdyn_consoleapplicationtype_msdyn_consoleapplicationtemplate_PageType'</comment>
   </data>
   <data name="10:Description,organization_msdyn_ciprovider" xml:space="preserve">
-    <value>Organisaation yksilöivä tunniste</value>
+    <value>Organisaation yksilöllinen tunniste</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'organization_msdyn_ciprovider'</comment>
   </data>
   <data name="10:Description,organization_msdyn_consoleapplicationtype" xml:space="preserve">
-    <value>Organisaation yksilöivä tunnus</value>
+    <value>Organisaation yksilöllinen tunniste</value>
     <comment>msdyn_consoleapplicationtype Description for EntityRelationship 'organization_msdyn_consoleapplicationtype'</comment>
   </data>
   <data name="10:Description,organization_msdyn_consoleappparameterdefinition" xml:space="preserve">
-    <value>Organisaation yksilöivä tunnus</value>
+    <value>Organisaation yksilöllinen tunniste</value>
     <comment>msdyn_consoleappparameterdefinition Description for EntityRelationship 'organization_msdyn_consoleappparameterdefinition'</comment>
   </data>
   <data name="10:Description,owner_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
@@ -281,51 +281,51 @@
     <comment>msdyn_templatetags Description for EntityRelationship 'owner_msdyn_templatetags'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'team_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'team_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'team_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'team_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'team_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_templatetags" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'team_msdyn_templatetags'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'user_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'user_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'user_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'user_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'user_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_templatetags" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'user_msdyn_templatetags'</comment>
   </data>
   <data name="15062:Description,ChannelAPIIntegrationFramework" xml:space="preserve">
@@ -335,10 +335,6 @@
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Channel API Integration Framework</value>
@@ -389,7 +385,7 @@
     <comment>'Channel' : Description for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedBy" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunniste.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
@@ -397,7 +393,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunniste.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
@@ -409,7 +405,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunniste.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
@@ -417,7 +413,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -433,7 +429,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
-    <value>CIProvider-tietueiden yksilöivä tunnus</value>
+    <value>CIProvider-tietueiden yksilöllinen tunniste</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
@@ -477,7 +473,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_trusteddomain' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOrganizationId" xml:space="preserve">
-    <value>Organisaation yksilöivä tunniste</value>
+    <value>Organisaation yksilöllinen tunniste</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
@@ -501,7 +497,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedOn" xml:space="preserve">
@@ -509,7 +505,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldentitymsdyn_consoleapplicationnotificationfield" xml:space="preserve">
@@ -521,7 +517,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedBy" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOn" xml:space="preserve">
@@ -529,11 +525,11 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfieldId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöivä tunnus</value>
+    <value>Entiteetin esiintymien yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'msdyn_consoleapplicationnotificationfieldId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode" xml:space="preserve">
@@ -569,15 +565,15 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningUser" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldstatecode" xml:space="preserve">
@@ -597,7 +593,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedOn" xml:space="preserve">
@@ -605,7 +601,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateentitymsdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
@@ -617,7 +613,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedBy" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOn" xml:space="preserve">
@@ -625,15 +621,19 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Näytettävät toimintopainikkeet. (Vanhentunut)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplateId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöivä tunnus</value>
+    <value>Entiteetin esiintymien yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_consoleapplicationnotificationtemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode" xml:space="preserve">
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ilmoituksen näyttöjärjestys suhteessa muihin ilmoitusmalleihin.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -681,15 +685,15 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningUser" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatestatecode" xml:space="preserve">
@@ -709,7 +713,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedOn" xml:space="preserve">
@@ -717,7 +721,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateentitymsdyn_consoleapplicationsessiontemplate" xml:space="preserve">
@@ -729,7 +733,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedBy" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOn" xml:space="preserve">
@@ -737,7 +741,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_AnchorTab" xml:space="preserve">
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Entiteetti-ilmentymien yksilöivä tunnus.</value>
+    <value>Entiteetin esiintymien yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -805,15 +809,15 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningUser" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatestatecode" xml:space="preserve">
@@ -833,7 +837,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedOn" xml:space="preserve">
@@ -841,7 +845,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateentitymsdyn_consoleapplicationtemplate" xml:space="preserve">
@@ -853,7 +857,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedBy" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOn" xml:space="preserve">
@@ -861,11 +865,11 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplateId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöivä tunnus</value>
+    <value>Entiteetin esiintymien yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_consoleapplicationtemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_isstale" xml:space="preserve">
@@ -925,19 +929,19 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningUser" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedBy" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedOn" xml:space="preserve">
@@ -945,7 +949,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterentitymsdyn_consoleapplicationtemplateparameter" xml:space="preserve">
@@ -957,7 +961,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedBy" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOn" xml:space="preserve">
@@ -965,11 +969,11 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameterId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöivä tunnus</value>
+    <value>Entiteetin esiintymien yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'msdyn_consoleapplicationtemplateparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_msdyn_isruntime" xml:space="preserve">
@@ -1013,15 +1017,15 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningUser" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterstatecode" xml:space="preserve">
@@ -1057,7 +1061,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedOn" xml:space="preserve">
@@ -1065,7 +1069,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeentitymsdyn_consoleapplicationtype" xml:space="preserve">
@@ -1077,7 +1081,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedBy" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOn" xml:space="preserve">
@@ -1085,11 +1089,11 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtypeId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöivä tunnus</value>
+    <value>Entiteetin esiintymien yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_consoleapplicationtypeId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statecode" xml:space="preserve">
@@ -1117,7 +1121,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_TemplateParameters' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeOrganizationId" xml:space="preserve">
-    <value>Organisaation yksilöivä tunnus</value>
+    <value>Organisaation yksilöllinen tunniste</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeOverriddenCreatedOn" xml:space="preserve">
@@ -1141,7 +1145,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedOn" xml:space="preserve">
@@ -1149,7 +1153,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionentitymsdyn_consoleappparameterdefinition" xml:space="preserve">
@@ -1161,7 +1165,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedBy" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOn" xml:space="preserve">
@@ -1169,11 +1173,11 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinitionId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöivä tunnus</value>
+    <value>Entiteetin esiintymien yksilöllinen tunniste</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_consoleappparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" xml:space="preserve">
@@ -1207,7 +1211,7 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_RuntimeType' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionOrganizationId" xml:space="preserve">
-    <value>Organisaation yksilöivä tunnus</value>
+    <value>Organisaation yksilöllinen tunniste</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
@@ -1231,7 +1235,7 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedBy" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedOn" xml:space="preserve">
@@ -1239,7 +1243,7 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsentitymsdyn_templatetags" xml:space="preserve">
@@ -1251,7 +1255,7 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedBy" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOn" xml:space="preserve">
@@ -1259,7 +1263,7 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_name" xml:space="preserve">
@@ -1267,7 +1271,7 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetagsId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöivä tunnus</value>
+    <value>Entiteetin esiintymien yksilöllinen tunniste</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'msdyn_templatetagsId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetags_statecode" xml:space="preserve">
@@ -1287,15 +1291,15 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningTeam" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningUser" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
+    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsstatecode" xml:space="preserve">
@@ -1351,7 +1355,7 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Luotu</value>
+    <value>Luontiajankohta</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -1367,11 +1371,11 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Muokattu</value>
+    <value>Muutosajankohta</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Muokkaaja (edustaja)</value>
+    <value>Muokannut (edustaja)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -1435,7 +1439,7 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Tietue luotu</value>
+    <value>Tietueen luontiajankohta</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1574,6 +1578,10 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
     <value>Muokannut (edustaja)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Hyväksy-painikkeen teksti</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (vanhentunut)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Ilmoituskentät</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Hylkää-painikkeen teksti</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ilmoitusjärjestys</value>
@@ -2633,6 +2645,14 @@ Ei - arvo toimitetaan, kun luodaan tätä parametria käyttämä malli</value>
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Osa</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Ilmoituskentät</value>

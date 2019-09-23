@@ -165,11 +165,11 @@
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
-    <value>Unik ID for brukeren som opprettet oppføringen.</value>
+    <value>Unik identifikator for brukeren som opprettet oppføringen.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_modifiedby" xml:space="preserve">
-    <value>Unik ID for brukeren som endret oppføringen.</value>
+    <value>Unik identifikator for brukeren som endret oppføringen.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationfield_createdby" xml:space="preserve">
@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Integration Framework for API for kanal</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -381,7 +377,7 @@
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
-    <value>Et skjema for denne enheten.</value>
+    <value>Skjema for denne enheten.</value>
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
@@ -389,15 +385,15 @@
     <comment>'Channel' : Description for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedBy" xml:space="preserve">
-    <value>Unik ID for brukeren som opprettet oppføringen.</value>
+    <value>Unik identifikator for brukeren som opprettet oppføringen.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet da oppføringen ble opprettet.</value>
+    <value>Dato og klokkeslett da oppføringen ble opprettet.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Unik ID for representanten som opprettet oppføringen.</value>
+    <value>Unik identifikator for representantbrukeren som opprettet oppføringen.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
@@ -409,15 +405,15 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>Unik ID for brukeren som endret oppføringen.</value>
+    <value>Unik identifikator for brukeren som endret oppføringen.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet da oppføringen ble endret.</value>
+    <value>Dato og klokkeslett da oppføringen ble endret.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Unik ID for representanten som endret oppføringen.</value>
+    <value>Unik identifikator for representantbrukeren som endret oppføringen.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -481,7 +477,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet da oppføringen ble overført.</value>
+    <value>Dato og klokkeslett da oppføringen ble overført.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidssonekode som var i bruk da oppføringen ble opprettet.</value>
+    <value>Tidssonekoden som var i bruk da oppføringen ble opprettet.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>Unik identifikator for representantbrukeren som endret oppføringen.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Handlingsknappene som skal vises. (Avskrevet)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Visningsrekkefølge for varslinger i forhold til andre varslingsmaler.</value>
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Unik ID for enhetsforekomster.</value>
+    <value>Unik identifikator for enhetsforekomster.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -1343,7 +1347,7 @@ Nei – verdien oppgis under oppretting av en mal som bruker denne parameteren</
     <comment>'TemplateTag' : Description for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:Description,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
-    <value>Et skjema for denne enheten.</value>
+    <value>Skjema for denne enheten.</value>
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
@@ -1359,7 +1363,7 @@ Nei – verdien oppgis under oppretting av en mal som bruker denne parameteren</
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Importer sekvensnummer</value>
+    <value>Importsekvensnummer</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedBy" xml:space="preserve">
@@ -1574,6 +1578,10 @@ Nei – verdien oppgis under oppretting av en mal som bruker denne parameteren</
     <value>Endret av (representant)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Godta-knappetekst</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (avskrevet)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@ Nei – verdien oppgis under oppretting av en mal som bruker denne parameteren</
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Varslingsfelter</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Avvis-knappetekst</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Varslingsrekkefølge</value>
@@ -2633,6 +2645,14 @@ Nei – verdien oppgis under oppretting av en mal som bruker denne parameteren</
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Inndeling</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Varslingsfelter</value>

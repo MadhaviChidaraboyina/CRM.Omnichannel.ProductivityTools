@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Πλαίσιο ενοποίησης API καναλιού</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -381,7 +377,7 @@
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
-    <value>Μια φόρμα για αυτή την οντότητα.</value>
+    <value>Μια φόρμα για αυτήν την οντότητα.</value>
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Ο κωδικός ζώνης ώρας που ήταν σε χρήση όταν δημιουργήθηκε η καρτέλα.</value>
+    <value>Κωδικός ζώνης ώρας που ήταν σε χρήση κατά τη δημιουργία της καρτέλας.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>Μοναδικό αναγνωριστικό του πληρεξούσιου χρήστη που τροποποίησε την καρτέλα.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Τα κουμπιά ενεργειών που θα εμφανιστούν. (Δεν χρησιμοποιείται)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Σειρά εμφάνισης ειδοποιήσεων σε σχέση με άλλα πρότυπα ειδοποιήσεων.</value>
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Μοναδικό αναγνωριστικό για τις παρουσίες της οντότητας.</value>
+    <value>Μοναδικό αναγνωριστικό για παρουσίες οντότητας.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -1105,7 +1109,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_displayname' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
-    <value>Όνομα προσαρμοσμένης οντότητας.</value>
+    <value>Το όνομα της προσαρμοσμένης οντότητας.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_RenderingOrder" xml:space="preserve">
@@ -1199,7 +1203,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_IsRuntime' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_name" xml:space="preserve">
-    <value>Όνομα προσαρμοσμένης οντότητας.</value>
+    <value>Το όνομα της προσαρμοσμένης οντότητας.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" xml:space="preserve">
@@ -1351,7 +1355,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Ημερομηνία δημιουργίας</value>
+    <value>Δημιουργία στις</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -1475,7 +1479,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία τροποποίησης</value>
+    <value>Τροποποίηση στις</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldModifiedOnBehalfBy" xml:space="preserve">
@@ -1499,7 +1503,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_LineHeader' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_name" xml:space="preserve">
-    <value>Πλήρες όνομα</value>
+    <value>Όνομα</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_Priority" xml:space="preserve">
@@ -1567,12 +1571,16 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία τροποποίησης</value>
+    <value>Τροποποίηση στις</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Τροποποίηση από (Πληρεξούσιος)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Κείμενο κουμπιού αποδοχής</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (Δεν χρησιμοποιείται)</value>
@@ -1595,7 +1603,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Icon' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_name" xml:space="preserve">
-    <value>Πλήρες όνομα</value>
+    <value>Όνομα</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationButtons" xml:space="preserve">
@@ -1605,6 +1613,10 @@
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Πεδία ειδοποίησης</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Κείμενο κουμπιού απόρριψης</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Σειρά ειδοποίησης</value>
@@ -1675,7 +1687,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία τροποποίησης</value>
+    <value>Τροποποίηση στις</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -1719,7 +1731,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_IsPanelHidden' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_name" xml:space="preserve">
-    <value>Πλήρες όνομα</value>
+    <value>Όνομα</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_PanelState" xml:space="preserve">
@@ -1795,7 +1807,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία τροποποίησης</value>
+    <value>Τροποποίηση στις</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -1835,7 +1847,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_IsStale' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_name" xml:space="preserve">
-    <value>Πλήρες όνομα</value>
+    <value>Όνομα</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_PageType" xml:space="preserve">
@@ -1895,7 +1907,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία τροποποίησης</value>
+    <value>Τροποποίηση στις</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -1923,7 +1935,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_IsRunTime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_name" xml:space="preserve">
-    <value>Πλήρες όνομα</value>
+    <value>Όνομα</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_ParameterName" xml:space="preserve">
@@ -2011,7 +2023,7 @@
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία τροποποίησης</value>
+    <value>Τροποποίηση στις</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeModifiedOnBehalfBy" xml:space="preserve">
@@ -2035,7 +2047,7 @@
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
-    <value>Πλήρες όνομα</value>
+    <value>Όνομα</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_RenderingOrder" xml:space="preserve">
@@ -2091,7 +2103,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία τροποποίησης</value>
+    <value>Τροποποίηση στις</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
@@ -2123,7 +2135,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_IsRuntime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_name" xml:space="preserve">
-    <value>Πλήρες όνομα</value>
+    <value>Όνομα</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" xml:space="preserve">
@@ -2175,7 +2187,7 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία τροποποίησης</value>
+    <value>Τροποποίηση στις</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsModifiedOnBehalfBy" xml:space="preserve">
@@ -2183,7 +2195,7 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_name" xml:space="preserve">
-    <value>Πλήρες όνομα</value>
+    <value>Όνομα</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_templatetagsId" xml:space="preserve">
@@ -2243,7 +2255,7 @@
     <comment>'App Parameter Definition' : label for cell in Entity FormXml ID: '{831b4552-37aa-9960-3770-ce6606502857}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{907339f9-d1e5-48b6-983d-e55b38ce05dd}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'App Parameter Definition' : label for tab in Entity FormXml ID: '{907339f9-d1e5-48b6-983d-e55b38ce05dd}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{96322715-36cd-1a8e-4b02-ae5a21b755bb}" xml:space="preserve">
@@ -2255,11 +2267,11 @@
     <comment>'App Parameter Definition' : label for cell in Entity FormXml ID: '{aaed2985-e20a-e643-e7d6-ce9b9b459b1a}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{f956a332-f5f8-4577-a104-9f863d694e57}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'App Parameter Definition' : label for section in Entity FormXml ID: '{f956a332-f5f8-4577-a104-9f863d694e57}'</comment>
   </data>
   <data name="1:label,Application Tab Template{1c7ca199-5627-4de2-b6c4-83d0be0be5be}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Application Tab Template' : label for tab in Entity FormXml ID: '{1c7ca199-5627-4de2-b6c4-83d0be0be5be}'</comment>
   </data>
   <data name="1:label,Application Tab Template{275a9039-b619-6781-3d78-478ee443d9e8}" xml:space="preserve">
@@ -2299,7 +2311,7 @@
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{db2a537d-5522-9de6-943d-4d5c07542e92}'</comment>
   </data>
   <data name="1:label,Application Tab Template{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Application Tab Template' : label for section in Entity FormXml ID: '{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{10c387e0-fbb6-442b-b126-b15e8518e03f}" xml:space="preserve">
@@ -2307,11 +2319,11 @@
     <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{10c387e0-fbb6-442b-b126-b15e8518e03f}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{7c173265-af1b-4522-a8b8-6a435cae429a}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Application Template Parameter' : label for tab in Entity FormXml ID: '{7c173265-af1b-4522-a8b8-6a435cae429a}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{7d5d94da-0ab2-41af-a918-403bab13a9bc}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Application Template Parameter' : label for section in Entity FormXml ID: '{7d5d94da-0ab2-41af-a918-403bab13a9bc}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{c9a9b00c-6458-4010-88b4-b2076efe26d3}" xml:space="preserve">
@@ -2335,11 +2347,11 @@
     <comment>'Application Type' : label for cell in Entity FormXml ID: '{74fe1b3b-ddd9-466d-b06c-f66467da8370}'</comment>
   </data>
   <data name="1:label,Application Type{7a9894bd-4d59-4cb5-9dc3-ab6b84ef6ad5}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Application Type' : label for tab in Entity FormXml ID: '{7a9894bd-4d59-4cb5-9dc3-ab6b84ef6ad5}'</comment>
   </data>
   <data name="1:label,Application Type{9aa87706-f770-4f1e-a905-4379d3517c38}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Application Type' : label for section in Entity FormXml ID: '{9aa87706-f770-4f1e-a905-4379d3517c38}'</comment>
   </data>
   <data name="1:label,Application Type{e403ad33-9951-d007-4358-2673171e868b}" xml:space="preserve">
@@ -2371,19 +2383,19 @@
     <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode0" xml:space="preserve">
-    <value>Ενεργό</value>
+    <value>Ενεργός</value>
     <comment>'msdyn_ciprovider' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode1" xml:space="preserve">
-    <value>Ανενεργό</value>
+    <value>Ανενεργός</value>
     <comment>'msdyn_ciprovider' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode1" xml:space="preserve">
-    <value>Ανενεργό</value>
+    <value>Eνεργό</value>
     <comment>'msdyn_ciprovider' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode2" xml:space="preserve">
-    <value>Ανενεργό</value>
+    <value>Ανενεργός</value>
     <comment>'msdyn_ciprovider' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode0" xml:space="preserve">
@@ -2607,7 +2619,7 @@
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{ca715140-33b6-4147-91a0-85a2c320f7dd}'</comment>
   </data>
   <data name="1:label,Notification Fields{cd441dbf-27f6-4ccb-aeb9-8c0b8a3f1f30}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Notification Fields' : label for section in Entity FormXml ID: '{cd441dbf-27f6-4ccb-aeb9-8c0b8a3f1f30}'</comment>
   </data>
   <data name="1:label,Notification Fields{cf8c0f6d-2225-4c33-8f65-13efaf38fda7}" xml:space="preserve">
@@ -2615,7 +2627,7 @@
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{cf8c0f6d-2225-4c33-8f65-13efaf38fda7}'</comment>
   </data>
   <data name="1:label,Notification Fields{d6df0d89-7b66-450a-8916-377c7e683e23}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Notification Fields' : label for tab in Entity FormXml ID: '{d6df0d89-7b66-450a-8916-377c7e683e23}'</comment>
   </data>
   <data name="1:label,Notification Fields{dcd8ee8a-4aac-30bc-d07a-592ad035b9dd}" xml:space="preserve">
@@ -2634,6 +2646,14 @@
     <value>Ενότητα</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Πεδία ειδοποίησης</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
@@ -2643,7 +2663,7 @@
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{94dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{9730037d-ab23-4a34-9b05-5a0e50e1c401}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Notification Template' : label for tab in Entity FormXml ID: '{9730037d-ab23-4a34-9b05-5a0e50e1c401}'</comment>
   </data>
   <data name="1:label,Notification Template{e3634dd8-8a0a-2c9e-49b2-ad872d9d9ba3}" xml:space="preserve">
@@ -2659,7 +2679,7 @@
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{eeb7401d-7729-9db8-8cc1-6d8343052141}'</comment>
   </data>
   <data name="1:label,Notification Template{ff05f569-e51f-4c31-96b2-ae6d20c9364f}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{ff05f569-e51f-4c31-96b2-ae6d20c9364f}'</comment>
   </data>
   <data name="1:label,Session Templates{093dd305-a7cc-d998-e489-ac60594b185e}" xml:space="preserve">
@@ -2679,7 +2699,7 @@
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{3b39cc03-8ee0-b79b-125d-272c546b6725}'</comment>
   </data>
   <data name="1:label,Session Templates{559158ad-2749-a49e-7128-466d84e59a24}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Session Templates' : label for section in Entity FormXml ID: '{559158ad-2749-a49e-7128-466d84e59a24}'</comment>
   </data>
   <data name="1:label,Session Templates{5d09b768-575c-d77d-6479-2130abbde22b}" xml:space="preserve">
@@ -2703,7 +2723,7 @@
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{bd25aa54-bb39-81ea-a63b-07857ea961aa}'</comment>
   </data>
   <data name="1:label,Session Templates{d507a7e4-d1a6-a2d3-2dcd-d42055c621cc}" xml:space="preserve">
-    <value>Γενικές</value>
+    <value>Γενικά</value>
     <comment>'Session Templates' : label for tab in Entity FormXml ID: '{d507a7e4-d1a6-a2d3-2dcd-d42055c621cc}'</comment>
   </data>
   <data name="1:label,Session Templates{d8c75080-1be0-30ce-1890-903eee8db7e6}" xml:space="preserve">
@@ -3119,7 +3139,7 @@
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateInfo{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Κοινό</value>
+    <value>Κοινός</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateMarketing{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3143,7 +3163,7 @@
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Template ParameterInfo{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Κοινή</value>
+    <value>Κοινός</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Template ParameterMarketing{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3183,7 +3203,7 @@
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification FieldsInfo{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Κοινά</value>
+    <value>Κοινός</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification FieldsMarketing{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3203,7 +3223,7 @@
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification TemplateInfo{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Κοινό</value>
+    <value>Κοινός</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification TemplateMarketing{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3227,7 +3247,7 @@
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Session TemplatesInfo{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Κοινά</value>
+    <value>Κοινός</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Session TemplatesMarketing{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
@@ -3263,7 +3283,7 @@
     <comment>'{e02fac01-dd62-4886-8f07-042ad67ee299}' : label for cell in Dialog FormXml ID: '{27ab568e-6561-4bb7-b6bc-4fa7100a1173}'</comment>
   </data>
   <data name="68:label,{e02fac01-dd62-4886-8f07-042ad67ee299}{36a52be7-c6b8-4615-acfe-6901a6164e96}" xml:space="preserve">
-    <value>Ακύρωση</value>
+    <value>Άκυρο</value>
     <comment>'{e02fac01-dd62-4886-8f07-042ad67ee299}' : label for cell in Dialog FormXml ID: '{36a52be7-c6b8-4615-acfe-6901a6164e96}'</comment>
   </data>
   <data name="68:label,{e02fac01-dd62-4886-8f07-042ad67ee299}{a2635e65-adcb-498e-8b9e-a51cd25b523e}" xml:space="preserve">

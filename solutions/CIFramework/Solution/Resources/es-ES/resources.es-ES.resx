@@ -305,27 +305,27 @@
     <comment>msdyn_templatetags Description for EntityRelationship 'team_msdyn_templatetags'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'user_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'user_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'user_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'user_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'user_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_templatetags" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'user_msdyn_templatetags'</comment>
   </data>
   <data name="15062:Description,ChannelAPIIntegrationFramework" xml:space="preserve">
@@ -335,10 +335,6 @@
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Marco de integración de API de canal</value>
@@ -381,7 +377,7 @@
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
-    <value>Formulario para esta entidad.</value>
+    <value>Formulario de esta entidad.</value>
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Código de la zona horaria que estaba en uso cuando se creó el registro.</value>
+    <value>Código de zona horaria en uso cuando se creó el registro.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -577,7 +573,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningUser" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldstatecode" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>Identificador único del usuario delegado que modificó el registro.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Botones de acción que se mostrarán. (Obsoleto)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Orden de presentación de la notificación con respecto a otras plantillas de notificación.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -689,7 +693,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningUser" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatestatecode" xml:space="preserve">
@@ -813,7 +817,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningUser" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatestatecode" xml:space="preserve">
@@ -933,7 +937,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningUser" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedBy" xml:space="preserve">
@@ -1021,7 +1025,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningUser" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterstatecode" xml:space="preserve">
@@ -1295,7 +1299,7 @@ No: se debe proporcionar el valor al crear una plantilla que use este parámetro
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningUser" xml:space="preserve">
-    <value>Identificador del usuario propietario del registro.</value>
+    <value>Identificador único del usuario propietario del registro.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsstatecode" xml:space="preserve">
@@ -1343,11 +1347,11 @@ No: se debe proporcionar el valor al crear una plantilla que use este parámetro
     <comment>'TemplateTag' : Description for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:Description,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
-    <value>Formulario para esta entidad.</value>
+    <value>Formulario de esta entidad.</value>
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
-    <value>Autor</value>
+    <value>Creado por</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
@@ -1355,7 +1359,7 @@ No: se debe proporcionar el valor al crear una plantilla que use este parámetro
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Autor (delegado)</value>
+    <value>Creado por (delegado)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
@@ -1363,7 +1367,7 @@ No: se debe proporcionar el valor al crear una plantilla que use este parámetro
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>Autor de modificación</value>
+    <value>Modificado por</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
@@ -1371,7 +1375,7 @@ No: se debe proporcionar el valor al crear una plantilla que use este parámetro
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Autor de modificación (delegado)</value>
+    <value>Modificado por (delegado)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -1574,6 +1578,10 @@ No: se debe proporcionar el valor al crear una plantilla que use este parámetro
     <value>Modificado por (delegado)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Texto del botón Aceptar</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (obsoleto)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@ No: se debe proporcionar el valor al crear una plantilla que use este parámetro
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Campos de notificación</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Texto del botón Rechazar</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Orden de notificación</value>
@@ -2633,6 +2645,14 @@ No: se debe proporcionar el valor al crear una plantilla que use este parámetro
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Sección</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Campos de notificación</value>

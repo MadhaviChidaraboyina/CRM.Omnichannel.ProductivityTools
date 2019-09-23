@@ -145,23 +145,23 @@
     <comment>msdyn_msdyn_consoleapplicationnotificationtem CustomLabel for EntityRelationship 'msdyn_msdyn_consoleapplicationnotificationtempl'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
@@ -169,7 +169,7 @@
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_modifiedby" xml:space="preserve">
-    <value>Mã định danh duy nhất của người dùng sửa đổi bản ghi.</value>
+    <value>Mã định danh duy nhất của người dùng đã sửa đổi bản ghi.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationfield_createdby" xml:space="preserve">
@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Khuôn khổ Tích hợp API Kênh</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -405,11 +401,11 @@
     <comment> 'msdyn_ciprovider' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Số thứ tự của quá trình nhập tạo ra bản ghi này.</value>
+    <value>Số thứ tự của quá trình nhập đã tạo bản ghi này.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>Mã định danh duy nhất của người dùng sửa đổi bản ghi.</value>
+    <value>Mã định danh duy nhất của người dùng đã sửa đổi bản ghi.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
@@ -481,7 +477,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Ngày và giờ dịch chuyển bản ghi.</value>
+    <value>Ngày và giờ di chuyển bản ghi.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -517,7 +513,7 @@
     <comment> 'msdyn_consoleapplicationnotificationfield' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldImportSequenceNumber" xml:space="preserve">
-    <value>Số thứ tự của quá trình nhập tạo bản ghi này.</value>
+    <value>Số thứ tự của quá trình nhập đã tạo bản ghi này.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedBy" xml:space="preserve">
@@ -569,7 +565,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
@@ -613,7 +609,7 @@
     <comment> 'msdyn_consoleapplicationnotificationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>Số thứ tự của quá trình nhập tạo bản ghi này.</value>
+    <value>Số thứ tự của quá trình nhập đã tạo bản ghi này.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedBy" xml:space="preserve">
@@ -627,6 +623,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Mã định danh duy nhất của người dùng đại diện đã sửa đổi bản ghi.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Nút hành động sẽ hiển thị. (Không còn dùng)</value>
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Thứ tự hiển thị thông báo liên quan đến các mẫu thông báo khác.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -681,7 +685,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
@@ -725,7 +729,7 @@
     <comment> 'msdyn_consoleapplicationsessiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateImportSequenceNumber" xml:space="preserve">
-    <value>Số thứ tự của quá trình nhập tạo bản ghi này.</value>
+    <value>Số thứ tự của quá trình nhập đã tạo bản ghi này.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedBy" xml:space="preserve">
@@ -805,7 +809,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
@@ -849,7 +853,7 @@
     <comment> 'msdyn_consoleapplicationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>Số thứ tự của quá trình nhập tạo bản ghi này.</value>
+    <value>Số thứ tự của quá trình nhập đã tạo bản ghi này.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedBy" xml:space="preserve">
@@ -925,7 +929,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
@@ -953,7 +957,7 @@
     <comment> 'msdyn_consoleapplicationtemplateparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterImportSequenceNumber" xml:space="preserve">
-    <value>Số thứ tự của quá trình nhập tạo bản ghi này.</value>
+    <value>Số thứ tự của quá trình nhập đã tạo bản ghi này.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedBy" xml:space="preserve">
@@ -1013,7 +1017,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
@@ -1073,7 +1077,7 @@
     <comment> 'msdyn_consoleapplicationtype' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeImportSequenceNumber" xml:space="preserve">
-    <value>Số thứ tự của quá trình nhập tạo bản ghi này.</value>
+    <value>Số thứ tự của quá trình nhập đã tạo bản ghi này.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedBy" xml:space="preserve">
@@ -1157,7 +1161,7 @@
     <comment> 'msdyn_consoleappparameterdefinition' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionImportSequenceNumber" xml:space="preserve">
-    <value>Số thứ tự của quá trình nhập tạo bản ghi này.</value>
+    <value>Số thứ tự của quá trình nhập đã tạo bản ghi này.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedBy" xml:space="preserve">
@@ -1247,7 +1251,7 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
     <comment> 'msdyn_templatetags' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsImportSequenceNumber" xml:space="preserve">
-    <value>Số thứ tự của quá trình nhập tạo bản ghi này.</value>
+    <value>Số thứ tự của quá trình nhập đã tạo bản ghi này.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedBy" xml:space="preserve">
@@ -1287,7 +1291,7 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
     <comment>'msdyn_templatetags' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>Mã định danh duy nhất của bơn vị kinh doanh sở hữu bản ghi</value>
+    <value>Mã định danh duy nhất của đơn vị kinh doanh sở hữu bản ghi</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningTeam" xml:space="preserve">
@@ -1447,7 +1451,7 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
     <comment>'msdyn_ciprovider' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Số Phiên bản Quy tắc Múi Giờ</value>
+    <value>Số phiên bản quy tắc múi giờ</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1574,6 +1578,10 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
     <value>Người sửa đổi (đại diện)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Văn bản Nút Chấp nhận</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Nút hành động (không dùng nữa)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Các trường Thông báo</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Văn bản Nút Từ chối</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Thứ tự thông báo</value>
@@ -2633,6 +2645,14 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Phần</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Các trường Thông báo</value>

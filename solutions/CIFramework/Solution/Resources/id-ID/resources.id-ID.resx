@@ -145,95 +145,95 @@
     <comment>msdyn_msdyn_consoleapplicationnotificationtem CustomLabel for EntityRelationship 'msdyn_msdyn_consoleapplicationnotificationtempl'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk pengguna yang membuat data.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_modifiedby" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk pengguna yang mengubah data.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationfield_createdby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationfield_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationfield_modifiedby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationfield_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationtemplate_createdby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationtemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationtemplate_modifiedby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationtemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationsessiontemplate_createdby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationsessiontemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationsessiontemplate_modifiedby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationsessiontemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplateparameter_createdby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplateparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplateparameter_modifiedby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplateparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplate_createdby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplate_modifiedby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtype_createdby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>msdyn_consoleapplicationtype Description for EntityRelationship 'lk_msdyn_consoleapplicationtype_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtype_modifiedby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>msdyn_consoleapplicationtype Description for EntityRelationship 'lk_msdyn_consoleapplicationtype_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleappparameterdefinition_createdby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>msdyn_consoleappparameterdefinition Description for EntityRelationship 'lk_msdyn_consoleappparameterdefinition_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleappparameterdefinition_modifiedby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>msdyn_consoleappparameterdefinition Description for EntityRelationship 'lk_msdyn_consoleappparameterdefinition_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_templatetags_createdby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'lk_msdyn_templatetags_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_templatetags_modifiedby" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'lk_msdyn_templatetags_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_consoleapplicationtemplate_msdyn_consoleapplicationsessiontemplate_AnchorTab" xml:space="preserve">
@@ -281,51 +281,51 @@
     <comment>msdyn_templatetags Description for EntityRelationship 'owner_msdyn_templatetags'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'team_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'team_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'team_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'team_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'team_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_templatetags" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'team_msdyn_templatetags'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'user_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'user_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'user_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'user_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'user_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_templatetags" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'user_msdyn_templatetags'</comment>
   </data>
   <data name="15062:Description,ChannelAPIIntegrationFramework" xml:space="preserve">
@@ -335,10 +335,6 @@
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Framework Integrasi API Saluran</value>
@@ -389,15 +385,15 @@
     <comment>'Channel' : Description for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk pengguna yang membuat data.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pembuatan data.</value>
+    <value>Tanggal dan waktu data dibuat.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk pengguna delegasi yang membuat data.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang membuat data.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
@@ -405,19 +401,19 @@
     <comment> 'msdyn_ciprovider' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Nomor urut impor pembuat data ini.</value>
+    <value>Nomor urut impor yang membuat data ini.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk pengguna yang mengubah data.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu perubahan data.</value>
+    <value>Tanggal dan waktu data diubah.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk pengguna delegasi yang mengubah data.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang mengubah data.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -481,7 +477,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pemindahan data.</value>
+    <value>Tanggal dan waktu data dimigrasikan.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -501,15 +497,15 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pembuatan rekaman.</value>
+    <value>Tanggal dan waktu data dibuat.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang membuat data.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldentitymsdyn_consoleapplicationnotificationfield" xml:space="preserve">
@@ -517,19 +513,19 @@
     <comment> 'msdyn_consoleapplicationnotificationfield' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldImportSequenceNumber" xml:space="preserve">
-    <value>Nomor urut impor pembuat rekaman ini.</value>
+    <value>Nomor urut impor yang membuat data ini.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pengubahan rekaman.</value>
+    <value>Tanggal dan waktu data diubah.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfieldId" xml:space="preserve">
@@ -561,7 +557,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu rekaman dimigrasi.</value>
+    <value>Tanggal dan waktu data dimigrasikan.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwnerId" xml:space="preserve">
@@ -569,15 +565,15 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningUser" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldstatecode" xml:space="preserve">
@@ -593,19 +589,19 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat membuat data.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pembuatan rekaman.</value>
+    <value>Tanggal dan waktu data dibuat.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang membuat data.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateentitymsdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
@@ -613,20 +609,24 @@
     <comment> 'msdyn_consoleapplicationnotificationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>Nomor urut impor pembuat rekaman ini.</value>
+    <value>Nomor urut impor yang membuat data ini.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pengubahan rekaman.</value>
+    <value>Tanggal dan waktu data diubah.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Tombol tindakan yang akan ditampilkan. (Ditolak)</value>
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Urutan tampilan pemberitahuan relatif terhadap template pemberitahuan lainnya.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -673,7 +677,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu rekaman dimigrasi.</value>
+    <value>Tanggal dan waktu data dimigrasikan.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwnerId" xml:space="preserve">
@@ -681,15 +685,15 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningUser" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatestatecode" xml:space="preserve">
@@ -705,19 +709,19 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat membuat data.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pembuatan rekaman.</value>
+    <value>Tanggal dan waktu data dibuat.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang membuat data.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateentitymsdyn_consoleapplicationsessiontemplate" xml:space="preserve">
@@ -725,19 +729,19 @@
     <comment> 'msdyn_consoleapplicationsessiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateImportSequenceNumber" xml:space="preserve">
-    <value>Nomor urut impor pembuat rekaman ini.</value>
+    <value>Nomor urut impor yang membuat data ini.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pengubahan rekaman.</value>
+    <value>Tanggal dan waktu data diubah.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_AnchorTab" xml:space="preserve">
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Pengidentifikasi unik instans entitas.</value>
+    <value>Pengidentifikasi unik untuk instans entitas.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -797,7 +801,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu rekaman dimigrasi.</value>
+    <value>Tanggal dan waktu data dimigrasikan.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwnerId" xml:space="preserve">
@@ -805,15 +809,15 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningUser" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatestatecode" xml:space="preserve">
@@ -829,19 +833,19 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat membuat data.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pembuatan rekaman.</value>
+    <value>Tanggal dan waktu data dibuat.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang membuat data.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateentitymsdyn_consoleapplicationtemplate" xml:space="preserve">
@@ -849,19 +853,19 @@
     <comment> 'msdyn_consoleapplicationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>Nomor urut impor pembuat rekaman ini.</value>
+    <value>Nomor urut impor yang membuat data ini.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pengubahan rekaman.</value>
+    <value>Tanggal dan waktu data diubah.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplateId" xml:space="preserve">
@@ -917,7 +921,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu rekaman dimigrasi.</value>
+    <value>Tanggal dan waktu data dimigrasikan.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwnerId" xml:space="preserve">
@@ -925,27 +929,27 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningUser" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pembuatan rekaman.</value>
+    <value>Tanggal dan waktu data dibuat.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang membuat data.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterentitymsdyn_consoleapplicationtemplateparameter" xml:space="preserve">
@@ -953,19 +957,19 @@
     <comment> 'msdyn_consoleapplicationtemplateparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterImportSequenceNumber" xml:space="preserve">
-    <value>Nomor urut impor pembuat rekaman ini.</value>
+    <value>Nomor urut impor yang membuat data ini.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pengubahan rekaman.</value>
+    <value>Tanggal dan waktu data diubah.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameterId" xml:space="preserve">
@@ -1005,7 +1009,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu rekaman dimigrasi.</value>
+    <value>Tanggal dan waktu data dimigrasikan.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwnerId" xml:space="preserve">
@@ -1013,15 +1017,15 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningUser" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterstatecode" xml:space="preserve">
@@ -1037,7 +1041,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat membuat data.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
@@ -1053,19 +1057,19 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat membuat data.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pembuatan rekaman.</value>
+    <value>Tanggal dan waktu data dibuat.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang membuat data.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeentitymsdyn_consoleapplicationtype" xml:space="preserve">
@@ -1073,19 +1077,19 @@
     <comment> 'msdyn_consoleapplicationtype' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeImportSequenceNumber" xml:space="preserve">
-    <value>Nomor urut impor pembuat rekaman ini.</value>
+    <value>Nomor urut impor yang membuat data ini.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pengubahan rekaman.</value>
+    <value>Tanggal dan waktu data diubah.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang mengubah data.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtypeId" xml:space="preserve">
@@ -1121,7 +1125,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu rekaman dimigrasi.</value>
+    <value>Tanggal dan waktu data dimigrasikan.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypestatecode" xml:space="preserve">
@@ -1137,19 +1141,19 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat membuat data.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pembuatan rekaman.</value>
+    <value>Tanggal dan waktu data dibuat.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang membuat data.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionentitymsdyn_consoleappparameterdefinition" xml:space="preserve">
@@ -1157,19 +1161,19 @@
     <comment> 'msdyn_consoleappparameterdefinition' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionImportSequenceNumber" xml:space="preserve">
-    <value>Nomor urut impor pembuat rekaman ini.</value>
+    <value>Nomor urut impor yang membuat data ini.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pengubahan rekaman.</value>
+    <value>Tanggal dan waktu data diubah.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang mengubah data.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinitionId" xml:space="preserve">
@@ -1211,7 +1215,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu rekaman dimigrasi.</value>
+    <value>Tanggal dan waktu data dimigrasikan.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionstatecode" xml:space="preserve">
@@ -1227,19 +1231,19 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat membuat data.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang membuat data.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pembuatan rekaman.</value>
+    <value>Tanggal dan waktu data dibuat.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang membuat rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang membuat data.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsentitymsdyn_templatetags" xml:space="preserve">
@@ -1247,19 +1251,19 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment> 'msdyn_templatetags' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsImportSequenceNumber" xml:space="preserve">
-    <value>Nomor urut impor pembuat rekaman ini.</value>
+    <value>Nomor urut impor yang membuat data ini.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna yang mengubah data.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu pengubahan rekaman.</value>
+    <value>Tanggal dan waktu data diubah.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna delegasi yang mengubah rekaman.</value>
+    <value>Pengidentifikasi unik pengguna delegasi yang mengubah data.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_name" xml:space="preserve">
@@ -1279,7 +1283,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_templatetags' : Description for OptionSet 'msdyn_templatetags_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu rekaman dimigrasi.</value>
+    <value>Tanggal dan waktu data dimigrasikan.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwnerId" xml:space="preserve">
@@ -1287,15 +1291,15 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_templatetags' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman</value>
+    <value>Pengidentifikasi unik unit bisnis yang memiliki data</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningTeam" xml:space="preserve">
-    <value>Pengidentifikasi unik dari tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki data.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningUser" xml:space="preserve">
-    <value>Pengidentifikasi unik dari pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki data.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsstatecode" xml:space="preserve">
@@ -1311,7 +1315,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_templatetags' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat membuat data.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -1371,7 +1375,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Diubah oleh (Delegasi)</value>
+    <value>Diubah Oleh (Delegasi)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -1435,7 +1439,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Data Dibuat pada</value>
+    <value>Data Dibuat Pada</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1511,7 +1515,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOverriddenCreatedOn" xml:space="preserve">
-    <value>Rekaman Dibuat Pada</value>
+    <value>Data Dibuat Pada</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwnerId" xml:space="preserve">
@@ -1574,6 +1578,10 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <value>Diubah Oleh (Delegasi)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Teks Tombol Terima</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>TombolTindakan (Ditolak)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1606,6 +1614,10 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <value>Bidang Pemberitahuan</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Teks Tombol Tolak</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Urutan pemberitahuan</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -1619,7 +1631,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Rekaman Dibuat Pada</value>
+    <value>Data Dibuat Pada</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwnerId" xml:space="preserve">
@@ -1707,7 +1719,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for OptionSet 'msdyn_consoleapplicationsessiontemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_description" xml:space="preserve">
-    <value>Keterangan</value>
+    <value>Deskripsi</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_description' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_icon" xml:space="preserve">
@@ -1739,7 +1751,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Rekaman Dibuat Pada</value>
+    <value>Data Dibuat Pada</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwnerId" xml:space="preserve">
@@ -1823,7 +1835,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_description" xml:space="preserve">
-    <value>Keterangan</value>
+    <value>Deskripsi</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_description' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_icon" xml:space="preserve">
@@ -1855,7 +1867,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Rekaman Dibuat Pada</value>
+    <value>Data Dibuat Pada</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwnerId" xml:space="preserve">
@@ -1939,7 +1951,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>Rekaman Dibuat Pada</value>
+    <value>Data Dibuat Pada</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwnerId" xml:space="preserve">
@@ -2051,7 +2063,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeOverriddenCreatedOn" xml:space="preserve">
-    <value>Rekaman Dibuat Pada</value>
+    <value>Data Dibuat Pada</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypestatecode" xml:space="preserve">
@@ -2135,7 +2147,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
-    <value>Rekaman Dibuat Pada</value>
+    <value>Data Dibuat Pada</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionstatecode" xml:space="preserve">
@@ -2199,7 +2211,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'msdyn_templatetags' : displayname for OptionSet 'msdyn_templatetags_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOverriddenCreatedOn" xml:space="preserve">
-    <value>Rekaman Dibuat Pada</value>
+    <value>Data Dibuat Pada</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwnerId" xml:space="preserve">
@@ -2634,6 +2646,14 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <value>Bagian</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Bidang Pemberitahuan</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
@@ -2687,7 +2707,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{5d09b768-575c-d77d-6479-2130abbde22b}'</comment>
   </data>
   <data name="1:label,Session Templates{67e28937-3ab9-4b74-e49b-54660966e25c}" xml:space="preserve">
-    <value>Keterangan</value>
+    <value>Deskripsi</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{67e28937-3ab9-4b74-e49b-54660966e25c}'</comment>
   </data>
   <data name="1:label,Session Templates{85978531-3836-82b6-4471-e0ecbe36018c}" xml:space="preserve">
@@ -3099,7 +3119,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'TemplateTag' : LocalizedName for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionInfo{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Biasa</value>
+    <value>Umum</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionMarketing{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
@@ -3119,7 +3139,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateInfo{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Biasa</value>
+    <value>Umum</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateMarketing{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3143,7 +3163,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Template ParameterInfo{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Biasa</value>
+    <value>Umum</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Template ParameterMarketing{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3163,7 +3183,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application TypeInfo{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Biasa</value>
+    <value>Umum</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application TypeMarketing{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3183,7 +3203,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification FieldsInfo{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Biasa</value>
+    <value>Umum</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification FieldsMarketing{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3203,7 +3223,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification TemplateInfo{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Biasa</value>
+    <value>Umum</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification TemplateMarketing{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3227,7 +3247,7 @@ Tidak - nilai harus disediakan saat membuat template yang menggunakan parameter 
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Session TemplatesInfo{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Biasa</value>
+    <value>Umum</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Session TemplatesMarketing{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">

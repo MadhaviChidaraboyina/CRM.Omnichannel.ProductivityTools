@@ -177,7 +177,7 @@
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationfield_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationfield_modifiedby" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationfield_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationtemplate_createdby" xml:space="preserve">
@@ -185,7 +185,7 @@
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationtemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationtemplate_modifiedby" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationnotificationtemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationsessiontemplate_createdby" xml:space="preserve">
@@ -193,7 +193,7 @@
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationsessiontemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationsessiontemplate_modifiedby" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationsessiontemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplateparameter_createdby" xml:space="preserve">
@@ -201,7 +201,7 @@
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplateparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplateparameter_modifiedby" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplateparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplate_createdby" xml:space="preserve">
@@ -209,7 +209,7 @@
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtemplate_modifiedby" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'lk_msdyn_consoleapplicationtemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtype_createdby" xml:space="preserve">
@@ -217,7 +217,7 @@
     <comment>msdyn_consoleapplicationtype Description for EntityRelationship 'lk_msdyn_consoleapplicationtype_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationtype_modifiedby" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>msdyn_consoleapplicationtype Description for EntityRelationship 'lk_msdyn_consoleapplicationtype_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleappparameterdefinition_createdby" xml:space="preserve">
@@ -225,7 +225,7 @@
     <comment>msdyn_consoleappparameterdefinition Description for EntityRelationship 'lk_msdyn_consoleappparameterdefinition_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleappparameterdefinition_modifiedby" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>msdyn_consoleappparameterdefinition Description for EntityRelationship 'lk_msdyn_consoleappparameterdefinition_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_templatetags_createdby" xml:space="preserve">
@@ -233,7 +233,7 @@
     <comment>msdyn_templatetags Description for EntityRelationship 'lk_msdyn_templatetags_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_templatetags_modifiedby" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'lk_msdyn_templatetags_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_consoleapplicationtemplate_msdyn_consoleapplicationsessiontemplate_AnchorTab" xml:space="preserve">
@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Kanal-API-integrationsfunktioner</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -349,7 +345,7 @@
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
   <data name="1:Description,App Parameter Definition{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>En formular for dette objekt.</value>
+    <value>En formular til dette objekt.</value>
     <comment>'App Parameter Definition' : Description for systemform in Entity FormXml ID: '{215a1395-743d-4dfb-b552-c51d65fdb423}'</comment>
   </data>
   <data name="1:Description,App Parameter Definition{e519c146-6836-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -361,7 +357,7 @@
     <comment>'Application Tab Template' : Description for SavedQuery on Entity QueryId: '{37fd3926-6e36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Tab Template{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>En formular for dette objekt.</value>
+    <value>En formular til dette objekt.</value>
     <comment>'Application Tab Template' : Description for systemform in Entity FormXml ID: '{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}'</comment>
   </data>
   <data name="1:Description,Application Template Parameter{88137b29-0c3b-e911-8187-000d3afe5f6b}" xml:space="preserve">
@@ -369,7 +365,7 @@
     <comment>'Application Template Parameter' : Description for SavedQuery on Entity QueryId: '{88137b29-0c3b-e911-8187-000d3afe5f6b}'</comment>
   </data>
   <data name="1:Description,Application Template Parameter{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>En formular for dette objekt.</value>
+    <value>En formular til dette objekt.</value>
     <comment>'Application Template Parameter' : Description for systemform in Entity FormXml ID: '{d00da6ab-1789-4a9d-ac44-da3ea8d75800}'</comment>
   </data>
   <data name="1:Description,Application Type{ba8f5f7e-6b36-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -377,7 +373,7 @@
     <comment>'Application Type' : Description for SavedQuery on Entity QueryId: '{ba8f5f7e-6b36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Type{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>En formular for dette objekt.</value>
+    <value>En formular til dette objekt.</value>
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
@@ -481,7 +477,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Dato og klokkeslæt for overførsel af posten.</value>
+    <value>Dato og klokkeslæt for overførslen af posten.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -521,7 +517,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedBy" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOn" xml:space="preserve">
@@ -617,7 +613,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedBy" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOn" xml:space="preserve">
@@ -627,6 +623,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Entydigt id for den stedfortræderbruger, der ændrede posten.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>De handlingsknapper, der skal vises. (Frarådet)</value>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Visningsrækkefølge for meddelelser i forhold til andre meddelelsesskabeloner.</value>
@@ -729,7 +733,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedBy" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOn" xml:space="preserve">
@@ -853,7 +857,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedBy" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOn" xml:space="preserve">
@@ -957,7 +961,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedBy" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOn" xml:space="preserve">
@@ -1077,7 +1081,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedBy" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOn" xml:space="preserve">
@@ -1161,7 +1165,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedBy" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOn" xml:space="preserve">
@@ -1251,7 +1255,7 @@ Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne par
     <comment>'msdyn_templatetags' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedBy" xml:space="preserve">
-    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOn" xml:space="preserve">
@@ -1315,7 +1319,7 @@ Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne par
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>En formular for dette objekt.</value>
+    <value>En formular til dette objekt.</value>
     <comment>'Notification Fields' : Description for systemform in Entity FormXml ID: '{92b56288-9844-4608-b6e7-d9362c325d68}'</comment>
   </data>
   <data name="1:Description,Notification Fields{e48410d6-7236-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -1323,7 +1327,7 @@ Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne par
     <comment>'Notification Fields' : Description for SavedQuery on Entity QueryId: '{e48410d6-7236-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Notification Template{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>En formular for dette objekt.</value>
+    <value>En formular til dette objekt.</value>
     <comment>'Notification Template' : Description for systemform in Entity FormXml ID: '{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}'</comment>
   </data>
   <data name="1:Description,Notification Template{2b409f89-7336-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -1335,7 +1339,7 @@ Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne par
     <comment>'Session Templates' : Description for SavedQuery on Entity QueryId: '{0f0185db-6f36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Session Templates{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>En formular for dette objekt.</value>
+    <value>En formular til dette objekt.</value>
     <comment>'Session Templates' : Description for systemform in Entity FormXml ID: '{7e7e29c0-bc24-40c2-938b-941554da4c4e}'</comment>
   </data>
   <data name="1:Description,TemplateTag{ad7358b6-7641-e911-8190-000d3afe6c36}" xml:space="preserve">
@@ -1435,7 +1439,7 @@ Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne par
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Posten blev oprettet den</value>
+    <value>Post oprettet den</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1451,7 +1455,7 @@ Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne par
     <comment>'msdyn_ciprovider' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonekode ved UTC-konvertering</value>
+    <value>Tidszonekode for UTC-konvertering</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -1574,6 +1578,10 @@ Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne par
     <value>Ændret af (Stedfortræder)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Tekst til knappen Acceptér</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (Frarådet)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@ Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne par
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Meddelelsesfelter</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Tekst til knappen Afvis</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Meddelelsesrækkefølge</value>
@@ -2634,6 +2646,14 @@ Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne par
     <value>Sektion</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Meddelelsesfelter</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
@@ -3263,7 +3283,7 @@ Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne par
     <comment>'{e02fac01-dd62-4886-8f07-042ad67ee299}' : label for cell in Dialog FormXml ID: '{27ab568e-6561-4bb7-b6bc-4fa7100a1173}'</comment>
   </data>
   <data name="68:label,{e02fac01-dd62-4886-8f07-042ad67ee299}{36a52be7-c6b8-4615-acfe-6901a6164e96}" xml:space="preserve">
-    <value>Annullér</value>
+    <value>Annuller</value>
     <comment>'{e02fac01-dd62-4886-8f07-042ad67ee299}' : label for cell in Dialog FormXml ID: '{36a52be7-c6b8-4615-acfe-6901a6164e96}'</comment>
   </data>
   <data name="68:label,{e02fac01-dd62-4886-8f07-042ad67ee299}{a2635e65-adcb-498e-8b9e-a51cd25b523e}" xml:space="preserve">

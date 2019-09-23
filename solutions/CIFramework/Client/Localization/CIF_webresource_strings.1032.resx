@@ -137,6 +137,78 @@
     <value>Κλείσιμο</value>
     <comment>Text for close button.</comment>
   </data>
+  <data name="FRE_COMPREHENSIVEVIEW_DESC" xml:space="preserve">
+    <value>Προβάλετε και αποκτήστε πρόσβαση σε όλες τις πληροφορίες πελατών στα χέρια σας σε ένα σημείο για να παρέχετε ταχύτερη εξυπηρέτηση.</value>
+    <comment>Description for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_COMPREHENSIVEVIEW_TITLE" xml:space="preserve">
+    <value>Ολοκληρωμένη προβολή της διαδρομής των πελατών σας</value>
+    <comment>Title for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_DESC" xml:space="preserve">
+    <value>Προσκαλέστε άλλους εκπροσώπους, επόπτες για να συνεργαστείτε και να λύσετε τα προβλήματα γρηγορότερα.</value>
+    <comment>Description for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_TITLE" xml:space="preserve">
+    <value>Συμβουλευτείτε τους χρήστες</value>
+    <comment>Title for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_DESC" xml:space="preserve">
+    <value>Αποκτήστε πρόσβαση και διαχειριστείτε εφαρμογές χάρτη τοποθεσίας που βρίσκονται στο πλαίσιο μιας περιόδου λειτουργίας.</value>
+    <comment>Description for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_TITLE" xml:space="preserve">
+    <value>Σχετικές εφαρμογές</value>
+    <comment>Title for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_DONTSHOWMEAGAIN" xml:space="preserve">
+    <value>Να μην εμφανιστεί ξανά</value>
+    <comment>Opt-out checkbox label for FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_DESC" xml:space="preserve">
+    <value>Ανοίξτε γρήγορα τα στοιχεία εργασίας με το πληκτρολόγιο και χειρονομία κλικ του ποντικιού και μεγιστοποιήστε την παραγωγικότητά σας.</value>
+    <comment>Description for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_TITLE" xml:space="preserve">
+    <value>Κάντε περισσότερες εργασίες</value>
+    <comment>Title for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETSTARTED" xml:space="preserve">
+    <value>Γρήγορα αποτελέσματα</value>
+    <comment>Get Started Button Text for FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_DESC" xml:space="preserve">
+    <value>Κάντε μια γρήγορη περιήγηση για να μάθετε πώς να παρέχετε ταχύτερη, εξατομικευμένη εξυπηρέτηση στους πελάτες σας.</value>
+    <comment>Description for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_TITLE" xml:space="preserve">
+    <value>Καλώς ορίσατε στο Πανκαναλικό για το Dynamics 365 Customer Service</value>
+    <comment>Title for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_LASTSLIDE_TITLE" xml:space="preserve">
+    <value>Όλες οι εργασίες</value>
+    <comment>Title for the Last Slide on FRE</comment>
+  </data>
+  <data name="FRE_PAGINATION_OF" xml:space="preserve">
+    <value>του</value>
+    <comment>of Word of Pagination on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_DESC" xml:space="preserve">
+    <value>Μεταφέρετε τις συνομιλίες ομαλά στους πιο κατάλληλους εκπροσώπους για να τις επιλύσετε γρήγορα.</value>
+    <comment>Description for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_TITLE" xml:space="preserve">
+    <value>Μεταβιβάστε τη συνομιλία</value>
+    <comment>Title for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_DESC" xml:space="preserve">
+    <value>Διαχειριστείτε πολλές συνομιλίες πελατών ταυτόχρονα με τον πλήρη έλεγχο του περιβάλλοντος και των λεπτομερειών πελάτη.</value>
+    <comment>Description for Work With Multiple Customers Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_TITLE" xml:space="preserve">
+    <value>Εργασία με πολλούς πελάτες</value>
+    <comment>Title for Work With Multiple Customers Slide on FRE</comment>
+  </data>
   <data name="LAUNCH_PRESENCE_DIALOG_TOOLTIP" xml:space="preserve">
     <value>Έναρξη παραθύρου διαλόγου παρουσίας</value>
     <comment>Tooltip for presence control in navbar</comment>

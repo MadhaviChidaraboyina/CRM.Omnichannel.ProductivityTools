@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Kanal API'sı Tümleştirme Çerçevesi</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğunda kullanımda olan zaman dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -517,7 +513,7 @@
     <comment> 'msdyn_consoleapplicationnotificationfield' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldImportSequenceNumber" xml:space="preserve">
-    <value>Bu kaydı oluşturan içe aktarma işleminin sıra numarası.</value>
+    <value>Bu kaydı oluşturan içeri aktarma işleminin sıra numarası.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedBy" xml:space="preserve">
@@ -589,11 +585,11 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca dahili kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
@@ -613,7 +609,7 @@
     <comment> 'msdyn_consoleapplicationnotificationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>Bu kaydı oluşturan içe aktarma işleminin sıra numarası.</value>
+    <value>Bu kaydı oluşturan içeri aktarma işleminin sıra numarası.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedBy" xml:space="preserve">
@@ -627,6 +623,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Kaydı değiştiren temsilci kullanıcının benzersiz tanımlayıcısı.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Görüntülenecek eylem düğmeleri. (Kullanım dışı)</value>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Bildirimin diğer bildirim şablonlarına göre görüntüleme sırası.</value>
@@ -701,11 +705,11 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca dahili kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
@@ -725,7 +729,7 @@
     <comment> 'msdyn_consoleapplicationsessiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateImportSequenceNumber" xml:space="preserve">
-    <value>Bu kaydı oluşturan içe aktarma işleminin sıra numarası.</value>
+    <value>Bu kaydı oluşturan içeri aktarma işleminin sıra numarası.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedBy" xml:space="preserve">
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Varlık örneklerinin benzersiz tanımlayıcısı.</value>
+    <value>Varlık kurulumlarının benzersiz tanımlayıcısı</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -825,11 +829,11 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca dahili kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
@@ -849,7 +853,7 @@
     <comment> 'msdyn_consoleapplicationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>Bu kaydı oluşturan içe aktarma işleminin sıra numarası.</value>
+    <value>Bu kaydı oluşturan içeri aktarma işleminin sıra numarası.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedBy" xml:space="preserve">
@@ -953,7 +957,7 @@
     <comment> 'msdyn_consoleapplicationtemplateparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterImportSequenceNumber" xml:space="preserve">
-    <value>Bu kaydı oluşturan içe aktarma işleminin sıra numarası.</value>
+    <value>Bu kaydı oluşturan içeri aktarma işleminin sıra numarası.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedBy" xml:space="preserve">
@@ -1033,11 +1037,11 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca dahili kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
@@ -1049,11 +1053,11 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca dahili kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
@@ -1073,7 +1077,7 @@
     <comment> 'msdyn_consoleapplicationtype' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeImportSequenceNumber" xml:space="preserve">
-    <value>Bu kaydı oluşturan içe aktarma işleminin sıra numarası.</value>
+    <value>Bu kaydı oluşturan içeri aktarma işleminin sıra numarası.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedBy" xml:space="preserve">
@@ -1133,11 +1137,11 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca dahili kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1157,7 +1161,7 @@
     <comment> 'msdyn_consoleappparameterdefinition' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionImportSequenceNumber" xml:space="preserve">
-    <value>Bu kaydı oluşturan içe aktarma işleminin sıra numarası.</value>
+    <value>Bu kaydı oluşturan içeri aktarma işleminin sıra numarası.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedBy" xml:space="preserve">
@@ -1223,11 +1227,11 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca dahili kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedBy" xml:space="preserve">
@@ -1247,7 +1251,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment> 'msdyn_templatetags' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsImportSequenceNumber" xml:space="preserve">
-    <value>Bu kaydı oluşturan içe aktarma işleminin sıra numarası.</value>
+    <value>Bu kaydı oluşturan içeri aktarma işleminin sıra numarası.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedBy" xml:space="preserve">
@@ -1307,11 +1311,11 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_templatetags' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca dahili kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -1415,7 +1419,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_LandingUrl' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_name" xml:space="preserve">
-    <value>Ad</value>
+    <value>Adı</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_RoleSelector" xml:space="preserve">
@@ -1435,7 +1439,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Kaydın Oluşturulduğu Tarih</value>
+    <value>Kaydın Oluşturulma Tarihi</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1459,7 +1463,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedOn" xml:space="preserve">
-    <value>Oluşturulma Tarihi</value>
+    <value>Oluşturma Tarihi</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedOnBehalfBy" xml:space="preserve">
@@ -1467,7 +1471,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldImportSequenceNumber" xml:space="preserve">
-    <value>İçe Aktarma Sıra Numarası</value>
+    <value>İçeri Aktarma Sıra Numarası</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldModifiedBy" xml:space="preserve">
@@ -1499,7 +1503,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_LineHeader' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_name" xml:space="preserve">
-    <value>Ad</value>
+    <value>Adı</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_Priority" xml:space="preserve">
@@ -1515,7 +1519,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwnerId" xml:space="preserve">
-    <value>Sahip</value>
+    <value>Sahibi</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
@@ -1551,7 +1555,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedOn" xml:space="preserve">
-    <value>Oluşturulma Tarihi</value>
+    <value>Oluşturma Tarihi</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1559,7 +1563,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>İçe Aktarma Sıra Numarası</value>
+    <value>İçeri Aktarma Sıra Numarası</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedBy" xml:space="preserve">
@@ -1573,6 +1577,10 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Değiştiren (Temsilci)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Kabul Et Düğmesi Metni</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (Kullanım dışı)</value>
@@ -1595,7 +1603,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Icon' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_name" xml:space="preserve">
-    <value>Ad</value>
+    <value>Adı</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationButtons" xml:space="preserve">
@@ -1605,6 +1613,10 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Bildirim Alanları</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Reddet Düğmesi Metni</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Bildirim sırası</value>
@@ -1623,7 +1635,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwnerId" xml:space="preserve">
-    <value>Sahip</value>
+    <value>Sahibi</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
@@ -1659,7 +1671,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedOn" xml:space="preserve">
-    <value>Oluşturulma Tarihi</value>
+    <value>Oluşturma Tarihi</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1667,7 +1679,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateImportSequenceNumber" xml:space="preserve">
-    <value>İçe Aktarma Sıra Numarası</value>
+    <value>İçeri Aktarma Sıra Numarası</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateModifiedBy" xml:space="preserve">
@@ -1719,7 +1731,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_IsPanelHidden' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_name" xml:space="preserve">
-    <value>Ad</value>
+    <value>Adı</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_PanelState" xml:space="preserve">
@@ -1743,7 +1755,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwnerId" xml:space="preserve">
-    <value>Sahip</value>
+    <value>Sahibi</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
@@ -1779,7 +1791,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedOn" xml:space="preserve">
-    <value>Oluşturulma Tarihi</value>
+    <value>Oluşturma Tarihi</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1787,7 +1799,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>İçe Aktarma Sıra Numarası</value>
+    <value>İçeri Aktarma Sıra Numarası</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateModifiedBy" xml:space="preserve">
@@ -1835,7 +1847,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_IsStale' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_name" xml:space="preserve">
-    <value>Ad</value>
+    <value>Adı</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_PageType" xml:space="preserve">
@@ -1859,7 +1871,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwnerId" xml:space="preserve">
-    <value>Sahip</value>
+    <value>Sahibi</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
@@ -1879,7 +1891,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedOn" xml:space="preserve">
-    <value>Oluşturulma Tarihi</value>
+    <value>Oluşturma Tarihi</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -1887,7 +1899,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterImportSequenceNumber" xml:space="preserve">
-    <value>İçe Aktarma Sıra Numarası</value>
+    <value>İçeri Aktarma Sıra Numarası</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterModifiedBy" xml:space="preserve">
@@ -1923,7 +1935,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_IsRunTime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_name" xml:space="preserve">
-    <value>Ad</value>
+    <value>Adı</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_ParameterName" xml:space="preserve">
@@ -1943,7 +1955,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwnerId" xml:space="preserve">
-    <value>Sahip</value>
+    <value>Sahibi</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
@@ -1995,7 +2007,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedOn" xml:space="preserve">
-    <value>Oluşturulma Tarihi</value>
+    <value>Oluşturma Tarihi</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedOnBehalfBy" xml:space="preserve">
@@ -2003,7 +2015,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeImportSequenceNumber" xml:space="preserve">
-    <value>İçe Aktarma Sıra Numarası</value>
+    <value>İçeri Aktarma Sıra Numarası</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeModifiedBy" xml:space="preserve">
@@ -2035,7 +2047,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
-    <value>Ad</value>
+    <value>Adı</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_RenderingOrder" xml:space="preserve">
@@ -2075,7 +2087,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Oluşturulma Tarihi</value>
+    <value>Oluşturma Tarihi</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
@@ -2083,7 +2095,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionImportSequenceNumber" xml:space="preserve">
-    <value>İçe Aktarma Sıra Numarası</value>
+    <value>İçeri Aktarma Sıra Numarası</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionModifiedBy" xml:space="preserve">
@@ -2123,7 +2135,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_IsRuntime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_name" xml:space="preserve">
-    <value>Ad</value>
+    <value>Adı</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" xml:space="preserve">
@@ -2159,7 +2171,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedOn" xml:space="preserve">
-    <value>Oluşturulma Tarihi</value>
+    <value>Oluşturma Tarihi</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedOnBehalfBy" xml:space="preserve">
@@ -2167,7 +2179,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsImportSequenceNumber" xml:space="preserve">
-    <value>İçe Aktarma Sıra Numarası</value>
+    <value>İçeri Aktarma Sıra Numarası</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsModifiedBy" xml:space="preserve">
@@ -2183,7 +2195,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_name" xml:space="preserve">
-    <value>Ad</value>
+    <value>Adı</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_templatetagsId" xml:space="preserve">
@@ -2203,7 +2215,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_templatetags' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwnerId" xml:space="preserve">
-    <value>Sahip</value>
+    <value>Sahibi</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
@@ -2375,7 +2387,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_ciprovider' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode1" xml:space="preserve">
-    <value>Etkin değil</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_ciprovider' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode1" xml:space="preserve">
@@ -2383,7 +2395,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_ciprovider' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode2" xml:space="preserve">
-    <value>Etkin değil</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_ciprovider' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode0" xml:space="preserve">
@@ -2391,7 +2403,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationfield' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode1" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statuscode1" xml:space="preserve">
@@ -2399,7 +2411,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationfield' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statuscode2" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode0" xml:space="preserve">
@@ -2407,7 +2419,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationtemplate' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode1" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statuscode1" xml:space="preserve">
@@ -2415,7 +2427,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationnotificationtemplate' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statuscode2" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden0" xml:space="preserve">
@@ -2439,7 +2451,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationsessiontemplate' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_statecode1" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_statuscode1" xml:space="preserve">
@@ -2447,7 +2459,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationsessiontemplate' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_statuscode2" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_isstale0" xml:space="preserve">
@@ -2471,7 +2483,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplate' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode1" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statuscode1" xml:space="preserve">
@@ -2479,7 +2491,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplate' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statuscode2" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_msdyn_isruntime0" xml:space="preserve">
@@ -2495,7 +2507,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplateparameter' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statecode1" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statuscode1" xml:space="preserve">
@@ -2503,7 +2515,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtemplateparameter' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statuscode2" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statecode0" xml:space="preserve">
@@ -2511,7 +2523,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtype' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statecode1" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationtype' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statuscode1" xml:space="preserve">
@@ -2519,7 +2531,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleapplicationtype' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statuscode2" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleapplicationtype' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime0" xml:space="preserve">
@@ -2535,7 +2547,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleappparameterdefinition' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode1" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleappparameterdefinition' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statuscode1" xml:space="preserve">
@@ -2543,7 +2555,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_consoleappparameterdefinition' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statuscode2" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_consoleappparameterdefinition' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_templatetagsmsdyn_templatetags_statecode0" xml:space="preserve">
@@ -2551,7 +2563,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_templatetags' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_templatetagsmsdyn_templatetags_statecode1" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_templatetags' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_templatetagsmsdyn_templatetags_statuscode1" xml:space="preserve">
@@ -2559,7 +2571,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'msdyn_templatetags' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_templatetagsmsdyn_templatetags_statuscode2" xml:space="preserve">
-    <value>Etkin olmayan</value>
+    <value>Etkin Değil</value>
     <comment>'msdyn_templatetags' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,Notification Fields{3e531709-6501-4936-76bd-d92d22bec5d5}" xml:space="preserve">
@@ -2633,6 +2645,14 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Bölüm</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Bildirim Alanları</value>
@@ -3095,7 +3115,7 @@ Hayır - değer bu parametreyi kullanan bir şablon oluşturulurken sağlanmalı
     <comment>'TemplateTag' : LocalizedName for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:LocalizedName,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
-    <value>Bilgi</value>
+    <value>Bilgiler</value>
     <comment>'TemplateTag' : LocalizedName for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionInfo{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">

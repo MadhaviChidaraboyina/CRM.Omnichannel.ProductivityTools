@@ -165,11 +165,11 @@
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
-    <value>Jedinečný identifikátor používateľa, ktorý vytvoril daný záznam.</value>
+    <value>Jednoznačný identifikátor používateľa, ktorý vytvoril daný záznam.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_modifiedby" xml:space="preserve">
-    <value>Jedinečný identifikátor používateľa, ktorý upravil daný záznam.</value>
+    <value>Jednoznačný identifikátor používateľa, ktorý upravil daný záznam.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationfield_createdby" xml:space="preserve">
@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Integračná architektúra rozhrania API kanála</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -389,7 +385,7 @@
     <comment>'Channel' : Description for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedBy" xml:space="preserve">
-    <value>Jedinečný identifikátor používateľa, ktorý vytvoril daný záznam.</value>
+    <value>Jednoznačný identifikátor používateľa, ktorý vytvoril daný záznam.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
@@ -397,7 +393,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Jedinečný identifikátor používateľa, ktorý je delegátom a ktorý vytvoril daný záznam.</value>
+    <value>Jednoznačný identifikátor používateľa, ktorý je delegátom a ktorý vytvoril daný záznam.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
@@ -409,7 +405,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>Jedinečný identifikátor používateľa, ktorý upravil daný záznam.</value>
+    <value>Jednoznačný identifikátor používateľa, ktorý upravil daný záznam.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
@@ -417,7 +413,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinečný identifikátor používateľa, ktorý je delegátom a ktorý upravil daný záznam.</value>
+    <value>Jednoznačný identifikátor používateľa, ktorý je delegátom a ktorý upravil daný záznam.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -589,7 +585,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Iba na interné použitie.</value>
+    <value>Iba na interné účely.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>Jednoznačný identifikátor používateľa, ktorý je delegátom a ktorý upravil daný záznam.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Tlačidlá akcií, ktoré sa majú zobraziť (zastarané)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Poradie zobrazovania oznámení vzhľadom na ostatné šablóny oznámení.</value>
@@ -701,7 +705,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Iba na interné použitie.</value>
+    <value>Iba na interné účely.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Jedinečný identifikátor inštancií entít.</value>
+    <value>Jednoznačný identifikátor inštancií entít.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -793,7 +797,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_Title" xml:space="preserve">
-    <value>Názov relácie zobrazovaný na paneli relácií.</value>
+    <value>Nadpis relácie zobrazovaný na paneli relácií.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOverriddenCreatedOn" xml:space="preserve">
@@ -825,7 +829,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Iba na interné použitie.</value>
+    <value>Iba na interné účely.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1033,7 +1037,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Iba na interné použitie.</value>
+    <value>Iba na interné účely.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1049,7 +1053,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Iba na interné použitie.</value>
+    <value>Iba na interné účely.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1133,7 +1137,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Iba na interné použitie.</value>
+    <value>Iba na interné účely.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1223,7 +1227,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Iba na interné použitie.</value>
+    <value>Iba na interné účely.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1307,7 +1311,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'msdyn_templatetags' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Iba na interné použitie.</value>
+    <value>Iba na interné účely.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1351,7 +1355,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Vytvorené dňa</value>
+    <value>Dátum vytvorenia</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -1367,7 +1371,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Upravené dňa</value>
+    <value>Dátum úpravy</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
@@ -1574,6 +1578,10 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <value>Upravil používateľ (delegát)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Text tlačidla Prijať</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Tlačidlá akcií (zastarané)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Polia oznámení</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Text tlačidla Odmietnuť</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Poradie oznámení</value>
@@ -1707,7 +1719,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for OptionSet 'msdyn_consoleapplicationsessiontemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_description" xml:space="preserve">
-    <value>Popis</value>
+    <value>Opis</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_description' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_icon" xml:space="preserve">
@@ -2634,6 +2646,14 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <value>Sekcia</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Polia oznámení</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
@@ -2651,7 +2671,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{e3634dd8-8a0a-2c9e-49b2-ad872d9d9ba3}'</comment>
   </data>
   <data name="1:label,Notification Template{ee47d446-144d-8d00-5094-ecaac28bbb3e}" xml:space="preserve">
-    <value>Názov</value>
+    <value>Nadpis</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{ee47d446-144d-8d00-5094-ecaac28bbb3e}'</comment>
   </data>
   <data name="1:label,Notification Template{eeb7401d-7729-9db8-8cc1-6d8343052141}" xml:space="preserve">
@@ -2687,11 +2707,11 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{5d09b768-575c-d77d-6479-2130abbde22b}'</comment>
   </data>
   <data name="1:label,Session Templates{67e28937-3ab9-4b74-e49b-54660966e25c}" xml:space="preserve">
-    <value>Popis</value>
+    <value>Opis</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{67e28937-3ab9-4b74-e49b-54660966e25c}'</comment>
   </data>
   <data name="1:label,Session Templates{85978531-3836-82b6-4471-e0ecbe36018c}" xml:space="preserve">
-    <value>Názov</value>
+    <value>Nadpis</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{85978531-3836-82b6-4471-e0ecbe36018c}'</comment>
   </data>
   <data name="1:label,Session Templates{bb564004-e351-9361-283d-ad20d4ad684e}" xml:space="preserve">
@@ -3115,7 +3135,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionService{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Služby</value>
+    <value>Služba</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateInfo{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3139,7 +3159,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateService{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Služby</value>
+    <value>Služba</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Template ParameterInfo{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3159,7 +3179,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application Template ParameterService{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Služby</value>
+    <value>Služba</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application TypeInfo{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3179,7 +3199,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application TypeService{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Služby</value>
+    <value>Služba</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification FieldsInfo{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3199,7 +3219,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Notification FieldsService{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Služby</value>
+    <value>Služba</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification TemplateInfo{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3223,7 +3243,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Notification TemplateService{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Služby</value>
+    <value>Služba</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Session TemplatesInfo{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
@@ -3247,7 +3267,7 @@ Nie – hodnota sa musí zadať počas vytvárania šablóny, ktorá používa t
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Session TemplatesService{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Služby</value>
+    <value>Služba</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="50:Title,msdyn.ApplicationRibbon.Presence.Button.LabelText" xml:space="preserve">

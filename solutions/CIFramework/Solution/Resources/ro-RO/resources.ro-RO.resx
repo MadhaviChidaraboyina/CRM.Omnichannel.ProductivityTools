@@ -145,23 +145,23 @@
     <comment>msdyn_msdyn_consoleapplicationnotificationtem CustomLabel for EntityRelationship 'msdyn_msdyn_consoleapplicationnotificationtempl'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Cadru de integrare API de canal</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -393,7 +389,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Data și ora la care s-a creat înregistrarea.</value>
+    <value>Data și ora când s-a creat înregistrarea.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -413,7 +409,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Data și ora la care s-a modificat înregistrarea.</value>
+    <value>Data și ora când s-a modificat înregistrarea.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
@@ -481,7 +477,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Data și ora la care s-a efectuat migrarea înregistrării.</value>
+    <value>Data și ora când s-a migrat înregistrarea.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codul fusului orar care era în uz atunci când s-a creat înregistrarea.</value>
+    <value>Codul fusului orar utilizat atunci când s-a creat înregistrarea.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -533,7 +529,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfieldId" xml:space="preserve">
-    <value>Identificator unic pentru instanțele entității</value>
+    <value>Identificator unic pentru instanțele de entități</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'msdyn_consoleapplicationnotificationfieldId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode" xml:space="preserve">
@@ -569,7 +565,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
@@ -589,11 +585,11 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numai pentru uz intern.</value>
+    <value>Doar pentru uz intern.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod al fusului orar utilizat atunci când s-a creat înregistrarea.</value>
+    <value>Codul fusului orar utilizat atunci când s-a creat înregistrarea.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
@@ -628,12 +624,16 @@
     <value>Identificator unic al utilizatorului delegat care a modificat înregistrarea.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Butoanele de acțiune care trebuie afișate. (Perimat)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplateId" xml:space="preserve">
-    <value>Identificator unic pentru instanțele entității</value>
+    <value>Identificator unic pentru instanțele de entități</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_consoleapplicationnotificationtemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode" xml:space="preserve">
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ordinea de afișare a notificărilor în raport cu alte șabloane de notificare.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -681,7 +685,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
@@ -701,11 +705,11 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numai pentru uz intern.</value>
+    <value>Doar pentru uz intern.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod al fusului orar utilizat atunci când s-a creat înregistrarea.</value>
+    <value>Codul fusului orar utilizat atunci când s-a creat înregistrarea.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Identificator unic pentru instanțele de entitate.</value>
+    <value>Identificator unic pentru instanțele de entități.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -805,7 +809,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
@@ -825,11 +829,11 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numai pentru uz intern.</value>
+    <value>Doar pentru uz intern.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod al fusului orar utilizat atunci când s-a creat înregistrarea.</value>
+    <value>Codul fusului orar utilizat atunci când s-a creat înregistrarea.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
@@ -865,7 +869,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplateId" xml:space="preserve">
-    <value>Identificator unic pentru instanțele entității</value>
+    <value>Identificator unic pentru instanțele de entități</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_consoleapplicationtemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_isstale" xml:space="preserve">
@@ -925,7 +929,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
@@ -969,7 +973,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameterId" xml:space="preserve">
-    <value>Identificator unic pentru instanțele entității</value>
+    <value>Identificator unic pentru instanțele de entități</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'msdyn_consoleapplicationtemplateparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_msdyn_isruntime" xml:space="preserve">
@@ -1013,7 +1017,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
@@ -1033,11 +1037,11 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numai pentru uz intern.</value>
+    <value>Doar pentru uz intern.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod al fusului orar utilizat atunci când s-a creat înregistrarea.</value>
+    <value>Codul fusului orar utilizat atunci când s-a creat înregistrarea.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
@@ -1049,11 +1053,11 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numai pentru uz intern.</value>
+    <value>Doar pentru uz intern.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod al fusului orar utilizat atunci când s-a creat înregistrarea.</value>
+    <value>Codul fusului orar utilizat atunci când s-a creat înregistrarea.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
@@ -1089,7 +1093,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtypeId" xml:space="preserve">
-    <value>Identificator unic pentru instanțele entității</value>
+    <value>Identificator unic pentru instanțele de entități</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_consoleapplicationtypeId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statecode" xml:space="preserve">
@@ -1133,11 +1137,11 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numai pentru uz intern.</value>
+    <value>Doar pentru uz intern.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod al fusului orar utilizat atunci când s-a creat înregistrarea.</value>
+    <value>Codul fusului orar utilizat atunci când s-a creat înregistrarea.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1173,7 +1177,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinitionId" xml:space="preserve">
-    <value>Identificator unic pentru instanțele entității</value>
+    <value>Identificator unic pentru instanțele de entități</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_consoleappparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" xml:space="preserve">
@@ -1223,11 +1227,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numai pentru uz intern.</value>
+    <value>Doar pentru uz intern.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod al fusului orar utilizat atunci când s-a creat înregistrarea.</value>
+    <value>Codul fusului orar utilizat atunci când s-a creat înregistrarea.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedBy" xml:space="preserve">
@@ -1267,7 +1271,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetagsId" xml:space="preserve">
-    <value>Identificator unic pentru instanțele entității</value>
+    <value>Identificator unic pentru instanțele de entități</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'msdyn_templatetagsId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetags_statecode" xml:space="preserve">
@@ -1287,7 +1291,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>Identificator unic al unității de business care este proprietara înregistrării</value>
+    <value>Identificator unic al unității de business care deține înregistrarea</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningTeam" xml:space="preserve">
@@ -1307,11 +1311,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numai pentru uz intern.</value>
+    <value>Doar pentru uz intern.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod al fusului orar utilizat atunci când s-a creat înregistrarea.</value>
+    <value>Codul fusului orar utilizat atunci când s-a creat înregistrarea.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -1351,7 +1355,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Creat pe</value>
+    <value>Creat la</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -1359,7 +1363,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Număr secvență import</value>
+    <value>Număr secvență de import</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedBy" xml:space="preserve">
@@ -1367,7 +1371,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Modificat pe</value>
+    <value>Modificat la</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
@@ -1435,7 +1439,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Înregistrare creată pe</value>
+    <value>Înregistrare creată la</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1447,11 +1451,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_ciprovider' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numărul de versiune pentru regula de fus orar</value>
+    <value>Număr de versiune pentru regula de fus orar</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codul fusului orar pentru conversie la UTC</value>
+    <value>Codul fusului orar pentru conversie UTC</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -1459,7 +1463,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedOn" xml:space="preserve">
-    <value>Creat pe</value>
+    <value>Creat la</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedOnBehalfBy" xml:space="preserve">
@@ -1475,7 +1479,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldModifiedOn" xml:space="preserve">
-    <value>Modificat pe</value>
+    <value>Modificat la</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldModifiedOnBehalfBy" xml:space="preserve">
@@ -1519,11 +1523,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>Unitate de business proprietar</value>
+    <value>Unitate de business proprietară</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
-    <value>Echipa proprietară</value>
+    <value>Echipă proprietară</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningUser" xml:space="preserve">
@@ -1543,7 +1547,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod de fus orar pentru conversie UTC</value>
+    <value>Codul fusului orar pentru conversie UTC</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
@@ -1551,7 +1555,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedOn" xml:space="preserve">
-    <value>Creat pe</value>
+    <value>Creat la</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1567,12 +1571,16 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOn" xml:space="preserve">
-    <value>Modificat pe</value>
+    <value>Modificat la</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Modificat de (Delegat)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Textul butonului Acceptare</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (depreciate)</value>
@@ -1606,6 +1614,10 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <value>Câmpuri de notificare</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Textul butonului Respingere</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ordine notificări</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -1627,11 +1639,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Unitate de business proprietar</value>
+    <value>Unitate de business proprietară</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
-    <value>Echipa proprietară</value>
+    <value>Echipă proprietară</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningUser" xml:space="preserve">
@@ -1651,7 +1663,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod de fus orar pentru conversie UTC</value>
+    <value>Codul fusului orar pentru conversie UTC</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
@@ -1659,7 +1671,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedOn" xml:space="preserve">
-    <value>Creat pe</value>
+    <value>Creat la</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1675,7 +1687,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateModifiedOn" xml:space="preserve">
-    <value>Modificat pe</value>
+    <value>Modificat la</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -1747,11 +1759,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Unitate de business proprietar</value>
+    <value>Unitate de business proprietară</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
-    <value>Echipa proprietară</value>
+    <value>Echipă proprietară</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningUser" xml:space="preserve">
@@ -1771,7 +1783,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod de fus orar pentru conversie UTC</value>
+    <value>Codul fusului orar pentru conversie UTC</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
@@ -1779,7 +1791,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedOn" xml:space="preserve">
-    <value>Creat pe</value>
+    <value>Creat la</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1795,7 +1807,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateModifiedOn" xml:space="preserve">
-    <value>Modificat pe</value>
+    <value>Modificat la</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -1863,11 +1875,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Unitate de business proprietar</value>
+    <value>Unitate de business proprietară</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
-    <value>Echipa proprietară</value>
+    <value>Echipă proprietară</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningUser" xml:space="preserve">
@@ -1879,7 +1891,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedOn" xml:space="preserve">
-    <value>Creat pe</value>
+    <value>Creat la</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -1895,7 +1907,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterModifiedOn" xml:space="preserve">
-    <value>Modificat pe</value>
+    <value>Modificat la</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -1947,11 +1959,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Unitate de business proprietar</value>
+    <value>Unitate de business proprietară</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
-    <value>Echipa proprietară</value>
+    <value>Echipă proprietară</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningUser" xml:space="preserve">
@@ -1971,7 +1983,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod de fus orar pentru conversie UTC</value>
+    <value>Codul fusului orar pentru conversie UTC</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
@@ -1987,7 +1999,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod de fus orar pentru conversie UTC</value>
+    <value>Codul fusului orar pentru conversie UTC</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
@@ -1995,7 +2007,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedOn" xml:space="preserve">
-    <value>Creat pe</value>
+    <value>Creat la</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedOnBehalfBy" xml:space="preserve">
@@ -2011,7 +2023,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeModifiedOn" xml:space="preserve">
-    <value>Modificat pe</value>
+    <value>Modificat la</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeModifiedOnBehalfBy" xml:space="preserve">
@@ -2067,7 +2079,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod de fus orar pentru conversie UTC</value>
+    <value>Codul fusului orar pentru conversie UTC</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
@@ -2075,7 +2087,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Creat pe</value>
+    <value>Creat la</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
@@ -2091,7 +2103,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Modificat pe</value>
+    <value>Modificat la</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
@@ -2151,7 +2163,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod de fus orar pentru conversie UTC</value>
+    <value>Codul fusului orar pentru conversie UTC</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedBy" xml:space="preserve">
@@ -2159,7 +2171,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedOn" xml:space="preserve">
-    <value>Creat pe</value>
+    <value>Creat la</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedOnBehalfBy" xml:space="preserve">
@@ -2175,7 +2187,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsModifiedOn" xml:space="preserve">
-    <value>Modificat pe</value>
+    <value>Modificat la</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsModifiedOnBehalfBy" xml:space="preserve">
@@ -2207,11 +2219,11 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>Unitate de business proprietar</value>
+    <value>Unitate de business proprietară</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningTeam" xml:space="preserve">
-    <value>Echipa proprietară</value>
+    <value>Echipă proprietară</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningUser" xml:space="preserve">
@@ -2231,7 +2243,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'msdyn_templatetags' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Cod de fus orar pentru conversie UTC</value>
+    <value>Codul fusului orar pentru conversie UTC</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,App Parameter Definition{07190a27-a07a-4cae-adca-49a091653e41}" xml:space="preserve">
@@ -2633,6 +2645,14 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Secțiune</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Câmpuri de notificare</value>
@@ -3139,7 +3159,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateService{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Serviciu</value>
+    <value>Servicii</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Template ParameterInfo{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3159,7 +3179,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application Template ParameterService{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Serviciu</value>
+    <value>Servicii</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application TypeInfo{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3179,7 +3199,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application TypeService{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Serviciu</value>
+    <value>Servicii</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification FieldsInfo{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3199,7 +3219,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Notification FieldsService{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Serviciu</value>
+    <value>Servicii</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification TemplateInfo{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3223,7 +3243,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Notification TemplateService{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Serviciu</value>
+    <value>Servicii</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Session TemplatesInfo{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
@@ -3247,7 +3267,7 @@ Nu – valoarea trebuie furnizată atunci când se creează un șablon care folo
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Session TemplatesService{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Serviciu</value>
+    <value>Servicii</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="50:Title,msdyn.ApplicationRibbon.Presence.Button.LabelText" xml:space="preserve">

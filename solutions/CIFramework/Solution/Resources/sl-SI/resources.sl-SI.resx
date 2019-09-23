@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Integration Framework (API) za kanal</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -405,7 +401,7 @@
     <comment> 'msdyn_ciprovider' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Zaporedna številka uvoza, pri katerem je bil ustvarjen ta zapis</value>
+    <value>Številka zaporedja uvoza, pri katerem je bil ustvarjen ta zapis</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Koda časovnega pasu, ki je bila v uporabi ob nastanku zapisa</value>
+    <value>Koda časovnega pasu, ki je bila uporabljena ob nastanku zapisa</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -517,7 +513,7 @@
     <comment> 'msdyn_consoleapplicationnotificationfield' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldImportSequenceNumber" xml:space="preserve">
-    <value>Zaporedna številka uvoza, pri katerem je bil ustvarjen ta zapis</value>
+    <value>Številka zaporedja uvoza, pri katerem je bil ustvarjen ta zapis</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedBy" xml:space="preserve">
@@ -533,7 +529,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfieldId" xml:space="preserve">
-    <value>Enolični identifikator primerkov entitete</value>
+    <value>Enolični identifikator za primerke entitet</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'msdyn_consoleapplicationnotificationfieldId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode" xml:space="preserve">
@@ -613,7 +609,7 @@
     <comment> 'msdyn_consoleapplicationnotificationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>Zaporedna številka uvoza, pri katerem je bil ustvarjen ta zapis</value>
+    <value>Številka zaporedja uvoza, pri katerem je bil ustvarjen ta zapis</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedBy" xml:space="preserve">
@@ -628,12 +624,16 @@
     <value>Enolični identifikator pooblaščenega uporabnika, ki je spremenil zapis</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Interaktivni gumbi, ki bodo prikazani (zastarelo)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplateId" xml:space="preserve">
-    <value>Enolični identifikator primerkov entitete</value>
+    <value>Enolični identifikator za primerke entitet</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_consoleapplicationnotificationtemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode" xml:space="preserve">
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Vrstni red prikaza obvestil glede na ostale predloge obvestil.</value>
@@ -725,7 +729,7 @@
     <comment> 'msdyn_consoleapplicationsessiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateImportSequenceNumber" xml:space="preserve">
-    <value>Zaporedna številka uvoza, pri katerem je bil ustvarjen ta zapis</value>
+    <value>Številka zaporedja uvoza, pri katerem je bil ustvarjen ta zapis</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedBy" xml:space="preserve">
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Enolični identifikator za primerke entitete</value>
+    <value>Enolični identifikator za primerke entitet</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -849,7 +853,7 @@
     <comment> 'msdyn_consoleapplicationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>Zaporedna številka uvoza, pri katerem je bil ustvarjen ta zapis</value>
+    <value>Številka zaporedja uvoza, pri katerem je bil ustvarjen ta zapis</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedBy" xml:space="preserve">
@@ -865,7 +869,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplateId" xml:space="preserve">
-    <value>Enolični identifikator primerkov entitete</value>
+    <value>Enolični identifikator za primerke entitet</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_consoleapplicationtemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_isstale" xml:space="preserve">
@@ -953,7 +957,7 @@
     <comment> 'msdyn_consoleapplicationtemplateparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterImportSequenceNumber" xml:space="preserve">
-    <value>Zaporedna številka uvoza, pri katerem je bil ustvarjen ta zapis</value>
+    <value>Številka zaporedja uvoza, pri katerem je bil ustvarjen ta zapis</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedBy" xml:space="preserve">
@@ -969,7 +973,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameterId" xml:space="preserve">
-    <value>Enolični identifikator primerkov entitete</value>
+    <value>Enolični identifikator za primerke entitet</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'msdyn_consoleapplicationtemplateparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_msdyn_isruntime" xml:space="preserve">
@@ -1073,7 +1077,7 @@
     <comment> 'msdyn_consoleapplicationtype' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeImportSequenceNumber" xml:space="preserve">
-    <value>Zaporedna številka uvoza, pri katerem je bil ustvarjen ta zapis</value>
+    <value>Številka zaporedja uvoza, pri katerem je bil ustvarjen ta zapis</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedBy" xml:space="preserve">
@@ -1089,7 +1093,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtypeId" xml:space="preserve">
-    <value>Enolični identifikator primerkov entitete</value>
+    <value>Enolični identifikator za primerke entitet</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_consoleapplicationtypeId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statecode" xml:space="preserve">
@@ -1157,7 +1161,7 @@
     <comment> 'msdyn_consoleappparameterdefinition' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionImportSequenceNumber" xml:space="preserve">
-    <value>Zaporedna številka uvoza, pri katerem je bil ustvarjen ta zapis</value>
+    <value>Številka zaporedja uvoza, pri katerem je bil ustvarjen ta zapis</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedBy" xml:space="preserve">
@@ -1173,7 +1177,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinitionId" xml:space="preserve">
-    <value>Enolični identifikator primerkov entitete</value>
+    <value>Enolični identifikator za primerke entitet</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_consoleappparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" xml:space="preserve">
@@ -1247,7 +1251,7 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment> 'msdyn_templatetags' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsImportSequenceNumber" xml:space="preserve">
-    <value>Zaporedna številka uvoza, pri katerem je bil ustvarjen ta zapis</value>
+    <value>Številka zaporedja uvoza, pri katerem je bil ustvarjen ta zapis</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedBy" xml:space="preserve">
@@ -1267,7 +1271,7 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_templatetags' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetagsId" xml:space="preserve">
-    <value>Enolični identifikator primerkov entitete</value>
+    <value>Enolični identifikator za primerke entitet</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'msdyn_templatetagsId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetags_statecode" xml:space="preserve">
@@ -1347,15 +1351,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
-    <value>Ustvaril uporabnik</value>
+    <value>Ustvaril(-a)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Ustvarjeno dne</value>
+    <value>Ustvarjeno:</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Ustvaril uporabnik (pooblaščenec)</value>
+    <value>Ustvaril(-a) (pooblaščenec)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
@@ -1363,15 +1367,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>Spremenil uporabnik</value>
+    <value>Spremenil(-a)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Spremenjeno dne</value>
+    <value>Spremenjeno:</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Spremenil uporabnik (pooblaščenec)</value>
+    <value>Spremenil(-a) (pooblaščenec)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -1455,15 +1459,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_ciprovider' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
-    <value>Ustvaril uporabnik:</value>
+    <value>Ustvaril(-a)</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedOn" xml:space="preserve">
-    <value>Ustvarjeno dne:</value>
+    <value>Ustvarjeno:</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedOnBehalfBy" xml:space="preserve">
-    <value>Ustvaril uporabnik (pooblaščenec):</value>
+    <value>Ustvaril(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldImportSequenceNumber" xml:space="preserve">
@@ -1471,15 +1475,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldModifiedBy" xml:space="preserve">
-    <value>Spremenil uporabnik:</value>
+    <value>Spremenil(-a)</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldModifiedOn" xml:space="preserve">
-    <value>Spremenjeno dne:</value>
+    <value>Spremenjeno::</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldModifiedOnBehalfBy" xml:space="preserve">
-    <value>Spremenil uporabnik (pooblaščenec):</value>
+    <value>Spremenil(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfieldId" xml:space="preserve">
@@ -1547,15 +1551,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
-    <value>Ustvaril uporabnik:</value>
+    <value>Ustvaril(-a)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedOn" xml:space="preserve">
-    <value>Ustvarjeno dne:</value>
+    <value>Ustvarjeno:</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Ustvaril uporabnik (pooblaščenec):</value>
+    <value>Ustvaril(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateImportSequenceNumber" xml:space="preserve">
@@ -1563,16 +1567,20 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedBy" xml:space="preserve">
-    <value>Spremenil uporabnik:</value>
+    <value>Spremenil(-a)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOn" xml:space="preserve">
-    <value>Spremenjeno dne:</value>
+    <value>Spremenjeno::</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Spremenil uporabnik (pooblaščenec):</value>
+    <value>Spremenil(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Besedilo gumba »Sprejmi«</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (zastarelo)</value>
@@ -1605,6 +1613,10 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Polja obvestila</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Besedilo gumba »Zavrni«</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Vrstni red obvestil</value>
@@ -1655,15 +1667,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
-    <value>Ustvaril uporabnik:</value>
+    <value>Ustvaril(-a)</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedOn" xml:space="preserve">
-    <value>Ustvarjeno dne:</value>
+    <value>Ustvarjeno:</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Ustvaril uporabnik (pooblaščenec):</value>
+    <value>Ustvaril(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateImportSequenceNumber" xml:space="preserve">
@@ -1671,15 +1683,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateModifiedBy" xml:space="preserve">
-    <value>Spremenil uporabnik:</value>
+    <value>Spremenil(-a)</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateModifiedOn" xml:space="preserve">
-    <value>Spremenjeno dne:</value>
+    <value>Spremenjeno::</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Spremenil uporabnik (pooblaščenec):</value>
+    <value>Spremenil(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_AnchorTab" xml:space="preserve">
@@ -1775,15 +1787,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
-    <value>Ustvaril uporabnik:</value>
+    <value>Ustvaril(-a)</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedOn" xml:space="preserve">
-    <value>Ustvarjeno dne:</value>
+    <value>Ustvarjeno:</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Ustvaril uporabnik (pooblaščenec):</value>
+    <value>Ustvaril(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateImportSequenceNumber" xml:space="preserve">
@@ -1791,15 +1803,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateModifiedBy" xml:space="preserve">
-    <value>Spremenil uporabnik:</value>
+    <value>Spremenil(-a)</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateModifiedOn" xml:space="preserve">
-    <value>Spremenjeno dne:</value>
+    <value>Spremenjeno::</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Spremenil uporabnik (pooblaščenec):</value>
+    <value>Spremenil(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplateId" xml:space="preserve">
@@ -1875,15 +1887,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedBy" xml:space="preserve">
-    <value>Ustvaril uporabnik:</value>
+    <value>Ustvaril(-a)</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedOn" xml:space="preserve">
-    <value>Ustvarjeno dne:</value>
+    <value>Ustvarjeno:</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Ustvaril uporabnik (pooblaščenec):</value>
+    <value>Ustvaril(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterImportSequenceNumber" xml:space="preserve">
@@ -1891,15 +1903,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterModifiedBy" xml:space="preserve">
-    <value>Spremenil uporabnik:</value>
+    <value>Spremenil(-a)</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterModifiedOn" xml:space="preserve">
-    <value>Spremenjeno dne:</value>
+    <value>Spremenjeno::</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Spremenil uporabnik (pooblaščenec):</value>
+    <value>Spremenil(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameterId" xml:space="preserve">
@@ -1991,15 +2003,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
-    <value>Ustvaril uporabnik:</value>
+    <value>Ustvaril(-a)</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedOn" xml:space="preserve">
-    <value>Ustvarjeno dne:</value>
+    <value>Ustvarjeno:</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedOnBehalfBy" xml:space="preserve">
-    <value>Ustvaril uporabnik (pooblaščenec):</value>
+    <value>Ustvaril(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeImportSequenceNumber" xml:space="preserve">
@@ -2007,15 +2019,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeModifiedBy" xml:space="preserve">
-    <value>Spremenil uporabnik:</value>
+    <value>Spremenil(-a)</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeModifiedOn" xml:space="preserve">
-    <value>Spremenjeno dne:</value>
+    <value>Spremenjeno::</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeModifiedOnBehalfBy" xml:space="preserve">
-    <value>Spremenil uporabnik (pooblaščenec):</value>
+    <value>Spremenil(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_consoleapplicationtypeId" xml:space="preserve">
@@ -2071,15 +2083,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
-    <value>Ustvaril uporabnik:</value>
+    <value>Ustvaril(-a)</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Ustvarjeno dne:</value>
+    <value>Ustvarjeno:</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Ustvaril uporabnik (pooblaščenec):</value>
+    <value>Ustvaril(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionImportSequenceNumber" xml:space="preserve">
@@ -2087,15 +2099,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionModifiedBy" xml:space="preserve">
-    <value>Spremenil uporabnik:</value>
+    <value>Spremenil(-a)</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Spremenjeno dne:</value>
+    <value>Spremenjeno::</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Spremenil uporabnik (pooblaščenec):</value>
+    <value>Spremenil(-a) (pooblaščenec):</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinitionId" xml:space="preserve">
@@ -2155,15 +2167,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedBy" xml:space="preserve">
-    <value>Ustvaril uporabnik:</value>
+    <value>Ustvaril(-a)</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedOn" xml:space="preserve">
-    <value>Ustvarjeno dne:</value>
+    <value>Ustvarjeno:</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedOnBehalfBy" xml:space="preserve">
-    <value>Ustvaril uporabnik (pooblaščenec):</value>
+    <value>Ustvaril(-a) (pooblaščenec):</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsImportSequenceNumber" xml:space="preserve">
@@ -2171,15 +2183,15 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'msdyn_templatetags' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsModifiedBy" xml:space="preserve">
-    <value>Spremenil uporabnik:</value>
+    <value>Spremenil(-a)</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsModifiedOn" xml:space="preserve">
-    <value>Spremenjeno dne:</value>
+    <value>Spremenjeno::</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsModifiedOnBehalfBy" xml:space="preserve">
-    <value>Spremenil uporabnik (pooblaščenec):</value>
+    <value>Spremenil(-a) (pooblaščenec):</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_name" xml:space="preserve">
@@ -2633,6 +2645,14 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Razdelek</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Polja obvestila</value>
@@ -3107,7 +3127,7 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionProcessCenter{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Seje procesov</value>
+    <value>Seje obdelave</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionSales{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
@@ -3131,7 +3151,7 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'Application Tab Template' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationtemplate_tags'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateProcessCenter{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Seje procesov</value>
+    <value>Seje obdelave</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateSales{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3151,7 +3171,7 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Application Template ParameterProcessCenter{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Seje procesov</value>
+    <value>Seje obdelave</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Application Template ParameterSales{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3171,7 +3191,7 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Application TypeProcessCenter{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Seje procesov</value>
+    <value>Seje obdelave</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Application TypeSales{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3191,7 +3211,7 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Notification FieldsProcessCenter{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Seje procesov</value>
+    <value>Seje obdelave</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Notification FieldsSales{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3215,7 +3235,7 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'Notification Template' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationnotificationtag'</comment>
   </data>
   <data name="1:Title,Notification TemplateProcessCenter{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Seje procesov</value>
+    <value>Seje obdelave</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Notification TemplateSales{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3239,7 +3259,7 @@ Ne – vrednost mora biti vnesena med ustvarjanjem predloge, ki uporablja ta par
     <comment>'Session Templates' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationsessiontemp_tag'</comment>
   </data>
   <data name="1:Title,Session TemplatesProcessCenter{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Seje procesov</value>
+    <value>Seje obdelave</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Session TemplatesSales{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">

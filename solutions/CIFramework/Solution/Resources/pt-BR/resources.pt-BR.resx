@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Estrutura de Integração da API do Canal</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -381,7 +377,7 @@
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
-    <value>Um formulário para esta entidade.</value>
+    <value>Formulário dessa entidade.</value>
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
@@ -393,7 +389,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Data e hora em que o registro foi criado.</value>
+    <value>Data e hora de criação do registro.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -405,7 +401,7 @@
     <comment> 'msdyn_ciprovider' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Número da Sequência da Importação que criou este registro.</value>
+    <value>Número de sequência da importação que criou este registro.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
@@ -413,7 +409,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Data e hora em que o registro foi modificado.</value>
+    <value>Data e hora da modificação do registro.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
@@ -481,7 +477,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Data e a hora da migração do registro.</value>
+    <value>Data e hora de migração do registro.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>O código do fuso horário que estava em uso quando o registro foi criado.</value>
+    <value>Código do fuso horário em uso quando o registro foi criado.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -505,7 +501,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedOn" xml:space="preserve">
-    <value>A data e a hora de criação do registro.</value>
+    <value>Data e hora de criação do registro.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedOnBehalfBy" xml:space="preserve">
@@ -517,7 +513,7 @@
     <comment> 'msdyn_consoleapplicationnotificationfield' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldImportSequenceNumber" xml:space="preserve">
-    <value>O número de sequência da importação que criou esse registro.</value>
+    <value>Número de sequência da importação que criou este registro.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedBy" xml:space="preserve">
@@ -525,7 +521,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOn" xml:space="preserve">
-    <value>A data e a hora da modificação do registro.</value>
+    <value>Data e hora da modificação do registro.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOnBehalfBy" xml:space="preserve">
@@ -561,7 +557,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOverriddenCreatedOn" xml:space="preserve">
-    <value>A data e a hora de migração do registro.</value>
+    <value>Data e hora de migração do registro.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwnerId" xml:space="preserve">
@@ -593,7 +589,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>O código do fuso horário em uso quando o registro foi criado.</value>
+    <value>Código do fuso horário em uso quando o registro foi criado.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
@@ -601,7 +597,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedOn" xml:space="preserve">
-    <value>A data e a hora de criação do registro.</value>
+    <value>Data e hora de criação do registro.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -613,7 +609,7 @@
     <comment> 'msdyn_consoleapplicationnotificationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>O número de sequência da importação que criou esse registro.</value>
+    <value>Número de sequência da importação que criou este registro.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedBy" xml:space="preserve">
@@ -621,12 +617,16 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOn" xml:space="preserve">
-    <value>A data e a hora da modificação do registro.</value>
+    <value>Data e hora da modificação do registro.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Identificador exclusivo do usuário delegado que modificou o registro.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Os botões de ação a serem exibidos. (Preterido)</value>
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ordem de exibição de notificação relativa a outros modelos de notificação.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -673,7 +677,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>A data e a hora de migração do registro.</value>
+    <value>Data e hora de migração do registro.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwnerId" xml:space="preserve">
@@ -705,7 +709,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>O código do fuso horário em uso quando o registro foi criado.</value>
+    <value>Código do fuso horário em uso quando o registro foi criado.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
@@ -713,7 +717,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedOn" xml:space="preserve">
-    <value>A data e a hora de criação do registro.</value>
+    <value>Data e hora de criação do registro.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -725,7 +729,7 @@
     <comment> 'msdyn_consoleapplicationsessiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateImportSequenceNumber" xml:space="preserve">
-    <value>O número de sequência da importação que criou esse registro.</value>
+    <value>Número de sequência da importação que criou este registro.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedBy" xml:space="preserve">
@@ -733,7 +737,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOn" xml:space="preserve">
-    <value>A data e a hora da modificação do registro.</value>
+    <value>Data e hora da modificação do registro.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -745,7 +749,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_AnchorTab' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplateId" xml:space="preserve">
-    <value>Identificador exclusivo das instâncias da entidade.</value>
+    <value>Identificador exclusivo de instâncias de entidade.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_consoleapplicationsessiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_ispanelhidden" xml:space="preserve">
@@ -797,7 +801,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>A data e a hora de migração do registro.</value>
+    <value>Data e hora de migração do registro.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwnerId" xml:space="preserve">
@@ -829,7 +833,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>O código do fuso horário em uso quando o registro foi criado.</value>
+    <value>Código do fuso horário em uso quando o registro foi criado.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
@@ -837,7 +841,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedOn" xml:space="preserve">
-    <value>A data e a hora de criação do registro.</value>
+    <value>Data e hora de criação do registro.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -849,7 +853,7 @@
     <comment> 'msdyn_consoleapplicationtemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateImportSequenceNumber" xml:space="preserve">
-    <value>O número de sequência da importação que criou esse registro.</value>
+    <value>Número de sequência da importação que criou este registro.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedBy" xml:space="preserve">
@@ -857,7 +861,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOn" xml:space="preserve">
-    <value>A data e a hora da modificação do registro.</value>
+    <value>Data e hora da modificação do registro.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -917,7 +921,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>A data e a hora de migração do registro.</value>
+    <value>Data e hora de migração do registro.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwnerId" xml:space="preserve">
@@ -941,7 +945,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedOn" xml:space="preserve">
-    <value>A data e a hora de criação do registro.</value>
+    <value>Data e hora de criação do registro.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -953,7 +957,7 @@
     <comment> 'msdyn_consoleapplicationtemplateparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterImportSequenceNumber" xml:space="preserve">
-    <value>O número de sequência da importação que criou esse registro.</value>
+    <value>Número de sequência da importação que criou este registro.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedBy" xml:space="preserve">
@@ -961,7 +965,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOn" xml:space="preserve">
-    <value>A data e a hora da modificação do registro.</value>
+    <value>Data e hora da modificação do registro.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -1005,7 +1009,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>A data e a hora de migração do registro.</value>
+    <value>Data e hora de migração do registro.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwnerId" xml:space="preserve">
@@ -1037,7 +1041,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>O código do fuso horário em uso quando o registro foi criado.</value>
+    <value>Código do fuso horário em uso quando o registro foi criado.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
@@ -1053,7 +1057,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>O código do fuso horário em uso quando o registro foi criado.</value>
+    <value>Código do fuso horário em uso quando o registro foi criado.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
@@ -1061,7 +1065,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedOn" xml:space="preserve">
-    <value>A data e a hora de criação do registro.</value>
+    <value>Data e hora de criação do registro.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedOnBehalfBy" xml:space="preserve">
@@ -1073,7 +1077,7 @@
     <comment> 'msdyn_consoleapplicationtype' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeImportSequenceNumber" xml:space="preserve">
-    <value>O número de sequência da importação que criou esse registro.</value>
+    <value>Número de sequência da importação que criou este registro.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedBy" xml:space="preserve">
@@ -1081,7 +1085,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOn" xml:space="preserve">
-    <value>A data e a hora da modificação do registro.</value>
+    <value>Data e hora da modificação do registro.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOnBehalfBy" xml:space="preserve">
@@ -1121,7 +1125,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeOverriddenCreatedOn" xml:space="preserve">
-    <value>A data e a hora de migração do registro.</value>
+    <value>Data e hora de migração do registro.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypestatecode" xml:space="preserve">
@@ -1137,7 +1141,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>O código do fuso horário em uso quando o registro foi criado.</value>
+    <value>Código do fuso horário em uso quando o registro foi criado.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1145,7 +1149,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>A data e a hora de criação do registro.</value>
+    <value>Data e hora de criação do registro.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
@@ -1157,7 +1161,7 @@
     <comment> 'msdyn_consoleappparameterdefinition' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionImportSequenceNumber" xml:space="preserve">
-    <value>O número de sequência da importação que criou esse registro.</value>
+    <value>Número de sequência da importação que criou este registro.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedBy" xml:space="preserve">
@@ -1165,7 +1169,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>A data e a hora da modificação do registro.</value>
+    <value>Data e hora da modificação do registro.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
@@ -1211,7 +1215,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
-    <value>A data e a hora de migração do registro.</value>
+    <value>Data e hora de migração do registro.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionstatecode" xml:space="preserve">
@@ -1227,7 +1231,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>O código do fuso horário em uso quando o registro foi criado.</value>
+    <value>Código do fuso horário em uso quando o registro foi criado.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedBy" xml:space="preserve">
@@ -1235,7 +1239,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedOn" xml:space="preserve">
-    <value>A data e a hora de criação do registro.</value>
+    <value>Data e hora de criação do registro.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedOnBehalfBy" xml:space="preserve">
@@ -1247,7 +1251,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment> 'msdyn_templatetags' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsImportSequenceNumber" xml:space="preserve">
-    <value>O número de sequência da importação que criou esse registro.</value>
+    <value>Número de sequência da importação que criou este registro.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedBy" xml:space="preserve">
@@ -1255,7 +1259,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOn" xml:space="preserve">
-    <value>A data e a hora da modificação do registro.</value>
+    <value>Data e hora da modificação do registro.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOnBehalfBy" xml:space="preserve">
@@ -1279,7 +1283,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_templatetags' : Description for OptionSet 'msdyn_templatetags_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOverriddenCreatedOn" xml:space="preserve">
-    <value>A data e a hora de migração do registro.</value>
+    <value>Data e hora de migração do registro.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwnerId" xml:space="preserve">
@@ -1311,7 +1315,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_templatetags' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>O código do fuso horário em uso quando o registro foi criado.</value>
+    <value>Código do fuso horário em uso quando o registro foi criado.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -1343,7 +1347,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'TemplateTag' : Description for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:Description,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
-    <value>Um formulário para esta entidade.</value>
+    <value>Formulário dessa entidade.</value>
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
@@ -1359,7 +1363,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Número da Sequência da Importação</value>
+    <value>Número de Sequência de Importação</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedBy" xml:space="preserve">
@@ -1435,7 +1439,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Criação do Registro em</value>
+    <value>Registro Criado em</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1447,11 +1451,11 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_ciprovider' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Número da Versão da Regra de Fuso Horário</value>
+    <value>Número de Versão da Regra de Fuso Horário</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Código do Fuso Horário para Conversão de UTC</value>
+    <value>Código de Fuso Horário da Conversão UTC</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -1511,7 +1515,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOverriddenCreatedOn" xml:space="preserve">
-    <value>Registro Criação em</value>
+    <value>Registro Criado em</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwnerId" xml:space="preserve">
@@ -1574,6 +1578,10 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <value>Modificação de (Delegado)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Texto do Botão Aceitar</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (Preterido)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1606,6 +1614,10 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <value>Campos de Notificação</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Texto do Botão Recusar</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ordem de notificação</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -1619,7 +1631,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Registro Criação em</value>
+    <value>Registro Criado em</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwnerId" xml:space="preserve">
@@ -1739,7 +1751,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Registro Criação em</value>
+    <value>Registro Criado em</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwnerId" xml:space="preserve">
@@ -1855,7 +1867,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_Title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Registro Criação em</value>
+    <value>Registro Criado em</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwnerId" xml:space="preserve">
@@ -1939,7 +1951,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_Value' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>Registro Criação em</value>
+    <value>Registro Criado em</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwnerId" xml:space="preserve">
@@ -2051,7 +2063,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeOverriddenCreatedOn" xml:space="preserve">
-    <value>Registro Criação em</value>
+    <value>Registro Criado em</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypestatecode" xml:space="preserve">
@@ -2135,7 +2147,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
-    <value>Registro Criação em</value>
+    <value>Registro Criado em</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionstatecode" xml:space="preserve">
@@ -2199,7 +2211,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_templatetags' : displayname for OptionSet 'msdyn_templatetags_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOverriddenCreatedOn" xml:space="preserve">
-    <value>Registro Criação em</value>
+    <value>Registro Criado em</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwnerId" xml:space="preserve">
@@ -2371,19 +2383,19 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode0" xml:space="preserve">
-    <value>Ativo</value>
+    <value>Com Atividade</value>
     <comment>'msdyn_ciprovider' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode1" xml:space="preserve">
-    <value>Inativo</value>
+    <value>Sem Atividade</value>
     <comment>'msdyn_ciprovider' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode1" xml:space="preserve">
-    <value>Ativo</value>
+    <value>Com Atividade</value>
     <comment>'msdyn_ciprovider' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode2" xml:space="preserve">
-    <value>Inativo</value>
+    <value>Sem Atividade</value>
     <comment>'msdyn_ciprovider' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode0" xml:space="preserve">
@@ -2633,6 +2645,14 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Seção</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Campos de Notificação</value>
@@ -3095,7 +3115,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'TemplateTag' : LocalizedName for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:LocalizedName,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
-    <value>Informação</value>
+    <value>Informações</value>
     <comment>'TemplateTag' : LocalizedName for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionInfo{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">

@@ -145,31 +145,31 @@
     <comment>msdyn_msdyn_consoleapplicationnotificationtem CustomLabel for EntityRelationship 'msdyn_msdyn_consoleapplicationnotificationtempl'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
-    <value>यह रिकॉर्ड बनाने वाले उपयोगकर्ता का युनीक आइडेंटिफ़ायर.</value>
+    <value>उस उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_modifiedby" xml:space="preserve">
-    <value>उपयोगकर्ता का युनीक आइडेंटिफ़ायर जिसने रिकॉर्ड संशोधित किया.</value>
+    <value>उस उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड संशोधित किया.</value>
     <comment>msdyn_ciprovider Description for EntityRelationship 'lk_msdyn_ciprovider_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_consoleapplicationnotificationfield_createdby" xml:space="preserve">
@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>चैनल API एकीकरण फ़्रेमवर्क</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -389,11 +385,11 @@
     <comment>'Channel' : Description for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedBy" xml:space="preserve">
-    <value>यह रिकॉर्ड बनाने वाले उपयोगकर्ता का युनीक आइडेंटिफ़ायर.</value>
+    <value>उस उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>वह दिनांक और समय, जब रिकॉर्ड बनाया गया था.</value>
+    <value>वह दिनांक और समय, जब रिकॉर्ड बनाया गया.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -409,7 +405,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>उपयोगकर्ता का युनीक आइडेंटिफ़ायर जिसने रिकॉर्ड संशोधित किया.</value>
+    <value>उस उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड संशोधित किया.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
@@ -481,7 +477,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>वह दिनांक और समय, जब रिकॉर्ड माइग्रेट किया गया था.</value>
+    <value>वह दिनांक और समय, जब रिकॉर्ड माइग्रेट किया गया.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>वह समय क्षेत्र कोड जिसका उपयोग रिकॉर्ड बनाने के दौरान किया जा रहा था.</value>
+    <value>वह समय क्षेत्र कोड, जो रिकॉर्ड बनाते समय उपयोग में था.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -525,7 +521,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOn" xml:space="preserve">
-    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया था.</value>
+    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOnBehalfBy" xml:space="preserve">
@@ -569,7 +565,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
@@ -621,12 +617,16 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOn" xml:space="preserve">
-    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया था.</value>
+    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड संशोधित किया.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>प्रदर्शित किए जाने वाले क्रिया बटन. (डेप्रिकेटेड)</value>
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>अन्य सूचना टेम्पलेट्स के सापेक्ष सूचना प्रदर्शन क्रम.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -681,7 +685,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
@@ -733,7 +737,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOn" xml:space="preserve">
-    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया था.</value>
+    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -805,7 +809,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
@@ -857,7 +861,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOn" xml:space="preserve">
-    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया था.</value>
+    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -925,7 +929,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
@@ -961,7 +965,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOn" xml:space="preserve">
-    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया था.</value>
+    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -1013,7 +1017,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
@@ -1081,7 +1085,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOn" xml:space="preserve">
-    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया था.</value>
+    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOnBehalfBy" xml:space="preserve">
@@ -1165,7 +1169,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया था.</value>
+    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
@@ -1255,7 +1259,7 @@
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOn" xml:space="preserve">
-    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया था.</value>
+    <value>वह दिनांक और समय, जब रिकॉर्ड संशोधित किया गया.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOnBehalfBy" xml:space="preserve">
@@ -1287,7 +1291,7 @@
     <comment>'msdyn_templatetags' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>उस व्यवसाय इकाई का युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
+    <value>उस व्यवसाय इकाई के लिए युनीक आइडेंटिफ़ायर, जो रिकॉर्ड की स्‍वामी है</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningTeam" xml:space="preserve">
@@ -1355,7 +1359,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>निर्माण दिनांक (प्रतिनिधि)</value>
+    <value>निर्माता (प्रतिनिधि)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
@@ -1435,7 +1439,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>रिकॉर्ड का निर्माण दिनांक</value>
+    <value>रिकॉर्ड बनाने का दिनांक</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1447,7 +1451,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>समय क्षेत्र नियम संस्करण क्रमांक</value>
+    <value>समय क्षेत्र नियम संस्करण संख्या</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1574,6 +1578,10 @@
     <value>संशोधनकर्ता (प्रतिनिधि)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>स्वीकार करें बटन पाठ</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (डेप्रिकेटेड)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>सूचना फ़ील्ड</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>अस्वीकार करें बटन पाठ</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>सूचना क्रम</value>
@@ -2367,7 +2379,7 @@
     <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact1" xml:space="preserve">
-    <value>हां</value>
+    <value>हाँ</value>
     <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode0" xml:space="preserve">
@@ -2633,6 +2645,14 @@
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>सेक्शन</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>सूचना फ़ील्ड</value>
@@ -3099,7 +3119,7 @@
     <comment>'TemplateTag' : LocalizedName for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionInfo{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>एक समान</value>
+    <value>सामान्य</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionMarketing{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
@@ -3119,7 +3139,7 @@
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateInfo{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>एक समान</value>
+    <value>सामान्य</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateMarketing{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3143,7 +3163,7 @@
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Template ParameterInfo{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>एक समान</value>
+    <value>सामान्य</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Template ParameterMarketing{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3163,7 +3183,7 @@
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application TypeInfo{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>एक समान</value>
+    <value>सामान्य</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application TypeMarketing{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3183,7 +3203,7 @@
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification FieldsInfo{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>एक समान</value>
+    <value>सामान्य</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification FieldsMarketing{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3203,7 +3223,7 @@
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification TemplateInfo{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>एक समान</value>
+    <value>सामान्य</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification TemplateMarketing{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3227,7 +3247,7 @@
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Session TemplatesInfo{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>एक समान</value>
+    <value>सामान्य</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Session TemplatesMarketing{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">

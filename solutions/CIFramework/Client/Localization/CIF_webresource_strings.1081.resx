@@ -137,6 +137,78 @@
     <value>बंद करें</value>
     <comment>Text for close button.</comment>
   </data>
+  <data name="FRE_COMPREHENSIVEVIEW_DESC" xml:space="preserve">
+    <value>तेज़ सेवा वितरित करने के लिए, एक ही स्थान पर तुरंत सभी ग्राहक जानकारी देखें और उन तक पहुँचें.</value>
+    <comment>Description for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_COMPREHENSIVEVIEW_TITLE" xml:space="preserve">
+    <value>आपके ग्राहक की यात्रा का व्यापक दृश्य</value>
+    <comment>Title for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_DESC" xml:space="preserve">
+    <value>अन्य एजेंटों, पर्यवेक्षकों को आमंत्रित करें, ताकि समस्याओं पर तेज़ी से सहयोग करके उन्हें हल किया जा सके.</value>
+    <comment>Description for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_TITLE" xml:space="preserve">
+    <value>उपयोगकर्ताओं के साथ परामर्श करें</value>
+    <comment>Title for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_DESC" xml:space="preserve">
+    <value>उन साइटमैप अनुप्रयोगों तक पहुँचें और प्रबंधित करें, जो सत्र के संदर्भ के अंतर्गत मौजूद हैं.</value>
+    <comment>Description for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_TITLE" xml:space="preserve">
+    <value>प्रासंगिक अनुप्रयोग</value>
+    <comment>Title for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_DONTSHOWMEAGAIN" xml:space="preserve">
+    <value>मुझे पुनः न दिखाएँ</value>
+    <comment>Opt-out checkbox label for FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_DESC" xml:space="preserve">
+    <value>कीबोर्ड और माउस-क्लिक जेस्चर के ज़रिए कार्य आइटम तुरंत खोलें और अपनी उत्पादकता बढ़ाएँ.</value>
+    <comment>Description for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_TITLE" xml:space="preserve">
+    <value>अधिक कार्य पूर्ण करें</value>
+    <comment>Title for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETSTARTED" xml:space="preserve">
+    <value>प्रारंभ करें</value>
+    <comment>Get Started Button Text for FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_DESC" xml:space="preserve">
+    <value>अपने ग्राहकों को तेज़, वैयक्तिकृत सेवा प्रदान करने का तरीका जानने के लिए एक त्वरित टूर करें.</value>
+    <comment>Description for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_TITLE" xml:space="preserve">
+    <value>Dynamics 365 Customer Service के लिए ओमनीचैनल में आपका स्वागत है</value>
+    <comment>Title for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_LASTSLIDE_TITLE" xml:space="preserve">
+    <value>सब हो गया</value>
+    <comment>Title for the Last Slide on FRE</comment>
+  </data>
+  <data name="FRE_PAGINATION_OF" xml:space="preserve">
+    <value>इसका</value>
+    <comment>of Word of Pagination on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_DESC" xml:space="preserve">
+    <value>सर्वोत्तम-योग्य एजेंटों को सुचारू रूप से वार्तालाप स्थानांतरित करें, ताकि वे उन्हें तेज़ी से हल कर सकें.</value>
+    <comment>Description for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_TITLE" xml:space="preserve">
+    <value>वार्तालाप स्थानांतरित करें</value>
+    <comment>Title for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_DESC" xml:space="preserve">
+    <value>संदर्भ और ग्राहक विवरण के पूर्ण नियंत्रण के साथ एक साथ कई ग्राहक वार्तालाप प्रबंधित करें.</value>
+    <comment>Description for Work With Multiple Customers Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_TITLE" xml:space="preserve">
+    <value>कई ग्राहकों के साथ कार्य करें</value>
+    <comment>Title for Work With Multiple Customers Slide on FRE</comment>
+  </data>
   <data name="LAUNCH_PRESENCE_DIALOG_TOOLTIP" xml:space="preserve">
     <value>उपस्थिति संवाद लॉन्च करें</value>
     <comment>Tooltip for presence control in navbar</comment>

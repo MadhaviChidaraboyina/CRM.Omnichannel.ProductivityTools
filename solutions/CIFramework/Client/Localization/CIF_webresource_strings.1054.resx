@@ -137,6 +137,78 @@
     <value>ปิด</value>
     <comment>Text for close button.</comment>
   </data>
+  <data name="FRE_COMPREHENSIVEVIEW_DESC" xml:space="preserve">
+    <value>ดูและเข้าถึงข้อมูลของลูกค้าทั้งหมดได้ด้วยปลายนิ้วสัมผัสในที่เดียวเพื่อให้บริการได้เร็วขึ้น</value>
+    <comment>Description for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_COMPREHENSIVEVIEW_TITLE" xml:space="preserve">
+    <value>มุมมองที่ครอบคลุมเกี่ยวกับการเดินทางของลูกค้าของคุณ</value>
+    <comment>Title for Comprehensive View Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_DESC" xml:space="preserve">
+    <value>เชิญให้ตัวแทนคนอื่นๆ หัวหน้างานมาทำงานร่วมกันและแก้ไขปัญหาได้เร็วขึ้น</value>
+    <comment>Description for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONSULT_TITLE" xml:space="preserve">
+    <value>ปรึกษากับผู้ใช้</value>
+    <comment>Title for Consult With Users Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_DESC" xml:space="preserve">
+    <value>เข้าถึงและจัดการแอปพลิเคชันแผนผังไซต์ที่อยู่ในบริบทของเซสชัน</value>
+    <comment>Description for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_CONTEXTUALAPPS_TITLE" xml:space="preserve">
+    <value>แอปพลิเคชันตามบริบท</value>
+    <comment>Title for Contextual Applications Slide on FRE</comment>
+  </data>
+  <data name="FRE_DONTSHOWMEAGAIN" xml:space="preserve">
+    <value>ไม่ต้องแสดงรายการนี้อีก</value>
+    <comment>Opt-out checkbox label for FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_DESC" xml:space="preserve">
+    <value>เปิดรายการงานอย่างรวดเร็วด้วยการใช้แป้นพิมพ์และการคลิกเมาส์และเพิ่มประสิทธิภาพการทำงานของคุณ</value>
+    <comment>Description for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETMOREDONE_TITLE" xml:space="preserve">
+    <value>ทำงานสำเร็จได้มากขึ้น</value>
+    <comment>Title for Get More Done Slide on FRE</comment>
+  </data>
+  <data name="FRE_GETSTARTED" xml:space="preserve">
+    <value>เริ่มต้นใช้งาน</value>
+    <comment>Get Started Button Text for FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_DESC" xml:space="preserve">
+    <value>ชมการแนะนำการใช้งานแบบด่วนเพื่อเรียนรู้วิธีให้บริการที่รวดเร็วและเป็นส่วนตัวให้กับลูกค้าของคุณ</value>
+    <comment>Description for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_INTRO_SLIDE_TITLE" xml:space="preserve">
+    <value>ยินดีต้อนรับสู่ช่องทาง Omni สำหรับ Dynamics 365 Customer Service</value>
+    <comment>Title for the First Slide on FRE</comment>
+  </data>
+  <data name="FRE_LASTSLIDE_TITLE" xml:space="preserve">
+    <value>เสร็จสิ้นทั้งหมดแล้ว</value>
+    <comment>Title for the Last Slide on FRE</comment>
+  </data>
+  <data name="FRE_PAGINATION_OF" xml:space="preserve">
+    <value>จาก</value>
+    <comment>of Word of Pagination on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_DESC" xml:space="preserve">
+    <value>โอนการสนทนาไปยังตัวแทนที่ดีที่สุดอย่างราบรื่นเพื่อให้แก้ไขปัญหาได้อย่างรวดเร็ว</value>
+    <comment>Description for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_TRANSFER_TITLE" xml:space="preserve">
+    <value>โอนการสนทนา</value>
+    <comment>Title for Transfer the Conversation Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_DESC" xml:space="preserve">
+    <value>จัดการการสนทนากับลูกค้าหลายรายการพร้อมกันด้วยการควบคุมบริบทและรายละเอียดของลูกค้าได้อย่างสมบูรณ์แบบ</value>
+    <comment>Description for Work With Multiple Customers Slide on FRE</comment>
+  </data>
+  <data name="FRE_WORKWITHMULTIPLE_TITLE" xml:space="preserve">
+    <value>ทำงานกับลูกค้าหลายราย</value>
+    <comment>Title for Work With Multiple Customers Slide on FRE</comment>
+  </data>
   <data name="LAUNCH_PRESENCE_DIALOG_TOOLTIP" xml:space="preserve">
     <value>เปิดกล่องโต้ตอบสถานะการออนไลน์</value>
     <comment>Tooltip for presence control in navbar</comment>

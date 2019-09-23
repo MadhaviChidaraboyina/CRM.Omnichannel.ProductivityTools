@@ -145,23 +145,23 @@
     <comment>msdyn_msdyn_consoleapplicationnotificationtem CustomLabel for EntityRelationship 'msdyn_msdyn_consoleapplicationnotificationtempl'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
@@ -257,75 +257,75 @@
     <comment>msdyn_consoleappparameterdefinition Description for EntityRelationship 'organization_msdyn_consoleappparameterdefinition'</comment>
   </data>
   <data name="10:Description,owner_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'owner_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,owner_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'owner_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,owner_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'owner_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,owner_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'owner_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,owner_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'owner_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,owner_msdyn_templatetags" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'owner_msdyn_templatetags'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'team_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'team_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'team_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'team_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'team_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_templatetags" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'team_msdyn_templatetags'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'user_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'user_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'user_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'user_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'user_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_templatetags" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>msdyn_templatetags Description for EntityRelationship 'user_msdyn_templatetags'</comment>
   </data>
   <data name="15062:Description,ChannelAPIIntegrationFramework" xml:space="preserve">
@@ -335,10 +335,6 @@
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Арна API біріктіру құрылымы</value>
@@ -381,7 +377,7 @@
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
-    <value>Осы нысанға арналған пішін.</value>
+    <value>Бұл нысан пішіні.</value>
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
@@ -433,7 +429,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
-    <value>CI провайдерінің жазбаларына арналған бір мәнді идентификатор</value>
+    <value>CIProvider жазбаларына арналған бір мәнді идентификатор</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ciproviderId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
@@ -441,11 +437,11 @@
     <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_msdyn_clicktoact' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_statecode" xml:space="preserve">
-    <value>CI провайдерінің күйі</value>
+    <value>CIProvider күйі</value>
     <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_statuscode" xml:space="preserve">
-    <value>CI провайдері күйінің себебі</value>
+    <value>CIProvider күйінің себебі</value>
     <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
@@ -493,7 +489,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Тек ішкі пайдалануға ғана арналған.</value>
+    <value>Тек ішкі пайдалануға арналған.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
@@ -509,7 +505,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldentitymsdyn_consoleapplicationnotificationfield" xml:space="preserve">
@@ -529,11 +525,11 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfieldId" xml:space="preserve">
-    <value>Нысан үлгілерінің бір мәнді идентификаторы</value>
+    <value>Нысан даналарының бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'msdyn_consoleapplicationnotificationfieldId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode" xml:space="preserve">
@@ -565,19 +561,19 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwnerId" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningUser" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldstatecode" xml:space="preserve">
@@ -605,7 +601,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateentitymsdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
@@ -625,15 +621,19 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Көрсетілетін әрекет түймелері. (Ұсынылмайды)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplateId" xml:space="preserve">
-    <value>Нысан үлгілерінің бір мәнді идентификаторы</value>
+    <value>Нысан даналарының бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_consoleapplicationnotificationtemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode" xml:space="preserve">
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Басқа хабарландыру үлгілеріне қатысты хабарландыруды көрсету реті.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -677,19 +681,19 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwnerId" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningUser" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatestatecode" xml:space="preserve">
@@ -717,7 +721,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateentitymsdyn_consoleapplicationsessiontemplate" xml:space="preserve">
@@ -737,7 +741,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_AnchorTab" xml:space="preserve">
@@ -805,15 +809,15 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningUser" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatestatecode" xml:space="preserve">
@@ -841,7 +845,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateentitymsdyn_consoleapplicationtemplate" xml:space="preserve">
@@ -861,11 +865,11 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplateId" xml:space="preserve">
-    <value>Нысан үлгілерінің бір мәнді идентификаторы</value>
+    <value>Нысан даналарының бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'msdyn_consoleapplicationtemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_isstale" xml:space="preserve">
@@ -921,19 +925,19 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwnerId" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningUser" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedBy" xml:space="preserve">
@@ -945,7 +949,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterentitymsdyn_consoleapplicationtemplateparameter" xml:space="preserve">
@@ -965,11 +969,11 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameterId" xml:space="preserve">
-    <value>Нысан үлгілерінің бір мәнді идентификаторы</value>
+    <value>Нысан даналарының бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'msdyn_consoleapplicationtemplateparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_msdyn_isruntime" xml:space="preserve">
@@ -1009,19 +1013,19 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwnerId" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningUser" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterstatecode" xml:space="preserve">
@@ -1065,7 +1069,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeentitymsdyn_consoleapplicationtype" xml:space="preserve">
@@ -1085,11 +1089,11 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypeModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtypeId" xml:space="preserve">
-    <value>Нысан үлгілерінің бір мәнді идентификаторы</value>
+    <value>Нысан даналарының бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_consoleapplicationtypeId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statecode" xml:space="preserve">
@@ -1105,7 +1109,7 @@
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_displayname' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
-    <value>Реттеу нысанының атауы.</value>
+    <value>Реттелетін нысан атауы.</value>
     <comment>'msdyn_consoleapplicationtype' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtypemsdyn_RenderingOrder" xml:space="preserve">
@@ -1149,7 +1153,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionentitymsdyn_consoleappparameterdefinition" xml:space="preserve">
@@ -1169,11 +1173,11 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinitionId" xml:space="preserve">
-    <value>Нысан үлгілерінің бір мәнді идентификаторы</value>
+    <value>Нысан даналарының бір мәнді идентификаторы</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_consoleappparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" xml:space="preserve">
@@ -1199,7 +1203,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_IsRuntime' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_name" xml:space="preserve">
-    <value>Реттеу нысанының атауы.</value>
+    <value>Реттелеттін нысан атауы.</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" xml:space="preserve">
@@ -1239,7 +1243,7 @@
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsentitymsdyn_templatetags" xml:space="preserve">
@@ -1259,7 +1263,7 @@
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_name" xml:space="preserve">
@@ -1267,7 +1271,7 @@
     <comment>'msdyn_templatetags' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetagsId" xml:space="preserve">
-    <value>Нысан үлгілерінің бір мәнді идентификаторы</value>
+    <value>Нысан даналарының бір мәнді идентификаторы</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'msdyn_templatetagsId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsmsdyn_templatetags_statecode" xml:space="preserve">
@@ -1283,19 +1287,19 @@
     <comment>'msdyn_templatetags' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwnerId" xml:space="preserve">
-    <value>Жауапты ИД</value>
+    <value>Иеленушінің идентификаторы</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>Жазбаға иеленуші бөлімшенің бір мәнді идентификаторы</value>
+    <value>Жазбаны иеленуші бөлімшенің бір мәнді идентификаторы</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningTeam" xml:space="preserve">
-    <value>Жазбаға иеленуші топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаны иеленуші топтың бір мәнді идентификаторы.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningUser" xml:space="preserve">
-    <value>Жазбасы бар пайдаланушыға арналған бір мәнді идентификатор.</value>
+    <value>Жазбаны иеленуші пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsstatecode" xml:space="preserve">
@@ -1343,11 +1347,11 @@
     <comment>'TemplateTag' : Description for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:Description,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
-    <value>Осы нысан пішіні.</value>
+    <value>Бұл нысан пішіні.</value>
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
-    <value>Жасаушы</value>
+    <value>Жасаған</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
@@ -1355,7 +1359,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жасаушы (өкіл)</value>
+    <value>Жасаған (өкіл)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
@@ -1363,7 +1367,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>Өзгертуші</value>
+    <value>Өзгерткен</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
@@ -1371,7 +1375,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Өзгертуші (өкіл)</value>
+    <value>Өзгерткен (өкіл)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -1387,7 +1391,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
-    <value>CI провайдері индентификаторы</value>
+    <value>CIProviderId</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
@@ -1399,7 +1403,7 @@
     <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_statuscode" xml:space="preserve">
-    <value>Күйдің себебі</value>
+    <value>Күйінің себебі</value>
     <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
@@ -1443,11 +1447,11 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatuscode" xml:space="preserve">
-    <value>Күйдің себебі</value>
+    <value>Күйінің себебі</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Уақыт белдеуі ережесінің нұсқалық нөмірі</value>
+    <value>Уақыт белдеуі ережесі нұсқасының нөмірі</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1459,7 +1463,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedOn" xml:space="preserve">
-    <value>Жасалған күн</value>
+    <value>Жасалған күні</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedOnBehalfBy" xml:space="preserve">
@@ -1475,7 +1479,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldModifiedOn" xml:space="preserve">
-    <value>Өзгертілген күн</value>
+    <value>Өзгертілген күні</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldModifiedOnBehalfBy" xml:space="preserve">
@@ -1487,7 +1491,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_consoleapplicationnotificationfieldId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for OptionSet 'msdyn_consoleapplicationnotificationfield_statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statuscode" xml:space="preserve">
@@ -1499,7 +1503,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_LineHeader' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_name" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_Priority" xml:space="preserve">
@@ -1515,23 +1519,23 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwnerId" xml:space="preserve">
-    <value>Жауапты</value>
+    <value>Иеленуші</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>Жауапты бөлімше</value>
+    <value>Иеленуші іскерлік бөлімше</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
-    <value>Жауапты топ</value>
+    <value>Иеленуші топ</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldOwningUser" xml:space="preserve">
-    <value>Жауапты пайдаланушы</value>
+    <value>Иеленуші пайдаланушы</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldstatecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldstatuscode" xml:space="preserve">
@@ -1543,7 +1547,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>ЖРУ түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
@@ -1551,7 +1555,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedOn" xml:space="preserve">
-    <value>Жасалған күн</value>
+    <value>Жасалған күні</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1567,15 +1571,19 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOn" xml:space="preserve">
-    <value>Өзгертілген күн</value>
+    <value>Өзгертілген күні</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Өзгерткен (өкіл)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Қабылдау түймешігінің мәтіні</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
-    <value>Әрекет түймелері (ұсынылмайды)</value>
+    <value>ActionButtons (ұсынылмайды)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplateId" xml:space="preserve">
@@ -1583,7 +1591,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_consoleapplicationnotificationtemplateId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationnotificationtemplate_statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statuscode" xml:space="preserve">
@@ -1595,7 +1603,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Icon' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_name" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationButtons" xml:space="preserve">
@@ -1605,6 +1613,10 @@
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Хабарландыру өрістері</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Қабылдамау түймешігінің мәтіні</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Хабарландыру реті</value>
@@ -1623,23 +1635,23 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwnerId" xml:space="preserve">
-    <value>Жауапты</value>
+    <value>Иеленуші</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Жауапты бөлімше</value>
+    <value>Иеленуші іскерлік бөлімше</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
-    <value>Жауапты топ</value>
+    <value>Иеленуші топ</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateOwningUser" xml:space="preserve">
-    <value>Жауапты пайдаланушы</value>
+    <value>Иеленуші пайдаланушы</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatestatecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatestatuscode" xml:space="preserve">
@@ -1651,7 +1663,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>ЖРУ түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
@@ -1659,7 +1671,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedOn" xml:space="preserve">
-    <value>Жасалған күн</value>
+    <value>Жасалған күні</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1675,7 +1687,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateModifiedOn" xml:space="preserve">
-    <value>Өзгертілген күн</value>
+    <value>Өзгертілген күні</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -1699,7 +1711,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for OptionSet 'msdyn_consoleapplicationsessiontemplate_msdyn_pinned' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_statecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for OptionSet 'msdyn_consoleapplicationsessiontemplate_statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_statuscode" xml:space="preserve">
@@ -1719,7 +1731,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_IsPanelHidden' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_name" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_PanelState" xml:space="preserve">
@@ -1743,23 +1755,23 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwnerId" xml:space="preserve">
-    <value>Жауапты</value>
+    <value>Иеленуші</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Жауапты бөлімше</value>
+    <value>Иеленуші іскерлік бөлімше</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
-    <value>Жауапты топ</value>
+    <value>Иеленуші топ</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateOwningUser" xml:space="preserve">
-    <value>Жауапты пайдаланушы</value>
+    <value>Иеленуші пайдаланушы</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatestatecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatestatuscode" xml:space="preserve">
@@ -1771,7 +1783,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>ЖРУ түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
@@ -1779,7 +1791,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedOn" xml:space="preserve">
-    <value>Жасалған күн</value>
+    <value>Жасалған күні</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1795,7 +1807,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateModifiedOn" xml:space="preserve">
-    <value>Өзгертілген күн</value>
+    <value>Өзгертілген күні</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -1815,7 +1827,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_msdyn_pinned' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statuscode" xml:space="preserve">
@@ -1835,7 +1847,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_IsStale' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_name" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_PageType" xml:space="preserve">
@@ -1859,19 +1871,19 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwnerId" xml:space="preserve">
-    <value>Жауапты</value>
+    <value>Иеленуші</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Жауапты бөлімше</value>
+    <value>Иеленуші іскерлік бөлімше</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
-    <value>Жауапты топ</value>
+    <value>Иеленуші топ</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateOwningUser" xml:space="preserve">
-    <value>Жауапты пайдаланушы</value>
+    <value>Иеленуші пайдаланушы</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedBy" xml:space="preserve">
@@ -1879,7 +1891,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedOn" xml:space="preserve">
-    <value>Жасалған күн</value>
+    <value>Жасалған күні</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -1895,7 +1907,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterModifiedOn" xml:space="preserve">
-    <value>Өзгертілген күн</value>
+    <value>Өзгертілген күні</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -1911,7 +1923,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for OptionSet 'msdyn_consoleapplicationtemplateparameter_msdyn_isruntime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for OptionSet 'msdyn_consoleapplicationtemplateparameter_statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_consoleapplicationtemplateparameter_statuscode" xml:space="preserve">
@@ -1923,7 +1935,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_IsRunTime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_name" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_ParameterName" xml:space="preserve">
@@ -1943,23 +1955,23 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwnerId" xml:space="preserve">
-    <value>Жауапты</value>
+    <value>Иеленуші</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Жауапты бөлімше</value>
+    <value>Иеленуші іскерлік бөлімше</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
-    <value>Жауапты топ</value>
+    <value>Иеленуші топ</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterOwningUser" xml:space="preserve">
-    <value>Жауапты пайдаланушы</value>
+    <value>Иеленуші пайдаланушы</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterstatecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterstatuscode" xml:space="preserve">
@@ -1971,11 +1983,11 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>ЖРУ түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatestatuscode" xml:space="preserve">
@@ -1987,7 +1999,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>ЖРУ түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
@@ -1995,7 +2007,7 @@
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedOn" xml:space="preserve">
-    <value>Жасалған күн</value>
+    <value>Жасалған күні</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedOnBehalfBy" xml:space="preserve">
@@ -2011,7 +2023,7 @@
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeModifiedOn" xml:space="preserve">
-    <value>Өзгертілген күн</value>
+    <value>Өзгертілген күні</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeModifiedOnBehalfBy" xml:space="preserve">
@@ -2023,7 +2035,7 @@
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_consoleapplicationtypeId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for OptionSet 'msdyn_consoleapplicationtype_statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_consoleapplicationtype_statuscode" xml:space="preserve">
@@ -2035,7 +2047,7 @@
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_RenderingOrder" xml:space="preserve">
@@ -2055,7 +2067,7 @@
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypestatecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypestatuscode" xml:space="preserve">
@@ -2067,7 +2079,7 @@
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>ЖРУ түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
@@ -2075,7 +2087,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Жасалған күн</value>
+    <value>Жасалған күні</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
@@ -2091,7 +2103,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Өзгертілген күн</value>
+    <value>Өзгертілген күні</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
@@ -2107,7 +2119,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : displayname for OptionSet 'msdyn_consoleappparameterdefinition_msdyn_isruntime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for OptionSet 'msdyn_consoleappparameterdefinition_statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statuscode" xml:space="preserve">
@@ -2123,7 +2135,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_IsRuntime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_name" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" xml:space="preserve">
@@ -2139,7 +2151,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionstatecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionstatuscode" xml:space="preserve">
@@ -2151,7 +2163,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>ЖРУ түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedBy" xml:space="preserve">
@@ -2159,7 +2171,7 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedOn" xml:space="preserve">
-    <value>Жасалған күн</value>
+    <value>Жасалған күні</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedOnBehalfBy" xml:space="preserve">
@@ -2175,7 +2187,7 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsModifiedOn" xml:space="preserve">
-    <value>Өзгертілген күн</value>
+    <value>Өзгертілген күні</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsModifiedOnBehalfBy" xml:space="preserve">
@@ -2183,7 +2195,7 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_name" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_templatetagsId" xml:space="preserve">
@@ -2191,7 +2203,7 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'msdyn_templatetagsId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_templatetags_statecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_templatetags' : displayname for OptionSet 'msdyn_templatetags_statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_templatetags_statuscode" xml:space="preserve">
@@ -2203,23 +2215,23 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwnerId" xml:space="preserve">
-    <value>Жауапты</value>
+    <value>Иеленуші</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>Жауапты бөлімше</value>
+    <value>Иеленуші іскерлік бөлімше</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningTeam" xml:space="preserve">
-    <value>Жауапты топ</value>
+    <value>Иеленуші топ</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsOwningUser" xml:space="preserve">
-    <value>Жауапты пайдаланушы</value>
+    <value>Иеленуші пайдаланушы</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsstatecode" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsstatuscode" xml:space="preserve">
@@ -2231,7 +2243,7 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>ЖРУ түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,App Parameter Definition{07190a27-a07a-4cae-adca-49a091653e41}" xml:space="preserve">
@@ -2619,7 +2631,7 @@
     <comment>'Notification Fields' : label for tab in Entity FormXml ID: '{d6df0d89-7b66-450a-8916-377c7e683e23}'</comment>
   </data>
   <data name="1:label,Notification Fields{dcd8ee8a-4aac-30bc-d07a-592ad035b9dd}" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{dcd8ee8a-4aac-30bc-d07a-592ad035b9dd}'</comment>
   </data>
   <data name="1:label,Notification Fields{e6416ba8-02c5-42eb-081b-9d09e9ea104e}" xml:space="preserve">
@@ -2627,12 +2639,20 @@
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{e6416ba8-02c5-42eb-081b-9d09e9ea104e}'</comment>
   </data>
   <data name="1:label,Notification Template{49f27467-13e4-4190-ac4a-2a72b97632ad}" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{49f27467-13e4-4190-ac4a-2a72b97632ad}'</comment>
   </data>
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Бөлім</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Хабарландыру өрістері</value>
@@ -2667,7 +2687,7 @@
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{093dd305-a7cc-d998-e489-ac60594b185e}'</comment>
   </data>
   <data name="1:label,Session Templates{196dbc51-0ab0-1da7-555e-35cc732cbda3}" xml:space="preserve">
-    <value>Атау</value>
+    <value>Атауы</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{196dbc51-0ab0-1da7-555e-35cc732cbda3}'</comment>
   </data>
   <data name="1:label,Session Templates{1d313718-4d90-7004-cbbc-d98c01d6c01d}" xml:space="preserve">
@@ -2891,7 +2911,7 @@
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{f1d3c88b-9874-4d92-a0d1-717718332eec}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{fbdae360-d9a3-e911-8199-000d3a6d68d0}" xml:space="preserve">
-    <value>Бағдарлама түрлерін іздеу көрінісі</value>
+    <value>Бағдарлама түрлерінің LookUpView көрінісі</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{fbdae360-d9a3-e911-8199-000d3a6d68d0}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}" xml:space="preserve">
@@ -2923,7 +2943,7 @@
     <comment>'Channel' : LocalizedName for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
-    <value>CI провайдерлері</value>
+    <value>CIProviders</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
@@ -3099,7 +3119,7 @@
     <comment>'TemplateTag' : LocalizedName for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionInfo{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Ортақ</value>
+    <value>Жалпы</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionMarketing{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
@@ -3107,7 +3127,7 @@
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionProcessCenter{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Процестік сеанстар</value>
+    <value>Процесс сеанстары</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionSales{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
@@ -3119,7 +3139,7 @@
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateInfo{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Ортақ</value>
+    <value>Жалпы</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateMarketing{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3131,7 +3151,7 @@
     <comment>'Application Tab Template' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationtemplate_tags'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateProcessCenter{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Процестік сеанстар</value>
+    <value>Процесс сеанстары</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateSales{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3143,7 +3163,7 @@
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Template ParameterInfo{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Ортақ</value>
+    <value>Жалпы</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Template ParameterMarketing{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3151,7 +3171,7 @@
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Application Template ParameterProcessCenter{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Процестік сеанстар</value>
+    <value>Процесс сеанстары</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Application Template ParameterSales{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3163,7 +3183,7 @@
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application TypeInfo{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Ортақ</value>
+    <value>Жалпы</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application TypeMarketing{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3171,7 +3191,7 @@
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Application TypeProcessCenter{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Процестік сеанстар</value>
+    <value>Процесс сеанстары</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Application TypeSales{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3183,7 +3203,7 @@
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification FieldsInfo{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Ортақ</value>
+    <value>Жалпы</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification FieldsMarketing{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3191,7 +3211,7 @@
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Notification FieldsProcessCenter{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Процестік сеанстар</value>
+    <value>Процесс сеанстары</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Notification FieldsSales{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3203,7 +3223,7 @@
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification TemplateInfo{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Ортақ</value>
+    <value>Жалпы</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification TemplateMarketing{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3215,7 +3235,7 @@
     <comment>'Notification Template' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationnotificationtag'</comment>
   </data>
   <data name="1:Title,Notification TemplateProcessCenter{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Процестік сеанстар</value>
+    <value>Процесс сеанстары</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Notification TemplateSales{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3227,7 +3247,7 @@
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Session TemplatesInfo{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Ортақ</value>
+    <value>Жалпы</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Session TemplatesMarketing{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
@@ -3239,7 +3259,7 @@
     <comment>'Session Templates' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationsessiontemp_tag'</comment>
   </data>
   <data name="1:Title,Session TemplatesProcessCenter{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Процестік сеанстар</value>
+    <value>Процесс сеанстары</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Session TemplatesSales{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
@@ -3271,7 +3291,7 @@
     <comment>'{e02fac01-dd62-4886-8f07-042ad67ee299}' : label for cell in Dialog FormXml ID: '{a2635e65-adcb-498e-8b9e-a51cd25b523e}'</comment>
   </data>
   <data name="68:label,{e02fac01-dd62-4886-8f07-042ad67ee299}{ae414a88-c791-424b-ba52-51e20a263bae}" xml:space="preserve">
-    <value>Күй</value>
+    <value>Күйі</value>
     <comment>'{e02fac01-dd62-4886-8f07-042ad67ee299}' : label for cell in Dialog FormXml ID: '{ae414a88-c791-424b-ba52-51e20a263bae}'</comment>
   </data>
   <data name="68:LocalizedName,{e02fac01-dd62-4886-8f07-042ad67ee299}" xml:space="preserve">

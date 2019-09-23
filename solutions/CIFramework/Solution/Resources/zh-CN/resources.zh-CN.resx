@@ -145,23 +145,23 @@
     <comment>msdyn_msdyn_consoleapplicationnotificationtem CustomLabel for EntityRelationship 'msdyn_msdyn_consoleapplicationnotificationtempl'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>渠道 API 集成框架</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -349,7 +345,7 @@
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
   <data name="1:Description,App Parameter Definition{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>用于此实体的窗体。</value>
+    <value>此实体的窗体。</value>
     <comment>'App Parameter Definition' : Description for systemform in Entity FormXml ID: '{215a1395-743d-4dfb-b552-c51d65fdb423}'</comment>
   </data>
   <data name="1:Description,App Parameter Definition{e519c146-6836-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -361,7 +357,7 @@
     <comment>'Application Tab Template' : Description for SavedQuery on Entity QueryId: '{37fd3926-6e36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Tab Template{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>用于此实体的窗体。</value>
+    <value>此实体的窗体。</value>
     <comment>'Application Tab Template' : Description for systemform in Entity FormXml ID: '{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}'</comment>
   </data>
   <data name="1:Description,Application Template Parameter{88137b29-0c3b-e911-8187-000d3afe5f6b}" xml:space="preserve">
@@ -369,7 +365,7 @@
     <comment>'Application Template Parameter' : Description for SavedQuery on Entity QueryId: '{88137b29-0c3b-e911-8187-000d3afe5f6b}'</comment>
   </data>
   <data name="1:Description,Application Template Parameter{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>用于此实体的窗体。</value>
+    <value>此实体的窗体。</value>
     <comment>'Application Template Parameter' : Description for systemform in Entity FormXml ID: '{d00da6ab-1789-4a9d-ac44-da3ea8d75800}'</comment>
   </data>
   <data name="1:Description,Application Type{ba8f5f7e-6b36-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -377,7 +373,7 @@
     <comment>'Application Type' : Description for SavedQuery on Entity QueryId: '{ba8f5f7e-6b36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Type{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>用于此实体的窗体。</value>
+    <value>此实体的窗体。</value>
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
@@ -405,7 +401,7 @@
     <comment> 'msdyn_ciprovider' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>创建此记录的导入内容的序号。</value>
+    <value>创建此记录的导入的序号。</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedBy" xml:space="preserve">
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>创建记录时所用的时区代码。</value>
+    <value>创建记录时所使用的时区代码。</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -569,7 +565,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>修改记录的代理用户的唯一标识符。</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>要显示的操作按钮。(已弃用)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>与其他通知模板相关的通知显示顺序。</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -681,7 +685,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
@@ -805,7 +809,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
@@ -925,7 +929,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
@@ -1013,7 +1017,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
@@ -1287,7 +1291,7 @@
     <comment>'msdyn_templatetags' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>负责记录的业务单位的唯一标识符</value>
+    <value>负责记录的业务部门的唯一标识符</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningTeam" xml:space="preserve">
@@ -1315,7 +1319,7 @@
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>用于此实体的窗体。</value>
+    <value>此实体的窗体。</value>
     <comment>'Notification Fields' : Description for systemform in Entity FormXml ID: '{92b56288-9844-4608-b6e7-d9362c325d68}'</comment>
   </data>
   <data name="1:Description,Notification Fields{e48410d6-7236-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -1323,7 +1327,7 @@
     <comment>'Notification Fields' : Description for SavedQuery on Entity QueryId: '{e48410d6-7236-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Notification Template{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>用于此实体的窗体。</value>
+    <value>此实体的窗体。</value>
     <comment>'Notification Template' : Description for systemform in Entity FormXml ID: '{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}'</comment>
   </data>
   <data name="1:Description,Notification Template{2b409f89-7336-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -1335,7 +1339,7 @@
     <comment>'Session Templates' : Description for SavedQuery on Entity QueryId: '{0f0185db-6f36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Session Templates{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>用于此实体的窗体。</value>
+    <value>此实体的窗体。</value>
     <comment>'Session Templates' : Description for systemform in Entity FormXml ID: '{7e7e29c0-bc24-40c2-938b-941554da4c4e}'</comment>
   </data>
   <data name="1:Description,TemplateTag{ad7358b6-7641-e911-8190-000d3afe6c36}" xml:space="preserve">
@@ -1351,7 +1355,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>创建时间</value>
+    <value>创建日期</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -1435,7 +1439,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>记录的创建时间</value>
+    <value>创建记录的时间</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1459,7 +1463,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedOn" xml:space="preserve">
-    <value>创建时间</value>
+    <value>创建日期</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedOnBehalfBy" xml:space="preserve">
@@ -1551,7 +1555,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedOn" xml:space="preserve">
-    <value>创建时间</value>
+    <value>创建日期</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1573,6 +1577,10 @@
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>修改者(代理)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>接受按钮文本</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (已弃用)</value>
@@ -1605,6 +1613,10 @@
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>通知字段</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>拒绝按钮文本</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>通知顺序</value>
@@ -1659,7 +1671,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedOn" xml:space="preserve">
-    <value>创建时间</value>
+    <value>创建日期</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1779,7 +1791,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedOn" xml:space="preserve">
-    <value>创建时间</value>
+    <value>创建日期</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -1823,7 +1835,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_description" xml:space="preserve">
-    <value>描述</value>
+    <value>说明</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_description' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_icon" xml:space="preserve">
@@ -1879,7 +1891,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedOn" xml:space="preserve">
-    <value>创建时间</value>
+    <value>创建日期</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -1995,7 +2007,7 @@
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedOn" xml:space="preserve">
-    <value>创建时间</value>
+    <value>创建日期</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedOnBehalfBy" xml:space="preserve">
@@ -2075,7 +2087,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>创建时间</value>
+    <value>创建日期</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
@@ -2159,7 +2171,7 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedOn" xml:space="preserve">
-    <value>创建时间</value>
+    <value>创建日期</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedOnBehalfBy" xml:space="preserve">
@@ -2634,6 +2646,14 @@
     <value>节</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>通知字段</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
@@ -2891,7 +2911,7 @@
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{f1d3c88b-9874-4d92-a0d1-717718332eec}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{fbdae360-d9a3-e911-8199-000d3a6d68d0}" xml:space="preserve">
-    <value>应用程序类型查找视图</value>
+    <value>应用程序类型 LookUpView</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{fbdae360-d9a3-e911-8199-000d3a6d68d0}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}" xml:space="preserve">
@@ -3103,7 +3123,7 @@
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionMarketing{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>营销</value>
+    <value>市场营销</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionProcessCenter{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
@@ -3123,7 +3143,7 @@
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateMarketing{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>营销</value>
+    <value>市场营销</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Application Tab Templatenav_msdyn_msdyn_consoleapplicationtemplate_tags{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3147,7 +3167,7 @@
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application Template ParameterMarketing{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>营销</value>
+    <value>市场营销</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Application Template ParameterProcessCenter{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3167,7 +3187,7 @@
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Application TypeMarketing{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>营销</value>
+    <value>市场营销</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Application TypeProcessCenter{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3187,7 +3207,7 @@
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification FieldsMarketing{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>营销</value>
+    <value>市场营销</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Notification FieldsProcessCenter{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3207,7 +3227,7 @@
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Notification TemplateMarketing{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>营销</value>
+    <value>市场营销</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Notification Templatenav_msdyn_msdyn_consoleapplicationnotificationtag{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3231,7 +3251,7 @@
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Session TemplatesMarketing{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>营销</value>
+    <value>市场营销</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Session Templatesnav_msdyn_msdyn_consoleapplicationsessiontemp_tag{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">

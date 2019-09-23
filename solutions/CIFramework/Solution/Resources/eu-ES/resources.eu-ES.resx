@@ -145,23 +145,23 @@
     <comment>msdyn_msdyn_consoleapplicationnotificationtem CustomLabel for EntityRelationship 'msdyn_msdyn_consoleapplicationnotificationtempl'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationfield" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>msdyn_consoleapplicationnotificationfield Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationfield'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationnotificationtemplate" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>msdyn_consoleapplicationnotificationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationnotificationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationsessiontemplate" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>msdyn_consoleapplicationsessiontemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationsessiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplate" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>msdyn_consoleapplicationtemplate Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_consoleapplicationtemplateparameter" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>msdyn_consoleapplicationtemplateparameter Description for EntityRelationship 'business_unit_msdyn_consoleapplicationtemplateparameter'</comment>
   </data>
   <data name="10:Description,lk_msdyn_ciprovider_createdby" xml:space="preserve">
@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Kanaleko API integrazio-markoa</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -413,7 +409,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Erregistroaren aldatze-data eta -ordua.</value>
+    <value>Erregistroaren aldatu deneko data eta ordua.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
@@ -493,7 +489,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barne-erabilerarako soilik.</value>
+    <value>Barnean erabiltzeko soilik.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
@@ -569,7 +565,7 @@
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldOwningTeam" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>Erregistroa aldatu duen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Bistaratu beharreko ekintza-botoiak. (Zaharkitua)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -660,6 +660,10 @@
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Beste jakinarazpen-txantiloiei buruzko jakinarazpenak bistaratzeko ordena.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
@@ -681,7 +685,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplateOwningTeam" xml:space="preserve">
@@ -805,7 +809,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplateOwningTeam" xml:space="preserve">
@@ -925,7 +929,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>'msdyn_consoleapplicationtemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateOwningTeam" xml:space="preserve">
@@ -1013,7 +1017,7 @@
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationtemplateparameterOwningTeam" xml:space="preserve">
@@ -1287,7 +1291,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_templatetags' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
     <comment>'msdyn_templatetags' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_templatetagsOwningTeam" xml:space="preserve">
@@ -1347,7 +1351,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
-    <value>Honek sortua</value>
+    <value>Sortzailea</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
@@ -1355,7 +1359,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Honek sortua (ordezkaria)</value>
+    <value>Sortzailea (ordezkaria)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
@@ -1363,7 +1367,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>Honek aldatua:</value>
+    <value>Aldaketaren egilea</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
@@ -1371,7 +1375,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Honek aldatua (ordezkaria)</value>
+    <value>Aldaketaren egilea (ordezkaria)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -1387,7 +1391,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderapiversion' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciproviderId" xml:space="preserve">
-    <value>Integrazio etengabearen hornitzailearen IDa</value>
+    <value>CIProviderId</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ciproviderId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" xml:space="preserve">
@@ -1543,7 +1547,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC bihurketarako ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateCreatedBy" xml:space="preserve">
@@ -1573,6 +1577,10 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateModifiedOnBehalfBy" xml:space="preserve">
     <value>Aldaketaren egilea (ordezkaria)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Onartzeko botoiko testua</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (zaharkitua)</value>
@@ -1605,6 +1613,10 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Jakinarazpen-eremuak</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Baztertzeko botoiko testua</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Jakinarazpen-ordena</value>
@@ -1651,7 +1663,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC bihurketarako ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateCreatedBy" xml:space="preserve">
@@ -1707,7 +1719,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for OptionSet 'msdyn_consoleapplicationsessiontemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_description" xml:space="preserve">
-    <value>Deskribapena</value>
+    <value>Azalpena</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_description' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_icon" xml:space="preserve">
@@ -1771,7 +1783,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC bihurketarako ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateCreatedBy" xml:space="preserve">
@@ -1971,7 +1983,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC bihurketarako ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatestatecode" xml:space="preserve">
@@ -1987,7 +1999,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC bihurketarako ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeCreatedBy" xml:space="preserve">
@@ -2067,7 +2079,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypeUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC bihurketarako ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionCreatedBy" xml:space="preserve">
@@ -2151,7 +2163,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC bihurketarako ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsCreatedBy" xml:space="preserve">
@@ -2231,7 +2243,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_templatetags' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC bihurketarako ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,App Parameter Definition{07190a27-a07a-4cae-adca-49a091653e41}" xml:space="preserve">
@@ -2371,19 +2383,19 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode0" xml:space="preserve">
-    <value>Aktiboa</value>
+    <value>Aktibo</value>
     <comment>'msdyn_ciprovider' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statecode1" xml:space="preserve">
-    <value>Inaktiboa</value>
+    <value>Inaktibo</value>
     <comment>'msdyn_ciprovider' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode1" xml:space="preserve">
-    <value>Aktiboa</value>
+    <value>Aktibo</value>
     <comment>'msdyn_ciprovider' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_statuscode2" xml:space="preserve">
-    <value>Inaktiboa</value>
+    <value>Inaktibo</value>
     <comment>'msdyn_ciprovider' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationnotificationfieldmsdyn_consoleapplicationnotificationfield_statecode0" xml:space="preserve">
@@ -2634,6 +2646,14 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <value>Sekzioa</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Jakinarazpen-eremuak</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
@@ -2687,7 +2707,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{5d09b768-575c-d77d-6479-2130abbde22b}'</comment>
   </data>
   <data name="1:label,Session Templates{67e28937-3ab9-4b74-e49b-54660966e25c}" xml:space="preserve">
-    <value>Deskribapena</value>
+    <value>Azalpena</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{67e28937-3ab9-4b74-e49b-54660966e25c}'</comment>
   </data>
   <data name="1:label,Session Templates{85978531-3836-82b6-4471-e0ecbe36018c}" xml:space="preserve">
@@ -2891,7 +2911,7 @@ No: balio bat eman behar da parametro hau darabilen txantiloi bat sortzean</valu
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{f1d3c88b-9874-4d92-a0d1-717718332eec}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{fbdae360-d9a3-e911-8199-000d3a6d68d0}" xml:space="preserve">
-    <value>Aplikazio moten bilaketa-ikuspegia</value>
+    <value>Aplikazio moten LookUpView ikuspegia</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{fbdae360-d9a3-e911-8199-000d3a6d68d0}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}" xml:space="preserve">

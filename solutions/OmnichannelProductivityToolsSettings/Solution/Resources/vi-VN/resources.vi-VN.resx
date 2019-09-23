@@ -148,6 +148,14 @@
     <value>Cài đặt công cụ năng suất Bán hàng đa kênh</value>
     <comment> 'msdyn_OmnichannelProductivityToolsSettings' : LocalizedName for Solution</comment>
   </data>
+  <data name="80:Description,msdyn_OCAPP" xml:space="preserve">
+    <value>A unified and consistent experience for your agents interacting across communication channels to deliver an enhanced customer service</value>
+    <comment> 'msdyn_OCAPP' : Description for AppModule</comment>
+  </data>
+  <data name="80:LocalizedName,msdyn_OCAPP" xml:space="preserve">
+    <value>Omnichannel Administration</value>
+    <comment> 'msdyn_OCAPP' : LocalizedName for AppModule</comment>
+  </data>
   <data name="81:LocalizedName,msdyn_OCAPP" xml:space="preserve">
     <value>Quản trị Bán hàng đa kênh</value>
     <comment>'msdyn_OCAPP' : LocalizedName for AppModuleSiteMap</comment>
@@ -163,5 +171,9 @@
   <data name="81:Title,NewArea_08255196NewSubArea_386b5beb" xml:space="preserve">
     <value>Macro</value>
     <comment>Title for Area 'NewArea_08255196' SubArea 'NewSubArea_386b5beb'</comment>
+  </data>
+  <data name="81:Title,NewArea_08255196NewSubArea_5857f7fc" xml:space="preserve">
+    <value>Agent scripts</value>
+    <comment>Title for Area 'NewArea_08255196' SubArea 'NewSubArea_5857f7fc'</comment>
   </data>
 </root>

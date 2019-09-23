@@ -101,6 +101,294 @@
           <Str Name="Custom3" Val="WO18898_20190528" />
         </Props>
       </Item>
+      <Item ItemId=";FRE_COMPREHENSIVEVIEW_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View and access all the customer information at your fingertips at one place to deliver a faster service.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Visualizza e accedi a tutte le informazioni sul cliente a portata di mano in un'unica posizione per offrire un servizio più rapido.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0003779Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Comprehensive View Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_COMPREHENSIVEVIEW_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Comprehensive view of your customers' journey]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Visualizzazione completa del percorso dei tuoi clienti]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0003779Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Comprehensive View Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONSULT_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invite other agents, supervisors to collaborate and solve the issues faster.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Invita altri agenti e supervisori a collaborare e risolvere i problemi più velocemente.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0003779Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Consult With Users Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONSULT_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Consult with users]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Consultati con gli utenti]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0003779Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Consult With Users Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONTEXTUALAPPS_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Access and manage sitemap applications that lie within the context of a session.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Accedi e gestisci le applicazioni di mappa del sito che si trovano nel contesto di una sessione.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0003779Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Contextual Applications Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONTEXTUALAPPS_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Contextual applications]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Applicazioni contestuali]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Contextual Applications Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_DONTSHOWMEAGAIN" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Don't show me again]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Non visualizzare più]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Opt-out checkbox label for FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_GETMOREDONE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Quickly open work items with keyboard and mouse-click gesture and maximize your productivity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Apri rapidamente gli elementi di lavoro con la tastiera e con il movimento del clic del mouse e massimizza la produttività.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Get More Done Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_GETMOREDONE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get more done]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Esegui più operazioni]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Get More Done Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_GETSTARTED" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get Started]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Operazioni preliminari]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Get Started Button Text for FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_INTRO_SLIDE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Take a quick tour to learn how to deliver fast, personalized service to your customers.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Visualizza una rapida presentazione per scoprire come offrire un servizio veloce e personalizzato ai tuoi clienti.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for the First Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_INTRO_SLIDE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Welcome to Omnichannel for Dynamics 365 Customer Service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Benvenuto/a in Multicanale per Dynamics 365 Customer Service]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for the First Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_LASTSLIDE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All Done]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tutto fatto]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for the Last Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_PAGINATION_OF" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[of]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[di]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[of Word of Pagination on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_TRANSFER_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transfer the conversations smoothly to the best-qualified agents to resolve them fast.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Trasferisci le conversazioni in modo semplice agli agenti più qualificati per una risoluzione più rapida.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Transfer the Conversation Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_TRANSFER_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transfer the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Trasferisci la conversazione]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Transfer the Conversation Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_WORKWITHMULTIPLE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Manage multiple customer conversations simultaneously with complete control of the context and customer details.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Gestisci più conversazioni cliente contemporaneamente con il controllo completo dei dettagli del contesto e del cliente.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004094Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Work With Multiple Customers Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_WORKWITHMULTIPLE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Work with multiple customers]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lavora con più clienti]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0004055Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Work With Multiple Customers Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
       <Item ItemId=";LAUNCH_PRESENCE_DIALOG_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Launch presence dialog]]></Val>

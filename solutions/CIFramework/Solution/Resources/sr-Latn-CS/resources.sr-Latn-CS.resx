@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Kanal radnog okvira API integracije</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -417,7 +413,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Jedinstveni identifikator delegata-korisnika koji je izmenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika-delegata koji je izmenio zapis.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -497,7 +493,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone u upotrebi u vreme kreiranja zapisa.</value>
+    <value>Šifra vremenske zone koja je korišćena prilikom kreiranja zapisa.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>Jedinstveni identifikator korisnika-delegata koji je izmenio zapis.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>Dugmad za radnje koja treba da se prikazuju. (Zastarelo)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Redosled prikazivanja obaveštenja relativno u odnosu na druge predloške obaveštenja.</value>
@@ -1347,31 +1351,31 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
-    <value>Kreirao:</value>
+    <value>Autor</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>Vreme kreiranja:</value>
+    <value>Kreirano dana</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
-    <value>Kreirao (delegat):</value>
+    <value>Kreirao/la (delegat):</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderImportSequenceNumber" xml:space="preserve">
-    <value>Uvoz broja sekvence</value>
+    <value>Broj sekvence uvoza</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedBy" xml:space="preserve">
-    <value>Izmenio:</value>
+    <value>Izmenio/la</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>Vreme izmene:</value>
+    <value>Izmenjeno dana</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>Izmenio (delegat):</value>
+    <value>Izmenio/la (delegat)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -1435,7 +1439,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>Vreme kreiranja zapisa:</value>
+    <value>Zapis kreiran dana</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1447,11 +1451,11 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_ciprovider' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Broj verzije pravila za vremensku zonu</value>
+    <value>Broj verzije pravila vremenske zone</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za UTC konverziju</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldCreatedBy" xml:space="preserve">
@@ -1499,7 +1503,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_LineHeader' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_name" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationfieldmsdyn_Priority" xml:space="preserve">
@@ -1574,6 +1578,10 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <value>Izmenio/la (delegat)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Tekst dugmeta „Prihvati“</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (Zastarelo)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1595,7 +1603,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Icon' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_name" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationButtons" xml:space="preserve">
@@ -1605,6 +1613,10 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Polja obaveštenja</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Tekst dugmeta „Odbaci“</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Redosled obaveštenja</value>
@@ -1719,7 +1731,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_IsPanelHidden' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_name" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_PanelState" xml:space="preserve">
@@ -1835,7 +1847,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_IsStale' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_name" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_PageType" xml:space="preserve">
@@ -1923,7 +1935,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_IsRunTime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_name" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'msdyn_consoleapplicationtemplateparameter' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplateparametermsdyn_ParameterName" xml:space="preserve">
@@ -2035,7 +2047,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_name" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'msdyn_consoleapplicationtype' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtypemsdyn_RenderingOrder" xml:space="preserve">
@@ -2123,7 +2135,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_IsRuntime' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_name" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'msdyn_consoleappparameterdefinition' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" xml:space="preserve">
@@ -2183,7 +2195,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'msdyn_templatetags' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_name" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'msdyn_templatetags' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_templatetagsmsdyn_templatetagsId" xml:space="preserve">
@@ -2619,7 +2631,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'Notification Fields' : label for tab in Entity FormXml ID: '{d6df0d89-7b66-450a-8916-377c7e683e23}'</comment>
   </data>
   <data name="1:label,Notification Fields{dcd8ee8a-4aac-30bc-d07a-592ad035b9dd}" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{dcd8ee8a-4aac-30bc-d07a-592ad035b9dd}'</comment>
   </data>
   <data name="1:label,Notification Fields{e6416ba8-02c5-42eb-081b-9d09e9ea104e}" xml:space="preserve">
@@ -2627,12 +2639,20 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{e6416ba8-02c5-42eb-081b-9d09e9ea104e}'</comment>
   </data>
   <data name="1:label,Notification Template{49f27467-13e4-4190-ac4a-2a72b97632ad}" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{49f27467-13e4-4190-ac4a-2a72b97632ad}'</comment>
   </data>
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Odeljak</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
+  </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
   </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Polja obaveštenja</value>
@@ -2667,7 +2687,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{093dd305-a7cc-d998-e489-ac60594b185e}'</comment>
   </data>
   <data name="1:label,Session Templates{196dbc51-0ab0-1da7-555e-35cc732cbda3}" xml:space="preserve">
-    <value>Naziv</value>
+    <value>Ime</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{196dbc51-0ab0-1da7-555e-35cc732cbda3}'</comment>
   </data>
   <data name="1:label,Session Templates{1d313718-4d90-7004-cbbc-d98c01d6c01d}" xml:space="preserve">
@@ -3115,7 +3135,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,App Parameter DefinitionService{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>Usluge</value>
+    <value>Usluga</value>
     <comment>'App Parameter Definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateInfo{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
@@ -3139,7 +3159,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application Tab TemplateService{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>Usluge</value>
+    <value>Usluga</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application Template ParameterInfo{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
@@ -3159,7 +3179,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application Template ParameterService{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>Usluge</value>
+    <value>Usluga</value>
     <comment>'Application Template Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Application TypeInfo{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
@@ -3179,7 +3199,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Application TypeService{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>Usluge</value>
+    <value>Usluga</value>
     <comment>'Application Type' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification FieldsInfo{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
@@ -3199,7 +3219,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Notification FieldsService{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>Usluge</value>
+    <value>Usluga</value>
     <comment>'Notification Fields' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Notification TemplateInfo{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
@@ -3223,7 +3243,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Notification TemplateService{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>Usluge</value>
+    <value>Usluga</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Session TemplatesInfo{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
@@ -3247,7 +3267,7 @@ Ne – vrednost mora da se obezbedi kada se kreira predložak koji koristi ovaj 
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Session TemplatesService{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>Usluge</value>
+    <value>Usluga</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="50:Title,msdyn.ApplicationRibbon.Presence.Button.LabelText" xml:space="preserve">

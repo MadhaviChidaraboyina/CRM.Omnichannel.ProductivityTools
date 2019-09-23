@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>채널 API 통합 프레임워크</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -349,7 +345,7 @@
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
   <data name="1:Description,App Parameter Definition{215a1395-743d-4dfb-b552-c51d65fdb423}" xml:space="preserve">
-    <value>이 엔터티의 양식.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'App Parameter Definition' : Description for systemform in Entity FormXml ID: '{215a1395-743d-4dfb-b552-c51d65fdb423}'</comment>
   </data>
   <data name="1:Description,App Parameter Definition{e519c146-6836-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -361,7 +357,7 @@
     <comment>'Application Tab Template' : Description for SavedQuery on Entity QueryId: '{37fd3926-6e36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Tab Template{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
-    <value>이 엔터티의 양식.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Application Tab Template' : Description for systemform in Entity FormXml ID: '{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}'</comment>
   </data>
   <data name="1:Description,Application Template Parameter{88137b29-0c3b-e911-8187-000d3afe5f6b}" xml:space="preserve">
@@ -369,7 +365,7 @@
     <comment>'Application Template Parameter' : Description for SavedQuery on Entity QueryId: '{88137b29-0c3b-e911-8187-000d3afe5f6b}'</comment>
   </data>
   <data name="1:Description,Application Template Parameter{d00da6ab-1789-4a9d-ac44-da3ea8d75800}" xml:space="preserve">
-    <value>이 엔터티의 양식.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Application Template Parameter' : Description for systemform in Entity FormXml ID: '{d00da6ab-1789-4a9d-ac44-da3ea8d75800}'</comment>
   </data>
   <data name="1:Description,Application Type{ba8f5f7e-6b36-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -377,11 +373,11 @@
     <comment>'Application Type' : Description for SavedQuery on Entity QueryId: '{ba8f5f7e-6b36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Application Type{e5c56ff7-4104-46e5-93d6-223fef077785}" xml:space="preserve">
-    <value>이 엔터티의 양식.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Application Type' : Description for systemform in Entity FormXml ID: '{e5c56ff7-4104-46e5-93d6-223fef077785}'</comment>
   </data>
   <data name="1:Description,Channel{a9989785-8b32-48eb-ac09-7d1da00a0d0d}" xml:space="preserve">
-    <value>이 엔터티에 대한 양식입니다.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Channel' : Description for systemform in Entity FormXml ID: '{a9989785-8b32-48eb-ac09-7d1da00a0d0d}'</comment>
   </data>
   <data name="1:Description,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
@@ -393,7 +389,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>레코드가 생성된 날짜와 시간입니다.</value>
+    <value>레코드를 만든 날짜와 시간입니다.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -413,7 +409,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>레코드가 수정된 날짜 및 시간입니다.</value>
+    <value>레코드를 수정한 날짜와 시간입니다.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
@@ -481,7 +477,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>레코드를 마이그레이션한 날짜 및 시간.</value>
+    <value>레코드가 마이그레이션된 날짜와 시간입니다.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -493,7 +489,7 @@
     <comment>'msdyn_ciprovider' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>내부 전용.</value>
+    <value>내부 전용입니다.</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciproviderUTCConversionTimeZoneCode" xml:space="preserve">
@@ -628,6 +624,10 @@
     <value>레코드를 수정한 대리인 사용자의 고유 식별자입니다.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>표시할 작업 단추. (더 이상 사용되지 않음)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -659,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>다른 알림 템플릿에 상대적인 알림 표시 순서입니다.</value>
@@ -1315,7 +1319,7 @@
     <comment>'msdyn_templatetags' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Notification Fields{92b56288-9844-4608-b6e7-d9362c325d68}" xml:space="preserve">
-    <value>이 엔터티의 양식.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Notification Fields' : Description for systemform in Entity FormXml ID: '{92b56288-9844-4608-b6e7-d9362c325d68}'</comment>
   </data>
   <data name="1:Description,Notification Fields{e48410d6-7236-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -1323,7 +1327,7 @@
     <comment>'Notification Fields' : Description for SavedQuery on Entity QueryId: '{e48410d6-7236-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Notification Template{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
-    <value>이 엔터티의 양식.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Notification Template' : Description for systemform in Entity FormXml ID: '{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}'</comment>
   </data>
   <data name="1:Description,Notification Template{2b409f89-7336-e911-8191-000d3a06071c}" xml:space="preserve">
@@ -1335,7 +1339,7 @@
     <comment>'Session Templates' : Description for SavedQuery on Entity QueryId: '{0f0185db-6f36-e911-8191-000d3a06071c}'</comment>
   </data>
   <data name="1:Description,Session Templates{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
-    <value>이 엔터티의 양식.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Session Templates' : Description for systemform in Entity FormXml ID: '{7e7e29c0-bc24-40c2-938b-941554da4c4e}'</comment>
   </data>
   <data name="1:Description,TemplateTag{ad7358b6-7641-e911-8190-000d3afe6c36}" xml:space="preserve">
@@ -1343,7 +1347,7 @@
     <comment>'TemplateTag' : Description for SavedQuery on Entity QueryId: '{ad7358b6-7641-e911-8190-000d3afe6c36}'</comment>
   </data>
   <data name="1:Description,TemplateTag{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}" xml:space="preserve">
-    <value>이 엔터티에 대한 양식입니다.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'TemplateTag' : Description for systemform in Entity FormXml ID: '{f2adf75a-48eb-4041-b8f1-059c0ec9e0f3}'</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedBy" xml:space="preserve">
@@ -1351,7 +1355,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOn" xml:space="preserve">
-    <value>만든 날짜</value>
+    <value>생성일</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderCreatedOnBehalfBy" xml:space="preserve">
@@ -1367,11 +1371,11 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOn" xml:space="preserve">
-    <value>수정한 날짜</value>
+    <value>수정일</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderModifiedOnBehalfBy" xml:space="preserve">
-    <value>수정한 사람(대리인)</value>
+    <value>수정자(대리인)</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_AppSelector" xml:space="preserve">
@@ -1435,7 +1439,7 @@
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderOverriddenCreatedOn" xml:space="preserve">
-    <value>레코드 만든 날짜</value>
+    <value>레코드를 만든 시간</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciproviderstatecode" xml:space="preserve">
@@ -1574,6 +1578,10 @@
     <value>수정자(대리인)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>수락 단추 텍스트</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons(더 이상 사용되지 않음)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1605,6 +1613,10 @@
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>알림 필드</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>거부 단추 텍스트</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>알림 순서</value>
@@ -2363,7 +2375,7 @@
     <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact0" xml:space="preserve">
-    <value>아니오</value>
+    <value>아니요</value>
     <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact1" xml:space="preserve">
@@ -2634,6 +2646,14 @@
     <value>섹션</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>알림 필드</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
@@ -2891,7 +2911,7 @@
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{f1d3c88b-9874-4d92-a0d1-717718332eec}'</comment>
   </data>
   <data name="1:LocalizedName,Application Type{fbdae360-d9a3-e911-8199-000d3a6d68d0}" xml:space="preserve">
-    <value>앱 유형 조회 보기</value>
+    <value>앱 유형 LookUpView</value>
     <comment>'Application Type' : LocalizedName for SavedQuery on Entity QueryId: '{fbdae360-d9a3-e911-8199-000d3a6d68d0}'</comment>
   </data>
   <data name="1:LocalizedName,Channel{0217ecf9-6cd9-48ad-9e48-f825cd9c1844}" xml:space="preserve">
