@@ -2,7 +2,7 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.ProductivityPanel.Smartassist {
 	'use strict';
 
 	/**
@@ -14,6 +14,16 @@ module MscrmControls.ProductivityPanel {
 		SPACE_KEY = 32,
 		UP_ARROW_KEY = 38,
 		DOWN_ARROW_KEY = 40
+	}
+
+	/**
+	 * Card states
+	 */
+	export enum CardStates {
+		New = 1,
+		Default,
+		Applied,
+		Error
 	}
 
 	/**
@@ -29,6 +39,7 @@ module MscrmControls.ProductivityPanel {
 		public static ConversatonControlOrigin = "ConversatonControlOrigin";
 		public static SmartAssistTitleClass = "smart-assist-title";
 		public static ConversationSessionMap = "conversationSessionMap";
+		public static CardStatesSuffix = "_cardStates";
 		public static CardCountSuffix = "_cardCount";
 		public static ConversationCardsSuffix = "_cards";
 		public static SmartAssistCardContainerClass = "smartassist-card-container";
@@ -37,6 +48,10 @@ module MscrmControls.ProductivityPanel {
 		public static SmartAssistSuccessMessageClass = "smart-assist-success";
 		public static SmartAssistFailureClass = "smart-assist-failure";
 		public static SessionCloseHandlerId = "SessionCloseHandlerId";
+
+		public static CardNewClass = "card-new";
+		public static CardAppliedClass = "card-applied";
+		public static CardErrorClass = "card-error";
 	}
 
 	/**

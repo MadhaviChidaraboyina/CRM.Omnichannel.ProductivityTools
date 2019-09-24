@@ -30,16 +30,16 @@ module MscrmControls.ProductivityPanel {
 
 			// Listen for session close
 			let handlerId = Xrm.App.sessions.addOnAfterSessionClose(this.handleSessionClose);
-			localStorage.setItem(Constants.SessionCloseHandlerId, handlerId);
-			let logger = new TelemetryLogger(context);
-			SmartAssistManager.Instance.SetLogger(logger);
+			localStorage.setItem(Smartassist.Constants.SessionCloseHandlerId, handlerId);
+			let logger = new Smartassist.TelemetryLogger(context);
+			Smartassist.SmartAssistManager.Instance.SetLogger(logger);
 			SmartassistControl._context = context;
 			this.smartAssistContainer = container;
 			var el: HTMLDivElement = document.createElement("div");
-			el.id = Constants.SmartAssistOuterContainer;
+			el.id = Smartassist.Constants.SmartAssistOuterContainer;
 			this.smartAssistContainer.appendChild(el);
-			Xrm.WebApi.retrieveMultipleRecords(Constants.ServiceEndpointEntity, Constants.CDNEndpointFilter).then((data: any) => {
-				window[Constants.ConversatonControlOrigin] = data.entities[0].path;
+			Xrm.WebApi.retrieveMultipleRecords(Smartassist.Constants.ServiceEndpointEntity, Smartassist.Constants.CDNEndpointFilter).then((data: any) => {
+				window[Smartassist.Constants.ConversatonControlOrigin] = data.entities[0].path;
 				window.top.addEventListener("message", this.receiveMessage, false);
 			});
 		}
@@ -53,11 +53,8 @@ module MscrmControls.ProductivityPanel {
 		public updateView(context: Mscrm.ControlData<IInputBag>): void {
 			SmartassistControl._context = context;
 
-			SmartAssistManager.Instance.ResetSmartAssistControl();
-			SmartAssistManager.Instance.RenderTitle(SmartassistControl.getString(LocalizedStrings.SmartAssistControlHeader));
-
 			// If coming from a session switch, re-render cards from storage
-			SmartAssistManager.Instance.ReRenderCards();
+			Smartassist.SmartAssistManager.Instance.ReRenderCards();
 		}
 
 		/** 
@@ -91,7 +88,7 @@ module MscrmControls.ProductivityPanel {
 		}
 
 		private receiveMessage(event: any): void {
-			if (window[Constants.ConversatonControlOrigin].indexOf(event.origin) == -1)
+			if (window[Smartassist.Constants.ConversatonControlOrigin].indexOf(event.origin) == -1)
 				return;
 			if (event.data.messageType != "notifyEvent") {
 				return;
@@ -100,15 +97,16 @@ module MscrmControls.ProductivityPanel {
 				let messageMap = event.data.messageData.get("notificationUXObject");
 				let content = messageMap.get("content");
 				let conversationId = messageMap.get("conversationId");
-				let card = AdaptiveCardHelper.GetCardFromMessageContent(content);
-				SmartAssistManager.Instance.RenderSmartAssistCard(conversationId, card.content);
+				let uiSessionId = messageMap.get("uiSessionId");
+				let card = Smartassist.AdaptiveCardHelper.GetCardFromMessageContent(content);
+				Smartassist.SmartAssistManager.Instance.RenderSmartAssistCard(conversationId, card.content, uiSessionId);
 			}
 		}
 
-		private handleSessionClose() {
-			let sessionId = Xrm.App.sessions.getFocusedSession().sessionId;
-			ConversationStateManager.RemoveSessionMapping(sessionId);
-			let handlerId = localStorage.getItem(Constants.SessionCloseHandlerId);
+		private handleSessionClose(context: XrmClientApi.EventContext) {
+			let eventArgs: any = context.getEventArgs();
+			Smartassist.ConversationStateManager.RemoveSessionMapping(eventArgs.getInputArguments().sessionId);
+			let handlerId = localStorage.getItem(Smartassist.Constants.SessionCloseHandlerId);
 			Xrm.App.sessions.removeOnAfterSessionClose(handlerId);
 		}
 	}

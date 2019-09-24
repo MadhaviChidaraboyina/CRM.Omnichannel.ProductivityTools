@@ -3,7 +3,7 @@
 */
 /// <reference path="../PrivateReferences.ts"/>
 
-module MscrmControls.ProductivityPanel
+module MscrmControls.ProductivityPanel.Smartassist
 {
 	'use strict';
 

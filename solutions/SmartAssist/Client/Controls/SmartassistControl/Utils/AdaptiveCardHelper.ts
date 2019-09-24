@@ -3,7 +3,7 @@
 */
 /// <reference path="../CommonReferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.ProductivityPanel.Smartassist {
 	export class AdaptiveCardHelper {
 
 		private static startingTag: string = 'b64="';

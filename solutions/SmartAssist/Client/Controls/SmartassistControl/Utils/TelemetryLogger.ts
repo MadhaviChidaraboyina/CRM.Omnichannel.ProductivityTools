@@ -2,7 +2,7 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.ProductivityPanel
+module MscrmControls.ProductivityPanel.Smartassist
 {
 	'use strict';
 

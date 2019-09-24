@@ -3,7 +3,7 @@
 */
 /// <reference path="../CommonReferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.ProductivityPanel.Smartassist {
 	export class ConversationState {
 		private conversationId: string;
 
@@ -11,8 +11,8 @@ module MscrmControls.ProductivityPanel {
 			this.conversationId = conversationId;
 		}
 
-		public PersistCard(card: any): number {
-			this.setConversationSessionMapState();
+		public PersistCard(card: any, sessionId: string): number {
+			this.setConversationSessionMapState(sessionId);
 			if (!localStorage.getItem(this.conversationId + Constants.ConversationCardsSuffix)) {
 				localStorage.setItem(this.conversationId + Constants.ConversationCardsSuffix, JSON.stringify({}));
 			}
@@ -23,7 +23,7 @@ module MscrmControls.ProductivityPanel {
 			return cardCount;
 		}
 
-		public GetAllCards(): any[] {
+		public GetAllCards(): any {
 			if (localStorage.getItem(this.conversationId + Constants.ConversationCardsSuffix)) {
 				let cards = JSON.parse(localStorage.getItem(this.conversationId + Constants.ConversationCardsSuffix));
 				return cards;
@@ -36,13 +36,12 @@ module MscrmControls.ProductivityPanel {
 			localStorage.setItem(this.conversationId + Constants.ConversationCardsSuffix, JSON.stringify(cards));
 		}
 
-		private setConversationSessionMapState() {
-			let currentSession = Xrm.App.sessions.getFocusedSession().sessionId;
+		private setConversationSessionMapState(sessionId: string) {
 			if (!localStorage.getItem(Constants.ConversationSessionMap)) {
 				localStorage.setItem(Constants.ConversationSessionMap, JSON.stringify({}));
 			}
 			let conversationSessionMap = JSON.parse(localStorage.getItem(Constants.ConversationSessionMap));
-			conversationSessionMap[currentSession] = this.conversationId;
+			conversationSessionMap[sessionId] = this.conversationId;
 			localStorage.setItem(Constants.ConversationSessionMap, JSON.stringify(conversationSessionMap));
 		}
 

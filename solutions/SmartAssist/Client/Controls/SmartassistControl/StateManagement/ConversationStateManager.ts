@@ -3,7 +3,7 @@
 */
 /// <reference path="../CommonReferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.ProductivityPanel.Smartassist {
 	export class ConversationStateManager {
 		public static GetCurrentConversation(): string {
 			let currentSession = Xrm.App.sessions.getFocusedSession().sessionId;

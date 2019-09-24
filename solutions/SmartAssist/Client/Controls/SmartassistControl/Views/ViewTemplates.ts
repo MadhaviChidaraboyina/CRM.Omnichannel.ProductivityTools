@@ -3,11 +3,12 @@
 */
 /// <reference path="../CommonReferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.ProductivityPanel.Smartassist {
 	export class ViewTemplates {
 		public static CardContainerTemplate = '<div id = "{0}" class="' + Constants.SmartAssistCardContainerClass + '"></div>';
 		public static DismissButtonTemplate = '<span class="symbolFont Cancel dismiss-button" id="' + Constants.SmartAssistDismissCardButtonId + '{0}"></span>';
-		public static SuccessMessageTemplate = '<div class="smart-assist-success">{0}</div>';
-		public static FailureMessageTemplates = '<div class="smart-assist-failure">{0}</div>';
+		public static SuccessMessageTemplate = '<div class="' + Constants.SmartAssistSuccessMessageClass + '">{0}</div>';
+		public static FailureMessageTemplates = '<div class="' + Constants.SmartAssistFailureClass + '">{0}</div>';
+		public static SmartAssistTitleTemplate = '<div class="' + Constants.SmartAssistTitleClass + '"> {0} </div>';
 	}
 }
