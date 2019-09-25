@@ -2,7 +2,7 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 	'use strict';
 
 	export enum CallscriptActionType {
@@ -34,6 +34,13 @@ module MscrmControls.ProductivityPanel {
 		public static UninitializedString = "UNINITIALIZED";
 		public static ControlStateKey = "CallscriptControlState";
 
+		//class names for styling
+		public static AccordionRightArrowClassName = "accordionRightArrow";
+		public static AccordionDownArrowClassName = "accordionDownArrow";
+		public static TextActionIconClassName = "textActionIcon";
+		public static MacroActionIconClassName = "macroActionIcon";
+		public static RouteActionIconClassName = "routeActionIcon";
+
 		//keys for icon names
 		//accordion icons
 		public static expandedAccordionItemIcon = "expanded_accordion_arrow_icon.svg";
@@ -50,6 +57,14 @@ module MscrmControls.ProductivityPanel {
 		//action button icons
 		public static executeBtnIcon = "callscriptstep_executestep_button_icon.svg";
 		public static retryBtnIcon = "callscriptstep_retrystep_button_icon.svg";
+		public static viewScriptIcon = "msdyn_view_script_icon.svg";
+		public static markdoneTextIcon = "msdyn_markasdone_text_icon.svg";
+		public static runMacroIcon = "msdyn_run_macro_icon.svg";
+
+		// Accessibility ids
+		public static stepIdPrefix = "CallscriptStepsListItem-";
+		public static stepActionIdPrefix = "CallScriptRunActionIcon-";
+		public static idSuffix = "-Id";
 	}
 
 	/**
@@ -60,19 +75,25 @@ module MscrmControls.ProductivityPanel {
 		public static ScriptComboboxEmptyOptionLabel = "ScriptCombobox_EmptyOption";
 
 		//Accessibility Labels
-		public static Accessibility_ExecutedTextStepIndicator = "CompletedTextStep_AccessibilityLabel";
-		public static Accessibility_ExecutedMacroStepIndicator = "CompletedMacroStep_AccessibilityLabel";
-		public static Accessibility_ExecutedRouteStepIndicator = "CompletedScriptStep_AccessibilityLabel";
-		public static Accessibility_UnexecutedTextStepIndicator = "StepListItem_UnexecutedTextStepAccessibilityLabel";
-		public static Accessibility_UnexecutedMacroStepIndicator = "StepListItem_UnexecutedMacroStepAccessibilityLabel";
-		public static Accessibility_UnexecutedRouteStepIndicator = "StepListItem_UnexecutedRouteStepAccessibilityLabel";
+		public static Accessibility_NotStartedStepLabels: string[] =
+			["StepListItem_UnexecutedTextStepAccessibilityLabel", "StepListItem_UnexecutedMacroStepAccessibilityLabel", "StepListItem_UnexecutedRouteStepAccessibilityLabel"];
+		public static Accessibility_CompletedStepLabels: string[] =
+			["CompletedTextStep_AccessibilityLabel", "CompletedMacroStep_AccessibilityLabel", "CompletedScriptStep_AccessibilityLabel"];
+		public static Accessibility_FailedStepLabels: string[] =
+			["FailedTextStep_AccessibilityLabel", "FailedMacroStep_AccessibilityLabel", "FailedScriptStep_AccessibilityLabel"];
+		public static Accessibility_StartedStepLabel = "StepExecutionBtn_LabelForStepInProgress";
 
 		public static TextActionLabel = "StepExeutionBtn_LabelForTextAction";
 		public static RouteActionLabel = "StepExeutionBtn_LabelForRouteAction";
 		public static NotExecutedStepButtonLabel = "StepExecutionBtn_LabelForNotExecutedStep";
 		public static CompletedStepButtonLabel = "StepExecutionBtn_LabelForCompletedStep";
 		public static FailedStepButtonLabel = "StepExecutionBtn_LabelForFailedStep";
-		public static StartedStepButtonLabel = "StepExecutionBtn_LabelForStepInProgress";
+
+		//Error Strings
+		public static InitialScriptDataLoadFailure = "InitialScriptDataLoadFailure";
+		public static NoCallScriptFoundErrorMessage = "NoCallScriptFoundErrorMessage";
+		public static MacroStepFailureMessage = "MacroStepFailure_ErrorMessageWithoutError";
+		public static ScriptStepFailureMessage = "ScriptStepsDataLoadFailure";
 	}
 
 	/**
@@ -84,6 +105,8 @@ module MscrmControls.ProductivityPanel {
 		public static DataManager = "DataManager";
 		public static ListGenerator = "ListGenerator";
 		public static Utils = "Utils";
+		public static CIFUtil = "CIFUtil";
+		public static MacroUtil = "MacroUtil";
 		public static CallscriptStepListitemManager = "CallscriptStepListitemManager";
 		public static CallscriptStepDetailsManager = "CallscriptStepDetailsManager";
 	}
@@ -95,6 +118,15 @@ module MscrmControls.ProductivityPanel {
 	{
 		public static InitialDataFetch = "InititalDataFetch";
 		public static StepsDataFetch = "StepsDataFetch";
+		public static CallscriptRecordFetch = "CallscriptRecordFetch";
+	}
+
+	/**
+	 * Sub-components for accessibility telemetry messages
+	 */
+	export class AccessibilityComponents
+	{
+		public static KeyHandler = "KeyHandler";
 	}
 
 	/**

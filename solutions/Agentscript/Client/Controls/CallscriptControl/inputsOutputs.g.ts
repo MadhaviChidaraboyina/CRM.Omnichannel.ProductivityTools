@@ -1,4 +1,4 @@
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 	export interface IInputBag {
 	}
 

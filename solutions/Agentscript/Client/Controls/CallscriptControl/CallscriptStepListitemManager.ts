@@ -4,7 +4,7 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 	'use strict';
 
 	export class CallscriptStepListitemManager {
@@ -65,9 +65,143 @@ module MscrmControls.ProductivityPanel {
 		 * @param step step on which key is pressed
 		 * @param event JQuery event containing details of pressed key
 		 */
-		private handleStepListItemKeyDown(step: CallScriptStep, event: JQueryEventObject) {
-			if (event.keyCode === KeyCodes.ENTER_KEY) {
-				this.handleStepListItemClick(step);
+		private handleStepListItemKeyDown(step: CallScriptStep, currentStepIndex: number, prevStepId: string,
+			nextStepId: string, event: JQueryEventObject) {
+
+			switch (event.keyCode) {
+				case Mscrm.KeyCode.Enter:
+					this.handleStepListItemClick(step);
+					break;
+
+				case Mscrm.KeyCode.UpArrow:
+					event.preventDefault();
+					this.moveUp(currentStepIndex, step.id, prevStepId, nextStepId);
+					break;
+
+				case Mscrm.KeyCode.DownArrow:
+					event.preventDefault();
+					this.moveDown(currentStepIndex, step.id, prevStepId, nextStepId);
+					break;
+			}
+		}
+
+		/**
+		 * Move to previous step in agent script
+		 * @param currentStepIndex current step index
+		 * @param currStepId current step id
+		 * @param prevStepId previous step id
+		 * @param nextStepId next step id
+		 */
+		private moveUp(currentStepIndex: number, currStepId: string, prevStepId: string, nextStepId: string) {
+			if (currentStepIndex == 0 || this.context.utils.isNullOrEmptyString(prevStepId)) {
+				// No action for first step
+				return;
+			}
+
+			// Get previous step details
+			let prevStepElementId = this.getElementIdForStepId(prevStepId);
+			let prevStepDomElement = this.getDomElementForId(prevStepElementId)
+			let prevStepActionElementId = this.getActionButtonIdForStepId(prevStepId);
+			let prevStepActionDomElement = this.getDomElementForId(prevStepActionElementId);
+
+			this.moveFocus(currStepId, prevStepElementId, prevStepDomElement, prevStepActionDomElement, "moveUp");
+		}
+
+		/**
+		 * Moves to next step in aget script
+		 * @param currentStepIndex current step index
+		 * @param currStepId current step id
+		 * @param prevStepId previous step id
+		 * @param nextStepId next step id
+		 */
+		private moveDown(currentStepIndex: number, currStepId: string, prevStepId: string, nextStepId: string) {
+			if (this.context.utils.isNullOrEmptyString(nextStepId)) {
+				// No action for last step
+				return;
+			}
+
+			// Get next step details
+			let nextStepElementId = this.getElementIdForStepId(nextStepId);
+			let nextStepDomElement = this.getDomElementForId(nextStepElementId);
+			let nextStepActionElementId = this.getActionButtonIdForStepId(nextStepId);
+			let nextStepActionDomElement = this.getDomElementForId(nextStepActionElementId);
+
+			this.moveFocus(currStepId, nextStepElementId, nextStepDomElement, nextStepActionDomElement, "moveDown");
+		}
+
+		/**
+		 * Move focus to new element in list item (Move up and Move down scenario)
+		 * @param currStepId current step id
+		 * @param newStepElementId new step element id
+		 * @param newStepDomElement new step DOM element
+		 * @param newStepActionDomElement new step Action button element
+		 * @param scenario scenario
+		 */
+		private moveFocus(currStepId: string, newStepElementId: string, newStepDomElement: HTMLElement,
+			newStepActionDomElement: HTMLElement, scenario: string) {
+
+			// Current steps details
+			let currStepElementId = this.getElementIdForStepId(currStepId);
+			let currStepDomElement = this.getDomElementForId(currStepElementId);
+			let currStepActionElementId = this.getActionButtonIdForStepId(currStepId);
+			let currStepActionDomElement = this.getDomElementForId(currStepActionElementId);
+
+
+			try {
+				// Adjust tab index
+				newStepDomElement.tabIndex = 0;
+				newStepActionDomElement.tabIndex = 0;
+				currStepDomElement.tabIndex = -1;
+				currStepActionDomElement.tabIndex = -1;
+
+				// Set focus
+				this.context.accessibility.focusElementById(newStepElementId);
+
+			} catch (error) {
+				let errorMessage = "Error in handling accessibility keys";
+				let errorParam = new EventParameters();
+				errorParam.addParameter("scenario", scenario);
+				errorParam.addParameter("stepId", currStepId);
+				this.telemetryLogger.logError(this.telemetryContext, AccessibilityComponents.KeyHandler, errorMessage, errorParam);
+			}
+		}
+
+		/**
+		 * Get dom element for id
+		 * @param elementId element id
+		 */
+		private getDomElementForId(elementId: string): HTMLElement {
+			let elementAbsoluteId = this.context.accessibility.getUniqueId(elementId);
+			let domElement = document.getElementById(elementAbsoluteId);
+			return domElement;
+		}
+
+		/**
+		 * Returns dom element id for step id
+		 * @param stepId
+		 */
+		private getElementIdForStepId(stepId: string): string {
+			return Constants.stepIdPrefix + stepId + Constants.idSuffix;
+		}
+
+		/**
+		 * Returns action button id for step id
+		 * @param stepId
+		 */
+		private getActionButtonIdForStepId(stepId: string): string {
+			return Constants.stepActionIdPrefix + stepId + Constants.idSuffix;
+		}
+
+		/**
+		 * onclick handler for expanded step details container
+		 * @param stepToExpand step object whose expanded container was clicked
+		 * @param event mouse click jquery event
+		 */
+		private preventClickPropagationOnTextSelection(stepToExpand: CallScriptStep, event: JQueryEventObject) {
+			//Don't collapse if some text was selected through this click
+			let selectedTextOnWindowLength: number = window.getSelection().toString().length;
+			if (selectedTextOnWindowLength > 0) {
+				event.stopPropagation();
 			}
 		}
 
@@ -91,62 +225,114 @@ module MscrmControls.ProductivityPanel {
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptTextActionContainer-" + step.id + "-Key",
 				id: "CallScriptTextActionContainer-" + step.id + "-Id",
+				onClick: this.preventClickPropagationOnTextSelection.bind(this, step),
 				style: ControlStyle.getStepActionContainerStyle(isExpandedStep, step.executionStatus)
 			}, stepDetailsComponents);
+		}
+
+		public getAccordionIconClassName(isExpandedStep: boolean) {
+			if (isExpandedStep) {
+				return Constants.AccordionDownArrowClassName;
+			}
+			else {
+				return Constants.AccordionRightArrowClassName;
+			}
+		}
+
+		public getActionTypeIconClassName(step: CallScriptStep): string {
+			let actionTypeIconClassName: string;
+			if (step.action.actionType == CallscriptActionType.MacroAction) {
+				actionTypeIconClassName = Constants.MacroActionIconClassName;
+			}
+			if (step.action.actionType == CallscriptActionType.ReRouteAction) {
+				actionTypeIconClassName = Constants.RouteActionIconClassName;
+			}
+			if (step.action.actionType == CallscriptActionType.TextAction) {
+				actionTypeIconClassName = Constants.TextActionIconClassName;
+			}
+			return actionTypeIconClassName;
 		}
 
 		/**
 		 * Returns container having components for one list item for callscript step
 		 * @param step step whose list item is returned
-		 * @param this.controlStyle style class instance to get component styles
+		 * @param tabIndexValue tab index value for elements in the header
 		 */
-		private getStepHeaderContainer(step: CallScriptStep): Mscrm.Component {
+		private getStepHeaderContainer(step: CallScriptStep, tabIndexValue: number): Mscrm.Component {
 			let isExpandedStep = (step.id === this.expandedStepId);
-			var listItemBlock: Mscrm.Component[] = []
+			var listItemBlock: Mscrm.Component[] = [];
 
-			var arrowIcon = this.context.factory.createElement("TEXT", {
+			var arrowIcon = this.context.factory.createElement("Container", {
 				key: "CallScriptArrowIcon-" + step.id + "-Key",
 				id: "CallScriptArrowIcon-" + step.id + "-Id",
-				style: ControlStyle.getArrowIconStyle(this.context, isExpandedStep)
+				style: ControlStyle.getArrowIconStyle(this.context, isExpandedStep),
+				className: this.getAccordionIconClassName(isExpandedStep)
 			}, []);
 
-			var actionTypeIcon = this.context.factory.createElement("TEXT", {
+			var actionTypeIcon = this.context.factory.createElement("Container", {
 				key: "CallScriptActionTypeIcon-" + step.id + "-Key",
 				id: "CallScriptActionTypeIcon-" + step.id + "-Id",
-				style: ControlStyle.getActionTypeIconStyle(step.action.actionType, this.context)
+				style: ControlStyle.getActionTypeIconStyle(step.action.actionType, this.context),
+				className: this.getActionTypeIconClassName(step)
 			}, []);
 
 			var stepLabel = this.context.factory.createElement("TEXT", {
 				key: "CallScriptStepLabel-" + step.id + "-Key",
 				id: "CallScriptStepLabel-" + step.id + "-Id",
-				style: ControlStyle.getStepLabelStyle(step.executionStatus, this.context)
+				style: ControlStyle.getStepLabelStyle(step, this.context)
 			}, step.name);
 
-			var checkBoxIcon = this.context.factory.createElement("TEXT", {
-				key: "CallScriptCheckboxIcon-" + step.id + "-Key",
-				id: "CallScriptCheckboxIcon-" + step.id + "-Id",
-				style: ControlStyle.getCheckboxIconStyle(step.executionStatus, this.context)
+			var runActionIconButton = this.context.factory.createElement("BUTTON", {
+				key: "CallScriptRunActionIcon-" + step.id + "-Key",
+				id: "CallScriptRunActionIcon-" + step.id + "-Id",
+				title: this.stepDetailsManager.getActionButtonLabel(step),
+				style: ControlStyle.getRunActionIconStyle(step.action.actionType, this.context),
+				onClick: this.stepDetailsManager.getActionButtonClickHandler(step),
+				tabIndex: tabIndexValue
 			}, []);
+
+			var stepInProgressIcon = this.context.factory.createElement("TEXT", {
+				key: "CallScriptStepProgressIcon-" + step.id + "-Key",
+				id: "CallScriptStepProgressIcon-" + step.id + "-Id",
+				style: ControlStyle.getProgressIconStyle(this.context)
+			}, []);
+
+			let stepListItemComponents: Mscrm.Component[] = [arrowIcon, actionTypeIcon, stepLabel];
+			if (step.executionStatus === ExecutionStatus.Started) {
+				stepListItemComponents.push(stepInProgressIcon);
+			}
+			else {
+				stepListItemComponents.push(runActionIconButton);
+			}
 
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptCheckboxRow-" + step.id + "-key",
 				id: "CallScriptCheckboxRow-" + step.id + "-id",
 				style: { display: "flex", flexDirection: "row" }
-			}, [arrowIcon, actionTypeIcon, stepLabel, checkBoxIcon]);
+			}, stepListItemComponents);
 		}
 
-		public getStepListItemComponent(step: CallScriptStep): Mscrm.Component {
+		/**
+		 * Get list item in agent script list
+		 * @param step current step
+		 * @param currentStepIndex current step index
+		 * @param prevStepId previous step id
+		 * @param nextStepId next step id
+		 */
+		public getStepListItemComponent(step: CallScriptStep, currentStepIndex: number, prevStepId: string, nextStepId: string): Mscrm.Component {
 			let isExpandedStep = (step.id === this.expandedStepId);
+			let tabIndexValue = (currentStepIndex == 0) ? 0 : -1;
 
 			return this.context.factory.createElement("LISTITEM", {
 				key: "CallscriptStepsListItem-" + step.id + "-Key",
 				id: "CallscriptStepsListItem-" + step.id + "-Id",
-				style: ControlStyle.getListItemStyle(isExpandedStep, step.executionStatus),
-				tabIndex: 0,
+				style: ControlStyle.getListItemStyle(this.context.client.isRTL, isExpandedStep, step.executionStatus),
+				tabIndex: tabIndexValue,
 				onClick: this.handleStepListItemClick.bind(this, step),
-				onKeyDown: this.handleStepListItemKeyDown.bind(this, step),
-				accessibilityLabel: step.getAccessibilityLabel()
-			}, [this.getStepHeaderContainer(step), this.getStepDetailsContainer(step)]);
+				onKeyDown: this.handleStepListItemKeyDown.bind(this, step, currentStepIndex, prevStepId, nextStepId),
+				accessibilityLabel: step.getAccessibilityLabel(),
+				accessibilityExpanded: isExpandedStep
+			}, [this.getStepHeaderContainer(step, tabIndexValue), this.getStepDetailsContainer(step)]);
 		}
 	}
 }

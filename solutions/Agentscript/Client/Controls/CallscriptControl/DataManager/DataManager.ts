@@ -2,7 +2,7 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.ProductivityPanel
+module MscrmControls.CallscriptControl
 {
 	'use strict';
 
@@ -38,7 +38,7 @@ module MscrmControls.ProductivityPanel
 			return new Promise<CallScript[]>((resolve, reject) => {
 				let sessionTemplateId = this.cifUtil.getSessionTemplateId();
 
-				if (!this.context.utils.isNullOrEmptyString(sessionTemplateId)) {
+				if (!this.context.utils.isNullOrUndefined(sessionTemplateId) && !this.context.utils.isNullOrEmptyString(sessionTemplateId)) {
 					let retrieveDataPromise = this.retrieveCallscriptRecords(sessionTemplateId);
 					retrieveDataPromise.then(
 						(records: CallScript[]) => {
@@ -156,6 +156,94 @@ module MscrmControls.ProductivityPanel
 		}
 
 		/**
+		 * Retrieve call script and its steps
+		 * @param callscriptId call script id to retrieve
+		 */
+		public retrieveCallscriptAndStepsData(callscriptId: string): Promise<CallScript>
+		{
+			return new Promise<CallScript>((resolve, reject) => {
+				let callscriptRecordPromise = this.context.webAPI.retrieveRecord(AgentScriptEntity.entityName, callscriptId);
+
+				callscriptRecordPromise.then(
+					(dataResponse: WebApi.Entity) => {
+						let callscriptRecord = this.parseCallscriptRecord(dataResponse);
+
+						if (this.context.utils.isNullOrUndefined(callscriptRecord))
+						{
+							let errorMessage = "Could not parse call script record";
+							let errorParam = new EventParameters();
+							errorParam.addParameter("callscriptId", callscriptId);
+							this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.CallscriptRecordFetch, errorMessage,
+								errorParam);
+
+							reject(errorMessage);
+						}
+
+						let stepsDataPromise = this.retrieveCallScriptStepsData(callscriptId);
+
+						stepsDataPromise.then(
+							(stepsRecords: CallScriptStep[]) => {
+								callscriptRecord.steps = stepsRecords;
+								callscriptRecord.isStepsDataRetrieved = true;
+
+								let eventParam = new EventParameters();
+								eventParam.addParameter("sceanario", "CallscriptRecordFetch");
+								this.telemetryLogger.logSuccess(this.telemetryContext, DataManagerComponents.CallscriptRecordFetch, eventParam);
+
+								resolve(callscriptRecord);
+							},
+							(errorResponse: string) => {
+								let errorMessage = "Failed to get steps data for call script";
+								let errorParam = new EventParameters();
+								errorParam.addParameter("error", errorResponse);
+								this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.CallscriptRecordFetch, errorMessage,
+									errorParam);
+
+								reject(errorMessage);
+							}
+						);
+					},
+					(errorResponse: Mscrm.ErrorResponse) => {
+						let errorMessage = "Error getting call script record";
+						let eventParam = new EventParameters();
+						eventParam.addParameter("scenario", "retrieveCallscriptAndSteps");
+						eventParam.addParameter("callScriptId", callscriptId);
+						eventParam.addParameter("error", errorResponse.message);
+						eventParam.addParameter("errorCode", errorResponse.errorCode.toString());
+						this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.CallscriptRecordFetch,
+							errorMessage, eventParam, errorResponse);
+
+						reject(errorMessage);
+					}
+				);
+			});
+		}
+
+		/**
+		 * Parse call script record from data response
+		 * @param entityRecord returned entity records
+		 */
+		private parseCallscriptRecord(entityRecord: WebApi.Entity): CallScript
+		{
+			let callScriptId = entityRecord[AgentScriptEntity.msdyn_agentscriptId];
+			let callScriptName = entityRecord[AgentScriptEntity.msdyn_name];
+			let callScriptDescription = entityRecord[AgentScriptEntity.msdyn_description];
+
+			if (this.context.utils.isNullOrUndefined(callScriptId))
+			{
+				let errorMessage = "Error parsing call script record";
+				let eventParam = new EventParameters();
+				eventParam.addParameter("scenario", "ParseCallscriptRecord");
+				this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.CallscriptRecordFetch,
+					errorMessage, eventParam);
+				return null;
+			}
+
+			let callScriptRecord = new CallScript(callScriptId, callScriptName, callScriptDescription, false, []);
+			return callScriptRecord;
+		}
+
+		/**
 		 * Parse call script records
 		 * @param entityRecords retrieved entity records
 		 */
@@ -167,18 +255,13 @@ module MscrmControls.ProductivityPanel
 				for (let i = 0; i < entityRecords.length; i++)
 				{
 					let entityRecord = entityRecords[i];
+					let callScriptRecord = this.parseCallscriptRecord(entityRecord);
 
-					let callScriptId = entityRecord[AgentScriptEntity.msdyn_agentscriptId];
-					let callScriptName = entityRecord[AgentScriptEntity.msdyn_name];
-					let callScriptDescription = entityRecord[AgentScriptEntity.msdyn_description];
-
-					if (this.context.utils.isNullOrUndefined(callScriptId))
+					if (this.context.utils.isNullOrUndefined(callScriptRecord))
 					{
-						this.logFieldError("CallScriptParser", Constants.EmptyString, AgentScriptEntity.msdyn_agentscriptId);
 						continue;
 					}
 
-					let callScriptRecord = new CallScript(callScriptId, callScriptName, callScriptDescription, false, []);
 					callScriptRecords.push(callScriptRecord);
 				}
 			}

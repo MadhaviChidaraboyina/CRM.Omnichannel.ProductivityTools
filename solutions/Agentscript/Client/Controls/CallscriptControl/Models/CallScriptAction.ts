@@ -4,7 +4,7 @@
 
 /// <reference path="../privatereferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 	'use strict';
 
 	/**
@@ -22,7 +22,7 @@ module MscrmControls.ProductivityPanel {
 			this.errorText = "";
 		}
 
-		public executeAction(stateManager?: StateManager): Promise<any> {
+		public executeAction(executionParam?: any): Promise<any> {
 			return new Promise<any>((resolve, reject) => {
 				this.errorText = "No execution found for this action type, ActionType=" + this.actionType;
 				reject(this.errorText);
@@ -94,11 +94,8 @@ module MscrmControls.ProductivityPanel {
 			this.macroName = macroName;
 		}
 
-		public executeAction(): Promise<any> {
-			return new Promise<any>((resolve, reject) => {
-				//added a delay to simulate time taken for macro execution
-				window.setTimeout(() => resolve(), 5000);
-			});
+		public executeAction(macroUtil: MacroUtil): Promise<any> {
+			return macroUtil.executeMacro(this.macroName, this.macroId);
 		}
 	}
 
@@ -115,17 +112,64 @@ module MscrmControls.ProductivityPanel {
 			this.routeCallscriptName = routeCallscriptName;
 		}
 
-		public executeAction(stateManager: StateManager): Promise<any> {
+		/**
+		 * Returns true if route script data is already retrieved
+		 * If retrieved it sets current script flag to true
+		 * @param stateManager state manager
+		 */
+		private isRouteScriptRetrieved(stateManager: StateManager): boolean {
+			let isScriptAvailable = false;
+
 			for (let script of stateManager.callscriptsForCurrentSession) {
 				if (script.id === this.routeCallscriptId) {
 					script.isCurrent = true;
+					isScriptAvailable = true;
 				}
 				else {
 					script.isCurrent = false;
 				}
 			}
+
+			return isScriptAvailable;
+		}
+
+		/**
+		 * Executes script action
+		 * @param stateManager state manager
+		 */
+		public executeAction(stateManager: StateManager): Promise<any> {
+
 			return new Promise<any>((resolve, reject) => {
-				resolve(); //No background processing for route action
+
+				if (Utility.isNullOrUndefined(this.routeCallscriptId)) {
+					let errorMessage = "Route script id is null";
+					reject(errorMessage);
+					return;
+				}
+
+				let isRouteScriptAvailable = this.isRouteScriptRetrieved(stateManager);
+
+				if (isRouteScriptAvailable == false) {
+					// Route script is not associated with session template
+					// Retrieve the call script and its records
+					let newCallscriptDataPromise = stateManager.fetchCallscriptAndStepsData(this.routeCallscriptId);
+
+					newCallscriptDataPromise.then(
+						(routeCallscriptRecord: CallScript) => {
+							// mark this call script record as current
+							stateManager.updateCurrentCallScript(routeCallscriptRecord);
+							resolve();
+						},
+						(errorResponse: string) => {
+							// Telemetry is logged in data manager and state manager
+							reject(errorResponse);
+						}
+					);
+				}
+				else {
+					// Route script is already available and marked as current script
+					resolve();
+				}
 			});
 		}
 	}

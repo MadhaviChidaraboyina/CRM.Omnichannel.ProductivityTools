@@ -10,12 +10,10 @@
     <layoutxml>
       <grid name="resultset" jump="msdyn_name" select="1" preview="1" icon="1">
         <row name="result" id="msdyn_agentscriptstepid">
-          <cell name="msdyn_order" width="100" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
           <cell name="msdyn_name" width="150" />
+          <cell name="msdyn_order" width="50" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
           <cell name="msdyn_actiontype" width="100" />
-          <cell name="msdyn_textinstruction" width="100" disableSorting="1" />
-          <cell name="msdyn_macroactionid" width="100" />
-          <cell name="msdyn_routeactionid" width="100" />
+          <cell name="modifiedon" width="100" />
         </row>
       </grid>
     </layoutxml>
@@ -25,11 +23,9 @@
         <entity name="msdyn_agentscriptstep">
           <attribute name="msdyn_name" />
           <order attribute="msdyn_order" descending="false" />
-          <attribute name="msdyn_routeactionid" />
-          <attribute name="msdyn_macroactionid" />
           <attribute name="msdyn_actiontype" />
           <attribute name="msdyn_order" />
-          <attribute name="msdyn_textinstruction" />
+          <attribute name="modifiedon" />
           <attribute name="msdyn_agentscriptstepid" />
         </entity>
       </fetch>

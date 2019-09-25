@@ -4,7 +4,7 @@
 
 /// <reference path="../privatereferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 	'use strict';
 
 	//Utility Class
@@ -28,5 +28,14 @@ module MscrmControls.ProductivityPanel {
 			}
 			return this.getIconUrl(context, Constants.routeActionIcon);
 		}
+
+		/*
+		 * Utility function to validate if object is null or undefined
+		 * Note: Use this function only if context is not accessible
+		 */
+		public static isNullOrUndefined(object: any): boolean {
+			return typeof (object) == "undefined" || object == null;
+		}
+
 	}
 }

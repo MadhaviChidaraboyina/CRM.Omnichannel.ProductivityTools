@@ -26,6 +26,7 @@
     <UglifyGlobalDefs />
   </PropertyGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Accessibility\LiveRegion.ts" />
     <TypeScriptCompile Include="CallscriptStepListitemManager.ts" />
     <TypeScriptCompile Include="CallscriptStepsListManager.ts" />
     <TypeScriptCompile Include="CommonReferences.ts" />
@@ -48,12 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ControlManifest.xml" />
+    <Content Include="css\CallscriptControl.css" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
     <Folder Include="libs\" />
     <Folder Include="Typings\" />
   </ItemGroup>

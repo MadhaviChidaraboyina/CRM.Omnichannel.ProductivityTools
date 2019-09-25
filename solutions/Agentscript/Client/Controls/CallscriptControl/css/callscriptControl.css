@@ -1,0 +1,25 @@
+﻿/**
+* @license Copyright (c) Microsoft Corporation.  All rights reserved.
+*/
+
+.accordionRightArrow::after {
+	content: "\E974";
+	vertical-align: middle;
+}
+
+.accordionDownArrow::after {
+	content: "\E972";
+	vertical-align: middle;
+}
+
+.textActionIcon::after {
+	content: "\EDC3";
+}
+
+.routeActionIcon::after {
+	content: "\F005";
+}
+
+.macroActionIcon::after {
+	content: "\F075";
+}

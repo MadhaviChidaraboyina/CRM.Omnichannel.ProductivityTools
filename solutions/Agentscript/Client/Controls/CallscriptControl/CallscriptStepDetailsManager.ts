@@ -4,7 +4,7 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 	'use strict';
 
 	export class CallscriptStepDetailsManager {
@@ -13,6 +13,7 @@ module MscrmControls.ProductivityPanel {
 		private stateManager: StateManager;
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
+		private macroUtil: MacroUtil;
 
 		/**
 		 * Constructor.
@@ -22,6 +23,38 @@ module MscrmControls.ProductivityPanel {
 			this.stateManager = stateManager;
 			this.telemetryContext = TelemetryComponents.CallscriptStepListitemManager;
 			this.telemetryLogger = new TelemetryLogger(this.context);
+			this.macroUtil = new MacroUtil(context);
+		}
+
+		private getExecuteActionPromise(step: CallScriptStep) {
+			switch (step.action.actionType) {
+				case CallscriptActionType.TextAction:
+					return step.action.executeAction();
+				case CallscriptActionType.MacroAction:
+					return step.action.executeAction(this.macroUtil);
+				case CallscriptActionType.ReRouteAction:
+					return step.action.executeAction(this.stateManager);
+				default:
+					return step.action.executeAction();
+			}
+		}
+
+		/**
+		 * Returns action button click handler function
+		 */
+		public getActionButtonClickHandler(step: CallScriptStep): any {
+			return this.handleActionButtonClick.bind(this, step);
+		}
+
+		/**
+		 * Updates the content of live region on step execution status update
+		 */
+		public updateLiveRegionContent(step: CallScriptStep): void {
+			const liveRegion = document.getElementById(this.context.accessibility.getUniqueId(LiveRegion.LiveRegionId));
+			if (liveRegion) {
+				liveRegion.innerHTML = "";
+				liveRegion.innerHTML = step.getAccessibilityLabel();
+			}
 		}
 
 		/**
@@ -29,32 +62,52 @@ module MscrmControls.ProductivityPanel {
 		 * @param step step whose button is clicked
 		 * @param event Jquery event object 
 		 */
-		private handleActionButtonClick(step: CallScriptStep, event: JQueryEventObject): void {
+		public handleActionButtonClick(step: CallScriptStep, event: JQueryEventObject): void {
 			let methodName = "handleActionButtonClick";
 			if (step.executionStatus != ExecutionStatus.Started) {
 
 				let scripts = this.stateManager.callscriptsForCurrentSession;
 
 				step.executionStatus = ExecutionStatus.Started;
-				step.action.executeAction(this.stateManager).then(
+
+				this.updateLiveRegionContent(step);
+				$(event.target).closest("li").focus();
+
+				let executeActionPromise = this.getExecuteActionPromise(step);
+				executeActionPromise.then(
 					(response) => {
 						step.executionStatus = ExecutionStatus.Completed;
 						step.isExecuted = true;
+						this.updateLiveRegionContent(step);
+						if (step.action.actionType == CallscriptActionType.ReRouteAction) {
+							let comboboxId = this.context.accessibility.getUniqueId("callscriptCombobox");
+							$(document.getElementById(comboboxId)).focus();
+						}
+
 						this.context.utils.requestRender();
 
-						let eventParams = new EventParameters();
+						let eventParams = this.addActionExecutionLogs(step);
 						eventParams.addParameter("stepId", step.id);
 						eventParams.addParameter("message", "Step executed successfully");
 						this.telemetryLogger.logSuccess(this.telemetryContext, methodName, eventParams);
 					},
 					(error) => {
 						step.executionStatus = ExecutionStatus.Failed;
+						this.updateLiveRegionContent(step);
+
+						if (step.action.actionType == CallscriptActionType.MacroAction) {
+							step.action.errorText = this.context.resources.getString(LocalizedStrings.MacroStepFailureMessage);
+						} else if (step.action.actionType == CallscriptActionType.ReRouteAction) {
+							step.action.errorText = this.context.resources.getString(LocalizedStrings.ScriptStepFailureMessage);
+						}
 						this.context.utils.requestRender();
 
-						let eventParams = new EventParameters();
+						let eventParams = this.addActionExecutionLogs(step);
 						eventParams.addParameter("stepId", step.id);
 						eventParams.addParameter("message", "Step execution failed");
-						this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
+						eventParams.addParameter("errorDetails", error);
+						let errorMessage = "Failed to execute action";
+						this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, eventParams);
 					});
 			}
 			this.context.utils.requestRender();
@@ -62,10 +115,35 @@ module MscrmControls.ProductivityPanel {
 		}
 
 		/**
-		 * Returns button for apply/retry option for step based on step execution status
-		 * @param step step whose button is returned
+		 * Add telemetry event parameters when action is executed
+		 * @param step call script step
 		 */
-		public getActionButton(step: CallScriptStep): Mscrm.Component {
+		private addActionExecutionLogs(step: CallScriptStep): EventParameters {
+			let eventParams = new EventParameters();
+			try {
+				eventParams.addParameter("actionType", step.action.actionType.toString());
+
+				switch (step.action.actionType) {
+					case CallscriptActionType.MacroAction:
+						eventParams.addParameter("macroActionId", (step.action as MacroAction).macroId);
+						break;
+
+					case CallscriptActionType.ReRouteAction:
+						eventParams.addParameter("routeActionId", (step.action as RouteAction).routeCallscriptId);
+						break;
+
+					case CallscriptActionType.TextAction:
+						// TBD
+						break;
+				}
+			} catch (error) {
+				eventParams.addParameter("parameterError", "Error occured in adding parameter details");
+			}
+
+			return eventParams;
+		}
+
+		public getActionButtonLabel(step: CallScriptStep): string {
 			let buttonLabel: string;
 			if (step.action.actionType === CallscriptActionType.TextAction) {
 				buttonLabel = this.context.resources.getString(LocalizedStrings.TextActionLabel);
@@ -82,10 +160,18 @@ module MscrmControls.ProductivityPanel {
 					buttonLabel = this.context.resources.getString(LocalizedStrings.FailedStepButtonLabel);
 				}
 				else if (step.executionStatus === ExecutionStatus.Started) {
-					buttonLabel = this.context.resources.getString(LocalizedStrings.StartedStepButtonLabel);
+					buttonLabel = this.context.resources.getString(LocalizedStrings.Accessibility_StartedStepLabel);
 				}
 			}
+			return buttonLabel;
+		}
 
+		/**
+		 * Returns button for apply/retry option for step based on step execution status
+		 * @param step step whose button is returned
+		 */
+		public getActionButton(step: CallScriptStep): Mscrm.Component {
+			let buttonLabel = this.getActionButtonLabel(step);
 			var isDisabled = (step.executionStatus === ExecutionStatus.Started);
 
 			return this.context.factory.createElement("BUTTON", {
@@ -146,7 +232,9 @@ module MscrmControls.ProductivityPanel {
 			if (step.executionStatus === ExecutionStatus.Failed) {
 				textActionDetailsComponents.push(this.getErrorTextComponent(step));
 			}
+			/*Removing the action button, since action icon is present upfront now
 			textActionDetailsComponents.push(this.getActionButton(step));
+			*/
 
 			return textActionDetailsComponents;
 		}
@@ -162,7 +250,9 @@ module MscrmControls.ProductivityPanel {
 			if (step.executionStatus === ExecutionStatus.Failed) {
 				macroAndRouteActionDetailsComponents.push(this.getErrorTextComponent(step));
 			}
+			/*Removing the action button, since action icon is present upfront now
 			macroAndRouteActionDetailsComponents.push(this.getActionButton(step));
+			*/
 
 			return macroAndRouteActionDetailsComponents;
 		}

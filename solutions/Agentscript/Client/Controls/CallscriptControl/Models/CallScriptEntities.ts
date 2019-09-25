@@ -4,7 +4,7 @@
 
 /// <reference path="../privatereferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 	'use strict';
 
 	export class CallScript {
@@ -48,8 +48,10 @@ module MscrmControls.ProductivityPanel {
 		// Runtime attributes
 		public isExecuted: boolean;
 		public executionStatus: ExecutionStatus;
-		public executedAccessibilityLabel: string;
-		public notExecutedAccessibilityLabel: string;
+		public notStartedAccessibilityLabel: string;
+		public startedAccessibilityLabel: string;
+		public completedAccessibilityLabel: string;
+		public failedAccessibilityLabel: string;
 		public stepDescription: string;
 
 		/**
@@ -78,23 +80,27 @@ module MscrmControls.ProductivityPanel {
 		}
 
 		private initializeAccessibilityLabels(context: Mscrm.ControlData<IInputBag>): void {
-			var executedLocalizedLabel: string;
-			var notExecutedLocalizedLabel: string;
+			var notStartedLocalizedLabel: string;
+			var completedLocalizedLabel: string;
+			var failedLocalizedLabel: string;
 
 			switch (this.action.actionType) {
 				case (CallscriptActionType.TextAction): {
-					executedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_ExecutedTextStepIndicator);
-					notExecutedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_UnexecutedTextStepIndicator);
+					completedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_CompletedStepLabels[0]);
+					failedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_FailedStepLabels[0]);
+					notStartedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_NotStartedStepLabels[0]);
 					break;
 				}
 				case (CallscriptActionType.MacroAction): {
-					executedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_ExecutedMacroStepIndicator);
-					notExecutedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_UnexecutedMacroStepIndicator);
+					completedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_CompletedStepLabels[1]);
+					failedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_FailedStepLabels[1]);
+					notStartedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_NotStartedStepLabels[1]);
 					break;
 				}
 				case (CallscriptActionType.ReRouteAction): {
-					executedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_ExecutedRouteStepIndicator);
-					notExecutedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_UnexecutedRouteStepIndicator);
+					completedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_CompletedStepLabels[2]);
+					failedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_FailedStepLabels[2]);
+					notStartedLocalizedLabel = context.resources.getString(LocalizedStrings.Accessibility_NotStartedStepLabels[2]);
 					break;
 				}
 				default: {
@@ -102,17 +108,23 @@ module MscrmControls.ProductivityPanel {
 				}
 			}
 
-			this.executedAccessibilityLabel = StringHelper.Format(executedLocalizedLabel, this.name);
-			this.notExecutedAccessibilityLabel = StringHelper.Format(notExecutedLocalizedLabel, this.name);
+			this.notStartedAccessibilityLabel = StringHelper.Format(notStartedLocalizedLabel, this.name);
+			this.startedAccessibilityLabel = context.resources.getString(LocalizedStrings.Accessibility_StartedStepLabel);
+			this.completedAccessibilityLabel = StringHelper.Format(completedLocalizedLabel, this.name);
+			this.failedAccessibilityLabel = StringHelper.Format(failedLocalizedLabel, this.name);
 		}
 
 		public getAccessibilityLabel() {
-			if (this.isExecuted) {
-				return this.executedAccessibilityLabel;
+			if (this.executionStatus == ExecutionStatus.Started) {
+				return this.startedAccessibilityLabel;
 			}
-			else {
-				return this.notExecutedAccessibilityLabel;
+			else if (this.executionStatus == ExecutionStatus.Completed) {
+				return this.completedAccessibilityLabel;
 			}
+			else if (this.executionStatus == ExecutionStatus.Failed) {
+				return this.failedAccessibilityLabel;
+			}
+			return this.notStartedAccessibilityLabel;
 		}
 	}
 }

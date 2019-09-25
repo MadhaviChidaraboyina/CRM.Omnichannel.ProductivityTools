@@ -4,7 +4,7 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 	'use strict';
 
 	export class CallscriptControl implements Mscrm.Control<IInputBag, IOutputBag> {
@@ -182,6 +182,10 @@ module MscrmControls.ProductivityPanel {
 				}, loadingWheel);
 		}
 
+		/**
+		 * Returns a container with script description
+		 * @param currentScript script whose description container is returned
+		 */
 		private getScriptDescriptionContainer(currentScript: CallScript): Mscrm.Component {
 			var scriptDescriptionComponent = this.context.factory.createElement("TEXT", {
 				key: "CallScriptDescription-" + currentScript.id + "-Key",
@@ -193,6 +197,24 @@ module MscrmControls.ProductivityPanel {
 				id: "CallScriptDescriptionContainer-" + currentScript.id + "-Id",
 				style: ControlStyle.getScriptDescriptionContainerStyle()
 			}, scriptDescriptionComponent);
+		}
+
+		/**
+		 * Returns error container if current session is not valid OC session or there was a failure in script data fetch call
+		 * @param isInvalidSession flag indicating if this is invalid session or not
+		 */
+		private getScriptLoadErrorContainer(errorResourceKey: string): Mscrm.Component {
+			let displayErrorMessage = this.context.resources.getString(errorResourceKey);
+			var errorComponent = this.context.factory.createElement("TEXT", {
+				key: "CallScriptLoadErrorId",
+				id: "CallScriptLoadErrorId",
+				style: ControlStyle.getScriptDescriptionStyle(this.context)
+			}, displayErrorMessage);
+			return this.context.factory.createElement("CONTAINER", {
+				key: "CallScriptLoadErrorContainerKey",
+				id: "CallScriptLoadErrorContainerId",
+				style: ControlStyle.getScriptDescriptionContainerStyle()
+			}, errorComponent);
 		}
 
 		/** 
@@ -207,6 +229,12 @@ module MscrmControls.ProductivityPanel {
 			if (isScriptDataInitialized === false) {
 				return this.getLoadingWheel();
 			}
+			if (this.stateManager.scriptDataFetchFailed) {
+				return this.getScriptLoadErrorContainer(LocalizedStrings.InitialScriptDataLoadFailure);
+			}
+			if (this.stateManager.callscriptsForCurrentSession.length == 0) {
+				return this.getScriptLoadErrorContainer(LocalizedStrings.NoCallScriptFoundErrorMessage);
+			}
 
 			let callscriptComponents: Mscrm.Component[] = [];
 
@@ -220,6 +248,8 @@ module MscrmControls.ProductivityPanel {
 				callscriptComponents.push(this.getScriptDescriptionContainer(this.stateManager.selectedScriptForCurrentSession));
 				callscriptComponents.push(this.stepsListManager.getStepsList(this.stateManager.selectedScriptForCurrentSession));
 			}
+
+			callscriptComponents.push(LiveRegion.getLiveRegion(this.context));
 
 			return context.factory.createElement(
 				"CONTAINER", {

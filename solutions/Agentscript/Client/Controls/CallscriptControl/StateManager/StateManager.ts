@@ -2,7 +2,7 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 	'use strict';
 
 	export class StateManager {
@@ -14,6 +14,7 @@ module MscrmControls.ProductivityPanel {
 		private telemetryLogger: TelemetryLogger;
 
 		private isScriptsDataRequested: boolean;
+		public scriptDataFetchFailed: boolean;
 		private currentUciSessionId: string;
 		public selectedScriptForCurrentSession: CallScript;
 		public callscriptsForCurrentSession: CallScript[];
@@ -31,6 +32,7 @@ module MscrmControls.ProductivityPanel {
 			this.telemetryContext = TelemetryComponents.StateManager;
 			this.telemetryLogger = new TelemetryLogger(this.context);
 			this.isScriptsDataRequested = false;
+			this.scriptDataFetchFailed = false;
 
 			this.setCurrentUciSessionId();
 			this.initializeControlStateFromCIF();
@@ -101,9 +103,13 @@ module MscrmControls.ProductivityPanel {
 					this.telemetryLogger.logSuccess(this.telemetryContext, methodName, eventParams);
 				},
 				(errorString: string) => {
+					this.scriptDataFetchFailed = true;
+					this.context.utils.requestRender();
+
 					let errorMessage = "Failed to retrieve call script records";
 					let errorParam = new EventParameters();
 					errorParam.addParameter("errorDetails", errorString);
+					errorParam.addParameter("session-id", this.currentUciSessionId);
 					this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
 				}
 			);
@@ -142,6 +148,11 @@ module MscrmControls.ProductivityPanel {
 		*/
 		public initializeCallscriptsForCurrentSession(): boolean {
 			let methodName = "initializeCallscriptsForCurrentSession";
+
+			if (this.scriptDataFetchFailed) {
+				return true;
+			}
+
 			if (!this.context.utils.isNullOrUndefined(this.callscriptsForCurrentSession)) {
 				this.selectedScriptForCurrentSession = this.getCurrentCallScript();
 				if (!this.context.utils.isNullOrUndefined(this.selectedScriptForCurrentSession)) {
@@ -161,6 +172,52 @@ module MscrmControls.ProductivityPanel {
 					this.fetchCallScriptsForCurrentSession();
 				}
 				return false;
+			}
+		}
+
+		/**
+		 * To retrieve call script record and its steps
+		 * Use this function to retrieve call script if it is not retrieved in initial load
+		 * @param callscriptId call script record id
+		 */
+		public fetchCallscriptAndStepsData(callscriptId: string): Promise<CallScript> {
+
+			return new Promise<CallScript>((resolve, reject) => {
+				let methodName = "fetchCallscriptAndStepsData";
+				let dataFetchPromise = this.dataManager.retrieveCallscriptAndStepsData(callscriptId);
+
+				dataFetchPromise.then(
+					(newCallscriptRecord: CallScript) => {
+						// Add new call script record in current session record list
+						this.callscriptsForCurrentSession.push(newCallscriptRecord);
+
+						resolve(newCallscriptRecord);
+					},
+					(errorResponse: string) => {
+						let errorMessage = "Failed to retrieve call script";
+						let errorParam = new EventParameters();
+						errorParam.addParameter("recordId", callscriptId);
+						this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
+
+						reject(errorResponse);
+					}
+				);
+			});
+		}
+
+		/**
+		 * Updates given call script as current call script for the session
+		 * In next re-render updated call script will be loaded
+		 * @param newCurrentScript new call script to set as current script
+		 */
+		public updateCurrentCallScript(newCurrentScript: CallScript) {
+			for (let script of this.callscriptsForCurrentSession) {
+				if (script.id == newCurrentScript.id) {
+					script.isCurrent = true;
+				}
+				else {
+					script.isCurrent = false;
+				}
 			}
 		}
 	}

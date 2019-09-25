@@ -2,7 +2,7 @@
  * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 
 	export class ControlStyle {
 
@@ -120,7 +120,8 @@ module MscrmControls.ProductivityPanel {
 			return {
 				fontFamily: context.theming.fontfamilies.regular,
 				fontSize: "14px",
-				color: "#666666"
+				color: "#666666",
+				textAlign: context.client.isRTL ? "right" : "left"
 			}
 		}
 
@@ -130,8 +131,7 @@ module MscrmControls.ProductivityPanel {
 				marginRight: "14px",
 				marginBottom: "12px",
 				height: "auto",
-				minWidth: "234px",
-				textAlign: "justify"
+				minWidth: "234px"
 			}
 		}
 
@@ -169,12 +169,11 @@ module MscrmControls.ProductivityPanel {
 
 		public static getExpandedListItemOnHoverStyle() {
 			return {
-				background: "#F3F2F1",
 				cursor: "pointer"
 			}
 		}
 
-		public static getListItemStyle(isStepExpanded: boolean, stepExecutionStatus: ExecutionStatus) {
+		public static getListItemStyle(isRTL: boolean, isStepExpanded: boolean, stepExecutionStatus: ExecutionStatus) {
 			let backgroundStyle = "inherit";
 			if (isStepExpanded) {
 				if (stepExecutionStatus === ExecutionStatus.Failed) {
@@ -193,7 +192,8 @@ module MscrmControls.ProductivityPanel {
 				background: backgroundStyle,
 				":hover": onHoverStyle,
 				paddingLeft: "14px",
-				paddingRight: "14px"
+				paddingRight: "14px",
+				textAlign: isRTL ? "right" : "left",
 			}
 		}
 
@@ -203,12 +203,14 @@ module MscrmControls.ProductivityPanel {
 			else arrowIconUrl = Utility.getIconUrl(context, Constants.collapsedAccordionItemIcon);
 			return {
 				width: "14px",
-				height: "14px",
-				"background-image": "url(" + arrowIconUrl + ")",
-				"background-repeat": "no-repeat",
-				"background-position": "center",
-				marginTop: "15px",
-				marginBottom: "15px"
+				height: "16px",
+				marginTop: "14px",
+				marginBottom: "14px",
+				"font-family": 'Dyn CRM Symbol',
+				"font-size": "10px",
+				color: "black",
+				fontWeight: 600,
+				display: "table"
 			};
 		}
 
@@ -217,27 +219,26 @@ module MscrmControls.ProductivityPanel {
 			return {
 				width: "16px",
 				height: "16px",
-				"background-image": "url(" + actionTypeIconUrl + ")",
-				"background-repeat": "no-repeat",
-				"background-position": "center",
 				marginLeft: "14px",
 				marginRight: "14px",
 				marginTop: "14px",
-				marginBottom: "14px"
+				marginBottom: "14px",
+				"font-family": 'Dyn CRM Symbol',
+				"font-size": "16px",
+				display: "table"
 			};
 		}
 
-		public static getStepLabelStyle(stepExecutionStatus: ExecutionStatus, context: Mscrm.ControlData<IInputBag>) {
+		public static getStepLabelStyle(step: CallScriptStep, context: Mscrm.ControlData<IInputBag>) {
 			var labelFontColorStyle = "#333333"; //default
-			if (stepExecutionStatus === ExecutionStatus.Completed) labelFontColorStyle = "#666666";
-			else if (stepExecutionStatus === ExecutionStatus.Failed) labelFontColorStyle = "#A80000";
+			if (step.isExecuted) labelFontColorStyle = "#107C10";
+			else if (step.executionStatus === ExecutionStatus.Failed) labelFontColorStyle = "#A80000";
 			return {
 				fontFamily: context.theming.fontfamilies.regular,
 				fontSize: "14px",
 				color: labelFontColorStyle,
-				fontWeight: (stepExecutionStatus === ExecutionStatus.Completed) ? 500 : 600,
+				fontWeight: (step.isExecuted) ? 500 : 600,
 				"vertical-align": "middle",
-				"text-align": "justify",
 				paddingTop: "12px",
 				paddingBottom: "12px",
 				cursor: "pointer",
@@ -246,32 +247,48 @@ module MscrmControls.ProductivityPanel {
 			};
 		}
 
-		public static getCheckboxIconStyle(stepExecutionStatus: ExecutionStatus, context: Mscrm.ControlData<IInputBag>) {
-			let statusIconUrl = "";
-			let displayProperty = "flex";
-			if (stepExecutionStatus === ExecutionStatus.Completed) {
-				statusIconUrl = Utility.getIconUrl(context, Constants.executedStepIcon);
+		public static getProgressIconStyle(context: Mscrm.ControlData<IInputBag>) {
+			let backgroundIconUrl = Utility.getIconUrl(context, Constants.inprogressStepIcon);
+			let isRTL = context.client.isRTL;
+			return {
+				width: "16px",
+				height: "16px",
+				"background-image": "url(" + backgroundIconUrl + ")",
+				"background-repeat": "no-repeat",
+				"background-position": "center",
+				marginLeft: isRTL ? "0px" : "8px",
+				marginRight: isRTL ? "8px" : "0px",
+				marginTop: "14px",
+				marginBottom: "14px"
+			};
+		}
+
+		public static getRunActionIconStyle(actionType: CallscriptActionType, context: Mscrm.ControlData<IInputBag>) {
+			let backgroundIconUrl = "";
+			if (actionType === CallscriptActionType.TextAction) {
+				backgroundIconUrl = Utility.getIconUrl(context, Constants.markdoneTextIcon);
 			}
-			else if (stepExecutionStatus === ExecutionStatus.Failed) {
-				statusIconUrl = Utility.getIconUrl(context, Constants.failedStepIcon);
+			else if (actionType === CallscriptActionType.MacroAction) {
+				backgroundIconUrl = Utility.getIconUrl(context, Constants.runMacroIcon);
 			}
-			else if (stepExecutionStatus === ExecutionStatus.Started) {
-				statusIconUrl = Utility.getIconUrl(context, Constants.inprogressStepIcon);
-			}
-			else if (stepExecutionStatus === ExecutionStatus.NotStarted) {
-				displayProperty = "none";
+			else {
+				backgroundIconUrl = Utility.getIconUrl(context, Constants.viewScriptIcon);
 			}
 			let isRTL = context.client.isRTL;
 			return {
 				width: "16px",
 				height: "16px",
-				"background-image": "url(" + statusIconUrl + ")",
+				"background-image": "url(" + backgroundIconUrl + ")",
 				"background-repeat": "no-repeat",
+				"background-position": "center",
+				padding: "0px",
 				marginLeft: isRTL ? "0px" : "8px",
 				marginRight: isRTL ? "8px" : "0px",
 				marginTop: "14px",
 				marginBottom: "14px",
-				display: displayProperty
+				border: "none",
+				backgroundColor: "inherit",
+				cursor: "pointer"
 			};
 		}
 
@@ -281,10 +298,10 @@ module MscrmControls.ProductivityPanel {
 			return {
 				display: displayProperty,
 				"flex-direction": "column",
-				"text-align": "justify",
 				"vertical-align": "middle",
 				background: backgroundColor,
-				marginTop: "-12px"
+				marginTop: "-12px",
+				paddingBottom: "14px"
 			}
 		}
 
@@ -295,7 +312,6 @@ module MscrmControls.ProductivityPanel {
 				fontSize: "14px",
 				color: (stepExecutionStatus === ExecutionStatus.Completed) ? "#666666" : "#333333",
 				"vertical-align": "middle",
-				"text-align": "justify",
 				paddingTop: "4px",
 				width: "calc(100% - 86px)",
 				marginLeft: isRTL ? "0px" : "58px",
@@ -311,7 +327,6 @@ module MscrmControls.ProductivityPanel {
 				fontFamily: context.theming.fontfamilies.regular,
 				fontSize: "12px",
 				color: "#A80000",
-				"text-align": "justify",
 				paddingTop: "8px",
 				width: "calc(100% - 86px)",
 				marginLeft: isRTL ? "0px" : "58px",
@@ -346,7 +361,6 @@ module MscrmControls.ProductivityPanel {
 				width: "fit-content",
 				height: "28px",
 				marginTop: "12px",
-				marginBottom: "14px",
 				display: "inline-block",
 				cursor: "pointer",
 				marginLeft: isRTL ? "0px" : "58px",

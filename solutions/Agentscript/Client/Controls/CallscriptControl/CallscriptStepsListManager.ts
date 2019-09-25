@@ -4,7 +4,7 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.ProductivityPanel {
+module MscrmControls.CallscriptControl {
 	'use strict';
 
 	export class CallscriptStepsListManager {
@@ -28,8 +28,27 @@ module MscrmControls.ProductivityPanel {
 		public getStepsList(currentScript: CallScript): Mscrm.Component {
 			var listItems: Mscrm.Component[] = [];
 
-			for (let step of currentScript.steps) {
-				listItems.push(this.stepListitemManager.getStepListItemComponent(step));
+			let prevStepId = "";
+			let nextStepId = "";
+			let lastStepIndex = currentScript.steps.length - 1;
+
+			for (let i = 0; i < currentScript.steps.length; i++) {
+
+				let currentStep = currentScript.steps[i];
+
+				// Set next step Id
+				if (i != lastStepIndex) {
+					let nextStep = currentScript.steps[i + 1];
+					nextStepId = nextStep.id;
+				}
+				else {
+					nextStepId = ""
+				}
+
+				listItems.push(this.stepListitemManager.getStepListItemComponent(currentStep, i, prevStepId, nextStepId));
+
+				// Set previous step id
+				prevStepId = currentStep.id;
 			}
 
 			var list = this.context.factory.createElement("LIST", {

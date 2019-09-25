@@ -1,7 +1,7 @@
 ﻿/**
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
-module MscrmControls.ProductivityPanel
+module MscrmControls.CallscriptControl
 {
 	'use strict';
 
@@ -13,11 +13,15 @@ module MscrmControls.ProductivityPanel
 		// properties
 		private context: Mscrm.ControlData<IInputBag>;
 		private cifExternalUtil: Microsoft.CIFramework.External.CIFExternalUtilityImpl;
+		private telemetryContext: string;
+		private telemetryLogger: TelemetryLogger;
 
 		constructor(context: Mscrm.ControlData<IInputBag>)
 		{
 			this.context = context;
 			this.cifExternalUtil = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
+			this.telemetryContext = TelemetryComponents.CIFUtil;
+			this.telemetryLogger = new TelemetryLogger(this.context);
 		}
 
 		/**
@@ -27,7 +31,23 @@ module MscrmControls.ProductivityPanel
 		 */
 		public getSessionTemplateId(): string
 		{
-			return this.cifExternalUtil.getTemplateForSession();
+			let methodName = "getSessionTemplateId";
+			let sessionTemplateId: string = "";
+			try {
+				sessionTemplateId = this.cifExternalUtil.getTemplateForSession();
+				if (this.context.utils.isNullOrUndefined(sessionTemplateId)) {
+					//couldn't retrieve from CIF, fetch from form query parameters
+					let queryStringParameters = (window as any).Xrm.Page.context.getQueryStringParameters();
+					sessionTemplateId = queryStringParameters.templateId;
+				}
+			}
+			catch (error) {
+				let errorMessage = "Failed to retrieve session template id";
+				let errorParam = new EventParameters();
+				errorParam.addParameter("errorDetails", error);
+				this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
+			}
+			return sessionTemplateId;
 		}
 
 		/**
@@ -38,8 +58,20 @@ module MscrmControls.ProductivityPanel
 		 */
 		public resolveReplaceableParameters(inputParam: string): Promise<string>
 		{
-			let templateParams = this.cifExternalUtil.getSessionTemplateParams();
-			return this.cifExternalUtil.resolveTemplateString(inputParam, templateParams, "");
+			let methodName = "resolveReplaceableParameters";
+			try {
+				let templateParams = this.cifExternalUtil.getSessionTemplateParams();
+				return this.cifExternalUtil.resolveTemplateString(inputParam, templateParams, "");
+			}
+			catch (error) {
+				let errorMessage = "Failed to resolve replaceable parameters in text";
+				let errorParam = new EventParameters();
+				errorParam.addParameter("errorDetails", error);
+				this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
+				return new Promise((resolve, reject) => {
+					resolve(inputParam);
+				});
+			}
 		}
 
 		/**
@@ -47,11 +79,21 @@ module MscrmControls.ProductivityPanel
 		 * @param key key for entry whose value is returned
 		 */
 		public getValueFromSessionTemplateParams(key: string): any {
-			let sessionTemplateParams = this.cifExternalUtil.getSessionTemplateParams();
-			if (!this.context.utils.isNullOrUndefined(sessionTemplateParams) && !this.context.utils.isNullOrUndefined(sessionTemplateParams[key])) {
-				return sessionTemplateParams[key];
+			let methodName = "getValueFromSessionTemplateParams";
+			try {
+				let sessionTemplateParams = this.cifExternalUtil.getSessionTemplateParams();
+				if (!this.context.utils.isNullOrUndefined(sessionTemplateParams) && !this.context.utils.isNullOrUndefined(sessionTemplateParams[key])) {
+					return sessionTemplateParams[key];
+				}
 			}
-			return null;
+			catch (error) {
+				let errorMessage = "Failed to get value from session template params";
+				let errorParam = new EventParameters();
+				errorParam.addParameter("errorDetails", error);
+				errorParam.addParameter("lookupKey", key);
+				this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
+				return null;
+			}
 		}
 
 		/**
@@ -61,9 +103,19 @@ module MscrmControls.ProductivityPanel
 		 * @param sessionId id of session whose params are updated
 		 */
 		public setValueInSessionTemplateParams(key: string, value: any, sessionId: string): void {
+			let methodName = "setValueInSessionTemplateParams";
 			let input: Mscrm.Dictionary = {};
 			input[key] = value;
-			this.cifExternalUtil.setSessionTemplateParams(input, sessionId);
+			try {
+				this.cifExternalUtil.setSessionTemplateParams(input, sessionId);
+			}
+			catch (error) {
+				let errorMessage = "Failed to add/update key-value pair in session template params";
+				let errorParam = new EventParameters();
+				errorParam.addParameter("errorDetails", error);
+				errorParam.addParameter("uciSessionId", sessionId);
+				this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
+			}
 		}
 	}
 
@@ -74,10 +126,14 @@ module MscrmControls.ProductivityPanel
 	{
 		// properties
 		private context: Mscrm.ControlData<IInputBag>;
+		private telemetryContext: string;
+		private telemetryLogger: TelemetryLogger;
 
 		constructor(context: Mscrm.ControlData<IInputBag>)
 		{
 			this.context = context;
+			this.telemetryContext = TelemetryComponents.MacroUtil;
+			this.telemetryLogger = new TelemetryLogger(this.context);
 		}
 
 		/**
@@ -85,12 +141,23 @@ module MscrmControls.ProductivityPanel
 		 * @param macroName macro name
 		 * @param macroParam macro parameter
 		 */
-		public executeMacro(macroName: string, macroParam: any): Promise<string>
+		public executeMacro(macroName: string, macroId: string, macroParam?: any): Promise<string>
 		{
-			// ToDo: Integration with macro when available
-			return new Promise((resolve, reject) => {
-				resolve(Constants.EmptyString);
-			});
+			let methodName = "executeMacro";
+			try {
+				return Microsoft.ProductivityMacros.Internal.runMacro(macroName);
+			}
+			catch (error) {
+				let errorMessage = "Failed to execute run macro api";
+				let errorParam = new EventParameters();
+				errorParam.addParameter("errorDetails", error);
+				errorParam.addParameter("macroId", macroId);
+				this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
+
+				return new Promise<string>((resolve, reject) => {
+					reject(error);
+				});
+			}
 		}
 	}
 }
