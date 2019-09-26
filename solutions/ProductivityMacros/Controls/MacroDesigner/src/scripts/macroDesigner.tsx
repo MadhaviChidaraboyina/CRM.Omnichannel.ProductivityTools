@@ -19,6 +19,10 @@ function loadDesignerIframe() {
 
 loadDesignerIframe();
 
+let operKindDisplayText = {};
+operKindDisplayText[SharedDefines.Kind.Action] = Utils.Utils.getResourceString("DESIGNER_ACTION");
+operKindDisplayText[SharedDefines.Kind.Trigger] = Utils.Utils.getResourceString("DESIGNER_TRIGGER");
+
 let designerOptions: SharedDefines.IDesignerOptions = {
     ApiVersion: "1.0.0.0",  //K
     BaseUrl: window.location.hostname,  //K
@@ -29,12 +33,14 @@ let designerOptions: SharedDefines.IDesignerOptions = {
     Categories: [],
     SearchHint: Utils.Utils.getResourceString("DESIGNER_SEARCHMACROS"),
     UserVoiceMessage: Utils.Utils.getResourceString("DESIGNER_USERVOICEMSG"),
+    UserVoiceURL: "https://experience.dynamics.com/ideas/categories/list/?category=31047c64-7e28-e911-a95a-000d3a4f3883&forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad",
     environmentName: (window.top as any).Xrm.Utility.getGlobalContext().getOrgUniqueName(),
     environmentDescription: (window.top as any).Xrm.Utility.getGlobalContext().getOrgUniqueName(),
     Connectors: [
     ],
     Actions: [
-    ]
+    ],
+    operationKindDisplayText: operKindDisplayText
 };
 
 let CurrentWorkflowDetails = { definition: "", id: "", name: "", description: "" };

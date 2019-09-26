@@ -393,11 +393,11 @@ class SmartRecommendationProvider implements Designer.RecommendationProvider {
     }
 
     public getSearchBoxPlaceholder(kind: SharedDefines.Kind): string {
-        return this.designerOptions.SearchHint + " " + kind;
+        return this.designerOptions.SearchHint.concat(" ", this.designerOptions.operationKindDisplayText[kind]);
     }
 
     public getUserVoiceProps(): Designer.RecommendationUserVoiceProps {
-        return { segments: [{ text: this.designerOptions.UserVoiceMessage, disabled: true }], disabled: true };  //TODO
+        return { segments: [{ text: this.designerOptions.UserVoiceMessage, disabled: false, href: this.designerOptions.UserVoiceURL }], disabled: false };  //TODO
     }
 
     public shouldAllowTriggerSelectionAsAction(connectorId: string, operationId: string, kind: string): boolean {

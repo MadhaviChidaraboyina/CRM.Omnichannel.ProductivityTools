@@ -94,8 +94,10 @@ export interface IDesignerOptions {
     Actions: Action[],
     Connectors: Connector[],
     UserVoiceMessage: string,
+    UserVoiceURL?: string,
     environmentName: string,
-    environmentDescription: string
+    environmentDescription: string,
+    operationKindDisplayText: {[kind: string]: string}
 };
 
 export enum Visibility {

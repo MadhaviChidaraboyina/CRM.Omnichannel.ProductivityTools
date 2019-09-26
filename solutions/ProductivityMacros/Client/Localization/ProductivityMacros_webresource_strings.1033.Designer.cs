@@ -143,7 +143,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sample user voice message.
+        ///   Looks up a localized string similar to Let us know what you would like us to build next.
         /// </summary>
         internal static string DESIGNER_USERVOICEMSG {
             get {

@@ -154,7 +154,7 @@
     <comment>Trigger String for Designer Control</comment>
   </data>
   <data name="DESIGNER_USERVOICEMSG" xml:space="preserve">
-    <value>Sample user voice message</value>
+    <value>Let us know what you would like us to build next</value>
     <comment>User Voice Message for Designer Control</comment>
   </data>
   <data name="DESIGNR_STARTMACRO_TITLE" xml:space="preserve">
