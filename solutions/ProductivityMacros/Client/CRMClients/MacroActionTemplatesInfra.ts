@@ -1,7 +1,7 @@
 ﻿/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 
 /** @internal */
-namespace Microsoft.ProductivityMacros {
+namespace Microsoft.ProductivityMacros.Internal {
 	export class ProductivityMacroActionTemplate {
 		public static macroActionTemplates = new Map<string, ProductivityMacroActionTemplate>();
 
