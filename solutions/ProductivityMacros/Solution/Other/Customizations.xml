@@ -9,6 +9,7 @@
 	<EntityRelationships />
 	<OrganizationSettings />
 	<optionsets />
+	<Dialogs />
 	<WebResources />
 	<SolutionPluginAssemblies />
 	<SdkMessageProcessingSteps />

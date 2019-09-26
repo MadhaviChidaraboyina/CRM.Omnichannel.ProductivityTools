@@ -20,6 +20,14 @@
 									</labels>
 									<rows>
 										<row>
+											<cell id="{293c9227-65a0-41d0-ba6f-b4b875af8484}">
+												<labels>
+													<label description="Kind" languagecode="1033" />
+												</labels>
+												<control id="msdyn_kind" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_kind" />
+											</cell>
+										</row>
+										<row>
 											<cell id="{f5ea473e-8d09-4798-b801-b56fbbbe1238}">
 												<labels>
 													<label description="" languagecode="1033" />
@@ -89,6 +97,22 @@
 													<label description="" languagecode="1033" />
 												</labels>
 												<control id="msdyn_visibility" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_visibility" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{3505e37b-e0e0-4ee6-833a-8607177c16aa}">
+												<labels>
+													<label description="" languagecode="1033" />
+												</labels>
+												<control id="msdyn_runtimeapi" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_runtimeapi" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{c6bbb736-1759-6d58-508d-c277bdcb1209}" showlabel="true" locklevel="0">
+												<labels>
+													<label description="" languagecode="1033" />
+												</labels>
+												<control id="msdyn_macroconnector" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_macroconnector" disabled="false" />
 											</cell>
 										</row>
 									</rows>

@@ -16,7 +16,11 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
+    <TypeScriptCompile Include="Constants.ts" />
     <TypeScriptCompile Include="ProductivityMacrosUtilities.ts" />
+    <TypeScriptCompile Include="CRMClients\ProductivityMacrosWrapper.ts" />
+    <TypeScriptCompile Include="CRMClients\ProductivityMacroRuntime.ts" />
+    <TypeScriptCompile Include="CRMClients\Constants.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\TypeScript.targets" />

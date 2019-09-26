@@ -59,6 +59,15 @@
     <Content Include="Entities\ActionOutputParameter\SavedQueries\{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}.xml" />
     <Content Include="Entities\ActionOutputParameter\SavedQueries\{be58538e-d1d2-e911-a81f-000d3a6d6cb7}.xml" />
     <Content Include="Entities\ActionOutputParameter\SavedQueries\{de3156ab-1834-4782-a0d8-97869badb58b}.xml" />
+    <Content Include="Entities\MacroConnector\Entity.xml" />
+    <Content Include="Entities\MacroConnector\FormXml\main\{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}_managed.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{5f76bbd9-6db0-47e3-b819-e8e181a69ef8}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{6879ad1e-f3d8-436b-af1d-40219e693010}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{8c945d63-c3dd-e911-a81e-000d3af9c0c2}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{8eab9af9-f1b0-41b2-8eac-217db6b0346a}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{b8136d24-03a6-4453-b1d6-f6e96cc59762}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{d238ec0d-ead6-4558-964d-e92e17c8aa42}.xml" />
     <Content Include="Entities\ParameterDefinition\Entity.xml" />
     <Content Include="Entities\ParameterDefinition\FormXml\main\{a1b84754-82c8-4d2e-afe6-bceae91df1ca}_managed.xml" />
     <Content Include="Entities\ParameterDefinition\SavedQueries\{07a33cec-34c5-447a-b091-76a54ea8dcc0}.xml" />
@@ -69,7 +78,44 @@
     <Content Include="Entities\ParameterDefinition\SavedQueries\{57347866-53ad-4011-9024-d5161ce8391e}.xml" />
     <Content Include="Entities\ParameterDefinition\SavedQueries\{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}.xml" />
     <Content Include="Other\Relationships\msdyn_macroactiontemplate.xml" />
-	  <Content Include="Other\Relationships\msdyn_parameterdefinition.xml" />
+    <Content Include="Other\Relationships\msdyn_macroconnector.xml" />
+    <Content Include="Other\Relationships\msdyn_parameterdefinition.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macro_connector.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macro_connector.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macroDesigner.bundle.js.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macroDesigner.html.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_associated.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_associated.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_dashboard.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_dashboard.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_form.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_form.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_grid.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_grid.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_kb.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_kb.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_new_form.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_new_form.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_refresh.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_refresh.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_save.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_save.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_kb.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_kb.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_relevance.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_relevance.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_send_kb.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_send_kb.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_update_record.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_update_record.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_clone_record.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_clone_record.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_close_all_sessions.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_close_all_sessions.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_create_session.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_create_session.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_email.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_email.svg.data.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Other\Customizations.xml">
@@ -80,6 +126,7 @@
     </Content>
     <Content Include="WebResources\Localization\ProductivityMacros_webresource_strings.1033.resx.data.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
 </Project>

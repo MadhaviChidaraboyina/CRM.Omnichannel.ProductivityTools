@@ -1,8 +1,11 @@
 {
 	"extends":  "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
-  "include": [
-    "../ProductivityMacrosUtilities.ts"
-  ],
+	"include": [
+		"../ProductivityMacrosUtilities.ts",
+		"ProductivityMacrosWrapper.ts",
+		"ProductivityMacroRuntime.ts",
+		"Constants.ts"
+	],
   "compilerOptions": {
     "sourceMap": true,
     "outFile": "../../Solution/WebResources/CRMClients/msdyn_ProductivityMacros_internal_library.js",

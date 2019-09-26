@@ -948,7 +948,7 @@ namespace Microsoft.CIFramework.Internal {
 				error.sourceFunc = "openForm";
 				return logAPIFailure(appId, true, error, MessageType.openForm, cifVersion, "", "", telemetryParameter, parameters.get(Constants.correlationId));
 			}
-			else {
+			else { 
 				let res = state.client.openForm(parameters.get(Constants.entityFormOptions), parameters.get(Constants.entityFormParameters));
 				logParameterData(telemetryParameter, MessageType.openForm, { "entityFormOptions": parameters.get(Constants.entityFormOptions) });
 				var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.openForm, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));

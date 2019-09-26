@@ -19,7 +19,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class ProductivityMacros_webresource_strings_1033 {
@@ -39,8 +39,8 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.Dynamics.ProductivityMacros.WebResources.Localization.ProductivityMacros_webresource_strings.10" +
-                            "33", typeof(ProductivityMacros_webresource_strings_1033).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.Dynamics.ProductivityMacros.WebResources.Localization.ProductivityMacro" +
+                            "s_webresource_strings.1033", typeof(ProductivityMacros_webresource_strings_1033).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -58,6 +58,231 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Action.
+        /// </summary>
+        internal static string DESIGNER_ACTION {
+            get {
+                return ResourceManager.GetString("DESIGNER_ACTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unified Interface automation.
+        /// </summary>
+        internal static string DESIGNER_CONNECTORDISPLAYNAME {
+            get {
+                return ResourceManager.GetString("DESIGNER_CONNECTORDISPLAYNAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Macro connector.
+        /// </summary>
+        internal static string DESIGNER_MACROCONNECTOR {
+            get {
+                return ResourceManager.GetString("DESIGNER_MACROCONNECTOR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search macro.
+        /// </summary>
+        internal static string DESIGNER_SEARCHMACROS {
+            get {
+                return ResourceManager.GetString("DESIGNER_SEARCHMACROS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Macro Execution.
+        /// </summary>
+        internal static string DESIGNER_STARTMACRO_DESC {
+            get {
+                return ResourceManager.GetString("DESIGNER_STARTMACRO_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Macro Execution.
+        /// </summary>
+        internal static string DESIGNER_STARTMACRO_NAME {
+            get {
+                return ResourceManager.GetString("DESIGNER_STARTMACRO_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Macro.
+        /// </summary>
+        internal static string DESIGNER_STARTMACRO_SUBTITLE {
+            get {
+                return ResourceManager.GetString("DESIGNER_STARTMACRO_SUBTITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Macro.
+        /// </summary>
+        internal static string DESIGNER_STARTMACRO_SUMMARY {
+            get {
+                return ResourceManager.GetString("DESIGNER_STARTMACRO_SUMMARY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trigger.
+        /// </summary>
+        internal static string DESIGNER_TRIGGER {
+            get {
+                return ResourceManager.GetString("DESIGNER_TRIGGER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sample user voice message.
+        /// </summary>
+        internal static string DESIGNER_USERVOICEMSG {
+            get {
+                return ResourceManager.GetString("DESIGNER_USERVOICEMSG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Macro.
+        /// </summary>
+        internal static string DESIGNR_STARTMACRO_TITLE {
+            get {
+                return ResourceManager.GetString("DESIGNR_STARTMACRO_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close All other Sessions.
+        /// </summary>
+        internal static string MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create Session.
+        /// </summary>
+        internal static string MACRO_ACTION_CREATE_SESSION {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_CREATE_SESSION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Dashboard.
+        /// </summary>
+        internal static string MACRO_ACTION_OPEN_DASHBOARD {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_OPEN_DASHBOARD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Form.
+        /// </summary>
+        internal static string MACRO_ACTION_OPEN_FORM {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_OPEN_FORM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Grid.
+        /// </summary>
+        internal static string MACRO_ACTION_OPEN_GRID {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_OPEN_GRID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Knowledge Search.
+        /// </summary>
+        internal static string MACRO_ACTION_OPEN_KB_SEARCH {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_OPEN_KB_SEARCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh.
+        /// </summary>
+        internal static string MACRO_ACTION_REFRESH {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_REFRESH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string MACRO_ACTION_SAVE {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_SAVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search by Relevance.
+        /// </summary>
+        internal static string MACRO_ACTION_SEARCH_BY_RELEVANCE {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_SEARCH_BY_RELEVANCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search Knowledge Base.
+        /// </summary>
+        internal static string MACRO_ACTION_SEARCH_KB {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_SEARCH_KB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attribute logical name.
+        /// </summary>
+        internal static string MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC {
+            get {
+                return ResourceManager.GetString("MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE {
+            get {
+                return ResourceManager.GetString("MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attribute value.
+        /// </summary>
+        internal static string MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC {
+            get {
+                return ResourceManager.GetString("MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE {
+            get {
+                return ResourceManager.GetString("MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE", resourceCulture);
             }
         }
     }

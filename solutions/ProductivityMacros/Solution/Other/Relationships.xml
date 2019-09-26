@@ -4,4 +4,5 @@
   <EntityRelationship Name="msdyn_msdyn_macroactiontemplate_msdyn_actionout" />
   <EntityRelationship Name="msdyn_msdyn_paramdef_msdyn_actionoutputparam" />
   <EntityRelationship Name="msdyn_msdyn_paramdef_msdyn_actioninputparam" />
+  <EntityRelationship Name="msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector" />
 </EntityRelationships>

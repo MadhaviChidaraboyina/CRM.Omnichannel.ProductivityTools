@@ -82,10 +82,11 @@
       </Addresses>
     </Publisher>
     <RootComponents>
-		<RootComponent type="62" schemaName="msdyn_OCAPP" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_Macros.svg" behavior="0" />
+      <RootComponent type="62" schemaName="msdyn_OCAPP" behavior="0" />
 		<RootComponent type="80" schemaName="msdyn_OCAPP" behavior="0" />
-	</RootComponents>
-	<MissingDependencies>
+    </RootComponents>
+    <MissingDependencies>
     </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>

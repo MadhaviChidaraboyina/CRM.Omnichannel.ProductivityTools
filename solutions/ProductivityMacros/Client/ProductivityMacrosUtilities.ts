@@ -1,5 +1,8 @@
-﻿namespace Microsoft.Macros.Utility {
-	var webresourceName = "Localization/ProductivityMacros_webresource_strings.1033.resx";
+﻿/// <reference path="../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
+/// <reference path="Constants.ts" />
+
+namespace Microsoft.Macros.Utility {
+	var webresourceName = "Localization/ProductivityMacros_webresource_strings";
 
 	export function getResourceString(key: any) {
 		var value = key;
@@ -11,5 +14,90 @@
 			}
 		}
 		return value;
+	}
+
+	export function isMacrosView(viewId: any) {
+		if (viewId === Microsoft.Macros.Guids.AllMacrosViewGuid || viewId === Microsoft.Macros.Guids.ActiveMacrosViewGuid || viewId === Microsoft.Macros.Guids.InactiveMacrosViewGuid) {
+			return true;
+		}
+		return false;
+	}
+
+	// Handler Function for Click on a Record in the Grid View
+	export function openRecordHandler(selectedControlSelectedItemReferences: any, selectedControl: any) {
+		// Get the Current View ID
+		let viewSelector = selectedControl.getViewSelector();
+		let viewId = viewSelector.getCurrentView().id.toLowerCase();
+
+		// Get the Currently Selected Record ID
+		let selectedRecordGuid = selectedControlSelectedItemReferences[0].Id;
+
+		const dialogOptions: XrmClientApi.DialogOptions = {
+			width: 1550, height: 700, position: XrmClientApi.Constants.WindowPosition.side
+		};
+
+		const dialogParams: XrmClientApi.DialogParameters = {};
+		dialogParams[Microsoft.Macros.Constants.RecordIdParam] = selectedRecordGuid;
+
+		if (isMacrosView(viewId)) {
+			Xrm.Navigation.openDialog(Microsoft.Macros.Constants.CreateMacrosDialog, dialogOptions, dialogParams);
+		}
+		else {
+			let entityFormOptions = {
+				entityName: "workflow",
+				entityId: selectedRecordGuid
+			};
+
+			Xrm.Navigation.openForm(entityFormOptions);
+		}
+	}
+	
+	// Enable Function for Click on a Record in the Grid View
+	export function macrosEnableRule(selectedControlSelectedItemReferences: any, selectedControl: any): boolean {
+		// Get the Current View ID
+		let viewSelector = selectedControl.getViewSelector();
+		let viewId = viewSelector.getCurrentView().id.toLowerCase();
+
+		if (isMacrosView(viewId)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	export function newRecordHandler(selectedControl: any) {
+		let viewSelector = selectedControl.getViewSelector();
+		let viewId = viewSelector.getCurrentView().id.toLowerCase();
+
+		const dialogOptions: XrmClientApi.DialogOptions = {
+			width: 1550, height: 700, position: XrmClientApi.Constants.WindowPosition.side
+		};
+
+		if (isMacrosView(viewId)) {
+			Xrm.Navigation.openDialog(Microsoft.Macros.Constants.CreateMacrosDialog, dialogOptions, null);
+		}
+		else {
+			let entityFormOptions = {
+				entityName: "workflow"
+			};
+
+			Xrm.Navigation.openForm(entityFormOptions);
+		}
+	}
+
+	// Handler Function for the MDD OnLoad to pass the RecordID from MDD to the IFrame Control
+	export function dialogOnLoadHandler(eventContext: any) {
+		let formContext = eventContext.getFormContext();
+		let designerControl = formContext.getControl(Microsoft.Macros.Constants.DesignerID);
+		let appUrl = new URL(Xrm.Utility.getGlobalContext().getCurrentAppUrl());
+		let iframeUrl = appUrl.origin + "/WebResources/MacroDesigner/msdyn_ProductivityMacros_macroDesigner.html";
+		let input = formContext.data.attributes.getByName(Microsoft.Macros.Constants.RecordIdParam).getValue();
+		if (input == null) {
+			designerControl.setSrc(iframeUrl);
+		}
+		else {
+			designerControl.setSrc(iframeUrl+ "?id=" + input);
+		}
 	}
 }

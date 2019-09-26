@@ -36,7 +36,7 @@
 											</cell>
 										</row>
 										<row>
-											<cell id="{23058005-7eb8-11d5-d52e-43c2bb6c11e3}" showlabel="false" colspan="1" auto="false" rowspan="6">
+											<cell id="{85343452-c484-1dc3-6d73-32567eb03177}" showlabel="false" colspan="1" auto="false" rowspan="6">
 												<labels>
 													<label description="" languagecode="1033" />
 												</labels>
@@ -44,7 +44,7 @@
 													<parameters>
 														<ViewId>{07A33CEC-34C5-447A-B091-76A54EA8DCC0}</ViewId>
 														<IsUserView>false</IsUserView>
-														<RelationshipName>msdyn_msdyn_paramdef_msdyn_actioninputparam</RelationshipName>
+														<RelationshipName>msdyn_msdyn_paramdef_msdyn_actionoutputparam</RelationshipName>
 														<TargetEntityType>msdyn_parameterdefinition</TargetEntityType>
 														<AutoExpand>Fixed</AutoExpand>
 														<EnableQuickFind>false</EnableQuickFind>
@@ -57,7 +57,7 @@
 														<EnableChartPicker>true</EnableChartPicker>
 														<RecordsPerPage>4</RecordsPerPage>
 														<HeaderColorCode>#F3F3F3</HeaderColorCode>
-														<RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+														<RelationshipRoleOrdinal>2</RelationshipRoleOrdinal>
 													</parameters>
 												</control>
 											</cell>

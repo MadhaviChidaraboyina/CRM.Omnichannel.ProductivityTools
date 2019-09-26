@@ -1,5 +1,6 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
+		<ProjectToBuild Include="Controls\MacroDesigner\flowDesignerControl.njsproj" />
 		<ProjectToBuild Include="Client\WebResources.csproj" />
 		<ProjectToBuild Include="Plugins\ProductivityMacrosPlugins.csproj" />
 		<ProjectToBuild Include="Solution\ProductivityMacrosSolution.csproj" />
