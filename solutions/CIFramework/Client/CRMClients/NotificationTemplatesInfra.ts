@@ -204,8 +204,10 @@ namespace Microsoft.CIFramework.Internal {
 						for (var i = start; i < end && i < notificationFieldList.length; i++) {
 							var obj: any = { index: i };
 							stringResolversFields.push(TemplatesUtility.resolveTemplateString(notificationFieldList[i].value, templateParams, name).then(function (indexObj: any, result: any) {
-								results.push(new NotificationField(notificationFieldList[indexObj.index].lineheader, result, notificationFieldList[indexObj.index].priority));
-								noOfResolvedFields++;
+								if (!isNullOrUndefined(result) && result != "") {
+									results.push(new NotificationField(notificationFieldList[indexObj.index].lineheader, result, notificationFieldList[indexObj.index].priority));
+									noOfResolvedFields++;
+								}
 								return Promise.resolve("Success");
 							}.bind(this, obj), function (error: any) {
 								return Promise.resolve("Error");
@@ -235,16 +237,15 @@ namespace Microsoft.CIFramework.Internal {
 			fieldsWithValues.sort(this.compareInfoFields);
 			let avaialableFields: number = 0;
 			for (var field of fieldsWithValues) {
-				if (!isNullOrUndefined(field.value)) {
-					popupItem.details[field.lineheader] = field.value;
-					avaialableFields++;
-				}
+				popupItem.details[field.lineheader] = field.value;
+				avaialableFields++;
 				if (avaialableFields == NotificationConstants.NoOfFieldsAllowedInNotification) {
 					return popupItem;
 				}
+			}
+			return popupItem;
 		}
-		return popupItem;
-	}
+
 		// compare function for notification fields.
 		private compareInfoFields(field1: NotificationField, field2: NotificationField) {
 			if (field1.priority === field2.priority) {

@@ -109,7 +109,7 @@ module MscrmControls.Service.CIProvider {
 				Xrm.Utility.executeFunction(
 					ScenarioContolConstants.WorkstreamScenarioHelperWebresource,
 					ScenarioContolConstants.WorkstreamScenarioHelperFunction,
-					[this.context.page.entityId, Xrm.Page.getControl("msdyn_streamsource").getValueInternal().valueString])
+					[this.context.page.entityId, Xrm.Page.getAttribute("msdyn_streamsource").getValue()])
 					.then(
 					(resp: any) => {
 						this.LoadInitialState();

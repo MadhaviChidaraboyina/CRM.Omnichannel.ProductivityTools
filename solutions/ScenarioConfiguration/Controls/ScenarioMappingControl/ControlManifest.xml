@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
-	<control namespace="MscrmControls.Service.CIProvider" constructor="ScenarioMappingControl" version="1.3.0" display-name-key="CC_ScenarioMappingControl_Name" control-type="virtual">
+	<control namespace="MscrmControls.Service.CIProvider" constructor="ScenarioMappingControl" version="1.4.0" display-name-key="CC_ScenarioMappingControl_Name" control-type="virtual">
 		<modes>
 		</modes>
 		<type-group name="Text">
