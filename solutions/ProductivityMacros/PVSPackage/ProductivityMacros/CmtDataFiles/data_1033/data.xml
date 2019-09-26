@@ -722,7 +722,7 @@
   <entity name="msdyn_macroconnector" displayname="Macro Connector">
     <records>
       <record id="60541186-f5dd-e911-a81e-000d3af9c0c2">
-        <field name="msdyn_brandcolor" value="#BA00FB" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
         <field name="msdyn_categorykey" value="CONNECTORS" />
         <field name="msdyn_categorylabel" value="Built In Macro Actions" />
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -768,6 +768,7 @@
         <field name="msdyn_subtitle" value="Create new" />
         <field name="msdyn_summary" value="Open a new form to create a record" />
         <field name="msdyn_title" value="Open a new form to create a record" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="e6c81912-fad2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -790,6 +791,7 @@
         <field name="msdyn_subtitle" value="Open Form" />
         <field name="msdyn_summary" value="Open an existing record" />
         <field name="msdyn_title" value="Open an existing record" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="1c1af956-fad2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -812,6 +814,7 @@
         <field name="msdyn_subtitle" value="Open grid" />
         <field name="msdyn_summary" value="Open a record grid" />
         <field name="msdyn_title" value="Open a record grid" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="baa326ad-fad2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -833,6 +836,7 @@
         <field name="msdyn_subtitle" value="Open dashboard" />
         <field name="msdyn_summary" value="Open dashboard" />
         <field name="msdyn_title" value="Open an existing dashboard" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="13a680e2-fbd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -854,6 +858,7 @@
         <field name="msdyn_subtitle" value="Open knowledge search" />
         <field name="msdyn_summary" value="Open the knowledge search page" />
         <field name="msdyn_title" value="Open the knowledge search page" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="48bbc0f3-fbd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -875,6 +880,7 @@
         <field name="msdyn_subtitle" value="Create session" />
         <field name="msdyn_summary" value="Create session" />
         <field name="msdyn_title" value="Create session" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="2574de1c-fcd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -896,6 +902,7 @@
         <field name="msdyn_subtitle" value="Close All other Sessions" />
         <field name="msdyn_summary" value="Close All other Sessions" />
         <field name="msdyn_title" value="Close All other Sessions" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="85ab814a-fcd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -918,6 +925,7 @@
         <field name="msdyn_subtitle" value="Search the knowledge base for the populated phrase" />
         <field name="msdyn_summary" value="Search the knowledge base for the populated phrase" />
         <field name="msdyn_title" value="Search the knowledge base for the populated phrase" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="16fc3387-fcd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -940,6 +948,7 @@
         <field name="msdyn_subtitle" value="Do a relevance search based on the phrase" />
         <field name="msdyn_summary" value="Do a relevance search based on the phrase" />
         <field name="msdyn_title" value="Do a relevance search based on the phrase" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="101c73b5-fcd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -961,6 +970,7 @@
         <field name="msdyn_subtitle" value="Save the record" />
         <field name="msdyn_summary" value="Save the record" />
         <field name="msdyn_title" value="Save the record" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="19c8c1c6-fcd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -982,6 +992,7 @@
         <field name="msdyn_subtitle" value="Refresh the page" />
         <field name="msdyn_summary" value="Refresh the page" />
         <field name="msdyn_title" value="Refresh the page" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="ce3390dd-fcd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -1004,6 +1015,7 @@
         <field name="msdyn_subtitle" value="Update an existing record" />
         <field name="msdyn_summary" value="Update an existing record" />
         <field name="msdyn_title" value="Update an existing record" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="d965ea11-fdd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -1025,6 +1037,7 @@
         <field name="msdyn_subtitle" value="Open Associated" />
         <field name="msdyn_summary" value="Open associated records of a type for any given record in the session" />
         <field name="msdyn_title" value="Open Associated" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="e903922e-fdd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -1047,6 +1060,7 @@
         <field name="msdyn_subtitle" value="Open an email form with predefined template" />
         <field name="msdyn_summary" value="Open an email form with predefined template" />
         <field name="msdyn_title" value="Open an email form with predefined template" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="0e59ec44-fdd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -1068,6 +1082,7 @@
         <field name="msdyn_subtitle" value="Send knowledge base article" />
         <field name="msdyn_summary" value="Send knowledge base article" />
         <field name="msdyn_title" value="Send knowledge base article" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="68e92456-fdd2-e911-a81e-000d3a015920">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -1089,6 +1104,7 @@
         <field name="msdyn_subtitle" value="Clone a record and open it in a session" />
         <field name="msdyn_summary" value="Clone a record and open it in a session" />
         <field name="msdyn_title" value="Clone a record and open it in a session" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="cd1fa1a0-a0df-e911-a81e-000d3a0698dc">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -1110,6 +1126,7 @@
         <field name="msdyn_subtitle" value="Resolve Case" />
         <field name="msdyn_summary" value="Action to resolve case" />
         <field name="msdyn_title" value="Resolve Case" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -1131,6 +1148,7 @@
         <field name="msdyn_subtitle" value="Start macro execution" />
         <field name="msdyn_summary" value="Start macro execution" />
         <field name="msdyn_title" value="Start macro execution" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
     </records>
     <m2mrelationships />

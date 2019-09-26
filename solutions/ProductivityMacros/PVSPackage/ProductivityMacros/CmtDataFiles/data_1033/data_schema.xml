@@ -149,6 +149,7 @@
       <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
       <field displayname="Version Number" name="versionnumber" type="bigint" />
       <field displayname="Visibility" name="msdyn_visibility" type="string" customfield="true" />
+      <field displayname="Brand Color" name="msdyn_brandcolor" type="string" customfield="true" />
     </fields>
     <relationships />
   </entity>
