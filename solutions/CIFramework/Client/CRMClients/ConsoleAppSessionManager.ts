@@ -34,7 +34,7 @@ namespace Microsoft.CIFramework.Internal {
 		*/
 		onSessionSwitched(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
-			raiseAnalyticsEvent(Analytics.InternalEventName.SessionSwitched, eventMap);
+			raiseSystemAnalyticsEvent(InternalEventName.SessionSwitched, eventMap);
 			let previousSessionId = eventMap.get(Constants.previousSessionId);
 			let newSessionId = eventMap.get(Constants.newSessionId);
 			let previousProvider = state.sessionManager.getProvider(previousSessionId);
@@ -69,7 +69,7 @@ namespace Microsoft.CIFramework.Internal {
 		 */
 		onSessionClosed(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
-			raiseAnalyticsEvent(Analytics.InternalEventName.SessionClosed, eventMap);
+			raiseSystemAnalyticsEvent(InternalEventName.SessionClosed, eventMap);
 			let sessionId = eventMap.get(Constants.sessionId);
 
 			//Persist and close the Notes flap before closing the session

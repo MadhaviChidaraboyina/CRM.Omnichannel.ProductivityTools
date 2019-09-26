@@ -825,7 +825,7 @@
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionAgentAssignedTimestamp">
-          <Type>nvarchar</Type>
+          <Type>datetime</Type>
           <Name>msdyn_sessionagentassignedtimestamp</Name>
           <LogicalName>msdyn_sessionagentassignedtimestamp</LogicalName>
           <RequiredLevel>none</RequiredLevel>
@@ -837,7 +837,7 @@
           <IsCustomField>1</IsCustomField>
           <IsAuditEnabled>1</IsAuditEnabled>
           <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.6</IntroducedVersion>
+          <IntroducedVersion>1.0.0.10</IntroducedVersion>
           <IsCustomizable>1</IsCustomizable>
           <IsRenameable>1</IsRenameable>
           <CanModifySearchSettings>1</CanModifySearchSettings>
@@ -850,9 +850,9 @@
           <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <AutoNumberFormat></AutoNumberFormat>
-          <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
+          <Format>datetime</Format>
+          <CanChangeDateTimeBehavior>1</CanChangeDateTimeBehavior>
+          <Behavior>1</Behavior>
           <displaynames>
             <displayname description="Session Agent Assigned Timestamp" languagecode="1033" />
           </displaynames>
@@ -897,7 +897,7 @@
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionCreatedTimestamp">
-          <Type>nvarchar</Type>
+          <Type>datetime</Type>
           <Name>msdyn_sessioncreatedtimestamp</Name>
           <LogicalName>msdyn_sessioncreatedtimestamp</LogicalName>
           <RequiredLevel>none</RequiredLevel>
@@ -909,7 +909,7 @@
           <IsCustomField>1</IsCustomField>
           <IsAuditEnabled>1</IsAuditEnabled>
           <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.6</IntroducedVersion>
+          <IntroducedVersion>1.0.0.10</IntroducedVersion>
           <IsCustomizable>1</IsCustomizable>
           <IsRenameable>1</IsRenameable>
           <CanModifySearchSettings>1</CanModifySearchSettings>
@@ -922,9 +922,9 @@
           <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <AutoNumberFormat></AutoNumberFormat>
-          <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
+          <Format>datetime</Format>
+          <CanChangeDateTimeBehavior>1</CanChangeDateTimeBehavior>
+          <Behavior>1</Behavior>
           <displaynames>
             <displayname description="Session Created Timestamp" languagecode="1033" />
           </displaynames>
@@ -994,7 +994,7 @@
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <AutoNumberFormat></AutoNumberFormat>
           <displaynames>
-            <displayname description="SessionData" languagecode="1033" />
+            <displayname description="Session Data Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Unique identifier for entity instances" languagecode="1033" />
@@ -1036,8 +1036,8 @@
             <Description description="" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_sessionQueueAssignedTimestamp">
-          <Type>nvarchar</Type>
+        <attribute PhysicalName="msdyn_SessionQueueAssignedTimestamp">
+          <Type>datetime</Type>
           <Name>msdyn_sessionqueueassignedtimestamp</Name>
           <LogicalName>msdyn_sessionqueueassignedtimestamp</LogicalName>
           <RequiredLevel>none</RequiredLevel>
@@ -1049,7 +1049,7 @@
           <IsCustomField>1</IsCustomField>
           <IsAuditEnabled>1</IsAuditEnabled>
           <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.6</IntroducedVersion>
+          <IntroducedVersion>1.0.0.10</IntroducedVersion>
           <IsCustomizable>1</IsCustomizable>
           <IsRenameable>1</IsRenameable>
           <CanModifySearchSettings>1</CanModifySearchSettings>
@@ -1062,11 +1062,11 @@
           <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <AutoNumberFormat></AutoNumberFormat>
-          <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
+          <Format>datetime</Format>
+          <CanChangeDateTimeBehavior>1</CanChangeDateTimeBehavior>
+          <Behavior>1</Behavior>
           <displaynames>
-            <displayname description="session Queue Assigned Timestamp" languagecode="1033" />
+            <displayname description="Session Queue Assigned Timestamp" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1033" />
@@ -1102,7 +1102,7 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="UCI Session Id" languagecode="1033" />
+            <displayname description="Client Session Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1033" />
@@ -1138,7 +1138,7 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="UCI Session Name" languagecode="1033" />
+            <displayname description="Client Session Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1033" />

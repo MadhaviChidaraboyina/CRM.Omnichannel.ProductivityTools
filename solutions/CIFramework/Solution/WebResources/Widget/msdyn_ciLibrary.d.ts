@@ -220,42 +220,49 @@ declare namespace Microsoft.CIFramework {
         static initLogAnalyticsEventName: string;
         static analyticsEventType: string;
         static analyticsEventName: string;
-        static analyticsPlatformEventName: string;
+        static initAnalyticsPlatformEventName: string;
+        static logAnalyticsPlatformEventName: string;
         static focussedSession: string;
         static clientSessionId: string;
+        static notificationResponse: string;
         static isDelete: string;
+        static notificationResponseAction: string;
+        static acceptNotificationResponse: string;
+        static rejectNotificationResponse: string;
+        static channelProviderName: string;
+        static channelProviderId: string;
+        static telemetryApiName: string;
+        static telemetryInitApiName: string;
+        static telemetryLogCustomEventApiName: string;
+        static telemetryLogSystemEventApiName: string;
     }
     enum ErrorCode {
         Notes_Flap_Already_Expanded = 101,
+    }
+    enum EventType {
+        SystemEvent = 0,
+        CustomEvent = 1,
+    }
+    enum InternalEventName {
+        NotificationReceived = 0,
+        NotificationResponse = 1,
+        NotificationTimedOut = 2,
+        SessionStarted = 3,
+        SessionSwitched = 4,
+        SessionClosed = 5,
+        NewTabOpened = 6,
     }
 }
 /**
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
 declare namespace Microsoft.CIFramework.Analytics {
-    enum EventType {
-        SystemEvent = 0,
-        CustomEvent = 1,
-    }
-    enum InternalEventName {
-        InitAnalytics = 0,
-        NotificationReceived = 1,
-        NotificationAccepted = 2,
-        NotificationRejected = 3,
-        NotificationTimedOut = 4,
-        SessionStarted = 5,
-        SessionSwitched = 6,
-        SessionClosed = 7,
-        NewTabOpened = 8,
-        TabClosed = 9,
-        TabSwitched = 10,
-        CustomEvent = 11,
-    }
     class InitData {
         conversation: Conversation;
     }
     class Conversation {
         conversationId: string;
+        backendConversationId: string;
         channel: string;
         channelContext: string;
         regionData: string;
@@ -267,10 +274,13 @@ declare namespace Microsoft.CIFramework.Analytics {
         externalAccountId: string;
         contactId: string;
         externalContactId: string;
-        initialQueueName: string;
         additionalData: string;
         externalCorrelationId: string;
         conversationTimestamp: string;
+        externalConversationId: string;
+        initialQueueName: string;
+        primaryRelatedEntityName: string;
+        primaryRelatedEntityRecordId: string;
         customData?: (CustomDataEntity)[] | null;
         session: Session;
     }
@@ -289,6 +299,10 @@ declare namespace Microsoft.CIFramework.Analytics {
         sessionAdditionalData: string;
         externalCorrelationId: string;
         sessionCreatedTimestamp: string;
+        sessionAgentAssignedTimestamp: string;
+        sessionQueueAssignedTimestamp: string;
+        queueId: string;
+        queueName: string;
         customData?: (CustomDataEntity)[] | null;
         participants?: (ParticipantsEntity)[] | null;
     }
@@ -302,6 +316,7 @@ declare namespace Microsoft.CIFramework.Analytics {
         participantMode: string;
         participantType: string;
         participantAddedTimestamp: string;
+        participantAssignReason: string;
         customData?: (CustomDataEntity)[] | null;
     }
     class EventData {
@@ -309,9 +324,10 @@ declare namespace Microsoft.CIFramework.Analytics {
         sessionId: string;
         clientSessionId: string;
         eventParticipantId: string;
-        events?: (EventsEntity)[] | null;
+        events?: (EventEntity)[] | null;
     }
-    class EventsEntity {
+    class EventEntity {
+        kpiEventId: string;
         kpiEventName: string;
         kpiEventReason: string;
         eventTimestamp: string;
@@ -324,6 +340,7 @@ declare namespace Microsoft.CIFramework.Analytics {
         newPresence: string;
         tabId: string;
         tabName: string;
+        tabAction: string;
         notificationResponseAction: string;
         externalCorrelationId: string;
         customData?: (CustomDataEntity)[] | null;
@@ -589,8 +606,7 @@ declare namespace Microsoft.CIFramework {
     /**
      * API to set automation dictionary
     * Invokes the API updateContext
-    * @param input - List of parameters to be updated
-
+    * @param input - List of parameters to be updated in form of json input, array of strings for deleting parameters
     * @returns a Promise: void
     */
     function updateContext(input: any, sessionId?: string, isDelete?: boolean, correlationId?: string): Promise<any>;

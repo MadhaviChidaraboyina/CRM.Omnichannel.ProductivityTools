@@ -955,7 +955,7 @@ namespace Microsoft.CIFramework
 				messageType: MessageType.initLogAnalytics,
 				messageData: new Map().set(Constants.analyticsdata, data)
 					.set(Constants.correlationId, correlationId)
-					.set(Constants.analyticsEventType, Analytics.EventType.SystemEvent)
+					.set(Constants.analyticsEventType, EventType.SystemEvent)
 			}
 			return sendMessage<string>(initLogAnalytics.name, payload, false);
 		}
@@ -977,7 +977,7 @@ namespace Microsoft.CIFramework
 				messageData: new Map().set(Constants.analyticsdata, data)
 					.set(Constants.correlationId, correlationId)
 					.set(Constants.analyticsEventName, eventName)
-					.set(Constants.analyticsEventType, Analytics.EventType.CustomEvent)
+					.set(Constants.analyticsEventType, EventType.CustomEvent)
 			}
 			return sendMessage<string>(logAnalyticsEvent.name, payload, false);
 		}

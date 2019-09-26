@@ -2,26 +2,13 @@
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
 
+/// <reference path="../../../../packages/Crm.Moment.1.0.0/Content/Typings/moment.d.ts" />
+
 /**
  * Constants for CIFramework.
  */
 /** @internal */
 namespace Microsoft.CIFrameworkAnalytics.Utility {
-
-	var webresourceName = "Localization/CIF_webresource_strings";
-
-	export function getResourceString(key: any) {
-		var value = key;
-		if (Xrm && Xrm.Utility && Xrm.Utility.getResourceString) {
-			value = Xrm.Utility.getResourceString(webresourceName, key);
-
-			if (value === undefined || value === null) {
-				value = key;
-			}
-		}
-
-		return value;
-	}
 
 	/**
 	 * Generic method to convert map data into string
@@ -67,9 +54,19 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 	 * utility func to check whether an object is null or undefined
 	 */
 	/** @internal */
-	export function validateAnalyticsPayload(payload: InitData | EventData): Promise<boolean> {
-		if ((payload instanceof InitData && !isNullOrUndefined(payload.conversation.conversationId) && !isNullOrUndefined(payload.conversation.session.sessionId)) ||
-			(payload instanceof EventData && !isNullOrUndefined(payload.conversationId) && !isNullOrUndefined(payload.sessionId) && !isNullOrUndefined(payload.clientSessionId)))
+	export function validateInitAnalyticsPayload(payload: any): Promise<boolean> {
+		if ((!isNullOrUndefined(payload.conversation.conversationId) && !isNullOrUndefined(payload.conversation.session.sessionId)))
+			return Promise.resolve(true);
+		else
+			return Promise.resolve(false);
+	}
+
+	/**
+	 * utility func to check whether an object is null or undefined
+	 */
+	/** @internal */
+	export function validateLogAnalyticsPayload(payload: any): Promise<boolean> {
+		if ((!isNullOrUndefined(payload.conversationId) && !isNullOrUndefined(payload.sessionId) && !isNullOrUndefined(payload.clientSessionId)))
 			return Promise.resolve(true);
 		else
 			return Promise.resolve(false);
@@ -81,14 +78,32 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 	 */
 	export function buildConversationEntity(data: InitData): XrmClientApi.WebApi.Entity {
 		let entity: XrmClientApi.WebApi.Entity = {};
-		entity[Constants.Entity.conversationId] = data.conversation.conversationId;
-		entity[Constants.Entity.conversationId] = data.conversation.channel;
-		entity[Constants.Entity.conversationId] = data.conversation.regionData;
-		entity[Constants.Entity.conversationId] = data.conversation.conversationTimestamp;
-		let customDataList = data.conversation.customData;
+		let conv = data.conversation;
+		entity[Constants.ConversationEntity.accountId] = conv.accountId;
+		entity[Constants.ConversationEntity.additionalData] = conv.additionalData;
+		entity[Constants.ConversationEntity.backendConversationId] = conv.backendConversationId;
+		entity[Constants.ConversationEntity.channel] = conv.channel;
+		entity[Constants.ConversationEntity.channelContext] = conv.channelContext;
+		entity[Constants.ConversationEntity.contactId] = conv.contactId;
+		entity[Constants.ConversationEntity.conversationId] = conv.conversationId;
+		entity[Constants.ConversationEntity.Name] = conv.conversationId;
+		entity[Constants.ConversationEntity.conversationTimestamp] = isNullOrUndefined(conv.conversationTimestamp) ? conv.conversationTimestamp : getUTCDateTime();
+		entity[Constants.ConversationEntity.externalAccountId] = conv.externalAccountId;
+		entity[Constants.ConversationEntity.externalContactId] = conv.externalContactId;
+		entity[Constants.ConversationEntity.externalConversationId] = conv.externalConversationId;
+		entity[Constants.ConversationEntity.externalCorrelationId] = conv.externalCorrelationId;
+		entity[Constants.ConversationEntity.externalProviderId] = conv.externalProviderId;
+		entity[Constants.ConversationEntity.initialQueueName] = conv.initialQueueName;
+		entity[Constants.ConversationEntity.providerId] = conv.providerId;
+		entity[Constants.ConversationEntity.providerName] = conv.providerName;
+		entity[Constants.ConversationEntity.region] = conv.regionData;
+
+		let customDataList = conv.customData;
+		if (!isNullOrUndefined(customDataList)) { 
 		for (var customData of customDataList) {
 			entity[customData.attribute] = customData.value;
 		}
+	}
 		return entity;
 	}
 
@@ -99,12 +114,25 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 	export function buildSessionEntity(data: InitData): XrmClientApi.WebApi.Entity {
 		let session = data.conversation.session;
 		let entity: XrmClientApi.WebApi.Entity = {};
-		entity[Constants.Entity.sessionid] = session.sessionId;
-		entity[Constants.Entity.sessionname] = session.sessionName;
-		entity[Constants.Entity.createdts] = session.sessionCreatedTimestamp;
+		entity[Constants.SessionEntity.clientSessionId] = session.clientSessionId;
+		entity[Constants.SessionEntity.clientSessionName] = session.clientSessionName;
+		entity[Constants.SessionEntity.conversationId] = session.conversationId;
+		entity[Constants.SessionEntity.externalCorrelationId] = session.externalCorrelationId;
+		entity[Constants.SessionEntity.queueId] = session.queueId;
+		entity[Constants.SessionEntity.queueName] = session.queueName;
+		entity[Constants.SessionEntity.sessionAdditionalData] = session.sessionAdditionalData;
+		entity[Constants.SessionEntity.sessionAgentAssignedTimestamp] = session.sessionAgentAssignedTimestamp;
+		entity[Constants.SessionEntity.sessionChannel] = session.sessionChannel;
+		entity[Constants.SessionEntity.sessionCreatedTimestamp] = session.sessionCreatedTimestamp;
+		entity[Constants.SessionEntity.sessionCreationReason] = session.sessionCreationReason;
+		entity[Constants.SessionEntity.sessionId] = session.sessionId;
+		entity[Constants.SessionEntity.sessionQueueAssignedTimestamp] = session.sessionQueueAssignedTimestamp;
+
 		let customDataList = data.conversation.customData;
-		for (var customData of customDataList) {
-			entity[customData.attribute] = customData.value;
+		if (!isNullOrUndefined(customDataList)) {
+			for (var customData of customDataList) {
+				entity[customData.attribute] = customData.value;
+			}
 		}
 		return entity;
 	}
@@ -113,18 +141,29 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 	* Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
 	* @param map Object to build the entity for.
 	*/
-	export function buildParticipantEntityList(data: InitData): XrmClientApi.WebApi.Entity [] {
+	export function buildParticipantEntityList(data: InitData): XrmClientApi.WebApi.Entity[] {
 		let session = data.conversation.session;
 		let entities: XrmClientApi.WebApi.Entity[] = [];
 		for (var participant of session.participants) {
 			let entity: XrmClientApi.WebApi.Entity = {};
-			entity[Constants.Entity.sessionid] = participant.participantId;
-			entity[Constants.Entity.sessionname] = participant.participantName;
-			entity[Constants.Entity.createdts] = participant.participantType;
-			entity[Constants.Entity.createdts] = participant.participantAddedTimestamp;
+			entity[Constants.ParticipantEntity.participantId] = participant.participantId;
+			entity[Constants.ParticipantEntity.participantName] = participant.participantName;
+			entity[Constants.ParticipantEntity.participantType] = participant.participantType;
+			entity[Constants.ParticipantEntity.participantAddedTimestamp] = participant.participantAddedTimestamp;
+			entity[Constants.ParticipantEntity.participantId] = participant.participantId;
+			entity[Constants.ParticipantEntity.participantName] = participant.participantName;
+			entity[Constants.ParticipantEntity.participantType] = participant.participantType;
+			entity[Constants.ParticipantEntity.participantAddedTimestamp] = participant.participantAddedTimestamp;
+			entity[Constants.ParticipantEntity.participantId] = participant.participantId;
+			entity[Constants.ParticipantEntity.participantName] = participant.participantName;
+			entity[Constants.ParticipantEntity.participantType] = participant.participantType;
+			entity[Constants.ParticipantEntity.participantAddedTimestamp] = participant.participantAddedTimestamp;
+
 			let customDataList = data.conversation.customData;
-			for (var customData of customDataList) {
-				entity[customData.attribute] = customData.value;
+			if (!isNullOrUndefined(customDataList)) {
+				for (var customData of customDataList) {
+					entity[customData.attribute] = customData.value;
+				}
 			}
 			entities.push(entity);
 		}
@@ -140,81 +179,44 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 		let events = data.events;
 		for (var event of events) {
 			let entity: XrmClientApi.WebApi.Entity = {};
-			entity[Constants.Entity.conversationId] = data.conversationId;
-			entity[Constants.Entity.sessionid] = data.sessionId;
-			entity[Constants.Entity.additionalData] = event.additionalData;
-			entity[Constants.Entity.entityName] = event.entityName;
-			entity[Constants.Entity.entityRecordId] = event.entityRecordId;
-			entity[Constants.Entity.kpiEventReason] = event.kpiEventReason;
-			entity[Constants.Entity.eventTimestamp] = event.eventTimestamp;
-			entity[Constants.Entity.externalCorrelationId] = event.externalCorrelationId;
-			entity[Constants.Entity.knowledgeArticleId] = event.knowledgeArticleId;
-			entity[Constants.Entity.knowledgeArticleName] = event.knowledgeArticleName;
-			entity[Constants.Entity.kpiEventName] = event.kpiEventName;
-			entity[Constants.Entity.newPresence] = event.newPresence;
-			entity[Constants.Entity.oldPresence] = event.oldPresence;
-			entity[Constants.Entity.tabId] = event.tabId;
-			entity[Constants.Entity.tabName] = event.tabName;
+			entity[Constants.EventEntity.additionalData] = event.additionalData;
+			entity[Constants.EventEntity.clientSessionId] = data.clientSessionId;
+			entity[Constants.EventEntity.conversationId] = data.conversationId;
+			entity[Constants.EventEntity.createdEntityName] = event.entityName;
+			entity[Constants.EventEntity.createdEntityRecordId] = event.entityRecordId;
+			entity[Constants.EventEntity.eventTimestamp] = event.eventTimestamp;
+			entity[Constants.EventEntity.externalCorrelationId] = event.externalCorrelationId;
+			entity[Constants.EventEntity.knowledgeArticleId] = event.knowledgeArticleId;
+			entity[Constants.EventEntity.knowledgeArticleName] = event.knowledgeArticleName
+			entity[Constants.EventEntity.kpiEventId] = event.kpiEventId;
+			entity[Constants.EventEntity.kpiEventName] = event.kpiEventName
+			entity[Constants.EventEntity.kpiEventReason] = event.kpiEventReason;
+			entity[Constants.EventEntity.newPresence] = event.newPresence;
+			entity[Constants.EventEntity.notificationResponseAction] = event.notificationResponseAction;
+			entity[Constants.EventEntity.oldPresence] = event.oldPresence;
+			entity[Constants.EventEntity.participantId] = data.eventParticipantId;
+			entity[Constants.EventEntity.sessionId] = data.sessionId;
+			entity[Constants.EventEntity.tabAction] = event.tabAction;
+			entity[Constants.EventEntity.tabId] = event.tabId;
+			entity[Constants.EventEntity.tabName] = event.tabName;
+
 			let customDataList = event.customData;
-			for (var customData of customDataList) {
-				entity[customData.attribute] = customData.value;
+			if (!isNullOrUndefined(customDataList)) {
+				for (var customData of customDataList) {
+					entity[customData.attribute] = customData.value;
+				}
 			}
 			entities.push(entity);
 		}
 		return entities;
 	}
 
-	export function extractParameter(queryString: string, parameterName: string): string {
-		var params: any = {};
-		if (queryString) {
-			var queryStringArray = queryString.substr(1).split("&");
-			queryStringArray.forEach((query) => {
-				var queryPair = query.split("=");
-				var queryKey = decodeURIComponent(queryPair.shift());
-				var queryValue = decodeURIComponent(queryPair.join("="));
-				params[queryKey] = queryValue;
-			});
-		}
-		if (params.hasOwnProperty(parameterName))
-			return params[parameterName];
-		else
-			return "";
+	/**
+	 * Returns the current UTC Date Time
+	 * @param map Object to build the entity for.
+	 */
+	export function getUTCDateTime(): string {
+		return moment.utc().valueOf().toString();
 	}
 
-	export function extractSearchText(queryString: string): string {
-		var emptyString = "";
-		if (queryString) {
-			let query = queryString.split("=");
-			return (query[1] != null && query[1] != "") ? query[1] : emptyString;
-		}
-		return emptyString;
-	}
-
-
-	export function splitQueryForSearch(queryString: string): Array<string> {
-
-		var splitQuery: Array<string> = [];
-		if (queryString) {
-			splitQuery = queryString.split("&");
-		}
-		let splitSearchQuery = ["", ""];
-
-		splitQuery.forEach((query) => {
-			if (!query.startsWith("$search") && !query.startsWith("?$search")) {
-				splitSearchQuery[0] == "" ? splitSearchQuery[0] += query : splitSearchQuery[0] += "&" + query;
-			}
-			else {
-				splitSearchQuery[1] = query;
-			}
-		});
-		if (!splitSearchQuery[0].startsWith("?")) {
-			splitSearchQuery[0] = "?" + splitSearchQuery[0];
-		}
-		if (splitSearchQuery[1].startsWith("?")) {
-			splitSearchQuery[1] = splitSearchQuery[1].substr(1);
-		}
-		return splitSearchQuery;
-	}
-
-	
 }

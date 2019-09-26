@@ -20,6 +20,7 @@ namespace Microsoft.CIFramework.Internal {
 		export const startTime = "Start_Time";
 		export const timeTaken = "Time_Taken";
 		export const apiName = "API_Name";
+		export const eventName = "Event_Name";
 		export const telemetryData = "API_Perf_Markers";
 		export const isError = "Is_Error";
 		export const errorMessage = "Error_Message";
@@ -29,6 +30,7 @@ namespace Microsoft.CIFramework.Internal {
 		export const perfTable = "D365_CIF_Perf";
 		export const usageTable = "D365_CIF_Usage";
 		export const apiUsageTable = "D365_CIF_APIUsage";
+		export const analyticsUsageTable = "D365_CIFAnalytics_Usage";
 		export const userId = "User_ID";
 		export const CIFVersion = "CIF_Version";
 		export const customParameters = "customParameters";

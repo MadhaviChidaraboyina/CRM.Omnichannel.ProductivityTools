@@ -211,6 +211,35 @@ namespace Microsoft.CIFramework.Internal
 	}
 
 	// Function to populate the Parameter Data Telemetry
+	export function setAnalyticsAPIUsageTelemetry(data: AnalyticsAPIUsageTelemetry): void {
+		var ParamTelemetry = new AWTEventProperties();
+		ParamTelemetry.setName(TelemetryConstants.analyticsUsageTable);
+
+		ParamTelemetry.setProperty(TelemetryConstants.apiVersion, data.apiVersion ? data.apiVersion : "");
+		ParamTelemetry.setProperty(TelemetryConstants.appId, data.appId ? data.appId : "");
+		ParamTelemetry.setProperty(TelemetryConstants.channelOrder, data.sortOrder ? data.sortOrder : "");
+		ParamTelemetry.setProperty(TelemetryConstants.clientType, Xrm.Utility.getGlobalContext().client.getClient());
+		ParamTelemetry.setProperty(TelemetryConstants.crmVersion, Xrm.Utility.getGlobalContext().getVersion());
+		ParamTelemetry.setProperty(TelemetryConstants.orgId, Xrm.Utility.getGlobalContext().organizationSettings.organizationId);
+		ParamTelemetry.setProperty(TelemetryConstants.orgName, Xrm.Utility.getGlobalContext().organizationSettings.uniqueName);
+		ParamTelemetry.setProperty(TelemetryConstants.providerId, data.providerId ? data.providerId : "");
+		ParamTelemetry.setProperty(TelemetryConstants.providerName, data.providerName ? data.providerName : "");
+		ParamTelemetry.setProperty(TelemetryConstants.isError, data.isError ? data.isError : false);
+		ParamTelemetry.setProperty(TelemetryConstants.errorMessage, data.errorObject ? data.errorObject.errorMsg : "");
+		ParamTelemetry.setProperty(TelemetryConstants.errorType, data.errorObject ? errorTypes[data.errorObject.errorType] : "");
+		ParamTelemetry.setProperty(TelemetryConstants.errorReportTime, data.errorObject ? data.errorObject.reportTime : "");
+		ParamTelemetry.setProperty(TelemetryConstants.errorFunction, data.errorObject ? data.errorObject.sourceFunc : "");
+		ParamTelemetry.setProperty(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId);
+		ParamTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
+		ParamTelemetry.setProperty(TelemetryConstants.eventName, data.eventName ? data.eventName : "");
+		ParamTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
+		ParamTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters): "");
+		ParamTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
+		ParamTelemetry.setProperty(TelemetryConstants.correlationId, data.correlationId ? data.correlationId : "");
+
+		defaultLogger.logEvent(ParamTelemetry);
+	}
+
 	export function setAPIUsageTelemetry(data: APIUsageTelemetry): void {
 		var ParamTelemetry = new AWTEventProperties();
 		ParamTelemetry.setName(TelemetryConstants.apiUsageTable);
@@ -232,7 +261,7 @@ namespace Microsoft.CIFramework.Internal
 		ParamTelemetry.setProperty(TelemetryConstants.userId, Xrm.Utility.getGlobalContext().userSettings.userId);
 		ParamTelemetry.setProperty(TelemetryConstants.apiName, data.apiName ? data.apiName : "");
 		ParamTelemetry.setProperty(TelemetryConstants.CIFVersion, data.cifVersion);
-		ParamTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters): "");
+		ParamTelemetry.setProperty(TelemetryConstants.customParameters, data.customParameters ? JSON.stringify(data.customParameters) : "");
 		ParamTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
 		ParamTelemetry.setProperty(TelemetryConstants.correlationId, data.correlationId ? data.correlationId : "");
 
@@ -302,6 +331,35 @@ namespace Microsoft.CIFramework.Internal
 			this.providerName = providerName ? providerName : "";
 			this.apiVersion = apiVersion ? apiVersion : "";
 			this.apiName = apiName ? apiName : "";
+			this.sortOrder = sortOrder ? sortOrder : "";
+			this.appId = appId ? appId : "";
+			this.isError = isError ? isError : false;
+			this.errorObject = errorObject ? errorObject : null;
+			this.cifVersion = cifVersion ? cifVersion : "";
+			this.customParameters = customParameters ? customParameters : "";
+			this.correlationId = correlationId ? correlationId : "";
+		}
+	}
+
+	export class AnalyticsAPIUsageTelemetry {
+		providerId: string;
+		providerName: string;
+		apiVersion: string;
+		apiName: string;
+		eventName: string;
+		sortOrder: any;
+		appId: string;
+		isError: boolean;
+		errorObject: IErrorHandler;
+		cifVersion: string;
+		customParameters: string;
+		correlationId: string;
+		constructor(providerId?: string, providerName?: string, apiVersion?: string, apiName?: string, eventName?: string, sortOrder?: any, appId?: string, cifVersion?: string, isError?: boolean, errorObject?: IErrorHandler, customParameters?: string, correlationId?: string) {
+			this.providerId = providerId ? providerId : "";
+			this.providerName = providerName ? providerName : "";
+			this.apiVersion = apiVersion ? apiVersion : "";
+			this.apiName = apiName ? apiName : "";
+			this.eventName = eventName ? eventName : "";
 			this.sortOrder = sortOrder ? sortOrder : "";
 			this.appId = appId ? appId : "";
 			this.isError = isError ? isError : false;

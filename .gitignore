@@ -95,6 +95,10 @@ solutions/TypeDefinitions/CIFramework/
 /solutions/ProductivityMacros/Solution/WebResources/**/*.js
 /solutions/ProductivityMacros/Solution/WebResources/**/*.map
 /solutions/ProductivityMacros/Solution/WebResources/**/*.resx
+/solutions/CIFrameworkAnalytics/Package/WebResources/
+/solutions/CIFrameworkAnalytics/Solution/WebResources/**/*.js
+/solutions/CIFrameworkAnalytics/Solution/WebResources/**/*.map
+/solutions/CIFrameworkAnalytics/Solution/WebResources/**/*.resx
 
 #stylecop files being generated in project folders after build 
 /solutions/CIFramework/Client/Settings.StyleCop

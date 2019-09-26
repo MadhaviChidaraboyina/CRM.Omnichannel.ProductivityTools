@@ -6,10 +6,10 @@
       <LocalizedName description="CIFAnalytics" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.10</Version>
+    <Version>1.0.0.12</Version>
     <Managed>2</Managed>
     <Publisher>
-      <UniqueName>microsoftdynamics</UniqueName>
+      <UniqueName>DefaultPublisherCITTest</UniqueName>
       <LocalizedNames>
         <LocalizedName description="Microsoft Dynamics 365" languagecode="1033" />
       </LocalizedNames>

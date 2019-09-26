@@ -225,13 +225,39 @@ namespace Microsoft.CIFramework
 		public static initLogAnalyticsEventName = "initAnalytics";
 		public static analyticsEventType = "analyticsEventtype";
 		public static analyticsEventName = "analyticsEventname";
-		public static analyticsPlatformEventName = "logCIFAnalytics";
+		public static initAnalyticsPlatformEventName = "initCIFAnalytics";
+		public static logAnalyticsPlatformEventName = "logCIFAnalytics";
 		public static focussedSession = "focussedSession";
 		public static clientSessionId = "clientSessionId";
+		public static notificationResponse = "NotificationResponse";
 		public static isDelete = "isDelete";
+		public static notificationResponseAction = "NotificationResponseAction";
+		public static acceptNotificationResponse = "Accepted";
+		public static rejectNotificationResponse = "Rejected";
+		public static channelProviderName = "providerName";
+		public static channelProviderId = "providerId";
+		public static telemetryApiName = "telemetryAPIName";
+		public static telemetryInitApiName = "InitCIFAnalytics";
+		public static telemetryLogCustomEventApiName = "LogCustomEvent";
+		public static telemetryLogSystemEventApiName = "LogSystemEvent";
 	}
 
 	export enum ErrorCode {
 		Notes_Flap_Already_Expanded = 101 // Notes flap is already expanded.
+	}
+
+	export enum EventType {
+		SystemEvent,
+		CustomEvent,
+	}
+
+	export enum InternalEventName {
+		NotificationReceived,
+		NotificationResponse,
+		NotificationTimedOut,
+		SessionStarted,
+		SessionSwitched,
+		SessionClosed,
+		NewTabOpened
 	}
 }

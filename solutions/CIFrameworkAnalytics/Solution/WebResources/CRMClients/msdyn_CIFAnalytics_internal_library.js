@@ -5,40 +5,6 @@ var Microsoft;
 (function (Microsoft) {
     var CIFrameworkAnalytics;
     (function (CIFrameworkAnalytics) {
-        var EventType;
-        (function (EventType) {
-            EventType[EventType["SystemEvent"] = 0] = "SystemEvent";
-            EventType[EventType["CustomEvent"] = 1] = "CustomEvent";
-        })(EventType = CIFrameworkAnalytics.EventType || (CIFrameworkAnalytics.EventType = {}));
-        /*
-        export enum InternalEventName {
-            NotificationReceived = "Notification Received​",
-            NotificationAccepted = "Notification Accepted​",
-            NotificationRejected = "Notification Rejected​",
-            NotificationTimedOut = "Notification Timed Out​",
-            SessionStarted = "Session Started​",
-            SessionSwitched = "Session Switched​",
-            SessionClosed = "Session Closed​",
-            NewTabOpened = "New Tab Opened​",
-            TabClosed = "Tab Closed​",
-            TabSwitched = "Tab Switched​",
-            CustomEvent = "CustomEvent"
-        }
-        */
-        var InternalEventName;
-        (function (InternalEventName) {
-            InternalEventName[InternalEventName["NotificationReceived"] = 0] = "NotificationReceived";
-            InternalEventName[InternalEventName["NotificationAccepted"] = 1] = "NotificationAccepted";
-            InternalEventName[InternalEventName["NotificationRejected"] = 2] = "NotificationRejected";
-            InternalEventName[InternalEventName["NotificationTimedOut"] = 3] = "NotificationTimedOut";
-            InternalEventName[InternalEventName["SessionStarted"] = 4] = "SessionStarted";
-            InternalEventName[InternalEventName["SessionSwitched"] = 5] = "SessionSwitched";
-            InternalEventName[InternalEventName["SessionClosed"] = 6] = "SessionClosed";
-            InternalEventName[InternalEventName["NewTabOpened"] = 7] = "NewTabOpened";
-            InternalEventName[InternalEventName["TabClosed"] = 8] = "TabClosed";
-            InternalEventName[InternalEventName["TabSwitched"] = 9] = "TabSwitched";
-            InternalEventName[InternalEventName["CustomEvent"] = 10] = "CustomEvent";
-        })(InternalEventName = CIFrameworkAnalytics.InternalEventName || (CIFrameworkAnalytics.InternalEventName = {}));
         class InitData {
         }
         CIFrameworkAnalytics.InitData = InitData;
@@ -57,9 +23,9 @@ var Microsoft;
         class EventData {
         }
         CIFrameworkAnalytics.EventData = EventData;
-        class EventsEntity {
+        class EventEntity {
         }
-        CIFrameworkAnalytics.EventsEntity = EventsEntity;
+        CIFrameworkAnalytics.EventEntity = EventEntity;
     })(CIFrameworkAnalytics = Microsoft.CIFrameworkAnalytics || (Microsoft.CIFrameworkAnalytics = {}));
 })(Microsoft || (Microsoft = {}));
 /**
@@ -76,44 +42,106 @@ var Microsoft;
             */
             class MessageType {
             }
-            MessageType.EventName = "logCIFAnalytics";
+            MessageType.initAnalyticsPlatformEventName = "initCIFAnalytics";
+            MessageType.logAnalyticsPlatformEventName = "logCIFAnalytics";
             Constants.MessageType = MessageType;
-            class Entity {
+            class ConversationEntity {
             }
-            Entity.conversationEntityName = "ConversationData";
-            Entity.sessionEntityName = "SessionData";
-            Entity.participantEntityName = "ParticipantData";
-            Entity.eventEntityName = "BaseEvents";
-            // Attribute names of analytics Entities
-            Entity.conversationId = "conversationId";
-            Entity.channel = "channel";
-            Entity.region = "region";
-            Entity.createdts = "createdts";
-            Entity.sessionid = "sessionid";
-            Entity.sessionname = "sessionname";
-            Entity.participantid = "participantid";
-            Entity.participantname = "participantname";
-            Entity.participanttype = "participanttype";
-            Entity.addedtimestamp = "addedtimestamp";
-            Entity.additionalData = "event.additionalData";
-            Entity.customData = "event.customData";
-            Entity.entityName = "event.entityName";
-            Entity.entityRecordId = "event.entityRecordId";
-            Entity.kpiEventReason = "event.kpiEventReason";
-            Entity.eventTimestamp = "event.eventTimestamp";
-            Entity.externalCorrelationId = "event.externalCorrelationId";
-            Entity.knowledgeArticleId = "event.knowledgeArticleId";
-            Entity.knowledgeArticleName = "event.knowledgeArticleName";
-            Entity.kpiEventName = "event.kpiEventName";
-            Entity.newPresence = "event.newPresence";
-            Entity.oldPresence = "event.oldPresence";
-            Entity.tabId = "event.tabId";
-            Entity.tabName = "event.tabName";
-            Constants.Entity = Entity;
-            class EventData {
+            ConversationEntity.entityName = "msdyn_conversationdata";
+            ConversationEntity.Name = "msdyn_name";
+            ConversationEntity.accountId = "msdyn_accountid";
+            ConversationEntity.additionalData = "msdyn_additionaldata";
+            ConversationEntity.backendConversationId = "msdyn_backendconversationid";
+            ConversationEntity.channel = "msdyn_channel";
+            ConversationEntity.channelContext = "msdyn_context";
+            ConversationEntity.contactId = "msdyn_contactid";
+            ConversationEntity.conversationId = "msdyn_conversationid";
+            ConversationEntity.conversationTimestamp = "msdyn_conversationtimestamp";
+            ConversationEntity.externalAccountId = "msdyn_externalaccountid";
+            ConversationEntity.externalContactId = "msdyn_externalcontactid";
+            ConversationEntity.externalConversationId = "msdyn_externalconversationId";
+            ConversationEntity.externalCorrelationId = "msdyn_externalcorrelationid";
+            ConversationEntity.externalProviderId = "msdyn_externalproviderid";
+            ConversationEntity.initialQueueName = "msdyn_initialqueuename";
+            ConversationEntity.providerId = "msdyn_providerid";
+            ConversationEntity.providerName = "msdyn_providername";
+            ConversationEntity.region = "msdyn_region";
+            Constants.ConversationEntity = ConversationEntity;
+            class SessionEntity {
             }
-            EventData.analyticsData = "analyticsData";
-            Constants.EventData = EventData;
+            SessionEntity.entityName = "msdyn_sessiondata";
+            SessionEntity.clientSessionId = "msdyn_ucisessionid";
+            SessionEntity.clientSessionName = "msdyn_ucisessionname";
+            SessionEntity.conversationId = "msdyn_conversationid";
+            SessionEntity.externalCorrelationId = "msdyn_externalcorrelationid";
+            SessionEntity.queueId = "msdyn_queueid";
+            SessionEntity.queueName = "msdyn_queuename";
+            SessionEntity.sessionAdditionalData = "msdyn_sessionadditionaldata";
+            SessionEntity.sessionAgentAssignedTimestamp = "msdyn_sessionagentassignedtimestamp";
+            SessionEntity.sessionChannel = "msdyn_sessionchannel";
+            SessionEntity.sessionCreatedTimestamp = "msdyn_sessioncreatedtimestamp";
+            SessionEntity.sessionCreationReason = "msdyn_sessioncreationreason";
+            SessionEntity.sessionId = "msdyn_sessionid";
+            SessionEntity.sessionQueueAssignedTimestamp = "msdyn_sessionqueueassignedtimestamp";
+            Constants.SessionEntity = SessionEntity;
+            class ParticipantEntity {
+            }
+            ParticipantEntity.entityName = "msdyn_sessionparticipantdata";
+            ParticipantEntity.conversationId = "msdyn_conversationid";
+            ParticipantEntity.externalParticipantIame = "msdyn_externalparticipantid";
+            ParticipantEntity.externalParticipantName = "msdyn_externalparticipantname";
+            ParticipantEntity.participantAddedTimestamp = "msdyn_participantaddedtimestamp";
+            ParticipantEntity.participantAssignReason = "msdyn_participantassignreason";
+            ParticipantEntity.participantId = "msdyn_participantid";
+            ParticipantEntity.participantName = "msdyn_participantname";
+            ParticipantEntity.participantMode = "msdyn_participantmode";
+            ParticipantEntity.participantType = "msdyn_participanttype";
+            ParticipantEntity.sessionId = "msdyn_sessionid";
+            Constants.ParticipantEntity = ParticipantEntity;
+            class EventEntity {
+            }
+            EventEntity.entityName = "msdyn_kpieventdata";
+            EventEntity.additionalData = "msdyn_additionaldata";
+            EventEntity.clientSessionId = "msdyn_clientsessionid";
+            EventEntity.conversationId = "msdyn_conversationid";
+            EventEntity.createdEntityRecordId = "msdyn_entityrecordid";
+            EventEntity.createdEntityName = "msdyn_entityname";
+            EventEntity.eventTimestamp = "msdyn_eventtimestamp";
+            EventEntity.externalCorrelationId = "msdyn_externalcorrelationid";
+            EventEntity.knowledgeArticleId = "msdyn_knowledgearticleid";
+            EventEntity.knowledgeArticleName = "msdyn_knowledgearticlename";
+            EventEntity.kpiEventId = "msdyn_kpieventid";
+            EventEntity.kpiEventName = "msdyn_kpieventname";
+            EventEntity.kpiEventReason = "msdyn_kpieventreason";
+            EventEntity.newPresence = "msdyn_newpresence";
+            EventEntity.notificationResponseAction = "notificationResponseaction";
+            EventEntity.oldPresence = "msdyn_oldpresence";
+            EventEntity.participantId = "msdyn_participantid";
+            EventEntity.sessionId = "msdyn_sessionid";
+            EventEntity.tabId = "msdyn_tabid";
+            EventEntity.tabName = "msdyn_tabname";
+            EventEntity.tabAction = "msdyn_tabaction";
+            Constants.EventEntity = EventEntity;
+            class AnalyticsEvent {
+            }
+            AnalyticsEvent.analyticsData = "analyticsData";
+            AnalyticsEvent.correlationId = "correlationId";
+            AnalyticsEvent.focussedSession = "focussedSession";
+            AnalyticsEvent.eventName = "analyticsEventname";
+            AnalyticsEvent.eventType = "analyticsEventtype";
+            AnalyticsEvent.notificationReceived = "NotificationReceived";
+            AnalyticsEvent.notificationResponse = "NotificationResponse";
+            AnalyticsEvent.notificationTimedOut = "NotificationTimedOut";
+            AnalyticsEvent.sessionStarted = "SessionStarted";
+            AnalyticsEvent.sessionSwitched = "SessionSwitched";
+            AnalyticsEvent.sessionClosed = "SessionClosed";
+            AnalyticsEvent.newTabOpened = "NewTabOpened";
+            Constants.AnalyticsEvent = AnalyticsEvent;
+            var EventType;
+            (function (EventType) {
+                EventType[EventType["SystemEvent"] = 0] = "SystemEvent";
+                EventType[EventType["CustomEvent"] = 1] = "CustomEvent";
+            })(EventType = Constants.EventType || (Constants.EventType = {}));
         })(Constants = CIFrameworkAnalytics.Constants || (CIFrameworkAnalytics.Constants = {}));
     })(CIFrameworkAnalytics = Microsoft.CIFrameworkAnalytics || (Microsoft.CIFrameworkAnalytics = {}));
 })(Microsoft || (Microsoft = {}));
@@ -123,6 +151,7 @@ var Microsoft;
 /// <reference path="./Constants.ts" />
 /// <reference path="./AnalyticsDataModel.ts" />
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
+/// <reference path="../../../../packages/Crm.Moment.1.0.0/Content/Typings/moment.d.ts" />
 var Microsoft;
 (function (Microsoft) {
     var CIFrameworkAnalytics;
@@ -131,26 +160,34 @@ var Microsoft;
         let analyticsDataMap = new Map();
         let analyticsEventMap = new Map();
         /** @internal
-         * Initialize method that is called on load of the script
+         * Initialize method called on load of the script
          */
         function initialize() {
-            window.addEventListener(CIFrameworkAnalytics.Constants.MessageType.EventName, analyticsEventListener);
+            window.addEventListener(CIFrameworkAnalytics.Constants.MessageType.initAnalyticsPlatformEventName, initAnalyticsEventListener);
+            window.addEventListener(CIFrameworkAnalytics.Constants.MessageType.logAnalyticsPlatformEventName, logAnalyticsEventListener);
             loadAnalyticsEventMap();
         }
         /** @internal
          * Handler for the logCIFAnalytics that is raised from CIF Internal Library
          */
-        function analyticsEventListener(event) {
-            var payload = event.detail.get(CIFrameworkAnalytics.Constants.EventData.analyticsData);
-            if (CIFrameworkAnalytics.Utility.isNullOrUndefined(payload)) {
-                let logData = CIFrameworkAnalytics.Utility.validateAnalyticsPayload(payload);
-                if (CIFrameworkAnalytics.Utility.isNullOrUndefined(logData)) {
-                    if (payload instanceof CIFrameworkAnalytics.InitData) {
-                        logAnalyticsInitData(payload);
-                    }
-                    else if (payload instanceof CIFrameworkAnalytics.EventData) {
-                        logEventData(payload);
-                    }
+        function initAnalyticsEventListener(event) {
+            var payload = event.detail.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.analyticsData);
+            if (!CIFrameworkAnalytics.Utility.isNullOrUndefined(payload)) {
+                let logData = CIFrameworkAnalytics.Utility.validateInitAnalyticsPayload(payload);
+                if (logData) {
+                    logAnalyticsInitData(payload);
+                }
+            }
+        }
+        /** @internal
+         * Handler for the logCIFAnalytics that is raised from CIF Internal Library
+         */
+        function logAnalyticsEventListener(event) {
+            let eventData = createEventDataForSystemEvents(event.detail);
+            if (!CIFrameworkAnalytics.Utility.isNullOrUndefined(eventData)) {
+                let logData = CIFrameworkAnalytics.Utility.validateLogAnalyticsPayload(eventData);
+                if (logData) {
+                    logEventData(eventData);
                 }
             }
         }
@@ -160,6 +197,8 @@ var Microsoft;
         function logAnalyticsInitData(payload) {
             // update the conversation id to data map
             let conversationId = payload.conversation.conversationId;
+            if (analyticsDataMap.has(conversationId))
+                return;
             analyticsDataMap.set(conversationId, payload);
             //create the records. 
             logConversationData(payload);
@@ -171,7 +210,7 @@ var Microsoft;
         */
         function logConversationData(payload) {
             // create Conversation Data record
-            Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.Entity.conversationEntityName, CIFrameworkAnalytics.Utility.buildConversationEntity(payload)).then(function success(result) {
+            Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.ConversationEntity.entityName, CIFrameworkAnalytics.Utility.buildConversationEntity(payload)).then(function success(result) {
                 console.log("Conversation Data record created with ID: " + result.id);
             }, function (error) {
                 console.log(error.message);
@@ -182,7 +221,7 @@ var Microsoft;
         */
         function logSessionData(payload) {
             // create Session Data record
-            Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.Entity.sessionEntityName, CIFrameworkAnalytics.Utility.buildSessionEntity(payload)).then(function success(result) {
+            Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.SessionEntity.entityName, CIFrameworkAnalytics.Utility.buildSessionEntity(payload)).then(function success(result) {
                 console.log("Session Data record created with ID: " + result.id);
             }, function (error) {
                 console.log(error.message);
@@ -194,7 +233,7 @@ var Microsoft;
         function logParticipantData(payload) {
             let records = CIFrameworkAnalytics.Utility.buildParticipantEntityList(payload);
             records.forEach(function (record) {
-                Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.Entity.participantEntityName, record).then(function success(result) {
+                Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.ParticipantEntity.entityName, record).then(function success(result) {
                     console.log("Participant Data record created with ID: " + result.id);
                 }, function (error) {
                     console.log(error.message);
@@ -207,12 +246,55 @@ var Microsoft;
         function logEventData(payload) {
             let records = CIFrameworkAnalytics.Utility.buildEventsEntity(payload);
             records.forEach(function (record) {
-                Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.Entity.eventEntityName, record).then(function success(result) {
+                Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.EventEntity.entityName, record).then(function success(result) {
                     console.log("KPI Event Data record created with ID: " + result.id);
                 }, function (error) {
                     console.log(error.message);
                 });
             });
+        }
+        /** @internal
+        * Function to create the Event data for SystemEvents
+        */
+        function createEventDataForSystemEvents(payload) {
+            let correlationId = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.correlationId);
+            let clientSessionId = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.focussedSession);
+            let eventName = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.eventName);
+            let eventId = analyticsEventMap.get(eventName);
+            if (!CIFrameworkAnalytics.Utility.isNullOrUndefined(correlationId) && !CIFrameworkAnalytics.Utility.isNullOrUndefined(eventId)) {
+                let conversationData = analyticsDataMap.get(correlationId);
+                if (!CIFrameworkAnalytics.Utility.isNullOrUndefined(conversationData)) {
+                    var eventData = new CIFrameworkAnalytics.EventData();
+                    eventData.conversationId = correlationId;
+                    eventData.clientSessionId = clientSessionId;
+                    eventData.eventParticipantId = conversationData.conversation.session.participants[0].participantId;
+                    eventData.sessionId = conversationData.conversation.session.sessionId;
+                    let events = new Array();
+                    let event = new CIFrameworkAnalytics.EventEntity();
+                    event.kpiEventId = eventId;
+                    event.kpiEventName = eventName;
+                    fillEventDataForSystemEvents(payload, conversationData, event);
+                    events.push(event);
+                    eventData.events = events;
+                }
+                return eventData;
+            }
+        }
+        function fillEventDataForSystemEvents(payload, convData, event) {
+            switch (event.kpiEventName) {
+                case CIFrameworkAnalytics.Constants.AnalyticsEvent.notificationResponse:
+                    {
+                        let notificationResponse = payload.get(CIFrameworkAnalytics.Constants.EventEntity.notificationResponseAction);
+                        event.notificationResponseAction = notificationResponse;
+                    }
+                    break;
+                case CIFrameworkAnalytics.Constants.AnalyticsEvent.notificationReceived:
+                case CIFrameworkAnalytics.Constants.AnalyticsEvent.notificationTimedOut:
+                case CIFrameworkAnalytics.Constants.AnalyticsEvent.sessionStarted:
+                case CIFrameworkAnalytics.Constants.AnalyticsEvent.sessionSwitched:
+                case CIFrameworkAnalytics.Constants.AnalyticsEvent.sessionClosed:
+                    break;
+            }
         }
         /** @internal
         * Function to log the KPI Event Definitions data
@@ -222,9 +304,9 @@ var Microsoft;
                 if (analyticsEventMap.size > 0) {
                     return resolve(true);
                 }
-                Xrm.WebApi.retrieveMultipleRecords("new_kpieventdefinitions", "?$select=new_name,new_kpieventid&$filter=(new_active eq \"yes\")").then(function (result) {
+                Xrm.WebApi.retrieveMultipleRecords("msdyn_kpieventdefinition", "?$select=msdyn_name,msdyn_kpieventdefinitionid&$filter=(msdyn_active eq true)").then(function (result) {
                     result.entities.forEach(function (value, index, array) {
-                        analyticsEventMap.set(value["new_name"], value["new_kpieventid"]);
+                        analyticsEventMap.set(value["msdyn_name"].trim(), value["msdyn_kpieventdefinitionid"].trim());
                     });
                     return resolve(true);
                 }, function (error) {
@@ -239,6 +321,7 @@ var Microsoft;
 /**
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
+/// <reference path="../../../../packages/Crm.Moment.1.0.0/Content/Typings/moment.d.ts" />
 /**
  * Constants for CIFramework.
  */
@@ -249,18 +332,6 @@ var Microsoft;
     (function (CIFrameworkAnalytics) {
         var Utility;
         (function (Utility) {
-            var webresourceName = "Localization/CIF_webresource_strings";
-            function getResourceString(key) {
-                var value = key;
-                if (Xrm && Xrm.Utility && Xrm.Utility.getResourceString) {
-                    value = Xrm.Utility.getResourceString(webresourceName, key);
-                    if (value === undefined || value === null) {
-                        value = key;
-                    }
-                }
-                return value;
-            }
-            Utility.getResourceString = getResourceString;
             /**
              * Generic method to convert map data into string
              * @param map
@@ -305,27 +376,54 @@ var Microsoft;
              * utility func to check whether an object is null or undefined
              */
             /** @internal */
-            function validateAnalyticsPayload(payload) {
-                if ((payload instanceof CIFrameworkAnalytics.InitData && !isNullOrUndefined(payload.conversation.conversationId) && !isNullOrUndefined(payload.conversation.session.sessionId)) ||
-                    (payload instanceof CIFrameworkAnalytics.EventData && !isNullOrUndefined(payload.conversationId) && !isNullOrUndefined(payload.sessionId) && !isNullOrUndefined(payload.clientSessionId)))
+            function validateInitAnalyticsPayload(payload) {
+                if ((!isNullOrUndefined(payload.conversation.conversationId) && !isNullOrUndefined(payload.conversation.session.sessionId)))
                     return Promise.resolve(true);
                 else
                     return Promise.resolve(false);
             }
-            Utility.validateAnalyticsPayload = validateAnalyticsPayload;
+            Utility.validateInitAnalyticsPayload = validateInitAnalyticsPayload;
+            /**
+             * utility func to check whether an object is null or undefined
+             */
+            /** @internal */
+            function validateLogAnalyticsPayload(payload) {
+                if ((!isNullOrUndefined(payload.conversationId) && !isNullOrUndefined(payload.sessionId) && !isNullOrUndefined(payload.clientSessionId)))
+                    return Promise.resolve(true);
+                else
+                    return Promise.resolve(false);
+            }
+            Utility.validateLogAnalyticsPayload = validateLogAnalyticsPayload;
             /**
              * Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
              * @param map Object to build the entity for.
              */
             function buildConversationEntity(data) {
                 let entity = {};
-                entity[CIFrameworkAnalytics.Constants.Entity.conversationId] = data.conversation.conversationId;
-                entity[CIFrameworkAnalytics.Constants.Entity.conversationId] = data.conversation.channel;
-                entity[CIFrameworkAnalytics.Constants.Entity.conversationId] = data.conversation.regionData;
-                entity[CIFrameworkAnalytics.Constants.Entity.conversationId] = data.conversation.conversationTimestamp;
-                let customDataList = data.conversation.customData;
-                for (var customData of customDataList) {
-                    entity[customData.attribute] = customData.value;
+                let conv = data.conversation;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.accountId] = conv.accountId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.additionalData] = conv.additionalData;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.backendConversationId] = conv.backendConversationId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.channel] = conv.channel;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.channelContext] = conv.channelContext;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.contactId] = conv.contactId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.conversationId] = conv.conversationId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.Name] = conv.conversationId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.conversationTimestamp] = isNullOrUndefined(conv.conversationTimestamp) ? conv.conversationTimestamp : getUTCDateTime();
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.externalAccountId] = conv.externalAccountId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.externalContactId] = conv.externalContactId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.externalConversationId] = conv.externalConversationId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.externalCorrelationId] = conv.externalCorrelationId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.externalProviderId] = conv.externalProviderId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.initialQueueName] = conv.initialQueueName;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.providerId] = conv.providerId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.providerName] = conv.providerName;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.region] = conv.regionData;
+                let customDataList = conv.customData;
+                if (!isNullOrUndefined(customDataList)) {
+                    for (var customData of customDataList) {
+                        entity[customData.attribute] = customData.value;
+                    }
                 }
                 return entity;
             }
@@ -337,12 +435,24 @@ var Microsoft;
             function buildSessionEntity(data) {
                 let session = data.conversation.session;
                 let entity = {};
-                entity[CIFrameworkAnalytics.Constants.Entity.sessionid] = session.sessionId;
-                entity[CIFrameworkAnalytics.Constants.Entity.sessionname] = session.sessionName;
-                entity[CIFrameworkAnalytics.Constants.Entity.createdts] = session.sessionCreatedTimestamp;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.clientSessionId] = session.clientSessionId;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.clientSessionName] = session.clientSessionName;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.conversationId] = session.conversationId;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.externalCorrelationId] = session.externalCorrelationId;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.queueId] = session.queueId;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.queueName] = session.queueName;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.sessionAdditionalData] = session.sessionAdditionalData;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.sessionAgentAssignedTimestamp] = session.sessionAgentAssignedTimestamp;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.sessionChannel] = session.sessionChannel;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.sessionCreatedTimestamp] = session.sessionCreatedTimestamp;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.sessionCreationReason] = session.sessionCreationReason;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.sessionId] = session.sessionId;
+                entity[CIFrameworkAnalytics.Constants.SessionEntity.sessionQueueAssignedTimestamp] = session.sessionQueueAssignedTimestamp;
                 let customDataList = data.conversation.customData;
-                for (var customData of customDataList) {
-                    entity[customData.attribute] = customData.value;
+                if (!isNullOrUndefined(customDataList)) {
+                    for (var customData of customDataList) {
+                        entity[customData.attribute] = customData.value;
+                    }
                 }
                 return entity;
             }
@@ -356,13 +466,23 @@ var Microsoft;
                 let entities = [];
                 for (var participant of session.participants) {
                     let entity = {};
-                    entity[CIFrameworkAnalytics.Constants.Entity.sessionid] = participant.participantId;
-                    entity[CIFrameworkAnalytics.Constants.Entity.sessionname] = participant.participantName;
-                    entity[CIFrameworkAnalytics.Constants.Entity.createdts] = participant.participantType;
-                    entity[CIFrameworkAnalytics.Constants.Entity.createdts] = participant.participantAddedTimestamp;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantId] = participant.participantId;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantName] = participant.participantName;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantType] = participant.participantType;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantAddedTimestamp] = participant.participantAddedTimestamp;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantId] = participant.participantId;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantName] = participant.participantName;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantType] = participant.participantType;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantAddedTimestamp] = participant.participantAddedTimestamp;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantId] = participant.participantId;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantName] = participant.participantName;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantType] = participant.participantType;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantAddedTimestamp] = participant.participantAddedTimestamp;
                     let customDataList = data.conversation.customData;
-                    for (var customData of customDataList) {
-                        entity[customData.attribute] = customData.value;
+                    if (!isNullOrUndefined(customDataList)) {
+                        for (var customData of customDataList) {
+                            entity[customData.attribute] = customData.value;
+                        }
                     }
                     entities.push(entity);
                 }
@@ -378,79 +498,45 @@ var Microsoft;
                 let events = data.events;
                 for (var event of events) {
                     let entity = {};
-                    entity[CIFrameworkAnalytics.Constants.Entity.conversationId] = data.conversationId;
-                    entity[CIFrameworkAnalytics.Constants.Entity.sessionid] = data.sessionId;
-                    entity[CIFrameworkAnalytics.Constants.Entity.additionalData] = event.additionalData;
-                    entity[CIFrameworkAnalytics.Constants.Entity.entityName] = event.entityName;
-                    entity[CIFrameworkAnalytics.Constants.Entity.entityRecordId] = event.entityRecordId;
-                    entity[CIFrameworkAnalytics.Constants.Entity.kpiEventReason] = event.kpiEventReason;
-                    entity[CIFrameworkAnalytics.Constants.Entity.eventTimestamp] = event.eventTimestamp;
-                    entity[CIFrameworkAnalytics.Constants.Entity.externalCorrelationId] = event.externalCorrelationId;
-                    entity[CIFrameworkAnalytics.Constants.Entity.knowledgeArticleId] = event.knowledgeArticleId;
-                    entity[CIFrameworkAnalytics.Constants.Entity.knowledgeArticleName] = event.knowledgeArticleName;
-                    entity[CIFrameworkAnalytics.Constants.Entity.kpiEventName] = event.kpiEventName;
-                    entity[CIFrameworkAnalytics.Constants.Entity.newPresence] = event.newPresence;
-                    entity[CIFrameworkAnalytics.Constants.Entity.oldPresence] = event.oldPresence;
-                    entity[CIFrameworkAnalytics.Constants.Entity.tabId] = event.tabId;
-                    entity[CIFrameworkAnalytics.Constants.Entity.tabName] = event.tabName;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.additionalData] = event.additionalData;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.clientSessionId] = data.clientSessionId;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.conversationId] = data.conversationId;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.createdEntityName] = event.entityName;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.createdEntityRecordId] = event.entityRecordId;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.eventTimestamp] = event.eventTimestamp;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.externalCorrelationId] = event.externalCorrelationId;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.knowledgeArticleId] = event.knowledgeArticleId;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.knowledgeArticleName] = event.knowledgeArticleName;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.kpiEventId] = event.kpiEventId;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.kpiEventName] = event.kpiEventName;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.kpiEventReason] = event.kpiEventReason;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.newPresence] = event.newPresence;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.notificationResponseAction] = event.notificationResponseAction;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.oldPresence] = event.oldPresence;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.participantId] = data.eventParticipantId;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.sessionId] = data.sessionId;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.tabAction] = event.tabAction;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.tabId] = event.tabId;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.tabName] = event.tabName;
                     let customDataList = event.customData;
-                    for (var customData of customDataList) {
-                        entity[customData.attribute] = customData.value;
+                    if (!isNullOrUndefined(customDataList)) {
+                        for (var customData of customDataList) {
+                            entity[customData.attribute] = customData.value;
+                        }
                     }
                     entities.push(entity);
                 }
                 return entities;
             }
             Utility.buildEventsEntity = buildEventsEntity;
-            function extractParameter(queryString, parameterName) {
-                var params = {};
-                if (queryString) {
-                    var queryStringArray = queryString.substr(1).split("&");
-                    queryStringArray.forEach((query) => {
-                        var queryPair = query.split("=");
-                        var queryKey = decodeURIComponent(queryPair.shift());
-                        var queryValue = decodeURIComponent(queryPair.join("="));
-                        params[queryKey] = queryValue;
-                    });
-                }
-                if (params.hasOwnProperty(parameterName))
-                    return params[parameterName];
-                else
-                    return "";
+            /**
+             * Returns the current UTC Date Time
+             * @param map Object to build the entity for.
+             */
+            function getUTCDateTime() {
+                return moment.utc().valueOf().toString();
             }
-            Utility.extractParameter = extractParameter;
-            function extractSearchText(queryString) {
-                var emptyString = "";
-                if (queryString) {
-                    let query = queryString.split("=");
-                    return (query[1] != null && query[1] != "") ? query[1] : emptyString;
-                }
-                return emptyString;
-            }
-            Utility.extractSearchText = extractSearchText;
-            function splitQueryForSearch(queryString) {
-                var splitQuery = [];
-                if (queryString) {
-                    splitQuery = queryString.split("&");
-                }
-                let splitSearchQuery = ["", ""];
-                splitQuery.forEach((query) => {
-                    if (!query.startsWith("$search") && !query.startsWith("?$search")) {
-                        splitSearchQuery[0] == "" ? splitSearchQuery[0] += query : splitSearchQuery[0] += "&" + query;
-                    }
-                    else {
-                        splitSearchQuery[1] = query;
-                    }
-                });
-                if (!splitSearchQuery[0].startsWith("?")) {
-                    splitSearchQuery[0] = "?" + splitSearchQuery[0];
-                }
-                if (splitSearchQuery[1].startsWith("?")) {
-                    splitSearchQuery[1] = splitSearchQuery[1].substr(1);
-                }
-                return splitSearchQuery;
-            }
-            Utility.splitQueryForSearch = splitQueryForSearch;
+            Utility.getUTCDateTime = getUTCDateTime;
         })(Utility = CIFrameworkAnalytics.Utility || (CIFrameworkAnalytics.Utility = {}));
     })(CIFrameworkAnalytics = Microsoft.CIFrameworkAnalytics || (Microsoft.CIFrameworkAnalytics = {}));
 })(Microsoft || (Microsoft = {}));
