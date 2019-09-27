@@ -343,8 +343,8 @@
         <field name="msdyn_displayname" value="Inline Dialog" />
         <field name="organizationid" value="4afb7973-f345-e911-818f-000d3a6cc47a" lookupentity="organization" lookupentityname="CITTest" />
         <field name="msdyn_renderingorder" value="3" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
+        <field name="statecode" value="1" />
+        <field name="statuscode" value="2" />
       </record>
       <record id="2b47c50e-1246-e911-8190-000d3a6cc47a">
         <field name="msdyn_consoleapplicationtypeid" value="2b47c50e-1246-e911-8190-000d3a6cc47a" />

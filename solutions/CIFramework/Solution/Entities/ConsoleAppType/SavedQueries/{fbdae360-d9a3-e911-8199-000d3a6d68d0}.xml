@@ -23,10 +23,14 @@
 										<attribute name="msdyn_displayname" />
 										<attribute name="msdyn_name" />
 										<attribute name="msdyn_consoleapplicationtypeid" />
+										<order attribute="msdyn_name" descending="false" />
+										<filter type="and">
+												<condition attribute="statecode" operator="eq" value="0" />
+										</filter>
 								</entity>
 						</fetch>
 				</fetchxml>
-				<IntroducedVersion>1.0</IntroducedVersion>
+				<IntroducedVersion>1.1</IntroducedVersion>
 				<LocalizedNames>
 						<LocalizedName description="App types LookUpView" languagecode="1033" />
 				</LocalizedNames>
