@@ -37,10 +37,20 @@ namespace Microsoft.CIFramework.Internal {
 						else if (templateParams.hasOwnProperty(paramName)) {
 							val = templateParams[paramName];
 						}
+						if (val === "") {
+							let currentTabScope = TemplatesUtility.getTabId(Internal.SlugPrefix.CURRENT_TAB);
+							let anchorTabScope = TemplatesUtility.getTabId(Internal.SlugPrefix.ANCHOR_TAB);
+							if (templateParams[currentTabScope].hasOwnProperty(paramName)) {
+								val = templateParams[currentTabScope][paramName];
+							}
+							else if (templateParams[anchorTabScope].hasOwnProperty(paramName)) {
+								val = templateParams[anchorTabScope][paramName];
+							}
+						}
 						if (paramName.startsWith("$odata")) {
 							//val is assumed to be of the format $odata.<entityLogicalName>.<entityAttributeName>.<query>
 							let queryParts: string[] = paramName.split(".");
-							if (queryParts.length != 4) {
+							if (queryParts.length < 4) {
 								continue;   //Invalid template parameter; ignore it
 							}
 							let promise: Promise<string> = new Promise<string>(
@@ -48,6 +58,9 @@ namespace Microsoft.CIFramework.Internal {
 									let qPromises: Promise<string>[] = [];
 									qPromises.push(TemplatesUtility.resolveTemplateString(queryParts[1], templateParams, scope));
 									qPromises.push(TemplatesUtility.resolveTemplateString(queryParts[2], templateParams, scope));
+									for (let index = 3; index < queryParts.length - 1; index++) {
+										queryParts[3] += "." + queryParts[index + 1];
+									}
 									qPromises.push(TemplatesUtility.resolveTemplateString(queryParts[3], templateParams, scope));
 									Promise.all(qPromises).then(
 										function (results: string[]) {
