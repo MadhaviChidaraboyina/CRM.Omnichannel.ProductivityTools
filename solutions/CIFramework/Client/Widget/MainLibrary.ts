@@ -991,7 +991,7 @@ namespace Microsoft.CIFramework
 	 * API to set automation dictionary
 	* Invokes the API updateContext
 	* @param input - List of parameters to be updated in form of json input, array of strings for deleting parameters
-	* @returns a Promise: void
+	* @returns a Promise with template parameters
 	*/
 	export function updateContext(input: any, sessionId?: string, isDelete?: boolean, correlationId?: string): Promise<any> {
 		if (!isNullOrUndefined(input)) {

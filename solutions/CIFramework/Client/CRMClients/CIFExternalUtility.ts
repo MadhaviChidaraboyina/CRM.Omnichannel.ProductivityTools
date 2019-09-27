@@ -20,35 +20,43 @@ namespace Microsoft.CIFramework.External {
 	export class CIFExternalUtilityImpl implements CIFExternalUtility {
 		public getTemplateForSession(sessionId?: string): any {
 			try {
-				let sessionConfig: Internal.UCISessionTemplate;
+				let sessionIdVal: string;
 				if (sessionId) {
-					if (Internal.state.sessionManager.sessions.has(sessionId)) {
-						sessionConfig = Internal.state.sessionManager.sessions.get(sessionId).sessionConfig;
-					} else {
-						logErrors("Please provide valid session id", "CIFExternalUtility.getSessionTemplateId");
-					}
+					sessionIdVal = sessionId;
 				} else {
-					sessionConfig = Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).sessionConfig;
+					sessionIdVal = Internal.state.sessionManager.getFocusedSession();
+				}
+				let sessionConfig: Internal.UCISessionTemplate;
+				if (Internal.state.sessionManager.sessions.has(sessionIdVal)) {
+					sessionConfig = Internal.state.sessionManager.sessions.get(sessionIdVal).sessionConfig;
+				} else {
+					logErrors("Please provide valid session id", "CIFExternalUtility.getSessionTemplateId");
+					throw new Error("Invalid session Id");
 				}
 				return sessionConfig.templateId;
 			} catch (error) {
-				logErrors("Error retrieving sessionTemplateId : " + error, "CIFExternalUtility.getSessionTemplateId");
+				logErrors("Error retrieving sessionTemplateId : " + error, "CIFExternalUtility.getTemplateForSession");
+				throw error;
 			}
 		}
 
 		public getSessionTemplateParams(sessionId?: string): any {
 			try {
+				let sessionIdVal: string;
 				if (sessionId) {
-					if (Internal.state.sessionManager.sessions.has(sessionId)) {
-						return Internal.state.sessionManager.sessions.get(sessionId).templateParams;
-					} else {
-						logErrors("Please provide valid session id", "CIFExternalUtility.getSessionTemplateParams");
-					}
+					sessionIdVal = sessionId;
 				} else {
-					return Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).templateParams;
+					sessionIdVal = Internal.state.sessionManager.getFocusedSession();
+				}
+				if (Internal.state.sessionManager.sessions.has(sessionIdVal)) {
+					return Internal.state.sessionManager.sessions.get(sessionIdVal).templateParams;
+				} else {
+					logErrors("Please provide valid session id", "CIFExternalUtility.getSessionTemplateParams");
+					throw new Error("Invalid session Id");
 				}
 			} catch (error) {
 				logErrors("Error retrieving sessionTemplateParams : " + error, "CIFExternalUtility.getSessionTemplateParams");
+				throw error;
 			}
 		}
 
@@ -58,21 +66,28 @@ namespace Microsoft.CIFramework.External {
 		* returns an Object Promise: The returned Object has the same structure as the underlying Xrm.Navigation.openForm() API
 		*/
 		public setSessionTemplateParams(input: any, sessionId?: string): any {
-			if (!Internal.isNullOrUndefined(input)) {
-				if (sessionId) {
-					if (Internal.state.sessionManager.sessions.has(sessionId)) {
-						Internal.state.sessionManager.sessions.get(sessionId).setTemplateParams(input);
-						return Internal.state.sessionManager.sessions.get(sessionId).templateParams;
+			try {
+				if (!Internal.isNullOrUndefined(input)) {
+					let sessionIdVal: string;
+					if (sessionId) {
+						sessionIdVal = sessionId;
+					} else {
+						sessionIdVal = Internal.state.sessionManager.getFocusedSession();
+					}
+					if (Internal.state.sessionManager.sessions.has(sessionIdVal)) {
+						Internal.state.sessionManager.sessions.get(sessionIdVal).setTemplateParams(input);
+						return Internal.state.sessionManager.sessions.get(sessionIdVal).templateParams;
 					} else {
 						logErrors("Please provide valid session id", "CIFExternalUtility.setSessionTemplateParams");
+						throw new Error("Invalid session Id");
 					}
 				} else {
-					Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).setTemplateParams(input);
-					return Internal.state.sessionManager.sessions.get(Internal.state.sessionManager.getFocusedSession()).templateParams;
+					logErrors("Parameter input is required", "CIFExternalUtility.setSessionTemplateParams");
+					throw new Error("Parameter required");
 				}
-			} else {
-				logErrors("Parameter input is required", "CIFExternalUtility.setSessionTemplateParams");
-				return null;
+			} catch (error) {
+				logErrors("Error setting sessionTemplateParams : " + error, "CIFExternalUtility.setSessionTemplateParams");
+				throw error;
 			}
 		}
 

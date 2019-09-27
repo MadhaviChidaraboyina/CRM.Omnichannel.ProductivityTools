@@ -150,17 +150,24 @@ namespace Microsoft.CIFramework.Internal {
 		// Todo - User story - 1083257 - Get the no. of widgets to load based on client & listener window and accordingly set the values.
 		appId = top.location.search.split('appid=')[1].split('&')[0];
 
-		let macrosLibScript = document.createElement("script");
-		macrosLibScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_ProductivityMacros_internal_library.js";
-		document.getElementsByTagName("body")[0].appendChild(macrosLibScript);
+		try {
+			let macrosLibScript = document.createElement("script");
+			macrosLibScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_ProductivityMacros_internal_library.js";
+			document.getElementsByTagName("body")[0].appendChild(macrosLibScript);
+		} catch (error) {
+			console.log("Failed to load msdyn_ProductivityMacros_internal_library.js");
+		}
 
+		try {
+			let cifAnalyticsLibScript = document.createElement("script");
+			cifAnalyticsLibScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_CIFAnalytics_internal_library.js";
+			document.getElementsByTagName("body")[0].appendChild(cifAnalyticsLibScript);
+		} catch (error) {
+			console.log("Failed to load msdyn_CIFAnalytics_internal_library.js");
+		}
+		
 		loadProvider();
 		setNotificationTimeoutVersion();
-
-		let cifAnalyticsLibScript = document.createElement("script");
-		cifAnalyticsLibScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_CIFAnalytics_internal_library.js";
-		document.getElementsByTagName("body")[0].appendChild(cifAnalyticsLibScript);
-
 		return false;
 	}
 
