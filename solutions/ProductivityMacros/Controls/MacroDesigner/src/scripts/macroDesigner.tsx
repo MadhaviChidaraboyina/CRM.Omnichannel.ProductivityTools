@@ -58,14 +58,16 @@ async function startDesigner(rpc) {
         CurrentWorkflowDetails = await Workflow.Macros.getDefinition();
         let loadDef = await rpc.call(SharedDefines.DesignerMessages.LoadDefinition, [JSON.stringify({ definition: CurrentWorkflowDetails.definition, references: [], sku: { name: "Free" } }), JSON.stringify(designerOptions)]);
         console.log("Starting designer render");
-        if (CurrentWorkflowDetails.name !== null) {
+        if (CurrentWorkflowDetails.name) {
             (window.top as any).Xrm.Page.getControl("macrosname_id").getAttribute().setValue(CurrentWorkflowDetails.name);
         }
-        if (CurrentWorkflowDetails.description !== null) {
+        if (CurrentWorkflowDetails.description) {
             (window.top as any).Xrm.Page.getControl("macrosdesc_id").getAttribute().setValue(CurrentWorkflowDetails.description);
         }
         let rendRes = await rpc.call(SharedDefines.DesignerMessages.RenderDesigner);
         console.log("Called");
+        let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
+        designerIframe.style.display = "inline";
         let saveButton = document.getElementById("saveButton");
         if (saveButton) {
             saveButton.addEventListener("click", async function (event) {
