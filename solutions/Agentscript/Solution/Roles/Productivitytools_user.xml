@@ -5,5 +5,11 @@
     <RolePrivilege name="prvReadmsdyn_agentscript" level="Global" />
     <RolePrivilege name="prvReadmsdyn_agentscriptstep" level="Global" />
     <RolePrivilege name="prvReadWorkflow" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_actioninputparameter" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_actionoutputparameter" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_inputparameters" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_macroconnector" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_parameterdefinition" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_designeroptions" level="Global" />
   </RolePrivileges>
 </Role>
