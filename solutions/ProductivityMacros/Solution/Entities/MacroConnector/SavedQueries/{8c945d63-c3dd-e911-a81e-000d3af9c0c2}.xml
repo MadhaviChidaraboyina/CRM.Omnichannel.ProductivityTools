@@ -9,7 +9,7 @@
     <savedqueryid>{8c945d63-c3dd-e911-a81e-000d3af9c0c2}</savedqueryid>
     <querytype>8192</querytype>
     <fetchxml>
-      <fetch version="1.0" mapping="logical" output-format="xml-platform">
+      <fetch version="1.0" mapping="logical">
         <entity name="msdyn_macroconnector">
           <attribute name="msdyn_macroconnectorid" />
           <filter type="and">
