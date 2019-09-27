@@ -145,7 +145,7 @@ module MscrmControls.CallscriptControl
 		{
 			let methodName = "executeMacro";
 			try {
-				return Microsoft.ProductivityMacros.Internal.runMacro(macroName);
+				return Microsoft.ProductivityMacros.runMacro(macroName);
 			}
 			catch (error) {
 				let errorMessage = "Failed to execute run macro api";
