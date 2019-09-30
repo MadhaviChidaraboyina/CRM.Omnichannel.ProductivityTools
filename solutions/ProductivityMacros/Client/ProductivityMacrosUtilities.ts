@@ -31,9 +31,10 @@ namespace Microsoft.Macros.Utility {
 
 		// Get the Currently Selected Record ID
 		let selectedRecordGuid = selectedControlSelectedItemReferences[0].Id;
-
+		let vpHeight = (window.top as any).Xrm.Page.ui.getViewPortHeight();
+		let vpWidth = (window.top as any).Xrm.Page.ui.getViewPortWidth();
 		const dialogOptions: XrmClientApi.DialogOptions = {
-			width: 1550, height: 700, position: XrmClientApi.Constants.WindowPosition.side
+			width: vpWidth, height: vpHeight, position: XrmClientApi.Constants.WindowPosition.inline
 		};
 
 		const dialogParams: XrmClientApi.DialogParameters = {};
@@ -70,8 +71,11 @@ namespace Microsoft.Macros.Utility {
 		let viewSelector = selectedControl.getViewSelector();
 		let viewId = viewSelector.getCurrentView().id.toLowerCase();
 
+		let vpHeight = (window.top as any).Xrm.Page.ui.getViewPortHeight();
+		let vpWidth = (window.top as any).Xrm.Page.ui.getViewPortWidth();
+
 		const dialogOptions: XrmClientApi.DialogOptions = {
-			width: 1550, height: 700, position: XrmClientApi.Constants.WindowPosition.side
+			width: vpWidth, height: vpHeight, position: XrmClientApi.Constants.WindowPosition.inline
 		};
 
 		if (isMacrosView(viewId)) {
