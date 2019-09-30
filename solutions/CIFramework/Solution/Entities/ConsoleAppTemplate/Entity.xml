@@ -864,18 +864,18 @@
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
             <displaynames>
-              <displayname description="Pinned" languagecode="1033" />
+              <displayname description="Can close" languagecode="1033" />
             </displaynames>
             <Descriptions>
               <Description description="Whether this tab can be closed" languagecode="1033" />
             </Descriptions>
             <options>
-              <option value="0" Color="#0000ff">
+              <option value="1" Color="#0000ff">
                 <labels>
                   <label description="No" languagecode="1033" />
                 </labels>
               </option>
-              <option value="1" Color="#0000ff">
+              <option value="0" Color="#0000ff">
                 <labels>
                   <label description="Yes" languagecode="1033" />
                 </labels>
@@ -883,7 +883,7 @@
             </options>
           </optionset>
           <displaynames>
-            <displayname description="Pinned" languagecode="1033" />
+            <displayname description="Can close" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Whether this tab can be closed" languagecode="1033" />

@@ -54,7 +54,7 @@
                                   <row>
                                       <cell id="{5d09b768-575c-d77d-6479-2130abbde22b}" showlabel="true" locklevel="0">
                                           <labels>
-                                              <label description="PanelState" languagecode="1033" />
+                                              <label description="Communication panel mode" languagecode="1033" />
                                           </labels>
                                           <control id="msdyn_panelstate" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_panelstate" disabled="false" />
                                       </cell>
@@ -89,7 +89,7 @@
                                   <row>
                                       <cell id="{093dd305-a7cc-d998-e489-ac60594b185e}" showlabel="true" locklevel="0">
                                           <labels>
-                                              <label description="AnchorTab" languagecode="1033" />
+                                              <label description="Anchor tab" languagecode="1033" />
                                           </labels>
                                           <control id="msdyn_anchortab" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_anchortab" disabled="false" />
                                       </cell>

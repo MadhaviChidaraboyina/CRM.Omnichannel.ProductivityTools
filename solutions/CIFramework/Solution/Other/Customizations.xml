@@ -94,7 +94,7 @@
             <label description="Docked" languagecode="1033" />
           </labels>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="The panel will be expanded" languagecode="1033" />
           </Descriptions>
         </option>
         <option value="100000001" ExternalValue="minimized" Color="#0000ff">
@@ -102,7 +102,7 @@
             <label description="Minimized" languagecode="1033" />
           </labels>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="The panel will be minimized" languagecode="1033" />
           </Descriptions>
         </option>
         <option value="100000002" ExternalValue="hidden" Color="#0000ff">
@@ -110,7 +110,7 @@
             <label description="Hidden" languagecode="1033" />
           </labels>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="The panel will be hidden" languagecode="1033" />
           </Descriptions>
         </option>
       </options>
