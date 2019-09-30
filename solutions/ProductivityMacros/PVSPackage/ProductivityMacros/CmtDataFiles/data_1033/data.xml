@@ -1112,6 +1112,7 @@
         <field name="msdyn_actionDescription" value="Action to resolve case" />
         <field name="msdyn_displayname" value="Resolve Case" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" />
         <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />

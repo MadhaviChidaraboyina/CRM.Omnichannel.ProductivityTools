@@ -23,9 +23,15 @@ namespace Microsoft.ProductivityMacros {
 							let executeActionsPromise = actions.reduce((accumulatorPromise, nextId) => {
 								return accumulatorPromise.then(function (result: any) {
 									return resolveParamsAndExecuteMacroAction(nextId.type, nextId.inputs, nextId.name);
-								});
+								}, function (error: Error) {
+										reject(error);
+									});
 							}, Promise.resolve());
-							executeActionsPromise.then(e => { resolve("Macro executed successfully") });
+							executeActionsPromise.then(function (success: any) {
+								resolve("Action performed successfully")
+							}, function (error: Error) {
+									reject(error);
+								});
 						},
 						function (error: Error) {
 							reject(error);
@@ -63,7 +69,12 @@ namespace Microsoft.ProductivityMacros {
 			let query = "?$select=name,clientdata" + "&$filter=name eq '" + macroName + "' and category eq 6";
 			Xrm.WebApi.retrieveMultipleRecords(entityName, query).then(
 				function (result: any) {
-					resolve(result.entities[0].clientdata);
+					if (Internal.isNullOrUndefined(result.entities) || result.entities.length <= 0 || (Internal.isNullOrUndefined(result.entities[0].clientdata))) {
+						reject("Macro not found");
+					}
+					else {
+						resolve(result.entities[0].clientdata);
+					}
 				},
 				function (error: Error) {
 					reject(error);
