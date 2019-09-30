@@ -1,0 +1,155 @@
+<entities >
+  <entity name="msdyn_parameterdefinition" displayname="Parameter definition" etc="10119" primaryidfield="msdyn_parameterdefinitionid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="Default Value" name="msdyn_defaultvalue" type="string" customfield="true" />
+      <field displayname="Description" name="msdyn_description" type="string" customfield="true" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="Parameter definition" name="msdyn_parameterdefinitionid" type="guid" primaryKey="true" />
+      <field displayname="Parameter Type" name="msdyn_parametertype" type="string" customfield="true" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="Title" name="msdyn_displayname" type="string" customfield="true" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+      <field displayname="Object structure definition" name="msdyn_jsonobjectstructure" type="string" />
+    </fields>
+    <relationships>
+      <relationship name="msdyn_msdyn_paramdef_msdyn_actionoutputparam" manyToMany="true" isreflexive="false" relatedEntityName="msdyn_msdyn_paramdef_msdyn_actionoutputparam" m2mTargetEntity="msdyn_actionoutputparameter" m2mTargetEntityPrimaryKey="msdyn_actionoutputparameterid" />
+      <relationship name="msdyn_msdyn_paramdef_msdyn_actioninputparam" manyToMany="true" isreflexive="false" relatedEntityName="msdyn_msdyn_paramdef_msdyn_actioninputparam" m2mTargetEntity="msdyn_actioninputparameter" m2mTargetEntityPrimaryKey="msdyn_actioninputparameterid" />
+    </relationships>
+  </entity>
+  <entity name="msdyn_actioninputparameter" displayname="Action Input Parameter" etc="10115" primaryidfield="msdyn_actioninputparameterid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="Action Input Parameter" name="msdyn_actioninputparameterid" type="guid" primaryKey="true" />
+      <field displayname="Action Template Input Parameter" name="msdyn_actiontemplateinputparameterid" type="entityreference" lookupType="msdyn_macroactiontemplate" customfield="true" />
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="Parameter Type" name="msdyn_parametertype" type="bool" customfield="true" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+      <field displayname="Visibility" name="msdyn_visibility" type="string" customfield="true" />
+    </fields>
+    <relationships />
+  </entity>
+  <entity name="msdyn_actionoutputparameter" displayname="Action Output Parameter" etc="10116" primaryidfield="msdyn_actionoutputparameterid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="Action Output Parameter" name="msdyn_actionoutputparameterid" type="guid" primaryKey="true" />
+      <field displayname="Action Template Output Parameter" name="msdyn_actiontemplateoutputparameterid" type="entityreference" lookupType="msdyn_macroactiontemplate" customfield="true" />
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+    </fields>
+    <relationships />
+  </entity>
+  <entity name="msdyn_macroconnector" displayname="Macro Connector" etc="10118" primaryidfield="msdyn_macroconnectorid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="Brand Color" name="msdyn_brandcolor" type="string" customfield="true" />
+      <field displayname="Category key" name="msdyn_categorykey" type="string" customfield="true" />
+      <field displayname="Category Label" name="msdyn_categorylabel" type="string" customfield="true" />
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="Description" name="msdyn_description" type="string" customfield="true" />
+      <field displayname="Display Name" name="msdyn_displayname" type="string" customfield="true" />
+      <field displayname="Icon" name="msdyn_icon" type="string" customfield="true" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="Macro Connector" name="msdyn_macroconnectorid" type="guid" primaryKey="true" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="Title" name="msdyn_title" type="string" customfield="true" />
+      <field displayname="Type" name="msdyn_type" type="string" customfield="true" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+    </fields>
+    <relationships />
+  </entity>
+  <entity name="msdyn_macroactiontemplate" displayname="Macro Action Template" etc="10117" primaryidfield="msdyn_macroactiontemplateid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="Brand Color" name="msdyn_brandcolor" type="string" customfield="true" />
+      <field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Created On" name="createdon" type="datetime" />
+      <field displayname="Description" name="msdyn_actionDescription" type="string" customfield="true" />
+      <field displayname="Display  Name" name="msdyn_displayname" type="string" customfield="true" />
+      <field displayname="FUNDU_MACRO_CONNECTOR" name="msdyn_macroconnector" type="entityreference" lookupType="msdyn_macroconnector" customfield="true" />
+      <field displayname="Icon" name="msdyn_icon" type="string" customfield="true" />
+      <field displayname="Import Sequence Number" name="importsequencenumber" type="number" />
+      <field displayname="Input Parameters" name="msdyn_inputparameters" type="string" customfield="true" />
+      <field displayname="Kind" name="msdyn_kind" type="string" customfield="true" />
+      <field displayname="Macro Action Template" name="msdyn_macroactiontemplateid" type="guid" primaryKey="true" />
+      <field displayname="Modified By" name="modifiedby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified By (Delegate)" name="modifiedonbehalfby" type="entityreference" lookupType="systemuser" />
+      <field displayname="Modified On" name="modifiedon" type="datetime" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Output Parameters" name="msdyn_outputparameters" type="string" customfield="true" />
+      <field displayname="Owner" name="ownerid" type="owner" />
+      <field displayname="Owning Business Unit" name="owningbusinessunit" type="entityreference" lookupType="businessunit" />
+      <field displayname="Owning Team" name="owningteam" type="entityreference" lookupType="team" />
+      <field displayname="Owning User" name="owninguser" type="entityreference" lookupType="systemuser" />
+      <field displayname="Record Created On" name="overriddencreatedon" type="datetime" />
+      <field displayname="Runtime API" name="msdyn_runtimeapi" type="string" customfield="true" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="Subtitle" name="msdyn_subtitle" type="string" customfield="true" />
+      <field displayname="Summary" name="msdyn_summary" type="string" customfield="true" />
+      <field displayname="Time Zone Rule Version Number" name="timezoneruleversionnumber" type="number" />
+      <field displayname="Title" name="msdyn_title" type="string" customfield="true" />
+      <field displayname="UTC Conversion Time Zone Code" name="utcconversiontimezonecode" type="number" />
+      <field displayname="Version Number" name="versionnumber" type="bigint" />
+      <field displayname="Visibility" name="msdyn_visibility" type="string" customfield="true" />
+    </fields>
+    <relationships />
+  </entity>
+</entities>
