@@ -143,7 +143,6 @@
     <MakeDir Condition="!Exists($(DesignerControlBlobFolderPath))" Directories="$(DesignerControlBlobFolderPath)" />
     <Copy SourceFiles="@(DesignerBlobFiles)" DestinationFolder="$(DesignerControlBlobFolderPath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
   </Target>
-  
   <!-- Copy Macro Designer Web Resources to Solution Path -->
   <Target Name="CopyWebResources" AfterTargets="Build">
     <ItemGroup>

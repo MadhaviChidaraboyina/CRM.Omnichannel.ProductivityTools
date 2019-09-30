@@ -59,6 +59,15 @@
     <Content Include="Entities\ActionOutputParameter\SavedQueries\{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}.xml" />
     <Content Include="Entities\ActionOutputParameter\SavedQueries\{be58538e-d1d2-e911-a81f-000d3a6d6cb7}.xml" />
     <Content Include="Entities\ActionOutputParameter\SavedQueries\{de3156ab-1834-4782-a0d8-97869badb58b}.xml" />
+    <Content Include="Entities\MacroConfiguration\Entity.xml" />
+    <Content Include="Entities\MacroConfiguration\FormXml\main\{4c0f7a89-7e67-4972-828e-1244f593a422}_managed.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{709f8c74-0e07-41f2-ab20-157f309ba509}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{b33bb17c-9d07-4514-b073-165721b935e9}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{2512f971-7ada-435b-a487-ce8bc79ef734}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{fe7078c7-dae0-e911-a81f-000d3af9c0c2}.xml" />
     <Content Include="Entities\MacroConnector\Entity.xml" />
     <Content Include="Entities\MacroConnector\FormXml\main\{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}_managed.xml" />
     <Content Include="Entities\MacroConnector\SavedQueries\{0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}.xml" />

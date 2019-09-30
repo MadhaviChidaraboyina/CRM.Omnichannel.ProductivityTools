@@ -1,8 +1,22 @@
-﻿export class Constants {
+﻿export interface MacroDesignerConfig {
+    DesignerBaseURL?: string;
+    UserVoiceText?: string;
+    UserVoiceLink?: string;
+    SearchHint?: string;
+}
+
+declare global {
+    interface Window {
+        Xrm: XrmClientApi.XrmStatic;
+    }
+}
+
+export class Constants {
     public static DESIGNER_CONTROL_SIGNATURE = "msladesigner";
     public static WRAPPER_CONTROL_SIGNATURE = "msladesigner";
     public static MACRO_ID = "id";
     public static WORKFLOW_ENTITY = "workflow";
+    public static MACRO_CONFIG_ENTITY = "msdyn_macrosolutionconfiguration";
 };
 
 export class DesignerMessages {
@@ -97,7 +111,7 @@ export interface IDesignerOptions {
     UserVoiceURL?: string,
     environmentName: string,
     environmentDescription: string,
-    operationKindDisplayText: {[kind: string]: string}
+    operationKindDisplayText: { [kind: string]: string }
 };
 
 export enum Visibility {
