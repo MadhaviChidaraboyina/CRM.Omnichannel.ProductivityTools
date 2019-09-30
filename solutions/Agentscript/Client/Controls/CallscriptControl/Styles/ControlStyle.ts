@@ -194,6 +194,7 @@ module MscrmControls.CallscriptControl {
 				paddingLeft: "14px",
 				paddingRight: "14px",
 				textAlign: isRTL ? "right" : "left",
+				display: "inline-block" 
 			}
 		}
 
