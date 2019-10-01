@@ -1022,6 +1022,7 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(notificationObject, [Constants.value]);
 		if (provider) {
+			raiseSystemAnalyticsEvent(CIFramework.InternalEventName.NotificationReceived, notificationObject);
 			return new Promise<any>((resolve, reject) => {
 				//let panelWidth = state.client.getWidgetWidth();
 				notifyEventClient(notificationObject).then(
@@ -1030,7 +1031,6 @@ namespace Microsoft.CIFramework.Internal {
 						setPerfData(perfData);
 						var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.notifyEvent, provider.sortOrder, appId, cifVersion, false, null, "", notificationObject.get(Constants.correlationId));
 						setAPIUsageTelemetry(paramData);
-						raiseSystemAnalyticsEvent(InternalEventName.NotificationReceived, notificationObject);
 						return resolve(res);
 					},
 					(error: IErrorHandler) => {
@@ -1204,7 +1204,7 @@ namespace Microsoft.CIFramework.Internal {
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
 				provider.createSession(parameters.get(Constants.input), parameters.get(Constants.context), parameters.get(Constants.customerName), telemetryData, appId, cifVersion, parameters.get(Constants.correlationId)).then(function (sessionId) {
-					raiseSystemAnalyticsEvent(InternalEventName.SessionStarted, parameters, new Map<string, any>().set(Constants.clientSessionId, sessionId));
+					raiseSystemAnalyticsEvent(InternalEventName.SessionStarted, parameters, new Map<string, any>().set(AnalyticsConstants.clientSessionId, sessionId));
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createSession, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 					setPerfData(perfData);
 					var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.createSession, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
@@ -1448,9 +1448,9 @@ namespace Microsoft.CIFramework.Internal {
 	 * InitLogAnalyticsEvent handler that post message library will invoke.
 	*/
 	export function raiseInitAnalyticsEvent(parameters: Map<string, any>): Promise<Map<string, any>> {
-		parameters.set(Constants.telemetryApiName, Constants.telemetryInitApiName);
+		parameters.set(AnalyticsConstants.telemetryApiName, AnalyticsConstants.telemetryInitApiName);
 		return new Promise(function (resolve, reject) {
-			if (raiseAnalyticsEventInternal(Constants.initAnalyticsPlatformEventName, parameters)) {
+			if (raiseAnalyticsEventInternal(AnalyticsConstants.initAnalyticsPlatformEventName, parameters)) {
 				resolve(new Map().set(Constants.value, "Success"));
 			}
 			else {
@@ -1466,15 +1466,15 @@ namespace Microsoft.CIFramework.Internal {
 		if (!isNullOrUndefined(additionalParams)) {
 			additionalParams.forEach((value, key) => parameters.set(key, value));
 		}
-		parameters.set(Constants.telemetryApiName, Constants.telemetryLogSystemEventApiName);
-		if (parameters.get(Constants.analyticsEventType) !== EventType.CustomEvent) {
-			parameters.set(Constants.analyticsEventType, EventType.SystemEvent)
+		parameters.set(AnalyticsConstants.telemetryApiName, AnalyticsConstants.telemetryLogSystemEventApiName);
+		if (parameters.get(AnalyticsConstants.analyticsEventType) !== EventType.CustomEvent) {
+			parameters.set(AnalyticsConstants.analyticsEventType, EventType.SystemEvent)
 		}
 		let sessionId = state.sessionManager.getFocusedSession();
 		let eventNameStr = InternalEventName[eventName];
-		parameters.set(Constants.analyticsEventName, eventNameStr).set(Constants.focussedSession, sessionId);
+		parameters.set(AnalyticsConstants.analyticsEventName, eventNameStr).set(AnalyticsConstants.focussedSession, sessionId);
 		return new Promise(function (resolve, reject) {
-			if (raiseAnalyticsEventInternal(Constants.logAnalyticsPlatformEventName, parameters)) {
+			if (raiseAnalyticsEventInternal(AnalyticsConstants.logAnalyticsPlatformEventName, parameters)) {
 				resolve(new Map().set(Constants.value, "Success"));
 			}
 			else {
@@ -1488,10 +1488,10 @@ namespace Microsoft.CIFramework.Internal {
 	*/
 	export function raiseCustomAnalyticsEvent(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let sessionId = state.sessionManager.getFocusedSession();
-		parameters.set(Constants.focussedSession, sessionId);
-		parameters.set(Constants.telemetryApiName, Constants.telemetryLogCustomEventApiName);
+		parameters.set(AnalyticsConstants.focussedSession, sessionId);
+		parameters.set(AnalyticsConstants.telemetryApiName, AnalyticsConstants.telemetryLogCustomEventApiName);
 		return new Promise(function (resolve, reject) {
-			if (raiseAnalyticsEventInternal(Constants.logAnalyticsPlatformEventName, parameters)) {
+			if (raiseAnalyticsEventInternal(AnalyticsConstants.logAnalyticsPlatformEventName, parameters)) {
 				resolve(new Map().set(Constants.value, "Success"));
 			}
 			else {
@@ -1504,19 +1504,27 @@ namespace Microsoft.CIFramework.Internal {
  * Internal method to raise the lLogAnalyticsEvent to Analytics js
 */
 	export function raiseAnalyticsEventInternal(eventName: string, parameters: Map<string, any>): boolean {
+		let providerName = "", providerId = "", apiVersion = "", sortOrder = "";
 		const [provider, errorData] = getProvider(parameters, [Constants.SearchString]);
 		if (!isNullOrUndefined(provider)) {
-			parameters.set(Constants.channelProviderName, provider.name);
-			parameters.set(Constants.channelProviderId, provider.providerId);
+			providerName = provider.name;
+			providerId = provider.providerId;
+			apiVersion = provider.apiVersion;
+			sortOrder = provider.sortOrder;
+			parameters.set(AnalyticsConstants.channelProviderName, provider.name);
+			parameters.set(AnalyticsConstants.channelProviderId, provider.providerId);
 		}
-		else {
+		try {
 			logAPIFailure(appId, true, errorData, MessageType.isConsoleApp, cifVersion, "", "", "", parameters.get(Constants.correlationId));
+		} catch (error) {
+			console.log("Error in method logAPIFailure.");
 		}
-		let apiName = parameters.get(Constants.telemetryApiName);
-		var paramData = new AnalyticsAPIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, apiName, eventName, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
-		setAnalyticsAPIUsageTelemetry(paramData);
-		var eventParams = { bubbles: false, cancelable: false, detail: parameters };
-		var event = new CustomEvent(eventName, eventParams);
-		return window.dispatchEvent(event);
+
+		let apiName = parameters.get(AnalyticsConstants.telemetryApiName);
+			var paramData = new AnalyticsAPIUsageTelemetry(providerId, providerName, apiVersion, apiName, eventName, sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
+			setAnalyticsAPIUsageTelemetry(paramData);
+			var eventParams = { bubbles: false, cancelable: false, detail: parameters };
+			var event = new CustomEvent(eventName, eventParams);
+			return window.dispatchEvent(event);
 	}
 }

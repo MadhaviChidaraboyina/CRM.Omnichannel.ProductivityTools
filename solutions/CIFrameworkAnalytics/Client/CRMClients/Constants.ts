@@ -12,8 +12,8 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 	}
 
 	export class ConversationEntity {
-        public static entityName = "msdyn_conversationdata";
-        public static Name = "msdyn_name";
+		public static entityName = "msdyn_conversationdata";
+		public static Name = "msdyn_name";
 		public static accountId = "msdyn_accountid";
 		public static additionalData = "msdyn_additionaldata";
 		public static backendConversationId = "msdyn_backendconversationid";
@@ -22,10 +22,10 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static contactId = "msdyn_contactid";
 		public static conversationId = "msdyn_conversationid";
 		public static conversationTimestamp = "msdyn_conversationtimestamp";	
-        public static externalAccountId = "msdyn_externalaccountid";
-        public static externalContactId = "msdyn_externalcontactid";
-        public static externalConversationId = "msdyn_externalconversationId";
-        public static externalCorrelationId = "msdyn_externalcorrelationid";
+		public static externalAccountId = "msdyn_externalaccountid";
+		public static externalContactId = "msdyn_externalcontactid";
+		public static externalConversationId = "msdyn_externalconversationId";
+		public static externalCorrelationId = "msdyn_externalcorrelationid";
 		public static externalProviderId = "msdyn_externalproviderid";
 		public static initialQueueName = "msdyn_initialqueuename";
 		public static providerId = "msdyn_providerid";
@@ -38,14 +38,14 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static clientSessionId = "msdyn_ucisessionid";
 		public static clientSessionName = "msdyn_ucisessionname";
 		public static conversationId = "msdyn_conversationid";
-        public static externalCorrelationId = "msdyn_externalcorrelationid";
+		public static externalCorrelationId = "msdyn_externalcorrelationid";
 		public static queueId = "msdyn_queueid";
 		public static queueName = "msdyn_queuename";
 		public static sessionAdditionalData = "msdyn_sessionadditionaldata";
-        public static sessionAgentAssignedTimestamp = "msdyn_sessionagentassignedtimestamp";
-        public static sessionChannel = "msdyn_sessionchannel";
-        public static sessionCreatedTimestamp = "msdyn_sessioncreatedtimestamp";
-        public static sessionCreationReason = "msdyn_sessioncreationreason";
+		public static sessionAgentAssignedTimestamp = "msdyn_sessionagentassignedtimestamp";
+		public static sessionChannel = "msdyn_sessionchannel";
+		public static sessionCreatedTimestamp = "msdyn_sessioncreatedtimestamp";
+		public static sessionCreationReason = "msdyn_sessioncreationreason";
 		public static sessionId = "msdyn_sessionid";
 		public static sessionQueueAssignedTimestamp = "msdyn_sessionqueueassignedtimestamp";
 	}
@@ -79,7 +79,7 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static kpiEventName = "msdyn_kpieventname";
 		public static kpiEventReason = "msdyn_kpieventreason";
 		public static newPresence = "msdyn_newpresence";
-		public static notificationResponseAction = "notificationResponseaction";
+		public static notificationResponseAction = "msdyn_notificationresponseaction";
 		public static oldPresence = "msdyn_oldpresence";
 		public static participantId = "msdyn_participantid";
 		public static sessionId = "msdyn_sessionid";
@@ -101,11 +101,17 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static sessionSwitched = "SessionSwitched";
 		public static sessionClosed = "SessionClosed";
 		public static newTabOpened = "NewTabOpened";
+		public static sessionId = "sessionId";
+		public static clientSessionId = "clientSessionId";
+		public static providerId = "providerId";
+		public static providerName = "providerName";
+		public static defaultSessionId = "session-id-0";
+		public static noSessionId = "session not created";
+		public static notificationResponseAction = "notificationResponseAction";
 	}
 
 	export enum EventType {
 		SystemEvent,
 		CustomEvent
 	}
-
 }

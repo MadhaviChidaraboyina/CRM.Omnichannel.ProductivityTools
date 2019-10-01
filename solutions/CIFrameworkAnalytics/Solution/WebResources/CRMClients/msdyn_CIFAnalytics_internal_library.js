@@ -26,6 +26,9 @@ var Microsoft;
         class EventEntity {
         }
         CIFrameworkAnalytics.EventEntity = EventEntity;
+        class SessionCache {
+        }
+        CIFrameworkAnalytics.SessionCache = SessionCache;
     })(CIFrameworkAnalytics = Microsoft.CIFrameworkAnalytics || (Microsoft.CIFrameworkAnalytics = {}));
 })(Microsoft || (Microsoft = {}));
 /**
@@ -114,7 +117,7 @@ var Microsoft;
             EventEntity.kpiEventName = "msdyn_kpieventname";
             EventEntity.kpiEventReason = "msdyn_kpieventreason";
             EventEntity.newPresence = "msdyn_newpresence";
-            EventEntity.notificationResponseAction = "notificationResponseaction";
+            EventEntity.notificationResponseAction = "msdyn_notificationresponseaction";
             EventEntity.oldPresence = "msdyn_oldpresence";
             EventEntity.participantId = "msdyn_participantid";
             EventEntity.sessionId = "msdyn_sessionid";
@@ -136,6 +139,13 @@ var Microsoft;
             AnalyticsEvent.sessionSwitched = "SessionSwitched";
             AnalyticsEvent.sessionClosed = "SessionClosed";
             AnalyticsEvent.newTabOpened = "NewTabOpened";
+            AnalyticsEvent.sessionId = "sessionId";
+            AnalyticsEvent.clientSessionId = "clientSessionId";
+            AnalyticsEvent.providerId = "providerId";
+            AnalyticsEvent.providerName = "providerName";
+            AnalyticsEvent.defaultSessionId = "session-id-0";
+            AnalyticsEvent.noSessionId = "session not created";
+            AnalyticsEvent.notificationResponseAction = "notificationResponseAction";
             Constants.AnalyticsEvent = AnalyticsEvent;
             var EventType;
             (function (EventType) {
@@ -151,12 +161,11 @@ var Microsoft;
 /// <reference path="./Constants.ts" />
 /// <reference path="./AnalyticsDataModel.ts" />
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
-/// <reference path="../../../../packages/Crm.Moment.1.0.0/Content/Typings/moment.d.ts" />
 var Microsoft;
 (function (Microsoft) {
     var CIFrameworkAnalytics;
     (function (CIFrameworkAnalytics) {
-        let conversationUCSessionMap = new Map();
+        let clientSessionConversationIdMap = new Map();
         let analyticsDataMap = new Map();
         let analyticsEventMap = new Map();
         /** @internal
@@ -175,7 +184,7 @@ var Microsoft;
             if (!CIFrameworkAnalytics.Utility.isNullOrUndefined(payload)) {
                 let logData = CIFrameworkAnalytics.Utility.validateInitAnalyticsPayload(payload);
                 if (logData) {
-                    logAnalyticsInitData(payload);
+                    logAnalyticsInitData(event.detail);
                 }
             }
         }
@@ -194,23 +203,25 @@ var Microsoft;
         /** @internal
          * Function to log the analytics init data
          */
-        function logAnalyticsInitData(payload) {
+        function logAnalyticsInitData(data) {
+            let payload = data.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.analyticsData);
             // update the conversation id to data map
             let conversationId = payload.conversation.conversationId;
             if (analyticsDataMap.has(conversationId))
                 return;
             analyticsDataMap.set(conversationId, payload);
             //create the records. 
-            logConversationData(payload);
-            logSessionData(payload);
-            logParticipantData(payload);
+            logConversationData(data);
+            logSessionData(data);
+            logParticipantData(data);
         }
         /** @internal
         * Function to log the Conversation data
         */
-        function logConversationData(payload) {
+        function logConversationData(data) {
+            let payload = data.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.analyticsData);
             // create Conversation Data record
-            Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.ConversationEntity.entityName, CIFrameworkAnalytics.Utility.buildConversationEntity(payload)).then(function success(result) {
+            Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.ConversationEntity.entityName, CIFrameworkAnalytics.Utility.buildConversationEntity(data)).then(function success(result) {
                 console.log("Conversation Data record created with ID: " + result.id);
             }, function (error) {
                 console.log(error.message);
@@ -219,9 +230,10 @@ var Microsoft;
         /** @internal
         * Function to log the Session data
         */
-        function logSessionData(payload) {
+        function logSessionData(data) {
+            let payload = data.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.analyticsData);
             // create Session Data record
-            Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.SessionEntity.entityName, CIFrameworkAnalytics.Utility.buildSessionEntity(payload)).then(function success(result) {
+            Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.SessionEntity.entityName, CIFrameworkAnalytics.Utility.buildSessionEntity(data)).then(function success(result) {
                 console.log("Session Data record created with ID: " + result.id);
             }, function (error) {
                 console.log(error.message);
@@ -230,8 +242,9 @@ var Microsoft;
         /** @internal
         * Function to log the Participant data
         */
-        function logParticipantData(payload) {
-            let records = CIFrameworkAnalytics.Utility.buildParticipantEntityList(payload);
+        function logParticipantData(data) {
+            let payload = data.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.analyticsData);
+            let records = CIFrameworkAnalytics.Utility.buildParticipantEntityList(data);
             records.forEach(function (record) {
                 Xrm.WebApi.createRecord(CIFrameworkAnalytics.Constants.ParticipantEntity.entityName, record).then(function success(result) {
                     console.log("Participant Data record created with ID: " + result.id);
@@ -258,9 +271,15 @@ var Microsoft;
         */
         function createEventDataForSystemEvents(payload) {
             let correlationId = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.correlationId);
-            let clientSessionId = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.focussedSession);
+            let clientSessionId = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.sessionId);
+            if (CIFrameworkAnalytics.Utility.isNullOrUndefined(clientSessionId)) {
+                clientSessionId = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.focussedSession);
+            }
             let eventName = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.eventName);
             let eventId = analyticsEventMap.get(eventName);
+            if (CIFrameworkAnalytics.Utility.isNullOrUndefined(correlationId)) {
+                correlationId = clientSessionConversationIdMap.get(clientSessionId);
+            }
             if (!CIFrameworkAnalytics.Utility.isNullOrUndefined(correlationId) && !CIFrameworkAnalytics.Utility.isNullOrUndefined(eventId)) {
                 let conversationData = analyticsDataMap.get(correlationId);
                 if (!CIFrameworkAnalytics.Utility.isNullOrUndefined(conversationData)) {
@@ -273,6 +292,7 @@ var Microsoft;
                     let event = new CIFrameworkAnalytics.EventEntity();
                     event.kpiEventId = eventId;
                     event.kpiEventName = eventName;
+                    event.eventTimestamp = new Date().toISOString();
                     fillEventDataForSystemEvents(payload, conversationData, event);
                     events.push(event);
                     eventData.events = events;
@@ -284,13 +304,18 @@ var Microsoft;
             switch (event.kpiEventName) {
                 case CIFrameworkAnalytics.Constants.AnalyticsEvent.notificationResponse:
                     {
-                        let notificationResponse = payload.get(CIFrameworkAnalytics.Constants.EventEntity.notificationResponseAction);
+                        let notificationResponse = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.notificationResponseAction);
                         event.notificationResponseAction = notificationResponse;
                     }
                     break;
+                case CIFrameworkAnalytics.Constants.AnalyticsEvent.sessionStarted:
+                    {
+                        let sessionId = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.clientSessionId);
+                        let correlationId = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.correlationId);
+                        clientSessionConversationIdMap.set(sessionId, correlationId);
+                    }
                 case CIFrameworkAnalytics.Constants.AnalyticsEvent.notificationReceived:
                 case CIFrameworkAnalytics.Constants.AnalyticsEvent.notificationTimedOut:
-                case CIFrameworkAnalytics.Constants.AnalyticsEvent.sessionStarted:
                 case CIFrameworkAnalytics.Constants.AnalyticsEvent.sessionSwitched:
                 case CIFrameworkAnalytics.Constants.AnalyticsEvent.sessionClosed:
                     break;
@@ -320,10 +345,6 @@ var Microsoft;
 })(Microsoft || (Microsoft = {}));
 /**
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
- */
-/// <reference path="../../../../packages/Crm.Moment.1.0.0/Content/Typings/moment.d.ts" />
-/**
- * Constants for CIFramework.
  */
 /** @internal */
 var Microsoft;
@@ -398,7 +419,10 @@ var Microsoft;
              * Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
              * @param map Object to build the entity for.
              */
-            function buildConversationEntity(data) {
+            function buildConversationEntity(payload) {
+                let data = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.analyticsData);
+                let providerId = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.providerId);
+                let providerName = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.providerName);
                 let entity = {};
                 let conv = data.conversation;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.accountId] = conv.accountId;
@@ -409,15 +433,15 @@ var Microsoft;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.contactId] = conv.contactId;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.conversationId] = conv.conversationId;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.Name] = conv.conversationId;
-                entity[CIFrameworkAnalytics.Constants.ConversationEntity.conversationTimestamp] = isNullOrUndefined(conv.conversationTimestamp) ? conv.conversationTimestamp : getUTCDateTime();
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.conversationTimestamp] = isNullOrUndefined(conv.conversationTimestamp) ? new Date().toISOString() : conv.conversationTimestamp;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.externalAccountId] = conv.externalAccountId;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.externalContactId] = conv.externalContactId;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.externalConversationId] = conv.externalConversationId;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.externalCorrelationId] = conv.externalCorrelationId;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.externalProviderId] = conv.externalProviderId;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.initialQueueName] = conv.initialQueueName;
-                entity[CIFrameworkAnalytics.Constants.ConversationEntity.providerId] = conv.providerId;
-                entity[CIFrameworkAnalytics.Constants.ConversationEntity.providerName] = conv.providerName;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.providerId] = isNullOrUndefined(conv.providerId) ? providerId : conv.providerId;
+                entity[CIFrameworkAnalytics.Constants.ConversationEntity.providerName] = isNullOrUndefined(conv.providerName) ? providerName : conv.providerName;
                 entity[CIFrameworkAnalytics.Constants.ConversationEntity.region] = conv.regionData;
                 let customDataList = conv.customData;
                 if (!isNullOrUndefined(customDataList)) {
@@ -432,7 +456,8 @@ var Microsoft;
              * Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
              * @param map Object to build the entity for.
              */
-            function buildSessionEntity(data) {
+            function buildSessionEntity(payload) {
+                let data = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.analyticsData);
                 let session = data.conversation.session;
                 let entity = {};
                 entity[CIFrameworkAnalytics.Constants.SessionEntity.clientSessionId] = session.clientSessionId;
@@ -461,11 +486,14 @@ var Microsoft;
             * Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
             * @param map Object to build the entity for.
             */
-            function buildParticipantEntityList(data) {
+            function buildParticipantEntityList(payload) {
+                let data = payload.get(CIFrameworkAnalytics.Constants.AnalyticsEvent.analyticsData);
                 let session = data.conversation.session;
                 let entities = [];
                 for (var participant of session.participants) {
                     let entity = {};
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.sessionId] = session.sessionId;
+                    entity[CIFrameworkAnalytics.Constants.ParticipantEntity.conversationId] = session.conversationId;
                     entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantId] = participant.participantId;
                     entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantName] = participant.participantName;
                     entity[CIFrameworkAnalytics.Constants.ParticipantEntity.participantType] = participant.participantType;
@@ -499,7 +527,7 @@ var Microsoft;
                 for (var event of events) {
                     let entity = {};
                     entity[CIFrameworkAnalytics.Constants.EventEntity.additionalData] = event.additionalData;
-                    entity[CIFrameworkAnalytics.Constants.EventEntity.clientSessionId] = data.clientSessionId;
+                    entity[CIFrameworkAnalytics.Constants.EventEntity.clientSessionId] = (data.clientSessionId === CIFrameworkAnalytics.Constants.AnalyticsEvent.defaultSessionId) ? CIFrameworkAnalytics.Constants.AnalyticsEvent.noSessionId : data.clientSessionId;
                     entity[CIFrameworkAnalytics.Constants.EventEntity.conversationId] = data.conversationId;
                     entity[CIFrameworkAnalytics.Constants.EventEntity.createdEntityName] = event.entityName;
                     entity[CIFrameworkAnalytics.Constants.EventEntity.createdEntityRecordId] = event.entityRecordId;
@@ -529,14 +557,6 @@ var Microsoft;
                 return entities;
             }
             Utility.buildEventsEntity = buildEventsEntity;
-            /**
-             * Returns the current UTC Date Time
-             * @param map Object to build the entity for.
-             */
-            function getUTCDateTime() {
-                return moment.utc().valueOf().toString();
-            }
-            Utility.getUTCDateTime = getUTCDateTime;
         })(Utility = CIFrameworkAnalytics.Utility || (CIFrameworkAnalytics.Utility = {}));
     })(CIFrameworkAnalytics = Microsoft.CIFrameworkAnalytics || (Microsoft.CIFrameworkAnalytics = {}));
 })(Microsoft || (Microsoft = {}));

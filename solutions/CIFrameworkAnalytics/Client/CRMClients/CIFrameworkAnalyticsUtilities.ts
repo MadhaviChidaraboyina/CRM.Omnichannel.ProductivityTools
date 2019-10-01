@@ -2,11 +2,6 @@
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
 
-/// <reference path="../../../../packages/Crm.Moment.1.0.0/Content/Typings/moment.d.ts" />
-
-/**
- * Constants for CIFramework.
- */
 /** @internal */
 namespace Microsoft.CIFrameworkAnalytics.Utility {
 
@@ -76,7 +71,10 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 	 * Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
 	 * @param map Object to build the entity for.
 	 */
-	export function buildConversationEntity(data: InitData): XrmClientApi.WebApi.Entity {
+	export function buildConversationEntity(payload: any): XrmClientApi.WebApi.Entity {
+		let data: InitData = payload.get(Constants.AnalyticsEvent.analyticsData);
+		let providerId = payload.get(Constants.AnalyticsEvent.providerId);
+		let providerName = payload.get(Constants.AnalyticsEvent.providerName);
 		let entity: XrmClientApi.WebApi.Entity = {};
 		let conv = data.conversation;
 		entity[Constants.ConversationEntity.accountId] = conv.accountId;
@@ -87,15 +85,15 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 		entity[Constants.ConversationEntity.contactId] = conv.contactId;
 		entity[Constants.ConversationEntity.conversationId] = conv.conversationId;
 		entity[Constants.ConversationEntity.Name] = conv.conversationId;
-		entity[Constants.ConversationEntity.conversationTimestamp] = isNullOrUndefined(conv.conversationTimestamp) ? conv.conversationTimestamp : getUTCDateTime();
+		entity[Constants.ConversationEntity.conversationTimestamp] = isNullOrUndefined(conv.conversationTimestamp) ? new Date().toISOString() : conv.conversationTimestamp;
 		entity[Constants.ConversationEntity.externalAccountId] = conv.externalAccountId;
 		entity[Constants.ConversationEntity.externalContactId] = conv.externalContactId;
 		entity[Constants.ConversationEntity.externalConversationId] = conv.externalConversationId;
 		entity[Constants.ConversationEntity.externalCorrelationId] = conv.externalCorrelationId;
 		entity[Constants.ConversationEntity.externalProviderId] = conv.externalProviderId;
 		entity[Constants.ConversationEntity.initialQueueName] = conv.initialQueueName;
-		entity[Constants.ConversationEntity.providerId] = conv.providerId;
-		entity[Constants.ConversationEntity.providerName] = conv.providerName;
+		entity[Constants.ConversationEntity.providerId] = isNullOrUndefined(conv.providerId) ? providerId : conv.providerId;
+		entity[Constants.ConversationEntity.providerName] = isNullOrUndefined(conv.providerName) ? providerName : conv.providerName;
 		entity[Constants.ConversationEntity.region] = conv.regionData;
 
 		let customDataList = conv.customData;
@@ -111,7 +109,8 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 	 * Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
 	 * @param map Object to build the entity for.
 	 */
-	export function buildSessionEntity(data: InitData): XrmClientApi.WebApi.Entity {
+	export function buildSessionEntity(payload: any): XrmClientApi.WebApi.Entity {
+		let data: InitData = payload.get(Constants.AnalyticsEvent.analyticsData);
 		let session = data.conversation.session;
 		let entity: XrmClientApi.WebApi.Entity = {};
 		entity[Constants.SessionEntity.clientSessionId] = session.clientSessionId;
@@ -141,11 +140,14 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 	* Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
 	* @param map Object to build the entity for.
 	*/
-	export function buildParticipantEntityList(data: InitData): XrmClientApi.WebApi.Entity[] {
+	export function buildParticipantEntityList(payload: any): XrmClientApi.WebApi.Entity[] {
+		let data: InitData = payload.get(Constants.AnalyticsEvent.analyticsData);
 		let session = data.conversation.session;
 		let entities: XrmClientApi.WebApi.Entity[] = [];
 		for (var participant of session.participants) {
 			let entity: XrmClientApi.WebApi.Entity = {};
+			entity[Constants.ParticipantEntity.sessionId] = session.sessionId;
+			entity[Constants.ParticipantEntity.conversationId] = session.conversationId;
 			entity[Constants.ParticipantEntity.participantId] = participant.participantId;
 			entity[Constants.ParticipantEntity.participantName] = participant.participantName;
 			entity[Constants.ParticipantEntity.participantType] = participant.participantType;
@@ -180,7 +182,7 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 		for (var event of events) {
 			let entity: XrmClientApi.WebApi.Entity = {};
 			entity[Constants.EventEntity.additionalData] = event.additionalData;
-			entity[Constants.EventEntity.clientSessionId] = data.clientSessionId;
+			entity[Constants.EventEntity.clientSessionId] = (data.clientSessionId === Constants.AnalyticsEvent.defaultSessionId) ? Constants.AnalyticsEvent.noSessionId : data.clientSessionId;
 			entity[Constants.EventEntity.conversationId] = data.conversationId;
 			entity[Constants.EventEntity.createdEntityName] = event.entityName;
 			entity[Constants.EventEntity.createdEntityRecordId] = event.entityRecordId;
@@ -209,14 +211,6 @@ namespace Microsoft.CIFrameworkAnalytics.Utility {
 			entities.push(entity);
 		}
 		return entities;
-	}
-
-	/**
-	 * Returns the current UTC Date Time
-	 * @param map Object to build the entity for.
-	 */
-	export function getUTCDateTime(): string {
-		return moment.utc().valueOf().toString();
 	}
 
 }

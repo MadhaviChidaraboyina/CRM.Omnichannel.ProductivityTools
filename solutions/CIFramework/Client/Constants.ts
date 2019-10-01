@@ -95,7 +95,6 @@ namespace Microsoft.CIFramework
 		public static ScriptIdAttributeValue = "CIFMainLibrary";
 		public static ScriptCRMUrlAttributeName = "data-crmurl";
 		public static nameParameter = "msdyn_name";
-
 		public static originURL = "originURL";
 		public static CIClickToAct = "CIClickToAct";
 		public static CISendKBArticle = "KMClickToSend";
@@ -221,6 +220,20 @@ namespace Microsoft.CIFramework
 		public static templateParameters = "templateParameters";
 		public static notificationTemplateTimeoutDefaultValue = 120;
 		public static templateNameResolver = "templateNameResolver";
+		public static notificationResponse = "NotificationResponse";
+		public static isDelete = "isDelete";
+	}
+
+	export class AnalyticsConstants {
+		public static notificationResponseAction = "notificationResponseAction";
+		public static acceptNotificationResponse = "accepted";
+		public static rejectNotificationResponse = "rejected";
+		public static channelProviderName = "providerName";
+		public static channelProviderId = "providerId";
+		public static telemetryApiName = "telemetryAPIName";
+		public static telemetryInitApiName = "InitCIFAnalytics";
+		public static telemetryLogCustomEventApiName = "LogCustomEvent";
+		public static telemetryLogSystemEventApiName = "LogSystemEvent";
 		public static analyticsdata = "analyticsData";
 		public static initLogAnalyticsEventName = "initAnalytics";
 		public static analyticsEventType = "analyticsEventtype";
@@ -229,17 +242,6 @@ namespace Microsoft.CIFramework
 		public static logAnalyticsPlatformEventName = "logCIFAnalytics";
 		public static focussedSession = "focussedSession";
 		public static clientSessionId = "clientSessionId";
-		public static notificationResponse = "NotificationResponse";
-		public static isDelete = "isDelete";
-		public static notificationResponseAction = "NotificationResponseAction";
-		public static acceptNotificationResponse = "Accepted";
-		public static rejectNotificationResponse = "Rejected";
-		public static channelProviderName = "providerName";
-		public static channelProviderId = "providerId";
-		public static telemetryApiName = "telemetryAPIName";
-		public static telemetryInitApiName = "InitCIFAnalytics";
-		public static telemetryLogCustomEventApiName = "LogCustomEvent";
-		public static telemetryLogSystemEventApiName = "LogSystemEvent";
 	}
 
 	export enum ErrorCode {

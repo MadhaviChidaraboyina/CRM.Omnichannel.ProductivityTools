@@ -953,9 +953,9 @@ namespace Microsoft.CIFramework
 		if (!isNullOrUndefined(data)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.initLogAnalytics,
-				messageData: new Map().set(Constants.analyticsdata, data)
+				messageData: new Map().set(AnalyticsConstants.analyticsdata, data)
 					.set(Constants.correlationId, correlationId)
-					.set(Constants.analyticsEventType, EventType.SystemEvent)
+					.set(AnalyticsConstants.analyticsEventType, EventType.SystemEvent)
 			}
 			return sendMessage<string>(initLogAnalytics.name, payload, false);
 		}
@@ -974,10 +974,10 @@ namespace Microsoft.CIFramework
 		if (!isNullOrUndefined(data) || !isNullOrUndefined(eventName)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.logAnalyticsEvent,
-				messageData: new Map().set(Constants.analyticsdata, data)
+				messageData: new Map().set(AnalyticsConstants.analyticsdata, data)
 					.set(Constants.correlationId, correlationId)
-					.set(Constants.analyticsEventName, eventName)
-					.set(Constants.analyticsEventType, EventType.CustomEvent)
+					.set(AnalyticsConstants.analyticsEventName, eventName)
+					.set(AnalyticsConstants.analyticsEventType, EventType.CustomEvent)
 			}
 			return sendMessage<string>(logAnalyticsEvent.name, payload, false);
 		}

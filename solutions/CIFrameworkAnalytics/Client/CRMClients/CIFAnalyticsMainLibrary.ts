@@ -4,11 +4,10 @@
 /// <reference path="./Constants.ts" />
 /// <reference path="./AnalyticsDataModel.ts" />
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
-/// <reference path="../../../../packages/Crm.Moment.1.0.0/Content/Typings/moment.d.ts" />
 
 namespace Microsoft.CIFrameworkAnalytics {
 
-	let conversationUCSessionMap = new Map<string, string>();
+	let clientSessionConversationIdMap = new Map<string, string>();
 	let analyticsDataMap = new Map<string, InitData>();
 	let analyticsEventMap = new Map<string, string>();
 
@@ -29,7 +28,7 @@ namespace Microsoft.CIFrameworkAnalytics {
 		if (!Utility.isNullOrUndefined(payload)) {
 			let logData = Utility.validateInitAnalyticsPayload(payload);
 			if (logData) {
-				logAnalyticsInitData(payload);
+				logAnalyticsInitData(event.detail);
 			}
 		}
 	}
@@ -50,7 +49,8 @@ namespace Microsoft.CIFrameworkAnalytics {
 	/** @internal
 	 * Function to log the analytics init data
 	 */
-	function logAnalyticsInitData(payload: InitData) {
+	function logAnalyticsInitData(data: any) {
+		let payload: InitData = data.get(Constants.AnalyticsEvent.analyticsData);
 		// update the conversation id to data map
 		let conversationId: string = payload.conversation.conversationId;
 		if (analyticsDataMap.has(conversationId))
@@ -59,17 +59,18 @@ namespace Microsoft.CIFrameworkAnalytics {
 		analyticsDataMap.set(conversationId, payload);
 
 		//create the records. 
-		logConversationData(payload);
-		logSessionData(payload);
-		logParticipantData(payload);
+		logConversationData(data);
+		logSessionData(data);
+		logParticipantData(data);
 	}
 
 	/** @internal
 	* Function to log the Conversation data
 	*/
-	function logConversationData(payload: InitData) {
+	function logConversationData(data: any) {
+		let payload: InitData = data.get(Constants.AnalyticsEvent.analyticsData);
 		// create Conversation Data record
-		Xrm.WebApi.createRecord(Constants.ConversationEntity.entityName, Utility.buildConversationEntity(payload)).then(
+		Xrm.WebApi.createRecord(Constants.ConversationEntity.entityName, Utility.buildConversationEntity(data)).then(
 			function success(result) {
 				console.log("Conversation Data record created with ID: " + result.id);
 			},
@@ -82,9 +83,10 @@ namespace Microsoft.CIFrameworkAnalytics {
 	/** @internal
 	* Function to log the Session data
 	*/
-	function logSessionData(payload: InitData) {
+	function logSessionData(data: any) {
+		let payload: InitData = data.get(Constants.AnalyticsEvent.analyticsData);
 		// create Session Data record
-		Xrm.WebApi.createRecord(Constants.SessionEntity.entityName, Utility.buildSessionEntity(payload)).then(
+		Xrm.WebApi.createRecord(Constants.SessionEntity.entityName, Utility.buildSessionEntity(data)).then(
 			function success(result) {
 				console.log("Session Data record created with ID: " + result.id);
 			},
@@ -97,8 +99,9 @@ namespace Microsoft.CIFrameworkAnalytics {
 	/** @internal
 	* Function to log the Participant data
 	*/
-	function logParticipantData(payload: InitData) {
-		let records: XrmClientApi.WebApi.Entity[] = Utility.buildParticipantEntityList(payload);
+	function logParticipantData(data: any) {
+		let payload: InitData = data.get(Constants.AnalyticsEvent.analyticsData);
+		let records: XrmClientApi.WebApi.Entity[] = Utility.buildParticipantEntityList(data);
 		records.forEach(function (record) {
 			Xrm.WebApi.createRecord(Constants.ParticipantEntity.entityName, record).then(
 				function success(result) {
@@ -133,9 +136,15 @@ namespace Microsoft.CIFrameworkAnalytics {
 	*/
 	function createEventDataForSystemEvents(payload: any): EventData {
 		let correlationId = payload.get(Constants.AnalyticsEvent.correlationId);
-		let clientSessionId = payload.get(Constants.AnalyticsEvent.focussedSession);
+		let clientSessionId = payload.get(Constants.AnalyticsEvent.sessionId);
+		if (Utility.isNullOrUndefined(clientSessionId)) {
+			clientSessionId = payload.get(Constants.AnalyticsEvent.focussedSession);
+		}
 		let eventName = payload.get(Constants.AnalyticsEvent.eventName);
 		let eventId = analyticsEventMap.get(eventName);
+		if (Utility.isNullOrUndefined(correlationId)) {
+			correlationId = clientSessionConversationIdMap.get(clientSessionId);
+		}
 		if (!Utility.isNullOrUndefined(correlationId) && !Utility.isNullOrUndefined(eventId)) {
 			let conversationData = analyticsDataMap.get(correlationId);
 			if (!Utility.isNullOrUndefined(conversationData)) {
@@ -148,6 +157,7 @@ namespace Microsoft.CIFrameworkAnalytics {
 				let event = new EventEntity();
 				event.kpiEventId = eventId;
 				event.kpiEventName = eventName;
+				event.eventTimestamp = new Date().toISOString();
 				fillEventDataForSystemEvents(payload,conversationData,event);
 				events.push(event);
 				eventData.events = events;
@@ -160,13 +170,18 @@ namespace Microsoft.CIFrameworkAnalytics {
 		switch (event.kpiEventName) {
 			case Constants.AnalyticsEvent.notificationResponse:
 				{
-					let notificationResponse = payload.get(Constants.EventEntity.notificationResponseAction);
+					let notificationResponse = payload.get(Constants.AnalyticsEvent.notificationResponseAction);
 					event.notificationResponseAction = notificationResponse;
 				}
 				break;
+			case Constants.AnalyticsEvent.sessionStarted:
+				{
+					let sessionId = payload.get(Constants.AnalyticsEvent.clientSessionId);
+					let correlationId = payload.get(Constants.AnalyticsEvent.correlationId);
+					clientSessionConversationIdMap.set(sessionId, correlationId);
+				}
 			case Constants.AnalyticsEvent.notificationReceived:
 			case Constants.AnalyticsEvent.notificationTimedOut:
-			case Constants.AnalyticsEvent.sessionStarted:
 			case Constants.AnalyticsEvent.sessionSwitched:
 			case Constants.AnalyticsEvent.sessionClosed:
 				break;

@@ -36,6 +36,7 @@ namespace Microsoft.CIFramework.Internal {
 						}
 						console.log("[NotifyEventFromTemplate] Notification accepted. Timer cleared");
 						logInfoToTelemetry("[NotifyEventFromTemplate] Notification Accepted on Agent Accept", correlationId);
+						raiseSystemAnalyticsEvent(InternalEventName.NotificationResponse, mapReturn, new Map<string, any>().set(Constants.correlationId, correlationId).set(AnalyticsConstants.notificationResponseAction, AnalyticsConstants.acceptNotificationResponse));
 						showPopUpNotification();
 						return resolve(mapReturn);
 					}.bind(this);
@@ -50,6 +51,7 @@ namespace Microsoft.CIFramework.Internal {
 						}
 						console.log("[NotifyEventFromTemplate] Notification rejected.Timer cleared");
 						logInfoToTelemetry("[NotifyEventFromTemplate] Notification Rejected on Agent Decline", correlationId);
+						raiseSystemAnalyticsEvent(InternalEventName.NotificationResponse, mapReturn, new Map<string, any>().set(Constants.correlationId, correlationId).set(AnalyticsConstants.notificationResponseAction, AnalyticsConstants.rejectNotificationResponse));
 						showPopUpNotification();
 						return resolve(mapReturn);
 					}.bind(this);
@@ -61,6 +63,7 @@ namespace Microsoft.CIFramework.Internal {
 						closeId = "";
 						console.log("[NotifyEventFromTemplate] Notification rejected due to timeout");
 						logInfoToTelemetry("[NotifyEventFromTemplate] Notification Rejected on display timeout", correlationId);
+						raiseSystemAnalyticsEvent(InternalEventName.NotificationTimedOut, mapReturn, new Map<string, any>().set(Constants.correlationId, correlationId));
 						showPopUpNotification();
 						return resolve(mapReturn);
 					}.bind(this);

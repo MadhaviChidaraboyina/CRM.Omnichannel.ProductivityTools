@@ -216,16 +216,10 @@ declare namespace Microsoft.CIFramework {
         static templateParameters: string;
         static notificationTemplateTimeoutDefaultValue: number;
         static templateNameResolver: string;
-        static analyticsdata: string;
-        static initLogAnalyticsEventName: string;
-        static analyticsEventType: string;
-        static analyticsEventName: string;
-        static initAnalyticsPlatformEventName: string;
-        static logAnalyticsPlatformEventName: string;
-        static focussedSession: string;
-        static clientSessionId: string;
         static notificationResponse: string;
         static isDelete: string;
+    }
+    class AnalyticsConstants {
         static notificationResponseAction: string;
         static acceptNotificationResponse: string;
         static rejectNotificationResponse: string;
@@ -235,6 +229,14 @@ declare namespace Microsoft.CIFramework {
         static telemetryInitApiName: string;
         static telemetryLogCustomEventApiName: string;
         static telemetryLogSystemEventApiName: string;
+        static analyticsdata: string;
+        static initLogAnalyticsEventName: string;
+        static analyticsEventType: string;
+        static analyticsEventName: string;
+        static initAnalyticsPlatformEventName: string;
+        static logAnalyticsPlatformEventName: string;
+        static focussedSession: string;
+        static clientSessionId: string;
     }
     enum ErrorCode {
         Notes_Flap_Already_Expanded = 101,

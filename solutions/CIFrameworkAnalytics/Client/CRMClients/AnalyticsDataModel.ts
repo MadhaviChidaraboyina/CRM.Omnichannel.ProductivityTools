@@ -98,4 +98,10 @@ namespace Microsoft.CIFrameworkAnalytics {
 		public externalCorrelationId: string;
 		public customData?: (CustomDataEntity)[] | null;
 	}
+
+	export class SessionCache {
+		public conversationId: string;
+		public providerId: string;
+		public providerName: string;
+	}
 }
