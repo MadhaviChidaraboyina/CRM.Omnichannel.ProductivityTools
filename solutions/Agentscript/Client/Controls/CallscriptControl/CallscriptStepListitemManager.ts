@@ -230,6 +230,10 @@ module MscrmControls.CallscriptControl {
 			}, stepDetailsComponents);
 		}
 
+		/**
+		 * Returns CSS class name for accordion arrow icon
+		 * @param isExpandedStep true if current step is expanded
+		 */
 		public getAccordionIconClassName(isExpandedStep: boolean) {
 			if (isExpandedStep) {
 				return Constants.AccordionDownArrowClassName;
@@ -239,6 +243,10 @@ module MscrmControls.CallscriptControl {
 			}
 		}
 
+		/**
+		 * Returns CSS class name for run action icon
+		 * @param step object of step for which icon is rendered
+		 */
 		public getActionTypeIconClassName(step: CallScriptStep): string {
 			let actionTypeIconClassName: string;
 			if (step.action.actionType == CallscriptActionType.MacroAction) {
@@ -269,40 +277,46 @@ module MscrmControls.CallscriptControl {
 				className: this.getAccordionIconClassName(isExpandedStep)
 			}, []);
 
-			var actionTypeIcon = this.context.factory.createElement("Container", {
-				key: "CallScriptActionTypeIcon-" + step.id + "-Key",
-				id: "CallScriptActionTypeIcon-" + step.id + "-Id",
-				style: ControlStyle.getActionTypeIconStyle(step.action.actionType, this.context),
-				className: this.getActionTypeIconClassName(step)
-			}, []);
-
-			var stepLabel = this.context.factory.createElement("TEXT", {
-				key: "CallScriptStepLabel-" + step.id + "-Key",
-				id: "CallScriptStepLabel-" + step.id + "-Id",
+			var stepLabelComponents = [];
+			if (step.isExecuted || step.executionStatus === ExecutionStatus.Failed) {
+				var stepExecutionStatusIcon = this.context.factory.createElement("CONTAINER", {
+					key: "CallscriptStepExecutionIcon" + step.id + "-key",
+					id: "CallscriptStepExecutionIcon" + step.id + "-id",
+					style: ControlStyle.getStepExecutionStatusIconStyle(this.context, step.executionStatus),
+					className: (step.executionStatus == ExecutionStatus.Failed) ? Constants.FailedStepIconClassName : Constants.CompletedStepIconClassName
+				}, []);
+				stepLabelComponents.push(stepExecutionStatusIcon);
+			}
+			stepLabelComponents.push(step.name);
+			var stepLabelContainer = this.context.factory.createElement("CONTAINER", {
+				key: "CallScriptStepLabelContainer-" + step.id + "-Key",
+				id: "CallScriptStepLabelContainer-" + step.id + "-Id",
 				style: ControlStyle.getStepLabelStyle(step, this.context)
-			}, step.name);
+			}, stepLabelComponents);
 
-			var runActionIconButton = this.context.factory.createElement("BUTTON", {
+			var runActionIcon = this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptRunActionIcon-" + step.id + "-Key",
 				id: "CallScriptRunActionIcon-" + step.id + "-Id",
 				title: this.stepDetailsManager.getActionButtonLabel(step),
-				style: ControlStyle.getRunActionIconStyle(step.action.actionType, this.context),
+				style: ControlStyle.getRunActionIconStyle(),
+				className: this.getActionTypeIconClassName(step),
 				onClick: this.stepDetailsManager.getActionButtonClickHandler(step),
+				onKeyDown: this.stepDetailsManager.getActionButtonKeyDownHandler(step),
 				tabIndex: tabIndexValue
 			}, []);
 
-			var stepInProgressIcon = this.context.factory.createElement("TEXT", {
+			var stepInProgressIcon = this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptStepProgressIcon-" + step.id + "-Key",
 				id: "CallScriptStepProgressIcon-" + step.id + "-Id",
 				style: ControlStyle.getProgressIconStyle(this.context)
 			}, []);
 
-			let stepListItemComponents: Mscrm.Component[] = [arrowIcon, actionTypeIcon, stepLabel];
+			let stepListItemComponents: Mscrm.Component[] = [arrowIcon, stepLabelContainer];
 			if (step.executionStatus === ExecutionStatus.Started) {
 				stepListItemComponents.push(stepInProgressIcon);
 			}
 			else {
-				stepListItemComponents.push(runActionIconButton);
+				stepListItemComponents.push(runActionIcon);
 			}
 
 			return this.context.factory.createElement("CONTAINER", {

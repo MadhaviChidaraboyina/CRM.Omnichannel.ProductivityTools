@@ -37,6 +37,8 @@ module MscrmControls.CallscriptControl {
 		//class names for styling
 		public static AccordionRightArrowClassName = "accordionRightArrow";
 		public static AccordionDownArrowClassName = "accordionDownArrow";
+		public static FailedStepIconClassName = "failedStepIcon";
+		public static CompletedStepIconClassName = "completedStepIcon";
 		public static TextActionIconClassName = "textActionIcon";
 		public static MacroActionIconClassName = "macroActionIcon";
 		public static RouteActionIconClassName = "routeActionIcon";

@@ -47,6 +47,13 @@ module MscrmControls.CallscriptControl {
 		}
 
 		/**
+		 * Returns action button keydown handler function
+		 */
+		public getActionButtonKeyDownHandler(step: CallScriptStep): any {
+			return this.handleActionButtonKeydown.bind(this, step);
+		}
+
+		/**
 		 * Updates the content of live region on step execution status update
 		 */
 		public updateLiveRegionContent(step: CallScriptStep): void {
@@ -115,6 +122,17 @@ module MscrmControls.CallscriptControl {
 		}
 
 		/**
+		 * Keydown handler for run action button
+		 * @param step step to run
+		 * @param event keydown jquery event
+		 */
+		public handleActionButtonKeydown(step: CallScriptStep, event: JQueryEventObject): void {
+			if (event.keyCode === Mscrm.KeyCode.Enter) {
+				this.handleActionButtonClick(step, event);
+			}
+		}
+
+		/**
 		 * Add telemetry event parameters when action is executed
 		 * @param step call script step
 		 */
@@ -143,6 +161,10 @@ module MscrmControls.CallscriptControl {
 			return eventParams;
 		}
 
+		/**
+		 * Returns tooltip to show on run action icons
+		 * @param step step to get tooltip for
+		 */
 		public getActionButtonLabel(step: CallScriptStep): string {
 			let buttonLabel: string;
 			if (step.action.actionType === CallscriptActionType.TextAction) {
@@ -164,24 +186,6 @@ module MscrmControls.CallscriptControl {
 				}
 			}
 			return buttonLabel;
-		}
-
-		/**
-		 * Returns button for apply/retry option for step based on step execution status
-		 * @param step step whose button is returned
-		 */
-		public getActionButton(step: CallScriptStep): Mscrm.Component {
-			let buttonLabel = this.getActionButtonLabel(step);
-			var isDisabled = (step.executionStatus === ExecutionStatus.Started);
-
-			return this.context.factory.createElement("BUTTON", {
-				key: "CallScriptStepExecuteBtn" + step.id + "-Key",
-				id: "CallScriptStepExecuteBtn" + step.id + "-id",
-				style: ControlStyle.getExecuteActionButtonStyle(step, this.context),
-				title: buttonLabel,
-				disabled: isDisabled,
-				onClick: this.handleActionButtonClick.bind(this, step)
-			}, buttonLabel);
 		}
 
 		/**
@@ -250,9 +254,6 @@ module MscrmControls.CallscriptControl {
 			if (step.executionStatus === ExecutionStatus.Failed) {
 				macroAndRouteActionDetailsComponents.push(this.getErrorTextComponent(step));
 			}
-			/*Removing the action button, since action icon is present upfront now
-			macroAndRouteActionDetailsComponents.push(this.getActionButton(step));
-			*/
 
 			return macroAndRouteActionDetailsComponents;
 		}

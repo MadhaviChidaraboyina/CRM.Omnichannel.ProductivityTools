@@ -15,7 +15,9 @@ module MscrmControls.CallscriptControl {
 				"flex-direction": "column",
 				overflow: "auto",
 				minHeight: "346px",
-				paddingTop: "16px"
+				paddingTop: "16px",
+				paddingLeft: "14px",
+				paddingRight: "14px"
 			};
 		}
 
@@ -31,8 +33,6 @@ module MscrmControls.CallscriptControl {
 		public static getHeaderContainerStyle() {
 			return {
 				"align-items": "left",
-				marginLeft: "14px",
-				marginRight: "14px",
 				marginBottom: "12px",
 				minWidth: "234px"
 			}
@@ -73,11 +73,9 @@ module MscrmControls.CallscriptControl {
 			return {
 				position: "relative",
 				"float": "left",
-				width: "calc(100% - 28px)",
+				width: "100%",
 				height: "32px",
 				marginBottom: "8px",
-				marginLeft: "14px",
-				marginRight: "14px",
 				minWidth: "234px"
 			};
 		}
@@ -127,8 +125,6 @@ module MscrmControls.CallscriptControl {
 
 		public static getScriptDescriptionContainerStyle() {
 			return {
-				marginLeft: "14px",
-				marginRight: "14px",
 				marginBottom: "12px",
 				height: "auto",
 				minWidth: "234px"
@@ -160,19 +156,6 @@ module MscrmControls.CallscriptControl {
 			}
 		}
 
-		public static getCollapsedListItemOnHoverStyle() {
-			return {
-				background: "#EDEBE9",
-				cursor: "pointer"
-			}
-		}
-
-		public static getExpandedListItemOnHoverStyle() {
-			return {
-				cursor: "pointer"
-			}
-		}
-
 		public static getListItemStyle(isRTL: boolean, isStepExpanded: boolean, stepExecutionStatus: ExecutionStatus) {
 			let backgroundStyle = "inherit";
 			if (isStepExpanded) {
@@ -183,30 +166,28 @@ module MscrmControls.CallscriptControl {
 					backgroundStyle = "#F3F2F1";
 				}
 			}
-			let onHoverStyle = (isStepExpanded) ? ControlStyle.getExpandedListItemOnHoverStyle() : ControlStyle.getCollapsedListItemOnHoverStyle();
 			return {
-				width: "calc(100% - 28px)",
+				width: "100%",
 				height: "auto",
 				flexDirection: "column",
 				cursor: "pointer",
 				background: backgroundStyle,
-				":hover": onHoverStyle,
-				paddingLeft: "14px",
-				paddingRight: "14px",
+				":hover": { background: (isStepExpanded && stepExecutionStatus === ExecutionStatus.Failed) ? "#F9F0EF" : "#F3F2F1" },
+				":hover .textActionIcon, .routeActionIcon, .macroActionIcon": { background: "#FFFFFF" },
 				textAlign: isRTL ? "right" : "left",
 				display: "inline-block" 
 			}
 		}
 
 		public static getArrowIconStyle(context: Mscrm.ControlData<IInputBag>, isExpandedStep: boolean) {
-			let arrowIconUrl: string;
-			if (isExpandedStep) arrowIconUrl = Utility.getIconUrl(context, Constants.expandedAccordionItemIcon);
-			else arrowIconUrl = Utility.getIconUrl(context, Constants.collapsedAccordionItemIcon);
+			let isRTL = context.client.isRTL;
 			return {
 				width: "14px",
-				height: "16px",
-				marginTop: "14px",
-				marginBottom: "14px",
+				height: "14px",
+				paddingTop: "11px",
+				paddingBottom: "11px",
+				marginLeft: isRTL ? "6px" : "4px",
+				marginRight: isRTL ? "4px" : "6px",
 				"font-family": 'Dyn CRM Symbol',
 				"font-size": "10px",
 				color: "black",
@@ -215,18 +196,32 @@ module MscrmControls.CallscriptControl {
 			};
 		}
 
-		public static getActionTypeIconStyle(actionType: CallscriptActionType, context: Mscrm.ControlData<IInputBag>) {
-			let actionTypeIconUrl = Utility.getActionIconUrl(context, actionType);
+		public static getStepExecutionStatusIconStyle(context: Mscrm.ControlData<IInputBag>, stepExecutionStatus: ExecutionStatus) {
+			let isRTL = context.client.isRTL;
+			return {
+				width: "14px",
+				height: "21px",
+				paddingTop: "1px",
+				"font-family": 'Dyn CRM Symbol',
+				"font-size": "14px",
+				color: (stepExecutionStatus === ExecutionStatus.Failed) ? "#A80000" : "#107C10",
+				marginRight: isRTL ? "0px" : "6px",
+				marginLeft: isRTL ? "6px" : "0px",
+				float: isRTL ? "right" : "left"
+			};
+		}
+
+		public static getRunActionIconStyle() {
 			return {
 				width: "16px",
 				height: "16px",
-				marginLeft: "14px",
-				marginRight: "14px",
-				marginTop: "14px",
-				marginBottom: "14px",
+				margin: "4px",
+				padding: "6px 6px",
 				"font-family": 'Dyn CRM Symbol',
 				"font-size": "16px",
-				display: "table"
+				borderRadius: "50%",
+				display: "table",
+				color: "#333333"
 			};
 		}
 
@@ -238,13 +233,15 @@ module MscrmControls.CallscriptControl {
 				fontFamily: context.theming.fontfamilies.regular,
 				fontSize: "14px",
 				color: labelFontColorStyle,
-				fontWeight: (step.isExecuted) ? 500 : 600,
+				fontWeight: 600,
 				"vertical-align": "middle",
-				paddingTop: "12px",
-				paddingBottom: "12px",
 				cursor: "pointer",
-				width: "calc(100% - 82px)",
-				wordWrap: "break-word"
+				width: "calc(100% - 36px)",
+				paddingTop: "7px",
+				paddingBottom: "7px",
+				lineHeight: "1.6",
+				wordWrap: "break-word",
+				display: "block"
 			};
 		}
 
@@ -257,39 +254,8 @@ module MscrmControls.CallscriptControl {
 				"background-image": "url(" + backgroundIconUrl + ")",
 				"background-repeat": "no-repeat",
 				"background-position": "center",
-				marginLeft: isRTL ? "0px" : "8px",
-				marginRight: isRTL ? "8px" : "0px",
-				marginTop: "14px",
-				marginBottom: "14px"
-			};
-		}
-
-		public static getRunActionIconStyle(actionType: CallscriptActionType, context: Mscrm.ControlData<IInputBag>) {
-			let backgroundIconUrl = "";
-			if (actionType === CallscriptActionType.TextAction) {
-				backgroundIconUrl = Utility.getIconUrl(context, Constants.markdoneTextIcon);
-			}
-			else if (actionType === CallscriptActionType.MacroAction) {
-				backgroundIconUrl = Utility.getIconUrl(context, Constants.runMacroIcon);
-			}
-			else {
-				backgroundIconUrl = Utility.getIconUrl(context, Constants.viewScriptIcon);
-			}
-			let isRTL = context.client.isRTL;
-			return {
-				width: "16px",
-				height: "16px",
-				"background-image": "url(" + backgroundIconUrl + ")",
-				"background-repeat": "no-repeat",
-				"background-position": "center",
-				padding: "0px",
-				marginLeft: isRTL ? "0px" : "8px",
-				marginRight: isRTL ? "8px" : "0px",
-				marginTop: "14px",
-				marginBottom: "14px",
-				border: "none",
-				backgroundColor: "inherit",
-				cursor: "pointer"
+				margin: "4px",
+				padding: "6px 6px",
 			};
 		}
 
@@ -301,7 +267,7 @@ module MscrmControls.CallscriptControl {
 				"flex-direction": "column",
 				"vertical-align": "middle",
 				background: backgroundColor,
-				marginTop: "-12px",
+				marginTop: "-5px",
 				paddingBottom: "14px"
 			}
 		}
@@ -314,9 +280,9 @@ module MscrmControls.CallscriptControl {
 				color: (stepExecutionStatus === ExecutionStatus.Completed) ? "#666666" : "#333333",
 				"vertical-align": "middle",
 				paddingTop: "4px",
-				width: "calc(100% - 86px)",
-				marginLeft: isRTL ? "0px" : "58px",
-				marginRight: isRTL ? "58px" : "0px",
+				width: "calc(100% - 28px)",
+				marginLeft: isRTL ? "4px" : "24px",
+				marginRight: isRTL ? "24px" : "4px",
 				wordWrap: "break-word",
 				"whiteSpace": "pre-wrap"
 			}
@@ -329,50 +295,11 @@ module MscrmControls.CallscriptControl {
 				fontSize: "12px",
 				color: "#A80000",
 				paddingTop: "8px",
-				width: "calc(100% - 86px)",
-				marginLeft: isRTL ? "0px" : "58px",
-				marginRight: isRTL ? "58px" : "0px",
+				width: "calc(100% - 28px)",
+				marginLeft: isRTL ? "4px" : "24px",
+				marginRight: isRTL ? "24px" : "4px",
 				wordWrap: "break-word"
 			}
 		}
-
-		public static getExecuteActionButtonStyle(step: CallScriptStep, context: Mscrm.ControlData<IInputBag>) {
-			let isRTL = context.client.isRTL;
-			let buttonWidth: string;
-			if (step.action.actionType === CallscriptActionType.TextAction) {
-				buttonWidth = "112px";
-			}
-			else if (step.action.actionType === CallscriptActionType.ReRouteAction) {
-				buttonWidth = "62px";
-			}
-			else {
-				if (step.executionStatus === ExecutionStatus.Failed) buttonWidth = "80px";
-				else if (step.executionStatus === ExecutionStatus.Completed) buttonWidth = "100px";
-				else buttonWidth = "62px";
-			}
-			return {
-				fontFamily: context.theming.fontfamilies.regular,
-				fontSize: "14px",
-				color: "#FFFFFF",
-				background: "#2266E3",
-				border: "none",
-				borderRadius: "2px",
-				minWidth: buttonWidth,
-				maxWidth: "calc(100% - 58px)",
-				width: "fit-content",
-				height: "28px",
-				marginTop: "12px",
-				display: "inline-block",
-				cursor: "pointer",
-				marginLeft: isRTL ? "0px" : "58px",
-				marginRight: isRTL ? "58px" : "0px",
-				":hover": { background: "#FFFFFF", color: "#2266E3"},
-				":disabled": { background: "#EDEBE9", color: "#A19F9D", width: "80px" },
-				whiteSpace: "nowrap",
-				overflow: "hidden",
-				textOverflow: "ellipsis"
-			}
-		}
-
 	}
 }
