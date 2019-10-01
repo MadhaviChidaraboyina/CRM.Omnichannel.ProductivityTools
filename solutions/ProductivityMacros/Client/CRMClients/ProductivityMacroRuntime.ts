@@ -165,25 +165,27 @@ namespace Microsoft.ProductivityMacros {
 				let inputs = JSON.parse(actionInputs);
 
 				for (var input in inputs) {
-					if (typeof inputs[input] === 'object') {
-						stringResolversInputs.push(resolveParams(actionType, JSON.stringify(inputs[input]), result).then(function (response: any) {
-							resolvedInputs[input] = response;
-						}.bind(this), function (error: Error) {
+                    if (typeof inputs[input] === 'object') {
+                        let val = inputs[input];
+                        resolvedInputs[input] = val;
+                        Object.keys(val).forEach(function (propName) {
+                            stringResolversInputs.push(resolveParams(actionType, JSON.stringify(val[propName]), result).then(function (response: any) {
+                                resolvedInputs[input][propName] = response;
+                            }));
+                        });
+                    }
+                    else if (Array.isArray(inputs[input])) {
+                        var arrayInput = inputs[input];
+                        resolvedInputs[input] = arrayInput;
+                        for (var i = 0; i < arrayInput.length; i++) {
+                            stringResolversInputs.push(resolveParams(actionType, arrayInput[i], result).then(function (response: any) {
+                                resolvedInputs[input][i] = response;
+                            }.bind(this), function (error: Error) {
 
-						})
-						);
-					}
-					else if (Array.isArray(inputs[input])) {
-						var arrayInput = inputs[input];
-						for (var i = 0; i < arrayInput.length; i++) {
-							stringResolversInputs.push(resolveParams(actionType, arrayInput[i], result).then(function (response: any) {
-								resolvedInputs[input] = response;
-							}.bind(this), function (error: Error) {
-
-							})
-							);
-						}
-					}
+                            })
+                            );
+                        }
+                    }
 					else if (typeof inputs[input] === 'string' || inputs[input] instanceof String) {
 						if (inputs[input].startsWith("@outputs")) {
 							inputs[input] = resolveActionInputFromPrevActionOutput(inputs[input]);

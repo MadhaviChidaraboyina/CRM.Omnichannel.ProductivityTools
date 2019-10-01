@@ -177,7 +177,7 @@ export interface Connector extends ArmResource<ConnectorProperty> {
 //export type ConnectionOperation = ApiOperation | FunctionResource | Website | Workflow; -- ORIGINAL
 export type ConnectionOperation = ApiOperation;// | FunctionResource | Website | Workflow; --OUR REDUCED
 
-export type AnalyticsService = any;
+//export type AnalyticsService = Analytics;
 
 export interface BuiltInOperationIdsTypes {
     ADD_TO_TIME?: string;
@@ -736,4 +736,209 @@ export interface Schema {
     //externalDocs?: ExternalDocumentation;
     example?: any;
     [xdash: string]: any;
+}
+
+export interface AnalyticsContext {
+    /* tslint:disable: no-any */
+    data?: any;
+    /* tslint:enable: no-any */
+
+    browserName?: string;
+    browserVersion?: string;
+    browserArch?: string;
+    screenResolution?: string;
+    windowLocationHref?: string;
+    osName?: string;
+    osVersion?: string;
+    osArch?: string;
+}
+
+
+export interface AnalyticsService {
+
+    /* tslint:disable: no-any max-line-length */
+
+    getContext(): AnalyticsContext;
+    setContextData(contextData: any): void;
+    replaceContextData(contextData: any): void;
+
+    /*
+     * shim for performance.now() which returns double instead of long and is more precise than Date.now()
+     */
+    performanceNow(): number;
+
+    /*
+        {
+            eventId: eventId || guid(),
+            eventCorrelationId: eventCorrelationId,
+            message: message,
+            "eventData": {
+              context: getContext(),
+              data: data
+            },
+            eventName: eventName,
+            eventTimestamp: eventTimestamp || new Date(),
+            eventType: "Trace",
+            code: "info"
+        }
+    */
+    logInfo(eventName: string, message: string, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void;
+
+    /*
+        {
+            eventId: eventId || guid(),
+            eventCorrelationId: eventCorrelationId,
+            message: message,
+            "eventData": {
+              context: getContext(),
+              data: data
+            },
+            eventName: eventName,
+            eventTimestamp: eventTimestamp || new Date(),
+            eventType: "Trace",
+            code: "warning"
+        }
+    */
+    logWarning(eventName: string, message: string, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void;
+
+    /*
+        {
+          "eventId": eventId || guid(),
+          "eventCorrelationId": eventCorrelationId,
+          "eventType": "Error",
+          "eventTimestamp": eventTimestamp || new Date(),
+          "eventName": eventName,
+          "eventData": {
+              context: getContext(),
+              data: data
+          },
+          "message": error.toString(), // to string defaults to `${error.name}: ${error.message}`
+          "code": error.code,
+          "exception": error.stack
+        }
+    */
+    logError(eventName: string, error: Error, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void;
+    // TODO: Add api for logging unhandled exception.
+
+    /*
+        {
+          "eventId": eventId || guid(),
+          "eventCorrelationId": eventCorrelationId,
+          "eventType": "Request",
+          "eventTimestamp": eventTimestamp || new Date(),
+          "eventName": eventName,
+          "eventData": {
+              context: getContext(),
+              data: data,
+              request: "start"
+          },
+          "httpMethod": httpMethod,
+          "targetUri": targetUri,
+          "hostName": "example.com", // we can autogenerate this from targetUri. this is optional
+          "apiVersion": "2.0", // auto generate for targetUri or make this a parameter? this is optional
+          "clientRequestId": clientRequestId // optional
+        }
+    */
+    logHttpRequestStart(eventName: string, httpMethod: string, targetUri: string, clientRequestId?: string, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void;
+
+    /*
+        {
+          "eventId": eventId || guid(),
+          "eventCorrelationId": eventCorrelationId,
+          "eventType": "Request",
+          "eventTimestamp": eventTimestamp || new Date(),
+          "eventName": eventName,
+          "eventData": {
+              context: getContext(),
+              data: data,
+              request: "end" // "end" | "networkerror" | "error",
+              preciseDurationInMilliseconds: preciseDurationInMilliseconds
+          },
+          "durationInMilliseconds": Math.round(preciseDurationInMilliseconds),
+          "httpMethod": httpMethod,
+          "targetUri": targetUri,
+          "clientRequestId": clientRequestId, // optional
+          "serviceRequestId": responseData.serviceRequestId, // optional
+          "contentLength": responseData.contentLength,
+          "httpStatusCode": responseData.statusCode,
+
+          // optional. we can remove this since this info is already available in targetUri and these are optional
+          "hostName": responseData.hostName,
+          "apiVersion": responseData.apiVersion",
+        }
+    */
+    logHttpRequestEnd(eventName: string, httpMethod: string, targetUri: string, responseData: /*ResponseData*/ any, preciseDurationInMilliseconds: number, clientRequestId?: string, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void;
+
+    // Telemetry APIs
+    /*
+        {
+          "eventId": eventId || guid(),
+          "eventCorrelationId": eventCorrelationId,
+          "eventType": "Telemetry",
+          "eventTimestamp": eventTimestamp || new Date(),
+          "eventName": eventName,
+          "eventData": {
+            context: getContext(),
+            data: data
+          }
+        },
+    */
+    trackEvent(eventName: string, data: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void;
+
+    // Profiling APIs
+    /*
+        {
+          "eventId": eventId || guid(),
+          "eventCorrelationId": eventCorrelationId,
+          "eventType": "Telemetry",
+          "eventTimestamp": eventTimestamp || new Date(), // save this internally and remove during profileEnd incase profileEnd passes date instead of duration
+          "eventName": eventName,
+          "eventData": {
+            context: getContext(),
+            data: data,
+            profile: "start"
+          }
+        },
+    */
+    profileStart(eventCorrelationId: string, eventName: string, data: any, preciseDurationInMilliseconds?: number, eventTimestamp?: Date, eventId?: string): void;
+
+    /*
+        {
+          "eventId": eventId || guid(),
+          "eventCorrelationId": eventCorrelationId,
+          "eventType": "Telemetry",
+          "eventTimestamp": eventTimestamp || new Date(),
+          "eventName": eventName,
+          "eventData": {
+            context: getContext(),
+            data: data,
+            profile: "end",
+            preciseDurationInMilliseconds: preciseDurationInMilliseconds // if not present this is same as durationInMs
+          },
+          durationInMilliseconds: Math.round(preciseDurationInMilliseconds) // if not present calcaulate from eventTimeStamp. remove from internal data structure
+        }
+    */
+    profileEnd(eventCorrelationId: string, eventName: string, data: any, preciseDurationInMilliseconds?: number, eventTimeStamp?: Date, eventId?: string): void;
+
+    /*
+        {
+          "eventId": eventId || guid(),
+          "eventCorrelationId": eventCorrelationId,
+          "eventType": "Telemetry",
+          "eventTimestamp": eventTimestamp || new Date(),
+          "eventName": eventName,
+          "eventData": {
+            context: getContext(),
+            data: data,
+            profile: "profile",
+            preciseDurationInMilliseconds: preciseDurationInMilliseconds // this should always be calculated by the caller and is required
+          },
+          durationInMilliseconds: Math.round(preciseDurationInMilliseconds)
+        }
+    */
+    profile(eventCorrelationId: string, eventName: string, data: any, precisedurationInMilliseconds: number, eventTimestamp?: Date | number, eventId?: string): void;
+    /* tslint:enable: no-any max-line-length */
+
+    flush(): Promise<void>;
+
 }

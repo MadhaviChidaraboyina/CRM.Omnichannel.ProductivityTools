@@ -545,3 +545,73 @@ export class OperationManifestServiceImpl implements Designer.OperationManifestS
         return null;
     }
 }
+
+export class Analytics implements Designer.AnalyticsService {
+    private _context: Designer.AnalyticsContext = {};
+    private _correlationId: string = Utils.Utils.GenGuid();
+    private _rpc: any = null;
+    public constructor(rpc: any, context: SharedDefines.IDesignerOptions, version: string) {
+        this._context = {}; //TODO
+        this._rpc = rpc;
+    }
+    public getContext(): Designer.AnalyticsContext {
+        return this._context;
+    }
+    public setContextData(contextData: any): void {
+        this._context.data = contextData;
+    }
+    public replaceContextData(data: any): void {
+        return this.setContextData(data);
+    }
+    public performanceNow(): number {
+        return 0;   //TODO
+    }
+    private _log(level: SharedDefines.LogLevel, eventType: SharedDefines.TelemetryEventType, eventName: string, message: string, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string, error?: Error) {
+        let obj: SharedDefines.LogObject = {
+            eventName: eventName,
+            eventType: eventType,
+            level: level,
+            //designerInstanceId: this._correlationId,
+            message: Utils.Utils.genMsgForTelemetry(message, error),
+            eventCorrelationId: eventCorrelationId,
+            eventId: eventId,
+            eventTimeStamp: eventTimestamp || new Date(),
+            eventData: { data: data, context: this.getContext() }
+        };
+        if (error) {
+            obj.exception = error.stack;
+        }
+        this._rpc.call(SharedDefines.WrapperMessages.LOG, [JSON.stringify(obj)]);
+    }
+    public logInfo(eventName: string, message: string, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void {
+        return this._log(SharedDefines.LogLevel.Info, SharedDefines.TelemetryEventType.Trace, eventName, message, data, eventCorrelationId, eventTimestamp, eventId);
+    }
+    public logWarning(eventName: string, message: string, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void {
+        return this._log(SharedDefines.LogLevel.Warning, SharedDefines.TelemetryEventType.Trace, eventName, message, data, eventCorrelationId, eventTimestamp, eventId);
+    }
+    public logError(eventName: string, error: Error, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void {
+        return this._log(SharedDefines.LogLevel.Error, SharedDefines.TelemetryEventType.Trace, eventName, error.toString(), data, eventCorrelationId, eventTimestamp, eventId);
+    }
+    public logHttpRequestStart(eventName: string, httpMethod: string, targetUri: string, clientRequestId?: string, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void {
+        //TODO
+    }
+    public logHttpRequestEnd(eventName: string, httpMethod: string, targetUri: string, responseData: /*ResponseData*/ any, preciseDurationInMilliseconds: number, clientRequestId?: string, data?: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void {
+        //TODO
+    }
+    public trackEvent(eventName: string, data: any, eventCorrelationId?: string, eventTimestamp?: Date, eventId?: string): void {
+        return this._log(SharedDefines.LogLevel.Info, SharedDefines.TelemetryEventType.Telemetry, eventName, "Track Event".concat(":", eventName), data, eventCorrelationId, eventTimestamp, eventId);
+    }
+    public profileStart(eventCorrelationId: string, eventName: string, data: any, preciseDurationInMilliseconds?: number, eventTimestamp?: Date, eventId?: string): void {
+        //TODO
+    }
+    profileEnd(eventCorrelationId: string, eventName: string, data: any, preciseDurationInMilliseconds?: number, eventTimeStamp?: Date, eventId?: string): void {
+        //TODO
+    }
+    profile(eventCorrelationId: string, eventName: string, data: any, precisedurationInMilliseconds: number, eventTimestamp?: Date | number, eventId?: string): void {
+        //TODO
+    }
+    flush(): Promise<void> {
+        //TODO
+        return Promise.resolve();
+    }
+}

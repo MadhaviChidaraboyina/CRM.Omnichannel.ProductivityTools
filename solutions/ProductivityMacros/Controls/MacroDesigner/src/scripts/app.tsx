@@ -276,6 +276,9 @@ function initializeDesigner(req) {
                     };
                     let flowConfigurationOptions = {
                         apiVersion: designerOptions.ApiVersion,
+                        analyticsServiceFactory: function (version) {
+                            return new HostService.Analytics(rpc, designerOptions, version);
+                        },
                         features: FeaturesToEnable,
                         builtInTypeServiceFactory: builtInTypeServiceFactory,
                         operationManifestServiceFactory: operationManifestServiceFactory,

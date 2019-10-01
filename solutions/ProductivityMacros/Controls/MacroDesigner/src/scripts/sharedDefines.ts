@@ -1,8 +1,12 @@
-﻿export interface MacroDesignerConfig {
+﻿import { AnalyticsContext } from "./DesignerDefinitions";
+
+export interface MacroDesignerConfig {
     DesignerBaseURL?: string;
     UserVoiceText?: string;
     UserVoiceLink?: string;
     SearchHint?: string;
+    DesignerSolutionVersion?: string;
+    DesignerInstanceId?: string;
 }
 
 declare global {
@@ -30,8 +34,34 @@ export class DesignerMessages {
 export class WrapperMessages {
     public static DesignerInitDone = "initDone";
     public static RPC_PING = "__PING__";
+    public static LOG = "log";
 };
-
+export enum LogLevel {
+    Info = "Info",
+    Warning = "Warning",
+    Error = "Error",
+    Trace = "Trace",
+    Debug = "Debug"
+}
+export enum TelemetryEventType {
+    Trace = "Trace",
+    Request = "Request",
+    Telemetry = "Telemetry",
+    ProfileStart = "ProfileStart",
+    ProfileEnd = "ProfileEnd"
+}
+export interface LogObject {
+    //designerInstanceId: string,
+    eventName: string,
+    eventCorrelationId?: string,
+    message: string,
+    eventData?: { context?: AnalyticsContext, data?: any },
+    eventId?: string,
+    eventTimeStamp: Date,
+    eventType: TelemetryEventType,
+    level: LogLevel,
+    exception?: any
+}
 export interface Parameter {
     name: string,
     type: string,
