@@ -33,13 +33,9 @@ module MscrmControls.CallscriptControl
 		{
 			let methodName = "getSessionTemplateId";
 			let sessionTemplateId: string = "";
+
 			try {
 				sessionTemplateId = this.cifExternalUtil.getTemplateForSession();
-				if (this.context.utils.isNullOrUndefined(sessionTemplateId)) {
-					//couldn't retrieve from CIF, fetch from form query parameters
-					let queryStringParameters = (window as any).Xrm.Page.context.getQueryStringParameters();
-					sessionTemplateId = queryStringParameters.templateId;
-				}
 			}
 			catch (error) {
 				let errorMessage = "Failed to retrieve session template id";
@@ -47,6 +43,22 @@ module MscrmControls.CallscriptControl
 				errorParam.addParameter("errorDetails", error);
 				this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
 			}
+
+			if (this.context.utils.isNullOrUndefined(sessionTemplateId) ||
+				this.context.utils.isNullOrEmptyString(sessionTemplateId)) {
+
+				try {
+					//couldn't retrieve from CIF, fetch from form query parameters
+					let queryStringParameters = (window as any).Xrm.Page.context.getQueryStringParameters();
+					sessionTemplateId = queryStringParameters.templateId;
+				} catch (error) {
+					let errorMsg = "Failed to retrieve session template id from form param";
+					let errorParams = new EventParameters();
+					errorParams.addParameter("errorDetails", error);
+					this.telemetryLogger.logError(this.telemetryContext, methodName, errorMsg, errorParams);
+				}
+			}
+			
 			return sessionTemplateId;
 		}
 
