@@ -13,3 +13,4 @@ solutions\Agentscript\Client\Controls\CallscriptControl\strings\CallscriptContro
 solutions\Agentscript\Client\Localization\Languages\Agentscript.1033.resx,Agentscript
 solutions\Agentscript\Solution\Resources\en-us\resources.en-US.resx,Agentscript
 solutions\SmartAssist\Client\Controls\SmartassistControl\strings\SmartassistControl.1033.resx,SmartAssist
+solutions\CIFrameworkAnalytics\Solution\Resources\en-us\resources.en-US.resx,CIFrameworkAnalytics

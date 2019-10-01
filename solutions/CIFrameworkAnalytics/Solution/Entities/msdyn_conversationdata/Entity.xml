@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Conversations Data" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Primary entity for a conversation" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -281,7 +281,7 @@
             <displayname description="Account Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Dynamics CRM Account Identifier" languagecode="1033" />
+            <Description description="Account unique identifier" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_AdditionalData">
@@ -353,7 +353,7 @@
             <displayname description="Backend Conversation Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Backend Conversation Identifier" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Channel">
@@ -425,7 +425,7 @@
             <displayname description="Contact Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Dynamics CRM Contact Identifier" languagecode="1033" />
+            <Description description="Contact unique identifier" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Context">
@@ -529,7 +529,7 @@
             <displayname description="Conversation Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Conversation identifier" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ConversationTimestamp">
@@ -565,7 +565,7 @@
             <displayname description="Conversation Timestamp" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Conversation started time" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute1">
@@ -637,7 +637,7 @@
             <displayname description="Custom Attribute 10" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 10" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute2">
@@ -673,7 +673,7 @@
             <displayname description="Custom Attribute 2" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 2" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute3">
@@ -709,7 +709,7 @@
             <displayname description="Custom Attribute 3" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 3" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute4">
@@ -745,7 +745,7 @@
             <displayname description="Custom Attribute 4" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 4" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute5">
@@ -781,7 +781,7 @@
             <displayname description="Custom Attribute 5" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 5" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute6">
@@ -817,7 +817,7 @@
             <displayname description="Custom Attribute 6" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 6" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute7">
@@ -853,7 +853,7 @@
             <displayname description="Custom Attribute 7" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 7" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute8">
@@ -889,7 +889,7 @@
             <displayname description="Custom Attribute 8" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 8" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute9">
@@ -925,7 +925,7 @@
             <displayname description="Custom Attribute 9" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 9" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ExternalAccountId">
@@ -1033,7 +1033,7 @@
             <displayname description="External Conversation Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Conversation Identifier from the external system" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ExternalCorrelationId">
@@ -1069,7 +1069,7 @@
             <displayname description="External Correlation Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="External System Correlation Id" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ExternalProviderId">
@@ -1138,7 +1138,7 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="Initial Queue Name" languagecode="1033" />
+            <displayname description="Initial Queue Name to which the incoming work item was assigned" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1033" />
@@ -1213,7 +1213,7 @@
             <displayname description="Primary Related Entity Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Name of the primary entity to which this work item belongs to" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_PrimaryRelatedEntityRecordId">
@@ -1249,7 +1249,7 @@
             <displayname description="Primary Related Entity Record Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Id of the primary entity to which this work item belongs to" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ProviderId">
@@ -1285,7 +1285,7 @@
             <displayname description="Provider Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Channel Integration Framework Provider Id" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ProviderName">
@@ -1321,7 +1321,7 @@
             <displayname description="Provider Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Channel Integration Framework Provider Name" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Region">
@@ -1713,7 +1713,7 @@
           </Descriptions>
         </attribute>
       </attributes>
-      <EntitySetName>msdyn_conversationdatas</EntitySetName>
+      <EntitySetName>msdyn_conversationsdata</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>

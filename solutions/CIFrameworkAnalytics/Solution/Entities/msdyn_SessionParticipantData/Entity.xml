@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="Session Participants Data" OriginalName="Session Participant Data">msdyn_SessionParticipantData</Name>
+  <Name LocalizedName="Session Participant Data" OriginalName="Session Participant Data">msdyn_SessionParticipantData</Name>
   <EntityInfo>
     <entity Name="msdyn_SessionParticipantData">
       <LocalizedNames>
-        <LocalizedName description="Session Participants Data" languagecode="1033" />
+        <LocalizedName description="Session Participant Data" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Sessions Participants Data" languagecode="1033" />
+        <LocalizedCollectionName description="Session Participants Data" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="" languagecode="1033" />
@@ -281,7 +281,7 @@
             <displayname description="Conversation Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Conversation Identifier" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute1">
@@ -317,7 +317,7 @@
             <displayname description="Custom Attribute 1" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 1" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute10">
@@ -353,7 +353,7 @@
             <displayname description="Custom Attribute 10" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 10" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute2">
@@ -389,7 +389,7 @@
             <displayname description="Custom Attribute 2" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 2" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute3">
@@ -425,7 +425,7 @@
             <displayname description="Custom Attribute 3" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 3" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute4">
@@ -461,7 +461,7 @@
             <displayname description="Custom Attribute 4" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 4" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute5">
@@ -497,7 +497,7 @@
             <displayname description="Custom Attribute 5" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 5" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute6">
@@ -533,7 +533,7 @@
             <displayname description="Custom Attribute 6" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 6" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute7">
@@ -569,7 +569,7 @@
             <displayname description="Custom Attribute 7" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 7" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute8">
@@ -605,7 +605,7 @@
             <displayname description="Custom Attribute 8" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 8" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute9">
@@ -641,7 +641,7 @@
             <displayname description="Custom Attribute 9" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 9" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ExternalParticipantId">
@@ -677,7 +677,7 @@
             <displayname description="External Participant Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="External identifier of the session participant" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ExternalParticipantName">
@@ -713,7 +713,7 @@
             <displayname description="External Participant Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="External name of the session participant" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Name">
@@ -785,7 +785,7 @@
             <displayname description="Participant Added Timestamp" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Timestamp at which the participant was added to the session" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ParticipantAssignReason">
@@ -821,7 +821,7 @@
             <displayname description="Participant Assign Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Rason for which the participant was added to the session" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ParticipantId">
@@ -857,7 +857,7 @@
             <displayname description="Participant Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Identifier of the session participant" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ParticipantMode">
@@ -893,7 +893,7 @@
             <displayname description="Participant Mode" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Session participant mode" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ParticipantName">
@@ -929,7 +929,7 @@
             <displayname description="Participant Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Name of the session participant" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ParticipantType">
@@ -965,7 +965,7 @@
             <displayname description="Participant Type" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Type of the session participant" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionId">
@@ -1001,7 +1001,7 @@
             <displayname description="Session Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Identifier of the session" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionParticipantDataId">
@@ -1389,7 +1389,7 @@
           </Descriptions>
         </attribute>
       </attributes>
-      <EntitySetName>msdyn_sessionparticipantdatas</EntitySetName>
+      <EntitySetName>msdyn_sessionparticipantsdata</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>

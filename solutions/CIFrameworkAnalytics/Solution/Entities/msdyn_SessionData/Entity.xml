@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Sessions Data" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Primary entity for session data" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -281,7 +281,7 @@
             <displayname description="Conversation Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Conversation Identifier" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute1">
@@ -317,7 +317,7 @@
             <displayname description="Custom Attribute 1" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 1" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute10">
@@ -353,7 +353,7 @@
             <displayname description="Custom Attribute 10" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 10" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute2">
@@ -389,7 +389,7 @@
             <displayname description="Custom Attribute 2" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 2" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute3">
@@ -425,7 +425,7 @@
             <displayname description="Custom Attribute 3" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 3" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute4">
@@ -461,7 +461,7 @@
             <displayname description="Custom Attribute 4" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 4" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute5">
@@ -497,7 +497,7 @@
             <displayname description="Custom Attribute 5" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 5" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute6">
@@ -533,7 +533,7 @@
             <displayname description="Custom Attribute 6" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 6" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute7">
@@ -569,7 +569,7 @@
             <displayname description="Custom Attribute 7" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 7" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute8">
@@ -605,7 +605,7 @@
             <displayname description="Custom Attribute 8" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 8" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute9">
@@ -641,7 +641,7 @@
             <displayname description="Custom Attribute 9" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 9" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ExternalCorrelationId">
@@ -677,7 +677,7 @@
             <displayname description="External Correlation Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="External System Correlation Id" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Name">
@@ -749,7 +749,7 @@
             <displayname description="Queue Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Identifier of the queue to which this session belongs to" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_QueueName">
@@ -785,7 +785,7 @@
             <displayname description="Queue Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Name of the queue to which this session belongs to" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionAdditionalData">
@@ -821,7 +821,7 @@
             <displayname description="Session Additional Data" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Additional data related to the session" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionAgentAssignedTimestamp">
@@ -857,7 +857,7 @@
             <displayname description="Session Agent Assigned Timestamp" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Timestamp at which the agent was assigned to the session" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionChannel">
@@ -893,7 +893,7 @@
             <displayname description="Session Channel" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Channel for the session" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionCreatedTimestamp">
@@ -929,7 +929,7 @@
             <displayname description="Session Created Timestamp" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Timestamp at which the session was created" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionCreationReason">
@@ -965,7 +965,7 @@
             <displayname description="Session Creation Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Reason for the session creation" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionDataId">
@@ -1033,7 +1033,7 @@
             <displayname description="Session Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Identifier for the session" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionQueueAssignedTimestamp">
@@ -1069,7 +1069,7 @@
             <displayname description="Session Queue Assigned Timestamp" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Timestamp at which the queue was assigned to the session" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_UCISessionId">
@@ -1105,7 +1105,7 @@
             <displayname description="Client Session Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Identifier of the client session" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_UCISessionName">
@@ -1141,7 +1141,7 @@
             <displayname description="Client Session Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Name of the client session" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OverriddenCreatedOn">
@@ -1497,7 +1497,7 @@
           </Descriptions>
         </attribute>
       </attributes>
-      <EntitySetName>msdyn_sessiondatas</EntitySetName>
+      <EntitySetName>msdyn_sessionsdata</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>

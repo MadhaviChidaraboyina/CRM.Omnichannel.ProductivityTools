@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="KPI Event Data" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Primary entity for a kpi event" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -281,7 +281,7 @@
             <displayname description="Additional Data" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Additional data related to the kpi event" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ClientSessionId">
@@ -317,7 +317,7 @@
             <displayname description="Client Session Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Client session identifier" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ConversationId">
@@ -353,7 +353,7 @@
             <displayname description="Conversation Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Conversation Identifier" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute1">
@@ -389,7 +389,7 @@
             <displayname description="Custom Attribute 1" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 1" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute10">
@@ -425,7 +425,7 @@
             <displayname description="Custom Attribute 10" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="2000" languagecode="1033" />
+            <Description description="Custom Attribute 10" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute2">
@@ -461,7 +461,7 @@
             <displayname description="Custom Attribute 2" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 2" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute3">
@@ -497,7 +497,7 @@
             <displayname description="Custom Attribute 3" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 3" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute4">
@@ -533,7 +533,7 @@
             <displayname description="Custom Attribute 4" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 4" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute5">
@@ -569,7 +569,7 @@
             <displayname description="Custom Attribute 5" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 5" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute6">
@@ -605,7 +605,7 @@
             <displayname description="Custom Attribute 6" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 6" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute7">
@@ -641,7 +641,7 @@
             <displayname description="Custom Attribute 7" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 7" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute8">
@@ -677,7 +677,7 @@
             <displayname description="Custom Attribute 8" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 8" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute9">
@@ -713,7 +713,7 @@
             <displayname description="Custom Attribute 9" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Custom Attribute 9" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_EntityName">
@@ -749,7 +749,7 @@
             <displayname description="Entity Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Name of entity that was created by explicit agent action" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_EntityRecordId">
@@ -785,7 +785,7 @@
             <displayname description="Entity Record Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Unique indentifier of entity that was created by explicit agent action" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_EventTimestamp">
@@ -821,7 +821,7 @@
             <displayname description="Event Timestamp" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Timestamp at which the event occurred" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ExternalCorrelationId">
@@ -857,7 +857,7 @@
             <displayname description="External Correlation Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="External System Correlation Id" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_KnowledgeArticleId">
@@ -893,7 +893,7 @@
             <displayname description="Knowledge Article Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Id of the Knowledge Article suggested by the agent" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_KnowledgeArticleName">
@@ -929,7 +929,7 @@
             <displayname description="Knowledge Article Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Name of the Knowledge Article suggested by the agent" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_KPIEventDataId">
@@ -997,7 +997,7 @@
             <displayname description="KPI Event Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Unique identifier for the KPI Event" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_KPIEventName">
@@ -1033,7 +1033,7 @@
             <displayname description="KPI Event Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Name of the  associated KPI event" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_KPIEventReason">
@@ -1069,7 +1069,7 @@
             <displayname description="KPI Event Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Reason due to which the KPI event was created" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Name">
@@ -1141,7 +1141,7 @@
             <displayname description="New Presence" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="New agent presence status" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_NotificationResponseAction">
@@ -1177,7 +1177,7 @@
             <displayname description="Notification Response Action" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Agent notification response action value" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_OldPresence">
@@ -1213,7 +1213,7 @@
             <displayname description="Old Presence" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Old agent presence status" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ParticipantId">
@@ -1249,7 +1249,7 @@
             <displayname description="Participant Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Identifier of the agent for whom the event was fired" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SessionId">
@@ -1285,7 +1285,7 @@
             <displayname description="Session Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Identifier of the session to which this event belongs" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_TabAction">
@@ -1321,7 +1321,7 @@
             <displayname description="Tab Action" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Tab action done by the agent" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_TabId">
@@ -1357,7 +1357,7 @@
             <displayname description="Tab Id" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Identifier of the tab which was acted upon by the agent" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_TabName">
@@ -1393,7 +1393,7 @@
             <displayname description="Tab Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Name of the tab which was acted upon by the agent" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OverriddenCreatedOn">
@@ -1749,7 +1749,7 @@
           </Descriptions>
         </attribute>
       </attributes>
-      <EntitySetName>msdyn_kpieventdatas</EntitySetName>
+      <EntitySetName>msdyn_kpieventsdata</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>

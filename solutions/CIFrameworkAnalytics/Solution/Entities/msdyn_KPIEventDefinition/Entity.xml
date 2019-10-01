@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="KPI Event Definitions" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Primary entity for defining a KPI event" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -283,7 +283,7 @@
               <displayname description="Local Enumeration" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="This field indicates if the KPI Event Definition record is active" languagecode="1033" />
+              <Description description="Field to indicate if the KPI Event is active" languagecode="1033" />
             </Descriptions>
             <options>
               <option value="1">
@@ -302,7 +302,7 @@
             <displayname description="Active" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="This field indicates if the KPI Event Definition record is active" languagecode="1033" />
+            <Description description="Field to indicate if the KPI Event is active" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_EventDescription">
@@ -338,7 +338,7 @@
             <displayname description="Event Description" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="KPI event description" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_EventDisplayName">
@@ -374,7 +374,7 @@
             <displayname description="Event Display Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="KPI event display name" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_EventType">
@@ -409,7 +409,7 @@
             <displayname description="Event Type" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="KPI Event type" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_KPIEventDefinitionId">

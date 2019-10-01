@@ -8,7 +8,7 @@
     <isdefault>1</isdefault>
     <savedqueryid>{e95955ab-09aa-49fc-a7fb-172ca5ca4df5}</savedqueryid>
     <layoutxml>
-      <grid name="msdyn_sessionparticipantdatas" jump="msdyn_name" select="1" icon="1" preview="0">
+      <grid name="msdyn_sessionparticipantsdata" jump="msdyn_name" select="1" icon="1" preview="0">
         <row name="msdyn_sessionparticipantdata" id="msdyn_sessionparticipantdataid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />

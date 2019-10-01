@@ -8,7 +8,7 @@
     <isdefault>1</isdefault>
     <savedqueryid>{733bed81-bf92-4a47-854a-866766dcc749}</savedqueryid>
     <layoutxml>
-      <grid name="msdyn_kpieventdatas" jump="msdyn_name" select="1" icon="1" preview="0">
+      <grid name="msdyn_kpieventsdata" jump="msdyn_name" select="1" icon="1" preview="0">
         <row name="msdyn_kpieventdata" id="msdyn_kpieventdataid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
