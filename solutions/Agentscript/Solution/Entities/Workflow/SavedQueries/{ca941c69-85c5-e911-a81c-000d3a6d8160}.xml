@@ -22,7 +22,6 @@
           <order attribute="name" descending="false" />
           <filter type="and">
             <condition attribute="category" operator="eq" value="6" />
-            <condition attribute="statecode" operator="eq" value="1" />
           </filter>
           <attribute name="workflowid" />
         </entity>
