@@ -1823,7 +1823,7 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_msdyn_isstale' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned" xml:space="preserve">
-    <value>Pinned</value>
+    <value>Can close</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_msdyn_pinned' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode" xml:space="preserve">
@@ -1855,7 +1855,7 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_PageType' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_Pinned" xml:space="preserve">
-    <value>Pinned</value>
+    <value>Can close</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_Pinned' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_TemplateParameters" xml:space="preserve">
@@ -2471,11 +2471,11 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'msdyn_consoleapplicationtemplate' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned0" xml:space="preserve">
-    <value>No</value>
+    <value>Yes</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned1" xml:space="preserve">
-    <value>Yes</value>
+    <value>No</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode0" xml:space="preserve">
@@ -2683,7 +2683,7 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{ff05f569-e51f-4c31-96b2-ae6d20c9364f}'</comment>
   </data>
   <data name="1:label,Session Templates{093dd305-a7cc-d998-e489-ac60594b185e}" xml:space="preserve">
-    <value>AnchorTab</value>
+    <value>Anchor tab</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{093dd305-a7cc-d998-e489-ac60594b185e}'</comment>
   </data>
   <data name="1:label,Session Templates{196dbc51-0ab0-1da7-555e-35cc732cbda3}" xml:space="preserve">
@@ -2703,7 +2703,7 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'Session Templates' : label for section in Entity FormXml ID: '{559158ad-2749-a49e-7128-466d84e59a24}'</comment>
   </data>
   <data name="1:label,Session Templates{5d09b768-575c-d77d-6479-2130abbde22b}" xml:space="preserve">
-    <value>PanelState</value>
+    <value>Communication panel mode</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{5d09b768-575c-d77d-6479-2130abbde22b}'</comment>
   </data>
   <data name="1:label,Session Templates{67e28937-3ab9-4b74-e49b-54660966e25c}" xml:space="preserve">
@@ -2945,10 +2945,6 @@ No - value must be supplied when creating a template that uses this parameter</v
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
     <value>CIProviders</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Channel Provider</value>
-    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>Channel Provider</value>
@@ -3355,15 +3351,15 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'msdyn_panestate' : Description for OptionSet</comment>
   </data>
   <data name="9:Description,msdyn_panestate100000000" xml:space="preserve">
-    <value />
+    <value>The panel will be expanded</value>
     <comment>'msdyn_panestate' : Description for OptionSet Value '100000000'</comment>
   </data>
   <data name="9:Description,msdyn_panestate100000001" xml:space="preserve">
-    <value />
+    <value>The panel will be minimized</value>
     <comment>'msdyn_panestate' : Description for OptionSet Value '100000001'</comment>
   </data>
   <data name="9:Description,msdyn_panestate100000002" xml:space="preserve">
-    <value />
+    <value>The panel will be hidden</value>
     <comment>'msdyn_panestate' : Description for OptionSet Value '100000002'</comment>
   </data>
   <data name="9:Description,msdyn_presencestatus" xml:space="preserve">

@@ -624,6 +624,10 @@
     <value>Unique identifier of the delegate user who modified the record.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>The action buttons to be displayed. (Deprecated)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -655,6 +659,10 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value />
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Notification display order relative to other notification templates.</value>
@@ -1570,6 +1578,10 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value>Modified By (Delegate)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_AcceptButtonText" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_AcceptButtonText' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_ActionButtons" xml:space="preserve">
     <value>ActionButtons (Deprecated)</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_ActionButtons' on Entity</comment>
@@ -1601,6 +1613,10 @@ No - value must be supplied when creating a template that uses this parameter</v
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_NotificationFieldsPlaceholder" xml:space="preserve">
     <value>Notification Fields</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_NotificationFieldsPlaceholder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RejectButtonText" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RejectButtonText' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Notification order</value>
@@ -1807,7 +1823,7 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_msdyn_isstale' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned" xml:space="preserve">
-    <value>Pinned</value>
+    <value>Can close</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_msdyn_pinned' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode" xml:space="preserve">
@@ -1839,7 +1855,7 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_PageType' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_Pinned" xml:space="preserve">
-    <value>Pinned</value>
+    <value>Can close</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_Pinned' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_TemplateParameters" xml:space="preserve">
@@ -2455,11 +2471,11 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'msdyn_consoleapplicationtemplate' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned0" xml:space="preserve">
-    <value>No</value>
+    <value>Yes</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned1" xml:space="preserve">
-    <value>Yes</value>
+    <value>No</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode0" xml:space="preserve">
@@ -2630,6 +2646,14 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value>Section</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
   </data>
+  <data name="1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Reject Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
+  <data name="1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
+    <value>Accept Button Text</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}'</comment>
+  </data>
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Notification Fields</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
@@ -2659,7 +2683,7 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{ff05f569-e51f-4c31-96b2-ae6d20c9364f}'</comment>
   </data>
   <data name="1:label,Session Templates{093dd305-a7cc-d998-e489-ac60594b185e}" xml:space="preserve">
-    <value>AnchorTab</value>
+    <value>Anchor tab</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{093dd305-a7cc-d998-e489-ac60594b185e}'</comment>
   </data>
   <data name="1:label,Session Templates{196dbc51-0ab0-1da7-555e-35cc732cbda3}" xml:space="preserve">
@@ -2679,7 +2703,7 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'Session Templates' : label for section in Entity FormXml ID: '{559158ad-2749-a49e-7128-466d84e59a24}'</comment>
   </data>
   <data name="1:label,Session Templates{5d09b768-575c-d77d-6479-2130abbde22b}" xml:space="preserve">
-    <value>PanelState</value>
+    <value>Communication panel mode</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{5d09b768-575c-d77d-6479-2130abbde22b}'</comment>
   </data>
   <data name="1:label,Session Templates{67e28937-3ab9-4b74-e49b-54660966e25c}" xml:space="preserve">
@@ -3118,6 +3142,10 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value>Marketing</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
+  <data name="1:Title,Application Tab Templatenav_msdyn_msdyn_consoleapplicationtemplate_tags{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
+    <value>TemplateTags</value>
+    <comment>'Application Tab Template' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationtemplate_tags'</comment>
+  </data>
   <data name="1:Title,Application Tab TemplateProcessCenter{8d39ebda-4f57-4f83-8d39-39e1bb2d6a0d}" xml:space="preserve">
     <value>Process Sessions</value>
     <comment>'Application Tab Template' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
@@ -3198,6 +3226,10 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value>Marketing</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
+  <data name="1:Title,Notification Templatenav_msdyn_msdyn_consoleapplicationnotificationtag{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
+    <value>TemplateTags</value>
+    <comment>'Notification Template' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationnotificationtag'</comment>
+  </data>
   <data name="1:Title,Notification TemplateProcessCenter{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}" xml:space="preserve">
     <value>Process Sessions</value>
     <comment>'Notification Template' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
@@ -3217,6 +3249,10 @@ No - value must be supplied when creating a template that uses this parameter</v
   <data name="1:Title,Session TemplatesMarketing{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
     <value>Marketing</value>
     <comment>'Session Templates' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Session Templatesnav_msdyn_msdyn_consoleapplicationsessiontemp_tag{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
+    <value>TemplateTags</value>
+    <comment>'Session Templates' : Title for NavBarByRelationshipItem in Entity FormXml ID: 'nav_msdyn_msdyn_consoleapplicationsessiontemp_tag'</comment>
   </data>
   <data name="1:Title,Session TemplatesProcessCenter{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
     <value>Process Sessions</value>
@@ -3315,15 +3351,15 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'msdyn_panestate' : Description for OptionSet</comment>
   </data>
   <data name="9:Description,msdyn_panestate100000000" xml:space="preserve">
-    <value />
+    <value>The panel will be expanded</value>
     <comment>'msdyn_panestate' : Description for OptionSet Value '100000000'</comment>
   </data>
   <data name="9:Description,msdyn_panestate100000001" xml:space="preserve">
-    <value />
+    <value>The panel will be minimized</value>
     <comment>'msdyn_panestate' : Description for OptionSet Value '100000001'</comment>
   </data>
   <data name="9:Description,msdyn_panestate100000002" xml:space="preserve">
-    <value />
+    <value>The panel will be hidden</value>
     <comment>'msdyn_panestate' : Description for OptionSet Value '100000002'</comment>
   </data>
   <data name="9:Description,msdyn_presencestatus" xml:space="preserve">
