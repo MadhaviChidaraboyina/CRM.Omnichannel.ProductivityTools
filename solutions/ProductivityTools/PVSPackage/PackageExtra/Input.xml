@@ -2,7 +2,7 @@
 <PvsPackageData>
   <ProviderName>Microsoft</ProviderName>
   <PackageFile>ProductivityTools.PackageDeployer.zip</PackageFile>
-  <SolutionAnchorName>ProductivityTools.zip</SolutionAnchorName>
+  <SolutionAnchorName>msdyn_ProductivityToolsAnchor_managed.zip</SolutionAnchorName>
   <StartDate>01/01/2017</StartDate>
   <EndDate>01/01/2050</EndDate>
   <MinimumProductVersion>9.0</MinimumProductVersion>

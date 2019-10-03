@@ -6,7 +6,7 @@
     <NOTARGET>true</NOTARGET>
     <PatchSolutionName>msdyn_CIFrameworkPatch</PatchSolutionName>
 	  <DropSolutionPath>$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions</DropSolutionPath>
-	  <PatchLocalizedName>&quot;CIF Patch&quot;</PatchLocalizedName>
+	  <PatchLocalizedName>&quot;Channel API Integration Framework Patch&quot;</PatchLocalizedName>
     <PatchLocalizedDesc>&quot;The patch solution upgrades the cif components.&quot;</PatchLocalizedDesc>
     <BaseSolutionName>msdyn_CIFramework_managed.zip</BaseSolutionName>
     <NuggetBaseSolution>$(PKG_CIF)\Solutions\msdyn_CIFramework_managed.zip</NuggetBaseSolution>
