@@ -38,6 +38,18 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";80:Description,msdyn_OCAPP" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A unified and consistent experience for your agents interacting across communication channels to deliver an enhanced customer service]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";80:LocalizedName,msdyn_OCAPP" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Administration]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";81:LocalizedName,msdyn_OCAPP" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Omnichannel Administration]]></Val>
@@ -59,6 +71,12 @@
       <Item ItemId=";81:Title,NewArea_08255196NewSubArea_386b5beb" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Macros]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";81:Title,NewArea_08255196NewSubArea_5857f7fc" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent scripts]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

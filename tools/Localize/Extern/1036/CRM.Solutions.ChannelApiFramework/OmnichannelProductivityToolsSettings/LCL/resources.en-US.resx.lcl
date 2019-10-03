@@ -75,6 +75,32 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";80:Description,msdyn_OCAPP" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A unified and consistent experience for your agents interacting across communication channels to deliver an enhanced customer service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Expérience unifiée et cohérente pour vos agents qui interagissent sur plusieurs canaux de communication pour fournir un service clientèle amélioré]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:49.0000128Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";80:LocalizedName,msdyn_OCAPP" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Administration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Administration d’Omnicanal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:49.0000128Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
       <Item ItemId=";81:LocalizedName,msdyn_OCAPP" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Omnichannel Administration]]></Val>
@@ -125,6 +151,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0008617Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";81:Title,NewArea_08255196NewSubArea_5857f7fc" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent scripts]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Scripts de l'agent]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:49.0000134Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
         </Props>
       </Item>
     </Item>

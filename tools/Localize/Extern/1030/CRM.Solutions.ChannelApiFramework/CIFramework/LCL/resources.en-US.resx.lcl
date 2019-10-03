@@ -9223,6 +9223,32 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,Notification Template{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reject Button Text]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tekst til knappen Afvis]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:47.0004183Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Notification Template{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Accept Button Text]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tekst til knappen Acceptér]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:47.0004183Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Notification Fields]]></Val>

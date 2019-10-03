@@ -374,6 +374,32 @@
           <Str Name="Custom3" Val="WO20359_20190903" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,msdyn_channelmsdyn_NotificationScenarioPlaceholder" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006913Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_channelmsdyn_SessionScenarioPlaceholder" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006913Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
       <Item ItemId=";1:Description,msdyn_channelmsdyn_channelId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for entity instances]]></Val>
@@ -829,6 +855,32 @@
           <Str Name="Custom3" Val="WO20359_20190903" />
         </Props>
       </Item>
+      <Item ItemId=";1:LocalizedName,Scenario{067388b4-be66-40cf-857e-4d12e4ccdae8}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Scenario Associated View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[案例相關檢視表]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006913Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Scenario{2fe4d867-6f4a-41d9-afc5-10b10f37a0d9}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive Scenarios]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[非使用中案例]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006913Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
       <Item ItemId=";1:LocalizedName,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Information]]></Val>
@@ -842,6 +894,71 @@
           <Str Name="Custom3" Val="WO20359_20190903" />
         </Props>
       </Item>
+      <Item ItemId=";1:LocalizedName,Scenario{929ac0ff-07de-4625-811a-eeb17b4beaf7}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Scenario Lookup View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[案例查詢檢視表]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006913Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Scenario{c9e706fe-f26e-4848-bc3e-2418dafeaa55}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Scenarios]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[使用中案例]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006913Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Scenario{db8f2d21-dbfb-4b73-9f87-825ec557d014}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Scenario Advanced Find View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[案例進階尋找檢視表]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006902Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,channel{1e20053c-5e3d-44f2-8f71-570f2d21e870}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[channel Advanced Find View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[管道進階尋找檢視表]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006902Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,channel{371409fa-b007-4d26-9dbe-f3299f51de77}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active channels]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[使用中管道]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006902Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
       <Item ItemId=";1:LocalizedName,channel{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Information]]></Val>
@@ -853,6 +970,45 @@
         <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0001677Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,channel{5eaef5f2-2950-4e10-8396-98d7e3db3377}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[channel Lookup View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[管道查詢檢視表]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006902Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,channel{d172c07a-7a40-40cf-a450-e1a4442bf7ad}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive channels]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[非使用中管道]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006902Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,channel{ea5c6022-fe29-4849-ac8b-70d6704501a1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[channel Associated View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[管道相關檢視表]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006902Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,msdyn_channelentitymsdyn_channel" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1152,6 +1308,32 @@
         <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0001664Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelmsdyn_NotificationScenarioPlaceholder" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Notification Scenario Placeholder]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[通知案例預留位置]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006902Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_channelmsdyn_SessionScenarioPlaceholder" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Scenarios Placeholder]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[工作階段案例預留位置]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006902Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_channelmsdyn_channelId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1687,6 +1869,19 @@
           <Str Name="Custom3" Val="WO20359_20190903" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,channel{1e538390-cc76-d4e5-3b64-463d5b187b2b}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006903Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,channel{56144221-cac8-49a9-98e8-df7596306973}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[General]]></Val>
@@ -1700,6 +1895,45 @@
           <Str Name="Custom3" Val="WO20359_20190903" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,channel{63514de6-a19b-990e-b6ad-8234014c287e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[索引標籤]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006903Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,channel{9a22ed8d-2d46-76dc-0cd7-25161a23cea9}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Notifications]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[通知]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006903Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,channel{b1645c6e-66b7-c1e0-ea42-11e68d59a389}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[工作階段]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006903Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,channel{debc7136-3c34-4af3-883c-f07c5a02a571}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[General]]></Val>
@@ -1711,6 +1945,32 @@
         <Modified By="v-rondai" DateTime="2019-09-05T13:25:59.0001646Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,channel{e2e87fa6-a6a9-4b42-86a7-3c2e074a94e8}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006903Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,channel{e4aea527-c954-0e08-3e84-c44ab001e06e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0006903Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO20361_20190923" />
         </Props>
       </Item>
       <Item ItemId=";1:label,channel{f2e73fa6-a6a9-4b42-86a7-3c2e074a94e8}" ItemType="0;.resx" PsrId="211" Leaf="true">

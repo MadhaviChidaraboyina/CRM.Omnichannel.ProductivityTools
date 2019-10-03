@@ -149,11 +149,11 @@
     <comment> 'msdyn_OmnichannelProductivityToolsSettings' : LocalizedName for Solution</comment>
   </data>
   <data name="80:Description,msdyn_OCAPP" xml:space="preserve">
-    <value>A unified and consistent experience for your agents interacting across communication channels to deliver an enhanced customer service</value>
+    <value>ประสบการณ์ใช้งานแบบรวมศูนย์และที่สอดคล้องกันสำหรับตัวแทนที่ทำงานกับช่องทางการสื่อสารเพื่อนำเสนอการบริการลูกค้าที่ปรับปรุงใหม่</value>
     <comment> 'msdyn_OCAPP' : Description for AppModule</comment>
   </data>
   <data name="80:LocalizedName,msdyn_OCAPP" xml:space="preserve">
-    <value>Omnichannel Administration</value>
+    <value>การจัดการช่องทาง Omni</value>
     <comment> 'msdyn_OCAPP' : LocalizedName for AppModule</comment>
   </data>
   <data name="81:LocalizedName,msdyn_OCAPP" xml:space="preserve">
@@ -173,7 +173,7 @@
     <comment>Title for Area 'NewArea_08255196' SubArea 'NewSubArea_386b5beb'</comment>
   </data>
   <data name="81:Title,NewArea_08255196NewSubArea_5857f7fc" xml:space="preserve">
-    <value>Agent scripts</value>
+    <value>สคริปต์ตัวแทน</value>
     <comment>Title for Area 'NewArea_08255196' SubArea 'NewSubArea_5857f7fc'</comment>
   </data>
 </root>

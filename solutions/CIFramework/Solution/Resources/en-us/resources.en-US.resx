@@ -340,6 +340,10 @@
     <value>Channel API Integration Framework</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
+  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
+    <value>Channel API Integration Framework</value>
+    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
+  </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>

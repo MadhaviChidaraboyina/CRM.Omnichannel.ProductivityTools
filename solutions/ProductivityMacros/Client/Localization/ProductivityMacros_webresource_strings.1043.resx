@@ -117,6 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DESIGNER_ACTION" xml:space="preserve">
+    <value>Action</value>
+    <comment>Action string for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_CONNECTORDISPLAYNAME" xml:space="preserve">
+    <value>Unified Interface automation</value>
+    <comment>Display Name String for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_MACROCONNECTOR" xml:space="preserve">
+    <value>Macro connector</value>
+    <comment>Macro connector string for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_SEARCHMACROS" xml:space="preserve">
+    <value>Search macro</value>
+    <comment>Search Macro string for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_DESC" xml:space="preserve">
+    <value>Start Macro Execution</value>
+    <comment>Description Text for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_NAME" xml:space="preserve">
+    <value>Start Macro Execution</value>
+    <comment>Name Text for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_SUBTITLE" xml:space="preserve">
+    <value>Start Macro</value>
+    <comment>Subtitle String for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_SUMMARY" xml:space="preserve">
+    <value>Start Macro</value>
+    <comment>Summary String for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_TRIGGER" xml:space="preserve">
+    <value>Trigger</value>
+    <comment>Trigger String for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_USERVOICEMSG" xml:space="preserve">
+    <value>Let us know what you would like us to build next</value>
+    <comment>User Voice Message for Designer Control</comment>
+  </data>
+  <data name="DESIGNR_STARTMACRO_TITLE" xml:space="preserve">
+    <value>Start Macro</value>
+    <comment>Title String for Start Macro Trigger</comment>
+  </data>
   <data name="MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS" xml:space="preserve">
     <value>Alle andere sessies sluiten</value>
     <comment>Action to close all except present session</comment>
@@ -156,5 +200,21 @@
   <data name="MACRO_ACTION_SEARCH_KB" xml:space="preserve">
     <value>Zoeken in Knowledge Base</value>
     <comment>Action to search KB</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE" xml:space="preserve">
+    <value>Name</value>
+    <comment>Title string for 'name' field of custom attribute</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC" xml:space="preserve">
+    <value>Attribute logical name</value>
+    <comment>Description for 'name' field of custom attribute</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE" xml:space="preserve">
+    <value>Value</value>
+    <comment>Title string for 'value' field of custom attribute</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC" xml:space="preserve">
+    <value>Attribute value</value>
+    <comment>Description for 'value' field of custom attribute</comment>
   </data>
 </root>
