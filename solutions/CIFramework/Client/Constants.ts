@@ -101,6 +101,7 @@ namespace Microsoft.CIFramework
 		public static SetPresenceEvent = "setPresenceEvent";
 		public static widgetIframeId = "SidePanelIFrame";
 		public static clickToActAttributeName = "msdyn_clicktoact";
+		public static enableAnalyticsAttributeName = "msdyn_enableanalytics";
 		public static systemUserLogicalName = "systemuser";
 		public static templateTag = "templateTag";
 		public static appSelectorFieldName = "msdyn_appselector";
@@ -242,6 +243,7 @@ namespace Microsoft.CIFramework
 		public static logAnalyticsPlatformEventName = "logCIFAnalytics";
 		public static focussedSession = "focussedSession";
 		public static clientSessionId = "clientSessionId";
+		public static enableAnalytics = "enableAnalytics";
 	}
 
 	export enum ErrorCode {

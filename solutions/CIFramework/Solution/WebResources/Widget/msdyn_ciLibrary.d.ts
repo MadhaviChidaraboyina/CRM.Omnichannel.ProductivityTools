@@ -97,6 +97,7 @@ declare namespace Microsoft.CIFramework {
         static SetPresenceEvent: string;
         static widgetIframeId: string;
         static clickToActAttributeName: string;
+        static enableAnalyticsAttributeName: string;
         static systemUserLogicalName: string;
         static templateTag: string;
         static appSelectorFieldName: string;
@@ -237,6 +238,7 @@ declare namespace Microsoft.CIFramework {
         static logAnalyticsPlatformEventName: string;
         static focussedSession: string;
         static clientSessionId: string;
+        static enableAnalytics: string;
     }
     enum ErrorCode {
         Notes_Flap_Already_Expanded = 101,

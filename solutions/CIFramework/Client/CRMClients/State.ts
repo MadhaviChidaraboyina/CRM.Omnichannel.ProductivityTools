@@ -98,6 +98,7 @@ namespace Microsoft.CIFramework.Internal {
 		appId: string;	//App Id
 		trustedDomain: string;	// Domain to be whitelisted
 		sessions: Map<string, Session>;
+		enableAnalytics: boolean  // Boolean flag to indicate whether to enable creation of CIF Analytics records
 
 		constructor(x: XrmClientApi.WebApi.Entity, state: IState, environmentInfo: any) {
 			this._state = state;
@@ -115,6 +116,7 @@ namespace Microsoft.CIFramework.Internal {
 			this.crmVersion = environmentInfo["crmVersion"];
 			this.appId = environmentInfo["appId"];
 			this.sessions = new Map<string, Session>();
+			this.enableAnalytics = x[Constants.enableAnalyticsAttributeName];
 		}
 
 		raiseEvent(data: Map<string, any>, messageType: string, noTimeout?: boolean): Promise<Map<string, any>> {

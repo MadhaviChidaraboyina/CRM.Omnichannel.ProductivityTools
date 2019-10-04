@@ -10,6 +10,7 @@ namespace Microsoft.CIFrameworkAnalytics {
 	let clientSessionConversationIdMap = new Map<string, string>();
 	let analyticsDataMap = new Map<string, InitData>();
 	let analyticsEventMap = new Map<string, string>();
+	let conversationAnalyticsFlagMap = new Map<string, boolean>();
 
 	/** @internal
 	 * Initialize method called on load of the script
@@ -24,11 +25,13 @@ namespace Microsoft.CIFrameworkAnalytics {
 	 * Handler for the logCIFAnalytics that is raised from CIF Internal Library
 	 */
 	function initAnalyticsEventListener(event: any) {
-		var payload = event.detail.get(Constants.AnalyticsEvent.analyticsData);
-		if (!Utility.isNullOrUndefined(payload)) {
-			let logData = Utility.validateInitAnalyticsPayload(payload);
-			if (logData) {
-				logAnalyticsInitData(event.detail);
+		let enableAnalyticsFlag = event.detail.get(Constants.AnalyticsEvent.enableAnalytics);
+		let conversationId = event.detail.get(Constants.AnalyticsEvent.correlationId);
+		if (!Utility.isNullOrUndefined(conversationId) && enableAnalyticsFlag) {
+			conversationAnalyticsFlagMap.set(conversationId, enableAnalyticsFlag);
+			var payload = event.detail.get(Constants.AnalyticsEvent.analyticsData);
+			if (!Utility.isNullOrUndefined(payload) && Utility.validateInitAnalyticsPayload(payload)) {
+					logAnalyticsInitData(event.detail);
 			}
 		}
 	}
@@ -37,11 +40,13 @@ namespace Microsoft.CIFrameworkAnalytics {
 	 * Handler for the logCIFAnalytics that is raised from CIF Internal Library
 	 */
 	function logAnalyticsEventListener(event: any) {
-		let eventData = createEventDataForSystemEvents(event.detail);
-		if (!Utility.isNullOrUndefined(eventData)) {
-			let logData = Utility.validateLogAnalyticsPayload(eventData);
-			if (logData) {
-				logEventData(eventData);
+		let conversationId = getConversationId(event.detail);
+		if (!Utility.isNullOrUndefined(conversationId)) {
+			if (conversationAnalyticsFlagMap.get(conversationId)) {
+				let eventData = createEventDataForSystemEvents(event.detail);
+				if (!Utility.isNullOrUndefined(eventData) && Utility.validateLogAnalyticsPayload(eventData)) {
+						logEventData(eventData);
+				}
 			}
 		}
 	}
@@ -135,16 +140,10 @@ namespace Microsoft.CIFrameworkAnalytics {
 	* Function to create the Event data for SystemEvents
 	*/
 	function createEventDataForSystemEvents(payload: any): EventData {
-		let correlationId = payload.get(Constants.AnalyticsEvent.correlationId);
-		let clientSessionId = payload.get(Constants.AnalyticsEvent.sessionId);
-		if (Utility.isNullOrUndefined(clientSessionId)) {
-			clientSessionId = payload.get(Constants.AnalyticsEvent.focussedSession);
-		}
+		let correlationId = getConversationId(payload);
+		let clientSessionId = getClientSessionId(payload);
 		let eventName = payload.get(Constants.AnalyticsEvent.eventName);
 		let eventId = analyticsEventMap.get(eventName);
-		if (Utility.isNullOrUndefined(correlationId)) {
-			correlationId = clientSessionConversationIdMap.get(clientSessionId);
-		}
 		if (!Utility.isNullOrUndefined(correlationId) && !Utility.isNullOrUndefined(eventId)) {
 			let conversationData = analyticsDataMap.get(correlationId);
 			if (!Utility.isNullOrUndefined(conversationData)) {
@@ -164,6 +163,23 @@ namespace Microsoft.CIFrameworkAnalytics {
 			}
 			return eventData;
 		}
+	}
+
+	function getConversationId(payload: any): string {
+		let correlationId = payload.get(Constants.AnalyticsEvent.correlationId);
+		let clientSessionId = getClientSessionId(payload);
+		if (Utility.isNullOrUndefined(correlationId)) {
+			correlationId = clientSessionConversationIdMap.get(clientSessionId);
+		}
+		return correlationId;
+	}
+
+	function getClientSessionId(payload: any): string {
+		let clientSessionId = payload.get(Constants.AnalyticsEvent.sessionId);
+		if (Utility.isNullOrUndefined(clientSessionId)) {
+			clientSessionId = payload.get(Constants.AnalyticsEvent.focussedSession);
+		}
+		return clientSessionId;
 	}
 
 	function fillEventDataForSystemEvents(payload: any, convData: InitData, event: EventEntity): void {
@@ -213,5 +229,4 @@ namespace Microsoft.CIFrameworkAnalytics {
 
 	//call the initialize method
 	setTimeout(initialize(), 0);
-
 }

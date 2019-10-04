@@ -1449,12 +1449,13 @@ namespace Microsoft.CIFramework.Internal {
 	*/
 	export function raiseInitAnalyticsEvent(parameters: Map<string, any>): Promise<Map<string, any>> {
 		parameters.set(AnalyticsConstants.telemetryApiName, AnalyticsConstants.telemetryInitApiName);
+
 		return new Promise(function (resolve, reject) {
 			if (raiseAnalyticsEventInternal(AnalyticsConstants.initAnalyticsPlatformEventName, parameters)) {
 				resolve(new Map().set(Constants.value, "Success"));
 			}
 			else {
-				reject(Error("Failure"));
+				reject(new Map().set(Constants.value, "Failure"));
 			}
 		});
 	}
@@ -1473,14 +1474,8 @@ namespace Microsoft.CIFramework.Internal {
 		let sessionId = state.sessionManager.getFocusedSession();
 		let eventNameStr = InternalEventName[eventName];
 		parameters.set(AnalyticsConstants.analyticsEventName, eventNameStr).set(AnalyticsConstants.focussedSession, sessionId);
-		return new Promise(function (resolve, reject) {
-			if (raiseAnalyticsEventInternal(AnalyticsConstants.logAnalyticsPlatformEventName, parameters)) {
-				resolve(new Map().set(Constants.value, "Success"));
-			}
-			else {
-				reject(Error("Failure"));
-			}
-		});
+		let ret = raiseAnalyticsEventInternal(AnalyticsConstants.logAnalyticsPlatformEventName, parameters);
+		return Promise.resolve(new Map().set(Constants.value, ret));
 	}
 
 	/**
@@ -1495,7 +1490,7 @@ namespace Microsoft.CIFramework.Internal {
 				resolve(new Map().set(Constants.value, "Success"));
 			}
 			else {
-				reject(Error("Failure"));
+				reject(new Map().set(Constants.value, "Failure"));
 			}
 		});
 	}
@@ -1513,6 +1508,7 @@ namespace Microsoft.CIFramework.Internal {
 			sortOrder = provider.sortOrder;
 			parameters.set(AnalyticsConstants.channelProviderName, provider.name);
 			parameters.set(AnalyticsConstants.channelProviderId, provider.providerId);
+			parameters.set(AnalyticsConstants.enableAnalytics, provider.enableAnalytics);
 		}
 		try {
 			logAPIFailure(appId, true, errorData, MessageType.isConsoleApp, cifVersion, "", "", "", parameters.get(Constants.correlationId));
@@ -1521,10 +1517,10 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		let apiName = parameters.get(AnalyticsConstants.telemetryApiName);
-			var paramData = new AnalyticsAPIUsageTelemetry(providerId, providerName, apiVersion, apiName, eventName, sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
-			setAnalyticsAPIUsageTelemetry(paramData);
-			var eventParams = { bubbles: false, cancelable: false, detail: parameters };
-			var event = new CustomEvent(eventName, eventParams);
-			return window.dispatchEvent(event);
+		var paramData = new AnalyticsAPIUsageTelemetry(providerId, providerName, apiVersion, apiName, eventName, sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
+		setAnalyticsAPIUsageTelemetry(paramData);
+		var eventParams = { bubbles: false, cancelable: false, detail: parameters };
+		var event = new CustomEvent(eventName, eventParams);
+		return window.dispatchEvent(event);
 	}
 }

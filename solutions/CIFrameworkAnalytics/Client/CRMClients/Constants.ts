@@ -108,6 +108,7 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static defaultSessionId = "session-id-0";
 		public static noSessionId = "session not created";
 		public static notificationResponseAction = "notificationResponseAction";
+		public static enableAnalytics = "enableAnalytics";
 	}
 
 	export enum EventType {
