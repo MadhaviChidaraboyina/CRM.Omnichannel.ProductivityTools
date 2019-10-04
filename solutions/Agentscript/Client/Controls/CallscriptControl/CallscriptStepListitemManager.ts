@@ -150,9 +150,16 @@ module MscrmControls.CallscriptControl {
 			try {
 				// Adjust tab index
 				newStepDomElement.tabIndex = 0;
-				newStepActionDomElement.tabIndex = 0;
+
+				if (!this.context.utils.isNullOrUndefined(newStepActionDomElement)) {
+					newStepActionDomElement.tabIndex = 0;
+				}
+				
 				currStepDomElement.tabIndex = -1;
-				currStepActionDomElement.tabIndex = -1;
+
+				if (!this.context.utils.isNullOrUndefined(currStepActionDomElement)) {
+					currStepActionDomElement.tabIndex = -1;
+				}
 
 				// Set focus
 				this.context.accessibility.focusElementById(newStepElementId);
@@ -274,7 +281,8 @@ module MscrmControls.CallscriptControl {
 				key: "CallScriptArrowIcon-" + step.id + "-Key",
 				id: "CallScriptArrowIcon-" + step.id + "-Id",
 				style: ControlStyle.getArrowIconStyle(this.context, isExpandedStep),
-				className: this.getAccordionIconClassName(isExpandedStep)
+				className: this.getAccordionIconClassName(isExpandedStep),
+				accessibilityHidden: true
 			}, []);
 
 			var stepLabelComponents = [];
@@ -283,7 +291,8 @@ module MscrmControls.CallscriptControl {
 					key: "CallscriptStepExecutionIcon" + step.id + "-key",
 					id: "CallscriptStepExecutionIcon" + step.id + "-id",
 					style: ControlStyle.getStepExecutionStatusIconStyle(this.context, step.executionStatus),
-					className: (step.executionStatus == ExecutionStatus.Failed) ? Constants.FailedStepIconClassName : Constants.CompletedStepIconClassName
+					className: (step.executionStatus == ExecutionStatus.Failed) ? Constants.FailedStepIconClassName : Constants.CompletedStepIconClassName,
+					accessibilityHidden: true
 				}, []);
 				stepLabelComponents.push(stepExecutionStatusIcon);
 			}
@@ -302,7 +311,8 @@ module MscrmControls.CallscriptControl {
 				className: this.getActionTypeIconClassName(step),
 				onClick: this.stepDetailsManager.getActionButtonClickHandler(step),
 				onKeyDown: this.stepDetailsManager.getActionButtonKeyDownHandler(step),
-				tabIndex: tabIndexValue
+				tabIndex: tabIndexValue,
+				role: "button"
 			}, []);
 
 			var stepInProgressIcon = this.context.factory.createElement("CONTAINER", {

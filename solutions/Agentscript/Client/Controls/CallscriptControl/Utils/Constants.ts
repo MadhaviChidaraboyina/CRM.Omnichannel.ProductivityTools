@@ -190,4 +190,12 @@ module MscrmControls.CallscriptControl {
 		public static MacroAction = 192350001;
 		public static RouteAction = 192350002;
 	}
+
+	/**
+	 * Css class names
+	 */
+	export class AgentscriptCssClassNames
+	{
+		public static SelectorElementParentDiv = "mscrm-agentscript-selectContainer";
+	}
 }

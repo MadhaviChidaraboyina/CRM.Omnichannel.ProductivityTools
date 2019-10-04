@@ -18,6 +18,7 @@ module MscrmControls.CallscriptControl {
 		private initCompleted: boolean;
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
+		private setFocusOnSelector: boolean;
 
 		/**
 		 * Constructor.
@@ -25,6 +26,7 @@ module MscrmControls.CallscriptControl {
 		constructor() {
 			this.initCompleted = false;
 			this.telemetryContext = TelemetryComponents.MainComponent;
+			this.setFocusOnSelector = false;
 		}
 
 		/**
@@ -64,11 +66,16 @@ module MscrmControls.CallscriptControl {
 				if (selectedOption.id === script.id) {
 					script.isCurrent = true;
 					this.stateManager.selectedScriptForCurrentSession = script;
+
+					if (!this.stateManager.selectedScriptForCurrentSession.isStepsDataRetrieved) {
+						this.setFocusOnSelector = true;
+					}
 				}
 				else {
 					script.isCurrent = false;
 				}
 			}
+
 			this.context.utils.requestRender();
 
 			let eventParams = new EventParameters();
@@ -136,6 +143,7 @@ module MscrmControls.CallscriptControl {
 			const dropDownComponent = this.context.factory.createElement("CONTAINER", {
 				key: "dropDownContainerKey",
 				id: "dropDownContainerId",
+				className: AgentscriptCssClassNames.SelectorElementParentDiv,
 				style: ControlStyle.getDropDownComponentStyle(),
 				title: currentOption.Label
 			}, [callscriptComboBox, dropDownArrowComponent]);
@@ -251,12 +259,41 @@ module MscrmControls.CallscriptControl {
 
 			callscriptComponents.push(LiveRegion.getLiveRegion(this.context));
 
+			if (this.setFocusOnSelector) {
+				this.setFocus();
+			}
+
 			return context.factory.createElement(
 				"CONTAINER", {
 					id: "CallScriptContainer",
 					key: "CallScriptContainer",
 					style: ControlStyle.getMainComponentStyle()
 				}, callscriptComponents);
+		}
+
+		/**
+		 * Set focus on script selector
+		 */
+		private setFocus() {
+			setTimeout(() => {
+				try {
+					let selectorId = "callscriptCombobox";
+					let selectorAbsoluteId = this.context.accessibility.getUniqueId(selectorId);
+					let domElement = document.getElementById(selectorAbsoluteId);
+
+					if (this.context.utils.isNullOrUndefined(domElement)) {
+						return;
+					}
+
+					domElement.focus();
+					this.setFocusOnSelector = false;
+				}
+				catch (error) {
+					let errorMessage = "Failed to set focus on script selector";
+					let errorParam = new EventParameters();
+					this.telemetryLogger.logError(this.telemetryContext, "SetFocus", errorMessage, errorParam);
+				}
+			}, 300)
 		}
 
 		/** 

@@ -46,3 +46,7 @@
 	background: #0078D4 !important;
 	color: #FFFFFF;
 }
+
+.mscrm-agentscript-selectContainer select:focus {
+	border: 1px dotted #000000;
+}
