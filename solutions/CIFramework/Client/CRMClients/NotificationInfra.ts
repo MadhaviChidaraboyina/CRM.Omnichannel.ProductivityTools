@@ -416,7 +416,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (key.search(Constants.correlationId) != -1) {
 				correlationId = value;
 			}
-			if (key.search(Constants.templateName) != -1) {
+			if (key == Constants.templateName) { // both templateNameResolver and templateName keys will give non -1 result if we do search instead of equals. hence changed to ==
 				templateName = value;
 			}
 			if (key.search(Constants.templateParameters) != -1) {
