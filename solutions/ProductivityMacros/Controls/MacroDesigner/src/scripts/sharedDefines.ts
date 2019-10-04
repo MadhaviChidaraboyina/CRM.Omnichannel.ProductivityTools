@@ -1,4 +1,4 @@
-﻿import { AnalyticsContext } from "./DesignerDefinitions";
+import { AnalyticsContext } from "./DesignerDefinitions";
 
 export interface MacroDesignerConfig {
     DesignerBaseURL?: string;

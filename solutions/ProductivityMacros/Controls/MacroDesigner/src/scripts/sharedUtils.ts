@@ -1,4 +1,6 @@
-﻿export class Utils {
+﻿/// <reference path="../../../../Client/TelemetryHelper.ts" />
+
+export class Utils {
     public static serialize(message, source, destination) {
         /*let ret = {
             signature: destination,
@@ -41,5 +43,8 @@
             let r = Math.random() * 16 | 0, v = c === "x" ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
+    }
+    public static logAdminTelemetry(msg: any) {
+        (window.top as any).Microsoft.ProductivityMacros.Internal.setMacrosAdminData(msg);
     }
 };

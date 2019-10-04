@@ -6,11 +6,15 @@
 /// <reference path="../../../../Packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApiInternal.d.ts" />
 /// <reference path="Constants.ts" />
 /// <reference path="../../TypeDefinitions/msdyn_internal_ci_library.d.ts" />
-/// <reference path="MacroActionTemplatesInfra.ts" />
+/// <reference path="../TelemetryHelper.ts" />
 
 namespace Microsoft.ProductivityMacros {
 
 	var cifExternal: Microsoft.CIFramework.External.CIFExternalUtilityImpl;
+	
+	export function initializeMacrosRuntime() {
+		Microsoft.ProductivityMacros.Internal.initializeTelemetry();
+	}
 
 	export function runMacro(macroName: string, params?: string): Promise<string> {
 
@@ -228,4 +232,6 @@ namespace Microsoft.ProductivityMacros {
 			);
 		});
 	}
+	
+	initializeMacrosRuntime();
 }

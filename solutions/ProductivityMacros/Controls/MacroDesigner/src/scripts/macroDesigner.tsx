@@ -408,6 +408,7 @@ async function startDesigner(rpc) {
 function doTelemetry(msg: SharedDefines.LogObject) {
     //let msgObj: SharedDefines.LogObject = JSON.parse(msg);
     //console.log(JSON.stringify(msg));   //TODO: Log stuff from msgObj to telemetry
+    Utils.Utils.logAdminTelemetry(msg);
     console.log(msg.eventTimeStamp + " " + msg.eventType + " " + msg.level + " " + msg.eventName + " " + msg.message);
 }
 

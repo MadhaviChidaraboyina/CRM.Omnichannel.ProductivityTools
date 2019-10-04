@@ -5,10 +5,10 @@
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="Constants.ts" />
 /// <reference path="../../TypeDefinitions/msdyn_internal_ci_library.d.ts" />
+/// <reference path="../TelemetryHelper.ts" />
 
 /** @internal */
 namespace Microsoft.ProductivityMacros.Internal {
-
 	/**
 	 * utility func to check whether an object is null or undefined
 	 */
@@ -46,16 +46,24 @@ namespace Microsoft.ProductivityMacros.Internal {
 						sessionContextParams[actionName + ".EntityName"] = formInputs.EntityName;
 						sessionContextParams[actionName + ".PageType"] = "entityrecord";
 						updateActionOutputInSessionContext(sessionContextParams);
+						logSuccess("ProductivityMacrosWrapper - openNewForm", "");
 						resolve(tabId);
 					},
 					function (error: Error) {
-						reject(error);
+						let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - openNewForm", errorTypes.GenericError);
+						logFailure("openNewForm", errorObject, "");
+						reject(error.message);
 					}
 				);
 			});
-
 		} else {
-			return Promise.reject("[openNewForm] - Input is undefined");
+			let errorObject = {} as IErrorHandler;
+			errorObject.errorMsg = "formInputs is Null or Undefined";
+			errorObject.errorType = errorTypes.InvalidParams;
+			errorObject.reportTime = new Date().toUTCString();
+			errorObject.sourceFunc = "ProductivityMacrosWrapper - openNewForm";
+			logFailure("openNewForm", errorObject, "");
+			return Promise.reject("openNewForm - formInputs is Null or Undefined");
 		}
 	}
 
@@ -80,15 +88,24 @@ namespace Microsoft.ProductivityMacros.Internal {
 						sessionContextParams[actionName + Constants.SuffixEntityId] = entityFormOptions.EntityId;
 						sessionContextParams[actionName + Constants.SuffixPageType] = "entityrecord";
 						updateActionOutputInSessionContext(sessionContextParams);
+						logSuccess("ProductivityMacrosWrapper - openExistingForm", "");
 						resolve(tabId);
 					},
 					function (error: Error) {
-						reject(error);
+						let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - openExistingForm", errorTypes.GenericError);
+						logFailure("openExistingForm", errorObject, "");
+						reject(error.message);
 					}
 				);
 			});
 		} else {
-			return Promise.reject("[openExistingForm] - Input is undefined");
+			let errorObject = {} as IErrorHandler;
+			errorObject.errorMsg = "entityFormOptions is Null or Undefined";
+			errorObject.errorType = errorTypes.InvalidParams;
+			errorObject.reportTime = new Date().toUTCString();
+			errorObject.sourceFunc = "ProductivityMacrosWrapper - openExistingForm";
+			logFailure("openExistingForm", errorObject, "");
+			return Promise.reject("openExistingForm - entityFormOptions is Null or Undefined");
 		}
 	}
 
@@ -128,10 +145,13 @@ namespace Microsoft.ProductivityMacros.Internal {
 									sessionContextParams[actionName + Constants.SuffixEntityName] = entityFormData.EntityName;
 									sessionContextParams[actionName + Constants.SuffixPageType] = "entityrecord";
 									updateActionOutputInSessionContext(sessionContextParams);
+									logSuccess("ProductivityMacrosWrapper - draftEmail", "");
 									return resolve(tabId);
 								},
 								function (error: Error) {
-									return reject(error);
+									let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - draftEmail", errorTypes.GenericError);
+									logFailure("draftEmail", errorObject, "");
+									reject(error.message);
 								}
 							);
 						});
@@ -154,16 +174,25 @@ namespace Microsoft.ProductivityMacros.Internal {
 				return new Promise<any>((resolve, reject) => {
 					createTab(tabInput).then(
 						function (success: any) {
+							logSuccess("ProductivityMacrosWrapper - draftEmail", "");
 							resolve(success);
 						}.bind(this, actionName),
 						function (error: Error) {
-							reject(error);
+							let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - draftEmail", errorTypes.GenericError);
+							logFailure("draftEmail", errorObject, "");
+							reject(error.message);
 						}
 					);
 				});
 			}
 		} else {
-			// Log telemetry error
+			let errorObject = {} as IErrorHandler;
+			errorObject.errorMsg = "entityFormData is Null or Undefined";
+			errorObject.errorType = errorTypes.InvalidParams;
+			errorObject.reportTime = new Date().toUTCString();
+			errorObject.sourceFunc = "ProductivityMacrosWrapper - draftEmail";
+			logFailure("draftEmail", errorObject, "");
+			return Promise.reject("draftEmail - entityFormData is Null or Undefined");
 		}
 	}
 
@@ -186,15 +215,24 @@ namespace Microsoft.ProductivityMacros.Internal {
 						sessionContextParams[actionName + Constants.SuffixEntityName] = entityListOptions.EntityName;
 						sessionContextParams[actionName + Constants.SuffixPageType] = "entityrecord";
 						updateActionOutputInSessionContext(sessionContextParams);
+						logSuccess("ProductivityMacrosWrapper - openGrid", "");
 						resolve(tabId);
 					}.bind(this, actionName),
 					function (error: Error) {
-						reject(error);
+						let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - openGrid", errorTypes.GenericError);
+						logFailure("openGrid", errorObject, "");
+						reject(error.message);
 					}
 				);
 			});
 		} else {
-			// Log telemetry error
+			let errorObject = {} as IErrorHandler;
+			errorObject.errorMsg = "entityListOptions is Null or Undefined";
+			errorObject.errorType = errorTypes.InvalidParams;
+			errorObject.reportTime = new Date().toUTCString();
+			errorObject.sourceFunc = "ProductivityMacrosWrapper - openGrid";
+			logFailure("openGrid", errorObject, "");
+			return Promise.reject("openGrid - entityListOptions is Null or Undefined");
 		}
 	}
 
@@ -213,15 +251,24 @@ namespace Microsoft.ProductivityMacros.Internal {
 			return new Promise<any>((resolve, reject) => {
 				createTab(tabInput).then(
 					function (success: any) {
+						logSuccess("ProductivityMacrosWrapper - openDashboard", "");
 						resolve(success);
 					}.bind(this, actionName),
 					function (error: Error) {
-						reject(error);
+						let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - openDashboard", errorTypes.GenericError);
+						logFailure("openDashboard", errorObject, "");
+						reject(error.message);
 					}
 				);
 			});
 		} else {
-			// Log telemetry error
+			let errorObject = {} as IErrorHandler;
+			errorObject.errorMsg = "dashboardPageOptions is Null or Undefined";
+			errorObject.errorType = errorTypes.InvalidParams;
+			errorObject.reportTime = new Date().toUTCString();
+			errorObject.sourceFunc = "ProductivityMacrosWrapper - openDashboard";
+			logFailure("openDashboard", errorObject, "");
+			return Promise.reject("openDashboard - dashboardPageOptions is Null or Undefined");
 		}
 	}
 
@@ -242,15 +289,24 @@ namespace Microsoft.ProductivityMacros.Internal {
 						var sessionContextParams: any = {};
 						sessionContextParams[actionName + Constants.SuffixTabId] = tabId;
 						updateActionOutputInSessionContext(sessionContextParams);
+						logSuccess("ProductivityMacrosWrapper - openSearchPage", "");
 						resolve(tabId);
 					}.bind(this, actionName),
 					function (error: Error) {
-						reject(error);
+						let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - openSearchPage", errorTypes.GenericError);
+						logFailure("openSearchPage", errorObject, "");
+						reject(error.message);
 					}
 				);
 			});
 		} else {
-			// Log telemetry error
+			let errorObject = {} as IErrorHandler;
+			errorObject.errorMsg = "searchPageOptions is Null or Undefined";
+			errorObject.errorType = errorTypes.InvalidParams;
+			errorObject.reportTime = new Date().toUTCString();
+			errorObject.sourceFunc = "ProductivityMacrosWrapper - openSearchPage";
+			logFailure("openSearchPage", errorObject, "");
+			return Promise.reject("openSearchPage - searchPageOptions is Null or Undefined");
 		}
 	}
 
@@ -270,31 +326,46 @@ namespace Microsoft.ProductivityMacros.Internal {
 						var sessionContextParams: any = {};
 						sessionContextParams[actionName + Constants.SuffixTabId] = tabId;
 						updateActionOutputInSessionContext(sessionContextParams);
+						logSuccess("ProductivityMacrosWrapper - openKBSearchControl", "");
 						resolve(tabId);
 					}.bind(this, actionName),
 					function (error: Error) {
-						reject(error);
+						let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - openKBSearchControl", errorTypes.GenericError);
+						logFailure("openKBSearchControl", errorObject, "");
+						reject(error.message);
 					}
 				);
 			});
 		}
 		catch (error) {
+			let errorObject = {} as IErrorHandler;
+			errorObject.errorMsg = error;
+			errorObject.errorType = errorTypes.InvalidParams;
+			errorObject.reportTime = new Date().toUTCString();
+			errorObject.sourceFunc = "ProductivityMacrosWrapper - openKBSearchControl";
+			logFailure("openKBSearchControl", errorObject, "");
 			return Promise.reject(error);
 		}
 	}
 
 	export function save(): Promise<any> {
+		let telemetryData =  new Object() ;
 		return new Promise(function (resolve: any, reject: any) {
+			let startTime = new Date();
 			(((((window as any).top) as any).Xrm) as any).Page.data.save().then(function (tabId: any) {
-				// Log telemetry data
-				//logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
+				logNestedApiData(telemetryData, startTime, Date.now() - startTime.getTime(), "Xrm.Page.data.save");
+				logSuccess("ProductivityMacrosWrapper - save", "", telemetryData);
 				resolve(tabId);
 			}.bind(this), function (errorMessage: string) {
-				// Log telemetry error
-				reject(errorMessage);
+				let errorObject = {} as IErrorHandler;
+				errorObject.errorMsg = errorMessage;
+				errorObject.errorType = errorTypes.XrmApiError;
+				errorObject.reportTime = new Date().toUTCString();
+				errorObject.sourceFunc = "ProductivityMacrosWrapper - save";
+				logFailure("save", errorObject, "");
+				return Promise.reject(errorMessage);
 			});
 		});
-
 	}
 
 	export function getEnvironment(): Map<string, any> {
@@ -302,25 +373,30 @@ namespace Microsoft.ProductivityMacros.Internal {
 		//Using eval(...) to avoid compiler error
 		var data: Map<string, any> = new Map<string, any>();
 		try {
-			//let startTime = new Date();
+			let telemetryData = new Object();
+			let startTime = new Date();
 			let pageUrl: any = new URL(eval("window.top.Xrm.Page.getUrl()") as string);
-			//let timeTaken = Date.now() - startTime.getTime();
-			//let apiName = "Xrm.Page.getUrl"
-			//logApiData(telemetryData, startTime, timeTaken, apiName);
-
+			let timeTaken = Date.now() - startTime.getTime();
+			logNestedApiData(telemetryData, startTime, timeTaken, "Xrm.Page.getUrl");
 			for (var entry of pageUrl.searchParams.entries()) {
 				data.set(entry[0], entry[1]);
 			}
 		}
 		catch (error) {
-			//geturl not available on this page
+			let errorObject = {} as IErrorHandler;
+			errorObject.errorMsg = "geturl not available on this page";
+			errorObject.errorType = errorTypes.GenericError;
+			errorObject.reportTime = new Date().toUTCString();
+			errorObject.sourceFunc = "ProductivityMacrosWrapper - getEnvironment";
+			logFailure("getEnvironment", errorObject, "");
+			return createErrorMap("getUrl not available on this page", "getEnvironment");
 		}
 
 		let startTime = new Date();
+		let telemetryData = new Object;
 		var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
-		//let timeTaken = Date.now() - startTime.getTime();
-		//let apiName = "Xrm.Utility.getGlobalContext";
-		//logApiData(telemetryData, startTime, timeTaken, apiName);
+		let timeTaken = Date.now() - startTime.getTime();
+		logNestedApiData(telemetryData, startTime, timeTaken, "Xrm.Utility.getGlobalContext");
 
 		data.set(Constants.ClientUrl, context.getClientUrl());
 		data.set(Constants.AppUrl, context.getCurrentAppUrl());
@@ -332,60 +408,64 @@ namespace Microsoft.ProductivityMacros.Internal {
 		data.set(Constants.UserName, context.userSettings.userName);
 		data.set(Constants.UserRoles, context.userSettings.securityRoles);
 		data.set(Constants.crmVersion, context.getVersion());
+		logSuccess("ProductivityMacrosWrapper - getEnvironment", "", telemetryData);
 		return data;
 	}
 
-    export function updateRecord(actionName: string, entityData: any): Promise<Map<string, any>> {
+    export function updateRecord(actionName: string, entityData: any,telemetryData?: Object | any): Promise<Map<string, any>> {
         if (!entityData) {
-			/*let errorData = {} as IErrorHandler;
+			/* let errorData = {} as IErrorHandler;
 			errorData.errorMsg = "Need values to Update for updateRecord";
 			errorData.errorType = errorTypes.InvalidParams;
 			errorData.reportTime = new Date().toUTCString();
-			errorData.sourceFunc = "client.updateRecord";
-			return Promise.reject(errorData);*/
-        }
-        let data = getCustomArray(entityData)
-        return new Promise<Map<string, any>>((resolve, reject) => {
-            //let startTime = new Date();
-            return Xrm.WebApi.updateRecord(entityData.EntityName, entityData.EntityId, data).then(
-                (result: XrmClientApi.LookupValue) => {
-                    var sessionContextParams: any = {};
-                    sessionContextParams[actionName + Constants.SuffixEntityName] = entityData.EntityName;
-                    sessionContextParams[actionName + Constants.SuffixEntityId] = entityData.EntityId;
-                    updateActionOutputInSessionContext(sessionContextParams);
-                    return resolve(buildMap(result));
-                },
-                (error: Error) => {
-					/*let errorData = generateErrorObject(error, "client.updateRecord - Xrm.WebApi.updateRecord", errorTypes.XrmApiError);
-					return reject(errorData);*/
+			errorData.sourceFunc = "ProductivityMacros.updateRecord";
+			//return Promise.reject(errorData);
+			*/
+			return Promise.reject(createErrorMap("Need values to Update for updateRecord", "updateRecord")); // should be removed add logrejectanderror mrthod here
+		}
+		let data = getCustomArray(entityData)
+		return new Promise<Map<string, any>>((resolve, reject) => {
+			let startTime = new Date();
+			return Xrm.WebApi.updateRecord(entityData.EntityName, entityData.EntityId, data).then(
+				(result: XrmClientApi.LookupValue) => {
+					let timeTaken = Date.now() - startTime.getTime();
+					var sessionContextParams: any = {};
+					sessionContextParams[actionName + Constants.SuffixEntityName] = entityData.EntityName;
+					sessionContextParams[actionName + Constants.SuffixEntityId] = entityData.EntityId;
+					updateActionOutputInSessionContext(sessionContextParams);
+					logNestedApiData(telemetryData, startTime, timeTaken, "Xrm.WebApi.updateRecord");
+					logSuccess("ProductivityMacrosWrapper - updateRecord", "", telemetryData);
+					return resolve(buildMap(result));
+				},
+				(error: Error) => {
+					let errorData = generateErrorObject(error, "ProductivityMacrosWrapper - updateRecord", errorTypes.XrmApiError);
+					logFailure("openNewForm", errorData, "");
+					return reject(error);
                 });
         });
     }
 
-	export function retrieveRecord(entityData: any): Promise<Map<string, any>> {
+	export function retrieveRecord(entityData: any, telemetryData?: Object | any): Promise<Map<string, any>> {
 		return new Promise<Map<string, any>>((resolve, reject) => {
 			let startTime = new Date();
 			return Xrm.WebApi.retrieveRecord(entityData.EntityName, entityData.EntityId, entityData.Query).then(
 				(result: XrmClientApi.WebApi.Entity) => {
-					/*let timeTaken = Date.now() - startTime.getTime();
-					let apiName = "Xrm.WebApi.retrieveRecord";
-					logApiData(telemetryData, startTime, timeTaken, apiName);*/
+					let timeTaken = Date.now() - startTime.getTime();
+					logNestedApiData(telemetryData, startTime, timeTaken, "Xrm.WebApi.retrieveRecord");
+					logSuccess("ProductivityMacrosWrapper - retrieveRecord", "", telemetryData);
 					return resolve(buildMap(result));
 				},
 				(error: Error) => {
-					/*let errorData = generateErrorObject(error, "client.retrieveRecord - Xrm.WebApi.retrieveRecord", errorTypes.XrmApiError);
-					return reject(errorData);*/
+					let errorData = generateErrorObject(error, "ProductivityMacrosWrapper - retrieveRecord", errorTypes.XrmApiError);
+					logFailure("openNewForm", errorData, "");
+					return reject(error);
 				});
 		});
-
 	}
 
 	function createTab(input: XrmClientApi.TabInput, telemetryData?: Object): Promise<string> {
-		//let startTime = new Date();
-		//let apiName = "Xrm.App.sessions.getSession(sessionId).tabs.createTab";
-        let cifExternal = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
-        return cifExternal.createTab(input);
-
+		let cifExternal = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
+		return cifExternal.createTab(input);
 	}
 
 	/**
@@ -438,6 +518,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 	}
 
 	export function resolveIncident(actionName: string, entityFormData: any): Promise<any> {
+		let telemetryData = new Object();
 		return new Promise<any>((resolve, reject) => {
 			var parameters = {
 				"IncidentId":
@@ -451,7 +532,12 @@ namespace Microsoft.ProductivityMacros.Internal {
 				"Remarks": entityFormData.Remarks
 			}
 			var requestUrl = "/api/data/v9.0/ResolveIncident?tag=abortbpf";
+			let startTime = new Date();
 			var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
+			
+			let timeTaken = Date.now() - startTime.getTime();
+			logNestedApiData(telemetryData, startTime, timeTaken, "Xrm.Utility.getGlobalContext");
+			
 			var req = new XMLHttpRequest();
 			req.open("POST", context.getClientUrl() + requestUrl, true);
 			req.setRequestHeader("OData-MaxVersion", "4.0");
@@ -467,11 +553,17 @@ namespace Microsoft.ProductivityMacros.Internal {
 						sessionContextParams[actionName + Constants.SuffixEntityName] = "incident";
 						sessionContextParams[actionName + Constants.SuffixEntityId] = entityFormData.IncidentId;
 						sessionContextParams[actionName + Constants.SuffixPageType] = "entityrecord";
-						updateActionOutputInSessionContext(sessionContextParams)
+						updateActionOutputInSessionContext(sessionContextParams);
+						logSuccess("ProductivityMacrosWrapper - resolveIncident", "", telemetryData);
 						resolve("Success");
 					} else {
-						var errorText = req.responseText;
-						reject(errorText);
+						let errorObject = {} as IErrorHandler;
+						errorObject.errorMsg = req.responseText;
+						errorObject.errorType = errorTypes.GenericError;
+						errorObject.reportTime = new Date().toUTCString();
+						errorObject.sourceFunc = "ProductivityMacrosWrapper - resolveIncident";
+						logFailure("resolveIncident", errorObject, "");
+						return Promise.reject(req.responseText);
 					}
 				}
 			};
@@ -480,6 +572,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 	}
 
 	function InstantiateEmailTemplate(entityFormData: any): Promise<any> {
+		let telemetryData = new Object();
 		return new Promise<any>((resolve, reject) => {
 			var parameters = {
 				"TemplateId": entityFormData.TemplateId, //template Id
@@ -487,7 +580,12 @@ namespace Microsoft.ProductivityMacros.Internal {
 				"ObjectId": entityFormData.EntityId //record id for the entity above
 			};
 			var requestUrl = "/api/data/v9.1/InstantiateTemplate";
+			let startTime = new Date();
 			var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
+			
+			let timeTaken = Date.now() - startTime.getTime();
+			logNestedApiData(telemetryData, startTime, timeTaken, "Xrm.Utility.getGlobalContext");
+			
 			var req = new XMLHttpRequest();
 			req.open("POST", context.getClientUrl() + requestUrl, true);
 			req.setRequestHeader("OData-MaxVersion", "4.0");
@@ -500,10 +598,16 @@ namespace Microsoft.ProductivityMacros.Internal {
 					req.onreadystatechange = null;
 					if (req.status === 200) {
 						var result = JSON.parse(req.response); //template result containing resolved subject and description fields
+						logSuccess("ProductivityMacrosWrapper - InstantiateEmailTemplate", "", telemetryData);
 						resolve(result);
 					} else {
-						var errorText = req.responseText;
-						reject(errorText);
+						let errorObject = {} as IErrorHandler;
+						errorObject.errorMsg = req.responseText;
+						errorObject.errorType = errorTypes.GenericError;
+						errorObject.reportTime = new Date().toUTCString();
+						errorObject.sourceFunc = "ProductivityMacrosWrapper - instantiateEmailTemplate";
+						logFailure("instantiateEmailTemplate", errorObject, "");
+						return Promise.reject(req.responseText);
 					}
 				}
 			};

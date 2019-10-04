@@ -4,11 +4,14 @@
 		"../ProductivityMacrosUtilities.ts",
 		"ProductivityMacrosWrapper.ts",
 		"ProductivityMacroRuntime.ts",
-		"Constants.ts"
+		"aria-webjs-sdk-1.8.3.js",
+		"Constants.ts",
+		"MacroActionTemplatesInfra.ts"
 	],
   "compilerOptions": {
     "sourceMap": true,
     "outFile": "../../Solution/WebResources/CRMClients/msdyn_ProductivityMacros_internal_library.js",
-    "module": "amd"
+    "module": "amd",
+    "allowJs": true
   }
 }
