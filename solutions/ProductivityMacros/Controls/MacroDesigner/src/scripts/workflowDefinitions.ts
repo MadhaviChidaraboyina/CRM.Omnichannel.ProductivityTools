@@ -1,5 +1,5 @@
 ﻿import { Utils } from "./sharedUtils";
-import { Constants, Action, Parameter, Connector, Kind, Category } from "./sharedDefines";
+import { Constants, Action, Parameter, Connector, Kind, Category, DesignerTemplateConfig } from "./sharedDefines";
 import { isNullOrUndefined } from "util";
 
 let globalContext: XrmClientApi.GlobalContext = (window.top as any).Xrm.Utility.getGlobalContext();
@@ -30,10 +30,17 @@ export class Macros {
     private static definition = {
         "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json",
     };
-    public static async getActionTemplates() {
+    public static async getActionTemplates(): Promise<DesignerTemplateConfig> {
         let actions: Action[] = [];
         let categories: Category[] = [];
-        let connectorData = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_macroconnector", "?$filter=statecode eq 0&$select=msdyn_macroconnectorid,msdyn_name,msdyn_title,msdyn_displayname,msdyn_brandcolor,msdyn_description,msdyn_icon,msdyn_categorykey,msdyn_categorylabel,msdyn_type");
+        let promises: Promise<boolean>[] = [];
+        let res1 = await Promise.all([
+            window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_macroconnector", "?$filter=statecode eq 0&$select=msdyn_macroconnectorid,msdyn_name,msdyn_title,msdyn_displayname,msdyn_brandcolor,msdyn_description,msdyn_icon,msdyn_categorykey,msdyn_categorylabel,msdyn_type"),
+            window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_macroactiontemplate", "?$filter=statecode eq 0&$select=msdyn_name,msdyn_title,msdyn_subtitle,msdyn_displayname,msdyn_brandcolor,msdyn_actionDescription,msdyn_icon,msdyn_summary,msdyn_visibility,msdyn_kind&$expand=msdyn_msdyn_macroactiontemplate_msdyn_actioninput($select=msdyn_name,msdyn_visibility),msdyn_msdyn_macroactiontemplate_msdyn_actionout($select=msdyn_name),msdyn_macroconnector($select=msdyn_name)")
+        ]);
+        let connectorData = await res1[0];
+        let templates = await res1[1];
+
         let connectors: Connector[] = [];
         connectorData.entities.forEach(function (templ) {
             let connector: Connector = {
@@ -57,8 +64,7 @@ export class Macros {
             }
             connectors.push(connector);
         });
-        let promises: Promise<boolean>[] = [];
-        let templates = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_macroactiontemplate", "?$filter=statecode eq 0&$select=msdyn_name,msdyn_title,msdyn_subtitle,msdyn_displayname,msdyn_brandcolor,msdyn_actionDescription,msdyn_icon,msdyn_summary,msdyn_visibility,msdyn_kind&$expand=msdyn_msdyn_macroactiontemplate_msdyn_actioninput($select=msdyn_name,msdyn_visibility),msdyn_msdyn_macroactiontemplate_msdyn_actionout($select=msdyn_name),msdyn_macroconnector($select=msdyn_name)");
+
         templates.entities.forEach(function (templ) {
             let action: Action = {
                 id: templ.msdyn_name,
@@ -127,7 +133,7 @@ export class Macros {
             actions.push(action);
         });
         await Promise.all(promises);
-        return { actions, connectors, categories };
+        return { actions: actions, connectors: connectors, categories: categories };
     }
 
     public static async getDefinition() {

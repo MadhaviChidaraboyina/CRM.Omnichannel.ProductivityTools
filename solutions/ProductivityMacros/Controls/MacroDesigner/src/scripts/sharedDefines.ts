@@ -125,6 +125,11 @@ export interface Connector {
     //iconUri: "./icons/flow_placeholder.svg",
     //runtimeUrls: [],
 }
+export interface DesignerTemplateConfig {
+    actions: Action[],
+    connectors: Connector[],
+    categories: Category[]
+}
 export interface IDesignerOptions {
     ApiVersion: string,
     BaseUrl: string,

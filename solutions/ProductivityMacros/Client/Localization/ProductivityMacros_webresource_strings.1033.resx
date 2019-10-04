@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
+    <value>Unable to find designer configuration</value>
+    <comment>Error message when config entity read fails</comment>
+  </data>
   <data name="DESIGNER_ACTION" xml:space="preserve">
     <value>Action</value>
     <comment>Action string for Designer Control</comment>
@@ -216,5 +220,33 @@
   <data name="MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC" xml:space="preserve">
     <value>Attribute value</value>
     <comment>Description for 'value' field of custom attribute</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" xml:space="preserve">
+    <value>Unable to read macro definition</value>
+    <comment>Error message when the macro definition to be edited could not be read</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
+    <value>Unable to read action templates</value>
+    <comment>Error message when templates entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_CDS_WRITE_ERROR" xml:space="preserve">
+    <value>Unable to save macro definition</value>
+    <comment>Error message when write to CDS fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
+    <value>Designer control initialization failed</value>
+    <comment>Error message when designer control initialization fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">
+    <value>Unable to create macro definition</value>
+    <comment>Error message when designer control cannot generate a valid JSON</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_LOAD_FAILURE" xml:space="preserve">
+    <value>Unable to load macro definition</value>
+    <comment>Error message when the control cannot load the macro definition</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_RENDER_FAILURE" xml:space="preserve">
+    <value>Unable to render macro designer control</value>
+    <comment>Error message when the control cannot be rendered</comment>
   </data>
 </root>

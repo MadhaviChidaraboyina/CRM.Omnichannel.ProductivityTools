@@ -86,9 +86,15 @@
     <Content Include="Entities\ParameterDefinition\SavedQueries\{5811f646-830b-4439-aecd-0b1eb4c4910f}.xml" />
     <Content Include="Entities\ParameterDefinition\SavedQueries\{57347866-53ad-4011-9024-d5161ce8391e}.xml" />
     <Content Include="Entities\ParameterDefinition\SavedQueries\{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}.xml" />
+    <Content Include="Entities\Workflow\Entity.xml" />
+    <Content Include="Entities\Workflow\RibbonDiff.xml" />
+    <Content Include="Entities\Workflow\SavedQueries\{012107d2-54d0-e911-a81c-000d3a6e50b0}.xml" />
+    <Content Include="Entities\Workflow\SavedQueries\{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}.xml" />
+    <Content Include="Entities\Workflow\SavedQueries\{ddf85356-30d9-e911-a81e-000d3af73f4d}.xml" />
     <Content Include="Other\Relationships\msdyn_macroactiontemplate.xml" />
     <Content Include="Other\Relationships\msdyn_macroconnector.xml" />
     <Content Include="Other\Relationships\msdyn_parameterdefinition.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_spinner.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macro_connector.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macro_connector.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macroDesigner.bundle.js.data.xml" />
@@ -116,6 +122,7 @@
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_send_kb.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_send_kb.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_update_record.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_spinner.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_update_record.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_clone_record.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_clone_record.svg.data.xml" />

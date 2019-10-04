@@ -227,7 +227,7 @@ function initializeDesigner(req) {
                     })
                 });
                 rpc.register(SharedDefines.DesignerMessages.Initialize, function (options) {
-                    console.log("Start initialize");
+                    //console.log("Start initialize");
                     let designerOptions: SharedDefines.IDesignerOptions = JSON.parse(options);
                     let operationManager: HostService.OperationManager = new HostService.OperationManager(designerOptions);
                     let builtInTypeServiceFactory = function (analytics, schemaVersion) {
@@ -292,11 +292,11 @@ function initializeDesigner(req) {
                     return true;
                 });
                 rpc.register(SharedDefines.DesignerMessages.GetDefinition, function (options) {
-                    console.log("Start getDefinition");
+                    //console.log("Start getDefinition");
                     return JSON.stringify(designer.getWorkflow(options));
                 });
                 rpc.register(SharedDefines.DesignerMessages.LoadDefinition, function (workflowDefn, options) {
-                    console.log("Start loadDefinition");
+                    //console.log("Start loadDefinition");
                     let workflowParsed = JSON.parse(workflowDefn);
                     let workflow = {
                         definition: workflowParsed.definition,
@@ -308,24 +308,24 @@ function initializeDesigner(req) {
                     return designer.loadWorkflow(workflow, JSON.parse(options));
                 });
                 rpc.register(SharedDefines.DesignerMessages.RenderDesigner, function () {
-                    console.log("Start renderDesigner");
+                    //console.log("Start renderDesigner");
                     return designer.render();
                 });
-                console.log("Will be acking now");
+                //console.log("Will be acking now");
                 try {
                     rpc.ack().then(
                         function (res) {
-                            console.log("Designer handshake done " + res);
+                            //console.log("Designer handshake done " + res);
                             rpc.call(SharedDefines.WrapperMessages.DesignerInitDone);
                         },
                         function (err) {
-                            console.log("Designer handshake err " + err);
+                            //console.log("Designer handshake err " + err);
 
                         });
-                    console.log("RPC ack called");
+                    //console.log("RPC ack called");
                 }
                 catch (error) {
-                    console.log("Error in ack " + error);
+                    //console.log("Error in ack " + error);
                 }
                 /*},
                 function (error) {

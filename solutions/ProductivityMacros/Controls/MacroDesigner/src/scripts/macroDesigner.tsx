@@ -2,39 +2,45 @@
 import * as Utils from "./sharedUtils";
 
 import * as Workflow from "./workflowDefinitions";
-//import * as Url from "url";
-//import "XrmClientApi";
+import { MouseEvent } from "react";
 
 let cancelButton = document.getElementById("cancelButton");
+async function closeDesigner(event?: Event) {
+    (window.top.Xrm.Page.ui as XrmClientApi.FormUi).close();
+}
+
 if (cancelButton) {
-    cancelButton.addEventListener("click", async function (event) {
-        console.log("Cancelling the MDD");
-        (window.top.Xrm.Page.ui as XrmClientApi.FormUi).close();
-    });
+    cancelButton.addEventListener("click", closeDesigner);
 }
 
 enum WrapperEvents {
     WrapperConfigErrorEvent = "MSWP.CONFIG_ERROR",
     WrapperConfigLoadEvent = "MSWP.CONFIG_LOAD",
     DesignerIframeLoadEvent = "MSWP.IFRAME_LOAD_DONE",
-    //TemplateDefinitionLoadEvent = "MSWP.TEMPLATES_LOADED",
     DesignerControlInitEvent = "MSWP.DESIGNER_CONTROL_INIT",
     DesignerControlInitErrorEvent = "MSWP.DESIGNER_CONTROL_INIT_ERROR",
     DesignerControlExecutionEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_EVENT",
     DesignerControlExecutionErrorEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_ERROR"
 };
-let _designerConfigPromise: Promise<SharedDefines.MacroDesignerConfig> | null = null;
-let _macroDesignerConfig: SharedDefines.MacroDesignerConfig | null = null;
+
+enum RequiredCDSOpersForInit {
+    DesignerConfig = "0",
+    Templates = "1",
+    WorkflowDefinition = "2"
+};
+
+let initOperations: { [operType: string]: Promise<any> } = {};
+
+function triggerCDSInitOperations() {
+    initOperations[RequiredCDSOpersForInit.DesignerConfig] = getDesignerBlobConfig();
+    initOperations[RequiredCDSOpersForInit.Templates] = Workflow.Macros.getActionTemplates();
+    initOperations[RequiredCDSOpersForInit.WorkflowDefinition] = Workflow.Macros.getDefinition();
+}
+
+triggerCDSInitOperations();
 
 async function getDesignerBlobConfig(): Promise<SharedDefines.MacroDesignerConfig> {
-    //TODO - read from serviceendpoint
-    if (_macroDesignerConfig) {
-        return Promise.resolve(_macroDesignerConfig);
-    }
-    if (_designerConfigPromise) {
-        return _designerConfigPromise;
-    }
-    _designerConfigPromise = new Promise<SharedDefines.MacroDesignerConfig>(async function (resolve, reject) {
+    let _designerConfigPromise: Promise<SharedDefines.MacroDesignerConfig> = new Promise<SharedDefines.MacroDesignerConfig>(async function (resolve, reject) {
         let lcid = window.top.Xrm.Utility.getGlobalContext().getOrgLcid();
         let locale = SharedDefines.LOCALE_MAP[lcid] || "en";
         let baseUrl: string = "";
@@ -50,7 +56,6 @@ async function getDesignerBlobConfig(): Promise<SharedDefines.MacroDesignerConfi
             designerConfig.UserVoiceLink = config.msdyn_uservoicelink;
             designerConfig.SearchHint = config.msdyn_searchhint;
             designerConfig.DesignerSolutionVersion = config.msdyn_macrosversion;
-            //baseUrl = config.msdyn_designerfallbackurl;
             if (config.msdyn_designerurlconfigentity && config.msdyn_designerurlconfigentityattrib) {
                 if (config.msdyn_designerurlconfigentityid) {
                     try {
@@ -100,22 +105,19 @@ async function getDesignerBlobConfig(): Promise<SharedDefines.MacroDesignerConfi
                 message: Utils.Utils.genMsgForTelemetry("No valid designer URL configured"),
                 eventTimeStamp: new Date(),
                 eventType: SharedDefines.TelemetryEventType.Trace,
-                //exception: error.stack
             };
-            doTelemetry(obj);
+            doTelemetry(obj, "DESIGNER_CONFIG_ERROR_URL_NOT_FOUND", true);
             reject(new Error("Unable to find designer config"));
         }
         else {
             designerConfig.DesignerBaseURL = new URL(path + "?locale=" + locale + "&base=" + encodeURIComponent(window.top.Xrm.Utility.getGlobalContext().getClientUrl()), baseUrl).toString();
-            _macroDesignerConfig = designerConfig;
             let obj: SharedDefines.LogObject = {
                 level: SharedDefines.LogLevel.Info,
                 eventName: WrapperEvents.WrapperConfigLoadEvent,
                 message: Utils.Utils.genMsgForTelemetry("Designer config loaded"),
                 eventTimeStamp: new Date(),
                 eventType: SharedDefines.TelemetryEventType.Trace,
-                eventData: { data: _macroDesignerConfig }
-                //exception: error.stack
+                eventData: { data: designerConfig }
             };
             doTelemetry(obj);
             resolve(designerConfig);
@@ -126,7 +128,10 @@ async function getDesignerBlobConfig(): Promise<SharedDefines.MacroDesignerConfi
 
 async function loadDesignerIframe() {
     let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
-    let url: string = (await getDesignerBlobConfig()).DesignerBaseURL || "";
+    let url: string = (await initOperations[RequiredCDSOpersForInit.DesignerConfig] as SharedDefines.MacroDesignerConfig).DesignerBaseURL || "";
+    if (!url) {
+        return;
+    }
     designerIframe.onload = function () {
         let obj: SharedDefines.LogObject = {
             level: SharedDefines.LogLevel.Info,
@@ -134,7 +139,6 @@ async function loadDesignerIframe() {
             message: Utils.Utils.genMsgForTelemetry("Designer iframe loaded"),
             eventTimeStamp: new Date(),
             eventType: SharedDefines.TelemetryEventType.Trace,
-            //exception: error.stack
         };
         doTelemetry(obj);
     };
@@ -154,18 +158,16 @@ let CurrentWorkflowDetails = { definition: "", id: "", name: "", description: ""
 
 async function startDesigner(rpc) {
     try {
-        let designerConfig: SharedDefines.MacroDesignerConfig = await getDesignerBlobConfig();
         let designerOptions: SharedDefines.IDesignerOptions = {
-            ApiVersion: designerConfig.DesignerSolutionVersion || "1.0",  //K
-            BaseUrl: window.location.hostname,  //K
-            location: "NAM",    //K
-            resourceGroup: "resourcegroup", //K
-            subscriptionId: "subscription", //K
-            resourceId: "resourceId",   //K
+            ApiVersion: "1.0",
+            BaseUrl: window.location.hostname,
+            location: "NAM",
+            resourceGroup: "resourcegroup",
+            subscriptionId: "subscription",
+            resourceId: "resourceId",
             Categories: [],
-            SearchHint: designerConfig.SearchHint || Utils.Utils.getResourceString("DESIGNER_SEARCHMACROS"),
-            UserVoiceMessage: designerConfig.UserVoiceText || Utils.Utils.getResourceString("DESIGNER_USERVOICEMSG"),
-            UserVoiceURL: designerConfig.UserVoiceLink,
+            SearchHint: "",
+            UserVoiceMessage: "",
             environmentName: window.top.Xrm.Utility.getGlobalContext().getOrgUniqueName(),
             environmentDescription: window.top.Xrm.Utility.getGlobalContext().getOrgUniqueName(),
             Connectors: [
@@ -174,9 +176,13 @@ async function startDesigner(rpc) {
             ],
             operationKindDisplayText: operKindDisplayText
         };
-        //console.log("Starting designer init");
         try {
-            let templates = await Workflow.Macros.getActionTemplates();
+            let designerConfig: SharedDefines.MacroDesignerConfig = await initOperations[RequiredCDSOpersForInit.DesignerConfig] as SharedDefines.MacroDesignerConfig;
+            let templates = await initOperations[RequiredCDSOpersForInit.Templates] as SharedDefines.DesignerTemplateConfig;
+            designerOptions.ApiVersion = designerConfig.DesignerSolutionVersion || designerOptions.ApiVersion;
+            designerOptions.SearchHint = designerConfig.SearchHint || Utils.Utils.getResourceString("DESIGNER_SEARCHMACROS");
+            designerOptions.UserVoiceMessage = designerConfig.UserVoiceText || Utils.Utils.getResourceString("DESIGNER_USERVOICEMSG");
+            designerOptions.UserVoiceURL = designerConfig.UserVoiceLink;
             designerOptions.Actions = templates.actions;
             designerOptions.Connectors = templates.connectors;
             designerOptions.Categories = templates.categories;
@@ -186,7 +192,6 @@ async function startDesigner(rpc) {
                 message: Utils.Utils.genMsgForTelemetry("Designer action templates loaded"),
                 eventTimeStamp: new Date(),
                 eventType: SharedDefines.TelemetryEventType.Trace,
-                //exception: error.stack
             };
             doTelemetry(obj);
         }
@@ -199,7 +204,7 @@ async function startDesigner(rpc) {
                 eventType: SharedDefines.TelemetryEventType.Trace,
                 exception: error.stack
             };
-            doTelemetry(obj);
+            doTelemetry(obj, "DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND");
         }
         try {
             let initResult = await rpc.call(SharedDefines.DesignerMessages.Initialize, [JSON.stringify(designerOptions)]);
@@ -209,7 +214,6 @@ async function startDesigner(rpc) {
                 message: Utils.Utils.genMsgForTelemetry("Designer control init done"),
                 eventTimeStamp: new Date(),
                 eventType: SharedDefines.TelemetryEventType.Trace,
-                //exception: error.stack
             };
             doTelemetry(obj);
         }
@@ -222,11 +226,11 @@ async function startDesigner(rpc) {
                 eventType: SharedDefines.TelemetryEventType.Trace,
                 exception: error.stack
             };
-            doTelemetry(obj);
+            doTelemetry(obj, "DESIGNER_CONTROL_INIT_FAILURE", true);
+            return;
         }
-        //console.log("Starting designer loaddef");
         try {
-            CurrentWorkflowDetails = await Workflow.Macros.getDefinition();
+            CurrentWorkflowDetails = await initOperations[RequiredCDSOpersForInit.WorkflowDefinition];
             if (CurrentWorkflowDetails.name) {
                 (window.top as any).Xrm.Page.getControl("macrosname_id").getAttribute().setValue(CurrentWorkflowDetails.name);
             }
@@ -239,7 +243,6 @@ async function startDesigner(rpc) {
                 message: Utils.Utils.genMsgForTelemetry("Workflow definition read from CDS done"),
                 eventTimeStamp: new Date(),
                 eventType: SharedDefines.TelemetryEventType.Trace,
-                //exception: error.stack
             };
             doTelemetry(obj);
         }
@@ -252,7 +255,8 @@ async function startDesigner(rpc) {
                 eventType: SharedDefines.TelemetryEventType.Trace,
                 exception: error.stack
             };
-            doTelemetry(obj);
+            doTelemetry(obj, "DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION", true);
+            return;
         }
         try {
             let loadDef = await rpc.call(SharedDefines.DesignerMessages.LoadDefinition, [JSON.stringify({ definition: CurrentWorkflowDetails.definition, references: [], sku: { name: "Free" } }), JSON.stringify(designerOptions)]);
@@ -262,7 +266,6 @@ async function startDesigner(rpc) {
                 message: Utils.Utils.genMsgForTelemetry("Macro definition loaded into designer control"),
                 eventTimeStamp: new Date(),
                 eventType: SharedDefines.TelemetryEventType.Trace,
-                //exception: error.stack
             };
             doTelemetry(obj);
         }
@@ -275,12 +278,13 @@ async function startDesigner(rpc) {
                 eventType: SharedDefines.TelemetryEventType.Trace,
                 exception: error.stack
             };
-            doTelemetry(obj);
+            doTelemetry(obj, "DESIGNER_CONTROL_LOAD_FAILURE", true);
+            return;
         }
-        //console.log("Starting designer render");   
         try {
             let rendRes = await rpc.call(SharedDefines.DesignerMessages.RenderDesigner);
-            console.log("Called");
+            let spinner = document.getElementById("designerContainerSpinner") as HTMLImageElement;
+            spinner.style.display = "none";
             let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
             designerIframe.style.display = "inline";
             let obj: SharedDefines.LogObject = {
@@ -289,7 +293,6 @@ async function startDesigner(rpc) {
                 message: Utils.Utils.genMsgForTelemetry("Designer render complete"),
                 eventTimeStamp: new Date(),
                 eventType: SharedDefines.TelemetryEventType.Trace,
-                //exception: error.stack
             };
             doTelemetry(obj);
         }
@@ -302,12 +305,12 @@ async function startDesigner(rpc) {
                 eventType: SharedDefines.TelemetryEventType.Trace,
                 exception: error.stack
             };
-            doTelemetry(obj);
+            doTelemetry(obj, "DESIGNER_CONTROL_RENDER_FAILURE", true);
+            return;
         }
         let saveButton = document.getElementById("saveButton");
         if (saveButton) {
             saveButton.addEventListener("click", async function (event) {
-                //console.log("Asking designer for workflow definition");
                 try {
                     let workflowDefn = await rpc.call(SharedDefines.DesignerMessages.GetDefinition);
                     let obj: SharedDefines.LogObject = {
@@ -316,7 +319,6 @@ async function startDesigner(rpc) {
                         message: Utils.Utils.genMsgForTelemetry("Macro definition JSON generation done"),
                         eventTimeStamp: new Date(),
                         eventType: SharedDefines.TelemetryEventType.Trace,
-                        //exception: error.stack
                     };
                     doTelemetry(obj);
                     let name = (window.top as any).Xrm.Page.getControl("macrosname_id").getValue() as string;
@@ -328,7 +330,6 @@ async function startDesigner(rpc) {
                             definition: JSON.parse(workflowDefn).definition
                         }
                     };
-                    //TODO - handle the scenario where name is empty
                     console.log("Got workflow definition for macro '" + name + "' =" + JSON.stringify(clientData));
                     if (CurrentWorkflowDetails.id) {
                         try {
@@ -339,10 +340,9 @@ async function startDesigner(rpc) {
                                 message: Utils.Utils.genMsgForTelemetry("Macro definition successfully updated"),
                                 eventTimeStamp: new Date(),
                                 eventType: SharedDefines.TelemetryEventType.Trace,
-                                //exception: error.stack
                             };
                             doTelemetry(obj);
-                            (window.top.Xrm.Page.ui as XrmClientApi.FormUi).close();
+                            closeDesigner(event);
                         }
                         catch (error) {
                             let obj: SharedDefines.LogObject = {
@@ -353,7 +353,8 @@ async function startDesigner(rpc) {
                                 eventType: SharedDefines.TelemetryEventType.Trace,
                                 exception: error.stack
                             };
-                            doTelemetry(obj);
+                            doTelemetry(obj, "DESIGNER_CONTROL_CDS_WRITE_ERROR");
+                            return;
                         }
                     }
                     else {
@@ -365,13 +366,35 @@ async function startDesigner(rpc) {
                                 message: Utils.Utils.genMsgForTelemetry("New macro creation success"),
                                 eventTimeStamp: new Date(),
                                 eventType: SharedDefines.TelemetryEventType.Trace,
-                                //exception: error.stack
                             };
                             doTelemetry(obj);
-                            (window.top.Xrm.Page.ui as XrmClientApi.FormUi).close();
+                            try {
+                                let upd = await window.top.Xrm.WebApi.updateRecord(SharedDefines.Constants.WORKFLOW_ENTITY, rec.id, { statecode: 1, statuscode: 2 });
+                                let obj: SharedDefines.LogObject = {
+                                    level: SharedDefines.LogLevel.Info,
+                                    eventName: WrapperEvents.DesignerControlExecutionEvent,
+                                    message: Utils.Utils.genMsgForTelemetry("Macro '" + rec.id + "' successfully activated"),
+                                    eventTimeStamp: new Date(),
+                                    eventType: SharedDefines.TelemetryEventType.Trace,
+                                };
+                                doTelemetry(obj);
+                                closeDesigner(event);
+                            }
+                            catch (error) {
+                                let obj: SharedDefines.LogObject = {
+                                    level: SharedDefines.LogLevel.Error,
+                                    eventName: WrapperEvents.DesignerControlExecutionErrorEvent,
+                                    message: Utils.Utils.genMsgForTelemetry("Unable to activate macro + '" + rec.id + ",", error),
+                                    eventTimeStamp: new Date(),
+                                    eventType: SharedDefines.TelemetryEventType.Trace,
+                                    exception: error.stack
+                                };
+                                doTelemetry(obj, "DESIGNER_CONTROL_CDS_WRITE_ERROR");
+                                return;
+                            }
+                            //(window.top.Xrm.Page.ui as XrmClientApi.FormUi).close();
                         }
                         catch (error) {
-                            //TODO - log error save failed
                             let obj: SharedDefines.LogObject = {
                                 level: SharedDefines.LogLevel.Error,
                                 eventName: WrapperEvents.DesignerControlExecutionErrorEvent,
@@ -380,7 +403,8 @@ async function startDesigner(rpc) {
                                 eventType: SharedDefines.TelemetryEventType.Trace,
                                 exception: error.stack
                             };
-                            doTelemetry(obj);
+                            doTelemetry(obj, "DESIGNER_CONTROL_CDS_WRITE_ERROR");
+                            return;
                         }
                     }
                 }
@@ -393,28 +417,41 @@ async function startDesigner(rpc) {
                         eventType: SharedDefines.TelemetryEventType.Trace,
                         exception: error.stack
                     };
-                    doTelemetry(obj);
+                    doTelemetry(obj, "DESIGNER_CONTROL_JSON_GENERATION_ERROR");
+                    return;
                 }
-
-
             });
         }
     }
     catch (error) {
-        console.log("designer load error " + error);
+        let obj: SharedDefines.LogObject = {
+            level: SharedDefines.LogLevel.Error,
+            eventName: WrapperEvents.DesignerControlInitErrorEvent,
+            message: Utils.Utils.genMsgForTelemetry("Unknown error trying to load designer", error),
+            eventTimeStamp: new Date(),
+            eventType: SharedDefines.TelemetryEventType.Trace,
+            exception: error.stack
+        };
+        doTelemetry(obj, "DESIGNER_CONTROL_INIT_FAILURE", true);
+        return;
     }
 }
 
-function doTelemetry(msg: SharedDefines.LogObject) {
-    //let msgObj: SharedDefines.LogObject = JSON.parse(msg);
-    //console.log(JSON.stringify(msg));   //TODO: Log stuff from msgObj to telemetry
+function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, toClose?: boolean) {
     Utils.Utils.logAdminTelemetry(msg);
     console.log(msg.eventTimeStamp + " " + msg.eventType + " " + msg.level + " " + msg.eventName + " " + msg.message);
+    if (userVisibleError) {
+        window.top.Xrm.Navigation.openAlertDialog({ text: Utils.Utils.getResourceString(userVisibleError) }).then(function () {
+            if (toClose) {
+                closeDesigner();
+            }
+        });
+    }
 }
 
 require(["LogicApps/rpc/Scripts/logicappdesigner/libs/rpc/rpc.standalone"], async function (Rpc) {
     let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
-    let targetOrigin = (await getDesignerBlobConfig()).DesignerBaseURL || "*";
+    let targetOrigin = (await initOperations[RequiredCDSOpersForInit.DesignerConfig] as SharedDefines.MacroDesignerConfig).DesignerBaseURL || "*";
     let rpc = new Rpc.Rpc({
         signature: SharedDefines.Constants.WRAPPER_CONTROL_SIGNATURE,
         targetOrigin: targetOrigin,
@@ -433,7 +470,6 @@ require(["LogicApps/rpc/Scripts/logicappdesigner/libs/rpc/rpc.standalone"], asyn
     });
     rpc.register(SharedDefines.WrapperMessages.DesignerInitDone,
         function () {
-            console.log("Designer Init Done");
             startDesigner(rpc);
         });
 });

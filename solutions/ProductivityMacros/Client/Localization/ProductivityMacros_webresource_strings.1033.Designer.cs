@@ -71,11 +71,83 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unable to read macro definition.
+        /// </summary>
+        internal static string DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION {
+            get {
+                return ResourceManager.GetString("DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to read action templates.
+        /// </summary>
+        internal static string DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to find designer configuration.
+        /// </summary>
+        internal static string DESIGNER_CONFIG_ERROR_URL_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("DESIGNER_CONFIG_ERROR_URL_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unified Interface automation.
         /// </summary>
         internal static string DESIGNER_CONNECTORDISPLAYNAME {
             get {
                 return ResourceManager.GetString("DESIGNER_CONNECTORDISPLAYNAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to save macro definition.
+        /// </summary>
+        internal static string DESIGNER_CONTROL_CDS_WRITE_ERROR {
+            get {
+                return ResourceManager.GetString("DESIGNER_CONTROL_CDS_WRITE_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Designer control initialization failed.
+        /// </summary>
+        internal static string DESIGNER_CONTROL_INIT_FAILURE {
+            get {
+                return ResourceManager.GetString("DESIGNER_CONTROL_INIT_FAILURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to create macro definition.
+        /// </summary>
+        internal static string DESIGNER_CONTROL_JSON_GENERATION_ERROR {
+            get {
+                return ResourceManager.GetString("DESIGNER_CONTROL_JSON_GENERATION_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to load macro definition.
+        /// </summary>
+        internal static string DESIGNER_CONTROL_LOAD_FAILURE {
+            get {
+                return ResourceManager.GetString("DESIGNER_CONTROL_LOAD_FAILURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to render macro designer control.
+        /// </summary>
+        internal static string DESIGNER_CONTROL_RENDER_FAILURE {
+            get {
+                return ResourceManager.GetString("DESIGNER_CONTROL_RENDER_FAILURE", resourceCulture);
             }
         }
         
