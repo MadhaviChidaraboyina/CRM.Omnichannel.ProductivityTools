@@ -291,6 +291,9 @@ namespace CRM.Solutions.ChannelApiFrameworkV2.Test
 				Log.Comment("Contact ID : " + contactId);
                 caseId = WorkWithSolutions.createCase(caseName, contactId);
 				Log.Comment("Case ID : " + caseId.ToString());
+				string inputJson = helper.getJson(Constants.CREATE_SESSION, caseId.ToString());
+				string outputJson = helper.PerformAction(driver, inputJson);
+				Log.Comment("Got the output result for create a session");
 				string createTabInputJson = helper.getJson(Constants.CREATE_TAB, caseId.ToString());
 				driver.SwitchTo().DefaultContent();
 				driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
@@ -303,7 +306,7 @@ namespace CRM.Solutions.ChannelApiFrameworkV2.Test
 				Thread.Sleep(3000);
 				var newTab = driver.FindElements(By.XPath(string.Format("//*[@data-id='{0}']", TAB_OUTPUT_JSON)));
 				Assert.IsTrue(newTab.Count > 0, "New tab was not created");
-				var tabName = driver.FindElement(By.XPath("//*[@id='tab-wrapper-tab-id-1']/div/span"));
+				var tabName = driver.FindElement(By.XPath("//*[@id='tab-wrapper-tab-id-2']/div/span"));
 				Assert.IsTrue(tabName.Text == "Tab", "Tab name is incorrect");
 				driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
 				Thread.Sleep(3000);
@@ -360,6 +363,11 @@ namespace CRM.Solutions.ChannelApiFrameworkV2.Test
 				Log.Comment("Contact ID : " + contactId);
                 caseId = WorkWithSolutions.createCase(caseName, contactId);
 				Log.Comment("Case ID : " + caseId.ToString());
+				string inputJson = helper.getJson(Constants.CREATE_SESSION, caseId.ToString());
+				string outputJson = helper.PerformAction(driver, inputJson);
+				Log.Comment("Got the output result for create a session");
+				driver.SwitchTo().DefaultContent();
+				Thread.Sleep(3000);
 				string createTabInputJson = helper.getJson(Constants.CREATE_TAB, caseId.ToString());
 				driver.SwitchTo().DefaultContent();
 				driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
