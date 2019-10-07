@@ -1154,4 +1154,30 @@
     </records>
     <m2mrelationships />
   </entity>
+  <entity name="msdyn_macrosolutionconfiguration" displayname="Macro Solution Configuration">
+	<records>
+      <record id="1b65ad62-4fe3-e911-a81a-000d3a706f52">
+        <field name="msdyn_designerurlconfigentityattrib" value="path" />
+        <field name="createdby" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
+        <field name="createdon" value="9/30/2019 6:56:11 AM" />
+        <field name="msdyn_designerurlconfigentity" value="serviceendpoint" />
+        <field name="msdyn_macrosolutionconfigurationid" value="1b65ad62-4fe3-e911-a81a-000d3a706f52" />
+        <field name="modifiedby" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
+        <field name="modifiedon" value="9/30/2019 7:28:45 AM" />
+        <field name="msdyn_name" value="Default Designer Config" />
+        <field name="ownerid" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
+        <field name="owningbusinessunit" value="68c108db-5bdf-e911-a81a-000d3a7611d3" lookupentity="businessunit" />
+        <field name="owninguser" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" />
+        <field name="msdyn_designerurlconfigentityid" value="38bd8b51-de34-4c45-bf43-5a913aeec49f" />
+        <field name="msdyn_designerurlrelativepath" value="/flowcontrol/DesignerBlob/iframedesigner.html" />
+        <field name="msdyn_searchhint" value="Search macro" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_uservoicelink" value="https://experience.dynamics.com/ideas/categories/list/?category=31047c64-7e28-e911-a95a-000d3a4f3883&amp;amp;forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad" />
+        <field name="msdyn_uservoicetext" value="Let us know what you would like us to build next" />
+        <field name="msdyn_macrosversion" value="9.2.0.0" />
+      </record>
+    </records>
+    <m2mrelationships />
+  </entity>
 </entities>

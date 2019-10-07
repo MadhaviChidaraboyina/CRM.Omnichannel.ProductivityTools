@@ -40,10 +40,10 @@ namespace Microsoft.CIFramework.Internal {
 						if (val === "") {
 							let currentTabScope = TemplatesUtility.getTabId(Internal.SlugPrefix.CURRENT_TAB);
 							let anchorTabScope = TemplatesUtility.getTabId(Internal.SlugPrefix.ANCHOR_TAB);
-							if (templateParams[currentTabScope].hasOwnProperty(paramName)) {
+							if (templateParams[currentTabScope] && templateParams[currentTabScope].hasOwnProperty(paramName)) {
 								val = templateParams[currentTabScope][paramName];
 							}
-							else if (templateParams[anchorTabScope].hasOwnProperty(paramName)) {
+							else if (templateParams[anchorTabScope] && templateParams[anchorTabScope].hasOwnProperty(paramName)) {
 								val = templateParams[anchorTabScope][paramName];
 							}
 						}
