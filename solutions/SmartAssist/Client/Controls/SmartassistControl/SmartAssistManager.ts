@@ -30,10 +30,10 @@ module MscrmControls.ProductivityPanel.Smartassist {
 
 		public RenderSmartAssistCard(conversationId, card, uiSessionId) {
 			let conversationState = ConversationStateManager.GetConversationState(conversationId);
-			let currentConversationId = ConversationStateManager.GetCurrentConversation();
-
 			//Get an ID for the card by saving it. Set the state of the card
 			let cardId = conversationState.PersistCard(card, uiSessionId);
+
+			let currentConversationId = ConversationStateManager.GetCurrentConversation();
 
 			if (conversationId == currentConversationId) {
 				// Render the card

@@ -6,7 +6,7 @@ interface String {
 	Format(...params: string[]): string;
 }
 
-declare namespace Microsoft.ProductivityMacros.Internal {
+declare namespace Microsoft.ProductivityMacros {
     function runMacro(macroName: string, params?: string): Promise<string>;
 }
 declare namespace Microsoft.Macros.Utility {

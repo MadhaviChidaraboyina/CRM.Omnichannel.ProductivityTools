@@ -121,12 +121,16 @@
     <value>Smart assist</value>
     <comment>Header value for smartassist control</comment>
   </data>
+  <data name="EmptyMessage" xml:space="preserve">
+    <value>No suggestions available</value>
+    <comment>Empty message</comment>
+  </data>
   <data name="FailureMessage" xml:space="preserve">
     <value>Something went wrong. Please try again</value>
     <comment>Failure Message</comment>
   </data>
   <data name="SuccessMessage" xml:space="preserve">
-    <value>Action applied successfully!</value>
+    <value>Done!</value>
     <comment>Success Message</comment>
   </data>
 </root>

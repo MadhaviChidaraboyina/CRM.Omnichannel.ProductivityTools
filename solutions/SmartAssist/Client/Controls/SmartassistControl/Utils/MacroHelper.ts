@@ -19,7 +19,7 @@ module MscrmControls.ProductivityPanel.Smartassist
 		 */
 		public executeMacro(macroName: string, macroParam: any): Promise<string>
 		{
-			return Microsoft.ProductivityMacros.Internal.runMacro(macroName, macroParam);
+			return Microsoft.ProductivityMacros.runMacro(macroName, macroParam);
 		}
 	}
 }
