@@ -318,12 +318,12 @@
       </m2mrelationship>
       <m2mrelationship sourceid="6e033082-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
-          <targetid>1d75d16f-fad2-e911-a81e-000d3a015920</targetid>
+          <targetid>c8e3f6f3-9888-45ea-ab7a-378b7aedccbc</targetid>
         </targetids>
       </m2mrelationship>
       <m2mrelationship sourceid="474f7494-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
-          <targetid>1d75d16f-fad2-e911-a81e-000d3a015920</targetid>
+          <targetid>c8e3f6f3-9888-45ea-ab7a-378b7aedccbc</targetid>
         </targetids>
       </m2mrelationship>
       <m2mrelationship sourceid="fed739aa-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
@@ -438,6 +438,22 @@
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="c8e3f6f3-9888-45ea-ab7a-378b7aedccbc">
+        <field name="msdyn_actioninputparameterid" value="c8e3f6f3-9888-45ea-ab7a-378b7aedccbc" />
+        <field name="msdyn_actiontemplateinputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:58 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Open_Grid_Input_Params_Optional" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="important" />
       </record>
       <record id="1ce921a3-fbd2-e911-a81e-000d3a015920">
         <field name="msdyn_actioninputparameterid" value="1ce921a3-fbd2-e911-a81e-000d3a015920" />
@@ -724,7 +740,7 @@
       <record id="60541186-f5dd-e911-a81e-000d3af9c0c2">
         <field name="msdyn_brandcolor" value="#2266E3" />
         <field name="msdyn_categorykey" value="CONNECTORS" />
-        <field name="msdyn_categorylabel" value="Built In Macro Actions" />
+        <field name="msdyn_categorylabel" value="Predefined automation actions" />
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:12:53 PM" />
         <field name="msdyn_description" value="Automate commonly used client-side tasks" />
@@ -1155,7 +1171,7 @@
     <m2mrelationships />
   </entity>
   <entity name="msdyn_macrosolutionconfiguration" displayname="Macro Solution Configuration">
-	<records>
+    <records>
       <record id="1b65ad62-4fe3-e911-a81a-000d3a706f52">
         <field name="msdyn_designerurlconfigentityattrib" value="path" />
         <field name="createdby" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />

@@ -11,4 +11,14 @@
 		<field name="msdyn_displayname" localizableAttribute="value" loc="Yes" />
 		<field name="msdyn_parametertype" localizableAttribute="value" loc="Yes" />
 	</entity>
+	<entity name="msdyn_macrosolutionconfiguration">
+		<field name="msdyn_searchhint" localizableAttribute="value" loc="Yes" />
+		<field name="msdyn_uservoicetext" localizableAttribute="value" loc="Yes" />
+	</entity>
+	<entity name="msdyn_macroconnector">
+		<field name="msdyn_categorylabel" localizableAttribute="value" loc="Yes" />
+		<field name="msdyn_description" localizableAttribute="value" loc="Yes" />
+		<field name="msdyn_displayname" localizableAttribute="value" loc="Yes" />
+		<field name="msdyn_title" localizableAttribute="value" loc="Yes" />
+	</entity>
 </entities>
