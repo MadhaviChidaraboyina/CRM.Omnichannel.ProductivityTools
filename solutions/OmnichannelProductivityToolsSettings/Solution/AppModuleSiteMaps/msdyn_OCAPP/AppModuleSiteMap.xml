@@ -10,7 +10,7 @@
 				<Titles>
 					<Title LCID="1033" Title="Agent Experience" />
 				</Titles>
-				<SubArea Id="NewSubArea_386b5beb" VectorIcon="/WebResources/msdyn_Macros.svg" Icon="/WebResources/msdyn_Macros.svg" Url="/main.aspx?pagetype=entitylist&amp;etn=workflow&amp;viewid=53ab4fc4-2fd9-e911-a81e-000d3af73f4d&amp;viewType=0139" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ordinalvalue="0" solutionaction="Added">
+				<SubArea Id="NewSubArea_386b5beb" VectorIcon="/WebResources/msdyn_Macros.svg" Icon="/WebResources/msdyn_Macros.svg" Url="/main.aspx?pagetype=entitylist&amp;etn=workflow&amp;viewid=012107d2-54d0-e911-a81c-000d3a6e50b0&amp;viewType=0139" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ordinalvalue="0" solutionaction="Added">
 					<Titles>
 						<Title LCID="1033" Title="Macros" />
 					</Titles>

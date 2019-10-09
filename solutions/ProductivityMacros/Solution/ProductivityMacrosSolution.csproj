@@ -89,8 +89,6 @@
     <Content Include="Entities\Workflow\Entity.xml" />
     <Content Include="Entities\Workflow\RibbonDiff.xml" />
     <Content Include="Entities\Workflow\SavedQueries\{012107d2-54d0-e911-a81c-000d3a6e50b0}.xml" />
-    <Content Include="Entities\Workflow\SavedQueries\{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}.xml" />
-    <Content Include="Entities\Workflow\SavedQueries\{ddf85356-30d9-e911-a81e-000d3af73f4d}.xml" />
     <Content Include="Other\Relationships\msdyn_macroactiontemplate.xml" />
     <Content Include="Other\Relationships\msdyn_macroconnector.xml" />
     <Content Include="Other\Relationships\msdyn_parameterdefinition.xml" />
