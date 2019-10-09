@@ -7,8 +7,8 @@ namespace Microsoft.ProductivityMacros.Internal {
 	export var crmVersion: string = "";
 	export var orgId: string = "";
 	declare var defaultLogger: any;
-	let prodIngestionKey = "0481695575574bf987b30aef71f56577-85967d04-532f-4857-8af8-00961bcfa60f-6846";
-	let devIngestionKey = "0481695575574bf987b30aef71f56577-85967d04-532f-4857-8af8-00961bcfa60f-6846";
+	let prodIngestionKey = "15742b0e58eb4711bc046acff53e7165-1bfb5a4d-2ecc-4c51-8271-a773c63f58de-6809";
+	let devIngestionKey = "22fdf28125b2493787078364a7ffe42e-28bf5791-b218-4f89-8d06-8135775da123-7269";
 
 	let GERMANY_ENDPOINT = "https://de.pipe.aria.microsoft.com/Collector/3.0/";
 	let GCCH_ENDPOINT = "https://tb.pipe.aria.microsoft.com/Collector/3.0/";

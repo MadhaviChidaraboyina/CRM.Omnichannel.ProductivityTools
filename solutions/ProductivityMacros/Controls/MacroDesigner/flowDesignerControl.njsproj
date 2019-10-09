@@ -133,7 +133,14 @@
     <Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(DesignerControlOutputPath) --output-path $(DesignerControlOutputPath) --context $(ContextDirectory) --config webpack-designerControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
     <Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(HostControlOutputPath) --output-path $(HostControlOutputPath) --context $(ContextDirectory) --config webpack-hostControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
   </Target>
-  <Target Name="GenDesignerBlob" AfterTargets="Build">
+  <!-- Copy version.txt to DesignerOutputPath -->
+  <Target Name="CopyVersionTxt" AfterTargets="Build">
+	<ItemGroup>
+		<VersionFile Include="$(ContextDirectory)\version.txt;" />
+	</ItemGroup>
+	<Copy SourceFiles="@(VersionFile)" DestinationFolder="$(DesignerControlOutputPath)" Retries="3" RetryDelayMilliseconds="300" />
+  </Target>
+  <Target Name="GenDesignerBlob" AfterTargets="Build" DependsOnTargets="CopyVersionTxt">
     <ItemGroup>
       <DesignerBlobFiles Include="$(DesignerControlOutputPath)\**\*.*" />
     </ItemGroup>

@@ -75,7 +75,7 @@
   </ItemGroup>
 <Target Name="GetSignedSolution" BeforeTargets="CreatePDPackageZip">
   <ItemGroup>
-    <SolutionCabs Include="$(PKG_CIF)\Solutions\msdyn_CIFramework_managed.cab" />
+    <SolutionCabs Include="$(PKG_CIF_PROD)\Solutions\msdyn_CIFramework_managed.cab" />
   </ItemGroup>
     <Message Text="Getting signed solution files.." Importance="high" />
     <Copy SourceFiles="@(SolutionCabs)" DestinationFolder="$(OutputPath)ProductivityTools" Retries="20" RetryDelayMilliseconds="1000" ContinueOnError="true" />
