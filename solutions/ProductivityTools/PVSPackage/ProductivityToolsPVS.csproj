@@ -73,13 +73,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-<Target Name="GetSignedSolution" BeforeTargets="CreatePDPackageZip">
-  <ItemGroup>
-    <SolutionCabs Include="$(PKG_CIF_PROD)\Solutions\msdyn_CIFramework_managed.cab" />
-  </ItemGroup>
-    <Message Text="Getting signed solution files.." Importance="high" />
-    <Copy SourceFiles="@(SolutionCabs)" DestinationFolder="$(OutputPath)ProductivityTools" Retries="20" RetryDelayMilliseconds="1000" ContinueOnError="true" />
-</Target>
   <ItemGroup>
     <Content Include="ProductivityTools\Content\en-us\EndHtml\CSS\common.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
