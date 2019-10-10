@@ -21,6 +21,182 @@
     <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";DESIGNER_ACTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Veiksmas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006138Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONNECTORDISPLAYNAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unified Interface automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vieningosios sąsajos automatizavimas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006138Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display Name String for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_MACROCONNECTOR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makrokomandos jungtis]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006138Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro connector string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_SEARCHMACROS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieškoti makrokomandos]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006138Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Search Macro string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro Execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pradėti makrokomandos vykdymą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006138Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description Text for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_NAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro Execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pradėti makrokomandos vykdymą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006251Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Name Text for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_SUBTITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Paleisti makrokomandą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006251Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Subtitle String for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Paleisti makrokomandą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006251Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary String for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_TRIGGER" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Trigger]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Paleidiklis]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006251Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Trigger String for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_USERVOICEMSG" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Let us know what you would like us to build next]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Praneškite mums, ką turėtume sukurti vėliau]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006251Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[User Voice Message for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNR_STARTMACRO_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Paleisti makrokomandą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006251Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title String for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Close All other Sessions]]></Val>
@@ -179,6 +355,70 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute logical name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atributo loginis pavadinimas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006251Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for 'name' field of custom attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pavadinimas / vardas ir pavardė]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006251Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title string for 'name' field of custom attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atributo reikšmė]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006251Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for 'value' field of custom attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Reikšmė]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0006251Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title string for 'value' field of custom attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
     </Item>

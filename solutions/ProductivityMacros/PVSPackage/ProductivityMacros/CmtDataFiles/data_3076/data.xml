@@ -133,7 +133,7 @@
       <record id="ca97e23b-9fdf-e911-a81e-000d3a0698dc">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:17:41 PM" />
-        <field name="msdyn_description" value="Application page type" />
+        <field name="msdyn_description" value="應用程式頁面類型" />
         <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:17:41 PM" />
         <field name="msdyn_name" value="PageType" />
@@ -141,15 +141,15 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="ca97e23b-9fdf-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="string" />
+        <field name="msdyn_parametertype" value="字串" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Page Type" />
+        <field name="msdyn_displayname" value="頁面類型" />
       </record>
       <record id="eb102e60-9fdf-e911-a81e-000d3a0698dc">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:18:42 PM" />
-        <field name="msdyn_description" value="Id of the tab" />
+        <field name="msdyn_description" value="索引標籤的識別碼" />
         <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:18:42 PM" />
         <field name="msdyn_name" value="TabId" />
@@ -157,15 +157,15 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="eb102e60-9fdf-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="string" />
+        <field name="msdyn_parametertype" value="字串" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Tab Id" />
+        <field name="msdyn_displayname" value="索引標籤識別碼" />
       </record>
       <record id="b66cd2ac-9fdf-e911-a81e-000d3a0698dc">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:20:51 PM" />
-        <field name="msdyn_description" value="Email Recipients" />
+        <field name="msdyn_description" value="電子郵件收件者" />
         <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:20:51 PM" />
         <field name="msdyn_name" value="PartyListName" />
@@ -173,15 +173,15 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="b66cd2ac-9fdf-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="string" />
+        <field name="msdyn_parametertype" value="字串" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Email Recipients" />
+        <field name="msdyn_displayname" value="電子郵件收件者" />
       </record>
       <record id="473decbe-9fdf-e911-a81e-000d3a0698dc">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:21:21 PM" />
-        <field name="msdyn_description" value="Id of the email template" />
+        <field name="msdyn_description" value="電子郵件範本的識別碼" />
         <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:21:21 PM" />
         <field name="msdyn_name" value="TemplateId" />
@@ -189,15 +189,15 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="473decbe-9fdf-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="string" />
+        <field name="msdyn_parametertype" value="字串" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Template Id" />
+        <field name="msdyn_displayname" value="範本識別碼" />
       </record>
       <record id="6c7f2dbf-a0df-e911-a81e-000d3a0698dc">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:28:31 PM" />
-        <field name="msdyn_description" value="Time that is billable" />
+        <field name="msdyn_description" value="可計費的時間" />
         <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:28:31 PM" />
         <field name="msdyn_name" value="BillableTime" />
@@ -205,15 +205,15 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="6c7f2dbf-a0df-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="string" />
+        <field name="msdyn_parametertype" value="字串" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Billable Time" />
+        <field name="msdyn_displayname" value="計費時間" />
       </record>
       <record id="4a8c0ace-a0df-e911-a81e-000d3a0698dc">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:28:56 PM" />
-        <field name="msdyn_description" value="Case Id" />
+        <field name="msdyn_description" value="案例識別碼" />
         <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:28:56 PM" />
         <field name="msdyn_name" value="IncidentId" />
@@ -221,7 +221,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="4a8c0ace-a0df-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="string" />
+        <field name="msdyn_parametertype" value="字串" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="IncidentId" />
@@ -229,7 +229,7 @@
       <record id="35b0d4dc-a0df-e911-a81e-000d3a0698dc">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:29:21 PM" />
-        <field name="msdyn_description" value="Resolution reason" />
+        <field name="msdyn_description" value="結案原因" />
         <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:29:21 PM" />
         <field name="msdyn_name" value="Resolution" />
@@ -237,15 +237,15 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="35b0d4dc-a0df-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="string" />
+        <field name="msdyn_parametertype" value="字串" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Resolution" />
+        <field name="msdyn_displayname" value="結案" />
       </record>
       <record id="9a6161ef-3033-4c8a-89fb-8229bf4539e9">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 11:52:28 AM" />
-        <field name="msdyn_description" value="Sample JSON object" />
+        <field name="msdyn_description" value="範例 JSON 物件" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/9/2019 11:52:28 AM" />
         <field name="msdyn_name" value="Custom_Object" />
@@ -253,16 +253,16 @@
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="9a6161ef-3033-4c8a-89fb-8229bf4539e9" />
-        <field name="msdyn_parametertype" value="array" />
+        <field name="msdyn_parametertype" value="陣列" />
         <field name="msdyn_jsonobjectstructure" value="{&quot;Key1&quot;:{&quot;title&quot;:&quot;Title 1&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;Key1 description&quot;},&quot;Key2&quot;:{&quot;title&quot;:&quot;Title 2&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;Key2 description&quot;}}" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Sample custom JSON Object" />
+        <field name="msdyn_displayname" value="範例自訂 JSON 物件" />
       </record>
       <record id="dc1db27b-b27e-4de3-ad4b-a1ba406de050">
         <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 11:52:28 AM" />
-        <field name="msdyn_description" value="Array of custom name-value pairs" />
+        <field name="msdyn_description" value="自訂名稱值組的陣列" />
         <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/9/2019 11:52:28 AM" />
         <field name="msdyn_name" value="Custom_Array" />
@@ -270,11 +270,11 @@
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="dc1db27b-b27e-4de3-ad4b-a1ba406de050" />
-        <field name="msdyn_parametertype" value="array" />
+        <field name="msdyn_parametertype" value="陣列" />
         <field name="msdyn_jsonobjectstructure" value="{&quot;Name&quot;:{&quot;title&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC&quot;},&quot;Value&quot;:{&quot;title&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC&quot;}}" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Custom Attribute" />
+        <field name="msdyn_displayname" value="自訂屬性" />
       </record>
     </records>
     <m2mrelationships>
@@ -319,12 +319,12 @@
       </m2mrelationship>
       <m2mrelationship sourceid="6e033082-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
-          <targetid>1d75d16f-fad2-e911-a81e-000d3a015920</targetid>
+          <targetid>c8e3f6f3-9888-45ea-ab7a-378b7aedccbc</targetid>
         </targetids>
       </m2mrelationship>
       <m2mrelationship sourceid="474f7494-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
-          <targetid>1d75d16f-fad2-e911-a81e-000d3a015920</targetid>
+          <targetid>c8e3f6f3-9888-45ea-ab7a-378b7aedccbc</targetid>
         </targetids>
       </m2mrelationship>
       <m2mrelationship sourceid="fed739aa-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
@@ -439,6 +439,22 @@
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="c8e3f6f3-9888-45ea-ab7a-378b7aedccbc">
+        <field name="msdyn_actioninputparameterid" value="c8e3f6f3-9888-45ea-ab7a-378b7aedccbc" />
+        <field name="msdyn_actiontemplateinputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:58 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Open_Grid_Input_Params_Optional" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="important" />
       </record>
       <record id="1ce921a3-fbd2-e911-a81e-000d3a015920">
         <field name="msdyn_actioninputparameterid" value="1ce921a3-fbd2-e911-a81e-000d3a015920" />
@@ -725,7 +741,7 @@
       <record id="60541186-f5dd-e911-a81e-000d3af9c0c2">
         <field name="msdyn_brandcolor" value="#2266E3" />
         <field name="msdyn_categorykey" value="CONNECTORS" />
-        <field name="msdyn_categorylabel" value="Built In Macro Actions" />
+        <field name="msdyn_categorylabel" value="Predefined automation actions" />
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:12:53 PM" />
         <field name="msdyn_description" value="Automate commonly used client-side tasks" />
@@ -1110,9 +1126,10 @@
       <record id="cd1fa1a0-a0df-e911-a81e-000d3a0698dc">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:27:40 PM" />
-        <field name="msdyn_actionDescription" value="Action to resolve case" />
-        <field name="msdyn_displayname" value="Resolve Case" />
+        <field name="msdyn_actionDescription" value="用於解決案例的動作" />
+        <field name="msdyn_displayname" value="解決案例" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" />
         <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -1124,16 +1141,16 @@
         <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.resolveIncident(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Resolve Case" />
-        <field name="msdyn_summary" value="Action to resolve case" />
-        <field name="msdyn_title" value="Resolve Case" />
+        <field name="msdyn_subtitle" value="解決案例" />
+        <field name="msdyn_summary" value="用於解決案例的動作" />
+        <field name="msdyn_title" value="解決案例" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f">
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:13:05 PM" />
-        <field name="msdyn_actionDescription" value="Start macro execution" />
-        <field name="msdyn_displayname" value="Start" />
+        <field name="msdyn_actionDescription" value="開始執行巨集" />
+        <field name="msdyn_displayname" value="開始" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_macro_connector.svg" />
         <field name="msdyn_kind" value="TRIGGERS" />
@@ -1146,10 +1163,35 @@
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Start macro execution" />
-        <field name="msdyn_summary" value="Start macro execution" />
-        <field name="msdyn_title" value="Start macro execution" />
+        <field name="msdyn_subtitle" value="開始執行巨集" />
+        <field name="msdyn_summary" value="開始執行巨集" />
+        <field name="msdyn_title" value="開始執行巨集" />
         <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+    </records>
+    <m2mrelationships />
+  </entity>
+  <entity name="msdyn_macrosolutionconfiguration" displayname="Macro Solution Configuration">
+    <records>
+      <record id="1b65ad62-4fe3-e911-a81a-000d3a706f52">
+        <field name="msdyn_designerurlconfigentityattrib" value="path" />
+        <field name="createdby" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
+        <field name="createdon" value="9/30/2019 6:56:11 AM" />
+        <field name="msdyn_designerurlconfigentity" value="serviceendpoint" />
+        <field name="msdyn_macrosolutionconfigurationid" value="1b65ad62-4fe3-e911-a81a-000d3a706f52" />
+        <field name="modifiedby" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
+        <field name="modifiedon" value="9/30/2019 7:28:45 AM" />
+        <field name="msdyn_name" value="Default Designer Config" />
+        <field name="ownerid" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
+        <field name="owningbusinessunit" value="68c108db-5bdf-e911-a81a-000d3a7611d3" lookupentity="businessunit" />
+        <field name="owninguser" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" />
+        <field name="msdyn_designerurlconfigentityid" value="38bd8b51-de34-4c45-bf43-5a913aeec49f" />
+        <field name="msdyn_designerurlrelativepath" value="/flowcontrol/DesignerBlob/iframedesigner.html" />
+        <field name="msdyn_searchhint" value="Search macro" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_uservoicelink" value="https://experience.dynamics.com/ideas/categories/list/?category=31047c64-7e28-e911-a95a-000d3a4f3883&amp;amp;forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad" />
+        <field name="msdyn_uservoicetext" value="Let us know what you would like us to build next" />
       </record>
     </records>
     <m2mrelationships />

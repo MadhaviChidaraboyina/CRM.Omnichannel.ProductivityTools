@@ -121,6 +121,10 @@
     <value>스마트 지원</value>
     <comment>Header value for smartassist control</comment>
   </data>
+  <data name="EmptyMessage" xml:space="preserve">
+    <value>No suggestions available</value>
+    <comment>Empty message</comment>
+  </data>
   <data name="FailureMessage" xml:space="preserve">
     <value>문제가 발생했습니다. 다시 시도하십시오.</value>
     <comment>Failure Message</comment>

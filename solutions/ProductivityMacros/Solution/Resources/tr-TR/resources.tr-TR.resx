@@ -140,6 +140,10 @@
     <value>Eylem Çıkış Parametresi ile ilişkilendirilmiş ilişkili Makro Eylemi Şablonunun benzersiz tanımlayıcısı.</value>
     <comment>msdyn_actionoutputparameter Description for EntityRelationship 'msdyn_msdyn_macroactiontemplate_msdyn_actionout'</comment>
   </data>
+  <data name="10:Description,msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector" xml:space="preserve">
+    <value />
+    <comment>msdyn_macroactiontemplate Description for EntityRelationship 'msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector'</comment>
+  </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
@@ -179,6 +183,22 @@
   <data name="1:Description,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
     <value>Bana ait etkin Makro Eylemi Şablonları</value>
     <comment>'Macro Action Template' : Description for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
+  </data>
+  <data name="1:Description,Macro Connector{8c945d63-c3dd-e911-a81e-000d3af9c0c2}" xml:space="preserve">
+    <value>Bana ait etkin makro bağlayıcıları</value>
+    <comment>'Macro Connector' : Description for SavedQuery on Entity QueryId: '{8c945d63-c3dd-e911-a81e-000d3af9c0c2}'</comment>
+  </data>
+  <data name="1:Description,Macro Connector{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Bu varlığa ait bir form.</value>
+    <comment>'Macro Connector' : Description for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
+  </data>
+  <data name="1:Description,Macro Solution Configuration{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>A form for this entity.</value>
+    <comment>'Macro Solution Configuration' : Description for systemform in Entity FormXml ID: '{4c0f7a89-7e67-4972-828e-1244f593a422}'</comment>
+  </data>
+  <data name="1:Description,Macro Solution Configuration{fe7078c7-dae0-e911-a81f-000d3af9c0c2}" xml:space="preserve">
+    <value>Active Macro Solution Configurations owned by me</value>
+    <comment>'Macro Solution Configuration' : Description for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
     <value>Kaydı oluşturan kullanıcının benzersiz tanımlayıcısı.</value>
@@ -239,6 +259,10 @@
   <data name="1:Description,msdyn_actioninputparametermsdyn_parametertype" xml:space="preserve">
     <value />
     <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_visibility" xml:space="preserve">
+    <value>Bu parametreleri işleyen eylem kartı oturumu. Olası değerler: gerekli, gelişmiş, önemli, dahili, salt okunur</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_visibility' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameterOverriddenCreatedOn" xml:space="preserve">
     <value>Kaydın geçirildiği tarih ve saat.</value>
@@ -416,6 +440,10 @@
     <value>Makro eylemi şablonunun giriş parametreleri</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_InputParameters' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_kind" xml:space="preserve">
+    <value>Tür, "TETİKLEYİCİLER" veya "EYLEMLER" olmalı</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_kind' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplateId" xml:space="preserve">
     <value>Varlık kurulumlarının benzersiz tanımlayıcısı</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_macroactiontemplateId' on Entity</comment>
@@ -428,6 +456,10 @@
     <value>Makro Eylemi Şablonu durumunun açıklaması</value>
     <comment>'msdyn_macroactiontemplate' : Description for OptionSet 'msdyn_macroactiontemplate_statuscode' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroconnector" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_macroconnector' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_name" xml:space="preserve">
     <value>Bu Makro şablonunun adı.</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_name' on Entity</comment>
@@ -435,6 +467,10 @@
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_OutputParameters" xml:space="preserve">
     <value>Makro eylemi şablonu varlığının çıkış parametreleri</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_OutputParameters' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_runtimeapi" xml:space="preserve">
+    <value>Çalışma zamanında yürütülecek işlev</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_runtimeapi' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_subtitle" xml:space="preserve">
     <value />
@@ -488,6 +524,246 @@
     <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_macroconnectorCreatedBy" xml:space="preserve">
+    <value>Kaydı oluşturan kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorCreatedOn" xml:space="preserve">
+    <value>Kaydın oluşturulduğu tarih ve saat.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorCreatedOnBehalfBy" xml:space="preserve">
+    <value>Kaydı oluşturan temsilci kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_macroconnector' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorImportSequenceNumber" xml:space="preserve">
+    <value>Bu kaydı oluşturan içeri aktarma işleminin sıra numarası.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorModifiedBy" xml:space="preserve">
+    <value>Kaydı değiştiren kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorModifiedOn" xml:space="preserve">
+    <value>Kaydın değiştirildiği tarih ve saat.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorModifiedOnBehalfBy" xml:space="preserve">
+    <value>Kaydı değiştiren temsilci kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_brandcolor" xml:space="preserve">
+    <value>Bu bağlayıcının kutucuğunun işlendiği renk</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_brandcolor' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_categorykey" xml:space="preserve">
+    <value>Bu bağlayıcının işlenmesi gereken kategorinin dize etiketi</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_categorykey' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_categorylabel" xml:space="preserve">
+    <value>Bu bağlayıcının altında görüntüleneceği kategorinin metin tabanlı görüntü metni</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_categorylabel' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_description" xml:space="preserve">
+    <value>Bu bağlayıcıyı açıklamak üzere tasarımcıda görüntülenen metin</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_displayname" xml:space="preserve">
+    <value>Tasarımcıda bu bağlayıcı için görünen ad</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_Icon" xml:space="preserve">
+    <value>Bu bağlayıcı için işlenecek simge URL'si</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_Icon' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_macroconnectorId" xml:space="preserve">
+    <value>Varlık kurulumlarının benzersiz tanımlayıcısı</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_macroconnectorId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_macroconnector_statecode" xml:space="preserve">
+    <value>Makro Bağlayıcısı durumu</value>
+    <comment>'msdyn_macroconnector' : Description for OptionSet 'msdyn_macroconnector_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_macroconnector_statuscode" xml:space="preserve">
+    <value>Makro Bağlayıcısı durumunun nedeni</value>
+    <comment>'msdyn_macroconnector' : Description for OptionSet 'msdyn_macroconnector_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_name" xml:space="preserve">
+    <value>Özel varlığın adı.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_title" xml:space="preserve">
+    <value>Bu bağlayıcı için tasarımcıda görüntülenen başlık</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_title' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_type" xml:space="preserve">
+    <value>Bu bağlayıcının türü</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_type' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorOverriddenCreatedOn" xml:space="preserve">
+    <value>Kaydın geçirildiği tarih ve saat.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorOwnerId" xml:space="preserve">
+    <value>Sahip Kimliği</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorOwningBusinessUnit" xml:space="preserve">
+    <value>Kaydın sahibi olan departmanın benzersiz tanımlayıcısı</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorOwningTeam" xml:space="preserve">
+    <value>Kaydın sahibi olan takımın benzersiz tanımlayıcısı.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorOwningUser" xml:space="preserve">
+    <value>Kaydın sahibi olan kullanıcının benzersiz tanımlayıcısı.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorstatecode" xml:space="preserve">
+    <value>Makro Bağlayıcısı durumu</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorstatuscode" xml:space="preserve">
+    <value>Makro Bağlayıcısı durumunun nedeni</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Yalnızca dahili kullanım içindir.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationCreatedBy" xml:space="preserve">
+    <value>Unique identifier of the user who created the record.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationCreatedOn" xml:space="preserve">
+    <value>Date and time when the record was created.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>Unique identifier of the delegate user who created the record.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_macrosolutionconfiguration' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationImportSequenceNumber" xml:space="preserve">
+    <value>Sequence number of the import that created this record.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationModifiedBy" xml:space="preserve">
+    <value>Unique identifier of the user who modified the record.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationModifiedOn" xml:space="preserve">
+    <value>Date and time when the record was modified.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>Unique identifier of the delegate user who modified the record.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerfallbackurl' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentity" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentity' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityattrib" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentityattrib' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityid" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentityid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityquery" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentityquery' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlrelativepath" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlrelativepath' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfigurationId" xml:space="preserve">
+    <value>Unique identifier for entity instances</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_macrosolutionconfigurationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode" xml:space="preserve">
+    <value>Status of the Macro Solution Configuration</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for OptionSet 'msdyn_macrosolutionconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Macro Solution Configuration</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for OptionSet 'msdyn_macrosolutionconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosversion" xml:space="preserve">
+    <value>Macro solution version</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_macrosversion' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_name" xml:space="preserve">
+    <value>The name of the custom entity.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_searchhint" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_searchhint' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_uservoicelink" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_uservoicelink' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_uservoicetext" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_uservoicetext' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>Date and time that the record was migrated.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationOwnerId" xml:space="preserve">
+    <value>Owner Id</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
+    <value>Unique identifier for the business unit that owns the record</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationOwningTeam" xml:space="preserve">
+    <value>Unique identifier for the team that owns the record.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationOwningUser" xml:space="preserve">
+    <value>Unique identifier for the user that owns the record.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationstatecode" xml:space="preserve">
+    <value>Status of the Macro Solution Configuration</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationstatuscode" xml:space="preserve">
+    <value>Reason for the status of the Macro Solution Configuration</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>For internal use only.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Time zone code that was in use when the record was created.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_parameterdefinitionCreatedBy" xml:space="preserve">
     <value>Kaydı oluşturan kullanıcının benzersiz tanımlayıcısı.</value>
     <comment>'msdyn_parameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
@@ -531,6 +807,10 @@
   <data name="1:Description,msdyn_parameterdefinitionmsdyn_DisplayName" xml:space="preserve">
     <value />
     <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_DisplayName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_jsonobjectstructure" xml:space="preserve">
+    <value>JSON veya Dizi türü parametre için parametre yapısını açıklana JSON dizesi</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_jsonobjectstructure' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinitionmsdyn_name" xml:space="preserve">
     <value>Özel varlığın adı.</value>
@@ -596,6 +876,18 @@
     <value>Bu varlığa ait bir form.</value>
     <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
   </data>
+  <data name="1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
+    <value>Tüm Makroları listeler</value>
+    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
+  </data>
+  <data name="1:Description,Process{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}" xml:space="preserve">
+    <value>Tüm Etkin Makroları listeler</value>
+    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}'</comment>
+  </data>
+  <data name="1:Description,Process{ddf85356-30d9-e911-a81e-000d3af73f4d}" xml:space="preserve">
+    <value>Tüm Etkin Olmayan Makroları listeler</value>
+    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{ddf85356-30d9-e911-a81e-000d3af73f4d}'</comment>
+  </data>
   <data name="1:displayname,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
     <value>Oluşturan</value>
     <comment>'msdyn_actioninputparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
@@ -651,6 +943,10 @@
   <data name="1:displayname,msdyn_actioninputparametermsdyn_parametertype" xml:space="preserve">
     <value>Parametre Türü</value>
     <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_visibility" xml:space="preserve">
+    <value>Görünürlük</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_visibility' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_actioninputparameterOverriddenCreatedOn" xml:space="preserve">
     <value>Kayıt Oluşturma Tarihi</value>
@@ -820,6 +1116,10 @@
     <value>Giriş Parametreleri</value>
     <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_InputParameters' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_kind" xml:space="preserve">
+    <value>Tür</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_kind' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplateId" xml:space="preserve">
     <value>Makro Eylemi Şablonu</value>
     <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_macroactiontemplateId' on Entity</comment>
@@ -832,6 +1132,10 @@
     <value>Durum Açıklaması</value>
     <comment>'msdyn_macroactiontemplate' : displayname for OptionSet 'msdyn_macroactiontemplate_statuscode' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroconnector" xml:space="preserve">
+    <value>FUNDU_MACRO_CONNECTOR</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_macroconnector' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_macroactiontemplatemsdyn_name" xml:space="preserve">
     <value>Adı</value>
     <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
@@ -839,6 +1143,10 @@
   <data name="1:displayname,msdyn_macroactiontemplatemsdyn_OutputParameters" xml:space="preserve">
     <value>Çıkış Parametreleri</value>
     <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_OutputParameters' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_runtimeapi" xml:space="preserve">
+    <value>Çalışma Zamanı API'si</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_runtimeapi' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macroactiontemplatemsdyn_subtitle" xml:space="preserve">
     <value>Alt Yazı</value>
@@ -892,6 +1200,238 @@
     <value>UTC Dönüştürme Saat Dilimi Kodu</value>
     <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_macroconnectorCreatedBy" xml:space="preserve">
+    <value>Oluşturan</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorCreatedOn" xml:space="preserve">
+    <value>Oluşturma Tarihi</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorCreatedOnBehalfBy" xml:space="preserve">
+    <value>Oluşturan (Temsilci)</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorImportSequenceNumber" xml:space="preserve">
+    <value>İçeri Aktarma Sıra Numarası</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorModifiedBy" xml:space="preserve">
+    <value>Değiştiren</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorModifiedOn" xml:space="preserve">
+    <value>Değiştirme Tarihi</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorModifiedOnBehalfBy" xml:space="preserve">
+    <value>Değiştiren (Temsilci)</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_brandcolor" xml:space="preserve">
+    <value>Marka Rengi</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_brandcolor' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_categorykey" xml:space="preserve">
+    <value>Kategori anahtarı</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_categorykey' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_categorylabel" xml:space="preserve">
+    <value>Kategori Etiketi</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_categorylabel' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_description" xml:space="preserve">
+    <value>Açıklama</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_displayname" xml:space="preserve">
+    <value>Görünen Ad</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_Icon" xml:space="preserve">
+    <value>Simge</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_Icon' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_macroconnectorId" xml:space="preserve">
+    <value>Makro Bağlayıcısı</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_macroconnectorId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_macroconnector_statecode" xml:space="preserve">
+    <value>Durum</value>
+    <comment>'msdyn_macroconnector' : displayname for OptionSet 'msdyn_macroconnector_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_macroconnector_statuscode" xml:space="preserve">
+    <value>Durum Açıklaması</value>
+    <comment>'msdyn_macroconnector' : displayname for OptionSet 'msdyn_macroconnector_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_name" xml:space="preserve">
+    <value>Adı</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_title" xml:space="preserve">
+    <value>Başlık</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_title' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_type" xml:space="preserve">
+    <value>Tür</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_type' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorOverriddenCreatedOn" xml:space="preserve">
+    <value>Kaydın Oluşturulma Tarihi</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorOwnerId" xml:space="preserve">
+    <value>Sahibi</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorOwningBusinessUnit" xml:space="preserve">
+    <value>Sahibi Olan Departman</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorOwningTeam" xml:space="preserve">
+    <value>Sahibi Olan Takım</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorOwningUser" xml:space="preserve">
+    <value>Sahibi Olan Kullanıcı</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorstatecode" xml:space="preserve">
+    <value>Durum</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorstatuscode" xml:space="preserve">
+    <value>Durum Açıklaması</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Saat Dilimi Kuralı Sürüm Numarası</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC Dönüştürme Saat Dilimi Kodu</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationCreatedBy" xml:space="preserve">
+    <value>Created By</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationCreatedOn" xml:space="preserve">
+    <value>Created On</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>Created By (Delegate)</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationImportSequenceNumber" xml:space="preserve">
+    <value>Import Sequence Number</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationModifiedOn" xml:space="preserve">
+    <value>Modified On</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>Modified By (Delegate)</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
+    <value>Designer Blob URL</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerfallbackurl' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentity" xml:space="preserve">
+    <value>Entity from which to read designer URL</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentity' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityattrib" xml:space="preserve">
+    <value>Attribute from which to read designer URL</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityattrib' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityid" xml:space="preserve">
+    <value>Record Id from which to read designer URL</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityquery" xml:space="preserve">
+    <value>An oData query to retrieve record from which to read designer URL</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityquery' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlrelativepath" xml:space="preserve">
+    <value>Relative path to designer blob within the designer URL</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlrelativepath' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfigurationId" xml:space="preserve">
+    <value>Macro Solution Configuration</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_macrosolutionconfigurationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for OptionSet 'msdyn_macrosolutionconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for OptionSet 'msdyn_macrosolutionconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosversion" xml:space="preserve">
+    <value>msdyn_macrosversion</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_macrosversion' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_name" xml:space="preserve">
+    <value>Name</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_searchhint" xml:space="preserve">
+    <value>Search Hint Text</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_searchhint' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_uservoicelink" xml:space="preserve">
+    <value>User Voice Link</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_uservoicelink' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_uservoicetext" xml:space="preserve">
+    <value>User Voice Text</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_uservoicetext' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>Record Created On</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationOwnerId" xml:space="preserve">
+    <value>Owner</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
+    <value>Owning Business Unit</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationOwningTeam" xml:space="preserve">
+    <value>Owning Team</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationOwningUser" xml:space="preserve">
+    <value>Owning User</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationstatecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationstatuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Time Zone Rule Version Number</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC Conversion Time Zone Code</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_parameterdefinitionCreatedBy" xml:space="preserve">
     <value>Oluşturan</value>
     <comment>'msdyn_parameterdefinition' : displayname for Attribute 'CreatedBy' on Entity</comment>
@@ -931,6 +1471,10 @@
   <data name="1:displayname,msdyn_parameterdefinitionmsdyn_DisplayName" xml:space="preserve">
     <value>Başlık</value>
     <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_DisplayName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_jsonobjectstructure" xml:space="preserve">
+    <value>Nesne yapısı tanımı</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_jsonobjectstructure' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_parameterdefinitionmsdyn_name" xml:space="preserve">
     <value>Adı</value>
@@ -997,50 +1541,6 @@
     <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{1db09e91-87dd-4114-9211-ec8dc43882c2}'</comment>
   </data>
   <data name="1:label,Action Input Parameter{59f79de4-9448-47dc-957a-108da2c131e1}" xml:space="preserve">
-    <value>General</value>
-    <comment>'Action Input Parameter' : label for tab in Entity FormXml ID: '{59f79de4-9448-47dc-957a-108da2c131e1}'</comment>
-  </data>
-  <data name="1:label,Action Input Parameter{8716236a-d69e-6a70-e474-5431a2c3a7a1}" xml:space="preserve">
-    <value />
-    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{8716236a-d69e-6a70-e474-5431a2c3a7a1}'</comment>
-  </data>
-  <data name="1:label,Action Input Parameter{a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}" xml:space="preserve">
-    <value>General</value>
-    <comment>'Action Input Parameter' : label for section in Entity FormXml ID: '{a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}'</comment>
-  </data>
-  <data name="1:label,Action Input Parameter{eca182a2-7198-417d-8c54-04fba492cd15}" xml:space="preserve">
-    <value />
-    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{eca182a2-7198-417d-8c54-04fba492cd15}'</comment>
-  </data>
-  <data name="1:label,Action Output Parameter{23058005-7eb8-11d5-d52e-43c2bb6c11e3}" xml:space="preserve">
-    <value />
-    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{23058005-7eb8-11d5-d52e-43c2bb6c11e3}'</comment>
-  </data>
-  <data name="1:label,Action Output Parameter{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}" xml:space="preserve">
-    <value>General</value>
-    <comment>'Action Output Parameter' : label for tab in Entity FormXml ID: '{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}'</comment>
-  </data>
-  <data name="1:label,Action Output Parameter{c30d42c3-4d26-4042-8ed4-c811fd2cbd22}" xml:space="preserve">
-    <value />
-    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{c30d42c3-4d26-4042-8ed4-c811fd2cbd22}'</comment>
-  </data>
-  <data name="1:label,Action Output Parameter{f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}" xml:space="preserve">
-    <value />
-    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}'</comment>
-  </data>
-  <data name="1:label,Action Output Parameter{f46781d7-e36b-43b2-9c10-f210b21462e2}" xml:space="preserve">
-    <value>General</value>
-    <comment>'Action Output Parameter' : label for section in Entity FormXml ID: '{f46781d7-e36b-43b2-9c10-f210b21462e2}'</comment>
-  </data>
-  <data name="1:label,Macro Action Template{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}" xml:space="preserve">
-    <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}'</comment>
-  </data>
-  <data name="1:label,Macro Action Template{745b027e-644b-4c55-4260-c8c4eac84cc6}" xml:space="preserve">
-    <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{745b027e-644b-4c55-4260-c8c4eac84cc6}'</comment>
-  </data>
-  <data name="1:label,Action Input Parameter{59f79de4-9448-47dc-957a-108da2c131e1}" xml:space="preserve">
     <value>Genel</value>
     <comment>'Action Input Parameter' : label for tab in Entity FormXml ID: '{59f79de4-9448-47dc-957a-108da2c131e1}'</comment>
   </data>
@@ -1056,9 +1556,9 @@
     <value />
     <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{eca182a2-7198-417d-8c54-04fba492cd15}'</comment>
   </data>
-  <data name="1:label,Action Output Parameter{23058005-7eb8-11d5-d52e-43c2bb6c11e3}" xml:space="preserve">
+  <data name="1:label,Action Output Parameter{85343452-c484-1dc3-6d73-32567eb03177}" xml:space="preserve">
     <value />
-    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{23058005-7eb8-11d5-d52e-43c2bb6c11e3}'</comment>
+    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{85343452-c484-1dc3-6d73-32567eb03177}'</comment>
   </data>
   <data name="1:label,Action Output Parameter{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}" xml:space="preserve">
     <value>Genel</value>
@@ -1075,6 +1575,14 @@
   <data name="1:label,Action Output Parameter{f46781d7-e36b-43b2-9c10-f210b21462e2}" xml:space="preserve">
     <value>Genel</value>
     <comment>'Action Output Parameter' : label for section in Entity FormXml ID: '{f46781d7-e36b-43b2-9c10-f210b21462e2}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{293c9227-65a0-41d0-ba6f-b4b875af8484}" xml:space="preserve">
+    <value>Tür</value>
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{293c9227-65a0-41d0-ba6f-b4b875af8484}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{3505e37b-e0e0-4ee6-833a-8607177c16aa}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{3505e37b-e0e0-4ee6-833a-8607177c16aa}'</comment>
   </data>
   <data name="1:label,Macro Action Template{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}" xml:space="preserve">
     <value />
@@ -1100,6 +1608,10 @@
     <value />
     <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{ae619791-7ccc-6c47-2469-50d422be151c}'</comment>
   </data>
+  <data name="1:label,Macro Action Template{c6bbb736-1759-6d58-508d-c277bdcb1209}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{c6bbb736-1759-6d58-508d-c277bdcb1209}'</comment>
+  </data>
   <data name="1:label,Macro Action Template{d431e2bb-2356-1dba-9638-676b3902e396}" xml:space="preserve">
     <value />
     <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{d431e2bb-2356-1dba-9638-676b3902e396}'</comment>
@@ -1119,6 +1631,106 @@
   <data name="1:label,Macro Action Template{f5ea473e-8d09-4798-b801-b56fbbbe1238}" xml:space="preserve">
     <value />
     <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{f5ea473e-8d09-4798-b801-b56fbbbe1238}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{099062b1-cd1c-47a7-7c27-1803b509cb3e}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{099062b1-cd1c-47a7-7c27-1803b509cb3e}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{33deeba5-04ad-d3a9-5ae4-9674d18831b1}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{33deeba5-04ad-d3a9-5ae4-9674d18831b1}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{40ed711e-a9da-457e-a3cb-2b6ead26a421}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{40ed711e-a9da-457e-a3cb-2b6ead26a421}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{45a6d044-27d6-9ac7-b8a2-5ba21c4d0d98}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{45a6d044-27d6-9ac7-b8a2-5ba21c4d0d98}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{4e98b137-b949-441b-5210-9170ac39c993}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{4e98b137-b949-441b-5210-9170ac39c993}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{51892293-3a82-8a72-e0c8-3bcbdb879cea}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{51892293-3a82-8a72-e0c8-3bcbdb879cea}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{52ce6d0e-b08b-6392-c615-2712d1dacbb6}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{52ce6d0e-b08b-6392-c615-2712d1dacbb6}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{670bc1ee-710d-1194-6e55-9046523de5d6}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{670bc1ee-710d-1194-6e55-9046523de5d6}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{c53f9008-ccce-483f-9bd3-136ff1967976}" xml:space="preserve">
+    <value>Genel</value>
+    <comment>'Macro Connector' : label for section in Entity FormXml ID: '{c53f9008-ccce-483f-9bd3-136ff1967976}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{dd8fc39a-56dd-4b2c-bb8e-e2cc4a1f21e7}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{dd8fc39a-56dd-4b2c-bb8e-e2cc4a1f21e7}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{e3149089-9571-4482-abfc-231d6899cee1}" xml:space="preserve">
+    <value>Genel</value>
+    <comment>'Macro Connector' : label for tab in Entity FormXml ID: '{e3149089-9571-4482-abfc-231d6899cee1}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{e487c9e3-6bee-dd35-ca00-1d3189b95bc5}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{e487c9e3-6bee-dd35-ca00-1d3189b95bc5}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{10fd4277-739b-47a9-9b1f-5db4d467a93e}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{10fd4277-739b-47a9-9b1f-5db4d467a93e}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{21ea3c85-489b-4dcf-9ac6-b5bede827eb2}" xml:space="preserve">
+    <value>General</value>
+    <comment>'Macro Solution Configuration' : label for section in Entity FormXml ID: '{21ea3c85-489b-4dcf-9ac6-b5bede827eb2}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{430e9a47-ba6c-9b31-911d-20de9a6d9da0}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{430e9a47-ba6c-9b31-911d-20de9a6d9da0}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{478527c1-1de8-7686-c613-0260ca951521}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{478527c1-1de8-7686-c613-0260ca951521}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{73979e36-2019-d539-699c-1c307b1e6e74}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{73979e36-2019-d539-699c-1c307b1e6e74}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{960171e4-d16e-4638-b6c5-6efff843081a}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{960171e4-d16e-4638-b6c5-6efff843081a}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{a8f02afc-4385-49e2-a304-196d5fae8ebb}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{a8f02afc-4385-49e2-a304-196d5fae8ebb}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{b2ce2821-bb29-1777-b8a8-d6c78ec06959}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{b2ce2821-bb29-1777-b8a8-d6c78ec06959}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{ba5af261-d010-4e61-8524-6bcd6abe5a50}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{ba5af261-d010-4e61-8524-6bcd6abe5a50}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{c36ecd71-699d-4768-ae15-d805513a0731}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{c36ecd71-699d-4768-ae15-d805513a0731}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{c68ca0e7-905f-44f9-b782-41b98c85cff3}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{c68ca0e7-905f-44f9-b782-41b98c85cff3}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{d5997eca-5e6d-4b94-b8a2-ba31f6bdab73}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{d5997eca-5e6d-4b94-b8a2-ba31f6bdab73}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{def751e7-13fb-4ae7-a5b9-12030a58e054}" xml:space="preserve">
+    <value>General</value>
+    <comment>'Macro Solution Configuration' : label for tab in Entity FormXml ID: '{def751e7-13fb-4ae7-a5b9-12030a58e054}'</comment>
   </data>
   <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype0" xml:space="preserve">
     <value>İsteğe Bağlı</value>
@@ -1176,6 +1788,38 @@
     <value>Etkin Değil</value>
     <comment>'msdyn_macroactiontemplate' : label for status '2' on Entity</comment>
   </data>
+  <data name="1:label,msdyn_macroconnectormsdyn_macroconnector_statecode0" xml:space="preserve">
+    <value>Etkin</value>
+    <comment>'msdyn_macroconnector' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroconnectormsdyn_macroconnector_statecode1" xml:space="preserve">
+    <value>Etkin Değil</value>
+    <comment>'msdyn_macroconnector' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroconnectormsdyn_macroconnector_statuscode1" xml:space="preserve">
+    <value>Etkin</value>
+    <comment>'msdyn_macroconnector' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroconnectormsdyn_macroconnector_statuscode2" xml:space="preserve">
+    <value>Etkin Değil</value>
+    <comment>'msdyn_macroconnector' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode0" xml:space="preserve">
+    <value>Active</value>
+    <comment>'msdyn_macrosolutionconfiguration' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode1" xml:space="preserve">
+    <value>Inactive</value>
+    <comment>'msdyn_macrosolutionconfiguration' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode1" xml:space="preserve">
+    <value>Active</value>
+    <comment>'msdyn_macrosolutionconfiguration' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode2" xml:space="preserve">
+    <value>Inactive</value>
+    <comment>'msdyn_macrosolutionconfiguration' : label for status '2' on Entity</comment>
+  </data>
   <data name="1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode0" xml:space="preserve">
     <value>Etkin</value>
     <comment>'msdyn_parameterdefinition' : label for state '0' on Entity</comment>
@@ -1208,6 +1852,10 @@
     <value />
     <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{61aea276-465a-b471-4133-acad2b8644cc}'</comment>
   </data>
+  <data name="1:label,Parameter definition{65474f61-b687-41c1-aa88-34e4cc02431f}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{65474f61-b687-41c1-aa88-34e4cc02431f}'</comment>
+  </data>
   <data name="1:label,Parameter definition{672695b5-9003-4ef2-b2c0-fc9c15663ae2}" xml:space="preserve">
     <value>Genel</value>
     <comment>'Parameter definition' : label for section in Entity FormXml ID: '{672695b5-9003-4ef2-b2c0-fc9c15663ae2}'</comment>
@@ -1235,6 +1883,14 @@
   <data name="1:LocalizedCollectionName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
     <value>Makro Eylemi Şablonları</value>
     <comment> 'msdyn_macroactiontemplate' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
+    <value>makro bağlayıcıları</value>
+    <comment> 'msdyn_macroconnector' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
+    <value>Macro Solution Configurations</value>
+    <comment> 'msdyn_macrosolutionconfiguration' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
     <value>Parametre tanımları</value>
@@ -1336,9 +1992,69 @@
     <value>Makro Eylemi Şablonu Gelişmiş Bul Görünümü</value>
     <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}'</comment>
   </data>
-  <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
-    <value>Action Input Parameter</value>
-    <comment> 'msdyn_actioninputparameter' : LocalizedName for Entity</comment>
+  <data name="1:LocalizedName,Macro Connector{0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}" xml:space="preserve">
+    <value>Makro Bağlayıcısı Arama Görünümü</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{5f76bbd9-6db0-47e3-b819-e8e181a69ef8}" xml:space="preserve">
+    <value>Makro Bağlayıcısı Gelişmiş Bul Görünümü</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{5f76bbd9-6db0-47e3-b819-e8e181a69ef8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{6879ad1e-f3d8-436b-af1d-40219e693010}" xml:space="preserve">
+    <value>Etkin olmayan makro bağlayıcıları</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{6879ad1e-f3d8-436b-af1d-40219e693010}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{8c945d63-c3dd-e911-a81e-000d3af9c0c2}" xml:space="preserve">
+    <value>Makro bağlayıcılarım</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{8c945d63-c3dd-e911-a81e-000d3af9c0c2}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{8eab9af9-f1b0-41b2-8eac-217db6b0346a}" xml:space="preserve">
+    <value>Etkin makro bağlayıcıları</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{8eab9af9-f1b0-41b2-8eac-217db6b0346a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{b8136d24-03a6-4453-b1d6-f6e96cc59762}" xml:space="preserve">
+    <value>Etkin makro bağlayıcılarını Hızlı Bul</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{b8136d24-03a6-4453-b1d6-f6e96cc59762}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{d238ec0d-ead6-4558-964d-e92e17c8aa42}" xml:space="preserve">
+    <value>Makro Bağlayıcısı İlişkili Görünümü</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{d238ec0d-ead6-4558-964d-e92e17c8aa42}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Bilgiler</value>
+    <comment>'Macro Connector' : LocalizedName for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}" xml:space="preserve">
+    <value>Macro Solution Configuration Associated View</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{2512f971-7ada-435b-a487-ce8bc79ef734}" xml:space="preserve">
+    <value>Active Macro Solution Configurations</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{2512f971-7ada-435b-a487-ce8bc79ef734}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Information</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for systemform in Entity FormXml ID: '{4c0f7a89-7e67-4972-828e-1244f593a422}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{709f8c74-0e07-41f2-ab20-157f309ba509}" xml:space="preserve">
+    <value>Macro Solution Configuration Advanced Find View</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{709f8c74-0e07-41f2-ab20-157f309ba509}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}" xml:space="preserve">
+    <value>Quick Find Active Macro Solution Configurations</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{b33bb17c-9d07-4514-b073-165721b935e9}" xml:space="preserve">
+    <value>Inactive Macro Solution Configurations</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{b33bb17c-9d07-4514-b073-165721b935e9}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}" xml:space="preserve">
+    <value>Macro Solution Configuration Lookup View</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{fe7078c7-dae0-e911-a81f-000d3af9c0c2}" xml:space="preserve">
+    <value>My Macro Solution Configurations</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
   </data>
   <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
     <value>Eylem Giriş Parametresi</value>
@@ -1351,6 +2067,14 @@
   <data name="1:LocalizedName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
     <value>Makro Eylemi Şablonu</value>
     <comment> 'msdyn_macroactiontemplate' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
+    <value>Makro Bağlayıcısı</value>
+    <comment> 'msdyn_macroconnector' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
+    <value>Macro Solution Configuration</value>
+    <comment> 'msdyn_macrosolutionconfiguration' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
     <value>Parametre tanımı</value>
@@ -1388,6 +2112,18 @@
     <value>Parametre tanımı Gelişmiş Bul Görünümü</value>
     <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}'</comment>
   </data>
+  <data name="1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
+    <value>Tüm Makrolar</value>
+    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
+  </data>
+  <data name="1:LocalizedName,Process{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}" xml:space="preserve">
+    <value>Etkin Makrolar</value>
+    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}'</comment>
+  </data>
+  <data name="1:LocalizedName,Process{ddf85356-30d9-e911-a81e-000d3af73f4d}" xml:space="preserve">
+    <value>Etkin Olmayan Makrolar</value>
+    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{ddf85356-30d9-e911-a81e-000d3af73f4d}'</comment>
+  </data>
   <data name="1:Title,Action Input ParameterInfo{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>Ortak</value>
     <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
@@ -1424,56 +2160,104 @@
     <value>Satış</value>
     <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
-  <data name="1:Title,Processworkflow.HomePageGrid.New.Button.LabelText" xml:space="preserve">
-    <value>New</value>
-    <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.LabelText'</comment>
-  </data>
   <data name="1:Title,Action Output ParameterService{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
     <value>Servis</value>
     <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
-  <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipDesc" xml:space="preserve">
-    <value>Create a new record</value>
-    <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipDesc'</comment>
+  <data name="1:Title,Macro ConnectorInfo{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Ortak</value>
+    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Macro ConnectorMarketing{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Pazarlama</value>
+    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Macro ConnectorProcessCenter{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>İşlem Oturumları</value>
+    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Macro ConnectorSales{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Satış</value>
+    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Macro ConnectorService{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Servis</value>
+    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Macro Solution ConfigurationInfo{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Common</value>
+    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Macro Solution ConfigurationMarketing{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Macro Solution ConfigurationProcessCenter{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Process Sessions</value>
+    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Macro Solution ConfigurationSales{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Sales</value>
+    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Macro Solution ConfigurationService{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Service</value>
+    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Parameter definitionInfo{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>Ortak</value>
     <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
-  <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipTitle" xml:space="preserve">
-    <value>New</value>
-    <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipTitle'</comment>
-  </data>
   <data name="1:Title,Parameter definitionMarketing{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>Pazarlama</value>
     <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
-  </data>
-  <data name="68:Description,{2E40DD90-2824-4524-B223-947052798E72}" xml:space="preserve">
-    <value>Allows you to create Macros</value>
-    <comment> '{2E40DD90-2824-4524-B223-947052798E72}' : Description for Dialog</comment>
   </data>
   <data name="1:Title,Parameter definitionProcessCenter{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>İşlem Oturumları</value>
     <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
-  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" xml:space="preserve">
-    <value>Create Macros</value>
-    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}'</comment>
-  </data>
   <data name="1:Title,Parameter definitionSales{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>Satış</value>
     <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
-  </data>
-  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{BC53D472-1587-4980-944E-F55DFE5D3F0A}" xml:space="preserve">
-    <value>Macro Designer</value>
-    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{BC53D472-1587-4980-944E-F55DFE5D3F0A}'</comment>
   </data>
   <data name="1:Title,Parameter definitionService{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>Servis</value>
     <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
+  <data name="1:Title,Processworkflow.HomePageGrid.New.Button.LabelText" xml:space="preserve">
+    <value>Yeni</value>
+    <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.LabelText'</comment>
+  </data>
+  <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipDesc" xml:space="preserve">
+    <value>Yeni kayıt oluştur</value>
+    <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipDesc'</comment>
+  </data>
+  <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipTitle" xml:space="preserve">
+    <value>Yeni</value>
+    <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipTitle'</comment>
+  </data>
+  <data name="68:Description,{2E40DD90-2824-4524-B223-947052798E72}" xml:space="preserve">
+    <value>Makro oluşturmanızı sağlar</value>
+    <comment> '{2E40DD90-2824-4524-B223-947052798E72}' : Description for Dialog</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" xml:space="preserve">
+    <value>Makro oluştur</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{505EF84E-0234-43DB-A095-AE2A87872170}" xml:space="preserve">
+    <value>Açıklama</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{505EF84E-0234-43DB-A095-AE2A87872170}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{BC53D472-1587-4980-944E-F55DFE5D3F0A}" xml:space="preserve">
+    <value>Makro Tasarımcısı</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{BC53D472-1587-4980-944E-F55DFE5D3F0A}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{D74829E3-D89A-4B89-BEC7-67B6BB0DE2EA}" xml:space="preserve">
+    <value>Adı</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{D74829E3-D89A-4B89-BEC7-67B6BB0DE2EA}'</comment>
+  </data>
   <data name="68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E72}" xml:space="preserve">
-    <value>Create Macros</value>
+    <value>Makro Oluştur</value>
     <comment> '{2E40DD90-2824-4524-B223-947052798E72}' : LocalizedName for Dialog</comment>
   </data>
 </root>

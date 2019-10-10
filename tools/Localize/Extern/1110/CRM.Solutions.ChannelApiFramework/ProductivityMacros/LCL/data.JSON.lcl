@@ -177,6 +177,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Acción para resolver o caso]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009155Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Update an existing record]]></Val>
@@ -188,6 +201,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005986Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Iniciar a execución da macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009155Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -385,6 +411,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Resolver caso]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009155Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Update record]]></Val>
@@ -396,6 +435,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005955Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Iniciar]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.000913Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -593,6 +645,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Resolver caso]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.000913Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Update an existing record]]></Val>
@@ -604,6 +669,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005928Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Iniciar a execución da macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.000913Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -801,6 +879,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Acción para resolver o caso]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.000913Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Update an existing record]]></Val>
@@ -812,6 +903,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005909Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Iniciar a execución da macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009102Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -1009,6 +1113,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Resolver caso]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009102Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Update an existing record]]></Val>
@@ -1020,6 +1137,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005845Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Iniciar a execución da macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009102Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -1074,6 +1204,32 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_35b0d4dc-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Motivo da resolución]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009102Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Id of the email template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID do modelo de correo electrónico]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009102Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The type of view]]></Val>
@@ -1085,6 +1241,32 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005845Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_4a8c0ace-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Case Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID do caso]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009074Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_6c7f2dbf-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time that is billable]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tempo que é facturable]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009074Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_6e033082-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -1100,6 +1282,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_9a6161ef-3033-4c8a-89fb-8229bf4539e9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample JSON object]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Obxecto JSON de exemplo]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009074Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A JSON string representing the attributes and values to be updated]]></Val>
@@ -1111,6 +1306,32 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005845Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_b66cd2ac-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email Recipients]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Destinatarios de correo electrónico]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009074Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ca97e23b-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application page type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tipo de páxina da aplicación]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009074Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_d61ae14b-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -1126,6 +1347,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_dc1db27b-b27e-4de3-ad4b-a1ba406de050" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Array of custom name-value pairs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Matriz de pares de valores de nome personalizados]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009074Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Form Id to be opened]]></Val>
@@ -1137,6 +1371,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005831Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_eb102e60-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Id of the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID do separador]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009074Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_f729e573-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -1178,6 +1425,32 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_35b0d4dc-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Resolución]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009074Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Template Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID do modelo]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009074Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[View Type]]></Val>
@@ -1189,6 +1462,32 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005831Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_4a8c0ace-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[IncidentId]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[IncidentId]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009049Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_6c7f2dbf-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Billable Time]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tempo facturable]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009049Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_6e033082-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -1204,6 +1503,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_9a6161ef-3033-4c8a-89fb-8229bf4539e9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample custom JSON Object]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Obxecto JSON personalizado de exemplo]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009049Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[JSON string of key-value pairs]]></Val>
@@ -1215,6 +1527,32 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005831Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_b66cd2ac-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email Recipients]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Destinatarios de correo electrónico]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009049Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ca97e23b-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Page Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tipo de páxina]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009049Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_d61ae14b-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -1230,6 +1568,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_dc1db27b-b27e-4de3-ad4b-a1ba406de050" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Custom Attribute]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atributo personalizado]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009049Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Entity Form Id]]></Val>
@@ -1241,6 +1592,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005831Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_eb102e60-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Tab Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID do separador]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009049Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_f729e573-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -1282,6 +1646,32 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_35b0d4dc-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[cadea]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009049Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[cadea]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009017Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[string]]></Val>
@@ -1293,6 +1683,32 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005804Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_4a8c0ace-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[cadea]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009017Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_6c7f2dbf-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[cadea]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009017Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_6e033082-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -1308,6 +1724,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_9a6161ef-3033-4c8a-89fb-8229bf4539e9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[array]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[matriz]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009017Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[string]]></Val>
@@ -1319,6 +1748,32 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005804Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_b66cd2ac-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[cadea]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009017Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ca97e23b-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[cadea]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009017Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_d61ae14b-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
@@ -1334,6 +1789,19 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_dc1db27b-b27e-4de3-ad4b-a1ba406de050" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[array]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[matriz]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009017Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[string]]></Val>
@@ -1345,6 +1813,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0005804Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_eb102e60-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[cadea]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:54.0009017Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_f729e573-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">

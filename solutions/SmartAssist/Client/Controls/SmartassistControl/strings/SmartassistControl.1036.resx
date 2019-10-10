@@ -121,6 +121,10 @@
     <value>Assistance intelligente</value>
     <comment>Header value for smartassist control</comment>
   </data>
+  <data name="EmptyMessage" xml:space="preserve">
+    <value>No suggestions available</value>
+    <comment>Empty message</comment>
+  </data>
   <data name="FailureMessage" xml:space="preserve">
     <value>Un problème s'est produit. Veuillez recommencer</value>
     <comment>Failure Message</comment>

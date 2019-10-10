@@ -3356,16 +3356,13 @@
   </data>
   <data name="9:Description,msdyn_panestate100000000" xml:space="preserve">
     <value />
-    <comment>'msdyn_panestate' : Description for OptionSet Value '100000000'</comment>
-  </data>
+    <comment>'msdyn_panestate' : Description for OptionSet Value '100000000'</comment></data>
   <data name="9:Description,msdyn_panestate100000001" xml:space="preserve">
     <value />
-    <comment>'msdyn_panestate' : Description for OptionSet Value '100000001'</comment>
-  </data>
+    <comment>'msdyn_panestate' : Description for OptionSet Value '100000001'</comment></data>
   <data name="9:Description,msdyn_panestate100000002" xml:space="preserve">
     <value />
-    <comment>'msdyn_panestate' : Description for OptionSet Value '100000002'</comment>
-  </data>
+    <comment>'msdyn_panestate' : Description for OptionSet Value '100000002'</comment></data>
   <data name="9:Description,msdyn_presencestatus" xml:space="preserve">
     <value>エージェントの状態を設定しています</value>
     <comment>'msdyn_presencestatus' : Description for OptionSet</comment>

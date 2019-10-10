@@ -121,6 +121,10 @@
     <value>智能助手</value>
     <comment>Header value for smartassist control</comment>
   </data>
+  <data name="EmptyMessage" xml:space="preserve">
+    <value>No suggestions available</value>
+    <comment>Empty message</comment>
+  </data>
   <data name="FailureMessage" xml:space="preserve">
     <value>出错了。请重试</value>
     <comment>Failure Message</comment>

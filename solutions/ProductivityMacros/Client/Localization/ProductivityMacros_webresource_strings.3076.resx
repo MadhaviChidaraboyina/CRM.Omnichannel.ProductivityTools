@@ -117,48 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
+    <value>Unable to find designer configuration</value>
+    <comment>Error message when config entity read fails</comment>
+  </data>
   <data name="DESIGNER_ACTION" xml:space="preserve">
-    <value>Action</value>
+    <value>動作</value>
     <comment>Action string for Designer Control</comment>
   </data>
   <data name="DESIGNER_CONNECTORDISPLAYNAME" xml:space="preserve">
-    <value>Unified Interface automation</value>
+    <value>整合介面自動化</value>
     <comment>Display Name String for Designer Control</comment>
   </data>
   <data name="DESIGNER_MACROCONNECTOR" xml:space="preserve">
-    <value>Macro connector</value>
+    <value>巨集連接器</value>
     <comment>Macro connector string for Designer Control</comment>
   </data>
   <data name="DESIGNER_SEARCHMACROS" xml:space="preserve">
-    <value>Search macro</value>
+    <value>搜尋巨集</value>
     <comment>Search Macro string for Designer Control</comment>
   </data>
   <data name="DESIGNER_STARTMACRO_DESC" xml:space="preserve">
-    <value>Start Macro Execution</value>
+    <value>開始執行巨集</value>
     <comment>Description Text for Start Macro Trigger</comment>
   </data>
   <data name="DESIGNER_STARTMACRO_NAME" xml:space="preserve">
-    <value>Start Macro Execution</value>
+    <value>開始執行巨集</value>
     <comment>Name Text for Start Macro Trigger</comment>
   </data>
   <data name="DESIGNER_STARTMACRO_SUBTITLE" xml:space="preserve">
-    <value>Start Macro</value>
+    <value>啟動巨集</value>
     <comment>Subtitle String for Start Macro Trigger</comment>
   </data>
   <data name="DESIGNER_STARTMACRO_SUMMARY" xml:space="preserve">
-    <value>Start Macro</value>
+    <value>啟動巨集</value>
     <comment>Summary String for Start Macro Trigger</comment>
   </data>
   <data name="DESIGNER_TRIGGER" xml:space="preserve">
-    <value>Trigger</value>
+    <value>觸發程序</value>
     <comment>Trigger String for Designer Control</comment>
   </data>
   <data name="DESIGNER_USERVOICEMSG" xml:space="preserve">
-    <value>Let us know what you would like us to build next</value>
+    <value>請告知您希望我們接下來建置的項目</value>
     <comment>User Voice Message for Designer Control</comment>
   </data>
   <data name="DESIGNR_STARTMACRO_TITLE" xml:space="preserve">
-    <value>Start Macro</value>
+    <value>啟動巨集</value>
     <comment>Title String for Start Macro Trigger</comment>
   </data>
   <data name="MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS" xml:space="preserve">
@@ -202,19 +206,47 @@
     <comment>Action to search KB</comment>
   </data>
   <data name="MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE" xml:space="preserve">
-    <value>Name</value>
+    <value>名稱</value>
     <comment>Title string for 'name' field of custom attribute</comment>
   </data>
   <data name="MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC" xml:space="preserve">
-    <value>Attribute logical name</value>
+    <value>屬性邏輯名稱</value>
     <comment>Description for 'name' field of custom attribute</comment>
   </data>
   <data name="MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE" xml:space="preserve">
-    <value>Value</value>
+    <value>值</value>
     <comment>Title string for 'value' field of custom attribute</comment>
   </data>
   <data name="MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC" xml:space="preserve">
-    <value>Attribute value</value>
+    <value>屬性值</value>
     <comment>Description for 'value' field of custom attribute</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" xml:space="preserve">
+    <value>Unable to read macro definition</value>
+    <comment>Error message when the macro definition to be edited could not be read</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
+    <value>Unable to read action templates</value>
+    <comment>Error message when templates entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_CDS_WRITE_ERROR" xml:space="preserve">
+    <value>Unable to save macro definition</value>
+    <comment>Error message when write to CDS fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
+    <value>Designer control initialization failed</value>
+    <comment>Error message when designer control initialization fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">
+    <value>Unable to create macro definition</value>
+    <comment>Error message when designer control cannot generate a valid JSON</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_LOAD_FAILURE" xml:space="preserve">
+    <value>Unable to load macro definition</value>
+    <comment>Error message when the control cannot load the macro definition</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_RENDER_FAILURE" xml:space="preserve">
+    <value>Unable to render macro designer control</value>
+    <comment>Error message when the control cannot be rendered</comment>
   </data>
 </root>

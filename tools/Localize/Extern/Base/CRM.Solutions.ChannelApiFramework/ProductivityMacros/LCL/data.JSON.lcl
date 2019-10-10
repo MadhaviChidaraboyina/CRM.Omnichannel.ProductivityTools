@@ -93,9 +93,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Update an existing record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -189,9 +201,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Update record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -285,9 +309,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Update an existing record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -381,9 +417,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Update an existing record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -477,9 +525,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Update an existing record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -507,9 +567,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_35b0d4dc-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution reason]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Id of the email template]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The type of view]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_4a8c0ace-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Case Id]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_6c7f2dbf-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time that is billable]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -519,9 +603,27 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_9a6161ef-3033-4c8a-89fb-8229bf4539e9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample JSON object]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A JSON string representing the attributes and values to be updated]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_b66cd2ac-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email Recipients]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ca97e23b-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application page type]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -531,9 +633,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_dc1db27b-b27e-4de3-ad4b-a1ba406de050" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Array of custom name-value pairs]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Form Id to be opened]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_eb102e60-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Id of the tab]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -555,9 +669,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_35b0d4dc-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Template Id]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[View Type]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_4a8c0ace-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[IncidentId]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_6c7f2dbf-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Billable Time]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -567,9 +705,27 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_9a6161ef-3033-4c8a-89fb-8229bf4539e9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample custom JSON Object]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[JSON string of key-value pairs]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_b66cd2ac-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email Recipients]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ca97e23b-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Page Type]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -579,9 +735,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_dc1db27b-b27e-4de3-ad4b-a1ba406de050" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Custom Attribute]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Entity Form Id]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_eb102e60-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Tab Id]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -603,7 +771,31 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_35b0d4dc-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_4a8c0ace-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_6c7f2dbf-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[string]]></Val>
         </Str>
@@ -615,7 +807,25 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_9a6161ef-3033-4c8a-89fb-8229bf4539e9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[array]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_b66cd2ac-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ca97e23b-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[string]]></Val>
         </Str>
@@ -627,7 +837,19 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_dc1db27b-b27e-4de3-ad4b-a1ba406de050" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[array]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[string]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_eb102e60-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[string]]></Val>
         </Str>

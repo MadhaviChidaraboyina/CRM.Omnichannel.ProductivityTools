@@ -829,7 +829,7 @@
     <comment>'Agent script' : label for cell in Entity FormXml ID: '{348e70d2-ae41-4fe2-a9a5-580dce3f1430}'</comment>
   </data>
   <data name="1:label,Agent script{3a85372d-b6c7-2a17-1e8c-5bb27d66d753}" xml:space="preserve">
-    <value>Section</value>
+    <value>Seção</value>
     <comment>'Agent script' : label for section in Entity FormXml ID: '{3a85372d-b6c7-2a17-1e8c-5bb27d66d753}'</comment>
   </data>
   <data name="1:label,Agent script{44a4cc6b-7f5c-448c-aca3-3d5a48024117}" xml:space="preserve">

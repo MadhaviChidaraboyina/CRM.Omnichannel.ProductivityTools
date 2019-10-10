@@ -2857,6 +2857,19 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,Agent script{3a85372d-b6c7-2a17-1e8c-5bb27d66d753}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Section]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Секция]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0007326Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,Agent script{44a4cc6b-7f5c-448c-aca3-3d5a48024117}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Header]]></Val>
