@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="Session Data" OriginalName="SessionData">msdyn_SessionData</Name>
+  <Name LocalizedName="Session Data" OriginalName="Session Data">msdyn_SessionData</Name>
   <EntityInfo>
     <entity Name="msdyn_SessionData">
       <LocalizedNames>
@@ -320,42 +320,6 @@
             <Description description="Custom Attribute 1" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_CustomAttribute10">
-          <Type>nvarchar</Type>
-          <Name>msdyn_customattribute10</Name>
-          <LogicalName>msdyn_customattribute10</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.3</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <Format>text</Format>
-          <MaxLength>4000</MaxLength>
-          <Length>8000</Length>
-          <displaynames>
-            <displayname description="Custom Attribute 10" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Custom Attribute 10" languagecode="1033" />
-          </Descriptions>
-        </attribute>
         <attribute PhysicalName="msdyn_CustomAttribute2">
           <Type>nvarchar</Type>
           <Name>msdyn_customattribute2</Name>
@@ -500,150 +464,6 @@
             <Description description="Custom Attribute 5" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_CustomAttribute6">
-          <Type>nvarchar</Type>
-          <Name>msdyn_customattribute6</Name>
-          <LogicalName>msdyn_customattribute6</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.3</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
-          <displaynames>
-            <displayname description="Custom Attribute 6" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Custom Attribute 6" languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_CustomAttribute7">
-          <Type>nvarchar</Type>
-          <Name>msdyn_customattribute7</Name>
-          <LogicalName>msdyn_customattribute7</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.3</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
-          <displaynames>
-            <displayname description="Custom Attribute 7" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Custom Attribute 7" languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_CustomAttribute8">
-          <Type>nvarchar</Type>
-          <Name>msdyn_customattribute8</Name>
-          <LogicalName>msdyn_customattribute8</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.3</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
-          <displaynames>
-            <displayname description="Custom Attribute 8" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Custom Attribute 8" languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_CustomAttribute9">
-          <Type>nvarchar</Type>
-          <Name>msdyn_customattribute9</Name>
-          <LogicalName>msdyn_customattribute9</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.3</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <Format>text</Format>
-          <MaxLength>4000</MaxLength>
-          <Length>8000</Length>
-          <displaynames>
-            <displayname description="Custom Attribute 9" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Custom Attribute 9" languagecode="1033" />
-          </Descriptions>
-        </attribute>
         <attribute PhysicalName="msdyn_ExternalCorrelationId">
           <Type>nvarchar</Type>
           <Name>msdyn_externalcorrelationid</Name>
@@ -714,6 +534,42 @@
           </displaynames>
           <Descriptions>
             <Description description="Required name field" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="msdyn_ProviderSessionId">
+          <Type>nvarchar</Type>
+          <Name>msdyn_providersessionid</Name>
+          <LogicalName>msdyn_providersessionid</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <Format>text</Format>
+          <MaxLength>100</MaxLength>
+          <Length>200</Length>
+          <displaynames>
+            <displayname description="Provider Session Id" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_QueueId">
@@ -818,7 +674,7 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="Session Additional Data" languagecode="1033" />
+            <displayname description="Additional Data" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Additional data related to the session" languagecode="1033" />
@@ -854,7 +710,7 @@
           <CanChangeDateTimeBehavior>1</CanChangeDateTimeBehavior>
           <Behavior>1</Behavior>
           <displaynames>
-            <displayname description="Session Agent Assigned Timestamp" languagecode="1033" />
+            <displayname description="Agent Assigned Timestamp" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Timestamp at which the agent was assigned to the session" languagecode="1033" />
@@ -890,7 +746,7 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="Session Channel" languagecode="1033" />
+            <displayname description="Channel" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Channel for the session" languagecode="1033" />
@@ -926,7 +782,7 @@
           <CanChangeDateTimeBehavior>1</CanChangeDateTimeBehavior>
           <Behavior>1</Behavior>
           <displaynames>
-            <displayname description="Session Created Timestamp" languagecode="1033" />
+            <displayname description="Created Timestamp" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Timestamp at which the session was created" languagecode="1033" />
@@ -962,7 +818,7 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="Session Creation Reason" languagecode="1033" />
+            <displayname description="Creation Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Reason for the session creation" languagecode="1033" />
@@ -1000,42 +856,6 @@
             <Description description="Unique identifier for entity instances" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_SessionId">
-          <Type>nvarchar</Type>
-          <Name>msdyn_sessionid</Name>
-          <LogicalName>msdyn_sessionid</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.6</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
-          <displaynames>
-            <displayname description="Session Id" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Identifier for the session" languagecode="1033" />
-          </Descriptions>
-        </attribute>
         <attribute PhysicalName="msdyn_SessionQueueAssignedTimestamp">
           <Type>datetime</Type>
           <Name>msdyn_sessionqueueassignedtimestamp</Name>
@@ -1066,7 +886,7 @@
           <CanChangeDateTimeBehavior>1</CanChangeDateTimeBehavior>
           <Behavior>1</Behavior>
           <displaynames>
-            <displayname description="Session Queue Assigned Timestamp" languagecode="1033" />
+            <displayname description="Queue Assigned Timestamp" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Timestamp at which the queue was assigned to the session" languagecode="1033" />
@@ -1348,7 +1168,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the SessionData" languagecode="1033" />
+              <Description description="Status of the Session Data" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -1404,7 +1224,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the SessionData" languagecode="1033" />
+              <Description description="Reason for the status of the Session Data" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">

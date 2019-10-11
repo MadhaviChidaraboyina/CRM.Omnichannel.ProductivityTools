@@ -7,10 +7,10 @@
 
 namespace Microsoft.CIFrameworkAnalytics {
 
-	let clientSessionConversationIdMap = new Map<string, string>();
-	let analyticsDataMap = new Map<string, InitData>();
-	let analyticsEventMap = new Map<string, string>();
-	let conversationAnalyticsFlagMap = new Map<string, boolean>();
+	let clientSessionConversationIdMap = new Map<string, string>(); // Map to store the UCI Session Id and ConversationId 
+	let analyticsDataMap = new Map<string, InitData>(); // Map to store the conversation Id and InitData
+	let analyticsEventMap = new Map<string, string>(); //Map to store the KPI Event Definitions
+	let conversationAnalyticsFlagMap = new Map<string, boolean>(); //Map to store the conversationId and Analytics flag
 
 	/** @internal
 	 * Initialize method called on load of the script
@@ -75,7 +75,7 @@ namespace Microsoft.CIFrameworkAnalytics {
 	function logConversationData(data: any) {
 		let payload: InitData = data.get(Constants.AnalyticsEvent.analyticsData);
 		// create Conversation Data record
-		Xrm.WebApi.createRecord(Constants.ConversationEntity.entityName, Utility.buildConversationEntity(data)).then(
+		Xrm.WebApi.createRecord(Constants.ConversationEntity.entityName, buildConversationEntity(data)).then(
 			function success(result) {
 				console.log("Conversation Data record created with ID: " + result.id);
 			},
@@ -91,7 +91,7 @@ namespace Microsoft.CIFrameworkAnalytics {
 	function logSessionData(data: any) {
 		let payload: InitData = data.get(Constants.AnalyticsEvent.analyticsData);
 		// create Session Data record
-		Xrm.WebApi.createRecord(Constants.SessionEntity.entityName, Utility.buildSessionEntity(data)).then(
+		Xrm.WebApi.createRecord(Constants.SessionEntity.entityName, buildSessionEntity(data)).then(
 			function success(result) {
 				console.log("Session Data record created with ID: " + result.id);
 			},
@@ -106,7 +106,7 @@ namespace Microsoft.CIFrameworkAnalytics {
 	*/
 	function logParticipantData(data: any) {
 		let payload: InitData = data.get(Constants.AnalyticsEvent.analyticsData);
-		let records: XrmClientApi.WebApi.Entity[] = Utility.buildParticipantEntityList(data);
+		let records: XrmClientApi.WebApi.Entity[] = buildParticipantEntityList(data);
 		records.forEach(function (record) {
 			Xrm.WebApi.createRecord(Constants.ParticipantEntity.entityName, record).then(
 				function success(result) {
@@ -123,7 +123,7 @@ namespace Microsoft.CIFrameworkAnalytics {
 	* Function to log the Event data
 	*/
 	function logEventData(payload: EventData) {
-		let records: XrmClientApi.WebApi.Entity[] = Utility.buildEventsEntity(payload);
+		let records: XrmClientApi.WebApi.Entity[] = buildEventsEntity(payload);
 		records.forEach(function (record) {
 			Xrm.WebApi.createRecord(Constants.EventEntity.entityName, record).then(
 				function success(result) {
@@ -150,39 +150,70 @@ namespace Microsoft.CIFrameworkAnalytics {
 				var eventData: EventData = new EventData();
 				eventData.conversationId = correlationId;
 				eventData.clientSessionId = clientSessionId;
-				eventData.eventParticipantId = conversationData.conversation.session.participants[0].participantId;
-				eventData.sessionId = conversationData.conversation.session.sessionId;
+				eventData.participantId = conversationData.conversation.session.participants[0].participantId;
+				eventData.providerSessionId = conversationData.conversation.session.providerSessionId;
 				let events: EventEntity[] = new Array<EventEntity>();
 				let event = new EventEntity();
-				event.kpiEventId = eventId;
-				event.kpiEventName = eventName;
-				event.eventTimestamp = new Date().toISOString();
-				fillEventDataForSystemEvents(payload,conversationData,event);
 				events.push(event);
 				eventData.events = events;
+				event.kpiEventName = eventName;
+				event.eventTimestamp = new Date().toISOString();
+				fillEventDataForSystemEvents(payload, conversationData, eventData);
 			}
 			return eventData;
 		}
 	}
 
+	/** @internal
+	* Function to get the UCI Conversation Id
+	*/
 	function getConversationId(payload: any): string {
 		let correlationId = payload.get(Constants.AnalyticsEvent.correlationId);
-		let clientSessionId = getClientSessionId(payload);
 		if (Utility.isNullOrUndefined(correlationId)) {
-			correlationId = clientSessionConversationIdMap.get(clientSessionId);
+			let data: EventData = payload.get(Constants.AnalyticsEvent.analyticsData);
+			if (!Utility.isNullOrUndefined(data)) {
+				correlationId = data.conversationId;
+			}
+			if (Utility.isNullOrUndefined(correlationId)){
+				let clientSessionId = getClientSessionId(payload);
+				if (!Utility.isNullOrUndefined(clientSessionId)) {
+					correlationId = clientSessionConversationIdMap.get(clientSessionId);
+				}
+			}
 		}
 		return correlationId;
 	}
 
+	/** @internal
+	* Function to get the UCI Session Id
+	*/
 	function getClientSessionId(payload: any): string {
-		let clientSessionId = payload.get(Constants.AnalyticsEvent.sessionId);
+		let eventName = payload.get(Constants.AnalyticsEvent.eventName);
+		let clientSessionId = "";
+		if (eventName === Constants.AnalyticsEvent.sessionInFocus) {
+			clientSessionId = payload.get(Constants.AnalyticsEvent.newSessionId);
+		}
+		else if (eventName === Constants.AnalyticsEvent.sessionOutOfFocus) {
+			clientSessionId = payload.get(Constants.AnalyticsEvent.previousSessionId);
+		}
+		else if (eventName === Constants.AnalyticsEvent.sessionClosed) {
+			clientSessionId = payload.get(Constants.AnalyticsEvent.sessionId);
+		}
+		else {
+			clientSessionId = payload.get(Constants.AnalyticsEvent.clientSessionId);
+		}
 		if (Utility.isNullOrUndefined(clientSessionId)) {
-			clientSessionId = payload.get(Constants.AnalyticsEvent.focussedSession);
+			// clientSessionId = payload.get(Constants.AnalyticsEvent.focussedSession);
+			clientSessionId = Constants.AnalyticsEvent.defaultSessionId;
 		}
 		return clientSessionId;
 	}
 
-	function fillEventDataForSystemEvents(payload: any, convData: InitData, event: EventEntity): void {
+	/** @internal
+	* Function to fill event specific data
+	*/
+	function fillEventDataForSystemEvents(payload: any, convData: InitData, eventData: EventData): void {
+		let event = eventData.events[0];
 		switch (event.kpiEventName) {
 			case Constants.AnalyticsEvent.notificationResponse:
 				{
@@ -196,32 +227,170 @@ namespace Microsoft.CIFrameworkAnalytics {
 					let correlationId = payload.get(Constants.AnalyticsEvent.correlationId);
 					clientSessionConversationIdMap.set(sessionId, correlationId);
 				}
-			case Constants.AnalyticsEvent.notificationReceived:
-			case Constants.AnalyticsEvent.notificationTimedOut:
-			case Constants.AnalyticsEvent.sessionSwitched:
-			case Constants.AnalyticsEvent.sessionClosed:
+				break;
+			case Constants.AnalyticsEvent.sessionInFocus:
+				{
+					eventData.clientSessionId = payload.get(Constants.AnalyticsEvent.newSessionId);
+				}
+				break;
+			case Constants.AnalyticsEvent.sessionOutOfFocus:
+				{
+					let newClientSessionId = payload.get(Constants.AnalyticsEvent.previousSessionId);
+					let newConversationId = clientSessionConversationIdMap.get(newClientSessionId);
+					let newConvData: InitData = analyticsDataMap.get(newConversationId);
+					if (!Utility.isNullOrUndefined(newConvData) && !Utility.isNullOrUndefined(newConvData.conversation) && !Utility.isNullOrUndefined(newConvData.conversation.session)) {
+						eventData.providerSessionId = newConvData.conversation.session.providerSessionId;
+					}
+					eventData.clientSessionId = newClientSessionId;
+					eventData.conversationId = newConversationId;
+				}
+				break;
+			default:
 				break;
 		}
 	}
+
+	/**
+	 * Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
+	 * @param map Object to build the entity for.
+	 */
+	export function buildConversationEntity(payload: any): XrmClientApi.WebApi.Entity {
+		let data: InitData = payload.get(Constants.AnalyticsEvent.analyticsData);
+		let providerId = payload.get(Constants.AnalyticsEvent.providerId);
+		let providerName = payload.get(Constants.AnalyticsEvent.providerName);
+		let entity: XrmClientApi.WebApi.Entity = {};
+		let conv = data.conversation;
+		entity[Constants.ConversationEntity.accountId] = conv.accountId;
+		entity[Constants.ConversationEntity.additionalData] = conv.additionalData;
+		entity[Constants.ConversationEntity.channel] = conv.channel;
+		entity[Constants.ConversationEntity.contactId] = conv.contactId;
+		entity[Constants.ConversationEntity.conversationId] = conv.conversationId;
+		entity[Constants.ConversationEntity.Name] = conv.conversationId;
+		entity[Constants.ConversationEntity.conversationTimestamp] = Utility.isNullOrUndefined(conv.createdTimestamp) ? new Date().toISOString() : conv.createdTimestamp;
+		entity[Constants.ConversationEntity.externalCorrelationId] = conv.externalCorrelationId;
+		entity[Constants.ConversationEntity.providerId] = Utility.isNullOrUndefined(conv.providerId) ? providerId : conv.providerId;
+		entity[Constants.ConversationEntity.providerName] = Utility.isNullOrUndefined(conv.providerName) ? providerName : conv.providerName;
+		entity[Constants.ConversationEntity.region] = conv.regionData;
+
+		let customDataList = conv.customData;
+		if (!Utility.isNullOrUndefined(customDataList)) {
+			for (var customData of customDataList) {
+				entity[customData.attribute] = customData.value;
+			}
+		}
+		return entity;
+	}
+
+	/**
+	 * Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
+	 * @param map Object to build the entity for.
+	 */
+	export function buildSessionEntity(payload: any): XrmClientApi.WebApi.Entity {
+		let data: InitData = payload.get(Constants.AnalyticsEvent.analyticsData);
+		let session = data.conversation.session;
+		let entity: XrmClientApi.WebApi.Entity = {};
+		entity[Constants.SessionEntity.clientSessionId] = session.clientSessionId;
+		entity[Constants.SessionEntity.clientSessionName] = session.clientSessionName;
+		entity[Constants.SessionEntity.conversationId] = data.conversation.conversationId;
+		entity[Constants.SessionEntity.externalCorrelationId] = session.externalCorrelationId;
+		entity[Constants.SessionEntity.queueId] = session.queueId;
+		entity[Constants.SessionEntity.queueName] = session.queueName;
+		entity[Constants.SessionEntity.sessionAdditionalData] = session.additionalData;
+		entity[Constants.SessionEntity.sessionAgentAssignedTimestamp] = session.agentAssignedTimestamp;
+		entity[Constants.SessionEntity.sessionChannel] = session.channel;
+		entity[Constants.SessionEntity.sessionCreatedTimestamp] = session.createdTimestamp;
+		entity[Constants.SessionEntity.sessionCreationReason] = session.creationReason;
+		entity[Constants.SessionEntity.sessionId] = session.providerSessionId;
+		entity[Constants.SessionEntity.sessionQueueAssignedTimestamp] = session.queueAssignedTimestamp;
+
+		let customDataList = data.conversation.customData;
+		if (!Utility.isNullOrUndefined(customDataList)) {
+			for (var customData of customDataList) {
+				entity[customData.attribute] = customData.value;
+			}
+		}
+		return entity;
+	}
+
+	/**
+	 * Given a map, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
+	 * @param map Object to build the entity for.
+	 */
+	export function buildParticipantEntityList(payload: any): XrmClientApi.WebApi.Entity[] {
+		let data: InitData = payload.get(Constants.AnalyticsEvent.analyticsData);
+		let session = data.conversation.session;
+		let entities: XrmClientApi.WebApi.Entity[] = [];
+		for (var participant of session.participants) {
+			let entity: XrmClientApi.WebApi.Entity = {};
+			entity[Constants.ParticipantEntity.sessionId] = session.providerSessionId;
+			entity[Constants.ParticipantEntity.conversationId] = data.conversation.conversationId;
+			entity[Constants.ParticipantEntity.participantId] = participant.participantId;
+			entity[Constants.ParticipantEntity.participantName] = participant.name;
+			entity[Constants.ParticipantEntity.participantType] = participant.type;
+			entity[Constants.ParticipantEntity.participantAddedTimestamp] = participant.addedTimestamp;
+
+			let customDataList = data.conversation.customData;
+			if (!Utility.isNullOrUndefined(customDataList)) {
+				for (var customData of customDataList) {
+					entity[customData.attribute] = customData.value;
+				}
+			}
+			entities.push(entity);
+		}
+		return entities;
+	}
+
+	/**
+	 * Given a EventData, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
+	 * @param map Object to build the entity for.
+	 */
+	export function buildEventsEntity(data: EventData): XrmClientApi.WebApi.Entity[] {
+		let entities: XrmClientApi.WebApi.Entity[] = [];
+		let events = data.events;
+		for (var event of events) {
+			let entity: XrmClientApi.WebApi.Entity = {};
+			entity[Constants.EventEntity.additionalData] = event.additionalData;
+			entity[Constants.EventEntity.clientSessionId] = (data.clientSessionId === Constants.AnalyticsEvent.defaultSessionId) ? Constants.AnalyticsEvent.noSessionId : data.clientSessionId;
+			entity[Constants.EventEntity.conversationId] = data.conversationId;
+			entity[Constants.EventEntity.eventTimestamp] = event.eventTimestamp;
+			entity[Constants.EventEntity.externalCorrelationId] = event.externalCorrelationId;
+			entity[Constants.EventEntity.kpiEventName] = event.kpiEventName
+			entity[Constants.EventEntity.kpiEventId] = analyticsEventMap.get(event.kpiEventName);
+			entity[Constants.EventEntity.kpiEventReason] = event.kpiEventReason;
+			entity[Constants.EventEntity.notificationResponseAction] = event.notificationResponseAction;
+			entity[Constants.EventEntity.participantId] = data.participantId;
+			entity[Constants.EventEntity.sessionId] = data.providerSessionId;
+
+			let customDataList = event.customData;
+			if (!Utility.isNullOrUndefined(customDataList)) {
+				for (var customData of customDataList) {
+					entity[customData.attribute] = customData.value;
+				}
+			}
+			entities.push(entity);
+		}
+		return entities;
+	}
+
 
 	/** @internal
 	* Function to log the KPI Event Definitions data
 	*/
 	function loadAnalyticsEventMap(): Promise<boolean> {
 		return new Promise<boolean>(
-			function (resolve, reject) {
+			function(resolve, reject) {
 				if (analyticsEventMap.size > 0) {
 					return resolve(true);
 				}
 				Xrm.WebApi.retrieveMultipleRecords("msdyn_kpieventdefinition", "?$select=msdyn_name,msdyn_kpieventdefinitionid&$filter=(msdyn_active eq true)").then(
-					function (result) {
+					function(result) {
 						result.entities.forEach(
-							function (value, index, array) {
+							function(value, index, array) {
 								analyticsEventMap.set(value["msdyn_name"].trim(), value["msdyn_kpieventdefinitionid"].trim());
 							});
 						return resolve(true);
 					},
-					function (error) {
+					function(error) {
 						return reject(error);
 					});
 			});

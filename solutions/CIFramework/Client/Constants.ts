@@ -260,7 +260,8 @@ namespace Microsoft.CIFramework
 		NotificationResponse,
 		NotificationTimedOut,
 		SessionStarted,
-		SessionSwitched,
+		SessionInFocus,
+		SessionOutOfFocus,
 		SessionClosed,
 		NewTabOpened
 	}

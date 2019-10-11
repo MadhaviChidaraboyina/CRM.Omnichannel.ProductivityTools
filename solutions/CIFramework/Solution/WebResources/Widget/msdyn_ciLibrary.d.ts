@@ -252,9 +252,10 @@ declare namespace Microsoft.CIFramework {
         NotificationResponse = 1,
         NotificationTimedOut = 2,
         SessionStarted = 3,
-        SessionSwitched = 4,
-        SessionClosed = 5,
-        NewTabOpened = 6,
+        SessionInFocus = 4,
+        SessionOutOfFocus = 5,
+        SessionClosed = 6,
+        NewTabOpened = 7,
     }
 }
 /**

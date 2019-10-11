@@ -1496,8 +1496,8 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	/**
- * Internal method to raise the lLogAnalyticsEvent to Analytics js
-*/
+	* Internal method to raise the lLogAnalyticsEvent to Analytics js
+	*/
 	export function raiseAnalyticsEventInternal(eventName: string, parameters: Map<string, any>): boolean {
 		let providerName = "", providerId = "", apiVersion = "", sortOrder = "";
 		const [provider, errorData] = getProvider(parameters, [Constants.SearchString]);

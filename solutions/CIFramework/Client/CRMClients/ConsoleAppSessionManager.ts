@@ -34,7 +34,8 @@ namespace Microsoft.CIFramework.Internal {
 		*/
 		onSessionSwitched(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
-			raiseSystemAnalyticsEvent(InternalEventName.SessionSwitched, eventMap);
+			raiseSystemAnalyticsEvent(InternalEventName.SessionInFocus, eventMap);
+			raiseSystemAnalyticsEvent(InternalEventName.SessionOutOfFocus, eventMap);
 			let previousSessionId = eventMap.get(Constants.previousSessionId);
 			let newSessionId = eventMap.get(Constants.newSessionId);
 			let previousProvider = state.sessionManager.getProvider(previousSessionId);

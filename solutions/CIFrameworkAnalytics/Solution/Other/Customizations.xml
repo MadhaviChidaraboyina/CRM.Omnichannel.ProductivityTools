@@ -9,9 +9,9 @@
   <EntityRelationships />
   <OrganizationSettings />
   <optionsets />
+  <WebResources />
   <CustomControls />
   <EntityDataProviders />
-  <WebResources />
   <Languages>
     <Language>1033</Language>
   </Languages>

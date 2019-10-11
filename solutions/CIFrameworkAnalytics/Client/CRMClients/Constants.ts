@@ -16,18 +16,12 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static Name = "msdyn_name";
 		public static accountId = "msdyn_accountid";
 		public static additionalData = "msdyn_additionaldata";
-		public static backendConversationId = "msdyn_backendconversationid";
 		public static channel = "msdyn_channel";
 		public static channelContext = "msdyn_context";
 		public static contactId = "msdyn_contactid";
 		public static conversationId = "msdyn_conversationid";
 		public static conversationTimestamp = "msdyn_conversationtimestamp";	
-		public static externalAccountId = "msdyn_externalaccountid";
-		public static externalContactId = "msdyn_externalcontactid";
-		public static externalConversationId = "msdyn_externalconversationId";
 		public static externalCorrelationId = "msdyn_externalcorrelationid";
-		public static externalProviderId = "msdyn_externalproviderid";
-		public static initialQueueName = "msdyn_initialqueuename";
 		public static providerId = "msdyn_providerid";
 		public static providerName = "msdyn_providername";
 		public static region = "msdyn_region";
@@ -46,7 +40,7 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static sessionChannel = "msdyn_sessionchannel";
 		public static sessionCreatedTimestamp = "msdyn_sessioncreatedtimestamp";
 		public static sessionCreationReason = "msdyn_sessioncreationreason";
-		public static sessionId = "msdyn_sessionid";
+		public static sessionId = "msdyn_providersessionid";
 		public static sessionQueueAssignedTimestamp = "msdyn_sessionqueueassignedtimestamp";
 	}
 
@@ -61,7 +55,7 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static participantName = "msdyn_participantname";
 		public static participantMode = "msdyn_participantmode";
 		public static participantType = "msdyn_participanttype";
-		public static sessionId = "msdyn_sessionid";
+		public static sessionId = "msdyn_providersessionid";
 	}
 
 	export class EventEntity {
@@ -69,23 +63,14 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static additionalData = "msdyn_additionaldata";
 		public static clientSessionId = "msdyn_clientsessionid";
 		public static conversationId = "msdyn_conversationid";
-		public static createdEntityRecordId = "msdyn_entityrecordid";
-		public static createdEntityName = "msdyn_entityname";
 		public static eventTimestamp = "msdyn_eventtimestamp";
 		public static externalCorrelationId = "msdyn_externalcorrelationid";
-		public static knowledgeArticleId = "msdyn_knowledgearticleid";
-		public static knowledgeArticleName = "msdyn_knowledgearticlename";		
 		public static kpiEventId = "msdyn_kpieventid";
 		public static kpiEventName = "msdyn_kpieventname";
 		public static kpiEventReason = "msdyn_kpieventreason";
-		public static newPresence = "msdyn_newpresence";
 		public static notificationResponseAction = "msdyn_notificationresponseaction";
-		public static oldPresence = "msdyn_oldpresence";
 		public static participantId = "msdyn_participantid";
-		public static sessionId = "msdyn_sessionid";
-		public static tabId = "msdyn_tabid";
-		public static tabName = "msdyn_tabname";
-		public static tabAction = "msdyn_tabaction";
+		public static sessionId = "msdyn_providersessionid";
 	}
 
 	export class AnalyticsEvent {
@@ -98,15 +83,18 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static notificationResponse = "NotificationResponse";
 		public static notificationTimedOut = "NotificationTimedOut";
 		public static sessionStarted = "SessionStarted";
-		public static sessionSwitched = "SessionSwitched";
+		public static sessionInFocus = "SessionInFocus";
+		public static sessionOutOfFocus = "SessionOutOfFocus";
 		public static sessionClosed = "SessionClosed";
 		public static newTabOpened = "NewTabOpened";
 		public static sessionId = "sessionId";
 		public static clientSessionId = "clientSessionId";
+		public static previousSessionId = "previousSessionId";
+		public static newSessionId = "newSessionId";
 		public static providerId = "providerId";
 		public static providerName = "providerName";
 		public static defaultSessionId = "session-id-0";
-		public static noSessionId = "session not created";
+		public static noSessionId = "Default Session";
 		public static notificationResponseAction = "notificationResponseAction";
 		public static enableAnalytics = "enableAnalytics";
 	}
