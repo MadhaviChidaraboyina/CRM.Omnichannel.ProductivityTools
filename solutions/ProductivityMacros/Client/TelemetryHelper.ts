@@ -6,7 +6,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 	export declare var appId: string;
 	export var crmVersion: string = "";
 	export var orgId: string = "";
-	declare var defaultLogger: any;
+	declare var macrosLogger: any;
 	let prodIngestionKey = "15742b0e58eb4711bc046acff53e7165-1bfb5a4d-2ecc-4c51-8271-a773c63f58de-6809";
 	let devIngestionKey = "22fdf28125b2493787078364a7ffe42e-28bf5791-b218-4f89-8d06-8135775da123-7269";
 
@@ -20,10 +20,10 @@ namespace Microsoft.ProductivityMacros.Internal {
 		let domain = getDomain();
 		let logConfig = getConfiguration(domain);
 		if (domain == "Dev") {
-			defaultLogger = AWTLogManager.initialize(devIngestionKey, logConfig);
+			macrosLogger = AWTLogManager.initialize(devIngestionKey, logConfig);
 		}
 		else {
-			defaultLogger = AWTLogManager.initialize(prodIngestionKey, logConfig);
+			macrosLogger = AWTLogManager.initialize(prodIngestionKey, logConfig);
 		}
 
 		AWTLogManager.addNotificationListener({
@@ -200,7 +200,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 		AdminTelemetry.setProperty(TelemetryConstants.orgName, getOrgName());
 		AdminTelemetry.setProperty(TelemetryConstants.userId, getUserId());
 
-		defaultLogger.logEvent(AdminTelemetry);
+		macrosLogger.logEvent(AdminTelemetry);
 	}
 
 	// Function to populate the Macros Runtime Data Telemetry
@@ -227,7 +227,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 		RuntimeTelemetry.setProperty(TelemetryConstants.orgName, getOrgName());
 		RuntimeTelemetry.setProperty(TelemetryConstants.userId, getUserId());
 
-		defaultLogger.logEvent(RuntimeTelemetry);
+		macrosLogger.logEvent(RuntimeTelemetry);
 	}
 
 	export class UsageTelemetryData {
