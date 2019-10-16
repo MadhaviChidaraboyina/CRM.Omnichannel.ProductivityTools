@@ -133,7 +133,7 @@
 </value>
   </metadata>
   <data name="15062:Description,ProductivityToolsAnchor" xml:space="preserve">
-    <value>Productivity Tools for Dynamics 365 apps provide capabilities that help users to perform day-to-day business operations in a faster, efficient, and process compliant manner and deliver value to customers </value>
+    <value>เครื่องมือเสริมประสิทธิภาพงานสำหรับแอปพลิเคชัน Dynamics 365 มีความสามารถที่ช่วยให้ผู้ใช้สามารถดำเนินธุรกิจในแต่ละวันได้รวดเร็วขึ้น มีประสิทธิภาพ และเป็นไปตามมาตรฐานและส่งมอบคุณค่าให้กับลูกค้า </value>
     <comment> 'ProductivityToolsAnchor' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">

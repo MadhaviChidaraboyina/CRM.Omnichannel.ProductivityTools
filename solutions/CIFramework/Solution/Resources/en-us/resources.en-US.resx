@@ -2954,6 +2954,10 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value>Channel Provider</value>
     <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
+  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
+    <value>Channel Provider</value>
+    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
+  </data>
   <data name="1:LocalizedName,msdyn_consoleapplicationnotificationfieldentitymsdyn_consoleapplicationnotificationfield" xml:space="preserve">
     <value>Notification Field</value>
     <comment> 'msdyn_consoleapplicationnotificationfield' : LocalizedName for Entity</comment>

@@ -3379,7 +3379,7 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationtemplatemsdyn_Pinned" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Pinned]]></Val>
+          <Val><![CDATA[Can close]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3409,7 +3409,7 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Pinned]]></Val>
+          <Val><![CDATA[Can close]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4321,7 +4321,7 @@
       </Item>
       <Item ItemId=";1:label,Session Templates{093dd305-a7cc-d998-e489-ac60594b185e}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[AnchorTab]]></Val>
+          <Val><![CDATA[Anchor tab]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4351,7 +4351,7 @@
       </Item>
       <Item ItemId=";1:label,Session Templates{5d09b768-575c-d77d-6479-2130abbde22b}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[PanelState]]></Val>
+          <Val><![CDATA[Communication panel mode]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4567,13 +4567,13 @@
       </Item>
       <Item ItemId=";1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned0" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No]]></Val>
+          <Val><![CDATA[Yes]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes]]></Val>
+          <Val><![CDATA[No]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4849,19 +4849,19 @@
       </Item>
       <Item ItemId=";9:Description,msdyn_panestate100000000" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
+          <Val><![CDATA[The panel will be expanded]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";9:Description,msdyn_panestate100000001" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
+          <Val><![CDATA[The panel will be minimized]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";9:Description,msdyn_panestate100000002" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
+          <Val><![CDATA[The panel will be hidden]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

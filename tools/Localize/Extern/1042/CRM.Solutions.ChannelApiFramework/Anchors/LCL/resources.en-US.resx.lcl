@@ -26,20 +26,41 @@
       <Item ItemId=";15062:Description,ProductivityToolsAnchor" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Productivity Tools for Dynamics 365 apps provide capabilities that help users to perform day-to-day business operations in a faster, efficient, and process compliant manner and deliver value to customers ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dynamics 365 앱의 생산성 도구는 사용자가 보다 빠르고 효율적이며 프로세스에서 규정하는 방식으로 일상의 비즈니스 업무를 수행하고 고객에게 가치를 제공하도록 돕는 기능을 제공합니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.0004876Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21129_20191007" />
+        </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,ProductivityToolsAnchor" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[ProductivityTools]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[생산성 도구]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.0004876Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21129_20191007" />
+        </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dynamics 365]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.0004876Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21129_20191007" />
+        </Props>
       </Item>
     </Item>
   </Item>

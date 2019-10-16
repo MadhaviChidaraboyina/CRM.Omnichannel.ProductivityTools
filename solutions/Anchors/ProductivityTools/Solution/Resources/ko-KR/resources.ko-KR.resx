@@ -133,7 +133,7 @@
 </value>
   </metadata>
   <data name="15062:Description,ProductivityToolsAnchor" xml:space="preserve">
-    <value>Productivity Tools for Dynamics 365 apps provide capabilities that help users to perform day-to-day business operations in a faster, efficient, and process compliant manner and deliver value to customers </value>
+    <value>Dynamics 365 앱의 생산성 도구는 사용자가 보다 빠르고 효율적이며 프로세스에서 규정하는 방식으로 일상의 비즈니스 업무를 수행하고 고객에게 가치를 제공하도록 돕는 기능을 제공합니다.</value>
     <comment> 'ProductivityToolsAnchor' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
@@ -141,7 +141,7 @@
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ProductivityToolsAnchor" xml:space="preserve">
-    <value>ProductivityTools</value>
+    <value>생산성 도구</value>
     <comment> 'ProductivityToolsAnchor' : LocalizedName for Solution</comment>
   </data>
 </root>

@@ -133,7 +133,7 @@
 </value>
   </metadata>
   <data name="15062:Description,msdyn_smartassist" xml:space="preserve">
-    <value>This solution enables smart assist functionality for agents. </value>
+    <value>To rješenje omogućuje funkciju pametne pomoći za agente. </value>
     <comment> 'msdyn_smartassist' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
@@ -141,7 +141,7 @@
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,msdyn_smartassist" xml:space="preserve">
-    <value>Smart assist</value>
+    <value>Pametna pomoć</value>
     <comment> 'msdyn_smartassist' : LocalizedName for Solution</comment>
   </data>
 </root>

@@ -193,11 +193,11 @@
     <comment>'Macro Connector' : Description for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
   </data>
   <data name="1:Description,Macro Solution Configuration{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
-    <value>A form for this entity.</value>
+    <value>Obrazac za taj entitet.</value>
     <comment>'Macro Solution Configuration' : Description for systemform in Entity FormXml ID: '{4c0f7a89-7e67-4972-828e-1244f593a422}'</comment>
   </data>
   <data name="1:Description,Macro Solution Configuration{fe7078c7-dae0-e911-a81f-000d3af9c0c2}" xml:space="preserve">
-    <value>Active Macro Solution Configurations owned by me</value>
+    <value>Aktivne konfiguracije rješenja za makronaredbe u mojem vlasništvu</value>
     <comment>'Macro Solution Configuration' : Description for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
@@ -641,15 +641,15 @@
     <comment>'msdyn_macroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationCreatedBy" xml:space="preserve">
-    <value>Unique identifier of the user who created the record.</value>
+    <value>Jedinstveni identifikator korisnika koji je izradio zapis.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationCreatedOn" xml:space="preserve">
-    <value>Date and time when the record was created.</value>
+    <value>Datum i vrijeme izrade zapisa.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Unique identifier of the delegate user who created the record.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je stvorio zapis.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
@@ -657,19 +657,19 @@
     <comment> 'msdyn_macrosolutionconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationImportSequenceNumber" xml:space="preserve">
-    <value>Sequence number of the import that created this record.</value>
+    <value>Redni broj uvoza koji je stvorio taj zapis.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationModifiedBy" xml:space="preserve">
-    <value>Unique identifier of the user who modified the record.</value>
+    <value>Jedinstveni identifikator korisnika koji je izmijenio zapis.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationModifiedOn" xml:space="preserve">
-    <value>Date and time when the record was modified.</value>
+    <value>Datum i vrijeme izmjene zapisa.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Unique identifier of the delegate user who modified the record.</value>
+    <value>Jedinstveni identifikator korisnika delegata koji je izmijenio zapis.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
@@ -697,23 +697,23 @@
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlrelativepath' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfigurationId" xml:space="preserve">
-    <value>Unique identifier for entity instances</value>
+    <value>Jedinstveni identifikator za instance entiteta</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_macrosolutionconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode" xml:space="preserve">
-    <value>Status of the Macro Solution Configuration</value>
+    <value>Stanje konfiguracije rješenja za makronaredbe</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for OptionSet 'msdyn_macrosolutionconfiguration_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode" xml:space="preserve">
-    <value>Reason for the status of the Macro Solution Configuration</value>
+    <value>Razlog stanja konfiguracije rješenja za makronaredbe</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for OptionSet 'msdyn_macrosolutionconfiguration_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosversion" xml:space="preserve">
-    <value>Macro solution version</value>
+    <value>Verzija rješenja za makronaredbe</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_macrosversion' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_name" xml:space="preserve">
-    <value>The name of the custom entity.</value>
+    <value>Naziv prilagođenog entiteta.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_searchhint" xml:space="preserve">
@@ -729,39 +729,39 @@
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_uservoicetext' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Date and time that the record was migrated.</value>
+    <value>Datum i vrijeme migracije zapisa.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationOwnerId" xml:space="preserve">
-    <value>Owner Id</value>
+    <value>ID vlasnika</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
-    <value>Unique identifier for the business unit that owns the record</value>
+    <value>Jedinstveni identifikator za poslovnu jedinicu u čijem je vlasništvu zapis</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationOwningTeam" xml:space="preserve">
-    <value>Unique identifier for the team that owns the record.</value>
+    <value>Jedinstveni identifikator za tim u čijem je vlasništvu zapis.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationOwningUser" xml:space="preserve">
-    <value>Unique identifier for the user that owns the record.</value>
+    <value>Jedinstveni identifikator za korisnika u čijem je vlasništvu zapis.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationstatecode" xml:space="preserve">
-    <value>Status of the Macro Solution Configuration</value>
+    <value>Stanje konfiguracije rješenja za makronaredbe</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationstatuscode" xml:space="preserve">
-    <value>Reason for the status of the Macro Solution Configuration</value>
+    <value>Razlog stanja konfiguracije rješenja za makronaredbe</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>For internal use only.</value>
+    <value>Isključivo za internu upotrebu.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Time zone code that was in use when the record was created.</value>
+    <value>Šifra vremenske zone koja se upotrebljavala kada je zapis izrađen.</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinitionCreatedBy" xml:space="preserve">
@@ -1313,67 +1313,67 @@
     <comment>'msdyn_macroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationCreatedBy" xml:space="preserve">
-    <value>Created By</value>
+    <value>Autor</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationCreatedOn" xml:space="preserve">
-    <value>Created On</value>
+    <value>Datum izrade</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Created By (Delegate)</value>
+    <value>Autor (delegat)</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationImportSequenceNumber" xml:space="preserve">
-    <value>Import Sequence Number</value>
+    <value>Redni broj uvoza</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationModifiedBy" xml:space="preserve">
-    <value>Modified By</value>
+    <value>Autor izmjene</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationModifiedOn" xml:space="preserve">
-    <value>Modified On</value>
+    <value>Datum izmjene</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Modified By (Delegate)</value>
+    <value>Autor izmjene (delegat)</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
-    <value>Designer Blob URL</value>
+    <value>URL bloba dizajnera</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerfallbackurl' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentity" xml:space="preserve">
-    <value>Entity from which to read designer URL</value>
+    <value>Entitet iz kojeg će se očitati URL dizajnera</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentity' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityattrib" xml:space="preserve">
-    <value>Attribute from which to read designer URL</value>
+    <value>Atribut iz kojeg će se očitati URL dizajnera</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityattrib' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityid" xml:space="preserve">
-    <value>Record Id from which to read designer URL</value>
+    <value>ID zapisa iz kojeg će se očitati URL dizajnera</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityid' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityquery" xml:space="preserve">
-    <value>An oData query to retrieve record from which to read designer URL</value>
+    <value>Upit oData za dohvaćanje zapisa iz kojih će se očitati URL dizajnera</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityquery' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlrelativepath" xml:space="preserve">
-    <value>Relative path to designer blob within the designer URL</value>
+    <value>Relativni put do bloba dizajnera unutar URL-a dizajnera</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlrelativepath' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfigurationId" xml:space="preserve">
-    <value>Macro Solution Configuration</value>
+    <value>Konfiguracija rješenja za makronaredbe</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_macrosolutionconfigurationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode" xml:space="preserve">
-    <value>Status</value>
+    <value>Stanje</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for OptionSet 'msdyn_macrosolutionconfiguration_statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode" xml:space="preserve">
-    <value>Status Reason</value>
+    <value>Razlog stanja</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for OptionSet 'msdyn_macrosolutionconfiguration_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosversion" xml:space="preserve">
@@ -1381,55 +1381,55 @@
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_macrosversion' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_name" xml:space="preserve">
-    <value>Name</value>
+    <value>Naziv</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_searchhint" xml:space="preserve">
-    <value>Search Hint Text</value>
+    <value>Pretraži tekst podsjetnika</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_searchhint' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_uservoicelink" xml:space="preserve">
-    <value>User Voice Link</value>
+    <value>Veza mišljenja korisnika</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_uservoicelink' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_uservoicetext" xml:space="preserve">
-    <value>User Voice Text</value>
+    <value>Tekst mišljenja korisnika</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_uservoicetext' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Record Created On</value>
+    <value>Datum izrade zapisa</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationOwnerId" xml:space="preserve">
-    <value>Owner</value>
+    <value>Vlasnik</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
-    <value>Owning Business Unit</value>
+    <value>Poslovna jedinica vlasnik</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationOwningTeam" xml:space="preserve">
-    <value>Owning Team</value>
+    <value>Tim vlasnik</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationOwningUser" xml:space="preserve">
-    <value>Owning User</value>
+    <value>Korisnik vlasnik</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationstatecode" xml:space="preserve">
-    <value>Status</value>
+    <value>Stanje</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationstatuscode" xml:space="preserve">
-    <value>Status Reason</value>
+    <value>Razlog stanja</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Time Zone Rule Version Number</value>
+    <value>Broj verzije pravila vremenske zone</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC Conversion Time Zone Code</value>
+    <value>Šifra vremenske zone za pretvorbu u UTC</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_parameterdefinitionCreatedBy" xml:space="preserve">
@@ -1685,7 +1685,7 @@
     <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{10fd4277-739b-47a9-9b1f-5db4d467a93e}'</comment>
   </data>
   <data name="1:label,Macro Solution Configuration{21ea3c85-489b-4dcf-9ac6-b5bede827eb2}" xml:space="preserve">
-    <value>General</value>
+    <value>Općenito</value>
     <comment>'Macro Solution Configuration' : label for section in Entity FormXml ID: '{21ea3c85-489b-4dcf-9ac6-b5bede827eb2}'</comment>
   </data>
   <data name="1:label,Macro Solution Configuration{430e9a47-ba6c-9b31-911d-20de9a6d9da0}" xml:space="preserve">
@@ -1729,7 +1729,7 @@
     <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{d5997eca-5e6d-4b94-b8a2-ba31f6bdab73}'</comment>
   </data>
   <data name="1:label,Macro Solution Configuration{def751e7-13fb-4ae7-a5b9-12030a58e054}" xml:space="preserve">
-    <value>General</value>
+    <value>Općenito</value>
     <comment>'Macro Solution Configuration' : label for tab in Entity FormXml ID: '{def751e7-13fb-4ae7-a5b9-12030a58e054}'</comment>
   </data>
   <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype0" xml:space="preserve">
@@ -1805,19 +1805,19 @@
     <comment>'msdyn_macroconnector' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode0" xml:space="preserve">
-    <value>Active</value>
+    <value>Aktivan</value>
     <comment>'msdyn_macrosolutionconfiguration' : label for state '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode1" xml:space="preserve">
-    <value>Inactive</value>
+    <value>Neaktivan</value>
     <comment>'msdyn_macrosolutionconfiguration' : label for state '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode1" xml:space="preserve">
-    <value>Active</value>
+    <value>Aktivan</value>
     <comment>'msdyn_macrosolutionconfiguration' : label for status '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode2" xml:space="preserve">
-    <value>Inactive</value>
+    <value>Neaktivan</value>
     <comment>'msdyn_macrosolutionconfiguration' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode0" xml:space="preserve">
@@ -1889,7 +1889,7 @@
     <comment> 'msdyn_macroconnector' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
-    <value>Macro Solution Configurations</value>
+    <value>Konfiguracije rješenja za makronaredbe</value>
     <comment> 'msdyn_macrosolutionconfiguration' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
@@ -2025,35 +2025,35 @@
     <comment>'Macro Connector' : LocalizedName for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Solution Configuration{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}" xml:space="preserve">
-    <value>Macro Solution Configuration Associated View</value>
+    <value>Pridruženi prikaz konfiguracije rješenja za makronaredbe</value>
     <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Solution Configuration{2512f971-7ada-435b-a487-ce8bc79ef734}" xml:space="preserve">
-    <value>Active Macro Solution Configurations</value>
+    <value>Aktivne konfiguracije rješenja za makronaredbe</value>
     <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{2512f971-7ada-435b-a487-ce8bc79ef734}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Solution Configuration{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
-    <value>Information</value>
+    <value>Informacije</value>
     <comment>'Macro Solution Configuration' : LocalizedName for systemform in Entity FormXml ID: '{4c0f7a89-7e67-4972-828e-1244f593a422}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Solution Configuration{709f8c74-0e07-41f2-ab20-157f309ba509}" xml:space="preserve">
-    <value>Macro Solution Configuration Advanced Find View</value>
+    <value>Prikaz za napredno pretraživanje konfiguracije rješenja za makronaredbe</value>
     <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{709f8c74-0e07-41f2-ab20-157f309ba509}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Solution Configuration{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}" xml:space="preserve">
-    <value>Quick Find Active Macro Solution Configurations</value>
+    <value>Brzo pretraživanje konfiguracija rješenja za makronaredbe</value>
     <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Solution Configuration{b33bb17c-9d07-4514-b073-165721b935e9}" xml:space="preserve">
-    <value>Inactive Macro Solution Configurations</value>
+    <value>Neaktivne konfiguracije rješenja za makronaredbe</value>
     <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{b33bb17c-9d07-4514-b073-165721b935e9}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Solution Configuration{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}" xml:space="preserve">
-    <value>Macro Solution Configuration Lookup View</value>
+    <value>Prikaz za traženje konfiguracije rješenja za makronaredbe</value>
     <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Solution Configuration{fe7078c7-dae0-e911-a81f-000d3af9c0c2}" xml:space="preserve">
-    <value>My Macro Solution Configurations</value>
+    <value>Moje konfiguracije rješenja za makronaredbe</value>
     <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
   </data>
   <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
@@ -2073,7 +2073,7 @@
     <comment> 'msdyn_macroconnector' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
-    <value>Macro Solution Configuration</value>
+    <value>Konfiguracija rješenja za makronaredbe</value>
     <comment> 'msdyn_macrosolutionconfiguration' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
@@ -2185,7 +2185,7 @@
     <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Macro Solution ConfigurationInfo{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
-    <value>Common</value>
+    <value>Zajednički</value>
     <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
   <data name="1:Title,Macro Solution ConfigurationMarketing{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
@@ -2193,15 +2193,15 @@
     <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
   <data name="1:Title,Macro Solution ConfigurationProcessCenter{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
-    <value>Process Sessions</value>
+    <value>Sesije procesa</value>
     <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
   <data name="1:Title,Macro Solution ConfigurationSales{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
-    <value>Sales</value>
+    <value>Prodaja</value>
     <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
   <data name="1:Title,Macro Solution ConfigurationService{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
-    <value>Service</value>
+    <value>Usluga</value>
     <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Parameter definitionInfo{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">

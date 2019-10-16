@@ -1827,7 +1827,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_msdyn_isstale' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned" xml:space="preserve">
-    <value>고정</value>
+    <value>종료 가능</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationtemplate_msdyn_pinned' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode" xml:space="preserve">
@@ -1859,7 +1859,7 @@
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_PageType' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_Pinned" xml:space="preserve">
-    <value>고정</value>
+    <value>종료 가능</value>
     <comment>'msdyn_consoleapplicationtemplate' : displayname for Attribute 'msdyn_Pinned' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationtemplatemsdyn_TemplateParameters" xml:space="preserve">
@@ -2475,11 +2475,11 @@
     <comment>'msdyn_consoleapplicationtemplate' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned0" xml:space="preserve">
-    <value>아니요</value>
+    <value>예</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned1" xml:space="preserve">
-    <value>예</value>
+    <value>아니요</value>
     <comment>'msdyn_consoleapplicationtemplate' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode0" xml:space="preserve">
@@ -2687,7 +2687,7 @@
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{ff05f569-e51f-4c31-96b2-ae6d20c9364f}'</comment>
   </data>
   <data name="1:label,Session Templates{093dd305-a7cc-d998-e489-ac60594b185e}" xml:space="preserve">
-    <value>AnchorTab</value>
+    <value>기준 위치 탭</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{093dd305-a7cc-d998-e489-ac60594b185e}'</comment>
   </data>
   <data name="1:label,Session Templates{196dbc51-0ab0-1da7-555e-35cc732cbda3}" xml:space="preserve">
@@ -2707,7 +2707,7 @@
     <comment>'Session Templates' : label for section in Entity FormXml ID: '{559158ad-2749-a49e-7128-466d84e59a24}'</comment>
   </data>
   <data name="1:label,Session Templates{5d09b768-575c-d77d-6479-2130abbde22b}" xml:space="preserve">
-    <value>PanelState</value>
+    <value>통신 패널 모드</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{5d09b768-575c-d77d-6479-2130abbde22b}'</comment>
   </data>
   <data name="1:label,Session Templates{67e28937-3ab9-4b74-e49b-54660966e25c}" xml:space="preserve">
@@ -2949,6 +2949,10 @@
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
     <value>CIProvider</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
+    <value>Channel Provider</value>
+    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>채널 공급자</value>
@@ -3355,14 +3359,17 @@
     <comment>'msdyn_panestate' : Description for OptionSet</comment>
   </data>
   <data name="9:Description,msdyn_panestate100000000" xml:space="preserve">
-    <value />
-    <comment>'msdyn_panestate' : Description for OptionSet Value '100000000'</comment></data>
+    <value>패널이 확장됩니다.</value>
+    <comment>'msdyn_panestate' : Description for OptionSet Value '100000000'</comment>
+  </data>
   <data name="9:Description,msdyn_panestate100000001" xml:space="preserve">
-    <value />
-    <comment>'msdyn_panestate' : Description for OptionSet Value '100000001'</comment></data>
+    <value>패널이 축소됩니다.</value>
+    <comment>'msdyn_panestate' : Description for OptionSet Value '100000001'</comment>
+  </data>
   <data name="9:Description,msdyn_panestate100000002" xml:space="preserve">
-    <value />
-    <comment>'msdyn_panestate' : Description for OptionSet Value '100000002'</comment></data>
+    <value>패널을 숨깁니다.</value>
+    <comment>'msdyn_panestate' : Description for OptionSet Value '100000002'</comment>
+  </data>
   <data name="9:Description,msdyn_presencestatus" xml:space="preserve">
     <value>에이전트의 상태 설정</value>
     <comment>'msdyn_presencestatus' : Description for OptionSet</comment>

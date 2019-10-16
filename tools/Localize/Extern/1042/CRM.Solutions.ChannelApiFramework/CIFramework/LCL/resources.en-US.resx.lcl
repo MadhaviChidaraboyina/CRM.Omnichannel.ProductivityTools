@@ -7301,15 +7301,18 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationtemplatemsdyn_Pinned" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Pinned]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[고정]]></Val>
+          <Val><![CDATA[Can close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[종료 가능]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Pinned]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0001877Z" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.0004025Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationtemplatemsdyn_TemplateParameters" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -7366,15 +7369,18 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Pinned]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[고정]]></Val>
+          <Val><![CDATA[Can close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[종료 가능]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Pinned]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0001877Z" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.0004019Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9342,15 +9348,18 @@
       </Item>
       <Item ItemId=";1:label,Session Templates{093dd305-a7cc-d998-e489-ac60594b185e}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[AnchorTab]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[AnchorTab]]></Val>
+          <Val><![CDATA[Anchor tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[기준 위치 탭]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[AnchorTab]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0001381Z" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.0003916Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Session Templates{196dbc51-0ab0-1da7-555e-35cc732cbda3}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9407,15 +9416,18 @@
       </Item>
       <Item ItemId=";1:label,Session Templates{5d09b768-575c-d77d-6479-2130abbde22b}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[PanelState]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[PanelState]]></Val>
+          <Val><![CDATA[Communication panel mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[통신 패널 모드]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[PanelState]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0001381Z" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.0003916Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Session Templates{67e28937-3ab9-4b74-e49b-54660966e25c}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9875,28 +9887,34 @@
       </Item>
       <Item ItemId=";1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned0" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[아니요]]></Val>
+          <Val><![CDATA[Yes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[예]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[No]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0001302Z" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.000389Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_msdyn_pinned1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[예]]></Val>
+          <Val><![CDATA[No]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[아니요]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Yes]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0001302Z" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.000389Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_consoleapplicationtemplatemsdyn_consoleapplicationtemplate_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -10486,41 +10504,50 @@
       </Item>
       <Item ItemId=";9:Description,msdyn_panestate100000000" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[The panel will be expanded]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[패널이 확장됩니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0001204Z" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.0003875Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
       <Item ItemId=";9:Description,msdyn_panestate100000001" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[The panel will be minimized]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[패널이 축소됩니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0001204Z" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.0003875Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
       <Item ItemId=";9:Description,msdyn_panestate100000002" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[The panel will be hidden]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[패널을 숨깁니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0001204Z" />
+        <Modified By="v-licha2" DateTime="2019-10-10T10:16:38.0003875Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
       <Item ItemId=";9:Description,msdyn_presencestatus" ItemType="0;.resx" PsrId="211" Leaf="true">
