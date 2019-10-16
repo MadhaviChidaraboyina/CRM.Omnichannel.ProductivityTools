@@ -19,11 +19,6 @@
     <CIFPatchImportConfigFile>..\PatchGenerator\ImportConfig.xml</CIFPatchImportConfigFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Dynamics.Solution.Common">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-      <HintPath>$(PKG_XRMAPP_SOLUTIONCOMMON)\$(SCPATH)\Microsoft.Dynamics.Solution.Common.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Activities" />
