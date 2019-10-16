@@ -232,9 +232,9 @@ namespace Microsoft.CIFramework.Internal {
 			return Promise.resolve(title);
 		}
 
-		updateTabContextInCurrentSession(input: any) {
+		updateTabContextInCurrentSession(input: any, sessionId?: string) {
 			let cifExt = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
-			cifExt.setSessionTemplateParams(input);
+			cifExt.setSessionTemplateParams(input, sessionId);
 		}
 	}
 

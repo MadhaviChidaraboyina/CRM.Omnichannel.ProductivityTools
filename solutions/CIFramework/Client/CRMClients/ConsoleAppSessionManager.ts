@@ -164,7 +164,7 @@ namespace Microsoft.CIFramework.Internal {
 									var inputObject: any = {};
 									let tabId = Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId;
 									inputObject[tabId] = { "pageType": sessionInput.pageInput.pageType, "entityName": (sessionInput.pageInput as any).entityName, "entityId": (sessionInput.pageInput as any).entityId };
-									this.updateTabContextInCurrentSession(inputObject);
+									this.updateTabContextInCurrentSession(inputObject, sessionId);
 									window.setTimeout(provider.setFocusedSession.bind(provider), 0, sessionId, true);
 									sessionInput.anchorTabTemplate.resolveTitle(templateParams).then(
 										function (result: string) {
@@ -327,8 +327,8 @@ namespace Microsoft.CIFramework.Internal {
 					additionalData["applicationType"] = input.pageInput.pageType;
 					logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName, additionalData);
 					var inputObject: any = {};
-					inputObject[tabId] = {"pageType": input.pageInput.pageType, "entityName": input.pageInput.entityName, "entityId": input.pageInput.entityId};
-					this.updateTabContextInCurrentSession(inputObject);
+					inputObject[tabId] = { "pageType": input.pageInput.pageType, "entityName": input.pageInput.entityName, "entityId": input.pageInput.entityId };
+					this.updateTabContextInCurrentSession(inputObject, sessionId);
 					resolve(tabId);
 				}.bind(this), function (errorMessage: string) {
 					reject(errorMessage);
