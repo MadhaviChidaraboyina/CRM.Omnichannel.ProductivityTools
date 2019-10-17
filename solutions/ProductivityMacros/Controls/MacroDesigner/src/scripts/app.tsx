@@ -22,9 +22,11 @@ function getMonacoLocale(editorLocaleName) {
 
 let LOCALE = Utils.Utils.getUrlParam("locale", "en");
 document.getElementsByTagName("html")[0].setAttribute("lang", LOCALE);
-
+let designerSupportedLocales = [
+    "bg", "ca", "cs", "da", "de", "el", "es", "et", "eu", "fi", "fr", "gl", "hi", "hr", "hu", "id", "it", "ja", "ja-ploc-jp", "kk", "ko", "lt", "lv", "ms", "nl", "no", "pl", "pt-br", "pt-pt", "qps-ploc", "ro", "ru", "sk", "sl", "sr-cyrl-rs", "sr-latn-rs", "sv", "th", "tr", "uk", "vi", "zh-hans", "zh-hant"
+];
 function getLocalizedResources() {
-    if (LOCALE === "en" || !LOCALE) {
+    if (LOCALE === "en" || !LOCALE || (designerSupportedLocales.indexOf(LOCALE) < 0)) {
         return "LogicApps/core/scripts/resources.logicapps.min"
     } else {
         return "LogicApps/core/scripts/loc_gen/" + LOCALE + "/resources.logicapps.min"
