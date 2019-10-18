@@ -83,49 +83,58 @@ export class Macros {
             };
             templ.msdyn_msdyn_macroactiontemplate_msdyn_actioninput.forEach(async function (inputType) {
                 let prom = new Promise<boolean>(async (res, rej) => {
-                    let paramData = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_actioninputparameter", "?$filter=msdyn_actioninputparameterid eq '" + inputType.msdyn_actioninputparameterid + "'&$expand=msdyn_msdyn_paramdef_msdyn_actioninputparam($select=msdyn_defaultvalue,msdyn_description,msdyn_displayname,msdyn_name,msdyn_parametertype,msdyn_jsonobjectstructure)&$select=msdyn_name");
-                    paramData.entities.forEach(function (inputParamType) {
-                        inputParamType.msdyn_msdyn_paramdef_msdyn_actioninputparam.forEach(function (input) {
-                            let param: Parameter = {
-                                name: input.msdyn_name,
-                                description: input.msdyn_description,
-                                title: input.msdyn_displayname,
-                                type: input.msdyn_parametertype,
-                                visibility: inputType.msdyn_visibility
-                            }
-                            if (input.msdyn_jsonobjectstructure) {
-                                param.compoundObjectDefinitionJSON = JSON.stringify(_localizeObject(JSON.parse(input.msdyn_jsonobjectstructure)));
-                            }
-                            if (isNullOrUndefined(action.inputs)) {
-                                action.inputs = [];
-                            }
-                            action.inputs.push(param);
-
-                            res(true);
+                    try {
+                        let paramData = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_actioninputparameter", "?$filter=msdyn_actioninputparameterid eq '" + inputType.msdyn_actioninputparameterid + "'&$expand=msdyn_msdyn_paramdef_msdyn_actioninputparam($select=msdyn_defaultvalue,msdyn_description,msdyn_displayname,msdyn_name,msdyn_parametertype,msdyn_jsonobjectstructure)&$select=msdyn_name");
+                        paramData.entities.forEach(function (inputParamType) {
+                            inputParamType.msdyn_msdyn_paramdef_msdyn_actioninputparam.forEach(function (input) {
+                                let param: Parameter = {
+                                    name: input.msdyn_name,
+                                    description: input.msdyn_description,
+                                    title: input.msdyn_displayname,
+                                    type: input.msdyn_parametertype,
+                                    visibility: inputType.msdyn_visibility
+                                }
+                                if (input.msdyn_jsonobjectstructure) {
+                                    param.compoundObjectDefinitionJSON = JSON.stringify(_localizeObject(JSON.parse(input.msdyn_jsonobjectstructure)));
+                                }
+                                if (isNullOrUndefined(action.inputs)) {
+                                    action.inputs = [];
+                                }
+                                action.inputs.push(param);
+                            });
                         });
-                    });
+                        res(true);
+                    }
+                    catch (error) {
+                        rej(error);
+                    }
                 });
                 promises.push(prom);
             });
 
             templ.msdyn_msdyn_macroactiontemplate_msdyn_actionout.forEach(async function (outputType) {
                 let prom = new Promise<boolean>(async (res, rej) => {
-                    let paramData = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_actionoutputparameter", "?$filter=msdyn_actionoutputparameterid eq '" + outputType.msdyn_actionoutputparameterid + "'&$expand=msdyn_msdyn_paramdef_msdyn_actionoutputparam($select=msdyn_defaultvalue,msdyn_description,msdyn_displayname,msdyn_name,msdyn_parametertype)&$select=msdyn_name");
-                    paramData.entities.forEach(function (outputParamType) {
-                        outputParamType.msdyn_msdyn_paramdef_msdyn_actionoutputparam.forEach(function (output) {
-                            let param: Parameter = {
-                                name: output.msdyn_name,
-                                description: output.msdyn_description,
-                                title: output.msdyn_displayname,
-                                type: output.msdyn_parametertype
-                            }
-                            if (isNullOrUndefined(action.outputs)) {
-                                action.outputs = [];
-                            }
-                            action.outputs.push(param);
-                            res(true);
+                    try {
+                        let paramData = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_actionoutputparameter", "?$filter=msdyn_actionoutputparameterid eq '" + outputType.msdyn_actionoutputparameterid + "'&$expand=msdyn_msdyn_paramdef_msdyn_actionoutputparam($select=msdyn_defaultvalue,msdyn_description,msdyn_displayname,msdyn_name,msdyn_parametertype)&$select=msdyn_name");
+                        paramData.entities.forEach(function (outputParamType) {
+                            outputParamType.msdyn_msdyn_paramdef_msdyn_actionoutputparam.forEach(function (output) {
+                                let param: Parameter = {
+                                    name: output.msdyn_name,
+                                    description: output.msdyn_description,
+                                    title: output.msdyn_displayname,
+                                    type: output.msdyn_parametertype
+                                }
+                                if (isNullOrUndefined(action.outputs)) {
+                                    action.outputs = [];
+                                }
+                                action.outputs.push(param);
+                            });
                         });
-                    });
+                        res(true);
+                    }
+                    catch (error) {
+                        rej(error);
+                    }
 
                 });
                 promises.push(prom);
