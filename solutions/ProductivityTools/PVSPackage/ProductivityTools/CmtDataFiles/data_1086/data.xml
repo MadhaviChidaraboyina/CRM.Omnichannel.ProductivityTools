@@ -651,7 +651,7 @@
         <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
         <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
         <field name="msdyn_parameterdefinitionid" value="d61ae14b-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="rentetan" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="Nama Logik Entiti" />
@@ -667,7 +667,7 @@
         <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
         <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
         <field name="msdyn_parameterdefinitionid" value="ddf27260-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="rentetan" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="Id Borang Entiti" />
@@ -683,7 +683,7 @@
         <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
         <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
         <field name="msdyn_parameterdefinitionid" value="f729e573-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="rentetan" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="Id rekod entiti" />
@@ -699,7 +699,7 @@
         <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
         <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
         <field name="msdyn_parameterdefinitionid" value="6e033082-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="rentetan" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="Id Pandangan" />
@@ -715,7 +715,7 @@
         <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
         <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
         <field name="msdyn_parameterdefinitionid" value="474f7494-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="rentetan" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="Jenis Pandangan" />
@@ -731,7 +731,7 @@
         <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
         <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
         <field name="msdyn_parameterdefinitionid" value="fed739aa-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="rentetan" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="Id papan pemuka" />
@@ -747,7 +747,7 @@
         <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
         <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
         <field name="msdyn_parameterdefinitionid" value="32e1acb9-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="rentetan" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="Cari rentetan" />
@@ -763,7 +763,7 @@
         <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
         <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
         <field name="msdyn_parameterdefinitionid" value="ae9b14cb-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="rentetan" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="Rentetan JSON pasangan nilai utama" />

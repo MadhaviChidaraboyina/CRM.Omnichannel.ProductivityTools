@@ -9,7 +9,6 @@
 	<entity name="msdyn_parameterdefinition">
 		<field name="msdyn_description" localizableAttribute="value" loc="Yes" />
 		<field name="msdyn_displayname" localizableAttribute="value" loc="Yes" />
-		<field name="msdyn_parametertype" localizableAttribute="value" loc="Yes" />
 	</entity>
 	<entity name="msdyn_macrosolutionconfiguration">
 		<field name="msdyn_searchhint" localizableAttribute="value" loc="Yes" />
