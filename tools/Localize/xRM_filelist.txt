@@ -16,3 +16,5 @@ solutions\SmartAssist\Client\Controls\SmartassistControl\strings\SmartassistCont
 solutions\SmartAssist\Solution\Resources\en-US\resources.en-US.resx,SmartAssist
 solutions\CIFrameworkAnalytics\Solution\Resources\en-us\resources.en-US.resx,CIFrameworkAnalytics
 solutions\Anchors\ProductivityTools\Solution\Resources\en-US\resources.en-US.resx,Anchors
+!solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.xml,ProductivityTools
+solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.json,ProductivityTools
