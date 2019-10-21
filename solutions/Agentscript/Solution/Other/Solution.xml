@@ -149,6 +149,7 @@
       <RootComponent type="61" schemaName="msdyn_view_script_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_AgentScriptStepFormScript.js" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_AgentscriptFormScript.js" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_agentscripticon" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.CallscriptControl.CallscriptControl" behavior="0" />
       <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
       <RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />
