@@ -53,7 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Framework\DefaultTestCollection.cs" />
-    <Compile Include="Framework\IntegrationTest.cs" />
     <Compile Include="Framework\SolutionFixture.cs" />
   </ItemGroup>
   <ItemGroup>

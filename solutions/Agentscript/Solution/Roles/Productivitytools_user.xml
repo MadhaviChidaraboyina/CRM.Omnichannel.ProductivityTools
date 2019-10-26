@@ -11,5 +11,6 @@
     <RolePrivilege name="prvReadmsdyn_macroconnector" level="Global" />
     <RolePrivilege name="prvReadmsdyn_parameterdefinition" level="Global" />
     <RolePrivilege name="prvReadmsdyn_designeroptions" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_macroactiontemplate" level="Global" />
   </RolePrivileges>
 </Role>
