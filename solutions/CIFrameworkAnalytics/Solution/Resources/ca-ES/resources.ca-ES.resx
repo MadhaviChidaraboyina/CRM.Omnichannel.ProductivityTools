@@ -344,10 +344,6 @@
     <value>Dades addicionals relacionades amb la conversa</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_AdditionalData' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_BackendConversationId" xml:space="preserve">
-    <value>Identificador de conversa del servidor de fons</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_BackendConversationId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_Channel" xml:space="preserve">
     <value>Canal de conversa</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_Channel' on Entity</comment>
@@ -356,20 +352,16 @@
     <value>Identificador únic del contacte</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ContactId' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_Context" xml:space="preserve">
-    <value>Context de conversa obtingut del canal</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_Context' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdataId" xml:space="preserve">
     <value>Identificador únic de les instàncies de l'entitat</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_conversationdataId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdata_statecode" xml:space="preserve">
-    <value>Estat de ConversationData</value>
+    <value>Estat de les dades de la conversa</value>
     <comment>'msdyn_conversationdata' : Description for OptionSet 'msdyn_conversationdata_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdata_statuscode" xml:space="preserve">
-    <value>Raó per a l'estat de ConversationData</value>
+    <value>Raó per a l'estat de les dades de la conversa</value>
     <comment>'msdyn_conversationdata' : Description for OptionSet 'msdyn_conversationdata_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_ConversationId" xml:space="preserve">
@@ -383,10 +375,6 @@
   <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute1" xml:space="preserve">
     <value>Atribut personalitzat 1</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atribut personalitzat 10</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atribut personalitzat 2</value>
@@ -404,45 +392,25 @@
     <value>Atribut personalitzat 5</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atribut personalitzat 6</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerCity" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerCity' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atribut personalitzat 7</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerCountry" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerCountry' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atribut personalitzat 8</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerState" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerState' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atribut personalitzat 9</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalAccountId" xml:space="preserve">
-    <value>Identificador de compte del sistema extern</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalAccountId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalContactId" xml:space="preserve">
-    <value>Identificador de contacte del sistema extern</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalContactId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalConversationId" xml:space="preserve">
-    <value>Identificador de conversa del sistema extern</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalConversationId' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerZip" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerZip' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Identificador de correlació del sistema extern</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalProviderId" xml:space="preserve">
-    <value>Identificador únic del proveïdor extern</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalProviderId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_InitialQueueName" xml:space="preserve">
-    <value />
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_InitialQueueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_name" xml:space="preserve">
     <value>Nom de l'entitat personalitzada.</value>
@@ -552,10 +520,6 @@
     <value>Atribut personalitzat 1</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atribut personalitzat 10</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atribut personalitzat 2</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -572,30 +536,6 @@
     <value>Atribut personalitzat 5</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atribut personalitzat 6</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atribut personalitzat 7</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atribut personalitzat 8</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atribut personalitzat 9</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_EntityName" xml:space="preserve">
-    <value>Nom de l'entitat creada per l'acció de l'agent explícit</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EntityName' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_EntityRecordId" xml:space="preserve">
-    <value>Identificador únic de l'entitat creada per l'acció de l'agent explícit</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EntityRecordId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_EventTimestamp" xml:space="preserve">
     <value>Data i hora en què s'ha produït la incidència</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EventTimestamp' on Entity</comment>
@@ -603,14 +543,6 @@
   <data name="1:Description,msdyn_KPIEventDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Identificador de correlació del sistema extern</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" xml:space="preserve">
-    <value>Identificador de l'article de la Knowledge Base suggerit per l'agent</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_KnowledgeArticleId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" xml:space="preserve">
-    <value>Nom de l'article de la Knowledge Base suggerit per l'agent</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_KnowledgeArticleName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_KPIEventDataId" xml:space="preserve">
     <value>Identificador únic de les instàncies de l'entitat</value>
@@ -640,37 +572,17 @@
     <value>Camp de nom obligatori</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_Name' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_NewPresence" xml:space="preserve">
-    <value>Estat de presència d'un agent nou</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_NewPresence' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_NotificationResponseAction" xml:space="preserve">
     <value>Valor de l'acció de resposta de notificació d'agent</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_NotificationResponseAction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_OldPresence" xml:space="preserve">
-    <value>Estat de presència d'un agent antic</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_OldPresence' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_ParticipantId" xml:space="preserve">
     <value>Identificador de l'agent per al qual s'ha emès la incidència</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_SessionId" xml:space="preserve">
-    <value>Identificador de la sessió a la qual pertany aquesta incidència</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabAction" xml:space="preserve">
-    <value>Acció de pestanya que ha dut a terme l'agent</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabAction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabId" xml:space="preserve">
-    <value>Identificador de la pestanya en què ha actuat l'agent</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabName" xml:space="preserve">
-    <value>Nom de la pestanya en què ha actuat l'agent</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabName' on Entity</comment>
+  <data name="1:Description,msdyn_KPIEventDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDataOverriddenCreatedOn" xml:space="preserve">
     <value>Data i hora de migració del registre.</value>
@@ -852,10 +764,6 @@
     <value>Atribut personalitzat 1</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atribut personalitzat 10</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atribut personalitzat 2</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -872,22 +780,6 @@
     <value>Atribut personalitzat 5</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atribut personalitzat 6</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atribut personalitzat 7</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atribut personalitzat 8</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atribut personalitzat 9</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Identificador de correlació del sistema extern</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
@@ -895,6 +787,10 @@
   <data name="1:Description,msdyn_SessionDatamsdyn_Name" xml:space="preserve">
     <value>Camp de nom obligatori</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_Name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_SessionDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_QueueId" xml:space="preserve">
     <value>Identificador de la cua a la qual pertany aquesta sessió</value>
@@ -929,16 +825,12 @@
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_SessionDataId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_sessiondata_statecode" xml:space="preserve">
-    <value>Estat de SessionData</value>
+    <value>Estat de les dades de la sessió</value>
     <comment>'msdyn_SessionData' : Description for OptionSet 'msdyn_sessiondata_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_sessiondata_statuscode" xml:space="preserve">
-    <value>Raó per a l'estat de SessionData</value>
+    <value>Raó per a l'estat de les dades de la sessió</value>
     <comment>'msdyn_SessionData' : Description for OptionSet 'msdyn_sessiondata_statuscode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_SessionId" xml:space="preserve">
-    <value>Identificador per a la sessió</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" xml:space="preserve">
     <value>Data i hora en què la cua es va assignar a la sessió</value>
@@ -1028,10 +920,6 @@
     <value>Atribut personalitzat 1</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atribut personalitzat 10</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atribut personalitzat 2</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1047,30 +935,6 @@
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute5" xml:space="preserve">
     <value>Atribut personalitzat 5</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atribut personalitzat 6</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atribut personalitzat 7</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atribut personalitzat 8</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atribut personalitzat 9</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" xml:space="preserve">
-    <value>Identificador extern del participant de la sessió</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ExternalParticipantId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" xml:space="preserve">
-    <value>Nom extern del participant de la sessió</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ExternalParticipantName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_Name" xml:space="preserve">
     <value>Camp de nom obligatori</value>
@@ -1100,9 +964,9 @@
     <value>Tipus del participant de la sessió</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ParticipantType' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_SessionId" xml:space="preserve">
-    <value>Identificador de la sessió</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
+  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" xml:space="preserve">
     <value>Identificador únic de les instàncies de l'entitat</value>
@@ -1212,10 +1076,6 @@
     <value>Dades addicionals</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_AdditionalData' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_BackendConversationId" xml:space="preserve">
-    <value>Identificador de conversa del servidor de fons</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_BackendConversationId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_Channel" xml:space="preserve">
     <value>Canal</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_Channel' on Entity</comment>
@@ -1223,10 +1083,6 @@
   <data name="1:displayname,msdyn_conversationdatamsdyn_ContactId" xml:space="preserve">
     <value>Identificador del contacte</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ContactId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_Context" xml:space="preserve">
-    <value>Context del canal</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_Context' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_conversationdataId" xml:space="preserve">
     <value>Identificador de dades de conversa</value>
@@ -1252,10 +1108,6 @@
     <value>Atribut personalitzat 1</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atribut personalitzat 10</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atribut personalitzat 2</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1272,45 +1124,25 @@
     <value>Atribut personalitzat 5</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atribut personalitzat 6</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerCity" xml:space="preserve">
+    <value>Ciutat del client</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerCity' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atribut personalitzat 7</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerCountry" xml:space="preserve">
+    <value>País del client</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerCountry' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atribut personalitzat 8</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerState" xml:space="preserve">
+    <value>Estat del client</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerState' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atribut personalitzat 9</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalAccountId" xml:space="preserve">
-    <value>Identificador del compte extern</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalAccountId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalContactId" xml:space="preserve">
-    <value>Identificador del contacte extern</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalContactId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalConversationId" xml:space="preserve">
-    <value>Identificador de la conversa externa</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalConversationId' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerZip" xml:space="preserve">
+    <value>Codi postal del client</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerZip' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID de correlació externa</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalProviderId" xml:space="preserve">
-    <value>Identificador del proveïdor extern</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalProviderId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_InitialQueueName" xml:space="preserve">
-    <value>Nom de la cua inicial a la qual s'ha assignat l'element de treball d'entrada</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_InitialQueueName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_name" xml:space="preserve">
     <value>Nom</value>
@@ -1416,10 +1248,6 @@
     <value>Atribut personalitzat 1</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atribut personalitzat 10</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atribut personalitzat 2</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1436,30 +1264,6 @@
     <value>Atribut personalitzat 5</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atribut personalitzat 6</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atribut personalitzat 7</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atribut personalitzat 8</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atribut personalitzat 9</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_EntityName" xml:space="preserve">
-    <value>Nom d'entitat</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EntityName' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_EntityRecordId" xml:space="preserve">
-    <value>ID de registre de l'entitat</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EntityRecordId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_EventTimestamp" xml:space="preserve">
     <value>Data i hora de la incidència</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EventTimestamp' on Entity</comment>
@@ -1467,14 +1271,6 @@
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID de correlació externa</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" xml:space="preserve">
-    <value>Identificador de l'article de la Knowledge Base</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_KnowledgeArticleId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" xml:space="preserve">
-    <value>Nom de l'article de la Knowledge Base</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_KnowledgeArticleName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_KPIEventDataId" xml:space="preserve">
     <value>Identificador de dades d'incidència de KPI</value>
@@ -1504,37 +1300,17 @@
     <value>Nom</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_NewPresence" xml:space="preserve">
-    <value>Presència nova</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_NewPresence' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_NotificationResponseAction" xml:space="preserve">
     <value>Acció de resposta de notificació</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_NotificationResponseAction' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_OldPresence" xml:space="preserve">
-    <value>Presència antiga</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_OldPresence' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_ParticipantId" xml:space="preserve">
     <value>Identificador de participant</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_SessionId" xml:space="preserve">
-    <value>ID de sessió</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabAction" xml:space="preserve">
-    <value>Acció de la pestanya</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabAction' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabId" xml:space="preserve">
-    <value>Identificador de la pestanya</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabName" xml:space="preserve">
-    <value>Nom de la pestanya</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabName' on Entity</comment>
+  <data name="1:displayname,msdyn_KPIEventDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>Identificador de sessió del proveïdor</value>
+    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDataOverriddenCreatedOn" xml:space="preserve">
     <value>Registre creat el</value>
@@ -1708,10 +1484,6 @@
     <value>Atribut personalitzat 1</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atribut personalitzat 10</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atribut personalitzat 2</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1728,22 +1500,6 @@
     <value>Atribut personalitzat 5</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atribut personalitzat 6</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atribut personalitzat 7</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atribut personalitzat 8</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atribut personalitzat 9</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID de correlació externa</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
@@ -1751,6 +1507,10 @@
   <data name="1:displayname,msdyn_SessionDatamsdyn_Name" xml:space="preserve">
     <value>Nom</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_SessionDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>Identificador de sessió del proveïdor</value>
+    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_QueueId" xml:space="preserve">
     <value>ID de cua</value>
@@ -1761,23 +1521,23 @@
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_QueueName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionAdditionalData" xml:space="preserve">
-    <value>Dades addicionals de la sessió</value>
+    <value>Dades addicionals</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionAdditionalData' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionAgentAssignedTimestamp" xml:space="preserve">
-    <value>Data i hora d'assignació de l'agent de la sessió</value>
+    <value>Data i hora d'assignació de l'agent</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionAgentAssignedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionChannel" xml:space="preserve">
-    <value>Canal de sessió</value>
+    <value>Canal</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionChannel' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionCreatedTimestamp" xml:space="preserve">
-    <value>Data i hora de creació de la sessió</value>
+    <value>Data i hora de creació</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionCreatedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionCreationReason" xml:space="preserve">
-    <value>Raó per a la creació de la sessió</value>
+    <value>Raó per a la creació</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionCreationReason' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionDataId" xml:space="preserve">
@@ -1792,12 +1552,8 @@
     <value>Raó per a l'estat</value>
     <comment>'msdyn_SessionData' : displayname for OptionSet 'msdyn_sessiondata_statuscode' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_SessionId" xml:space="preserve">
-    <value>ID de sessió</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" xml:space="preserve">
-    <value>Data i hora d'assignació de cua de la sessió</value>
+    <value>Data i hora d'assignació de cua</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionQueueAssignedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_UCISessionId" xml:space="preserve">
@@ -1880,10 +1636,6 @@
     <value>Atribut personalitzat 1</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atribut personalitzat 10</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atribut personalitzat 2</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1900,40 +1652,16 @@
     <value>Atribut personalitzat 5</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atribut personalitzat 6</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atribut personalitzat 7</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atribut personalitzat 8</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atribut personalitzat 9</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" xml:space="preserve">
-    <value>Identificador de participant extern</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ExternalParticipantId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" xml:space="preserve">
-    <value>Nom de participant extern</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ExternalParticipantName' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_Name" xml:space="preserve">
     <value>Nom</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAddedTimestamp" xml:space="preserve">
-    <value>Data i hora en què es va afegir el participant</value>
+    <value>Data i hora d'addició</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantAddedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAssignReason" xml:space="preserve">
-    <value>Raó per a l'assignació del participant</value>
+    <value>Raó per a l'assignació</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantAssignReason' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantId" xml:space="preserve">
@@ -1941,20 +1669,20 @@
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantMode" xml:space="preserve">
-    <value>Mode del participant</value>
+    <value>Mode</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantMode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantName" xml:space="preserve">
-    <value>Nom del participant</value>
+    <value>Nom</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantType" xml:space="preserve">
-    <value>Tipus de participant</value>
+    <value>Tipus</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantType' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_SessionId" xml:space="preserve">
-    <value>ID de sessió</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
+  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>Identificador de sessió del proveïdor</value>
+    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" xml:space="preserve">
     <value>Identificador de dades de participants de la sessió</value>

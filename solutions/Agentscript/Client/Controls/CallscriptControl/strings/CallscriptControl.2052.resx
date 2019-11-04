@@ -189,6 +189,10 @@
     <value>代理脚本未与当前会话链接</value>
     <comment>Error message when no agent scripts are linked with session template</comment>
   </data>
+  <data name="ScriptActionStepLabel" xml:space="preserve">
+    <value>加载脚本</value>
+    <comment>Label for script action step</comment>
+  </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
     <value>选择脚本</value>
     <comment>Label for empty option in script select combobox</comment>

@@ -340,10 +340,6 @@
     <value>Channel API Integration Framework</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
@@ -440,6 +436,10 @@
     <value />
     <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_msdyn_clicktoact' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics" xml:space="preserve">
+    <value />
+    <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_msdyn_enableanalytics' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_statecode" xml:space="preserve">
     <value>Status of the CIProvider</value>
     <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_statecode' on Entity</comment>
@@ -451,6 +451,10 @@
   <data name="1:Description,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
     <value>Enable Outbound Communication</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ClickToAct' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
+    <value>Enable CIF Analytics for the current provider</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_EnableAnalytics' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_Label" xml:space="preserve">
     <value />
@@ -1402,6 +1406,10 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value>Enable Outbound Communication</value>
     <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_msdyn_clicktoact' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics" xml:space="preserve">
+    <value>Enable Analytics</value>
+    <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_msdyn_enableanalytics' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_statecode" xml:space="preserve">
     <value>Status</value>
     <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_statecode' on Entity</comment>
@@ -1413,6 +1421,10 @@ No - value must be supplied when creating a template that uses this parameter</v
   <data name="1:displayname,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
     <value>Enable Outbound Communication</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ClickToAct' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
+    <value>Enable Analytics</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_EnableAnalytics' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_Label" xml:space="preserve">
     <value>Label</value>
@@ -2383,6 +2395,14 @@ No - value must be supplied when creating a template that uses this parameter</v
     <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact1" xml:space="preserve">
+    <value>Yes</value>
+    <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics0" xml:space="preserve">
+    <value>No</value>
+    <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics1" xml:space="preserve">
     <value>Yes</value>
     <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
   </data>

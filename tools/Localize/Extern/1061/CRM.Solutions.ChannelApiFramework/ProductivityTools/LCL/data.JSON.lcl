@@ -1194,38 +1194,80 @@
       <Item ItemId=";msdyn_macroconnector@msdyn_categorylabel_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eelmääratletud automatiseerimise toimingud]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.000102Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
       </Item>
       <Item ItemId=";msdyn_macroconnector@msdyn_description_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Automate commonly used client-side tasks]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sageli kasutatavate kliendipoolsete ülesannete automatiseerimine]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0001016Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
       </Item>
       <Item ItemId=";msdyn_macroconnector@msdyn_displayname_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Productivity Automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tootlikkuse automatiseerimine]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0001016Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
       </Item>
       <Item ItemId=";msdyn_macroconnector@msdyn_title_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Productivity Automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tootlikkuse automatiseerimine]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0001016Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
       </Item>
       <Item ItemId=";msdyn_macrosolutionconfiguration@msdyn_searchhint_1b65ad62-4fe3-e911-a81a-000d3a706f52" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Search macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Otsi makrot]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0001016Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
       </Item>
       <Item ItemId=";msdyn_macrosolutionconfiguration@msdyn_uservoicetext_1b65ad62-4fe3-e911-a81a-000d3a706f52" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Let us know what you would like us to build next]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Andke meile teada, mida uut võiksime järgmisena luua]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0001016Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_32e1acb9-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">

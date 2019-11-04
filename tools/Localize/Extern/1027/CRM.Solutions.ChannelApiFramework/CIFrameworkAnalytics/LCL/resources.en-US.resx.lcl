@@ -907,19 +907,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 10]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006082Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -968,84 +955,6 @@
         </Str>
         <Disp Icon="Str" />
         <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006082Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 6]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006082Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 7]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006082Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 8]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006082Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 9]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006056Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_EntityName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name of entity that was created by explicit agent action]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nom de l'entitat creada per l'acció de l'agent explícit]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006056Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_EntityRecordId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique indentifier of entity that was created by explicit agent action]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador únic de l'entitat creada per l'acció de l'agent explícit]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006056Z" />
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
@@ -1128,50 +1037,11 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Id of the Knowledge Article suggested by the agent]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de l'article de la Knowledge Base suggerit per l'agent]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006056Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name of the Knowledge Article suggested by the agent]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nom de l'article de la Knowledge Base suggerit per l'agent]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006027Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_Name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Required name field]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Camp de nom obligatori]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006027Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_NewPresence" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[New agent presence status]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Estat de presència d'un agent nou]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1193,19 +1063,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_OldPresence" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Old agent presence status]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Estat de presència d'un agent antic]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006027Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_ParticipantId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Identifier of the agent for whom the event was fired]]></Val>
@@ -1219,56 +1076,17 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Identifier of the session to which this event belongs]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de la sessió a la qual pertany aquesta incidència]]></Val>
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006027Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000692Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_TabAction" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Tab action done by the agent]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Acció de pestanya que ha dut a terme l'agent]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006027Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_TabId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Identifier of the tab which was acted upon by the agent]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de la pestanya en què ha actuat l'agent]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006027Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_TabName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name of the tab which was acted upon by the agent]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nom de la pestanya en què ha actuat l'agent]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0006027Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_kpieventdata_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1882,19 +1700,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 10]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005897Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -1947,58 +1752,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 6]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005869Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 7]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005869Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 8]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005869Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 9]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005869Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_ExternalCorrelationId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[External System Correlation Id]]></Val>
@@ -2023,6 +1776,19 @@
         <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005869Z" />
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000688Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_QueueId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2129,19 +1895,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Identifier for the session]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador per a la sessió]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005872Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Timestamp at which the queue was assigned to the session]]></Val>
@@ -2183,28 +1936,34 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_sessiondata_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Status of the SessionData]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Estat de SessionData]]></Val>
+          <Val><![CDATA[Status of the Session Data]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Estat de les dades de la sessió]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Status of the SessionData]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005847Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000688Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_sessiondata_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Reason for the status of the SessionData]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Raó per a l'estat de SessionData]]></Val>
+          <Val><![CDATA[Reason for the status of the Session Data]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Raó per a l'estat de les dades de la sessió]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Reason for the status of the SessionData]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005847Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000688Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatastatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2454,19 +2213,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 10]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005787Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -2511,84 +2257,6 @@
           <Val><![CDATA[Custom Attribute 5]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Atribut personalitzat 5]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005787Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 6]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005787Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 7]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005787Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 8]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005787Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 9]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005787Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External identifier of the session participant]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador extern del participant de la sessió]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005787Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External name of the session participant]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nom extern del participant de la sessió]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2688,17 +2356,17 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Identifier of the session]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de la sessió]]></Val>
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005748Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.000068Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2987,19 +2655,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_BackendConversationId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Backend Conversation Identifier]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de conversa del servidor de fons]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005659Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_Channel" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Conversation channel]]></Val>
@@ -3018,19 +2673,6 @@
           <Val><![CDATA[Contact unique identifier]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Identificador únic del contacte]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005659Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_Context" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Conversation context gathered from the channel]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Context de conversa obtingut del canal]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3070,19 +2712,6 @@
           <Val><![CDATA[Custom Attribute 1]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Atribut personalitzat 1]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005659Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 10]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3143,128 +2772,11 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 6]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005659Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 7]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005659Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 8]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005634Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 9]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005634Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ExternalAccountId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Account identifier from the external system]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de compte del sistema extern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005634Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ExternalContactId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Contact identifier from the external system]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de contacte del sistema extern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005634Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ExternalConversationId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Conversation Identifier from the external system]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de conversa del sistema extern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005634Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ExternalCorrelationId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[External System Correlation Id]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Identificador de correlació del sistema extern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005634Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ExternalProviderId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier of the external provider]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador únic del proveïdor extern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005634Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_InitialQueueName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3353,28 +2865,86 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_conversationdata_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Status of the ConversationData]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Estat de ConversationData]]></Val>
+          <Val><![CDATA[Status of the Conversation Data]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Estat de les dades de la conversa]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Status of the ConversationData]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005603Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.000068Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_conversationdata_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Reason for the status of the ConversationData]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Raó per a l'estat de ConversationData]]></Val>
+          <Val><![CDATA[Reason for the status of the Conversation Data]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Raó per a l'estat de les dades de la conversa]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Reason for the status of the ConversationData]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.000068Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_customerCity" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005603Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.000068Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_customerCountry" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.000068Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_customerState" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.000068Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_customerZip" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000674Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -4495,19 +4065,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 10]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005363Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -4556,84 +4113,6 @@
         </Str>
         <Disp Icon="Str" />
         <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005363Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 6]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005363Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 7]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005359Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 8]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005359Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 9]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005359Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_EntityName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Entity Name]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nom d'entitat]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005359Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_EntityRecordId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Entity Record Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[ID de registre de l'entitat]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005359Z" />
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
@@ -4716,50 +4195,11 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Knowledge Article Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de l'article de la Knowledge Base]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005318Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Knowledge Article Name]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nom de l'article de la Knowledge Base]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005318Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_Name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Nom]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005318Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_NewPresence" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[New Presence]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Presència nova]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -4781,19 +4221,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_OldPresence" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Old Presence]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Presència antiga]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005318Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_ParticipantId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Participant Id]]></Val>
@@ -4807,56 +4234,17 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Id]]></Val>
+          <Val><![CDATA[Provider Session Id]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[ID de sessió]]></Val>
+            <Val><![CDATA[Identificador de sessió del proveïdor]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005318Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000678Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_TabAction" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Tab Action]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Acció de la pestanya]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005281Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_TabId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Tab Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de la pestanya]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005281Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_TabName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Tab Name]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nom de la pestanya]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005281Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_kpieventdata_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -5444,19 +4832,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 10]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.000516Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -5509,58 +4884,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 6]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.000516Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 7]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.000516Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 8]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.000516Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 9]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.000516Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_ExternalCorrelationId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[External Correlation Id]]></Val>
@@ -5585,6 +4908,19 @@
         <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005135Z" />
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Provider Session Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Identificador de sessió del proveïdor]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.000067Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_QueueId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -5615,67 +4951,82 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionAdditionalData" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Additional Data]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Dades addicionals de la sessió]]></Val>
+          <Val><![CDATA[Additional Data]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Dades addicionals]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Session Additional Data]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005135Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.000067Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionAgentAssignedTimestamp" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Agent Assigned Timestamp]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Data i hora d'assignació de l'agent de la sessió]]></Val>
+          <Val><![CDATA[Agent Assigned Timestamp]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Data i hora d'assignació de l'agent]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Session Agent Assigned Timestamp]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005135Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.000067Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionChannel" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Channel]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Canal de sessió]]></Val>
+          <Val><![CDATA[Channel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Canal]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Session Channel]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005135Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionCreatedTimestamp" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Created Timestamp]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Data i hora de creació de la sessió]]></Val>
+          <Val><![CDATA[Created Timestamp]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Data i hora de creació]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Session Created Timestamp]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005135Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionCreationReason" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Creation Reason]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Raó per a la creació de la sessió]]></Val>
+          <Val><![CDATA[Creation Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Raó per a la creació]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Session Creation Reason]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005135Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionDataId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -5691,30 +5042,20 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Session Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[ID de sessió]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005135Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Queue Assigned Timestamp]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Data i hora d'assignació de cua de la sessió]]></Val>
+          <Val><![CDATA[Queue Assigned Timestamp]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Data i hora d'assignació de cua]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Session Queue Assigned Timestamp]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005104Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_UCISessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -6003,19 +5344,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 10]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005017Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -6068,84 +5396,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 6]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005017Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 7]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005015Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 8]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005015Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 9]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005015Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Participant Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de participant extern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005015Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Participant Name]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nom de participant extern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005015Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_Name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name]]></Val>
@@ -6161,28 +5411,34 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAddedTimestamp" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Participant Added Timestamp]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Data i hora en què es va afegir el participant]]></Val>
+          <Val><![CDATA[Added Timestamp]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Data i hora d'addició]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Participant Added Timestamp]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005015Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAssignReason" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Participant Assign Reason]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Raó per a l'assignació del participant]]></Val>
+          <Val><![CDATA[Assign Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Raó per a l'assignació]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Participant Assign Reason]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005015Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -6200,54 +5456,63 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantMode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Participant Mode]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Mode del participant]]></Val>
+          <Val><![CDATA[Mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Mode]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Participant Mode]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0005015Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantName" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Participant Name]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nom del participant]]></Val>
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Nom]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Participant Name]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004991Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantType" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Participant Type]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Tipus de participant]]></Val>
+          <Val><![CDATA[Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Tipus]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Participant Type]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004991Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Id]]></Val>
+          <Val><![CDATA[Provider Session Id]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[ID de sessió]]></Val>
+            <Val><![CDATA[Identificador de sessió del proveïdor]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004991Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -6523,19 +5788,6 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_BackendConversationId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Backend Conversation Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de conversa del servidor de fons]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004939Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_Channel" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Channel]]></Val>
@@ -6554,19 +5806,6 @@
           <Val><![CDATA[Contact Id]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Identificador del contacte]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004939Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_Context" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Channel Context]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Context del canal]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6606,19 +5845,6 @@
           <Val><![CDATA[Custom Attribute 1]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Atribut personalitzat 1]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004917Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 10]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6679,128 +5905,11 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 6]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004917Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 7]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004917Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 8]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004887Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribut personalitzat 9]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004887Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ExternalAccountId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Account Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador del compte extern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004887Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ExternalContactId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Contact Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador del contacte extern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004887Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ExternalConversationId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Conversation Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador de la conversa externa]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004887Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
       <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ExternalCorrelationId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[External Correlation Id]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[ID de correlació externa]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004887Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ExternalProviderId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Provider Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Identificador del proveïdor extern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004887Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_InitialQueueName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Initial Queue Name to which the incoming work item was assigned]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nom de la cua inicial a la qual s'ha assignat l'element de treball d'entrada]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6911,6 +6020,58 @@
         <Modified By="v-licha2" DateTime="2019-10-09T11:10:27.0004861Z" />
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_customerCity" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer City]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ciutat del client]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_customerCountry" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer Country]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[País del client]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_customerState" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer State]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Estat del client]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000646Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_customerZip" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer Zip]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Codi postal del client]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:50.0000639Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">

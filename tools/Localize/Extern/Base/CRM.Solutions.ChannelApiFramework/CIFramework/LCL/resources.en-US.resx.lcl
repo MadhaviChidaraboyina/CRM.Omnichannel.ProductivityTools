@@ -551,6 +551,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_EnableAnalytics" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable CIF Analytics for the current provider]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_Label" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[]]></Val>
@@ -588,6 +594,12 @@
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[]]></Val>
         </Str>
@@ -2705,6 +2717,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_EnableAnalytics" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable Analytics]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_Label" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Label]]></Val>
@@ -2744,6 +2762,12 @@
       <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Enable Outbound Communication]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable Analytics]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4422,6 +4446,18 @@
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Yes]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Yes]]></Val>
         </Str>

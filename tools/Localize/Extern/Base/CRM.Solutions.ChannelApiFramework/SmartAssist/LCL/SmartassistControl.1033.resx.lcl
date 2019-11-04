@@ -21,6 +21,15 @@
           <Cmt Name="Dev"><![CDATA[Header value for smartassist control]]></Cmt>
         </Cmts>
       </Item>
+      <Item ItemId=";EmptyMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No suggestions available]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Empty message]]></Cmt>
+        </Cmts>
+      </Item>
       <Item ItemId=";FailureMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Something went wrong. Please try again]]></Val>
@@ -32,7 +41,7 @@
       </Item>
       <Item ItemId=";SuccessMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Action applied successfully!]]></Val>
+          <Val><![CDATA[Done!]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>

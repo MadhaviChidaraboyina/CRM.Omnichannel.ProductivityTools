@@ -189,6 +189,10 @@
     <value>З поточним сеансом не зв’язано жодного сценарію агента</value>
     <comment>Error message when no agent scripts are linked with session template</comment>
   </data>
+  <data name="ScriptActionStepLabel" xml:space="preserve">
+    <value>Завантажити сценарій</value>
+    <comment>Label for script action step</comment>
+  </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
     <value>Вибрати сценарій</value>
     <comment>Label for empty option in script select combobox</comment>

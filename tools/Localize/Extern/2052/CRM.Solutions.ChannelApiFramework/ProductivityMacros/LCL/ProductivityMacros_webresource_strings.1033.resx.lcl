@@ -37,6 +37,54 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to read macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[无法读取宏定义]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0007277Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the macro definition to be edited could not be read]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to read action templates]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[无法读取操作模板]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0007277Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when templates entity read fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to find designer configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[找不到设计器配置]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0007277Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when config entity read fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
       <Item ItemId=";DESIGNER_CONNECTORDISPLAYNAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unified Interface automation]]></Val>
@@ -51,6 +99,86 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_CDS_WRITE_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to save macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[无法保存宏定义]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0007277Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when write to CDS fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_INIT_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Designer control initialization failed]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[设计器控件初始化失败]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0007277Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when designer control initialization fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_JSON_GENERATION_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to create macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[无法创建宏定义]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0007277Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when designer control cannot generate a valid JSON]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_LOAD_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to load macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[无法加载宏定义]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0007277Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the control cannot load the macro definition]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_RENDER_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to render macro designer control]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[无法呈现宏设计器控件]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.000727Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the control cannot be rendered]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
       <Item ItemId=";DESIGNER_MACROCONNECTOR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

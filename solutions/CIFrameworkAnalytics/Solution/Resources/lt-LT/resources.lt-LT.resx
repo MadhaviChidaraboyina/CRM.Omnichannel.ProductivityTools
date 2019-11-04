@@ -344,10 +344,6 @@
     <value>Papildomi su pokalbiu susiję duomenys</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_AdditionalData' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_BackendConversationId" xml:space="preserve">
-    <value>Vidinio pokalbio identifikatorius</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_BackendConversationId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_Channel" xml:space="preserve">
     <value>Pokalbio kanalas</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_Channel' on Entity</comment>
@@ -355,10 +351,6 @@
   <data name="1:Description,msdyn_conversationdatamsdyn_ContactId" xml:space="preserve">
     <value>Kontakto unikalusis identifikatorius</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ContactId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_Context" xml:space="preserve">
-    <value>Iš kanalo surinktas pokalbio kontekstas</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_Context' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdataId" xml:space="preserve">
     <value>Objekto egzempliorių unikalusis identifikatorius</value>
@@ -384,10 +376,6 @@
     <value>1 pasirinktinis atributas</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>10 pasirinktinis atributas</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>2 pasirinktinis atributas</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -404,45 +392,25 @@
     <value>5 pasirinktinis atributas</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>6 pasirinktinis atributas</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerCity" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerCity' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>7 pasirinktinis atributas</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerCountry" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerCountry' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>8 pasirinktinis atributas</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerState" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerState' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>9 pasirinktinis atributas</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalAccountId" xml:space="preserve">
-    <value>Kliento identifikatorius iš išorinės sistemos</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalAccountId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalContactId" xml:space="preserve">
-    <value>Kontakto identifikatorius iš išorinės sistemos</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalContactId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalConversationId" xml:space="preserve">
-    <value>Pokalbio identifikatorius iš išorinės sistemos</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalConversationId' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerZip" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerZip' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Išorinės sistemos sąsajos ID</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalProviderId" xml:space="preserve">
-    <value>Išorinio teikėjo unikalusis identifikatorius</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalProviderId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_InitialQueueName" xml:space="preserve">
-    <value />
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_InitialQueueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_name" xml:space="preserve">
     <value>Pasirinktinio objekto pavadinimas.</value>
@@ -552,10 +520,6 @@
     <value>1 pasirinktinis atributas</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>10 pasirinktinis atributas</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>2 pasirinktinis atributas</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -572,30 +536,6 @@
     <value>5 pasirinktinis atributas</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>6 pasirinktinis atributas</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>7 pasirinktinis atributas</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>8 pasirinktinis atributas</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>9 pasirinktinis atributas</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_EntityName" xml:space="preserve">
-    <value>Objekto, sukurto pagal aiškų agento veiksmą, pavadinimas</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EntityName' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_EntityRecordId" xml:space="preserve">
-    <value>Objekto, sukurto pagal aiškų agento veiksmą, unikalusis identifikatorius</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EntityRecordId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_EventTimestamp" xml:space="preserve">
     <value>Laiko, kai įvyko įvykis, žyma</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EventTimestamp' on Entity</comment>
@@ -603,14 +543,6 @@
   <data name="1:Description,msdyn_KPIEventDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Išorinės sistemos sąsajos ID</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" xml:space="preserve">
-    <value>Agento pasiūlyto informacinio straipsnio ID</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_KnowledgeArticleId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" xml:space="preserve">
-    <value>Agento pasiūlyto informacinio straipsnio pavadinimas</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_KnowledgeArticleName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_KPIEventDataId" xml:space="preserve">
     <value>Objekto egzempliorių unikalusis identifikatorius</value>
@@ -640,37 +572,17 @@
     <value>Būtinas pavadinimo laukas</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_Name' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_NewPresence" xml:space="preserve">
-    <value>Naujo agento buvimo būsena</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_NewPresence' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_NotificationResponseAction" xml:space="preserve">
     <value>Agento pranešimo atsakymo veiksmo reikšmė</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_NotificationResponseAction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_OldPresence" xml:space="preserve">
-    <value>Seno agento buvimo būsena</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_OldPresence' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_ParticipantId" xml:space="preserve">
     <value>Agento, kuriam buvo paleistas įvykis, identifikatorius</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_SessionId" xml:space="preserve">
-    <value>Seanso, kuriam priklauso šis įvykis, identifikatorius</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabAction" xml:space="preserve">
-    <value>Agento atliktas skirtuko veiksmas</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabAction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabId" xml:space="preserve">
-    <value>Skirtuko, kurį naudodamas agentas atliko veiksmą, identifikatorius</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabName" xml:space="preserve">
-    <value>Skirtuko, kurį naudodamas agentas atliko veiksmą, pavadinimas</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabName' on Entity</comment>
+  <data name="1:Description,msdyn_KPIEventDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDataOverriddenCreatedOn" xml:space="preserve">
     <value>Data ir laikas, kada įrašas buvo perkeltas.</value>
@@ -852,10 +764,6 @@
     <value>1 pasirinktinis atributas</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>10 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>2 pasirinktinis atributas</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -872,22 +780,6 @@
     <value>5 pasirinktinis atributas</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>6 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>7 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>8 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>9 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Išorinės sistemos sąsajos ID</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
@@ -895,6 +787,10 @@
   <data name="1:Description,msdyn_SessionDatamsdyn_Name" xml:space="preserve">
     <value>Būtinas pavadinimo laukas</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_Name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_SessionDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_QueueId" xml:space="preserve">
     <value>Eilės, kuriam priklauso šis seansas, identifikatorius</value>
@@ -935,10 +831,6 @@
   <data name="1:Description,msdyn_SessionDatamsdyn_sessiondata_statuscode" xml:space="preserve">
     <value>Seanso duomenų būsenos tipas</value>
     <comment>'msdyn_SessionData' : Description for OptionSet 'msdyn_sessiondata_statuscode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_SessionId" xml:space="preserve">
-    <value>Identifikatorius, skirtas seansui</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" xml:space="preserve">
     <value>Laiko, kai eilė buvo priskirta seansui, žyma</value>
@@ -1028,10 +920,6 @@
     <value>1 pasirinktinis atributas</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>10 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>2 pasirinktinis atributas</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1047,30 +935,6 @@
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute5" xml:space="preserve">
     <value>5 pasirinktinis atributas</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>6 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>7 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>8 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>9 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" xml:space="preserve">
-    <value>Seanso dalyvio išorinis identifikatorius</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ExternalParticipantId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" xml:space="preserve">
-    <value>Seanso dalyvio išorinis vardas</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ExternalParticipantName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_Name" xml:space="preserve">
     <value>Būtinas pavadinimo laukas</value>
@@ -1100,9 +964,9 @@
     <value>Seanso dalyvio tipas</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ParticipantType' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_SessionId" xml:space="preserve">
-    <value>Seanso identifikatorius</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
+  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" xml:space="preserve">
     <value>Objekto egzempliorių unikalusis identifikatorius</value>
@@ -1212,10 +1076,6 @@
     <value>Papildomi duomenys</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_AdditionalData' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_BackendConversationId" xml:space="preserve">
-    <value>Vidinio pokalbio ID</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_BackendConversationId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_Channel" xml:space="preserve">
     <value>Kanalas</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_Channel' on Entity</comment>
@@ -1223,10 +1083,6 @@
   <data name="1:displayname,msdyn_conversationdatamsdyn_ContactId" xml:space="preserve">
     <value>Kontakto ID</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ContactId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_Context" xml:space="preserve">
-    <value>Kanalo kontekstas</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_Context' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_conversationdataId" xml:space="preserve">
     <value>Pokalbio duomenų ID</value>
@@ -1252,10 +1108,6 @@
     <value>1 pasirinktinis atributas</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>10 pasirinktinis atributas</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>2 pasirinktinis atributas</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1272,45 +1124,25 @@
     <value>5 pasirinktinis atributas</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>6 pasirinktinis atributas</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerCity" xml:space="preserve">
+    <value>Kliento miestas</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerCity' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>7 pasirinktinis atributas</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerCountry" xml:space="preserve">
+    <value>Kliento šalis</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerCountry' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>8 pasirinktinis atributas</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerState" xml:space="preserve">
+    <value>Kliento valstija</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerState' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>9 pasirinktinis atributas</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalAccountId" xml:space="preserve">
-    <value>Išorinio kliento ID</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalAccountId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalContactId" xml:space="preserve">
-    <value>Išorinio kontakto ID</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalContactId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalConversationId" xml:space="preserve">
-    <value>Išorinio pokalbio ID</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalConversationId' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerZip" xml:space="preserve">
+    <value>Kliento pašto indeksas</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerZip' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Išorinės sąsajos ID</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalProviderId" xml:space="preserve">
-    <value>Išorinio teikėjo ID</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalProviderId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_InitialQueueName" xml:space="preserve">
-    <value>Pradinis eilės pavadinimas, kuriam buvo priskirtas gaunamas darbo elementas</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_InitialQueueName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_name" xml:space="preserve">
     <value>Pavadinimas / vardas ir pavardė</value>
@@ -1416,10 +1248,6 @@
     <value>1 pasirinktinis atributas</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>10 pasirinktinis atributas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>2 pasirinktinis atributas</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1436,30 +1264,6 @@
     <value>5 pasirinktinis atributas</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>6 pasirinktinis atributas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>7 pasirinktinis atributas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>8 pasirinktinis atributas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>9 pasirinktinis atributas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_EntityName" xml:space="preserve">
-    <value>Objekto pavadinimas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EntityName' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_EntityRecordId" xml:space="preserve">
-    <value>Objekto įrašo ID</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EntityRecordId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_EventTimestamp" xml:space="preserve">
     <value>Įvykio laiko žyma</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EventTimestamp' on Entity</comment>
@@ -1467,14 +1271,6 @@
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Išorinės sąsajos ID</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" xml:space="preserve">
-    <value>Informacinio straipsnio ID</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_KnowledgeArticleId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" xml:space="preserve">
-    <value>Informacinio straipsnio pavadinimas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_KnowledgeArticleName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_KPIEventDataId" xml:space="preserve">
     <value>KPI įvykio duomenų ID</value>
@@ -1504,37 +1300,17 @@
     <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_NewPresence" xml:space="preserve">
-    <value>Naujas buvimas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_NewPresence' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_NotificationResponseAction" xml:space="preserve">
     <value>Pranešimo atsakymo veiksmas</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_NotificationResponseAction' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_OldPresence" xml:space="preserve">
-    <value>Ankstesnis buvimas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_OldPresence' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_ParticipantId" xml:space="preserve">
     <value>Dalyvio ID</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_SessionId" xml:space="preserve">
-    <value>Seanso ID</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabAction" xml:space="preserve">
-    <value>Skirtuko veiksmas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabAction' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabId" xml:space="preserve">
-    <value>Skirtuko ID</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabName" xml:space="preserve">
-    <value>Skirtuko pavadinimas</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabName' on Entity</comment>
+  <data name="1:displayname,msdyn_KPIEventDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>Teikėjo seanso ID</value>
+    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDataOverriddenCreatedOn" xml:space="preserve">
     <value>Įrašo sukūrimo data</value>
@@ -1708,10 +1484,6 @@
     <value>1 pasirinktinis atributas</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>10 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>2 pasirinktinis atributas</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1728,22 +1500,6 @@
     <value>5 pasirinktinis atributas</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>6 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>7 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>8 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>9 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Išorinės sąsajos ID</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
@@ -1751,6 +1507,10 @@
   <data name="1:displayname,msdyn_SessionDatamsdyn_Name" xml:space="preserve">
     <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_SessionDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>Teikėjo seanso ID</value>
+    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_QueueId" xml:space="preserve">
     <value>Eilės ID</value>
@@ -1761,23 +1521,23 @@
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_QueueName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionAdditionalData" xml:space="preserve">
-    <value>Papildomi seanso duomenys</value>
+    <value>Papildomi duomenys</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionAdditionalData' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionAgentAssignedTimestamp" xml:space="preserve">
-    <value>Laiko, kai agentas buvo priskirtas seansui, žyma</value>
+    <value>Laiko, kai agentas buvo priskirtas, žyma</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionAgentAssignedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionChannel" xml:space="preserve">
-    <value>Seanso kanalas</value>
+    <value>Kanalas</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionChannel' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionCreatedTimestamp" xml:space="preserve">
-    <value>Laiko, kai buvo sukurtas seansas, žyma</value>
+    <value>Sukurta laiko žyma</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionCreatedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionCreationReason" xml:space="preserve">
-    <value>Priežastis, kodėl seansas buvo sukurtas</value>
+    <value>Priežastis, kodėl buvo sukurta</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionCreationReason' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionDataId" xml:space="preserve">
@@ -1792,12 +1552,8 @@
     <value>Būsenos tipas</value>
     <comment>'msdyn_SessionData' : displayname for OptionSet 'msdyn_sessiondata_statuscode' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_SessionId" xml:space="preserve">
-    <value>Seanso ID</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" xml:space="preserve">
-    <value>Laiko, kai eilė buvo priskirta seansui, žyma</value>
+    <value>Laiko, kai eilė buvo priskirta, žyma</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionQueueAssignedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_UCISessionId" xml:space="preserve">
@@ -1880,10 +1636,6 @@
     <value>1 pasirinktinis atributas</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>10 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>2 pasirinktinis atributas</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1900,40 +1652,16 @@
     <value>5 pasirinktinis atributas</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>6 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>7 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>8 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>9 pasirinktinis atributas</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" xml:space="preserve">
-    <value>Išorinio dalyvio ID</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ExternalParticipantId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" xml:space="preserve">
-    <value>Išorinio dalyvio vardas</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ExternalParticipantName' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_Name" xml:space="preserve">
     <value>Pavadinimas / vardas ir pavardė</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAddedTimestamp" xml:space="preserve">
-    <value>Laiko, kai buvo įtrauktas dalyvis, žyma</value>
+    <value>Įtraukta laiko žyma</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantAddedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAssignReason" xml:space="preserve">
-    <value>Dalyvio priskyrimo priežastis</value>
+    <value>Priskyrimo priežastis</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantAssignReason' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantId" xml:space="preserve">
@@ -1941,20 +1669,20 @@
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantMode" xml:space="preserve">
-    <value>Dalyvio režimas</value>
+    <value>Režimas</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantMode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantName" xml:space="preserve">
-    <value>Dalyvio vardas</value>
+    <value>Pavadinimas</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantType" xml:space="preserve">
-    <value>Dalyvio tipas</value>
+    <value>Tipas</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantType' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_SessionId" xml:space="preserve">
-    <value>Seanso ID</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
+  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>Teikėjo seanso ID</value>
+    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" xml:space="preserve">
     <value>Seanso dalyvio duomenų ID</value>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
-    <value>Unable to find designer configuration</value>
+    <value>Não é possível localizar a configuração do designer</value>
     <comment>Error message when config entity read fails</comment>
   </data>
   <data name="DESIGNER_ACTION" xml:space="preserve">
@@ -222,31 +222,31 @@
     <comment>Description for 'value' field of custom attribute</comment>
   </data>
   <data name="DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" xml:space="preserve">
-    <value>Unable to read macro definition</value>
+    <value>Não é possível ler a definição da macro</value>
     <comment>Error message when the macro definition to be edited could not be read</comment>
   </data>
   <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
-    <value>Unable to read action templates</value>
+    <value>Não é possível ler os modelos de ação</value>
     <comment>Error message when templates entity read fails</comment>
   </data>
   <data name="DESIGNER_CONTROL_CDS_WRITE_ERROR" xml:space="preserve">
-    <value>Unable to save macro definition</value>
+    <value>Não é possível salvar a definição da macro</value>
     <comment>Error message when write to CDS fails</comment>
   </data>
   <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
-    <value>Designer control initialization failed</value>
+    <value>Falha na inicialização do controle de designer</value>
     <comment>Error message when designer control initialization fails</comment>
   </data>
   <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">
-    <value>Unable to create macro definition</value>
+    <value>Não é possível criar a definição da macro</value>
     <comment>Error message when designer control cannot generate a valid JSON</comment>
   </data>
   <data name="DESIGNER_CONTROL_LOAD_FAILURE" xml:space="preserve">
-    <value>Unable to load macro definition</value>
+    <value>Não é possível carregar a definição da macro</value>
     <comment>Error message when the control cannot load the macro definition</comment>
   </data>
   <data name="DESIGNER_CONTROL_RENDER_FAILURE" xml:space="preserve">
-    <value>Unable to render macro designer control</value>
+    <value>Não é possível processar o controle de designer de macro</value>
     <comment>Error message when the control cannot be rendered</comment>
   </data>
 </root>

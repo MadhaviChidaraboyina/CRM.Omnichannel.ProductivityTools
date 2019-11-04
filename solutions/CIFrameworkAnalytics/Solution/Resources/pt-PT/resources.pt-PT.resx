@@ -344,10 +344,6 @@
     <value>Dados adicionais relacionados com a conversação</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_AdditionalData' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_BackendConversationId" xml:space="preserve">
-    <value>Identificador de Conversação de Back-end</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_BackendConversationId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_Channel" xml:space="preserve">
     <value>Canal de conversação</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_Channel' on Entity</comment>
@@ -356,20 +352,16 @@
     <value>Identificador exclusivo do contacto</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ContactId' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_Context" xml:space="preserve">
-    <value>Contexto da conversação recolhido no canal</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_Context' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdataId" xml:space="preserve">
     <value>Identificador exclusivo de instâncias de entidade</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_conversationdataId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdata_statecode" xml:space="preserve">
-    <value>Estado de ConversationData</value>
+    <value>Estado dos Dados da Conversação</value>
     <comment>'msdyn_conversationdata' : Description for OptionSet 'msdyn_conversationdata_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdata_statuscode" xml:space="preserve">
-    <value>Razão do estado de ConversationData</value>
+    <value>Razão do estado dos Dados da Conversação</value>
     <comment>'msdyn_conversationdata' : Description for OptionSet 'msdyn_conversationdata_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_ConversationId" xml:space="preserve">
@@ -383,10 +375,6 @@
   <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute1" xml:space="preserve">
     <value>Atributo Personalizado 1</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atributo Personalizado 10</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atributo Personalizado 2</value>
@@ -404,45 +392,25 @@
     <value>Atributo Personalizado 5</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atributo Personalizado 6</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerCity" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerCity' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atributo Personalizado 7</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerCountry" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerCountry' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atributo Personalizado 8</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerState" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerState' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atributo Personalizado 9</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalAccountId" xml:space="preserve">
-    <value>Identificador de conta do sistema externo</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalAccountId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalContactId" xml:space="preserve">
-    <value>Identificador de contacto do sistema externo</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalContactId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalConversationId" xml:space="preserve">
-    <value>Identificador de conversação do sistema externo</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalConversationId' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerZip" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerZip' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID de Correlação de Sistema Externo</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalProviderId" xml:space="preserve">
-    <value>Identificador exclusivo do fornecedor externo</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalProviderId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_InitialQueueName" xml:space="preserve">
-    <value />
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_InitialQueueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_name" xml:space="preserve">
     <value>O nome da entidade personalizada.</value>
@@ -552,10 +520,6 @@
     <value>Atributo Personalizado 1</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atributo Personalizado 10</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atributo Personalizado 2</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -572,30 +536,6 @@
     <value>Atributo Personalizado 5</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atributo Personalizado 6</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atributo Personalizado 7</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atributo Personalizado 8</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atributo Personalizado 9</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_EntityName" xml:space="preserve">
-    <value>Nome da entidade criada por ação explícita do agente</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EntityName' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_EntityRecordId" xml:space="preserve">
-    <value>Identificador exclusivo da entidade criada por ação explícita do agente</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EntityRecordId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_EventTimestamp" xml:space="preserve">
     <value>Carimbo de data/hora em que o evento ocorreu</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EventTimestamp' on Entity</comment>
@@ -603,14 +543,6 @@
   <data name="1:Description,msdyn_KPIEventDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID de Correlação de Sistema Externo</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" xml:space="preserve">
-    <value>ID do Artigo da Base de Dados de Conhecimento sugerido pelo agente</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_KnowledgeArticleId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" xml:space="preserve">
-    <value>Nome do Artigo da Base de Dados de Conhecimento sugerido pelo agente</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_KnowledgeArticleName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_KPIEventDataId" xml:space="preserve">
     <value>Identificador exclusivo de instâncias de entidade</value>
@@ -640,37 +572,17 @@
     <value>Campo de nome obrigatório</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_Name' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_NewPresence" xml:space="preserve">
-    <value>Novo estado de presença do agente</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_NewPresence' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_NotificationResponseAction" xml:space="preserve">
     <value>Valor da ação de resposta de notificação do agente</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_NotificationResponseAction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_OldPresence" xml:space="preserve">
-    <value>Antigo estado de presença do agente</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_OldPresence' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_ParticipantId" xml:space="preserve">
     <value>Identificador do agente para o qual o evento foi acionado</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_SessionId" xml:space="preserve">
-    <value>Identificador da sessão à qual este evento pertence</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabAction" xml:space="preserve">
-    <value>Ação de separador efetuada pelo agente</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabAction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabId" xml:space="preserve">
-    <value>Identificador do separador no qual o agente agiu</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabName" xml:space="preserve">
-    <value>Nome do separador no qual o agente agiu</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabName' on Entity</comment>
+  <data name="1:Description,msdyn_KPIEventDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDataOverriddenCreatedOn" xml:space="preserve">
     <value>Data e hora de migração do registo.</value>
@@ -852,10 +764,6 @@
     <value>Atributo Personalizado 1</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atributo Personalizado 10</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atributo Personalizado 2</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -872,22 +780,6 @@
     <value>Atributo Personalizado 5</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atributo Personalizado 6</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atributo Personalizado 7</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atributo Personalizado 8</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atributo Personalizado 9</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID de Correlação de Sistema Externo</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
@@ -895,6 +787,10 @@
   <data name="1:Description,msdyn_SessionDatamsdyn_Name" xml:space="preserve">
     <value>Campo de nome obrigatório</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_Name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_SessionDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_QueueId" xml:space="preserve">
     <value>Identificador da fila à qual esta sessão pertence</value>
@@ -929,16 +825,12 @@
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_SessionDataId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_sessiondata_statecode" xml:space="preserve">
-    <value>Estado de SessionData</value>
+    <value>Estado dos Dados da Sessão</value>
     <comment>'msdyn_SessionData' : Description for OptionSet 'msdyn_sessiondata_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_sessiondata_statuscode" xml:space="preserve">
-    <value>Razão do estado de SessionData</value>
+    <value>Razão do estado dos Dados da Sessão</value>
     <comment>'msdyn_SessionData' : Description for OptionSet 'msdyn_sessiondata_statuscode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_SessionId" xml:space="preserve">
-    <value>Identificador da sessão</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" xml:space="preserve">
     <value>Carimbo de data/hora em que a fila foi atribuída à sessão</value>
@@ -1028,10 +920,6 @@
     <value>Atributo Personalizado 1</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atributo Personalizado 10</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atributo Personalizado 2</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1047,30 +935,6 @@
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute5" xml:space="preserve">
     <value>Atributo Personalizado 5</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atributo Personalizado 6</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atributo Personalizado 7</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atributo Personalizado 8</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atributo Personalizado 9</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" xml:space="preserve">
-    <value>Identificador externo do participante na sessão</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ExternalParticipantId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" xml:space="preserve">
-    <value>Nome externo do participante na sessão</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ExternalParticipantName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_Name" xml:space="preserve">
     <value>Campo de nome obrigatório</value>
@@ -1100,9 +964,9 @@
     <value>Tipo do participante na sessão</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ParticipantType' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_SessionId" xml:space="preserve">
-    <value>Identificador da sessão</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
+  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" xml:space="preserve">
     <value>Identificador exclusivo de instâncias de entidade</value>
@@ -1212,10 +1076,6 @@
     <value>Dados Adicionais</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_AdditionalData' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_BackendConversationId" xml:space="preserve">
-    <value>ID de Conversação de Back-end</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_BackendConversationId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_Channel" xml:space="preserve">
     <value>Canal</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_Channel' on Entity</comment>
@@ -1223,10 +1083,6 @@
   <data name="1:displayname,msdyn_conversationdatamsdyn_ContactId" xml:space="preserve">
     <value>ID do Contacto</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ContactId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_Context" xml:space="preserve">
-    <value>Contexto do Canal</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_Context' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_conversationdataId" xml:space="preserve">
     <value>ID dos Dados de Conversação</value>
@@ -1252,10 +1108,6 @@
     <value>Atributo Personalizado 1</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atributo Personalizado 10</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atributo Personalizado 2</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1272,45 +1124,25 @@
     <value>Atributo Personalizado 5</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atributo Personalizado 6</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerCity" xml:space="preserve">
+    <value>Localidade do Cliente</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerCity' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atributo Personalizado 7</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerCountry" xml:space="preserve">
+    <value>País do Cliente</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerCountry' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atributo Personalizado 8</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerState" xml:space="preserve">
+    <value>Distrito do Cliente</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerState' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atributo Personalizado 9</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalAccountId" xml:space="preserve">
-    <value>ID de Conta Externo</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalAccountId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalContactId" xml:space="preserve">
-    <value>ID de Contacto Externo</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalContactId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalConversationId" xml:space="preserve">
-    <value>ID de Conversação Externo</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalConversationId' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerZip" xml:space="preserve">
+    <value>Código Postal do Cliente</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerZip' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID de Correlação Externo</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalProviderId" xml:space="preserve">
-    <value>ID de Fornecedor Externo</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalProviderId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_InitialQueueName" xml:space="preserve">
-    <value>Nome da Fila Inicial à qual o item de trabalho recebido foi atribuído</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_InitialQueueName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_name" xml:space="preserve">
     <value>Nome</value>
@@ -1416,10 +1248,6 @@
     <value>Atributo Personalizado 1</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atributo Personalizado 10</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atributo Personalizado 2</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1436,30 +1264,6 @@
     <value>Atributo Personalizado 5</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atributo Personalizado 6</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atributo Personalizado 7</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atributo Personalizado 8</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atributo Personalizado 9</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_EntityName" xml:space="preserve">
-    <value>Nome da Entidade</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EntityName' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_EntityRecordId" xml:space="preserve">
-    <value>ID do Registo de Entidade</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EntityRecordId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_EventTimestamp" xml:space="preserve">
     <value>Carimbo de Data/Hora do Evento</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EventTimestamp' on Entity</comment>
@@ -1467,14 +1271,6 @@
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID de Correlação Externo</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" xml:space="preserve">
-    <value>ID do Artigo da Base de Dados de Conhecimento</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_KnowledgeArticleId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" xml:space="preserve">
-    <value>Nome do Artigo da Base de Dados de Conhecimento</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_KnowledgeArticleName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_KPIEventDataId" xml:space="preserve">
     <value>ID dos Dados de Evento de KPI</value>
@@ -1504,37 +1300,17 @@
     <value>Nome</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_NewPresence" xml:space="preserve">
-    <value>Nova Presença</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_NewPresence' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_NotificationResponseAction" xml:space="preserve">
     <value>Ação de Resposta à Notificação</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_NotificationResponseAction' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_OldPresence" xml:space="preserve">
-    <value>Antiga Presença</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_OldPresence' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_ParticipantId" xml:space="preserve">
     <value>ID do Participante</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_SessionId" xml:space="preserve">
-    <value>ID da Sessão</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabAction" xml:space="preserve">
-    <value>Ação de Separador</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabAction' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabId" xml:space="preserve">
-    <value>ID do Separador</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabName" xml:space="preserve">
-    <value>Nome do Separador</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabName' on Entity</comment>
+  <data name="1:displayname,msdyn_KPIEventDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>ID de Sessão do Fornecedor</value>
+    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDataOverriddenCreatedOn" xml:space="preserve">
     <value>Registo Criado Em</value>
@@ -1708,10 +1484,6 @@
     <value>Atributo Personalizado 1</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atributo Personalizado 10</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atributo Personalizado 2</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1728,22 +1500,6 @@
     <value>Atributo Personalizado 5</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atributo Personalizado 6</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atributo Personalizado 7</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atributo Personalizado 8</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atributo Personalizado 9</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID de Correlação Externo</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
@@ -1751,6 +1507,10 @@
   <data name="1:displayname,msdyn_SessionDatamsdyn_Name" xml:space="preserve">
     <value>Nome</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_SessionDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>ID de Sessão do Fornecedor</value>
+    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_QueueId" xml:space="preserve">
     <value>ID da Fila</value>
@@ -1761,23 +1521,23 @@
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_QueueName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionAdditionalData" xml:space="preserve">
-    <value>Dados Adicionais da Sessão</value>
+    <value>Dados Adicionais</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionAdditionalData' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionAgentAssignedTimestamp" xml:space="preserve">
-    <value>Carimbo de Data/Hora de Atribuição de Agente à Sessão</value>
+    <value>Carimbo de Data/Hora de Atribuição de Agente</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionAgentAssignedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionChannel" xml:space="preserve">
-    <value>Canal da Sessão</value>
+    <value>Canal</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionChannel' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionCreatedTimestamp" xml:space="preserve">
-    <value>Carimbo de Data/Hora de Criação da Sessão</value>
+    <value>Carimbo de Data/Hora de Criação</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionCreatedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionCreationReason" xml:space="preserve">
-    <value>Razão de Criação da Sessão</value>
+    <value>Razão da Criação</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionCreationReason' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionDataId" xml:space="preserve">
@@ -1792,12 +1552,8 @@
     <value>Razão do Estado</value>
     <comment>'msdyn_SessionData' : displayname for OptionSet 'msdyn_sessiondata_statuscode' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_SessionId" xml:space="preserve">
-    <value>ID da Sessão</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" xml:space="preserve">
-    <value>Carimbo de Data/Hora de Atribuição de Fila à Sessão</value>
+    <value>Carimbo de Data/Hora de Atribuição de Fila</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionQueueAssignedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_UCISessionId" xml:space="preserve">
@@ -1880,10 +1636,6 @@
     <value>Atributo Personalizado 1</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Atributo Personalizado 10</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Atributo Personalizado 2</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1900,40 +1652,16 @@
     <value>Atributo Personalizado 5</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Atributo Personalizado 6</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Atributo Personalizado 7</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Atributo Personalizado 8</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Atributo Personalizado 9</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" xml:space="preserve">
-    <value>ID de Participante Externo</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ExternalParticipantId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" xml:space="preserve">
-    <value>Nome de Participante Externo</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ExternalParticipantName' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_Name" xml:space="preserve">
     <value>Nome</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAddedTimestamp" xml:space="preserve">
-    <value>Carimbo de Data/Hora de Adição de Participante</value>
+    <value>Carimbo de Data/Hora de Adição</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantAddedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAssignReason" xml:space="preserve">
-    <value>Razão de Atribuição de Participante</value>
+    <value>Razão de Atribuição</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantAssignReason' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantId" xml:space="preserve">
@@ -1941,20 +1669,20 @@
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantMode" xml:space="preserve">
-    <value>Modo do Participante</value>
+    <value>Modo</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantMode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantName" xml:space="preserve">
-    <value>Nome do Participante</value>
+    <value>Nome</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantType" xml:space="preserve">
-    <value>Tipo de Participante</value>
+    <value>Tipo</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantType' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_SessionId" xml:space="preserve">
-    <value>ID da Sessão</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
+  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>ID de Sessão do Fornecedor</value>
+    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" xml:space="preserve">
     <value>ID dos Dados do Participante na Sessão</value>

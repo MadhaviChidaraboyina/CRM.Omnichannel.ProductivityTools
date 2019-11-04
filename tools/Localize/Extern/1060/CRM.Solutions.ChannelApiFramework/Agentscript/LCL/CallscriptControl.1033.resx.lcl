@@ -309,6 +309,22 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";ScriptActionStepLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Load script]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nalaganje skripta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:49.0003628Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Label for script action step]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
       <Item ItemId=";ScriptCombobox_EmptyOption" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Select a script]]></Val>

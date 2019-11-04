@@ -344,10 +344,6 @@
     <value>Extra gegevens met betrekking tot het gesprek</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_AdditionalData' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_BackendConversationId" xml:space="preserve">
-    <value>Id van back-endgesprek</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_BackendConversationId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_Channel" xml:space="preserve">
     <value>Gespreksmethode</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_Channel' on Entity</comment>
@@ -355,10 +351,6 @@
   <data name="1:Description,msdyn_conversationdatamsdyn_ContactId" xml:space="preserve">
     <value>Unieke id van contactpersoon.</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ContactId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_Context" xml:space="preserve">
-    <value>Gesprekscontext die is opgehaald vanuit de methode</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_Context' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdataId" xml:space="preserve">
     <value>Unieke id van entiteitsexemplaren</value>
@@ -384,10 +376,6 @@
     <value>Aangepast kenmerk 1</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Aangepast kenmerk 10</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Aangepast kenmerk 2</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -404,45 +392,25 @@
     <value>Aangepast kenmerk 5</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Aangepast kenmerk 6</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerCity" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerCity' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Aangepast kenmerk 7</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerCountry" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerCountry' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Aangepast kenmerk 8</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerState" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerState' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Aangepast kenmerk 9</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalAccountId" xml:space="preserve">
-    <value>Account-id uit het externe systeem</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalAccountId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalContactId" xml:space="preserve">
-    <value>Contactpersoon-id uit het externe systeem</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalContactId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalConversationId" xml:space="preserve">
-    <value>Gespreks-id uit het externe systeem</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalConversationId' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerZip" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerZip' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Correlatie-id van extern systeem</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalProviderId" xml:space="preserve">
-    <value>Unieke id van de externe provider</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalProviderId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_InitialQueueName" xml:space="preserve">
-    <value />
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_InitialQueueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_name" xml:space="preserve">
     <value>Naam van de aangepaste entiteit.</value>
@@ -552,10 +520,6 @@
     <value>Aangepast kenmerk 1</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Aangepast kenmerk 10</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Aangepast kenmerk 2</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -572,30 +536,6 @@
     <value>Aangepast kenmerk 5</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Aangepast kenmerk 6</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Aangepast kenmerk 7</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Aangepast kenmerk 8</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Aangepast kenmerk 9</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_EntityName" xml:space="preserve">
-    <value>Naam van entiteit die is gemaakt door expliciete agentactie</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EntityName' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_EntityRecordId" xml:space="preserve">
-    <value>Unieke id van entiteit die is gemaakt door expliciete agentactie</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EntityRecordId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_EventTimestamp" xml:space="preserve">
     <value>Tijdstempel waarop de gebeurtenis heeft plaatsgevonden</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EventTimestamp' on Entity</comment>
@@ -603,14 +543,6 @@
   <data name="1:Description,msdyn_KPIEventDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Correlatie-id van extern systeem</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" xml:space="preserve">
-    <value>Id van het Knowledge-artikel dat wordt voorgesteld door de agent</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_KnowledgeArticleId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" xml:space="preserve">
-    <value>Naam van het Knowledge-artikel dat wordt voorgesteld door de agent</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_KnowledgeArticleName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_KPIEventDataId" xml:space="preserve">
     <value>Unieke id van entiteitsexemplaren</value>
@@ -640,37 +572,17 @@
     <value>Vereist naamveld</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_Name' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_NewPresence" xml:space="preserve">
-    <value>Nieuwe aanwezigheidsstatus van agent</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_NewPresence' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_NotificationResponseAction" xml:space="preserve">
     <value>Waarde van responsactie bij agentmelding</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_NotificationResponseAction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_OldPresence" xml:space="preserve">
-    <value>Oude aanwezigheidsstatus van agent</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_OldPresence' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_ParticipantId" xml:space="preserve">
     <value>Id van de agent voor wie de gebeurtenis is geactiveerd</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_SessionId" xml:space="preserve">
-    <value>Id van de sessie waartoe deze gebeurtenis behoort</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabAction" xml:space="preserve">
-    <value>Tabbladactie die door de agent wordt uitgevoerd</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabAction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabId" xml:space="preserve">
-    <value>Id van het tabblad waarop de agent heeft gehandeld</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabName" xml:space="preserve">
-    <value>Naam van het tabblad waarop de agent heeft gehandeld</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabName' on Entity</comment>
+  <data name="1:Description,msdyn_KPIEventDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDataOverriddenCreatedOn" xml:space="preserve">
     <value>Datum en tijd waarop de record is gemigreerd.</value>
@@ -852,10 +764,6 @@
     <value>Aangepast kenmerk 1</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Aangepast kenmerk 10</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Aangepast kenmerk 2</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -872,22 +780,6 @@
     <value>Aangepast kenmerk 5</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Aangepast kenmerk 6</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Aangepast kenmerk 7</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Aangepast kenmerk 8</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Aangepast kenmerk 9</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Correlatie-id van extern systeem</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
@@ -895,6 +787,10 @@
   <data name="1:Description,msdyn_SessionDatamsdyn_Name" xml:space="preserve">
     <value>Vereist naamveld</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_Name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_SessionDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_QueueId" xml:space="preserve">
     <value>Id van de wachtrij waartoe deze sessie behoort</value>
@@ -935,10 +831,6 @@
   <data name="1:Description,msdyn_SessionDatamsdyn_sessiondata_statuscode" xml:space="preserve">
     <value>Reden voor de status van de sessiegegevens</value>
     <comment>'msdyn_SessionData' : Description for OptionSet 'msdyn_sessiondata_statuscode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_SessionId" xml:space="preserve">
-    <value>Id voor de sessie</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" xml:space="preserve">
     <value>Tijdstempel waarop de wachtrij is toegewezen aan de sessie</value>
@@ -1028,10 +920,6 @@
     <value>Aangepast kenmerk 1</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Aangepast kenmerk 10</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Aangepast kenmerk 2</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1047,30 +935,6 @@
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute5" xml:space="preserve">
     <value>Aangepast kenmerk 5</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Aangepast kenmerk 6</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Aangepast kenmerk 7</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Aangepast kenmerk 8</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Aangepast kenmerk 9</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" xml:space="preserve">
-    <value>Externe id van de sessiedeelnemer</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ExternalParticipantId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" xml:space="preserve">
-    <value>Externe naam van de sessiedeelnemer</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ExternalParticipantName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_Name" xml:space="preserve">
     <value>Vereist naamveld</value>
@@ -1100,9 +964,9 @@
     <value>Type van de sessiedeelnemer</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ParticipantType' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_SessionId" xml:space="preserve">
-    <value>Id van de sessie</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
+  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" xml:space="preserve">
     <value>Unieke id van entiteitsexemplaren</value>
@@ -1212,10 +1076,6 @@
     <value>Extra gegevens</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_AdditionalData' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_BackendConversationId" xml:space="preserve">
-    <value>Back-endgespreks-id</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_BackendConversationId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_Channel" xml:space="preserve">
     <value>Methode</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_Channel' on Entity</comment>
@@ -1223,10 +1083,6 @@
   <data name="1:displayname,msdyn_conversationdatamsdyn_ContactId" xml:space="preserve">
     <value>Id van contactpersoon</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ContactId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_Context" xml:space="preserve">
-    <value>Methodecontext</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_Context' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_conversationdataId" xml:space="preserve">
     <value>Id van gespreksgegevens</value>
@@ -1252,10 +1108,6 @@
     <value>Aangepast kenmerk 1</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Aangepast kenmerk 10</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Aangepast kenmerk 2</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1272,45 +1124,25 @@
     <value>Aangepast kenmerk 5</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Aangepast kenmerk 6</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerCity" xml:space="preserve">
+    <value>Plaats van klant</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerCity' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Aangepast kenmerk 7</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerCountry" xml:space="preserve">
+    <value>Land van klant</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerCountry' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Aangepast kenmerk 8</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerState" xml:space="preserve">
+    <value>Staat van klant</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerState' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Aangepast kenmerk 9</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalAccountId" xml:space="preserve">
-    <value>Externe account-id</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalAccountId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalContactId" xml:space="preserve">
-    <value>Externe contactpersoon-id</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalContactId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalConversationId" xml:space="preserve">
-    <value>Externe gespreks-id</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalConversationId' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerZip" xml:space="preserve">
+    <value>Postcode van klant</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerZip' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Externe correlatie-id</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalProviderId" xml:space="preserve">
-    <value>Externe provider-id</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalProviderId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_InitialQueueName" xml:space="preserve">
-    <value>Initiële wachtrijnaam waaraan het binnenkomende werkitem is toegewezen</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_InitialQueueName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_name" xml:space="preserve">
     <value>Naam</value>
@@ -1416,10 +1248,6 @@
     <value>Aangepast kenmerk 1</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Aangepast kenmerk 10</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Aangepast kenmerk 2</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1436,30 +1264,6 @@
     <value>Aangepast kenmerk 5</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Aangepast kenmerk 6</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Aangepast kenmerk 7</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Aangepast kenmerk 8</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Aangepast kenmerk 9</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_EntityName" xml:space="preserve">
-    <value>Entiteitnaam</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EntityName' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_EntityRecordId" xml:space="preserve">
-    <value>Entiteitsrecord-id</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EntityRecordId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_EventTimestamp" xml:space="preserve">
     <value>Tijdstempel van gebeurtenis</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EventTimestamp' on Entity</comment>
@@ -1467,14 +1271,6 @@
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Externe correlatie-id</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" xml:space="preserve">
-    <value>Id Knowledge-artikel</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_KnowledgeArticleId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" xml:space="preserve">
-    <value>Naam Knowledge-artikel</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_KnowledgeArticleName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_KPIEventDataId" xml:space="preserve">
     <value>Gegevens-id van KPI-gebeurtenis</value>
@@ -1504,37 +1300,17 @@
     <value>Naam</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_NewPresence" xml:space="preserve">
-    <value>Nieuwe anwezigheid</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_NewPresence' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_NotificationResponseAction" xml:space="preserve">
     <value>Responsactie bij melding</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_NotificationResponseAction' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_OldPresence" xml:space="preserve">
-    <value>Oude aanwezigheid</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_OldPresence' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_ParticipantId" xml:space="preserve">
     <value>Deelnemer-id</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_SessionId" xml:space="preserve">
-    <value>Sessie-id</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabAction" xml:space="preserve">
-    <value>Tabbladactie</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabAction' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabId" xml:space="preserve">
-    <value>Tabblad-id</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabName" xml:space="preserve">
-    <value>Tabbladnaam</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabName' on Entity</comment>
+  <data name="1:displayname,msdyn_KPIEventDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>Sessie-id van provider</value>
+    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDataOverriddenCreatedOn" xml:space="preserve">
     <value>Record gemaakt op</value>
@@ -1708,10 +1484,6 @@
     <value>Aangepast kenmerk 1</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Aangepast kenmerk 10</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Aangepast kenmerk 2</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1728,22 +1500,6 @@
     <value>Aangepast kenmerk 5</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Aangepast kenmerk 6</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Aangepast kenmerk 7</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Aangepast kenmerk 8</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Aangepast kenmerk 9</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>Externe correlatie-id</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
@@ -1751,6 +1507,10 @@
   <data name="1:displayname,msdyn_SessionDatamsdyn_Name" xml:space="preserve">
     <value>Naam</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_SessionDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>Sessie-id van provider</value>
+    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_QueueId" xml:space="preserve">
     <value>Wachtrij-id</value>
@@ -1761,23 +1521,23 @@
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_QueueName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionAdditionalData" xml:space="preserve">
-    <value>Extra gegevens voor sessie</value>
+    <value>Extra gegevens</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionAdditionalData' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionAgentAssignedTimestamp" xml:space="preserve">
-    <value>Aan sessieagent toegewezen tijdstempel</value>
+    <value>Aan agent toegewezen tijdstempel</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionAgentAssignedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionChannel" xml:space="preserve">
-    <value>Sessiemethode</value>
+    <value>Methode</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionChannel' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionCreatedTimestamp" xml:space="preserve">
-    <value>Tijdstempel sessie gemaakt</value>
+    <value>Tijdstempel gemaakt</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionCreatedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionCreationReason" xml:space="preserve">
-    <value>Reden voor maken van sessie</value>
+    <value>Reden voor aanmaak</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionCreationReason' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionDataId" xml:space="preserve">
@@ -1792,12 +1552,8 @@
     <value>Reden van status</value>
     <comment>'msdyn_SessionData' : displayname for OptionSet 'msdyn_sessiondata_statuscode' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_SessionId" xml:space="preserve">
-    <value>Sessie-id</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" xml:space="preserve">
-    <value>Aan sessiewachtrij toegewezen tijdstempel</value>
+    <value>Aan wachtrij toegewezen tijdstempel</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionQueueAssignedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_UCISessionId" xml:space="preserve">
@@ -1880,10 +1636,6 @@
     <value>Aangepast kenmerk 1</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Aangepast kenmerk 10</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Aangepast kenmerk 2</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1900,40 +1652,16 @@
     <value>Aangepast kenmerk 5</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Aangepast kenmerk 6</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Aangepast kenmerk 7</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Aangepast kenmerk 8</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Aangepast kenmerk 9</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" xml:space="preserve">
-    <value>Id van externe deelnemer</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ExternalParticipantId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" xml:space="preserve">
-    <value>Naam van externe deelnemer</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ExternalParticipantName' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_Name" xml:space="preserve">
     <value>Naam</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAddedTimestamp" xml:space="preserve">
-    <value>Tijdstempel van toegevoegde deelnemer</value>
+    <value>Toegevoegde tijdstempel</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantAddedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAssignReason" xml:space="preserve">
-    <value>Reden voor toewijzen van deelnemer</value>
+    <value>Reden toewijzen</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantAssignReason' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantId" xml:space="preserve">
@@ -1941,20 +1669,20 @@
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantMode" xml:space="preserve">
-    <value>Deelnemersmodus</value>
+    <value>Modus</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantMode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantName" xml:space="preserve">
-    <value>Deelnemersnaam</value>
+    <value>Naam</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantType" xml:space="preserve">
-    <value>Deelnemertype</value>
+    <value>Type</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantType' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_SessionId" xml:space="preserve">
-    <value>Sessie-id</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
+  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>Sessie-id van provider</value>
+    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" xml:space="preserve">
     <value>Id van gegevens over sessiedeelnemer</value>

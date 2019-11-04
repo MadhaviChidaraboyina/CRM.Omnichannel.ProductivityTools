@@ -1191,6 +1191,84 @@
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_categorylabel_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Iš anksto nustatyti automatizavimo veiksmai]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0001307Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_description_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used client-side tasks]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatizuoti dažnai naudojamas kliento užduotis]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0001307Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_displayname_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktyvumo automatizavimas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0001307Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_title_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktyvumo automatizavimas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0001307Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macrosolutionconfiguration@msdyn_searchhint_1b65ad62-4fe3-e911-a81a-000d3a706f52" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieškoti makrokomandos]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0001307Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macrosolutionconfiguration@msdyn_uservoicetext_1b65ad62-4fe3-e911-a81a-000d3a706f52" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Let us know what you would like us to build next]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Praneškite mums, ką turėtume sukurti vėliau]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:48.0001307Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_32e1acb9-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The phrase to be searched for&quot;]]></Val>
@@ -1629,227 +1707,6 @@
         </Str>
         <Disp Icon="Str" />
         <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0004027Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_32e1acb9-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.000399Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_35b0d4dc-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0009524Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0009524Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.000399Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_4a8c0ace-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0009524Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_6c7f2dbf-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0009524Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_6e033082-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.000399Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_9a6161ef-3033-4c8a-89fb-8229bf4539e9" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[array]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[masyvas]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0009524Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.000399Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_b66cd2ac-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.0009524Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ca97e23b-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.000955Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_d61ae14b-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.000399Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_dc1db27b-b27e-4de3-ad4b-a1ba406de050" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[array]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[masyvas]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.000955Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.000399Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_eb102e60-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:25.000955Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_f729e573-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.000399Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
-        </Props>
-      </Item>
-      <Item ItemId=";msdyn_parameterdefinition@msdyn_parametertype_fed739aa-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[string]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[eilutė]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.000399Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>

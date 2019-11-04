@@ -344,10 +344,6 @@
     <value>Dữ liệu bổ sung liên quan đến cuộc hội thoại</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_AdditionalData' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_BackendConversationId" xml:space="preserve">
-    <value>Mã định danh Cuộc hội thoại Phụ trợ</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_BackendConversationId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_Channel" xml:space="preserve">
     <value>Kênh cuộc hội thoại</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_Channel' on Entity</comment>
@@ -356,20 +352,16 @@
     <value>Mã định danh duy nhất của người liên hệ</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ContactId' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_Context" xml:space="preserve">
-    <value>Ngữ cảnh cuộc hội thoại thu thập từ kênh</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_Context' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdataId" xml:space="preserve">
     <value>Mã định danh duy nhất của phiên bản thực thể</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_conversationdataId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdata_statecode" xml:space="preserve">
-    <value>Trạng thái ConversationData</value>
+    <value>Trạng thái Dữ liệu Cuộc hội thoại</value>
     <comment>'msdyn_conversationdata' : Description for OptionSet 'msdyn_conversationdata_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_conversationdata_statuscode" xml:space="preserve">
-    <value>Lý do cho trạng thái của ConversationData</value>
+    <value>Lý do cho trạng thái của Dữ liệu Cuộc hội thoại</value>
     <comment>'msdyn_conversationdata' : Description for OptionSet 'msdyn_conversationdata_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_ConversationId" xml:space="preserve">
@@ -383,10 +375,6 @@
   <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute1" xml:space="preserve">
     <value>Thuộc tính Tùy chỉnh 1</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 10</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Thuộc tính Tùy chỉnh 2</value>
@@ -404,45 +392,25 @@
     <value>Thuộc tính Tùy chỉnh 5</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 6</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerCity" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerCity' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 7</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerCountry" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerCountry' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 8</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerState" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerState' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 9</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalAccountId" xml:space="preserve">
-    <value>Mã định danh khách hàng từ hệ thống bên ngoài</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalAccountId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalContactId" xml:space="preserve">
-    <value>Mã định danh người liên hệ từ hệ thống bên ngoài</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalContactId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalConversationId" xml:space="preserve">
-    <value>Mã định danh Cuộc hội thoại từ hệ thống bên ngoài</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalConversationId' on Entity</comment>
+  <data name="1:Description,msdyn_conversationdatamsdyn_customerZip" xml:space="preserve">
+    <value />
+    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_customerZip' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID Tương quan Hệ thống Bên ngoài</value>
     <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_ExternalProviderId" xml:space="preserve">
-    <value>Mã định danh duy nhất của nhà cung cấp bên ngoài</value>
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_ExternalProviderId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_conversationdatamsdyn_InitialQueueName" xml:space="preserve">
-    <value />
-    <comment>'msdyn_conversationdata' : Description for Attribute 'msdyn_InitialQueueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_conversationdatamsdyn_name" xml:space="preserve">
     <value>Tên thực thể tùy chỉnh.</value>
@@ -552,10 +520,6 @@
     <value>Thuộc tính Tùy chỉnh 1</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 10</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Thuộc tính Tùy chỉnh 2</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -572,30 +536,6 @@
     <value>Thuộc tính Tùy chỉnh 5</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 6</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 7</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 8</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 9</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_EntityName" xml:space="preserve">
-    <value>Tên thực thể được tạo ra bởi hành động rõ ràng từ tổng đài viên</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EntityName' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_EntityRecordId" xml:space="preserve">
-    <value>Mã định danh duy nhất của thực thể được tạo ra bởi hành động rõ ràng từ tổng đài viên</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EntityRecordId' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_EventTimestamp" xml:space="preserve">
     <value>Dấu thời gian xảy ra sự kiện</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_EventTimestamp' on Entity</comment>
@@ -603,14 +543,6 @@
   <data name="1:Description,msdyn_KPIEventDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID Tương quan Hệ thống Bên ngoài</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" xml:space="preserve">
-    <value>ID của Bài viết trong Cơ sở kiến thức mà tổng đài viên đề xuất</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_KnowledgeArticleId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" xml:space="preserve">
-    <value>Tên của Bài viết trong Cơ sở kiến thức mà tổng đài viên đề xuất</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_KnowledgeArticleName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_KPIEventDataId" xml:space="preserve">
     <value>Mã định danh duy nhất của phiên bản thực thể</value>
@@ -640,37 +572,17 @@
     <value>Trường tên là bắt buộc</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_Name' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_NewPresence" xml:space="preserve">
-    <value>Trạng thái hiện diện của tổng đài viên mới</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_NewPresence' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_NotificationResponseAction" xml:space="preserve">
     <value>Giá trị hành động phản hồi thông báo tổng đài viên</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_NotificationResponseAction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_OldPresence" xml:space="preserve">
-    <value>Trạng thái hiện diện của tổng đài viên cũ</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_OldPresence' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDatamsdyn_ParticipantId" xml:space="preserve">
     <value>Mã định danh của tổng đài viên mà sự kiện đã chạy</value>
     <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_SessionId" xml:space="preserve">
-    <value>Mã định danh của phiên có chứa sự kiện này</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabAction" xml:space="preserve">
-    <value>Hành động tab do tổng đài viên thực hiện</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabAction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabId" xml:space="preserve">
-    <value>Mã định danh của tab mà tổng đài viên đã đưa ra hành động</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_KPIEventDatamsdyn_TabName" xml:space="preserve">
-    <value>Tên của tab mà tổng đài viên đã đưa ra hành động</value>
-    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_TabName' on Entity</comment>
+  <data name="1:Description,msdyn_KPIEventDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_KPIEventData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_KPIEventDataOverriddenCreatedOn" xml:space="preserve">
     <value>Ngày và giờ di chuyển bản ghi.</value>
@@ -852,10 +764,6 @@
     <value>Thuộc tính Tùy chỉnh 1</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 10</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Thuộc tính Tùy chỉnh 2</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -872,22 +780,6 @@
     <value>Thuộc tính Tùy chỉnh 5</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 6</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 7</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 8</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 9</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID Tương quan Hệ thống Bên ngoài</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
@@ -895,6 +787,10 @@
   <data name="1:Description,msdyn_SessionDatamsdyn_Name" xml:space="preserve">
     <value>Trường tên là bắt buộc</value>
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_Name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_SessionDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_QueueId" xml:space="preserve">
     <value>Mã định danh của hàng đợi có chứa phiên này</value>
@@ -929,16 +825,12 @@
     <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_SessionDataId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_sessiondata_statecode" xml:space="preserve">
-    <value>Trạng thái của SessionData</value>
+    <value>Trạng thái của Dữ liệu Phiên</value>
     <comment>'msdyn_SessionData' : Description for OptionSet 'msdyn_sessiondata_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_sessiondata_statuscode" xml:space="preserve">
-    <value>Lý do dẫn đến trạng thái của SessionData</value>
+    <value>Lý do dẫn đến trạng thái của Dữ liệu Phiên</value>
     <comment>'msdyn_SessionData' : Description for OptionSet 'msdyn_sessiondata_statuscode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionDatamsdyn_SessionId" xml:space="preserve">
-    <value>Mã định danh cho phiên</value>
-    <comment>'msdyn_SessionData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" xml:space="preserve">
     <value>Dấu thời gian hàng đợi được gán cho phiên</value>
@@ -1028,10 +920,6 @@
     <value>Thuộc tính Tùy chỉnh 1</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 10</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Thuộc tính Tùy chỉnh 2</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1047,30 +935,6 @@
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute5" xml:space="preserve">
     <value>Thuộc tính Tùy chỉnh 5</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 6</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 7</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 8</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 9</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" xml:space="preserve">
-    <value>Mã định danh bên ngoài của người tham gia phiên</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ExternalParticipantId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" xml:space="preserve">
-    <value>Tên bên ngoài của người tham gia phiên</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ExternalParticipantName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_Name" xml:space="preserve">
     <value>Trường tên là bắt buộc</value>
@@ -1100,9 +964,9 @@
     <value>Loại người tham gia phiên</value>
     <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ParticipantType' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_SessionId" xml:space="preserve">
-    <value>Mã định danh của phiên</value>
-    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_SessionId' on Entity</comment>
+  <data name="1:Description,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value />
+    <comment>'msdyn_SessionParticipantData' : Description for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" xml:space="preserve">
     <value>Mã định danh duy nhất của phiên bản thực thể</value>
@@ -1212,10 +1076,6 @@
     <value>Dữ liệu Bổ sung</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_AdditionalData' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_BackendConversationId" xml:space="preserve">
-    <value>ID Cuộc hội thoại Phụ trợ</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_BackendConversationId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_Channel" xml:space="preserve">
     <value>Kênh</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_Channel' on Entity</comment>
@@ -1223,10 +1083,6 @@
   <data name="1:displayname,msdyn_conversationdatamsdyn_ContactId" xml:space="preserve">
     <value>ID Người liên hệ</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ContactId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_Context" xml:space="preserve">
-    <value>Ngữ cảnh Kênh</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_Context' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_conversationdataId" xml:space="preserve">
     <value>ID Dữ liệu Cuộc hội thoại</value>
@@ -1252,10 +1108,6 @@
     <value>Thuộc tính Tùy chỉnh 1</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 10</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Thuộc tính Tùy chỉnh 2</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1272,45 +1124,25 @@
     <value>Thuộc tính Tùy chỉnh 5</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 6</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerCity" xml:space="preserve">
+    <value>Thành phố Khách hàng</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerCity' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 7</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerCountry" xml:space="preserve">
+    <value>Quốc gia Khách hàng</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerCountry' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 8</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerState" xml:space="preserve">
+    <value>Bang của Khách hàng</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerState' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 9</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalAccountId" xml:space="preserve">
-    <value>ID Khách hàng Bên ngoài</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalAccountId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalContactId" xml:space="preserve">
-    <value>ID Người liên hệ Bên ngoài</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalContactId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalConversationId" xml:space="preserve">
-    <value>ID Cuộc hội thoại Bên ngoài</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalConversationId' on Entity</comment>
+  <data name="1:displayname,msdyn_conversationdatamsdyn_customerZip" xml:space="preserve">
+    <value>Mã zip của Khách hàng</value>
+    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_customerZip' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID Tương quan Bên ngoài</value>
     <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_ExternalProviderId" xml:space="preserve">
-    <value>ID Nhà cung cấp Bên ngoài</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_ExternalProviderId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_conversationdatamsdyn_InitialQueueName" xml:space="preserve">
-    <value>Tên Hàng đợi Ban đầu mà mục công việc đến được gán</value>
-    <comment>'msdyn_conversationdata' : displayname for Attribute 'msdyn_InitialQueueName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_conversationdatamsdyn_name" xml:space="preserve">
     <value>Tên</value>
@@ -1416,10 +1248,6 @@
     <value>Thuộc tính Tùy chỉnh 1</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 10</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Thuộc tính Tùy chỉnh 2</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1436,30 +1264,6 @@
     <value>Thuộc tính Tùy chỉnh 5</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 6</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 7</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 8</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 9</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_EntityName" xml:space="preserve">
-    <value>Tên Thực thể</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EntityName' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_EntityRecordId" xml:space="preserve">
-    <value>ID Bản ghi Thực thể</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EntityRecordId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_EventTimestamp" xml:space="preserve">
     <value>Dấu thời gian Sự kiện</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_EventTimestamp' on Entity</comment>
@@ -1467,14 +1271,6 @@
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID Tương quan Bên ngoài</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" xml:space="preserve">
-    <value>ID Bài viết trong Cơ sở kiến thức</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_KnowledgeArticleId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" xml:space="preserve">
-    <value>Tên Bài viết trong Cơ sở kiến thức</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_KnowledgeArticleName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_KPIEventDataId" xml:space="preserve">
     <value>ID Dữ liệu Sự kiện Chỉ số Đánh giá Hiệu suất Chính</value>
@@ -1504,37 +1300,17 @@
     <value>Tên</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_NewPresence" xml:space="preserve">
-    <value>Hiện diện Mới</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_NewPresence' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_NotificationResponseAction" xml:space="preserve">
     <value>Hành động Phản hồi trước Thông báo</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_NotificationResponseAction' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_OldPresence" xml:space="preserve">
-    <value>Hiện diện Cũ</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_OldPresence' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDatamsdyn_ParticipantId" xml:space="preserve">
     <value>ID Người tham gia</value>
     <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_SessionId" xml:space="preserve">
-    <value>ID phiên</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabAction" xml:space="preserve">
-    <value>Hành động Tab</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabAction' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabId" xml:space="preserve">
-    <value>ID Tab</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_KPIEventDatamsdyn_TabName" xml:space="preserve">
-    <value>Tên Tab</value>
-    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_TabName' on Entity</comment>
+  <data name="1:displayname,msdyn_KPIEventDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>ID Phiên Nhà cung cấp</value>
+    <comment>'msdyn_KPIEventData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_KPIEventDataOverriddenCreatedOn" xml:space="preserve">
     <value>Ngày Tạo Bản ghi</value>
@@ -1708,10 +1484,6 @@
     <value>Thuộc tính Tùy chỉnh 1</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 10</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Thuộc tính Tùy chỉnh 2</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1728,22 +1500,6 @@
     <value>Thuộc tính Tùy chỉnh 5</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 6</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 7</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 8</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 9</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_ExternalCorrelationId" xml:space="preserve">
     <value>ID Tương quan Bên ngoài</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_ExternalCorrelationId' on Entity</comment>
@@ -1751,6 +1507,10 @@
   <data name="1:displayname,msdyn_SessionDatamsdyn_Name" xml:space="preserve">
     <value>Tên</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_SessionDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>ID Phiên Nhà cung cấp</value>
+    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_QueueId" xml:space="preserve">
     <value>ID Hàng đợi</value>
@@ -1761,23 +1521,23 @@
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_QueueName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionAdditionalData" xml:space="preserve">
-    <value>Dữ liệu Bổ sung Phiên</value>
+    <value>Dữ liệu Bổ sung</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionAdditionalData' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionAgentAssignedTimestamp" xml:space="preserve">
-    <value>Dấu thời gian Đã gán theo Tổng đài viên Phiên</value>
+    <value>Dấu thời gian Đã gán theo Tổng đài viên</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionAgentAssignedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionChannel" xml:space="preserve">
-    <value>Kênh của Phiên</value>
+    <value>Kênh</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionChannel' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionCreatedTimestamp" xml:space="preserve">
-    <value>Dấu thời gian Tạo Phiên</value>
+    <value>Dấu thời gian Đã tạo</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionCreatedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionCreationReason" xml:space="preserve">
-    <value>Lý do cho việc Tạo Phiên</value>
+    <value>Lý do Tạo</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionCreationReason' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionDataId" xml:space="preserve">
@@ -1792,12 +1552,8 @@
     <value>Lý do dẫn đến trạng thái</value>
     <comment>'msdyn_SessionData' : displayname for OptionSet 'msdyn_sessiondata_statuscode' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionDatamsdyn_SessionId" xml:space="preserve">
-    <value>ID phiên</value>
-    <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" xml:space="preserve">
-    <value>Dấu thời gian Đã gán theo Hàng đợi Phiên</value>
+    <value>Dấu thời gian Đã gán theo Hàng đợi</value>
     <comment>'msdyn_SessionData' : displayname for Attribute 'msdyn_SessionQueueAssignedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionDatamsdyn_UCISessionId" xml:space="preserve">
@@ -1880,10 +1636,6 @@
     <value>Thuộc tính Tùy chỉnh 1</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute1' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 10</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute10' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" xml:space="preserve">
     <value>Thuộc tính Tùy chỉnh 2</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute2' on Entity</comment>
@@ -1900,40 +1652,16 @@
     <value>Thuộc tính Tùy chỉnh 5</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute5' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 6</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute6' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 7</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute7' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 8</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute8' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" xml:space="preserve">
-    <value>Thuộc tính Tùy chỉnh 9</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_CustomAttribute9' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" xml:space="preserve">
-    <value>ID Người tham gia Bên ngoài</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ExternalParticipantId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" xml:space="preserve">
-    <value>Tên Người tham gia Bên ngoài</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ExternalParticipantName' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_Name" xml:space="preserve">
     <value>Tên</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_Name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAddedTimestamp" xml:space="preserve">
-    <value>Người tham gia Đã thêm Dấu thời gian</value>
+    <value>Dấu thời gian Đã thêm</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantAddedTimestamp' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAssignReason" xml:space="preserve">
-    <value>Lý do Gán Người tham gia</value>
+    <value>Lý do Gán</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantAssignReason' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantId" xml:space="preserve">
@@ -1941,20 +1669,20 @@
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantMode" xml:space="preserve">
-    <value>Chế độ Người tham gia</value>
+    <value>Chế độ</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantMode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantName" xml:space="preserve">
-    <value>Tên Người tham gia</value>
+    <value>Tên</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantName' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantType" xml:space="preserve">
-    <value>Loại Người tham gia</value>
+    <value>Loại</value>
     <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ParticipantType' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_SessionId" xml:space="preserve">
-    <value>ID phiên</value>
-    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_SessionId' on Entity</comment>
+  <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" xml:space="preserve">
+    <value>ID Phiên Nhà cung cấp</value>
+    <comment>'msdyn_SessionParticipantData' : displayname for Attribute 'msdyn_ProviderSessionId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_SessionParticipantDatamsdyn_SessionParticipantDataId" xml:space="preserve">
     <value>ID Dữ liệu Người tham gia Phiên</value>

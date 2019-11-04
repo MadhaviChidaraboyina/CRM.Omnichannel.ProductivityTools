@@ -1,655 +1,17 @@
-<?xml version='1.0' encoding='utf-8'?>
-<entities timestamp="9/9/2019 8:11:20 PM" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <entity displayname="Action Input Parameter" name="msdyn_actioninputparameter">
-    <records>
-      <record id="f530a3d1-f9d2-e911-a81e-000d3a015920">
-        <field name="msdyn_actioninputparameterid" value="f530a3d1-f9d2-e911-a81e-000d3a015920" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" name="msdyn_actiontemplateinputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:03:22 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:03:24 PM" />
-        <field name="msdyn_name" value="Create_New_Input_Params_Mandatory" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      <field name="msdyn_visibility" value="required" />
-      </record>
-      <record id="c8d99e29-fad2-e911-a81e-000d3a015920">
-        <field name="msdyn_actioninputparameterid" value="c8d99e29-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Form" name="msdyn_actiontemplateinputparameterid" value="e6c81912-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:05:50 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:05:51 PM" />
-        <field name="msdyn_name" value="Open_Exisiting_Form_Input_Params_Mandatory" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      <field name="msdyn_visibility" value="required" />
-      </record>
-      <record id="1d75d16f-fad2-e911-a81e-000d3a015920">
-        <field name="msdyn_actioninputparameterid" value="1d75d16f-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" name="msdyn_actiontemplateinputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:07:48 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:07:48 PM" />
-        <field name="msdyn_name" value="Open_Grid_Input_Params_Mandatory" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      <field name="msdyn_visibility" value="required" />
-      </record>
-      <record id="1ce921a3-fbd2-e911-a81e-000d3a015920">
-        <field name="msdyn_actioninputparameterid" value="1ce921a3-fbd2-e911-a81e-000d3a015920" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Dashboard" name="msdyn_actiontemplateinputparameterid" value="baa326ad-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:16:23 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:16:24 PM" />
-        <field name="msdyn_name" value="Open_Dashboard_Input_Param_Mandatory" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      <field name="msdyn_visibility" value="required" />
-      </record>
-      <record id="c833de57-fcd2-e911-a81e-000d3a015920">
-        <field name="msdyn_actioninputparameterid" value="c833de57-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_knowledge_base" name="msdyn_actiontemplateinputparameterid" value="85ab814a-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:21:26 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:21:27 PM" />
-        <field name="msdyn_name" value="Search_kb_input_params_madatory" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      <field name="msdyn_visibility" value="important" />
-      </record>
-      <record id="62da1195-fcd2-e911-a81e-000d3a015920">
-        <field name="msdyn_actioninputparameterid" value="62da1195-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_by_relevance" name="msdyn_actiontemplateinputparameterid" value="16fc3387-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:23:09 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:23:10 PM" />
-        <field name="msdyn_name" value="Search_by_relevance_input_parameter" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      <field name="msdyn_visibility" value="required" />
-      </record>
-      <record id="d54edfed-fcd2-e911-a81e-000d3a015920">
-        <field name="msdyn_actioninputparameterid" value="d54edfed-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Record" name="msdyn_actiontemplateinputparameterid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:25:38 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:25:39 PM" />
-        <field name="msdyn_name" value="Update_record_input_params_mandatory" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      <field name="msdyn_visibility" value="required" />
-      </record>
-    <record id="c8e3f6f3-9888-45ea-ab7a-378b7aedccbc">
-        <field name="msdyn_actioninputparameterid" value="c8e3f6f3-9888-45ea-ab7a-378b7aedccbc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" name="msdyn_actiontemplateinputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="createdon" value="9/25/2019 2:12:58 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
-        <field name="msdyn_name" value="Open_Grid_Input_Params_Optional" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_visibility" value="important" />
-      </record>
-      <record id="4de2d295-9fdf-e911-a81e-000d3a0698dc">
-        <field name="msdyn_actioninputparameterid" value="4de2d295-9fdf-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Draft_Email" name="msdyn_actiontemplateinputparameterid" value="e903922e-fdd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="createdon" value="9/25/2019 2:20:12 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="modifiedon" value="9/25/2019 2:56:52 PM" />
-        <field name="msdyn_name" value="draft_email_input_params_mandatory" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_visibility" value="required" />
-      </record>
-      <record id="c61541ac-a0df-e911-a81e-000d3a0698dc">
-        <field name="msdyn_actioninputparameterid" value="c61541ac-a0df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Resolve_Case" name="msdyn_actiontemplateinputparameterid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="createdon" value="9/25/2019 2:27:59 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="modifiedon" value="9/25/2019 2:58:53 PM" />
-        <field name="msdyn_name" value="Resolve_Case_Input_Mandatory" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_visibility" value="required" />
-      </record>
-      <record id="8729c34c-a5df-e911-a81e-000d3a0698dc">
-        <field name="msdyn_actioninputparameterid" value="8729c34c-a5df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Record" name="msdyn_actiontemplateinputparameterid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="createdon" value="9/25/2019 3:01:07 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="modifiedon" value="9/25/2019 3:01:07 PM" />
-        <field name="msdyn_name" value="Update_record_input_params_advanced" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="False" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_visibility" value="advanced" />
-      </record>
-      <record id="84e5f9f9-15e6-4c54-8727-326e9cddb5e8">
-        <field name="msdyn_actioninputparameterid" value="84e5f9f9-15e6-4c54-8727-326e9cddb5e8" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Form" name="msdyn_actiontemplateinputparameterid" value="e6c81912-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="createdon" value="9/25/2019 2:12:58 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="modifiedon" value="9/25/2019 2:58:17 PM" />
-        <field name="msdyn_name" value="Open_Existing_Form_Input_Params_Optional" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_visibility" value="important" />
-      </record>
-      <record id="df71b777-cf80-40f3-bc35-9a52c2eb8433">
-        <field name="msdyn_actioninputparameterid" value="df71b777-cf80-40f3-bc35-9a52c2eb8433" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" name="msdyn_actiontemplateinputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="createdon" value="9/25/2019 2:12:57 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
-        <field name="msdyn_name" value="Create_New_Input_Params_Advanced" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="False" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_visibility" value="advanced" />
-      </record>
-      <record id="f537df76-a690-4fc8-aa69-9b875f5fff9b">
-        <field name="msdyn_actioninputparameterid" value="f537df76-a690-4fc8-aa69-9b875f5fff9b" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" name="msdyn_actiontemplateinputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="createdon" value="9/25/2019 2:12:58 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
-        <field name="msdyn_name" value="Create_New_Input_Params_Optional" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="False" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_visibility" value="important" />
-      </record>
-    </records>
-    <m2mrelationships />
-  </entity>
-  <entity displayname="Macro Action Template" name="msdyn_macroactiontemplate">
-    <records>
-      <record id="01a02947-f9d2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 11:59:30 AM" />
-        <field name="msdyn_actionDescription" value="새 양식을 열어 레코드 만들기" />
-        <field name="msdyn_displayname" value="새로 만들기" />
-        <field name="msdyn_macroactiontemplateid" value="01a02947-f9d2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:30:21 PM" />
-        <field name="msdyn_name" value="Create_New" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="새로 만들기" />
-        <field name="msdyn_summary" value="새 양식을 열어 레코드 만들기" />
-        <field name="msdyn_title" value="새 양식을 열어 레코드 만들기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_new_form.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openNewForm(actionName,actionInputs)" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="e6c81912-fad2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:05:10 PM" />
-        <field name="msdyn_actionDescription" value="기존 레코드 열기" />
-        <field name="msdyn_displayname" value="양식 열기" />
-        <field name="msdyn_macroactiontemplateid" value="e6c81912-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:33:15 PM" />
-        <field name="msdyn_name" value="Open_Form" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="양식 열기" />
-        <field name="msdyn_summary" value="기존 레코드 열기" />
-        <field name="msdyn_title" value="기존 레코드 열기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_form.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openExistingForm(actionName,actionInputs)" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="1c1af956-fad2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:07:06 PM" />
-        <field name="msdyn_actionDescription" value="레코드 그리드 열기" />
-        <field name="msdyn_displayname" value="그리드 열기" />
-        <field name="msdyn_macroactiontemplateid" value="1c1af956-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:33:57 PM" />
-        <field name="msdyn_name" value="Open_Grid" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="그리드 열기" />
-        <field name="msdyn_summary" value="레코드 그리드 열기" />
-        <field name="msdyn_title" value="레코드 그리드 열기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_grid.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openGrid(actionName,actionInputs)" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="baa326ad-fad2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:09:31 PM" />
-        <field name="msdyn_actionDescription" value="기존 대시보드 열기" />
-        <field name="msdyn_displayname" value="대시보드 열기" />
-        <field name="msdyn_macroactiontemplateid" value="baa326ad-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:09:31 PM" />
-        <field name="msdyn_name" value="Open_Dashboard" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="대시보드 열기" />
-        <field name="msdyn_summary" value="대시보드 열기" />
-        <field name="msdyn_title" value="기존 대시보드 열기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_dashboard.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="13a680e2-fbd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:18:10 PM" />
-        <field name="msdyn_actionDescription" value="참조 자료 검색 페이지 열기" />
-        <field name="msdyn_displayname" value="참조 자료 검색 열기" />
-        <field name="msdyn_macroactiontemplateid" value="13a680e2-fbd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:18:10 PM" />
-        <field name="msdyn_name" value="Open_knowledge_search" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="참조 자료 검색 열기" />
-        <field name="msdyn_summary" value="참조 자료 검색 페이지 열기" />
-        <field name="msdyn_title" value="참조 자료 검색 페이지 열기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_kb.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="48bbc0f3-fbd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:18:38 PM" />
-        <field name="msdyn_actionDescription" value="세션 만들기" />
-        <field name="msdyn_displayname" value="세션 만들기" />
-        <field name="msdyn_macroactiontemplateid" value="48bbc0f3-fbd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:18:38 PM" />
-        <field name="msdyn_name" value="Create_Session" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="세션 만들기" />
-        <field name="msdyn_summary" value="세션 만들기" />
-        <field name="msdyn_title" value="세션 만들기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_create_session.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="2574de1c-fcd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:19:47 PM" />
-        <field name="msdyn_actionDescription" value="다른 모든 세션 닫기" />
-        <field name="msdyn_displayname" value="다른 모든 세션 닫기" />
-        <field name="msdyn_macroactiontemplateid" value="2574de1c-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:19:47 PM" />
-        <field name="msdyn_name" value="Close_All_other_Sessions" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="다른 모든 세션 닫기" />
-        <field name="msdyn_summary" value="다른 모든 세션 닫기" />
-        <field name="msdyn_title" value="다른 모든 세션 닫기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_close_all_sessions.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="85ab814a-fcd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:21:04 PM" />
-        <field name="msdyn_actionDescription" value="채워진 문구에 대한 참조 자료 검색" />
-        <field name="msdyn_displayname" value="참조 자료 문서 검색" />
-        <field name="msdyn_macroactiontemplateid" value="85ab814a-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:37:49 PM" />
-        <field name="msdyn_name" value="Search_knowledge_base" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="채워진 문구에 대한 참조 자료 검색" />
-        <field name="msdyn_summary" value="채워진 문구에 대한 참조 자료 검색" />
-        <field name="msdyn_title" value="채워진 문구에 대한 참조 자료 검색" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_search_kb.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openKBSearchControl(actionName,actionInputs)" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="16fc3387-fcd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:22:46 PM" />
-        <field name="msdyn_actionDescription" value="문구에 따라 관련성 검색 수행" />
-        <field name="msdyn_displayname" value="관련성별로 검색" />
-        <field name="msdyn_macroactiontemplateid" value="16fc3387-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:36:34 PM" />
-        <field name="msdyn_name" value="Search_by_relevance" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="문구에 따라 관련성 검색 수행" />
-        <field name="msdyn_summary" value="문구에 따라 관련성 검색 수행" />
-        <field name="msdyn_title" value="문구에 따라 관련성 검색 수행" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_search_relevance.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openSearchPage(actionName,actionInputs)" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="101c73b5-fcd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:24:03 PM" />
-        <field name="msdyn_actionDescription" value="레코드 저장" />
-        <field name="msdyn_displayname" value="저장" />
-        <field name="msdyn_macroactiontemplateid" value="101c73b5-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:35:34 PM" />
-        <field name="msdyn_name" value="Save" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="레코드 저장" />
-        <field name="msdyn_summary" value="레코드 저장" />
-        <field name="msdyn_title" value="레코드 저장" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_save.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="19c8c1c6-fcd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:24:32 PM" />
-        <field name="msdyn_actionDescription" value="페이지 새로 고침" />
-        <field name="msdyn_displayname" value="새로 고침" />
-        <field name="msdyn_macroactiontemplateid" value="19c8c1c6-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:35:16 PM" />
-        <field name="msdyn_name" value="Refresh" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="페이지 새로 고침" />
-        <field name="msdyn_summary" value="페이지 새로 고침" />
-        <field name="msdyn_title" value="페이지 새로 고침" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_refresh.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="ce3390dd-fcd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:25:11 PM" />
-        <field name="msdyn_actionDescription" value="기존 레코드 업데이트" />
-        <field name="msdyn_displayname" value="레코드 업데이트" />
-        <field name="msdyn_macroactiontemplateid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:39:43 PM" />
-        <field name="msdyn_name" value="Update_Record" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="기존 레코드 업데이트" />
-        <field name="msdyn_summary" value="기존 레코드 업데이트" />
-        <field name="msdyn_title" value="기존 레코드 업데이트" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_update_record.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.updateRecord(actionName,actionInputs)" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="d965ea11-fdd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:26:39 PM" />
-        <field name="msdyn_actionDescription" value="세션에서 지정된 레코드에 대해 종류의 관련 레코드 열기" />
-        <field name="msdyn_displayname" value="관련 항목 열기" />
-        <field name="msdyn_macroactiontemplateid" value="d965ea11-fdd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 12:26:39 PM" />
-        <field name="msdyn_name" value="Open_Associated" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="관련 항목 열기" />
-        <field name="msdyn_summary" value="세션에서 지정된 레코드에 대해 종류의 관련 레코드 열기" />
-        <field name="msdyn_title" value="관련 항목 열기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_associated.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="e903922e-fdd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:27:27 PM" />
-        <field name="msdyn_actionDescription" value="미리 정의된 템플릿으로 전자 메일 양식 열기" />
-        <field name="msdyn_displayname" value="전자 메일" />
-        <field name="msdyn_macroactiontemplateid" value="e903922e-fdd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:31:31 PM" />
-        <field name="msdyn_name" value="Draft_Email" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="미리 정의된 템플릿으로 전자 메일 양식 열기" />
-        <field name="msdyn_summary" value="미리 정의된 템플릿으로 전자 메일 양식 열기" />
-        <field name="msdyn_title" value="미리 정의된 템플릿으로 전자 메일 양식 열기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_email.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.draftEmail(actionName,actionInputs)" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="0e59ec44-fdd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:28:04 PM" />
-        <field name="msdyn_actionDescription" value="참조 자료 문서 보내기" />
-        <field name="msdyn_displayname" value="참조 자료 보내기" />
-        <field name="msdyn_macroactiontemplateid" value="0e59ec44-fdd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:38:44 PM" />
-        <field name="msdyn_name" value="Send_KB" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="참조 자료 문서 보내기" />
-        <field name="msdyn_summary" value="참조 자료 문서 보내기" />
-        <field name="msdyn_title" value="참조 자료 문서 보내기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_send_kb.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="68e92456-fdd2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 12:28:33 PM" />
-        <field name="msdyn_actionDescription" value="레코드를 복제하고 세션에서 열기" />
-        <field name="msdyn_displayname" value="레코드 복제" />
-        <field name="msdyn_macroactiontemplateid" value="68e92456-fdd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 2:29:00 PM" />
-        <field name="msdyn_name" value="Clone_record" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="레코드를 복제하고 세션에서 열기" />
-        <field name="msdyn_summary" value="레코드를 복제하고 세션에서 열기" />
-        <field name="msdyn_title" value="레코드를 복제하고 세션에서 열기" />
-      <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_clone_record.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-    <record id="cd1fa1a0-a0df-e911-a81e-000d3a0698dc">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="createdon" value="9/25/2019 2:27:40 PM" />
-        <field name="msdyn_actionDescription" value="Action to resolve case" />
-        <field name="msdyn_displayname" value="Resolve Case" />
-        <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_macroactiontemplateid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="modifiedon" value="9/25/2019 2:27:40 PM" />
-        <field name="msdyn_name" value="Resolve_Case" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.resolveIncident(actionName,actionInputs)" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Resolve Case" />
-        <field name="msdyn_summary" value="Action to resolve case" />
-        <field name="msdyn_title" value="Resolve Case" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="createdon" value="9/25/2019 2:13:05 PM" />
-        <field name="msdyn_actionDescription" value="Start macro execution" />
-        <field name="msdyn_displayname" value="Start" />
-        <field lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_macro_connector.svg" />
-        <field name="msdyn_kind" value="TRIGGERS" />
-        <field name="msdyn_macroactiontemplateid" value="d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="modifiedon" value="9/25/2019 2:13:05 PM" />
-        <field name="msdyn_name" value="Start" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Start macro execution" />
-        <field name="msdyn_summary" value="Start macro execution" />
-        <field name="msdyn_title" value="Start macro execution" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-    </records>
-    <m2mrelationships />
-  </entity>
-  <entity displayname="Parameter definition" name="msdyn_parameterdefinition">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" timestamp="9/25/2019 8:35:47 PM">
+  <entity name="msdyn_parameterdefinition" displayname="Parameter definition">
     <records>
       <record id="d61ae14b-f8d2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 11:52:28 AM" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:09 PM" />
         <field name="msdyn_description" value="열어 볼 엔터티의 논리적 이름" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 11:52:28 AM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:09 PM" />
         <field name="msdyn_name" value="EntityName" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="d61ae14b-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
@@ -657,15 +19,15 @@
         <field name="msdyn_displayname" value="엔터티 논리적 이름" />
       </record>
       <record id="ddf27260-f8d2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 11:53:03 AM" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:10 PM" />
         <field name="msdyn_description" value="열어 볼 양식 ID" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 11:53:03 AM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:10 PM" />
         <field name="msdyn_name" value="FormId" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="ddf27260-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
@@ -673,15 +35,15 @@
         <field name="msdyn_displayname" value="엔터티 양식 ID" />
       </record>
       <record id="f729e573-f8d2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 11:53:35 AM" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:10 PM" />
         <field name="msdyn_description" value="열어 볼 엔터티 레코드 ID" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 11:53:35 AM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:10 PM" />
         <field name="msdyn_name" value="EntityId" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="f729e573-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
@@ -689,15 +51,15 @@
         <field name="msdyn_displayname" value="엔터티 레코드 ID" />
       </record>
       <record id="6e033082-f8d2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 11:53:59 AM" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:10 PM" />
         <field name="msdyn_description" value="열어 볼 보기의 ID" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 11:53:59 AM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:10 PM" />
         <field name="msdyn_name" value="ViewId" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="6e033082-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
@@ -705,15 +67,15 @@
         <field name="msdyn_displayname" value="보기 ID" />
       </record>
       <record id="474f7494-f8d2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 11:54:30 AM" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:10 PM" />
         <field name="msdyn_description" value="보기의 유형" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 11:54:30 AM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:10 PM" />
         <field name="msdyn_name" value="ViewType" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="474f7494-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
@@ -721,15 +83,15 @@
         <field name="msdyn_displayname" value="보기 유형" />
       </record>
       <record id="fed739aa-f8d2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 11:55:07 AM" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:11 PM" />
         <field name="msdyn_description" value="열어 볼 대시보드의 ID" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 11:55:07 AM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:11 PM" />
         <field name="msdyn_name" value="DashboardId" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="fed739aa-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
@@ -737,15 +99,15 @@
         <field name="msdyn_displayname" value="대시보드 ID" />
       </record>
       <record id="32e1acb9-f8d2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 11:55:33 AM" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:11 PM" />
         <field name="msdyn_description" value="검색할 문구&quot;" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 11:55:33 AM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:11 PM" />
         <field name="msdyn_name" value="SearchString" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="32e1acb9-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
@@ -753,111 +115,111 @@
         <field name="msdyn_displayname" value="검색 문자열" />
       </record>
       <record id="ae9b14cb-f8d2-e911-a81e-000d3a015920">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="createdon" value="9/9/2019 11:56:02 AM" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:11 PM" />
         <field name="msdyn_description" value="업데이트할 특성 및 값을 나타내는 JSON 문자열" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field name="modifiedon" value="9/9/2019 11:56:02 AM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:11 PM" />
         <field name="msdyn_name" value="UpdateData" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="ae9b14cb-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="키-값 쌍의 JSON 문자열" />
       </record>
-    <record id="ca97e23b-9fdf-e911-a81e-000d3a0698dc">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+      <record id="ca97e23b-9fdf-e911-a81e-000d3a0698dc">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:17:41 PM" />
-        <field name="msdyn_description" value="Application page type" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_description" value="응용 프로그램 페이지 유형" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:17:41 PM" />
         <field name="msdyn_name" value="PageType" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="ca97e23b-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Page Type" />
+        <field name="msdyn_displayname" value="페이지 유형" />
       </record>
       <record id="eb102e60-9fdf-e911-a81e-000d3a0698dc">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:18:42 PM" />
-        <field name="msdyn_description" value="Id of the tab" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_description" value="탭의 ID" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:18:42 PM" />
         <field name="msdyn_name" value="TabId" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="eb102e60-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Tab Id" />
+        <field name="msdyn_displayname" value="탭 ID" />
       </record>
       <record id="b66cd2ac-9fdf-e911-a81e-000d3a0698dc">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:20:51 PM" />
-        <field name="msdyn_description" value="Email Recipients" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_description" value="이메일 수신자" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:20:51 PM" />
         <field name="msdyn_name" value="PartyListName" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="b66cd2ac-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Email Recipients" />
+        <field name="msdyn_displayname" value="이메일 수신자" />
       </record>
       <record id="473decbe-9fdf-e911-a81e-000d3a0698dc">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:21:21 PM" />
-        <field name="msdyn_description" value="Id of the email template" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_description" value="이메일 템플릿의 ID" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:21:21 PM" />
         <field name="msdyn_name" value="TemplateId" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="473decbe-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Template Id" />
+        <field name="msdyn_displayname" value="템플릿 ID" />
       </record>
       <record id="6c7f2dbf-a0df-e911-a81e-000d3a0698dc">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:28:31 PM" />
-        <field name="msdyn_description" value="Time that is billable" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_description" value="청구 가능 시간" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:28:31 PM" />
         <field name="msdyn_name" value="BillableTime" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="6c7f2dbf-a0df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Billable Time" />
+        <field name="msdyn_displayname" value="청구 가능 시간" />
       </record>
       <record id="4a8c0ace-a0df-e911-a81e-000d3a0698dc">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:28:56 PM" />
-        <field name="msdyn_description" value="Case Id" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_description" value="서비스 케이스 ID" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:28:56 PM" />
         <field name="msdyn_name" value="IncidentId" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="4a8c0ace-a0df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
@@ -865,58 +227,58 @@
         <field name="msdyn_displayname" value="IncidentId" />
       </record>
       <record id="35b0d4dc-a0df-e911-a81e-000d3a0698dc">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:29:21 PM" />
-        <field name="msdyn_description" value="Resolution reason" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_description" value="해결 설명" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:29:21 PM" />
         <field name="msdyn_name" value="Resolution" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="35b0d4dc-a0df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Resolution" />
+        <field name="msdyn_displayname" value="해결" />
       </record>
       <record id="9a6161ef-3033-4c8a-89fb-8229bf4539e9">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 11:52:28 AM" />
-        <field name="msdyn_description" value="Sample JSON object" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="msdyn_description" value="샘플 JSON 개체" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/9/2019 11:52:28 AM" />
         <field name="msdyn_name" value="Custom_Object" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="9a6161ef-3033-4c8a-89fb-8229bf4539e9" />
         <field name="msdyn_parametertype" value="array" />
         <field name="msdyn_jsonobjectstructure" value="{&quot;Key1&quot;:{&quot;title&quot;:&quot;Title 1&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;Key1 description&quot;},&quot;Key2&quot;:{&quot;title&quot;:&quot;Title 2&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;Key2 description&quot;}}" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Sample custom JSON Object" />
+        <field name="msdyn_displayname" value="샘플 사용자 지정 JSON 개체" />
       </record>
       <record id="dc1db27b-b27e-4de3-ad4b-a1ba406de050">
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/9/2019 11:52:28 AM" />
-        <field name="msdyn_description" value="Array of custom name-value pairs" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="msdyn_description" value="사용자 지정 이름-값 쌍의 배열" />
+        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/9/2019 11:52:28 AM" />
         <field name="msdyn_name" value="Custom_Array" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" />
-        <field lookupentity="systemuser" name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" />
+        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
+        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="dc1db27b-b27e-4de3-ad4b-a1ba406de050" />
         <field name="msdyn_parametertype" value="array" />
         <field name="msdyn_jsonobjectstructure" value="{&quot;Name&quot;:{&quot;title&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC&quot;},&quot;Value&quot;:{&quot;title&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC&quot;}}" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Custom Attribute" />
+        <field name="msdyn_displayname" value="사용자 지정 특성" />
       </record>
     </records>
     <m2mrelationships>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam" sourceid="d61ae14b-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid">
+      <m2mrelationship sourceid="d61ae14b-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
         <targetids>
           <targetid>af738e20-9fdf-e911-a81e-000d3a0698dc</targetid>
           <targetid>324255e8-9fdf-e911-a81e-000d3a0698dc</targetid>
@@ -926,7 +288,7 @@
           <targetid>70ec88f5-a2df-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="d61ae14b-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="d61ae14b-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>f530a3d1-f9d2-e911-a81e-000d3a015920</targetid>
           <targetid>c8d99e29-fad2-e911-a81e-000d3a015920</targetid>
@@ -935,48 +297,48 @@
           <targetid>4de2d295-9fdf-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="ddf27260-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="ddf27260-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>84e5f9f9-15e6-4c54-8727-326e9cddb5e8</targetid>
           <targetid>f537df76-a690-4fc8-aa69-9b875f5fff9b</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam" sourceid="f729e573-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid">
+      <m2mrelationship sourceid="f729e573-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
         <targetids>
           <targetid>64dfc33d-a0df-e911-a81e-000d3a0698dc</targetid>
           <targetid>98ddcda4-a1df-e911-a81e-000d3a0698dc</targetid>
           <targetid>70ec88f5-a2df-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="f729e573-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="f729e573-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>c8d99e29-fad2-e911-a81e-000d3a015920</targetid>
           <targetid>d54edfed-fcd2-e911-a81e-000d3a015920</targetid>
           <targetid>4de2d295-9fdf-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="6e033082-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="6e033082-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>c8e3f6f3-9888-45ea-ab7a-378b7aedccbc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="474f7494-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="474f7494-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>c8e3f6f3-9888-45ea-ab7a-378b7aedccbc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="fed739aa-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="fed739aa-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>1ce921a3-fbd2-e911-a81e-000d3a015920</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="32e1acb9-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="32e1acb9-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>c833de57-fcd2-e911-a81e-000d3a015920</targetid>
           <targetid>62da1195-fcd2-e911-a81e-000d3a015920</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam" sourceid="ca97e23b-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid">
+      <m2mrelationship sourceid="ca97e23b-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
         <targetids>
           <targetid>af738e20-9fdf-e911-a81e-000d3a0698dc</targetid>
           <targetid>324255e8-9fdf-e911-a81e-000d3a0698dc</targetid>
@@ -985,7 +347,7 @@
           <targetid>70ec88f5-a2df-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam" sourceid="eb102e60-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid">
+      <m2mrelationship sourceid="eb102e60-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
         <targetids>
           <targetid>af738e20-9fdf-e911-a81e-000d3a0698dc</targetid>
           <targetid>324255e8-9fdf-e911-a81e-000d3a0698dc</targetid>
@@ -995,32 +357,32 @@
           <targetid>8d571f7e-a1df-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="b66cd2ac-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="b66cd2ac-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>4de2d295-9fdf-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="473decbe-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="473decbe-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>4de2d295-9fdf-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="6c7f2dbf-a0df-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="6c7f2dbf-a0df-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>c61541ac-a0df-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="4a8c0ace-a0df-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="4a8c0ace-a0df-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>c61541ac-a0df-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="35b0d4dc-a0df-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="35b0d4dc-a0df-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>c61541ac-a0df-e911-a81e-000d3a0698dc</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam" sourceid="dc1db27b-b27e-4de3-ad4b-a1ba406de050" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid">
+      <m2mrelationship sourceid="dc1db27b-b27e-4de3-ad4b-a1ba406de050" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>df71b777-cf80-40f3-bc35-9a52c2eb8433</targetid>
           <targetid>8729c34c-a5df-e911-a81e-000d3a0698dc</targetid>
@@ -1028,170 +390,808 @@
       </m2mrelationship>
     </m2mrelationships>
   </entity>
-<entity displayname="Action Output Parameter" name="msdyn_actionoutputparameter">
+  <entity name="msdyn_actioninputparameter" displayname="Action Input Parameter">
+    <records>
+      <record id="f530a3d1-f9d2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="f530a3d1-f9d2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:58 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Create_New_Input_Params_Mandatory" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="c8d99e29-fad2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="c8d99e29-fad2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="e6c81912-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Form" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:57 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Open_Existing_Form_Input_Params_Mandatory" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="1d75d16f-fad2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="1d75d16f-fad2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:58 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Open_Grid_Input_Params_Mandatory" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="c8e3f6f3-9888-45ea-ab7a-378b7aedccbc">
+        <field name="msdyn_actioninputparameterid" value="c8e3f6f3-9888-45ea-ab7a-378b7aedccbc" />
+        <field name="msdyn_actiontemplateinputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:58 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Open_Grid_Input_Params_Optional" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="important" />
+      </record>
+      <record id="1ce921a3-fbd2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="1ce921a3-fbd2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="baa326ad-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Dashboard" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:59 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Open_Dashboard_Input_Param_Mandatory" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="c833de57-fcd2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="c833de57-fcd2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="85ab814a-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_knowledge_base" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:59 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:59:44 PM" />
+        <field name="msdyn_name" value="Search_kb_input_params" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="False" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="important" />
+      </record>
+      <record id="62da1195-fcd2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="62da1195-fcd2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="16fc3387-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_by_relevance" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:58 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Search_by_relevance_input_parameter" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="d54edfed-fcd2-e911-a81e-000d3a015920">
+        <field name="msdyn_actioninputparameterid" value="d54edfed-fcd2-e911-a81e-000d3a015920" />
+        <field name="msdyn_actiontemplateinputparameterid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Record" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:59 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Update_record_input_params_mandatory" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="4de2d295-9fdf-e911-a81e-000d3a0698dc">
+        <field name="msdyn_actioninputparameterid" value="4de2d295-9fdf-e911-a81e-000d3a0698dc" />
+        <field name="msdyn_actiontemplateinputparameterid" value="e903922e-fdd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Draft_Email" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:20:12 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:56:52 PM" />
+        <field name="msdyn_name" value="draft_email_input_params_mandatory" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="c61541ac-a0df-e911-a81e-000d3a0698dc">
+        <field name="msdyn_actioninputparameterid" value="c61541ac-a0df-e911-a81e-000d3a0698dc" />
+        <field name="msdyn_actiontemplateinputparameterid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" lookupentity="msdyn_macroactiontemplate" lookupentityname="Resolve_Case" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:27:59 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:58:53 PM" />
+        <field name="msdyn_name" value="Resolve_Case_Input_Mandatory" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="8729c34c-a5df-e911-a81e-000d3a0698dc">
+        <field name="msdyn_actioninputparameterid" value="8729c34c-a5df-e911-a81e-000d3a0698dc" />
+        <field name="msdyn_actiontemplateinputparameterid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Record" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 3:01:07 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 3:01:07 PM" />
+        <field name="msdyn_name" value="Update_record_input_params_advanced" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="False" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="advanced" />
+      </record>
+      <record id="84e5f9f9-15e6-4c54-8727-326e9cddb5e8">
+        <field name="msdyn_actioninputparameterid" value="84e5f9f9-15e6-4c54-8727-326e9cddb5e8" />
+        <field name="msdyn_actiontemplateinputparameterid" value="e6c81912-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Form" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:58 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:58:17 PM" />
+        <field name="msdyn_name" value="Open_Existing_Form_Input_Params_Optional" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="True" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="important" />
+      </record>
+      <record id="df71b777-cf80-40f3-bc35-9a52c2eb8433">
+        <field name="msdyn_actioninputparameterid" value="df71b777-cf80-40f3-bc35-9a52c2eb8433" />
+        <field name="msdyn_actiontemplateinputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:57 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Create_New_Input_Params_Advanced" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="False" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="advanced" />
+      </record>
+      <record id="f537df76-a690-4fc8-aa69-9b875f5fff9b">
+        <field name="msdyn_actioninputparameterid" value="f537df76-a690-4fc8-aa69-9b875f5fff9b" />
+        <field name="msdyn_actiontemplateinputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:12:58 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
+        <field name="msdyn_name" value="Create_New_Input_Params_Optional" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parametertype" value="False" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="important" />
+      </record>
+    </records>
+    <m2mrelationships />
+  </entity>
+  <entity name="msdyn_actionoutputparameter" displayname="Action Output Parameter">
     <records>
       <record id="af738e20-9fdf-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="af738e20-9fdf-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" name="msdyn_actiontemplateoutputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:16:56 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:20:33 PM" />
         <field name="msdyn_name" value="Create_New_Output_Params" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="324255e8-9fdf-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="324255e8-9fdf-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Draft_Email" name="msdyn_actiontemplateoutputparameterid" value="e903922e-fdd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="e903922e-fdd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Draft_Email" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:22:31 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:25:38 PM" />
         <field name="msdyn_name" value="draft_email_output_params" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="64dfc33d-a0df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="64dfc33d-a0df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Form" name="msdyn_actiontemplateoutputparameterid" value="e6c81912-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="e6c81912-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Form" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:24:54 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:26:50 PM" />
         <field name="msdyn_name" value="Open_Exisiting_Form_Output_Params" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="76104271-a0df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="76104271-a0df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" name="msdyn_actiontemplateoutputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:26:20 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:29:27 PM" />
         <field name="msdyn_name" value="Open_Grid_Output_Params" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="1ea83154-a1df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="1ea83154-a1df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_by_relevance" name="msdyn_actiontemplateoutputparameterid" value="16fc3387-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="16fc3387-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_by_relevance" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:32:41 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:34:14 PM" />
         <field name="msdyn_name" value="Search_by_relevance_output_parameter" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="8d571f7e-a1df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="8d571f7e-a1df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_knowledge_base" name="msdyn_actiontemplateoutputparameterid" value="85ab814a-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="85ab814a-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_knowledge_base" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:33:52 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:37:33 PM" />
         <field name="msdyn_name" value="Search_kb_output_params" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="98ddcda4-a1df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="98ddcda4-a1df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Record" name="msdyn_actiontemplateoutputparameterid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Record" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:34:56 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:42:17 PM" />
         <field name="msdyn_name" value="Update_record_output_params" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="70ec88f5-a2df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="70ec88f5-a2df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="msdyn_macroactiontemplate" lookupentityname="Resolve_Case" name="msdyn_actiontemplateoutputparameterid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" lookupentity="msdyn_macroactiontemplate" lookupentityname="Resolve_Case" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:44:21 PM" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:45:29 PM" />
         <field name="msdyn_name" value="resolve_case_ouput_params" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
     </records>
     <m2mrelationships />
   </entity>
-  <entity displayname="Macro Connector" name="msdyn_macroconnector">
+  <entity name="msdyn_macroconnector" displayname="Macro Connector">
     <records>
       <record id="60541186-f5dd-e911-a81e-000d3af9c0c2">
         <field name="msdyn_brandcolor" value="#2266E3" />
         <field name="msdyn_categorykey" value="CONNECTORS" />
-        <field name="msdyn_categorylabel" value="Predefined automation actions" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="msdyn_categorylabel" value="미리 정의된 자동화 작업" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:12:53 PM" />
-        <field name="msdyn_description" value="Automate commonly used client-side tasks" />
-        <field name="msdyn_displayname" value="Productivity Automation" />
+        <field name="msdyn_description" value="일반적으로 사용되는 클라이언트 측 작업 자동화" />
+        <field name="msdyn_displayname" value="생산성 자동화" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_macro_connector.svg" />
         <field name="msdyn_macroconnectorid" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="modifiedon" value="9/25/2019 2:12:53 PM" />
         <field name="msdyn_name" value="Productivity Automation" />
-        <field lookupentity="systemuser" lookupentityname="First name Last name" name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" />
-        <field lookupentity="systemuser" name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_title" value="Productivity Automation" />
+        <field name="msdyn_title" value="생산성 자동화" />
         <field name="msdyn_type" value="CDSClientAutomation" />
       </record>
     </records>
     <m2mrelationships />
   </entity>
-  <entity displayname="Macro Solution Configuration" name="msdyn_macrosolutionconfiguration">
+  <entity name="msdyn_macroactiontemplate" displayname="Macro Action Template">
+    <records>
+      <record id="01a02947-f9d2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:00 PM" />
+        <field name="msdyn_actionDescription" value="새 양식을 열어 레코드 만들기" />
+        <field name="msdyn_displayname" value="새로 만들기" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_new_form.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="01a02947-f9d2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:15:13 PM" />
+        <field name="msdyn_name" value="Create_New" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openNewForm(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="새로 만들기" />
+        <field name="msdyn_summary" value="새 양식을 열어 레코드 만들기" />
+        <field name="msdyn_title" value="새 양식을 열어 레코드 만들기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="e6c81912-fad2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:01 PM" />
+        <field name="msdyn_actionDescription" value="기존 레코드 열기" />
+        <field name="msdyn_displayname" value="양식 열기" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_form.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="e6c81912-fad2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:23:29 PM" />
+        <field name="msdyn_name" value="Open_Form" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openExistingForm(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="양식 열기" />
+        <field name="msdyn_summary" value="기존 레코드 열기" />
+        <field name="msdyn_title" value="기존 레코드 열기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="1c1af956-fad2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:02 PM" />
+        <field name="msdyn_actionDescription" value="레코드 그리드 열기" />
+        <field name="msdyn_displayname" value="그리드 열기" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_grid.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="1c1af956-fad2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:25:44 PM" />
+        <field name="msdyn_name" value="Open_Grid" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openGrid(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="그리드 열기" />
+        <field name="msdyn_summary" value="레코드 그리드 열기" />
+        <field name="msdyn_title" value="레코드 그리드 열기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="baa326ad-fad2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:01 PM" />
+        <field name="msdyn_actionDescription" value="기존 대시보드 열기" />
+        <field name="msdyn_displayname" value="대시보드 열기" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_dashboard.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="baa326ad-fad2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
+        <field name="msdyn_name" value="Open_Dashboard" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="1" />
+        <field name="statuscode" value="2" />
+        <field name="msdyn_subtitle" value="대시보드 열기" />
+        <field name="msdyn_summary" value="대시보드 열기" />
+        <field name="msdyn_title" value="기존 대시보드 열기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="13a680e2-fbd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:01 PM" />
+        <field name="msdyn_actionDescription" value="참조 자료 검색 페이지 열기" />
+        <field name="msdyn_displayname" value="참조 자료 검색 열기" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_kb.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="13a680e2-fbd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
+        <field name="msdyn_name" value="Open_knowledge_search" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="1" />
+        <field name="statuscode" value="2" />
+        <field name="msdyn_subtitle" value="참조 자료 검색 열기" />
+        <field name="msdyn_summary" value="참조 자료 검색 페이지 열기" />
+        <field name="msdyn_title" value="참조 자료 검색 페이지 열기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="48bbc0f3-fbd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:02 PM" />
+        <field name="msdyn_actionDescription" value="세션 만들기" />
+        <field name="msdyn_displayname" value="세션 만들기" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_create_session.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="48bbc0f3-fbd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:14:52 PM" />
+        <field name="msdyn_name" value="Create_Session" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="1" />
+        <field name="statuscode" value="2" />
+        <field name="msdyn_subtitle" value="세션 만들기" />
+        <field name="msdyn_summary" value="세션 만들기" />
+        <field name="msdyn_title" value="세션 만들기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="2574de1c-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:02 PM" />
+        <field name="msdyn_actionDescription" value="다른 모든 세션 닫기" />
+        <field name="msdyn_displayname" value="다른 모든 세션 닫기" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_close_all_sessions.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="2574de1c-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:14:52 PM" />
+        <field name="msdyn_name" value="Close_All_other_Sessions" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="1" />
+        <field name="statuscode" value="2" />
+        <field name="msdyn_subtitle" value="다른 모든 세션 닫기" />
+        <field name="msdyn_summary" value="다른 모든 세션 닫기" />
+        <field name="msdyn_title" value="다른 모든 세션 닫기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="85ab814a-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:03 PM" />
+        <field name="msdyn_actionDescription" value="채워진 문구에 대한 참조 자료 검색" />
+        <field name="msdyn_displayname" value="참조 자료 문서 검색" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_search_kb.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="85ab814a-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:33:10 PM" />
+        <field name="msdyn_name" value="Search_knowledge_base" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openKBSearchControl(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="채워진 문구에 대한 참조 자료 검색" />
+        <field name="msdyn_summary" value="채워진 문구에 대한 참조 자료 검색" />
+        <field name="msdyn_title" value="채워진 문구에 대한 참조 자료 검색" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="16fc3387-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:03 PM" />
+        <field name="msdyn_actionDescription" value="문구에 따라 관련성 검색 수행" />
+        <field name="msdyn_displayname" value="관련성별로 검색" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_search_relevance.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="16fc3387-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:30:36 PM" />
+        <field name="msdyn_name" value="Search_by_relevance" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openSearchPage(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="문구에 따라 관련성 검색 수행" />
+        <field name="msdyn_summary" value="문구에 따라 관련성 검색 수행" />
+        <field name="msdyn_title" value="문구에 따라 관련성 검색 수행" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="101c73b5-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:03 PM" />
+        <field name="msdyn_actionDescription" value="레코드 저장" />
+        <field name="msdyn_displayname" value="저장" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_save.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="101c73b5-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
+        <field name="msdyn_name" value="Save" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="1" />
+        <field name="statuscode" value="2" />
+        <field name="msdyn_subtitle" value="레코드 저장" />
+        <field name="msdyn_summary" value="레코드 저장" />
+        <field name="msdyn_title" value="레코드 저장" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="19c8c1c6-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:03 PM" />
+        <field name="msdyn_actionDescription" value="페이지 새로 고침" />
+        <field name="msdyn_displayname" value="새로 고침" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_refresh.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="19c8c1c6-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
+        <field name="msdyn_name" value="Refresh" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="1" />
+        <field name="statuscode" value="2" />
+        <field name="msdyn_subtitle" value="페이지 새로 고침" />
+        <field name="msdyn_summary" value="페이지 새로 고침" />
+        <field name="msdyn_title" value="페이지 새로 고침" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="ce3390dd-fcd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:04 PM" />
+        <field name="msdyn_actionDescription" value="기존 레코드 업데이트" />
+        <field name="msdyn_displayname" value="레코드 업데이트" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_update_record.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:34:23 PM" />
+        <field name="msdyn_name" value="Update_Record" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.updateRecord(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="기존 레코드 업데이트" />
+        <field name="msdyn_summary" value="기존 레코드 업데이트" />
+        <field name="msdyn_title" value="기존 레코드 업데이트" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="d965ea11-fdd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:05 PM" />
+        <field name="msdyn_actionDescription" value="세션에서 지정된 레코드에 대해 종류의 관련 레코드 열기" />
+        <field name="msdyn_displayname" value="관련 항목 열기" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_associated.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="d965ea11-fdd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
+        <field name="msdyn_name" value="Open_Associated" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="1" />
+        <field name="statuscode" value="2" />
+        <field name="msdyn_subtitle" value="관련 항목 열기" />
+        <field name="msdyn_summary" value="세션에서 지정된 레코드에 대해 종류의 관련 레코드 열기" />
+        <field name="msdyn_title" value="관련 항목 열기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="e903922e-fdd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:04 PM" />
+        <field name="msdyn_actionDescription" value="미리 정의된 템플릿으로 전자 메일 양식 열기" />
+        <field name="msdyn_displayname" value="전자 메일" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_email.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="e903922e-fdd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:19:50 PM" />
+        <field name="msdyn_name" value="Draft_Email" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.draftEmail(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="미리 정의된 템플릿으로 전자 메일 양식 열기" />
+        <field name="msdyn_summary" value="미리 정의된 템플릿으로 전자 메일 양식 열기" />
+        <field name="msdyn_title" value="미리 정의된 템플릿으로 전자 메일 양식 열기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="0e59ec44-fdd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:04 PM" />
+        <field name="msdyn_actionDescription" value="참조 자료 문서 보내기" />
+        <field name="msdyn_displayname" value="참조 자료 보내기" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_send_kb.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="0e59ec44-fdd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
+        <field name="msdyn_name" value="Send_KB" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="1" />
+        <field name="statuscode" value="2" />
+        <field name="msdyn_subtitle" value="참조 자료 문서 보내기" />
+        <field name="msdyn_summary" value="참조 자료 문서 보내기" />
+        <field name="msdyn_title" value="참조 자료 문서 보내기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="68e92456-fdd2-e911-a81e-000d3a015920">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:05 PM" />
+        <field name="msdyn_actionDescription" value="레코드를 복제하고 세션에서 열기" />
+        <field name="msdyn_displayname" value="레코드 복제" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_clone_record.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="68e92456-fdd2-e911-a81e-000d3a015920" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:14:52 PM" />
+        <field name="msdyn_name" value="Clone_record" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="1" />
+        <field name="statuscode" value="2" />
+        <field name="msdyn_subtitle" value="레코드를 복제하고 세션에서 열기" />
+        <field name="msdyn_summary" value="레코드를 복제하고 세션에서 열기" />
+        <field name="msdyn_title" value="레코드를 복제하고 세션에서 열기" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="cd1fa1a0-a0df-e911-a81e-000d3a0698dc">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:27:40 PM" />
+        <field name="msdyn_actionDescription" value="케이스 해결을 위한 서비스 케이스" />
+        <field name="msdyn_displayname" value="서비스 케이스 해결" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:27:40 PM" />
+        <field name="msdyn_name" value="Resolve_Case" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.resolveIncident(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="서비스 케이스 해결" />
+        <field name="msdyn_summary" value="케이스 해결을 위한 서비스 케이스" />
+        <field name="msdyn_title" value="서비스 케이스 해결" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:05 PM" />
+        <field name="msdyn_actionDescription" value="매크로 실행 시작" />
+        <field name="msdyn_displayname" value="시작" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_macro_connector.svg" />
+        <field name="msdyn_kind" value="TRIGGERS" />
+        <field name="msdyn_macroactiontemplateid" value="d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:05 PM" />
+        <field name="msdyn_name" value="Start" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="매크로 실행 시작" />
+        <field name="msdyn_summary" value="매크로 실행 시작" />
+        <field name="msdyn_title" value="매크로 실행 시작" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+    </records>
+    <m2mrelationships />
+  </entity>
+  <entity name="msdyn_macrosolutionconfiguration" displayname="Macro Solution Configuration">
     <records>
       <record id="1b65ad62-4fe3-e911-a81a-000d3a706f52">
         <field name="msdyn_designerurlconfigentityattrib" value="path" />
-        <field lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" name="createdby" value="36addd55-be8a-4535-a9fb-e765ef02f771" />
+        <field name="createdby" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
         <field name="createdon" value="9/30/2019 6:56:11 AM" />
         <field name="msdyn_designerurlconfigentity" value="serviceendpoint" />
         <field name="msdyn_macrosolutionconfigurationid" value="1b65ad62-4fe3-e911-a81a-000d3a706f52" />
-        <field lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" name="modifiedby" value="36addd55-be8a-4535-a9fb-e765ef02f771" />
+        <field name="modifiedby" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
         <field name="modifiedon" value="9/30/2019 7:28:45 AM" />
         <field name="msdyn_name" value="Default Designer Config" />
-        <field lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" name="ownerid" value="36addd55-be8a-4535-a9fb-e765ef02f771" />
-        <field lookupentity="businessunit" name="owningbusinessunit" value="68c108db-5bdf-e911-a81a-000d3a7611d3" />
-        <field lookupentity="systemuser" name="owninguser" value="36addd55-be8a-4535-a9fb-e765ef02f771" />
+        <field name="ownerid" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
+        <field name="owningbusinessunit" value="68c108db-5bdf-e911-a81a-000d3a7611d3" lookupentity="businessunit" />
+        <field name="owninguser" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" />
         <field name="msdyn_designerurlconfigentityid" value="38bd8b51-de34-4c45-bf43-5a913aeec49f" />
         <field name="msdyn_designerurlrelativepath" value="/flowcontrol/DesignerBlob/iframedesigner.html" />
-        <field name="msdyn_searchhint" value="Search macro" />
+        <field name="msdyn_searchhint" value="매크로 검색" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_uservoicelink" value="https://experience.dynamics.com/ideas/categories/list/?category=31047c64-7e28-e911-a95a-000d3a4f3883&amp;amp;forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad" />
-        <field name="msdyn_uservoicetext" value="Let us know what you would like us to build next" />
+        <field name="msdyn_uservoicetext" value="다음에 빌드되기 원하는 기능을 알려주십시오." />
         <field name="msdyn_macrosversion" value="9.2.0.0" />
       </record>
     </records>

@@ -189,6 +189,10 @@
     <value>वर्तमान सत्र से कोई एजेंट स्क्रिप्ट लिंक नहीं है</value>
     <comment>Error message when no agent scripts are linked with session template</comment>
   </data>
+  <data name="ScriptActionStepLabel" xml:space="preserve">
+    <value>स्क्रिप्ट लोड करें</value>
+    <comment>Label for script action step</comment>
+  </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
     <value>एक स्क्रिप्ट चुनें</value>
     <comment>Label for empty option in script select combobox</comment>

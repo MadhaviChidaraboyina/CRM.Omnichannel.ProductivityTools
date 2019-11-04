@@ -189,6 +189,10 @@
     <value>Δεν υπάρχουν δέσμες ενεργειών εκπροσώπου συνδεδεμένες με την τρέχουσα περίοδο λειτουργίας</value>
     <comment>Error message when no agent scripts are linked with session template</comment>
   </data>
+  <data name="ScriptActionStepLabel" xml:space="preserve">
+    <value>Φόρτωση δέσμης ενεργειών</value>
+    <comment>Label for script action step</comment>
+  </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
     <value>Επιλέξτε μια δέσμη ενεργειών</value>
     <comment>Label for empty option in script select combobox</comment>

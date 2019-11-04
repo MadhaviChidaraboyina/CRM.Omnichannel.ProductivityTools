@@ -13,7 +13,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="d61ae14b-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="实体逻辑名称" />
@@ -29,7 +29,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="ddf27260-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="实体窗体 ID" />
@@ -45,7 +45,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="f729e573-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="实体记录 ID" />
@@ -61,7 +61,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="6e033082-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="视图 ID" />
@@ -77,7 +77,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="474f7494-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="视图类型" />
@@ -93,7 +93,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="fed739aa-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="仪表板 ID" />
@@ -109,7 +109,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="32e1acb9-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="搜索字符串" />
@@ -125,7 +125,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="ae9b14cb-f8d2-e911-a81e-000d3a015920" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="键值对的 JSON 字符串" />
@@ -141,7 +141,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="ca97e23b-9fdf-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="页面类型" />
@@ -157,7 +157,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="eb102e60-9fdf-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="选项卡 ID" />
@@ -173,7 +173,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="b66cd2ac-9fdf-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="电子邮件收件人" />
@@ -189,7 +189,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="473decbe-9fdf-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="模板 ID" />
@@ -205,7 +205,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="6c7f2dbf-a0df-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="记帐时间" />
@@ -221,7 +221,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="4a8c0ace-a0df-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="IncidentId" />
@@ -237,7 +237,7 @@
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="35b0d4dc-a0df-e911-a81e-000d3a0698dc" />
-        <field name="msdyn_parametertype" value="字符串" />
+        <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="解决" />
@@ -253,7 +253,7 @@
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="9a6161ef-3033-4c8a-89fb-8229bf4539e9" />
-        <field name="msdyn_parametertype" value="数组" />
+        <field name="msdyn_parametertype" value="array" />
         <field name="msdyn_jsonobjectstructure" value="{&quot;Key1&quot;:{&quot;title&quot;:&quot;Title 1&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;Key1 description&quot;},&quot;Key2&quot;:{&quot;title&quot;:&quot;Title 2&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;Key2 description&quot;}}" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -270,7 +270,7 @@
         <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
         <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="dc1db27b-b27e-4de3-ad4b-a1ba406de050" />
-        <field name="msdyn_parametertype" value="数组" />
+        <field name="msdyn_parametertype" value="array" />
         <field name="msdyn_jsonobjectstructure" value="{&quot;Name&quot;:{&quot;title&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC&quot;},&quot;Value&quot;:{&quot;title&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC&quot;}}" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -741,11 +741,11 @@
       <record id="60541186-f5dd-e911-a81e-000d3af9c0c2">
         <field name="msdyn_brandcolor" value="#2266E3" />
         <field name="msdyn_categorykey" value="CONNECTORS" />
-        <field name="msdyn_categorylabel" value="Predefined automation actions" />
+        <field name="msdyn_categorylabel" value="预定义的自动化操作" />
         <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="createdon" value="9/25/2019 2:12:53 PM" />
-        <field name="msdyn_description" value="Automate commonly used client-side tasks" />
-        <field name="msdyn_displayname" value="Productivity Automation" />
+        <field name="msdyn_description" value="自动执行常用的客户端任务" />
+        <field name="msdyn_displayname" value="工作效率自动化" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_macro_connector.svg" />
         <field name="msdyn_macroconnectorid" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
         <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
@@ -756,7 +756,7 @@
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_title" value="Productivity Automation" />
+        <field name="msdyn_title" value="工作效率自动化" />
         <field name="msdyn_type" value="CDSClientAutomation" />
       </record>
     </records>
@@ -1187,11 +1187,11 @@
         <field name="owninguser" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" />
         <field name="msdyn_designerurlconfigentityid" value="38bd8b51-de34-4c45-bf43-5a913aeec49f" />
         <field name="msdyn_designerurlrelativepath" value="/flowcontrol/DesignerBlob/iframedesigner.html" />
-        <field name="msdyn_searchhint" value="Search macro" />
+        <field name="msdyn_searchhint" value="搜索宏" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_uservoicelink" value="https://experience.dynamics.com/ideas/categories/list/?category=31047c64-7e28-e911-a95a-000d3a4f3883&amp;amp;forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad" />
-        <field name="msdyn_uservoicetext" value="Let us know what you would like us to build next" />
+        <field name="msdyn_uservoicetext" value="告知我们您希望我们接下来构建的内容" />
       </record>
     </records>
     <m2mrelationships />

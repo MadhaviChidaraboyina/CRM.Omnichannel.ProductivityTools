@@ -122,7 +122,7 @@
     <comment>Header value for smartassist control</comment>
   </data>
   <data name="EmptyMessage" xml:space="preserve">
-    <value>No suggestions available</value>
+    <value>Немає доступних пропозицій</value>
     <comment>Empty message</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
@@ -130,7 +130,7 @@
     <comment>Failure Message</comment>
   </data>
   <data name="SuccessMessage" xml:space="preserve">
-    <value>Дію застосовано!</value>
+    <value>Готово!</value>
     <comment>Success Message</comment>
   </data>
 </root>

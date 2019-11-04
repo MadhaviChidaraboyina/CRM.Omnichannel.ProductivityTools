@@ -174,6 +174,15 @@
           <Cmt Name="Dev"><![CDATA[Error message when no agent scripts are linked with session template]]></Cmt>
         </Cmts>
       </Item>
+      <Item ItemId=";ScriptActionStepLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Load script]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Label for script action step]]></Cmt>
+        </Cmts>
+      </Item>
       <Item ItemId=";ScriptCombobox_EmptyOption" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Select a script]]></Val>

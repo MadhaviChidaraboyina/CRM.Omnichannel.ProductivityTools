@@ -37,6 +37,22 @@
           <Str Name="Custom3" Val="WO20361_20190923" />
         </Props>
       </Item>
+      <Item ItemId=";EmptyMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No suggestions available]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[利用可能な提案はありません]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:49.0002093Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Empty message]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
       <Item ItemId=";FailureMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Something went wrong. Please try again]]></Val>
@@ -55,18 +71,21 @@
       </Item>
       <Item ItemId=";SuccessMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Action applied successfully!]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[アクションは正常に適用されました!]]></Val>
+          <Val><![CDATA[Done!]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[完了しました。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Action applied successfully!]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-26T02:12:51.0003755Z" />
+        <Modified By="v-rondai" DateTime="2019-10-23T12:46:49.0002093Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Success Message]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO20361_20190923" />
+          <Str Name="Custom3" Val="WO21633_20191021" />
         </Props>
       </Item>
     </Item>

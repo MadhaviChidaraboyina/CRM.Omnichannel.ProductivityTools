@@ -337,10 +337,6 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
-    <value>Channel API Integration Framework</value>
-    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>Khuôn khổ Tích hợp API Kênh</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -440,6 +436,10 @@
     <value />
     <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_msdyn_clicktoact' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics" xml:space="preserve">
+    <value />
+    <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_msdyn_enableanalytics' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_ciprovider_statecode" xml:space="preserve">
     <value>Trạng thái của CIProvider</value>
     <comment>'msdyn_ciprovider' : Description for OptionSet 'msdyn_ciprovider_statecode' on Entity</comment>
@@ -451,6 +451,10 @@
   <data name="1:Description,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
     <value>Bật Giao tiếp Truyền đi</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ClickToAct' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
+    <value>Bật Phân tích CIF cho nhà cung cấp hiện tại</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_EnableAnalytics' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_Label" xml:space="preserve">
     <value />
@@ -1402,6 +1406,10 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
     <value>Bật Giao tiếp Truyền đi</value>
     <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_msdyn_clicktoact' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics" xml:space="preserve">
+    <value>Bật Phân tích</value>
+    <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_msdyn_enableanalytics' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_ciprovider_statecode" xml:space="preserve">
     <value>Trạng thái</value>
     <comment>'msdyn_ciprovider' : displayname for OptionSet 'msdyn_ciprovider_statecode' on Entity</comment>
@@ -1413,6 +1421,10 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
   <data name="1:displayname,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
     <value>Bật Giao tiếp Truyền đi</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ClickToAct' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
+    <value>Bật Phân tích</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_EnableAnalytics' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_Label" xml:space="preserve">
     <value>Nhãn</value>
@@ -2383,6 +2395,14 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
     <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact1" xml:space="preserve">
+    <value>Có</value>
+    <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics0" xml:space="preserve">
+    <value>Không</value>
+    <comment>'msdyn_ciprovider' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_enableanalytics1" xml:space="preserve">
     <value>Có</value>
     <comment>'msdyn_ciprovider' : label for option '1' on Entity</comment>
   </data>

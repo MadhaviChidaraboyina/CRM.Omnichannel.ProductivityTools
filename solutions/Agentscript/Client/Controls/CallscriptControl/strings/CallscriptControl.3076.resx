@@ -189,6 +189,10 @@
     <value>沒有任何客服專員底稿與目前工作階段連結</value>
     <comment>Error message when no agent scripts are linked with session template</comment>
   </data>
+  <data name="ScriptActionStepLabel" xml:space="preserve">
+    <value>載入指令碼</value>
+    <comment>Label for script action step</comment>
+  </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
     <value>選取底稿</value>
     <comment>Label for empty option in script select combobox</comment>

@@ -189,6 +189,10 @@
     <value>Nėra agento scenarijų, susietų su dabartiniu seansu</value>
     <comment>Error message when no agent scripts are linked with session template</comment>
   </data>
+  <data name="ScriptActionStepLabel" xml:space="preserve">
+    <value>Įkelti scenarijų</value>
+    <comment>Label for script action step</comment>
+  </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
     <value>Pasirinkite scenarijų</value>
     <comment>Label for empty option in script select combobox</comment>

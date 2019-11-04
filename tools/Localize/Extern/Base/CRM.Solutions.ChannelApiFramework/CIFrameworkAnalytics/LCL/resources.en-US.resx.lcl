@@ -422,12 +422,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -449,42 +443,6 @@
       <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute5" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 5]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_EntityName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name of entity that was created by explicit agent action]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_EntityRecordId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique indentifier of entity that was created by explicit agent action]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -524,27 +482,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Id of the Knowledge Article suggested by the agent]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name of the Knowledge Article suggested by the agent]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_Name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Required name field]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_NewPresence" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[New agent presence status]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -554,39 +494,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_OldPresence" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Old agent presence status]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_ParticipantId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Identifier of the agent for whom the event was fired]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Identifier of the session to which this event belongs]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_TabAction" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Tab action done by the agent]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_TabId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Identifier of the tab which was acted upon by the agent]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_TabName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name of the tab which was acted upon by the agent]]></Val>
+          <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -872,12 +788,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -902,30 +812,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_ExternalCorrelationId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[External System Correlation Id]]></Val>
@@ -935,6 +821,12 @@
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_Name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Required name field]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -986,12 +878,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Identifier for the session]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Timestamp at which the queue was assigned to the session]]></Val>
@@ -1012,13 +898,13 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_sessiondata_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Status of the SessionData]]></Val>
+          <Val><![CDATA[Status of the Session Data]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:Description,msdyn_SessionDatamsdyn_sessiondata_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Reason for the status of the SessionData]]></Val>
+          <Val><![CDATA[Reason for the status of the Session Data]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1136,12 +1022,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -1163,42 +1043,6 @@
       <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute5" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 5]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External identifier of the session participant]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External name of the session participant]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1244,9 +1088,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Identifier of the session]]></Val>
+          <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1382,12 +1226,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_BackendConversationId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Backend Conversation Identifier]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_Channel" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Conversation channel]]></Val>
@@ -1397,12 +1235,6 @@
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ContactId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Contact unique identifier]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_Context" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Conversation context gathered from the channel]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1421,12 +1253,6 @@
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 1]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1454,63 +1280,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ExternalAccountId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Account identifier from the external system]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ExternalContactId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Contact identifier from the external system]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ExternalConversationId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Conversation Identifier from the external system]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ExternalCorrelationId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[External System Correlation Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_ExternalProviderId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier of the external provider]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_InitialQueueName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1552,13 +1324,37 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_conversationdata_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Status of the ConversationData]]></Val>
+          <Val><![CDATA[Status of the Conversation Data]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_conversationdata_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Reason for the status of the ConversationData]]></Val>
+          <Val><![CDATA[Reason for the status of the Conversation Data]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_customerCity" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_customerCountry" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_customerState" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_conversationdatamsdyn_customerZip" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2078,12 +1874,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -2105,42 +1895,6 @@
       <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute5" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 5]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_EntityName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Entity Name]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_EntityRecordId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Entity Record Id]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2180,27 +1934,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Knowledge Article Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_KnowledgeArticleName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Knowledge Article Name]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_Name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_NewPresence" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[New Presence]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2210,39 +1946,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_OldPresence" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Old Presence]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_ParticipantId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Participant Id]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_TabAction" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Tab Action]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_TabId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Tab Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_TabName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Tab Name]]></Val>
+          <Val><![CDATA[Provider Session Id]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2516,12 +2228,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -2546,30 +2252,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_ExternalCorrelationId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[External Correlation Id]]></Val>
@@ -2579,6 +2261,12 @@
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_Name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Provider Session Id]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2596,31 +2284,31 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionAdditionalData" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Additional Data]]></Val>
+          <Val><![CDATA[Additional Data]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionAgentAssignedTimestamp" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Agent Assigned Timestamp]]></Val>
+          <Val><![CDATA[Agent Assigned Timestamp]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionChannel" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Channel]]></Val>
+          <Val><![CDATA[Channel]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionCreatedTimestamp" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Created Timestamp]]></Val>
+          <Val><![CDATA[Created Timestamp]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionCreationReason" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Creation Reason]]></Val>
+          <Val><![CDATA[Creation Reason]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2630,15 +2318,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Session Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:displayname,msdyn_SessionDatamsdyn_SessionQueueAssignedTimestamp" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Queue Assigned Timestamp]]></Val>
+          <Val><![CDATA[Queue Assigned Timestamp]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2774,12 +2456,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 2]]></Val>
@@ -2804,42 +2480,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Participant Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ExternalParticipantName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Participant Name]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_Name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name]]></Val>
@@ -2848,13 +2488,13 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAddedTimestamp" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Participant Added Timestamp]]></Val>
+          <Val><![CDATA[Added Timestamp]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantAssignReason" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Participant Assign Reason]]></Val>
+          <Val><![CDATA[Assign Reason]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2866,25 +2506,25 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantMode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Participant Mode]]></Val>
+          <Val><![CDATA[Mode]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantName" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Participant Name]]></Val>
+          <Val><![CDATA[Name]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ParticipantType" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Participant Type]]></Val>
+          <Val><![CDATA[Type]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_SessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_SessionParticipantDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Session Id]]></Val>
+          <Val><![CDATA[Provider Session Id]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3014,12 +2654,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_BackendConversationId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Backend Conversation Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_Channel" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Channel]]></Val>
@@ -3029,12 +2663,6 @@
       <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ContactId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Contact Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_Context" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Channel Context]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3053,12 +2681,6 @@
       <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Custom Attribute 1]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute10" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 10]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3086,63 +2708,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute6" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 6]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute7" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 7]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute8" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 8]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_CustomAttribute9" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Custom Attribute 9]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ExternalAccountId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Account Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ExternalContactId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Contact Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ExternalConversationId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Conversation Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ExternalCorrelationId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[External Correlation Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_ExternalProviderId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[External Provider Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_InitialQueueName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Initial Queue Name to which the incoming work item was assigned]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3191,6 +2759,30 @@
       <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_conversationdata_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status Reason]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_customerCity" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer City]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_customerCountry" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer Country]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_customerState" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer State]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_conversationdatamsdyn_customerZip" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer Zip]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

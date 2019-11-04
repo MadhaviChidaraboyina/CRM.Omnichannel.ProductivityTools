@@ -122,7 +122,7 @@
     <comment>Header value for smartassist control</comment>
   </data>
   <data name="EmptyMessage" xml:space="preserve">
-    <value>No suggestions available</value>
+    <value>利用可能な提案はありません</value>
     <comment>Empty message</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
@@ -130,7 +130,7 @@
     <comment>Failure Message</comment>
   </data>
   <data name="SuccessMessage" xml:space="preserve">
-    <value>アクションは正常に適用されました!</value>
+    <value>完了しました。</value>
     <comment>Success Message</comment>
   </data>
 </root>

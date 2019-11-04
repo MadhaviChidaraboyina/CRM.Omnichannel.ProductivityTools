@@ -189,6 +189,10 @@
     <value>Aucun script de l'agent n'est lié à la session active</value>
     <comment>Error message when no agent scripts are linked with session template</comment>
   </data>
+  <data name="ScriptActionStepLabel" xml:space="preserve">
+    <value>Charger le script</value>
+    <comment>Label for script action step</comment>
+  </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
     <value>Sélectionner un script</value>
     <comment>Label for empty option in script select combobox</comment>

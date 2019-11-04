@@ -189,6 +189,10 @@
     <value>S aktuálnou reláciou nie sú prepojené žiadne skripty agentov</value>
     <comment>Error message when no agent scripts are linked with session template</comment>
   </data>
+  <data name="ScriptActionStepLabel" xml:space="preserve">
+    <value>Načítať skript</value>
+    <comment>Label for script action step</comment>
+  </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
     <value>Vyberte skript</value>
     <comment>Label for empty option in script select combobox</comment>
