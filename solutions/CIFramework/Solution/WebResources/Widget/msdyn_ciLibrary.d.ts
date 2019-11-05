@@ -135,6 +135,8 @@ declare namespace Microsoft.CIFramework {
         static UciLib: string;
         static OrgId: string;
         static trustedDomain: string;
+        static customParams: string;
+        static customParamsKey: string;
         static eventType: string;
         static headerDataCIF: string;
         static bodyDataCIF: string;

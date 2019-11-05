@@ -51,6 +51,11 @@
 												<control id="msdyn_trusteddomain" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="msdyn_trusteddomain" disabled="false" />
 											</cell>
 										</row>
+										<row>
+											<cell id="{54F26BB7-0D52-4737-8863-C78AC77C8A80}" showlabel="true" locklevel="0">
+												<control id="msdyn_customparams" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="msdyn_customparams" disabled="false" />
+											</cell>
+										</row>
 									</rows>
 								</section>
 							</sections>

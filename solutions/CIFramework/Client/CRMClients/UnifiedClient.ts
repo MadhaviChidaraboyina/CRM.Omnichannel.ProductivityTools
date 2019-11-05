@@ -206,12 +206,13 @@ namespace Microsoft.CIFramework.Internal {
 			const options: XrmClientApi.NewPanelOptions = {
 				position: isConsoleAppInternal() ? Constants.left : Constants.right,
 				defaultCollapsedBehavior: false,
-				url: "/webresources/widgets_container.html",				
+				url: "/webresources/widgets_container.html",
+				title: (ciProviders.size > 0) ? ciProviders.entries().next().value[1].label : "",
 			};
 			if (isConsoleAppInternal()) {
 				options.state = Constants.sidePanelHiddenState;
 			}
-			return new Promise<Map<string, boolean | string>>((resolve, reject) => {
+      return new Promise<Map<string, boolean | string>>((resolve, reject) => {
 				return Xrm.Panel.loadPanel(options).then(function () {
 					Xrm.Panel.addOnSizeChange(client.sizeChanged);
 					Xrm.Panel.addOnStateChange(client.modeChanged);
@@ -240,7 +241,7 @@ namespace Microsoft.CIFramework.Internal {
 							iFrame.height = "100%";
 							iFrame.width = "100%";
 							iFrame.src = key;
-							iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
+              iFrame.title = value.label;     //TODO: We may need to figure out where to put this title based on UX
 							value.setContainer(new WidgetIFrameWrapper(iFrame), minimizedHeight);
 							containerDiv.appendChild(iFrame);
 							doc.getElementById("widgetControlDiv").appendChild(containerDiv);

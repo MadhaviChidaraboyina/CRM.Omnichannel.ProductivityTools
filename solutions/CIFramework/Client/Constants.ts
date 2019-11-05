@@ -138,7 +138,9 @@ namespace Microsoft.CIFramework
 		public static Attributes = "attributes";
 		public static UciLib = "ucilib";
 		public static OrgId = "orgId";
-		public static trustedDomain = "msdyn_trusteddomain";
+    public static trustedDomain = "msdyn_trusteddomain";
+    public static customParams = "msdyn_customparams";
+    public static customParamsKey = "customParams";
 		public static eventType: string = "eventType";
 		public static headerDataCIF: string = "headerDataCIF";
 		public static bodyDataCIF: string = "bodyDataCIF";

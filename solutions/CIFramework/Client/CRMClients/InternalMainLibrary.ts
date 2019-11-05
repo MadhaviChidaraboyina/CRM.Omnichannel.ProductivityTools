@@ -215,11 +215,11 @@ namespace Microsoft.CIFramework.Internal {
 						if (x[Constants.trustedDomain] != "")
 							trustedDomains.push(x[Constants.trustedDomain]);
 
-						var provider: CIProvider = new CIProvider(x, state, environmentInfo);
+            var provider: CIProvider = new CIProvider(x, state, environmentInfo);
 						if (first) {
 							// initialize the session manager
 							state.providerManager = new ProviderManager(state.client, x[Constants.landingUrl], provider);
-							first = false;
+              first = false;
 						}
 						else {
 							state.providerManager.addProvider(x[Constants.landingUrl], provider);
@@ -381,7 +381,8 @@ namespace Microsoft.CIFramework.Internal {
 		let startTime = new Date();
 		const [provider, errorData] = getProvider(parameters); // if there are multiple widgets then we need this to get the value of particular widget 
 		if (provider) {
-			let data = state.client.getEnvironment(provider, telemetryData);
+      let data = state.client.getEnvironment(provider, telemetryData);
+      data.set(Constants.customParams, provider.customParams);
 			var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.getEnvironment, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 			setPerfData(perfData);
 			var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.getEnvironment, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));

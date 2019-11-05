@@ -97,6 +97,7 @@ namespace Microsoft.CIFramework.Internal {
 		crmVersion: string;	//CRM version
 		appId: string;	//App Id
 		trustedDomain: string;	// Domain to be whitelisted
+		customParams: string;
 		sessions: Map<string, Session>;
 		enableAnalytics: boolean  // Boolean flag to indicate whether to enable creation of CIF Analytics records
 
@@ -111,6 +112,7 @@ namespace Microsoft.CIFramework.Internal {
 			this.sortOrder = x[Constants.SortOrder];
 			this.apiVersion = x[Constants.APIVersion];
 			this.trustedDomain = x[Constants.trustedDomain];
+			this.customParams = x[Constants.customParams];
 			this.orgId = environmentInfo["orgId"];
 			this.orgName = environmentInfo["orgName"];
 			this.crmVersion = environmentInfo["crmVersion"];
