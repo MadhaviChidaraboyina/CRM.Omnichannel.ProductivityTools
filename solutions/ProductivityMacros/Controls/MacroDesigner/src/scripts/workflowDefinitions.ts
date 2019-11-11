@@ -77,7 +77,7 @@ export class Macros {
                 title: templ.msdyn_title,
                 summary: templ.msdyn_summary,
                 kind: templ.msdyn_kind,
-                visibility: templ.msdyn_visibility,
+                visibility: (templ.msdyn_visibility || "true"),
                 category: "CONNECTORS",
                 connectorId: templ.msdyn_macroconnector && templ.msdyn_macroconnector.msdyn_macroconnectorid || ""
             };

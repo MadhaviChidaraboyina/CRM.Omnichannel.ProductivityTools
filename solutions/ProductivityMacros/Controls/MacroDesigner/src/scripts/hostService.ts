@@ -511,19 +511,11 @@ export class OperationManifestServiceImpl implements Designer.OperationManifestS
     }
     public getOperationInfo(definition: any): Promise<Designer.OperationInfo> {
         let defaultConnector = this.operationManager.getDefaultConnector();
-        //let defaultAction = this.operationManager.getDefaultAction(defaultConnector.id);
-        return Promise.resolve({ connectorId: defaultConnector.id, operationId: defaultConnector.id });
+        let action = this.operationManager.getActionById(definition.type);
+        return Promise.resolve({ connectorId: defaultConnector.id, operationId: action && action.id || defaultConnector.id });
     }
     public getOperationManifest(connectorId: string, operationId: string): Promise<Designer.OperationManifest> {
         let searchList = [connectorId, operationId];
-        for (let conId in searchList) {
-            let conn = this.operationManager.getConnectorById(searchList[conId]);
-            if (conn) {
-                return Promise.resolve({
-                    properties: conn.properties
-                });
-            }
-        }
         for (let conId in searchList) {
             let action = this.operationManager.getActionById(searchList[conId]);
             if (action) {
