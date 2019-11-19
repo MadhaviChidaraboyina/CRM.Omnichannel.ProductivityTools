@@ -893,7 +893,7 @@
           <Type>nvarchar</Type>
           <Name>msdyn_title</Name>
           <LogicalName>msdyn_title</LogicalName>
-          <RequiredLevel>optional</RequiredLevel>
+          <RequiredLevel>required</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>

@@ -13,7 +13,6 @@
             <cell name="msdyn_name" width="200"/>
             <cell name="msdyn_panelstate" width="100" />
             <cell name="msdyn_anchortab" width="125"/>
-            <cell name="msdyn_pinned" width="100" />
             <cell name="modifiedon" width="100" />
         </row>
       </grid>
@@ -24,7 +23,6 @@
         <entity name="msdyn_consoleapplicationsessiontemplate">
           <attribute name="msdyn_consoleapplicationsessiontemplateid" />
           <attribute name="msdyn_name" />
-            <attribute name="msdyn_pinned" />
             <attribute name="msdyn_panelstate" />
             <attribute name="modifiedon" />
             <attribute name="msdyn_anchortab" />
