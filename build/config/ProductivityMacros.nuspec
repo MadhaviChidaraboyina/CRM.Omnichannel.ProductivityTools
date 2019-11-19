@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Microsoft.Dynamics.Service.ProductivityMacros</id>
+    <version>$version$</version>
+    <authors>Microsoft Dynamics 365 </authors>
+    <owners>Microsoft Dynamics 365</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>$vsoURL$$vsoTeamProject$/_git/$repositoryName$</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Microsoft Dynamics 365 XRM Solution for ProductivityMacros.</description>
+    <releaseNotes>This release includes XRM solution: ProductivityMacros</releaseNotes>
+    <copyright>Copyright �2016 Microsoft Corporation</copyright>
+    <tags>CRM XRM Dynamics365 ProductivityMacros Solution</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+	<files>
+		<!-- retail artifacts -->
+		<file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityMacros*.*" target="Solutions" />
+		<file src="..\..\drop\retail\AnyCPU\PVSPackages\ProductivityMacrosPackage.zip" target="PVSPackages" />
+		<file src="..\..\drop\retail\AnyCPU\Blobs\designer.zip" target="Blobs" />
+  </files>
+</package>
