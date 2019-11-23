@@ -134,18 +134,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,Process{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Lists down all the Active Macros]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,Process{ddf85356-30d9-e911-a81e-000d3af73f4d}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Lists down all the Inactive Macros]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparameterCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
@@ -1475,18 +1463,6 @@
       <Item ItemId=";1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[All Macros]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:LocalizedName,Process{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Active Macros]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:LocalizedName,Process{ddf85356-30d9-e911-a81e-000d3af73f4d}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Inactive Macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

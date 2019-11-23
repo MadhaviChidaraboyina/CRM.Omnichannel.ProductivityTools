@@ -880,14 +880,6 @@
     <value>Перечисляет все макросы</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
   </data>
-  <data name="1:Description,Process{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}" xml:space="preserve">
-    <value>Перечисляет все активные макросы</value>
-    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}'</comment>
-  </data>
-  <data name="1:Description,Process{ddf85356-30d9-e911-a81e-000d3af73f4d}" xml:space="preserve">
-    <value>Перечисляет все неактивные макросы</value>
-    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{ddf85356-30d9-e911-a81e-000d3af73f4d}'</comment>
-  </data>
   <data name="1:displayname,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
     <value>Кем создано</value>
     <comment>'msdyn_actioninputparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
@@ -2115,14 +2107,6 @@
   <data name="1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
     <value>Все макросы</value>
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
-  </data>
-  <data name="1:LocalizedName,Process{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}" xml:space="preserve">
-    <value>Активные макросы</value>
-    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}'</comment>
-  </data>
-  <data name="1:LocalizedName,Process{ddf85356-30d9-e911-a81e-000d3af73f4d}" xml:space="preserve">
-    <value>Неактивные макросы</value>
-    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{ddf85356-30d9-e911-a81e-000d3af73f4d}'</comment>
   </data>
   <data name="1:Title,Action Input ParameterInfo{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>Общие</value>

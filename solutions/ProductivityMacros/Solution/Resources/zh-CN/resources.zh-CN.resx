@@ -185,7 +185,7 @@
     <comment>'Macro Action Template' : Description for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
   </data>
   <data name="1:Description,Macro Connector{8c945d63-c3dd-e911-a81e-000d3af9c0c2}" xml:space="preserve">
-    <value>由我负责的可用 macroconnectors</value>
+    <value>由我负责的可用 macroconnector</value>
     <comment>'Macro Connector' : Description for SavedQuery on Entity QueryId: '{8c945d63-c3dd-e911-a81e-000d3af9c0c2}'</comment>
   </data>
   <data name="1:Description,Macro Connector{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
@@ -879,14 +879,6 @@
   <data name="1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
     <value>列出所有宏</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
-  </data>
-  <data name="1:Description,Process{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}" xml:space="preserve">
-    <value>列出所有可用的宏</value>
-    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}'</comment>
-  </data>
-  <data name="1:Description,Process{ddf85356-30d9-e911-a81e-000d3af73f4d}" xml:space="preserve">
-    <value>列出所有停用的宏</value>
-    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{ddf85356-30d9-e911-a81e-000d3af73f4d}'</comment>
   </data>
   <data name="1:displayname,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
     <value>创建者</value>
@@ -1885,7 +1877,7 @@
     <comment> 'msdyn_macroactiontemplate' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
-    <value>macroconnectors</value>
+    <value>macroconnector</value>
     <comment> 'msdyn_macroconnector' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
@@ -2001,19 +1993,19 @@
     <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{5f76bbd9-6db0-47e3-b819-e8e181a69ef8}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Connector{6879ad1e-f3d8-436b-af1d-40219e693010}" xml:space="preserve">
-    <value>停用的 macroconnectors</value>
+    <value>停用的 macroconnector</value>
     <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{6879ad1e-f3d8-436b-af1d-40219e693010}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Connector{8c945d63-c3dd-e911-a81e-000d3af9c0c2}" xml:space="preserve">
-    <value>我的 macroconnectors</value>
+    <value>我的 macroconnector</value>
     <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{8c945d63-c3dd-e911-a81e-000d3af9c0c2}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Connector{8eab9af9-f1b0-41b2-8eac-217db6b0346a}" xml:space="preserve">
-    <value>可用的 macroconnectors</value>
+    <value>可用的 macroconnector</value>
     <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{8eab9af9-f1b0-41b2-8eac-217db6b0346a}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Connector{b8136d24-03a6-4453-b1d6-f6e96cc59762}" xml:space="preserve">
-    <value>快速查找可用的 macroconnectors</value>
+    <value>快速查找可用的 macroconnector</value>
     <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{b8136d24-03a6-4453-b1d6-f6e96cc59762}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Connector{d238ec0d-ead6-4558-964d-e92e17c8aa42}" xml:space="preserve">
@@ -2115,14 +2107,6 @@
   <data name="1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
     <value>所有宏</value>
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
-  </data>
-  <data name="1:LocalizedName,Process{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}" xml:space="preserve">
-    <value>可用的宏</value>
-    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}'</comment>
-  </data>
-  <data name="1:LocalizedName,Process{ddf85356-30d9-e911-a81e-000d3af73f4d}" xml:space="preserve">
-    <value>停用的宏</value>
-    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{ddf85356-30d9-e911-a81e-000d3af73f4d}'</comment>
   </data>
   <data name="1:Title,Action Input ParameterInfo{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>通用</value>

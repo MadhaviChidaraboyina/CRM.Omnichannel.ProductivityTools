@@ -196,11 +196,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Active macroconnectors owned by me]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[由我负责的可用 macroconnectors]]></Val>
+            <Val><![CDATA[由我负责的可用 macroconnector]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:26.0002509Z" />
+        <Modified By="v-rondai" DateTime="2019-11-21T05:08:13Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -2523,11 +2523,11 @@
         <Str Cat="Text">
           <Val><![CDATA[macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[macroconnectors]]></Val>
+            <Val><![CDATA[macroconnector]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:26.0002302Z" />
+        <Modified By="v-rondai" DateTime="2019-11-21T05:08:13Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -2900,11 +2900,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Inactive macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[停用的 macroconnectors]]></Val>
+            <Val><![CDATA[停用的 macroconnector]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:26.0002293Z" />
+        <Modified By="v-rondai" DateTime="2019-11-21T05:08:13Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -2913,11 +2913,11 @@
         <Str Cat="Text">
           <Val><![CDATA[My macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[我的 macroconnectors]]></Val>
+            <Val><![CDATA[我的 macroconnector]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:26.0002293Z" />
+        <Modified By="v-rondai" DateTime="2019-11-21T05:08:13Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -2926,11 +2926,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Active macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[可用的 macroconnectors]]></Val>
+            <Val><![CDATA[可用的 macroconnector]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:26.0002293Z" />
+        <Modified By="v-rondai" DateTime="2019-11-21T05:08:13Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -2939,11 +2939,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Quick Find Active macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[快速查找可用的 macroconnectors]]></Val>
+            <Val><![CDATA[快速查找可用的 macroconnector]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T12:03:26.0002293Z" />
+        <Modified By="v-rondai" DateTime="2019-11-21T05:08:13Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -5387,7 +5387,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-10T05:56:57.0003409Z" />
+        <Modified By="v-jinsqi" DateTime="2019-11-07T11:05:02Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[21748]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
@@ -5400,7 +5403,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-10T05:56:57.0003409Z" />
+        <Modified By="v-jinsqi" DateTime="2019-11-07T11:05:02Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[21749]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
