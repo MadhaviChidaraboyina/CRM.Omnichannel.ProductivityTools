@@ -10,7 +10,7 @@ module MscrmControls.ProductivityPanel.Smartassist
 	{
 		// properties
 		private context: Mscrm.ControlData<IInputBag>;
-		private baseComponent: string;
+		public baseComponent: string;
 		private separator: string;
 
 		// Initialize context variable during init

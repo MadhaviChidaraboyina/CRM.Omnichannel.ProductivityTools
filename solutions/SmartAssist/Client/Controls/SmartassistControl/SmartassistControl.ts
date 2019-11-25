@@ -11,6 +11,7 @@ module MscrmControls.ProductivityPanel {
 
 		private smartAssistContainer: HTMLDivElement = null;
 		private static _context: Mscrm.ControlData<IInputBag> = null;
+		private telemetryReporter: Smartassist.TelemetryLogger
 		/**
 		 * Empty constructor.
 		 */
@@ -27,21 +28,39 @@ module MscrmControls.ProductivityPanel {
 		 */
 		public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
 			let self = this;
+			let methodName = "init";
+			// Initialize Telemetry Repoter
+			this.telemetryReporter = new Smartassist.TelemetryLogger(context);
 
 			// Listen for session close
-			let handlerId = Xrm.App.sessions.addOnAfterSessionClose(this.handleSessionClose);
-			localStorage.setItem(Smartassist.Constants.SessionCloseHandlerId, handlerId);
-			let logger = new Smartassist.TelemetryLogger(context);
-			Smartassist.SmartAssistManager.Instance.SetLogger(logger);
-			SmartassistControl._context = context;
-			this.smartAssistContainer = container;
-			var el: HTMLDivElement = document.createElement("div");
-			el.id = Smartassist.Constants.SmartAssistOuterContainer;
-			this.smartAssistContainer.appendChild(el);
-			Xrm.WebApi.retrieveMultipleRecords(Smartassist.Constants.ServiceEndpointEntity, Smartassist.Constants.CDNEndpointFilter).then((data: any) => {
-				window[Smartassist.Constants.ConversatonControlOrigin] = data.entities[0].path;
-				window.top.addEventListener("message", this.receiveMessage, false);
-			});
+			let handlerId;
+
+			try {
+				handlerId = Xrm.App.sessions.addOnAfterSessionClose(this.handleSessionClose);
+				if (!context.utils.isNullOrUndefined(handlerId) &&
+					!context.utils.isNullOrEmptyString(handlerId)) {
+
+					localStorage.setItem(Smartassist.Constants.SessionCloseHandlerId, handlerId);
+					let logger = new Smartassist.TelemetryLogger(context);
+					Smartassist.SmartAssistManager.Instance.SetLogger(logger);
+					SmartassistControl._context = context;
+					this.smartAssistContainer = container;
+					var el: HTMLDivElement = document.createElement("div");
+					el.id = Smartassist.Constants.SmartAssistOuterContainer;
+					this.smartAssistContainer.appendChild(el);
+					Xrm.WebApi.retrieveMultipleRecords(Smartassist.Constants.ServiceEndpointEntity, Smartassist.Constants.CDNEndpointFilter).then((data: any) => {
+						window[Smartassist.Constants.ConversatonControlOrigin] = data.entities[0].path;
+						window.top.addEventListener("message", this.receiveMessage, false);
+					});
+				}
+			} catch (Error) {
+
+				let logConstants = Smartassist.TelemetryComponents;
+				let eventParameters = new Smartassist.EventParameters();
+				eventParameters.addParameter("handlerId", handlerId);
+				let error = { name: "Smart Assist Control Init error", message: "Error while initializing smart assist control" };
+				this.telemetryReporter.logError(logConstants.MainComponent, methodName, "", eventParameters);
+			}
 		}
 
 		/** 
