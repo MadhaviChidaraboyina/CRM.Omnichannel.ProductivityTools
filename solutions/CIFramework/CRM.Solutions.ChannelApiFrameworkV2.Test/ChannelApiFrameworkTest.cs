@@ -136,6 +136,7 @@ namespace CRM.Solutions.ChannelApiFrameworkV2.Test
 				var newSession2 = driver.FindElements(By.XPath(string.Format("//*[@data-id='{0}']", outputJson2)));
 				Assert.IsTrue(newSession2.Count > 0, "Second new session was not created");
 				string getAllSessionInputJson = helper.getJson(Constants.GET_ALL_SESSIONS);
+				Log.Comment("Got input JSON for allSessions");
 				driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
 				Thread.Sleep(3000);
 				driver.SwitchTo().Frame(driver.FindElement(By.XPath("//*[@id='widgetControlDiv']/div/iframe")));
@@ -380,6 +381,7 @@ namespace CRM.Solutions.ChannelApiFrameworkV2.Test
 				Thread.Sleep(3000);
 				var newTab = driver.FindElements(By.XPath(string.Format("//*[@data-id='{0}']", TAB_OUTPUT_JSON)));
 				Assert.IsTrue(newTab.Count > 0, "New tab was not created");
+				Log.Comment("New tab created");
 				driver.SwitchTo().Frame(driver.FindElement(By.Id("SidePanelIFrame")));
 				Thread.Sleep(3000);
 				driver.SwitchTo().Frame(driver.FindElement(By.XPath("//*[@id='widgetControlDiv']/div/iframe")));
@@ -548,6 +550,7 @@ namespace CRM.Solutions.ChannelApiFrameworkV2.Test
 				driver.SwitchTo().Frame(driver.FindElement(By.XPath("//*[@id='widgetControlDiv']/div/iframe")));
 				Thread.Sleep(3000);
 				string getTabs = helper.getJson(Constants.GET_TABS);
+				Log.Comment("Got the input JSON for can create session");
 				string outputGetTabs = helper.PerformAction(driver, getTabs);
 				Log.Comment("Got the output result for get Tabs" + outputGetTabs);
 				Assert.IsTrue(outputGetTabs == "tab-id-1", "Did not get Tabs by name");
