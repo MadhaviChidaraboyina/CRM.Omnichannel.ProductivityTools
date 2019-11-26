@@ -95,7 +95,7 @@ module MscrmControls.ProductivityPanel {
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
 		public destroy(): void {
-			window.top.removeEventListener("message", this.receiveMessage, false);
+
 		}
 
 		public static getString(resourceName: string): string {
@@ -123,6 +123,9 @@ module MscrmControls.ProductivityPanel {
 		}
 
 		private handleSessionClose(context: XrmClientApi.EventContext) {
+			// Remove listener on session close
+			window.top.removeEventListener("message", this.receiveMessage, false);
+
 			let eventArgs: any = context.getEventArgs();
 			Smartassist.ConversationStateManager.RemoveSessionMapping(eventArgs.getInputArguments().sessionId);
 			let handlerId = localStorage.getItem(Smartassist.Constants.SessionCloseHandlerId);
