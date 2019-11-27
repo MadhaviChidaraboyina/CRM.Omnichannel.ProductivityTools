@@ -452,9 +452,10 @@
     <value>Enable Outbound Communication</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ClickToAct' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_ciprovidermsdyn_customparams" xml:space="preserve">
+	<data name="1:Description,msdyn_ciprovidermsdyn_customparams" xml:space="preserve">
     <value>Custom Parameters for the Widget to load</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_customparams' on Entity</comment>
+	</data>
   <data name="1:Description,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
     <value>Enable CIF Analytics for the current provider</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_EnableAnalytics' on Entity</comment>
@@ -1425,9 +1426,10 @@ No - value must be supplied when creating a template that uses this parameter</v
     <value>Enable Outbound Communication</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ClickToAct' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_ciprovidermsdyn_customparams" xml:space="preserve">
+	<data name="1:displayname,msdyn_ciprovidermsdyn_customparams" xml:space="preserve">
     <value>Custom Parameters</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_customparams' on Entity</comment>
+	</data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
     <value>Enable Analytics</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_EnableAnalytics' on Entity</comment>

@@ -76,45 +76,6 @@
         </option>
       </options>
     </optionset>
-    <optionset Name="msdyn_panestate" localizedName="PaneState" description="The panel state for a session">
-      <OptionSetType>picklist</OptionSetType>
-      <IsGlobal>1</IsGlobal>
-      <IntroducedVersion>1.0.0.0</IntroducedVersion>
-      <IsCustomizable>1</IsCustomizable>
-      <ExternalTypeName>panelState</ExternalTypeName>
-      <displaynames>
-        <displayname description="PaneState" languagecode="1033" />
-      </displaynames>
-      <Descriptions>
-        <Description description="The panel state for a session" languagecode="1033" />
-      </Descriptions>
-      <options>
-        <option value="100000000" ExternalValue="docked" Color="#0000ff">
-          <labels>
-            <label description="Docked" languagecode="1033" />
-          </labels>
-          <Descriptions>
-            <Description description="The panel will be expanded" languagecode="1033" />
-          </Descriptions>
-        </option>
-        <option value="100000001" ExternalValue="minimized" Color="#0000ff">
-          <labels>
-            <label description="Minimized" languagecode="1033" />
-          </labels>
-          <Descriptions>
-            <Description description="The panel will be minimized" languagecode="1033" />
-          </Descriptions>
-        </option>
-        <option value="100000002" ExternalValue="hidden" Color="#0000ff">
-          <labels>
-            <label description="Hidden" languagecode="1033" />
-          </labels>
-          <Descriptions>
-            <Description description="The panel will be hidden" languagecode="1033" />
-          </Descriptions>
-        </option>
-      </options>
-    </optionset>
     <optionset Name="msdyn_presencestatus" localizedName="msdyn_presencestatus">
       <OptionSetType>picklist</OptionSetType>
       <IsCustomizable>0</IsCustomizable>

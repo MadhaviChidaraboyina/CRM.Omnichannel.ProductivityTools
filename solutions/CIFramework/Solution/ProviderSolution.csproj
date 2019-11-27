@@ -108,6 +108,7 @@
     <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{6a8bc071-4b56-4eac-877c-dbdbdd4d975f}.xml" />
     <Content Include="Entities\ConsoleAppNotificationField\SavedQueries\{ceef7e89-404a-4746-8735-a09e0114d232}.xml" />
     <Content Include="Entities\ConsoleAppType\SavedQueries\{fbdae360-d9a3-e911-8199-000d3a6d68d0}.xml" />
+    <Content Include="OptionSets\msdyn_panestate.xml" />
     <Content Include="Other\Relationships\SessionTemplates.xml" />
     <Content Include="packageMap.xml">
       <Link>packageMap.xml</Link>
