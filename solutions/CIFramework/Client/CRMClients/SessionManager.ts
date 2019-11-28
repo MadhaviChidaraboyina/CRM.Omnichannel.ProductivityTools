@@ -234,7 +234,10 @@ namespace Microsoft.CIFramework.Internal {
 
 		updateTabContextInCurrentSession(input: any, sessionId?: string) {
 			let cifExt = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
-			cifExt.setSessionTemplateParams(input, sessionId);
+			try {
+				cifExt.setSessionTemplateParams(input, sessionId);
+			} catch (error) { }
+			
 		}
 	}
 
