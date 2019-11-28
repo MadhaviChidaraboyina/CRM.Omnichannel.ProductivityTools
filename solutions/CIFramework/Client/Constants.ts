@@ -225,6 +225,7 @@ namespace Microsoft.CIFramework
 		public static templateNameResolver = "templateNameResolver";
 		public static notificationResponse = "NotificationResponse";
 		public static isDelete = "isDelete";
+		public static isDirty = "isDirty";
 	}
 
 	export class AnalyticsConstants {

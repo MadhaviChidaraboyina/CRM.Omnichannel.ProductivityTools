@@ -523,6 +523,18 @@ namespace Microsoft.CIFramework.Internal {
 			var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
 			let timeTaken = Date.now() - startTime.getTime();
 			let apiName = "Xrm.Utility.getGlobalContext";
+			let isDirtyValue = null;
+			let pageData = eval("window.top.Xrm.Page.data");
+
+			if(pageData != null)
+			{
+				let entityData = eval("window.top.Xrm.Page.data.entity");
+				if(entityData != null)
+				{
+					isDirtyValue = eval("window.top.Xrm.Page.data.entity.getIsDirty()");
+				}
+			}
+
 			logApiData(telemetryData, startTime, timeTaken, apiName);
 			
 			data.set(Constants.ClientUrl, context.getClientUrl());
@@ -535,6 +547,7 @@ namespace Microsoft.CIFramework.Internal {
 			data.set(Constants.UserName, context.userSettings.userName);
 			data.set(Constants.UserRoles, context.userSettings.securityRoles);
 			data.set(Constants.crmVersion, context.getVersion());
+			data.set(Constants.isDirty, isDirtyValue);
 			return data;
 		}
 

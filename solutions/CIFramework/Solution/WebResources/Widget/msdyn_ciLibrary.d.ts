@@ -221,6 +221,7 @@ declare namespace Microsoft.CIFramework {
         static templateNameResolver: string;
         static notificationResponse: string;
         static isDelete: string;
+        static isDirty: string;
     }
     class AnalyticsConstants {
         static notificationResponseAction: string;
