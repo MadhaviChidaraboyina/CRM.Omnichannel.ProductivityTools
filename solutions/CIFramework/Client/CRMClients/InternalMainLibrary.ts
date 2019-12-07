@@ -306,27 +306,42 @@ namespace Microsoft.CIFramework.Internal {
 	}
 
 	/* Utility function to raise events registered for the framework and get back the response */
-	function sendMessage(parameters: Map<string, any>, messageType: string, provider?: CIProvider): Promise<any> {
-		if (isNullOrUndefined(provider)) {
-			provider = state.providerManager.getActiveProvider();
+	function sendMessage(parameters: Map<string, any>, messageType: string, provider?: CIProvider,
+		broadcastMessage?: boolean): Promise<any> {
+
+		let providersList: CIProvider[] = new Array();
+		if (broadcastMessage == false) {
 			if (isNullOrUndefined(provider)) {
-				const error = generateErrorObject(new Map().set("message", "No active provider found"), "sendGenericMessage", errorTypes.GenericError);
-				return logAPIFailure(appId, true, error, messageType + " - sendGenericMessage", cifVersion, "", "");
+				provider = state.providerManager.getActiveProvider();
 			}
+			providersList.push(provider);
 		}
-		return new Promise<string>((resolve, reject) => {
-			provider.raiseEvent(parameters, messageType).then(
-				function (result: any) {
-					resolve(result);
-				},
-				function (error: Error) {
-					let errorData = generateErrorObject(error, messageType + " - sendMessage", errorTypes.GenericError);
-					logAPIFailure(appId, true, errorData, messageType + " - sendMessage", cifVersion, provider.providerId, provider.name);
-					reject(error);
-				}
-			);
-		});
-	}
+		else {
+			state.providerManager.ciProviders.forEach((value: CIProvider, key: string) => {
+				providersList.push(value);
+			});
+		}
+
+		if (providersList.length == 0) {
+			const error = generateErrorObject(new Map().set("message", "No active provider found"), "sendGenericMessage", errorTypes.GenericError);
+			return logAPIFailure(appId, true, error, messageType + " - sendGenericMessage", cifVersion, "", "");
+		}
+
+		let results: Promise<any>[] = [];
+		for (let value of providersList) {
+				results.push(value.raiseEvent(parameters, messageType).then(
+					function (result: any) {
+						console.log("AppId: " + appId + " API: - sendMessage successful " + "CIFVersion: " + cifVersion +
+							" ProviderId: " + value.providerId + " ProviderName:" + value.name);
+					},
+					function (error: Error) {
+						let errorData = generateErrorObject(error, messageType + " - sendMessage", errorTypes.GenericError);
+						logAPIFailure(appId, true, errorData, messageType + " - sendMessage", cifVersion, value.providerId, value.name);
+					}
+				));
+		}
+		return Promise.all(results);
+		}
 
 
 	/* Utility function to get the Provider out of the parameters */
@@ -553,7 +568,7 @@ namespace Microsoft.CIFramework.Internal {
 	export function onSetPresence(event: CustomEvent): void {
 		let eventMap = Microsoft.CIFramework.Utility.buildMap(event.detail);
 		presence.setAgentPresence(eventMap.get("presenceInfo"));
-		sendMessage(eventMap, MessageType.onSetPresenceEvent);
+		sendMessage(eventMap, MessageType.onSetPresenceEvent, null, true);
 	}
 
 	/**
