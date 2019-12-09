@@ -2,7 +2,6 @@
 	<ItemGroup>
 		<ProjectToBuild Include="Controls\MacroDesigner\flowDesignerControl.njsproj" />
 		<ProjectToBuild Include="Client\WebResources.csproj" />
-		<ProjectToBuild Include="Plugins\ProductivityMacrosPlugins.csproj" />
 		<ProjectToBuild Include="Solution\ProductivityMacrosSolution.csproj" />
 		<ProjectToBuild Include="packages.proj" Condition="'$(EnableSigning)'!='true'" />
 	</ItemGroup>

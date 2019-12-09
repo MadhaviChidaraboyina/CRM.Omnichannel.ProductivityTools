@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebResources", "Client\WebR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityMacrosSolution", "Solution\ProductivityMacrosSolution.csproj", "{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityMacrosPlugins", "Plugins\ProductivityMacrosPlugins.csproj", "{03558A12-F560-4391-8747-DB2C300D3C1F}"
-EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "flowDesignerControl", "Controls\MacroDesigner\flowDesignerControl.njsproj", "{4087A27A-8FEA-457D-8080-DEC306F13126}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityMacrosPVS", "PVSPackage\ProductivityMacrosPVS.csproj", "{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}"
@@ -47,18 +45,6 @@ Global
 		{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}.retail|amd64.Build.0 = retail|amd64
 		{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}.retail|Any CPU.ActiveCfg = retail|Any CPU
 		{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}.retail|Any CPU.Build.0 = retail|Any CPU
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.Debug|amd64.ActiveCfg = debug|amd64
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.Debug|amd64.Build.0 = debug|amd64
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.Release|amd64.ActiveCfg = release|amd64
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.Release|amd64.Build.0 = release|amd64
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.retail|amd64.ActiveCfg = retail|amd64
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.retail|amd64.Build.0 = retail|amd64
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.retail|Any CPU.ActiveCfg = retail|Any CPU
-		{03558A12-F560-4391-8747-DB2C300D3C1F}.retail|Any CPU.Build.0 = retail|Any CPU
 		{4087A27A-8FEA-457D-8080-DEC306F13126}.Debug|amd64.ActiveCfg = debug|Any CPU
 		{4087A27A-8FEA-457D-8080-DEC306F13126}.Debug|Any CPU.ActiveCfg = debug|Any CPU
 		{4087A27A-8FEA-457D-8080-DEC306F13126}.Release|amd64.ActiveCfg = release|Any CPU
