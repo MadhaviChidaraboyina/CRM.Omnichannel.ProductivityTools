@@ -138,8 +138,19 @@ namespace Microsoft.CIFramework.Internal {
 						},
 						function (error: Error) {
 							ret.title = this.title;
+							console.log(error);
 							return Promise.reject(error);
-							//TODO: log error
+						}));
+
+					stringResolvers.push(TemplatesUtility.resolveTemplateString(this.icon, templateParams, this.name).then(
+						function (result: string) {
+							ret.imageUrl = result;
+							return Promise.resolve(result);
+						},
+						function (error: Error) {
+							ret.imageUrl = this.icon;
+							console.log(error);
+							return Promise.reject(error);
 						}));
 
 					if (this.infoFields.length > 0) {
