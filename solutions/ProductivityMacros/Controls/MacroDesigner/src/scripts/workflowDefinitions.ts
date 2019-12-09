@@ -58,7 +58,7 @@ export class Macros {
             let newCategory: Category = { itemKey: templ.msdyn_categorykey, linkText: templ.msdyn_categorylabel };
             if (categories.findIndex(
                 function (value) {
-                    return value === newCategory;
+                    return value.linkText === newCategory.linkText;
                 }) < 0) {
                 categories.push(newCategory);
             }

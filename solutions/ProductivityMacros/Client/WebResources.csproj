@@ -16,14 +16,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="CRMClients\aria-webjs-sdk-1.8.3.js" />
+    <Content Include="Libraries\requirejs\require.js" />
     <Content Include="ProductivityMacrosConstants.ts" />
     <Content Include="CRMClients\Client.ts" />
     <Content Include="CRMClients\Constants.ts" />
     <Content Include="Constants.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="Constants.ts" />
+    <TypeScriptCompile Include="CRMClients\ProductivityMacroState.ts" />
+    <TypeScriptCompile Include="Libraries\requirejs\require.d.ts" />
     <TypeScriptCompile Include="ProductivityMacrosUtilities.ts" />
     <TypeScriptCompile Include="CRMClients\ProductivityMacrosWrapper.ts" />
+    <TypeScriptCompile Include="CRMClients\ProductivityMacroSlug.ts" />
     <TypeScriptCompile Include="CRMClients\ProductivityMacroRuntime.ts" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.8.3.d.ts" />
     <TypeScriptCompile Include="CRMClients\Constants.ts" />
@@ -83,6 +87,7 @@
   <ItemGroup>
     <LocResx Include="Localization\ProductivityMacros_webresource_strings.*.resx" />
   </ItemGroup>
+  <ItemGroup />
   <Target Name="SelectedOutputs" DependsOnTargets="CopyStatic">
     <ItemGroup>
       <WebResources Include="$(TypeScriptOutDir)\**\*.svg" />

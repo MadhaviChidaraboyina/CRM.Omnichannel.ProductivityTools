@@ -36,7 +36,9 @@ namespace Microsoft.ProductivityMacros {
 		public static SuffixTabId = ".TabId";
 		public static SuffixEntityName = ".EntityName";
 		public static SuffixEntityId = ".EntityId";
-		public static SuffixPageType = ".PageType";
+        public static SuffixPageType = ".PageType";
+        public static SuffixPrimaryNameAttributeValue = ".PrimaryNameAttributeValue";
+        public static OutputResult = "result";
 	}
 
 	export class ActionTypes {
@@ -55,4 +57,16 @@ namespace Microsoft.ProductivityMacros {
 		public static OPEN_DASHBOARD = "Open_Dashboard";
 		
 	}
+
+	export class SlugPrefix {
+		public static SPLIT_BY_OPENING_BRACKET = "(";
+		public static SPLIT_BY_DOT = ".";
+        public static SPLIT_BY_COMMA = ",";
+        public static SPLIT_BY_DOLLAR = "$";
+    }
+
+    export class EntityName {
+        public static ActionTemplateEntityName = "msdyn_macroactiontemplate";
+        public static ConnectorEntityName = "msdyn_macroconnector";
+    }
 }

@@ -5,13 +5,10 @@
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 /// <reference path="../../../../Packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApiInternal.d.ts" />
 /// <reference path="Constants.ts" />
-/// <reference path="../../TypeDefinitions/msdyn_internal_ci_library.d.ts" />
 /// <reference path="../TelemetryHelper.ts" />
 
 namespace Microsoft.ProductivityMacros {
 
-	var cifExternal: Microsoft.CIFramework.External.CIFExternalUtilityImpl;
-	
 	export function initializeMacrosRuntime() {
 		Microsoft.ProductivityMacros.Internal.initializeTelemetry();
 	}
@@ -19,19 +16,20 @@ namespace Microsoft.ProductivityMacros {
 	export function runMacro(macroName: string, params?: string): Promise<string> {
 
 		return new Promise((resolve, reject) => {
-			Internal.ProductivityMacroActionTemplate.InitMacroActionTemplates().then(
-				function (result: any) {
+            Internal.ProductivityMacroOperation.InitMacroActionTemplates().then(
+				function (templates: any) {
 					getMacroInputJSON(macroName).then(
 						function (inputJSONstring: string) {
-							let actions = getSortedActionsList(JSON.parse(inputJSONstring).properties.definition.actions);
+                            let actions = getSortedActionsList(JSON.parse(inputJSONstring).properties.definition.actions);
+                            var macroState = new Microsoft.ProductivityMacros.Internal.ProductivityMacroState();
 							let executeActionsPromise = actions.reduce((accumulatorPromise, nextId) => {
 								return accumulatorPromise.then(function (result: any) {
-									return resolveParamsAndExecuteMacroAction(nextId.type, nextId.inputs, nextId.name);
+                                    return resolveParamsAndExecuteMacroAction(nextId.type, nextId.inputs, nextId.name, macroState);
 								}, function (error: Error) {
 										reject(error);
 									});
 							}, Promise.resolve());
-							executeActionsPromise.then(function (success: any) {
+                            executeActionsPromise.then(function (success: any) {
 								resolve("Action performed successfully")
 							}, function (error: Error) {
 									reject(error);
@@ -57,13 +55,6 @@ namespace Microsoft.ProductivityMacros {
 		attribute = attribute.substr(1, attribute.length - 2);
 		let inputSlug = "{" + prefix + "." + attribute + "}";
 		return inputSlug;
-	}
-
-	function getCifExternalObject(): Microsoft.CIFramework.External.CIFExternalUtilityImpl {
-		if (!cifExternal) {
-			cifExternal = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
-		}
-		return cifExternal;
 	}
 
 	/** @internal */
@@ -135,15 +126,12 @@ namespace Microsoft.ProductivityMacros {
 		dependecySortObj.result.push(obj);
 	}
 
-
-
-
-	function resolveParamsAndExecuteMacroAction(actionType: string, actionInputs: string, actionName: string): Promise<any> {
+    function resolveParamsAndExecuteMacroAction(actionType: string, actionInputs: string, actionName: string, macroState: any): Promise<any> {
 		return new Promise<any>(
 			function (resolve: (response: any) => void, reject: (error: any) => void) {
 				let result = {};
-				resolveParams(actionType, JSON.stringify(actionInputs), result).then(function (response: any) {
-					executeMacroAction(actionType, response, actionName).then(function (response: any) {
+                resolveParams(actionType, JSON.stringify(actionInputs), macroState, result).then(function (response: any) {
+                    executeMacroAction(actionType, response, actionName, macroState).then(function (response: any) {
 
 						resolve(response);
 					}, function (error: Error) {
@@ -158,7 +146,7 @@ namespace Microsoft.ProductivityMacros {
 	}
 
 	/** @internal */
-	function resolveParams(actionType: string, actionInputs: string, result?: any): Promise<any> {
+    function resolveParams(actionType: string, actionInputs: string, macroState: any, result?: any): Promise<any> {
 		return new Promise<any>(
 			function (resolve: (response: any) => void, reject: (error: any) => void) {
 				var stringResolversInputs: Promise<string>[] = [];
@@ -173,7 +161,7 @@ namespace Microsoft.ProductivityMacros {
                         let val = inputs[input];
                         resolvedInputs[input] = val;
                         Object.keys(val).forEach(function (propName) {
-                            stringResolversInputs.push(resolveParams(actionType, JSON.stringify(val[propName]), result).then(function (response: any) {
+                            stringResolversInputs.push(resolveParams(actionType, JSON.stringify(val[propName]), macroState, result).then(function (response: any) {
                                 resolvedInputs[input][propName] = response;
                             }));
                         });
@@ -182,7 +170,7 @@ namespace Microsoft.ProductivityMacros {
                         var arrayInput = inputs[input];
                         resolvedInputs[input] = arrayInput;
                         for (var i = 0; i < arrayInput.length; i++) {
-                            stringResolversInputs.push(resolveParams(actionType, arrayInput[i], result).then(function (response: any) {
+                            stringResolversInputs.push(resolveParams(actionType, arrayInput[i], macroState, result).then(function (response: any) {
                                 resolvedInputs[input][i] = response;
                             }.bind(this), function (error: Error) {
 
@@ -193,8 +181,8 @@ namespace Microsoft.ProductivityMacros {
 					else if (typeof inputs[input] === 'string' || inputs[input] instanceof String) {
 						if (inputs[input].startsWith("@outputs")) {
 							inputs[input] = resolveActionInputFromPrevActionOutput(inputs[input]);
-						}
-						stringResolversInputs.push(getCifExternalObject().resolveTemplateString(inputs[input], getCifExternalObject().getSessionTemplateParams(), "").then(
+                        }
+                        stringResolversInputs.push(Internal.resolveTemplateString(inputs[input], macroState.stateParams, "").then(
 							function (indexObj: any, result: any) {
 								resolvedInputs[indexObj] = result;
 								Promise.resolve(resolvedInputs);
@@ -219,11 +207,12 @@ namespace Microsoft.ProductivityMacros {
 	}
 
 	/** @internal */
-	function executeMacroAction(actionType: string, actionInputs: string, actionName: string): Promise<any> {
-		let exectuableMethod = Internal.ProductivityMacroActionTemplate.macroActionTemplates.get(actionType)["_runtimeAPI"];
+    function executeMacroAction(actionType: string, actionInputs: string, actionName: string, macroState: any): Promise<any> {
+        let exectuableMethod = Internal.ProductivityMacroOperation.macroActionTemplates.get(actionType)["_runtimeAPI"];
 		return new Promise<any>((resolve, reject) => {
 			eval(exectuableMethod).then(
-				function (success: any) {
+                function (success: any) {
+                    updateActionOutputInSessionContext(success, macroState);
 					resolve(success);
 				},
 				function (error: Error) {
@@ -231,7 +220,13 @@ namespace Microsoft.ProductivityMacros {
 				}
 			);
 		});
-	}
+    }
+
+    function updateActionOutputInSessionContext(output: any, macroState: any) {
+        if (output && output[Constants.OutputResult]) {
+            macroState.setStateParams(output[Constants.OutputResult]);
+        }
+    }
 	
 	initializeMacrosRuntime();
 }

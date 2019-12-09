@@ -99,6 +99,30 @@
                         <control id="msdyn_categorylabel" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_categorylabel" disabled="false" />
                       </cell>
                     </row>
+                    <row>
+                      <cell id="{3bb2ebc7-c568-e709-200b-c879d3c071c1}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Prefix" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_prefix" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_prefix" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6b36ba6e-da05-5b44-41c4-546aa45e317d}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Callback" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_callback" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_callback" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8eac758a-1050-11ea-8d71-362b9e155667}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Webresource Name" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_webresourcename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_webresourcename" disabled="false" />
+                      </cell>
+                    </row>
                   </rows>
                 </section>
               </sections>
