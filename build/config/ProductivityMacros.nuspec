@@ -6,7 +6,7 @@
     <authors>Microsoft Dynamics 365 </authors>
     <owners>Microsoft Dynamics 365</owners>
     <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>$vsoURL$$vsoTeamProject$/_git/$repositoryName$</projectUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
     <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Microsoft Dynamics 365 XRM Solution for ProductivityMacros.</description>
