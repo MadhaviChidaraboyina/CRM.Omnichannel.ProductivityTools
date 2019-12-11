@@ -452,6 +452,10 @@
     <value>Bật Giao tiếp Truyền đi</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ClickToAct' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_customparams" xml:space="preserve">
+    <value>Tham số Tùy chỉnh cho Tiện ích cần tải</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_customparams' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
     <value>Bật Phân tích CIF cho nhà cung cấp hiện tại</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_EnableAnalytics' on Entity</comment>
@@ -1421,6 +1425,10 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
   <data name="1:displayname,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
     <value>Bật Giao tiếp Truyền đi</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ClickToAct' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_customparams" xml:space="preserve">
+    <value>Tham số Tùy chỉnh</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_customparams' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
     <value>Bật Phân tích</value>
@@ -2969,10 +2977,6 @@ Không - giá trị phải được cung cấp khi tạo một mẫu sử dụng
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
     <value>CIProviders</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Channel Provider</value>
-    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>Nhà cung cấp Kênh</value>

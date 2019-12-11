@@ -452,6 +452,10 @@
     <value>Abilita comunicazioni in uscita</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ClickToAct' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_customparams" xml:space="preserve">
+    <value>Parametri personalizzati per il widget da caricare</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_customparams' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
     <value>Abilita analisi CIF per il provider corrente</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_EnableAnalytics' on Entity</comment>
@@ -1421,6 +1425,10 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
   <data name="1:displayname,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
     <value>Abilita comunicazioni in uscita</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ClickToAct' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_customparams" xml:space="preserve">
+    <value>Parametri personalizzati</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_customparams' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
     <value>Abilita analisi</value>
@@ -2969,10 +2977,6 @@ No: nessun valore deve essere specificato durante la creazione di un modello che
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
     <value>CIProvider</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Channel Provider</value>
-    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>Provider di canale</value>

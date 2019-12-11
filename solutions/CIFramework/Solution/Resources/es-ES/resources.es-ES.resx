@@ -452,6 +452,10 @@
     <value>Habilitar comunicación de salida</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_ClickToAct' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_ciprovidermsdyn_customparams" xml:space="preserve">
+    <value>Parámetros personalizados que cargará el widget</value>
+    <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_customparams' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
     <value>Habilita Análisis de CIF para el proveedor actual</value>
     <comment>'msdyn_ciprovider' : Description for Attribute 'msdyn_EnableAnalytics' on Entity</comment>
@@ -1421,6 +1425,10 @@ No: se debe proporcionar el valor al crear una plantilla que use este parámetro
   <data name="1:displayname,msdyn_ciprovidermsdyn_ClickToAct" xml:space="preserve">
     <value>Habilitar comunicación de salida</value>
     <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_ClickToAct' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_ciprovidermsdyn_customparams" xml:space="preserve">
+    <value>Parámetros personalizados</value>
+    <comment>'msdyn_ciprovider' : displayname for Attribute 'msdyn_customparams' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_ciprovidermsdyn_EnableAnalytics" xml:space="preserve">
     <value>Habilitar análisis</value>
@@ -2969,10 +2977,6 @@ No: se debe proporcionar el valor al crear una plantilla que use este parámetro
   <data name="1:LocalizedName,Channel{b8efd5d0-fb16-e811-812f-000d3a2528ca}" xml:space="preserve">
     <value>Proveedores de integración de canal</value>
     <comment>'Channel' : LocalizedName for SavedQuery on Entity QueryId: '{b8efd5d0-fb16-e811-812f-000d3a2528ca}'</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
-    <value>Channel Provider</value>
-    <comment> 'msdyn_ciprovider' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">
     <value>Proveedor de canal</value>

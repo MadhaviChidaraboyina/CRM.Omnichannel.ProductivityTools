@@ -1332,6 +1332,19 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_customparams" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Custom Parameters for the Widget to load]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Настроювані параметри віджета для завантаження]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-05T12:04:29.0002141Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23375_20191203" />
+        </Props>
+      </Item>
       <Item ItemId=";1:Description,msdyn_ciprovidermsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name of the Channel provider]]></Val>
@@ -6023,6 +6036,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-20T14:08:54.0006335Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_customparams" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Custom Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Настроювані параметри]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-05T12:04:29.0002114Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23375_20191203" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_ciprovidermsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
