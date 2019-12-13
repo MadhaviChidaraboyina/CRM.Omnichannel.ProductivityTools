@@ -37,11 +37,27 @@
 											</cell>
 										</row>
 										<row>
+											<cell id="{90b3a189-7e63-3324-823a-75199c5b883d}" showlabel="true" locklevel="0">
+												<labels>
+													<label description="Theme" languagecode="1033" />
+												</labels>
+												<control id="msdyn_theme" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_theme" disabled="false" />
+											</cell>
+										</row>
+										<row>
 											<cell id="{e3634dd8-8a0a-2c9e-49b2-ad872d9d9ba3}" showlabel="true" locklevel="0">
 												<labels>
 													<label description="Icon" languagecode="1033" />
 												</labels>
 												<control id="msdyn_icon" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_icon" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{509ba94c-608e-2a12-089b-40db61a60c17}" showlabel="true" locklevel="0">
+												<labels>
+													<label description="Show timeout" languagecode="1033" />
+												</labels>
+												<control id="msdyn_showtimeout" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_showtimeout" disabled="false" />
 											</cell>
 										</row>
 										<row>

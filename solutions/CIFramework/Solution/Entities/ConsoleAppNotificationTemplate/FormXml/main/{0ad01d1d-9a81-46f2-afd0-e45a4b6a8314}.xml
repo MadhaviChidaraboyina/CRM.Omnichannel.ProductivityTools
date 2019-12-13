@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{0ad01d1d-9a81-46f2-afd0-e45a4b6a8314}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{9730037d-ab23-4a34-9b05-5a0e50e1c401}" IsUserDefined="1" name="{9730037d-ab23-4a34-9b05-5a0e50e1c401}" locklevel="0" expanded="true" showlabel="true">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="40%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{ff05f569-e51f-4c31-96b2-ae6d20c9364f}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{49f27467-13e4-4190-ac4a-2a72b97632ad}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ee47d446-144d-8d00-5094-ecaac28bbb3e}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Title" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_title" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_title" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{90b3a189-7e63-3324-823a-75199c5b883d}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Theme" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_theme" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_theme" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e3634dd8-8a0a-2c9e-49b2-ad872d9d9ba3}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Icon" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_icon" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_icon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{509ba94c-608e-2a12-089b-40db61a60c17}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Show timeout" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_showtimeout" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_showtimeout" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{94dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Timeout (seconds)" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_timeout" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="msdyn_timeout" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{eeb7401d-7729-9db8-8cc1-6d8343052141}" showlabel="false" locklevel="0">
+                        <labels>
+                          <label description="Notification Buttons" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_notificationbuttons" datafieldname="msdyn_notificationbuttons" disabled="false" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{98CC6724-AB3D-4145-B2ED-D7C3A3B92B26}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{64dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" showlabel="true" locklevel="0" visible="false">
+                        <labels>
+                          <label description="Accept Button Text" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_acceptbuttontext" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_acceptbuttontext" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{58dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" showlabel="true" locklevel="0" visible="false">
+                        <labels>
+                          <label description="Reject Button Text" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_rejectbuttontext" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_rejectbuttontext" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="60%">
+              <sections>
+                <section name="{9730037d-ab23-4a34-9b05-5a0e50e1c401}_section_2" showlabel="false" showbar="false" locklevel="0" id="{58164d85-26cc-e735-db3c-42d081de97ab}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" showlabel="true" colspan="1" auto="false" rowspan="7">
+                        <labels>
+                          <label description="Notification Fields" languagecode="1033" />
+                        </labels>
+                        <control id="NotificationFields" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" indicationOfSubgrid="true" uniqueid="{25a42570-0916-ae92-aa77-80389aada6ab}">
+                          <parameters>
+                            <ViewId>{CEEF7E89-404A-4746-8735-A09E0114D232}</ViewId>
+                            <IsUserView>false</IsUserView>
+                            <RelationshipName>msdyn_msdyn_consoleapplicationnotificationtempl</RelationshipName>
+                            <TargetEntityType>msdyn_consoleapplicationnotificationfield</TargetEntityType>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <ViewIds>{CEEF7E89-404A-4746-8735-A09E0114D232}</ViewIds>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <ChartGridMode>All</ChartGridMode>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar>
+          <NavBarByRelationshipItem RelationshipName="msdyn_msdyn_consoleapplicationnotificationtag" Sequence="10000" Area="Info" Id="nav_msdyn_msdyn_consoleapplicationnotificationtag" Show="false">
+            <Titles>
+              <Title LCID="1033" Text="TemplateTags" />
+            </Titles>
+          </NavBarByRelationshipItem>
+        </NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions>
+        <controlDescription forControl="{98CC6724-AB3D-4145-B2ED-D7C3A3B92B26}">
+          <customControl formFactor="0" name="MscrmControls.Service.CIProvider.NotificationButtonConfigControl">
+            <parameters>
+              <value>msdyn_notificationbuttons</value>
+              <accept_buttontext>msdyn_acceptbuttontext</accept_buttontext>
+              <reject_buttontext>msdyn_rejectbuttontext</reject_buttontext>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Service.CIProvider.NotificationButtonConfigControl">
+            <parameters>
+              <value>msdyn_notificationbuttons</value>
+              <accept_buttontext>msdyn_acceptbuttontext</accept_buttontext>
+              <reject_buttontext>msdyn_rejectbuttontext</reject_buttontext>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Service.CIProvider.NotificationButtonConfigControl">
+            <parameters>
+              <value>msdyn_notificationbuttons</value>
+              <accept_buttontext>msdyn_acceptbuttontext</accept_buttontext>
+              <reject_buttontext>msdyn_rejectbuttontext</reject_buttontext>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{25a42570-0916-ae92-aa77-80389aada6ab}">
+          <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" formFactor="0">
+            <parameters>
+              <ViewId>{CEEF7E89-404A-4746-8735-A09E0114D232}</ViewId>
+              <IsUserView>false</IsUserView>
+              <RelationshipName>msdyn_msdyn_consoleapplicationnotificationtempl</RelationshipName>
+              <TargetEntityType>msdyn_consoleapplicationnotificationfield</TargetEntityType>
+              <AutoExpand>Fixed</AutoExpand>
+              <EnableQuickFind>false</EnableQuickFind>
+              <EnableViewPicker>false</EnableViewPicker>
+              <ViewIds>{CEEF7E89-404A-4746-8735-A09E0114D232}</ViewIds>
+              <EnableJumpBar>false</EnableJumpBar>
+              <ChartGridMode>All</ChartGridMode>
+              <VisualizationId />
+              <IsUserChart>false</IsUserChart>
+              <EnableChartPicker>true</EnableChartPicker>
+              <RecordsPerPage>4</RecordsPerPage>
+              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+              <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{CEEF7E89-404A-4746-8735-A09E0114D232}</ViewId>
+                <columnsDefaultView />
+                <IsUserView>false</IsUserView>
+                <RelationshipName>msdyn_msdyn_consoleapplicationnotificationtempl</RelationshipName>
+                <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+                <TargetEntityType>msdyn_consoleapplicationnotificationfield</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{CEEF7E89-404A-4746-8735-A09E0114D232}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy static="true" type="Enum">no</EnableGroupBy>
+              <EnableEditing static="true" type="Enum">yes</EnableEditing>
+              <ReflowBehavior static="true" type="Enum">GridOnly</ReflowBehavior>
+              <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+              <HideNestedGridColumnHeader static="true" type="Enum">no</HideNestedGridColumnHeader>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{CEEF7E89-404A-4746-8735-A09E0114D232}</ViewId>
+                <columnsDefaultView />
+                <IsUserView>false</IsUserView>
+                <RelationshipName>msdyn_msdyn_consoleapplicationnotificationtempl</RelationshipName>
+                <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+                <TargetEntityType>msdyn_consoleapplicationnotificationfield</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{CEEF7E89-404A-4746-8735-A09E0114D232}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy static="true" type="Enum">no</EnableGroupBy>
+              <EnableEditing static="true" type="Enum">yes</EnableEditing>
+              <ReflowBehavior static="true" type="Enum">GridOnly</ReflowBehavior>
+              <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+              <HideNestedGridColumnHeader static="true" type="Enum">no</HideNestedGridColumnHeader>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <formLibraries>
+        <Library name="EventHandlersLib/msdyn_EventHandlersLib.js" libraryUniqueId="{09ea6a88-1818-9ab0-496b-0ab021d5c0b3}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="CIFramework.populateDefaultValuesNotificationTemplate" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{d3317d08-138b-905e-4631-aab3d746d22a}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
