@@ -813,6 +813,28 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+* API to notify the KPI Breach
+*/
+	export function notifyKpiBreach(sessionId: string, shouldReset: boolean, details?: string, correlationId?: string): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.notifyKpiBreach,
+			messageData: new Map().set(Constants.correlationId, correlationId)
+		}
+		return sendMessage<string>(notifyKpiBreach.name, payload, false);
+	}
+
+	/**
+* API to notify the new activity on the session 
+*/
+	export function notifyNewActivity(sessionId: string, count: boolean, correlationId?: string): Promise<string> {
+		const payload: postMessageNamespace.IExternalRequestMessageType = {
+			messageType: MessageType.notifyNewActivity,
+			messageData: new Map().set(Constants.correlationId, correlationId)
+		}
+		return sendMessage<string>(notifyNewActivity.name, payload, false);
+	}
+
+	/**
 	 * API to get the focused tab in focused Session
 	 */
 	export function getFocusedTab(correlationId?: string): Promise<string> {

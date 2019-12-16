@@ -73,6 +73,8 @@ declare namespace Microsoft.CIFramework {
         static initLogAnalytics: string;
         static logAnalyticsEvent: string;
         static updateContext: string;
+        static notifyKpiBreach: string;
+        static notifyNewActivity: string;
     }
     /**
      * All constants for widget side logic should be placed here
@@ -572,6 +574,14 @@ declare namespace Microsoft.CIFramework {
      * API to notify incoming on an invisible Session
      */
     function requestFocusSession(sessionId: string, messagesCount?: number, correlationId?: string): Promise<string>;
+    /**
+* API to notify the KPI Breach
+*/
+    function notifyKpiBreach(sessionId: string, shouldReset: boolean, details?: string, correlationId?: string): Promise<string>;
+    /**
+* API to notify the new activity on the session
+*/
+    function notifyNewActivity(sessionId: string, count: boolean, correlationId?: string): Promise<string>;
     /**
      * API to get the focused tab in focused Session
      */

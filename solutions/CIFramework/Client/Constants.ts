@@ -75,6 +75,8 @@ namespace Microsoft.CIFramework
 		public static initLogAnalytics = "initLogAnalytics";
 		public static logAnalyticsEvent = "logAnalyticsEvent";
 		public static updateContext = "updateContext";
+		public static notifyKpiBreach = "notifyKpiBreach";
+		public static notifyNewActivity = "notifyNewActivity"
 	}
 
 	/**

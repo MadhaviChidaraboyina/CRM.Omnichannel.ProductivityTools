@@ -64,7 +64,9 @@ namespace Microsoft.CIFramework.Internal {
 		["logErrorsAndReject", [logErrorsAndReject]],
 		["initLogAnalytics", [raiseInitAnalyticsEvent]],
 		["logAnalyticsEvent", [raiseCustomAnalyticsEvent]],
-		["updateContext", [updateContext]]
+		["updateContext", [updateContext]],
+		["notifyKpiBreach", [notifyKpiBreach]],
+		["notifyNewActivity", [notifyNewActivity]]
 	]);
 
 	let genericEventRegistrations = new Map<string, CIProvider[]>();
@@ -1307,6 +1309,17 @@ namespace Microsoft.CIFramework.Internal {
 			return logAPIFailure(appId, true, errorData, MessageType.requestFocusSession, cifVersion, "", "", telemetryParameter, parameters.get(Constants.correlationId));
 		}
 	}
+
+	export function notifyKpiBreach(parameters: Map<string, any>): Promise<Map<string, any>> {
+		return Promise.resolve(new Map<string, any>());
+	}
+
+
+	export function notifyNewActivity(parameters: Map<string, any>): Promise<Map<string, any>> {
+		return Promise.resolve(new Map<string, any>());
+	}
+
+
 
 	export function getFocusedTab(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
