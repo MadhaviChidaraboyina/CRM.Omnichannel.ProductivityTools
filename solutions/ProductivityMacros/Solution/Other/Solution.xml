@@ -157,6 +157,8 @@
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_update_record.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_spinner.svg" behavior="0" />
+      <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
+      <RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>

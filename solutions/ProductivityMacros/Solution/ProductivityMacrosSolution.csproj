@@ -140,7 +140,9 @@
     </Content>
     <Content Include="WebResources\Localization\ProductivityMacros_webresource_strings.1033.resx.data.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Roles\" />
+  </ItemGroup>
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
 </Project>
