@@ -209,7 +209,7 @@
     <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{00419135-4a82-4321-942d-04c7d655d97a}'</comment>
   </data>
   <data name="1:Description,Agent script step{2def46f4-82c5-e911-a81c-000d3a6d8160}" xml:space="preserve">
-    <value>Активні кроки сценарію агентів, за які я відповідаю</value>
+    <value>Активні кроки сценарію агента, за які я відповідаю</value>
     <comment>'Agent script step' : Description for SavedQuery on Entity QueryId: '{2def46f4-82c5-e911-a81c-000d3a6d8160}'</comment>
   </data>
   <data name="1:Description,Agent script step{fc21e314-257a-4c4e-a5d3-189b32111173}" xml:space="preserve">
@@ -357,7 +357,7 @@
     <comment>'msdyn_agentscriptstep' : Description for Attribute 'msdyn_agentscriptstepId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_agentscriptstepmsdyn_agentscriptstep_msdyn_actiontype" xml:space="preserve">
-    <value>Тип дії кроку сценарію агента</value>
+    <value>Тип дії для кроку сценарію агента</value>
     <comment>'msdyn_agentscriptstep' : Description for OptionSet 'msdyn_agentscriptstep_msdyn_actiontype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_agentscriptstepmsdyn_agentscriptstep_statecode" xml:space="preserve">

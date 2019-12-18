@@ -274,11 +274,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Active Agent script steps owned by me]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Активні кроки сценарію агентів, за які я відповідаю]]></Val>
+            <Val><![CDATA[Активні кроки сценарію агента, за які я відповідаю]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.0006585Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:13:53Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -850,7 +853,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.0006806Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:13:53Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -950,11 +956,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Action type for agent script step action]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Тип дії кроку сценарію агента]]></Val>
+            <Val><![CDATA[Тип дії для кроку сценарію агента]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.0006781Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:13:53Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>

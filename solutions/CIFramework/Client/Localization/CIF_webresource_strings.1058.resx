@@ -150,7 +150,7 @@
     <comment>Description for Consult With Users Slide on FRE</comment>
   </data>
   <data name="FRE_CONSULT_TITLE" xml:space="preserve">
-    <value>Консультуйтеся з користувачами</value>
+    <value>Сумісна робота</value>
     <comment>Title for Consult With Users Slide on FRE</comment>
   </data>
   <data name="FRE_CONTEXTUALAPPS_DESC" xml:space="preserve">
@@ -178,7 +178,7 @@
     <comment>Get Started Button Text for FRE</comment>
   </data>
   <data name="FRE_INTRO_SLIDE_DESC" xml:space="preserve">
-    <value>Переглянути коротку демонстрацію можливостей для надання швидкого персоналізованого обслуговування.</value>
+    <value>Перегляньте коротку демонстрацію можливостей для надання швидкого персоналізованого обслуговування.</value>
     <comment>Description for the First Slide on FRE</comment>
   </data>
   <data name="FRE_INTRO_SLIDE_TITLE" xml:space="preserve">
@@ -198,7 +198,7 @@
     <comment>Description for Transfer the Conversation Slide on FRE</comment>
   </data>
   <data name="FRE_TRANSFER_TITLE" xml:space="preserve">
-    <value>Передати розмову</value>
+    <value>Передавання розмов</value>
     <comment>Title for Transfer the Conversation Slide on FRE</comment>
   </data>
   <data name="FRE_WORKWITHMULTIPLE_DESC" xml:space="preserve">

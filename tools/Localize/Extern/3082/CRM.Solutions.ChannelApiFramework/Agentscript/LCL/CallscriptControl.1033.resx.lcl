@@ -137,14 +137,17 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} macro step failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Error en el paso de macro {0}.]]></Val>
+            <Val><![CDATA[No se pudo completar el paso de macro {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:54.0001507Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:00Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[When macro execution step failed]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -153,14 +156,17 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} script step failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Error en el paso de script {0}.]]></Val>
+            <Val><![CDATA[No se pudo completar el paso de script {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:54.0001507Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:00Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[When script step loading fails]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -169,14 +175,17 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} text instruction step failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Error en el paso de instrucción de texto {0}.]]></Val>
+            <Val><![CDATA[No se pudo completar el paso de instrucción de texto {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:54.0001507Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:00Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[When text instruction step failed]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -185,14 +194,17 @@
         <Str Cat="Text">
           <Val><![CDATA[We couldn't load the agent script records. Please contact your admin.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[No se pueden cargar los registros de script de agente. Póngase en contacto con su administrador.]]></Val>
+            <Val><![CDATA[No se pudieron cargar los registros de script de agente. Póngase en contacto con su administrador.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:54.0001479Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:00Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Generic error message when initial script data load fails]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -233,14 +245,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Macro failed for step {0}. Please contact your admin.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Error de la macro en el paso {0}. Póngase en contacto con su administrador.]]></Val>
+            <Val><![CDATA[No se pudo completar la macro para el paso {0}. Póngase en contacto con su administrador.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:54.0001479Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:00Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Screen reader message when macro execution failed]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -249,14 +264,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Macro failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Error en la macro.]]></Val>
+            <Val><![CDATA[No se pudo completar la macro.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:54.0001479Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:00Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Error message to show when macro execution failed]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -265,14 +283,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Macro failed. Please contact your admin.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Error en la macro. Póngase en contacto con su administrador.]]></Val>
+            <Val><![CDATA[No se pudo completar la macro. Póngase en contacto con su administrador.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:54.0001479Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:00Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Generic error message to show when macro execution failed]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -329,14 +350,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Select a script]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Seleccione un script]]></Val>
+            <Val><![CDATA[Seleccionar un script]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:54.0001479Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:00Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Label for empty option in script select combobox]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>

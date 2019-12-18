@@ -169,14 +169,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Access and manage sitemap applications that lie within the context of a session.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Acceda e xestione aplicacións de mapas do sitio que se atopan no contexto dunha sesión.]]></Val>
+            <Val><![CDATA[Acceda a aplicacións de mapas do sitio que se atopan no contexto dunha sesión e xestióneas.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:49.0002497Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:38Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Description for Contextual Applications Slide on FRE]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>

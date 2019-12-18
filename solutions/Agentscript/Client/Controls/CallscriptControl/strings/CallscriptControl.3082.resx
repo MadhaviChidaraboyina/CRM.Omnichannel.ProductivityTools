@@ -146,19 +146,19 @@
     <comment>Header value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
-    <value>Error en el paso de macro {0}.</value>
+    <value>No se pudo completar el paso de macro {0}.</value>
     <comment>When macro execution step failed</comment>
   </data>
   <data name="FailedScriptStep_AccessibilityLabel" xml:space="preserve">
-    <value>Error en el paso de script {0}.</value>
+    <value>No se pudo completar el paso de script {0}.</value>
     <comment>When script step loading fails</comment>
   </data>
   <data name="FailedTextStep_AccessibilityLabel" xml:space="preserve">
-    <value>Error en el paso de instrucción de texto {0}.</value>
+    <value>No se pudo completar el paso de instrucción de texto {0}.</value>
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>No se pueden cargar los registros de script de agente. Póngase en contacto con su administrador.</value>
+    <value>No se pudieron cargar los registros de script de agente. Póngase en contacto con su administrador.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">
@@ -170,15 +170,15 @@
     <comment>Loading text to show when data fetch is in progress</comment>
   </data>
   <data name="MacroStepFailure_AccessibilityMessage" xml:space="preserve">
-    <value>Error de la macro en el paso {0}. Póngase en contacto con su administrador.</value>
+    <value>No se pudo completar la macro para el paso {0}. Póngase en contacto con su administrador.</value>
     <comment>Screen reader message when macro execution failed</comment>
   </data>
   <data name="MacroStepFailure_ErrorMessageWithError" xml:space="preserve">
-    <value>Error en la macro.</value>
+    <value>No se pudo completar la macro.</value>
     <comment>Error message to show when macro execution failed</comment>
   </data>
   <data name="MacroStepFailure_ErrorMessageWithoutError" xml:space="preserve">
-    <value>Error en la macro. Póngase en contacto con su administrador.</value>
+    <value>No se pudo completar la macro. Póngase en contacto con su administrador.</value>
     <comment>Generic error message to show when macro execution failed</comment>
   </data>
   <data name="MacroStepSuccess_AccessibilityMessage" xml:space="preserve">
@@ -194,7 +194,7 @@
     <comment>Label for script action step</comment>
   </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
-    <value>Seleccione un script</value>
+    <value>Seleccionar un script</value>
     <comment>Label for empty option in script select combobox</comment>
   </data>
   <data name="ScriptStepsDataLoadFailure" xml:space="preserve">

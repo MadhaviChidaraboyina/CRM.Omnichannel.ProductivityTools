@@ -154,7 +154,7 @@
     <comment>Title for Consult With Users Slide on FRE</comment>
   </data>
   <data name="FRE_CONTEXTUALAPPS_DESC" xml:space="preserve">
-    <value>Acceda e xestione aplicacións de mapas do sitio que se atopan no contexto dunha sesión.</value>
+    <value>Acceda a aplicacións de mapas do sitio que se atopan no contexto dunha sesión e xestióneas.</value>
     <comment>Description for Contextual Applications Slide on FRE</comment>
   </data>
   <data name="FRE_CONTEXTUALAPPS_TITLE" xml:space="preserve">

@@ -178,7 +178,7 @@
     <comment>Error message to show when macro execution failed</comment>
   </data>
   <data name="MacroStepFailure_ErrorMessageWithoutError" xml:space="preserve">
-    <value>Erro de macro para. Póñase en contacto co administrador.</value>
+    <value>Erro de macro. Póñase en contacto co administrador.</value>
     <comment>Generic error message to show when macro execution failed</comment>
   </data>
   <data name="MacroStepSuccess_AccessibilityMessage" xml:space="preserve">

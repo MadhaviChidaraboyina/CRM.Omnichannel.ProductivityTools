@@ -137,14 +137,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Invite other agents, supervisors to collaborate and solve the issues faster.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Uzaicināt citus aģentus un vadītājus, lai sadarbotos un ātrāk atrisinātu problēmas.]]></Val>
+            <Val><![CDATA[Uzaiciniet citus aģentus un vadītājus, lai sadarbotos un ātrāk atrisinātu problēmas.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002924Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:11:37Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Description for Consult With Users Slide on FRE]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>

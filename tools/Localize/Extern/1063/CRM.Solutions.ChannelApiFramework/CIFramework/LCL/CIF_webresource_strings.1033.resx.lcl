@@ -329,14 +329,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Transfer the conversations smoothly to the best-qualified agents to resolve them fast.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Greitai persiųskite pokalbius aukščiausios kvalifikacijos agentams, kad juos sparčiai išspręstumėte.]]></Val>
+            <Val><![CDATA[Sklandžiai persiųskite pokalbius aukščiausios kvalifikacijos agentams, kad juos sparčiai išspręstumėte.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0003155Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:11:22Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Description for Transfer the Conversation Slide on FRE]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>

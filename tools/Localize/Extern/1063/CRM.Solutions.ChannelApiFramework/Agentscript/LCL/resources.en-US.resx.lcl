@@ -599,11 +599,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Reason for the status of the Agent script]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Agento scenarijaus būsenos priežastis]]></Val>
+            <Val><![CDATA[Agento scenarijaus būsenos tipas]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.0009831Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:11:22Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -976,11 +979,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Reason for the status of the Agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Agento scenarijaus veiksmo būsenos priežastis]]></Val>
+            <Val><![CDATA[Agento scenarijaus veiksmo būsenos tipas]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.0009781Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:11:22Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -1080,11 +1086,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Active Agent script steps]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Aktyvūs agento scenarijaus veiksmai]]></Val>
+            <Val><![CDATA[Aktyvieji agento scenarijaus veiksmai]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.0009514Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:11:22Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -1171,11 +1180,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Inactive Agent script steps]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Neaktyvūs agento scenarijaus veiksmai]]></Val>
+            <Val><![CDATA[Neaktyvieji agento scenarijaus veiksmai]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.0009514Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:11:22Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -1210,11 +1222,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Active Agent scripts]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Aktyvūs agento scenarijai]]></Val>
+            <Val><![CDATA[Aktyvieji agento scenarijai]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.0009514Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:11:22Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -1249,11 +1264,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Inactive Agent scripts]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Neaktyvūs agento scenarijai]]></Val>
+            <Val><![CDATA[Neaktyvieji agento scenarijai]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.000975Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:11:22Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -1314,11 +1332,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Quick Find Active Agent scripts]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Aktyvių agento scenarijų sparčioji ieška]]></Val>
+            <Val><![CDATA[Aktyviųjų agento scenarijų sparčioji ieška]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.000975Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:11:22Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>

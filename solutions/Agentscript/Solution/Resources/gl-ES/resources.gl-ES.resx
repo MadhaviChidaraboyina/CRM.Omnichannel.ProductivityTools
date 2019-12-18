@@ -225,7 +225,7 @@
     <comment>'Agent script' : Description for systemform in Entity FormXml ID: '{4eedba34-5c04-49d4-965c-f5fff3d9f592}'</comment>
   </data>
   <data name="1:Description,Agent script{bf0e549f-82c5-e911-a81c-000d3a6d8160}" xml:space="preserve">
-    <value>Scripts do axente activos da miña propiedade</value>
+    <value>Scripts de axente activos da miña propiedade</value>
     <comment>'Agent script' : Description for SavedQuery on Entity QueryId: '{bf0e549f-82c5-e911-a81c-000d3a6d8160}'</comment>
   </data>
   <data name="1:Description,msdyn_agentscriptCreatedBy" xml:space="preserve">

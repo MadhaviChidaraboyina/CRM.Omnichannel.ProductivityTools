@@ -265,14 +265,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Macro failed. Please contact your admin.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Erro de macro para. Póñase en contacto co administrador.]]></Val>
+            <Val><![CDATA[Erro de macro. Póñase en contacto co administrador.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:54.0000477Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:38Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Generic error message to show when macro execution failed]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>

@@ -153,14 +153,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Consult with users]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Консультуйтеся з користувачами]]></Val>
+            <Val><![CDATA[Сумісна робота]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008566Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:13:53Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Title for Consult With Users Slide on FRE]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -265,14 +268,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Take a quick tour to learn how to deliver fast, personalized service to your customers.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Переглянути коротку демонстрацію можливостей для надання швидкого персоналізованого обслуговування.]]></Val>
+            <Val><![CDATA[Перегляньте коротку демонстрацію можливостей для надання швидкого персоналізованого обслуговування.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008566Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:13:53Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Description for the First Slide on FRE]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
@@ -345,14 +351,17 @@
         <Str Cat="Text">
           <Val><![CDATA[Transfer the conversation]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Передати розмову]]></Val>
+            <Val><![CDATA[Передавання розмов]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008549Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:13:53Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Title for Transfer the Conversation Slide on FRE]]></Cmt>
         </Cmts>
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>

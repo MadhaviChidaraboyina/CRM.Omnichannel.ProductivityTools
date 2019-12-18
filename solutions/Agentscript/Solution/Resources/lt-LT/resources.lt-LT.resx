@@ -269,7 +269,7 @@
     <comment>'msdyn_agentscript' : Description for OptionSet 'msdyn_agentscript_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_agentscriptmsdyn_agentscript_statuscode" xml:space="preserve">
-    <value>Agento scenarijaus būsenos priežastis</value>
+    <value>Agento scenarijaus būsenos tipas</value>
     <comment>'msdyn_agentscript' : Description for OptionSet 'msdyn_agentscript_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_agentscriptmsdyn_Description" xml:space="preserve">
@@ -365,7 +365,7 @@
     <comment>'msdyn_agentscriptstep' : Description for OptionSet 'msdyn_agentscriptstep_statecode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_agentscriptstepmsdyn_agentscriptstep_statuscode" xml:space="preserve">
-    <value>Agento scenarijaus veiksmo būsenos priežastis</value>
+    <value>Agento scenarijaus veiksmo būsenos tipas</value>
     <comment>'msdyn_agentscriptstep' : Description for OptionSet 'msdyn_agentscriptstep_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_agentscriptstepmsdyn_Description" xml:space="preserve">
@@ -1033,7 +1033,7 @@
     <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{08acace2-86c5-e911-a81c-000d3a6d8160}'</comment>
   </data>
   <data name="1:LocalizedName,Agent script step{1bc4855d-6ea2-4ef7-b0da-c587bc70db0e}" xml:space="preserve">
-    <value>Aktyvūs agento scenarijaus veiksmai</value>
+    <value>Aktyvieji agento scenarijaus veiksmai</value>
     <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{1bc4855d-6ea2-4ef7-b0da-c587bc70db0e}'</comment>
   </data>
   <data name="1:LocalizedName,Agent script step{2def46f4-82c5-e911-a81c-000d3a6d8160}" xml:space="preserve">
@@ -1061,7 +1061,7 @@
     <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{a38b6f8e-7cb5-4848-aff3-9873ac922afc}'</comment>
   </data>
   <data name="1:LocalizedName,Agent script step{b0f7f366-14ad-4862-8a27-44d20e928538}" xml:space="preserve">
-    <value>Neaktyvūs agento scenarijaus veiksmai</value>
+    <value>Neaktyvieji agento scenarijaus veiksmai</value>
     <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{b0f7f366-14ad-4862-8a27-44d20e928538}'</comment>
   </data>
   <data name="1:LocalizedName,Agent script step{c5645420-c66e-4e68-bee2-bd16b27cd357}" xml:space="preserve">
@@ -1073,7 +1073,7 @@
     <comment>'Agent script step' : LocalizedName for systemform in Entity FormXml ID: '{fc21e314-257a-4c4e-a5d3-189b32111173}'</comment>
   </data>
   <data name="1:LocalizedName,Agent script{2049ca13-2606-498e-8177-9c6f0b8e790b}" xml:space="preserve">
-    <value>Aktyvūs agento scenarijai</value>
+    <value>Aktyvieji agento scenarijai</value>
     <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{2049ca13-2606-498e-8177-9c6f0b8e790b}'</comment>
   </data>
   <data name="1:LocalizedName,Agent script{20abb81a-52e0-4ee5-b14b-63357e12e150}" xml:space="preserve">
@@ -1085,7 +1085,7 @@
     <comment>'Agent script' : LocalizedName for systemform in Entity FormXml ID: '{4eedba34-5c04-49d4-965c-f5fff3d9f592}'</comment>
   </data>
   <data name="1:LocalizedName,Agent script{6f94621b-0965-4873-96cf-12990a13175d}" xml:space="preserve">
-    <value>Neaktyvūs agento scenarijai</value>
+    <value>Neaktyvieji agento scenarijai</value>
     <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{6f94621b-0965-4873-96cf-12990a13175d}'</comment>
   </data>
   <data name="1:LocalizedName,Agent script{7a6bde9a-aa7c-4564-8a21-92967d25ccd8}" xml:space="preserve">
@@ -1105,7 +1105,7 @@
     <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{bf4ca0c4-4cf0-456e-9d2e-a82c36dbdb04}'</comment>
   </data>
   <data name="1:LocalizedName,Agent script{da1ad55f-8bd8-4105-a3fa-a861a9eb5c16}" xml:space="preserve">
-    <value>Aktyvių agento scenarijų sparčioji ieška</value>
+    <value>Aktyviųjų agento scenarijų sparčioji ieška</value>
     <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{da1ad55f-8bd8-4105-a3fa-a861a9eb5c16}'</comment>
   </data>
   <data name="1:LocalizedName,Agent script{f23a365e-e46e-4d08-b093-3cd0fc7e0fe6}" xml:space="preserve">

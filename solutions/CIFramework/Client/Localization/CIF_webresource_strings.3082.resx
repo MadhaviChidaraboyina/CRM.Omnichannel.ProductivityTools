@@ -146,7 +146,7 @@
     <comment>Title for Comprehensive View Slide on FRE</comment>
   </data>
   <data name="FRE_CONSULT_DESC" xml:space="preserve">
-    <value>Invite a otros agentes y supervisores para colaborar y resolver los problemas con mayor rapidez.</value>
+    <value>Invite a otros agentes y supervisores a colaborar y resolver los problemas con mayor rapidez.</value>
     <comment>Description for Consult With Users Slide on FRE</comment>
   </data>
   <data name="FRE_CONSULT_TITLE" xml:space="preserve">

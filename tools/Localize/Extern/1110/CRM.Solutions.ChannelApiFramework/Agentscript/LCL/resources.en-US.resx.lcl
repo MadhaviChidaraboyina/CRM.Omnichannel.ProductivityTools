@@ -326,11 +326,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Active Agent scripts owned by me]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Scripts do axente activos da miña propiedade]]></Val>
+            <Val><![CDATA[Scripts de axente activos da miña propiedade]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:55.0005956Z" />
+        <Modified By="v-jinsqi" DateTime="2019-12-12T09:09:38Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
