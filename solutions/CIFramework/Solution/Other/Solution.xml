@@ -109,6 +109,7 @@
 			<RootComponent type="61" schemaName="EventHandlersLib/msdyn_EventHandlersLib.js" behavior="0" />
 			<RootComponent type="61" schemaName="PresenceEventHandlersLib/msdyn_internal_presence_ci_library.js" behavior="0" />
 			<RootComponent type="61" schemaName="OpenDialogLib/msdyn_internal_openDialog_ci_library.js" behavior="0" />
+			<RootComponent type="61" schemaName="Macros/msdyn_internal_cimacro_library.js" behavior="0" />
 			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1033.resx" behavior="0" />
 			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1025.resx" behavior="0" />
 			<RootComponent type="61" schemaName="Localization/CIF_webresource_strings.1026.resx" behavior="0" />
@@ -182,6 +183,13 @@
 			<RootComponent type="61" schemaName="widgets_containerStyle.css" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_notificationCss.css" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_ExternalWebPageContainer.html" behavior ="0"/>
+			<RootComponent type="61" schemaName="Macros/msdyn_ProductivityMacros_close_all_other_session.svg" behavior="0" />
+			<RootComponent type="61" schemaName="Macros/msdyn_ProductivityMacros_close_session.svg" behavior="0" />
+			<RootComponent type="61" schemaName="Macros/msdyn_ProductivityMacros_focus_tab.svg" behavior="0" />
+			<RootComponent type="61" schemaName="Macros/msdyn_ProductivityMacros_get_current_page.svg" behavior="0" />
+			<RootComponent type="61" schemaName="Macros/msdyn_ProductivityMacros_open_application_tab.svg" behavior="0" />
+			<RootComponent type="61" schemaName="Macros/msdyn_ProductivityMacros_refresh_page.svg" behavior="0" />
+			<RootComponent type="61" schemaName="Macros/msdyn_sessionConnector_macro_connector.svg" behavior="0" />
 			<RootComponent type="62" schemaName="msdyn_ChannelIntegrationFrameworkSitemap" behavior="0" />
 			<RootComponent type="66" schemaName="MscrmControls.Service.CIProvider.CustomMultiSelectControl" />
 			<RootComponent type="66" schemaName="MscrmControls.FieldControls.AgentClickToActControl" />
@@ -205,6 +213,7 @@
 			<RootComponent type="60" id="{e02fac01-dd62-4886-8f07-042ad67ee299}" behavior="0" />
 			<RootComponent type="9" schemaName="msdyn_presencestatus" behavior="0" />
 		</RootComponents>
-		<MissingDependencies />
+		<MissingDependencies>
+		</MissingDependencies>
 	</SolutionManifest>
 </ImportExportXml>

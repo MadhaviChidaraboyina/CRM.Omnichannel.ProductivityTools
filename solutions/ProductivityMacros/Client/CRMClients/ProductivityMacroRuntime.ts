@@ -23,24 +23,26 @@ namespace Microsoft.ProductivityMacros {
                             let actions = getSortedActionsList(JSON.parse(inputJSONstring).properties.definition.actions);
                             var macroState = new Microsoft.ProductivityMacros.Internal.ProductivityMacroState();
 							let executeActionsPromise = actions.reduce((accumulatorPromise, nextId) => {
-								return accumulatorPromise.then(function (result: any) {
-                                    return resolveParamsAndExecuteMacroAction(nextId.type, nextId.inputs, nextId.name, macroState);
-								}, function (error: Error) {
+                                return accumulatorPromise.then(function (result: any) {
+                                    if (!Internal.isNullOrUndefined(result)) {
+                                        return resolveParamsAndExecuteMacroAction(nextId.type, nextId.inputs, nextId.name, macroState);
+                                    } 
+                                }, function (error: Error) {
 										reject(error);
 									});
-							}, Promise.resolve());
+							}, Promise.resolve("success"));
                             executeActionsPromise.then(function (success: any) {
 								resolve("Action performed successfully")
-							}, function (error: Error) {
+                            }, function (error: Error) {
 									reject(error);
-								});
+							});
 						},
 						function (error: Error) {
 							reject(error);
 						}
 					);
 				},
-				function (error: Error) {
+                function (error: Error) {
 					reject(error);
 				}
 			);
@@ -135,7 +137,7 @@ namespace Microsoft.ProductivityMacros {
 
 						resolve(response);
 					}, function (error: Error) {
-						resolve(error);
+                        reject(error);
 					}
 					);
 				}, function (error: Error) {

@@ -14,7 +14,10 @@ namespace Microsoft.CIFramework.External {
 		getSessionTemplateParams(sessionId?: string): any;
 		setSessionTemplateParams(data: any, sessionId?: string): void;
 		resolveTemplateString(input: string, templateParams: any, scope: string): Promise<string>;
-		createTab(input: XrmClientApi.TabInput): Promise<string>;
+        createTab(input: XrmClientApi.TabInput): Promise<string>;
+        focusTab(tabId: string, sessionId?: string): Promise<string>;
+        getCurrentTab(sessionId?: string): any;
+        refreshTab(tabId: string, sessionId?: string): Promise<string>;
 	}
 
 	export class CIFExternalUtilityImpl implements CIFExternalUtility {
@@ -97,7 +100,66 @@ namespace Microsoft.CIFramework.External {
 
 		public createTab(input: XrmClientApi.TabInput): Promise<string> {
 			return Internal.state.sessionManager.createTabInternal(Internal.state.sessionManager.getFocusedSession(), input);
-		}
+        }
+
+        focusTab(tabId: string, sessionId?: string): Promise<string> {
+            try {
+                return new Promise<any>((resolve, reject) => {
+                    let sessionIdVal: string;
+                    if (sessionId) {
+                        sessionIdVal = sessionId;
+                    } else {
+                        sessionIdVal = Internal.state.sessionManager.getFocusedSession();
+                    }
+                    Internal.state.sessionManager.focusTab(sessionIdVal, tabId).then((success) => {
+                        resolve(success);
+                    },
+                    (error) => {
+                        reject(error);
+                    });
+                });
+            } catch (error) {
+                logErrors("Error in focusTab : " + error, "CIFExternalUtility.focusTab");
+                Promise.reject(error);
+            }
+        }
+
+        getCurrentTab(sessionId?: string): any {
+            try {
+                let sessionIdVal: string;
+                if (sessionId) {
+                    sessionIdVal = sessionId;
+                } else {
+                    sessionIdVal = Internal.state.sessionManager.getFocusedSession();
+                }
+                return Internal.state.sessionManager.getFocusedTab(sessionIdVal);
+            } catch (error) {
+                logErrors("Error getCurrentTab : " + error, "CIFExternalUtility.getCurrentTab");
+                throw error;
+            }
+        }
+
+        refreshTab(tabId: string, sessionId?: string): Promise<string> {
+            try {
+                return new Promise<any>((resolve, reject) => {
+                    let sessionIdVal: string;
+                    if (sessionId) {
+                        sessionIdVal = sessionId;
+                    } else {
+                        sessionIdVal = Internal.state.sessionManager.getFocusedSession();
+                    }
+                    Internal.state.sessionManager.refreshTab(sessionIdVal, tabId).then((success) => {
+                        resolve(success);
+                    },
+                    (error) => {
+                        reject(error);
+                    });
+                });
+            } catch (error) {
+                logErrors("Error in refreshTab : " + error, "CIFExternalUtility.refreshTab");
+                Promise.reject(error);
+            }
+        }
 	}
 
 	function logErrors(errorMessage: string, functionName: string) {

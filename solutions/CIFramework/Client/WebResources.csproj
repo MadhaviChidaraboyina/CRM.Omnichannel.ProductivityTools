@@ -46,6 +46,7 @@
     <TypeScriptCompile Include="CRMClients\SessionPanel.ts" />
     <TypeScriptCompile Include="CRMClients\PresenceControl.ts" />
     <TypeScriptCompile Include="CRMClients\CIFExternalUtility.ts" />
+    <TypeScriptCompile Include="Macros\CIFMacrosWrapper.ts" />
     <TypeScriptCompile Include="TelemetryConstants.ts" />
     <TypeScriptCompile Include="PresenceEventHandlersLib\PresenceDialogControl.ts" />
     <TypeScriptCompile Include="TelemetryHelper.ts" />
@@ -86,6 +87,7 @@
     <Content Include="EventHandlersLib\tsconfig.json" />
     <Content Include="PresenceEventHandlersLib\tsconfig.json" />
     <Content Include="OpenDialogLib\tsconfig.json" />
+    <Content Include="Macros\tsconfig.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

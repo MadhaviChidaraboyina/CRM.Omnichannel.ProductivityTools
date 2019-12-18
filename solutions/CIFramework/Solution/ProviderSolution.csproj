@@ -173,6 +173,7 @@
     <Content Include="AppModules\CIConfigApp\*" />
     <Content Include="AppModuleSitemaps\CIConfigApp\*" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
 </Project>

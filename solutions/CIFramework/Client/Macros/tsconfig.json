@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outFile": "../../Solution/WebResources/Macros/msdyn_internal_cimacro_library.js",
+    "module": "amd",
+    "allowJs": true
+  },
+  "extends": "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+  "include": [
+    "CIFMacrosWrapper.ts"
+  ]
+}

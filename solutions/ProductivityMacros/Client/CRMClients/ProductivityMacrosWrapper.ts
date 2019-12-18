@@ -449,7 +449,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                 errorObject.reportTime = new Date().toUTCString();
                 errorObject.sourceFunc = "ProductivityMacrosWrapper - save";
                 logFailure("save", errorObject, "");
-                return Promise.reject(errorMessage);
+                return reject(errorMessage);
             });
         });
     }
@@ -650,7 +650,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                         errorObject.reportTime = new Date().toUTCString();
                         errorObject.sourceFunc = "ProductivityMacrosWrapper - resolveIncident";
                         logFailure("resolveIncident", errorObject, "");
-                        return Promise.reject(req.responseText);
+                        return reject(req.responseText);
                     }
                 }
             };
@@ -694,7 +694,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                         errorObject.reportTime = new Date().toUTCString();
                         errorObject.sourceFunc = "ProductivityMacrosWrapper - instantiateEmailTemplate";
                         logFailure("instantiateEmailTemplate", errorObject, "");
-                        return Promise.reject(req.responseText);
+                        return reject(req.responseText);
                     }
                 }
             };
