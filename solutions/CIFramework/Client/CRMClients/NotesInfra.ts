@@ -18,9 +18,11 @@ namespace Microsoft.CIFramework.Internal {
 		let notesDiv = widgetIFrame.contentWindow.document.getElementById("notesDiv");
 		if (notesDiv.style.visibility == "hidden") {
 			notesDiv.style.visibility = "visible";
+			notesDiv.tabIndex = 0;
 		}
 		else {
 			notesDiv.style.visibility = "hidden";
+			notesDiv.tabIndex = -1;
 		}
 	}
 	export function insertNotesClient(notesDetails: Map<string,any>/*, width: number*/): Promise<any>{
