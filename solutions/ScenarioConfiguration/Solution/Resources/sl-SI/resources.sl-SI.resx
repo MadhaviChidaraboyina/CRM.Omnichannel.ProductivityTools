@@ -201,7 +201,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
-    <value>Enolični identifikator za primerke entitet</value>
+    <value>Enolični identifikator za primerke entitete</value>
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_channelId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_ChannelProviderId" xml:space="preserve">
@@ -233,7 +233,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningBusinessUnit" xml:space="preserve">
-    <value>Enolični identifikator za poslovno enoto, ki je lastnica zapisa.</value>
+    <value>Enolični identifikator za poslovno enoto, ki je lastnica zapisa</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
@@ -309,7 +309,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_NotificationTemplate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_scenarioId" xml:space="preserve">
-    <value>Enolični identifikator za primerke entitet</value>
+    <value>Enolični identifikator za primerke entitete</value>
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_scenarioId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_scenario_msdyn_type" xml:space="preserve">
@@ -341,7 +341,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningBusinessUnit" xml:space="preserve">
-    <value>Enolični identifikator za poslovno enoto, ki je lastnica zapisa.</value>
+    <value>Enolični identifikator za poslovno enoto, ki je lastnica zapisa</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">

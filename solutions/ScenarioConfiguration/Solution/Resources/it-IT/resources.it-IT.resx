@@ -201,7 +201,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
-    <value>Identificatore univoco per le istanze di entità</value>
+    <value>Identificatore univoco delle istanze di entità</value>
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_channelId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_ChannelProviderId" xml:space="preserve">
@@ -309,7 +309,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_NotificationTemplate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_scenarioId" xml:space="preserve">
-    <value>Identificatore univoco per le istanze di entità</value>
+    <value>Identificatore univoco delle istanze di entità</value>
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_scenarioId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_scenario_msdyn_type" xml:space="preserve">
@@ -453,7 +453,7 @@
     <comment>'msdyn_channel' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numero di versione della regola per il fuso orario</value>
+    <value>Numero di versione regola fuso orario</value>
     <comment>'msdyn_channel' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
@@ -557,7 +557,7 @@
     <comment>'msdyn_scenario' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Numero di versione della regola per il fuso orario</value>
+    <value>Numero di versione regola fuso orario</value>
     <comment>'msdyn_scenario' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">

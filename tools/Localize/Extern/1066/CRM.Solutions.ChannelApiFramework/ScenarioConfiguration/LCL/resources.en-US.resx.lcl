@@ -209,11 +209,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Mã định danh duy nhất của người dùng sửa đổi bản ghi.]]></Val>
+            <Val><![CDATA[Mã định danh duy nhất của người dùng đã sửa đổi bản ghi.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001455Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T03:04:38Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
         </Props>
@@ -534,11 +534,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Mã định danh duy nhất của người dùng sửa đổi bản ghi.]]></Val>
+            <Val><![CDATA[Mã định danh duy nhất của người dùng đã sửa đổi bản ghi.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.000144Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T03:04:38Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
         </Props>
@@ -1058,9 +1058,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001429Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:Title,ScenarioProcessCenter{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1071,9 +1072,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001429Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:Title,ScenarioSales{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1084,9 +1086,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001429Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:Title,ScenarioService{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1123,9 +1126,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001422Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_channelCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1175,9 +1179,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001422Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_channelModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1201,9 +1206,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001419Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_channelOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1275,11 +1281,11 @@
         <Str Cat="Text">
           <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Mã Múi giờ Chuyển đổi UTC]]></Val>
+            <Val><![CDATA[Mã múi giờ chuyển đổi UTC]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001419Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T03:04:38Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
         </Props>
@@ -1383,9 +1389,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001414Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_channelstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1435,9 +1442,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001414Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_scenarioCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1487,9 +1495,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001414Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_scenarioModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1513,9 +1522,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001414Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_scenarioOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1587,11 +1597,11 @@
         <Str Cat="Text">
           <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Mã Múi giờ Chuyển đổi UTC]]></Val>
+            <Val><![CDATA[Mã múi giờ chuyển đổi UTC]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001408Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T03:04:38Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
         </Props>
@@ -1669,9 +1679,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001408Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_scenariomsdyn_scenarioId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1773,9 +1784,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001393Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Scenario{25f90570-8ed0-4eb4-98af-71f6daa7a728}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1851,9 +1863,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001389Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,channel{1acbe822-da47-40e4-bb56-b2347e5bc033}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1890,9 +1903,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001389Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,channel{63514de6-a19b-990e-b6ad-8234014c287e}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1942,9 +1956,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001389Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,channel{e2e87fa6-a6a9-4b42-86a7-3c2e074a94e8}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1994,9 +2009,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001389Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_channelmsdyn_channel_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2007,9 +2023,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001389Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_channelmsdyn_channel_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2020,9 +2037,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001389Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_channelmsdyn_channel_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2033,9 +2051,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001389Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_scenariomsdyn_scenario_msdyn_type0" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2072,9 +2091,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001389Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_scenariomsdyn_scenario_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2085,9 +2105,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001389Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_scenariomsdyn_scenario_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2098,9 +2119,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001384Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_scenariomsdyn_scenario_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2111,9 +2133,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-09-06T03:01:31.0001384Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T20:54:30Z" />
         <Props>
           <Str Name="Custom3" Val="WO20359_20190903" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
     </Item>

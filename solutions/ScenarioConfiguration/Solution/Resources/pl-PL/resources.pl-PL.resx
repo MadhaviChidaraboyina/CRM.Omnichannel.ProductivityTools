@@ -233,7 +233,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningBusinessUnit" xml:space="preserve">
-    <value>Unikatowy identyfikator jednostki biznesowej, która jest właścicielem rekordu.</value>
+    <value>Unikatowy identyfikator jednostki biznesowej, która jest właścicielem rekordu</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
@@ -341,7 +341,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningBusinessUnit" xml:space="preserve">
-    <value>Unikatowy identyfikator jednostki biznesowej, która jest właścicielem rekordu.</value>
+    <value>Unikatowy identyfikator jednostki biznesowej, która jest właścicielem rekordu</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">
@@ -457,7 +457,7 @@
     <comment>'msdyn_channel' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej konwersji czasu UTC</value>
+    <value>Kod strefy czasowej do konwersji czasu UTC</value>
     <comment>'msdyn_channel' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioCreatedBy" xml:space="preserve">
@@ -561,7 +561,7 @@
     <comment>'msdyn_scenario' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod strefy czasowej konwersji czasu UTC</value>
+    <value>Kod strefy czasowej do konwersji czasu UTC</value>
     <comment>'msdyn_scenario' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,channel{1acbe822-da47-40e4-bb56-b2347e5bc033}" xml:space="preserve">

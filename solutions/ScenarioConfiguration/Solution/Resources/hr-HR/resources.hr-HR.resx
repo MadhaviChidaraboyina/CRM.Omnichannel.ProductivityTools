@@ -169,11 +169,11 @@
     <comment>'channel' : Description for systemform in Entity FormXml ID: '{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}'</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedBy" xml:space="preserve">
-    <value>Jedinstveni identifikator korisnika koji je izradio zapis.</value>
+    <value>Jedinstveni identifikator korisnika koji je stvorio zapis.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOn" xml:space="preserve">
-    <value>Datum i vrijeme izrade zapisa.</value>
+    <value>Datum i vrijeme stvaranja zapisa.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
@@ -185,7 +185,7 @@
     <comment> 'msdyn_channel' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelImportSequenceNumber" xml:space="preserve">
-    <value>Slijedni broj uvoza koji je stvorio taj zapis.</value>
+    <value>Redni broj uvoza koji je stvorio ovaj zapis.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedBy" xml:space="preserve">
@@ -201,7 +201,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
-    <value>Jedinstveni identifikator za instance entiteta</value>
+    <value>Jedinstveni identifikator instanci entiteta</value>
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_channelId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_ChannelProviderId" xml:space="preserve">
@@ -233,15 +233,15 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningBusinessUnit" xml:space="preserve">
-    <value>Jedinstveni identifikator za poslovnu jedinicu u čijem je vlasništvu zapis</value>
+    <value>Jedinstveni identifikator poslovne jedinice koja je vlasnik zapisa</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim u čijem je vlasništvu zapis.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningUser" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika u čijem je vlasništvu zapis.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelstatecode" xml:space="preserve">
@@ -257,15 +257,15 @@
     <comment>'msdyn_channel' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone koja se koristila kada je zapis izrađen.</value>
+    <value>Šifra vremenske zone koja se upotrebljavala kada je zapis stvoren.</value>
     <comment>'msdyn_channel' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedBy" xml:space="preserve">
-    <value>Jedinstveni identifikator korisnika koji je izradio zapis.</value>
+    <value>Jedinstveni identifikator korisnika koji je stvorio zapis.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOn" xml:space="preserve">
-    <value>Datum i vrijeme izrade zapisa.</value>
+    <value>Datum i vrijeme stvaranja zapisa.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
@@ -277,7 +277,7 @@
     <comment> 'msdyn_scenario' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioImportSequenceNumber" xml:space="preserve">
-    <value>Slijedni broj uvoza koji je stvorio taj zapis.</value>
+    <value>Redni broj uvoza koji je stvorio ovaj zapis.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedBy" xml:space="preserve">
@@ -309,7 +309,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_NotificationTemplate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_scenarioId" xml:space="preserve">
-    <value>Jedinstveni identifikator za instance entiteta</value>
+    <value>Jedinstveni identifikator instanci entiteta</value>
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_scenarioId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_scenario_msdyn_type" xml:space="preserve">
@@ -341,15 +341,15 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningBusinessUnit" xml:space="preserve">
-    <value>Jedinstveni identifikator za poslovnu jedinicu u čijem je vlasništvu zapis</value>
+    <value>Jedinstveni identifikator poslovne jedinice koja je vlasnik zapisa</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim u čijem je vlasništvu zapis.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningUser" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika u čijem je vlasništvu zapis.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariostatecode" xml:space="preserve">
@@ -365,7 +365,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone koja se koristila kada je zapis izrađen.</value>
+    <value>Šifra vremenske zone koja se upotrebljavala kada je zapis stvoren.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">

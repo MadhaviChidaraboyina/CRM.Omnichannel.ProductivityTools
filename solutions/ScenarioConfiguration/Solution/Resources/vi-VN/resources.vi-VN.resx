@@ -189,7 +189,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedBy" xml:space="preserve">
-    <value>Mã định danh duy nhất của người dùng sửa đổi bản ghi.</value>
+    <value>Mã định danh duy nhất của người dùng đã sửa đổi bản ghi.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOn" xml:space="preserve">
@@ -281,7 +281,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedBy" xml:space="preserve">
-    <value>Mã định danh duy nhất của người dùng sửa đổi bản ghi.</value>
+    <value>Mã định danh duy nhất của người dùng đã sửa đổi bản ghi.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOn" xml:space="preserve">
@@ -457,7 +457,7 @@
     <comment>'msdyn_channel' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Mã Múi giờ Chuyển đổi UTC</value>
+    <value>Mã múi giờ chuyển đổi UTC</value>
     <comment>'msdyn_channel' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioCreatedBy" xml:space="preserve">
@@ -561,7 +561,7 @@
     <comment>'msdyn_scenario' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Mã Múi giờ Chuyển đổi UTC</value>
+    <value>Mã múi giờ chuyển đổi UTC</value>
     <comment>'msdyn_scenario' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,channel{1acbe822-da47-40e4-bb56-b2347e5bc033}" xml:space="preserve">

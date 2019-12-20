@@ -177,7 +177,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя представител, създал записа</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelentitymsdyn_channel" xml:space="preserve">
@@ -185,7 +185,7 @@
     <comment> 'msdyn_channel' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelImportSequenceNumber" xml:space="preserve">
-    <value>Номер на последователност на импортирането, създало този запис.</value>
+    <value>Пореден номер на импортирането, създало този запис.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedBy" xml:space="preserve">
@@ -197,7 +197,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, който е извършил промяна на записа.</value>
+    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
@@ -269,7 +269,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя представител, създал записа</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioentitymsdyn_scenario" xml:space="preserve">
@@ -277,7 +277,7 @@
     <comment> 'msdyn_scenario' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioImportSequenceNumber" xml:space="preserve">
-    <value>Номер на последователност на импортирането, създало този запис.</value>
+    <value>Пореден номер на импортирането, създало този запис.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedBy" xml:space="preserve">
@@ -289,7 +289,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, който е извършил промяна на записа.</value>
+    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_ChannelId" xml:space="preserve">

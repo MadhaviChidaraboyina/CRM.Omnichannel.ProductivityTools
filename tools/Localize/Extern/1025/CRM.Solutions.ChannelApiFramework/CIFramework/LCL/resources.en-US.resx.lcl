@@ -65,9 +65,10 @@
             </Tgt>
           </Str>
           <Disp Icon="Str" />
-          <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0006992Z" />
+          <Modified By="v-rondai" DateTime="2019-12-13T13:38:05Z" />
           <Props>
             <Str Name="Custom3" Val="WO21181_20190917" />
+            <Str Name="Custom4" Val="Accepted" />
           </Props>
         </Item>
       </Item>
@@ -3674,15 +3675,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_IsRuntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[نعم - سيتم انتقاء القيمة من وسيطة templateParameters في وقت التشغيل]A;لا - سيتم توفير القيمة عند إنشاء قالب يستخدم هذه المعلمة]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[نعم - سيتم انتقاء القيمة من وسيطة templateParameters في وقت التشغيل]D;]A;لا - سيتم توفير القيمة عند إنشاء قالب يستخدم هذه المعلمة]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000663Z" />
+        <Modified By="v-rondai" DateTime="2019-12-19T02:36:19.0007472Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO23640_20191216" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3713,15 +3717,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[نعم - سيتم انتقاء القيمة من وسيطة templateParameters في وقت التشغيل]A;لا - سيتم توفير القيمة عند إنشاء قالب يستخدم هذه المعلمة]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[نعم - سيتم انتقاء القيمة من وسيطة templateParameters في وقت التشغيل]D;]A;لا - سيتم توفير القيمة عند إنشاء قالب يستخدم هذه المعلمة]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000663Z" />
+        <Modified By="v-rondai" DateTime="2019-12-19T02:36:19.0007472Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO23640_20191216" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -10510,9 +10517,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0005318Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T13:38:08Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";81:Title,New_AreaNew_SubArea" ItemType="0;.resx" PsrId="211" Leaf="true">

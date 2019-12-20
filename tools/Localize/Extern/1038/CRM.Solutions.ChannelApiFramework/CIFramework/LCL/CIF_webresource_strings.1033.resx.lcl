@@ -45,12 +45,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000405Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T16:24:44Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for adding notes]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";AGENT_IMAGE_ALT_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -93,12 +94,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000405Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T16:24:44Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for close button.]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";FRE_COMPREHENSIVEVIEW_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -429,12 +431,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000405Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T16:24:44Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for notification comment detail]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";NOTIFICATION_DETAIL_WAIT_TIME_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -493,12 +496,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000405Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T16:24:44Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote available presence]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";PRESENCE_AWAY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -573,12 +577,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000398Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T16:24:44Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote offline presence]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";PRESENCE_UNKOWN_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

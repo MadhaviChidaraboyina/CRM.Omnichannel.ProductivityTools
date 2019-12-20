@@ -93,12 +93,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2018-09-28T12:34:49.0000589Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T13:38:04Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Attribute details]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO7838_20180924" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";CC_Field_Value_Desc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

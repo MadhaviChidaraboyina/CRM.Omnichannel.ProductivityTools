@@ -225,7 +225,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOverriddenCreatedOn" xml:space="preserve">
-    <value>Kaydın geçirildiği tarih ve saat.</value>
+    <value>Kaydın taşındığı tarih ve saat.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwnerId" xml:space="preserve">
@@ -257,7 +257,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_channel' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedBy" xml:space="preserve">
@@ -333,7 +333,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_Type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOverriddenCreatedOn" xml:space="preserve">
-    <value>Kaydın geçirildiği tarih ve saat.</value>
+    <value>Kaydın taşındığı tarih ve saat.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwnerId" xml:space="preserve">
@@ -365,7 +365,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kayıt oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
+    <value>Kaydın oluşturulduğu sırada kullanımda olan saat dilimi kodu.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">

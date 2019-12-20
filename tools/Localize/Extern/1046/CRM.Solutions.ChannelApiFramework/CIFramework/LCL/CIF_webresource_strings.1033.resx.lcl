@@ -45,12 +45,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0002232Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T18:30:58Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for adding notes]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";AGENT_IMAGE_ALT_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -429,12 +430,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.000235Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T18:30:58Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for notification comment detail]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";NOTIFICATION_DETAIL_WAIT_TIME_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

@@ -173,7 +173,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOn" xml:space="preserve">
-    <value>Tietueen luontipäivämäärä ja aika.</value>
+    <value>Tietueen luontipäivämäärä ja -aika.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
@@ -193,7 +193,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOn" xml:space="preserve">
-    <value>Tietueen muokkauspäivämäärä ja aika.</value>
+    <value>Tietueen muokkauspäivämäärä ja -aika.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOnBehalfBy" xml:space="preserve">
@@ -265,7 +265,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOn" xml:space="preserve">
-    <value>Tietueen luontipäivämäärä ja aika.</value>
+    <value>Tietueen luontipäivämäärä ja -aika.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
@@ -285,7 +285,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOn" xml:space="preserve">
-    <value>Tietueen muokkauspäivämäärä ja aika.</value>
+    <value>Tietueen muokkauspäivämäärä ja -aika.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOnBehalfBy" xml:space="preserve">

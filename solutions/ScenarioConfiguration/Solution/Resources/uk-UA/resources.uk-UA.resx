@@ -173,7 +173,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOn" xml:space="preserve">
-    <value>Дата та час створення запису.</value>
+    <value>Дата й час створення запису.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
@@ -185,7 +185,7 @@
     <comment> 'msdyn_channel' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelImportSequenceNumber" xml:space="preserve">
-    <value>Порядковий номер імпорту, під час якого було створено цей запис.</value>
+    <value>Порядковий номер імпорту, під час якого створено цей запис.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedBy" xml:space="preserve">
@@ -201,7 +201,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
-    <value>Унікальний ідентифікатор одного з екземплярів сутності</value>
+    <value>Унікальний ідентифікатор екземплярів сутностей</value>
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_channelId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_ChannelProviderId" xml:space="preserve">
@@ -225,7 +225,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOverriddenCreatedOn" xml:space="preserve">
-    <value>Дата та час перенесення запису.</value>
+    <value>Дата й час перенесення запису.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwnerId" xml:space="preserve">
@@ -233,15 +233,15 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
+    <value>Унікальний ідентифікатор організаційної одиниці, яка відповідає за запис.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор для робочої групи, яка відповідає за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, який відповідає за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelstatecode" xml:space="preserve">
@@ -265,7 +265,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOn" xml:space="preserve">
-    <value>Дата та час створення запису.</value>
+    <value>Дата й час створення запису.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
@@ -277,7 +277,7 @@
     <comment> 'msdyn_scenario' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioImportSequenceNumber" xml:space="preserve">
-    <value>Порядковий номер імпорту, під час якого було створено цей запис.</value>
+    <value>Порядковий номер імпорту, під час якого створено цей запис.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedBy" xml:space="preserve">
@@ -309,7 +309,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_NotificationTemplate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_scenarioId" xml:space="preserve">
-    <value>Унікальний ідентифікатор одного з екземплярів сутності</value>
+    <value>Унікальний ідентифікатор екземплярів сутностей</value>
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_scenarioId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_scenario_msdyn_type" xml:space="preserve">
@@ -333,7 +333,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_Type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOverriddenCreatedOn" xml:space="preserve">
-    <value>Дата та час перенесення запису.</value>
+    <value>Дата й час перенесення запису.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwnerId" xml:space="preserve">
@@ -341,15 +341,15 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
+    <value>Унікальний ідентифікатор організаційної одиниці, яка відповідає за запис.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор для робочої групи, яка відповідає за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, який відповідає за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariostatecode" xml:space="preserve">

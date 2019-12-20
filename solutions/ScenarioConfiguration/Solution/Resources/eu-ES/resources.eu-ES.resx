@@ -193,7 +193,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOn" xml:space="preserve">
-    <value>Erregistroa aldatu deneko data eta ordua.</value>
+    <value>Erregistroaren aldaketa-data eta -ordua.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOnBehalfBy" xml:space="preserve">
@@ -241,7 +241,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelstatecode" xml:space="preserve">
@@ -285,7 +285,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOn" xml:space="preserve">
-    <value>Erregistroa aldatu deneko data eta ordua.</value>
+    <value>Erregistroaren aldaketa-data eta -ordua.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOnBehalfBy" xml:space="preserve">
@@ -349,7 +349,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariostatecode" xml:space="preserve">
@@ -457,7 +457,7 @@
     <comment>'msdyn_channel' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC bihurketarako ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_channel' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioCreatedBy" xml:space="preserve">
@@ -561,7 +561,7 @@
     <comment>'msdyn_scenario' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC bihurketarako ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_scenario' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,channel{1acbe822-da47-40e4-bb56-b2347e5bc033}" xml:space="preserve">

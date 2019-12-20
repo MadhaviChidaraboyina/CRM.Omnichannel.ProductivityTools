@@ -729,9 +729,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:53.0006385Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:00:27Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,ChannelAPIIntegrationFramework" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -755,9 +756,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:53.0006385Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:00:27Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,App Parameter Definition{215a1395-743d-4dfb-b552-c51d65fdb423}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3674,15 +3676,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_IsRuntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Да — значение будет выбрано из аргумента templateParameters во время выполнения]A;Нет — значение должно быть предоставлено при создании шаблона, в котором используется этот параметр]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Да — значение будет выбрано из аргумента templateParameters во время выполнения]D;]A;Нет — значение должно быть предоставлено при создании шаблона, в котором используется этот параметр]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:53.0005882Z" />
+        <Modified By="v-rondai" DateTime="2019-12-19T02:36:22.000183Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO23640_20191216" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3713,15 +3718,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Да — значение будет выбрано из аргумента templateParameters во время выполнения]A;Нет — значение должно быть предоставлено при создании шаблона, в котором используется этот параметр]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Да — значение будет выбрано из аргумента templateParameters во время выполнения]D;]A;Нет — значение должно быть предоставлено при создании шаблона, в котором используется этот параметр]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:53.0005882Z" />
+        <Modified By="v-rondai" DateTime="2019-12-19T02:36:22.000183Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO23640_20191216" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -10510,9 +10518,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:53.0004927Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:00:29Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";81:Title,New_AreaNew_SubArea" ItemType="0;.resx" PsrId="211" Leaf="true">

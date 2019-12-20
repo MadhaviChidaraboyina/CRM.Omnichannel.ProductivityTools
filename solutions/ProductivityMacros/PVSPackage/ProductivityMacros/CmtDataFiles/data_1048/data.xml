@@ -276,6 +276,22 @@
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="Atribut particularizat" />
       </record>
+	  <record id="3a359e47-ec11-ea11-a811-000d3a334ee9">
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:13:09 PM" />
+        <field name="msdyn_description" value="Numele principal al entității de deschis" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:13:09 PM" />
+        <field name="msdyn_name" value="PrimaryNameAttributeValue" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_parameterdefinitionid" value="3a359e47-ec11-ea11-a811-000d3a334ee9" />
+        <field name="msdyn_parametertype" value="string" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_displayname" value="Numele principal al entității" />
+      </record>
     </records>
     <m2mrelationships>
       <m2mrelationship sourceid="d61ae14b-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
@@ -286,6 +302,7 @@
           <targetid>76104271-a0df-e911-a81e-000d3a0698dc</targetid>
           <targetid>98ddcda4-a1df-e911-a81e-000d3a0698dc</targetid>
           <targetid>70ec88f5-a2df-e911-a81e-000d3a0698dc</targetid>
+		  <targetid>a4794d6d-b112-ea11-a811-000d3a334ee9</targetid>
         </targetids>
       </m2mrelationship>
       <m2mrelationship sourceid="d61ae14b-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
@@ -308,6 +325,7 @@
           <targetid>64dfc33d-a0df-e911-a81e-000d3a0698dc</targetid>
           <targetid>98ddcda4-a1df-e911-a81e-000d3a0698dc</targetid>
           <targetid>70ec88f5-a2df-e911-a81e-000d3a0698dc</targetid>
+		  <targetid>a4794d6d-b112-ea11-a811-000d3a334ee9</targetid>
         </targetids>
       </m2mrelationship>
       <m2mrelationship sourceid="f729e573-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
@@ -386,6 +404,11 @@
         <targetids>
           <targetid>df71b777-cf80-40f3-bc35-9a52c2eb8433</targetid>
           <targetid>8729c34c-a5df-e911-a81e-000d3a0698dc</targetid>
+        </targetids>
+      </m2mrelationship>
+      <m2mrelationship sourceid="3a359e47-ec11-ea11-a811-000d3a334ee9" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
+        <targetids>
+          <targetid>a4794d6d-b112-ea11-a811-000d3a334ee9</targetid>
         </targetids>
       </m2mrelationship>
     </m2mrelationships>
@@ -733,6 +756,20 @@
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
+      <record id="a4794d6d-b112-ea11-a811-000d3a334ee9">
+        <field name="msdyn_actionoutputparameterid" value="a4794d6d-b112-ea11-a811-000d3a334ee9" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="101c73b5-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Save" />
+        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="createdon" value="9/25/2019 2:44:21 PM" />
+        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="modifiedon" value="9/25/2019 2:45:29 PM" />
+        <field name="msdyn_name" value="save_output_params" />
+        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
+        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
+        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
     </records>
     <m2mrelationships />
   </entity>
@@ -754,6 +791,7 @@
         <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
+        <field name="msdyn_prefix" value="UCI" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_title" value="Automatizare productivitate" />
@@ -982,8 +1020,9 @@
         <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
         <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
         <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
-        <field name="statecode" value="1" />
-        <field name="statuscode" value="2" />
+		<field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.save(actionName)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
         <field name="msdyn_subtitle" value="Salvați înregistrarea" />
         <field name="msdyn_summary" value="Salvați înregistrarea" />
         <field name="msdyn_title" value="Salvați înregistrarea" />

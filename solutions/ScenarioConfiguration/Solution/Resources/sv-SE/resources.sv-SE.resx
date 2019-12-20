@@ -165,7 +165,7 @@
     <comment> 'ScenariosAndChannels' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,channel{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" xml:space="preserve">
-    <value>Ett formulär för denna entitet.</value>
+    <value>Ett formulär för den här entiteten.</value>
     <comment>'channel' : Description for systemform in Entity FormXml ID: '{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}'</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedBy" xml:space="preserve">
@@ -237,7 +237,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
-    <value>Unik identifierare teamet som äger posten.</value>
+    <value>Unik identifierare för teamet som äger posten.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningUser" xml:space="preserve">
@@ -345,7 +345,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">
-    <value>Unik identifierare teamet som äger posten.</value>
+    <value>Unik identifierare för teamet som äger posten.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningUser" xml:space="preserve">
@@ -369,7 +369,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
-    <value>Ett formulär för denna entitet.</value>
+    <value>Ett formulär för den här entiteten.</value>
     <comment>'Scenario' : Description for systemform in Entity FormXml ID: '{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}'</comment>
   </data>
   <data name="1:displayname,msdyn_channelCreatedBy" xml:space="preserve">

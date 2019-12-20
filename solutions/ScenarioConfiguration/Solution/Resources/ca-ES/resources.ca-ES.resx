@@ -253,7 +253,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a l'ús intern.</value>
+    <value>Només per a ús intern.</value>
     <comment>'msdyn_channel' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
@@ -361,7 +361,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a l'ús intern.</value>
+    <value>Només per a ús intern.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">

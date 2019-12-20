@@ -3674,15 +3674,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_IsRuntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Ja - værdien hentes fra templateParameters-argumentet ved kørsel]A;Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne parameter]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Ja - værdien hentes fra templateParameters-argumentet ved kørsel]D;]A;Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne parameter]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0002529Z" />
+        <Modified By="v-rondai" DateTime="2019-12-19T02:36:19.000453Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO23640_20191216" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3713,15 +3716,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Ja - værdien hentes fra templateParameters-argumentet ved kørsel]A;Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne parameter]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Ja - værdien hentes fra templateParameters-argumentet ved kørsel]D;]A;Nej - værdien skal angives, når der oprettes en skabelon, som bruger denne parameter]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.00025Z" />
+        <Modified By="v-rondai" DateTime="2019-12-19T02:36:19.000453Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO23640_20191216" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -10510,9 +10516,10 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0001589Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T14:18:53Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";81:Title,New_AreaNew_SubArea" ItemType="0;.resx" PsrId="211" Leaf="true">

@@ -169,15 +169,15 @@
     <comment>'channel' : Description for systemform in Entity FormXml ID: '{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}'</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedBy" xml:space="preserve">
-    <value>Unieke id van de gebruiker die de record heeft gemaakt.</value>
+    <value>De unieke id van de gebruiker die de record heeft gemaakt.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gemaakt.</value>
+    <value>Datum en tijdstip waarop de record is gemaakt.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
-    <value>Unieke id voor de gemachtigde gebruiker die de record heeft gemaakt.</value>
+    <value>De unieke id van de gemachtigde gebruiker die de record heeft gemaakt.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelentitymsdyn_channel" xml:space="preserve">
@@ -189,15 +189,15 @@
     <comment>'msdyn_channel' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedBy" xml:space="preserve">
-    <value>Unieke id van de gebruiker die de record heeft gewijzigd.</value>
+    <value>De unieke id van de gebruiker die de record heeft gewijzigd.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gewijzigd.</value>
+    <value>Datum en tijdstip waarop de record is gewijzigd.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOnBehalfBy" xml:space="preserve">
-    <value>Unieke id van de gemachtigde gebruiker die de record heeft gewijzigd.</value>
+    <value>De unieke id van de gemachtigde gebruiker die de record heeft gewijzigd.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
@@ -221,11 +221,11 @@
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_DisplayName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_name" xml:space="preserve">
-    <value>Naam van de aangepaste entiteit.</value>
+    <value>De naam van de aangepaste entiteit.</value>
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gemigreerd.</value>
+    <value>Datum en tijdstip waarop de record is gemigreerd.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwnerId" xml:space="preserve">
@@ -233,11 +233,11 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningBusinessUnit" xml:space="preserve">
-    <value>Unieke id voor de business unit die eigenaar is van de record</value>
+    <value>De unieke id van de bedrijfseenheid die eigenaar van de record is</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
-    <value>Unieke id voor het team dat eigenaar is van de record.</value>
+    <value>De unieke id van het team dat eigenaar is van de record.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningUser" xml:space="preserve">
@@ -253,23 +253,23 @@
     <comment>'msdyn_channel' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Uitsluitend voor intern gebruik.</value>
+    <value>Alleen voor intern gebruik.</value>
     <comment>'msdyn_channel' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tijdzonecode die werd gebruikt bij het maken van de record.</value>
+    <value>Tijdzonecode die werd gebruikt toen de record werd gemaakt.</value>
     <comment>'msdyn_channel' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedBy" xml:space="preserve">
-    <value>Unieke id van de gebruiker die de record heeft gemaakt.</value>
+    <value>De unieke id van de gebruiker die de record heeft gemaakt.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gemaakt.</value>
+    <value>Datum en tijdstip waarop de record is gemaakt.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
-    <value>Unieke id voor de gemachtigde gebruiker die de record heeft gemaakt.</value>
+    <value>De unieke id van de gemachtigde gebruiker die de record heeft gemaakt.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioentitymsdyn_scenario" xml:space="preserve">
@@ -281,15 +281,15 @@
     <comment>'msdyn_scenario' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedBy" xml:space="preserve">
-    <value>Unieke id van de gebruiker die de record heeft gewijzigd.</value>
+    <value>De unieke id van de gebruiker die de record heeft gewijzigd.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gewijzigd.</value>
+    <value>Datum en tijdstip waarop de record is gewijzigd.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOnBehalfBy" xml:space="preserve">
-    <value>Unieke id van de gemachtigde gebruiker die de record heeft gewijzigd.</value>
+    <value>De unieke id van de gemachtigde gebruiker die de record heeft gewijzigd.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_ChannelId" xml:space="preserve">
@@ -301,7 +301,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_DisplayName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_name" xml:space="preserve">
-    <value>Naam van de aangepaste entiteit.</value>
+    <value>De naam van de aangepaste entiteit.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_NotificationTemplate" xml:space="preserve">
@@ -333,7 +333,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_Type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gemigreerd.</value>
+    <value>Datum en tijdstip waarop de record is gemigreerd.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwnerId" xml:space="preserve">
@@ -341,11 +341,11 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningBusinessUnit" xml:space="preserve">
-    <value>Unieke id voor de business unit die eigenaar is van de record</value>
+    <value>De unieke id van de bedrijfseenheid die eigenaar van de record is</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">
-    <value>Unieke id voor het team dat eigenaar is van de record.</value>
+    <value>De unieke id van het team dat eigenaar is van de record.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningUser" xml:space="preserve">
@@ -361,11 +361,11 @@
     <comment>'msdyn_scenario' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Uitsluitend voor intern gebruik.</value>
+    <value>Alleen voor intern gebruik.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tijdzonecode die werd gebruikt bij het maken van de record.</value>
+    <value>Tijdzonecode die werd gebruikt toen de record werd gemaakt.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">

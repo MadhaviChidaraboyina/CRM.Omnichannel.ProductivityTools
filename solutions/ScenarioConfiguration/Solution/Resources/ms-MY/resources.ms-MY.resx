@@ -173,11 +173,11 @@
     <comment>'msdyn_channel' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOn" xml:space="preserve">
-    <value>Tarikh dan masa semasa rekod dicipta.</value>
+    <value>Tarikh dan masa rekod dicipta.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengecam unik pengguna wakil yang mencipta rekod.</value>
+    <value>Pengecam unik wakil pengguna yang mencipta rekod.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelentitymsdyn_channel" xml:space="preserve">
@@ -185,7 +185,7 @@
     <comment> 'msdyn_channel' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelImportSequenceNumber" xml:space="preserve">
-    <value>Nombor jujukan import yang menghasilkan rekod ini.</value>
+    <value>Nombor jujukan import yang mencipta rekod ini.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedBy" xml:space="preserve">
@@ -193,11 +193,11 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOn" xml:space="preserve">
-    <value>Tarikh dan masa semasa rekod diubah suai.</value>
+    <value>Tarikh dan masa rekod diubah suai.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengecam unik pengguna wakil yang mengubah suai rekod.</value>
+    <value>Pengecam unik wakil pengguna yang mengubah suai rekod.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
@@ -225,7 +225,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOverriddenCreatedOn" xml:space="preserve">
-    <value>Tarikh dan masa yang rekod dipindahkan.</value>
+    <value>Tarikh dan masa rekod dipindahkan.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwnerId" xml:space="preserve">
@@ -265,11 +265,11 @@
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOn" xml:space="preserve">
-    <value>Tarikh dan masa semasa rekod dicipta.</value>
+    <value>Tarikh dan masa rekod dicipta.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
-    <value>Pengecam unik pengguna wakil yang mencipta rekod.</value>
+    <value>Pengecam unik wakil pengguna yang mencipta rekod.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioentitymsdyn_scenario" xml:space="preserve">
@@ -277,7 +277,7 @@
     <comment> 'msdyn_scenario' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioImportSequenceNumber" xml:space="preserve">
-    <value>Nombor jujukan import yang menghasilkan rekod ini.</value>
+    <value>Nombor jujukan import yang mencipta rekod ini.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedBy" xml:space="preserve">
@@ -285,11 +285,11 @@
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOn" xml:space="preserve">
-    <value>Tarikh dan masa semasa rekod diubah suai.</value>
+    <value>Tarikh dan masa rekod diubah suai.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOnBehalfBy" xml:space="preserve">
-    <value>Pengecam unik pengguna wakil yang mengubah suai rekod.</value>
+    <value>Pengecam unik wakil pengguna yang mengubah suai rekod.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_ChannelId" xml:space="preserve">
@@ -333,7 +333,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_Type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOverriddenCreatedOn" xml:space="preserve">
-    <value>Tarikh dan masa yang rekod dipindahkan.</value>
+    <value>Tarikh dan masa rekod dipindahkan.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwnerId" xml:space="preserve">

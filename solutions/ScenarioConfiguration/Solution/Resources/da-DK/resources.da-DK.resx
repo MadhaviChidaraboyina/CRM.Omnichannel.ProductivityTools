@@ -165,7 +165,7 @@
     <comment> 'ScenariosAndChannels' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,channel{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" xml:space="preserve">
-    <value>En formular for dette objekt.</value>
+    <value>En formular til dette objekt.</value>
     <comment>'channel' : Description for systemform in Entity FormXml ID: '{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}'</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedBy" xml:space="preserve">
@@ -177,7 +177,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
-    <value>Entydigt id for den stedfortræderbruger, der ændrede posten.</value>
+    <value>Entydigt id for den stedfortræderbruger, der oprettede posten.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelentitymsdyn_channel" xml:space="preserve">
@@ -225,7 +225,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOverriddenCreatedOn" xml:space="preserve">
-    <value>Dato og klokkeslæt for overførslen af posten.</value>
+    <value>Dato og klokkeslæt for overførsel af posten.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwnerId" xml:space="preserve">
@@ -257,7 +257,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Den tidszonekode, der var i brug, da posten blev oprettet.</value>
+    <value>Den tidszonekode, der var i brug under oprettelsen af posten.</value>
     <comment>'msdyn_channel' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedBy" xml:space="preserve">
@@ -269,7 +269,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
-    <value>Entydigt id for den stedfortræderbruger, der ændrede posten.</value>
+    <value>Entydigt id for den stedfortræderbruger, der oprettede posten.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioentitymsdyn_scenario" xml:space="preserve">
@@ -333,7 +333,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_Type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOverriddenCreatedOn" xml:space="preserve">
-    <value>Dato og klokkeslæt for overførslen af posten.</value>
+    <value>Dato og klokkeslæt for overførsel af posten.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwnerId" xml:space="preserve">
@@ -365,11 +365,11 @@
     <comment>'msdyn_scenario' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Den tidszonekode, der var i brug, da posten blev oprettet.</value>
+    <value>Den tidszonekode, der var i brug under oprettelsen af posten.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
-    <value>En formular for dette objekt.</value>
+    <value>En formular til dette objekt.</value>
     <comment>'Scenario' : Description for systemform in Entity FormXml ID: '{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}'</comment>
   </data>
   <data name="1:displayname,msdyn_channelCreatedBy" xml:space="preserve">
@@ -453,7 +453,7 @@
     <comment>'msdyn_channel' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Versionsnummer af tidszoneregel</value>
+    <value>Versionsnummer for tidszoneregel</value>
     <comment>'msdyn_channel' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
@@ -557,7 +557,7 @@
     <comment>'msdyn_scenario' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Versionsnummer af tidszoneregel</value>
+    <value>Versionsnummer for tidszoneregel</value>
     <comment>'msdyn_scenario' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">

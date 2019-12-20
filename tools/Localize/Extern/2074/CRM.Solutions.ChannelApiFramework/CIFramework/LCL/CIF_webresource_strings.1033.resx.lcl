@@ -29,12 +29,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006027Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:53:22Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for notification button.]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";ADD_NOTE_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -45,12 +46,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006027Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:53:22Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for adding notes]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";AGENT_IMAGE_ALT_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -93,12 +95,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006027Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:53:22Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for close button.]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";FRE_COMPREHENSIVEVIEW_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -413,12 +416,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006027Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:53:22Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for assisting user for notes.]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";NOTIFICATION_DETAIL_COMMENT_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -493,12 +497,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006018Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:53:22Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote available presence]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";PRESENCE_AWAY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -509,12 +514,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006018Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:53:22Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote away presence]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";PRESENCE_BUSY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -525,12 +531,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006018Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:53:22Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text to denote busy presence]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";PRESENCE_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

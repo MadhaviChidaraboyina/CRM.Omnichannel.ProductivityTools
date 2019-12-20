@@ -185,7 +185,7 @@
     <comment> 'msdyn_channel' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelImportSequenceNumber" xml:space="preserve">
-    <value>Número de secuencia de importación que creou este rexistro.</value>
+    <value>Número de secuencia da importación que creou este rexistro.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedBy" xml:space="preserve">
@@ -201,7 +201,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
-    <value>Identificador único de instancias da entidade</value>
+    <value>Identificador único para instancias da entidade</value>
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_channelId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_ChannelProviderId" xml:space="preserve">
@@ -257,7 +257,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Código do fuso horario en uso cando se creou o rexistro.</value>
+    <value>Código de fuso horario en uso cando se creou o rexistro.</value>
     <comment>'msdyn_channel' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedBy" xml:space="preserve">
@@ -277,7 +277,7 @@
     <comment> 'msdyn_scenario' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioImportSequenceNumber" xml:space="preserve">
-    <value>Número de secuencia de importación que creou este rexistro.</value>
+    <value>Número de secuencia da importación que creou este rexistro.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedBy" xml:space="preserve">
@@ -309,7 +309,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_NotificationTemplate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_scenarioId" xml:space="preserve">
-    <value>Identificador único de instancias da entidade</value>
+    <value>Identificador único para instancias da entidade</value>
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_scenarioId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_scenario_msdyn_type" xml:space="preserve">
@@ -365,7 +365,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Código do fuso horario en uso cando se creou o rexistro.</value>
+    <value>Código de fuso horario en uso cando se creou o rexistro.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
@@ -457,7 +457,7 @@
     <comment>'msdyn_channel' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Conversión a UTC do código do fuso horario</value>
+    <value>Conversión a UTC do código de fuso horario</value>
     <comment>'msdyn_channel' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioCreatedBy" xml:space="preserve">
@@ -561,7 +561,7 @@
     <comment>'msdyn_scenario' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Conversión a UTC do código do fuso horario</value>
+    <value>Conversión a UTC do código de fuso horario</value>
     <comment>'msdyn_scenario' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,channel{1acbe822-da47-40e4-bb56-b2347e5bc033}" xml:space="preserve">

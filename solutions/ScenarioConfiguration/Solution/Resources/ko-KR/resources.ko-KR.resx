@@ -233,15 +233,15 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningBusinessUnit" xml:space="preserve">
-    <value>레코드를 소유하는 사업부의 고유 식별자</value>
+    <value>레코드 담당 사업부의 고유 식별자</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
-    <value>레코드를 소유하는 팀의 고유 식별자입니다.</value>
+    <value>레코드를 담당하는 팀의 고유 식별자입니다.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningUser" xml:space="preserve">
-    <value>레코드를 소유하는 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 담당하는 사용자의 고유 식별자입니다.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelstatecode" xml:space="preserve">
@@ -341,15 +341,15 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningBusinessUnit" xml:space="preserve">
-    <value>레코드를 소유하는 사업부의 고유 식별자</value>
+    <value>레코드 담당 사업부의 고유 식별자</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">
-    <value>레코드를 소유하는 팀의 고유 식별자입니다.</value>
+    <value>레코드를 담당하는 팀의 고유 식별자입니다.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningUser" xml:space="preserve">
-    <value>레코드를 소유하는 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 담당하는 사용자의 고유 식별자입니다.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariostatecode" xml:space="preserve">

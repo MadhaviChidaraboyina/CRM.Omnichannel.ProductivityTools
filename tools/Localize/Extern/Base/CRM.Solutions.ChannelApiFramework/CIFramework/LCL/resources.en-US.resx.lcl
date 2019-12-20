@@ -14,6 +14,15 @@
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
       <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+      <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showt" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) imeout" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Show timeout for the Notification template]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+      </Item>
       <Item ItemId=";1:LocalizedCollectionName,msdyn_consoleapplicationnotificationtemplateentitymsdyn_consoleapplicationnotificationte" ItemType="0" PsrId="211" Leaf="false">
         <Disp Icon="Dir" LocTbl="false" />
         <Item ItemId=";(...) mplate" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -37,6 +46,45 @@
         <Item ItemId=";(...) 4}" ItemType="0;.resx" PsrId="211" Leaf="true">
           <Str Cat="Text">
             <Val><![CDATA[TemplateTags]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showt" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) imeout" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Show timeout]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+      </Item>
+      <Item ItemId=";1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showtimeout" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) 100000000" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Yes]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+        <Item ItemId=";(...) 100000001" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[No]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+      </Item>
+      <Item ItemId=";1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme100000" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) 000" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Dark]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+        <Item ItemId=";(...) 001" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Light]]></Val>
           </Str>
           <Disp Icon="Str" />
         </Item>
@@ -929,6 +977,18 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Showtimeout" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Show timeout for the Notification template]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Theme" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Theme color for Notification template.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Timeout" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Notification time out period.]]></Val>
@@ -944,6 +1004,12 @@
       <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplateId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for entity instances]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Theme color for Notification template.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1705,7 +1771,7 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_IsRuntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1723,7 +1789,7 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3089,6 +3155,18 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Showtimeout" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Show timeout]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Theme" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Theme]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Timeout" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Timeout (seconds)]]></Val>
@@ -3104,6 +3182,12 @@
       <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplateId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[ConsoleApplicationNotificationTemplate]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Theme]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4295,6 +4379,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:label,Notification Template{509ba94c-608e-2a12-089b-40db61a60c17}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Show timeout]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Section]]></Val>
@@ -4316,6 +4406,12 @@
       <Item ItemId=";1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Notification Fields]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:label,Notification Template{90b3a189-7e63-3324-823a-75199c5b883d}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Theme]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

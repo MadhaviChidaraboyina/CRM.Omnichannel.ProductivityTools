@@ -165,7 +165,7 @@
     <comment> 'ScenariosAndChannels' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,channel{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" xml:space="preserve">
-    <value>Μια φόρμα για αυτή την οντότητα.</value>
+    <value>Μια φόρμα για αυτήν την οντότητα.</value>
     <comment>'channel' : Description for systemform in Entity FormXml ID: '{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}'</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedBy" xml:space="preserve">
@@ -185,7 +185,7 @@
     <comment> 'msdyn_channel' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelImportSequenceNumber" xml:space="preserve">
-    <value>Αριθμός ακολουθίας της εισαγωγής που δημιούργησε αυτή την καρτέλα.</value>
+    <value>Αριθμός ακολουθίας της εισαγωγής που δημιούργησε αυτήν την καρτέλα.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedBy" xml:space="preserve">
@@ -233,15 +233,15 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningBusinessUnit" xml:space="preserve">
-    <value>Το μοναδικό αναγνωριστικό για την επιχειρηματική μονάδα που είναι κάτοχος της καρτέλας</value>
+    <value>Μοναδικό αναγνωριστικό για την επιχειρηματική μονάδα που είναι κάτοχος της καρτέλας</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
-    <value>Μοναδικό αναγνωριστικό για την ομάδα-κάτοχο της καρτέλας.</value>
+    <value>Μοναδικό αναγνωριστικό για την ομάδα που είναι κάτοχος της καρτέλας.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningUser" xml:space="preserve">
-    <value>Μοναδικό αναγνωριστικό για τον χρήστη που είναι κάτοχος της καρτέλας.</value>
+    <value>Μοναδικό αναγνωριστικό του χρήστη που είναι κάτοχος της καρτέλας.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelstatecode" xml:space="preserve">
@@ -277,7 +277,7 @@
     <comment> 'msdyn_scenario' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioImportSequenceNumber" xml:space="preserve">
-    <value>Αριθμός ακολουθίας της εισαγωγής που δημιούργησε αυτή την καρτέλα.</value>
+    <value>Αριθμός ακολουθίας της εισαγωγής που δημιούργησε αυτήν την καρτέλα.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedBy" xml:space="preserve">
@@ -341,15 +341,15 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningBusinessUnit" xml:space="preserve">
-    <value>Το μοναδικό αναγνωριστικό για την επιχειρηματική μονάδα που είναι κάτοχος της καρτέλας</value>
+    <value>Μοναδικό αναγνωριστικό για την επιχειρηματική μονάδα που είναι κάτοχος της καρτέλας</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">
-    <value>Μοναδικό αναγνωριστικό για την ομάδα-κάτοχο της καρτέλας.</value>
+    <value>Μοναδικό αναγνωριστικό για την ομάδα που είναι κάτοχος της καρτέλας.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningUser" xml:space="preserve">
-    <value>Μοναδικό αναγνωριστικό για τον χρήστη που είναι κάτοχος της καρτέλας.</value>
+    <value>Μοναδικό αναγνωριστικό του χρήστη που είναι κάτοχος της καρτέλας.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariostatecode" xml:space="preserve">
@@ -369,7 +369,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
-    <value>Μια φόρμα για αυτή την οντότητα.</value>
+    <value>Μια φόρμα για αυτήν την οντότητα.</value>
     <comment>'Scenario' : Description for systemform in Entity FormXml ID: '{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}'</comment>
   </data>
   <data name="1:displayname,msdyn_channelCreatedBy" xml:space="preserve">

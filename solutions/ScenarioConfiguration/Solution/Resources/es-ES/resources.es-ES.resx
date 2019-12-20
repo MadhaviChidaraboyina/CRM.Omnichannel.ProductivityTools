@@ -165,7 +165,7 @@
     <comment> 'ScenariosAndChannels' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,channel{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}" xml:space="preserve">
-    <value>Formulario de esta entidad.</value>
+    <value>Formulario para esta entidad.</value>
     <comment>'channel' : Description for systemform in Entity FormXml ID: '{5ea2fe94-8df1-4798-90fe-a5ce5aa7080d}'</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedBy" xml:space="preserve">
@@ -257,7 +257,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Código de zona horaria en uso cuando se creó el registro.</value>
+    <value>Código de la zona horaria en uso cuando se creó el registro.</value>
     <comment>'msdyn_channel' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedBy" xml:space="preserve">
@@ -365,11 +365,11 @@
     <comment>'msdyn_scenario' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Código de zona horaria en uso cuando se creó el registro.</value>
+    <value>Código de la zona horaria en uso cuando se creó el registro.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Scenario{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}" xml:space="preserve">
-    <value>Formulario de esta entidad.</value>
+    <value>Formulario para esta entidad.</value>
     <comment>'Scenario' : Description for systemform in Entity FormXml ID: '{42d4eb5f-4cae-4cee-9c16-b97791a01a7e}'</comment>
   </data>
   <data name="1:displayname,msdyn_channelCreatedBy" xml:space="preserve">

@@ -77,12 +77,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000859Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T14:18:51Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Cancel Button Text]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";CLOSE_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

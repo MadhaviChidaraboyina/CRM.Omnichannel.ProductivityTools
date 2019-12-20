@@ -413,12 +413,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000481Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T15:56:18Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for assisting user for notes.]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";NOTIFICATION_DETAIL_COMMENT_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -605,12 +606,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-05-31T02:41:25.0000482Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T15:56:18Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Reject Button Text]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";START_NOTES_TOOLTIP_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

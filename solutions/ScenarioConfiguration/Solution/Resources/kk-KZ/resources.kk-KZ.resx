@@ -177,7 +177,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкілетті пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelentitymsdyn_channel" xml:space="preserve">
@@ -197,7 +197,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкілетті пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
@@ -221,7 +221,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_DisplayName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_name" xml:space="preserve">
-    <value>Реттелетін нысанның атауы.</value>
+    <value>Реттелетін нысан атауы.</value>
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOverriddenCreatedOn" xml:space="preserve">
@@ -237,11 +237,11 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
-    <value>Жазбаға ие топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие топқа арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningUser" xml:space="preserve">
-    <value>Жазбаға ие пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие пайдаланушыға арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelstatecode" xml:space="preserve">
@@ -269,7 +269,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкілетті пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioentitymsdyn_scenario" xml:space="preserve">
@@ -289,7 +289,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкілетті пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_ChannelId" xml:space="preserve">
@@ -301,7 +301,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_DisplayName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_name" xml:space="preserve">
-    <value>Реттелетін нысанның атауы.</value>
+    <value>Реттелетін нысан атауы.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_NotificationTemplate" xml:space="preserve">
@@ -345,11 +345,11 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">
-    <value>Жазбаға ие топтың бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие топқа арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningUser" xml:space="preserve">
-    <value>Жазбаға ие пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие пайдаланушыға арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariostatecode" xml:space="preserve">
@@ -453,7 +453,7 @@
     <comment>'msdyn_channel' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Уақыт белдеуі ережесінің нұсқалық нөмірі</value>
+    <value>Уақыт белдеуі ережесінің нұсқа нөмірі</value>
     <comment>'msdyn_channel' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
@@ -557,7 +557,7 @@
     <comment>'msdyn_scenario' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Уақыт белдеуі ережесінің нұсқалық нөмірі</value>
+    <value>Уақыт белдеуі ережесінің нұсқа нөмірі</value>
     <comment>'msdyn_scenario' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">

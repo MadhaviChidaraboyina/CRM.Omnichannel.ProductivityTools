@@ -173,11 +173,11 @@
     <comment>'msdyn_channel' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOn" xml:space="preserve">
-    <value>Datum und Uhrzeit, wann der Datensatz erstellt wurde.</value>
+    <value>Datum und Uhrzeit der Datensatzerstellung.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelCreatedOnBehalfBy" xml:space="preserve">
-    <value>Eindeutiger Bezeichner des Stellvertreterbenutzers, der den Datensatz erstellt hat.</value>
+    <value>Eindeutiger Bezeichner des stellvertretenden Benutzers, der den Datensatz erstellt hat.</value>
     <comment>'msdyn_channel' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelentitymsdyn_channel" xml:space="preserve">
@@ -193,11 +193,11 @@
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOn" xml:space="preserve">
-    <value>Datum und Uhrzeit, wann der Datensatz geändert wurde.</value>
+    <value>Datum und Uhrzeit der Datensatzänderung.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelModifiedOnBehalfBy" xml:space="preserve">
-    <value>Eindeutiger Bezeichner des Stellvertreterbenutzers, der den Datensatz geändert hat.</value>
+    <value>Eindeutiger Bezeichner des stellvertretenden Benutzers, der den Datensatz geändert hat.</value>
     <comment>'msdyn_channel' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelmsdyn_channelId" xml:space="preserve">
@@ -225,7 +225,7 @@
     <comment>'msdyn_channel' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum und Uhrzeit, wann der Datensatz migriert wurde.</value>
+    <value>Datum und Uhrzeit der Datensatzmigration.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwnerId" xml:space="preserve">
@@ -233,15 +233,15 @@
     <comment>'msdyn_channel' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningBusinessUnit" xml:space="preserve">
-    <value>Eindeutiger Bezeichner für die Unternehmenseinheit, die für den Datensatz verantwortlich ist</value>
+    <value>Eindeutiger Bezeichner der für den Datensatz zuständigen Unternehmenseinheit.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningTeam" xml:space="preserve">
-    <value>Eindeutiger Bezeichner für das Team, das für den Datensatz verantwortlich ist.</value>
+    <value>Eindeutiger Bezeichner des für den Datensatz zuständigen Teams.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelOwningUser" xml:space="preserve">
-    <value>Eindeutiger Bezeichner für den Benutzer, der für den Datensatz verantwortlich ist.</value>
+    <value>Eindeutiger Bezeichner des für den Datensatz zuständigen Benutzers.</value>
     <comment>'msdyn_channel' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_channelstatecode" xml:space="preserve">
@@ -265,11 +265,11 @@
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOn" xml:space="preserve">
-    <value>Datum und Uhrzeit, wann der Datensatz erstellt wurde.</value>
+    <value>Datum und Uhrzeit der Datensatzerstellung.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioCreatedOnBehalfBy" xml:space="preserve">
-    <value>Eindeutiger Bezeichner des Stellvertreterbenutzers, der den Datensatz erstellt hat.</value>
+    <value>Eindeutiger Bezeichner des stellvertretenden Benutzers, der den Datensatz erstellt hat.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioentitymsdyn_scenario" xml:space="preserve">
@@ -285,11 +285,11 @@
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOn" xml:space="preserve">
-    <value>Datum und Uhrzeit, wann der Datensatz geändert wurde.</value>
+    <value>Datum und Uhrzeit der Datensatzänderung.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioModifiedOnBehalfBy" xml:space="preserve">
-    <value>Eindeutiger Bezeichner des Stellvertreterbenutzers, der den Datensatz geändert hat.</value>
+    <value>Eindeutiger Bezeichner des stellvertretenden Benutzers, der den Datensatz geändert hat.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariomsdyn_ChannelId" xml:space="preserve">
@@ -333,7 +333,7 @@
     <comment>'msdyn_scenario' : Description for Attribute 'msdyn_Type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum und Uhrzeit, wann der Datensatz migriert wurde.</value>
+    <value>Datum und Uhrzeit der Datensatzmigration.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwnerId" xml:space="preserve">
@@ -341,15 +341,15 @@
     <comment>'msdyn_scenario' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningBusinessUnit" xml:space="preserve">
-    <value>Eindeutiger Bezeichner für die Unternehmenseinheit, die für den Datensatz verantwortlich ist</value>
+    <value>Eindeutiger Bezeichner der für den Datensatz zuständigen Unternehmenseinheit.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningTeam" xml:space="preserve">
-    <value>Eindeutiger Bezeichner für das Team, das für den Datensatz verantwortlich ist.</value>
+    <value>Eindeutiger Bezeichner des für den Datensatz zuständigen Teams.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenarioOwningUser" xml:space="preserve">
-    <value>Eindeutiger Bezeichner für den Benutzer, der für den Datensatz verantwortlich ist.</value>
+    <value>Eindeutiger Bezeichner des für den Datensatz zuständigen Benutzers.</value>
     <comment>'msdyn_scenario' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_scenariostatecode" xml:space="preserve">
@@ -453,11 +453,11 @@
     <comment>'msdyn_channel' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Zeitzonenregel-Versionsnummer</value>
+    <value>Versionsnummer der Zeitzonenregel</value>
     <comment>'msdyn_channel' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_channelUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Zeitzonencode für UTC-Konvertierung</value>
+    <value>Zeitzonencode für die UTC-Konvertierung</value>
     <comment>'msdyn_channel' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioCreatedBy" xml:space="preserve">
@@ -557,11 +557,11 @@
     <comment>'msdyn_scenario' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Zeitzonenregel-Versionsnummer</value>
+    <value>Versionsnummer der Zeitzonenregel</value>
     <comment>'msdyn_scenario' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_scenarioUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Zeitzonencode für UTC-Konvertierung</value>
+    <value>Zeitzonencode für die UTC-Konvertierung</value>
     <comment>'msdyn_scenario' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,channel{1acbe822-da47-40e4-bb56-b2347e5bc033}" xml:space="preserve">

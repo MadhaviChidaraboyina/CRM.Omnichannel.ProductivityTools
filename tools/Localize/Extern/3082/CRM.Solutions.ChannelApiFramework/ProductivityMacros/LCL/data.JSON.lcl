@@ -1295,6 +1295,19 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_3a359e47-ec11-ea11-a811-000d3a334ee9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Primary name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nombre principal de la entidad que se va a abrir]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-19T02:36:24.0000348Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23640_20191216" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Id of the email template]]></Val>
@@ -1514,6 +1527,19 @@
         <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0003303Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_3a359e47-ec11-ea11-a811-000d3a334ee9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity Primary Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nombre de entidad principal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-19T02:36:24.0000348Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23640_20191216" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">

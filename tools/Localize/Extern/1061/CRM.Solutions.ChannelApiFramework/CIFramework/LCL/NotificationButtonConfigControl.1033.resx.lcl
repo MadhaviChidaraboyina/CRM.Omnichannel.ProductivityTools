@@ -29,12 +29,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-07-18T11:09:25.000795Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T14:57:44Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Accept]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO19705_20190715" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";Accept_Button_Enabled_Switch" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -77,12 +78,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-07-11T02:27:43.0000133Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T14:57:44Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Label for when the flip switch is disabled]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO19542_20190708" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";FlipSwitch_Yes_Label" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -109,12 +111,13 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-07-18T11:09:25.000795Z" />
+        <Modified By="v-rondai" DateTime="2019-12-13T14:57:44Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Reject]]></Cmt>
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO19705_20190715" />
+          <Str Name="Custom4" Val="Accepted" />
         </Props>
       </Item>
       <Item ItemId=";Reject_Button_Enabled_Switch" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

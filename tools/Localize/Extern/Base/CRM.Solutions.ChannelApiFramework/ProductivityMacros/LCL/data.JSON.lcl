@@ -609,6 +609,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_3a359e47-ec11-ea11-a811-000d3a334ee9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Primary name of the entity to be opened]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition@msdyn_description_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Id of the email template]]></Val>
@@ -708,6 +714,12 @@
       <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_35b0d4dc-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Resolution]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_3a359e47-ec11-ea11-a811-000d3a334ee9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity Primary Name]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

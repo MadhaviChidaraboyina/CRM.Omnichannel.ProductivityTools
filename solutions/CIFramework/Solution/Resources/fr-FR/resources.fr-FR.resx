@@ -648,6 +648,14 @@
     <value>Identificateur unique des instances d'entité</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_consoleapplicationnotificationtemplateId' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showtimeout" xml:space="preserve">
+    <value>Show timeout for the Notification template</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for OptionSet 'msdyn_consoleapplicationnotificationtemplate_msdyn_showtimeout' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme" xml:space="preserve">
+    <value>Theme color for Notification template.</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for OptionSet 'msdyn_consoleapplicationnotificationtemplate_msdyn_theme' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode" xml:space="preserve">
     <value>Statut du modèle de notification</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for OptionSet 'msdyn_consoleapplicationnotificationtemplate_statecode' on Entity</comment>
@@ -679,6 +687,14 @@
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ordre d'affichage de la notification par rapport aux autres modèles de notification.</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Showtimeout" xml:space="preserve">
+    <value>Show timeout for the Notification template</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_Showtimeout' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Theme" xml:space="preserve">
+    <value>Theme color for Notification template.</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_Theme' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Timeout" xml:space="preserve">
     <value>Délai d'expiration de la notification.</value>
@@ -1614,6 +1630,14 @@ Non - une valeur non valide doit être fournie lors de la création d'un modèle
     <value>ConsoleApplicationNotificationTemplate</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_consoleapplicationnotificationtemplateId' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showtimeout" xml:space="preserve">
+    <value>Show timeout</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationnotificationtemplate_msdyn_showtimeout' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme" xml:space="preserve">
+    <value>Theme</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationnotificationtemplate_msdyn_theme' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode" xml:space="preserve">
     <value>Statut</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for OptionSet 'msdyn_consoleapplicationnotificationtemplate_statecode' on Entity</comment>
@@ -1645,6 +1669,14 @@ Non - une valeur non valide doit être fournie lors de la création d'un modèle
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_RenderingOrder" xml:space="preserve">
     <value>Ordre de la notification</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_RenderingOrder' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Showtimeout" xml:space="preserve">
+    <value>Show timeout</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Showtimeout' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Theme" xml:space="preserve">
+    <value>Theme</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : displayname for Attribute 'msdyn_Theme' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Timeout" xml:space="preserve">
     <value>Délai d'attente (secondes)</value>
@@ -2446,6 +2478,22 @@ Non - une valeur non valide doit être fournie lors de la création d'un modèle
     <value>Inactif</value>
     <comment>'msdyn_consoleapplicationnotificationfield' : label for status '2' on Entity</comment>
   </data>
+  <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showtimeout100000000" xml:space="preserve">
+    <value>Yes</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : label for option '100000000' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showtimeout100000001" xml:space="preserve">
+    <value>No</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : label for option '100000001' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme100000000" xml:space="preserve">
+    <value>Dark</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : label for option '100000000' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme100000001" xml:space="preserve">
+    <value>Light</value>
+    <comment>'msdyn_consoleapplicationnotificationtemplate' : label for option '100000001' on Entity</comment>
+  </data>
   <data name="1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode0" xml:space="preserve">
     <value>Actif</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : label for state '0' on Entity</comment>
@@ -2674,6 +2722,10 @@ Non - une valeur non valide doit être fournie lors de la création d'un modèle
     <value>Nom</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{49f27467-13e4-4190-ac4a-2a72b97632ad}'</comment>
   </data>
+  <data name="1:label,Notification Template{509ba94c-608e-2a12-089b-40db61a60c17}" xml:space="preserve">
+    <value>Show timeout</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{509ba94c-608e-2a12-089b-40db61a60c17}'</comment>
+  </data>
   <data name="1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" xml:space="preserve">
     <value>Section</value>
     <comment>'Notification Template' : label for section in Entity FormXml ID: '{58164d85-26cc-e735-db3c-42d081de97ab}'</comment>
@@ -2689,6 +2741,10 @@ Non - une valeur non valide doit être fournie lors de la création d'un modèle
   <data name="1:label,Notification Template{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}" xml:space="preserve">
     <value>Champs de notification</value>
     <comment>'Notification Template' : label for cell in Entity FormXml ID: '{7e34a068-15a7-1aea-c2bc-3d083e1e1aa6}'</comment>
+  </data>
+  <data name="1:label,Notification Template{90b3a189-7e63-3324-823a-75199c5b883d}" xml:space="preserve">
+    <value>Theme</value>
+    <comment>'Notification Template' : label for cell in Entity FormXml ID: '{90b3a189-7e63-3324-823a-75199c5b883d}'</comment>
   </data>
   <data name="1:label,Notification Template{94dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" xml:space="preserve">
     <value>Délai d'attente (secondes)</value>
