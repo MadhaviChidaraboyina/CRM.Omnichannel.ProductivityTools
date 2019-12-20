@@ -7,8 +7,11 @@
 namespace PVSPackage
 {
     using Microsoft.Uii.Common.Entities;
+    using Microsoft.Xrm.Sdk;
+    using Microsoft.Xrm.Sdk.Query;
     using Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase;
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.Composition;
 
     /// <summary>
@@ -90,6 +93,31 @@ namespace PVSPackage
             return base.OverrideSolutionImportDecision(solutionUniqueName, organizationVersion, packageSolutionVersion, inboundSolutionVersion, deployedSolutionVersion, systemSelectedImportAction);
         }
 
+        /// <summary>
+        /// Override default selected language
+        /// </summary>
+        /// <param name="selectedLanguage">default selected language</param>
+        /// <param name="availableLanguages">all available languages in importconfig xml</param>
+        /// <returns></returns>
+        public override int OverrideConfigurationDataFileLanguage(int selectedLanguage, List<int> availableLanguages)
+        {
+            if (!IsSolutionInstalled("OmnichannelBase") && !IsSolutionInstalled("ChannelAPIIntegrationFramework"))
+            {
+                PackageLog.Log("OmnichannelBase and ChannelAPIIntegrationFramework not found on target org, original data.zip will be imported");
+                return selectedLanguage * 10;  //Contains only base data
+            }
+            else if (IsSolutionInstalled("OmnichannelBase"))
+            {
+                PackageLog.Log("OmnichannelBase found on target org, both CIF and OC data.zip will be imported");
+                return selectedLanguage;  // Contains base + CIF and OC data
+            }
+            else
+            {
+                PackageLog.Log("ChannelAPIIntegrationFramework found on target org, CIF data.zip will be imported");
+                return selectedLanguage * 100; //Contains base + CIF data
+            }
+        }
+
         #region Properties
 
         /// <summary>
@@ -127,6 +155,22 @@ namespace PVSPackage
         public override string GetLongNameOfImport
         {
             get { return "ProductivityMacros"; }
+        }
+
+        /// <summary>
+        /// Checks whether the Solution Health Solution is installed in the organization
+        /// This should be called before trying to register any solution health rules
+        /// </summary>
+        /// <returns></returns>
+        private bool IsSolutionInstalled(String solutionName)
+        {
+            String uniqueName = solutionName;
+            var query = new QueryExpression("solution");
+            query.ColumnSet = new ColumnSet("uniquename");
+            query.Criteria.AddCondition("uniquename", ConditionOperator.Equal, uniqueName);
+
+            EntityCollection solutions = CrmSvc.RetrieveMultiple(query);
+            return solutions != null && solutions.Entities != null && solutions.Entities.Count > 0;
         }
 
         #endregion

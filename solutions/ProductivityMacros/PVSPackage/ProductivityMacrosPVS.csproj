@@ -321,6 +321,19 @@
     <Content Include="ProductivityMacros\CmtDataFiles\data_3098\data_schema.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ProductivityMacros\CmtDataFiles\data_10330\data.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProductivityMacros\CmtDataFiles\data_10330\data_schema.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProductivityMacros\CmtDataFiles\data_103300\data.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProductivityMacros\CmtDataFiles\data_103300\data_schema.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ProductivityMacros\Content\en-us\EndHtml\CSS\common.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -402,4 +415,4 @@
     <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
