@@ -5,4 +5,11 @@
   <EntityRelationship Name="msdyn_msdyn_paramdef_msdyn_actionoutputparam" />
   <EntityRelationship Name="msdyn_msdyn_paramdef_msdyn_actioninputparam" />
   <EntityRelationship Name="msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector" />
+	<EntityRelationship Name="business_unit_msdyn_macrosession" />
+	<EntityRelationship Name="lk_msdyn_macrosession_createdby" />
+	<EntityRelationship Name="lk_msdyn_macrosession_modifiedby" />
+	<EntityRelationship Name="msdyn_workflow_msdyn_macrosession_macroname" />
+	<EntityRelationship Name="owner_msdyn_macrosession" />
+	<EntityRelationship Name="team_msdyn_macrosession" />
+	<EntityRelationship Name="user_msdyn_macrosession" />
 </EntityRelationships>

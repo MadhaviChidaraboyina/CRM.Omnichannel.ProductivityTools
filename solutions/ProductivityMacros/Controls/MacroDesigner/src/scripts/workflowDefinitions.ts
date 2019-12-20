@@ -158,6 +158,23 @@ export class Macros {
             //TODO - log error
             return { definition: Macros.definition, name: "", description: "", id: "" };
         }
-    }
+	}
+
+	public static async getExecutionStatus() {
+		let id = Utils.getUrlParam(Constants.MACRO_ID);
+		if (!id) {
+			return { executionstatus: {}, name: "" };
+		}
+		try {
+			let defn = await (window.top as any).Xrm.WebApi.retrieveRecord(Constants.MACROS_SESSION_ENTITY, id, "?$select=msdyn_executioncontext,msdyn_macroname");
+			return { executionstatus: JSON.parse(defn.msdyn_executioncontext), name: defn.msdyn_macroname};  // Check whether defn is eexecutionJSON only or {executionJson}
+			//return { definition: JSON.parse(defn.clientdata).properties.definition, name: defn.name, description: defn.description, id: id };
+		}
+		catch (error) {
+			//TODO - log error
+			return { executionstatus: {}, name: "" };
+		}
+	}
+
     public static testDefinition = { "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json", "actions": { "TestBuiltInActionPropertiesSummary": { "type": "TestBuiltInActionType", "runAfter": {} }, "TestBuiltInActionPropertiesSummary_2": { "type": "TestBuiltInActionType", "runAfter": { "TestBuiltInActionPropertiesSummary": ["Succeeded"] } }, "TestBuiltInActionPropertiesSummary_3": { "type": "TestBuiltInActionType", "runAfter": { "TestBuiltInActionPropertiesSummary_2": ["Succeeded"] } } }, "parameters": { "$authentication": { "defaultValue": {}, "type": "SecureObject" } }, "triggers": { "manual": { "kind": "PowerApps", "type": "manual", "inputs": {} } }, "contentVersion": "1.0.0.0" };
 }

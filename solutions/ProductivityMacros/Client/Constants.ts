@@ -7,6 +7,8 @@ namespace Microsoft.Macros {
 		public static CreateMacrosDialog = "CreateMacrosMDD";
 		public static RecordIdParam = "record_Id";
 		public static DesignerID = "designer_id";
+		public static MonitorID = "monitor_id";
+		public static MacrosMonitorDialog = "MacrosMonitorMDD";
 	}
 
 	export class Guids {

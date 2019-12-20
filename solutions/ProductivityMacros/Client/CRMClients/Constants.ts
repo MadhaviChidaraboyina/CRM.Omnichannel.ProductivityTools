@@ -4,23 +4,6 @@
 /** @internal */
 namespace Microsoft.ProductivityMacros {
 
-	export interface IActionItem {
-		name: string;
-        type: string,
-        inputs: any,
-        runAfter: any
-    }
-
-    export interface IMacroActions {
-        actionName: IActionItem;
-	}
-
-	export interface ISortByDependency {
-		objectMap: Map<string, IActionItem>,
-		visited: Map<string, boolean>,
-		result: IActionItem[];
-	}
-
 	export class Constants {
 		public static AppName = "appName";
 		public static ClientUrl = "clientUrl";
@@ -38,7 +21,14 @@ namespace Microsoft.ProductivityMacros {
 		public static SuffixEntityId = ".EntityId";
         public static SuffixPageType = ".PageType";
         public static SuffixPrimaryNameAttributeValue = ".PrimaryNameAttributeValue";
-        public static OutputResult = "result";
+		public static OutputResult = "result";
+		public static StatusSucceded = "Succeeded";
+		public static StatusFailed = "Failed";
+		public static StatusSkipped = "Skipped";
+		public static ActionSuccessfull = "Action performed successfully";
+		public static SplitByDot = ".";
+		public static typeOfExecution = "Microsoft.Logic/workflows/runs";
+		public static typeOfDefinition = "Microsoft.Logic/workflows/versions";
 	}
 
 	export class ActionTypes {
@@ -67,6 +57,9 @@ namespace Microsoft.ProductivityMacros {
 
     export class EntityName {
         public static ActionTemplateEntityName = "msdyn_macroactiontemplate";
-        public static ConnectorEntityName = "msdyn_macroconnector";
-    }
+		public static ConnectorEntityName = "msdyn_macroconnector";
+		public static RunHistoryEntity = "msdyn_macrosession";
+		public static WorkflowEntity = "workflow"
+	}
+
 }

@@ -53,9 +53,11 @@
     <DesignerControlBlobFolderPath>$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Blobs\MacroDesigner</DesignerControlBlobFolderPath>
   </PropertyGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\scripts\appMon.tsx" />
     <TypeScriptCompile Include="src\scripts\DesignerDefinitions.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\scripts\macroMonitor.tsx" />
     <TypeScriptCompile Include="src\scripts\sharedUtils.ts" />
     <TypeScriptCompile Include="src\scripts\sharedDefines.ts" />
     <TypeScriptCompile Include="src\scripts\hostService.ts" />
@@ -73,7 +75,9 @@
     <Content Include="src\Html\iframedesigner.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\Html\iframemonitor.html" />
     <Content Include="src\Html\macroDesigner.html" />
+    <Content Include="src\Html\macroMonitor.html" />
     <Content Include="test_index.html">
       <SubType>Code</SubType>
     </Content>
@@ -100,6 +104,10 @@
     <Compile Include="webpack-designerControl.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="webpack-hostMonitorControl.js" />
+    <Compile Include="webpack-monitorControl.js" >
+			<SubType>Code</SubType>
+		</Compile>
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <!-- Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" / -->
@@ -132,13 +140,15 @@
   <Target Name="Build">
     <Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(DesignerControlOutputPath) --output-path $(DesignerControlOutputPath) --context $(ContextDirectory) --config webpack-designerControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
     <Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(HostControlOutputPath) --output-path $(HostControlOutputPath) --context $(ContextDirectory) --config webpack-hostControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
-  </Target>
+		<Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(DesignerControlOutputPath) --output-path $(DesignerControlOutputPath) --context $(ContextDirectory) --config webpack-monitorControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
+		<Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(HostControlOutputPath) --output-path $(HostControlOutputPath) --context $(ContextDirectory) --config webpack-hostMonitorControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
+	</Target>
   <!-- Copy version.txt to DesignerOutputPath -->
   <Target Name="CopyVersionTxt" AfterTargets="Build">
-	<ItemGroup>
-		<VersionFile Include="$(ContextDirectory)\version.txt;" />
-	</ItemGroup>
-	<Copy SourceFiles="@(VersionFile)" DestinationFolder="$(DesignerControlOutputPath)" Retries="3" RetryDelayMilliseconds="300" />
+    <ItemGroup>
+      <VersionFile Include="$(ContextDirectory)\version.txt;" />
+    </ItemGroup>
+    <Copy SourceFiles="@(VersionFile)" DestinationFolder="$(DesignerControlOutputPath)" Retries="3" RetryDelayMilliseconds="300" />
   </Target>
   <Target Name="GenDesignerBlob" AfterTargets="Build" DependsOnTargets="CopyVersionTxt">
     <ItemGroup>

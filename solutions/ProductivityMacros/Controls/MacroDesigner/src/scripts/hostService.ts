@@ -514,6 +514,7 @@ export class OperationManifestServiceImpl implements Designer.OperationManifestS
         let action = this.operationManager.getActionById(definition.type);
         return Promise.resolve({ connectorId: defaultConnector.id, operationId: action && action.id || defaultConnector.id });
     }
+	
     public getOperationManifest(connectorId: string, operationId: string): Promise<Designer.OperationManifest> {
         let searchList = [connectorId, operationId];
         for (let conId in searchList) {
@@ -606,4 +607,253 @@ export class Analytics implements Designer.AnalyticsService {
         //TODO
         return Promise.resolve();
     }
+}
+
+
+export interface LogicAppsRunService {
+	getActionInputs(action: any);
+	getActionOutputs(action: any);
+	getActions(runId: string);
+	getContent(contentLink: any);
+	getRepetition(repetitionId: string);
+	getRepetitionInputsOutputs(repetition: any);
+	getRepetitions(action: any, count: any);
+	getRequestHistories(actionId: string);
+	getRequestHistoriesForRepetition(actionId: string, repetitionName: string);
+	getRun(runId: string);
+	getRuns(workflowId: string);
+	getScopeRepetitions(action: any, status?: string);
+	getTrigger(triggerId: string);
+	getTriggerHistory(triggerHistoryId: string)
+	getTriggerHistoryInputs(triggerHistory: any);
+	getTriggerHistoryOutputs(triggerHistory: any)
+	getTriggers(workflowId: string);
+	listExpressionTraces(actionId: string);
+	listExpressionTracesForRepetition(repetitionId: string);
+	_fetchRequestHistoryBodies(requestHistories: any[]);
+}
+
+export class runServiceImpl implements LogicAppsRunService {
+
+	private executionStateJSON;
+	constructor(analytics, monitorOptions) {
+		this.executionStateJSON = monitorOptions;
+	}
+
+	getActionInputs(action: any): Promise<any> {
+
+		var actionName = action.name;
+		return new Promise<any>((resolve, reject) => {
+			var ret = this.executionStateJSON.definition.actions[actionName].inputs.body;
+			resolve(ret);
+		});
+	}
+
+	getActionOutputs(action: any): Promise<any> {
+		var actionName = action.name;
+		return new Promise<any>((resolve, reject) => {
+			var ret = this.executionStateJSON.definition.actions[actionName].outputs.body;
+			resolve(ret);
+		});
+	}
+
+	async getActions(runId: string): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+
+	}
+
+	async getContent(contentLink: any): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+	async getRepetition(repetitionId: string): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+	async getRepetitionInputsOutputs(repetition: any): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+
+	}
+
+	async getRepetitions(action: any, count = 1): Promise<any[]> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+	async getRequestHistories(actionId: string): Promise<any[]> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+	async getRequestHistoriesForRepetition(actionId: string, repetitionName: string): Promise<any[]> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+	getRun(runId: string): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+	async getRuns(workflowId: string): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+	async getScopeRepetitions(action: any, status?: string): Promise<any[]> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+	getTrigger(triggerId: string): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+
+	getTriggerHistory(triggerHistoryId: string): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+	getTriggerHistoryInputs(triggerHistory: any): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+
+	}
+
+	getTriggerHistoryOutputs(triggerHistory: any): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+
+	}
+
+
+	async getTriggers(workflowId: string): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+
+	listExpressionTraces(actionId: string): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+
+	}
+
+	listExpressionTracesForRepetition(repetitionId: string): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+
+	}
+
+	async _fetchRequestHistoryBodies(requestHistories: any[]): Promise<any[]> {
+		return new Promise<any>((resolve, reject) => {
+
+		});
+	}
+}
+
+
+export interface LogicAppsRunInstanceService {
+	getRunInstance(runId: string, includeWorkflow: boolean);
+
+}
+
+export class runInstanceServiceImpl implements LogicAppsRunInstanceService {
+
+	private executionStatusJSON;
+	constructor(analytics, monitorOptions) {
+		this.executionStatusJSON = monitorOptions;
+	}
+
+	getRunInstance(runId: string, includeWorkflow: boolean): Promise<any> {
+		return new Promise<any>((resolve, reject) => {
+			var r = {
+				"id": this.executionStatusJSON.id,
+				"name": this.executionStatusJSON.name,
+				"type": this.executionStatusJSON.type,
+				"properties": {
+					"waitEndTime": this.executionStatusJSON.waitEndTime,
+					"startTime": this.executionStatusJSON.startTime,
+					"endTime": this.executionStatusJSON.endTime,
+					"status": this.executionStatusJSON.status,
+					"outputs": {},
+					"workflow": {
+						"id": this.executionStatusJSON.definition.id,//"/subscriptions/7da41661-fb51-45ba-b8f2-b4c136cb904b/resourceGroups/isdhingr-rg/providers/Microsoft.Logic/workflows/testish2/versions/08586281405650119862",
+						"name": this.executionStatusJSON.definition.name,
+						"type": this.executionStatusJSON.definition.type,
+						"properties": {
+							"createdTime": this.executionStatusJSON.definition.createdTime,
+							"changedTime": this.executionStatusJSON.definition.changedTime,
+							"version": this.executionStatusJSON.definition.version,
+							"definition": {
+								"$schema": this.executionStatusJSON.definition.$schema,
+								"contentVersion": this.executionStatusJSON.definition.contentVersion,
+								"outputs": {},
+								"triggers": this.executionStatusJSON.definition.triggers,
+								"actions": this.executionStatusJSON.definition.actions, //TODO
+							}
+						}
+					},
+					"trigger": {
+						"name": this.executionStatusJSON.trigger.name,
+						"startTime": this.executionStatusJSON.trigger.startTime,
+						"endTime": this.executionStatusJSON.trigger.startTime,
+						"scheduledTime": this.executionStatusJSON.trigger.startTime,
+						"status": this.executionStatusJSON.trigger.status
+					}
+				}
+			}
+
+			var o: any[] = [];
+			var actionList = this.executionStatusJSON.definition.actions;
+			actionList = Object.keys(actionList);
+
+			for (var i = 0; i < actionList.length; i++) {
+				var actionName = actionList[i];
+				var id = this.executionStatusJSON.definition.actions[actionList[i]].id;
+				var type = this.executionStatusJSON.definition.actions[actionList[i]].type;
+				var properties = {
+					"startTime": this.executionStatusJSON.definition.actions[actionList[i]].startTime,
+					"endTime": this.executionStatusJSON.definition.actions[actionList[i]].endTime,
+					"status": this.executionStatusJSON.definition.actions[actionList[i]].status
+				}
+				o.push({ "id": id, "type": type, "name": actionName, "properties": properties })
+			}
+
+			var s = r.properties.workflow;
+
+			var ap = [];
+
+			var retObj = {
+				run: r,
+				runActions: o,
+				workflowVersion: s,
+				apis: ap
+			}
+
+			resolve(retObj);
+		});
+	}
 }

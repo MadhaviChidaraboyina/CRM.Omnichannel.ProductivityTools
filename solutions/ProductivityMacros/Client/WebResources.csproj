@@ -23,7 +23,9 @@
     <Content Include="Constants.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="Constants.ts" />
+    <TypeScriptCompile Include="CRMClients\Models.ts" />
     <TypeScriptCompile Include="CRMClients\ProductivityMacroState.ts" />
+    <TypeScriptCompile Include="CRMClients\ProductivityMacrosRunHistory.ts" />
     <TypeScriptCompile Include="Libraries\requirejs\require.d.ts" />
     <TypeScriptCompile Include="ProductivityMacrosUtilities.ts" />
     <TypeScriptCompile Include="CRMClients\ProductivityMacrosWrapper.ts" />

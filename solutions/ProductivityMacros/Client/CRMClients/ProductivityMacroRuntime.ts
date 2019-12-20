@@ -5,9 +5,13 @@
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 /// <reference path="../../../../Packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApiInternal.d.ts" />
 /// <reference path="Constants.ts" />
+/// <reference path="Models.ts" />
 /// <reference path="../TelemetryHelper.ts" />
+/// <reference path="./ProductivityMacrosRunHistory.ts" />
 
 namespace Microsoft.ProductivityMacros {
+	
+	var data = {} as executionJSON;
 
 	export function initializeMacrosRuntime() {
 		Microsoft.ProductivityMacros.Internal.initializeTelemetry();
@@ -20,7 +24,8 @@ namespace Microsoft.ProductivityMacros {
 				function (templates: any) {
 					getMacroInputJSON(macroName).then(
 						function (inputJSONstring: string) {
-                            let actions = getSortedActionsList(JSON.parse(inputJSONstring).properties.definition.actions);
+							let actions = getSortedActionsList(JSON.parse(inputJSONstring).properties.definition.actions);
+							Microsoft.ProductivityMacros.RunHistory.setActionsInJSON(data, actions, inputJSONstring, macroName);
                             var macroState = new Microsoft.ProductivityMacros.Internal.ProductivityMacroState();
 							let executeActionsPromise = actions.reduce((accumulatorPromise, nextId) => {
                                 return accumulatorPromise.then(function (result: any) {
@@ -29,12 +34,21 @@ namespace Microsoft.ProductivityMacros {
                                     } 
                                 }, function (error: Error) {
 										reject(error);
-									});
+									}
+								);
 							}, Promise.resolve("success"));
-                            executeActionsPromise.then(function (success: any) {
-								resolve("Action performed successfully")
-                            }, function (error: Error) {
-									reject(error);
+							executeActionsPromise.then(function (success: any) {
+								var status = Microsoft.ProductivityMacros.Constants.StatusSucceded;
+								if (Internal.isNullOrUndefined(success)) {
+									status = Microsoft.ProductivityMacros.Constants.StatusFailed;
+								}
+								Microsoft.ProductivityMacros.RunHistory.createRunHistoryRecord(data, status, macroName);
+								resolve(Microsoft.ProductivityMacros.Constants.ActionSuccessfull)
+							},
+							function (error: Error) {
+								var status = Microsoft.ProductivityMacros.Constants.StatusFailed;
+								Microsoft.ProductivityMacros.RunHistory.createRunHistoryRecord(data, status, macroName);
+								reject(error);
 							});
 						},
 						function (error: Error) {
@@ -70,6 +84,7 @@ namespace Microsoft.ProductivityMacros {
 						reject("Macro not found");
 					}
 					else {
+						Microsoft.ProductivityMacros.RunHistory.initializeDefinition(data, result);
 						resolve(result.entities[0].clientdata);
 					}
 				},
@@ -209,15 +224,22 @@ namespace Microsoft.ProductivityMacros {
 	}
 
 	/** @internal */
-    function executeMacroAction(actionType: string, actionInputs: string, actionName: string, macroState: any): Promise<any> {
-        let exectuableMethod = Internal.ProductivityMacroOperation.macroActionTemplates.get(actionType)["_runtimeAPI"];
+    function executeMacroAction(actionType: string, actionInputs: any, actionName: string, macroState: any): Promise<any> {
+		let exectuableMethod = Internal.ProductivityMacroOperation.macroActionTemplates.get(actionType)["_runtimeAPI"];
+		var status, endTime, outputs = {}, startTime = new Date().toISOString();
 		return new Promise<any>((resolve, reject) => {
 			eval(exectuableMethod).then(
                 function (success: any) {
-                    updateActionOutputInSessionContext(success, macroState);
+					updateActionOutputInSessionContext(success, macroState);
+					status = Microsoft.ProductivityMacros.Constants.StatusSucceded;
+					outputs = generateOutputJSON(success[Constants.OutputResult]);
+					Microsoft.ProductivityMacros.RunHistory.setActionStatus(data, status, startTime, outputs, actionName, actionInputs);
 					resolve(success);
 				},
 				function (error: Error) {
+					status = Microsoft.ProductivityMacros.Constants.StatusFailed;
+					outputs = {};
+					Microsoft.ProductivityMacros.RunHistory.setActionStatus(data, status, startTime, outputs, actionName, actionInputs);
 					reject(error);
 				}
 			);
@@ -231,4 +253,14 @@ namespace Microsoft.ProductivityMacros {
     }
 	
 	initializeMacrosRuntime();
+
+	function generateOutputJSON(output: any) {
+		let keys = Object.keys(output);
+		var finalOutput: any = {};
+		for (var i = 0; i < keys.length; i++) {
+			var newKey = keys[i].split(Microsoft.ProductivityMacros.Constants.SplitByDot, 2)[1];
+			finalOutput[newKey] = output[keys[i]];
+		}
+		return finalOutput;
+	}
 }
