@@ -87,8 +87,8 @@
                             <DisableMru>false</DisableMru>
                             <DisableQuickFind>false</DisableQuickFind>
                             <DisableViewPicker>false</DisableViewPicker>
-                            <DefaultViewId>{CA941C69-85C5-E911-A81C-000D3A6D8160}</DefaultViewId>
-                            <AvailableViewIds>{CA941C69-85C5-E911-A81C-000D3A6D8160}</AvailableViewIds>
+                            <DefaultViewId>{012107d2-54d0-e911-a81c-000d3a6e50b0}</DefaultViewId>
+                            <AvailableViewIds>{012107d2-54d0-e911-a81c-000d3a6e50b0}</AvailableViewIds>
                             <AllowFilterOff>false</AllowFilterOff>
                           </parameters>
                         </control>
