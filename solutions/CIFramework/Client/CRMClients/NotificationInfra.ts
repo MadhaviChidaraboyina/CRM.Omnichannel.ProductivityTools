@@ -284,7 +284,8 @@ namespace Microsoft.CIFramework.Internal {
 				notificationExpiryTime: notificationExpiryTime,
 				queueTimeOutMethod: rejectAfterQueueLimitExceeded,
 				timeOutMethod: rejectAfterTimeout,
-				correlationId: correlationId
+				correlationId: correlationId,
+				hiddenTimeoutMethod: onTimeoutHandler
 			};
 			
 			queue.enqueue(notificationItem);
@@ -327,26 +328,37 @@ namespace Microsoft.CIFramework.Internal {
 			let createdAtTime = popUpItem.notificationCreatedAt;
 			let notificationExpiryTime = popUpItem.notificationExpiryTime;
 			let leftTime = 0;
+
 			if (notificationExpiryTime > 0) {
 				var spentInQueueTime = Date.now() - createdAtTime;
 				console.log("[NotifyEvent] - The notification spent " + spentInQueueTime / 1000 + " seconds in queue");
 				leftTime = notificationExpiryTime - spentInQueueTime;
 
 				if (leftTime > 0) {
-					if (IsPlatformNotificationTimeoutInfra) {
-						popupnotification.timeoutAction["timeout"] = leftTime;
+					if (IsPlatformNotificationTimeoutInfra && !(isNullOrUndefined(popupnotification.timeoutAction))) {
+							popupnotification.timeoutAction["timeout"] = leftTime;
 					}
-					else {
+					else if (!IsPlatformNotificationTimeoutInfra){
 						let leftTimeSec = Math.ceil((leftTime) / 1000);
 						popupnotification.details[Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT")] = leftTimeSec.toString() + " " + Utility.getResourceString("NOTIFICATION_WAIT_TIME_SECONDS");
 					}
 				}
 			}
+
 			Xrm.Internal.addPopupNotification(popupnotification).then((id: string) => {
 				closeId = id; console.log(id);
 				CheckAndDequeueNotification(popUpItem);
 				if (!IsPlatformNotificationTimeoutInfra && leftTime > 0) {
 					displayedNotificationTimer = setTimeout(popUpItem.timeOutMethod, leftTime);
+				}
+				else {
+					if (isNullOrUndefined(popupnotification.timeoutAction) && leftTime > 0) {
+						//Start notification hidden timer
+						console.log("Start notification timer for Id: " + closeId.toString() + "Timer value: " +
+							notificationExpiryTime + " CorelationId: " + popUpItem.correlationId);
+						logInfoToTelemetry("Start notification timer for Id: " + closeId.toString() + "Timer value: " + notificationExpiryTime, popUpItem.correlationId);
+						displayedNotificationTimer = setTimeout(popUpItem.hiddenTimeoutMethod, leftTime);
+					}
 				}
 			}).catch((e: any) => {
 				console.log("[NotifyEvent] Error creating new notification: " + e);

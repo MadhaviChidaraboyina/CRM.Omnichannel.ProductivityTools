@@ -120,6 +120,8 @@ declare namespace Microsoft.CIFramework {
         static ClientUrl: string;
         static AppUrl: string;
         static Theme: string;
+        static darkTheme: string;
+        static lightTheme: string;
         static OrgLcid: string;
         static OrgUniqueName: string;
         static UserId: string;
@@ -224,6 +226,7 @@ declare namespace Microsoft.CIFramework {
         static notificationResponse: string;
         static isDelete: string;
         static isDirty: string;
+        static onHiddenTimerEvent: string;
     }
     class AnalyticsConstants {
         static notificationResponseAction: string;
@@ -251,6 +254,14 @@ declare namespace Microsoft.CIFramework {
     enum EventType {
         SystemEvent = 0,
         CustomEvent = 1,
+    }
+    enum ShowTimeoutOption {
+        Yes = 100000000,
+        No = 100000001,
+    }
+    const enum PopupNotificationThemeType {
+        Dark = 100000000,
+        Light = 100000001,
     }
     enum InternalEventName {
         NotificationReceived = 0,

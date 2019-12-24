@@ -124,6 +124,8 @@ namespace Microsoft.CIFramework
 		public static ClientUrl = "clientUrl";
 		public static AppUrl = "appUrl";
 		public static Theme = "themeName";
+		public static darkTheme = "dark";
+		public static lightTheme = "light";
 		public static OrgLcid = "orgLcid";
 		public static OrgUniqueName = "orgUniqueName";
 		public static UserId = "userId";
@@ -228,6 +230,7 @@ namespace Microsoft.CIFramework
 		public static notificationResponse = "NotificationResponse";
 		public static isDelete = "isDelete";
 		public static isDirty = "isDirty";
+		public static onHiddenTimerEvent = "onHiddenTimerEvent";
 	}
 
 	export class AnalyticsConstants {
@@ -258,6 +261,16 @@ namespace Microsoft.CIFramework
 	export enum EventType {
 		SystemEvent,
 		CustomEvent,
+	}
+
+	export enum ShowTimeoutOption {
+		Yes = 100000000,
+		No = 100000001
+	}
+
+	export const enum PopupNotificationThemeType {
+		Dark = 100000000, //"dark",
+		Light = 100000001 //"light",
 	}
 
 	export enum InternalEventName {

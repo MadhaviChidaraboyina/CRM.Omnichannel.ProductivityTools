@@ -24,8 +24,9 @@ namespace Microsoft.CIFramework.Internal {
 					if (UCINotificationTemplate._notificationTemplates.size > 0) {
 						return resolve(true);
 					}
+
 					Xrm.WebApi.retrieveMultipleRecords("msdyn_consoleapplicationnotificationtemplate",
-						"?$select=msdyn_name,msdyn_title,msdyn_notificationbuttons,msdyn_icon,msdyn_timeout,msdyn_acceptbuttontext,msdyn_rejectbuttontext&$expand=msdyn_msdyn_consoleapplicationnotificationtempl($select=msdyn_name,msdyn_lineheader,msdyn_value,msdyn_priority),msdyn_msdyn_consoleapplicationnotificationtag($select=msdyn_name)").then(
+						"?$select=msdyn_name,msdyn_showtimeout,msdyn_theme,msdyn_title,msdyn_notificationbuttons,msdyn_icon,msdyn_timeout,msdyn_acceptbuttontext,msdyn_rejectbuttontext&$expand=msdyn_msdyn_consoleapplicationnotificationtempl($select=msdyn_name,msdyn_lineheader,msdyn_value,msdyn_priority),msdyn_msdyn_consoleapplicationnotificationtag($select=msdyn_name)").then(
 						function (result) {
 							result.entities.forEach(
 								function (value, index, array) {
@@ -38,7 +39,9 @@ namespace Microsoft.CIFramework.Internal {
 										value["msdyn_timeout"],
 										value["msdyn_acceptbuttontext"],
 										value["msdyn_rejectbuttontext"],
-										value["msdyn_msdyn_consoleapplicationnotificationtempl"]
+										value["msdyn_msdyn_consoleapplicationnotificationtempl"],
+										value["msdyn_showtimeout"],
+										value["msdyn_theme"]
 									));
 									for (let index in value["msdyn_msdyn_consoleapplicationnotificationtag"]) {
 										let tag: string = value["msdyn_msdyn_consoleapplicationnotificationtag"][index].msdyn_name;
@@ -102,10 +105,10 @@ namespace Microsoft.CIFramework.Internal {
 			});
 		}
 
-		public instantiateTemplate(templateParams: any, acceptHandler: XrmClientApi.EventHandler, rejectHandler: XrmClientApi.EventHandler, timeoutHandler: XrmClientApi.EventHandler, correlationId?: string): Promise<CIFPopupNotification> { //TODO: The return type here will change based on platform definition
+		public instantiateTemplate(templateParams: any, acceptHandler: XrmClientApi.EventHandler, rejectHandler: XrmClientApi.EventHandler, timeoutHandler: XrmClientApi.EventHandler, correlationId?: string): Promise<any> { // TODO: TASK 1666251 change any to CIFPopupNotification> { //TODO: The return type here will change based on platform definition
 			return new Promise<any>(function (resolve: (value?: XrmClientApi.IPopupNotificationItem | PromiseLike<XrmClientApi.IPopupNotificationItem>) => void, reject: (error: Error) => void) {
 				try {   //TODO: Parameterized apptab title
-					let ret: XrmClientApi.IPopupNotificationItem = {
+					let ret: any = { // TODO: TASK 1666251 Change any to XrmClientApi.IPopupNotificationItem = {
 						title: this.title,
 						acceptAction: {
 							eventHandler: acceptHandler,
@@ -118,16 +121,21 @@ namespace Microsoft.CIFramework.Internal {
 						imageUrl: this.icon,
 						details: {},
 						type: isNullOrUndefined(this.actionButtons[UCINotificationTemplate.RejectAction]) ? XrmClientApi.Constants.PopupNotificationType.AcceptOnly : XrmClientApi.Constants.PopupNotificationType.AcceptDecline,
-						entityLookUpValue: null
+						entityLookUpValue: null,
+						themeType: this.theme,
 					};
-					if (!isNullOrUndefined(this.timeout) && this.timeout > 0) {
-						let timeoutAction = {
-						eventHandler: timeoutHandler,
-						actionLabel: Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT"),
-						timeout: this.timeout
+					if (!isNullOrUndefined(this.timeout) && this.timeout > 0 && this.showTimeout == ShowTimeoutOption.Yes) {
+							let timeoutAction = {
+								eventHandler: timeoutHandler,
+								actionLabel: Utility.getResourceString("NOTIFICATION_DETAIL_WAIT_TIME_TEXT"),
+								timeout: this.timeout
+							}
+							ret.timeoutAction = timeoutAction;
 						}
-						ret.timeoutAction = timeoutAction;
+					else {
+						console.log("Timeout action not added for addpopupnotification ");
 					}
+
 
 					let stringResolvers: Promise<string>[] = [];
 
@@ -281,6 +289,8 @@ namespace Microsoft.CIFramework.Internal {
 		private _actionButtons: { [value: string]: string };
 		private _icon: string;
 		private _timeout: number;
+		private _theme: string;
+		private _showTimeout: ShowTimeoutOption;
 		private _infoField: XrmClientApi.Entity[];
 		public get templateId(): string {
 			return this._templateId;
@@ -298,18 +308,27 @@ namespace Microsoft.CIFramework.Internal {
 		protected get icon(): string {
 			return this._icon;
 		}
-		protected get timeout(): number {
+		public get timeout(): number {
 			return this._timeout;
+		}
+		public get showTimeout(): ShowTimeoutOption {
+			return this._showTimeout;
+		}
+		public get theme(): string {
+			return this._theme;
 		}
 		protected get infoFields(): XrmClientApi.Entity[] {
 			return this._infoField;
 		}
-		private constructor(templateId: string, name: string, title: string, actionButtons: string, icon: string, timeout: number, acceptButtonText: string, rejectButtonText: string, infoFields: XrmClientApi.Entity[]) {
+		private constructor(templateId: string, name: string, title: string, actionButtons: string, icon: string, timeout: number, acceptButtonText: string, rejectButtonText: string, infoFields: XrmClientApi.Entity[], showTimeout: ShowTimeoutOption, theme: PopupNotificationThemeType) {
 			this._templateId = templateId;
 			this._name = name;
 			this._title = title;
 			this._icon = icon;
-			this._timeout = timeout*1000; //convert to milliseconds
+			this._timeout = timeout * 1000; //convert to milliseconds
+			this._showTimeout = isNullOrUndefined(showTimeout) ? ShowTimeoutOption.Yes : showTimeout;
+			this._theme = isNullOrUndefined(theme) ? Constants.darkTheme :
+				(theme == PopupNotificationThemeType.Light) ? Constants.lightTheme : Constants.darkTheme;
 			this._infoField = infoFields;
 			this._actionButtons = {};
 			let buttonsJson = JSON.parse(actionButtons);

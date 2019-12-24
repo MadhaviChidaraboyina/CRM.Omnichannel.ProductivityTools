@@ -26,7 +26,8 @@ namespace Microsoft.CIFramework.Internal
 		notificationExpiryTime: number,
 		queueTimeOutMethod: any,
 		timeOutMethod: any,
-		correlationId: string
+		correlationId: string,
+		hiddenTimeoutMethod: any
 	}
 
 	export class NotificationConstants {

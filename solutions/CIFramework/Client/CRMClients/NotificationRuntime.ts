@@ -26,12 +26,14 @@ namespace Microsoft.CIFramework.Internal {
 				fetchTask = UCINotificationTemplate.getTemplate(templateName);
 
 				fetchTask.then(function (notificationTemplate: UCINotificationTemplate) {
+					let showTimeout: ShowTimeoutOption = notificationTemplate.showTimeout;
+					let timeoutForNotification: number = notificationTemplate.timeout;
 					//accept handler
 					let onAcceptHandler = function () {
 						var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
 						Xrm.Internal.clearPopupNotification(closeId);
 						closeId = "";
-						if (!IsPlatformNotificationTimeoutInfra) {
+						if (!IsPlatformNotificationTimeoutInfra || showTimeout == ShowTimeoutOption.No)  {
 							clearTimeout(displayedNotificationTimer);
 						}
 						console.log("[NotifyEventFromTemplate] Notification accepted. Timer cleared");
@@ -46,7 +48,7 @@ namespace Microsoft.CIFramework.Internal {
 						var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
 						Xrm.Internal.clearPopupNotification(closeId);
 						closeId = "";
-						if (!IsPlatformNotificationTimeoutInfra) {
+						if (!IsPlatformNotificationTimeoutInfra || showTimeout == ShowTimeoutOption.No) {
 							clearTimeout(displayedNotificationTimer);
 						}
 						console.log("[NotifyEventFromTemplate] Notification rejected.Timer cleared");
@@ -67,6 +69,13 @@ namespace Microsoft.CIFramework.Internal {
 						showPopUpNotification();
 						return resolve(mapReturn);
 					}.bind(this);
+
+					//Hidden Timeout handler
+					let onHiddenTimeoutHandler = function () {
+						console.log("Hidden TimeoutHandler: Notification rejected due to timeout - Custom Timer");
+						return onTimeoutHandler();
+					}.bind(this);
+
 
 					let rejectAfterTimeout = function () {
 						var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
@@ -105,14 +114,16 @@ namespace Microsoft.CIFramework.Internal {
 								var popUpItem: XrmClientApi.IPopupNotificationItem = { title: popupNotificationItem.title, acceptAction: popupNotificationItem.acceptAction, declineAction: popupNotificationItem.declineAction, details: popupNotificationItem.details, type: popupNotificationItem.type, imageUrl: popupNotificationItem.imageUrl };
 							}
 
-							let notificationExpiryTime = !isNullOrUndefined(popupNotificationItem.timeoutAction) ? popupNotificationItem.timeoutAction.timeout: 0;
+							let notificationExpiryTime = !isNullOrUndefined(timeoutForNotification) ? timeoutForNotification : 0;
+
 							var notificationItem: INotificationItem = {
 								popUpNotificationItem: popUpItem,
 								notificationCreatedAt: Date.now(),
 								notificationExpiryTime: notificationExpiryTime,
 								queueTimeOutMethod: rejectAfterQueueLimitExceeded,
 								timeOutMethod: rejectAfterTimeout,
-								correlationId: correlationId
+								correlationId: correlationId,
+								hiddenTimeoutMethod: onHiddenTimeoutHandler
 							};
 
 							queue.enqueue(notificationItem);
