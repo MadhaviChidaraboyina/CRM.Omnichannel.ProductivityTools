@@ -23,6 +23,22 @@
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
       <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+      <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showt" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) imeout" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Show timeout for the Notification template]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+              <Val><![CDATA[알림 템플릿의 시간 제한 표시]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" />
+          <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000326Z" />
+          <Props>
+            <Str Name="Custom3" Val="WO23860_20191219" />
+          </Props>
+        </Item>
+      </Item>
       <Item ItemId=";1:LocalizedCollectionName,msdyn_consoleapplicationnotificationtemplateentitymsdyn_consoleapplicationnotificationte" ItemType="0" PsrId="211" Leaf="false">
         <Disp Icon="Dir" LocTbl="false" />
         <Item ItemId=";(...) mplate" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -68,6 +84,80 @@
           <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0002991Z" />
           <Props>
             <Str Name="Custom3" Val="WO21181_20190917" />
+          </Props>
+        </Item>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showt" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) imeout" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Show timeout]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+              <Val><![CDATA[시간 제한 표시]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" />
+          <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000326Z" />
+          <Props>
+            <Str Name="Custom3" Val="WO23860_20191219" />
+          </Props>
+        </Item>
+      </Item>
+      <Item ItemId=";1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showtimeout" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) 100000000" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Yes]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+              <Val><![CDATA[예]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" />
+          <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000323Z" />
+          <Props>
+            <Str Name="Custom3" Val="WO23860_20191219" />
+          </Props>
+        </Item>
+        <Item ItemId=";(...) 100000001" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[No]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+              <Val><![CDATA[아니요]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" />
+          <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000323Z" />
+          <Props>
+            <Str Name="Custom3" Val="WO23860_20191219" />
+          </Props>
+        </Item>
+      </Item>
+      <Item ItemId=";1:label,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme100000" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) 000" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Dark]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+              <Val><![CDATA[어두움]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" />
+          <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000323Z" />
+          <Props>
+            <Str Name="Custom3" Val="WO23860_20191219" />
+          </Props>
+        </Item>
+        <Item ItemId=";(...) 001" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Light]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+              <Val><![CDATA[약함]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" />
+          <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000323Z" />
+          <Props>
+            <Str Name="Custom3" Val="WO23860_20191219" />
           </Props>
         </Item>
       </Item>
@@ -1995,6 +2085,32 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Showtimeout" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Show timeout for the Notification template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[알림 템플릿의 시간 제한 표시]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000311Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Theme" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Theme color for Notification template.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[알림 템플릿의 테마 색상입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000311Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
       <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Timeout" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Notification time out period.]]></Val>
@@ -2032,6 +2148,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0002802Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Theme color for Notification template.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[알림 템플릿의 테마 색상입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000311Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -6681,6 +6810,32 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Showtimeout" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Show timeout]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시간 제한 표시]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Theme" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Theme]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[테마]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_Timeout" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Timeout (seconds)]]></Val>
@@ -6718,6 +6873,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.0001979Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Theme]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[테마]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9300,6 +9468,19 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,Notification Template{509ba94c-608e-2a12-089b-40db61a60c17}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Show timeout]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[시간 제한 표시]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000246Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,Notification Template{58164d85-26cc-e735-db3c-42d081de97ab}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Section]]></Val>
@@ -9350,6 +9531,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-20T14:08:52.000141Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Notification Template{90b3a189-7e63-3324-823a-75199c5b883d}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Theme]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[테마]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:13.0000246Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Notification Template{94dc52e2-4ab4-ce0e-b637-b5ed622c75e9}" ItemType="0;.resx" PsrId="211" Leaf="true">
