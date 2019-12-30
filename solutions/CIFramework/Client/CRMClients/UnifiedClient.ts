@@ -298,7 +298,8 @@ namespace Microsoft.CIFramework.Internal {
 				);
 			} else {
 				return new Promise<Map<string, any>>((resolve, reject) => {
-					return Xrm.Navigation.openForm(fo, fp).then(function (res) {
+				const xrmInstance = (window.top.getCurrentXrm()) || Xrm;
+					return xrmInstance.Navigation.openForm(fo, fp).then(function (res) {
 						return resolve(new Map<string, any>().set(Constants.value, res));
 					},
 					function (error: Error) {
