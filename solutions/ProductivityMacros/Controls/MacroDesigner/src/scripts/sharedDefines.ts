@@ -34,6 +34,8 @@ export class Constants {
 	public static MWRAPPER_CONTROL_SIGNATURE = "mslamonitor";
 	public static MACROS_SESSION_ENTITY = "msdyn_macrosession";
 	public static MACROS_MONITOR_PATH = "/flowcontrol/DesignerBlob/iframemonitor.html";
+	public static SESSION_TEMPLATE_ENTITY="msdyn_consoleapplicationsessiontemplate";
+    public static EXPRESSION_DATA = "msdyn_expressiondata";
 };
 
 export class DesignerMessages {
@@ -184,7 +186,33 @@ export interface IMonitorOptions {
 	operationKindDisplayText: { [kind: string]: string }
 	executionStatusJSON: any
 };
-
+export interface LogicAppDesignerTemplateConfig {
+	actions: any[],
+	triggers: any[],
+    connectors: any[],
+    categories: Category[],
+    operationManifestData: any[]
+}
+export interface ILogicAppDesignerOptions{
+    ApiVersion: string,
+    BaseUrl: string,
+    location: string,
+    resourceGroup: string,
+    subscriptionId: string,
+    resourceId: string,
+    //doNotAddRecommendation: true,
+    Categories: Category[],
+    SearchHint: string,
+	Actions: any[],
+	Triggers: any[],
+    Connectors: any[],
+    OperationManifest: any[],
+    UserVoiceMessage: string,
+    UserVoiceURL?: string,
+    environmentName: string,
+    environmentDescription: string,
+    operationKindDisplayText: { [kind: string]: string }
+}
 export enum Visibility {
 	Required = "required",
 	Important = "important",
@@ -389,3 +417,19 @@ const LOCALE_MAP = {
 };
 
 export { LOCALE_MAP };
+
+export enum WrapperEvents {
+    WrapperConfigErrorEvent = "MSWP.CONFIG_ERROR",
+    WrapperConfigLoadEvent = "MSWP.CONFIG_LOAD",
+    DesignerIframeLoadEvent = "MSWP.IFRAME_LOAD_DONE",
+    DesignerControlInitEvent = "MSWP.DESIGNER_CONTROL_INIT",
+    DesignerControlInitErrorEvent = "MSWP.DESIGNER_CONTROL_INIT_ERROR",
+    DesignerControlExecutionEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_EVENT",
+    DesignerControlExecutionErrorEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_ERROR"
+};
+
+export enum RequiredCDSOpersForInit {
+    DesignerConfig = "0",
+    Templates = "1",
+    WorkflowDefinition = "2"
+};

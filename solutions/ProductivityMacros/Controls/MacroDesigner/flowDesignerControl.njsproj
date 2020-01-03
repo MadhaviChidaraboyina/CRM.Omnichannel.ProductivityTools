@@ -53,6 +53,7 @@
     <DesignerControlBlobFolderPath>$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Blobs\MacroDesigner</DesignerControlBlobFolderPath>
   </PropertyGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\scripts\LogicAppDesigner\DesignerDefinitions.ts"/>
     <TypeScriptCompile Include="src\scripts\appMon.tsx" />
     <TypeScriptCompile Include="src\scripts\DesignerDefinitions.ts">
       <SubType>Code</SubType>
@@ -62,21 +63,26 @@
     <TypeScriptCompile Include="src\scripts\sharedDefines.ts" />
     <TypeScriptCompile Include="src\scripts\hostService.ts" />
     <TypeScriptCompile Include="src\scripts\macroDesigner.tsx" />
-    <TypeScriptCompile Include="src\scripts\oAuthService.ts">
+    <TypeScriptCompile Include="src\scripts\oAuthService.ts"/>
+    <TypeScriptCompile Include="src\scripts\LogicAppDesigner\hostService.ts" />
+    <TypeScriptCompile Include="src\scripts\LogicAppDesigner\agentScriptDesigner.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="src\scripts\workflowDefinitions.ts">
+    <TypeScriptCompile Include="src\scripts\workflowDefinitions.ts"/>
+    <TypeScriptCompile Include="src\scripts\LogicAppDesigner\workflowDefinitions.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="test_server.js" />
     <Content Include="src\Html\auth.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\Html\iframedesigner.html">
+    <Content Include="src\Html\iframedesigner.html"/>
+    <Content Include="src\Html\iframeLogicappDesigner.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\Html\iframemonitor.html" />
     <Content Include="src\Html\macroDesigner.html" />
+    <Content Include="src\Html\agentScriptDesigner.html" />
     <Content Include="src\Html\macroMonitor.html" />
     <Content Include="test_index.html">
       <SubType>Code</SubType>
@@ -84,7 +90,8 @@
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <TypeScriptCompile Include="src\scripts\app.tsx">
+    <TypeScriptCompile Include="src\scripts\app.tsx"/>
+    <TypeScriptCompile Include="src\scripts\LogicAppDesigner\Logicapp.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Typings\XrmClientApi.d.ts" />
@@ -96,12 +103,15 @@
     <Folder Include="src\" />
     <Folder Include="src\Html\" />
     <Folder Include="src\scripts\" />
+    <Folder Include="src\scripts\LogicAppDesigner\"/>
     <Folder Include="Typings\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="external\prototype.js" />
     <Compile Include="webpack-hostControl.js" />
-    <Compile Include="webpack-designerControl.js">
+    <Compile Include="webpack-designerControl.js"/>
+    <Compile Include="webpack-agentScriptHostControl.js" />
+    <Compile Include="webpack-logicappDesignerControl.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="webpack-hostMonitorControl.js" />
@@ -140,6 +150,8 @@
   <Target Name="Build">
     <Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(DesignerControlOutputPath) --output-path $(DesignerControlOutputPath) --context $(ContextDirectory) --config webpack-designerControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
     <Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(HostControlOutputPath) --output-path $(HostControlOutputPath) --context $(ContextDirectory) --config webpack-hostControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
+    <Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(DesignerControlOutputPath) --output-path $(DesignerControlOutputPath) --context $(ContextDirectory) --config webpack-logicappDesignerControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
+    <Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(HostControlOutputPath) --output-path $(HostControlOutputPath) --context $(ContextDirectory) --config webpack-agentScriptHostControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />    
 		<Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(DesignerControlOutputPath) --output-path $(DesignerControlOutputPath) --context $(ContextDirectory) --config webpack-monitorControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
 		<Exec Command="$(ContextDirectory)\node_modules\.bin\webpack --env.OUTPUT_PATH=$(HostControlOutputPath) --output-path $(HostControlOutputPath) --context $(ContextDirectory) --config webpack-hostMonitorControl.js --mode $(WebpackMode)" WorkingDirectory="$(ContextDirectory)" />
 	</Target>

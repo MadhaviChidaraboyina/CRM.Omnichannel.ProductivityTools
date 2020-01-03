@@ -120,6 +120,21 @@ namespace Microsoft.Macros.Utility {
 		}
 	}
 
+		// Handler Function for the MDD OnLoad to pass the RecordID from MDD to the IFrame Control
+		export function agentScriptDialogOnLoadHandler(eventContext: any) {
+			let formContext = eventContext.getFormContext();
+			let designerControl = formContext.getControl(Microsoft.Macros.Constants.DesignerID);
+			let appUrl = new URL(Xrm.Utility.getGlobalContext().getCurrentAppUrl());
+			let iframeUrl = appUrl.origin + "/WebResources/MacroDesigner/msdyn_ProductivityMacros_agentScriptDesigner.html";
+			let input = formContext.data.attributes.getByName(Microsoft.Macros.Constants.RecordIdParam).getValue();
+			if (input == null) {
+				designerControl.setSrc(iframeUrl);
+			}
+			else {
+				designerControl.setSrc(iframeUrl+ "?id=" + input);
+			}
+		}
+
 	export function monitorDialogOnLoadHandler(eventContext: any) {
 		let formContext = eventContext.getFormContext();
 		let monitorControl = formContext.getControl(Microsoft.Macros.Constants.MonitorID);

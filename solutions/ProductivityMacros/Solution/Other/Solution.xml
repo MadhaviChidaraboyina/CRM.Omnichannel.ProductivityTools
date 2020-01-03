@@ -91,6 +91,7 @@
       <RootComponent type="1" schemaName="workflow" behavior="0" />
 			<RootComponent type="1" schemaName="msdyn_macrosession" behavior="0" />
       <RootComponent type="60" id="{2e40dd90-2824-4524-b223-947052798e72}" behavior="0" />
+      <RootComponent type="60" id="{6dda9163-2590-4ecc-b6f2-55363e629054}" behavior="0" />
 			<RootComponent type="60" id="{2e40dd90-2824-4524-b223-947052798e73}" behavior="0" />
       <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1025.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1026.resx" behavior="0" />
@@ -141,6 +142,8 @@
 			<RootComponent type="61" schemaName="CRMClients/msdyn_LogicAppExecutor.js" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroDesigner.bundle.js" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroDesigner.html" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_agentScriptDesigner.bundle.js" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_agentScriptDesigner.html" behavior="0" />
 			<RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroMonitor.bundle.js" behavior="0" />
 			<RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroMonitor.html" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_clone_record.svg" behavior="0" />
@@ -162,6 +165,9 @@
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_update_record.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_spinner.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/AgentScriptDesigner/msdyn_ProductivityMacros_setDefaultAction.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/AgentScriptDesigner/msdyn_ProductivityMacros_manualTrigger.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/AgentScriptDesigner/msdyn_ProductivityMacros_agentConnector.svg" behavior="0" />
       <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
       <RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />
     </RootComponents>
