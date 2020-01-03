@@ -1196,4 +1196,16 @@
     </records>
     <m2mrelationships />
   </entity>
+  <entity name="msdyn_productivitypaneconfiguration" displayname="Productivity pane configuration">
+    <records>
+      <record id="482d09b0-d327-ea11-a810-000d3a1026fe">
+        <field name="msdyn_productivitypaneconfigurationid" value="482d09b0-d327-ea11-a810-000d3a1026fe" />
+        <field name="msdyn_productivitypanemode" value="True" />
+        <field name="msdyn_productivitypanestate" value="True" />
+        <field name="msdyn_name" value="Productivity pane configuration" />
+        <field name="msdyn_applicationname" value="msdyn_OCAPP" />
+      </record>
+    </records>
+    <m2mrelationships />
+  </entity>
 </entities>

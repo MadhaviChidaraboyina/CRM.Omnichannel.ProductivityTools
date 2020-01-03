@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/crm/2011/tools/pluginregistration">
+  <Solutions>
+    <Solution Assembly="Microsoft.Dynamics.ProductivityPaneControl.Plugins.dll" Id="DF569CD1-E10A-4280-AC58-8074920E8983" IsolationMode="None" SourceType="Database">
+      <PluginTypes />
+    </Solution>
+  </Solutions>
+  <XamlWorkflows />
+</Register>

@@ -8,7 +8,9 @@
 		<ProjectToBuild Include="Agentscript\dirs.proj" />
                 <ProjectToBuild Include="SmartAssist\dirs.proj" />
 		<ProjectToBuild Include="OmnichannelProductivityToolsSettings\dirs.proj" />
+		<ProjectToBuild Include="ProductivityPaneControl\dirs.proj" />
 		<ProjectToBuild Include="ProductivityTools\dirs.proj" />
+		
 	</ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />

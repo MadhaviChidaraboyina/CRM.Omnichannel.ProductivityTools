@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml>
+  <CustomActions>
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_productivitypaneconfiguration.Activate.Hide" Location="Mscrm.Form.msdyn_productivitypaneconfiguration.Activate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_productivitypaneconfiguration.Deactivate.Hide" Location="Mscrm.Form.msdyn_productivitypaneconfiguration.Deactivate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_productivitypaneconfiguration.Delete.Hide" Location="Mscrm.Form.msdyn_productivitypaneconfiguration.Delete" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_productivitypaneconfiguration.Flows.RefreshCommandBar.Hide" Location="Mscrm.Form.msdyn_productivitypaneconfiguration.Flows.RefreshCommandBar" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_productivitypaneconfiguration.NewRecord.Hide" Location="Mscrm.Form.msdyn_productivitypaneconfiguration.NewRecord" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_productivitypaneconfiguration.NewRecordForBPFEntity.Hide" Location="Mscrm.Form.msdyn_productivitypaneconfiguration.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_productivitypaneconfiguration.Reports.Hide" Location="Mscrm.Form.msdyn_productivitypaneconfiguration.Reports" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_productivitypaneconfiguration.SaveAndNew.Hide" Location="Mscrm.Form.msdyn_productivitypaneconfiguration.SaveAndNew" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_productivitypaneconfiguration.SendSelected.Hide" Location="Mscrm.Form.msdyn_productivitypaneconfiguration.SendSelected" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.Form.msdyn_productivitypaneconfiguration.WordTemplate.Hide" Location="Mscrm.Form.msdyn_productivitypaneconfiguration.WordTemplate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.Activate.Hide" Location="Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.Activate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.BulkDelete.Hide" Location="Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.BulkDelete" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.Deactivate.Hide" Location="Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.Deactivate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.Delete.Hide" Location="Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.Delete" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.DeleteMenu.Hide" Location="Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.DeleteMenu" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.Flows.RefreshCommandBar.Hide" Location="Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.Flows.RefreshCommandBar" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.NewRecord.Hide" Location="Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.NewRecord" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.NewRecordForBPFEntity.Hide" Location="Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.Send.Hide" Location="Mscrm.HomepageGrid.msdyn_productivitypaneconfiguration.Send" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.Activate.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.Activate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.AddExistingAssoc.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.AddExistingAssoc" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.AddExistingStandard.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.AddExistingStandard" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.AddNewStandard.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.AddNewStandard" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.BulkDelete.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.BulkDelete" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.Deactivate.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.Deactivate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.Delete.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.Delete" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.DocumentTemplate.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.DocumentTemplate" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.ExportToExcel.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.ExportToExcel" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.NewRecord.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.NewRecord" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.Remove.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.Remove" />
+    <HideCustomAction HideActionId="msdyn.Mscrm.SubGrid.msdyn_productivitypaneconfiguration.RunReport.Hide" Location="Mscrm.SubGrid.msdyn_productivitypaneconfiguration.RunReport" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions />
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

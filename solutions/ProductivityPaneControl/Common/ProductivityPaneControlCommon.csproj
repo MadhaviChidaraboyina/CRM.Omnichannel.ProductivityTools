@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{14D5A07C-BF4C-4CAF-AA28-ACD97221C2EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Dynamics.ProductivityPaneControl.Common</RootNamespace>
+    <AssemblyName>Microsoft.Dynamics.ProductivityPaneControl.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionNamePath>ProductivityPaneControl</SolutionNamePath>
+    <PluginResourceFolder>$(WSRoot)\solutions\$(SolutionNamePath)\Package\WebResources\$(SolutionNamePath)\PluginResources</PluginResourceFolder>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\build\config\mssharedlibsn1024.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>$(PKG_CRMSDK_COREASSEMBLIES)\lib\net462\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Dynamics.Solution.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>$(PKG_XRMAPP_SOLUTIONCOMMON)\$(SCPATH)\Microsoft.Dynamics.Solution.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>$(PKG_CRMSDK_COREASSEMBLIES)\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Localization\Labels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Labels.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Labels.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Microsoft.Dynamics.ProductivityPaneControl.Localization</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PluginResources Include="Localization\Labels.*-*.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\build\config\mssharedlibsn1024.snk">
+      <Link>mssharedlibsn1024.snk</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(PKG_STYLECOP)\build\StyleCop.MSBuild.Targets" Condition=" '$(EnableStyleCopCheck)' == 'true' " />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\PluginResources.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\BuildExtensions.targets" />
+  <Target Name="ValidateLabels" BeforeTargets="Compile">
+    <FindReplaceTextInFile Path="Localization\Labels.Designer.cs" FindWhat="global::System.Resources.ResourceManager" ReplaceWith="Microsoft.Dynamics.Solution.Common.PluginResourceManager" />
+    <FindReplaceTextInFile Path="Localization\Labels.Designer.cs" FindWhat="resourceMan = temp;" ReplaceWith="resourceMan = temp; resourceMan.SolutionName = &quot;$(SolutionNamePath)&quot;;" MatchingProcess="Line" />
+    <LabelCheck LabelFile="Localization\Labels.resx" />
+  </Target>
+</Project>
