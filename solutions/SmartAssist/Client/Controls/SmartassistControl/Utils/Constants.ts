@@ -38,7 +38,6 @@ module MscrmControls.ProductivityPanel.Smartassist {
 		public static CDNEndpointFilter = "?$filter=name eq 'oc-cdn-endpoint'";
 		public static ConversatonControlOrigin = "ConversatonControlOrigin";
 		public static SmartAssistTitleClass = "smart-assist-title";
-		public static ConversationSessionMap = "conversationSessionMap";
 		public static CardStatesSuffix = "_cardStates";
 		public static CardCountSuffix = "_cardCount";
 		public static ConversationCardsSuffix = "_cards";
@@ -52,6 +51,10 @@ module MscrmControls.ProductivityPanel.Smartassist {
 		public static CardNewClass = "card-new";
 		public static CardAppliedClass = "card-applied";
 		public static CardErrorClass = "card-error";
+
+		public static EnterKeyCode = 13;
+		public static eventClick = "click";
+		public static eventKeyPress = "keypress";
 	}
 
 	/**

@@ -108,6 +108,7 @@ module MscrmControls.ProductivityPanel {
 		left: calc(100% - 26px);
 		position: absolute;
 		cursor: pointer;
+		tabindex: 0;
 	}
 </style>
 `;

@@ -11,8 +11,7 @@ module MscrmControls.ProductivityPanel.Smartassist {
 			this.conversationId = conversationId;
 		}
 
-		public PersistCard(card: any, sessionId: string): number {
-			this.setConversationSessionMapState(sessionId);
+		public PersistCard(card: any): number {
 			if (!localStorage.getItem(this.conversationId + Constants.ConversationCardsSuffix)) {
 				localStorage.setItem(this.conversationId + Constants.ConversationCardsSuffix, JSON.stringify({}));
 			}
@@ -34,15 +33,6 @@ module MscrmControls.ProductivityPanel.Smartassist {
 			let cards = JSON.parse(localStorage.getItem(this.conversationId + Constants.ConversationCardsSuffix));
 			delete cards[cardId];
 			localStorage.setItem(this.conversationId + Constants.ConversationCardsSuffix, JSON.stringify(cards));
-		}
-
-		private setConversationSessionMapState(sessionId: string) {
-			if (!localStorage.getItem(Constants.ConversationSessionMap)) {
-				localStorage.setItem(Constants.ConversationSessionMap, JSON.stringify({}));
-			}
-			let conversationSessionMap = JSON.parse(localStorage.getItem(Constants.ConversationSessionMap));
-			conversationSessionMap[sessionId] = this.conversationId;
-			localStorage.setItem(Constants.ConversationSessionMap, JSON.stringify(conversationSessionMap));
 		}
 
 		private renewCardCount(): number {

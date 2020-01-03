@@ -28,10 +28,10 @@ module MscrmControls.ProductivityPanel.Smartassist {
 			return SmartAssistManager.instance;
 		}
 
-		public RenderSmartAssistCard(conversationId, card, uiSessionId) {
+		public RenderSmartAssistCard(conversationId, card) {
 			let conversationState = ConversationStateManager.GetConversationState(conversationId);
 			//Get an ID for the card by saving it. Set the state of the card
-			let cardId = conversationState.PersistCard(card, uiSessionId);
+			let cardId = conversationState.PersistCard(card);
 
 			let currentConversationId = ConversationStateManager.GetCurrentConversation();
 
@@ -174,10 +174,16 @@ module MscrmControls.ProductivityPanel.Smartassist {
 		}
 
 		private BindDismissActionForCard(conversationId: string, cardId: number) {
-			$('#' + Constants.SmartAssistDismissCardButtonId + cardId).on("click", () => {
+			$('#' + Constants.SmartAssistDismissCardButtonId + cardId).on(Constants.eventClick, () => {
 				let id = Constants.SmartAssistCardContainerIdPrefix + cardId;
 				$("#" + id).remove();
 				ConversationStateManager.GetConversationState(conversationId).RemoveCard(cardId);
+			});
+			$('#' + Smartassist.Constants.SmartAssistDismissCardButtonId + cardId).on(Constants.eventKeyPress, function (args) {
+				var id = Smartassist.Constants.SmartAssistDismissCardButtonId + cardId;
+				if (args.keyCode == Constants.EnterKeyCode) {
+					$("#" + id).click();
+				}
 			});
 		}
 

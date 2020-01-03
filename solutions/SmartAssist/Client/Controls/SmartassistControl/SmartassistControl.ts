@@ -10,7 +10,7 @@ module MscrmControls.ProductivityPanel {
 	export class SmartassistControl implements Mscrm.StandardControl<IInputBag, IOutputBag> {
 
 		private smartAssistContainer: HTMLDivElement = null;
-		private static _context: Mscrm.ControlData<IInputBag> = null;
+		public static _context: Mscrm.ControlData<IInputBag> = null;
 		private telemetryReporter: Smartassist.TelemetryLogger
 		/**
 		 * Empty constructor.
@@ -118,7 +118,9 @@ module MscrmControls.ProductivityPanel {
 				let conversationId = messageMap.get("conversationId");
 				let uiSessionId = messageMap.get("uiSessionId");
 				let card = Smartassist.AdaptiveCardHelper.GetCardFromMessageContent(content);
-				Smartassist.SmartAssistManager.Instance.RenderSmartAssistCard(conversationId, card.content, uiSessionId);
+				if (conversationId && uiSessionId) {
+					Smartassist.SmartAssistManager.Instance.RenderSmartAssistCard(conversationId, card.content);
+				}
 			}
 		}
 
@@ -127,7 +129,6 @@ module MscrmControls.ProductivityPanel {
 			window.top.removeEventListener("message", this.receiveMessage, false);
 
 			let eventArgs: any = context.getEventArgs();
-			Smartassist.ConversationStateManager.RemoveSessionMapping(eventArgs.getInputArguments().sessionId);
 			let handlerId = localStorage.getItem(Smartassist.Constants.SessionCloseHandlerId);
 			Xrm.App.sessions.removeOnAfterSessionClose(handlerId);
 		}
