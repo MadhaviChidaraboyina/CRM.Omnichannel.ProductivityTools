@@ -161,6 +161,14 @@ namespace Microsoft.CIFramework.Internal {
 		}
 
 		try {
+			let logicAppExecutorScript = document.createElement("script");
+			logicAppExecutorScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_LogicAppExecutor.js";
+			document.getElementsByTagName("body")[0].appendChild(logicAppExecutorScript);
+		} catch (error) {
+			console.log("Failed to load LogicAppExecutor.js");
+		}
+
+		try {
 			let cifAnalyticsLibScript = document.createElement("script");
 			cifAnalyticsLibScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_CIFAnalytics_internal_library.js";
 			document.getElementsByTagName("body")[0].appendChild(cifAnalyticsLibScript);

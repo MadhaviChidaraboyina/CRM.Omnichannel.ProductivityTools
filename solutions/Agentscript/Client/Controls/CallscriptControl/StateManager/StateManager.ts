@@ -94,9 +94,22 @@ module MscrmControls.CallscriptControl {
 
 			dataManagerPromise.then(
 				(callscriptRecords: CallScript[]) => {
-					this.callscriptsForCurrentSession = callscriptRecords;
-					this.context.utils.requestRender();
-
+					let retrieveDefaultCallScriptPromise = this.dataManager.retrieveDefaultCallScript();
+					retrieveDefaultCallScriptPromise.then(
+						function (defaultCallScriptID: string) {
+							this.callscriptsForCurrentSession = callscriptRecords;
+							if (!this.context.utils.isNullOrUndefined(defaultCallScriptID)) {
+								this.updateCurrentCallScriptByID(defaultCallScriptID);
+							}
+							this.context.utils.requestRender();
+						}.bind(this),
+						function (errorMessage: string) {
+							//TODO : Show Error message 
+							this.callscriptsForCurrentSession = callscriptRecords;
+							this.context.utils.requestRender();
+						}.bind(this)
+					);							
+										
 					let eventParams = new EventParameters();
 					eventParams.addParameter("totalScripts", callscriptRecords.length.toString());
 					eventParams.addParameter("message", "Call script records retrieved for session");
@@ -213,6 +226,22 @@ module MscrmControls.CallscriptControl {
 		public updateCurrentCallScript(newCurrentScript: CallScript) {
 			for (let script of this.callscriptsForCurrentSession) {
 				if (script.id == newCurrentScript.id) {
+					script.isCurrent = true;
+				}
+				else {
+					script.isCurrent = false;
+				}
+			}
+		}
+
+		/**
+		 * Updates given call script as current call script for the session
+		 * In next re-render updated call script will be loaded
+		 * @param newCurrentScriptID new call script id to set as current script
+		 */
+		public updateCurrentCallScriptByID(newCurrentScriptID: string) {
+			for (let script of this.callscriptsForCurrentSession) {
+				if (script.id == newCurrentScriptID) {
 					script.isCurrent = true;
 				}
 				else {

@@ -161,6 +161,7 @@
     <Content Include="Other\Solution.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WebResources\CRMClients\msdyn_LogicAppExecutor.js.data.xml" />
     <Content Include="WebResources\Localization\ProductivityMacros_webresource_strings.1033.resx.data.xml" />
   </ItemGroup>
   <ItemGroup>

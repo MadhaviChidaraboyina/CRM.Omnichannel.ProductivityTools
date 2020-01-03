@@ -121,6 +121,7 @@ module MscrmControls.CallscriptControl {
 		public static InitialDataFetch = "InititalDataFetch";
 		public static StepsDataFetch = "StepsDataFetch";
 		public static CallscriptRecordFetch = "CallscriptRecordFetch";
+		public static RetrieveDefaultCallScript = "RetrieveDefaultCallScript";
 	}
 
 	/**

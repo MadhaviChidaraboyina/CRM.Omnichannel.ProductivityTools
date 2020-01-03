@@ -6,8 +6,7 @@ module MscrmControls.CallscriptControl
 {
 	'use strict';
 
-	export class DataManager
-	{
+	export class DataManager {
 		// Properties
 		private context: Mscrm.ControlData<IInputBag>;
 		private telemetryContext: string;
@@ -19,8 +18,7 @@ module MscrmControls.CallscriptControl
 		private isInitialDataFetchCompleted: boolean;
 
 		// Default constructor
-		constructor(context: Mscrm.ControlData<IInputBag>)
-		{
+		constructor(context: Mscrm.ControlData<IInputBag>) {
 			this.context = context;
 			this.telemetryContext = TelemetryComponents.DataManager;
 			this.telemetryLogger = new TelemetryLogger(context);
@@ -33,8 +31,7 @@ module MscrmControls.CallscriptControl
 		 * Retrieves initial data for call script control
 		 * It gets session template and then retrieves call scripts associated with it
 		 */
-		public retrieveInitialData(): Promise<CallScript[]>
-		{
+		public retrieveInitialData(): Promise<CallScript[]> {
 			return new Promise<CallScript[]>((resolve, reject) => {
 				let sessionTemplateId = this.cifUtil.getSessionTemplateId();
 
@@ -66,6 +63,71 @@ module MscrmControls.CallscriptControl
 				}
 			});
 		}
+
+		/**
+		 * Retrieves default call script 
+		 * It gets session template and then retrieves default script for it by executing logicAppExecutor
+		 */
+		public retrieveDefaultCallScript(): Promise<string> {
+			return new Promise<string>((resolve, reject) => {
+				let sessionTemplateId = this.cifUtil.getSessionTemplateId();
+				if (!this.context.utils.isNullOrUndefined(sessionTemplateId) && !this.context.utils.isNullOrEmptyString(sessionTemplateId)) {
+					var request = new XMLHttpRequest();
+					var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
+					var requestUrl = context.getClientUrl() + "/api/data/v9.0/msdyn_consoleapplicationsessiontemplates(" + sessionTemplateId + ")?$select=msdyn_enablebuildexpression,msdyn_expressiondata";
+					request.open('GET', requestUrl, false);
+					request.send(null);
+					if (request.status === 200) {
+						var response = JSON.parse(request.responseText);
+						if (response.msdyn_enablebuildexpression && !this.context.utils.isNullOrEmptyString(response.msdyn_expressiondata)) {
+							let retrieveDataPromise = Microsoft.LogicAppExecutor.ExecuteLogicApp(response.msdyn_expressiondata);
+							retrieveDataPromise.then(
+								function (callScriptID: string) {
+									let param = new EventParameters();
+									param.addParameter("sessionTemplateId", sessionTemplateId);
+									param.addParameter("defaultCallScriptId", callScriptID);
+									param.addParameter("scenario", "Default CallScript Id retrieved");
+									this.telemetryLogger.logSuccess(this.telemetryContext, DataManagerComponents.RetrieveDefaultCallScript, param);
+									resolve(callScriptID);
+								}.bind(this),
+								function (errorMessage: string) {
+									let errorParams = new EventParameters();
+									this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.RetrieveDefaultCallScript, errorMessage, errorParams);
+
+									//Reject the promise
+									reject(errorMessage);
+								}
+							);
+						}
+						else {
+							let param = new EventParameters();
+							param.addParameter("sessionTemplateId", sessionTemplateId);
+							param.addParameter("scenario", "build expression is Disabled");
+							this.telemetryLogger.logSuccess(this.telemetryContext, DataManagerComponents.RetrieveDefaultCallScript, param);
+							resolve(null);
+						}
+					}
+					else {
+						let errorMessage = "Failed to fetch expression details to retrieve default call script Id";
+						let errorParams = new EventParameters();
+						errorParams.addParameter("sessionTemplateId", sessionTemplateId);
+						this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.RetrieveDefaultCallScript, errorMessage, errorParams);
+
+						//Reject the promise
+						reject(errorMessage);
+					}
+				}
+				else {
+					let errorMessage = "Failed to retrieve session template Id";
+					let errorParam = new EventParameters();
+					this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.RetrieveDefaultCallScript, errorMessage, errorParam);
+
+					//Reject the promise
+					reject(errorMessage);
+				}
+			});
+		}
+
 
 		/**
 		 * Retrieves initial call script records associated with given session template id

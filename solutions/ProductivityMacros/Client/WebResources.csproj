@@ -23,6 +23,11 @@
     <Content Include="Constants.ts" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="Constants.ts" />
+    <TypeScriptCompile Include="CRMClients\LogicAppExecutor\Actions\IfAction.ts" />
+    <TypeScriptCompile Include="CRMClients\LogicAppExecutor\Actions\SetDefaultCallScriptAction.ts" />
+    <TypeScriptCompile Include="CRMClients\LogicAppExecutor\Interfaces.ts" />
+    <TypeScriptCompile Include="CRMClients\LogicAppExecutor\LogicAppExecutor.ts" />
+    <TypeScriptCompile Include="CRMClients\LogicAppExecutor\LogicAppExecutorUtils.ts" />
     <TypeScriptCompile Include="CRMClients\Models.ts" />
     <TypeScriptCompile Include="CRMClients\ProductivityMacroState.ts" />
     <TypeScriptCompile Include="CRMClients\ProductivityMacrosRunHistory.ts" />
@@ -65,6 +70,7 @@
       <Link>tsconfig\tsconfig.base.uciandclassicweb.json</Link>
     </None>
     <Content Include="CRMClients\tsconfig.json" />
+    <Content Include="CRMClients\LogicAppExecutor\tsconfig.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

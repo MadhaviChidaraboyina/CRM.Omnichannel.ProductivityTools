@@ -5,6 +5,8 @@
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="Constants.ts" />
 /// <reference path="../TelemetryHelper.ts" />
+/// <reference path="ProductivityMacrosWrapper.ts" />
+/// <reference path="MacroActionTemplatesInfra.ts" />
 
 /** @internal */
 namespace Microsoft.ProductivityMacros.Internal {

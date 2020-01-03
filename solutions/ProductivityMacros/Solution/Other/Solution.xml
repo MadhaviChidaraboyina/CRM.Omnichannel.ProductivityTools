@@ -138,6 +138,7 @@
       <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.3082.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.3098.resx" behavior="0" />
       <RootComponent type="61" schemaName="CRMClients/msdyn_ProductivityMacros_internal_library.js" behavior="0" />
+			<RootComponent type="61" schemaName="CRMClients/msdyn_LogicAppExecutor.js" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroDesigner.bundle.js" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroDesigner.html" behavior="0" />
 			<RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroMonitor.bundle.js" behavior="0" />
