@@ -180,7 +180,7 @@ module MscrmControls.ProductivityPanel.Smartassist {
 				ConversationStateManager.GetConversationState(conversationId).RemoveCard(cardId);
 			});
 			$('#' + Smartassist.Constants.SmartAssistDismissCardButtonId + cardId).on(Constants.eventKeyPress, function (args) {
-				var id = Smartassist.Constants.SmartAssistDismissCardButtonId + cardId;
+				let id = Smartassist.Constants.SmartAssistDismissCardButtonId + cardId;
 				if (args.keyCode == Constants.EnterKeyCode) {
 					$("#" + id).click();
 				}
