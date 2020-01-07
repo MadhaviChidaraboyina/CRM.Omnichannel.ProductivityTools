@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link
+      href="/uclient/resources/styles/Styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      .notification-icon::before {
+        content: "\E783";
+        color: #3b79b7;
+      }
+      body {
+        background-color: #efefef !important;
+        font-family: "Segoe UI", sans-serif;
+        color: #333333;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="padding: 0.35em">
+      <span class="symbolFont notification-icon"></span>
+      <span id="message">Information Message.</span>
+    </div>
+  </body>
+  <script>
+    function getQueryStringObject() {
+      var obj = {};
+
+      var sortedQueryString = decodeURIComponent(
+        location.search.replace("?data=", "")
+      );
+      if (sortedQueryString) {
+        sortedQueryString.split("&").forEach((v, i) => {
+          var splitString = v.split("=");
+          obj[splitString[0]] = splitString[1];
+        });
+      }
+      return obj;
+    }
+
+    var messageKey = getQueryStringObject().messageKey;
+    if (messageKey) {
+      var localizedMsg = "";
+      try {
+        localizedMsg = window.top
+          .getCurrentXrm()
+          .Utility.getResourceString(
+            "Localization/CIF_webresource_strings",
+            messageKey
+          );
+      } catch (e) {}
+      document.getElementById("message").innerHTML = localizedMsg || messageKey;
+    }
+  </script>
+</html>

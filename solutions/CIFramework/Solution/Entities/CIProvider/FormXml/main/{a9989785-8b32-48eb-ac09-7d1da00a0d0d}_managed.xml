@@ -1,173 +1,207 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <forms>
-  <systemform>
-    <formid>{a9989785-8b32-48eb-ac09-7d1da00a0d0d}</formid>
-    <IntroducedVersion>1.0</IntroducedVersion>
-    <FormPresentation>1</FormPresentation>
-    <FormActivationState>1</FormActivationState>
-    <form shownavigationbar="false">
-      <tabs>
-        <tab verticallayout="true" id="{2190ec7e-bb48-4408-aa64-6008072a8a39}" IsUserDefined="1" name="{2190ec7e-bb48-4408-aa64-6008072a8a39}" locklevel="0" expanded="true" showlabel="true">
-          <labels>
-            <label description="Channel Provider Configuration" languagecode="1033" />
-          </labels>
-          <columns>
-            <column width="34%">
-              <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{700edb12-0fa4-4b08-aed3-208619a35f0e}">
-                  <rows>
-                    <row>
-                      <cell id="{8c621a7b-fd3a-4d1b-81a2-28795ccc836b}">
-                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{07478256-16a3-4608-6c09-e5a84d0215e3}" showlabel="true" locklevel="0">
-                        <control id="msdyn_label" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_label" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{910edd35-4cd4-4b0a-9e21-b54e9e84225a}" showlabel="true" locklevel="0">
-                        <control id="msdyn_landingurl" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="msdyn_landingurl" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{35765a1a-2106-2a1b-79a4-38eb1ab76b66}" showlabel="true" locklevel="0">
-                        <control id="msdyn_clicktoact" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_clicktoact" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{c0e04a8e-e0a8-9cb4-3563-cb92ba28e129}" showlabel="true" locklevel="0">
-                        <control id="msdyn_sortorder" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="msdyn_sortorder" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{2b3d7a63-0066-41d0-939c-12bad22bb227}" showlabel="true" locklevel="0">
-                        <control id="msdyn_ciproviderapiversion" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="msdyn_ciproviderapiversion" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{d6aa4662-c329-37e8-ec51-1e8572e277ae}" showlabel="true" locklevel="0">
-                        <control id="msdyn_trusteddomain" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="msdyn_trusteddomain" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{54F26BB7-0D52-4737-8863-C78AC77C8A80}" showlabel="true" locklevel="0">
-                        <control id="msdyn_customparams" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="msdyn_customparams" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{f2953c8e-a3cb-400c-8aac-e7eed3ffb2b7}" showlabel="true" locklevel="0">
-                        <control id="msdyn_enableanalytics" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_enableanalytics" disabled="false" />
-                      </cell>
-                    </row>
-                  </rows>
-                </section>
-              </sections>
-            </column>
-            <column width="33%">
-              <sections>
-                <section name="{2190ec7e-bb48-4408-aa64-6008072a8a39}_section_3" showlabel="true" showbar="false" locklevel="0" id="{51ee0bc8-2a26-7a49-664d-8077d77d456a}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
-                  <labels>
-                    <label description="Select Unified Interface Apps for the Channel" languagecode="1033" />
-                  </labels>
-                  <rows>
-                    <row>
-                      <cell id="{e29618b5-d6b9-b4e5-6788-bdd56cde06ba}" showlabel="false" locklevel="0" rowspan="5">
-                        <control id="msdyn_appselector" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{fd43fdae-9d69-4434-958d-44c949989a55}" datafieldname="msdyn_appselector" disabled="false" />
-                      </cell>
-                    </row>
-                  </rows>
-                </section>
-              </sections>
-            </column>
-            <column width="33%">
-              <sections>
-                <section name="{c8623d8d-affd-453d-8cae-3da82648ccf0}_section_4" showlabel="true" showbar="false" locklevel="0" id="{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
-                  <labels>
-                    <label description="Select the Roles for the Channel" languagecode="1033" />
-                  </labels>
-                  <rows>
-                    <row>
-                      <cell id="{8ae18add-cb7e-45c5-9174-7e7952e96cc4}" showlabel="false" locklevel="0" rowspan="5">
-                        <control id="msdyn_roleselector" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{e811e8aa-73cc-4f61-ac91-c9a9082ce9d5}" datafieldname="msdyn_roleselector" disabled="false" />
-                      </cell>
-                    </row>
-                  </rows>
-                </section>
-              </sections>
-            </column>
-          </columns>
-        </tab>
-      </tabs>
-      <Navigation>
-        <NavBar/>
-      </Navigation>
-      <controlDescriptions>
-        <controlDescription forControl="{fd43fdae-9d69-4434-958d-44c949989a55}">
-          <customControl formFactor="2" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
-            <parameters>
-              <elementUniqueNames>msdyn_appselector</elementUniqueNames>
-            </parameters>
-          </customControl>
-          <customControl formFactor="0" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
-            <parameters>
-              <elementUniqueNames>msdyn_appselector</elementUniqueNames>
-            </parameters>
-          </customControl>
-          <customControl formFactor="1" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
-            <parameters>
-              <elementUniqueNames>msdyn_appselector</elementUniqueNames>
-            </parameters>
-          </customControl>
-        </controlDescription>
-        <controlDescription forControl="{e811e8aa-73cc-4f61-ac91-c9a9082ce9d5}">
-          <customControl formFactor="2" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
-            <parameters>
-              <elementUniqueNames>msdyn_roleselector</elementUniqueNames>
-            </parameters>
-          </customControl>
-          <customControl formFactor="0" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
-            <parameters>
-              <elementUniqueNames>msdyn_roleselector</elementUniqueNames>
-            </parameters>
-          </customControl>
-          <customControl formFactor="1" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
-            <parameters>
-              <elementUniqueNames>msdyn_roleselector</elementUniqueNames>
-            </parameters>
-          </customControl>
-        </controlDescription>
-      </controlDescriptions>
-      <formLibraries>
-        <Library name="cc_MscrmControls.Service.CIProvider.CustomMultiSelectControl/CIProviderCustomMultiSelectControl.js" libraryUniqueId="{94c0045d-9c16-2eea-b68d-dae8c4343d31}" />
-        <Library name="EventHandlersLib/msdyn_EventHandlersLib.js" libraryUniqueId="{04CE1A39-B30B-427A-84B8-E2307C3DEB73}" />
-      </formLibraries>
-      <events>
-        <event name="onsave" application="false" active="false">
-          <Handlers>
-            <Handler functionName="MscrmControls.Service.CIProvider.CustomMultiSelectControl.UpdateAppModuleBase" libraryName="cc_MscrmControls.Service.CIProvider.CustomMultiSelectControl/CIProviderCustomMultiSelectControl.js" handlerUniqueId="{2e74ee1a-7e78-4345-67a7-82828a407c9e}" enabled="true" parameters="Xrm.Page.getAttribute(&quot;msdyn_appselector&quot;).getValue()" passExecutionContext="true" />
-          </Handlers>
-        </event>
-        <event name="onchange" application="false" active="false" attribute="msdyn_landingurl">
-          <Handlers>
-            <Handler functionName="CIFramework.wildcardCheckOnLandingUrl" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{F746DF43-A28B-405B-9F21-D8A8C9D2DF75}" enabled="true" parameters="" passExecutionContext="false"></Handler>
-          </Handlers>
-        </event>
-        <event name="onchange" application="false" active="false" attribute="msdyn_trusteddomain">
-          <Handlers>
-            <Handler functionName="CIFramework.wildcardCheckOnTrustedDomain" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{5AD9F61C-477E-424B-8640-EA55E8155506}" enabled="true" parameters="" passExecutionContext="false"></Handler>
-          </Handlers>
-        </event>
-      </events>
-    </form>
-    <IsCustomizable>0</IsCustomizable>
-    <CanBeDeleted>1</CanBeDeleted>
-    <LocalizedNames>
-      <LocalizedName description="Information" languagecode="1033" />
-    </LocalizedNames>
-    <Descriptions>
-      <Description description="A form for this entity." languagecode="1033" />
-    </Descriptions>
-  </systemform>
+	<systemform>
+		<formid>{a9989785-8b32-48eb-ac09-7d1da00a0d0d}</formid>
+		<IntroducedVersion>1.0</IntroducedVersion>
+		<FormPresentation>1</FormPresentation>
+		<FormActivationState>1</FormActivationState>
+		<form shownavigationbar="false">
+			<tabs>
+				<tab verticallayout="true" id="{2190ec7e-bb48-4408-aa64-6008072a8a39}" IsUserDefined="1" name="{2190ec7e-bb48-4408-aa64-6008072a8a39}" locklevel="0" expanded="true" showlabel="true">
+					<labels>
+						<label description="Channel Provider Configuration" languagecode="1033" />
+					</labels>
+					<columns>
+						<column width="34%">
+							<sections>
+								<section showlabel="false" showbar="false" IsUserDefined="0" id="{700edb12-0fa4-4b08-aed3-208619a35f0e}">
+									<rows>
+										<row>
+											<cell id="{338e3129-6c43-b66c-7c52-483bb867d262}" showlabel="false" colspan="1" auto="false" rowspan="1" visible="false">
+												<labels>
+													<label description="Info" languagecode="1033" />
+												</labels>
+												<control id="WebResource_msdyn_cifmessage" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+													<parameters>
+														<Url>msdyn_cifmessage.html</Url>
+														<Data>messageKey=V2_API_INFORMATION</Data>
+														<PassParameters>false</PassParameters>
+														<ShowOnMobileClient>false</ShowOnMobileClient>
+														<Security>false</Security>
+														<Scrolling>auto</Scrolling>
+														<Border>true</Border>
+														<WebResourceId>{C5268193-FF26-EA11-A810-000D3A0C3110}</WebResourceId>
+													</parameters>
+												</control>
+												<events>
+													<event name="onload" application="false">
+														<dependencies />
+													</event>
+												</events>
+											</cell>
+										</row>
+										<row>
+											<cell id="{8c621a7b-fd3a-4d1b-81a2-28795ccc836b}">
+												<control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{07478256-16a3-4608-6c09-e5a84d0215e3}" showlabel="true" locklevel="0">
+												<control id="msdyn_label" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_label" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{910edd35-4cd4-4b0a-9e21-b54e9e84225a}" showlabel="true" locklevel="0">
+												<control id="msdyn_landingurl" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="msdyn_landingurl" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{35765a1a-2106-2a1b-79a4-38eb1ab76b66}" showlabel="true" locklevel="0">
+												<control id="msdyn_clicktoact" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_clicktoact" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{c0e04a8e-e0a8-9cb4-3563-cb92ba28e129}" showlabel="true" locklevel="0">
+												<control id="msdyn_sortorder" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="msdyn_sortorder" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{2b3d7a63-0066-41d0-939c-12bad22bb227}" showlabel="true" locklevel="0">
+												<control id="msdyn_ciproviderapiversion" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="msdyn_ciproviderapiversion" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{d6aa4662-c329-37e8-ec51-1e8572e277ae}" showlabel="true" locklevel="0">
+												<control id="msdyn_trusteddomain" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="msdyn_trusteddomain" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{54F26BB7-0D52-4737-8863-C78AC77C8A80}" showlabel="true" locklevel="0">
+												<control id="msdyn_customparams" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="msdyn_customparams" disabled="false" />
+											</cell>
+										</row>
+										<row>
+											<cell id="{f2953c8e-a3cb-400c-8aac-e7eed3ffb2b7}" showlabel="true" locklevel="0">
+												<control id="msdyn_enableanalytics" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_enableanalytics" disabled="false" />
+											</cell>
+										</row>
+									</rows>
+								</section>
+							</sections>
+						</column>
+						<column width="33%">
+							<sections>
+								<section name="{2190ec7e-bb48-4408-aa64-6008072a8a39}_section_3" showlabel="true" showbar="false" locklevel="0" id="{51ee0bc8-2a26-7a49-664d-8077d77d456a}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+									<labels>
+										<label description="Select Unified Interface Apps for the Channel" languagecode="1033" />
+									</labels>
+									<rows>
+										<row>
+											<cell id="{e29618b5-d6b9-b4e5-6788-bdd56cde06ba}" showlabel="false" locklevel="0" rowspan="5">
+												<control id="msdyn_appselector" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{fd43fdae-9d69-4434-958d-44c949989a55}" datafieldname="msdyn_appselector" disabled="false" />
+											</cell>
+										</row>
+									</rows>
+								</section>
+							</sections>
+						</column>
+						<column width="33%">
+							<sections>
+								<section name="{c8623d8d-affd-453d-8cae-3da82648ccf0}_section_4" showlabel="true" showbar="false" locklevel="0" id="{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+									<labels>
+										<label description="Select the Roles for the Channel" languagecode="1033" />
+									</labels>
+									<rows>
+										<row>
+											<cell id="{8ae18add-cb7e-45c5-9174-7e7952e96cc4}" showlabel="false" locklevel="0" rowspan="5">
+												<control id="msdyn_roleselector" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{e811e8aa-73cc-4f61-ac91-c9a9082ce9d5}" datafieldname="msdyn_roleselector" disabled="false" />
+											</cell>
+										</row>
+									</rows>
+								</section>
+							</sections>
+						</column>
+					</columns>
+				</tab>
+			</tabs>
+			<Navigation>
+				<NavBar/>
+			</Navigation>
+			<controlDescriptions>
+				<controlDescription forControl="{fd43fdae-9d69-4434-958d-44c949989a55}">
+					<customControl formFactor="2" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
+						<parameters>
+							<elementUniqueNames>msdyn_appselector</elementUniqueNames>
+						</parameters>
+					</customControl>
+					<customControl formFactor="0" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
+						<parameters>
+							<elementUniqueNames>msdyn_appselector</elementUniqueNames>
+						</parameters>
+					</customControl>
+					<customControl formFactor="1" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
+						<parameters>
+							<elementUniqueNames>msdyn_appselector</elementUniqueNames>
+						</parameters>
+					</customControl>
+				</controlDescription>
+				<controlDescription forControl="{e811e8aa-73cc-4f61-ac91-c9a9082ce9d5}">
+					<customControl formFactor="2" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
+						<parameters>
+							<elementUniqueNames>msdyn_roleselector</elementUniqueNames>
+						</parameters>
+					</customControl>
+					<customControl formFactor="0" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
+						<parameters>
+							<elementUniqueNames>msdyn_roleselector</elementUniqueNames>
+						</parameters>
+					</customControl>
+					<customControl formFactor="1" name="MscrmControls.Service.CIProvider.CustomMultiSelectControl">
+						<parameters>
+							<elementUniqueNames>msdyn_roleselector</elementUniqueNames>
+						</parameters>
+					</customControl>
+				</controlDescription>
+			</controlDescriptions>
+			<formLibraries>
+				<Library name="cc_MscrmControls.Service.CIProvider.CustomMultiSelectControl/CIProviderCustomMultiSelectControl.js" libraryUniqueId="{94c0045d-9c16-2eea-b68d-dae8c4343d31}" />
+				<Library name="EventHandlersLib/msdyn_EventHandlersLib.js" libraryUniqueId="{04CE1A39-B30B-427A-84B8-E2307C3DEB73}" />
+			</formLibraries>
+			<events>
+				<event name="onsave" application="false" active="false">
+					<Handlers>
+						<Handler functionName="MscrmControls.Service.CIProvider.CustomMultiSelectControl.UpdateAppModuleBase" libraryName="cc_MscrmControls.Service.CIProvider.CustomMultiSelectControl/CIProviderCustomMultiSelectControl.js" handlerUniqueId="{2e74ee1a-7e78-4345-67a7-82828a407c9e}" enabled="true" parameters="Xrm.Page.getAttribute(&quot;msdyn_appselector&quot;).getValue()" passExecutionContext="true" />
+					</Handlers>
+				</event>
+				<event name="onchange" application="false" active="false" attribute="msdyn_landingurl">
+					<Handlers>
+						<Handler functionName="CIFramework.wildcardCheckOnLandingUrl" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{F746DF43-A28B-405B-9F21-D8A8C9D2DF75}" enabled="true" parameters="" passExecutionContext="false"></Handler>
+					</Handlers>
+				</event>
+				<event name="onchange" application="false" active="false" attribute="msdyn_trusteddomain">
+					<Handlers>
+						<Handler functionName="CIFramework.wildcardCheckOnTrustedDomain" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{5AD9F61C-477E-424B-8640-EA55E8155506}" enabled="true" parameters="" passExecutionContext="false"></Handler>
+					</Handlers>
+				</event>
+				<event name="onchange" application="false" active="false" attribute="msdyn_ciproviderapiversion">
+					<Handlers>
+						<Handler functionName="CIFramework.executeCustomCommand" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{02290750-8489-a933-0282-85370d2c7d17}" enabled="true" parameters="{&quot;targets&quot;:[{&quot;type&quot;:&quot;control&quot;,&quot;name&quot;:&quot;WebResource_msdyn_cifmessage&quot;},{&quot;type&quot;:&quot;attribute&quot;,&quot;name&quot;:&quot;msdyn_ciproviderapiversion&quot;}],&quot;commandText&quot;:&quot;targets[0].setVisible(targets[1].getValue()==1)&quot;}" passExecutionContext="false" />
+					</Handlers>
+				</event>
+				<event name="onload" application="false" active="false">
+					<Handlers>
+						<Handler functionName="CIFramework.executeCustomCommand" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{35b557e9-a36a-5dda-5d68-cb9841c3e37d}" enabled="true" parameters="{&quot;targets&quot;:[{&quot;type&quot;:&quot;control&quot;,&quot;name&quot;:&quot;WebResource_msdyn_cifmessage&quot;},{&quot;type&quot;:&quot;attribute&quot;,&quot;name&quot;:&quot;msdyn_ciproviderapiversion&quot;}],&quot;commandText&quot;:&quot;targets[0].setVisible(targets[1].getValue()==1)&quot;}" passExecutionContext="false" />
+					</Handlers>
+				</event>
+			</events>
+		</form>
+		<IsCustomizable>0</IsCustomizable>
+		<CanBeDeleted>1</CanBeDeleted>
+		<LocalizedNames>
+			<LocalizedName description="Information" languagecode="1033" />
+		</LocalizedNames>
+		<Descriptions>
+			<Description description="A form for this entity." languagecode="1033" />
+		</Descriptions>
+	</systemform>
 </forms>

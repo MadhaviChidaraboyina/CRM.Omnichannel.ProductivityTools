@@ -183,6 +183,7 @@
 			<RootComponent type="61" schemaName="widgets_containerStyle.css" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_notificationCss.css" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_ExternalWebPageContainer.html" behavior ="0"/>
+			<RootComponent type="61" schemaName="msdyn_cifmessage.html" behavior="0" />
 			<RootComponent type="61" schemaName="Macros/msdyn_ProductivityMacros_close_all_other_session.svg" behavior="0" />
 			<RootComponent type="61" schemaName="Macros/msdyn_ProductivityMacros_close_session.svg" behavior="0" />
 			<RootComponent type="61" schemaName="Macros/msdyn_ProductivityMacros_focus_tab.svg" behavior="0" />

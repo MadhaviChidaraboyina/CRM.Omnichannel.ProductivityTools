@@ -64,6 +64,13 @@ module MscrmControls.Service.CIProvider {
 			this.currentSelectedElements = [];
 			this.initParamsFromContext(context);
 			this.getOptionsList();
+			if (this.fieldName == CustomMultiSelectorConfig.AppSelectorFieldName) {
+				const apiVersionAttr=Xrm.Page.getAttribute("msdyn_ciproviderapiversion");
+				if(apiVersionAttr)
+				{ 
+					apiVersionAttr.addOnChange(this.getAppList.bind(this));
+				}
+			}	
 		}
 
 		private initParamsFromContext(context: Mscrm.ControlData<IConfigControlInputBag>): void {
@@ -93,11 +100,20 @@ module MscrmControls.Service.CIProvider {
 		}
 
 		public getAppList(): void {
-
-			var queryParam = "(clienttype eq 4)";
-			var query = "?$select=name,appmoduleid,uniquename,eventhandlers,navigationtype&$filter=" + queryParam;
+			const queryParams = ["(clienttype eq 4)"];
+			const apiVersionAttr=Xrm.Page.getAttribute("msdyn_ciproviderapiversion");
+			if(apiVersionAttr)
+			{ 
+				if(apiVersionAttr.getValue()===0)
+				{
+					queryParams.push("(navigationtype eq 0)");
+				}
+			}
+			
+			var query = "?$select=name,appmoduleid,uniquename,eventhandlers,navigationtype&$filter=" + queryParams.join("and");
 			this.context.webAPI.retrieveMultipleRecords("appmodule", query).then(
 				(data: any) => {
+					this.elementList.length=0;
 						//To-Do - Add Telemetry
 					for (let app of data.entities) {
 						console.log(app);

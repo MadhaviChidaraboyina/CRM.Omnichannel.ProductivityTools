@@ -269,4 +269,8 @@
     <value>Start adding notes</value>
     <comment>Text for assisting user for notes.</comment>
   </data>
+  <data name="V2_API_INFORMATION" xml:space="preserve">
+    <value>Dynamics 365 Channel Integration Framework version 2.0 supports only Telephony channels.</value>
+    <comment>V2 api information message</comment>
+  </data>
 </root>
