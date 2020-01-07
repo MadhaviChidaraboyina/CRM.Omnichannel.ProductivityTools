@@ -8,7 +8,7 @@ namespace Microsoft.CIFramework.Internal
 	declare var Xrm: any;
 	declare var defaultLogger: any;
 	let prodIngestionKey = "0cd345da5c484bff8b75c696a3ac2159-3a768593-5759-4630-a59e-a75af2a7bf20-6631";
-	let devIngestionKey = "d129926264ad4dcc891eaf004fb351de-9bb27fd5-7e89-42a5-960c-c397c94ce2af-7153";
+	let devIngestionKey = "39f156fe0f00465288756928db675fe0-fef5dc1c-14bd-4361-9259-5f10f8ef5040-7209";
 
 	let GERMANY_ENDPOINT = "https://de.pipe.aria.microsoft.com/Collector/3.0/";
 	let GCCH_ENDPOINT = "https://tb.pipe.aria.microsoft.com/Collector/3.0/";
