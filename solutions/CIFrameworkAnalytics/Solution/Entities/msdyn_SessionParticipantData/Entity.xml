@@ -4,10 +4,10 @@
   <EntityInfo>
     <entity Name="msdyn_SessionParticipantData">
       <LocalizedNames>
-        <LocalizedName description="Session Participant Data" languagecode="1033" />
+        <LocalizedName description="Session Participant Data (Deprecated)" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Session Participants Data" languagecode="1033" />
+        <LocalizedCollectionName description="Session Participants Data (Deprecated)" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="" languagecode="1033" />

@@ -4,10 +4,10 @@
   <EntityInfo>
     <entity Name="msdyn_conversationdata">
       <LocalizedNames>
-        <LocalizedName description="Conversation Data" languagecode="1033" />
+        <LocalizedName description="Conversation Data (Deprecated)" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Conversations Data" languagecode="1033" />
+        <LocalizedCollectionName description="Conversations Data (Deprecated)" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="Primary entity for a conversation" languagecode="1033" />
