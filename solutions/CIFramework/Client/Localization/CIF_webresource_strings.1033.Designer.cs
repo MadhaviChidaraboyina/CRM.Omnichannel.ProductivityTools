@@ -197,7 +197,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Take a quick tour to learn how to deliver fast, personalized service to your customers..
         /// </summary>
         internal static string FRE_INTRO_SLIDE_DESC {
             get {
@@ -206,7 +206,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Welcome to Omnichannel for Dynamics 365 Customer Service.
         /// </summary>
         internal static string FRE_INTRO_SLIDE_TITLE {
             get {
@@ -274,6 +274,180 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         internal static string LAUNCH_PRESENCE_DIALOG_TOOLTIP {
             get {
                 return ResourceManager.GetString("LAUNCH_PRESENCE_DIALOG_TOOLTIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh the tab..
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d7bc60 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d" +
+                        "7bc60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Focus tab..
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4" +
+                        "b9823", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get the current page..
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637fee" +
+                        "b170d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh the tab.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_48fc87c4_f480_4129_9c1d_682442d7bc60 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_48fc87c4_f480_4129_9c1d_682442d7bc60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Focus tab.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get the current page.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session connector.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_48fc87c4_f480_4129_9c1d_682442d7bc60 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_48fc87c4_f480_4129_9c1d_682442d7bc60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session connector.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_761589d3_4fd7_4cab_b2f7_96728d4b9823", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session connector.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_d3ee390f_0299_43e5_8107_e637feeb170d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_d3ee390f_0299_43e5_8107_e637feeb170d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh the tab.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_48fc87c4_f480_4129_9c1d_682442d7bc60 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_48fc87c4_f480_4129_9c1d_682442d7bc60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Focus tab.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get the current page.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh the tab.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_48fc87c4_f480_4129_9c1d_682442d7bc60 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_48fc87c4_f480_4129_9c1d_682442d7bc60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Focus tab.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get the current page.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Predefined automation actions.
+        /// </summary>
+        internal static string msdyn_macroconnector_msdyn_categorylabel_ac627bea_31f2_4378_9a21_6e1e2d74e278 {
+            get {
+                return ResourceManager.GetString("msdyn_macroconnector_msdyn_categorylabel_ac627bea_31f2_4378_9a21_6e1e2d74e278", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Automate commonly used session actions.
+        /// </summary>
+        internal static string msdyn_macroconnector_msdyn_description_ac627bea_31f2_4378_9a21_6e1e2d74e278 {
+            get {
+                return ResourceManager.GetString("msdyn_macroconnector_msdyn_description_ac627bea_31f2_4378_9a21_6e1e2d74e278", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session Connector.
+        /// </summary>
+        internal static string msdyn_macroconnector_msdyn_displayname_ac627bea_31f2_4378_9a21_6e1e2d74e278 {
+            get {
+                return ResourceManager.GetString("msdyn_macroconnector_msdyn_displayname_ac627bea_31f2_4378_9a21_6e1e2d74e278", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session Connector.
+        /// </summary>
+        internal static string msdyn_macroconnector_msdyn_title_ac627bea_31f2_4378_9a21_6e1e2d74e278 {
+            get {
+                return ResourceManager.GetString("msdyn_macroconnector_msdyn_title_ac627bea_31f2_4378_9a21_6e1e2d74e278", resourceCulture);
             }
         }
         

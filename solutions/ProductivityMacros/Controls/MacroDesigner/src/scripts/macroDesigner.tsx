@@ -52,9 +52,9 @@ async function getDesignerBlobConfig(): Promise<SharedDefines.MacroDesignerConfi
         if (macroCDSConfig.entities.length > 0) {
             let config = macroCDSConfig.entities[0];
             path = config.msdyn_designerurlrelativepath;
-            designerConfig.UserVoiceText = config.msdyn_uservoicetext;
+            designerConfig.UserVoiceText = Utils.Utils.getResourceString(config.msdyn_uservoicetext);
             designerConfig.UserVoiceLink = config.msdyn_uservoicelink;
-            designerConfig.SearchHint = config.msdyn_searchhint;
+            designerConfig.SearchHint = Utils.Utils.getResourceString(config.msdyn_searchhint);
             designerConfig.DesignerSolutionVersion = config.msdyn_macrosversion;
             if (config.msdyn_designerurlconfigentity && config.msdyn_designerurlconfigentityattrib) {
                 if (config.msdyn_designerurlconfigentityid) {

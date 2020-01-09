@@ -26,6 +26,55 @@ function _localizeObject(obj: any): string | undefined {
         });
     return obj;
 }
+
+function loadLocalizationResx(webresourceName: string): Promise<string> {
+    return new Promise<any>((resolve, reject) => {
+        let xhr = new XMLHttpRequest();
+        let webfragment = "/api/data/v9.0/";
+        let url = globalContext.getClientUrl() + webfragment + "GetClientMetadata(ClientMetadataQuery=@ClientMetadataQuery)?@ClientMetadataQuery={\"MetadataType\":\"webresource\",\"MetadataSubtype\":null,\"EntityLogicalName\":null,\"MetadataId\":null,\"MetadataNames\":[\"" + webresourceName + "\"],\"GetDefault\":false,\"DependencyDepth\":\"OnDemandWithoutContext\",\"Exclude\":[]}"
+        xhr.open("GET", url, true);
+        xhr.onload = function () {
+            try {
+                let response;
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    if (xhr.response !== null) {
+                        let responseMetadata = JSON.parse(JSON.parse(xhr.response).Metadata);
+                        if (responseMetadata.WebResources) {
+                            let webresources = responseMetadata.WebResources;
+                            webresources.forEach((resource) => {
+                                if (resource.Type === "12") {
+                                    response = resource.ContentJson;
+                                    resolve(response);
+                                }
+                            });
+                        }
+                    }
+                    else {
+                        response = xhr.response;
+                    }
+                    resolve(response);
+                }
+                else {
+                    response = Error(xhr.statusText);
+                    reject(response);
+                }
+            } catch (e) {
+                reject(e);
+            }
+        };
+        // Handle network errors
+        xhr.onerror = function () {
+            reject(Error("Network Error"));
+        };
+
+        xhr.setRequestHeader("cache-control", "no-cache");
+        xhr.setRequestHeader("Content-type", "application/json");
+        xhr.setRequestHeader("Accept-Language", "en-US,en;q=0.8");
+        xhr.setRequestHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+        xhr.send();
+    });
+}
+
 export class Macros {
     private static definition = {
         "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json",
@@ -35,27 +84,34 @@ export class Macros {
         let categories: Category[] = [];
         let promises: Promise<boolean>[] = [];
         let res1 = await Promise.all([
-            window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_macroconnector", "?$filter=statecode eq 0&$select=msdyn_macroconnectorid,msdyn_name,msdyn_title,msdyn_displayname,msdyn_brandcolor,msdyn_description,msdyn_icon,msdyn_categorykey,msdyn_categorylabel,msdyn_type"),
+            window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_macroconnector", "?$filter=statecode eq 0&$select=msdyn_macroconnectorid,msdyn_name,msdyn_title,msdyn_displayname,msdyn_brandcolor,msdyn_description,msdyn_icon,msdyn_categorykey,msdyn_categorylabel,msdyn_type,msdyn_webresourcename"),
             window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_macroactiontemplate", "?$filter=statecode eq 0&$select=msdyn_name,msdyn_title,msdyn_subtitle,msdyn_displayname,msdyn_brandcolor,msdyn_actionDescription,msdyn_icon,msdyn_summary,msdyn_visibility,msdyn_kind&$expand=msdyn_msdyn_macroactiontemplate_msdyn_actioninput($select=msdyn_name,msdyn_visibility),msdyn_msdyn_macroactiontemplate_msdyn_actionout($select=msdyn_name),msdyn_macroconnector($select=msdyn_name)")
         ]);
         let connectorData = await res1[0];
         let templates = await res1[1];
 
         let connectors: Connector[] = [];
+        let mPromises: Promise<string>[] = [];
+        connectorData.entities.forEach(function (templ) {
+            if (!isNullOrUndefined(templ.msdyn_webresourcename)) {
+                mPromises.push(loadLocalizationResx(templ.msdyn_webresourcename));
+            }
+        });
+        let responseLocale = await Promise.all(mPromises);
         connectorData.entities.forEach(function (templ) {
             let connector: Connector = {
                 id: templ.msdyn_macroconnectorid,
                 type: templ.msdyn_type,
                 name: templ.msdyn_name,
-                title: templ.msdyn_title,
+                title: Utils.getResourceString(templ.msdyn_title, responseLocale),
                 brandColor: templ.msdyn_brandcolor,
-                description: templ.msdyn_description,
+                description: Utils.getResourceString(templ.msdyn_description, responseLocale),
                 icon: _getIconUrl(templ.msdyn_icon),
                 capabilities: [],
-                displayName: templ.msdyn_displayname,
+                displayName: Utils.getResourceString(templ.msdyn_displayname, responseLocale),
                 category: templ.msdyn_categorykey
             };
-            let newCategory: Category = { itemKey: templ.msdyn_categorykey, linkText: templ.msdyn_categorylabel };
+            let newCategory: Category = { itemKey: templ.msdyn_categorykey, linkText: Utils.getResourceString(templ.msdyn_categorylabel, responseLocale) };
             if (categories.findIndex(
                 function (value) {
                     return value.linkText === newCategory.linkText;
@@ -69,13 +125,13 @@ export class Macros {
             let action: Action = {
                 id: templ.msdyn_name,
                 type: templ.msdyn_name,
-                name: templ.msdyn_displayname,
+                name: Utils.getResourceString(templ.msdyn_displayname, responseLocale),
                 brandColor: templ.msdyn_brandcolor,
-                description: templ.msdyn_actionDescription,
+                description: Utils.getResourceString(templ.msdyn_actionDescription, responseLocale),
                 icon: (templ.msdyn_icon && _getIconUrl(templ.msdyn_icon) || ""),
-                subtitle: templ.msdyn_subtitle,
-                title: templ.msdyn_title,
-                summary: templ.msdyn_summary,
+                subtitle: Utils.getResourceString(templ.msdyn_subtitle, responseLocale),
+                title: Utils.getResourceString(templ.msdyn_title, responseLocale),
+                summary: Utils.getResourceString(templ.msdyn_summary, responseLocale),
                 kind: templ.msdyn_kind,
                 visibility: (templ.msdyn_visibility || "true"),
                 category: "CONNECTORS",
@@ -89,8 +145,8 @@ export class Macros {
                             inputParamType.msdyn_msdyn_paramdef_msdyn_actioninputparam.forEach(function (input) {
                                 let param: Parameter = {
                                     name: input.msdyn_name,
-                                    description: input.msdyn_description,
-                                    title: input.msdyn_displayname,
+                                    description: Utils.getResourceString(input.msdyn_description, responseLocale),
+                                    title: Utils.getResourceString(input.msdyn_displayname, responseLocale),
                                     type: input.msdyn_parametertype,
                                     visibility: inputType.msdyn_visibility
                                 }
@@ -120,8 +176,8 @@ export class Macros {
                             outputParamType.msdyn_msdyn_paramdef_msdyn_actionoutputparam.forEach(function (output) {
                                 let param: Parameter = {
                                     name: output.msdyn_name,
-                                    description: output.msdyn_description,
-                                    title: output.msdyn_displayname,
+                                    description: Utils.getResourceString(output.msdyn_description, responseLocale),
+                                    title: Utils.getResourceString(output.msdyn_displayname, responseLocale),
                                     type: output.msdyn_parametertype
                                 }
                                 if (isNullOrUndefined(action.outputs)) {
