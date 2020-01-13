@@ -3811,7 +3811,8 @@ declare namespace XrmClientApi {
 		 */
         const enum WindowPosition {
             center = 1,
-            side = 2
+			side = 2,
+			inline = 3,
         }
 
 		/**

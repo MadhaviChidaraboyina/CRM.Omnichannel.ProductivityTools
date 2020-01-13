@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Set_Default_AgentScript_Help_Text" xml:space="preserve">
+    <value>Turn on the toggle below to load agent scripts conditionally. Conditions can be built using the ‘Build Condition Flow’ button. To know more about this feature refer to the documentation here.</value>
+  </data>
 </root>

@@ -29,7 +29,7 @@
             <label description="Agent scripts" languagecode="1033" />
           </labels>
           <columns>
-            <column width="100%" id="0">
+            <column width="66%" id="0">
               <sections>
                 <section name="tab_3_section_1" showlabel="false" showbar="false" locklevel="0" id="{b4c27572-1009-3a20-4cbd-4cc2cbc02738}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" height="auto" ordinalvalue="0">
                   <labels>
@@ -71,9 +71,105 @@
                 </section>
               </sections>
             </column>
-          </columns>
-        </tab>
-      </tabs>
+			      <column width="34%" id="1">
+                      <sections>
+                        <section id="{09700f80-4e1b-4f35-a2a9-0a5d37f7e4cf}" name="Agent scripts_column_4_section_1" columns="11" showlabel="true" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="130" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="0" >
+                          <labels>
+                            <label description="Auto load script" languagecode="1033" />
+                          </labels>
+                          <rows>
+														<row>
+															<cell id="{8EFB8D13-ACF6-4DA0-9EA6-4BBC445F3887}" showlabel="false" colspan="1" auto="false" rowspan="2">
+																<labels>
+																	<label description="Disclaimer" languagecode="1033" />
+																</labels>
+																<control id="WebResource_Disclaimer" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+																	<parameters>
+																		<Url>msdyn_SetDefaultAgentScriptHelpText.html</Url>
+																		<PassParameters>false</PassParameters>
+																		<ShowOnMobileClient>false</ShowOnMobileClient>
+																		<Security>false</Security>
+																		<Scrolling>auto</Scrolling>
+																		<Border>false</Border>
+																		<WebResourceId>{E3D92944-7308-4B9C-A37E-316DDF5127A8}</WebResourceId>
+																	</parameters>
+																</control>
+																<events>
+																	<event name="onload" application="false">
+																		<dependencies />
+																	</event>
+																</events>
+															</cell>
+														</row>
+                            <row>
+                              <cell id="{e62bb031-3e21-42dc-6561-7816d972cc57}" showlabel="true" locklevel="0" ordinalvalue="10000">
+                                <labels>
+                                  <label description="" languagecode="1033" />
+                                </labels>
+                                <control id="msdyn_enablebuildexpression" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_enablebuildexpression" disabled="false" uniqueid="{d58a5d64-6074-8149-b838-3608de33a25c}" />
+                              </cell>                            
+                            </row>
+														<row>
+															<cell id="{2154398b-bde8-698e-e2b9-7b5a959d2c2e}" showlabel="false" locklevel="0">
+																<labels>
+																	<label description="Expression data" languagecode="1033" />
+																</labels>
+																<control id="msdyn_expressiondata" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_expressiondata" disabled="false" uniqueid="{dc881d6a-da91-8be9-2ce2-b72c0670bcc1}" />
+															</cell>
+														</row>
+                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                  </columns>
+                </tab>
+              </tabs>
+              <controlDescriptions>              
+                <controlDescription forControl="{d58a5d64-6074-8149-b838-3608de33a25c}" solutionaction="Added">
+                  <customControl id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}">
+                    <parameters>
+                      <datafieldname>msdyn_enablebuildexpression</datafieldname>
+                    </parameters>
+                  </customControl>
+                  <customControl formFactor="0" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                    <parameters>
+                      <value>msdyn_enablebuildexpression</value>
+                    </parameters>
+                  </customControl>
+                  <customControl formFactor="1" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                    <parameters>
+                      <value>msdyn_enablebuildexpression</value>
+                    </parameters>
+                  </customControl>
+                  <customControl formFactor="2" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                    <parameters>
+                      <value>msdyn_enablebuildexpression</value>
+                    </parameters>
+                  </customControl>
+                </controlDescription>
+								<controlDescription forControl="{dc881d6a-da91-8be9-2ce2-b72c0670bcc1}">
+									<customControl id="{E0DECE4B-6FC8-4a8f-A065-082708572369}">
+										<parameters>
+											<datafieldname>msdyn_expressiondata</datafieldname>
+										</parameters>
+									</customControl>
+									<customControl formFactor="0" name="MscrmControls.BuildExpressionButtonControl.BuildExpressionButtonControl">
+										<parameters>
+											<value>msdyn_expressiondata</value>
+										</parameters>
+									</customControl>
+									<customControl formFactor="1" name="MscrmControls.BuildExpressionButtonControl.BuildExpressionButtonControl">
+										<parameters>
+											<value>msdyn_expressiondata</value>
+										</parameters>
+									</customControl>
+									<customControl formFactor="2" name="MscrmControls.BuildExpressionButtonControl.BuildExpressionButtonControl">
+										<parameters>
+											<value>msdyn_expressiondata</value>
+										</parameters>
+									</customControl>
+								</controlDescription>
+              </controlDescriptions>
     </form>
     <LocalizedNames>
       <LocalizedName description="Information" languagecode="1033" />

@@ -74,14 +74,20 @@
       <TypeDefinitions Include="$(TypeScriptOutDir)\**\*.d.ts" />
     </ItemGroup>
   </Target>
-  <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)%(RecursiveDir)')">
-    <Copy SourceFiles="@(WebResources)" DestinationFolder="$(SolutionPackagePath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
-    <Copy SourceFiles="@(TypeDefinitions)" DestinationFolder="$(WSRoot)\solutions\TypeDefinitions\Agentscript\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
-  </Target>
   <ItemGroup>
-    <EmbeddedResource Include="Localization\Languages\Agentscript.1033.resx" />
-    <EmbeddedResource Include="Localization\Languages\Agentscript.resx">
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="Localization\Languages\Agentscript.1033.resx" >
+	<Generator>ResXFileCodeGenerator</Generator>    
+	  </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Languages\Agentscript.resx">     
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <LocResx Include="Localization\Languages\Agentscript.*.resx" />
+  </ItemGroup>
+    <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)%(RecursiveDir)')">
+    <Copy SourceFiles="@(WebResources)" DestinationFolder="$(SolutionPackagePath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
+    <Copy SourceFiles="@(TypeDefinitions)" DestinationFolder="$(WSRoot)\solutions\TypeDefinitions\Agentscript\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
+	<Copy SourceFiles="@(LocResx)" DestinationFolder="$(XrmSolutionsRoot)\solutions\Agentscript\Solution\WebResources\Localization" Retries="3" RetryDelayMilliseconds="300" />
+  </Target>
 </Project>

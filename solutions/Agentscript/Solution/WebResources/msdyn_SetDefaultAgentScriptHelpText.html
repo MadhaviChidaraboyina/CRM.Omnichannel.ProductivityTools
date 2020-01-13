@@ -1,0 +1,54 @@
+[[[<html>
+	<head>"		<link href="/uclient/resources/styles/Styles.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript">
+			function setLocalizedStringsForSetDefaultAgentScriptDisclaimer()
+		{
+				
+				var DisclaimerText = "Turn on the toggle below to load agent scripts conditionally. Conditions can be built using the ‘Build Condition Flow’ button. To know more about this feature refer to the documentation here."
+			document.getElementById("disclaimer-string").innerHTML = DisclaimerText;
+
+		}
+		</script>
+		<style>
+			.disclaimer-text-body {
+				background-color: #F4F4F4 !important;
+				font-family: "Segoe UI", sans-serif;
+			}
+
+			.disclaimer-text {
+				padding: 10px;
+				display: table;
+				font-size: 12px;
+				line-height: 14px;
+				color: #333333;
+			}
+
+			#msdyn_disclaimerimage {
+				top: 6px;
+				left: 7px;
+				position: absolute;
+				width: 16px;
+				height: 16px;
+				font-family: CRM MDL2 Assets;
+				font-size: 15px;
+				line-height: 18px;
+				text-align: center;
+				color: #333333;
+				display: table-cell;
+			}
+
+			#disclamer-string-wrap
+			{
+				display: table-cell;
+			}
+		</style>
+	</head>
+	<body onload="setLocalizedStringsForSetDefaultAgentScriptDisclaimer();" class="disclaimer-text-body" style="overflow-wrap: break-word;">
+		<div class="disclaimer-text">
+			<span id="msdyn_disclaimerimage" class="symbolFont InformationIcon-symbol"></span>
+			<span id="disclamer-string-wrap">
+				<span id="disclaimer-string"></span>
+			</span>
+		</div>
+	</body>
+</html>

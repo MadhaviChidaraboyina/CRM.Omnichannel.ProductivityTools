@@ -18,3 +18,4 @@ solutions\CIFrameworkAnalytics\Solution\Resources\en-us\resources.en-US.resx,CIF
 solutions\Anchors\ProductivityTools\Solution\Resources\en-US\resources.en-US.resx,Anchors
 !solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.xml,ProductivityTools
 solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.json,ProductivityTools
+solutions\Agentscript\Client\Controls\BuildExpressionButtonControl\strings\BuildExpressionButtonControl.1033.resx,Agentscript

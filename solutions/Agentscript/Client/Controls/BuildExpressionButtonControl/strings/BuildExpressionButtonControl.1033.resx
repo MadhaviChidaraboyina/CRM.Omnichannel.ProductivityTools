@@ -117,7 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Set_Default_AgentScript_Help_Text" xml:space="preserve">
-    <value>Turn on the toggle below to load agent scripts conditionally. Conditions can be built using the ‘Build Condition Flow’ button. To know more about this feature refer to the documentation here.</value>
+  <data name="CC_BuildExpressionButtonControl_Desc" xml:space="preserve">
+    <value>Button to build an expression</value>
+    <comment>Button to build an expression</comment>
+  </data>
+  <data name="CC_BuildExpressionButtonControl_Name" xml:space="preserve">
+    <value>Build Expression Button</value>
+    <comment>Build Expression Button</comment>
+  </data>
+  <data name="CC_Build_Expression" xml:space="preserve">
+    <value>Build Expression</value>
+    <comment>Build Expression</comment>
+  </data>
+  <data name="CC_Field" xml:space="preserve">
+    <value>Value</value>
+    <comment>Value</comment>
+  </data>
+  <data name="CC_Field_Desc" xml:space="preserve">
+    <value>Attribute details</value>
+    <comment>Attribute details</comment>
   </data>
 </root>

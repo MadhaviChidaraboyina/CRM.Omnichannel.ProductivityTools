@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+	<control namespace="MscrmControls.BuildExpressionButtonControl" constructor="BuildExpressionButtonControl" version="1.0.0" display-name-key="CC_BuildExpressionButtonControl_Name" description-key="CC_BuildExpressionButtonControl_Desc">
+		<modes>
+			<read />
+			<edit />
+		</modes>
+		<type-group name="text">
+			<type>SingleLine.Text</type>
+			<type>Multiple</type>
+		</type-group>
+		
+		<property name="value" display-name-key="CC_Field" description-key="CC_Field_Desc" of-type-group="text" usage="bound" required="true" hidden="true" />
+
+		<resources>		
+			<code path="BuildExpressionButtonControl.js" order="6" />
+			<resx path="strings/BuildExpressionButtonControl.1033.resx" version="1.0.0" />
+		</resources>
+	</control>
+</manifest>
