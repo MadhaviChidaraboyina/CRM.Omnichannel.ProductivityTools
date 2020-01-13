@@ -117,7 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Set_Default_AgentScript_Help_Text" xml:space="preserve">
-    <value>Turn on the toggle below to load agent scripts conditionally. Conditions can be built using the ‘Build Condition Flow’ button. To know more about this feature refer to the documentation here.</value>
+  <data name="Set_Default_AgentScript_No_Help_Text" xml:space="preserve">
+    <value>Set the toggle to No to disable the expression to set the default script for a particular session type.</value>
+  </data>
+  <data name="Set_Default_AgentScript_Yes_Help_Text" xml:space="preserve">
+    <value>Set the toggle to Yes to enable and build expression to set the default script for a particular session type.</value>
   </data>
 </root>

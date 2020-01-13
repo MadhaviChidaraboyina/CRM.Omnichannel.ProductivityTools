@@ -1,12 +1,24 @@
-[[[<html>
-	<head>"		<link href="/uclient/resources/styles/Styles.css" rel="stylesheet" type="text/css">
+<html>
+	<head>
+		<link href="/uclient/resources/styles/Styles.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript">
-			function setLocalizedStringsForSetDefaultAgentScriptDisclaimer()
+		function setLocalizedStringsForSetDefaultAgentScriptDisclaimer()
 		{
-				
-				var DisclaimerText = "Turn on the toggle below to load agent scripts conditionally. Conditions can be built using the ‘Build Condition Flow’ button. To know more about this feature refer to the documentation here."
-			document.getElementById("disclaimer-string").innerHTML = DisclaimerText;
-
+			var enableBuildExpression = parent.Xrm.Page.getAttribute("msdyn_enablebuildexpression");
+			setInnerHTML(enableBuildExpression.getValue());
+			enableBuildExpression.addOnChange(function () {
+				setInnerHTML(enableBuildExpression.getValue());
+			});				
+		}
+		
+		function setInnerHTML(enableBuildExpression)
+		{
+			if (enableBuildExpression) {
+				document.getElementById("disclaimer-string").innerHTML = parent.Xrm.Utility.getResourceString("Localization/msdyn_Agentscript", "Set_Default_AgentScript_No_Help_Text");
+			}
+			else {
+				document.getElementById("disclaimer-string").innerHTML = parent.Xrm.Utility.getResourceString("Localization/msdyn_Agentscript", "Set_Default_AgentScript_Yes_Help_Text");
+			}
 		}
 		</script>
 		<style>
@@ -21,6 +33,7 @@
 				font-size: 12px;
 				line-height: 14px;
 				color: #333333;
+				position: absolute;
 			}
 
 			#msdyn_disclaimerimage {
@@ -29,7 +42,6 @@
 				position: absolute;
 				width: 16px;
 				height: 16px;
-				font-family: CRM MDL2 Assets;
 				font-size: 15px;
 				line-height: 18px;
 				text-align: center;

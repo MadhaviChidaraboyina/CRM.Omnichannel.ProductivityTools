@@ -14,6 +14,7 @@ module MscrmControls.ButtonControl {
 		private buttonDiv: JQuery;
 		private buttonElement: Mscrm.Component;
 		private id: string;
+		private enableBuildExpression: any;
 
 		constructor() {
 			super();
@@ -21,16 +22,15 @@ module MscrmControls.ButtonControl {
 
 		protected initCore(context: Mscrm.ControlData<IInputBag>, state?: Mscrm.Dictionary): void {
 			this._context = context;
+			this.enableBuildExpression = Xrm.Page.getAttribute("msdyn_enablebuildexpression");
 			this.buttonDomElement = this.getButtonContainer();
 			let div = document.createElement("div");
 			this.buttonDiv = $(div);
 			$(this.container).append(this.buttonDiv);
 			context.utils.bindDOMElement(this.buttonDomElement, div);
-
-			var enableBuildExpression = Xrm.Page.getAttribute("msdyn_enablebuildexpression");
-			this.setButtonProperties(enableBuildExpression.getValue());
-			enableBuildExpression.addOnChange(function () {
-				this.setButtonProperties(enableBuildExpression.getValue());
+	
+			this.enableBuildExpression.addOnChange(function () {
+				this.setButtonProperties();
 			}.bind(this));
 		}
 
@@ -69,6 +69,7 @@ module MscrmControls.ButtonControl {
 					style: this.getButtonStyle(),
 					title: "ExpressionBuilder",
 					tabIndex: 0,
+					disabled: !this.enableBuildExpression.getValue(),
 					onClick: this.openExpressionbuilder.bind(this)
 				}, this._context.resources.getString("CC_Build_Expression"));
 		}
@@ -125,8 +126,8 @@ module MscrmControls.ButtonControl {
 				});
 		}
 
-		private setButtonProperties(enableBuildExpression: boolean) {
-			if (enableBuildExpression) {
+		private setButtonProperties() {
+			if (this.enableBuildExpression.getValue()) {
 				$(this.buttonElement).prop("disabled", false);
 			}
 			else {
