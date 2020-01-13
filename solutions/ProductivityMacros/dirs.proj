@@ -4,6 +4,8 @@
 		<ProjectToBuild Include="Client\WebResources.csproj" />
 		<ProjectToBuild Include="Solution\ProductivityMacrosSolution.csproj" />
 		<ProjectToBuild Include="packages.proj" Condition="'$(EnableSigning)'!='true'" />
+		<ProjectToBuild Include="Client\Controls\MacroSessionAssociatedGridControl\MacroSessionAssociatedGridControl.csproj" />
+		<ProjectToBuild Include="Client\Controls\RunLinkControl\RunLinkControl.csproj" />
 	</ItemGroup>
 	<PropertyGroup>
 		<SolutionOutputPath>$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions</SolutionOutputPath>

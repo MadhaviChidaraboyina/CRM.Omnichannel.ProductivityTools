@@ -2,7 +2,7 @@
 <Dialog>
 	<FormId>{2E40DD90-2824-4524-B223-947052798E72}</FormId>
 	<LocalizedNames>
-		<LocalizedName description="Create Macros" languagecode="1033" />
+		<LocalizedName description="Macros" languagecode="1033" />
 	</LocalizedNames>
 	<Descriptions>
 		<Description description="Allows you to create Macros" languagecode="1033" />
@@ -19,7 +19,7 @@
 						<row>
 							<cell id="{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}">
 								<labels>
-									<label description="Create macros" languagecode="1033" />
+									<label description="Macros" languagecode="1033" />
 								</labels>
 								<control id="lbl_createmacros" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
 									<parameters>
@@ -64,6 +64,19 @@
 												</cell>
 											</row>
 											<row>
+												<cell id="{6352839d-d38e-4f34-8491-15269dd75512}" showlabel="false">
+													<labels>
+														<label description="Run History" languagecode="1033" />
+													</labels>
+													<control id="RunHistory" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{e38518d4-bb72-42f8-9be0-a0241376f488}">
+														<parameters>
+															<MaxLength>200</MaxLength>
+															<Format>SingleLineOfText</Format>
+														</parameters>
+													</control>
+												</cell>
+											</row>
+											<row>
 												<cell id="{BC53D472-1587-4980-944E-F55DFE5D3F0A}" rowspan="16" showlabel="false">
 													<labels>
 														<label description="Macro Designer" languagecode="1033" />
@@ -94,6 +107,16 @@
 						</Handlers>
 					</event>
 				</events>
+				<controlDescriptions>
+					<controlDescription forControl="{e38518d4-bb72-42f8-9be0-a0241376f488}">
+						<customControl name="MscrmControls.RunLinkControl.RunLinkControl" formFactor="0">
+						</customControl>
+						<customControl name="MscrmControls.RunLinkControl.RunLinkControl" formFactor="1">
+						</customControl>
+						<customControl name="MscrmControls.RunLinkControl.RunLinkControl" formFactor="2">
+						</customControl>
+					</controlDescription>
+				</controlDescriptions>
 				<formparameters>
 					<querystringparameter name="record_Id" type="SafeString" />
 				</formparameters>

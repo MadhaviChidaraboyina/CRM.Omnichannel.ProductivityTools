@@ -19,7 +19,7 @@
 						<row>
 							<cell id="{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}">
 								<labels>
-									<label description="Macros Monitor View" languagecode="1033" />
+									<label description="Macro Run" languagecode="1033" />
 								</labels>
 								<control id="lbl_macrosmonitor" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
 									<parameters>

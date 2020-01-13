@@ -150,7 +150,9 @@ operKindDisplayText[SharedDefines.Kind.Trigger] = Utils.Utils.getResourceString(
 async function startMonitor(rpc) {
 	try {
 		let executionStatusJSON = await initOperations[RequiredCDSOpersForInit.ExecutionStatusJSON];
-		
+		if (executionStatusJSON.executionstatus.name) {
+			(window.top as any).Xrm.Page.getControl("macrosname_id").getAttribute().setValue(executionStatusJSON.executionstatus.name);
+		}
 		let monitorOptions: SharedDefines.IMonitorOptions = {
 			ApiVersion: "1.0",
 			BaseUrl: window.location.hostname,
