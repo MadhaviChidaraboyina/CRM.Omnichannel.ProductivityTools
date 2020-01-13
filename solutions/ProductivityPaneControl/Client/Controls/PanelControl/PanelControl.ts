@@ -83,7 +83,7 @@ module MscrmControls.ProductivityToolPanel {
 		/**
 		 * getProductivityToolButton generates the toggle button.
 		 */
-		private getProductivityToolButton(iconId: string, iconPath: string, buttonId: string, selectionIndicator: boolean=false): Mscrm.Component
+		private getProductivityToolButton(iconId: string, iconPath: string, buttonId: string, selectionIndicator: boolean, toolTip: string): Mscrm.Component
 		{		
 			const icon = this.getProductivityToolIcon(iconId, iconPath);
 			const toggleButton = this.context.factory.createElement(
@@ -103,7 +103,8 @@ module MscrmControls.ProductivityToolPanel {
 						key: `${Constants.listItemId}${buttonId}`,
 						style: {
 							display: "flex"
-						}
+						},
+						title: this.context.resources.getString(toolTip)
 					},
 					toggleButton);
 
@@ -129,9 +130,9 @@ module MscrmControls.ProductivityToolPanel {
 			var listItems: Mscrm.Component[] = [];
 
 			const toggleButton =  this.getProductivityToolButton(Constants.toggleIconId,
-				this.panelToggle ? Constants.panelToggleExpand : Constants.panelToggleCollpase,Constants.toggle);
-			const agentGuidanceButton =  this.getProductivityToolButton(Constants.agentScriptIconId,Constants.agentScriptIcon,Constants.agentGuidance, true);
-			const macrosButton =  this.getProductivityToolButton(Constants.macrosIconId,Constants.productivityMacrosIcon,Constants.productivityMacros, true);
+				this.panelToggle ? Constants.panelToggleExpand : Constants.panelToggleCollpase,Constants.toggle, false, this.panelToggle ? Constants.collpaseToolTip: Constants.expandToolTip);
+			const agentGuidanceButton =  this.getProductivityToolButton(Constants.agentScriptIconId,Constants.agentScriptIcon,Constants.agentGuidance, true, Constants.agentGuidanceTooltip);
+			const macrosButton =  this.getProductivityToolButton(Constants.macrosIconId,Constants.productivityMacrosIcon,Constants.productivityMacros, true, Constants.productivityMacrosTooltip);
 
 			listItems.push(toggleButton);
 			listItems.push(agentGuidanceButton);

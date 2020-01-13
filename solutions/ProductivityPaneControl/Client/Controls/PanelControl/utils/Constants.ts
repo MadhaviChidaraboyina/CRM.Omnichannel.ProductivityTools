@@ -31,8 +31,10 @@ module MscrmControls.ProductivityToolPanel {
 		public static toolLeftBorderColour = "#E1DFDD";
 		public static listItemId = "ProductivityPanelListItem-"
 		public static toolIndicatorId = "tool-indicator-"
-		public static agentGuidanceTooltip = "Agent guidance";
-		public static macrosTooltip = "Productivity macros";
+		public static agentGuidanceTooltip = "Agent_Guidance";
+		public static productivityMacrosTooltip = "Productivity_Macros";
+		public static expandToolTip = "ExpandMessage";
+		public static collpaseToolTip = "CollpaseMessage";
 		public static FALSE = false;
 		public static TRUE = true;
 

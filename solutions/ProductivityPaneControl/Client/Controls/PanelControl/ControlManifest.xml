@@ -5,6 +5,7 @@
 		</modes>
 		<resources>
 			<code path="PanelControl.js" order="1" />
+			<resx path="strings/PanelControl.1033.resx" version="1.0.0" />
 		</resources>
 	</control>
 </manifest>
