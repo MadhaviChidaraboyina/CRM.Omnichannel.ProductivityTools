@@ -69,7 +69,7 @@ namespace Microsoft.ProductivityMacros {
 		let attribute = matches[1];
 		prefix = prefix.substr(1, prefix.length - 2);
 		attribute = attribute.substr(1, attribute.length - 2);
-		let inputSlug = "{" + prefix + "." + attribute + "}";
+		let inputSlug = "${" + prefix + "." + attribute + "}";
 		return inputSlug;
 	}
 

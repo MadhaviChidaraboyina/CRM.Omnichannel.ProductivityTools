@@ -18,10 +18,15 @@ namespace Microsoft.ProductivityMacros.Internal {
             }
             let paramVals: Map<string, string> = new Map<string, string>();
             let paramResolvers: Promise<string>[] = [];
+
+            if (input.startsWith(SlugPrefix.SPLIT_BY_DOLLAR)) { // For backward compatibilty.
+                input = input.substr(1, input.length - 1);   
+            } 
+
             //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions : "?" character
 
             let matches = input.match(new RegExp("\\{[^{]*\\}|\\{(?:[^{]*\\{[^}]*\\}[^{}]*)*\\}", "g")); // "\\{.*?\\}" (non -greedy) allows to resolve "{qp}{param1}" as qp and param1 whereas "\\{.*\\}" (greedy) resolve "{qp}{param1}" as {qp}{param1} itself.
-            let slugResolutionCallback: string = null;
+            let slugCallbacks: string[] = [];
 
             for (let index in matches) {
                 let param = matches[index];
@@ -37,34 +42,41 @@ namespace Microsoft.ProductivityMacros.Internal {
                         if (prefixes.length > 1) {
                             var connector = Internal.ProductivityMacroOperation.macroConnectorTemplates.get(prefixes[0].substr(1));
                             if (!isNullOrUndefined(connector)) {
-                                slugResolutionCallback = connector.callback;
+                                slugCallbacks.push(connector.callback);
                                 paramName = stripSlugPrefix(paramName);
                             }
                         }
+                    }
+                    if (slugCallbacks.length == 0) {
+                        buildSlugCallbacks(slugCallbacks);
                     }
                     if (!isNullOrUndefined(templateParams) && templateParams.hasOwnProperty(scope) && templateParams[scope].hasOwnProperty(paramName)) {
                         val = templateParams[scope][paramName];
                     }
                     else if (!isNullOrUndefined(templateParams) && templateParams.hasOwnProperty(paramName)) {
                         val = templateParams[paramName];
-                    } else if (!isNullOrUndefined(slugResolutionCallback)) {
+                    } else if (slugCallbacks.length > 0) {
                         let promise: Promise<string> = new Promise<string>(
                             function (resolve, reject) {
-                                var callbackParams = stripCallbackParams(slugResolutionCallback);
-                                if (callbackParams.length != 2) {
-                                    return reject("Incorrect number of params defined in callback");
-                                }
-                                var callbackFun = new Function(callbackParams[0], callbackParams[1], "return " + slugResolutionCallback);
-                                var executionContext = {};
-                                callbackFun(executionContext,"{" + paramName + "}").then((res: any) => {
-                                    paramVals.set(param, res["result"]);
-                                    return resolve(paramVals.get(param));
-                                }, (error: any) => {
+                                let executionpromise = slugCallbacks.reduce((accumulatorPromise, nextId) => {
+                                    return accumulatorPromise.then(function (result: any) {
+                                        if (result === undefined || result === "") {
+                                            return resolveSlugInCallback(nextId, paramName)
+                                        } else {
+                                            return Promise.resolve(result)
+                                        }
+                                    }, function (error: Error) {
+                                        return reject(error);
+                                    });
+                                }, Promise.resolve(""));
+                                executionpromise.then((result: any) => {
+                                    paramVals.set(param, result);
+                                    return resolve(paramVals.get(param))
+                                }, (error: Error) => {
                                     return reject(error);
-                                });
-                            }
-                        );
-                        paramResolvers.push(promise);
+                                })
+                       });
+                       paramResolvers.push(promise);
                     }
 
 					if (paramName.startsWith("$odata")) {
@@ -134,7 +146,34 @@ namespace Microsoft.ProductivityMacros.Internal {
 					return reject(error);
 				});
 		});
-	}
+    }
+
+    function buildSlugCallbacks(slugCallbacks: string[]) {
+        var connector = Internal.ProductivityMacroOperation.macroConnectorTemplates.get("OC");  // Default callback
+        if (!isNullOrUndefined(connector)) {
+                slugCallbacks.push(connector.callback);
+        }
+        Internal.ProductivityMacroOperation.macroConnectorTemplates.forEach((value: ProductivityMacroConnector, key: string) => {
+            if (key != "OC" && !isNullOrUndefined(value.callback)) {  //already added
+                slugCallbacks.push(value.callback);
+            }
+        });
+    }
+
+    function resolveSlugInCallback(callback: string, paramName: string) {
+        return new Promise<any>((resolve, reject) => {
+            var callbackParams = stripCallbackParams(callback);
+            if (callbackParams.length == 2) {
+                var callbackFun = new Function(callbackParams[0], callbackParams[1], "return " + callback);
+            }
+            var executionContext = {};
+            callbackFun(executionContext, "{" + paramName + "}").then((res: any) => {
+                return resolve(res["result"]);
+            }, function (error: Error) {
+                return reject(error);
+            });
+        });
+    }
 
 	function stripSlugPrefix(param: string): string {
 		let splitTextArray = param.split(SlugPrefix.SPLIT_BY_DOT);
