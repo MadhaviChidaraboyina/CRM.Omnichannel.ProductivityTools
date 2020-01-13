@@ -16,7 +16,15 @@ export default <OperationManifest>{
                 callscriptId: {
                     title: Utils.getResourceString("LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE"),//'Set Default Call script',
                     description: Utils.getResourceString("LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION"),//'Set the default call script',
-                    'x-ms-editor': 'string',
+                    type: 'string',
+                    'x-ms-property-name-alias': 'callscriptId',
+                    'x-ms-dynamic-list': {
+                        'operationId': 'setcallscript',
+                        'parameters': {},
+                        'itemsPath': 'value',
+                        'itemValuePath': 'Name',
+                        'itemTitlePath': 'DisplayName'
+                    }
                 }/*,
                 explicitDependencies: {
                     type: 'object',

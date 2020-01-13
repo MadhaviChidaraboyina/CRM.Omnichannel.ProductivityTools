@@ -3,6 +3,7 @@ import * as Utils from "../sharedUtils";
 import * as OAuth from "../oAuthService";
 import * as HostService from "./hostService";
 import { OperationManifestServiceImpl } from "./OperationManifest";
+import { ConnectorV2Service } from "./ConnectorV2";
 
 function getUrlParams() {
     let urlParams = {},
@@ -59,8 +60,8 @@ let FeaturesToEnable = {
     DEBOUNCE_EMIT_CHANGE: true,
     DISABLE_AUTO_FOCUS_PARAMETERS: true,
     DISABLE_TOKEN_PICKER_COMPACT_MODE: true,
-    FX_TOKEN: true,
-    FX_TOKEN_FOR_CONDITION: true,
+    FX_TOKEN: false,
+    FX_TOKEN_FOR_CONDITION: false,
     GATEWAY_FOR_CONNECTION: true,
     HTML_EDITOR: false,
     INITIALIZE_DYNAMIC_CONTENT_ASYNC: true,
@@ -296,6 +297,10 @@ function initializeDesigner(req) {
                     let operationManifestServiceFactory = function (analytics) {
                         return new OperationManifestServiceImpl(designerOptions);
                     };
+                    let connectorV2ServiceFactory = function(analytics){
+                        return new ConnectorV2Service(rpc);
+                    };
+                    
                     let flowConfigurationOptions = {
                         apiVersion: designerOptions.ApiVersion,
                         features: FeaturesToEnable,
@@ -304,6 +309,7 @@ function initializeDesigner(req) {
                         urlService: urlService,
                         connectionServiceFactory: connectionServiceFactory,
                         recommendationServiceFactory: recommendationServiceFactory,
+                        connectorV2ServiceFactory: connectorV2ServiceFactory,
                         locale: LOCALE
                     };
                     disposeDesigner();

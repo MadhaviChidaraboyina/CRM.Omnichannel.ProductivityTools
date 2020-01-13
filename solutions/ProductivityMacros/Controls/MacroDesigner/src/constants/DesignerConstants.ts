@@ -16,7 +16,7 @@ export const manifestConnectorIds = {
 
 export const manifestOperationIds = {
     setCallScript: 'setcallscript',
-    start: 'start'
+    start: 'start',
 };
 
 export const icons = {

@@ -53,6 +53,7 @@ export class WrapperMessages {
 	public static RPC_PING = "__PING__";
 	public static LOG = "log";
 	public static MonitorInitDone = "monitorInitDone";
+	public static GetCrmData = "crmdata";
 };
 export enum LogLevel {
 	Info = "Info",
@@ -213,6 +214,17 @@ export interface ILogicAppDesignerOptions{
     environmentDescription: string,
     operationKindDisplayText: { [kind: string]: string }
 }
+
+export interface ListDynamicValuesResponse {
+    value: ListDynamicValue[];
+}
+export interface ListDynamicValue {
+    value: any;        // tslint:disable-line: no-any
+    displayName: string;
+    description: string;
+    disabled: boolean;
+}
+
 export enum Visibility {
 	Required = "required",
 	Important = "important",

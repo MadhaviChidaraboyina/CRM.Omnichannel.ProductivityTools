@@ -240,7 +240,7 @@ async function startDesigner(rpc) {
 	        let obj: SharedDefines.LogObject = {
                 level: SharedDefines.LogLevel.Info,
                 eventName: SharedDefines.WrapperEvents.DesignerControlInitEvent,
-                message: Utils.Utils.genMsgForTelemetry("Macro definition loaded into designer control"),
+                message: Utils.Utils.genMsgForTelemetry("Expression definition loaded into designer control"),
                 eventTimeStamp: new Date(),
                 eventType: SharedDefines.TelemetryEventType.Trace,
             };
@@ -250,7 +250,7 @@ async function startDesigner(rpc) {
             let obj: SharedDefines.LogObject = {
                 level: SharedDefines.LogLevel.Error,
                 eventName: SharedDefines.WrapperEvents.DesignerControlInitEvent,
-                message: Utils.Utils.genMsgForTelemetry("Unable to load macro definition to designer", error),
+                message: Utils.Utils.genMsgForTelemetry("Unable to load expression definition to designer", error),
                 eventTimeStamp: new Date(),
                 eventType: SharedDefines.TelemetryEventType.Trace,
                 exception: error.stack
@@ -303,7 +303,7 @@ async function startDesigner(rpc) {
                     let clientData = {
                             definition: JSON.parse(workflowDefn).definition
                     };
-                    console.log("Got workflow definition for macro '" + name + "' =" + JSON.stringify(clientData));
+                    console.log("Got workflow definition for expression '" + name + "' =" + JSON.stringify(clientData));
                     if (CurrentWorkflowDetails.id) {
                         try {
                             let rec = await window.top.Xrm.WebApi.updateRecord(SharedDefines.Constants.SESSION_TEMPLATE_ENTITY, CurrentWorkflowDetails.id, { msdyn_expressiondata: JSON.stringify(clientData) });
@@ -321,7 +321,7 @@ async function startDesigner(rpc) {
                             let obj: SharedDefines.LogObject = {
                                 level: SharedDefines.LogLevel.Error,
                                 eventName: SharedDefines.WrapperEvents.DesignerControlExecutionErrorEvent,
-                                message: Utils.Utils.genMsgForTelemetry("Unable to update macro definition", error),
+                                message: Utils.Utils.genMsgForTelemetry("Unable to update expression definition", error),
                                 eventTimeStamp: new Date(),
                                 eventType: SharedDefines.TelemetryEventType.Trace,
                                 exception: error.stack
@@ -362,7 +362,7 @@ async function startDesigner(rpc) {
 }
 
 function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, toClose?: boolean) {
-   // Utils.Utils.logAdminTelemetry(msg);
+    Utils.Utils.logAdminTelemetry(msg);
     console.log(msg.eventTimeStamp + " " + msg.eventType + " " + msg.level + " " + msg.eventName + " " + msg.message);
     if (userVisibleError) {
         window.top.Xrm.Navigation.openAlertDialog({ text: Utils.Utils.getResourceString(userVisibleError) }).then(function () {
@@ -372,6 +372,41 @@ function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, to
         });
     }
 }
+
+async function getCRMData() {
+    let response : SharedDefines.ListDynamicValuesResponse = {value: []};
+
+    let sessionTemplateId = Utils.Utils.getUrlParam(SharedDefines.Constants.MACRO_ID);
+    let agentScriptList : SharedDefines.ListDynamicValue[] =[];
+    try {
+        let result = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_consoleapplicationsessiontemplate","?$filter=msdyn_consoleapplicationsessiontemplateid eq '" + sessionTemplateId +"'&$expand=msdyn_msdyn_agentscript_msdyn_sessiontemplate($select=msdyn_name,msdyn_agentscriptid,msdyn_description)&$select=msdyn_name");   
+        result.entities.forEach(function (item) {
+            item.msdyn_msdyn_agentscript_msdyn_sessiontemplate.forEach(function (input) {
+                let agentScriptItem: SharedDefines.ListDynamicValue= {
+                    value: input.msdyn_agentscriptid,
+                    displayName: input.msdyn_name,
+                    description: input.msdyn_description,
+                    disabled: false
+                }
+                agentScriptList.push(agentScriptItem);
+            });
+        });
+        response.value = agentScriptList;  
+    }
+    catch (error) {
+        let obj: SharedDefines.LogObject = {
+            level: SharedDefines.LogLevel.Error,
+            eventName: SharedDefines.WrapperEvents.DesignerControlExecutionEvent,
+            message: Utils.Utils.genMsgForTelemetry("Unable to get Agent Script List", error),
+            eventTimeStamp: new Date(),
+            eventType: SharedDefines.TelemetryEventType.Trace,
+            exception: error.stack
+        };
+        doTelemetry(obj);
+    }
+    return (JSON.stringify(response));
+}
+ 
 
 require(["LogicApps/rpc/Scripts/logicappdesigner/libs/rpc/rpc.standalone"], async function (Rpc) {
     let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
@@ -388,6 +423,10 @@ require(["LogicApps/rpc/Scripts/logicappdesigner/libs/rpc/rpc.standalone"], asyn
                 return Utils.Utils.deserialize(message, SharedDefines.Constants.DESIGNER_CONTROL_SIGNATURE, SharedDefines.Constants.WRAPPER_CONTROL_SIGNATURE);
             }
         })
+    });
+    rpc.register(SharedDefines.WrapperMessages.GetCrmData, function () {
+        return getCRMData();
+
     });
     rpc.register(SharedDefines.WrapperMessages.DesignerInitDone,
         function () {
