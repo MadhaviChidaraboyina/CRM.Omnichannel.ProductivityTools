@@ -45,7 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controls", "Controls", "{65
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallscriptControl", "Client\Controls\CallscriptControl\CallscriptControl.csproj", "{7A1500DA-8B09-4DC9-9883-D78AA37C5C2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildExpressionButtonControl", "Client\Controls\BuildExpressionButtonControl\BuildExpressionButtonControl.csproj", "{6F82FCF7-B961-4D6E-A719-3B14EF99DD66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonControl", "Client\Controls\ButtonControl\ButtonControl.csproj", "{6F82FCF7-B961-4D6E-A719-3B14EF99DD66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

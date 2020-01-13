@@ -16,9 +16,9 @@
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>BuildExpressionButtonControl</RootNamespace>
-    <AssemblyName>BuildExpressionButtonControl</AssemblyName>
-    <TypeScriptOutFile>BuildExpressionButtonControl.js</TypeScriptOutFile>
+    <RootNamespace>ButtonControl</RootNamespace>
+    <AssemblyName>ButtonControl</AssemblyName>
+    <TypeScriptOutFile>ButtonControl.js</TypeScriptOutFile>
   </PropertyGroup>
   <PropertyGroup>
     <UglifyJsMangle>true</UglifyJsMangle>
@@ -41,21 +41,21 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="strings\BuildExpressionButtonControl.1033.resx">
+    <EmbeddedResource Include="strings\ButtonControl.1033.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>BuildExpressionButtonControl.1033.Designer.cs</LastGenOutput>
+      <LastGenOutput>ButtonControl.1033.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="strings\BuildExpressionButtonControl.1033.Designer.cs">
+    <Compile Include="strings\ButtonControl.1033.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BuildExpressionButtonControl.1033.resx</DependentUpon>
+      <DependentUpon>ButtonControl.1033.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="CommonReferences.ts" />
-    <TypeScriptCompile Include="BuildExpressionButtonControl.ts" />
+    <TypeScriptCompile Include="ButtonControl.ts" />
     <TypeScriptCompile Include="inputsOutputs.g.ts" />
     <TypeScriptCompile Include="PrivateReferences.ts" />
   </ItemGroup>
@@ -72,17 +72,17 @@
       <SelectedLibsOutputs Include="libs\*.*" />
       <SelectedcssOutputs Include="css\*.*" />
       <SelectedOutputs Include="$(TypeScriptOutFile)" />
-			<SelectedOutputs Include="ControlManifest.xml" />
+      <SelectedOutputs Include="ControlManifest.xml" />
       <SelectedimgOutputs Include="img\*.*" />
       <SelectedStringOutputs Include="strings\*.*" />
     </ItemGroup>
-    <Copy SourceFiles="@(SelectedOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\BuildExpressionButtonControl" />
-    <Copy SourceFiles="@(SelectedLibsOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\BuildExpressionButtonControl\libs" />
-    <Copy SourceFiles="@(SelectedcssOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\BuildExpressionButtonControl\css" />
-    <Copy SourceFiles="@(SelectedimgOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\BuildExpressionButtonControl\img" />
-    <Copy SourceFiles="@(SelectedStringOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\BuildExpressionButtonControl\strings" />
+    <Copy SourceFiles="@(SelectedOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\ButtonControl" />
+    <Copy SourceFiles="@(SelectedLibsOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\ButtonControl\libs" />
+    <Copy SourceFiles="@(SelectedcssOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\ButtonControl\css" />
+    <Copy SourceFiles="@(SelectedimgOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\ButtonControl\img" />
+    <Copy SourceFiles="@(SelectedStringOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\ButtonControl\strings" />
   </Target>
   <Target Name="Clean">
-    <RemoveDir Directories="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\BuildExpressionButtonControl" />
+    <RemoveDir Directories="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls\ButtonControl" />
   </Target>
 </Project>

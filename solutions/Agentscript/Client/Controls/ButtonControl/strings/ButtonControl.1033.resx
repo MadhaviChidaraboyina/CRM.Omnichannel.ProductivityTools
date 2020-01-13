@@ -117,11 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CC_BuildExpressionButtonControl_Desc" xml:space="preserve">
+  <data name="CC_ButtonControl_Desc" xml:space="preserve">
     <value>Button to build an expression</value>
     <comment>Button to build an expression</comment>
   </data>
-  <data name="CC_BuildExpressionButtonControl_Name" xml:space="preserve">
+  <data name="CC_ButtonControl_Name" xml:space="preserve">
     <value>Build Expression Button</value>
     <comment>Build Expression Button</comment>
   </data>

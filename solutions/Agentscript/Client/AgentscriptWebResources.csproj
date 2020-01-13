@@ -48,7 +48,7 @@
     <Content Include="AgentscriptFormScript\tsconfig.json" />
   </ItemGroup>
   <Target Name="CopyResource">
-    <Copy SourceFiles="Localization\Languages\Agentscript.resx" DestinationFiles="Localization\Languages\Agentscript.1033.resx" SkipUnchangedFiles="True" />
+    <Copy SourceFiles="Localization\Languages\msdyn_Agentscript.resx" DestinationFiles="Localization\Languages\msdyn_Agentscript.1033.resx" SkipUnchangedFiles="True" />
   </Target>
   <Target Name="CopyStatic" DependsOnTargets="CopyResource">
     <ItemGroup>
@@ -75,19 +75,18 @@
     </ItemGroup>
   </Target>
   <ItemGroup>
-    <EmbeddedResource Include="Localization\Languages\Agentscript.1033.resx" >
-	<Generator>ResXFileCodeGenerator</Generator>    
-	  </EmbeddedResource>
-    <EmbeddedResource Include="Localization\Languages\Agentscript.resx">     
+    <EmbeddedResource Include="Localization\Languages\msdyn_Agentscript.1033.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Languages\msdyn_Agentscript.resx">
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
-    <LocResx Include="Localization\Languages\Agentscript.*.resx" />
+    <LocResx Include="Localization\Languages\msdyn_Agentscript.*.resx" />
   </ItemGroup>
-    <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)%(RecursiveDir)')">
+  <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)%(RecursiveDir)')">
     <Copy SourceFiles="@(WebResources)" DestinationFolder="$(SolutionPackagePath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
     <Copy SourceFiles="@(TypeDefinitions)" DestinationFolder="$(WSRoot)\solutions\TypeDefinitions\Agentscript\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
-	<Copy SourceFiles="@(LocResx)" DestinationFolder="$(XrmSolutionsRoot)\solutions\Agentscript\Solution\WebResources\Localization" Retries="3" RetryDelayMilliseconds="300" />
+    <Copy SourceFiles="@(LocResx)" DestinationFolder="$(XrmSolutionsRoot)\solutions\Agentscript\Solution\WebResources\Localization" Retries="3" RetryDelayMilliseconds="300" />
   </Target>
 </Project>

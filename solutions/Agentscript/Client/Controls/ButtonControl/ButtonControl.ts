@@ -4,10 +4,10 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.BuildExpressionButtonControl {
+module MscrmControls.ButtonControl {
 	'use strict';
 
-	export class BuildExpressionButtonControl extends MscrmCommon.FieldControlBase<IInputBag, IOutputBag> {
+	export class ButtonControl extends MscrmCommon.FieldControlBase<IInputBag, IOutputBag> {
 
 		private _context: Mscrm.ControlData<IInputBag>;
 		private buttonDomElement: any;

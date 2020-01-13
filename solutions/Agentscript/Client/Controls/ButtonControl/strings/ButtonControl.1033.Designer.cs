@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BuildExpressionButtonControl.strings {
+namespace ButtonControl.strings {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace BuildExpressionButtonControl.strings {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class BuildExpressionButtonControl_1033 {
+    internal class ButtonControl_1033 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal BuildExpressionButtonControl_1033() {
+        internal ButtonControl_1033() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace BuildExpressionButtonControl.strings {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BuildExpressionButtonControl.strings.BuildExpressionButtonControl.1033", typeof(BuildExpressionButtonControl_1033).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ButtonControl.strings.ButtonControl.1033", typeof(ButtonControl_1033).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,51 @@ namespace BuildExpressionButtonControl.strings {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Build Expression.
+        /// </summary>
+        internal static string CC_Build_Expression {
+            get {
+                return ResourceManager.GetString("CC_Build_Expression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Button to build an expression.
+        /// </summary>
+        internal static string CC_ButtonControl_Desc {
+            get {
+                return ResourceManager.GetString("CC_ButtonControl_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Build Expression Button.
+        /// </summary>
+        internal static string CC_ButtonControl_Name {
+            get {
+                return ResourceManager.GetString("CC_ButtonControl_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string CC_Field {
+            get {
+                return ResourceManager.GetString("CC_Field", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attribute details.
+        /// </summary>
+        internal static string CC_Field_Desc {
+            get {
+                return ResourceManager.GetString("CC_Field_Desc", resourceCulture);
             }
         }
     }

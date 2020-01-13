@@ -3,4 +3,4 @@
 */
 
 /// <reference path="inputsoutputs.g.ts" />
-/// <reference path="BuildExpressionButtonControl.ts" />
+/// <reference path="ButtonControl.ts" />

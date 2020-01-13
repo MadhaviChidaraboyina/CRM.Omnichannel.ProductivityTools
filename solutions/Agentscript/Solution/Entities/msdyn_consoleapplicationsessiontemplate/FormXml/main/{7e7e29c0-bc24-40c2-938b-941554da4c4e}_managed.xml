@@ -147,23 +147,23 @@
                     </parameters>
                   </customControl>
                 </controlDescription>
-								<controlDescription forControl="{dc881d6a-da91-8be9-2ce2-b72c0670bcc1}">
+								<controlDescription forControl="{dc881d6a-da91-8be9-2ce2-b72c0670bcc1}" solutionaction="Added">
 									<customControl id="{E0DECE4B-6FC8-4a8f-A065-082708572369}">
 										<parameters>
 											<datafieldname>msdyn_expressiondata</datafieldname>
 										</parameters>
 									</customControl>
-									<customControl formFactor="0" name="MscrmControls.BuildExpressionButtonControl.BuildExpressionButtonControl">
+									<customControl formFactor="0" name="MscrmControls.ButtonControl.ButtonControl">
 										<parameters>
 											<value>msdyn_expressiondata</value>
 										</parameters>
 									</customControl>
-									<customControl formFactor="1" name="MscrmControls.BuildExpressionButtonControl.BuildExpressionButtonControl">
+									<customControl formFactor="1" name="MscrmControls.ButtonControl.ButtonControl">
 										<parameters>
 											<value>msdyn_expressiondata</value>
 										</parameters>
 									</customControl>
-									<customControl formFactor="2" name="MscrmControls.BuildExpressionButtonControl.BuildExpressionButtonControl">
+									<customControl formFactor="2" name="MscrmControls.ButtonControl.ButtonControl">
 										<parameters>
 											<value>msdyn_expressiondata</value>
 										</parameters>

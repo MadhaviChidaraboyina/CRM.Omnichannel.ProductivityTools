@@ -8,7 +8,7 @@
   <IntroducedVersion>1.0.0.0</IntroducedVersion>
   <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
   <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
-  <DependencyXml>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Dependencies&gt;&lt;Dependency componentType=&quot;WebResource&quot;&gt;&lt;Library name=&quot;Localization/Agentscript.1033.resx&quot; displayName=&quot;&quot; languagecode=&quot;1033&quot; description=&quot;&quot; libraryUniqueId=&quot;{9C756E88-1366-4ED9-A691-E286E09BEBC4}&quot; /&gt;&lt;/Dependency&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <DependencyXml>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Dependencies&gt;&lt;Dependency componentType=&quot;WebResource&quot;&gt;&lt;Library name=&quot;Localization/msdyn_Agentscript.1033.resx&quot; displayName=&quot;&quot; languagecode=&quot;1033&quot; description=&quot;&quot; libraryUniqueId=&quot;{9C756E88-1366-4ED9-A691-E286E09BEBC4}&quot; /&gt;&lt;/Dependency&gt;&lt;/Dependencies&gt;</DependencyXml>
   <IsCustomizable>1</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
