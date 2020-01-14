@@ -151,12 +151,12 @@ namespace Microsoft.ProductivityMacros.Internal {
                                     dependencyResources.forEach(
                                         function (value, index, array) {
                                             if (!(value in webresources)) {
-                                                //if (isResx(value)) {
-                                                //    webresources[value] = true;
-                                                //} else {
+                                                if (isResx(value)) {
+                                                    webresources[value] = true;
+                                                } else {
                                                     webresources[value] = false;
                                                     promises.push(findDepedency(value, webresources));
-                                                //}
+                                                }
                                             } else if (webresources[value] == false) {
                                                 promises.push(findDepedency(value, webresources));
                                             }
@@ -187,9 +187,9 @@ namespace Microsoft.ProductivityMacros.Internal {
     function getDependendency(dependencyxml: string): string[] {
         var dependentResources: string[] = [];
         var parsedXml = (window.top as any).$.parseXML(dependencyxml);
-        var dependency = parsedXml.documentElement.childNodes;
-        for (var i = 0; i < dependency.length; i++) {
-            var libraries = dependency[i].childNodes;
+        var dependencyElement = parsedXml.documentElement.getElementsByTagName("Dependency")
+        for (var i = 0; i < dependencyElement.length; i++) {
+            var libraries = dependencyElement[i].getElementsByTagName("Library");
             for (var l = 0; l < libraries.length; l++) {
                 var webresourceName = libraries[l].getAttribute("name");
                 if (!isNullOrUndefined(webresourceName)) {
