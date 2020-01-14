@@ -461,7 +461,7 @@
 					<Type>picklist</Type>
 					<Name>msdyn_showtimeout</Name>
 					<LogicalName>msdyn_showtimeout</LogicalName>
-					<RequiredLevel>required</RequiredLevel>
+					<RequiredLevel>none</RequiredLevel>
 					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
 					<ImeMode>auto</ImeMode>
 					<ValidForUpdateApi>1</ValidForUpdateApi>
@@ -522,7 +522,7 @@
           <Type>picklist</Type>
           <Name>msdyn_theme</Name>
           <LogicalName>msdyn_theme</LogicalName>
-          <RequiredLevel>required</RequiredLevel>
+          <RequiredLevel>none</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>
