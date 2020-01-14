@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="MscrmControls.GridControl" constructor="MacroSessionAssociatedGridControl" version="1.0.0" display-name-key="MacroSessionAssociatedGridControl" control-type="virtual">
+  <control namespace="MscrmControls.GridControl" constructor="MacroSessionAssociatedGridControl" version="1.0.1" display-name-key="MacroSessionAssociatedGridControl" control-type="virtual">
     <modes>
     </modes>
 		<resources>

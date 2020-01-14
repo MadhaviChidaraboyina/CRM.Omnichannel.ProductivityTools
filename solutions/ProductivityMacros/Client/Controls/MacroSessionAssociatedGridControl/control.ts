@@ -12,7 +12,7 @@ module MscrmControls.GridControl {
 		private _context: Mscrm.ControlData<IInputBag>;
 
 		private static readonly DEFAULT_SHOW_COUNT: number = 25;
-		private static readonly MAX_RECORD_COUNT: number = 25;
+		private static readonly MAX_RECORD_COUNT: number = 5000;
 		private XMLConstants: XMLConstants;
 		private showCount: number;
 		private recordCount: number = -1;
@@ -128,7 +128,7 @@ module MscrmControls.GridControl {
 
 			const properties: any = {
 				parameters: {
-					//TargetEntityType: this.entityLogicalName,
+					TargetEntityType: this.entityLogicalName,
 					Grid: {
 						Type: "Grid",
 						onDataSetUpdate: this.onDataSetUpdate.bind(this),
@@ -141,14 +141,13 @@ module MscrmControls.GridControl {
 							LayoutXml: this.layoutXML,
 							TargetEntityType: this.entityLogicalName,
 						},
-						PagingInput: {
-							Static: true,
-							Value: JSON.stringify({
-								pageSize: this.showCount,
-								firstPageNumber: 1,
-								lastPageNumber: 1
-							}),
-							Primary: false,
+						DataSetUIOptions: {
+							displayChart: false,
+							displayCommandBar: true,
+							displayIndex: true,
+							displayQuickFind: false,
+							displayViewSelector: false,
+							displayPaging: true
 						}
 					},
 					EnableGroupBy: {
