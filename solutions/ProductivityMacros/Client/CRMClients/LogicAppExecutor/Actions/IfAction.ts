@@ -117,7 +117,7 @@ namespace Microsoft.LogicAppExecutor {
 							let slugPromise = resolveSlug(expressions[expression][0]).then(
 								function (lhs: any) {
 									try {
-										console.log(lhs);
+										console.log("LHS : " + lhs);
 										return (this.evaluvateOperation(lhs, expressions[expression][1], operator));
 									}
 									catch (ex) {
@@ -159,6 +159,8 @@ namespace Microsoft.LogicAppExecutor {
 						return lhs.startsWith(rhs);
 					case "endsWith":
 						return lhs.endsWith(rhs);
+					case "contains":
+						return lhs.includes(rhs);
 				}
 			}
 			catch (ex)
