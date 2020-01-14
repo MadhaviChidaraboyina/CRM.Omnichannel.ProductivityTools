@@ -171,6 +171,7 @@ function startInit() {
 				'office-ui-fabric-react/lib/SwatchColorPicker': 'office-ui-fabric-react',
 				'office-ui-fabric-react/lib/TeachingBubble': 'office-ui-fabric-react',
 				'office-ui-fabric-react/lib/TextField': 'office-ui-fabric-react',
+				'office-ui-fabric-react/lib/Text': 'office-ui-fabric-react',
 				'office-ui-fabric-react/lib/ThemeGenerator': 'office-ui-fabric-react',
 				'office-ui-fabric-react/lib/Toggle': 'office-ui-fabric-react',
 				'office-ui-fabric-react/lib/Tooltip': 'office-ui-fabric-react',

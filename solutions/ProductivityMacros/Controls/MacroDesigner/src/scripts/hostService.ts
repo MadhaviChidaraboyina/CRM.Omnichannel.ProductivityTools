@@ -103,9 +103,15 @@ export class BuiltInTypeService {
     public getBuiltInParameters(): Record<string, Designer.BuiltInParameterDefinition> {
         return {};  //TODO
     }
+    public getOperationKind(): any {
+        return null;
+    }
+    public getDefaultOperationKind(isTrigger: boolean): string {
+        return isTrigger ? SharedDefines.Kind.Trigger : SharedDefines.Kind.Action;
+    }
 }
 
-type DesignerAction = Designer.ApiOperation & Designer.Operation & Designer.OperationManifest;
+type  DesignerAction = Designer.ApiOperation & Designer.Operation & Designer.OperationManifest;
 type DesignerConnector = Designer.RecommendationConnector;
 
 function getDesignerSchemaObjectFromInput(inp: SharedDefines.Parameter): Designer.Schema {
