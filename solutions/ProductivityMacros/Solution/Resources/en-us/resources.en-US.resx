@@ -2225,7 +2225,7 @@
     <comment> '{2E40DD90-2824-4524-B223-947052798E72}' : Description for Dialog</comment>
   </data>
   <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" xml:space="preserve">
-    <value>Create macros</value>
+    <value>Macros</value>
     <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}'</comment>
   </data>
   <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{505EF84E-0234-43DB-A095-AE2A87872170}" xml:space="preserve">
@@ -2241,7 +2241,7 @@
     <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{D74829E3-D89A-4B89-BEC7-67B6BB0DE2EA}'</comment>
   </data>
   <data name="68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E72}" xml:space="preserve">
-    <value>Create Macros</value>
+    <value>Macros</value>
     <comment> '{2E40DD90-2824-4524-B223-947052798E72}' : LocalizedName for Dialog</comment>
   </data>
 </root>
