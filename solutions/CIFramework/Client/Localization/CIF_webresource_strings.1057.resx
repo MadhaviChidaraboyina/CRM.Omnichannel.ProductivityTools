@@ -213,6 +213,82 @@
     <value>Luncurkan dialog kehadiran</value>
     <comment>Tooltip for presence control in navbar</comment>
   </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d7bc60" xml:space="preserve">
+    <value>Refresh the tab.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
+    <value>Focus tab.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
+    <value>Get the current page.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_48fc87c4_f480_4129_9c1d_682442d7bc60" xml:space="preserve">
+    <value>Refresh the tab</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
+    <value>Focus tab</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
+    <value>Get the current page</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_48fc87c4_f480_4129_9c1d_682442d7bc60" xml:space="preserve">
+    <value>Session connector</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
+    <value>Session connector</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
+    <value>Session connector</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_48fc87c4_f480_4129_9c1d_682442d7bc60" xml:space="preserve">
+    <value>Refresh the tab</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
+    <value>Focus tab</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
+    <value>Get the current page</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_48fc87c4_f480_4129_9c1d_682442d7bc60" xml:space="preserve">
+    <value>Refresh the tab</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
+    <value>Focus tab</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
+    <value>Get the current page</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_categorylabel_ac627bea_31f2_4378_9a21_6e1e2d74e278" xml:space="preserve">
+    <value>Predefined automation actions</value>
+    <comment>Macro Connector Category Label</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_description_ac627bea_31f2_4378_9a21_6e1e2d74e278" xml:space="preserve">
+    <value>Automate commonly used session actions</value>
+    <comment>Macro Connector Description</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_displayname_ac627bea_31f2_4378_9a21_6e1e2d74e278" xml:space="preserve">
+    <value>Session Connector</value>
+    <comment>Macro Connector Display Name</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_title_ac627bea_31f2_4378_9a21_6e1e2d74e278" xml:space="preserve">
+    <value>Session Connector</value>
+    <comment>Macro Connector Category Label</comment>
+  </data>
   <data name="NOTES_TOOLTIP_TEXT" xml:space="preserve">
     <value>Buat Catatan</value>
     <comment>Text for assisting user for notes.</comment>
@@ -268,5 +344,9 @@
   <data name="START_NOTES_TOOLTIP_TEXT" xml:space="preserve">
     <value>Mulai menambahkan catatan</value>
     <comment>Text for assisting user for notes.</comment>
+  </data>
+  <data name="V2_API_INFORMATION" xml:space="preserve">
+    <value>Dynamics 365 Channel Integration Framework version 2.0 supports only Telephony channels.</value>
+    <comment>V2 api information message</comment>
   </data>
 </root>

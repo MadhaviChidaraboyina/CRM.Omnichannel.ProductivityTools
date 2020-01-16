@@ -21,6 +21,22 @@
     <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";CC_Smartassist_Control" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Smart Assist control]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Išmaniojo pagelbiklio valdiklis]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-08T11:46:17.0005807Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Control name]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24046_20200103" />
+        </Props>
+      </Item>
       <Item ItemId=";ControlHeader" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Smart assist]]></Val>

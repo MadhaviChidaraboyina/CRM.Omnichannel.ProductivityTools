@@ -436,6 +436,17 @@
     <value>Zeitzonencode, der zum Zeitpunkt der Datensatzerstellung verwendet wurde.</value>
     <comment>'msdyn_agentscript' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpression" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationsessiontemplate' : Description for OptionSet 'msdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpression' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_enablebuildexpression' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" xml:space="preserve">
+    <value />
+    <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_expressiondata' on Entity</comment></data>
   <data name="1:Description,Session Templates{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
     <value>Ein Formular für diese Entität.</value>
     <comment>'Session Templates' : Description for systemform in Entity FormXml ID: '{7e7e29c0-bc24-40c2-938b-941554da4c4e}'</comment>
@@ -639,6 +650,18 @@
   <data name="1:displayname,msdyn_agentscriptUTCConversionTimeZoneCode" xml:space="preserve">
     <value>Zeitzonencode für die UTC-Konvertierung</value>
     <comment>'msdyn_agentscript' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpression" xml:space="preserve">
+    <value>Ausdrucks-Generator aktivieren</value>
+    <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for OptionSet 'msdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpression' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">
+    <value>Ausdrucks-Generator aktivieren</value>
+    <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_enablebuildexpression' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" xml:space="preserve">
+    <value>Ausdrucksdaten</value>
+    <comment>'msdyn_consoleapplicationsessiontemplate' : displayname for Attribute 'msdyn_expressiondata' on Entity</comment>
   </data>
   <data name="1:label,Agent script step{0103ed17-b98a-4032-87b5-77bfd61bd9d4}" xml:space="preserve">
     <value />
@@ -956,6 +979,14 @@
     <value>Inaktiv</value>
     <comment>'msdyn_agentscriptstep' : label for status '2' on Entity</comment>
   </data>
+  <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpression0" xml:space="preserve">
+    <value>Nein</value>
+    <comment>'msdyn_consoleapplicationsessiontemplate' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpression1" xml:space="preserve">
+    <value>Ja</value>
+    <comment>'msdyn_consoleapplicationsessiontemplate' : label for option '1' on Entity</comment>
+  </data>
   <data name="1:label,Session Templates{093dd305-a7cc-d998-e489-ac60594b185e}" xml:space="preserve">
     <value>AnchorTab</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{093dd305-a7cc-d998-e489-ac60594b185e}'</comment>
@@ -1119,10 +1150,6 @@
   <data name="1:LocalizedName,msdyn_agentscriptstepentitymsdyn_agentscriptstep" xml:space="preserve">
     <value>Agent-Skriptschritt</value>
     <comment> 'msdyn_agentscriptstep' : LocalizedName for Entity</comment>
-  </data>
-  <data name="1:LocalizedName,Process{ca941c69-85c5-e911-a81c-000d3a6d8160}" xml:space="preserve">
-    <value>Makros</value>
-    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{ca941c69-85c5-e911-a81c-000d3a6d8160}'</comment>
   </data>
   <data name="1:LocalizedName,Session Templates{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
     <value>Informationen</value>

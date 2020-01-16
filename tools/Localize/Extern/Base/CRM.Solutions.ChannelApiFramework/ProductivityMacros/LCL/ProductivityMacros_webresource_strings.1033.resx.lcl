@@ -183,6 +183,114 @@
           <Cmt Name="Dev"><![CDATA[Title String for Start Macro Trigger]]></Cmt>
         </Cmts>
       </Item>
+      <Item ItemId=";LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script connector]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display name for custom connector]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer Service]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display string for custom category]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Built-in]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display string for logic app built in category]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_SEARCHTEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search ]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Search string for Designer Control]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sets the default agent script ]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for set call script action]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enter the unique ID of the agent script (32 character string)]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for input paramater  set call script action]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script ID ]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for input paramater  set call script action]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ID of the agent script ]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for output paramater  set call script action]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Default agent script ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for output paramater  set call script action]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Set default agent script]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for set call script action]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_START_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[When the session loads, start evaluating the expression]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for start trigger for expression evaluation]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LADESIGNER_START_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start evaluating expression  ]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for start trigger for expression evaluation]]></Cmt>
+        </Cmts>
+      </Item>
       <Item ItemId=";MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Close All other Sessions]]></Val>
@@ -279,7 +387,7 @@
         </Str>
         <Disp Icon="Str" />
         <Cmts>
-          <Cmt Name="Dev"><![CDATA[Description for 'name' field of custom attribute]]></Cmt>
+          <Cmt Name="Dev"><![CDATA[Description for 'name' field of attribute]]></Cmt>
         </Cmts>
       </Item>
       <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -288,7 +396,7 @@
         </Str>
         <Disp Icon="Str" />
         <Cmts>
-          <Cmt Name="Dev"><![CDATA[Title string for 'name' field of custom attribute]]></Cmt>
+          <Cmt Name="Dev"><![CDATA[Title string for 'name' field of attribute]]></Cmt>
         </Cmts>
       </Item>
       <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -297,7 +405,7 @@
         </Str>
         <Disp Icon="Str" />
         <Cmts>
-          <Cmt Name="Dev"><![CDATA[Description for 'value' field of custom attribute]]></Cmt>
+          <Cmt Name="Dev"><![CDATA[Description for 'value' field of attribute]]></Cmt>
         </Cmts>
       </Item>
       <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -306,7 +414,1150 @@
         </Str>
         <Disp Icon="Str" />
         <Cmts>
-          <Cmt Name="Dev"><![CDATA[Title string for 'value' field of custom attribute]]></Cmt>
+          <Cmt Name="Dev"><![CDATA[Title string for 'value' field of attribute]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_16fc3387_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_1c1af956_fad2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_414bf49a_f06e_4ae2_9dd8_6d23f2619916" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus tab.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_85ab814a_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_ce3390dd_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current page.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_d3fef303_b090_44d8_a8f0_e2545a2459ae" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_e6c81912_fad2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_e903922e_fdd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create New]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_16fc3387_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search by relevance]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_1c1af956_fad2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open grid]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_414bf49a_f06e_4ae2_9dd8_6d23f2619916" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus tab]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_85ab814a_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search knowledge base article]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_ce3390dd_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current page]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_d3fef303_b090_44d8_a8f0_e2545a2459ae" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_e6c81912_fad2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open form]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_e903922e_fdd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_16fc3387_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_1c1af956_fad2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_414bf49a_f06e_4ae2_9dd8_6d23f2619916" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_85ab814a_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel connector]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_ce3390dd_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_d3fef303_b090_44d8_a8f0_e2545a2459ae" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel connector]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_e6c81912_fad2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_e903922e_fdd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_16fc3387_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_1c1af956_fad2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_414bf49a_f06e_4ae2_9dd8_6d23f2619916" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus tab]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_85ab814a_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_ce3390dd_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current page]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_d3fef303_b090_44d8_a8f0_e2545a2459ae" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_e6c81912_fad2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_e903922e_fdd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_16fc3387_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_1c1af956_fad2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_414bf49a_f06e_4ae2_9dd8_6d23f2619916" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus tab]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_85ab814a_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_ce3390dd_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current page]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_d3fef303_b090_44d8_a8f0_e2545a2459ae" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_e6c81912_fad2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_e903922e_fdd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_categorylabel_60541186_f5dd_e911_a81e_000d3af9c0c2" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Category Label]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_categorylabel_ac627bea_31f2_4378_9a21_6e1e2d74e278" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Category Label]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_categorylabel_d2f931e3_70b7_4093_865e_b8075a02c215" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Category Label]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_description_60541186_f5dd_e911_a81e_000d3af9c0c2" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used client-side tasks]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_description_ac627bea_31f2_4378_9a21_6e1e2d74e278" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used session actions]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_description_d2f931e3_70b7_4093_865e_b8075a02c215" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used Omnichannel actions]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_displayname_60541186_f5dd_e911_a81e_000d3af9c0c2" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Display Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_displayname_ac627bea_31f2_4378_9a21_6e1e2d74e278" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Display Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_displayname_d2f931e3_70b7_4093_865e_b8075a02c215" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Display Name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_title_60541186_f5dd_e911_a81e_000d3af9c0c2" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_title_ac627bea_31f2_4378_9a21_6e1e2d74e278" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Category Label]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_title_d2f931e3_70b7_4093_865e_b8075a02c215" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macrosolutionconfiguration_msdyn_searchhint" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search macro]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Solution Configuration Search Hint Text]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macrosolutionconfiguration_msdyn_uservoicetext" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Let us know what you would like us to build next]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Solution Configuration User Voice Text]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_2a148183_3905_49e9_acee_eed07fe2da18" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application Template ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_32e1acb9_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The phrase to be searched for&amp;quot;]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_35b0d4dc_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution reason]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_3a359e47_ec11_ea11_a811_000d3a334ee9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Primary name of the entity to be opened]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_473decbe_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ID of the email template]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_474f7494_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The type of view]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_4a8c0ace_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Case ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_6c7f2dbf_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time that is billable]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_6e033082_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ID of the view to be opened]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_9a6161ef_3033_4c8a_89fb_8229bf4539e9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample JSON object]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_ae9b14cb_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A JSON string representing the attributes and values to be updated]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_b66cd2ac_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email Recipients]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_ca97e23b_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application page type]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_d61ae14b_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Logical name of the entity to be opened]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_dc1db27b_b27e_4de3_ad4b_a1ba406de050" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Array of custom name-value pairs]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_ddf27260_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Form ID to be opened]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_eb102e60_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ID of the tab]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_f729e573_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID to be opened]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_fed739aa_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ID of the dashboard to be opened]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_2a148183_3905_49e9_acee_eed07fe2da18" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application Template ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_32e1acb9_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search string]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_35b0d4dc_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_3a359e47_ec11_ea11_a811_000d3a334ee9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity Primary Name]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_473decbe_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Template ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_474f7494_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View Type]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_4a8c0ace_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Incident ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_6c7f2dbf_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Billable Time]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_6e033082_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_9a6161ef_3033_4c8a_89fb_8229bf4539e9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample custom JSON Object]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_ae9b14cb_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[JSON string of key-value pairs]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_b66cd2ac_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email Recipients]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_ca97e23b_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Page Type]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_d61ae14b_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity Logical Name]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_dc1db27b_b27e_4de3_ad4b_a1ba406de050" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_ddf27260_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity Form ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_eb102e60_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Tab ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_f729e573_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_fed739aa_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dashboard ID]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
         </Cmts>
       </Item>
     </Item>

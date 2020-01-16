@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" timestamp="9/25/2019 8:35:47 PM">
   <entity name="msdyn_parameterdefinition" displayname="Parameter definition">
     <records>
@@ -141,7 +142,7 @@
         <field name="msdyn_name" value="Custom_Object" />
         <field name="msdyn_parameterdefinitionid" value="9a6161ef-3033-4c8a-89fb-8229bf4539e9" />
         <field name="msdyn_parametertype" value="array" />
-        <field name="msdyn_jsonobjectstructure" value='{"Key1":{"title":"Title 1","type":"string","description":"Key1 description"},"Key2":{"title":"Title 2","type":"string","description":"Key2 description"}}'/>
+        <field name="msdyn_jsonobjectstructure" value="{&quot;Key1&quot;:{&quot;title&quot;:&quot;Title 1&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;Key1 description&quot;},&quot;Key2&quot;:{&quot;title&quot;:&quot;Title 2&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;Key2 description&quot;}}" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_9a6161ef_3033_4c8a_89fb_8229bf4539e9" />
@@ -151,7 +152,7 @@
         <field name="msdyn_name" value="Custom_Array" />
         <field name="msdyn_parameterdefinitionid" value="dc1db27b-b27e-4de3-ad4b-a1ba406de050" />
         <field name="msdyn_parametertype" value="array" />
-        <field name="msdyn_jsonobjectstructure" value='{"Name":{"title":"MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE","type":"string","description":"MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC"},"Value":{"title":"MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE","type":"string","description":"MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC"}}'/>
+        <field name="msdyn_jsonobjectstructure" value="{&quot;Name&quot;:{&quot;title&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC&quot;},&quot;Value&quot;:{&quot;title&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC&quot;}}" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_dc1db27b_b27e_4de3_ad4b_a1ba406de050" />
@@ -590,7 +591,7 @@
           <field name="statuscode" value="1" />
           <field name="msdyn_title" value="msdyn_macroconnector_msdyn_title_d2f931e3_70b7_4093_865e_b8075a02c215" />
           <field name="msdyn_type" value="CDSClientAutomation" />
-          <field name="msdyn_webresourcename" value="msdyn_ocMacroResources.js"/>
+          <field name="msdyn_webresourcename" value="msdyn_ocMacroResources.js" />
       </record>
       <record id="ac627bea-31f2-4378-9a21-6e1e2d74e278">
           <field name="msdyn_brandcolor" value="#2266E3" />
@@ -607,7 +608,7 @@
           <field name="statuscode" value="1" />
           <field name="msdyn_title" value="msdyn_macroconnector_msdyn_title_ac627bea_31f2_4378_9a21_6e1e2d74e278" />
           <field name="msdyn_type" value="CDSClientAutomation" />
-          <field name="msdyn_webresourcename" value="Macros/msdyn_internal_cimacro_library.js"/>
+          <field name="msdyn_webresourcename" value="Macros/msdyn_internal_cimacro_library.js" />
       </record>
     </records>
     <m2mrelationships />
@@ -990,6 +991,18 @@
         <field name="statuscode" value="1" />
         <field name="msdyn_uservoicelink" value="https://experience.dynamics.com/ideas/categories/list/?category=31047c64-7e28-e911-a95a-000d3a4f3883&amp;amp;forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad" />
         <field name="msdyn_uservoicetext" value="msdyn_macrosolutionconfiguration_msdyn_uservoicetext" />
+      </record>
+    </records>
+    <m2mrelationships />
+  </entity>
+  <entity name="msdyn_productivitypaneconfiguration" displayname="Productivity pane configuration">
+    <records>
+      <record id="482d09b0-d327-ea11-a810-000d3a1026fe">
+        <field name="msdyn_productivitypaneconfigurationid" value="482d09b0-d327-ea11-a810-000d3a1026fe" />
+        <field name="msdyn_productivitypanemode" value="True" />
+        <field name="msdyn_productivitypanestate" value="True" />
+        <field name="msdyn_name" value="Productivity pane configuration" />
+        <field name="msdyn_applicationname" value="msdyn_OCAPP" />
       </record>
     </records>
     <m2mrelationships />

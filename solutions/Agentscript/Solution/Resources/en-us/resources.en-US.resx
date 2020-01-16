@@ -445,7 +445,7 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_enablebuildexpression' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" xml:space="preserve">
-    <value />
+    <value>Stores expression JSON</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_expressiondata' on Entity</comment>
   </data>
   <data name="1:Description,Session Templates{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
@@ -1143,10 +1143,6 @@
   <data name="1:LocalizedName,Agent script{f23a365e-e46e-4d08-b093-3cd0fc7e0fe6}" xml:space="preserve">
     <value>Information</value>
     <comment>'Agent script' : LocalizedName for systemform in Entity FormXml ID: '{f23a365e-e46e-4d08-b093-3cd0fc7e0fe6}'</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_agentscriptentitymsdyn_agentscript" xml:space="preserve">
-    <value>Agent script</value>
-    <comment> 'msdyn_agentscript' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_agentscriptentitymsdyn_agentscript" xml:space="preserve">
     <value>Agent script</value>

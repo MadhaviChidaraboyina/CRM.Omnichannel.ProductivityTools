@@ -23,6 +23,67 @@
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
       <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+      <Item ItemId=";1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpr" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) ession" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+              <Val><![CDATA[]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" />
+          <Modified By="v-rondai" DateTime="2020-01-08T11:46:17.0008269Z" />
+          <Props>
+            <Str Name="Custom3" Val="WO24046_20200103" />
+          </Props>
+        </Item>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpr" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) ession" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Enable build expression]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+              <Val><![CDATA[Bật tính năng xây dựng biểu thức]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" />
+          <Modified By="v-rondai" DateTime="2020-01-08T11:46:17.0008269Z" />
+          <Props>
+            <Str Name="Custom3" Val="WO24046_20200103" />
+          </Props>
+        </Item>
+      </Item>
+      <Item ItemId=";1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpression" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) 0" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[No]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+              <Val><![CDATA[Không]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" />
+          <Modified By="v-rondai" DateTime="2020-01-08T11:46:17.0008262Z" />
+          <Props>
+            <Str Name="Custom3" Val="WO24046_20200103" />
+          </Props>
+        </Item>
+        <Item ItemId=";(...) 1" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Yes]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+              <Val><![CDATA[Có]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" />
+          <Modified By="v-rondai" DateTime="2020-01-08T11:46:17.0008262Z" />
+          <Props>
+            <Str Name="Custom3" Val="WO24046_20200103" />
+          </Props>
+        </Item>
+      </Item>
       <Item ItemId=";10:Description,business_unit_msdyn_agentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
@@ -1024,6 +1085,32 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_enablebuildexpression" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-08T11:46:17.000826Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24046_20200103" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-08T11:46:17.000826Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24046_20200103" />
+        </Props>
+      </Item>
       <Item ItemId=";1:LocalizedCollectionName,msdyn_agentscriptentitymsdyn_agentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent scripts]]></Val>
@@ -1328,19 +1415,6 @@
           <Val><![CDATA[Information]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Thông tin]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.0005749Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:LocalizedName,Process{ca941c69-85c5-e911-a81c-000d3a6d8160}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Macro]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2244,6 +2318,32 @@
         <Modified By="v-jachyl" DateTime="2019-09-20T14:08:56.0005556Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_enablebuildexpression" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable build expression]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Bật tính năng xây dựng biểu thức]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-08T11:46:17.0008251Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24046_20200103" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Expression data]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dữ liệu biểu thức]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-08T11:46:17.0008251Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24046_20200103" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Agent script step{0103ed17-b98a-4032-87b5-77bfd61bd9d4}" ItemType="0;.resx" PsrId="211" Leaf="true">

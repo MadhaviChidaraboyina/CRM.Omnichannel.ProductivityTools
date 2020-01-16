@@ -3,303 +3,177 @@
   <entity name="msdyn_parameterdefinition" displayname="Parameter definition">
     <records>
       <record id="d61ae14b-f8d2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:09 PM" />
-        <field name="msdyn_description" value="Logický názov entity, ktorá sa má otvoriť" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:09 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_d61ae14b_f8d2_e911_a81e_000d3a015920" />
         <field name="msdyn_name" value="EntityName" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="d61ae14b-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Logický názov entity" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_d61ae14b_f8d2_e911_a81e_000d3a015920" />
       </record>
       <record id="ddf27260-f8d2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:10 PM" />
-        <field name="msdyn_description" value="ID formulára, ktorý sa má otvoriť" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:10 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_ddf27260_f8d2_e911_a81e_000d3a015920" />
         <field name="msdyn_name" value="FormId" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="ddf27260-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="ID formulára entity" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_ddf27260_f8d2_e911_a81e_000d3a015920" />
       </record>
       <record id="f729e573-f8d2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:10 PM" />
-        <field name="msdyn_description" value="ID záznamu entity, ktorý sa má otvoriť" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:10 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_f729e573_f8d2_e911_a81e_000d3a015920" />
         <field name="msdyn_name" value="EntityId" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="f729e573-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="ID záznamu entity" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_f729e573_f8d2_e911_a81e_000d3a015920" />
       </record>
       <record id="6e033082-f8d2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:10 PM" />
-        <field name="msdyn_description" value="ID zobrazenia, ktoré sa má otvoriť" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:10 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_6e033082_f8d2_e911_a81e_000d3a015920" />
         <field name="msdyn_name" value="ViewId" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="6e033082-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="ID zobrazenia" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_6e033082_f8d2_e911_a81e_000d3a015920" />
       </record>
       <record id="474f7494-f8d2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:10 PM" />
-        <field name="msdyn_description" value="Typ zobrazenia" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:10 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_474f7494_f8d2_e911_a81e_000d3a015920" />
         <field name="msdyn_name" value="ViewType" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="474f7494-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Typ zobrazenia" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_474f7494_f8d2_e911_a81e_000d3a015920" />
       </record>
       <record id="fed739aa-f8d2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:11 PM" />
-        <field name="msdyn_description" value="ID tabule, ktorá sa má otvoriť" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:11 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_fed739aa_f8d2_e911_a81e_000d3a015920" />
         <field name="msdyn_name" value="DashboardId" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="fed739aa-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="ID tabule" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_fed739aa_f8d2_e911_a81e_000d3a015920" />
       </record>
       <record id="32e1acb9-f8d2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:11 PM" />
-        <field name="msdyn_description" value="Fráza, ktorú treba vyhľadať&quot;" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:11 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_32e1acb9_f8d2_e911_a81e_000d3a015920" />
         <field name="msdyn_name" value="SearchString" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="32e1acb9-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Hľadaný reťazec" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_32e1acb9_f8d2_e911_a81e_000d3a015920" />
       </record>
       <record id="ae9b14cb-f8d2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:11 PM" />
-        <field name="msdyn_description" value="Reťazec JSON predstavujúci atribúty a hodnoty, ktoré sa majú aktualizovať" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:11 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_ae9b14cb_f8d2_e911_a81e_000d3a015920" />
         <field name="msdyn_name" value="UpdateData" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="ae9b14cb-f8d2-e911-a81e-000d3a015920" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Reťazec JSON párov kľúč – hodnota" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_ae9b14cb_f8d2_e911_a81e_000d3a015920" />
       </record>
       <record id="ca97e23b-9fdf-e911-a81e-000d3a0698dc">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:17:41 PM" />
-        <field name="msdyn_description" value="Typ stránky aplikácie" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:17:41 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_ca97e23b_9fdf_e911_a81e_000d3a0698dc" />
         <field name="msdyn_name" value="PageType" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="ca97e23b-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Typ stránky" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_ca97e23b_9fdf_e911_a81e_000d3a0698dc" />
       </record>
       <record id="eb102e60-9fdf-e911-a81e-000d3a0698dc">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:18:42 PM" />
-        <field name="msdyn_description" value="ID karty" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:18:42 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_eb102e60_9fdf_e911_a81e_000d3a0698dc" />
         <field name="msdyn_name" value="TabId" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="eb102e60-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="ID karty" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_eb102e60_9fdf_e911_a81e_000d3a0698dc" />
       </record>
       <record id="b66cd2ac-9fdf-e911-a81e-000d3a0698dc">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:20:51 PM" />
-        <field name="msdyn_description" value="Príjemcovia e-mailu" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:20:51 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_b66cd2ac_9fdf_e911_a81e_000d3a0698dc" />
         <field name="msdyn_name" value="PartyListName" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="b66cd2ac-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Príjemcovia e-mailu" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_b66cd2ac_9fdf_e911_a81e_000d3a0698dc" />
       </record>
       <record id="473decbe-9fdf-e911-a81e-000d3a0698dc">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:21:21 PM" />
-        <field name="msdyn_description" value="ID šablóny e-mailu" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:21:21 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_473decbe_9fdf_e911_a81e_000d3a0698dc" />
         <field name="msdyn_name" value="TemplateId" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="473decbe-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="ID šablóny" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_473decbe_9fdf_e911_a81e_000d3a0698dc" />
       </record>
       <record id="6c7f2dbf-a0df-e911-a81e-000d3a0698dc">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:28:31 PM" />
-        <field name="msdyn_description" value="Čas, ktorý možno fakturovať" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:28:31 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_6c7f2dbf_a0df_e911_a81e_000d3a0698dc" />
         <field name="msdyn_name" value="BillableTime" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="6c7f2dbf-a0df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Fakturovateľný čas" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_6c7f2dbf_a0df_e911_a81e_000d3a0698dc" />
       </record>
       <record id="4a8c0ace-a0df-e911-a81e-000d3a0698dc">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:28:56 PM" />
-        <field name="msdyn_description" value="ID prípadu" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:28:56 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_4a8c0ace_a0df_e911_a81e_000d3a0698dc" />
         <field name="msdyn_name" value="IncidentId" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="4a8c0ace-a0df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="ID incidentu" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_4a8c0ace_a0df_e911_a81e_000d3a0698dc" />
       </record>
       <record id="35b0d4dc-a0df-e911-a81e-000d3a0698dc">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:29:21 PM" />
-        <field name="msdyn_description" value="Dôvod vyriešenia" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:29:21 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_35b0d4dc_a0df_e911_a81e_000d3a0698dc" />
         <field name="msdyn_name" value="Resolution" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="35b0d4dc-a0df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Riešenie" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_35b0d4dc_a0df_e911_a81e_000d3a0698dc" />
       </record>
       <record id="9a6161ef-3033-4c8a-89fb-8229bf4539e9">
-        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/9/2019 11:52:28 AM" />
-        <field name="msdyn_description" value="Vzorový objekt JSON" />
-        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 11:52:28 AM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_9a6161ef_3033_4c8a_89fb_8229bf4539e9" />
         <field name="msdyn_name" value="Custom_Object" />
-        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
-        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="9a6161ef-3033-4c8a-89fb-8229bf4539e9" />
         <field name="msdyn_parametertype" value="array" />
         <field name="msdyn_jsonobjectstructure" value="{&quot;Key1&quot;:{&quot;title&quot;:&quot;Title 1&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;Key1 description&quot;},&quot;Key2&quot;:{&quot;title&quot;:&quot;Title 2&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;Key2 description&quot;}}" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Vzorový vlastný objekt JSON" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_9a6161ef_3033_4c8a_89fb_8229bf4539e9" />
       </record>
       <record id="dc1db27b-b27e-4de3-ad4b-a1ba406de050">
-        <field name="createdby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/9/2019 11:52:28 AM" />
-        <field name="msdyn_description" value="Pole vlastných párov názov-hodnota" />
-        <field name="modifiedby" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/9/2019 11:52:28 AM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_dc1db27b_b27e_4de3_ad4b_a1ba406de050" />
         <field name="msdyn_name" value="Custom_Array" />
-        <field name="ownerid" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="3335447e-39d0-e911-a81b-000d3a015920" lookupentity="businessunit" />
-        <field name="owninguser" value="253c447e-39d0-e911-a81b-000d3a015920" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="dc1db27b-b27e-4de3-ad4b-a1ba406de050" />
         <field name="msdyn_parametertype" value="array" />
         <field name="msdyn_jsonobjectstructure" value="{&quot;Name&quot;:{&quot;title&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC&quot;},&quot;Value&quot;:{&quot;title&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC&quot;}}" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Atribút" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_dc1db27b_b27e_4de3_ad4b_a1ba406de050" />
       </record>
       <record id="3a359e47-ec11-ea11-a811-000d3a334ee9">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:09 PM" />
-        <field name="msdyn_description" value="Primárny názov entity, ktorá sa má otvoriť" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:09 PM" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_3a359e47_ec11_ea11_a811_000d3a334ee9" />
         <field name="msdyn_name" value="PrimaryNameAttributeValue" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parameterdefinitionid" value="3a359e47-ec11-ea11-a811-000d3a334ee9" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="Primárny názov entity" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_3a359e47_ec11_ea11_a811_000d3a334ee9" />
       </record>
       <record id="2a148183-3905-49e9-acee-eed07fe2da18">
-        <field name="msdyn_description" value="ID šablóny aplikácie" />
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_2a148183_3905_49e9_acee_eed07fe2da18" />
         <field name="msdyn_name" value="ApplicationTemplateId" />
         <field name="msdyn_parameterdefinitionid" value="2a148183-3905-49e9-acee-eed07fe2da18" />
         <field name="msdyn_parametertype" value="string" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_displayname" value="ID šablóny aplikácie" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_2a148183_3905_49e9_acee_eed07fe2da18" />
       </record>
     </records>
     <m2mrelationships>
@@ -323,6 +197,8 @@
           <targetid>1d75d16f-fad2-e911-a81e-000d3a015920</targetid>
           <targetid>d54edfed-fcd2-e911-a81e-000d3a015920</targetid>
           <targetid>4de2d295-9fdf-e911-a81e-000d3a0698dc</targetid>
+          <targetid>d4c05c73-2834-41d8-aa60-56b88224a5bd</targetid>
+          <targetid>72e1811e-aa62-4cf9-9055-298a93d11318</targetid>
         </targetids>
       </m2mrelationship>
       <m2mrelationship sourceid="ddf27260-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
@@ -376,7 +252,6 @@
           <targetid>64dfc33d-a0df-e911-a81e-000d3a0698dc</targetid>
           <targetid>76104271-a0df-e911-a81e-000d3a0698dc</targetid>
           <targetid>70ec88f5-a2df-e911-a81e-000d3a0698dc</targetid>
-          <targetid>a5ddec36-4c57-447e-b460-4ca2c25cad8c</targetid>
         </targetids>
       </m2mrelationship>
       <m2mrelationship sourceid="eb102e60-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
@@ -387,8 +262,7 @@
           <targetid>76104271-a0df-e911-a81e-000d3a0698dc</targetid>
           <targetid>1ea83154-a1df-e911-a81e-000d3a0698dc</targetid>
           <targetid>8d571f7e-a1df-e911-a81e-000d3a0698dc</targetid>
-		  <targetid>92a13b71-60a1-4ff3-ba0b-9a5bf836ad3c</targetid>
-		  <targetid>a5ddec36-4c57-447e-b460-4ca2c25cad8c</targetid>
+          <targetid>92a13b71-60a1-4ff3-ba0b-9a5bf836ad3c</targetid>
         </targetids>
       </m2mrelationship>
       <m2mrelationship sourceid="b66cd2ac-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
@@ -429,14 +303,15 @@
           <targetid>72e1811e-aa62-4cf9-9055-298a93d11318</targetid>
         </targetids>
       </m2mrelationship>
-      <m2mrelationship sourceid="2a148183-3905-49e9-acee-eed07fe2da18" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
+      <m2mrelationship sourceid="3a359e47-ec11-ea11-a811-000d3a334ee9" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
-          <targetid>b1b5b1e8-8c6c-4227-80f4-b239ebd494bf</targetid>
+          <targetid>d4c05c73-2834-41d8-aa60-56b88224a5bd</targetid>
+          <targetid>72e1811e-aa62-4cf9-9055-298a93d11318</targetid>
         </targetids>
       </m2mrelationship>
-        <m2mrelationship sourceid="eb102e60-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
+      <m2mrelationship sourceid="eb102e60-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
           <targetids>
-			<targetid>455e7ded-ed50-4c08-abde-793d7f5ac4b7</targetid>
+            <targetid>455e7ded-ed50-4c08-abde-793d7f5ac4b7</targetid>
             <targetid>e8ded7e4-ec2c-41aa-ac11-6f91ffc940bc</targetid>
           </targetids>
         </m2mrelationship>
@@ -447,14 +322,7 @@
       <record id="f530a3d1-f9d2-e911-a81e-000d3a015920">
         <field name="msdyn_actioninputparameterid" value="f530a3d1-f9d2-e911-a81e-000d3a015920" />
         <field name="msdyn_actiontemplateinputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:58 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
         <field name="msdyn_name" value="Create_New_Input_Params_Mandatory" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="True" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -463,14 +331,7 @@
       <record id="c8d99e29-fad2-e911-a81e-000d3a015920">
         <field name="msdyn_actioninputparameterid" value="c8d99e29-fad2-e911-a81e-000d3a015920" />
         <field name="msdyn_actiontemplateinputparameterid" value="e6c81912-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Form" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:57 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
         <field name="msdyn_name" value="Open_Existing_Form_Input_Params_Mandatory" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="True" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -479,14 +340,7 @@
       <record id="1d75d16f-fad2-e911-a81e-000d3a015920">
         <field name="msdyn_actioninputparameterid" value="1d75d16f-fad2-e911-a81e-000d3a015920" />
         <field name="msdyn_actiontemplateinputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:58 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
         <field name="msdyn_name" value="Open_Grid_Input_Params_Mandatory" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="True" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -495,14 +349,7 @@
       <record id="c8e3f6f3-9888-45ea-ab7a-378b7aedccbc">
         <field name="msdyn_actioninputparameterid" value="c8e3f6f3-9888-45ea-ab7a-378b7aedccbc" />
         <field name="msdyn_actiontemplateinputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:58 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
         <field name="msdyn_name" value="Open_Grid_Input_Params_Optional" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="True" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -511,14 +358,7 @@
       <record id="1ce921a3-fbd2-e911-a81e-000d3a015920">
         <field name="msdyn_actioninputparameterid" value="1ce921a3-fbd2-e911-a81e-000d3a015920" />
         <field name="msdyn_actiontemplateinputparameterid" value="baa326ad-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Dashboard" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:59 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
         <field name="msdyn_name" value="Open_Dashboard_Input_Param_Mandatory" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="True" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -527,14 +367,7 @@
       <record id="c833de57-fcd2-e911-a81e-000d3a015920">
         <field name="msdyn_actioninputparameterid" value="c833de57-fcd2-e911-a81e-000d3a015920" />
         <field name="msdyn_actiontemplateinputparameterid" value="85ab814a-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_knowledge_base" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:59 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:59:44 PM" />
         <field name="msdyn_name" value="Search_kb_input_params" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="False" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -543,14 +376,7 @@
       <record id="62da1195-fcd2-e911-a81e-000d3a015920">
         <field name="msdyn_actioninputparameterid" value="62da1195-fcd2-e911-a81e-000d3a015920" />
         <field name="msdyn_actiontemplateinputparameterid" value="16fc3387-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_by_relevance" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:58 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
         <field name="msdyn_name" value="Search_by_relevance_input_parameter" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="True" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -559,14 +385,7 @@
       <record id="d54edfed-fcd2-e911-a81e-000d3a015920">
         <field name="msdyn_actioninputparameterid" value="d54edfed-fcd2-e911-a81e-000d3a015920" />
         <field name="msdyn_actiontemplateinputparameterid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Record" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:59 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
         <field name="msdyn_name" value="Update_record_input_params_mandatory" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="True" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -575,14 +394,7 @@
       <record id="4de2d295-9fdf-e911-a81e-000d3a0698dc">
         <field name="msdyn_actioninputparameterid" value="4de2d295-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateinputparameterid" value="e903922e-fdd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Draft_Email" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:20:12 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:56:52 PM" />
         <field name="msdyn_name" value="draft_email_input_params_mandatory" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="True" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -591,14 +403,7 @@
       <record id="c61541ac-a0df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actioninputparameterid" value="c61541ac-a0df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateinputparameterid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" lookupentity="msdyn_macroactiontemplate" lookupentityname="Resolve_Case" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:27:59 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:58:53 PM" />
         <field name="msdyn_name" value="Resolve_Case_Input_Mandatory" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="True" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -607,14 +412,7 @@
       <record id="8729c34c-a5df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actioninputparameterid" value="8729c34c-a5df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateinputparameterid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Record" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 3:01:07 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 3:01:07 PM" />
         <field name="msdyn_name" value="Update_record_input_params_advanced" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="False" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -623,14 +421,7 @@
       <record id="84e5f9f9-15e6-4c54-8727-326e9cddb5e8">
         <field name="msdyn_actioninputparameterid" value="84e5f9f9-15e6-4c54-8727-326e9cddb5e8" />
         <field name="msdyn_actiontemplateinputparameterid" value="e6c81912-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Form" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:58 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:58:17 PM" />
         <field name="msdyn_name" value="Open_Existing_Form_Input_Params_Optional" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="True" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -639,14 +430,7 @@
       <record id="df71b777-cf80-40f3-bc35-9a52c2eb8433">
         <field name="msdyn_actioninputparameterid" value="df71b777-cf80-40f3-bc35-9a52c2eb8433" />
         <field name="msdyn_actiontemplateinputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:57 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
         <field name="msdyn_name" value="Create_New_Input_Params_Advanced" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="False" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -655,14 +439,7 @@
       <record id="f537df76-a690-4fc8-aa69-9b875f5fff9b">
         <field name="msdyn_actioninputparameterid" value="f537df76-a690-4fc8-aa69-9b875f5fff9b" />
         <field name="msdyn_actiontemplateinputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:58 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:12 PM" />
         <field name="msdyn_name" value="Create_New_Input_Params_Optional" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_parametertype" value="False" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
@@ -695,15 +472,6 @@
         <field name="statuscode" value="1" />
         <field name="msdyn_visibility" value="required" />
       </record>
-      <record id="b1b5b1e8-8c6c-4227-80f4-b239ebd494bf">
-        <field name="msdyn_actioninputparameterid" value="b1b5b1e8-8c6c-4227-80f4-b239ebd494bf" />
-        <field name="msdyn_actiontemplateinputparameterid" value="70575109-3ed6-4e47-9f20-33af77ae060a" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_application_tab" />
-        <field name="msdyn_name" value="Open_application_tab_Input_Params_Mandatory" />
-        <field name="msdyn_parametertype" value="True" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_visibility" value="required" />
-      </record>
       <record id="e8ded7e4-ec2c-41aa-ac11-6f91ffc940bc">
         <field name="msdyn_actioninputparameterid" value="e8ded7e4-ec2c-41aa-ac11-6f91ffc940bc" />
         <field name="msdyn_actiontemplateinputparameterid" value="761589d3-4fd7-4cab-b2f7-96728d4b9823" lookupentity="msdyn_macroactiontemplate" lookupentityname="Focus_tab" />
@@ -721,133 +489,63 @@
       <record id="af738e20-9fdf-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="af738e20-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateoutputparameterid" value="01a02947-f9d2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Create_New" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:16:56 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:20:33 PM" />
         <field name="msdyn_name" value="Create_New_Output_Params" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="324255e8-9fdf-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="324255e8-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateoutputparameterid" value="e903922e-fdd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Draft_Email" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:22:31 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:25:38 PM" />
         <field name="msdyn_name" value="draft_email_output_params" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="64dfc33d-a0df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="64dfc33d-a0df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateoutputparameterid" value="e6c81912-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Form" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:24:54 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:26:50 PM" />
         <field name="msdyn_name" value="Open_Exisiting_Form_Output_Params" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="76104271-a0df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="76104271-a0df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateoutputparameterid" value="1c1af956-fad2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Grid" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:26:20 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:29:27 PM" />
         <field name="msdyn_name" value="Open_Grid_Output_Params" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="1ea83154-a1df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="1ea83154-a1df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateoutputparameterid" value="16fc3387-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_by_relevance" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:32:41 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:34:14 PM" />
         <field name="msdyn_name" value="Search_by_relevance_output_parameter" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="8d571f7e-a1df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="8d571f7e-a1df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateoutputparameterid" value="85ab814a-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Search_knowledge_base" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:33:52 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:37:33 PM" />
         <field name="msdyn_name" value="Search_kb_output_params" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="98ddcda4-a1df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="98ddcda4-a1df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateoutputparameterid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Record" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:34:56 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:42:17 PM" />
         <field name="msdyn_name" value="Update_record_output_params" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="70ec88f5-a2df-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="70ec88f5-a2df-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateoutputparameterid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" lookupentity="msdyn_macroactiontemplate" lookupentityname="Resolve_Case" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:44:21 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:45:29 PM" />
         <field name="msdyn_name" value="resolve_case_ouput_params" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
       <record id="a4794d6d-b112-ea11-a811-000d3a334ee9">
         <field name="msdyn_actionoutputparameterid" value="a4794d6d-b112-ea11-a811-000d3a334ee9" />
-        <field name="msdyn_actiontemplateoutputparameterid" value="101c73b5-fcd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Save" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:44:21 PM" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:45:29 PM" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="414bf49a-f06e-4ae2-9dd8-6d23f2619916" lookupentity="msdyn_macroactiontemplate" lookupentityname="Save" />
         <field name="msdyn_name" value="save_output_params" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-      </record>
-      <record id="a5ddec36-4c57-447e-b460-4ca2c25cad8c">
-        <field name="msdyn_actionoutputparameterid" value="a5ddec36-4c57-447e-b460-4ca2c25cad8c" />
-        <field name="msdyn_actiontemplateoutputparameterid" value="70575109-3ed6-4e47-9f20-33af77ae060a" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_application_tab" />
-        <field name="msdyn_name" value="Open_application_tab_Output_Params" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
@@ -866,39 +564,32 @@
       <record id="60541186-f5dd-e911-a81e-000d3af9c0c2">
         <field name="msdyn_brandcolor" value="#2266E3" />
         <field name="msdyn_categorykey" value="CONNECTORS" />
-        <field name="msdyn_categorylabel" value="Preddefinované akcie automatizácie" />
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:12:53 PM" />
-        <field name="msdyn_description" value="Automatizujte bežne používané úlohy na strane klienta" />
-        <field name="msdyn_displayname" value="Automatizácia produktivity" />
+        <field name="msdyn_categorylabel" value="msdyn_macroconnector_msdyn_categorylabel_60541186_f5dd_e911_a81e_000d3af9c0c2" />
+        <field name="msdyn_description" value="msdyn_macroconnector_msdyn_description_60541186_f5dd_e911_a81e_000d3af9c0c2" />
+        <field name="msdyn_displayname" value="msdyn_macroconnector_msdyn_displayname_60541186_f5dd_e911_a81e_000d3af9c0c2" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_macro_connector.svg" />
         <field name="msdyn_macroconnectorid" value="60541186-f5dd-e911-a81e-000d3af9c0c2" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:12:53 PM" />
         <field name="msdyn_name" value="Productivity Automation" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_prefix" value="UCI" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_title" value="Automatizácia produktivity" />
+        <field name="msdyn_title" value="msdyn_macroconnector_msdyn_title_60541186_f5dd_e911_a81e_000d3af9c0c2" />
         <field name="msdyn_type" value="CDSClientAutomation" />
       </record>
       <record id="d2f931e3-70b7-4093-865e-b8075a02c215">
           <field name="msdyn_brandcolor" value="#2266E3" />
           <field name="msdyn_callback" value="OmniChannelPackage.Macros.Instance.resolveSlug(context,paramName)" />
           <field name="msdyn_categorykey" value="CONNECTORS" />
-          <field name="msdyn_categorylabel" value="Preddefinované akcie automatizácie" />
-          <field name="msdyn_description" value="Automatizujte bežne používané akcie Omnikanála" />
-          <field name="msdyn_displayname" value="Konektor Omnikanála" />
+          <field name="msdyn_categorylabel" value="msdyn_macroconnector_msdyn_categorylabel_d2f931e3_70b7_4093_865e_b8075a02c215" />
+          <field name="msdyn_description" value="msdyn_macroconnector_msdyn_description_d2f931e3_70b7_4093_865e_b8075a02c215" />
+          <field name="msdyn_displayname" value="msdyn_macroconnector_msdyn_displayname_d2f931e3_70b7_4093_865e_b8075a02c215" />
           <field name="msdyn_icon" value="WebResources/msdyn_OmnichannelBase/_imgs/Macros/msdyn_omnichannelConnector_macro_connector.svg" />
           <field name="msdyn_macroconnectorid" value="d2f931e3-70b7-4093-865e-b8075a02c215" />
           <field name="msdyn_name" value="Omnichannel Connector" />
           <field name="msdyn_prefix" value="OC" />
           <field name="statecode" value="0" />
           <field name="statuscode" value="1" />
-          <field name="msdyn_title" value="Konektor Omnikanála" />
+          <field name="msdyn_title" value="msdyn_macroconnector_msdyn_title_d2f931e3_70b7_4093_865e_b8075a02c215" />
           <field name="msdyn_type" value="CDSClientAutomation" />
           <field name="msdyn_webresourcename" value="msdyn_ocMacroResources.js" />
       </record>
@@ -906,16 +597,16 @@
           <field name="msdyn_brandcolor" value="#2266E3" />
           <field name="msdyn_callback" value="Microsoft.ChannelIntegrationFramework.Macros.resolveSlug(context,paramName)" />
           <field name="msdyn_categorykey" value="CONNECTORS" />
-          <field name="msdyn_categorylabel" value="Preddefinované akcie automatizácie" />
-          <field name="msdyn_description" value="Automatizujte bežne používané akcie relácie" />
-          <field name="msdyn_displayname" value="Konektor relácie" />
+          <field name="msdyn_categorylabel" value="msdyn_macroconnector_msdyn_categorylabel_ac627bea_31f2_4378_9a21_6e1e2d74e278" />
+          <field name="msdyn_description" value="msdyn_macroconnector_msdyn_description_ac627bea_31f2_4378_9a21_6e1e2d74e278" />
+          <field name="msdyn_displayname" value="msdyn_macroconnector_msdyn_displayname_ac627bea_31f2_4378_9a21_6e1e2d74e278" />
           <field name="msdyn_icon" value="WebResources/Macros/msdyn_sessionConnector_macro_connector.svg" />
           <field name="msdyn_macroconnectorid" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" />
           <field name="msdyn_name" value="Session Connector" />
           <field name="msdyn_prefix" value="Session" />
           <field name="statecode" value="0" />
           <field name="statuscode" value="1" />
-          <field name="msdyn_title" value="Konektor relácie" />
+          <field name="msdyn_title" value="msdyn_macroconnector_msdyn_title_ac627bea_31f2_4378_9a21_6e1e2d74e278" />
           <field name="msdyn_type" value="CDSClientAutomation" />
           <field name="msdyn_webresourcename" value="Macros/msdyn_internal_cimacro_library.js" />
       </record>
@@ -925,413 +616,287 @@
   <entity name="msdyn_macroactiontemplate" displayname="Macro Action Template">
     <records>
       <record id="01a02947-f9d2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:00 PM" />
-        <field name="msdyn_actionDescription" value="Otvorením nového formulára vytvorte záznam." />
-        <field name="msdyn_displayname" value="Vytvoriť nové" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_01a02947_f9d2_e911_a81e_000d3a015920" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_01a02947_f9d2_e911_a81e_000d3a015920" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_new_form.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="01a02947-f9d2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:15:13 PM" />
         <field name="msdyn_name" value="Create_New" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openNewForm(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Otvorením nového formulára vytvorte záznam" />
-        <field name="msdyn_title" value="Otvorením nového formulára vytvorte záznam" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_01a02947_f9d2_e911_a81e_000d3a015920" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_01a02947_f9d2_e911_a81e_000d3a015920" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_01a02947_f9d2_e911_a81e_000d3a015920" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="e6c81912-fad2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:01 PM" />
-        <field name="msdyn_actionDescription" value="Otvorte existujúci záznam" />
-        <field name="msdyn_displayname" value="Otvoriť formulár" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_e6c81912_fad2_e911_a81e_000d3a015920" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_e6c81912_fad2_e911_a81e_000d3a015920" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_form.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="e6c81912-fad2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:23:29 PM" />
         <field name="msdyn_name" value="Open_Form" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openExistingForm(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Otvorte existujúci záznam" />
-        <field name="msdyn_title" value="Otvorte existujúci záznam" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_e6c81912_fad2_e911_a81e_000d3a015920" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_e6c81912_fad2_e911_a81e_000d3a015920" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_e6c81912_fad2_e911_a81e_000d3a015920" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="1c1af956-fad2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:02 PM" />
-        <field name="msdyn_actionDescription" value="Otvorte mriežku záznamov" />
-        <field name="msdyn_displayname" value="Otvoriť mriežku" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_1c1af956_fad2_e911_a81e_000d3a015920" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_1c1af956_fad2_e911_a81e_000d3a015920" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_grid.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="1c1af956-fad2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:25:44 PM" />
         <field name="msdyn_name" value="Open_Grid" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openGrid(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Otvorte mriežku záznamov" />
-        <field name="msdyn_title" value="Otvorte mriežku záznamov" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_1c1af956_fad2_e911_a81e_000d3a015920" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_1c1af956_fad2_e911_a81e_000d3a015920" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_1c1af956_fad2_e911_a81e_000d3a015920" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="baa326ad-fad2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:01 PM" />
-        <field name="msdyn_actionDescription" value="Otvorte existujúcu tabuľu" />
-        <field name="msdyn_displayname" value="Otvoriť tabuľu" />
+        <field name="msdyn_actionDescription" value="Open an existing dashboard" />
+        <field name="msdyn_displayname" value="Open dashboard" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_dashboard.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="baa326ad-fad2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
         <field name="msdyn_name" value="Open_Dashboard" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="1" />
         <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Otvoriť tabuľu" />
-        <field name="msdyn_title" value="Otvorte existujúcu tabuľu" />
+        <field name="msdyn_subtitle" value="Productivity automation" />
+        <field name="msdyn_summary" value="Open dashboard" />
+        <field name="msdyn_title" value="Open an existing dashboard" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="13a680e2-fbd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:01 PM" />
-        <field name="msdyn_actionDescription" value="Otvorte vyhľadávaciu stránku v rámci vedomostnej databázy." />
-        <field name="msdyn_displayname" value="Otvoriť vyhľadávanie vo vedomostnej databáze" />
+        <field name="msdyn_actionDescription" value="Open the knowledge search page" />
+        <field name="msdyn_displayname" value="Open knowledge search" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_kb.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="13a680e2-fbd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
         <field name="msdyn_name" value="Open_knowledge_search" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="1" />
         <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Otvorte vyhľadávaciu stránku v rámci vedomostnej databázy." />
-        <field name="msdyn_title" value="Otvorte vyhľadávaciu stránku v rámci vedomostnej databázy." />
+        <field name="msdyn_subtitle" value="Productivity automation" />
+        <field name="msdyn_summary" value="Open the knowledge search page" />
+        <field name="msdyn_title" value="Open the knowledge search page" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="48bbc0f3-fbd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:02 PM" />
-        <field name="msdyn_actionDescription" value="Vytvorte reláciu" />
-        <field name="msdyn_displayname" value="Vytvoriť reláciu" />
+        <field name="msdyn_actionDescription" value="Create session" />
+        <field name="msdyn_displayname" value="Create session" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_create_session.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="48bbc0f3-fbd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:14:52 PM" />
         <field name="msdyn_name" value="Create_Session" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="1" />
         <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Vytvoriť reláciu" />
-        <field name="msdyn_title" value="Vytvoriť reláciu" />
+        <field name="msdyn_subtitle" value="Productivity automation" />
+        <field name="msdyn_summary" value="Create session" />
+        <field name="msdyn_title" value="Create session" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="2574de1c-fcd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:02 PM" />
-        <field name="msdyn_actionDescription" value="Zavrite všetky ostatné relácie" />
-        <field name="msdyn_displayname" value="Zavrite všetky ostatné relácie" />
+        <field name="msdyn_actionDescription" value="Close All other Sessions" />
+        <field name="msdyn_displayname" value="Close All other Sessions" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_close_all_sessions.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="2574de1c-fcd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:14:52 PM" />
         <field name="msdyn_name" value="Close_All_other_Sessions" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="1" />
         <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Zavrite všetky ostatné relácie" />
-        <field name="msdyn_title" value="Zavrite všetky ostatné relácie" />
+        <field name="msdyn_subtitle" value="Productivity automation" />
+        <field name="msdyn_summary" value="Close All other Sessions" />
+        <field name="msdyn_title" value="Close All other Sessions" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="85ab814a-fcd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:03 PM" />
-        <field name="msdyn_actionDescription" value="Vyhľadajte vyplnenú frázu vo vedomostnej databáze" />
-        <field name="msdyn_displayname" value="Hľadať v článku vedomostnej databázy" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_85ab814a_fcd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_85ab814a_fcd2_e911_a81e_000d3a015920" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_search_kb.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="85ab814a-fcd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:33:10 PM" />
         <field name="msdyn_name" value="Search_knowledge_base" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openKBSearchControl(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Vyhľadajte vyplnenú frázu vo vedomostnej databáze" />
-        <field name="msdyn_title" value="Vyhľadajte vyplnenú frázu vo vedomostnej databáze" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_85ab814a_fcd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_85ab814a_fcd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_85ab814a_fcd2_e911_a81e_000d3a015920" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="16fc3387-fcd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:03 PM" />
-        <field name="msdyn_actionDescription" value="Vykonajte vyhľadávanie podľa relevancie na základe danej frázy" />
-        <field name="msdyn_displayname" value="Vyhľadať podľa relevancie" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_16fc3387_fcd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_16fc3387_fcd2_e911_a81e_000d3a015920" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_search_relevance.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="16fc3387-fcd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:30:36 PM" />
         <field name="msdyn_name" value="Search_by_relevance" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openSearchPage(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Vykonajte vyhľadávanie podľa relevancie na základe danej frázy" />
-        <field name="msdyn_title" value="Vykonajte vyhľadávanie podľa relevancie na základe danej frázy" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_16fc3387_fcd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_16fc3387_fcd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_16fc3387_fcd2_e911_a81e_000d3a015920" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
-      <record id="101c73b5-fcd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:03 PM" />
-        <field name="msdyn_actionDescription" value="Uložte záznam" />
-        <field name="msdyn_displayname" value="Uložiť" />
+      <record id="414bf49a-f06e-4ae2-9dd8-6d23f2619916">
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_414bf49a_f06e_4ae2_9dd8_6d23f2619916" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_414bf49a_f06e_4ae2_9dd8_6d23f2619916" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_save.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_macroactiontemplateid" value="101c73b5-fcd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
+        <field name="msdyn_macroactiontemplateid" value="414bf49a-f06e-4ae2-9dd8-6d23f2619916" />
         <field name="msdyn_name" value="Save" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.save(actionName)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Uložte záznam" />
-        <field name="msdyn_title" value="Uložte záznam" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_414bf49a_f06e_4ae2_9dd8_6d23f2619916" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_title_414bf49a_f06e_4ae2_9dd8_6d23f2619916" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_summary_414bf49a_f06e_4ae2_9dd8_6d23f2619916" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="19c8c1c6-fcd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:03 PM" />
-        <field name="msdyn_actionDescription" value="Obnovte stránku" />
-        <field name="msdyn_displayname" value="Obnoviť" />
+        <field name="msdyn_actionDescription" value="Refresh the page" />
+        <field name="msdyn_displayname" value="Refresh" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_refresh.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="19c8c1c6-fcd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
         <field name="msdyn_name" value="Refresh" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="1" />
         <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Obnovte stránku" />
-        <field name="msdyn_title" value="Obnovte stránku" />
+        <field name="msdyn_subtitle" value="Productivity automation" />
+        <field name="msdyn_summary" value="Refresh the page" />
+        <field name="msdyn_title" value="Refresh the page" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="ce3390dd-fcd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:04 PM" />
-        <field name="msdyn_actionDescription" value="Aktualizujte existujúci záznam" />
-        <field name="msdyn_displayname" value="Aktualizovať záznam" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_ce3390dd_fcd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_ce3390dd_fcd2_e911_a81e_000d3a015920" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_update_record.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="ce3390dd-fcd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:34:23 PM" />
         <field name="msdyn_name" value="Update_Record" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.updateRecord(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Aktualizujte existujúci záznam" />
-        <field name="msdyn_title" value="Aktualizujte existujúci záznam" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_ce3390dd_fcd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_ce3390dd_fcd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_ce3390dd_fcd2_e911_a81e_000d3a015920" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="d965ea11-fdd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:05 PM" />
-        <field name="msdyn_actionDescription" value="Otvorte priradené záznamy typu pre akýkoľvek daný záznam v relácii" />
-        <field name="msdyn_displayname" value="Otvoriť priradený záznam" />
+        <field name="msdyn_actionDescription" value="Open associated records of a type for any given record in the session" />
+        <field name="msdyn_displayname" value="Open associated record" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_associated.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="d965ea11-fdd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
         <field name="msdyn_name" value="Open_Associated" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="1" />
         <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Otvorte priradené záznamy typu pre akýkoľvek daný záznam v relácii" />
-        <field name="msdyn_title" value="Otvoriť priradený záznam" />
+        <field name="msdyn_subtitle" value="Productivity automation" />
+        <field name="msdyn_summary" value="Open associated records of a type for any given record in the session" />
+        <field name="msdyn_title" value="Open associated record" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="e903922e-fdd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:04 PM" />
-        <field name="msdyn_actionDescription" value="Otvorte e-mailový formulár s vopred definovanou šablónou" />
-        <field name="msdyn_displayname" value="E-mail" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_e903922e_fdd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_e903922e_fdd2_e911_a81e_000d3a015920" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_email.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="e903922e-fdd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:19:50 PM" />
         <field name="msdyn_name" value="Draft_Email" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.draftEmail(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Otvorte e-mailový formulár s vopred definovanou šablónou" />
-        <field name="msdyn_title" value="Otvorte e-mailový formulár s vopred definovanou šablónou" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_e903922e_fdd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_title_e903922e_fdd2_e911_a81e_000d3a015920" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_summary_e903922e_fdd2_e911_a81e_000d3a015920" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="0e59ec44-fdd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:04 PM" />
-        <field name="msdyn_actionDescription" value="Odošlite článok vedomostnej databázy" />
-        <field name="msdyn_displayname" value="Odoslať vedomostnú databázu" />
+        <field name="msdyn_actionDescription" value="Send knowledge base article" />
+        <field name="msdyn_displayname" value="Send knowledge base" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_send_kb.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="0e59ec44-fdd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:14:53 PM" />
         <field name="msdyn_name" value="Send_KB" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="1" />
         <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Odošlite článok vedomostnej databázy" />
-        <field name="msdyn_title" value="Odošlite článok vedomostnej databázy" />
+        <field name="msdyn_subtitle" value="Productivity automation" />
+        <field name="msdyn_summary" value="Send knowledge base article" />
+        <field name="msdyn_title" value="Send knowledge base article" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="68e92456-fdd2-e911-a81e-000d3a015920">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:05 PM" />
-        <field name="msdyn_actionDescription" value="Klonujte záznam a otvorte ho v relácii" />
-        <field name="msdyn_displayname" value="Klonovať záznam" />
+        <field name="msdyn_actionDescription" value="Clone a record and open it in a session" />
+        <field name="msdyn_displayname" value="Clone record" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_clone_record.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="68e92456-fdd2-e911-a81e-000d3a015920" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:14:52 PM" />
         <field name="msdyn_name" value="Clone_record" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="1" />
         <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Klonujte záznam a otvorte ho v relácii" />
-        <field name="msdyn_title" value="Klonujte záznam a otvorte ho v relácii" />
+        <field name="msdyn_subtitle" value="Productivity automation" />
+        <field name="msdyn_summary" value="Clone a record and open it in a session" />
+        <field name="msdyn_title" value="Clone a record and open it in a session" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="cd1fa1a0-a0df-e911-a81e-000d3a0698dc">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:27:40 PM" />
-        <field name="msdyn_actionDescription" value="Akcia na vyriešenie prípadu" />
-        <field name="msdyn_displayname" value="Vyriešiť prípad" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="cd1fa1a0-a0df-e911-a81e-000d3a0698dc" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:27:40 PM" />
         <field name="msdyn_name" value="Resolve_Case" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.resolveIncident(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Akcia na vyriešenie prípadu" />
-        <field name="msdyn_title" value="Vyriešiť prípad" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_title_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_summary_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f">
-        <field name="createdby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="createdon" value="9/25/2019 2:13:05 PM" />
-        <field name="msdyn_actionDescription" value="Spustiť vykonávanie makra" />
-        <field name="msdyn_displayname" value="Spustiť" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" />
         <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_macro_connector.svg" />
         <field name="msdyn_kind" value="TRIGGERS" />
         <field name="msdyn_macroactiontemplateid" value="d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" />
-        <field name="modifiedby" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="modifiedon" value="9/25/2019 2:13:05 PM" />
         <field name="msdyn_name" value="Start" />
-        <field name="ownerid" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" lookupentityname="First name Last name" />
-        <field name="owningbusinessunit" value="278a3402-bbd5-e911-a81b-000d3a0698dc" lookupentity="businessunit" />
-        <field name="owninguser" value="19913402-bbd5-e911-a81b-000d3a0698dc" lookupentity="systemuser" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Automatizácia produktivity" />
-        <field name="msdyn_summary" value="Spustiť vykonávanie makra" />
-        <field name="msdyn_title" value="Spustiť vykonávanie makra" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_title_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_summary_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="90a7f632-c89e-40a6-a9ea-3f28d4e58fb3">
-        <field name="msdyn_actionDescription" value="Prepojte záznam s konverzáciou." />
-        <field name="msdyn_displayname" value="Prepojiť záznam s konverzáciou" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" />
         <field name="msdyn_macroconnector" value="d2f931e3-70b7-4093-865e-b8075a02c215" lookupentity="msdyn_macroconnector" lookupentityname="Omnichannel Connector" />
         <field name="msdyn_icon" value="WebResources/msdyn_OmnichannelBase/_imgs/Macros/msdyn_ProductivityMacros_Link_record_to_conversation.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
@@ -1340,14 +905,14 @@
         <field name="msdyn_runtimeapi" value="OmniChannelPackage.Macros.Instance.linkToConversation(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Konektor Omnikanála" />
-        <field name="msdyn_summary" value="Prepojiť záznam s konverzáciou" />
-        <field name="msdyn_title" value="Prepojiť záznam s konverzáciou" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_title_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_summary_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="d3fef303-b090-44d8-a8f0-e2545a2459ae">
-        <field name="msdyn_actionDescription" value="Zrušte prepojenie záznamu z konverzácie." />
-        <field name="msdyn_displayname" value="Zrušiť prepojenie záznamu z konverzácie" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_d3fef303_b090_44d8_a8f0_e2545a2459ae" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_d3fef303_b090_44d8_a8f0_e2545a2459ae" />
         <field name="msdyn_macroconnector" value="d2f931e3-70b7-4093-865e-b8075a02c215" lookupentity="msdyn_macroconnector" lookupentityname="Omnichannel Connector" />
         <field name="msdyn_icon" value="WebResources/msdyn_OmnichannelBase/_imgs/Macros/msdyn_ProductivityMacros_Unlink_record_from_conversation.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
@@ -1356,30 +921,14 @@
         <field name="msdyn_runtimeapi" value="OmniChannelPackage.Macros.Instance.unlinkToConversation(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Konektor Omnikanála" />
-        <field name="msdyn_summary" value="Zrušiť prepojenie záznamu z konverzácie" />
-        <field name="msdyn_title" value="Zrušiť prepojenie záznamu z konverzácie" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="8a3a1381-3d86-4737-8654-fd35f6a162ee">
-        <field name="msdyn_actionDescription" value="Odošlite rýchlu odpoveď." />
-        <field name="msdyn_displayname" value="Odoslať rýchlu odpoveď" />
-        <field name="msdyn_macroconnector" value="d2f931e3-70b7-4093-865e-b8075a02c215" lookupentity="msdyn_macroconnector" lookupentityname="Omnichannel Connector" />
-        <field name="msdyn_icon" value="WebResources/msdyn_OmnichannelBase/_imgs/Macros/msdyn_ProductivityMacros_Send_quick_response.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_macroactiontemplateid" value="8a3a1381-3d86-4737-8654-fd35f6a162ee" />
-        <field name="msdyn_name" value="Send_quick_response" />
-        <field name="msdyn_runtimeapi" value="" />
-        <field name="statecode" value="1" />
-        <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Konektor Omnikanála" />
-        <field name="msdyn_summary" value="Odoslať rýchlu odpoveď" />
-        <field name="msdyn_title" value="Odoslať rýchlu odpoveď" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_d3fef303_b090_44d8_a8f0_e2545a2459ae" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_title_d3fef303_b090_44d8_a8f0_e2545a2459ae" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_summary_d3fef303_b090_44d8_a8f0_e2545a2459ae" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="48fc87c4-f480-4129-9c1d-682442d7bc60">
-        <field name="msdyn_actionDescription" value="Obnovte kartu." />
-        <field name="msdyn_displayname" value="Obnoviť kartu" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d7bc60" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_48fc87c4_f480_4129_9c1d_682442d7bc60" />
         <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Session Connector" />
         <field name="msdyn_icon" value="WebResources/Macros/msdyn_ProductivityMacros_refresh_page.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
@@ -1388,62 +937,14 @@
         <field name="msdyn_runtimeapi" value="Microsoft.ChannelIntegrationFramework.Macros.refreshPageAction(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Konektor relácie" />
-        <field name="msdyn_summary" value="Obnoviť kartu" />
-        <field name="msdyn_title" value="Obnoviť kartu" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="c37131bf-12e0-4a2c-9659-3ff88bcc2d73">
-        <field name="msdyn_actionDescription" value="Zavrite túto reláciu." />
-        <field name="msdyn_displayname" value="Zavrieť reláciu" />
-        <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Session Connector" />
-        <field name="msdyn_icon" value="WebResources/Macros/msdyn_ProductivityMacros_close_session.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_macroactiontemplateid" value="c37131bf-12e0-4a2c-9659-3ff88bcc2d73" />
-        <field name="msdyn_name" value="Close_session" />
-        <field name="msdyn_runtimeapi" value="" />
-        <field name="statecode" value="1" />
-        <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Konektor relácie" />
-        <field name="msdyn_summary" value="Zavrieť túto reláciu" />
-        <field name="msdyn_title" value="Zavrieť reláciu" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="82bdb226-d89d-4408-97f1-b7ee0b208f68">
-        <field name="msdyn_actionDescription" value="Zavrite všetky ostatné relácie." />
-        <field name="msdyn_displayname" value="Zavrieť všetky ostatné relácie" />
-        <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Session Connector" />
-        <field name="msdyn_icon" value="WebResources/Macros/msdyn_ProductivityMacros_close_all_other_session.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_macroactiontemplateid" value="82bdb226-d89d-4408-97f1-b7ee0b208f68" />
-        <field name="msdyn_name" value="Close_all_other_sessions" />
-        <field name="msdyn_runtimeapi" value="" />
-        <field name="statecode" value="1" />
-        <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Konektor relácie" />
-        <field name="msdyn_summary" value="Zavrieť všetky ostatné relácie" />
-        <field name="msdyn_title" value="Zavrieť všetky ostatné relácie" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="70575109-3ed6-4e47-9f20-33af77ae060a">
-        <field name="msdyn_actionDescription" value="Otvorte kartu aplikácie." />
-        <field name="msdyn_displayname" value="Otvoriť kartu aplikácie" />
-        <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Session Connector" />
-        <field name="msdyn_icon" value="WebResources/Macros/msdyn_ProductivityMacros_open_application_tab.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_macroactiontemplateid" value="70575109-3ed6-4e47-9f20-33af77ae060a" />
-        <field name="msdyn_name" value="Open_application_tab" />
-        <field name="msdyn_runtimeapi" value="" />
-        <field name="statecode" value="1" />
-        <field name="statuscode" value="2" />
-        <field name="msdyn_subtitle" value="Konektor relácie" />
-        <field name="msdyn_summary" value="Otvoriť kartu aplikácie" />
-        <field name="msdyn_title" value="Otvoriť kartu aplikácie" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_48fc87c4_f480_4129_9c1d_682442d7bc60" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_title_48fc87c4_f480_4129_9c1d_682442d7bc60" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_summary_48fc87c4_f480_4129_9c1d_682442d7bc60" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="d3ee390f-0299-43e5-8107-e637feeb170d">
-        <field name="msdyn_actionDescription" value="Získajte aktuálnu stranu." />
-        <field name="msdyn_displayname" value="Získať aktuálnu stranu" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d" />
         <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Session Connector" />
         <field name="msdyn_icon" value="WebResources/Macros/msdyn_ProductivityMacros_get_current_page.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
@@ -1452,14 +953,14 @@
         <field name="msdyn_runtimeapi" value="Microsoft.ChannelIntegrationFramework.Macros.getCurrentPageAction(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Konektor relácie" />
-        <field name="msdyn_summary" value="Získať aktuálnu stranu" />
-        <field name="msdyn_title" value="Získať aktuálnu stranu" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_d3ee390f_0299_43e5_8107_e637feeb170d" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="761589d3-4fd7-4cab-b2f7-96728d4b9823">
-        <field name="msdyn_actionDescription" value="Karta Zameranie." />
-        <field name="msdyn_displayname" value="Karta Zameranie" />
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823" />
         <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Session Connector" />
         <field name="msdyn_icon" value="WebResources/Macros/msdyn_ProductivityMacros_focus_tab.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
@@ -1468,9 +969,9 @@
         <field name="msdyn_runtimeapi" value="Microsoft.ChannelIntegrationFramework.Macros.foucsTabAction(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="Konektor relácie" />
-        <field name="msdyn_summary" value="Karta Zameranie" />
-        <field name="msdyn_title" value="Karta Zameranie" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_761589d3_4fd7_4cab_b2f7_96728d4b9823" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
     </records>
@@ -1480,23 +981,16 @@
     <records>
       <record id="1b65ad62-4fe3-e911-a81a-000d3a706f52">
         <field name="msdyn_designerurlconfigentityattrib" value="path" />
-        <field name="createdby" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
-        <field name="createdon" value="9/30/2019 6:56:11 AM" />
         <field name="msdyn_designerurlconfigentity" value="serviceendpoint" />
         <field name="msdyn_macrosolutionconfigurationid" value="1b65ad62-4fe3-e911-a81a-000d3a706f52" />
-        <field name="modifiedby" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
-        <field name="modifiedon" value="9/30/2019 7:28:45 AM" />
         <field name="msdyn_name" value="Default Designer Config" />
-        <field name="ownerid" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" lookupentityname="Paul 0414 Cannon 0414" />
-        <field name="owningbusinessunit" value="68c108db-5bdf-e911-a81a-000d3a7611d3" lookupentity="businessunit" />
-        <field name="owninguser" value="36addd55-be8a-4535-a9fb-e765ef02f771" lookupentity="systemuser" />
         <field name="msdyn_designerurlconfigentityid" value="38bd8b51-de34-4c45-bf43-5a913aeec49f" />
         <field name="msdyn_designerurlrelativepath" value="/flowcontrol/DesignerBlob/iframedesigner.html" />
-        <field name="msdyn_searchhint" value="Vyhľadávacie makro" />
+        <field name="msdyn_searchhint" value="msdyn_macrosolutionconfiguration_msdyn_searchhint" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_uservoicelink" value="https://experience.dynamics.com/ideas/categories/list/?category=31047c64-7e28-e911-a95a-000d3a4f3883&amp;amp;forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad" />
-        <field name="msdyn_uservoicetext" value="Dajte nám vedieť, čo by sme mali ďalej zostaviť" />
+        <field name="msdyn_uservoicetext" value="msdyn_macrosolutionconfiguration_msdyn_uservoicetext" />
       </record>
     </records>
     <m2mrelationships />

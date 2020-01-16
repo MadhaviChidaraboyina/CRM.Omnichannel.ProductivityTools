@@ -14,6 +14,39 @@
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
       <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+      <Item ItemId=";1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpr" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) ession" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpr" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) ession" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Enable build expression]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+      </Item>
+      <Item ItemId=";1:label,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpression" ItemType="0" PsrId="211" Leaf="false">
+        <Disp Icon="Dir" LocTbl="false" />
+        <Item ItemId=";(...) 0" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[No]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+        <Item ItemId=";(...) 1" ItemType="0;.resx" PsrId="211" Leaf="true">
+          <Str Cat="Text">
+            <Val><![CDATA[Yes]]></Val>
+          </Str>
+          <Disp Icon="Str" />
+        </Item>
+      </Item>
       <Item ItemId=";10:Description,business_unit_msdyn_agentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
@@ -476,6 +509,18 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_enablebuildexpression" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Stores expression JSON]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:LocalizedCollectionName,msdyn_agentscriptentitymsdyn_agentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent scripts]]></Val>
@@ -617,12 +662,6 @@
       <Item ItemId=";1:LocalizedName,Agent script{f23a365e-e46e-4d08-b093-3cd0fc7e0fe6}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Information]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:LocalizedName,Process{ca941c69-85c5-e911-a81c-000d3a6d8160}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1037,6 +1076,18 @@
       <Item ItemId=";1:displayname,msdyn_agentscriptstepstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status Reason]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_enablebuildexpression" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable build expression]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Expression data]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
