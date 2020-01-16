@@ -496,7 +496,7 @@
 							<displayname description="Show timeout" languagecode="1033" />
 						</displaynames>
 						<Descriptions>
-							<Description description="Show timeout for the Notification template" languagecode="1033" />
+							<Description description="Show countdown for when the notification will disappear" languagecode="1033" />
 						</Descriptions>
 						<options>
 							<option value="100000000" ExternalValue="" Color="#0000ff">
@@ -515,7 +515,7 @@
 						<displayname description="Show timeout" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="Show timeout for the Notification template" languagecode="1033" />
+						<Description description="Show countdown for when the notification will disappear" languagecode="1033" />
 					</Descriptions>
 				</attribute>
         <attribute PhysicalName="msdyn_Theme">

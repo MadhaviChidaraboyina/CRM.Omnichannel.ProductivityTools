@@ -649,7 +649,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_consoleapplicationnotificationtemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_showtimeout" xml:space="preserve">
-    <value>Show timeout for the Notification template</value>
+    <value>Show countdown for when the notification will disappear</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for OptionSet 'msdyn_consoleapplicationnotificationtemplate_msdyn_showtimeout' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_consoleapplicationnotificationtemplate_msdyn_theme" xml:space="preserve">
@@ -689,7 +689,7 @@
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_RenderingOrder' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Showtimeout" xml:space="preserve">
-    <value>Show timeout for the Notification template</value>
+    <value>Show countdown for when the notification will disappear</value>
     <comment>'msdyn_consoleapplicationnotificationtemplate' : Description for Attribute 'msdyn_Showtimeout' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationnotificationtemplatemsdyn_Theme" xml:space="preserve">
