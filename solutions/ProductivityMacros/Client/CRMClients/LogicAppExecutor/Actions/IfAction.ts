@@ -106,13 +106,14 @@ namespace Microsoft.LogicAppExecutor {
 							break;
 						case "not":
 							this.evaluvateExpression(expressions[expression]).then(
-										function (success: boolean) {
-											console.log(success);
-											return resolve(!success);
-										},
-										function (error: Error) {
-											reject(error);
-								});							
+								function (success: boolean) {
+									console.log(success);
+									return resolve(!success);
+								},
+								function (error: Error) {
+									reject(error);
+								});
+							break;
 						default:
 							let slugPromise = resolveSlug(expressions[expression][0]).then(
 								function (lhs: any) {
