@@ -6,6 +6,7 @@
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
 	</Target>
 	<Target Name="Build">
-		<MSBuild Projects="@(ProjectToBuild)" />
+		<MSBuild Projects="@(ProjectToBuild)" Targets="CreatePDPackageZip" />
+		<MSBuild Projects="@(ProjectToBuild)" Targets="CreatePVSPackageZip" />
 	</Target>
 </Project>

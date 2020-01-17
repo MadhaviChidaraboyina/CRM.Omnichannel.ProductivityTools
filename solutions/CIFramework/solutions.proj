@@ -2,6 +2,7 @@
   <ItemGroup>
 		<ProjectToBuild Include="Solution\ProviderSolution.csproj" />
 		<ProjectToBuild Include="PatchGenerator\PatchGenerator.csproj" Condition="'$(cifEnableGenerator)'=='true'"/>
+		<ProjectToBuild Include="PVSPackage\CIFrameworkPVS.csproj" />
   </ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
