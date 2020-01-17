@@ -19,7 +19,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class CIF_webresource_strings_1033 {
@@ -278,7 +278,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Refresh the tab..
+        ///   Looks up a localized string similar to Refresh the tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d7bc60 {
             get {
@@ -288,7 +288,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Focus tab..
+        ///   Looks up a localized string similar to Focus on the tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
             get {
@@ -298,7 +298,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get the current page..
+        ///   Looks up a localized string similar to Get the current tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d {
             get {
@@ -317,7 +317,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Focus tab.
+        ///   Looks up a localized string similar to Focus on the tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
             get {
@@ -326,7 +326,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get the current page.
+        ///   Looks up a localized string similar to Get the current tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d {
             get {
@@ -371,7 +371,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Focus tab.
+        ///   Looks up a localized string similar to Focus on the tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
             get {
@@ -380,7 +380,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get the current page.
+        ///   Looks up a localized string similar to Get the current tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d {
             get {
@@ -398,7 +398,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Focus tab.
+        ///   Looks up a localized string similar to Focus on the tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
             get {
@@ -407,7 +407,7 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get the current page.
+        ///   Looks up a localized string similar to Get the current tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d {
             get {
@@ -574,6 +574,15 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
         internal static string START_NOTES_TOOLTIP_TEXT {
             get {
                 return ResourceManager.GetString("START_NOTES_TOOLTIP_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dynamics 365 Channel Integration Framework version 2.0 supports only Telephony channels..
+        /// </summary>
+        internal static string V2_API_INFORMATION {
+            get {
+                return ResourceManager.GetString("V2_API_INFORMATION", resourceCulture);
             }
         }
     }

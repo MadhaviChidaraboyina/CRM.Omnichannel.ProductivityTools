@@ -233,6 +233,114 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Agent script connector.
+        /// </summary>
+        internal static string LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME {
+            get {
+                return ResourceManager.GetString("LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer Service.
+        /// </summary>
+        internal static string LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM {
+            get {
+                return ResourceManager.GetString("LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Built-in.
+        /// </summary>
+        internal static string LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN {
+            get {
+                return ResourceManager.GetString("LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search .
+        /// </summary>
+        internal static string LADESIGNER_SEARCHTEXT {
+            get {
+                return ResourceManager.GetString("LADESIGNER_SEARCHTEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets the default agent script .
+        /// </summary>
+        internal static string LADESIGNER_SETCALLSCRIPT_DESCRIPTION {
+            get {
+                return ResourceManager.GetString("LADESIGNER_SETCALLSCRIPT_DESCRIPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the agent script .
+        /// </summary>
+        internal static string LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION {
+            get {
+                return ResourceManager.GetString("LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agent script .
+        /// </summary>
+        internal static string LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE {
+            get {
+                return ResourceManager.GetString("LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name of the agent script .
+        /// </summary>
+        internal static string LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION {
+            get {
+                return ResourceManager.GetString("LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default agent script .
+        /// </summary>
+        internal static string LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE {
+            get {
+                return ResourceManager.GetString("LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set default agent script.
+        /// </summary>
+        internal static string LADESIGNER_SETCALLSCRIPT_SUMMARY {
+            get {
+                return ResourceManager.GetString("LADESIGNER_SETCALLSCRIPT_SUMMARY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When the session loads, start evaluating the expression.
+        /// </summary>
+        internal static string LADESIGNER_START_DESCRIPTION {
+            get {
+                return ResourceManager.GetString("LADESIGNER_START_DESCRIPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start evaluating expression  .
+        /// </summary>
+        internal static string LADESIGNER_START_SUMMARY {
+            get {
+                return ResourceManager.GetString("LADESIGNER_START_SUMMARY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close All other Sessions.
         /// </summary>
         internal static string MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS {
@@ -409,7 +517,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Focus tab..
+        ///   Looks up a localized string similar to Focus on the tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
             get {
@@ -469,7 +577,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get the current page..
+        ///   Looks up a localized string similar to Get the current tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d {
             get {
@@ -554,7 +662,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Focus tab.
+        ///   Looks up a localized string similar to Focus on the tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
             get {
@@ -608,7 +716,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get the current page.
+        ///   Looks up a localized string similar to Get the current tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d {
             get {
@@ -824,7 +932,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Focus tab.
+        ///   Looks up a localized string similar to Focus on the tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
             get {
@@ -878,7 +986,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get the current page.
+        ///   Looks up a localized string similar to Get the current tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d {
             get {
@@ -959,7 +1067,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Focus tab.
+        ///   Looks up a localized string similar to Focus on the tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823 {
             get {
@@ -1013,7 +1121,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get the current page.
+        ///   Looks up a localized string similar to Get the current tab.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d {
             get {
@@ -1175,7 +1283,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Application Template ID.
+        ///   Looks up a localized string similar to Application template ID.
         /// </summary>
         internal static string msdyn_parameterdefinition_msdyn_description_2a148183_3905_49e9_acee_eed07fe2da18 {
             get {
@@ -1274,7 +1382,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email Recipients.
+        ///   Looks up a localized string similar to Email recipients.
         /// </summary>
         internal static string msdyn_parameterdefinition_msdyn_description_b66cd2ac_9fdf_e911_a81e_000d3a0698dc {
             get {
@@ -1373,7 +1481,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Entity Primary Name.
+        ///   Looks up a localized string similar to Entity primary name.
         /// </summary>
         internal static string msdyn_parameterdefinition_msdyn_displayname_3a359e47_ec11_ea11_a811_000d3a334ee9 {
             get {
@@ -1391,7 +1499,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to View Type.
+        ///   Looks up a localized string similar to View type.
         /// </summary>
         internal static string msdyn_parameterdefinition_msdyn_displayname_474f7494_f8d2_e911_a81e_000d3a015920 {
             get {
@@ -1409,7 +1517,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Billable Time.
+        ///   Looks up a localized string similar to Billable time.
         /// </summary>
         internal static string msdyn_parameterdefinition_msdyn_displayname_6c7f2dbf_a0df_e911_a81e_000d3a0698dc {
             get {
@@ -1445,7 +1553,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email Recipients.
+        ///   Looks up a localized string similar to Email recipients.
         /// </summary>
         internal static string msdyn_parameterdefinition_msdyn_displayname_b66cd2ac_9fdf_e911_a81e_000d3a0698dc {
             get {
@@ -1454,7 +1562,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Page Type.
+        ///   Looks up a localized string similar to Page type.
         /// </summary>
         internal static string msdyn_parameterdefinition_msdyn_displayname_ca97e23b_9fdf_e911_a81e_000d3a0698dc {
             get {
@@ -1463,7 +1571,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Entity Logical Name.
+        ///   Looks up a localized string similar to Entity logical name.
         /// </summary>
         internal static string msdyn_parameterdefinition_msdyn_displayname_d61ae14b_f8d2_e911_a81e_000d3a015920 {
             get {
@@ -1481,7 +1589,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Entity Form ID.
+        ///   Looks up a localized string similar to Entity form ID.
         /// </summary>
         internal static string msdyn_parameterdefinition_msdyn_displayname_ddf27260_f8d2_e911_a81e_000d3a015920 {
             get {
