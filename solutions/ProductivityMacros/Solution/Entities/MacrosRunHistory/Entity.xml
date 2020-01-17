@@ -233,7 +233,7 @@
 					<CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
 					<Behavior>1</Behavior>
 					<displaynames>
-						<displayname description="Modified On" languagecode="1033" />
+						<displayname description="Executed on" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
 						<Description description="Date and time when the record was modified." languagecode="1033" />
@@ -545,7 +545,7 @@
 						<LookupType id="00000000-0000-0000-0000-000000000000">9</LookupType>
 					</LookupTypes>
 					<displaynames>
-						<displayname description="Owner" languagecode="1033" />
+						<displayname description="User" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
 						<Description description="Owner Id" languagecode="1033" />

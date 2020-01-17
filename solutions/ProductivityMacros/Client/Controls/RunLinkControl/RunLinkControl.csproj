@@ -62,7 +62,7 @@
 		<Copy SourceFiles="@(SelectedLibsOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl\libs\%(RecursiveDir)" />
 		<Copy SourceFiles="@(SelectedcssOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl\css" />
 		<Copy SourceFiles="@(SelectedimgOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl\img" />
-		<Copy SourceFiles="@(SelectedStringOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl\strings" />
+		<Copy SourceFiles="@(SelectedStringOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl\Strings" />
 	</Target>
 	<Target Name="Clean">
 		<RemoveDir Directories="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl" />

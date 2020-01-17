@@ -117,15 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="okayLabel" xml:space="preserve">
-    <value>Okay</value>
-    <comment>Alert box button text</comment>
-  </data>
-  <data name="noHistoryText" xml:space="preserve">
+  <data name="RUNLINKCONTROL_NOHISTORY" xml:space="preserve">
     <value>No run histories found for the macro</value>
     <comment>Alert box text</comment>
   </data>
-  <data name="linkLabel" xml:space="preserve">
+  <data name="RUNLINKCONTROL_LINKLABEL" xml:space="preserve">
     <value>View run history</value>
     <comment>Text for the link which opens run histories grid</comment>
   </data>

@@ -158,7 +158,7 @@ module MscrmControls.RunLinkControl {
 
 				(window as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_macrosession", "?$filter=_msdyn_macroname_value eq '" + id + "'").then(
 					function success(result) {
-						if (result.entities == null || typeof result.entities == Constants.undefined || result.entities.length <= 0) {
+						if (result.entities == null || typeof result.entities == "undefined" || result.entities.length <= 0) {
 							var errorOptions = { message: self.getResourceString(self._context, Constants.noHistoryText) };
 							(window as any).Xrm.Navigation.openErrorDialog(errorOptions).then(
 								function success(result) {

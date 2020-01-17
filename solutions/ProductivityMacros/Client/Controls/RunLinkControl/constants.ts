@@ -9,9 +9,7 @@ module MscrmControls.RunLinkControl {
 
 		public static pageControlType = "control";
 		public static runLinkControlName = "MscrmControls.GridControl.MacroSessionAssociatedGridControl";
-		public static undefined = "undefined";
-		public static okayLabel = "Okay";
-		public static noHistoryText = "No run histories found for the macro";
-		public static linkLabel = "View run history";
+		public static noHistoryText = "RUNLINKCONTROL_NOHISTORY";
+		public static linkLabel = "RUNLINKCONTROL_LINKLABEL";
 	}
 }

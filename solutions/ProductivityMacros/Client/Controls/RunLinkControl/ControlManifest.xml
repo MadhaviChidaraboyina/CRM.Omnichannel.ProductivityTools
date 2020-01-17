@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="MscrmControls.RunLinkControl" constructor="RunLinkControl" version="1.0.1" display-name-key="RunLinkControl" control-type="virtual">
+  <control namespace="MscrmControls.RunLinkControl" constructor="RunLinkControl" version="1.0.2" display-name-key="RunLinkControl" control-type="virtual">
     <modes>
     </modes>
 		<resources>
-			<code path="RunLinkControl.js" order="2" />
+			<code path="RunLinkControl.js" order="1" />
 			<resx path="Strings/RunLinkControl.1033.resx" version="1.0.0" />
 		</resources>
   </control>
