@@ -53,8 +53,19 @@ module MscrmControls.CallscriptControl {
 
 				let params = new EventParameters();
 				this.telemetryLogger.logSuccess(this.telemetryContext, "Init", params);
-			}
+            }
+            let windowObject = this.getWindowObject();
+            windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.handleSessionSwitch.bind(this));  
 		}
+
+        private getWindowObject(): any {
+            return window.top;
+        }
+
+        //This method is registered as a handler for session switch
+        private handleSessionSwitch(context: XrmClientApi.EventContext) {
+            this.stateManager.onSessionSwitch();
+        }
 
 		/**
 		 * This function is called when agent changes selected option in callscript dropdown

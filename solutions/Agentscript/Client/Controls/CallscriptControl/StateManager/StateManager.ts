@@ -36,7 +36,20 @@ module MscrmControls.CallscriptControl {
 
 			this.setCurrentUciSessionId();
 			this.initializeControlStateFromCIF();
-		}
+        }
+
+        // this method reset the required properties when session switch / create
+        public onSessionSwitch(): void {
+            this.updateControlStateInCIF();
+            this.setCurrentUciSessionId();
+            this.initializeControlStateFromCIF();
+            if (this.context.utils.isNullOrUndefined(this.callscriptsForCurrentSession)) {
+                this.callscriptsForCurrentSession = null;
+                this.selectedScriptForCurrentSession = null;
+                this.isScriptsDataRequested = false;
+                this.scriptDataFetchFailed = false;
+            }
+        }
 
 		/**
 		 * Sets the value of sessionId to id of focussed session for this control instance
