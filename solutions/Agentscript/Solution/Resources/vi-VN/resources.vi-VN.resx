@@ -445,8 +445,9 @@
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_enablebuildexpression' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" xml:space="preserve">
-    <value />
-    <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_expressiondata' on Entity</comment></data>
+    <value>Lưu trữ JSON biểu thức</value>
+    <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_expressiondata' on Entity</comment>
+  </data>
   <data name="1:Description,Session Templates{7e7e29c0-bc24-40c2-938b-941554da4c4e}" xml:space="preserve">
     <value>Biểu mẫu cho thực thể này.</value>
     <comment>'Session Templates' : Description for systemform in Entity FormXml ID: '{7e7e29c0-bc24-40c2-938b-941554da4c4e}'</comment>

@@ -23,6 +23,45 @@
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
       <Modified By="toshiosh" DateTime="2015-10-01T20:49:33Z" />
+      <Item ItemId=";10:Description,business_unit_msdyn_macrosession" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās struktūrvienības unikālais identifikators, kam pieder ieraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009525Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,lk_msdyn_macrosession_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kurš izveidoja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009525Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,lk_msdyn_macrosession_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kurš modificēja šo ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009525Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";10:Description,msdyn_msdyn_macroactiontemplate_msdyn_actioninput" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for Macro Action Template associated with Action Input Parameter.]]></Val>
@@ -60,6 +99,58 @@
         <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000778Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,msdyn_workflow_msdyn_macrosession_macroname" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009521Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,owner_msdyn_macrosession" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieka Id]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009521Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,team_msdyn_macrosession" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās darba grupas unikālais identifikators, kam pieder ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009521Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,user_msdyn_macrosession" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kuram pieder šis ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009521Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";15062:Description,ProductivityMacros" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -218,6 +309,32 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,Macro Run History{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A card form for this entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Šīs entītijas kartes veidlapa.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009521Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Macro Run History{47492cdb-57ca-4667-a741-35c34491b4f6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A form for this entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Šīs entītijas veidlapa.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009521Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:Description,Macro Solution Configuration{4c0f7a89-7e67-4972-828e-1244f593a422}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A form for this entity.]]></Val>
@@ -275,32 +392,6 @@
           <Val><![CDATA[Lists down all the Macros]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Uzskaita visus makro]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000778Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,Process{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Lists down all the Active Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Uzskaita visus aktīvos makro]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000778Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,Process{ddf85356-30d9-e911-a81e-000d3af73f4d}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Lists down all the Inactive Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Uzskaita visus neaktīvos makro]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1583,6 +1674,19 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_callback" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009517Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_categorykey" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A string label for the category under which this connector should be rendered]]></Val>
@@ -1687,6 +1791,19 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_prefix" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009517Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_title" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The title displayed on the desginer for this connector]]></Val>
@@ -1713,6 +1830,19 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_webresourcename" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009517Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectorstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status of the Macro Connector]]></Val>
@@ -1737,6 +1867,318 @@
         <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000589Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kurš izveidoja ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009517Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta izveidošanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009517Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā deleģētā lietotāja unikālais identifikators, kas izveidoja šo ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009517Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sequence number of the import that created this record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās importēšanas operācijas kārtas numurs, kas izveidoja šo ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009517Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kurš modificēja šo ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.000951Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta modificēšanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.000951Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā deleģētā lietotāja unikālais identifikators, kas modificēja šo ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.000951Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta migrēšanas datums un laiks.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.000951Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieka Id]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.000951Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās struktūrvienības unikālais identifikators, kam pieder ieraksts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.000951Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tās darba grupas unikālais identifikators, kam pieder ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.000951Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā lietotāja unikālais identifikators, kuram pieder šis ieraksts.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.000951Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izmantošanai tikai iekšējām vajadzībām.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.000951Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Laika joslas kods, kas izmantots, veidojot ierakstu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.000951Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionentitymsdyn_macrosession" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Stores history of macro runs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Saglabā makro izpildes vēsture]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.00095Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionmsdyn_executioncontext" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Stores execution JSON for the macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Saglabā izpildes JSON makro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.00095Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionmsdyn_macroname" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Lookup field for the macro for which the session is created]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tā makro uzmeklēšanas lauks, kuram ir izveidota sesija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.00095Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionmsdyn_macrosession_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the macrosrunhistory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro izpildes vēstures statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.00095Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionmsdyn_macrosession_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the macrosrunhistory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro izpildes vēstures statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.00095Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionmsdyn_macrosessionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for entity instances]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Entītiju instanču unikāls identifikators]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.00095Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The name of the custom entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pielāgotās entītijas nosaukums.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.00095Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionmsdyn_status" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Stores whether macro succeeded or failed]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Saglabā, vai makro bija sekmīga vai nesekmīga]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.00095Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the macrosrunhistory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro izpildes vēstures statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.00095Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_macrosessionstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the macrosrunhistory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro izpildes vēstures statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009489Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2532,6 +2974,19 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_macrosessionentitymsdyn_macrosession" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Run Histories]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro izpildes vēstures]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009492Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:LocalizedCollectionName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Macro Solution Configurations]]></Val>
@@ -2974,6 +3429,97 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:LocalizedName,Macro Run History{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Information]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009499Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Run History{25689d1a-88b8-42c0-b9de-8c6e34053e84}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Run History Lookup View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro izpildes vēstures uzmeklēšanas skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009499Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Run History{372a2dda-7c30-463e-9372-694c51fbdddb}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Information]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009499Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Run History{47492cdb-57ca-4667-a741-35c34491b4f6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Information]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009499Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Run History{74122ce0-b1f0-4b41-9fae-a8b4e2bb0ca8}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Macro Run Histories]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvās makro izpildes vēstures]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009499Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Run History{755e5412-437a-4156-b1b9-c54d3bd2fcd6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Quick Find Active Macro Runs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvo makro izpildes gadījumu ātrā atrašana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009499Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Macro Run History{80ed4f96-7878-4274-9838-ad14e562c789}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Runs Associated View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro izpildes saistītais skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009499Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:LocalizedName,Macro Solution Configuration{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Macro Solution Configuration Associated View]]></Val>
@@ -3195,32 +3741,6 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
-      <Item ItemId=";1:LocalizedName,Process{53ab4fc4-2fd9-e911-a81e-000d3af73f4d}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Active Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Aktīvie makro]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000484Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:LocalizedName,Process{ddf85356-30d9-e911-a81e-000d3af73f4d}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Inactive Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Neaktīvie makro]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000484Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
-        </Props>
-      </Item>
       <Item ItemId=";1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Action Input Parameter]]></Val>
@@ -3271,6 +3791,19 @@
         <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000458Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,msdyn_macrosessionentitymsdyn_macrosession" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Run History]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro izpildes vēsture]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009475Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -4885,6 +5418,19 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:displayname,msdyn_macroconnectormsdyn_callback" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Callback]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atzvanīšana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009453Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:displayname,msdyn_macroconnectormsdyn_categorykey" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Category key]]></Val>
@@ -4989,6 +5535,19 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:displayname,msdyn_macroconnectormsdyn_prefix" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Prefix]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Prefikss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009453Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:displayname,msdyn_macroconnectormsdyn_title" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Title]]></Val>
@@ -5015,6 +5574,19 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:displayname,msdyn_macroconnectormsdyn_webresourcename" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Webresource Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tīmekļa resursu nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009453Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:displayname,msdyn_macroconnectorstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status]]></Val>
@@ -5039,6 +5611,305 @@
         <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000217Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveidotājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009453Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009453Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveidotājs (pārstāvis)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009453Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import Sequence Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Importēšanas secības numurs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009453Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificētājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificēšanas laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Modificētājs (pārstāvis)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieraksta izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Business Unit]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uzņēmuma struktūrvienība, kas ir īpašniece]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Team]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atbildīgā darba grupa]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning User]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atbildīgais lietotājs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Laika joslu kārtulas versijas numurs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[UTC pārvēršanas laika joslas kods]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionmsdyn_executioncontext" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Execution data]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izpildes dati]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionmsdyn_macroname" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionmsdyn_macrosession_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009445Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionmsdyn_macrosession_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009451Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionmsdyn_macrosessionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Run History ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro izpildes vēstures ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009451Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009451Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionmsdyn_status" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009451Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statuss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009451Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_macrosessionstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009451Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_macrosolutionconfigurationCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -5383,11 +6254,14 @@
         <Str Cat="Text">
           <Val><![CDATA[User Voice Link]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[UserVoice saite]]></Val>
+            <Val><![CDATA[Lietotāja balss saite]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-10T12:24:09.0004267Z" />
+        <Modified By="v-jinsqi" DateTime="2019-11-07T11:03:54Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[21748]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
@@ -5396,11 +6270,14 @@
         <Str Cat="Text">
           <Val><![CDATA[User Voice Text]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[UserVoice teksts]]></Val>
+            <Val><![CDATA[Lietotāja balss teksts]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-10T12:24:09.0004267Z" />
+        <Modified By="v-jinsqi" DateTime="2019-11-07T11:03:54Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[21749]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
@@ -6107,6 +6984,19 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,Macro Connector{3bb2ebc7-c568-e709-200b-c879d3c071c1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Prefix]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Prefikss]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009428Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,Macro Connector{40ed711e-a9da-457e-a3cb-2b6ead26a421}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[]]></Val>
@@ -6185,6 +7075,32 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,Macro Connector{6b36ba6e-da05-5b44-41c4-546aa45e317d}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Callback]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atzvanīšana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009428Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Connector{8eac758a-1050-11ea-8d71-362b9e155667}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Webresource Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tīmekļa resursu nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009428Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,Macro Connector{c53f9008-ccce-483f-9bd3-136ff1967976}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[General]]></Val>
@@ -6235,6 +7151,279 @@
         <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000088Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{050e1060-85ad-433d-b8b4-408f646d9d46}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Footer]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kājene]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009424Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{07c92620-d624-4581-a0a2-42457b5df3f9}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Header]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Galvene]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009424Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{3c31625a-2699-40e2-873c-781f358cf215}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusa iemesls]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009424Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{3fd055f1-d7b4-4b60-b901-23bc5f4b91b3}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ColorStrip]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Krāsu josla]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009424Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{41e98ad1-5713-4aa9-b528-daedf8297658}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009424Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{508e0a41-6976-4eff-9f6f-1181a2cf895a}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009424Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{64ed9939-befe-4ee0-aa3a-e0922e542d6b}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vispārīgi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009424Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{6aaca7be-888b-4540-bcfd-c2487685168b}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Izveides laiks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009424Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{7bf9e659-6e34-42b3-88f9-2f6461f91889}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009417Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{861b4ed5-4f00-4f8d-827f-1dd3c27bef53}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009417Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{95bd72f0-f004-42c6-b268-0a442f47a70d}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009417Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{97f77cce-299c-489d-ab2f-ce061f544de8}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009417Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{99668ea6-09d4-4166-aa4f-ff5d5c7b8ae5}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009417Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{99be5520-303f-4a7e-95c3-b3fc386f99fc}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Details]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Informācija]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009417Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{b7524f26-44fa-4373-a1e1-7995184d6751}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009417Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{c4c6a2e8-b137-4f4b-8f8b-50ec5d443506}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009417Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{c6dce013-9683-4e1b-8f0c-502f25a140af}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009417Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{e2cbcd92-24bf-4a15-95de-58b25f95d4a5}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Īpašnieks]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{e835fbc1-1a0a-4bfc-8520-fdf0b4922e28}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[GENERAL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[VISPĀRĪGI]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{ea219de3-7304-45a4-84bc-40c052ff9f24}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[General]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vispārīgi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Macro Run History{fe6efbe2-c00a-4b1e-8b40-dc639a12e9c6}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009423Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Macro Solution Configuration{10fd4277-739b-47a9-9b1f-5db4d467a93e}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -6757,6 +7946,58 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,msdyn_macrosessionmsdyn_macrosession_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009409Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_macrosessionmsdyn_macrosession_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009409Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_macrosessionmsdyn_macrosession_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009409Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_macrosessionmsdyn_macrosession_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Neaktīvs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009409Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Active]]></Val>
@@ -6874,6 +8115,19 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";68:Description,{2E40DD90-2824-4524-B223-947052798E73}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Allows you to view Macro Monitor View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ļauj skatīt makro pārrauga skatu]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009401Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E72}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Create Macros]]></Val>
@@ -6885,6 +8139,19 @@
         <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000056Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E73}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View Macros Monitor]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skatīt makro pārraugu]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009401Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -6937,6 +8204,45 @@
         <Modified By="v-jachyl" DateTime="2019-10-02T11:23:59.0000009Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E73}{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros Monitor View]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro pārrauga skats]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009401Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E73}{BC53D472-1587-4980-944E-F55DFE5D3F1A}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Monitor]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makro pārraugs]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009401Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E73}{D74829E3-D89A-4B89-BEC7-67B6BB0DE3EA}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nosaukums]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:46.0009401Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
     </Item>

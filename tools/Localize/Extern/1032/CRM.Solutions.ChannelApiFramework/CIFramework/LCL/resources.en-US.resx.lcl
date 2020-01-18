@@ -3804,18 +3804,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_IsRuntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
-            <Val><![CDATA[Ναι-η τιμή θα επιληφθεί από το όρισμα templateParameters στον χρόνο εκτέλεσης]D;]A;Όχι - η τιμή πρέπει να παρέχεται κατά τη δημιουργία προτύπου που χρησιμοποιεί αυτήν την παράμετρο]]></Val>
+            <Val><![CDATA[Ναι-η τιμή θα επιληφθεί από το όρισμα templateParameters στον χρόνο εκτέλεσης]A;Όχι - η τιμή πρέπει να παρέχεται κατά τη δημιουργία προτύπου που χρησιμοποιεί αυτήν την παράμετρο]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-12-19T02:36:20.0003564Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001361Z" />
         <Props>
-          <Str Name="Custom3" Val="WO23640_20191216" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_RuntimeType" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3846,18 +3846,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+          <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
-            <Val><![CDATA[Ναι-η τιμή θα επιληφθεί από το όρισμα templateParameters στον χρόνο εκτέλεσης]D;]A;Όχι - η τιμή πρέπει να παρέχεται κατά τη δημιουργία προτύπου που χρησιμοποιεί αυτήν την παράμετρο]]></Val>
+            <Val><![CDATA[Ναι-η τιμή θα επιληφθεί από το όρισμα templateParameters στον χρόνο εκτέλεσης]A;Όχι - η τιμή πρέπει να παρέχεται κατά τη δημιουργία προτύπου που χρησιμοποιεί αυτήν την παράμετρο]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
+            <Val><![CDATA[Yes - value will be picked from templateParameters argument at runtime]D;]A;No - value must be supplied when creating a template that uses this parameter]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2019-12-19T02:36:20.0003553Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001346Z" />
         <Props>
-          <Str Name="Custom3" Val="WO23640_20191216" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8847,28 +8847,34 @@
       </Item>
       <Item ItemId=";1:label,App Parameter Definition{07190a27-a07a-4cae-adca-49a091653e41}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Όνομα]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007477Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.000131Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,App Parameter Definition{831b4552-37aa-9960-3770-ce6606502857}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Default Value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Προεπιλεγμένη τιμή]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007479Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.000131Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,App Parameter Definition{907339f9-d1e5-48b6-983d-e55b38ce05dd}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8886,28 +8892,34 @@
       </Item>
       <Item ItemId=";1:label,App Parameter Definition{96322715-36cd-1a8e-4b02-ae5a21b755bb}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Runtime Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Τύπος χρόνου εκτέλεσης]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007479Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.000131Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,App Parameter Definition{aaed2985-e20a-e643-e7d6-ce9b9b459b1a}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Is Runtime]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Είναι χρόνος εκτέλεσης]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007479Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,App Parameter Definition{f956a332-f5f8-4577-a104-9f863d694e57}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8938,28 +8950,34 @@
       </Item>
       <Item ItemId=";1:label,Application Tab Template{275a9039-b619-6781-3d78-478ee443d9e8}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Application type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Τύπος εφαρμογής]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007479Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Tab Template{379c8712-d7cb-0257-b7be-7c7125e6341c}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Can close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Δυνατότητα κλεισίματος]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007479Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Tab Template{3eb84e18-6c5a-0c41-bcde-171e7da8347e}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8977,67 +8995,82 @@
       </Item>
       <Item ItemId=";1:label,Application Tab Template{40736098-8d9c-443a-b6ce-85335c739b61}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Όνομα]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007479Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Tab Template{51f4cad0-723f-4065-bd12-cc4fc7ac4cd8}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Κάτοχος]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007479Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Tab Template{75819513-1e68-ee7d-3d85-7a44ee81dac0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Icon]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Εικονίδιο]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007479Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Tab Template{89210d67-7701-576d-3723-4390303a64bc}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Description]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Περιγραφή]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000742Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Tab Template{a4bd1f84-bc33-4df0-bb12-3c6cefc25fcd}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Application title]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Τίτλος εφαρμογής]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000742Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Tab Template{db2a537d-5522-9de6-943d-4d5c07542e92}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9068,15 +9101,18 @@
       </Item>
       <Item ItemId=";1:label,Application Template Parameter{10c387e0-fbb6-442b-b126-b15e8518e03f}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Κάτοχος]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000742Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Template Parameter{7c173265-af1b-4522-a8b8-6a435cae429a}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9107,67 +9143,82 @@
       </Item>
       <Item ItemId=";1:label,Application Template Parameter{c9a9b00c-6458-4010-88b4-b2076efe26d3}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Όνομα]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000742Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Template Parameter{c9a9d11c-6458-4010-88b4-b2067efe26d3}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Parameter Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Όνομα παραμέτρου]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000742Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Template Parameter{d74819ae-d950-1e68-593d-72cecb426d49}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Τιμή]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000742Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001307Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Type{74fe1b2a-ddd9-466d-b06c-f68467da8370}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Όνομα]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000742Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Type{74fe1b3b-ddd9-466d-b06c-f66467da8370}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Display Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Εμφανιζόμενο όνομα]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007392Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Application Type{7a9894bd-4d59-4cb5-9dc3-ab6b84ef6ad5}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9198,15 +9249,31 @@
       </Item>
       <Item ItemId=";1:label,Application Type{e403ad33-9951-d007-4358-2673171e868b}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+          <Val><![CDATA[Rendering Order]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Σειρά απόδοσης]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
             <Val><![CDATA[]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{07478256-16a3-4608-6c09-e5a84d0215e3}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Label]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ετικέτα]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007392Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Channel{2190ec7e-bb48-4408-aa64-6008072a8a39}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9222,6 +9289,32 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,Channel{2b3d7a63-0066-41d0-939c-12bad22bb227}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[API Version]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Έκδοση API]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{35765a1a-2106-2a1b-79a4-38eb1ab76b66}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable Outbound Communication]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ενεργοποίηση εξερχόμενης επικοινωνίας]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,Channel{51ee0bc8-2a26-7a49-664d-8077d77d456a}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Select Unified Interface Apps for the Channel]]></Val>
@@ -9235,6 +9328,58 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,Channel{54F26BB7-0D52-4737-8863-C78AC77C8A80}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Custom Parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Προσαρμοσμένες παράμετροι]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{700edb12-0fa4-4b08-aed3-208619a35f0e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{8ae18add-cb7e-45c5-9174-7e7952e96cc4}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Role Selector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Επιλογέας ρόλου]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{8c621a7b-fd3a-4d1b-81a2-28795ccc836b}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Όνομα]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,Channel{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Select the Roles for the Channel]]></Val>
@@ -9246,6 +9391,58 @@
         <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007392Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{910edd35-4cd4-4b0a-9e21-b54e9e84225a}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Διεύθυνση URL καναλιού]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{c0e04a8e-e0a8-9cb4-3563-cb92ba28e129}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Channel Order]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Παραγγελία καναλιού]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001308Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{d6aa4662-c329-37e8-ec51-1e8572e277ae}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Trusted Domain]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Αξιόπιστος τομέας]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001304Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Channel{e29618b5-d6b9-b4e5-6788-bdd56cde06ba}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[App Selector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Επιλογέας εφαρμογής]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001304Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Notification Fields{3e531709-6501-4936-76bd-d92d22bec5d5}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9276,15 +9473,18 @@
       </Item>
       <Item ItemId=";1:label,Notification Fields{653dcd92-16cd-7741-2720-8c7cc7068ae3}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Field header]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Κεφαλίδα πεδίου]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007392Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001304Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Notification Fields{7d96d38b-f98c-4d17-9412-8cf184b9838c}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9302,15 +9502,18 @@
       </Item>
       <Item ItemId=";1:label,Notification Fields{81b5e8e3-9082-6913-d7ba-e7713d426cc0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Τιμή]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007392Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001304Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Notification Fields{81c37674-499b-ba10-7c38-03031dc39433}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9328,15 +9531,18 @@
       </Item>
       <Item ItemId=";1:label,Notification Fields{8e2770be-ceed-48c8-a3e3-18fad627f551}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Όνομα]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000737Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001304Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Notification Fields{9e1a0e43-e7c1-4934-b493-a5f65b7ae78f}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9380,15 +9586,18 @@
       </Item>
       <Item ItemId=";1:label,Notification Fields{ca715140-33b6-4147-91a0-85a2c320f7dd}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Κάτοχος]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.000737Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001304Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Notification Fields{cd441dbf-27f6-4ccb-aeb9-8c0b8a3f1f30}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9815,28 +10024,34 @@
       </Item>
       <Item ItemId=";1:label,TemplateTag{713f58d8-f7c7-44fe-a230-1e0004dc7913}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Όνομα]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007323Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001303Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,TemplateTag{9aa88551-6147-478f-9558-6896f8c8dda1}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Κάτοχος]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0007323Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T00:58:45.0001303Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21181_20190917" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_ciprovidermsdyn_ciprovider_msdyn_clicktoact0" ItemType="0;.resx" PsrId="211" Leaf="true">

@@ -1100,15 +1100,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Stores expression JSON]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[儲存運算式 JSON]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-09T06:01:13.0000278Z" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:16.0005254Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24046_20200103" />
+          <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedCollectionName,msdyn_agentscriptentitymsdyn_agentscript" ItemType="0;.resx" PsrId="211" Leaf="true">

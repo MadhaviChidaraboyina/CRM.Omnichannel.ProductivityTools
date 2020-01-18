@@ -132,6 +132,18 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
+  <data name="10:Description,business_unit_msdyn_macrosession" xml:space="preserve">
+    <value>Kirjet omava äriüksuse ainuidentifikaator</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'business_unit_msdyn_macrosession'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_macrosession_createdby" xml:space="preserve">
+    <value>Kirje loonud kasutaja ainuidentifikaator.</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'lk_msdyn_macrosession_createdby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_macrosession_modifiedby" xml:space="preserve">
+    <value>Kirjet muutnud kasutaja ainuidentifikaator.</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'lk_msdyn_macrosession_modifiedby'</comment>
+  </data>
   <data name="10:Description,msdyn_msdyn_macroactiontemplate_msdyn_actioninput" xml:space="preserve">
     <value>Toimingu sisendparameetriga seostatud makro tegevusmalli ainuidentifikaator.</value>
     <comment>msdyn_actioninputparameter Description for EntityRelationship 'msdyn_msdyn_macroactiontemplate_msdyn_actioninput'</comment>
@@ -143,6 +155,22 @@
   <data name="10:Description,msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector" xml:space="preserve">
     <value />
     <comment>msdyn_macroactiontemplate Description for EntityRelationship 'msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector'</comment>
+  </data>
+  <data name="10:Description,msdyn_workflow_msdyn_macrosession_macroname" xml:space="preserve">
+    <value />
+    <comment>msdyn_macrosession Description for EntityRelationship 'msdyn_workflow_msdyn_macrosession_macroname'</comment>
+  </data>
+  <data name="10:Description,owner_msdyn_macrosession" xml:space="preserve">
+    <value>Omaniku ID</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'owner_msdyn_macrosession'</comment>
+  </data>
+  <data name="10:Description,team_msdyn_macrosession" xml:space="preserve">
+    <value>Kirjet omava meeskonna ainuidentifikaator.</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'team_msdyn_macrosession'</comment>
+  </data>
+  <data name="10:Description,user_msdyn_macrosession" xml:space="preserve">
+    <value>Kirje omanikust kasutaja ainuidentifikaator</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'user_msdyn_macrosession'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
@@ -191,6 +219,14 @@
   <data name="1:Description,Macro Connector{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
     <value>Selle olemi vorm.</value>
     <comment>'Macro Connector' : Description for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
+  </data>
+  <data name="1:Description,Macro Run History{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}" xml:space="preserve">
+    <value>Selle olemi kaardivorm.</value>
+    <comment>'Macro Run History' : Description for systemform in Entity FormXml ID: '{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}'</comment>
+  </data>
+  <data name="1:Description,Macro Run History{47492cdb-57ca-4667-a741-35c34491b4f6}" xml:space="preserve">
+    <value>Selle olemi vorm.</value>
+    <comment>'Macro Run History' : Description for systemform in Entity FormXml ID: '{47492cdb-57ca-4667-a741-35c34491b4f6}'</comment>
   </data>
   <data name="1:Description,Macro Solution Configuration{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
     <value>Selle olemi vorm.</value>
@@ -560,6 +596,10 @@
     <value>Selle konnektori paani renderdamise värv</value>
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_brandcolor' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_callback" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_callback' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_macroconnectormsdyn_categorykey" xml:space="preserve">
     <value>Stringi silt kategooria jaoks, kuhu see konnektor tuleks renderdada</value>
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_categorykey' on Entity</comment>
@@ -596,6 +636,10 @@
     <value>Kohandatud olemi nimi.</value>
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_prefix" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_prefix' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_macroconnectormsdyn_title" xml:space="preserve">
     <value>Selle konnektori kujundajal kuvatav pealkiri</value>
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_title' on Entity</comment>
@@ -603,6 +647,10 @@
   <data name="1:Description,msdyn_macroconnectormsdyn_type" xml:space="preserve">
     <value>Selle konnektori tüüp</value>
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_type' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_webresourcename" xml:space="preserve">
+    <value />
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_webresourcename' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnectorOverriddenCreatedOn" xml:space="preserve">
     <value>Kirje migreerimise kuupäev ja kellaaeg.</value>
@@ -639,6 +687,102 @@
   <data name="1:Description,msdyn_macroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
     <value>Kirje loomisel kasutatud ajavööndi kood.</value>
     <comment>'msdyn_macroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionCreatedBy" xml:space="preserve">
+    <value>Kirje loonud kasutaja ainuidentifikaator.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionCreatedOn" xml:space="preserve">
+    <value>Kirje loomise kuupäev ja kellaaeg.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionCreatedOnBehalfBy" xml:space="preserve">
+    <value>Kirje loonud delegaadi ainuidentifikaator.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
+    <value>Talletab makro käitamise ajaloo</value>
+    <comment> 'msdyn_macrosession' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
+    <value>Kirje loonud impordi järjekorranumber.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
+    <value>Kirjet muutnud kasutaja ainuidentifikaator.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionModifiedOn" xml:space="preserve">
+    <value>Kirje muutmise kuupäev ja kellaaeg.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
+    <value>Kirjet muutnud delegaadi ainuidentifikaator.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_executioncontext" xml:space="preserve">
+    <value>Talletab makro käitamise JSON-ile</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_executioncontext' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_macroname" xml:space="preserve">
+    <value>Selle makro otsinguväli, mille jaoks seanss on loodud</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macroname' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_macrosessionid" xml:space="preserve">
+    <value>Olemi eksemplari ainuidentifikaator</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macrosessionid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_macrosession_statecode" xml:space="preserve">
+    <value>Makro käitamise ajaloo olek</value>
+    <comment>'msdyn_macrosession' : Description for OptionSet 'msdyn_macrosession_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_macrosession_statuscode" xml:space="preserve">
+    <value>Makro käitamise ajaloo oleku põhjus</value>
+    <comment>'msdyn_macrosession' : Description for OptionSet 'msdyn_macrosession_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_name" xml:space="preserve">
+    <value>Kohandatud olemi nimi.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_status" xml:space="preserve">
+    <value>Talletab, kas makro õnnestus või nurjus</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_status' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionOverriddenCreatedOn" xml:space="preserve">
+    <value>Kirje migreerimise kuupäev ja kellaaeg.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionOwnerId" xml:space="preserve">
+    <value>Omaniku ID</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
+    <value>Kirjet omava äriüksuse ainuidentifikaator</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionOwningTeam" xml:space="preserve">
+    <value>Kirjet omava meeskonna ainuidentifikaator.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionOwningUser" xml:space="preserve">
+    <value>Kirje omanikust kasutaja ainuidentifikaator</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionstatecode" xml:space="preserve">
+    <value>Makro käitamise ajaloo olek</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionstatuscode" xml:space="preserve">
+    <value>Makro käitamise ajaloo oleku põhjus</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Ainult sisemiseks kasutuseks.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Kirje loomisel kasutatud ajavööndi kood.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationCreatedBy" xml:space="preserve">
     <value>Kirje loonud kasutaja ainuidentifikaator.</value>
@@ -1224,6 +1368,10 @@
     <value>Tootemargi värv</value>
     <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_brandcolor' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_callback" xml:space="preserve">
+    <value>Tagasihelistamine</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_callback' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_macroconnectormsdyn_categorykey" xml:space="preserve">
     <value>Kategooria võti</value>
     <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_categorykey' on Entity</comment>
@@ -1260,6 +1408,10 @@
     <value>Nimetus</value>
     <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_prefix" xml:space="preserve">
+    <value>Eesliide</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_prefix' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_macroconnectormsdyn_title" xml:space="preserve">
     <value>Pealkiri</value>
     <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_title' on Entity</comment>
@@ -1267,6 +1419,10 @@
   <data name="1:displayname,msdyn_macroconnectormsdyn_type" xml:space="preserve">
     <value>Tüüp</value>
     <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_type' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_webresourcename" xml:space="preserve">
+    <value>Veebiressursi nimi</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_webresourcename' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macroconnectorOverriddenCreatedOn" xml:space="preserve">
     <value>Kirje loomise aeg:</value>
@@ -1303,6 +1459,98 @@
   <data name="1:displayname,msdyn_macroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
     <value>UTC ajavööndikoodi teisendus</value>
     <comment>'msdyn_macroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionCreatedBy" xml:space="preserve">
+    <value>Koostas</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionCreatedOn" xml:space="preserve">
+    <value>Koostamisaeg</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionCreatedOnBehalfBy" xml:space="preserve">
+    <value>Koostas (delegaat)</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
+    <value>Järjekorranumbri importimine</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionModifiedBy" xml:space="preserve">
+    <value>Muutja</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionModifiedOn" xml:space="preserve">
+    <value>Muutmise aeg</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
+    <value>Muutis (delegaat)</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_executioncontext" xml:space="preserve">
+    <value>Täitmisandmed</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'msdyn_executioncontext' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_macroname" xml:space="preserve">
+    <value>Makro nimi</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'msdyn_macroname' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_macrosessionid" xml:space="preserve">
+    <value>Makro käitamise ajaloo ID</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'msdyn_macrosessionid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_macrosession_statecode" xml:space="preserve">
+    <value>Olek</value>
+    <comment>'msdyn_macrosession' : displayname for OptionSet 'msdyn_macrosession_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_macrosession_statuscode" xml:space="preserve">
+    <value>Oleku põhjus</value>
+    <comment>'msdyn_macrosession' : displayname for OptionSet 'msdyn_macrosession_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_name" xml:space="preserve">
+    <value>Nimi</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_status" xml:space="preserve">
+    <value>Makro olek</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'msdyn_status' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionOverriddenCreatedOn" xml:space="preserve">
+    <value>Kirje loomise aeg</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionOwnerId" xml:space="preserve">
+    <value>Omanik</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
+    <value>Äriüksuse omamine</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionOwningTeam" xml:space="preserve">
+    <value>Omanikust meeskond</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionOwningUser" xml:space="preserve">
+    <value>Omanikust kasutaja</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionstatecode" xml:space="preserve">
+    <value>Olek</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionstatuscode" xml:space="preserve">
+    <value>Oleku põhjus</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Ajavööndireegli versiooninumber</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC ajavööndikoodi teisendus</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationCreatedBy" xml:space="preserve">
     <value>Koostas:</value>
@@ -1381,11 +1629,11 @@
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_searchhint' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_uservoicelink" xml:space="preserve">
-    <value>UserVoice'i link</value>
+    <value>Kasutaja hääle link</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_uservoicelink' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_uservoicetext" xml:space="preserve">
-    <value>UserVoice'i tekst</value>
+    <value>Kasutaja hääle tekst</value>
     <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_uservoicetext' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -1632,6 +1880,10 @@
     <value />
     <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{33deeba5-04ad-d3a9-5ae4-9674d18831b1}'</comment>
   </data>
+  <data name="1:label,Macro Connector{3bb2ebc7-c568-e709-200b-c879d3c071c1}" xml:space="preserve">
+    <value>Eesliide</value>
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{3bb2ebc7-c568-e709-200b-c879d3c071c1}'</comment>
+  </data>
   <data name="1:label,Macro Connector{40ed711e-a9da-457e-a3cb-2b6ead26a421}" xml:space="preserve">
     <value />
     <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{40ed711e-a9da-457e-a3cb-2b6ead26a421}'</comment>
@@ -1656,6 +1908,14 @@
     <value />
     <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{670bc1ee-710d-1194-6e55-9046523de5d6}'</comment>
   </data>
+  <data name="1:label,Macro Connector{6b36ba6e-da05-5b44-41c4-546aa45e317d}" xml:space="preserve">
+    <value>Tagasihelistamine</value>
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{6b36ba6e-da05-5b44-41c4-546aa45e317d}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{8eac758a-1050-11ea-8d71-362b9e155667}" xml:space="preserve">
+    <value>Veebiressursi nimi</value>
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{8eac758a-1050-11ea-8d71-362b9e155667}'</comment>
+  </data>
   <data name="1:label,Macro Connector{c53f9008-ccce-483f-9bd3-136ff1967976}" xml:space="preserve">
     <value>Üldine</value>
     <comment>'Macro Connector' : label for section in Entity FormXml ID: '{c53f9008-ccce-483f-9bd3-136ff1967976}'</comment>
@@ -1671,6 +1931,90 @@
   <data name="1:label,Macro Connector{e487c9e3-6bee-dd35-ca00-1d3189b95bc5}" xml:space="preserve">
     <value />
     <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{e487c9e3-6bee-dd35-ca00-1d3189b95bc5}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{050e1060-85ad-433d-b8b4-408f646d9d46}" xml:space="preserve">
+    <value>Jalus</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{050e1060-85ad-433d-b8b4-408f646d9d46}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{07c92620-d624-4581-a0a2-42457b5df3f9}" xml:space="preserve">
+    <value>Päis</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{07c92620-d624-4581-a0a2-42457b5df3f9}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{3c31625a-2699-40e2-873c-781f358cf215}" xml:space="preserve">
+    <value>Oleku põhjus</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{3c31625a-2699-40e2-873c-781f358cf215}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{3fd055f1-d7b4-4b60-b901-23bc5f4b91b3}" xml:space="preserve">
+    <value>Värviriba</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{3fd055f1-d7b4-4b60-b901-23bc5f4b91b3}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{41e98ad1-5713-4aa9-b528-daedf8297658}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{41e98ad1-5713-4aa9-b528-daedf8297658}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{508e0a41-6976-4eff-9f6f-1181a2cf895a}" xml:space="preserve">
+    <value>Nimi</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{508e0a41-6976-4eff-9f6f-1181a2cf895a}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{64ed9939-befe-4ee0-aa3a-e0922e542d6b}" xml:space="preserve">
+    <value>Üldine</value>
+    <comment>'Macro Run History' : label for tab in Entity FormXml ID: '{64ed9939-befe-4ee0-aa3a-e0922e542d6b}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{6aaca7be-888b-4540-bcfd-c2487685168b}" xml:space="preserve">
+    <value>Koostamisaeg</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{6aaca7be-888b-4540-bcfd-c2487685168b}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{7bf9e659-6e34-42b3-88f9-2f6461f91889}" xml:space="preserve">
+    <value>Omanik</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{7bf9e659-6e34-42b3-88f9-2f6461f91889}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{861b4ed5-4f00-4f8d-827f-1dd3c27bef53}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for tab in Entity FormXml ID: '{861b4ed5-4f00-4f8d-827f-1dd3c27bef53}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{95bd72f0-f004-42c6-b268-0a442f47a70d}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for tab in Entity FormXml ID: '{95bd72f0-f004-42c6-b268-0a442f47a70d}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{97f77cce-299c-489d-ab2f-ce061f544de8}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{97f77cce-299c-489d-ab2f-ce061f544de8}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{99668ea6-09d4-4166-aa4f-ff5d5c7b8ae5}" xml:space="preserve">
+    <value>Nimi</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{99668ea6-09d4-4166-aa4f-ff5d5c7b8ae5}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{99be5520-303f-4a7e-95c3-b3fc386f99fc}" xml:space="preserve">
+    <value>Üksikasjad</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{99be5520-303f-4a7e-95c3-b3fc386f99fc}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{b7524f26-44fa-4373-a1e1-7995184d6751}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{b7524f26-44fa-4373-a1e1-7995184d6751}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{c4c6a2e8-b137-4f4b-8f8b-50ec5d443506}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{c4c6a2e8-b137-4f4b-8f8b-50ec5d443506}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{c6dce013-9683-4e1b-8f0c-502f25a140af}" xml:space="preserve">
+    <value>Omanik</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{c6dce013-9683-4e1b-8f0c-502f25a140af}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{e2cbcd92-24bf-4a15-95de-58b25f95d4a5}" xml:space="preserve">
+    <value>Omanik</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{e2cbcd92-24bf-4a15-95de-58b25f95d4a5}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{e835fbc1-1a0a-4bfc-8520-fdf0b4922e28}" xml:space="preserve">
+    <value>ÜLDINE</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{e835fbc1-1a0a-4bfc-8520-fdf0b4922e28}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{ea219de3-7304-45a4-84bc-40c052ff9f24}" xml:space="preserve">
+    <value>Üldine</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{ea219de3-7304-45a4-84bc-40c052ff9f24}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{fe6efbe2-c00a-4b1e-8b40-dc639a12e9c6}" xml:space="preserve">
+    <value>Nimi</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{fe6efbe2-c00a-4b1e-8b40-dc639a12e9c6}'</comment>
   </data>
   <data name="1:label,Macro Solution Configuration{10fd4277-739b-47a9-9b1f-5db4d467a93e}" xml:space="preserve">
     <value />
@@ -1796,6 +2140,22 @@
     <value>Passiivne</value>
     <comment>'msdyn_macroconnector' : label for status '2' on Entity</comment>
   </data>
+  <data name="1:label,msdyn_macrosessionmsdyn_macrosession_statecode0" xml:space="preserve">
+    <value>Aktiivne</value>
+    <comment>'msdyn_macrosession' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosessionmsdyn_macrosession_statecode1" xml:space="preserve">
+    <value>Passiivne</value>
+    <comment>'msdyn_macrosession' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosessionmsdyn_macrosession_statuscode1" xml:space="preserve">
+    <value>Aktiivne</value>
+    <comment>'msdyn_macrosession' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosessionmsdyn_macrosession_statuscode2" xml:space="preserve">
+    <value>Passiivne</value>
+    <comment>'msdyn_macrosession' : label for status '2' on Entity</comment>
+  </data>
   <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode0" xml:space="preserve">
     <value>Aktiivne</value>
     <comment>'msdyn_macrosolutionconfiguration' : label for state '0' on Entity</comment>
@@ -1879,6 +2239,10 @@
   <data name="1:LocalizedCollectionName,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
     <value>makro konnektorid</value>
     <comment> 'msdyn_macroconnector' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
+    <value>Makro käitamise ajalugu</value>
+    <comment> 'msdyn_macrosession' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
     <value>Makrolahenduse konfiguratsioonid</value>
@@ -2016,6 +2380,34 @@
     <value>Teave</value>
     <comment>'Macro Connector' : LocalizedName for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
   </data>
+  <data name="1:LocalizedName,Macro Run History{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Macro Run History' : LocalizedName for systemform in Entity FormXml ID: '{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{25689d1a-88b8-42c0-b9de-8c6e34053e84}" xml:space="preserve">
+    <value>Makro käitamise ajaloo otsinguvaade</value>
+    <comment>'Macro Run History' : LocalizedName for SavedQuery on Entity QueryId: '{25689d1a-88b8-42c0-b9de-8c6e34053e84}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{372a2dda-7c30-463e-9372-694c51fbdddb}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Macro Run History' : LocalizedName for systemform in Entity FormXml ID: '{372a2dda-7c30-463e-9372-694c51fbdddb}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{47492cdb-57ca-4667-a741-35c34491b4f6}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Macro Run History' : LocalizedName for systemform in Entity FormXml ID: '{47492cdb-57ca-4667-a741-35c34491b4f6}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{74122ce0-b1f0-4b41-9fae-a8b4e2bb0ca8}" xml:space="preserve">
+    <value>Aktiivse makro käitamise ajalugu</value>
+    <comment>'Macro Run History' : LocalizedName for SavedQuery on Entity QueryId: '{74122ce0-b1f0-4b41-9fae-a8b4e2bb0ca8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{755e5412-437a-4156-b1b9-c54d3bd2fcd6}" xml:space="preserve">
+    <value>Aktiivsete makrokäitamiste kiirotsing</value>
+    <comment>'Macro Run History' : LocalizedName for SavedQuery on Entity QueryId: '{755e5412-437a-4156-b1b9-c54d3bd2fcd6}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{80ed4f96-7878-4274-9838-ad14e562c789}" xml:space="preserve">
+    <value>Makro käitamisega seostatud vaade</value>
+    <comment>'Macro Run History' : LocalizedName for SavedQuery on Entity QueryId: '{80ed4f96-7878-4274-9838-ad14e562c789}'</comment>
+  </data>
   <data name="1:LocalizedName,Macro Solution Configuration{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}" xml:space="preserve">
     <value>Makrolahenduse konfiguratsiooni seostatud vaade</value>
     <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}'</comment>
@@ -2049,6 +2441,10 @@
     <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
   </data>
   <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
+    <value>Action Input Parameter</value>
+    <comment> 'msdyn_actioninputparameter' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
     <value>Toimingu sisendparameeter</value>
     <comment> 'msdyn_actioninputparameter' : LocalizedName for Entity</comment>
   </data>
@@ -2063,6 +2459,10 @@
   <data name="1:LocalizedName,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
     <value>Makro konnektor</value>
     <comment> 'msdyn_macroconnector' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
+    <value>Makro käitamise ajalugu</value>
+    <comment> 'msdyn_macrosession' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
     <value>Makrolahenduse konfiguratsioon</value>
@@ -2224,6 +2624,10 @@
     <value>Võimaldab luua makrosid</value>
     <comment> '{2E40DD90-2824-4524-B223-947052798E72}' : Description for Dialog</comment>
   </data>
+  <data name="68:Description,{2E40DD90-2824-4524-B223-947052798E73}" xml:space="preserve">
+    <value>Võimaldab vaadata makrode jälgimisvaadet</value>
+    <comment> '{2E40DD90-2824-4524-B223-947052798E73}' : Description for Dialog</comment>
+  </data>
   <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" xml:space="preserve">
     <value>Makrode loomine</value>
     <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}'</comment>
@@ -2240,8 +2644,24 @@
     <value>Nimetus</value>
     <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{D74829E3-D89A-4B89-BEC7-67B6BB0DE2EA}'</comment>
   </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E73}{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}" xml:space="preserve">
+    <value>Kuva makrode jälgimine</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E73}' : label for cell in Dialog FormXml ID: '{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E73}{BC53D472-1587-4980-944E-F55DFE5D3F1A}" xml:space="preserve">
+    <value>Makrode jälgimine</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E73}' : label for cell in Dialog FormXml ID: '{BC53D472-1587-4980-944E-F55DFE5D3F1A}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E73}{D74829E3-D89A-4B89-BEC7-67B6BB0DE3EA}" xml:space="preserve">
+    <value>Nimi</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E73}' : label for cell in Dialog FormXml ID: '{D74829E3-D89A-4B89-BEC7-67B6BB0DE3EA}'</comment>
+  </data>
   <data name="68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E72}" xml:space="preserve">
     <value>Makrode loomine</value>
     <comment> '{2E40DD90-2824-4524-B223-947052798E72}' : LocalizedName for Dialog</comment>
+  </data>
+  <data name="68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E73}" xml:space="preserve">
+    <value>Kuva makrode jälgimine</value>
+    <comment> '{2E40DD90-2824-4524-B223-947052798E73}' : LocalizedName for Dialog</comment>
   </data>
 </root>

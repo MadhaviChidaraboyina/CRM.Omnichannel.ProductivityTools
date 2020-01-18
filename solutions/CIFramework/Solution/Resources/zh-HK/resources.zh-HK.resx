@@ -337,6 +337,10 @@
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
+    <value>Channel API Integration Framework</value>
+    <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
+  </data>
+  <data name="15062:LocalizedName,ChannelAPIIntegrationFramework" xml:space="preserve">
     <value>管道 API 整合架構</value>
     <comment> 'ChannelAPIIntegrationFramework' : LocalizedName for Solution</comment>
   </data>
@@ -2303,11 +2307,11 @@
     <comment>'msdyn_templatetags' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,App Parameter Definition{07190a27-a07a-4cae-adca-49a091653e41}" xml:space="preserve">
-    <value />
+    <value>名稱</value>
     <comment>'App Parameter Definition' : label for cell in Entity FormXml ID: '{07190a27-a07a-4cae-adca-49a091653e41}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{831b4552-37aa-9960-3770-ce6606502857}" xml:space="preserve">
-    <value />
+    <value>預設值</value>
     <comment>'App Parameter Definition' : label for cell in Entity FormXml ID: '{831b4552-37aa-9960-3770-ce6606502857}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{907339f9-d1e5-48b6-983d-e55b38ce05dd}" xml:space="preserve">
@@ -2315,11 +2319,11 @@
     <comment>'App Parameter Definition' : label for tab in Entity FormXml ID: '{907339f9-d1e5-48b6-983d-e55b38ce05dd}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{96322715-36cd-1a8e-4b02-ae5a21b755bb}" xml:space="preserve">
-    <value />
+    <value>執行階段類型</value>
     <comment>'App Parameter Definition' : label for cell in Entity FormXml ID: '{96322715-36cd-1a8e-4b02-ae5a21b755bb}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{aaed2985-e20a-e643-e7d6-ce9b9b459b1a}" xml:space="preserve">
-    <value />
+    <value>是執行階段</value>
     <comment>'App Parameter Definition' : label for cell in Entity FormXml ID: '{aaed2985-e20a-e643-e7d6-ce9b9b459b1a}'</comment>
   </data>
   <data name="1:label,App Parameter Definition{f956a332-f5f8-4577-a104-9f863d694e57}" xml:space="preserve">
@@ -2331,11 +2335,11 @@
     <comment>'Application Tab Template' : label for tab in Entity FormXml ID: '{1c7ca199-5627-4de2-b6c4-83d0be0be5be}'</comment>
   </data>
   <data name="1:label,Application Tab Template{275a9039-b619-6781-3d78-478ee443d9e8}" xml:space="preserve">
-    <value />
+    <value>應用程式類型</value>
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{275a9039-b619-6781-3d78-478ee443d9e8}'</comment>
   </data>
   <data name="1:label,Application Tab Template{379c8712-d7cb-0257-b7be-7c7125e6341c}" xml:space="preserve">
-    <value />
+    <value>可關閉</value>
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{379c8712-d7cb-0257-b7be-7c7125e6341c}'</comment>
   </data>
   <data name="1:label,Application Tab Template{3eb84e18-6c5a-0c41-bcde-171e7da8347e}" xml:space="preserve">
@@ -2343,23 +2347,23 @@
     <comment>'Application Tab Template' : label for section in Entity FormXml ID: '{3eb84e18-6c5a-0c41-bcde-171e7da8347e}'</comment>
   </data>
   <data name="1:label,Application Tab Template{40736098-8d9c-443a-b6ce-85335c739b61}" xml:space="preserve">
-    <value />
+    <value>名稱</value>
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{40736098-8d9c-443a-b6ce-85335c739b61}'</comment>
   </data>
   <data name="1:label,Application Tab Template{51f4cad0-723f-4065-bd12-cc4fc7ac4cd8}" xml:space="preserve">
-    <value />
+    <value>負責人</value>
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{51f4cad0-723f-4065-bd12-cc4fc7ac4cd8}'</comment>
   </data>
   <data name="1:label,Application Tab Template{75819513-1e68-ee7d-3d85-7a44ee81dac0}" xml:space="preserve">
-    <value />
+    <value>圖示</value>
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{75819513-1e68-ee7d-3d85-7a44ee81dac0}'</comment>
   </data>
   <data name="1:label,Application Tab Template{89210d67-7701-576d-3723-4390303a64bc}" xml:space="preserve">
-    <value />
+    <value>描述</value>
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{89210d67-7701-576d-3723-4390303a64bc}'</comment>
   </data>
   <data name="1:label,Application Tab Template{a4bd1f84-bc33-4df0-bb12-3c6cefc25fcd}" xml:space="preserve">
-    <value />
+    <value>應用程式標題</value>
     <comment>'Application Tab Template' : label for cell in Entity FormXml ID: '{a4bd1f84-bc33-4df0-bb12-3c6cefc25fcd}'</comment>
   </data>
   <data name="1:label,Application Tab Template{db2a537d-5522-9de6-943d-4d5c07542e92}" xml:space="preserve">
@@ -2371,7 +2375,7 @@
     <comment>'Application Tab Template' : label for section in Entity FormXml ID: '{e7bf7564-7fde-41d8-b3a1-ec12a38bda8e}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{10c387e0-fbb6-442b-b126-b15e8518e03f}" xml:space="preserve">
-    <value />
+    <value>負責人</value>
     <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{10c387e0-fbb6-442b-b126-b15e8518e03f}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{7c173265-af1b-4522-a8b8-6a435cae429a}" xml:space="preserve">
@@ -2383,23 +2387,23 @@
     <comment>'Application Template Parameter' : label for section in Entity FormXml ID: '{7d5d94da-0ab2-41af-a918-403bab13a9bc}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{c9a9b00c-6458-4010-88b4-b2076efe26d3}" xml:space="preserve">
-    <value />
+    <value>名稱</value>
     <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{c9a9b00c-6458-4010-88b4-b2076efe26d3}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{c9a9d11c-6458-4010-88b4-b2067efe26d3}" xml:space="preserve">
-    <value />
+    <value>參數名稱</value>
     <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{c9a9d11c-6458-4010-88b4-b2067efe26d3}'</comment>
   </data>
   <data name="1:label,Application Template Parameter{d74819ae-d950-1e68-593d-72cecb426d49}" xml:space="preserve">
-    <value />
+    <value>值</value>
     <comment>'Application Template Parameter' : label for cell in Entity FormXml ID: '{d74819ae-d950-1e68-593d-72cecb426d49}'</comment>
   </data>
   <data name="1:label,Application Type{74fe1b2a-ddd9-466d-b06c-f68467da8370}" xml:space="preserve">
-    <value />
+    <value>名稱</value>
     <comment>'Application Type' : label for cell in Entity FormXml ID: '{74fe1b2a-ddd9-466d-b06c-f68467da8370}'</comment>
   </data>
   <data name="1:label,Application Type{74fe1b3b-ddd9-466d-b06c-f66467da8370}" xml:space="preserve">
-    <value />
+    <value>顯示名稱</value>
     <comment>'Application Type' : label for cell in Entity FormXml ID: '{74fe1b3b-ddd9-466d-b06c-f66467da8370}'</comment>
   </data>
   <data name="1:label,Application Type{7a9894bd-4d59-4cb5-9dc3-ab6b84ef6ad5}" xml:space="preserve">
@@ -2411,20 +2415,64 @@
     <comment>'Application Type' : label for section in Entity FormXml ID: '{9aa87706-f770-4f1e-a905-4379d3517c38}'</comment>
   </data>
   <data name="1:label,Application Type{e403ad33-9951-d007-4358-2673171e868b}" xml:space="preserve">
-    <value />
+    <value>轉譯順序</value>
     <comment>'Application Type' : label for cell in Entity FormXml ID: '{e403ad33-9951-d007-4358-2673171e868b}'</comment>
+  </data>
+  <data name="1:label,Channel{07478256-16a3-4608-6c09-e5a84d0215e3}" xml:space="preserve">
+    <value>標籤</value>
+    <comment>'Channel' : label for cell in Entity FormXml ID: '{07478256-16a3-4608-6c09-e5a84d0215e3}'</comment>
   </data>
   <data name="1:label,Channel{2190ec7e-bb48-4408-aa64-6008072a8a39}" xml:space="preserve">
     <value>管道提供者設定</value>
     <comment>'Channel' : label for tab in Entity FormXml ID: '{2190ec7e-bb48-4408-aa64-6008072a8a39}'</comment>
   </data>
+  <data name="1:label,Channel{2b3d7a63-0066-41d0-939c-12bad22bb227}" xml:space="preserve">
+    <value>API 版本</value>
+    <comment>'Channel' : label for cell in Entity FormXml ID: '{2b3d7a63-0066-41d0-939c-12bad22bb227}'</comment>
+  </data>
+  <data name="1:label,Channel{35765a1a-2106-2a1b-79a4-38eb1ab76b66}" xml:space="preserve">
+    <value>啟用輸入通訊</value>
+    <comment>'Channel' : label for cell in Entity FormXml ID: '{35765a1a-2106-2a1b-79a4-38eb1ab76b66}'</comment>
+  </data>
   <data name="1:label,Channel{51ee0bc8-2a26-7a49-664d-8077d77d456a}" xml:space="preserve">
     <value>選取管道的整合介面應用程式</value>
     <comment>'Channel' : label for section in Entity FormXml ID: '{51ee0bc8-2a26-7a49-664d-8077d77d456a}'</comment>
   </data>
+  <data name="1:label,Channel{54F26BB7-0D52-4737-8863-C78AC77C8A80}" xml:space="preserve">
+    <value>自訂參數</value>
+    <comment>'Channel' : label for cell in Entity FormXml ID: '{54F26BB7-0D52-4737-8863-C78AC77C8A80}'</comment>
+  </data>
+  <data name="1:label,Channel{700edb12-0fa4-4b08-aed3-208619a35f0e}" xml:space="preserve">
+    <value />
+    <comment>'Channel' : label for section in Entity FormXml ID: '{700edb12-0fa4-4b08-aed3-208619a35f0e}'</comment>
+  </data>
+  <data name="1:label,Channel{8ae18add-cb7e-45c5-9174-7e7952e96cc4}" xml:space="preserve">
+    <value>角色選取器</value>
+    <comment>'Channel' : label for cell in Entity FormXml ID: '{8ae18add-cb7e-45c5-9174-7e7952e96cc4}'</comment>
+  </data>
+  <data name="1:label,Channel{8c621a7b-fd3a-4d1b-81a2-28795ccc836b}" xml:space="preserve">
+    <value>名稱</value>
+    <comment>'Channel' : label for cell in Entity FormXml ID: '{8c621a7b-fd3a-4d1b-81a2-28795ccc836b}'</comment>
+  </data>
   <data name="1:label,Channel{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}" xml:space="preserve">
     <value>選取管道的角色</value>
     <comment>'Channel' : label for section in Entity FormXml ID: '{8fa4afbc-e00d-4b0e-806b-2a667ba8abab}'</comment>
+  </data>
+  <data name="1:label,Channel{910edd35-4cd4-4b0a-9e21-b54e9e84225a}" xml:space="preserve">
+    <value>管道 URL</value>
+    <comment>'Channel' : label for cell in Entity FormXml ID: '{910edd35-4cd4-4b0a-9e21-b54e9e84225a}'</comment>
+  </data>
+  <data name="1:label,Channel{c0e04a8e-e0a8-9cb4-3563-cb92ba28e129}" xml:space="preserve">
+    <value>管道順序</value>
+    <comment>'Channel' : label for cell in Entity FormXml ID: '{c0e04a8e-e0a8-9cb4-3563-cb92ba28e129}'</comment>
+  </data>
+  <data name="1:label,Channel{d6aa4662-c329-37e8-ec51-1e8572e277ae}" xml:space="preserve">
+    <value>信任的網域</value>
+    <comment>'Channel' : label for cell in Entity FormXml ID: '{d6aa4662-c329-37e8-ec51-1e8572e277ae}'</comment>
+  </data>
+  <data name="1:label,Channel{e29618b5-d6b9-b4e5-6788-bdd56cde06ba}" xml:space="preserve">
+    <value>應用程式選取器</value>
+    <comment>'Channel' : label for cell in Entity FormXml ID: '{e29618b5-d6b9-b4e5-6788-bdd56cde06ba}'</comment>
   </data>
   <data name="1:label,msdyn_ciprovidermsdyn_ciproviderapiversion0" xml:space="preserve">
     <value>1.0</value>
@@ -2663,7 +2711,7 @@
     <comment>'Notification Fields' : label for section in Entity FormXml ID: '{5baddc9d-9ca1-406f-8f7f-da7c7946344d}'</comment>
   </data>
   <data name="1:label,Notification Fields{653dcd92-16cd-7741-2720-8c7cc7068ae3}" xml:space="preserve">
-    <value />
+    <value>欄位標題</value>
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{653dcd92-16cd-7741-2720-8c7cc7068ae3}'</comment>
   </data>
   <data name="1:label,Notification Fields{7d96d38b-f98c-4d17-9412-8cf184b9838c}" xml:space="preserve">
@@ -2671,7 +2719,7 @@
     <comment>'Notification Fields' : label for section in Entity FormXml ID: '{7d96d38b-f98c-4d17-9412-8cf184b9838c}'</comment>
   </data>
   <data name="1:label,Notification Fields{81b5e8e3-9082-6913-d7ba-e7713d426cc0}" xml:space="preserve">
-    <value />
+    <value>值</value>
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{81b5e8e3-9082-6913-d7ba-e7713d426cc0}'</comment>
   </data>
   <data name="1:label,Notification Fields{81c37674-499b-ba10-7c38-03031dc39433}" xml:space="preserve">
@@ -2679,7 +2727,7 @@
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{81c37674-499b-ba10-7c38-03031dc39433}'</comment>
   </data>
   <data name="1:label,Notification Fields{8e2770be-ceed-48c8-a3e3-18fad627f551}" xml:space="preserve">
-    <value />
+    <value>名稱</value>
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{8e2770be-ceed-48c8-a3e3-18fad627f551}'</comment>
   </data>
   <data name="1:label,Notification Fields{9e1a0e43-e7c1-4934-b493-a5f65b7ae78f}" xml:space="preserve">
@@ -2695,7 +2743,7 @@
     <comment>'Notification Fields' : label for tab in Entity FormXml ID: '{b535e1bf-9eac-4ee1-a2b8-8477d3cfd6c7}'</comment>
   </data>
   <data name="1:label,Notification Fields{ca715140-33b6-4147-91a0-85a2c320f7dd}" xml:space="preserve">
-    <value />
+    <value>負責人</value>
     <comment>'Notification Fields' : label for cell in Entity FormXml ID: '{ca715140-33b6-4147-91a0-85a2c320f7dd}'</comment>
   </data>
   <data name="1:label,Notification Fields{cd441dbf-27f6-4ccb-aeb9-8c0b8a3f1f30}" xml:space="preserve">
@@ -2827,11 +2875,11 @@
     <comment>'TemplateTag' : label for section in Entity FormXml ID: '{11d2b9d4-3f9e-4931-a5c2-f87d878b4ee8}'</comment>
   </data>
   <data name="1:label,TemplateTag{713f58d8-f7c7-44fe-a230-1e0004dc7913}" xml:space="preserve">
-    <value />
+    <value>名稱</value>
     <comment>'TemplateTag' : label for cell in Entity FormXml ID: '{713f58d8-f7c7-44fe-a230-1e0004dc7913}'</comment>
   </data>
   <data name="1:label,TemplateTag{9aa88551-6147-478f-9558-6896f8c8dda1}" xml:space="preserve">
-    <value />
+    <value>負責人</value>
     <comment>'TemplateTag' : label for cell in Entity FormXml ID: '{9aa88551-6147-478f-9558-6896f8c8dda1}'</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_ciproviderentitymsdyn_ciprovider" xml:space="preserve">

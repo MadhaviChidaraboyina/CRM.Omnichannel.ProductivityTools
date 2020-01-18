@@ -230,7 +230,7 @@
       </Item>
       <Item ItemId=";LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Enter the unique ID of the agent script (32 character string)]]></Val>
+          <Val><![CDATA[Select the agent script ]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -239,7 +239,7 @@
       </Item>
       <Item ItemId=";LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Agent script ID ]]></Val>
+          <Val><![CDATA[Agent script ]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -248,7 +248,7 @@
       </Item>
       <Item ItemId=";LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[ID of the agent script ]]></Val>
+          <Val><![CDATA[Name of the agent script ]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -257,7 +257,7 @@
       </Item>
       <Item ItemId=";LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Default agent script ID]]></Val>
+          <Val><![CDATA[Default agent script ]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
