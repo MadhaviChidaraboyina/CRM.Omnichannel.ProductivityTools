@@ -8,20 +8,30 @@
     <style>
       .notification-icon::before {
         content: "\E783";
-        color: #3b79b7;
+        font-size: 15px;
+        line-height: 15px;
+        text-align: center;
+        top: 8px;
+        position: absolute;
+      }
+      .notification-message{
+        left: 22px;
+        position: absolute;
+        top: 8px;
+        font-size: 12px;
+        font-family: "Segoe UI";
+        line-height: 16px;
       }
       body {
-        background-color: #efefef !important;
-        font-family: "Segoe UI", sans-serif;
+        background-color: #F4F4F4 !important;
         color: #333333;
-        font-size: 14px;
       }
     </style>
   </head>
   <body>
     <div style="padding: 0.35em">
       <span class="symbolFont notification-icon"></span>
-      <span id="message">Information Message.</span>
+      <span id="message" class="notification-message" >Information Message.</span>
     </div>
   </body>
   <script>
