@@ -339,16 +339,21 @@ namespace Microsoft.CIFramework.Internal {
 
 		let results: Promise<any>[] = [];
 		for (let value of providersList) {
-				results.push(value.raiseEvent(parameters, messageType).then(
+			let providerPromise = new Promise<any> ((resolve, reject) => {
+				value.raiseEvent(parameters, messageType).then(
 					function (result: any) {
 						console.log("AppId: " + appId + " API: - sendMessage successful " + "CIFVersion: " + cifVersion +
-							" ProviderId: " + value.providerId + " ProviderName:" + value.name);
+						" ProviderId: " + value.providerId + " ProviderName:" + value.name);
+						resolve(result);
 					},
 					function (error: Error) {
 						let errorData = generateErrorObject(error, messageType + " - sendMessage", errorTypes.GenericError);
 						logAPIFailure(appId, true, errorData, messageType + " - sendMessage", cifVersion, value.providerId, value.name);
+						reject(error);
 					}
-				));
+				)
+			});
+			results.push(providerPromise);
 		}
 		return Promise.all(results);
 		}
