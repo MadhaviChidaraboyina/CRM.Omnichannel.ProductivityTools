@@ -66,7 +66,8 @@ namespace Microsoft.CIFramework.Internal {
 		["logAnalyticsEvent", [raiseCustomAnalyticsEvent]],
 		["updateContext", [updateContext]],
 		["notifyKpiBreach", [notifyKpiBreach]],
-		["notifyNewActivity", [notifyNewActivity]]
+		["notifyNewActivity", [notifyNewActivity]],
+		["updateConversation", [updateConversation]]
 	]);
 
 	let genericEventRegistrations = new Map<string, CIProvider[]>();
@@ -177,6 +178,11 @@ namespace Microsoft.CIFramework.Internal {
 		}
 		
 		loadProvider();
+		let activeProvider = state.providerManager.getActiveProvider();
+		var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, InternalEventName.CifSessionStart)
+			                     .set(Constants.originURL, activeProvider.landingUrl));
+		raiseSystemAnalyticsEvent(InternalEventName.CifSessionStart, mapReturn);
+		registerUnloadHandler();
 		setNotificationTimeoutVersion();
 		return false;
 	}
@@ -254,6 +260,14 @@ namespace Microsoft.CIFramework.Internal {
 		);
 	}
 
+	function registerUnloadHandler() {
+		window.onunload = function () {
+			let activeProvider = state.providerManager.getActiveProvider();
+			var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, InternalEventName.CifSessionEnd)
+				                     .set(Constants.originURL, activeProvider.landingUrl));
+			raiseSystemAnalyticsEvent(InternalEventName.CifSessionEnd, mapReturn);
+		}
+	}
 	/**
 	 * IsConsoleApp API's client side handler that post message library will invoke.
 	*/
@@ -945,6 +959,34 @@ namespace Microsoft.CIFramework.Internal {
 		}
 	}
 
+	export function updateConversation(parameters: Map<string, any>): Promise<Map<string, any>> {
+		let telemetryData: any = new Object();
+		let telemetryParameter: any = new Object();
+		let startTime = new Date();
+		const [provider, errorData] = getProvider(parameters, [Constants.entityName, Constants.entityId, Constants.value]);
+		if (provider) {
+			return new Promise<Map<string, any>>((resolve, reject) => {
+				state.client.updateRecord(parameters.get(Constants.entityName), parameters.get(Constants.entityId), telemetryData, parameters.get(Constants.value)).then(
+					function (res) {
+						var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.updateConversation, cifVersion, telemetryData, parameters.get(Constants.correlationId));
+						setPerfData(perfData);
+						logParameterData(telemetryParameter, MessageType.updateConversation, { "entityName": parameters.get(Constants.entityName), "entityId": parameters.get(Constants.entityId) });
+						var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.updateConversation, provider.sortOrder, appId, cifVersion, false, null, telemetryParameter, parameters.get(Constants.correlationId));
+						setAPIUsageTelemetry(paramData);
+						return resolve(new Map<string, any>().set(Constants.value, res));
+					},
+					(error: IErrorHandler) => {
+						logAPIFailure(appId, true, error as IErrorHandler, MessageType.updateConversation, cifVersion, provider.providerId, provider.name, telemetryParameter, parameters.get(Constants.correlationId));
+						return reject(new Map<string, any>().set(Constants.value, error));
+					}
+				);
+			});
+		}
+		else {
+			return logAPIFailure(appId, true, errorData, MessageType.updateConversation, cifVersion, "", "", telemetryParameter, parameters.get(Constants.correlationId));
+		}
+	}
+
 	export function deleteRecord(parameters: Map<string, any>): Promise<Map<string, any>> {
 		let telemetryData: any = new Object();
 		let telemetryParameter: any = new Object();
@@ -1234,13 +1276,13 @@ namespace Microsoft.CIFramework.Internal {
 		const [provider, errorData] = getProvider(parameters);
 		if (provider) {
 			return new Promise<Map<string, any>>((resolve, reject) => {
-				provider.createSession(parameters.get(Constants.input), parameters.get(Constants.context), parameters.get(Constants.customerName), telemetryData, appId, cifVersion, parameters.get(Constants.correlationId)).then(function (sessionId) {
-					raiseSystemAnalyticsEvent(InternalEventName.SessionStarted, parameters, new Map<string, any>().set(AnalyticsConstants.clientSessionId, sessionId));
+				provider.createSession(parameters.get(Constants.input), parameters.get(Constants.context), parameters.get(Constants.customerName), telemetryData, appId, cifVersion, parameters.get(Constants.correlationId)).then(function (sessionid) {
+					raiseSystemAnalyticsEvent(InternalEventName.SessionStarted, parameters, new Map<string, any>().set(AnalyticsConstants.clientSessionId, sessionid));
 					var perfData = new PerfTelemetryData(provider, startTime, Date.now() - startTime.getTime(), MessageType.createSession, cifVersion, telemetryData, parameters.get(Constants.correlationId));
 					setPerfData(perfData);
 					var paramData = new APIUsageTelemetry(provider.providerId, provider.name, provider.apiVersion, MessageType.createSession, provider.sortOrder, appId, cifVersion, false, null, "", parameters.get(Constants.correlationId));
 					setAPIUsageTelemetry(paramData);
-					return resolve(new Map<string, any>().set(Constants.value, sessionId));
+					return resolve(new Map<string, any>().set(Constants.value, sessionid));
 				}, function (error) {
 					logAPIFailure(appId, true, error, MessageType.createSession, cifVersion, provider.providerId, provider.name, "", parameters.get(Constants.correlationId));
 					return reject(Microsoft.CIFramework.Utility.createErrorMap(error.errorMsg, MessageType.createSession))
@@ -1541,6 +1583,8 @@ namespace Microsoft.CIFramework.Internal {
 	* Internal method to raise the lLogAnalyticsEvent to Analytics js
 	*/
 	export function raiseAnalyticsEventInternal(eventName: string, parameters: Map<string, any>): boolean {
+		let sessionId = state.sessionManager.getFocusedSession();
+		let session = state.sessionManager.sessions.get(sessionId);
 		let providerName = "", providerId = "", apiVersion = "", sortOrder = "";
 		const [provider, errorData] = getProvider(parameters, [Constants.SearchString]);
 		if (!isNullOrUndefined(provider)) {
@@ -1551,6 +1595,11 @@ namespace Microsoft.CIFramework.Internal {
 			parameters.set(AnalyticsConstants.channelProviderName, provider.name);
 			parameters.set(AnalyticsConstants.channelProviderId, provider.providerId);
 			parameters.set(AnalyticsConstants.enableAnalytics, provider.enableAnalytics);
+			parameters.set(AnalyticsConstants.sessionUniqueId, session != null ? session.sessionUniqueId : null);
+			parameters.set(AnalyticsConstants.correlationId, session != null ? session.correlationId : null);
+			parameters.set(AnalyticsConstants.conversationId, session != null ? session.conversationId : null);
+			parameters.set(AnalyticsConstants.providerSessionId, session != null ? session.providerSessionId : null);
+
 		}
 		try {
 			logAPIFailure(appId, true, errorData, MessageType.isConsoleApp, cifVersion, "", "", "", parameters.get(Constants.correlationId));

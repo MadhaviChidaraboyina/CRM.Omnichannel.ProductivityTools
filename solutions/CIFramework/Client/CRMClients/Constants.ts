@@ -47,4 +47,18 @@ namespace Microsoft.CIFramework.Internal
 		public static ANCHOR_TAB = "AnchorTab";
 		public static SPLIT_BY_DOT = ".";
 	}
+
+	export class LiveWorkItemEntity {
+		public static entityName = "msdyn_ocliveworkitem";
+		public static title = "msdyn_title";
+		public static subject = "subject";
+		public static activityId = "activityId";
+		public static ocLiveWorkStreamId = "msdyn_ocliveworkitemid";
+		public static providerName = "msdyn_channelproviderName";
+		public static isThirdPartyConversation = "msdyn_thirdpartyconversation";
+	}
+
+	export class ChannelProvider {
+		public static Omnichannel = "omnichannel";
+	}
 }

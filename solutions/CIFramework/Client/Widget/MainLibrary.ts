@@ -96,6 +96,27 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
+			 * API to initialize the CIF Log Analytics session
+			* @param data - Object containing the init data
+			* @returns a Promise: JSON String with status message
+			*/
+	export function initLogAnalytics(data: any, correlationId?: string): Promise<string> {
+		if (!isNullOrUndefined(data)) {
+			const payload: postMessageNamespace.IExternalRequestMessageType = {
+				messageType: MessageType.initLogAnalytics,
+				messageData: new Map().set(AnalyticsConstants.analyticsdata, data)
+					.set(Constants.correlationId, correlationId)
+					.set(AnalyticsConstants.analyticsEventType, EventType.SystemEvent)
+			}
+			return sendMessage<string>(initLogAnalytics.name, payload, false);
+		}
+		else {
+			let errorMsg = "initLogAnalytics payload is not valid. ";
+			return logErrorsAndReject(errorMsg, MessageType.logAnalyticsEvent, correlationId);
+		}
+	}
+
+	/**
 	 * API to to check value of IsConsoleApp for a widget
 	 *
 	 * @param value. When set to 'true', then it's a console App.
@@ -777,7 +798,7 @@ namespace Microsoft.CIFramework
 	/**
 	 * API to create Session
 	 */
-	export function createSession(input: any, correlationId?: string): Promise<string> {
+	export function createSession(input: any, correlationId?: string, providerSessionId?: string): Promise<string> {
 		if (!isNullOrUndefined(input)) {
 			let customerName = input.customerName;
 			if (isNullOrUndefined(customerName) && !isNullOrUndefined(input.templateParameters)) {
@@ -785,7 +806,7 @@ namespace Microsoft.CIFramework
 			}
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
 				messageType: MessageType.createSession,
-				messageData: new Map().set(Constants.input, input).set(Constants.context, input.context).set(Constants.customerName, customerName).set(Constants.correlationId, correlationId)
+				messageData: new Map().set(Constants.input, input).set(Constants.context, input.context).set(Constants.customerName, customerName).set(Constants.correlationId, correlationId).set(Constants.providerSessionId, providerSessionId)
 			}
 			return sendMessage<string>(createSession.name, payload, false);
 		}
@@ -967,24 +988,37 @@ namespace Microsoft.CIFramework
 	}
 
 	/**
-	 * API to initialize the CIF Log Analytics session
-	* @param data - Object containing the init data
+	 * API to update conversation data
+	* @param data - Object containing the conversation data
 	* @returns a Promise: JSON String with status message
 	*/
-	export function initLogAnalytics(data: any, correlationId?: string): Promise<string> {
-		if (!isNullOrUndefined(data)) {
+	export function updateConversation(entityId: string , data: any, correlationId?: string): Promise<string>
+	{
+		if (!(isNullOrUndefined(entityId) || entityId == "") && !isNullOrUndefined(data)) {
 			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.initLogAnalytics,
-				messageData: new Map().set(AnalyticsConstants.analyticsdata, data)
-					.set(Constants.correlationId, correlationId)
-					.set(AnalyticsConstants.analyticsEventType, EventType.SystemEvent)
+				messageType: MessageType.updateConversation,
+				messageData: new Map().set(Constants.entityName, Constants.liveWorkItemEntity ).set(Constants.entityId, entityId).set(Constants.value, Microsoft.CIFramework.Utility.buildMap(JSON.parse(data))).set(Constants.correlationId, correlationId)
 			}
-			return sendMessage<string>(initLogAnalytics.name, payload, false);
+			return new Promise((resolve, reject) => {
+				return sendMessage<Map<string, any>>(updateConversation.name, payload, false).then(
+					function (result: Map<string, any>) {
+						return resolve(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(result)));
+					},
+					function (error: Map<string, any>) {
+						return reject(JSON.stringify(Microsoft.CIFramework.Utility.buildEntity(error)));
+					});
+			});
+		}else{
+			if (isNullOrUndefined(entityId) || entityId == "") {
+				let errorMsg = "The EntityId parameter is blank. Provide a value to the parameter.";
+				return logErrorsAndReject(errorMsg, MessageType.updateConversation, correlationId);
+			}
+			if (isNullOrUndefined(data)) {
+				let errorMsg = "The data parameter is blank. Provide a value to the parameter to update the record.";
+				return logErrorsAndReject(errorMsg, MessageType.updateConversation, correlationId);
+			}
 		}
-		else {
-			let errorMsg = "initLogAnalytics payload is not valid. ";
-			return logErrorsAndReject(errorMsg, MessageType.logAnalyticsEvent, correlationId);
-		}
+		
 	}
 
 	/**

@@ -60,7 +60,7 @@ namespace Microsoft.CIFramework.Internal {
 			}
 		}
 
-		createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<string> {
+		createSession(provider: CIProvider, input: any, context: any, customerName: string): Promise<Map<string, string>> {
 			if (!this.canCreateSession()) {
 				return Promise.reject("Cannot add the Session. Maximum sessions limit reached. Limit: " + Constants.MaxSessions);
 			}
@@ -82,7 +82,7 @@ namespace Microsoft.CIFramework.Internal {
 			window.setTimeout(this.focusSession.bind(this), 0, sessionId);
 
 			provider.raiseEvent(new Map<string, any>().set("sessionId", sessionId).set("focused", this.focusedSession == sessionId).set("context", context), MessageType.onSessionCreated);
-			return Promise.resolve(sessionId);
+			return Promise.resolve(new Map<string, string>().set("sessionId", sessionId));
 		}
 
 		requestFocusSession(sessionId: string, messagesCount: number): Promise<void> {

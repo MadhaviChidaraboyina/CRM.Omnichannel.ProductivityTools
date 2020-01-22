@@ -51,7 +51,6 @@
   </entity>
 		<entity name="msdyn_kpieventdefinition" displayname="KPI Event Definition" etc="10144" primaryidfield="msdyn_kpieventdefinitionid" primarynamefield="msdyn_name" disableplugins="false">
 				<fields>
-						<field displayname="Active" name="msdyn_active" type="bool" customfield="true" />
 						<field displayname="Created By" name="createdby" type="entityreference" lookupType="systemuser" />
 						<field displayname="Created By (Delegate)" name="createdonbehalfby" type="entityreference" lookupType="systemuser" />
 						<field displayname="Created On" name="createdon" type="datetime" />

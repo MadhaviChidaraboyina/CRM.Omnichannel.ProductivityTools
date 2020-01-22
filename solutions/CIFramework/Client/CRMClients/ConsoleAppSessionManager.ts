@@ -34,8 +34,9 @@ namespace Microsoft.CIFramework.Internal {
 		*/
 		onSessionSwitched(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
-			raiseSystemAnalyticsEvent(InternalEventName.SessionInFocus, eventMap);
-			raiseSystemAnalyticsEvent(InternalEventName.SessionOutOfFocus, eventMap);
+			let activeProvider = state.providerManager.getActiveProvider();
+			raiseSystemAnalyticsEvent(InternalEventName.SessionFocusOut, eventMap, new Map<string, any>().set(Constants.originURL, activeProvider.landingUrl));
+			raiseSystemAnalyticsEvent(InternalEventName.SessionFocusIn, eventMap, new Map<string, any>().set(Constants.originURL, activeProvider.landingUrl));	
 			let previousSessionId = eventMap.get(Constants.previousSessionId);
 			let newSessionId = eventMap.get(Constants.newSessionId);
 			let previousProvider = state.sessionManager.getProvider(previousSessionId);
@@ -70,7 +71,8 @@ namespace Microsoft.CIFramework.Internal {
 		 */
 		onSessionClosed(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
-			raiseSystemAnalyticsEvent(InternalEventName.SessionClosed, eventMap);
+			let activeProvider = state.providerManager.getActiveProvider();
+			raiseSystemAnalyticsEvent(InternalEventName.SessionClosed, eventMap, new Map<string, any>().set(Constants.originURL, activeProvider.landingUrl));
 			let sessionId = eventMap.get(Constants.sessionId);
 
 			//Persist and close the Notes flap before closing the session
@@ -126,13 +128,12 @@ namespace Microsoft.CIFramework.Internal {
 			return res;
 		}
 
-		createSession(provider: CIProvider, input: any, context: any, customerName: string, telemetryData?: Object, appId?: any, cifVersion?: any, correlationId?: string): Promise<string> {
+		createSession(provider: CIProvider, input : any, context: any, customerName: string, telemetryData?: Object, appId?: any, cifVersion?: any, correlationId?: string , providerSessionId ? : string): Promise<Map<string ,string>> {
 			//Before we create the new session, we persist the current notes if any and close the flap
 			var currentSessionId: string = state.sessionManager.getFocusedSession();
 			state.client.collapseFlap(currentSessionId);
 
 			return new Promise(function (resolve: any, reject: any) {
-
 				// Consumer can pass either templatename or templatename resolver.
 				// Template name resolver should contain webresourcename , functionname and parameters(if any).
 				let templateNameResolver: Promise<TemplateNameResolverResult> = TemplatesUtility.resolveTemplateName(input.templateNameResolver, input.templateName);
@@ -154,11 +155,25 @@ namespace Microsoft.CIFramework.Internal {
 						session.instantiateTemplate(templateParams, correlationId).then(
 							function (sessionInput: SessionTemplateSessionInput) {
 								let startTime = new Date();
+								let resultMap = new Map<string, string>();
 								let apiName = "Xrm.App.sessions.createSession";
+								let conversationId = null;
 								sessionInput.options.isFocused = true;  //Switch focus to the newly created session by default
 								Xrm.App.sessions.createSession(sessionInput).then(function (sessionId: string) {
 									logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
-									this.sessions.set(sessionId, new SessionInfo(provider, session, templateParams, correlationId));
+
+									if(provider && provider.name != ChannelProvider.Omnichannel && provider.enableAnalytics == true)
+									{
+										conversationId =  Microsoft.CIFramework.Utility.newGuid();
+										this.createLiveworkitem(provider, conversationId, cifVersion, correlationId);
+									}
+									else
+									{
+										conversationId = correlationId;
+									}
+
+									
+									this.sessions.set(sessionId, new SessionInfo(provider, session, templateParams, correlationId, Microsoft.CIFramework.Utility.newGuid(), providerSessionId, conversationId));
 									state.client.setPanelMode("setPanelMode", session.panelState);
 									state.client.setProviderVisibility(state.providerManager.ciProviders, provider.providerId);
 									var inputObject: any = {};
@@ -174,7 +189,11 @@ namespace Microsoft.CIFramework.Internal {
 											this.setTabTitleInternal(sessionId, Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId, sessionInput.anchorTabTemplate.title);
 										}.bind(this));
 									this.associateTabWithSession(sessionId, Xrm.App.sessions.getSession(sessionId).tabs.getAll().get(0).tabId, sessionInput.anchorTabTemplate, session.anchorTabName, sessionInput.anchorTabTemplate.tags);
-									resolve(sessionId); //Tell the caller the anchor tab is ready; other tabs loaded in the background
+									resultMap.set("sessionId" , sessionId);
+									resultMap.set("conversationId" , conversationId);
+									
+									resolve(resultMap); //Tell the caller the anchor tab is ready; other tabs loaded in the background
+									
 									session.appTabs.then(
 										function (appTabs: UCIApplicationTabTemplate[]) {
 											let tabsRendered: Promise<string>[] = [];
@@ -182,7 +201,7 @@ namespace Microsoft.CIFramework.Internal {
 												function (tab: UCIApplicationTabTemplate) {
 													tabsRendered.push(new Promise<string>(function (resolve: any, reject: any) {
 														tab.instantiateTemplate(templateParams, correlationId).then(
-															function (tabInput: XrmClientApi.TabInput) {
+														function (tabInput: XrmClientApi.TabInput) {
 																tabInput.options.isFocused = false; //All app-tabs rendered in the background
 																this.createTabInternal(sessionId, tabInput, telemetryData).then(
 																	function (tabId: string) {
@@ -244,6 +263,28 @@ namespace Microsoft.CIFramework.Internal {
 					});
 			}.bind(this)
 			);
+		}
+
+		createLiveworkitem(provider: CIProvider  , liveworkitemId : string , cifVersion:string  , correlationId : string) 
+		{
+				let entity: XrmClientApi.WebApi.Entity = {};
+				entity[LiveWorkItemEntity.ocLiveWorkStreamId] = liveworkitemId;
+				entity[LiveWorkItemEntity.subject] =  Microsoft.CIFramework.Utility.getResourceString("VISITOR_TEXT")+ " : "  + provider.name;
+				entity[LiveWorkItemEntity.title] = Microsoft.CIFramework.Utility.getResourceString("VISITOR_TEXT") + " : " + provider.name;
+				entity[LiveWorkItemEntity.activityId] = liveworkitemId;
+				entity[LiveWorkItemEntity.providerName] = liveworkitemId;
+				entity[LiveWorkItemEntity.isThirdPartyConversation] = true;
+	
+			Xrm.WebApi.createRecord(LiveWorkItemEntity.entityName, entity).then(
+				function success(result: any) {
+						console.log("Conversation Data record created with ID: " + result.id);
+					},
+					function (error: any) {
+						let errorData = generateErrorObject(error, "ConsoleAppSessionManager - CreateSession.createLiveworkitem/Tag", errorTypes.XrmApiError);
+						logAPIFailure(appId, true, errorData, "ConsoleAppSessionManager", cifVersion, "", "", "", correlationId);
+						
+					}
+				);
 		}
 
 		requestFocusSession(sessionId: string, messagesCount: number, telemetryData?: Object): Promise<void> {

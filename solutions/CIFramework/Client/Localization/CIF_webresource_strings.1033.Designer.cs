@@ -585,5 +585,14 @@ namespace Microsoft.Dynamics.CIFramework.WebResources.Localization {
                 return ResourceManager.GetString("V2_API_INFORMATION", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visitor.
+        /// </summary>
+        internal static string VISITOR_TEXT {
+            get {
+                return ResourceManager.GetString("VISITOR_TEXT", resourceCulture);
+            }
+        }
     }
 }

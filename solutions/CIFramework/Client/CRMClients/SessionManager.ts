@@ -19,8 +19,10 @@ namespace Microsoft.CIFramework.Internal {
 		private _sessionConfig: SessionConfig;
 		private _templateParams: any;
 		private _correlationId: string;
-
-		public constructor(provider: CIProvider, config?: SessionConfig, templateParams?: any, correlationId?: string) {
+		private _providerSessionId: string;
+		private _conversationId : string;
+		private _sessionUniqueId: string;
+		public constructor(provider: CIProvider, config?: SessionConfig, templateParams?: any, correlationId?: string , sessionUniqueId?:string, providerSessionId ? : string , conversationId ? : string) {
 			this._associatedProvider = provider;
 			this._tabsByTag = new Map<string, string[]>();
 			this._tabsByName = new Map<string, string[]>();
@@ -28,6 +30,9 @@ namespace Microsoft.CIFramework.Internal {
 			this._sessionConfig = config;
 			this._templateParams = templateParams || null;
 			this._correlationId = correlationId || null;
+			this._providerSessionId = providerSessionId || null;
+			this._conversationId = conversationId || null;
+			this._sessionUniqueId = sessionUniqueId || null;
 		}
 
 		public get templateParams(): any {
@@ -40,6 +45,14 @@ namespace Microsoft.CIFramework.Internal {
 
 		public get associatedProvider(): CIProvider {
 			return this._associatedProvider;
+		}
+
+		public get providerSessionId(): string {
+			return this._providerSessionId;
+		}
+
+		public get conversationId(): string {
+			return this._conversationId;
 		}
 
 		public setTemplateParams(input: any) {
@@ -56,6 +69,10 @@ namespace Microsoft.CIFramework.Internal {
 
 		public get correlationId(): string {
 			return this._correlationId;
+		}
+
+		public get sessionUniqueId(): string {
+			return this._sessionUniqueId;
 		}
 
 		public setTab(tabConfig: AppConfig, tabid: string, name: string, tags?: string[]): void {
@@ -169,7 +186,7 @@ namespace Microsoft.CIFramework.Internal {
 
 		abstract canCreateSession(telemetryData?: Object): boolean;
 
-		abstract createSession(provider: CIProvider, input: any, context: any, customerName: string, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<string>;
+		abstract createSession(provider: CIProvider, input: any, context: any, customerName: string, telemetryData?: Object, appId?: any, cifVersion?: any): Promise<Map<string ,string>>;
 
 		abstract focusSession(sessionId: string): Promise<void>;
 

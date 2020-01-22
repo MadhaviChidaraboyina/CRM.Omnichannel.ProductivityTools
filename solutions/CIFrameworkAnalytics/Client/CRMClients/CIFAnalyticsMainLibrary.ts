@@ -10,7 +10,8 @@ namespace Microsoft.CIFrameworkAnalytics {
 	let clientSessionConversationIdMap = new Map<string, string>(); // Map to store the UCI Session Id and ConversationId 
 	let analyticsDataMap = new Map<string, InitData>(); // Map to store the conversation Id and InitData
 	let analyticsEventMap = new Map<string, string>(); //Map to store the KPI Event Definitions
-	let conversationAnalyticsFlagMap = new Map<string, boolean>(); //Map to store the conversationId and Analytics flag
+	let conversationAnalyticsFlagMap = new Map<string, boolean>(); //Map to store the conversationId and Analytics flag 
+	let cifSessionId = newGuid();
 
 	/** @internal
 	 * Initialize method called on load of the script
@@ -42,8 +43,8 @@ namespace Microsoft.CIFrameworkAnalytics {
 	function logAnalyticsEventListener(event: any) {
 		let conversationId = getConversationId(event.detail);
 		if (!Utility.isNullOrUndefined(conversationId)) {
-			if (conversationAnalyticsFlagMap.get(conversationId)) {
-				let eventData = createEventDataForSystemEvents(event.detail);
+			if (event.detail.get(Constants.AnalyticsEvent.enableAnalytics)) {
+				let eventData = createEventDataForSystemEventsNew(event.detail);
 				if (!Utility.isNullOrUndefined(eventData) && Utility.validateLogAnalyticsPayload(eventData)) {
 						logEventData(eventData);
 				}
@@ -63,10 +64,6 @@ namespace Microsoft.CIFrameworkAnalytics {
 
 		analyticsDataMap.set(conversationId, payload);
 
-		//create the records. 
-		logConversationData(data);
-		logSessionData(data);
-		logParticipantData(data);
 	}
 
 	/** @internal
@@ -123,7 +120,7 @@ namespace Microsoft.CIFrameworkAnalytics {
 	* Function to log the Event data
 	*/
 	function logEventData(payload: EventData) {
-		let records: XrmClientApi.WebApi.Entity[] = buildEventsEntity(payload);
+		let records: XrmClientApi.WebApi.Entity[] = buildEventsEntityNew(payload);
 		records.forEach(function (record) {
 			Xrm.WebApi.createRecord(Constants.EventEntity.entityName, record).then(
 				function success(result) {
@@ -151,17 +148,47 @@ namespace Microsoft.CIFrameworkAnalytics {
 				eventData.conversationId = correlationId;
 				eventData.clientSessionId = clientSessionId;
 				eventData.participantId = conversationData.conversation.session.participants[0].participantId;
-				eventData.providerSessionId = conversationData.conversation.session.providerSessionId;
 				let events: EventEntity[] = new Array<EventEntity>();
 				let event = new EventEntity();
 				events.push(event);
 				eventData.events = events;
 				event.kpiEventName = eventName;
 				event.eventTimestamp = new Date().toISOString();
-				fillEventDataForSystemEvents(payload, conversationData, eventData);
+				fillEventDataForSystemEvents(payload, eventData);
 			}
 			return eventData;
 		}
+	}
+	/** @internal
+		* Function to create the Event data for SystemEvents
+		*/
+	function createEventDataForSystemEventsNew(payload: any): EventData {
+		let correlationId = getConversationId(payload);
+		let clientSessionId = getClientSessionId(payload);
+		let eventName = payload.get(Constants.AnalyticsEvent.eventName);
+		let eventId = analyticsEventMap.get(eventName);
+		let sessionUniqueId = payload.get(Constants.AnalyticsEvent.sessionUniqueId)
+		let providerId = payload.get(Constants.AnalyticsEvent.providerId);
+		let conversationId = payload.get(Constants.AnalyticsEvent.conversationId);
+		let providerSessionId = payload.get(Constants.AnalyticsEvent.providerSessionId);
+		if (!Utility.isNullOrUndefined(conversationId) && !Utility.isNullOrUndefined(eventId)) {
+				var eventData: EventData = new EventData();
+				eventData.conversationId = conversationId;
+				eventData.clientSessionId = clientSessionId;
+				eventData.participantId = Xrm.Utility.getGlobalContext().userSettings.userId;
+				eventData.providerId = providerId;
+				eventData.sessionId = sessionUniqueId;
+				eventData.providerSessionId = providerSessionId;
+				let events: EventEntity[] = new Array<EventEntity>();
+				let event = new EventEntity();
+				events.push(event);
+				eventData.events = events;
+				event.kpiEventName = eventName;
+				event.eventTimestamp = new Date().toISOString();
+				event.externalCorrelationId = payload.get(Constants.AnalyticsEvent.correlationId);
+				fillEventDataForSystemEvents(payload, eventData);
+			}
+			return eventData;
 	}
 
 	/** @internal
@@ -190,10 +217,10 @@ namespace Microsoft.CIFrameworkAnalytics {
 	function getClientSessionId(payload: any): string {
 		let eventName = payload.get(Constants.AnalyticsEvent.eventName);
 		let clientSessionId = "";
-		if (eventName === Constants.AnalyticsEvent.sessionInFocus) {
+		if (eventName === Constants.AnalyticsEvent.SessionFocusIn) {
 			clientSessionId = payload.get(Constants.AnalyticsEvent.newSessionId);
 		}
-		else if (eventName === Constants.AnalyticsEvent.sessionOutOfFocus) {
+		else if (eventName === Constants.AnalyticsEvent.SessionFocusOut) {
 			clientSessionId = payload.get(Constants.AnalyticsEvent.previousSessionId);
 		}
 		else if (eventName === Constants.AnalyticsEvent.sessionClosed) {
@@ -212,7 +239,7 @@ namespace Microsoft.CIFrameworkAnalytics {
 	/** @internal
 	* Function to fill event specific data
 	*/
-	function fillEventDataForSystemEvents(payload: any, convData: InitData, eventData: EventData): void {
+	function fillEventDataForSystemEvents(payload: any, eventData: EventData): void {
 		let event = eventData.events[0];
 		switch (event.kpiEventName) {
 			case Constants.AnalyticsEvent.notificationResponse:
@@ -228,12 +255,12 @@ namespace Microsoft.CIFrameworkAnalytics {
 					clientSessionConversationIdMap.set(sessionId, correlationId);
 				}
 				break;
-			case Constants.AnalyticsEvent.sessionInFocus:
+			case Constants.AnalyticsEvent.SessionFocusIn:
 				{
 					eventData.clientSessionId = payload.get(Constants.AnalyticsEvent.newSessionId);
 				}
 				break;
-			case Constants.AnalyticsEvent.sessionOutOfFocus:
+			case Constants.AnalyticsEvent.SessionFocusOut:
 				{
 					let newClientSessionId = payload.get(Constants.AnalyticsEvent.previousSessionId);
 					let newConversationId = clientSessionConversationIdMap.get(newClientSessionId);
@@ -245,9 +272,28 @@ namespace Microsoft.CIFrameworkAnalytics {
 					eventData.conversationId = newConversationId;
 				}
 				break;
+			case Constants.AnalyticsEvent.CifSessionStart:
+				{
+					eventData.clientSessionId = Constants.AnalyticsEvent.defaultSessionId;
+					eventData.sessionId = Constants.AnalyticsEvent.defaultSessionId;
+				}
+			case Constants.AnalyticsEvent.CifSessionEnd:
+				{
+					eventData.clientSessionId = Constants.AnalyticsEvent.defaultSessionId;
+					eventData.sessionId = Constants.AnalyticsEvent.defaultSessionId;
+				}
+				break;
 			default:
 				break;
 		}
+	}
+	
+	function newGuid() {
+		let guidRegex = /[xy]/g;
+		return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(guidRegex, function (c) {
+			var r = (Math.random() * 16 | 0), v = (c === 'x' ? r : r & 0x3 | 0x8);
+			return v.toString(16);
+		});
 	}
 
 	/**
@@ -372,6 +418,41 @@ namespace Microsoft.CIFrameworkAnalytics {
 		return entities;
 	}
 
+	/**
+	 * Given a EventData, this func returns an equivalent XrmClientApi.WebApi.Entity object for it.
+	 * @param map Object to build the entity for.
+	 */
+	export function buildEventsEntityNew(data: EventData): XrmClientApi.WebApi.Entity[] {
+		let entities: XrmClientApi.WebApi.Entity[] = [];
+		let events = data.events;
+		for (var event of events) {
+			let entity: XrmClientApi.WebApi.Entity = {};
+			entity[Constants.EventEntity.additionalData] = event.additionalData;
+			entity[Constants.EventEntity.clientSessionId] = (data.clientSessionId === Constants.AnalyticsEvent.defaultSessionId) ? Constants.AnalyticsEvent.noSessionId : data.clientSessionId;
+			entity[Constants.EventEntity.conversationId] = data.conversationId;
+			entity[Constants.EventEntity.eventTimestamp] = event.eventTimestamp;
+			entity[Constants.EventEntity.externalCorrelationId] = event.externalCorrelationId;
+			entity[Constants.EventEntity.kpiEventName] = event.kpiEventName
+			entity[Constants.EventEntity.kpiEventId] = analyticsEventMap.get(event.kpiEventName);
+			entity[Constants.EventEntity.kpiEventReason] = event.kpiEventReason;
+			entity[Constants.EventEntity.participantId] = data.participantId;
+			entity[Constants.EventEntity.cifSessionId] = cifSessionId;
+			entity[Constants.EventEntity.ProviderId] = data.providerId;
+			entity[Constants.EventEntity.sessionId] = data.providerSessionId;
+			entity[Constants.EventEntity.sessionUniqueId] = (data.sessionId === Constants.AnalyticsEvent.defaultSessionId) ? Constants.AnalyticsEvent.noSessionId : data.sessionId;
+
+
+			let customDataList = event.customData;
+			if (!Utility.isNullOrUndefined(customDataList)) {
+				for (var customData of customDataList) {
+					entity[customData.attribute] = customData.value;
+				}
+			}
+			entities.push(entity);
+		}
+		return entities;
+	}
+
 
 	/** @internal
 	* Function to log the KPI Event Definitions data
@@ -382,7 +463,7 @@ namespace Microsoft.CIFrameworkAnalytics {
 				if (analyticsEventMap.size > 0) {
 					return resolve(true);
 				}
-				Xrm.WebApi.retrieveMultipleRecords("msdyn_kpieventdefinition", "?$select=msdyn_name,msdyn_kpieventdefinitionid&$filter=(msdyn_active eq true)").then(
+				Xrm.WebApi.retrieveMultipleRecords("msdyn_kpieventdefinition", "?$select=msdyn_name,msdyn_kpieventdefinitionid&$filter=(statecode eq 0)").then(
 					function(result) {
 						result.entities.forEach(
 							function(value, index, array) {

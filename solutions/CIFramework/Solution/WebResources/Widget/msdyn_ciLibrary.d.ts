@@ -75,6 +75,7 @@ declare namespace Microsoft.CIFramework {
         static updateContext: string;
         static notifyKpiBreach: string;
         static notifyNewActivity: string;
+        static updateConversation: string;
     }
     /**
      * All constants for widget side logic should be placed here
@@ -212,6 +213,7 @@ declare namespace Microsoft.CIFramework {
         static sessionNotValidErrorMessage: string;
         static cifSolVersion: string;
         static correlationId: string;
+        static providerSessionId: string;
         static errorMessage: string;
         static functionName: string;
         static ErrorCode: string;
@@ -227,6 +229,7 @@ declare namespace Microsoft.CIFramework {
         static isDelete: string;
         static isDirty: string;
         static onHiddenTimerEvent: string;
+        static liveWorkItemEntity: string;
     }
     class AnalyticsConstants {
         static notificationResponseAction: string;
@@ -247,6 +250,12 @@ declare namespace Microsoft.CIFramework {
         static focussedSession: string;
         static clientSessionId: string;
         static enableAnalytics: string;
+        static telemetryUpdateConversationName: string;
+        static updateConversationsPlatformEventName: string;
+        static sessionUniqueId: string;
+        static correlationId: string;
+        static conversationId: string;
+        static providerSessionId: string;
     }
     enum ErrorCode {
         Notes_Flap_Already_Expanded = 101,
@@ -265,13 +274,16 @@ declare namespace Microsoft.CIFramework {
     }
     enum InternalEventName {
         NotificationReceived = 0,
-        NotificationResponse = 1,
-        NotificationTimedOut = 2,
-        SessionStarted = 3,
-        SessionInFocus = 4,
-        SessionOutOfFocus = 5,
-        SessionClosed = 6,
-        NewTabOpened = 7,
+        NotificationAccepted = 1,
+        NotificationRejected = 2,
+        NotificationTimedOut = 3,
+        SessionStarted = 4,
+        SessionFocusIn = 5,
+        SessionFocusOut = 6,
+        SessionClosed = 7,
+        NewTabOpened = 8,
+        CifSessionStart = 9,
+        CifSessionEnd = 10,
     }
 }
 /**
@@ -580,7 +592,7 @@ declare namespace Microsoft.CIFramework {
     /**
      * API to create Session
      */
-    function createSession(input: any, correlationId?: string): Promise<string>;
+    function createSession(input: any, correlationId?: string, providerSessionId?: string): Promise<string>;
     /**
      * API to notify incoming on an invisible Session
      */
@@ -621,11 +633,11 @@ declare namespace Microsoft.CIFramework {
     */
     function initializeAgentPresenceList(presenceList: any, correlationId?: string): Promise<boolean>;
     /**
-     * API to initialize the CIF Log Analytics session
-    * @param data - Object containing the init data
+     * API to update conversation data
+    * @param data - Object containing the conversation data
     * @returns a Promise: JSON String with status message
     */
-    function initLogAnalytics(data: any, correlationId?: string): Promise<string>;
+    function updateConversation(entityId: string, data: any, correlationId?: string): Promise<string>;
     /**
      * API to log a custom analytics event
     * @param data - Object containing the event data

@@ -356,6 +356,114 @@
             <Description description="Conversation Identifier" languagecode="1033" />
           </Descriptions>
         </attribute>
+				<attribute PhysicalName="msdyn_cifSessionId">
+					<Type>nvarchar</Type>
+					<Name>msdyn_cifSessionId</Name>
+					<LogicalName>msdyn_cifSessionId</LogicalName>
+					<RequiredLevel>none</RequiredLevel>
+					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+					<ImeMode>auto</ImeMode>
+					<ValidForUpdateApi>1</ValidForUpdateApi>
+					<ValidForReadApi>1</ValidForReadApi>
+					<ValidForCreateApi>1</ValidForCreateApi>
+					<IsCustomField>1</IsCustomField>
+					<IsAuditEnabled>1</IsAuditEnabled>
+					<IsSecured>0</IsSecured>
+					<IntroducedVersion>1.0.0.8</IntroducedVersion>
+					<IsCustomizable>1</IsCustomizable>
+					<IsRenameable>1</IsRenameable>
+					<CanModifySearchSettings>1</CanModifySearchSettings>
+					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+					<SourceType>0</SourceType>
+					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+					<IsSortableEnabled>0</IsSortableEnabled>
+					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+					<IsDataSourceSecret>0</IsDataSourceSecret>
+					<AutoNumberFormat></AutoNumberFormat>
+					<Format>text</Format>
+					<MaxLength>100</MaxLength>
+					<Length>200</Length>
+					<displaynames>
+						<displayname description="cif Session Id" languagecode="1033" />
+					</displaynames>
+					<Descriptions>
+						<Description description="cif Session Identifier" languagecode="1033" />
+					</Descriptions>
+				</attribute>
+				<attribute PhysicalName="msdyn_sessionId">
+					<Type>nvarchar</Type>
+					<Name>msdyn_sessionId</Name>
+					<LogicalName>msdyn_sessionId</LogicalName>
+					<RequiredLevel>none</RequiredLevel>
+					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+					<ImeMode>auto</ImeMode>
+					<ValidForUpdateApi>1</ValidForUpdateApi>
+					<ValidForReadApi>1</ValidForReadApi>
+					<ValidForCreateApi>1</ValidForCreateApi>
+					<IsCustomField>1</IsCustomField>
+					<IsAuditEnabled>1</IsAuditEnabled>
+					<IsSecured>0</IsSecured>
+					<IntroducedVersion>1.0.0.8</IntroducedVersion>
+					<IsCustomizable>1</IsCustomizable>
+					<IsRenameable>1</IsRenameable>
+					<CanModifySearchSettings>1</CanModifySearchSettings>
+					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+					<SourceType>0</SourceType>
+					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+					<IsSortableEnabled>0</IsSortableEnabled>
+					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+					<IsDataSourceSecret>0</IsDataSourceSecret>
+					<AutoNumberFormat></AutoNumberFormat>
+					<Format>text</Format>
+					<MaxLength>100</MaxLength>
+					<Length>200</Length>
+					<displaynames>
+						<displayname description="Session Id" languagecode="1033" />
+					</displaynames>
+					<Descriptions>
+						<Description description="Session Identifier" languagecode="1033" />
+					</Descriptions>
+				</attribute>
+				<attribute PhysicalName="msdyn_ProviderId">
+					<Type>nvarchar</Type>
+					<Name>msdyn_ProviderId</Name>
+					<LogicalName>msdyn_ProviderId</LogicalName>
+					<RequiredLevel>none</RequiredLevel>
+					<DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+					<ImeMode>auto</ImeMode>
+					<ValidForUpdateApi>1</ValidForUpdateApi>
+					<ValidForReadApi>1</ValidForReadApi>
+					<ValidForCreateApi>1</ValidForCreateApi>
+					<IsCustomField>1</IsCustomField>
+					<IsAuditEnabled>1</IsAuditEnabled>
+					<IsSecured>0</IsSecured>
+					<IntroducedVersion>1.0.0.8</IntroducedVersion>
+					<IsCustomizable>1</IsCustomizable>
+					<IsRenameable>1</IsRenameable>
+					<CanModifySearchSettings>1</CanModifySearchSettings>
+					<CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+					<CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+					<SourceType>0</SourceType>
+					<IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+					<IsSortableEnabled>0</IsSortableEnabled>
+					<CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+					<CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+					<IsDataSourceSecret>0</IsDataSourceSecret>
+					<AutoNumberFormat></AutoNumberFormat>
+					<Format>text</Format>
+					<MaxLength>100</MaxLength>
+					<Length>200</Length>
+					<displaynames>
+						<displayname description="Provider Id" languagecode="1033" />
+					</displaynames>
+					<Descriptions>
+						<Description description="Provider Identifier" languagecode="1033" />
+					</Descriptions>
+				</attribute>
         <attribute PhysicalName="msdyn_CustomAttribute1">
           <Type>nvarchar</Type>
           <Name>msdyn_customattribute1</Name>
@@ -782,42 +890,6 @@
           </displaynames>
           <Descriptions>
             <Description description="Required name field" languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_NotificationResponseAction">
-          <Type>nvarchar</Type>
-          <Name>msdyn_notificationresponseaction</Name>
-          <LogicalName>msdyn_notificationresponseaction</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.8</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
-          <displaynames>
-            <displayname description="Notification Response Action" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Agent notification response action value" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_ParticipantId">

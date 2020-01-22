@@ -271,4 +271,13 @@ namespace Microsoft.CIFramework.Utility {
 		}, 100);
 		(window.top as any).Xrm.Page.data.entity.removeOnSave(Microsoft.CIFramework.Utility.onFormSaveHandler);
 	}
+
+	export function newGuid() {
+		let guidRegex = /[xy]/g;
+		return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(guidRegex, function (c) {
+			var r = (Math.random() * 16 | 0), v = (c === 'x' ? r : r & 0x3 | 0x8);
+			return v.toString(16);
+		});
+	}
+	
 }

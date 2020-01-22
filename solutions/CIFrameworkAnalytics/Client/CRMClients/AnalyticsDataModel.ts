@@ -63,6 +63,9 @@ namespace Microsoft.CIFrameworkAnalytics {
 		public clientSessionId: string;
 		public participantId: string;
 		public events?: (EventEntity)[] | null;
+		public cifSessionId: string;
+		public providerId: string;
+		public sessionId: string;
 	}
 	export class EventEntity {
 		public kpiEventName: string;

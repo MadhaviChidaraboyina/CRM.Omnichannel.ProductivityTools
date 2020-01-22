@@ -72,6 +72,7 @@ namespace Microsoft.CIFramework.Internal {
 		customerName: string;
 		notesInfo: NotesInfo;
 		focused: boolean;
+		conversationId : string;
 	}
 
 	export type NotesInfo = {
@@ -171,14 +172,14 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			var session: Session = this.sessions.get(sessionId);
-			return Promise.resolve(new Map<string, any>().set("sessionId", sessionId).set("focused", session.focused).set("context", session.context));
+			return Promise.resolve(new Map<string, any>().set("sessionId", sessionId).set("focused", session.focused).set("context", session.context).set("conversationId" , session.conversationId));
 		}
 
 		canCreateSession(telemetryData?: Object): boolean {
 			return this._state.sessionManager.canCreateSession(telemetryData);
 		}
 
-		createSession(input: any, context: any, customerName: string, telemetryData: Object, appId?: any, cifVersion?: any, correlationId?: string): Promise<string> {
+		createSession(input: any, context: any, customerName: string, telemetryData: Object, appId?: any, cifVersion?: any, correlationId?: string, providerSessionId? :  string): Promise<string> {
 			let notesInformation: NotesInfo = {
 				notesDetails: new Map(),
 				resolve: null,
@@ -186,18 +187,20 @@ namespace Microsoft.CIFramework.Internal {
 			}
 
 			return new Promise(function (resolve: any, reject: any) {
-				this._state.sessionManager.createSession(this, input, context, customerName, telemetryData, appId, cifVersion, correlationId).then(function (sessionId: string) {
+				this._state.sessionManager.createSession(this, input, context, customerName, telemetryData, appId, cifVersion, correlationId).then(function (resultMap: Map<string, string>) {
 					let session: Session = {
-						sessionId: sessionId,
+						sessionId: resultMap.get("sessionId"),
 						input: input,
 						context: context,
 						customerName: customerName,
 						notesInfo: notesInformation,
-						focused: true
+						focused: true,
+						conversationId:resultMap.get("conversationId")
 					};
 
-					this.sessions.set(sessionId, session);
-					resolve(sessionId);
+					this.sessions.set(resultMap.get("sessionId"), session);
+					resolve(resultMap.get("sessionId"));
+					
 				}.bind(this), function (errorMessage: string) {
 					let error = {} as IErrorHandler;
 					error.reportTime = new Date().toUTCString();

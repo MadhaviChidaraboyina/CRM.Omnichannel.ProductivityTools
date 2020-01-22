@@ -71,6 +71,9 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static notificationResponseAction = "msdyn_notificationresponseaction";
 		public static participantId = "msdyn_participantid";
 		public static sessionId = "msdyn_providersessionid";
+		public static cifSessionId = "msdyn_cifSessionId";
+		public static ProviderId = "msdyn_ProviderId";
+		public static sessionUniqueId = "msdyn_sessionId";
 	}
 
 	export class AnalyticsEvent {
@@ -83,8 +86,8 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static notificationResponse = "NotificationResponse";
 		public static notificationTimedOut = "NotificationTimedOut";
 		public static sessionStarted = "SessionStarted";
-		public static sessionInFocus = "SessionInFocus";
-		public static sessionOutOfFocus = "SessionOutOfFocus";
+		public static SessionFocusIn = "SessionFocusIn";
+		public static SessionFocusOut = "SessionFocusOut";
 		public static sessionClosed = "SessionClosed";
 		public static newTabOpened = "NewTabOpened";
 		public static sessionId = "sessionId";
@@ -97,6 +100,11 @@ namespace Microsoft.CIFrameworkAnalytics.Constants {
 		public static noSessionId = "Default Session";
 		public static notificationResponseAction = "notificationResponseAction";
 		public static enableAnalytics = "enableAnalytics";
+		public static CifSessionStart = "CifSessionStart";
+		public static CifSessionEnd = "CifSessionEnd";
+		public static sessionUniqueId = "sessionUniqueId";
+		public static conversationId = "conversationId";
+		public static providerSessionId = "providerSessionId";
 	}
 
 	export enum EventType {

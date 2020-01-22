@@ -77,6 +77,7 @@ namespace Microsoft.CIFramework
 		public static updateContext = "updateContext";
 		public static notifyKpiBreach = "notifyKpiBreach";
 		public static notifyNewActivity = "notifyNewActivity"
+		public static updateConversation = "updateConversation";
 	}
 
 	/**
@@ -142,9 +143,9 @@ namespace Microsoft.CIFramework
 		public static Attributes = "attributes";
 		public static UciLib = "ucilib";
 		public static OrgId = "orgId";
-    public static trustedDomain = "msdyn_trusteddomain";
-    public static customParams = "msdyn_customparams";
-    public static customParamsKey = "customParams";
+		public static trustedDomain = "msdyn_trusteddomain";
+		public static customParams = "msdyn_customparams";
+		public static customParamsKey = "customParams";
 		public static eventType: string = "eventType";
 		public static headerDataCIF: string = "headerDataCIF";
 		public static bodyDataCIF: string = "bodyDataCIF";
@@ -216,6 +217,7 @@ namespace Microsoft.CIFramework
 		public static sessionNotValidErrorMessage = "Focused session is neither the default session nor it belongs to the provider";
 		public static cifSolVersion = "msdyn_cifsolversion";
 		public static correlationId = "correlationId";
+		public static providerSessionId = "providerSessionId";
 		public static errorMessage = "errorMsg";
 		public static functionName = "functName";
 		public static ErrorCode = "errorCode";
@@ -231,6 +233,7 @@ namespace Microsoft.CIFramework
 		public static isDelete = "isDelete";
 		public static isDirty = "isDirty";
 		public static onHiddenTimerEvent = "onHiddenTimerEvent";
+		public static liveWorkItemEntity = "msdyn_ocliveworkitem";
 	}
 
 	export class AnalyticsConstants {
@@ -252,6 +255,12 @@ namespace Microsoft.CIFramework
 		public static focussedSession = "focussedSession";
 		public static clientSessionId = "clientSessionId";
 		public static enableAnalytics = "enableAnalytics";
+		public static telemetryUpdateConversationName = "updateConversation";
+		public static updateConversationsPlatformEventName = "updateConversation";
+		public static sessionUniqueId = "sessionUniqueId";
+		public static correlationId = "correlationId";
+		public static conversationId = "conversationId";	
+		public static providerSessionId = "providerSessionId";
 	}
 
 	export enum ErrorCode {
@@ -275,12 +284,17 @@ namespace Microsoft.CIFramework
 
 	export enum InternalEventName {
 		NotificationReceived,
-		NotificationResponse,
+		NotificationAccepted,
+		NotificationRejected,
 		NotificationTimedOut,
 		SessionStarted,
-		SessionInFocus,
-		SessionOutOfFocus,
+		SessionFocusIn,
+		SessionFocusOut,
 		SessionClosed,
-		NewTabOpened
+		NewTabOpened,
+		CifSessionStart,
+		CifSessionEnd
+
+
 	}
 }

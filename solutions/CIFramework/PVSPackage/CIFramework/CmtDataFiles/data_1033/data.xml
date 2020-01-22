@@ -467,106 +467,64 @@
 	<entity name="msdyn_kpieventdefinition" displayname="KPI Event Definition">
 		<records>
 			<record id="6716695d-1bd9-e911-a838-000d3a375590">
-				<field name="msdyn_active" value="True" />
-				<field name="createdby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="createdon" value="9/17/2019 7:18:47 AM" />
 				<field name="msdyn_eventdescription" value="Agent received a notification" />
 				<field name="msdyn_eventtype" value="100000000" />
 				<field name="msdyn_eventdisplayname" value="Notification Received" />
 				<field name="msdyn_name" value="NotificationReceived" />
-				<field name="msdyn_kpieventdefinitionid" value="6716695d-1bd9-e911-a838-000d3a375590" />
-				<field name="modifiedby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="modifiedon" value="9/17/2019 7:18:47 AM" />
-				<field name="ownerid" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="owningbusinessunit" value="25e0fff9-ca89-e911-a838-000d3a365e48" lookupentity="businessunit" />
-				<field name="owninguser" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" />
-				<field name="statecode" value="0" />
-				<field name="statuscode" value="1" />
-			</record>
-			<record id="46be1c87-1bd9-e911-a838-000d3a375590">
-				<field name="msdyn_active" value="True" />
-				<field name="createdby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="createdon" value="9/17/2019 7:19:56 AM" />
-				<field name="msdyn_eventdescription" value="Agent responds to notification with an action" />
-				<field name="msdyn_eventtype" value="100000000" />
-				<field name="msdyn_eventdisplayname" value="Notification Response" />
-				<field name="msdyn_name" value="NotificationResponse" />
-				<field name="msdyn_kpieventdefinitionid" value="46be1c87-1bd9-e911-a838-000d3a375590" />
-				<field name="modifiedby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="modifiedon" value="9/17/2019 7:19:56 AM" />
-				<field name="ownerid" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="owningbusinessunit" value="25e0fff9-ca89-e911-a838-000d3a365e48" lookupentity="businessunit" />
-				<field name="owninguser" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" />
-				<field name="statecode" value="0" />
-				<field name="statuscode" value="1" />
 			</record>
 			<record id="7b37d3a5-1bd9-e911-a838-000d3a375590">
-				<field name="msdyn_active" value="True" />
-				<field name="createdby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="createdon" value="9/17/2019 7:20:45 AM" />
 				<field name="msdyn_eventdescription" value="Notification timed out due to agent&amp;#39;s inaction" />
 				<field name="msdyn_eventtype" value="100000000" />
 				<field name="msdyn_eventdisplayname" value="Notification TimedOut" />
 				<field name="msdyn_name" value="NotificationTimedOut" />
-				<field name="msdyn_kpieventdefinitionid" value="7b37d3a5-1bd9-e911-a838-000d3a375590" />
-				<field name="modifiedby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="modifiedon" value="9/17/2019 7:20:45 AM" />
-				<field name="ownerid" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="owningbusinessunit" value="25e0fff9-ca89-e911-a838-000d3a365e48" lookupentity="businessunit" />
-				<field name="owninguser" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" />
-				<field name="statecode" value="0" />
-				<field name="statuscode" value="1" />
 			</record>
 			<record id="1d30a3cb-1bd9-e911-a838-000d3a375590">
-				<field name="msdyn_active" value="True" />
-				<field name="createdby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="createdon" value="9/17/2019 7:21:45 AM" />
 				<field name="msdyn_eventdescription" value="A new session is started" />
 				<field name="msdyn_eventtype" value="100000000" />
 				<field name="msdyn_eventdisplayname" value="Session Started" />
 				<field name="msdyn_name" value="SessionStarted" />
-				<field name="msdyn_kpieventdefinitionid" value="1d30a3cb-1bd9-e911-a838-000d3a375590" />
-				<field name="modifiedby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="modifiedon" value="9/17/2019 7:21:45 AM" />
-				<field name="ownerid" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="owningbusinessunit" value="25e0fff9-ca89-e911-a838-000d3a365e48" lookupentity="businessunit" />
-				<field name="owninguser" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" />
-				<field name="statecode" value="0" />
-				<field name="statuscode" value="1" />
-			</record>
-			<record id="9ed354dc-1bd9-e911-a838-000d3a375590">
-				<field name="msdyn_active" value="True" />
-				<field name="createdby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="createdon" value="9/17/2019 7:22:14 AM" />
-				<field name="msdyn_eventdescription" value="A session switch happened" />
-				<field name="msdyn_eventtype" value="100000000" />
-				<field name="msdyn_eventdisplayname" value="Session Switched" />
-				<field name="msdyn_name" value="SessionSwitched" />
-				<field name="msdyn_kpieventdefinitionid" value="9ed354dc-1bd9-e911-a838-000d3a375590" />
-				<field name="modifiedby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="modifiedon" value="9/17/2019 7:22:14 AM" />
-				<field name="ownerid" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="owningbusinessunit" value="25e0fff9-ca89-e911-a838-000d3a365e48" lookupentity="businessunit" />
-				<field name="owninguser" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" />
-				<field name="statecode" value="0" />
-				<field name="statuscode" value="1" />
 			</record>
 			<record id="c77081f2-1bd9-e911-a838-000d3a375590">
-				<field name="msdyn_active" value="True" />
-				<field name="createdby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="createdon" value="9/17/2019 7:22:52 AM" />
 				<field name="msdyn_eventdescription" value="A session is closed." />
 				<field name="msdyn_eventtype" value="100000000" />
 				<field name="msdyn_eventdisplayname" value="Session Closed" />
 				<field name="msdyn_name" value="SessionClosed" />
-				<field name="msdyn_kpieventdefinitionid" value="c77081f2-1bd9-e911-a838-000d3a375590" />
-				<field name="modifiedby" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="modifiedon" value="9/17/2019 7:22:52 AM" />
-				<field name="ownerid" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" lookupentityname="Debasish Mishra" />
-				<field name="owningbusinessunit" value="25e0fff9-ca89-e911-a838-000d3a365e48" lookupentity="businessunit" />
-				<field name="owninguser" value="8ef4d910-65b8-48e5-b734-86319a4428a3" lookupentity="systemuser" />
-				<field name="statecode" value="0" />
-				<field name="statuscode" value="1" />
+			</record>
+			<record id="b0277f3b-c4c0-4d33-9c27-8114eaace944">
+				<field name="msdyn_eventdescription" value="A new Cif session is started." />
+				<field name="msdyn_eventtype" value="100000000" />
+				<field name="msdyn_eventdisplayname" value="Cif Session Start" />
+				<field name="msdyn_name" value="CifSessionStart" />
+			</record>
+			<record id="0d232df5-96ff-49cd-9ebe-b5bc3f44a080">
+				<field name="msdyn_eventdescription" value="A Cif session is ended." />
+				<field name="msdyn_eventtype" value="100000000" />
+				<field name="msdyn_eventdisplayname" value="Cif Session End" />
+				<field name="msdyn_name" value="CifSessionEnd" />
+			</record>
+			<record id="0e281360-0c69-47c1-9d2a-1039e1bbeb4b">
+				<field name="msdyn_eventdescription" value="Agent accepted a notification" />
+				<field name="msdyn_eventtype" value="100000000" />
+				<field name="msdyn_eventdisplayname" value="Notification Accepted" />
+				<field name="msdyn_name" value="NotificationAccepted" />
+			</record>
+			<record id="d698cbf7-ef47-4a7d-83b9-80fd66da804e">
+				<field name="msdyn_eventdescription" value="Agent rejected a notification" />
+				<field name="msdyn_eventtype" value="100000000" />
+				<field name="msdyn_eventdisplayname" value="Notification Rejected" />
+				<field name="msdyn_name" value="NotificationRejected" />
+			</record>
+			<record id="740b615b-769b-4972-b66c-0b22970a80ca">
+				<field name="msdyn_eventdescription" value="A session is focused in." />
+				<field name="msdyn_eventtype" value="100000000" />
+				<field name="msdyn_eventdisplayname" value="Session Focus In" />
+				<field name="msdyn_name" value="SessionFocusIn" />
+			</record>
+			<record id="cd3526ab-ac21-4bd5-aace-15c84f9ca29d">
+				<field name="msdyn_eventdescription" value="A session is focused out." />
+				<field name="msdyn_eventtype" value="100000000" />
+				<field name="msdyn_eventdisplayname" value="Session Focus Out" />
+				<field name="msdyn_name" value="SessionFocusOut" />
 			</record>
 		</records>
 		<m2mrelationships />
