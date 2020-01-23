@@ -377,7 +377,7 @@
     <comment>'Productivity pane configuration' : label for section in Entity FormXml ID: '{09e9c271-36bd-db1d-9580-a7a68aea45bc}'</comment>
   </data>
   <data name="1:label,Productivity pane configuration{0d4b5d0c-9346-681e-8b55-ccb1493da775}" xml:space="preserve">
-    <value>Default Mode</value>
+    <value>Default mode</value>
     <comment>'Productivity pane configuration' : label for cell in Entity FormXml ID: '{0d4b5d0c-9346-681e-8b55-ccb1493da775}'</comment>
   </data>
   <data name="1:label,Productivity pane configuration{1d232692-b84d-3a66-920a-aa61b957a77c}" xml:space="preserve">
