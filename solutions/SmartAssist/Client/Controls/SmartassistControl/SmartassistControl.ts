@@ -11,7 +11,8 @@ module MscrmControls.ProductivityPanel {
 
 		private smartAssistContainer: HTMLDivElement = null;
 		public static _context: Mscrm.ControlData<IInputBag> = null;
-		private telemetryReporter: Smartassist.TelemetryLogger
+        private telemetryReporter: Smartassist.TelemetryLogger;
+        private callbackOnCardReceived: (value: any) => void;
 		/**
 		 * Empty constructor.
 		 */
@@ -27,7 +28,10 @@ module MscrmControls.ProductivityPanel {
 		 * @params container The div element to draw this control in
 		 */
 		public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
-			let self = this;
+            let sessionContext = context.factory[ProductivityPanel.Smartassist.Constants.customControlProperties].configuration.Parameters.SessionContext;
+            if (!context.utils.isNullOrUndefined(sessionContext))
+                this.callbackOnCardReceived = sessionContext.Callback.bind(this);
+            let self = this;
 			let methodName = "init";
 			// Initialize Telemetry Repoter
 			this.telemetryReporter = new Smartassist.TelemetryLogger(context);
@@ -50,7 +54,7 @@ module MscrmControls.ProductivityPanel {
 					this.smartAssistContainer.appendChild(el);
 					Xrm.WebApi.retrieveMultipleRecords(Smartassist.Constants.ServiceEndpointEntity, Smartassist.Constants.CDNEndpointFilter).then((data: any) => {
 						window[Smartassist.Constants.ConversatonControlOrigin] = data.entities[0].path;
-						window.top.addEventListener("message", this.receiveMessage, false);
+                        window.top.addEventListener("message", this.receiveMessage.bind(this), false);
 					});
 				}
 			} catch (Error) {
@@ -120,7 +124,10 @@ module MscrmControls.ProductivityPanel {
 				let card = Smartassist.AdaptiveCardHelper.GetCardFromMessageContent(content);
 				if (conversationId && uiSessionId) {
 					Smartassist.SmartAssistManager.Instance.RenderSmartAssistCard(conversationId, card.content);
-				}
+                }
+                if (!SmartassistControl._context.utils.isNullOrUndefined(card)) {
+                    this.callbackOnCardReceived(true);
+                }
 			}
 		}
 

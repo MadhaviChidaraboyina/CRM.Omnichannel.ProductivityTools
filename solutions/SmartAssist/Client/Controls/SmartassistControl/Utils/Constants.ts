@@ -54,7 +54,9 @@ module MscrmControls.ProductivityPanel.Smartassist {
 
 		public static EnterKeyCode = 13;
 		public static eventClick = "click";
-		public static eventKeyPress = "keypress";
+        public static eventKeyPress = "keypress";
+
+        public static customControlProperties = "_customControlProperties";
 	}
 
 	/**

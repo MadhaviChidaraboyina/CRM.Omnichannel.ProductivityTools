@@ -30,10 +30,10 @@ module MscrmControls.ProductivityPanel {
 	}
 
 	#smartassist-outer-container {
-		max-height: 480px;
+		max-height: 240px;
 		overflow-y: auto;
 		padding: 2px;
-		padding-right: 14px;
+		padding-right: 4px;
 		padding-top: 14px;
 		padding-bottom: 14px;
 	}
@@ -56,6 +56,7 @@ module MscrmControls.ProductivityPanel {
 
 	#smartassist-outer-container::-webkit-scrollbar-track {
 		background: #FFFFFF;
+		border-radius: 4px;
 	}
 
 	#smartassist-outer-container:hover::-webkit-scrollbar-thumb {
@@ -63,7 +64,7 @@ module MscrmControls.ProductivityPanel {
 	}
 
 	#smartassist-outer-container::-webkit-scrollbar {
-		width: 4px;
+		width: 7px;
 		visibility: hidden;
 	}
 
