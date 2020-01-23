@@ -236,6 +236,23 @@ namespace Microsoft.CIFramework
 		public static liveWorkItemEntity = "msdyn_ocliveworkitem";
 	}
 
+	export class QueryDataConstants {
+		public static SelectOperator = "?$select=";
+		public static FilterOperator = "$filter=";
+	}
+
+	export class ProductivityPaneConfigConstants {
+		public static productivityPaneControlName = "MscrmControls.ProductivityToolPanel.ProductivityPanelControl";
+		// Entity constants		
+		public static entityName = "msdyn_productivitypaneconfiguration";
+
+		// Attributes
+		public static productivityPaneState = "msdyn_productivitypanestate";
+		public static productivityPaneMode = "msdyn_productivitypanemode";
+		public static applicationName = "msdyn_applicationname";
+		public static msdyn_name = "msdyn_name";
+	}
+
 	export class AnalyticsConstants {
 		public static notificationResponseAction = "notificationResponseAction";
 		public static acceptNotificationResponse = "accepted";

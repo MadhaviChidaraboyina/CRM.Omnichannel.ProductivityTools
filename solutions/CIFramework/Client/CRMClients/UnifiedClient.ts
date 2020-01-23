@@ -202,6 +202,27 @@ namespace Microsoft.CIFramework.Internal {
 			return Xrm.Utility.getGlobalContext().userSettings.userId;
 		}
 
+		client.loadPanel = (options: XrmClientApi.PanelOptions): Promise<string> => {			
+			let _xrmApp: any = Xrm.App;
+			return _xrmApp.panels.loadPanel({
+				pageInput: {
+					pageType: "control",
+					controlName: ProductivityPaneConfigConstants.productivityPaneControlName,
+				},
+				// =True: If already have sidepanel with pageInput at target position, will auto replace with new content.
+				// =false: will create new sidepanel at position, event have another sidepanel alredy
+				replaceIfExisted: true,
+				width: 340,
+				position: 2,						// 1=left, 2=right, default = right
+				state: 2,							// 0=collapsed, 1=Expanded, 2=Hidden, default = Expanded
+				showTitle: false,					// default = true
+				canBeClosed: false,					// will display close button in title bar
+				canBeCollapsed: true,				// will display expland / collapse in title bar,
+				defaultCollapsedBehavior: false,	// default = true
+				isTitleStatic: true,
+			});
+		}
+
 		client.loadWidgets = (ciProviders: Map<string, CIProvider>): Promise<Map<string, boolean | string>> => {
 			const options: XrmClientApi.NewPanelOptions = {
 				position: isConsoleAppInternal() ? Constants.left : Constants.right,

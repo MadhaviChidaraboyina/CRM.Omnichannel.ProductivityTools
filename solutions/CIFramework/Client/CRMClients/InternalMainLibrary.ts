@@ -251,6 +251,8 @@ namespace Microsoft.CIFramework.Internal {
 						var usageData = new UsageTelemetryData(provider.providerId, provider.name, provider.apiVersion, "loadProvider - loadWidgets", provider.sortOrder, appId, cifVersion, false, null);
 						setUsageData(usageData);
 					});
+
+					loadProductivityPanel();
 				}
 			},
 			(error: Error) => {
@@ -258,6 +260,55 @@ namespace Microsoft.CIFramework.Internal {
 				logFailure(appId, true, errorData, MessageType.loadProvider, cifVersion);
 			}
 		);
+	}
+
+	function loadProductivityPanel() {
+		try {
+			Xrm.Utility.getGlobalContext().getCurrentAppProperties().then(
+				(properties: { [key: string]: string }) => {
+					if (!isNullOrUndefined(properties)) {
+						let appName = properties["uniqueName"];
+						let retrieveDataPromise = Xrm.WebApi.retrieveMultipleRecords(ProductivityPaneConfigConstants.entityName, getProductivityPanelQuery(appName));
+						retrieveDataPromise.then(
+							(response: XrmClientApi.WebApi.RetrieveMultipleResponse) => {
+								if (response.entities.length > 0) {
+									let startTime = new Date();
+									state.client.loadPanel({}).then(
+										(panelId: string) => {
+											let timeTaken = Date.now() - startTime.getTime();
+											let apiName = "Xrm.WebApi.loadPanel"
+											let telemetryData: any = new Object();
+											logApiData(telemetryData, startTime, timeTaken, apiName);
+										},
+										(error: any) => {
+											let errorData = generateErrorObject(error, "loadProductivityPanel - loadpanel api", errorTypes.XrmApiError);
+											logFailure(appId, true, errorData, 'Failed to call loadpanel api', cifVersion);
+										});
+								}
+							},
+							(error: any) => {
+								if (!isNullOrUndefined(error)) {
+									let errorData = generateErrorObject(error, "loadProductivityPanel - Xrm.WebApi.retrieveMultipleRecords", errorTypes.XrmApiError);
+									logFailure(appId, true, errorData, 'Failed to get productivity pane config data', cifVersion);
+								}
+							}
+						);
+					}
+				},
+				(error: XrmClientApi.ErrorResponse) => {
+					let errorData = generateErrorObject(error, "loadProductivityPanel - get application name", errorTypes.XrmApiError);
+					logFailure(appId, true, errorData, 'Failed to get application name', cifVersion);
+				});
+		} catch (e) {
+			let errorData = generateErrorObject(e, "loadProductivityPanel", errorTypes.XrmApiError);
+			logFailure(appId, true, errorData, 'Failed to load ProductivityPanel', cifVersion);
+		}
+	}
+
+	function getProductivityPanelQuery(appName: string): string {
+		let query = String.format("{0}{1},{2},{3}&{4}{5} eq '{6}'", QueryDataConstants.SelectOperator, ProductivityPaneConfigConstants.productivityPaneState, ProductivityPaneConfigConstants.productivityPaneMode,
+			ProductivityPaneConfigConstants.applicationName, QueryDataConstants.FilterOperator, ProductivityPaneConfigConstants.applicationName, appName);		
+		return query;
 	}
 
 	function registerUnloadHandler() {
