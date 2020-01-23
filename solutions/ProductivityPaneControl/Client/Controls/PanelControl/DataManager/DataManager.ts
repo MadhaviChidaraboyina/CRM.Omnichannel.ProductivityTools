@@ -214,7 +214,7 @@ module MscrmControls.ProductivityToolPanel {
 		public GenerateQuery(): string {
 			let query: string;
 			query = QueryDataConstants.SelectOperator + ProductivityPaneConfigConstants.productivityPaneState + ',' + ProductivityPaneConfigConstants.productivityPaneMode + ',' +
-				ProductivityPaneConfigConstants.applicationName + '&' + QueryDataConstants.FilterOperator + ProductivityPaneConfigConstants.applicationName + ' eq ' + "'msdyn_OCAPP'";
+				ProductivityPaneConfigConstants.applicationName + '&' + QueryDataConstants.FilterOperator + ProductivityPaneConfigConstants.applicationName + ' eq ' + "'OmniChannelEngagementHub'";
 			return query;
 		}
 
