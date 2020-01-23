@@ -20,7 +20,7 @@
             <Title LCID="1033" Title="Agent scripts" />
           </Titles>
         </SubArea>
-        <SubArea Id="NewSubArea_9798d3c6" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/msdyn_productivitypaneconfiguration/_imgs/SitemapIcon/ProductivityPane" Icon="/WebResources/msdyn_productivitypaneconfiguration/_imgs/SitemapIcon/ProductivityPane" Url="/main.aspx?appName=msdyn_OCAPP&amp;pagetype=entityrecord&amp;etn=msdyn_productivitypaneconfiguration&amp;id=482d09b0-d327-ea11-a810-000d3a1026fe&amp;formid=4D182267-6A95-40E1-9C02-AE8DB486AF12" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+        <SubArea Id="NewSubArea_9798d3c6" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/msdyn_productivitypaneconfiguration/_imgs/SitemapIcon/ProductivityPane" Icon="/WebResources/msdyn_productivitypaneconfiguration/_imgs/SitemapIcon/ProductivityPane" Url="/main.aspx?appName=msdyn_OCAPP&amp;pagetype=entityrecord&amp;etn=msdyn_productivitypaneconfiguration&amp;id=482d09b0-d327-ea11-a810-000d3a1026fe&amp;formid=4D182267-6A95-40E1-9C02-AE8DB486AF12" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" solutionaction="Added">
             <Titles>
               <Title LCID="1033" Title="Productivity pane" />
             </Titles>

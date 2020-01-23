@@ -20,6 +20,30 @@
                   </labels>
                   <rows>
                     <row>
+                      <cell id="{518514e8-d2e2-ab26-3838-e710a0e6d747}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                        <labels>
+                          <label description="ProductivityPaneConfigExp" languagecode="1033" />
+                        </labels>
+                        <control id="WebResource_ProductivityPaneConfigExp" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                          <parameters>
+                            <Url>msdyn_ProductivityPaneConfigInfo.html</Url>
+                            <PassParameters>false</PassParameters>
+                            <ShowOnMobileClient>false</ShowOnMobileClient>
+                            <Security>false</Security>
+                            <Scrolling>auto</Scrolling>
+                            <Border>false</Border>
+                            <WebResourceId>{6657E7C1-643B-EA11-A812-000D3A1029AC}</WebResourceId>
+                          </parameters>
+                        </control>
+                        <events>
+                          <event name="onload" application="false">
+                            <dependencies />
+                          </event>
+                        </events>
+                      </cell>
+                    </row>
+                    <row></row>
+                    <row>																																										 
                       <cell id="{2001b56e-bd86-d68b-822b-83b0b06c2b74}" showlabel="false" locklevel="0" visible="false">
                         <labels>
                           <label description="Application name" languagecode="1033" />

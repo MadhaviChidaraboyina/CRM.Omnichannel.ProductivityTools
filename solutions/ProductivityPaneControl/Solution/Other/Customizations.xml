@@ -3,12 +3,16 @@
   <Entities />
   <Roles />
   <Workflows />
+  <FieldSecurityProfiles />
+  <Templates />
+  <EntityMaps />
   <EntityRelationships />
   <OrganizationSettings />
   <optionsets />
-  <CustomControls/>
+  <WebResources />
+  <CustomControls />
+  <EntityDataProviders />
   <Languages>
     <Language>1033</Language>
   </Languages>
-  <WebResources />
 </ImportExportXml>

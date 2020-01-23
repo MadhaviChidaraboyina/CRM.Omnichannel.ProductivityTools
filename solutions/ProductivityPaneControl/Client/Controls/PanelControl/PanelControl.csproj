@@ -8,7 +8,7 @@
     <Configuration Condition=" '$(BUILDTYPE)' == 'cover' ">Release</Configuration>
     <Configuration Condition=" '$(BUILDTYPE)' == 'retail' ">Release</Configuration>
     <ProjectGuid>{4B0F86BF-E8DD-495A-BBE5-F5F17317A7B9}</ProjectGuid>
-    <ProjectTypeGuids>{cf30e303-1c46-48be-a5b8-8e5f1c7263bf}</ProjectTypeGuids>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>$(MSBuildProjectDirectory)</OutputPath>
     <TargetFrameworkVersion>$(CRMdotNetTargetFrameWork)</TargetFrameworkVersion>
@@ -34,6 +34,11 @@
     <TypeScriptCompile Include="Utils\Constants.ts" />
     <TypeScriptCompile Include="Utils\PanelControlManager.ts" />
     <TypeScriptCompile Include="Utils\TelemetryLogger.ts" />
+    <TypeScriptCompile Include="SessionChangeManager\SessionChangeManager.ts" />
+    <TypeScriptCompile Include="PanelStateManager\PanelState.ts" />
+    <TypeScriptCompile Include="Models\ProductivityPaneConfig.ts" />
+    <TypeScriptCompile Include="DataManager\DataManager.ts" />
+    <TypeScriptCompile Include="$(PKG_TYPESCRIPT_MSBUILD)\tools\tsc\lib.es6.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ControlManifest.xml" />
@@ -45,7 +50,6 @@
     <Folder Include="css\" />
     <Folder Include="libs\" />
     <Folder Include="Typings\" />
-    <Folder Include="utils\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="strings\PanelControl.1033.resx">

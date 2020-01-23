@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  
+      <data name="ProductivityPaneConfig_info_text" xml:space="preserve">
+    <value>Productivity pane provides agents quick access to productivity apps and tools. {0}</value>
+    <comment>DO NOT CHANGE {0} as it will be replaced with ProductivityPaneConfig_LearnMore_String.</comment>
+  </data>
+  
+    <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
+    <value>Learn more.</value>
+  </data>
 </root>

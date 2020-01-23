@@ -5,28 +5,39 @@
 /// <reference path="utils/Constants.ts"/>
 /// <reference path="utils/PanelControlManager.ts"/>
 /// <reference path="privatereferences.ts"/>
+/// <reference path="utils/TelemetryLogger.ts"/>
+/// <reference path="Styles/ControlStyle.ts"/>
+/// <reference path="SessionChangeManager/SessionChangeManager.ts"/>
 
 module MscrmControls.ProductivityToolPanel {
-	'use strict';
+    'use strict';
 
-	export class ProductivityPanelControl implements Mscrm.Control<IInputBag, IOutputBag> {
+    export class ProductivityPanelControl implements Mscrm.Control<IInputBag, IOutputBag> {
 
-		private initCompleted: boolean;
-		private context: Mscrm.ControlData<IInputBag>;
-		private productivityToolSelected: string;
-		private panelToggle: boolean;
-		private telemetryContext: string;
-		private telemetryLogger: TelemetryLogger;
-		protected notifyOutputChanged: () => void;
-		
+        private initCompleted: boolean;
+        private context: Mscrm.ControlData<IInputBag>;
+        private dataManager: DataManager;
+        private panelState: PanelState;
+        private productivityToolSelected: string;
+        private panelToggle: boolean;
+        private currentSessionId: string;
+        private telemetryContext: string;
+        private telemetryLogger: TelemetryLogger;
+        protected notifyOutputChanged: () => void;
+        public productivityPaneConfigData: ProductivityPaneConfig;
+        public isDataFetched: boolean;
+
+        private sessionChangeManager: SessionChangeManager;
+        private controls: Mscrm.Component[];
+        private isSessionChanged: boolean;
 		/**
 		 * Constructor.
 		 */
-		constructor() {
-			this.initCompleted = false;
-			this.telemetryContext = TelemetryComponents.MainComponent;
-			this.productivityToolSelected = Constants.emptyString;
-		}
+        constructor() {
+            this.initCompleted = false;
+            this.telemetryContext = TelemetryComponents.MainComponent;
+            this.productivityPaneConfigData = new ProductivityPaneConfig(false, false);
+        }
 
 		/**
 		 * This function should be used for any initial setup necessary for your control.
@@ -35,120 +46,213 @@ module MscrmControls.ProductivityToolPanel {
 		 * @params state The user state for this control set from setState in the last session
 		 * @params container The div element to draw this control in
 		 */
-		public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary): void
-		{
-			if (this.initCompleted == false) {
-				this.context = context;
-				this.telemetryLogger = new TelemetryLogger(context);
-				this.notifyOutputChanged = notifyOutputChanged;
-				this.initCompleted = true;
-				let params = new EventParameters();
-				this.telemetryLogger.logSuccess(this.telemetryContext, "Init", params);
-			}
-			this.panelToggle = false;
-		}
+        public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary): void {
+            if (this.initCompleted == false) {
+                this.context = context;
+                this.telemetryLogger = new TelemetryLogger(context);
+                this.notifyOutputChanged = notifyOutputChanged;
+                this.dataManager = new DataManager(context);
+                this.panelState = new PanelState(context);
+                this.isDataFetched = false;
+                this.GetConfigData();
+                this.initCompleted = true;
+                let params = new EventParameters();
+                this.telemetryLogger.logSuccess(this.telemetryContext, "Init", params);
+                this.currentSessionId = Constants.emptyString;
+                this.sessionChangeManager = new SessionChangeManager(this.onSessionContextChanged.bind(this), this.telemetryLogger);
+                this.panelToggle = false;
+                this.productivityToolSelected = Constants.agentGuidance;
+                localStorage.setItem(LocalStorageKeyConstants.productivityToolDataModel, JSON.stringify({}));
+            }
+
+
+        }
+
+        private onSessionContextChanged(sessionContextData: SessionChangeEventData, actionType: string): void {
+            this.isSessionChanged = true;
+            this.currentSessionId = this.sessionChangeManager.getCurrentFocusedSessionId();
+
+            if (this.currentSessionId == Constants.homeSessionId) {
+                this.isSessionChanged = false;
+                this.currentSessionId = Constants.emptyString;
+                sessionContextData.newSessionId = Constants.emptyString;
+                this.context.utils.requestRender();
+            }
+            else {
+
+                if (actionType === Constants.sessionCreated) {
+                    const data = {
+                        productivityToolSelected: Constants.agentGuidance,
+                        panelToggle: this.productivityPaneConfigData.productivityPaneMode
+                    }
+                    this.panelState.storeSessionTemplateIdInLocStorage(sessionContextData.newSessionId);
+                    this.panelState.storeLiveWorkStreamIdInLocStorage(sessionContextData.newSessionId);
+                    PanelState.SetState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData, data);
+                }
+                if (actionType === Constants.sessionSwitched) {
+                    let sessionData = PanelState.getState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
+                    this.productivityToolSelected = sessionData.productivityToolSelected;
+                    this.panelToggle = sessionData.panelToggle;
+                    this.context.utils.requestRender();
+                }
+                if (actionType === Constants.sessionClosed) {
+                    PanelState.DeleteState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
+                }
+            }
+        }
 
 		/**
 		 * getPanelContainer generates a side panel.
 		 */
-		private getPanelContainer(): Mscrm.Component
-	    {
-			const panelContainer = this.context.factory.createElement(
-				"CONTAINER",
-				{
-					id: Constants.panelContainerId,
-					key: "panelContainer",
-					style: this.panelToggle ? ControlStyle.getProductivityPaneStyle(Constants.TRUE): ControlStyle.getProductivityPaneStyle(Constants.FALSE)
-				},
-				Constants.emptyString);
+        private getPanelContainer(): Mscrm.Component {
+            let sessionContextJSON = JSON.stringify(this.sessionChangeManager.getSessionChangeEventData());
+            let isCallScriptAvail = this.panelState.checkAgentScript(this.currentSessionId);
+            let isSmartassistAvail = this.panelState.checkSmartAssist(this.currentSessionId);
+            const properties_agentguidance: any = {
+                parameters: {},
+                key: Constants.agentGuidanceControlKey,
+                id: Constants.agentGuidanceControlKey,
+                configuration: {
+                    CustomControlId: Constants.agentGuidanceControlId,
+                    Name: Constants.agentGuidanceControlName,
+                    Parameters: {
+                        SessionContext: {
+                            Usage: 1,
+                            Static: true,
+                            Value: sessionContextJSON,
+                            Primary: false,
+                            Attributes: { isCallScript: isCallScriptAvail, isSmartassist: isSmartassistAvail },
+                            Callback: (value: any) => {
+                                //notification ui code will go here
+                            },
+                        },
+                    },
+                }
+            };
 
-			return panelContainer;			
-		}
+            let agentguidance = this.context.factory.createComponent(
+                "MscrmControls.ProductivityTool.AgentGuidance",
+                "agentguidancechild1",
+                properties_agentguidance
+            );
 
-		private getProductivityToolSelectionIndicator(buttonId: string): Mscrm.Component
-		{
-			const indicatorContainer = this.context.factory.createElement(
-				"CONTAINER",
-				{
-					id: `${Constants.toolIndicatorId}${buttonId}`,
-					key: "productivityToolIndicatorContainer",
-					style: (this.productivityToolSelected === buttonId && this.panelToggle) ? ControlStyle.getSelectionIndicatorStyle(Constants.TRUE) : ControlStyle.getSelectionIndicatorStyle(Constants.FALSE)
-				},
-				Constants.emptyString);
+            const panelContainer = this.context.factory.createElement(
+                "CONTAINER",
+                {
+                    id: Constants.panelContainerId,
+                    key: "panelContainer",
+                    style: this.panelToggle ? ControlStyle.getProductivityPaneStyle(Constants.TRUE) : ControlStyle.getProductivityPaneStyle(Constants.FALSE)
+                },
+                agentguidance);
 
-		   return indicatorContainer; 
-		}
-		
+            return panelContainer;
+        }
+
+        private getProductivityToolSelectionIndicator(buttonId: string): Mscrm.Component {
+            const indicatorContainer = this.context.factory.createElement(
+                "CONTAINER",
+                {
+                    id: `${Constants.toolIndicatorId}${buttonId}`,
+                    key: "productivityToolIndicatorContainer",
+                    style: (this.productivityToolSelected === buttonId && this.panelToggle) ? ControlStyle.getSelectionIndicatorStyle(Constants.TRUE) : ControlStyle.getSelectionIndicatorStyle(Constants.FALSE)
+                },
+                Constants.emptyString);
+
+            return indicatorContainer;
+        }
+
 
 		/**
 		 * getProductivityToolButton generates the toggle button.
 		 */
+
 		private getProductivityToolButton(iconId: string, iconPath: string, buttonId: string, selectionIndicator: boolean, toolTip: string): Mscrm.Component
 		{		
-			const icon = this.getProductivityToolIcon(iconId, iconPath);
-			const toggleButton = this.context.factory.createElement(
-				"BUTTON",
-				{
-					id: buttonId,
-					key: buttonId,
-					onClick: this.onButtonClick.bind(this, buttonId),
-					style: (this.productivityToolSelected === buttonId && this.panelToggle) ? ControlStyle.getProductivityPanelBtnStyle(Constants.TRUE) : ControlStyle.getProductivityPanelBtnStyle(Constants.FALSE)
+            const icon = this.getProductivityToolIcon(iconId, iconPath);
+            const toggleButton = this.context.factory.createElement(
+                "BUTTON",
+                {
+                    id: buttonId,
+                    key: buttonId,
+                    onClick: this.onButtonClick.bind(this, buttonId),
+                    style: (this.productivityToolSelected === buttonId && this.panelToggle) ? ControlStyle.getProductivityPanelBtnStyle(Constants.TRUE) : ControlStyle.getProductivityPanelBtnStyle(Constants.FALSE)
+                },
+                [icon, selectionIndicator ? this.getProductivityToolSelectionIndicator(buttonId) : Constants.emptyString]);
+
+            const listItem = this.context.factory.createElement(
+                "LISTITEM",
+                {
+                    id: `${Constants.listItemId}${buttonId}`,
+                    key: `${Constants.listItemId}${buttonId}`,
+                    style: {
+                        display: "flex"
+                    },
+					title: this.context.resources.getString(toolTip)
 				},
-				[icon, selectionIndicator ? this.getProductivityToolSelectionIndicator(buttonId): Constants.emptyString]);
+				toggleButton);
 
-				const listItem = this.context.factory.createElement(
-					"LISTITEM",
-					{
-						id: `${Constants.listItemId}${buttonId}`,
-						key: `${Constants.listItemId}${buttonId}`,
-						style: {
-							display: "flex"
-						},
-						title: this.context.resources.getString(toolTip)
-					},
-					toggleButton);
+            return listItem;
+        }
 
-				return listItem;
-		}
+        private getNavBarLastContainer(): Mscrm.Component {
+            const lastContainer = this.context.factory.createElement(
+                "CONTAINER",
+                {
+                    id: "productivity-tools-last-button-container",
+                    key: "productivityToolLastContainer",
+                    style: ControlStyle.getNavigationBarLastContainer()
+                },
+                "");
 
-		private getNavBarLastContainer(): Mscrm.Component
-		{	
-			const lastContainer = this.context.factory.createElement(
-				"CONTAINER",
-				{
-					id: "productivity-tools-last-button-container",
-					key: "productivityToolLastContainer",
-					style: ControlStyle.getNavigationBarLastContainer()
-				},
-				"");
+            return lastContainer;
+        }
 
-		   return lastContainer; 
-		}
+        private toolSeparator(): Mscrm.Component {
+            const separator = this.context.factory.createElement(
+                "Label",
+                {
+                    id: Constants.toolSeparatorId,
+                    key: Constants.toolSeparatorId,
+                    style: ControlStyle.toolSeparatorStyle(this.panelToggle)
+                },
+                Constants.emptyString);
 
-		private getproductivityToolButtons(): Mscrm.Component
-		{		
-			var listItems: Mscrm.Component[] = [];
+            const listItem = this.context.factory.createElement(
+                "LISTITEM",
+                {
+                    id: `${Constants.listItemId}${Constants.toolSeparatorId}`,
+                    key: `${Constants.listItemId}${Constants.toolSeparatorId}`,
+                    style: {
+                        display: "flex"
+                    }
+                },
+                separator);
+
+            return listItem;
+        }
+        private getproductivityToolButtons(): Mscrm.Component {
+			let listItems: Mscrm.Component[] = [];
 
 			const toggleButton =  this.getProductivityToolButton(Constants.toggleIconId,
 				this.panelToggle ? Constants.panelToggleExpand : Constants.panelToggleCollpase,Constants.toggle, false, this.panelToggle ? Constants.collpaseToolTip: Constants.expandToolTip);
 			const agentGuidanceButton =  this.getProductivityToolButton(Constants.agentScriptIconId,Constants.agentScriptIcon,Constants.agentGuidance, true, Constants.agentGuidanceTooltip);
-			const macrosButton =  this.getProductivityToolButton(Constants.macrosIconId,Constants.productivityMacrosIcon,Constants.productivityMacros, true, Constants.productivityMacrosTooltip);
+            const toolSeparator = this.toolSeparator();
 
-			listItems.push(toggleButton);
-			listItems.push(agentGuidanceButton);
-			listItems.push(macrosButton);
+            listItems.push(toggleButton);
+            listItems.push(toolSeparator);
+            listItems.push(agentGuidanceButton);
 
-			const buttonContainer = this.context.factory.createElement(
-				"LIST",
-				{
-					id: "productivity-tools-button-container",
-					key: "productivityToolContainer",
-					role: "list"
-				},
-				listItems);
+            const buttonContainer = this.context.factory.createElement(
+                "LIST",
+                {
+                    id: "productivity-tools-button-container",
+                    key: "productivityToolContainer",
+                    role: "list"
+                },
+                listItems);
 
-		   return buttonContainer; 
-		}
+            return buttonContainer;
+        }
 
 		/** 
 		 * This function will recieve an "Input Bag" containing the values currently assigned to the parameters in your manifest
@@ -156,77 +260,117 @@ module MscrmControls.ProductivityToolPanel {
 		 * as well as resource, client, and theming info (see mscrm.d.ts)
 		 * @params context The "Input Bag" as described above
 		 */
-		public updateView(context: Mscrm.ControlData<IInputBag>): Mscrm.Component
-		{
-				const navbarContainer = this.context.factory.createElement(
-					"CONTAINER",
-					{
-						id: "navbar-container-container",
-						key: "navbarContainer",
-						style: ControlStyle.getProductivityNavBarStyle()
-					},
-					[this.getproductivityToolButtons(), this.getNavBarLastContainer(), this.getPanelContainer()]);
+        public updateView(context: Mscrm.ControlData<IInputBag>): Mscrm.Component {
+            // fetch data 
+            let navbarContainer;
+            if (this.isDataFetched) {
+                let paneState = this.productivityPaneConfigData.productivityPaneState;
+                //this.panelToggle = this.productivityPaneConfigData.productivityPaneMode;
+                if (paneState == true) {
+                    this.controls = [];
+                    if (this.isSessionChanged && this.panelState.checkAgentScriptAndSmartAssistBot(this.currentSessionId)) {
+                        this.controls.push(this.getproductivityToolButtons());
+                        this.controls.push(this.getNavBarLastContainer());
+                        this.controls.push(this.getPanelContainer());
+                    }
+                    navbarContainer = this.context.factory.createElement(
+                        "CONTAINER",
+                        {
+                            id: "navbar-container-container",
+                            key: "navbarContainer",
+                            style: ControlStyle.getProductivityNavBarStyle()
+                        },
+                        this.controls
+                    );
+                    if (!(this.currentSessionId === Constants.emptyString)) {
+                        if (this.panelToggle) {
+                            this.setSidePanelControlState(1);
+                        } else {
+                            this.setSidePanelControlState(0);
+                        }
+                    }
+                    else {
+                        this.setSidePanelControlState(2);
+                    }
+                }
+                else {
+                    this.setSidePanelControlState(2);
+                }
+            }
+            else {
+                this.setSidePanelControlState(2);
+            }
 
-               return navbarContainer; 
-		}
+            return navbarContainer;
+        }
 
-		private setSidePanelControlState(stateId: number): void{
-			let methodName = "setSidePanelControlState";
-			try {
-				PanelControlManager.toggleSidePanelControl(stateId);
-			}
-			catch(error) {
-				let eventParams = new EventParameters();
-				eventParams.addParameter("message", "Failed to set sidePanel state");
-				this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
-			}
-		}
+        private setSidePanelControlState(stateId: number): void {
+            let methodName = "setSidePanelControlState";
+            try {
+                PanelControlManager.toggleSidePanelControl(stateId);
+            }
+            catch (error) {
+                let eventParams = new EventParameters();
+                eventParams.addParameter("message", "Failed to set sidePanel state");
+                this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
+            }
+        }
 
-		private toggleButtonClick(): void{
-			if(!this.panelToggle){
-				if(this.productivityToolSelected === Constants.emptyString){
-					this.productivityToolSelected = Constants.agentGuidance;
-				}
-				this.setSidePanelControlState(1);
-			}
-			else{
-				this.setSidePanelControlState(0);
-			}
-				this.panelToggle= !this.panelToggle;
-				this.context.utils.requestRender();
-		}
+        private toggleButtonClick(): void {
+            if (!this.panelToggle) {
+                if (this.productivityToolSelected === Constants.emptyString) {
+                    this.productivityToolSelected = Constants.agentGuidance;
+                }
+                this.setSidePanelControlState(1);
+            }
+            else {
+                this.setSidePanelControlState(0);
+            }
+            this.panelToggle = !this.panelToggle;
+            const data = {
+                productivityToolSelected: this.productivityToolSelected,
+                panelToggle: this.panelToggle
+            }
+            PanelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, data);
+            this.context.utils.requestRender();
+        }
 
-		private productivityToolButtonClick(buttonId: string): void{
-			if(!this.panelToggle){
-				this.setSidePanelControlState(1);
-				this.panelToggle = !this.panelToggle;
-				this.productivityToolSelected = buttonId;
-			}
-			if(!(this.productivityToolSelected === buttonId)){
-				this.productivityToolSelected = buttonId;
-			}
-			this.context.utils.requestRender();
-		}
+        private productivityToolButtonClick(buttonId: string): void {
+            if (!this.panelToggle) {
+                this.setSidePanelControlState(1);
+                this.panelToggle = !this.panelToggle;
+                this.productivityToolSelected = buttonId;
+            }
+            if (!(this.productivityToolSelected === buttonId)) {
+                this.productivityToolSelected = buttonId;
+            }
+            const data = {
+                productivityToolSelected: this.productivityToolSelected,
+                panelToggle: this.panelToggle
+            }
+            PanelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, data);
+            this.context.utils.requestRender();
+        }
 
-		private onButtonClick(buttonId: string): void {	
-			if(buttonId === Constants.toggle){
-				this.toggleButtonClick();
-			}
-			else{
-				this.productivityToolButtonClick(buttonId);
-			}
-		}
+        private onButtonClick(buttonId: string): void {
+            if (buttonId === Constants.toggle) {
+                this.toggleButtonClick();
+            }
+            else {
+                this.productivityToolButtonClick(buttonId);
+            }
+        }
 
-		private  getProductivityToolIcon(iconId: string, iconPath: string): Mscrm.Component {
-			const icon =  this.context.factory.createElement("IMG", {
-				id: iconId,
-				source: iconPath,
-				style:{
-					verticalAlign: "middle"
-				}
-			});
-			return icon;
-		}
+        private getProductivityToolIcon(iconId: string, iconPath: string): Mscrm.Component {
+            const icon = this.context.factory.createElement("IMG", {
+                id: iconId,
+                source: iconPath,
+                style: {
+                    verticalAlign: "middle"
+                }
+            });
+            return icon;
+        }
 
 		/** 
 		 * This function will return an "Output Bag" to the Crm Infrastructure
@@ -237,16 +381,44 @@ module MscrmControls.ProductivityToolPanel {
 		 * };
 		 * @returns The "Output Bag" containing values to pass to the infrastructure
 		 */
-		public getOutputs(): IOutputBag {
-			// custom code goes here - remove the line below and return the correct output
-			return null;
-		}
+        public getOutputs(): IOutputBag {
+            // custom code goes here - remove the line below and return the correct output
+            return null;
+        }
 
 		/**
 		 * This function will be called when the control is destroyed
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
-		public destroy(): void	{
-		}
-	}
+        public destroy(): void {
+            delete localStorage[LocalStorageKeyConstants.productivityToolDataModel];
+        }
+
+        //This functions get productivity pane config data from data manager 
+        //and assigns to variable productivityPaneConfigData
+        public GetConfigData() {
+            let methodName = 'GetConfigData';
+            try {
+                let dataPromise = this.dataManager.GetProductivityPaneConfigData();
+                dataPromise.then(
+                    (configData: ProductivityPaneConfig) => {
+                        this.productivityPaneConfigData.productivityPaneState = configData.productivityPaneState;
+                        this.productivityPaneConfigData.productivityPaneMode = configData.productivityPaneMode;
+                        this.isDataFetched = true;
+                        this.context.utils.requestRender();
+                    },
+                    (errorMessage: string) => {
+                        let errorParam = new EventParameters();
+                        errorParam.addParameter("errorDetails", "Error at GetConfigData()");
+                        this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
+                    }
+                );
+            } catch (e) {
+                let errorParam = new EventParameters();
+                errorParam.addParameter("errorObj", JSON.stringify(e));
+                this.telemetryLogger.logError(this.telemetryContext, methodName, e.message, errorParam);
+            }
+        }
+
+    }
 }
