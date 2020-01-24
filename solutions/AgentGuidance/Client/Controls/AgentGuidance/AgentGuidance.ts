@@ -52,18 +52,11 @@ module MscrmControls.ProductivityToolAgentGuidance {
             let check = StateManager.getState(this.getCurrentSessionId() + Constants.isSmartCardAvailable);
             if (this.context.utils.isNullOrUndefined(check)) {
                 StateManager.SetState(this.getCurrentSessionId() + Constants.isSmartCardAvailable, false);
-
-
             }
-
-
-
         }
 
         private getCurrentSessionId(): string {
             return this.getWindowObject().Xrm.App.sessions.getFocusedSession().sessionId;
-
-
         }
 
         private SetCardFlag(flag: boolean) {
@@ -96,17 +89,16 @@ module MscrmControls.ProductivityToolAgentGuidance {
 
         private getAgentGuidanceTools(context: Mscrm.ControlData<IInputBag>, sessionContextAttributes: any): Mscrm.Component[] {
             let listItems = [];
-            let isSmartassistEnabled = false;
+            this.isCardExist = StateManager.getState(this.getCurrentSessionId() + Constants.isSmartCardAvailable);
 
             if (sessionContextAttributes.isCallScript || sessionContextAttributes.isSmartassist){
                 listItems.push(this.getAgentGuidanceLabel(context));
             }
             if (sessionContextAttributes.isSmartassist){
                 listItems.push(this.getSmartScriptCompoment(context));
-                isSmartassistEnabled = true;
             } 
             if (sessionContextAttributes.isCallScript){
-                if(isSmartassistEnabled)
+                if(sessionContextAttributes.isSmartassist && this.isCardExist)
                     listItems.push(this.toolSeparator());
                 listItems.push(this.getCallScriptCompoment(context));
             } 
@@ -226,7 +218,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 style: {
                     paddingLeft: "14px",
                     paddingRight: "4px",
-                    marginTop: "2px",
+                    marginTop: "10px",
                     display: this.isCardExist ? "" : "none"
                 }
             };
