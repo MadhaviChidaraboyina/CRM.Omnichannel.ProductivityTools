@@ -51,6 +51,7 @@ namespace Microsoft.Macros.Utility {
 
 			Xrm.Navigation.openForm(entityFormOptions);
 		}
+
 	}
 
 	export function openMacrosMonitorRecordHandler(selectedControlSelectedItemReferences: any, selectedControl: any) {
@@ -147,5 +148,6 @@ namespace Microsoft.Macros.Utility {
 		else {
 			monitorControl.setSrc(iframeUrl + "?id=" + input);
 		}
+		formContext.getControl("macrosname_id").setFocus();
 	}
 }

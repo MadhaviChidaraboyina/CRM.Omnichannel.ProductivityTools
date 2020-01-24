@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="MscrmControls.RunLinkControl" constructor="RunLinkControl" version="1.0.2" display-name-key="RunLinkControl" control-type="virtual">
+  <control namespace="MscrmControls.RunLinkControl" constructor="RunLinkControl" version="1.0.3" display-name-key="RunLinkControl" control-type="virtual">
     <modes>
     </modes>
 		<resources>

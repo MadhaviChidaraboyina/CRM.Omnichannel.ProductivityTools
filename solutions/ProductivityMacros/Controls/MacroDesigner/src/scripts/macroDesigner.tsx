@@ -286,7 +286,8 @@ async function startDesigner(rpc) {
             let spinner = document.getElementById("designerContainerSpinner") as HTMLImageElement;
             spinner.style.display = "none";
             let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
-            designerIframe.style.display = "inline";
+			designerIframe.style.display = "inline";
+			setTimeout(function () { (window.top as any).Xrm.Page.getControl("macrosname_id").setFocus() }, 500)
             let obj: SharedDefines.LogObject = {
                 level: SharedDefines.LogLevel.Info,
                 eventName: WrapperEvents.DesignerControlInitEvent,

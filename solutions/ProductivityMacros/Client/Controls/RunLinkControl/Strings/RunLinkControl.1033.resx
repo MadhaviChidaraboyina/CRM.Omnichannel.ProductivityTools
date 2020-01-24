@@ -118,11 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RUNLINKCONTROL_NOHISTORY" xml:space="preserve">
-    <value>No run histories found for the macro</value>
+    <value>There's no run history associated with this macro record.</value>
     <comment>Alert box text</comment>
   </data>
   <data name="RUNLINKCONTROL_LINKLABEL" xml:space="preserve">
     <value>View run history</value>
     <comment>Text for the link which opens run histories grid</comment>
+  </data>
+	<data name="RUNLINKCONTROL_CONFIRMBUTTONLABEL" xml:space="preserve">
+    <value>Close</value>
+    <comment>Text for no run history found alert box button</comment>
+  </data>
+	<data name="RUNLINKCONTROL_NORUNALERTTITLE" xml:space="preserve">
+    <value>No run history</value>
+    <comment>Text for no run history found alert box title</comment>
   </data>
 </root>
