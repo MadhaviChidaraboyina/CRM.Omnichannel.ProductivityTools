@@ -464,7 +464,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab.]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -518,7 +518,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page.]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -599,7 +599,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -653,7 +653,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -869,7 +869,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -923,7 +923,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1004,7 +1004,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1058,7 +1058,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1220,7 +1220,7 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_description_2a148183_3905_49e9_acee_eed07fe2da18" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Application Template ID]]></Val>
+          <Val><![CDATA[Application template ID]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1319,7 +1319,7 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_description_b66cd2ac_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Email Recipients]]></Val>
+          <Val><![CDATA[Email recipients]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1418,7 +1418,7 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_3a359e47_ec11_ea11_a811_000d3a334ee9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Entity Primary Name]]></Val>
+          <Val><![CDATA[Entity primary name]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1436,7 +1436,7 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_474f7494_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[View Type]]></Val>
+          <Val><![CDATA[View type]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1454,7 +1454,7 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_6c7f2dbf_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Billable Time]]></Val>
+          <Val><![CDATA[Billable time]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1490,7 +1490,7 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_b66cd2ac_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Email Recipients]]></Val>
+          <Val><![CDATA[Email recipients]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1499,7 +1499,7 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_ca97e23b_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Page Type]]></Val>
+          <Val><![CDATA[Page type]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1508,7 +1508,7 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_d61ae14b_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Entity Logical Name]]></Val>
+          <Val><![CDATA[Entity logical name]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1526,7 +1526,7 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_ddf27260_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Entity Form ID]]></Val>
+          <Val><![CDATA[Entity form ID]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>

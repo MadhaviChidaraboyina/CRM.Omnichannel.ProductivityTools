@@ -366,7 +366,7 @@
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
-    <value>Přesune fokus na kartu.</value>
+    <value>Přesunout fokus na tuto kartu</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_85ab814a_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
@@ -390,7 +390,7 @@
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
-    <value>Získá aktuální stránku.</value>
+    <value>Získat aktuální kartu</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_d3fef303_b090_44d8_a8f0_e2545a2459ae" xml:space="preserve">
@@ -422,7 +422,7 @@
     <comment>Macro Action Template Display  Name</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
-    <value>Přesunout fokus na kartu</value>
+    <value>Přesunout fokus na tuto kartu</value>
     <comment>Macro Action Template Display  Name</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_85ab814a_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
@@ -446,7 +446,7 @@
     <comment>Macro Action Template Display  Name</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
-    <value>Získat aktuální stránku</value>
+    <value>Získat aktuální kartu</value>
     <comment>Macro Action Template Display  Name</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_d3fef303_b090_44d8_a8f0_e2545a2459ae" xml:space="preserve">
@@ -534,7 +534,7 @@
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
-    <value>Přesunout fokus na kartu</value>
+    <value>Přesunout fokus na tuto kartu</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_85ab814a_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
@@ -558,7 +558,7 @@
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
-    <value>Získat aktuální stránku</value>
+    <value>Získat aktuální kartu</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_d3fef303_b090_44d8_a8f0_e2545a2459ae" xml:space="preserve">
@@ -590,7 +590,7 @@
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
-    <value>Přesunout fokus na kartu</value>
+    <value>Přesunout fokus na tuto kartu</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_85ab814a_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
@@ -614,7 +614,7 @@
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
-    <value>Získat aktuální stránku</value>
+    <value>Získat aktuální kartu</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_d3fef303_b090_44d8_a8f0_e2545a2459ae" xml:space="preserve">

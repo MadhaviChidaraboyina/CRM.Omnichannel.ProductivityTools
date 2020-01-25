@@ -648,50 +648,59 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Refresh the tab.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Päivitä välilehti.]]></Val>
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Päivitä välilehti]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Refresh the tab.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T09:43:39.000442Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:39:01.0001994Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Kohdistus-välilehti.]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Kohdista välilehteen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T09:43:39.000442Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:39:01.0001911Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Hae nykyinen sivu.]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Hae nykyinen välilehti]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T09:43:39.000442Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:39:01.0001911Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -712,34 +721,40 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Kohdistus-välilehti]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Kohdista välilehteen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T09:43:39.000442Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:39:01.0001911Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Hae nykyinen sivu]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Hae nykyinen välilehti]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T09:43:39.0004412Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:39:01.0001911Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -808,34 +823,40 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Kohdistus-välilehti]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Kohdista välilehteen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T09:43:39.0004412Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:39:01.0001911Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Hae nykyinen sivu]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Hae nykyinen välilehti]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T09:43:39.0004412Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:39:01.0001911Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -856,34 +877,40 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Kohdistus-välilehti]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Kohdista välilehteen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T09:43:39.0004412Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:39:01.0001911Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Hae nykyinen sivu]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Hae nykyinen välilehti]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T09:43:39.0004412Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:39:01.0001909Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroconnector_msdyn_categorylabel_ac627bea_31f2_4378_9a21_6e1e2d74e278" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

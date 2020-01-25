@@ -80,6 +80,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";81:Title,NewArea_08255196NewSubArea_9798d3c6" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity pane]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
     </Item>
   </Item>
 </LCX>

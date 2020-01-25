@@ -1213,7 +1213,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_consoleappparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" xml:space="preserve">
-    <value>Ja – värdet hämtas från templateParameter-argumentet vid körning
+    <value>Ja – värdet hämtas från templateParameters-argumentet vid körning
 Nej – värdet måste anges när en mall som använder den här parametern skapas</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for OptionSet 'msdyn_consoleappparameterdefinition_msdyn_isruntime' on Entity</comment>
   </data>
@@ -1230,7 +1230,7 @@ Nej – värdet måste anges när en mall som använder den här parametern skap
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_DefaultValue' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_IsRuntime" xml:space="preserve">
-    <value>Ja – värdet hämtas från templateParameter-argumentet vid körning
+    <value>Ja – värdet hämtas från templateParameters-argumentet vid körning
 Nej – värdet måste anges när en mall som använder den här parametern skapas</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_IsRuntime' on Entity</comment>
   </data>

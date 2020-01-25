@@ -1213,7 +1213,7 @@
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_consoleappparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_consoleappparameterdefinition_msdyn_isruntime" xml:space="preserve">
-    <value>Sim: o valor será escolhido no argumento templateParameters no runtime
+    <value>Sim: o valor será escolhido no argumento templateParameters em runtime
 Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for OptionSet 'msdyn_consoleappparameterdefinition_msdyn_isruntime' on Entity</comment>
   </data>
@@ -1230,7 +1230,7 @@ Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_DefaultValue' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleappparameterdefinitionmsdyn_IsRuntime" xml:space="preserve">
-    <value>Sim: o valor será escolhido no argumento templateParameters no runtime
+    <value>Sim: o valor será escolhido no argumento templateParameters em runtime
 Não: o valor deverá ser fornecido ao criar um modelo que use esse parâmetro</value>
     <comment>'msdyn_consoleappparameterdefinition' : Description for Attribute 'msdyn_IsRuntime' on Entity</comment>
   </data>

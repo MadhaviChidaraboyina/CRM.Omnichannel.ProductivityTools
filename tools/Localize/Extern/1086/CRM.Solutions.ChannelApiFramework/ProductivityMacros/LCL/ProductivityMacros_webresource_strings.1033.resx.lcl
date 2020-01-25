@@ -835,18 +835,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Tab Fokus.]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Fokus pada tab]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005294Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.0005791Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_85ab814a_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -931,18 +934,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Dapatkan halaman semasa.]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Dapatkan tab semasa]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005283Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.0005791Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_d3fef303_b090_44d8_a8f0_e2545a2459ae" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1075,18 +1081,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Tab Fokus]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Fokus pada tab]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005283Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.0005791Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_85ab814a_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1171,18 +1180,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Dapatkan halaman semasa]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Dapatkan tab semasa]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.000528Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.0005766Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_d3fef303_b090_44d8_a8f0_e2545a2459ae" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1555,18 +1567,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Tab Fokus]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Fokus pada tab]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005266Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.0005766Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_85ab814a_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1651,18 +1666,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Dapatkan halaman semasa]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Dapatkan tab semasa]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005266Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.0005766Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_d3fef303_b090_44d8_a8f0_e2545a2459ae" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1795,18 +1813,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Focus tab]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Tab Fokus]]></Val>
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Fokus pada tab]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005257Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.0005737Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_85ab814a_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1891,18 +1912,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Get the current page]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Dapatkan halaman semasa]]></Val>
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Dapatkan tab semasa]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005257Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.0005737Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_d3fef303_b090_44d8_a8f0_e2545a2459ae" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2179,18 +2203,21 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_description_2a148183_3905_49e9_acee_eed07fe2da18" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Application Template ID]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[ID Templat Aplikasi]]></Val>
+          <Val><![CDATA[Application template ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID templat aplikasi]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Application Template ID]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005247Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.0005737Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_description_32e1acb9_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2355,18 +2382,21 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_description_b66cd2ac_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Email Recipients]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Penerima E-mel]]></Val>
+          <Val><![CDATA[Email recipients]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Penerima e-mel]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Email Recipients]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005242Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.0005737Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Parameter definition Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_description_ca97e23b_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2531,18 +2561,21 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_3a359e47_ec11_ea11_a811_000d3a334ee9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Entity Primary Name]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nama Utama Entiti]]></Val>
+          <Val><![CDATA[Entity primary name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Nama entiti utama]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Entity Primary Name]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005237Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.000571Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_473decbe_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2563,18 +2596,21 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_474f7494_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[View Type]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Jenis Pandangan]]></Val>
+          <Val><![CDATA[View type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Jenis pandangan]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[View Type]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005237Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.000571Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_4a8c0ace_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2595,18 +2631,21 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_6c7f2dbf_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Billable Time]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Waktu Boleh Dibil]]></Val>
+          <Val><![CDATA[Billable time]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Waktu boleh dibil]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Billable Time]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005237Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.000571Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_6e033082_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2659,50 +2698,59 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_b66cd2ac_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Email Recipients]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Penerima E-mel]]></Val>
+          <Val><![CDATA[Email recipients]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Penerima e-mel]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Email Recipients]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005236Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.000571Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_ca97e23b_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Page Type]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Jenis Halaman]]></Val>
+          <Val><![CDATA[Page type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Jenis halaman]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Page Type]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005236Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.000571Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_d61ae14b_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Entity Logical Name]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nama Logik Entiti]]></Val>
+          <Val><![CDATA[Entity logical name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Nama logik entiti]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Entity Logical Name]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005236Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.000571Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_dc1db27b_b27e_4de3_ad4b_a1ba406de050" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2723,18 +2771,21 @@
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_ddf27260_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Entity Form ID]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[ID Borang Entiti]]></Val>
+          <Val><![CDATA[Entity form ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID borang entiti]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Entity Form ID]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:09.0005236Z" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:13:55.000571Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO24462_20200121" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_eb102e60_9fdf_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

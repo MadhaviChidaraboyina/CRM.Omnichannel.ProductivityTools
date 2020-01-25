@@ -166,6 +166,19 @@
           <Str Name="Custom3" Val="WO20361_20190923" />
         </Props>
       </Item>
+      <Item ItemId=";81:Title,NewArea_08255196NewSubArea_9798d3c6" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity pane]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性ウィンドウ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:56:33.0006594Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24462_20200121" />
+        </Props>
+      </Item>
     </Item>
   </Item>
 </LCX>
