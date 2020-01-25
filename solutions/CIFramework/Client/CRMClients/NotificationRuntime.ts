@@ -31,16 +31,16 @@ namespace Microsoft.CIFramework.Internal {
 					//accept handler
 					let onAcceptHandler = function () {
 						var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Accept));
+						let originURL = templateParameters.originURL;
 						Xrm.Internal.clearPopupNotification(closeId);
 						closeId = "";
 						if (!IsPlatformNotificationTimeoutInfra || showTimeout == ShowTimeoutOption.No)  {
 							clearTimeout(displayedNotificationTimer);
 						}
-						let activeProvider = state.providerManager.getActiveProvider();
 						console.log("[NotifyEventFromTemplate] Notification accepted. Timer cleared");
 						logInfoToTelemetry("[NotifyEventFromTemplate] Notification Accepted on Agent Accept", correlationId);
 						raiseSystemAnalyticsEvent(InternalEventName.NotificationAccepted, mapReturn, new Map<string, any>().set(Constants.correlationId, correlationId).set(AnalyticsConstants.notificationResponseAction, AnalyticsConstants.acceptNotificationResponse)
-												 .set(Constants.originURL, activeProvider.landingUrl));
+							                 .set(Constants.originURL, originURL));
 						showPopUpNotification();
 						return resolve(mapReturn);
 					}.bind(this);
@@ -48,16 +48,16 @@ namespace Microsoft.CIFramework.Internal {
 					//decline handler
 					let onDeclineHandler = function () {
 						var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
+						let originURL = templateParameters.originURL;
 						Xrm.Internal.clearPopupNotification(closeId);
 						closeId = "";
 						if (!IsPlatformNotificationTimeoutInfra || showTimeout == ShowTimeoutOption.No) {
 							clearTimeout(displayedNotificationTimer);
 						}
-						let activeProvider = state.providerManager.getActiveProvider();
 						console.log("[NotifyEventFromTemplate] Notification rejected.Timer cleared");
 						logInfoToTelemetry("[NotifyEventFromTemplate] Notification Rejected on Agent Decline", correlationId);
 						raiseSystemAnalyticsEvent(InternalEventName.NotificationRejected, mapReturn, new Map<string, any>().set(Constants.correlationId, correlationId).set(AnalyticsConstants.notificationResponseAction, AnalyticsConstants.rejectNotificationResponse)
-												 .set(Constants.originURL, activeProvider.landingUrl));
+							                 .set(Constants.originURL, originURL));
 						showPopUpNotification();
 						return resolve(mapReturn);
 					}.bind(this);
@@ -65,12 +65,12 @@ namespace Microsoft.CIFramework.Internal {
 					//Timeout handler
 					let onTimeoutHandler = function () {
 						var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, Microsoft.CIFramework.Constants.Reject));
+						let originURL = templateParameters.originURL;
 						Xrm.Internal.clearPopupNotification(closeId);
-						let activeProvider = state.providerManager.getActiveProvider();
 						closeId = "";
 						console.log("[NotifyEventFromTemplate] Notification rejected due to timeout");
 						logInfoToTelemetry("[NotifyEventFromTemplate] Notification Rejected on display timeout", correlationId);
-						raiseSystemAnalyticsEvent(InternalEventName.NotificationTimedOut, mapReturn, new Map<string, any>().set(Constants.correlationId, correlationId).set(Constants.originURL, activeProvider.landingUrl));
+						raiseSystemAnalyticsEvent(InternalEventName.NotificationTimedOut, mapReturn, new Map<string, any>().set(Constants.correlationId, correlationId).set(Constants.originURL, originURL));
 						showPopUpNotification();
 						return resolve(mapReturn);
 					}.bind(this);

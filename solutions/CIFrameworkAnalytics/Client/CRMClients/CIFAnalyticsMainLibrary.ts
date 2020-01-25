@@ -41,17 +41,33 @@ namespace Microsoft.CIFrameworkAnalytics {
 	 * Handler for the logCIFAnalytics that is raised from CIF Internal Library
 	 */
 	function logAnalyticsEventListener(event: any) {
-		let conversationId = getConversationId(event.detail);
-		if (!Utility.isNullOrUndefined(conversationId)) {
-			if (event.detail.get(Constants.AnalyticsEvent.enableAnalytics)) {
+		let enableAnalytics = event.detail.get(Constants.AnalyticsEvent.enableAnalytics);
+
+		if (!enableAnalytics) {
+			enableAnalytics = enableAnalticsForUCIEvents(event);
+		}
+		if (enableAnalytics) {
 				let eventData = createEventDataForSystemEventsNew(event.detail);
 				if (!Utility.isNullOrUndefined(eventData) && Utility.validateLogAnalyticsPayload(eventData)) {
 						logEventData(eventData);
 				}
 			}
-		}
 	}
 
+	/** @internal
+		 * to log the notification events irrespective of enableanalytics flag
+		 */
+	function enableAnalticsForUCIEvents(event: any): boolean {
+		switch (event.detail.get(Constants.AnalyticsEvent.eventName)) {
+			case Constants.AnalyticsEvent.SessionFocusIn:
+			case Constants.AnalyticsEvent.SessionFocusOut:
+			case Constants.AnalyticsEvent.CifSessionStart:
+			case Constants.AnalyticsEvent.CifSessionEnd:
+				{
+					return true;
+				}
+		}
+	}
 	/** @internal
 	 * Function to log the analytics init data
 	 */
@@ -163,15 +179,14 @@ namespace Microsoft.CIFrameworkAnalytics {
 		* Function to create the Event data for SystemEvents
 		*/
 	function createEventDataForSystemEventsNew(payload: any): EventData {
-		let correlationId = getConversationId(payload);
-		let clientSessionId = getClientSessionId(payload);
+		let clientSessionId = payload.get(Constants.AnalyticsEvent.clientSessionId);
 		let eventName = payload.get(Constants.AnalyticsEvent.eventName);
 		let eventId = analyticsEventMap.get(eventName);
 		let sessionUniqueId = payload.get(Constants.AnalyticsEvent.sessionUniqueId)
 		let providerId = payload.get(Constants.AnalyticsEvent.providerId);
 		let conversationId = payload.get(Constants.AnalyticsEvent.conversationId);
 		let providerSessionId = payload.get(Constants.AnalyticsEvent.providerSessionId);
-		if (!Utility.isNullOrUndefined(conversationId) && !Utility.isNullOrUndefined(eventId)) {
+		if (!Utility.isNullOrUndefined(eventId) || eventName == Constants.AnalyticsEvent.CifSessionStart ||eventName == Constants.AnalyticsEvent.CifSessionEnd) {
 				var eventData: EventData = new EventData();
 				eventData.conversationId = conversationId;
 				eventData.clientSessionId = clientSessionId;
@@ -186,7 +201,6 @@ namespace Microsoft.CIFrameworkAnalytics {
 				event.kpiEventName = eventName;
 				event.eventTimestamp = new Date().toISOString();
 				event.externalCorrelationId = payload.get(Constants.AnalyticsEvent.correlationId);
-				fillEventDataForSystemEvents(payload, eventData);
 			}
 			return eventData;
 	}
@@ -477,6 +491,6 @@ namespace Microsoft.CIFrameworkAnalytics {
 			});
 	}
 
-	//call the initialize method
+    //call the initialize method
 	setTimeout(initialize(), 0);
 }

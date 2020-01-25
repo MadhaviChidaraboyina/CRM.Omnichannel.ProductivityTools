@@ -230,6 +230,7 @@ declare namespace Microsoft.CIFramework {
         static isDirty: string;
         static onHiddenTimerEvent: string;
         static liveWorkItemEntity: string;
+        static defaultSessionId: string;
     }
     class AnalyticsConstants {
         static notificationResponseAction: string;
@@ -256,6 +257,16 @@ declare namespace Microsoft.CIFramework {
         static correlationId: string;
         static conversationId: string;
         static providerSessionId: string;
+        static sessionStarted: string;
+        static SessionFocusIn: string;
+        static SessionFocusOut: string;
+        static sessionClosed: string;
+        static cifSessionStart: string;
+        static cifSessionEnd: string;
+        static notificationRecieved: string;
+        static notificationAccepted: string;
+        static notificationRejected: string;
+        static notificationTimedOut: string;
     }
     enum ErrorCode {
         Notes_Flap_Already_Expanded = 101,

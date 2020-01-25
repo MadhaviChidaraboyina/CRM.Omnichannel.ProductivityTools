@@ -34,13 +34,20 @@ namespace Microsoft.CIFramework.Internal {
 		*/
 		onSessionSwitched(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
-			let activeProvider = state.providerManager.getActiveProvider();
-			raiseSystemAnalyticsEvent(InternalEventName.SessionFocusOut, eventMap, new Map<string, any>().set(Constants.originURL, activeProvider.landingUrl));
-			raiseSystemAnalyticsEvent(InternalEventName.SessionFocusIn, eventMap, new Map<string, any>().set(Constants.originURL, activeProvider.landingUrl));	
+			let originUrl = null;
 			let previousSessionId = eventMap.get(Constants.previousSessionId);
 			let newSessionId = eventMap.get(Constants.newSessionId);
 			let previousProvider = state.sessionManager.getProvider(previousSessionId);
 			let newProvider = state.sessionManager.getProvider(newSessionId);
+			if (previousProvider != null) {
+				originUrl = previousProvider.landingUrl;
+			}
+			if (newProvider != null) {
+				originUrl = newProvider.landingUrl;
+			}
+			raiseSystemAnalyticsEvent(InternalEventName.SessionFocusOut, eventMap, new Map<string, any>().set(Constants.originURL, originUrl));
+			raiseSystemAnalyticsEvent(InternalEventName.SessionFocusIn, eventMap, new Map<string, any>().set(Constants.originURL, originUrl));
+
 			let switchProvider = false;
 			
 			if (previousProvider != null) {
@@ -71,14 +78,18 @@ namespace Microsoft.CIFramework.Internal {
 		 */
 		onSessionClosed(event: any): void {
 			let eventMap = Microsoft.CIFramework.Utility.buildMap(event.getEventArgs().getInputArguments());
-			let activeProvider = state.providerManager.getActiveProvider();
-			raiseSystemAnalyticsEvent(InternalEventName.SessionClosed, eventMap, new Map<string, any>().set(Constants.originURL, activeProvider.landingUrl));
+			let originUrl = null;
 			let sessionId = eventMap.get(Constants.sessionId);
+			let provider = state.sessionManager.getProvider(sessionId);
+			if (provider != null) {
+				originUrl = provider.landingUrl;
+			}
+			raiseSystemAnalyticsEvent(InternalEventName.SessionClosed, eventMap, new Map<string, any>().set(Constants.originURL, originUrl));
 
 			//Persist and close the Notes flap before closing the session
 			state.client.collapseFlap(sessionId);
 
-			let provider = state.sessionManager.getProvider(sessionId);
+			
 			if (provider != null) {
 				provider.closeSession(sessionId);
 			}

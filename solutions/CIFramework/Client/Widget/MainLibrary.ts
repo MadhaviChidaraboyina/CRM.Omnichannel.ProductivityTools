@@ -94,28 +94,7 @@ namespace Microsoft.CIFramework
 		sendMessage<T>(logErrorsAndReject.name, payload, false);
 		return postMessageNamespace.rejectWithErrorMessage(errorMsg);
 	}
-
-	/**
-			 * API to initialize the CIF Log Analytics session
-			* @param data - Object containing the init data
-			* @returns a Promise: JSON String with status message
-			*/
-	export function initLogAnalytics(data: any, correlationId?: string): Promise<string> {
-		if (!isNullOrUndefined(data)) {
-			const payload: postMessageNamespace.IExternalRequestMessageType = {
-				messageType: MessageType.initLogAnalytics,
-				messageData: new Map().set(AnalyticsConstants.analyticsdata, data)
-					.set(Constants.correlationId, correlationId)
-					.set(AnalyticsConstants.analyticsEventType, EventType.SystemEvent)
-			}
-			return sendMessage<string>(initLogAnalytics.name, payload, false);
-		}
-		else {
-			let errorMsg = "initLogAnalytics payload is not valid. ";
-			return logErrorsAndReject(errorMsg, MessageType.logAnalyticsEvent, correlationId);
-		}
-	}
-
+	
 	/**
 	 * API to to check value of IsConsoleApp for a widget
 	 *

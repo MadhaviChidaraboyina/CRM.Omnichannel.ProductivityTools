@@ -234,6 +234,7 @@ namespace Microsoft.CIFramework
 		public static isDirty = "isDirty";
 		public static onHiddenTimerEvent = "onHiddenTimerEvent";
 		public static liveWorkItemEntity = "msdyn_ocliveworkitem";
+		public static defaultSessionId = "session-id-0";
 	}
 
 	export class QueryDataConstants {
@@ -278,6 +279,16 @@ namespace Microsoft.CIFramework
 		public static correlationId = "correlationId";
 		public static conversationId = "conversationId";	
 		public static providerSessionId = "providerSessionId";
+		public static sessionStarted = "SessionStarted";
+		public static SessionFocusIn = "SessionFocusIn";
+		public static SessionFocusOut = "SessionFocusOut";
+		public static sessionClosed = "SessionClosed";
+		public static cifSessionStart = "cifSessionStart";
+		public static cifSessionEnd = "cifSessionEnd";
+		public static notificationRecieved = "NotificationRecieved";
+		public static notificationAccepted = "NotificationAccepted";
+		public static notificationRejected = "NotificationRejected";
+		public static notificationTimedOut = "NotificationTimedOut";
 	}
 
 	export enum ErrorCode {

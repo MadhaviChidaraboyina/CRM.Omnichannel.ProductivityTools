@@ -386,10 +386,10 @@
 					<MaxLength>100</MaxLength>
 					<Length>200</Length>
 					<displaynames>
-						<displayname description="cif Session Id" languagecode="1033" />
+						<displayname description="User Session Id" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="cif Session Identifier" languagecode="1033" />
+						<Description description="Unique identifier for Channel Integration Framework session" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_sessionId">
@@ -425,7 +425,7 @@
 						<displayname description="Session Id" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="Session Identifier" languagecode="1033" />
+						<Description description="Unique identifier for session" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_ProviderId">
@@ -461,7 +461,7 @@
 						<displayname description="Provider Id" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="Provider Identifier" languagecode="1033" />
+						<Description description="Unique identifier of the Provider that triggered this event" languagecode="1033" />
 					</Descriptions>
 				</attribute>
         <attribute PhysicalName="msdyn_CustomAttribute1">
