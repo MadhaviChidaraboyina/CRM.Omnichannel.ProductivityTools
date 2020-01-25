@@ -185,10 +185,22 @@ namespace Microsoft.CIFramework.Internal {
 		} catch (error) {
 			console.log("Failed to load msdyn_CIFAnalytics_internal_library.js");
 		}
-		
+		setOmnichannelInstallStatus();
 		loadProvider();
 		setNotificationTimeoutVersion();
 		return false;
+	}
+
+	function setOmnichannelInstallStatus() {
+		Xrm.Utility.getEntityMetadata(Constants.liveWorkItemEntity, null).then(
+			(result: any) => {
+				state.isOmnichannelInstalled = !isNullOrUndefined(result);
+			},
+			(error: Error) => {
+				state.isOmnichannelInstalled = false;
+				let errorData = generateErrorObject(error, "setOCInstallStatus - Xrm.Utility.getEntityMetadata - msdyn_ocliveworkitem", errorTypes.XrmApiError);
+				logFailure(appId, true, errorData, MessageType.setOCInstallStatus, cifVersion);
+			});
 	}
 
 	function setNotificationTimeoutVersion() {
@@ -235,11 +247,13 @@ namespace Microsoft.CIFramework.Internal {
 						if (x[Constants.trustedDomain] != "")
 							trustedDomains.push(x[Constants.trustedDomain]);
 
-            var provider: CIProvider = new CIProvider(x, state, environmentInfo);
+						var provider: CIProvider = new CIProvider(x, state, environmentInfo);
+						provider.shouldCreateLiveWorkItem = (Utility.extractParameter((new URL(provider.landingUrl)).search, Constants.skipLwiCreation) !== "true");
+
 						if (first) {
 							// initialize the session manager
 							state.providerManager = new ProviderManager(state.client, x[Constants.landingUrl], provider);
-              first = false;
+							first = false;
 						}
 						else {
 							state.providerManager.addProvider(x[Constants.landingUrl], provider);

@@ -78,6 +78,7 @@ namespace Microsoft.CIFramework
 		public static notifyKpiBreach = "notifyKpiBreach";
 		public static notifyNewActivity = "notifyNewActivity"
 		public static updateConversation = "updateConversation";
+		public static setOCInstallStatus = "setOCInstallStatus";
 	}
 
 	/**
@@ -234,6 +235,11 @@ namespace Microsoft.CIFramework
 		public static isDirty = "isDirty";
 		public static onHiddenTimerEvent = "onHiddenTimerEvent";
 		public static liveWorkItemEntity = "msdyn_ocliveworkitem";
+		public static skipLwiCreation = "skipLwiCreation";
+		public static entityStateCode = "statecode";
+		public static stateCodeClose = 3;
+		public static entityStatusCode = "statuscode";
+		public static statusCodeClose = 4;
 		public static defaultSessionId = "session-id-0";
 	}
 

@@ -34,6 +34,11 @@ namespace Microsoft.CIFramework.Internal {
 			 * Post message wrapper object
 			 */
 			messageLibrary: postMessageNamespace.postMsgWrapper;
+
+			/*
+			 * Check if omnichannel is installed, to decide LWI creation
+			 */
+			isOmnichannelInstalled: boolean;
 		}
 
 	export class ProviderManager {
@@ -100,7 +105,8 @@ namespace Microsoft.CIFramework.Internal {
 		trustedDomain: string;	// Domain to be whitelisted
 		customParams: string;
 		sessions: Map<string, Session>;
-		enableAnalytics: boolean  // Boolean flag to indicate whether to enable creation of CIF Analytics records
+		enableAnalytics: boolean;  // Boolean flag to indicate whether to enable creation of CIF Analytics records
+		shouldCreateLiveWorkItem: boolean;
 
 		constructor(x: XrmClientApi.WebApi.Entity, state: IState, environmentInfo: any) {
 			this._state = state;

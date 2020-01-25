@@ -89,8 +89,13 @@ namespace Microsoft.CIFramework.Internal {
 			//Persist and close the Notes flap before closing the session
 			state.client.collapseFlap(sessionId);
 
-			
+			let sessionInfo = state.sessionManager.sessions.get(sessionId);
 			if (provider != null) {
+				if (provider.shouldCreateLiveWorkItem && !isNullOrUndefined(sessionInfo)) {
+					let valueMap = new Map().set(Constants.entityStateCode, Constants.stateCodeClose).set(Constants.entityStatusCode, Constants.statusCodeClose);
+					let updateMap = new Map().set(Constants.entityName, Constants.liveWorkItemEntity).set(Constants.entityId, sessionInfo.conversationId).set(Constants.value, valueMap);
+					updateConversation(updateMap);
+				}
 				provider.closeSession(sessionId);
 			}
 		}
@@ -173,7 +178,7 @@ namespace Microsoft.CIFramework.Internal {
 								Xrm.App.sessions.createSession(sessionInput).then(function (sessionId: string) {
 									logApiData(telemetryData, startTime, Date.now() - startTime.getTime(), apiName);
 
-									if(provider && provider.name != ChannelProvider.Omnichannel && provider.enableAnalytics == true)
+									if (provider && provider.name != ChannelProvider.Omnichannel && provider.enableAnalytics == true && provider.shouldCreateLiveWorkItem == true && state.isOmnichannelInstalled)
 									{
 										conversationId =  Microsoft.CIFramework.Utility.newGuid();
 										this.createLiveworkitem(provider, conversationId, cifVersion, correlationId);
@@ -183,7 +188,6 @@ namespace Microsoft.CIFramework.Internal {
 										conversationId = correlationId;
 									}
 
-									
 									this.sessions.set(sessionId, new SessionInfo(provider, session, templateParams, correlationId, Microsoft.CIFramework.Utility.newGuid(), providerSessionId, conversationId));
 									state.client.setPanelMode("setPanelMode", session.panelState);
 									state.client.setProviderVisibility(state.providerManager.ciProviders, provider.providerId);
