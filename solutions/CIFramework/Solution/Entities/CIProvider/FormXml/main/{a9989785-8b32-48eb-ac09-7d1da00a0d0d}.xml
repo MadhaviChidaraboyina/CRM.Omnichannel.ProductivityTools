@@ -216,6 +216,16 @@
             <Handler functionName="CIFramework.wildcardCheckOnTrustedDomain" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{5AD9F61C-477E-424B-8640-EA55E8155506}" enabled="true" parameters="" passExecutionContext="false"></Handler>
           </Handlers>
         </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_ciproviderapiversion">
+          <Handlers>
+            <Handler functionName="CIFramework.executeCustomCommand" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{02290750-8489-a933-0282-85370d2c7d17}" enabled="true" parameters="{&quot;targets&quot;:[{&quot;type&quot;:&quot;control&quot;,&quot;name&quot;:&quot;WebResource_msdyn_cifmessage&quot;},{&quot;type&quot;:&quot;attribute&quot;,&quot;name&quot;:&quot;msdyn_ciproviderapiversion&quot;}],&quot;commandText&quot;:&quot;targets[0].setVisible(false)&quot;}" passExecutionContext="false" />
+          </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="CIFramework.executeCustomCommand" libraryName="EventHandlersLib/msdyn_EventHandlersLib.js" handlerUniqueId="{35b557e9-a36a-5dda-5d68-cb9841c3e37d}" enabled="true" parameters="{&quot;targets&quot;:[{&quot;type&quot;:&quot;control&quot;,&quot;name&quot;:&quot;WebResource_msdyn_cifmessage&quot;},{&quot;type&quot;:&quot;attribute&quot;,&quot;name&quot;:&quot;msdyn_ciproviderapiversion&quot;}],&quot;commandText&quot;:&quot;targets[0].setVisible(false)&quot;}" passExecutionContext="false" />
+          </Handlers>
+        </event>
       </events>
     </form>
     <IsCustomizable>0</IsCustomizable>

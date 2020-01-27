@@ -106,7 +106,7 @@ module MscrmControls.Service.CIProvider {
 			{ 
 				if(apiVersionAttr.getValue()===0)
 				{
-					queryParams.push("(navigationtype eq 0)");
+					queryParams.push("(navigationtype eq 0 or uniquename eq 'OmniChannelEngagementHub' )");
 				}
 			}
 			
