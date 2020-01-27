@@ -52,8 +52,8 @@ namespace Microsoft.CIFramework.Internal
 		public static entityName = "msdyn_ocliveworkitem";
 		public static title = "msdyn_title";
 		public static subject = "subject";
-		public static activityId = "activityId";
-		public static ocLiveWorkStreamId = "msdyn_ocliveworkitemid";
+		public static activityId = "activityid";
+		public static ocLiveWorkItemId = "msdyn_ocliveworkitemid";
 		public static providerName = "msdyn_channelproviderName";
 		public static isThirdPartyConversation = "msdyn_thirdpartyconversation";
 	}

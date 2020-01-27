@@ -283,7 +283,7 @@ namespace Microsoft.CIFramework.Internal {
 		createLiveworkitem(provider: CIProvider  , liveworkitemId : string , cifVersion:string  , correlationId : string) 
 		{
 				let entity: XrmClientApi.WebApi.Entity = {};
-				entity[LiveWorkItemEntity.ocLiveWorkStreamId] = liveworkitemId;
+				entity[LiveWorkItemEntity.ocLiveWorkItemId] = liveworkitemId;
 				entity[LiveWorkItemEntity.subject] =  Microsoft.CIFramework.Utility.getResourceString("VISITOR_TEXT")+ " : "  + provider.name;
 				entity[LiveWorkItemEntity.title] = Microsoft.CIFramework.Utility.getResourceString("VISITOR_TEXT") + " : " + provider.name;
 				entity[LiveWorkItemEntity.activityId] = liveworkitemId;
