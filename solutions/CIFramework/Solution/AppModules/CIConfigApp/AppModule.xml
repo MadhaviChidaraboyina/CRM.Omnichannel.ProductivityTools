@@ -5,6 +5,7 @@
      <WebResourceId>25665EDF-3868-4378-9852-E2B59B1BDD9F</WebResourceId>
      <FormFactor>1</FormFactor>
      <ClientType>4</ClientType>
+     <NavigationType>0</NavigationType>
      <AppModuleComponents>
        <AppModuleComponent type="62" schemaName="msdyn_ChannelIntegrationFrameworkSitemap" />
        <AppModuleComponent type="1" schemaName="msdyn_ciprovider" />
