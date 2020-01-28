@@ -1687,6 +1687,9 @@ namespace Microsoft.CIFramework.Internal {
 			case AnalyticsConstants.notificationRejected:
 			case AnalyticsConstants.notificationTimedOut:
 				return true;
+			default:
+				return false;
+
 		}
 	}
 	/**
@@ -1694,7 +1697,7 @@ namespace Microsoft.CIFramework.Internal {
 	*/
 	export function raiseAnalyticsEventInternal(eventName: string, parameters: Map<string, any>): boolean {
 		let session = null;
-		let correlationId = parameters.get(Constants.correlationId);
+		let correlationId = null;
 		let sessionId = getEventBasedSessionId(parameters);
 		if (isNullOrUndefined(sessionId)) {
 			sessionId = state.sessionManager.getFocusedSession();
@@ -1702,7 +1705,10 @@ namespace Microsoft.CIFramework.Internal {
 		if (sessionId != Constants.defaultSessionId) {
 			session = state.sessionManager.sessions.get(sessionId);
 		}
-		if (!isNotificationEvent(parameters)) {
+		if (isNotificationEvent(parameters)) {
+			correlationId = parameters.get(Constants.correlationId);	
+		}
+		else {
 			correlationId = (session != null ? session.correlationId : null);
 		}
 		let providerName = "", providerId = "", apiVersion = "", sortOrder = "";
