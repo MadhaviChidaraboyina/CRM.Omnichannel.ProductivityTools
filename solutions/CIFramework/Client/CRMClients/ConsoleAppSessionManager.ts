@@ -45,9 +45,13 @@ namespace Microsoft.CIFramework.Internal {
 			if (newProvider != null) {
 				originUrl = newProvider.landingUrl;
 			}
-			raiseSystemAnalyticsEvent(InternalEventName.SessionFocusOut, eventMap, new Map<string, any>().set(Constants.originURL, originUrl));
-			raiseSystemAnalyticsEvent(InternalEventName.SessionFocusIn, eventMap, new Map<string, any>().set(Constants.originURL, originUrl));
 
+			if(state.isAnalyticsEnabledForAnyProvider)
+			{
+				raiseSystemAnalyticsEvent(InternalEventName.SessionFocusOut, eventMap, new Map<string, any>().set(Constants.originURL, originUrl));
+				raiseSystemAnalyticsEvent(InternalEventName.SessionFocusIn, eventMap, new Map<string, any>().set(Constants.originURL, originUrl));
+			}
+			
 			let switchProvider = false;
 			
 			if (previousProvider != null) {

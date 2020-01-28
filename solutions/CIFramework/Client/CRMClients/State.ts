@@ -36,9 +36,14 @@ namespace Microsoft.CIFramework.Internal {
 			messageLibrary: postMessageNamespace.postMsgWrapper;
 
 			/*
-			 * Check if omnichannel is installed, to decide LWI creation
+			 *  if omnichannel is installed, to decide LWI creation
 			 */
 			isOmnichannelInstalled: boolean;
+
+			/*
+			 *  if analytics is enabled for any provider
+			 */
+			isAnalyticsEnabledForAnyProvider: boolean;
 		}
 
 	export class ProviderManager {

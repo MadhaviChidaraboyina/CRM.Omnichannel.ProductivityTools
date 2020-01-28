@@ -172,13 +172,12 @@ namespace Microsoft.CIFramework.Internal {
 		try {
 			let cifAnalyticsLibScript = document.createElement("script");
 			cifAnalyticsLibScript.src = Xrm.Page.context.getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_CIFAnalytics_internal_library.js";
-			cifAnalyticsLibScript.addEventListener("load", function () {
-				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, InternalEventName.CifSessionStart));
-				raiseSystemAnalyticsEvent(InternalEventName.CifSessionStart, mapReturn);
-			});
+
 			window.addEventListener("beforeunload", function () {
-				var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, InternalEventName.CifSessionEnd));
-				raiseSystemAnalyticsEvent(InternalEventName.CifSessionEnd, mapReturn);
+				if(state.isAnalyticsEnabledForAnyProvider){
+					var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, InternalEventName.CifSessionEnd));
+					raiseSystemAnalyticsEvent(InternalEventName.CifSessionEnd, mapReturn);
+				}
 			});
 
 			document.getElementsByTagName("body")[0].appendChild(cifAnalyticsLibScript);
@@ -218,7 +217,6 @@ namespace Microsoft.CIFramework.Internal {
 		let trustedDomains: string[] = [];
 		Xrm.WebApi.retrieveMultipleRecords(Constants.providerLogicalName, "?$filter=statecode eq 0 and contains(" + Constants.appSelectorFieldName + ",'" + appId + "')&$orderby=" + Constants.sortOrderFieldName + " asc").then(
 			(result: any) => {
-
 				if (result && result.entities) {
 					//event listener for the onCliCkToAct event
 					listenerWindow.removeEventListener(Constants.CIClickToAct, onClickToAct);
@@ -259,9 +257,11 @@ namespace Microsoft.CIFramework.Internal {
 							state.providerManager.addProvider(x[Constants.landingUrl], provider);
 						}
 
+						state.isAnalyticsEnabledForAnyProvider = state.isAnalyticsEnabledForAnyProvider || x[Constants.enableAnalyticsAttributeName];
 						var usageData = new UsageTelemetryData(x[Constants.providerId], x[Constants.nameParameter], x[Constants.APIVersion], "loadProvider", x[Constants.SortOrder], appId, cifVersion, false, null);
 						setUsageData(usageData);
 					}
+
 					// initialize and set post message wrapper.
 					state.messageLibrary = new postMessageNamespace.postMsgWrapper(listenerWindow, Array.from(trustedDomains), apiHandlers);
 					// load the widgets onto client. 
@@ -270,6 +270,7 @@ namespace Microsoft.CIFramework.Internal {
 						setUsageData(usageData);
 					});
 
+					cifSessionStart();
 					loadProductivityPanel();
 				}
 			},
@@ -278,6 +279,14 @@ namespace Microsoft.CIFramework.Internal {
 				logFailure(appId, true, errorData, MessageType.loadProvider, cifVersion);
 			}
 		);
+	}
+	
+	function cifSessionStart() {
+		if(state.isAnalyticsEnabledForAnyProvider)
+		{
+			var mapReturn = new Map().set(Microsoft.CIFramework.Constants.value, new Map().set(Microsoft.CIFramework.Constants.actionName, InternalEventName.CifSessionStart));
+			raiseSystemAnalyticsEvent(InternalEventName.CifSessionStart, mapReturn);
+		}
 	}
 
 	function loadProductivityPanel() {
