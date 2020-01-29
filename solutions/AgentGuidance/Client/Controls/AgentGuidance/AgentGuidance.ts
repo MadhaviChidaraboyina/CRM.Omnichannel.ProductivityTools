@@ -219,7 +219,6 @@ module MscrmControls.ProductivityToolAgentGuidance {
                     paddingLeft: "14px",
                     paddingRight: "4px",
                     marginTop: "10px",
-                    display: this.isCardExist ? "" : "none"
                 }
             };
 

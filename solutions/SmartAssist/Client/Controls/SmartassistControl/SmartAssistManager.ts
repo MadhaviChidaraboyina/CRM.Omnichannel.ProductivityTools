@@ -53,7 +53,10 @@ module MscrmControls.ProductivityPanel.Smartassist {
 			let conversationId = ConversationStateManager.GetCurrentConversation();
 			if (conversationId) {
 				let conversationState = ConversationStateManager.GetConversationState(conversationId);
-				let cards = conversationState.GetAllCards();
+                let cards = conversationState.GetAllCards();
+                if (SmartassistControl._context.utils.isNullOrUndefined(cards)) {
+                    this.ResetTopAndBottomPaddings();
+                }
 				for (var key in cards) {
 					let cardId = parseInt(key);
 					let card = cards[key];
@@ -61,6 +64,11 @@ module MscrmControls.ProductivityPanel.Smartassist {
 				}
 			}
 		}
+
+        private ResetTopAndBottomPaddings() {
+            document.getElementById(Smartassist.Constants.SmartAssistOuterContainer).style.paddingTop = "0px";
+            document.getElementById(Smartassist.Constants.SmartAssistOuterContainer).style.paddingBottom = "0px";
+        }
 
 		private ResetSmartAssistControl() {
 			$("#" + Constants.SmartAssistOuterContainer).html(SmartAssistTemplate.get());
