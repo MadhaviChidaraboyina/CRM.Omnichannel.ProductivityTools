@@ -33,7 +33,7 @@ module MscrmControls.CallscriptControl {
 			return this.errorText;
 		}
 
-		public resolveInstructionText(cifUtil: CIFUtil): Promise<string> {
+        public resolveInstructionText(macroUtil: MacroUtil): Promise<string> {
 			return new Promise<any>((resolve, reject) => {
 				resolve(""); //No slug resolution for macro and route actions
 			});
@@ -68,8 +68,9 @@ module MscrmControls.CallscriptControl {
 			});
 		}
 
-		public resolveInstructionText(cifUtil: CIFUtil): Promise<string> {
-			return cifUtil.resolveReplaceableParameters(this.configuredTextInstruction);
+        public resolveInstructionText(macroUtil: MacroUtil): Promise<string> {
+            macroUtil.resolveInitMacroTemplate();
+            return macroUtil.resolveReplaceableParameters(this.configuredTextInstruction);
 		}
 
 		public getResolvedTextInstruction(): string {

@@ -13,7 +13,8 @@ module MscrmControls.CallscriptControl {
 		private stateManager: StateManager;
 		public expandedStepId: string;
 		private stepDetailsManager: CallscriptStepDetailsManager;
-		private cifUtil: CIFUtil;
+        private cifUtil: CIFUtil;
+        private macroUtil: MacroUtil;
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
 
@@ -25,7 +26,8 @@ module MscrmControls.CallscriptControl {
 			this.expandedStepId = Constants.EmptyString;
 			this.stateManager = stateManager;
 			this.stepDetailsManager = stepDetailsManager;
-			this.cifUtil = new CIFUtil(this.context);
+            this.cifUtil = new CIFUtil(this.context);
+            this.macroUtil = new MacroUtil(this.context);
 			this.telemetryContext = TelemetryComponents.CallscriptStepListitemManager;
 			this.telemetryLogger = new TelemetryLogger(this.context);
 		}
@@ -41,8 +43,8 @@ module MscrmControls.CallscriptControl {
 				this.expandedStepId = Constants.EmptyString;
 			}
 			else {
-				if (stepToExpand.action.actionType === CallscriptActionType.TextAction) {
-					stepToExpand.action.resolveInstructionText(this.cifUtil).then(
+                if (stepToExpand.action.actionType === CallscriptActionType.TextAction) {
+                    stepToExpand.action.resolveInstructionText(this.macroUtil).then(
 						(resolvedInstructionText) => {
 							stepToExpand.action.setResolvedInstructionText(resolvedInstructionText);
 							this.context.utils.requestRender();

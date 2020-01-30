@@ -12,7 +12,7 @@ module MscrmControls.CallscriptControl
 	{
 		// properties
 		private context: Mscrm.ControlData<IInputBag>;
-		private cifExternalUtil: Microsoft.CIFramework.External.CIFExternalUtilityImpl;
+        private cifExternalUtil: Microsoft.CIFramework.External.CIFExternalUtilityImpl;
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
 
@@ -72,8 +72,8 @@ module MscrmControls.CallscriptControl
 		{
 			let methodName = "resolveReplaceableParameters";
 			try {
-				let templateParams = this.cifExternalUtil.getSessionTemplateParams();
-				return this.cifExternalUtil.resolveTemplateString(inputParam, templateParams, "");
+                let templateParams = this.cifExternalUtil.getSessionTemplateParams();
+                return this.cifExternalUtil.resolveTemplateString(inputParam, templateParams, "");
 			}
 			catch (error) {
 				let errorMessage = "Failed to resolve replaceable parameters in text";
@@ -139,14 +139,19 @@ module MscrmControls.CallscriptControl
 		// properties
 		private context: Mscrm.ControlData<IInputBag>;
 		private telemetryContext: string;
-		private telemetryLogger: TelemetryLogger;
+        private telemetryLogger: TelemetryLogger;
+        private static isInitMacroActionTemplates: boolean;
+        private initMacroActionTemplatesPromise: Promise<boolean>;
 
 		constructor(context: Mscrm.ControlData<IInputBag>)
 		{
 			this.context = context;
 			this.telemetryContext = TelemetryComponents.MacroUtil;
-			this.telemetryLogger = new TelemetryLogger(this.context);
-		}
+            this.telemetryLogger = new TelemetryLogger(this.context);
+            
+            this.initMacroActionTemplatesPromise= Microsoft.ProductivityMacros.Internal.ProductivityMacroOperation.InitMacroActionTemplates();
+            this.resolveInitMacroTemplate();
+        }
 
 		/**
 		 * Execute macro using macro api
@@ -170,6 +175,45 @@ module MscrmControls.CallscriptControl
 					reject(error);
 				});
 			}
-		}
+        }
+
+        public resolveInitMacroTemplate() {
+            this.initMacroActionTemplatesPromise.then(
+                function (value) {
+                    MacroUtil.isInitMacroActionTemplates = value;
+                },
+                function (error) {
+                    MacroUtil.isInitMacroActionTemplates = false;
+                }
+            );
+        }
+
+        /**
+         * Resolve replaceable parameters
+         * @param inputParam input parameter string
+         * @returns Resolved replaceable parameter
+         */
+        public resolveReplaceableParameters(inputParam: string): Promise<string> {
+            let methodName = "resolveReplaceableParameters";
+            try {
+                if (MacroUtil.isInitMacroActionTemplates) {
+                    return Microsoft.ProductivityMacros.Internal.resolveTemplateString(inputParam, null, "");
+                }
+                else {
+                    return new Promise((resolve, reject) => {
+                        resolve(inputParam);
+                    });
+                }
+            }
+            catch (error) {
+                let errorMessage = "Failed to resolve replaceable parameters in text";
+                let errorParam = new EventParameters();
+                errorParam.addParameter("errorDetails", error);
+                this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
+                return new Promise((resolve, reject) => {
+                    resolve(inputParam);
+                });
+            }
+        }
 	}
 }
