@@ -97,7 +97,7 @@ namespace Microsoft.CIFramework.Internal {
 			if (provider != null) {
 				if (provider.shouldCreateLiveWorkItem && !isNullOrUndefined(sessionInfo)) {
 					let valueMap = new Map().set(Constants.entityStateCode, Constants.stateCodeClose).set(Constants.entityStatusCode, Constants.statusCodeClose);
-					let updateMap = new Map().set(Constants.entityName, Constants.liveWorkItemEntity).set(Constants.entityId, sessionInfo.conversationId).set(Constants.value, valueMap);
+					let updateMap = new Map().set(Constants.entityName, Constants.liveWorkItemEntity).set(Constants.entityId, sessionInfo.conversationId).set(Constants.value, valueMap).set(Constants.originURL, originUrl);
 					updateConversation(updateMap);
 				}
 				provider.closeSession(sessionId);
