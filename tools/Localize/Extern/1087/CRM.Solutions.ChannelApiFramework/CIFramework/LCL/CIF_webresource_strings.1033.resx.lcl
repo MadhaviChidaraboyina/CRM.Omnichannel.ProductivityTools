@@ -653,6 +653,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";VISITOR_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Visitor]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Кіруші]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-30T11:00:43.000828Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Visitor Slug for provider name in third party live workitem]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24633_20200127" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Refresh the tab]]></Val>

@@ -1076,6 +1076,19 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_ProviderId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the Provider that triggered this event]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Унікальний ідентифікатор постачальника, який викликав цю подію]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-30T11:00:46.0007452Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24633_20200127" />
+        </Props>
+      </Item>
       <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[]]></Val>
@@ -1087,6 +1100,19 @@
         <Modified By="v-rondai" DateTime="2019-10-23T12:46:51.000473Z" />
         <Props>
           <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_cifSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for Channel Integration Framework session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Унікальний ідентифікатор для сеансу інфраструктури інтеграції каналів]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-30T11:00:46.0007452Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24633_20200127" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_kpieventdata_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1113,6 +1139,19 @@
         <Modified By="v-licha2" DateTime="2019-10-09T11:10:28.0007393Z" />
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_KPIEventDatamsdyn_sessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Унікальний ідентифікатор для сеансу]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-30T11:00:46.0007452Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24633_20200127" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_KPIEventDatastatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -4234,6 +4273,19 @@
           <Str Name="Custom3" Val="WO21129_20191007" />
         </Props>
       </Item>
+      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_ProviderId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Provider Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ідентифікатор постачальника]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-30T11:00:46.0007173Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24633_20200127" />
+        </Props>
+      </Item>
       <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_ProviderSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Provider Session Id]]></Val>
@@ -4245,6 +4297,19 @@
         <Modified By="v-rondai" DateTime="2019-10-23T12:46:51.0004712Z" />
         <Props>
           <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_cifSessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[User Session Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ідентифікатор сеансу користувача]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-30T11:00:46.0007173Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24633_20200127" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_kpieventdata_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -4271,6 +4336,19 @@
         <Modified By="v-licha2" DateTime="2019-10-09T11:10:28.000683Z" />
         <Props>
           <Str Name="Custom3" Val="WO21129_20191007" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_KPIEventDatamsdyn_sessionId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ідентифікатор сеансу]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-30T11:00:46.0007173Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24633_20200127" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_KPIEventDatastatecode" ItemType="0;.resx" PsrId="211" Leaf="true">

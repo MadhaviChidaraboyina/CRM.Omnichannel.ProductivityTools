@@ -350,7 +350,7 @@
     <comment>V2 api information message</comment>
   </data>
   <data name="VISITOR_TEXT" xml:space="preserve">
-    <value>Visitor</value>
+    <value>방문자</value>
     <comment>Visitor Slug for provider name in third party live workitem</comment>
   </data>
 </root>
