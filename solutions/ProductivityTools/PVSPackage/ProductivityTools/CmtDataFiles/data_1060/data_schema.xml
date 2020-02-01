@@ -188,4 +188,13 @@
       <field displayname="Version Number" name="versionnumber" type="bigint" />
     </fields>
   </entity>
+  <entity name="msdyn_productivitypaneconfiguration" displayname="Productivity pane configuration" etc="10193" primaryidfield="msdyn_productivitypaneconfigurationid" primarynamefield="msdyn_name" disableplugins="false">
+    <fields>
+      <field displayname="Productivity pane configuration" name="msdyn_productivitypaneconfigurationid" type="guid" primaryKey="true" />
+      <field displayname="Productivity pane mode" name="msdyn_productivitypanemode" type="bool" customfield="true" />
+      <field displayname="Productivity pane state" name="msdyn_productivitypanestate" type="bool" customfield="true" />
+      <field displayname="Name" name="msdyn_name" type="string" customfield="true" />
+      <field displayname="Application name" name="msdyn_applicationname" type="string" customfield="true" />
+    </fields>
+  </entity>
 </entities>
