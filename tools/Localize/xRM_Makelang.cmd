@@ -152,6 +152,54 @@ if Exist "%xRM_TMPPATH%\target.txt" (
         set xRM_SOURCE=%%o
         set xRM_TARGET=%%o
         set xRM_COMPNAME=%%q\
+
+        REM To help reading this batch file, here are sample values
+        REM   xRM_PATH      \solutions\Anchors\OmnichannelPrimeCustomMessaging\Solution\Resources\en-US\
+        REM   xRM_FILE      resources.en-US.resx
+        REM   xRM_SOURCE    "D:\OneCRM\CRM.OmniChannel.C1Provisioning\solutions\Anchors\OmnichannelPrimeCustomMessaging\Solution\Resources\en-US\resources.en-US.resx"
+        REM   xRM_TARGET    "D:\OneCRM\CRM.OmniChannel.C1Provisioning\solutions\Anchors\OmnichannelPrimeCustomMessaging\Solution\Resources\en-US\resources.en-US.resx"
+        REM   xRM_COMPNAME  Anchors\OmnichannelPrimeCustomMessaging\
+
+        REM Following if block is to onboard new files automatically. 
+        REM note: it is still required to update eol file to sync with xRM_filelist.txt. I have a plan to update eol file automatically but not yet implemented.
+        REM if it run in 'handoff' option and '!xRM_FILE!.lcl' file doesn't exist,
+        REM given file is new file thus generate lcl file for 'base' and all languages which will be picked by CTAS Handoff (aka WordCount) run
+        if /i "%xRM_HANDOFF%"=="1" (
+            if not exist "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" (
+                echo *** New file !xRM_SOURCE! found. 
+                echo *** Generating base lcl "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl"
+                REM Get parser id based on file extention
+                REM Default to RESX Parser
+                set xRM_PARSER=211
+                if /i "%%~xo"==".json" ( set xRM_PARSER=306 )
+
+                REM Does 'basepath' has a trailing slash? if so remove it 
+                set xRM_SOURCE_BASEPATH=%%~dpo
+                if !xRM_SOURCE_BASEPATH:~-1!==\ ( set xRM_SOURCE_BASEPATH=!xRM_SOURCE_BASEPATH:~0,-1! )
+
+                REM Genereate base lcl
+                echo *** call %PKG_LSBUILD%\lsbuild parse /p !xRM_PARSER! /o "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
+                echo.
+                call %PKG_LSBUILD%\lsbuild parse /p !xRM_PARSER! /o "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
+
+                REM Genereate target lcl
+                for /f "tokens=1,2" %%i in (%~dp0xRM_language.txt) do (
+                    set LCID=%%i
+                    set LL-CC=%%j
+
+                    REM replace 'sr-Latn-RS', 'sr-Cyrl-RS' with 'sr-Latn-CS', 'sr-Cyrl-CS' respectively since D635_CE has only CS based locales
+                    if "%%j"=="sr-Latn-RS" ( set LL-CC=sr-Latn-CS )
+                    if "%%j"=="sr-Cyrl-RS" ( set LL-CC=sr-Cyrl-CS )
+
+                    REM generate twice
+                    REM 1. under 'Localize\Temp\[ll-cc]' to copy to 'D365_CE' repo
+                    REM 2. under 'Localize\Extern\[lcid]' to copy to core team repo
+                    call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LCID! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\!LCID!\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_LOCPATH%\!LCID!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
+                    call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LL-CC! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\!LCID!\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_TMPPATH%\!LL-CC!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
+                )
+            )
+        )
+
         if exist "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" (
             if NOT DEFINED xRM_BASEDONE (
                 REM ExtractOnly - Copy the source file to Master folder
@@ -218,6 +266,7 @@ goto :eof
 
 :lsBuildGenerate
 if EXIST %xRM_TMPPATH%\%1 (
+    echo call %PKG_LSBUILD%\lsbuild response %xRM_TMPPATH%\%1
     call %PKG_LSBUILD%\lsbuild response %xRM_TMPPATH%\%1
 ) else (
     if NOT DEFINED xRM_EXTRACT (
@@ -251,6 +300,7 @@ set xRM_FILE=
 set xRM_SRCPATH=
 set xRM_EXTRACT=
 set xRM_TCOMP=
+set xRM_HANDOFF=
 
 shift
 :ArgumentsLoopBegin
@@ -266,6 +316,7 @@ if /i "%~1" EQU "/FullPL" (
         if /i "%~1" EQU "/handoff" (
             set xRM_EXTRACT=1
             set xRM_PL_FULL=/Pseudo
+            set xRM_HANDOFF=1
         ) else (
             if /i "%~1" EQU "/component" (
                 if "%~2"=="" goto :DisplayUsage
