@@ -16,7 +16,10 @@
     <RolePrivilege name="prvReadmsdyn_designeroptions" level="Global" />
     <RolePrivilege name="prvReadmsdyn_macroactiontemplate" level="Global" />
     <RolePrivilege name="prvReadmsdyn_macrosolutionconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_macrosession" level="Global" />
     <RolePrivilege name="prvReadmsdyn_macrosession" level="Global" />
-		<RolePrivilege name="prvCreatemsdyn_macrosession" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_macrosession" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_macrosession" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_macrosession" level="Global" />
   </RolePrivileges>
 </Role>
