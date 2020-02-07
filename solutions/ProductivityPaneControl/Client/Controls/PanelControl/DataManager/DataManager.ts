@@ -23,23 +23,22 @@ module MscrmControls.ProductivityToolPanel {
         }
 
         //This function returns productivity pane configuration data
-        public GetProductivityPaneConfigData(): Promise<ProductivityPaneConfig> {
+        public getProductivityPaneConfigData(appName: string): Promise<ProductivityPaneConfig> {
             let methodName = 'GetProductivityPaneConfigData';
             try {
                 return new Promise<ProductivityPaneConfig>((resolve, reject) => {
-                    let fetchQuery = this.GenerateQuery();
-                    let retrieveDataPromise = Xrm.WebApi.retrieveMultipleRecords(ProductivityPaneConfigConstants.entityName, fetchQuery);
-                    retrieveDataPromise.then((success: any) => {
-                        if (!this.context.utils.isNullOrUndefined(success)) {
-                            let productivityPane = new ProductivityPaneConfig(success.entities[0].msdyn_productivitypanestate, success.entities[0].msdyn_productivitypanemode);
+                    let productivityPaneQuery = this.getProductivityPanelQuery(appName);
+                    let retrieveDataPromise = Xrm.WebApi.retrieveMultipleRecords(ProductivityPaneConfigConstants.entityName, productivityPaneQuery);
+                    retrieveDataPromise.then(
+                        (response: any) => {
+                            let productivityPane = new ProductivityPaneConfig(response.entities[0].msdyn_productivitypanestate, response.entities[0].msdyn_productivitypanemode);
                             resolve(productivityPane);
-                        }
-                    },
+                        },
                         (error) => {
                             let errorParam = new EventParameters();
                             errorParam.addParameter("errorObj", JSON.stringify(error));
                             this.telemetryLogger.logError(this.telemetryContext, methodName, error.message, errorParam);
-                            reject(error.message);
+                            reject(error);
                         }
                     );
                 });
@@ -51,6 +50,14 @@ module MscrmControls.ProductivityToolPanel {
                     reject(e.message);
                 });
             }
+        }
+
+        //This function generates query to fetch productivity pane config data
+        //applicationName is set to static. Need to make dynamic.
+        public getProductivityPanelQuery(appName: string): string {
+            let query = String.format("{0}{1},{2},{3}&{4}{5} eq '{6}'", QueryDataConstants.SelectOperator, ProductivityPaneConfigConstants.productivityPaneState, ProductivityPaneConfigConstants.productivityPaneMode,
+                ProductivityPaneConfigConstants.applicationName, QueryDataConstants.FilterOperator, ProductivityPaneConfigConstants.applicationName, appName);
+            return query;
         }
                         
         public fetchAgentScriptRecords(SessionTemplateId: string) {
@@ -209,14 +216,7 @@ module MscrmControls.ProductivityToolPanel {
 			eventParam.addParameter("attribute", attribute);
 		}
 
-		//This function generates query to fetch productivity pane config data
-		//applicationName is set to static. Need to make dynamic.
-		public GenerateQuery(): string {
-			let query: string;
-			query = QueryDataConstants.SelectOperator + ProductivityPaneConfigConstants.productivityPaneState + ',' + ProductivityPaneConfigConstants.productivityPaneMode + ',' +
-				ProductivityPaneConfigConstants.applicationName + '&' + QueryDataConstants.FilterOperator + ProductivityPaneConfigConstants.applicationName + ' eq ' + "'OmniChannelEngagementHub'";
-			return query;
-		}
+		
 
 	}
 }

@@ -54,7 +54,7 @@ module MscrmControls.ProductivityToolPanel {
                 this.dataManager = new DataManager(context);
                 this.panelState = new PanelState(context);
                 this.isDataFetched = false;
-                this.GetConfigData();
+                this.retrieveIntitialData();
                 this.initCompleted = true;
                 let params = new EventParameters();
                 this.telemetryLogger.logSuccess(this.telemetryContext, "Init", params);
@@ -394,31 +394,41 @@ module MscrmControls.ProductivityToolPanel {
             delete localStorage[LocalStorageKeyConstants.productivityToolDataModel];
         }
 
-        //This functions get productivity pane config data from data manager 
-        //and assigns to variable productivityPaneConfigData
-        public GetConfigData() {
-            let methodName = 'GetConfigData';
+        public retrieveIntitialData() {
+            let methodName = 'retrieveIntitialData';
             try {
-                let dataPromise = this.dataManager.GetProductivityPaneConfigData();
-                dataPromise.then(
-                    (configData: ProductivityPaneConfig) => {
-                        this.productivityPaneConfigData.productivityPaneState = configData.productivityPaneState;
-                        this.productivityPaneConfigData.productivityPaneMode = configData.productivityPaneMode;
-                        this.isDataFetched = true;
-                        this.context.utils.requestRender();
+                //get application name
+                Xrm.Utility.getGlobalContext().getCurrentAppProperties().then(
+                    (properties: { [key: string]: string }) => {
+                        if (!this.context.utils.isNullOrUndefined(properties)) {
+                            let appName = properties["uniqueName"];
+
+                            //get productivity pane configuration data
+                            this.dataManager.getProductivityPaneConfigData(appName).then(
+                                (configData: ProductivityPaneConfig) => {
+                                    this.productivityPaneConfigData = configData;
+                                    this.isDataFetched = true;
+                                    this.context.utils.requestRender();
+                                },
+                                (error: XrmClientApi.ErrorResponse) => {
+                                    let errorParam = new EventParameters();
+                                    errorParam.addParameter("errorObj", JSON.stringify(error));
+                                    this.telemetryLogger.logError(this.telemetryContext, 'getProductivityPaneConfigData', error.message, errorParam);
+                                }
+                            );
+                        }
                     },
-                    (errorMessage: string) => {
+                    (error: XrmClientApi.ErrorResponse) => {
                         let errorParam = new EventParameters();
-                        errorParam.addParameter("errorDetails", "Error at GetConfigData()");
-                        this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
-                    }
-                );
-            } catch (e) {
+                        errorParam.addParameter("errorObj", JSON.stringify(error));
+                        this.telemetryLogger.logError(this.telemetryContext, 'Failed to fetch app name at getProductivityPaneConfigData().', error.message, errorParam);
+                    });
+            }
+            catch (e) {
                 let errorParam = new EventParameters();
                 errorParam.addParameter("errorObj", JSON.stringify(e));
                 this.telemetryLogger.logError(this.telemetryContext, methodName, e.message, errorParam);
             }
         }
-
     }
 }
