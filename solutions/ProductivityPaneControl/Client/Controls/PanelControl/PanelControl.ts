@@ -267,8 +267,15 @@ module MscrmControls.ProductivityToolPanel {
                 let paneState = this.productivityPaneConfigData.productivityPaneState;
                 //this.panelToggle = this.productivityPaneConfigData.productivityPaneMode;
                 if (paneState == true) {
+
+                    if(!this.panelState.checkAgentScriptAndSmartAssistBot(this.currentSessionId))
+                    {
+                        this.setSidePanelControlState(SidePanelControlState.Hidden);
+                        return navbarContainer;
+                    }
+
                     this.controls = [];
-                    if (this.isSessionChanged && this.panelState.checkAgentScriptAndSmartAssistBot(this.currentSessionId)) {
+                    if (this.isSessionChanged ) {
                         this.controls.push(this.getproductivityToolButtons());
                         this.controls.push(this.getNavBarLastContainer());
                         this.controls.push(this.getPanelContainer());
@@ -284,21 +291,21 @@ module MscrmControls.ProductivityToolPanel {
                     );
                     if (!(this.currentSessionId === Constants.emptyString)) {
                         if (this.panelToggle) {
-                            this.setSidePanelControlState(1);
+                            this.setSidePanelControlState(SidePanelControlState.Expand);
                         } else {
-                            this.setSidePanelControlState(0);
+                            this.setSidePanelControlState(SidePanelControlState.Collpase);
                         }
                     }
                     else {
-                        this.setSidePanelControlState(2);
+                        this.setSidePanelControlState(SidePanelControlState.Hidden);
                     }
                 }
                 else {
-                    this.setSidePanelControlState(2);
+                    this.setSidePanelControlState(SidePanelControlState.Hidden);
                 }
             }
             else {
-                this.setSidePanelControlState(2);
+                this.setSidePanelControlState(SidePanelControlState.Hidden);
             }
 
             return navbarContainer;
@@ -321,10 +328,10 @@ module MscrmControls.ProductivityToolPanel {
                 if (this.productivityToolSelected === Constants.emptyString) {
                     this.productivityToolSelected = Constants.agentGuidance;
                 }
-                this.setSidePanelControlState(1);
+                this.setSidePanelControlState(SidePanelControlState.Expand);
             }
             else {
-                this.setSidePanelControlState(0);
+                this.setSidePanelControlState(SidePanelControlState.Collpase);
             }
             this.panelToggle = !this.panelToggle;
             const data = {
@@ -337,7 +344,7 @@ module MscrmControls.ProductivityToolPanel {
 
         private productivityToolButtonClick(buttonId: string): void {
             if (!this.panelToggle) {
-                this.setSidePanelControlState(1);
+                this.setSidePanelControlState(SidePanelControlState.Expand);
                 this.panelToggle = !this.panelToggle;
                 this.productivityToolSelected = buttonId;
             }

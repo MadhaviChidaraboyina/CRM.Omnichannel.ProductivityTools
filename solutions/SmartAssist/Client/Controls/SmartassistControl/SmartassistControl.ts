@@ -26,7 +26,11 @@ module MscrmControls.ProductivityPanel {
 		 * @params state The user state for this control set from setState in the last session
 		 * @params container The div element to draw this control in
 		 */
-		public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
+        public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
+
+            let sessionContext = context.factory["_customControlProperties"].configuration.Parameters.SessionContext;
+            if (!context.utils.isNullOrUndefined(sessionContext))
+                Smartassist.SmartAssistManager.Instance.callbackOnCardReceived = sessionContext.Callback;
             let self = this;
 			let methodName = "init";
 			// Initialize Telemetry Repoter
@@ -120,6 +124,7 @@ module MscrmControls.ProductivityPanel {
 				let card = Smartassist.AdaptiveCardHelper.GetCardFromMessageContent(content);
 				if (conversationId && uiSessionId) {
 					Smartassist.SmartAssistManager.Instance.RenderSmartAssistCard(conversationId, card.content);
+                    Smartassist.SmartAssistManager.Instance.callbackOnCardReceived(true);
                 }
 			}
 		}

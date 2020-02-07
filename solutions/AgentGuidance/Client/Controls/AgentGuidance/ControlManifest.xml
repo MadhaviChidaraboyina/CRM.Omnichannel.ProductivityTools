@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-	<control namespace="MscrmControls.ProductivityToolAgentGuidance" constructor="AgentGuidance" version="1.0.1" display-name-key="CC_AgentGuidance_Control" control-type="virtual" hidden="true">
+	<control namespace="MscrmControls.ProductivityToolAgentGuidance" constructor="AgentGuidance" version="1.0.2" display-name-key="CC_AgentGuidance_Control" control-type="virtual" hidden="true">
 		<modes>
 		</modes>
 		<resources>

@@ -8,16 +8,31 @@ module MscrmControls.CallscriptControl {
 
 		public static getMainComponentStyle() {
 			return {
-				"height": "100%",
+				"height": "auto",
 				"width": "100%",
 				"text-align": "center",
 				"vertical-align": "middle",
 				"flex-direction": "column",
 				overflow: "auto",
-				minHeight: "346px",
-				paddingTop: "16px",
+				minHeight: "auto",
+				marginTop: "16px",
+				marginBottom: "10px",
 				paddingLeft: "14px",
-				paddingRight: "14px"
+				paddingRight: "14px",
+				"::-webkit-scrollbar": {
+					width: "4px",
+					visibility: "hidden"
+			   },
+				"::-webkit-scrollbar-thumb": {
+					background: "#FFFFFF",
+					borderRadius: "4px"
+				},
+				"::-webkit-scrollbar-track": {
+					background: "#FFFFFF"
+				},
+				":hover::-webkit-scrollbar-thumb": {
+					background: "#b5b5b5"
+				}
 			};
 		}
 
@@ -26,7 +41,7 @@ module MscrmControls.CallscriptControl {
 				width: "40px",
 				height: "40px",
 				margin: "auto",
-				position: "inherit !important"
+				position: "absolute"
 			}
 		}
 

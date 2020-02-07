@@ -30,12 +30,11 @@ module MscrmControls.ProductivityPanel {
 	}
 
 	#smartassist-outer-container {
-		max-height: 240px;
+		max-height: 100%;
 		overflow-y: auto;
 		padding: 2px;
-		padding-right: 4px;
-		padding-top: 14px;
-		padding-bottom: 14px;
+		padding-right: 14px;
+		padding-bottom: 5px;
 	}
 	
 	.card-new {
@@ -52,11 +51,11 @@ module MscrmControls.ProductivityPanel {
 
 	#smartassist-outer-container::-webkit-scrollbar-thumb {
 		background: #FFFFFF;
+        border-radius: 4px;
 	}
 
 	#smartassist-outer-container::-webkit-scrollbar-track {
 		background: #FFFFFF;
-		border-radius: 4px;
 	}
 
 	#smartassist-outer-container:hover::-webkit-scrollbar-thumb {
@@ -78,7 +77,9 @@ module MscrmControls.ProductivityPanel {
 		padding: 16px;
 		font-color: #666666;
 	}
-
+    .smartassist-card-container:last-child {
+            margin-bottom: 0px;
+    }
 	.ac-pushButton {
 		background: none!important;
 		border: none;

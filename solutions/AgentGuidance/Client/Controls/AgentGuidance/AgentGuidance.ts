@@ -20,7 +20,6 @@ module MscrmControls.ProductivityToolAgentGuidance {
 		 * Constructor.
 		 */
         constructor() {
-            this.isCardExist = false;
             this.initCompleted = false;
             this.telemetryContext = TelemetryComponents.MainComponent;
 		}
@@ -40,7 +39,12 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 this.telemetryLogger = new TelemetryLogger(context);
                 let params = new EventParameters();
                 this.telemetryLogger.logSuccess(this.telemetryContext, "Init", params);
-                localStorage.setItem(Constants.agentGuidanceDataModel, JSON.stringify({}));
+                let productivityToolAgentGuidance = localStorage.getItem(ProductivityToolAgentGuidance.Constants.agentGuidanceDataModel);
+                if (this.context.utils.isNullOrUndefined(productivityToolAgentGuidance)) localStorage.setItem(ProductivityToolAgentGuidance.Constants.agentGuidanceDataModel, JSON.stringify({}));
+                let windowObject = this.getWindowObject();
+                windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onSessionSwitched.bind(this));
+                windowObject.Xrm.App.sessions.addOnAfterSessionCreate(this.SetDefaultCardFlag.bind(this));
+                windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClosed.bind(this));
             }
         }
 
@@ -48,19 +52,30 @@ module MscrmControls.ProductivityToolAgentGuidance {
             return window.top;
         }
 
+        private getCurrentSessionId(): string {
+            return this.getWindowObject().Xrm.App.sessions.getFocusedSession().sessionId;
+        }
+
+        private onSessionClosed(event: any) {
+            let closingSessionId = event[Constants.eventArgs][Constants.inputArguments].sessionId;
+            StateManager.DeleteState(closingSessionId + Constants.isSmartCardAvailable);
+        }
+
+        private onSessionSwitched(){
+            this.isCardExist = StateManager.getState(this.getCurrentSessionId() + Constants.isSmartCardAvailable);
+        }
+
+        //set flag true if smart card available for current session
+        private SetCardFlag(flag: boolean) {
+            StateManager.SetState(this.getCurrentSessionId() + Constants.isSmartCardAvailable, flag);
+        }
+
+        //set flag false if smart card available for new session
         private SetDefaultCardFlag() {
             let check = StateManager.getState(this.getCurrentSessionId() + Constants.isSmartCardAvailable);
             if (this.context.utils.isNullOrUndefined(check)) {
                 StateManager.SetState(this.getCurrentSessionId() + Constants.isSmartCardAvailable, false);
             }
-        }
-
-        private getCurrentSessionId(): string {
-            return this.getWindowObject().Xrm.App.sessions.getFocusedSession().sessionId;
-        }
-
-        private SetCardFlag(flag: boolean) {
-            StateManager.SetState(this.getCurrentSessionId() + Constants.isSmartCardAvailable, flag);
         }
 
 		/** 
@@ -70,9 +85,8 @@ module MscrmControls.ProductivityToolAgentGuidance {
 		 * @params context The "Input Bag" as described above
 		 */
         public updateView(context: Mscrm.ControlData<IInputBag>): Mscrm.Component {
-            this.SetDefaultCardFlag();
             let controls = [];
-            let sessionContextAttributes = context.factory[Constants.customControlProperties].configuration.Parameters.SessionContext.Attributes;
+            let sessionContextAttributes = context.navigation[Constants.customControlProperties].configuration.Parameters.SessionContext.Attributes;
             controls = this.getAgentGuidanceTools(context, sessionContextAttributes);
 
 			return context.factory.createElement(
@@ -88,22 +102,34 @@ module MscrmControls.ProductivityToolAgentGuidance {
         }
 
         private getAgentGuidanceTools(context: Mscrm.ControlData<IInputBag>, sessionContextAttributes: any): Mscrm.Component[] {
-            let listItems = [];
+            let agentGuidancePane = [];
+            let tools = [];
             this.isCardExist = StateManager.getState(this.getCurrentSessionId() + Constants.isSmartCardAvailable);
 
-            if (sessionContextAttributes.isCallScript || sessionContextAttributes.isSmartassist){
-                listItems.push(this.getAgentGuidanceLabel(context));
+            if (sessionContextAttributes.isCallScript || sessionContextAttributes.isSmartassist) {
+                agentGuidancePane.push(this.getAgentGuidanceLabel(context));
             }
-            if (sessionContextAttributes.isSmartassist){
-                listItems.push(this.getSmartScriptCompoment(context));
-            } 
-            if (sessionContextAttributes.isCallScript){
-                if(sessionContextAttributes.isSmartassist && this.isCardExist)
-                    listItems.push(this.toolSeparator());
-                listItems.push(this.getCallScriptCompoment(context));
-            } 
-            
-            return listItems;
+            if (sessionContextAttributes.isSmartassist) {
+                tools.push(this.getSmartAssistComponent(context, sessionContextAttributes));
+            }
+            if (sessionContextAttributes.isCallScript) {
+                if (sessionContextAttributes.isSmartassist && this.isCardExist)
+                    tools.push(this.toolSeparator());
+                tools.push(this.getCallScriptComponent(context, sessionContextAttributes));
+            }
+
+            let agentGuidanceTools = context.factory.createElement(
+                "CONTAINER",
+                {
+                    key: Constants.agentGuidanceTools,
+                    id: Constants.agentGuidanceTools,
+                    style: ControlStyle.agentGuidanceToolsStyle()
+                },
+                tools
+            );
+
+            agentGuidancePane.push(agentGuidanceTools);
+            return agentGuidancePane;
         }
 
         private toolSeparator(): Mscrm.Component {
@@ -122,7 +148,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
                     id: `${Constants.toolSeparatorId}`,
                     key: `${Constants.toolSeparatorId}`,
                     style: {
-                        paddingTop: "30px"
+                        paddingTop: "10px"
                     }
                 },
                 separator);
@@ -144,7 +170,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
             return agentGuidanceLabel;
         }
 
-        private getCallScriptCompoment(context: Mscrm.ControlData<IInputBag>): Mscrm.Component {
+        private getCallScriptComponent(context: Mscrm.ControlData<IInputBag>, sessionContextAttributes: any): Mscrm.Component {
             let sessionContextJSON = "";
             let paramValue = context.factory[Constants.customControlProperties].configuration.Parameters.SessionContext;
             if (!this.context.utils.isNullOrUndefined(paramValue))
@@ -168,10 +194,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
             };
 
             const viewProperties: Mscrm.Dictionary = {
-                style: {
-                        paddingRight: "2px",
-                        paddingLeft: "2px"
-                }
+                style: ControlStyle.CallScriptComponentStyle(sessionContextAttributes.isSmartassist, this.isCardExist)
             };
 
             return this.context.factory.createElement("CONTAINER", viewProperties, [
@@ -182,8 +205,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 )]);
         }
 
-        private getSmartScriptCompoment(context: Mscrm.ControlData<IInputBag>): Mscrm.Component {
-            this.isCardExist = StateManager.getState(this.getCurrentSessionId() + Constants.isSmartCardAvailable);
+        private getSmartAssistComponent(context: Mscrm.ControlData<IInputBag>, sessionContextAttributes: any): Mscrm.Component {
             let sessionContextJSON = "";
             let paramValue = context.factory[Constants.customControlProperties].configuration.Parameters.SessionContext;
             if (!this.context.utils.isNullOrUndefined(paramValue))
@@ -203,11 +225,9 @@ module MscrmControls.ProductivityToolAgentGuidance {
                             Primary: false,
                             Attributes: {},
                             Callback: (value: any) => {
-                                if (value) {
-                                    this.SetCardFlag(value);
-                                    context.factory[Constants.customControlProperties].configuration.Parameters.SessionContext.Callback(value);
-                                    this.context.utils.requestRender();
-                                }
+                                this.SetCardFlag(value);
+                                //context.factory[Constants.customControlProperties].configuration.Parameters.SessionContext.Callback(value);
+                                this.context.utils.requestRender();
                             }, 
                         },
                     },
@@ -215,11 +235,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
             };
 
             const viewProperties: Mscrm.Dictionary = {
-                style: {
-                    paddingLeft: "14px",
-                    paddingRight: "4px",
-                    marginTop: "10px",
-                }
+                style: ControlStyle.smartAssistComponentStyle(sessionContextAttributes.isCallScript, this.isCardExist)
             };
 
             return this.context.factory.createElement("CONTAINER", viewProperties, [
@@ -249,7 +265,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
 		public destroy(): void	{
-            delete localStorage[Constants.agentGuidanceDataModel];
+
 		}
     }
 }

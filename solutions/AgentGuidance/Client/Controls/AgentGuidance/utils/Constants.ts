@@ -35,6 +35,14 @@ module MscrmControls.ProductivityToolAgentGuidance {
         public static agentGuidanceDataModel = "AgentGuidanceDataModel";
 
         public static isSmartCardAvailable = "_IsSmartCardAvailable";
+
+        public static agentGuidanceTools = "agent-guidance-tools";
+
+        public static eventArgs = "_eventArgs";
+
+        public static inputArguments = "_inputArguments"
+
+
     }
 
     export class TelemetryComponents {

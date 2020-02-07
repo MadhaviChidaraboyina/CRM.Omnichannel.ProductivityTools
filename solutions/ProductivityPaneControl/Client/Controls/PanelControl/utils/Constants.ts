@@ -21,7 +21,13 @@ module MscrmControls.ProductivityToolPanel {
 		Started,
 		Completed,
 		Failed
-	}
+    }
+
+    export enum SidePanelControlState {
+        Collpase = 0,
+        Expand = 1,
+        Hidden = 2
+    }
 
 	export class Constants {
 		public static emptyString = "";

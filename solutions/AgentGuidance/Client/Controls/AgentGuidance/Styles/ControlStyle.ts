@@ -9,7 +9,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
 
             let style: any = {
                 position: "relative",
-                left: "16px",
+                left: "15px",
                 right: "12.57 %",
                 top: "8 %",
                 bottom: "88.5 %",
@@ -18,6 +18,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 lineHeight: "28px",
                 color: "#323130",
                 paddingTop: "16px",
+                paddingBottom: "5px",
             };
 
             return style;
@@ -43,6 +44,36 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 width: "100%",
                 height: "1px",
                 background: "#EDEBE9",
+            }
+        }
+
+        public static agentGuidanceToolsStyle() {
+            return {
+                height: "87%",
+                display: "flex",
+                flexDirection: "column"
+            }
+        }
+
+        public static CallScriptComponentStyle(isSmartassist: boolean, isCardExist: boolean) {
+            return {
+                paddingRight: "4px",
+                paddingLeft: "2px",
+                height: "auto",
+                maxHeight: isSmartassist && isCardExist ? "inherit" : "100%",
+                overflow: "hidden auto"
+            }
+        }
+
+        public static smartAssistComponentStyle(isCallScript: boolean, isCardExist: boolean) {
+            return {
+                paddingLeft: "14px",
+                paddingRight: "4px",
+                paddingTop: "11px",
+                paddingBottom: "10px",
+                height: "auto",
+                maxHeight: isCallScript ? "50%" : "100%",
+                display: isCardExist ? "" : "none"
             }
         }
      

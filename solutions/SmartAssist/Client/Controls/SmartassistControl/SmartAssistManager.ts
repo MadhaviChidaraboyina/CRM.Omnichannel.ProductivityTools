@@ -10,6 +10,7 @@ module MscrmControls.ProductivityPanel.Smartassist {
 		private static instance: SmartAssistManager = null;
 		private adaptiveCard: AdaptiveCards.AdaptiveCard = null;
 		private logger: TelemetryLogger;
+        public callbackOnCardReceived: (value: any) => void;
 
 		private constructor() {
 			this.SmartAssistCards = {};
@@ -45,30 +46,22 @@ module MscrmControls.ProductivityPanel.Smartassist {
 			}
 		}
 
-		public ReRenderCards() {
+        public ReRenderCards() {
 
-			this.ResetSmartAssistControl();
-			this.RenderTitle(SmartassistControl.getString(Smartassist.LocalizedStrings.SmartAssistControlHeader));
+            this.ResetSmartAssistControl();
+            this.RenderTitle(SmartassistControl.getString(Smartassist.LocalizedStrings.SmartAssistControlHeader));
 
-			let conversationId = ConversationStateManager.GetCurrentConversation();
-			if (conversationId) {
+            let conversationId = ConversationStateManager.GetCurrentConversation();
+            if (conversationId) {
 				let conversationState = ConversationStateManager.GetConversationState(conversationId);
                 let cards = conversationState.GetAllCards();
-                if (SmartassistControl._context.utils.isNullOrUndefined(cards)) {
-                    this.ResetTopAndBottomPaddings();
-                }
-				for (var key in cards) {
+                for (var key in cards) {
 					let cardId = parseInt(key);
 					let card = cards[key];
 					this.renderCard(card, cardId, conversationId);
 				}
 			}
 		}
-
-        private ResetTopAndBottomPaddings() {
-            document.getElementById(Smartassist.Constants.SmartAssistOuterContainer).style.paddingTop = "0px";
-            document.getElementById(Smartassist.Constants.SmartAssistOuterContainer).style.paddingBottom = "0px";
-        }
 
 		private ResetSmartAssistControl() {
 			$("#" + Constants.SmartAssistOuterContainer).html(SmartAssistTemplate.get());
@@ -181,18 +174,24 @@ module MscrmControls.ProductivityPanel.Smartassist {
 			}
 		}
 
-		private BindDismissActionForCard(conversationId: string, cardId: number) {
+        private BindDismissActionForCard(conversationId: string, cardId: number) {
 			$('#' + Constants.SmartAssistDismissCardButtonId + cardId).on(Constants.eventClick, () => {
 				let id = Constants.SmartAssistCardContainerIdPrefix + cardId;
 				$("#" + id).remove();
-				ConversationStateManager.GetConversationState(conversationId).RemoveCard(cardId);
+                ConversationStateManager.GetConversationState(conversationId).RemoveCard(cardId);
+                var conversationState = Smartassist.ConversationStateManager.GetConversationState(conversationId);
+                var cards = conversationState.GetAllCards();                
+                var length = Object.keys(cards).length;
+                if (length == 0) {
+                    this.callbackOnCardReceived(false);
+                }
 			});
 			$('#' + Smartassist.Constants.SmartAssistDismissCardButtonId + cardId).on(Constants.eventKeyPress, function (args) {
 				let id = Smartassist.Constants.SmartAssistDismissCardButtonId + cardId;
 				if (args.keyCode == Constants.EnterKeyCode) {
 					$("#" + id).click();
 				}
-			});
+            });
 		}
 
 	}
