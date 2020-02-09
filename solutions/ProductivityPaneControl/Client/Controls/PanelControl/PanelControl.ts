@@ -30,6 +30,7 @@ module MscrmControls.ProductivityToolPanel {
         private sessionChangeManager: SessionChangeManager;
         private controls: Mscrm.Component[];
         private isSessionChanged: boolean;
+        private notificationCount: number;
 		/**
 		 * Constructor.
 		 */
@@ -83,7 +84,8 @@ module MscrmControls.ProductivityToolPanel {
                 if (actionType === Constants.sessionCreated) {
                     const data = {
                         productivityToolSelected: Constants.agentGuidance,
-                        panelToggle: this.productivityPaneConfigData.productivityPaneMode
+                        panelToggle: this.productivityPaneConfigData.productivityPaneMode,
+                        notificationCount: 0
                     }
                     this.panelState.storeSessionTemplateIdInLocStorage(sessionContextData.newSessionId);
                     this.panelState.storeLiveWorkStreamIdInLocStorage(sessionContextData.newSessionId);
@@ -93,6 +95,7 @@ module MscrmControls.ProductivityToolPanel {
                     let sessionData = PanelState.getState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
                     this.productivityToolSelected = sessionData.productivityToolSelected;
                     this.panelToggle = sessionData.panelToggle;
+                    this.notificationCount = sessionData.notificationCount;
                     this.context.utils.requestRender();
                 }
                 if (actionType === Constants.sessionClosed) {
@@ -123,7 +126,15 @@ module MscrmControls.ProductivityToolPanel {
                             Primary: false,
                             Attributes: { isCallScript: isCallScriptAvail, isSmartassist: isSmartassistAvail },
                             Callback: (value: any) => {
-                                //notification ui code will go here
+                                if (!this.panelToggle) {
+                                    const data = {
+                                        productivityToolSelected: this.productivityToolSelected,
+                                        panelToggle: this.panelToggle,
+                                        notificationCount: ++this.notificationCount
+                                    }
+                                    PanelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, data);
+                                }
+                                this.context.utils.requestRender();
                             },
                         },
                     },
@@ -177,7 +188,7 @@ module MscrmControls.ProductivityToolPanel {
                     onClick: this.onButtonClick.bind(this, buttonId),
                     style: (this.productivityToolSelected === buttonId && this.panelToggle) ? ControlStyle.getProductivityPanelBtnStyle(Constants.TRUE) : ControlStyle.getProductivityPanelBtnStyle(Constants.FALSE)
                 },
-                [icon, selectionIndicator ? this.getProductivityToolSelectionIndicator(buttonId) : Constants.emptyString]);
+                [icon, (!this.panelToggle && this.notificationCount > 0 && buttonId == Constants.agentGuidance) ? this.notificationContainer() : Constants.emptyString, selectionIndicator ? this.getProductivityToolSelectionIndicator(buttonId) : Constants.emptyString]);
 
             const listItem = this.context.factory.createElement(
                 "LISTITEM",
@@ -230,6 +241,29 @@ module MscrmControls.ProductivityToolPanel {
 
             return listItem;
         }
+
+        private notificationContainer(): Mscrm.Component {
+            const notificationLabel = this.context.factory.createElement(
+                "Label",
+                {
+                    id: Constants.notificationLabelId,
+                    key: Constants.notificationLabelId,
+                    style: ControlStyle.getNotificationLabelStyle()
+                },
+                this.notificationCount);
+
+            const notificationContainer = this.context.factory.createElement(
+                "CONTAINER",
+                {
+                    id: Constants.notificationContainerId,
+                    key: Constants.notificationContainerId,
+                    style: ControlStyle.getNotificationContainerStyle()
+                },
+                notificationLabel);
+
+            return notificationContainer;
+        }
+
         private getproductivityToolButtons(): Mscrm.Component {
 			let listItems: Mscrm.Component[] = [];
 
@@ -329,6 +363,7 @@ module MscrmControls.ProductivityToolPanel {
                     this.productivityToolSelected = Constants.agentGuidance;
                 }
                 this.setSidePanelControlState(SidePanelControlState.Expand);
+                this.notificationCount = 0;
             }
             else {
                 this.setSidePanelControlState(SidePanelControlState.Collpase);
@@ -336,7 +371,8 @@ module MscrmControls.ProductivityToolPanel {
             this.panelToggle = !this.panelToggle;
             const data = {
                 productivityToolSelected: this.productivityToolSelected,
-                panelToggle: this.panelToggle
+                panelToggle: this.panelToggle,
+                notificationCount: this.notificationCount
             }
             PanelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, data);
             this.context.utils.requestRender();
@@ -351,9 +387,13 @@ module MscrmControls.ProductivityToolPanel {
             if (!(this.productivityToolSelected === buttonId)) {
                 this.productivityToolSelected = buttonId;
             }
+            if (buttonId == Constants.agentGuidance) {
+                this.notificationCount = 0;
+            }
             const data = {
                 productivityToolSelected: this.productivityToolSelected,
-                panelToggle: this.panelToggle
+                panelToggle: this.panelToggle,
+                notificationCount: this.notificationCount
             }
             PanelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, data);
             this.context.utils.requestRender();

@@ -79,6 +79,8 @@ module MscrmControls.ProductivityToolPanel {
         public static agentGuidanceControlName = "childcontrol1";
         public static agentGuidanceControlKey = "agentguidancecontrol_child1";
 
+        public static notificationLabelId = "notificationLabelId";
+        public static notificationContainerId = "notificationContainerId";
 
 	}
 

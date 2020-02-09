@@ -226,8 +226,12 @@ module MscrmControls.ProductivityToolAgentGuidance {
                             Attributes: {},
                             Callback: (value: any) => {
                                 this.SetCardFlag(value);
-                                //context.factory[Constants.customControlProperties].configuration.Parameters.SessionContext.Callback(value);
-                                this.context.utils.requestRender();
+                                if (value) {
+                                    context.factory[Constants.customControlProperties].configuration.Parameters.SessionContext.Callback(value);
+                                }
+                                else {
+                                    this.context.utils.requestRender();
+                                }
                             }, 
                         },
                     },

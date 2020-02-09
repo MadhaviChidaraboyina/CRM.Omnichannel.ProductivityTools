@@ -81,5 +81,33 @@ module MscrmControls.ProductivityToolPanel {
                 visibility: flag ? "hidden" : "visible"
             }
         }
+
+        public static getNotificationLabelStyle() {
+            return {
+                width: "inherit",
+                fontFamily: "Segoe UI",
+                fontSize: "12px",
+                lineHeight: "inherit",
+                alignItems: "center",
+                textAlign: "center",
+                letterSpacing: "0.005em",
+                color: "#FFFFFF",
+            }
+        }
+
+        public static getNotificationContainerStyle() {
+            return {
+                height: "15px",
+                width: "15px",
+                position: "absolute",
+                right: ".45em",
+                top: "3.2em",
+                /* Persona/Red10 */
+                background: "#D13438",
+                border: "1px solid #A9A9A9",
+                borderRadius: "50%",
+                alignItems: "center"
+            }
+        }
 	}
 }
