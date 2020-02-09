@@ -12,29 +12,41 @@
       <Item ItemId=";15062:Description,msdyn_smartassist" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This solution enables smart assist and call script functionality for agents. ]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[This solution enables smart assist and call script functionality for agents. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Giải pháp này cho phép chức năng hỗ trợ thông minh và kịch bản cuộc gọi cho tổng đài viên. ]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T04:41:43.0006254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Dynamics 365]]></Val>
-          <Tgt Cat="Text" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Dynamics 365]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T04:41:43.0006254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,msdyn_smartassist" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent Guidance]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Agent Guidance]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Hướng dẫn Tổng đài viên]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T04:41:43.0006254Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
     </Item>
   </Item>

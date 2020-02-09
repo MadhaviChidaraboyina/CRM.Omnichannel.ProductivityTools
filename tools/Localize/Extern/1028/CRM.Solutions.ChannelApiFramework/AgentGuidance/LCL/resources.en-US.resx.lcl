@@ -12,29 +12,41 @@
       <Item ItemId=";15062:Description,msdyn_smartassist" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This solution enables smart assist and call script functionality for agents. ]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[This solution enables smart assist and call script functionality for agents. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[此解決方案為專員啟用智慧助理及呼叫指令碼功能。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T08:16:26.000628Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Dynamics 365]]></Val>
-          <Tgt Cat="Text" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Dynamics 365]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T08:16:26.000628Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,msdyn_smartassist" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent Guidance]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Agent Guidance]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[專員指南]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T08:16:26.000628Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
     </Item>
   </Item>

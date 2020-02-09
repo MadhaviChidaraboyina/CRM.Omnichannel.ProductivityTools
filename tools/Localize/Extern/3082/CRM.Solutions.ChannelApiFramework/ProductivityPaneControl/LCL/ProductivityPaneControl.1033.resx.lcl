@@ -12,23 +12,31 @@
       <Item ItemId=";ProductivityPaneConfig_LearnMore_String" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Learn more.]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Learn more.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Más información.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T07:24:51.0006079Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
       <Item ItemId=";ProductivityPaneConfig_info_text" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Productivity pane provides agents quick access to productivity apps and tools. {0}]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Productivity pane provides agents quick access to productivity apps and tools. {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[El panel de productividad proporciona a los agentes acceso rápido a las aplicaciones y herramientas de productividad. {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T07:24:51.0006079Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[DO NOT CHANGE {0} as it will be replaced with ProductivityPaneConfig_LearnMore_String.]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
     </Item>
   </Item>

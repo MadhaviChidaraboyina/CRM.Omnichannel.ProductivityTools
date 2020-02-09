@@ -12,20 +12,28 @@
       <Item ItemId=";Set_Default_AgentScript_No_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Set the toggle to No to disable the expression to set the default script for a particular session type.]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Set the toggle to No to disable the expression to set the default script for a particular session type.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[將開關設定為 [否]5D; 以停用為特定工作階段類型設定預設指令碼的運算式。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T08:16:26.0004195Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
       <Item ItemId=";Set_Default_AgentScript_Yes_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Set the toggle to Yes to enable and build expression to set the default script for a particular session type.]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Set the toggle to Yes to enable and build expression to set the default script for a particular session type.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[將開關設定為 [是]5D; 以啟用和建置運算式，為特定工作階段類型設定預設的指令碼。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T08:16:26.0004034Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
     </Item>
   </Item>

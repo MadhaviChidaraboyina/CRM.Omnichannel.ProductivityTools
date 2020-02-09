@@ -12,14 +12,18 @@
       <Item ItemId=";Agent_Guidance" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent guidance]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Agent guidance]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vejledning til helpdesk-medarbejder]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T02:05:09.0006409Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Header value for agentguidance control]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
     </Item>
   </Item>

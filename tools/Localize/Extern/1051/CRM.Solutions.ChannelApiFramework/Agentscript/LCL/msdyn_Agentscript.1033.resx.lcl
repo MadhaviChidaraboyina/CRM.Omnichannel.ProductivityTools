@@ -12,20 +12,28 @@
       <Item ItemId=";Set_Default_AgentScript_No_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Set the toggle to No to disable the expression to set the default script for a particular session type.]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Set the toggle to No to disable the expression to set the default script for a particular session type.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ak chcete zakázať výraz na nastavenie predvoleného skriptu pre konkrétny typ relácie, nastavte prepínač na možnosť Nie.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T02:39:34.0003536Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
       <Item ItemId=";Set_Default_AgentScript_Yes_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Set the toggle to Yes to enable and build expression to set the default script for a particular session type.]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Set the toggle to Yes to enable and build expression to set the default script for a particular session type.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ak chcete povoliť a zostaviť výraz na nastavenie predvoleného skriptu pre konkrétny typ relácie, nastavte prepínač na možnosť Áno.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T02:39:34.0003536Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
     </Item>
   </Item>

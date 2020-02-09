@@ -12,20 +12,28 @@
       <Item ItemId=";Set_Default_AgentScript_No_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Set the toggle to No to disable the expression to set the default script for a particular session type.]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Set the toggle to No to disable the expression to set the default script for a particular session type.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[व्यंजक को अक्षम करने के लिए टॉगल को नहीं पर सेट करें, ताकि किसी विशेष सत्र प्रकार के लिए डिफ़ॉल्ट स्क्रिप्ट सेट की जा सके.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T07:24:50.0004737Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
       <Item ItemId=";Set_Default_AgentScript_Yes_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Set the toggle to Yes to enable and build expression to set the default script for a particular session type.]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Set the toggle to Yes to enable and build expression to set the default script for a particular session type.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[बिल्ड व्यंजक को सक्षम करने के लिए टॉगल को हाँ पर सेट करें, ताकि किसी विशेष सत्र प्रकार के लिए डिफ़ॉल्ट स्क्रिप्ट सेट की जा सके.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T07:24:50.0004737Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
     </Item>
   </Item>

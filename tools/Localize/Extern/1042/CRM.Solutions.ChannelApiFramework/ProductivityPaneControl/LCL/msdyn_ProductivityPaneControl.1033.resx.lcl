@@ -12,23 +12,31 @@
       <Item ItemId=";ProductivityPaneConfig_LearnMore_String" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Learn more.]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Learn more.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[자세히 알아보십시오.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0007841Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
       <Item ItemId=";ProductivityPaneConfig_info_text" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Productivity pane provides agents quick access to productivity apps and tools. {0}]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Productivity pane provides agents quick access to productivity apps and tools. {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[생산성 창은 에이전트에게 생산성 앱 및 도구에 대한 빠른 액세스를 제공합니다. {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0007841Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[DO NOT CHANGE {0} as it will be replaced with ProductivityPaneConfig_LearnMore_String.]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
       </Item>
     </Item>
   </Item>
