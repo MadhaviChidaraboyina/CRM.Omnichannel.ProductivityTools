@@ -1,9 +1,6 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 		<ProjectToBuild Include="Anchors\ProductivityTools\dirs.proj" />
-		<ProjectToBuild Include="CIFrameworkAnalytics\dirs.proj" />
-		<ProjectToBuild Include="CIFramework\dirs.proj" />
-		<ProjectToBuild Include="ScenarioConfiguration\dirs.proj" />
 		<ProjectToBuild Include="ProductivityMacros\dirs.proj" />
 		<ProjectToBuild Include="Agentscript\dirs.proj" />
         <ProjectToBuild Include="SmartAssist\dirs.proj" />

@@ -1,8 +1,0 @@
-{
-	"extends": "../../tsconfig/tsconfig.base.mocha.fullapi.json",
-  "include": [ "../Client/*.ts", "../Client/Widget/*.ts", "../Client/Widget/**/*.ts", "**/*.ts" ],
-  "exclude": ["../Client/Widget/msdyn_ciLibrary.d.ts"],
-	"compilerOptions": {
-		"outFile": "ClientUnitTests.js"
-	}
-}
