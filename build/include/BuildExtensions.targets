@@ -1,4 +1,0 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<UsingTask TaskName="FindReplaceTextInFile" AssemblyFile="$(PKG_XRMAPP_TOOLS)\tools\FindReplaceTextInFile\Microsoft.Dynamics.XrmSolutions.Tools.FindReplaceTextInFile.dll" />
-	<UsingTask TaskName="LabelCheck" AssemblyFile="$(PKG_XRMAPP_TOOLS)\tools\LabelCheck\Microsoft.Dynamics.XrmSolutions.Tools.LabelCheck.dll" />
-</Project>

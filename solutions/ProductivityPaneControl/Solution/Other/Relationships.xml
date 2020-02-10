@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<EntityRelationships>
- <EntityRelationship Name="lk_msdyn_productivitypaneconfiguration_createdby" />
- <EntityRelationship Name="lk_msdyn_productivitypaneconfiguration_modifiedby" />
- <EntityRelationship Name="organization_msdyn_productivitypaneconfiguration" />
-</EntityRelationships>

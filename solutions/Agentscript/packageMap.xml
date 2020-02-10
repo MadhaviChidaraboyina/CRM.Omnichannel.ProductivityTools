@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Mapping>
-  <!-- Match specific named files to an alternate folder -->
-  <Folder map="WebResources" to="%WSRoot%\solutions\Agentscript\Package\WebResources" />
-  <Folder map="WebResources" to="%WSRoot%\solutions\Agentscript\Solution\WebResources" />
-  <FileToFile map="PluginAssemblies/MicrosoftDynamicsAgentscriptPlugins-DF569CD1-E10A-4280-AC58-8074920E8983/Microsoft.Dynamics.Agentscript.Plugins.dll" to="%WSRoot%\drop\%BuildConfiguration%\%BuildPlatform%\Plugins\Microsoft.Dynamics.Agentscript.Plugins.dll" />
-  <FileToFile map="PluginAssemblies/MicrosoftDynamicsAgentscriptWorkflows-262B3DA2-0518-401A-AACC-C74631965427/Microsoft.Dynamics.Agentscript.Workflows.dll" to="%WSRoot%\drop\%BuildConfiguration%\%BuildPlatform%\Workflows\Microsoft.Dynamics.Agentscript.Workflows.dll" />
-</Mapping>

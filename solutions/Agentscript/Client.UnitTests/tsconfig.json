@@ -1,6 +1,0 @@
-﻿{
-	"extends":  "../../tsconfig/tsconfig.base.mocha.json",
-	"include": [ "**/*.ts" ],
-	"compilerOptions": {
-	}
-}
