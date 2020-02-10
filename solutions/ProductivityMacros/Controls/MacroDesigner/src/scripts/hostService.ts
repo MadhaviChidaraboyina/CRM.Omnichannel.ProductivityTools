@@ -2,7 +2,11 @@
 import * as SharedDefines from "./sharedDefines";
 import { isNullOrUndefined, isNull } from "util";
 import * as Utils from "./sharedUtils";
-
+import { BuiltinProvider } from "./LogicAppDesigner/BuiltinProvider";
+import { BaseRecommendationProvider } from "./LogicAppDesigner/Provider";
+import { RecommendationRouter, GoBackResponse, SelectConnectorResponse, SelectOperationResponse } from "./LogicAppDesigner/RecommendationRouter";
+import { CustomRecommendationProvider } from "./LogicAppDesigner/CustomRecommendationProvider";
+import { RecommendationProvider, RecommendationResults, RecommendationConnector, RecommendationOperation, RecommendationOperationKind, RecommendationUserVoiceProps, builtInOperationIds } from './DesignerDefinitions';
 
 export class BuiltInTypeService {
     constructor(designerOptions, analytics) { }
@@ -214,7 +218,8 @@ export class OperationManager {
                         summary: action.summary,
                         visibility: action.visibility,
                         iconUri: action.icon,
-                        brandColor: action.brandColor,
+						brandColor: action.brandColor,
+						operationType: action.type
                     }
                 };
                 if (action.inputs) {
@@ -299,20 +304,25 @@ export class OperationManager {
         return ret.filter(function (action) {
             return isNullOrUndefined(kind) || (kind === action.kind);
         });
-    }
+	}
+
     public getActionById(operationId: string): DesignerAction | null {
         for (let conn in this.actions) {
-            for (let act in this.actions[conn]) {
-                if (this.actions[conn][act].id === operationId) {
+			for (let act in this.actions[conn]) {
+				let lowerCaseOperationType = this.actions[conn][act].properties.operationType;
+				if (lowerCaseOperationType !== null && lowerCaseOperationType !== undefined) {
+					lowerCaseOperationType = lowerCaseOperationType.toLowerCase();
+				}
+				if (this.actions[conn][act].id === operationId || lowerCaseOperationType === operationId.toLowerCase()) {
                     return this.actions[conn][act];
-                }
+				}
             }
-        }
+		}
         return null;
     }
 }
-class SmartRecommendationProvider implements Designer.RecommendationProvider {
-    private designerOptions: SharedDefines.IDesignerOptions;
+class SmartRecommendationProvider implements RecommendationProvider {
+	public designerOptions: any;
     private category: string = "";
     private operationManager: OperationManager;
     constructor(designerOptions: SharedDefines.IDesignerOptions, operationManager: OperationManager, category: string, analytics) {
@@ -408,20 +418,67 @@ class SmartRecommendationProvider implements Designer.RecommendationProvider {
 
     public shouldAllowTriggerSelectionAsAction(connectorId: string, operationId: string, kind: string): boolean {
         return false;   //TODO
-    }
+	}
+
+	public getExtraOperations(_kind: string): RecommendationOperation[] {
+		return [];
+	}
+
+	public goBack(): string {
+		return GoBackResponse.DEFAULT;
+	}
+
+	public selectConnector(_connector: string, _kind: string): string {
+		return SelectConnectorResponse.DEFAULT;
+	}
+
+	public selectOperation(operation: string, kind: string): string {
+		switch (operation) {
+			case builtInOperationIds.FOREACH:
+			case builtInOperationIds.IF:
+			case builtInOperationIds.SCOPE:
+			case builtInOperationIds.SWITCH:
+			case builtInOperationIds.UNTIL:
+				return SelectOperationResponse.SELECT_SCOPE_OPERATION;
+
+			default:
+				return SelectOperationResponse.DEFAULT;
+		}
+	}
 }
 
-export class SmartRecommendationImpl implements Designer.SmartRecommendationService {
-    private _recommendationProviders: { [category: string]: SmartRecommendationProvider } = {};
-    private designerOptions: SharedDefines.IDesignerOptions;
-    private operationManager: OperationManager;
-    constructor(designerOptions: SharedDefines.IDesignerOptions, operationManager: OperationManager, analytics) {
-        this.designerOptions = designerOptions;
+export enum LogicAppsCategories {
+	LOGIC_APPS_BUILTIN = "LOGIC_APPS_BUILTIN",
+	CUSTOM = "CUSTOM"
+}
+
+
+export class SmartRecommendationImpl implements RecommendationRouter, Designer.RecommendationService2 {
+	private _recommendationProviders: { [category: string]: BaseRecommendationProvider } = {};
+	private designerOptions: any;
+	private operationManager: OperationManager;
+	constructor(public recommendationOptions: Designer.RecommendationServiceOptions, designerOptions: any, operationManager: OperationManager, analytics) {
+		
+		this.designerOptions = designerOptions;
         this.operationManager = operationManager;
-        let _this = this;
-        designerOptions.Categories.forEach(function (category) {
-            _this._recommendationProviders[category.itemKey] = new SmartRecommendationProvider(designerOptions, operationManager, category.itemKey, analytics);
-        });
+		let _this = this;
+		this._recommendationProviders = {
+
+			[LogicAppsCategories.LOGIC_APPS_BUILTIN]: new BuiltinProvider({ builtInTypeService: recommendationOptions.builtInTypeService }, designerOptions),
+			//[LogicAppsCategories.CUSTOM]: new CustomRecommendationProvider(designerOptions)
+
+		};
+		this.designerOptions.Categories.forEach(function (category) {
+			if (category.itemKey != SharedDefines.Constants.BUILTIN_CATEGORY) {
+				_this._recommendationProviders[category.itemKey] = new SmartRecommendationProvider(designerOptions, operationManager, category.itemKey, analytics);
+			}
+		});
+  //      designerOptions.Categories.forEach(function (category) {
+  //         // _this._recommendationProviders[category.itemKey] = new SmartRecommendationProvider(designerOptions, operationManager, category.itemKey, analytics);
+		//	[LogicAppsCategories.LOGIC_APPS_BUILTIN]: new BuiltinProvider({ builtInTypeService: recommendationOptions.builtInTypeService }, designerOptions),
+		//	[LogicAppsCategories.CUSTOM]: new CustomRecommendationProvider(designerOptions)
+
+		//});
     }
     public getConnectorBrandColor(category: string, rawConnector: any): string {
         return this._recommendationProviders[category].getConnectorBrandColor(rawConnector);
@@ -449,12 +506,12 @@ export class SmartRecommendationImpl implements Designer.SmartRecommendationServ
     public getDefaultOperationKind(category: string, isTrigger: boolean): string {
         return this._recommendationProviders[category].getDefaultOperationKind(isTrigger);
     }
-    /*public getExtraOperations(category: string, kind: string): Designer.RecommendationOperation[] {
+    public getExtraOperations(category: string, kind: string): Designer.RecommendationOperation[] {
         return this._recommendationProviders[category].getExtraOperations(kind);
-    }*/
-    public getExtraOperationsByConnector(category: string, connectorId: string, kind: SharedDefines.Kind): Promise<Designer.RecommendationOperation[]> {
-        return this._recommendationProviders[category].getExtraOperationsByConnector(connectorId, kind);
     }
+    //public getExtraOperationsByConnector(category: string, connectorId: string, kind: SharedDefines.Kind): Promise<Designer.RecommendationOperation[]> {
+    //    return this._recommendationProviders[category].getExtraOperationsByConnector(connectorId, kind);
+    //}
     public getOperationKindsByCategory(category: string): Designer.RecommendationOperationKind[] {
         return this._recommendationProviders[category].getOperationKinds();
     }
@@ -502,7 +559,19 @@ export class SmartRecommendationImpl implements Designer.SmartRecommendationServ
                 }]);  //TODO
         }
         return Promise.reject("Unknown connector");
-    }
+	}
+
+	goBack(category: string): string {
+		return this._recommendationProviders[category].goBack();
+	}
+
+	selectConnector(category: string, connector: string, kind: string): string {
+		return this._recommendationProviders[category].selectConnector(connector, kind);
+	}
+
+	selectOperation(category: string, operation: string, kind: string): string {
+		return this._recommendationProviders[category].selectOperation(operation, kind);
+	}
 }
 
 export class OperationManifestServiceImpl implements Designer.OperationManifestService {
@@ -512,8 +581,16 @@ export class OperationManifestServiceImpl implements Designer.OperationManifestS
         this.designerOptions = designerOptions;
         this.operationManager = operationManager;
     }
-    public isSupported(operationType: string, operationKind: string | undefined): boolean {
-        return true;    //TODO
+	public isSupported(operationType: string, operationKind: string | undefined): boolean {
+		//if (operationType == "" || operationType == undefined)
+		//	return true;
+		let action1 = this.operationManager.getActionById(operationType);
+		if (action1 || operationType.toLowerCase() == "start") {
+			return true;
+		}
+		return false;
+		//if (operationType == "If" || operationType == "if") { return false; }
+		//return true;
     }
     public getOperationInfo(definition: any): Promise<Designer.OperationInfo> {
         let defaultConnector = this.operationManager.getDefaultConnector();

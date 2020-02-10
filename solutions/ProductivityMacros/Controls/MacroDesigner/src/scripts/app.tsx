@@ -231,13 +231,27 @@ function initializeDesigner(req) {
                 });
                 rpc.register(SharedDefines.DesignerMessages.Initialize, function (options) {
                     //console.log("Start initialize");
-                    let designerOptions: SharedDefines.IDesignerOptions = JSON.parse(options);
-                    let operationManager: HostService.OperationManager = new HostService.OperationManager(designerOptions);
-                    let builtInTypeServiceFactory = function (analytics, schemaVersion) {
-                        return new HostService.BuiltInTypeService(designerOptions, analytics);
-                    };
-                    let recommendationServiceFactory = function (analytics, schemaVersion) {
-                        return new HostService.SmartRecommendationImpl(
+					let designerOptions: SharedDefines.IDesignerOptions = JSON.parse(options);
+					designerOptions.Categories.push({
+						"itemKey": SharedDefines.Constants.BUILTIN_CATEGORY,
+						"linkText": SharedDefines.Constants.BUILTIN_CATEGORY_DISPLAY
+					})
+					
+					let builtInTypeServiceFactory = function (analytics, schemaVersion) {
+						return new DesignerCore.LogicAppsBuiltInTypeService(schemaVersion, designerOptions);
+					};
+
+					let operationManager: HostService.OperationManager = new HostService.OperationManager(designerOptions);
+					//Why using DesignerCore.LogicAppsBuiltInTypeService(schemaVersion, designerOptions); in expression builder
+                    //let builtInTypeServiceFactory = function (analytics, schemaVersion) {
+                    //    return new HostService.BuiltInTypeService(designerOptions, analytics);
+                    //};
+					let recommendationServiceFactory = function (analytics, schemaVersion) {
+						//let builtInTypeServiceFactory = function (analytics, schemaVersion) {
+						//	return new DesignerCore.LogicAppsBuiltInTypeService(schemaVersion, designerOptions);
+						//};
+						return new HostService.SmartRecommendationImpl(
+							{builtInTypeService:builtInTypeServiceFactory(analytics, schemaVersion)},
                             designerOptions,
                             operationManager,
                             analytics
@@ -296,10 +310,15 @@ function initializeDesigner(req) {
                 });
                 rpc.register(SharedDefines.DesignerMessages.GetDefinition, function (options) {
                     //console.log("Start getDefinition");
-                    return JSON.stringify(designer.getWorkflow(options));
+					return JSON.stringify(designer.getWorkflow(options));
                 });
                 rpc.register(SharedDefines.DesignerMessages.LoadDefinition, function (workflowDefn, options) {
                     //console.log("Start loadDefinition");
+					let designerOptions = JSON.parse(options);
+					designerOptions.Categories.push({
+						"itemKey": SharedDefines.Constants.BUILTIN_CATEGORY,
+						"linkText": SharedDefines.Constants.BUILTIN_CATEGORY_DISPLAY
+					})
                     let workflowParsed = JSON.parse(workflowDefn);
                     let workflow = {
                         definition: workflowParsed.definition,
@@ -308,7 +327,7 @@ function initializeDesigner(req) {
                             sku: workflowParsed.sku || workflowParsed.properties.sku
                         }
                     };
-                    return designer.loadWorkflow(workflow, JSON.parse(options));
+                    return designer.loadWorkflow(workflow, designerOptions);
                 });
                 rpc.register(SharedDefines.DesignerMessages.RenderDesigner, function () {
                     //console.log("Start renderDesigner");

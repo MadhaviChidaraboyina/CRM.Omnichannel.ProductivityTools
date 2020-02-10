@@ -171,13 +171,8 @@ export interface ConnectorProperty {
 export interface ApiOperation extends ArmResource<ApiOperationProperties> {
 }
 
-export interface Connector extends ArmResource<ConnectorProperty> {
-}
-
 //export type ConnectionOperation = ApiOperation | FunctionResource | Website | Workflow; -- ORIGINAL
 export type ConnectionOperation = ApiOperation;// | FunctionResource | Website | Workflow; --OUR REDUCED
-
-//export type AnalyticsService = Analytics;
 
 export interface BuiltInOperationIdsTypes {
     ADD_TO_TIME?: string;
@@ -247,6 +242,124 @@ export interface BuiltInOperationIdsTypes {
     XSLT_GET_MAPS?: string;
     XSLT_TRANSFORM?: string;
 }
+
+export const builtInOperationIds: BuiltInOperationIdsTypes = {
+	ADD_TO_TIME: 'add_to_time',
+	APIMANAGEMENT: 'apimanagement',
+	APPEND_TO_ARRAY_VARIABLE: 'append_to_array_variable',
+	APPEND_TO_STRING_VARIABLE: 'append_to_string_variable',
+	BATCH: 'batch',
+	BUTTON: 'button',
+	COMPOSE: 'compose',
+	CONVERT_TIME_ZONE: 'convert_time_zone',
+	CURRENT_TIME: 'current_time',
+	DECREMENT_VARIABLE: 'decrementvariable',
+	DELAY: 'delay',
+	DELAYUNTIL: 'delay_until',
+	EVENT_GRID: 'event_grid',
+	FLAT_FILE_DECODING: 'flat_file_decoding',
+	FLAT_FILE_ENCODING: 'flat_file_encoding',
+	FOREACH: 'foreach',
+	FUNCTION: 'function',
+	GEOFENCE_REQUEST: 'geofence_request',
+	GET_FUTURE_TIME: 'get_future_time',
+	GET_PAST_TIME: 'get_past_time',
+	HTTP_WITH_SWAGGER: 'http_with_swagger',
+	HTTP: 'http',
+	HTTPREQUESTTRIGGER: 'request',
+	HTTP_WEBHOOK: 'httpwebhook',
+	IF: 'if',
+	INCREMENT_VARIABLE: 'increment_variable',
+	INITIALIZE_VARIABLE: 'initializevariable',
+	INTEGRATION_ACCOUNT_ARTIFACT_LOOKUP: 'integration_account_artifact_lookup',
+	INTEGRATION_ACCOUNT_GET_SCHEMAS: 'content_and_schema_operation_get_schemas',
+	JOIN: 'join',
+	LIQUID_JSON_TO_JSON: 'liquid_json_to_json',
+	LIQUID_JSON_TO_TEXT: 'liquid_json_to_text',
+	LIQUID_XML_TO_JSON: 'liquid_xml_to_json',
+	LIQUID_XML_TO_TEXT: 'liquid_xml_to_text',
+	MANUALTRIGGER: 'manual',
+	PARSE_JSON: 'parsejson',
+	POWERAPPS_RESPONSE: 'powerappsresponse',
+	QUERY: 'query',
+	RECURRENCETRIGGER: 'recurrence',
+	RESPONSE: 'response',
+	SCOPE: 'scope',
+	SECURITY_CENTER_ALERT: 'securitycenteralert',
+	SELECT: 'select',
+	SEND_TO_BATCH: 'sendtobatch',
+	SET_VARIABLE: 'setvariable',
+	SUBTRACT_FROM_TIME: 'subtract_from_time',
+	SWITCH_CASE: 'switchcase',
+	SWITCH: 'switch',
+	TABLE_CSV: 'table_csv',
+	TABLE_HTML: 'table_html',
+	TERMINATE: 'terminate',
+	UNTIL: 'until',
+	WORKFLOW: 'workflow',
+	XML_VALIDATION: 'xml_validation',
+	XSLT_GET_CONTAINERS: 'xslt_get_containers',
+	XSLT_GET_FUNCTIONS: 'xslt_get_functions_in_container',
+	XSLT_GET_MAP: 'xslt_get_map',
+	XSLT_GET_MAPS: 'xslt_get_maps',
+	XSLT_TRANSFORM: 'xslt_transform'
+};
+
+export const manifestConnectorIds = {
+	as2: 'builtin/as2',
+	rosettanet: 'builtin/rosettanet',
+	code: 'builtin/code'
+};
+
+export const manifestOperationIds = {
+	as2Decode: 'as2decode',
+	as2Encode: 'as2encode',
+	rosettanetWaitForResponse: 'rosettanetwaitforresponse',
+	rosettanetDecode: 'rosettanetdecode',
+	rosettanetEncode: 'rosettanetencode',
+	codeJavaScript: 'javascript',
+	recurrence: 'recurrence',
+	scheduleSlidingWindow: 'slidingwindow'
+};
+export const builtInConnectorIds = {
+	APIMANAGEMENT: 'connectionProviders/apimanagement',
+	APPSERVICES: 'connectionProviders/appservice',
+	FUNCTION: 'connectionProviders/function',
+	WORKFLOW: 'connectionProviders/workflow',
+	BATCH_GROUP: 'connectionProviders/batch',
+	BUTTON_GROUP: 'connectionProviders/buttonGroup',
+	CONTROL_GROUP: 'connectionProviders/control',
+	DATA_OPERATIONS_GROUP: 'connectionProviders/dataOperation',
+	DATETIME_GROUP: 'connectionProviders/datetime',
+	GEOFENCE_GROUP: 'connectionProviders/geofenceGroup',
+	HTTP_GROUP: 'connectionProviders/http',
+	INTEGRATION_ACCOUNT_GROUP: 'connectionProviders/integrationAccount',
+	POWERAPPS_GROUP: 'connectionProviders/powerappsGroup',
+	REQUEST_RESPONSE_GROUP: 'connectionProviders/request',
+	SCHEDULE_GROUP: 'connectionProviders/schedule',
+	VARIABLE_GROUP: 'connectionProviders/variable'
+};
+
+export const builtInConnectorNames = {
+	BATCH_GROUP: 'batch',
+	CONTROL_GROUP: 'control',
+	DATA_OPERATIONS_GROUP: 'dataOperation',
+	DATETIME_GROUP: 'datetime',
+	HTTP_GROUP: 'http',
+	INTEGRATION_ACCOUNT_GROUP: 'integrationAccount',
+	REQUEST_RESPONSE_GROUP: 'request',
+	SCHEDULE_GROUP: 'schedule',
+	VARIABLE_GROUP: 'variable',
+	FLAT_FILE_GROUP: 'flatFile',
+	LIQUID_GROUP: 'liquid',
+	XML_GROUP: 'xml'
+};
+
+export const builtInSwaggerConnectorIds = {
+	FLAT_FILE_GROUP: 'connectionProviders/flatFile',
+	LIQUID_GROUP: 'connectionProviders/liquid',
+	XML_GROUP: 'connectionProviders/xml'
+};
 
 export interface OutputInfo {
     description?: string;
@@ -332,12 +445,26 @@ export interface OperationKind {
 }
 
 export interface RecommendationConnector extends Connector {
-    isIseConnector?: boolean;
-    title?: string;
-    brandColor?: string;
-    description?: string;
-    icon?: string;
+	isIseConnector?: boolean;
+	type?: string;
+	name?: string;
+	description?: string;
+	properties?: any;
 }
+
+export interface Connector{
+	brandColor: string;
+	icon: string;
+	id: string;
+	environmentBadge?: {
+		name: string;
+		description: string;
+	};
+	promotionIndex?: number;
+	category?: string;
+	title: string;
+}
+
 export interface RecommendationOperation extends Operation {
     isIseConnectorOperation?: boolean;
 }
@@ -376,6 +503,11 @@ export interface RecommendationUserVoiceProps {
     segments: RecommendationUserVoiceSegmentProps[];
 }
 
+export interface Badge {
+	name: string;
+	description: string;
+}
+
 export interface RecommendationServiceProvider {
     // tslint:disable-next-line: no-any
     canAddOperation?(rawOperation: any): boolean;
@@ -400,7 +532,7 @@ export interface RecommendationServiceProvider {
      */
     getExtraOperations?(kind: string): RecommendationOperation[];
 
-    getExtraOperationsByConnector(connectorId: string, kind: string): Promise<RecommendationOperation[]>;
+    getExtraOperationsByConnector?(connectorId: string, kind: string): Promise<RecommendationOperation[]>;
 
     getOperationKinds(): RecommendationOperationKind[];
 
@@ -417,8 +549,17 @@ export interface RecommendationServiceProvider {
     shouldAllowTriggerSelectionAsAction?(connectorId: string, operationId: string, kind: string): boolean;
 }
 
-export interface RecommendationProvider extends /*Partial<RecommendationRouteProvider>,*/ RecommendationServiceProvider {
+export interface RecommendationProvider extends Partial<RecommendationRouteProvider>, RecommendationServiceProvider {
 }
+
+export interface RecommendationRouteProvider {
+	goBack(): string;
+
+	selectConnector(connector: string, kind: string): string;
+
+	selectOperation(operation: string, kind: string): string;
+}
+
 export interface Category {
     itemKey: string;
     linkText: string;
@@ -519,7 +660,7 @@ export interface RecommendationService2 {
      * @arg {string} kind - The operation kind.
      * @return {RecommendationOperation[]}
      */
-    //getExtraOperations(category: string, kind: string): RecommendationOperation[];
+    getExtraOperations(category: string, kind: string): RecommendationOperation[];
 
     /**
      * Get the set of extra operations to render at the beginning of a list of operations for a given connector.
@@ -941,4 +1082,20 @@ export interface AnalyticsService {
 
     flush(): Promise<void>;
 
+}
+
+
+export interface BuiltInTypeService {
+	// tslint:disable-next-line: no-any
+	getBuiltInTriggers: () => any[];
+	// tslint:disable-next-line: no-any
+	getBuiltInActions: () => any[];
+	// tslint:disable-next-line: no-any
+	getBuiltInConnectors: () => any[];
+	// tslint:disable-next-line: no-any
+	getBuiltInOperationIds: () => any[];
+}
+
+export interface RecommendationServiceOptions {
+	builtInTypeService: BuiltInTypeService;
 }

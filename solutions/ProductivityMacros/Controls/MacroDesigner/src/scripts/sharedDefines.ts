@@ -35,7 +35,9 @@ export class Constants {
 	public static MACROS_SESSION_ENTITY = "msdyn_macrosession";
 	public static MACROS_MONITOR_PATH = "/flowcontrol/DesignerBlob/iframemonitor.html";
 	public static SESSION_TEMPLATE_ENTITY="msdyn_consoleapplicationsessiontemplate";
-    public static EXPRESSION_DATA = "msdyn_expressiondata";
+	public static EXPRESSION_DATA = "msdyn_expressiondata";
+	public static BUILTIN_CATEGORY = "LOGIC_APPS_BUILTIN";
+	public static BUILTIN_CATEGORY_DISPLAY = "Built-in";
 };
 
 export class DesignerMessages {
@@ -147,7 +149,8 @@ export interface Connector {
 export interface DesignerTemplateConfig {
 	actions: Action[],
 	connectors: Connector[],
-	categories: Category[]
+	categories: Category[],
+	triggers?: any[]
 }
 export interface IDesignerOptions {
 	ApiVersion: string,
@@ -445,3 +448,5 @@ export enum RequiredCDSOpersForInit {
     Templates = "1",
     WorkflowDefinition = "2"
 };
+
+
