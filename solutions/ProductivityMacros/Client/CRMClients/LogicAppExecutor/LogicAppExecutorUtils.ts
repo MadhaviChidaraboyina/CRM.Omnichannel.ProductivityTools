@@ -6,6 +6,7 @@
 /// <reference path="Interfaces.ts" />
 /// <reference path="Actions/IfAction.ts" />
 /// <reference path="Actions/SetDefaultCallScriptAction.ts" />
+/// <reference path="Actions/macroAction.ts" />
 /// <reference path="../ProductivityMacroSlug.ts" />
 
 namespace Microsoft.LogicAppExecutor {
@@ -66,10 +67,29 @@ namespace Microsoft.LogicAppExecutor {
 				return IfAction.Instance;
 			case "setcallscript":
 				return SetDefaultCallScriptAction.Instance;
+			default:
+				return MacroAction.Instance;
 		}
 	}
 
 	export function resolveSlug(slug: string): Promise<string> {
 		return Microsoft.ProductivityMacros.Internal.resolveTemplateString(slug, null, "");
 	}
+
+	export function resolveActionInputFromPrevActionOutput(input: string): string {
+		let matches = input.match(new RegExp("'(.*?)'", "g"));
+		let prefix = matches[0];
+		let attribute = matches[1];
+		prefix = prefix.substr(1, prefix.length - 2);
+		attribute = attribute.substr(1, attribute.length - 2);
+		let inputSlug = "${" + prefix + "." + attribute + "}";
+		return inputSlug;
+	}
+
+	export function updateActionOutputInSessionContext(output: any, state: any) {
+		if (output && output[Microsoft.ProductivityMacros.Constants.OutputResult]) {
+			state.setStateParams(output[Microsoft.ProductivityMacros.Constants.OutputResult]);
+		}
+	}
+
 }
