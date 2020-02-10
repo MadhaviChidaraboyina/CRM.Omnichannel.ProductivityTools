@@ -1,0 +1,37 @@
+﻿{
+	"GridContainer": {
+		"All": {
+			"xPath": "grid-cell-container"
+		}
+	},
+	"ControlSelector": {
+		"All": {
+			"xPath": "//*[@data-id='{0}']"
+		}
+	},
+	"ViewSelector": {
+		"All": {
+			"xPath": "//span[@data-id='ViewSelector_{0}']"
+		}
+	},
+	"Cells": {
+		"All": {
+			"xPath": "//*[@data-id='cell-{0}-{1}']"
+		}
+	},
+	"CellsSelector": {
+		"All": {
+			"xPath": "//*[@data-id='cell-{0}-{1}']"
+		}
+	},
+	"RowCount": {
+		"All": {
+			"xPath": "data-row-count"
+		}
+	},
+	"ColCount": {
+		"All": {
+			"xPath": "data-col-count"
+		}
+	}
+}

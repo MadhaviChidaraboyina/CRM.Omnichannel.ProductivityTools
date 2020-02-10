@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{00419135-4a82-4321-942d-04c7d655d97a}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{05dc9b8c-0bc8-4593-864d-a53c3c850fe9}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{a5add554-3745-47ff-85ba-5714bf74cda8}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0b35177f-2be7-4fe7-bcf3-8a63580a1249}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cb8d8875-3924-485b-bd60-fc528c39031e}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{748b3784-89a5-57db-03b2-aa228652ab61}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Agent script" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_agentscriptid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_agentscriptid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{caca0a68-00d7-7135-0134-85e589937670}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Order" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_order" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="msdyn_order" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{decdd59a-7e4a-5931-b722-2a1d4d40701e}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Action type" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_actiontype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_actiontype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{13e9d4ea-c648-dcc1-e673-9eec868812b5}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_description" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_description" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{775313e7-516e-08e6-ec05-612dbdab1cae}" showlabel="true" locklevel="0" rowspan="2">
+                        <labels>
+                          <label description="Text instructions" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_textinstruction" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_textinstruction" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row>
+                      <cell id="{e374a509-b580-d6ae-474c-2e21ce4cb12b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Target macro" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_macroactionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_macroactionid" disabled="false">
+                          <parameters>
+                          <AutoResolve>true</AutoResolve>
+                          <DisableMru>false</DisableMru>
+                          <DisableQuickFind>false</DisableQuickFind>
+                          <DisableViewPicker>false</DisableViewPicker>
+                          <DefaultViewId>{012107d2-54d0-e911-a81c-000d3a6e50b0}</DefaultViewId>
+                          <AvailableViewIds>{012107d2-54d0-e911-a81c-000d3a6e50b0}</AvailableViewIds>
+                          <AllowFilterOff>false</AllowFilterOff>
+                        </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c55900bb-eba9-a594-237e-0b2b5333729a}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Target script" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_routeactionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_routeactionid" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <formLibraries>
+        <Library name="msdyn_AgentScriptStepFormScript.js" libraryUniqueId="{db3bccbe-b510-d5e9-242e-d346574746ab}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onFormLoad" libraryName="msdyn_AgentScriptStepFormScript.js" handlerUniqueId="{da29152d-7a71-13b2-2e79-ab628d5eadc6}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onsave" application="false" active="false">
+          <Handlers>
+            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onFormSave" libraryName="msdyn_AgentScriptStepFormScript.js" handlerUniqueId="{6a9a332c-646d-d732-4959-6404e9e99ee0}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_actiontype">
+          <Handlers>
+            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onActionTypeChange" libraryName="msdyn_AgentScriptStepFormScript.js" handlerUniqueId="{889a0c7e-307a-5e69-eb50-0579daa7bd9e}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <IsCustomizable>0</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

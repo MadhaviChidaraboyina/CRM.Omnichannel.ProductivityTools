@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Role id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" name="Productivity tools user">
+  <IsCustomizable>0</IsCustomizable>
+  <RolePrivileges>
+    <RolePrivilege name="prvReadmsdyn_agentscript" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_agentscriptstep" level="Global" />
+    <RolePrivilege name="prvReadWorkflow" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_actioninputparameter" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_actionoutputparameter" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_inputparameters" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_macroconnector" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_parameterdefinition" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_designeroptions" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_macroactiontemplate" level="Global" />
+  </RolePrivileges>
+</Role>

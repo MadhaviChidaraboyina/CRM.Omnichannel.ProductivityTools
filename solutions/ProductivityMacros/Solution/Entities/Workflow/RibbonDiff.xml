@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml>
+	<CustomActions>
+		<!-- Hide the OOB New Button -->
+		<HideCustomAction HideActionId="Mscrm.HomepageGrid.workflow.NewRecord.Hide" Location="Mscrm.HomepageGrid.workflow.NewRecord" />
+		<!-- Custom Action for OpenRecordItem Button -->
+		<CustomAction Id="Mscrm.HomepageGrid.workflow.MainTab.Management.Controls.CustomAction.openRecord" Location="Mscrm.HomepageGrid.workflow.MainTab.Management.Controls._children" Sequence="100">
+			<CommandUIDefinition>
+				<Button 
+					Command="Mscrm.OpenRecordItem" 
+					Id="Mscrm.OpenRecordItem" 
+					LabelText="Open Record" 
+					Sequence="5"
+				/>
+			</CommandUIDefinition>
+		</CustomAction>
+		<!-- Custom Action for NewRecord Button -->
+		<CustomAction Id="Mscrm.HomepageGrid.workflow.MainTab.Management.Controls.CustomAction.NewRecord" Location="Mscrm.HomepageGrid.workflow.MainTab.Management.Controls._children" Sequence="3">
+			<CommandUIDefinition>
+				<Button 
+					Id="Mscrm.HomepageGrid.workflow.NewRecord" 
+					Command="Mscrm.NewRecordFromGrid" 
+					Sequence="10" 
+					TemplateAlias="o1" 
+					LabelText="$LocLabels:workflow.HomePageGrid.New.Button.LabelText" 
+					ToolTipTitle="$LocLabels:workflow.HomePageGrid.New.Button.ToolTipTitle" 
+					ToolTipDescription="$LocLabels:workflow.HomePageGrid.New.Button.ToolTipDesc" 
+					ModernImage="New"
+				/>
+			</CommandUIDefinition>
+		</CustomAction>
+	</CustomActions>
+	<CommandDefinitions>
+		<!-- Command Definition for OpenRecordItem Button -->
+		<CommandDefinition Id="Mscrm.OpenRecordItem">
+			<EnableRules>
+				<EnableRule Id="Mscrm.Disabled" />
+				<EnableRule Id="Mscrm.SelectionCountExactlyOne" />
+				<EnableRule Id="Mscrm.Macros.EnableRule" />
+			</EnableRules>
+			<DisplayRules />
+			<Actions>
+				<JavaScriptFunction FunctionName="Microsoft.Macros.Utility.openRecordHandler" Library="$webresource:CRMClients/msdyn_ProductivityMacros_internal_library.js">
+					<CrmParameter Value="SelectedControlSelectedItemReferences" />
+					<CrmParameter Value="SelectedControl" />
+				</JavaScriptFunction>
+			</Actions>
+		</CommandDefinition>
+		<!-- Command Definition for NewRecord Button -->
+		<CommandDefinition Id="Mscrm.NewRecordFromGrid">
+			<EnableRules>
+				<EnableRule Id="Mscrm.IsValidForHierarchyView" />
+				<EnableRule Id="Mscrm.IsEntityAvailableForUserInMocaOffline" />
+			</EnableRules>
+			<DisplayRules>
+				<DisplayRule Id="Mscrm.ShowForNonRelationshipBoundGrids" />
+				<DisplayRule Id="Mscrm.PrimaryIsNotActivity" />
+				<DisplayRule Id="Mscrm.HideNewForChildEntities" />
+				<DisplayRule Id="Mscrm.HideAddressEntities" />
+				<DisplayRule Id="Mscrm.SelectedEntityIsNotBPFEntity" />
+			</DisplayRules>
+			<Actions>
+				<JavaScriptFunction FunctionName="Microsoft.Macros.Utility.newRecordHandler" Library="$webresource:CRMClients/msdyn_ProductivityMacros_internal_library.js">
+					<CrmParameter Value="SelectedControl" />
+				</JavaScriptFunction>
+			</Actions>
+		</CommandDefinition>
+	</CommandDefinitions>
+	<Templates>
+		<RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+	</Templates>
+	<RuleDefinitions>
+		<TabDisplayRules />
+		<DisplayRules />
+		<EnableRules>
+			<EnableRule Id="Mscrm.Macros.EnableRule">
+				<CustomRule FunctionName="Microsoft.Macros.Utility.macrosEnableRule" Library="$webresource:CRMClients/msdyn_ProductivityMacros_internal_library.js" Default="false" InvertResult="false">
+					<CrmParameter Value="SelectedControlSelectedItemReferences" />
+					<CrmParameter Value="SelectedControl" />
+				</CustomRule>
+			</EnableRule>
+		</EnableRules>
+	</RuleDefinitions>
+	<LocLabels>
+		<LocLabel Id="workflow.HomePageGrid.New.Button.LabelText">
+			<Titles>
+				<Title description="New" languagecode="1033" />
+			</Titles>
+		</LocLabel>
+		<LocLabel Id="workflow.HomePageGrid.New.Button.ToolTipTitle">
+			<Titles>
+				<Title description="New" languagecode="1033" />
+			</Titles>
+		</LocLabel>
+		<LocLabel Id="workflow.HomePageGrid.New.Button.ToolTipDesc">
+			<Titles>
+				<Title description="Create a new record" languagecode="1033" />
+			</Titles>
+		</LocLabel>
+	</LocLabels>
+</RibbonDiffXml>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
+  <PropertyGroup>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <NOTARGET>true</NOTARGET>
+    <SolutionFileNamePrefix>msdyn_ProductivityMacros</SolutionFileNamePrefix>
+    <ApplicationFolder>$(XrmSolutionsRoot)\solutions\ProductivityMacros</ApplicationFolder>
+    <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
+    <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
+    <ProjectGuid>{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}</ProjectGuid>
+    <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls</CustomControlsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(WSRoot)\drop\debug\AnyCPU\Solutions</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\Sales_LinkedInIntegration.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(WSRoot)\drop\Release\AnyCPU\Solutions</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Dialogs\{2E40DD90-2824-4524-B223-947052798E72}.xml" />
+    <Content Include="Dialogs\{2E40DD90-2824-4524-B223-947052798E73}.xml" />
+    <Content Include="Entities\MacroActionTemplate\Entity.xml" />
+    <Content Include="Entities\MacroActionTemplate\FormXml\main\{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}_managed.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{7edfc44b-9171-4b03-b3fa-8f98c144543c}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{728594b5-08ae-442b-b4c5-36baa67c2e52}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{2fc6654b-0626-475b-ba71-dba1a5b84ddd}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}.xml" />
+    <Content Include="Entities\MacroActionTemplate\SavedQueries\{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}.xml" />
+    <Content Include="Entities\ActionInputParameter\Entity.xml" />
+    <Content Include="Entities\ActionInputParameter\FormXml\main\{15079f0d-d34e-4cad-9fa3-a1fab0783eac}_managed.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{5b965e27-ff23-48cc-9fa8-5f870282d801}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{220c95e7-e853-4196-bcf5-0195392aae41}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{641c26b7-2180-4bd6-86e0-ae67d20f87be}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{68335c03-9c8e-4941-b3de-3117bba3e5fb}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{a3cd66c8-212c-4117-a9ec-fe905795224a}.xml" />
+    <Content Include="Entities\ActionInputParameter\SavedQueries\{b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}.xml" />
+    <Content Include="Entities\ActionOutputParameter\Entity.xml" />
+    <Content Include="Entities\ActionOutputParameter\FormXml\main\{d4000272-4cda-436a-a678-cd3fe08ea2f6}_managed.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{9d540704-b34f-4ecc-b9d8-412acae74cf8}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{81a129b3-29df-4bbb-827b-37b6747f8e9b}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{358d764d-f167-46f4-864c-f147de16f5a4}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{5557f657-0457-4b1b-bef5-b3a20a701cd6}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{be58538e-d1d2-e911-a81f-000d3a6d6cb7}.xml" />
+    <Content Include="Entities\ActionOutputParameter\SavedQueries\{de3156ab-1834-4782-a0d8-97869badb58b}.xml" />
+    <Content Include="Entities\MacroConfiguration\Entity.xml" />
+    <Content Include="Entities\MacroConfiguration\FormXml\main\{4c0f7a89-7e67-4972-828e-1244f593a422}_managed.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{709f8c74-0e07-41f2-ab20-157f309ba509}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{b33bb17c-9d07-4514-b073-165721b935e9}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{2512f971-7ada-435b-a487-ce8bc79ef734}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}.xml" />
+    <Content Include="Entities\MacroConfiguration\SavedQueries\{fe7078c7-dae0-e911-a81f-000d3af9c0c2}.xml" />
+    <Content Include="Entities\MacroConnector\Entity.xml" />
+    <Content Include="Entities\MacroConnector\FormXml\main\{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}_managed.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{5f76bbd9-6db0-47e3-b819-e8e181a69ef8}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{6879ad1e-f3d8-436b-af1d-40219e693010}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{8c945d63-c3dd-e911-a81e-000d3af9c0c2}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{8eab9af9-f1b0-41b2-8eac-217db6b0346a}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{b8136d24-03a6-4453-b1d6-f6e96cc59762}.xml" />
+    <Content Include="Entities\MacroConnector\SavedQueries\{d238ec0d-ead6-4558-964d-e92e17c8aa42}.xml" />
+    <Content Include="Entities\MacrosRunHistory\Entity.xml" />
+    <Content Include="Entities\MacrosRunHistory\FormXml\card\{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}.xml" />
+    <Content Include="Entities\MacrosRunHistory\FormXml\card\{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}_managed.xml" />
+    <Content Include="Entities\MacrosRunHistory\FormXml\main\{47492cdb-57ca-4667-a741-35c34491b4f6}.xml" />
+    <Content Include="Entities\MacrosRunHistory\FormXml\main\{47492cdb-57ca-4667-a741-35c34491b4f6}_managed.xml" />
+    <Content Include="Entities\MacrosRunHistory\FormXml\quick\{372a2dda-7c30-463e-9372-694c51fbdddb}.xml" />
+    <Content Include="Entities\MacrosRunHistory\FormXml\quick\{372a2dda-7c30-463e-9372-694c51fbdddb}_managed.xml" />
+    <Content Include="Entities\MacrosRunHistory\RibbonDiff.xml" />
+    <Content Include="Entities\MacrosRunHistory\SavedQueries\{25689d1a-88b8-42c0-b9de-8c6e34053e84}.xml" />
+    <Content Include="Entities\MacrosRunHistory\SavedQueries\{74122ce0-b1f0-4b41-9fae-a8b4e2bb0ca8}.xml" />
+    <Content Include="Entities\MacrosRunHistory\SavedQueries\{755e5412-437a-4156-b1b9-c54d3bd2fcd6}.xml" />
+    <Content Include="Entities\MacrosRunHistory\SavedQueries\{80ed4f96-7878-4274-9838-ad14e562c789}.xml" />
+    <Content Include="Entities\ParameterDefinition\Entity.xml" />
+    <Content Include="Entities\ParameterDefinition\FormXml\main\{a1b84754-82c8-4d2e-afe6-bceae91df1ca}_managed.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{07a33cec-34c5-447a-b091-76a54ea8dcc0}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{52db0469-ff43-48fb-af2f-69f8355a174c}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{5811f646-830b-4439-aecd-0b1eb4c4910f}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{57347866-53ad-4011-9024-d5161ce8391e}.xml" />
+    <Content Include="Entities\ParameterDefinition\SavedQueries\{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}.xml" />
+    <Content Include="Entities\Workflow\Entity.xml" />
+    <Content Include="Entities\Workflow\RibbonDiff.xml" />
+    <Content Include="Entities\Workflow\SavedQueries\{012107d2-54d0-e911-a81c-000d3a6e50b0}.xml" />
+    <Content Include="Other\Relationships.xml" />
+    <Content Include="Other\Relationships\BusinessUnit.xml" />
+    <Content Include="Other\Relationships\msdyn_macroactiontemplate.xml" />
+    <Content Include="Other\Relationships\msdyn_macroconnector.xml" />
+    <Content Include="Other\Relationships\msdyn_parameterdefinition.xml" />
+    <Content Include="Other\Relationships\Owner.xml" />
+    <Content Include="Other\Relationships\SystemUser.xml" />
+    <Content Include="Other\Relationships\Team.xml" />
+    <Content Include="Other\Relationships\Workflow.xml" />
+    <Content Include="WebResources\CRMClients\msdyn_ProductivityMacros_internal_library.js.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_spinner.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macro_connector.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macro_connector.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macroDesigner.bundle.js.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macroDesigner.html.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_agentScriptDesigner.bundle.js.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_agentScriptDesigner.html.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macroMonitor.bundle.js.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_macroMonitor.html.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_associated.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_associated.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_dashboard.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_dashboard.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_form.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_form.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_grid.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_grid.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_kb.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_kb.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_new_form.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_new_form.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_refresh.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_refresh.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_save.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_save.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_kb.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_kb.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_relevance.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_relevance.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_send_kb.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_send_kb.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_update_record.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_spinner.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_update_record.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_clone_record.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_clone_record.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_close_all_sessions.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_close_all_sessions.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_create_session.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_create_session.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_email.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_email.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_agentConnector.svg"/>
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_agentConnector.svg.data.xml"/>
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_manualTrigger.svg"/>
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_manualTrigger.svg.data.xml"/>
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_setDefaultAction.svg"/>
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_setDefaultAction.svg.data.xml"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Other\Customizations.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Other\Solution.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebResources\CRMClients\msdyn_LogicAppExecutor.js.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacros_webresource_strings.1033.resx.data.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Roles\" />
+  </ItemGroup>
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
+</Project>

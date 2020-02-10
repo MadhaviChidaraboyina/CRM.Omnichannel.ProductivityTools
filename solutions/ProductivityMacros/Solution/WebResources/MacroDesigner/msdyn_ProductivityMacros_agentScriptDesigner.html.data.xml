@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+	<WebResourceId>{8EFE8847-0D9D-492E-8B77-9A69CAF87B8E}</WebResourceId>
+	<Name>MacroDesigner/msdyn_ProductivityMacros_agentScriptDesigner.html</Name>
+	<DisplayName>MacroDesigner/msdyn_ProductivityMacros_agentScriptDesigner.html</DisplayName>
+	<WebResourceType>1</WebResourceType>
+	<IntroducedVersion>1.0</IntroducedVersion>
+	<IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+	<IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>	
+	<IsCustomizable>1</IsCustomizable>
+	<CanBeDeleted>0</CanBeDeleted>
+	<IsHidden>0</IsHidden>
+	<FileName>/WebResources/MacroDesigner/msdyn_ProductivityMacros_agentScriptDesigner.html</FileName>
+</WebResource>

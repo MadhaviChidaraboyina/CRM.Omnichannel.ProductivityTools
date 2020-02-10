@@ -1,0 +1,2559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="data.json" PsrId="306" FileType="1" SrcCul="en-US" TgtCul="fr-FR" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <Props>
+    <Str Name="CustomName1" Val="Custom 1" />
+    <Str Name="CustomName2" Val="Custom 2" />
+    <Str Name="CustomName3" Val="Custom 3" />
+    <Str Name="CustomName4" Val="Custom 4" />
+    <Str Name="CustomName5" Val="Custom 5" />
+    <Str Name="CustomName6" Val="IQA" />
+  </Props>
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Loc" />
+    <Cmt Name="Note" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";String Table" ItemType="0" PsrId="306" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
+    <Modified By="v-keikca" DateTime="2017-10-31T18:39:05Z" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="306" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Modified By="v-keikca" DateTime="2017-10-31T18:39:05Z" />
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_01a02947-f9d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrez un nouveau formulaire pour créer un enregistrement.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006485Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_0e59ec44-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Envoyer l'article de la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006485Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_101c73b5-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sauvegarder l'enregistrement]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006485Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_13a680e2-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open the knowledge search page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir la page de recherche dans la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006485Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_16fc3387-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Effectuer une recherche par pertinence basée sur la phrase]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006485Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_19c8c1c6-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actualiser la page]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006485Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_1c1af956-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir une grille d'enregistrements]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006485Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_2574de1c-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer toutes les autres sessions]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_48bbc0f3-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Créer une session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_48fc87c4-f480-4129-9c1d-682442d7bc60" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actualiser l'onglet.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000622Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_68e92456-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone a record and open it in a session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Cloner un enregistrement et l'ouvrir dans une session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_70575109-3ed6-4e47-9f20-33af77ae060a" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open the application tab.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir l'onglet d'application.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000622Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_761589d3-4fd7-4cab-b2f7-96728d4b9823" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus tab.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Onglet Focus.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000622Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_82bdb226-d89d-4408-97f1-b7ee0b208f68" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close all of the other sessions.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer toutes les autres sessions.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000622Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_85ab814a-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher la phrase renseignée dans la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_8a3a1381-3d86-4737-8654-fd35f6a162ee" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send a quick response.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Envoyer une réponse rapide.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000622Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_90a7f632-c89e-40a6-a9ea-3f28d4e58fb3" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lier l'enregistrement à la conversation.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000622Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_baa326ad-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir un tableau de bord existant]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_c37131bf-12e0-4a2c-9659-3ff88bcc2d73" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close this session.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer cette session.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006214Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Action pour résoudre l'incident]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006428Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mettre à jour un enregistrement existant]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Démarrer l'exécution de la macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006292Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_d3ee390f-0299-43e5-8107-e637feeb170d" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current page.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Télécharger la page actuelle.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006214Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_d3fef303-b090-44d8-a8f0-e2545a2459ae" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Supprimer le lien de l'enregistrement de la conversation.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006214Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open associated records of a type for any given record in the session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir les enregistrements associés d'un type pour un enregistrement donné dans la session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_e6c81912-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir un enregistrement existant]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_actionDescription_e903922e-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir un formulaire de courrier électronique avec un modèle prédéfini]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_01a02947-f9d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create New]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Créer]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_0e59ec44-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Envoyer la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_101c73b5-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Enregistrer]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_13a680e2-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open knowledge search]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir la recherche dans la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006462Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_16fc3387-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search by relevance]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher par pertinence]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006462Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_19c8c1c6-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actualiser]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006462Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_1c1af956-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir la grille]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006406Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_2574de1c-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer toutes les autres sessions]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006406Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_48bbc0f3-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Créer une session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006406Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_48fc87c4-f480-4129-9c1d-682442d7bc60" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actualiser l'onglet]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006214Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_68e92456-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Cloner un enregistrement]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006406Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_70575109-3ed6-4e47-9f20-33af77ae060a" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir l'onglet d'application]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006214Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_761589d3-4fd7-4cab-b2f7-96728d4b9823" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Onglet Focus]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006214Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_82bdb226-d89d-4408-97f1-b7ee0b208f68" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close all other sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer toutes les autres sessions]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006214Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_85ab814a-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher un article de la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006406Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_8a3a1381-3d86-4737-8654-fd35f6a162ee" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send quick response]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Envoyer une réponse rapide]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006214Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_90a7f632-c89e-40a6-a9ea-3f28d4e58fb3" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lier l'enregistrement à la conversation]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_baa326ad-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir le tableau de bord]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006406Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_c37131bf-12e0-4a2c-9659-3ff88bcc2d73" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer la session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Résoudre l'incident]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006269Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mettre à jour l'enregistrement]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006406Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Démarrer]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006269Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_d3ee390f-0299-43e5-8107-e637feeb170d" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get current page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Télécharger la page actuelle]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_d3fef303-b090-44d8-a8f0-e2545a2459ae" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Supprimer le lien de l'enregistrement de la conversation]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open associated record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Ouvrir l'enregistrement associé]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Open Associated]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_e6c81912-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open form]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir le formulaire]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006406Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_displayname_e903922e-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[E-mail]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006406Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_01a02947-f9d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Create new]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_0e59ec44-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Send knowledge base article]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_101c73b5-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Save the record]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_13a680e2-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Open knowledge search]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_16fc3387-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_19c8c1c6-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Refresh the page]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006215Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_1c1af956-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Open grid]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_2574de1c-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Close All other Sessions]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_48bbc0f3-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Create session]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_48fc87c4-f480-4129-9c1d-682442d7bc60" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur de session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_68e92456-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clone a record and open it in a session]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_70575109-3ed6-4e47-9f20-33af77ae060a" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur de session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_761589d3-4fd7-4cab-b2f7-96728d4b9823" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur de session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_82bdb226-d89d-4408-97f1-b7ee0b208f68" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur de session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_85ab814a-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_8a3a1381-3d86-4737-8654-fd35f6a162ee" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur Omnicanal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_90a7f632-c89e-40a6-a9ea-3f28d4e58fb3" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur Omnicanal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_baa326ad-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Open dashboard]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_c37131bf-12e0-4a2c-9659-3ff88bcc2d73" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur de session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006211Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Resolve Case]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Update an existing record]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Start macro execution]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_d3ee390f-0299-43e5-8107-e637feeb170d" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur de session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_d3fef303-b090-44d8-a8f0-e2545a2459ae" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur Omnicanal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Open Associated]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_e6c81912-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Open Form]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_subtitle_e903922e-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Open an email form with predefined template]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_01a02947-f9d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrez un nouveau formulaire pour créer un enregistrement]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_0e59ec44-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Envoyer l'article de la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_101c73b5-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sauvegarder l'enregistrement]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_13a680e2-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open the knowledge search page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir la page de recherche dans la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_16fc3387-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Effectuer une recherche par pertinence basée sur la phrase]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_19c8c1c6-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actualiser la page]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_1c1af956-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir une grille d'enregistrements]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_2574de1c-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer toutes les autres sessions]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_48bbc0f3-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Créer une session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_48fc87c4-f480-4129-9c1d-682442d7bc60" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actualiser l'onglet]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_68e92456-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone a record and open it in a session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Cloner un enregistrement et l'ouvrir dans une session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_70575109-3ed6-4e47-9f20-33af77ae060a" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open the application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir l'onglet d'application]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_761589d3-4fd7-4cab-b2f7-96728d4b9823" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Onglet Focus]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_82bdb226-d89d-4408-97f1-b7ee0b208f68" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close all of the other sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer toutes les autres sessions]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006203Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_85ab814a-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher la phrase renseignée dans la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_8a3a1381-3d86-4737-8654-fd35f6a162ee" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send a quick response]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Envoyer une réponse rapide]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_90a7f632-c89e-40a6-a9ea-3f28d4e58fb3" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lier l'enregistrement à la conversation]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_baa326ad-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir le tableau de bord]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_c37131bf-12e0-4a2c-9659-3ff88bcc2d73" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close this session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer cette session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Action pour résoudre l'incident]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006269Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mettre à jour un enregistrement existant]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Démarrer l'exécution de la macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006265Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_d3ee390f-0299-43e5-8107-e637feeb170d" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Télécharger la page actuelle]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_d3fef303-b090-44d8-a8f0-e2545a2459ae" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Supprimer le lien de l'enregistrement de la conversation]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open associated records of a type for any given record in the session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir les enregistrements associés d'un type pour un enregistrement donné dans la session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_e6c81912-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir un enregistrement existant]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_summary_e903922e-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir un formulaire de courrier électronique avec un modèle prédéfini]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_01a02947-f9d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrez un nouveau formulaire pour créer un enregistrement]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_0e59ec44-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Envoyer l'article de la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_101c73b5-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sauvegarder l'enregistrement]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_13a680e2-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open the knowledge search page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir la page de recherche dans la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_16fc3387-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Effectuer une recherche par pertinence basée sur la phrase]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_19c8c1c6-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actualiser la page]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_1c1af956-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir une grille d'enregistrements]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006325Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_2574de1c-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer toutes les autres sessions]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006297Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_48bbc0f3-fbd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Créer une session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006297Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_48fc87c4-f480-4129-9c1d-682442d7bc60" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actualiser l'onglet]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_68e92456-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone a record and open it in a session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Cloner un enregistrement et l'ouvrir dans une session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006297Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_70575109-3ed6-4e47-9f20-33af77ae060a" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir l'onglet d'application]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_761589d3-4fd7-4cab-b2f7-96728d4b9823" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Onglet Focus]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_82bdb226-d89d-4408-97f1-b7ee0b208f68" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close all other sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer toutes les autres sessions]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_85ab814a-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher la phrase renseignée dans la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006297Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_8a3a1381-3d86-4737-8654-fd35f6a162ee" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send quick response]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Envoyer une réponse rapide]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_90a7f632-c89e-40a6-a9ea-3f28d4e58fb3" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lier l'enregistrement à la conversation]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_baa326ad-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir un tableau de bord existant]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006297Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_c37131bf-12e0-4a2c-9659-3ff88bcc2d73" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer la session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_cd1fa1a0-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Résoudre l'incident]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006265Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_ce3390dd-fcd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mettre à jour un enregistrement existant]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006297Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_d1a026a3-9e8d-42e7-8e16-9cdfc26ff43f" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Démarrer l'exécution de la macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006265Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_d3ee390f-0299-43e5-8107-e637feeb170d" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get current page]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Télécharger la page actuelle]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_d3fef303-b090-44d8-a8f0-e2545a2459ae" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Supprimer le lien de l'enregistrement de la conversation]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_d965ea11-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open associated record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Ouvrir l'enregistrement associé]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Open Associated]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_e6c81912-fad2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir un enregistrement existant]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006297Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate@msdyn_title_e903922e-fdd2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir un formulaire de courrier électronique avec un modèle prédéfini]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006297Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_categorylabel_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actions d'automatisation prédéfinies]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0005279Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_categorylabel_ac627bea-31f2-4378-9a21-6e1e2d74e278" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actions d'automatisation prédéfinies]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_categorylabel_d2f931e3-70b7-4093-865e-b8075a02c215" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actions d'automatisation prédéfinies]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_description_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used client-side tasks]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatiser les tâches côté client couramment utilisées]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0005279Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_description_ac627bea-31f2-4378-9a21-6e1e2d74e278" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used session actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatiser les actions de session fréquemment utilisées]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_description_d2f931e3-70b7-4093-865e-b8075a02c215" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used Omnichannel actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatiser les actions Omnicanal fréquemment utilisées]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_displayname_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0005279Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_displayname_ac627bea-31f2-4378-9a21-6e1e2d74e278" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur de session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_displayname_d2f931e3-70b7-4093-865e-b8075a02c215" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur Omnicanal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_title_60541186-f5dd-e911-a81e-000d3af9c0c2" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatisation de la productivité]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0005279Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_title_ac627bea-31f2-4378-9a21-6e1e2d74e278" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur de session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.0006191Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector@msdyn_title_d2f931e3-70b7-4093-865e-b8075a02c215" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur Omnicanal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macrosolutionconfiguration@msdyn_searchhint_1b65ad62-4fe3-e911-a81a-000d3a706f52" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher une macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0005279Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macrosolutionconfiguration@msdyn_uservoicetext_1b65ad62-4fe3-e911-a81a-000d3a706f52" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Let us know what you would like us to build next]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Indiquez-nous ce que vous aimeriez que nous créions ensuite]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-10-24T02:00:42.0005225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21633_20191021" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_2a148183-3905-49e9-acee-eed07fe2da18" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application Template ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID de modèle d'application]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_32e1acb9-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The phrase to be searched for&quot;]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Phrase à rechercher pour"]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006276Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_35b0d4dc-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Motif de la résolution]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006265Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_3a359e47-ec11-ea11-a811-000d3a334ee9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Primary name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nom principal de l'entité à ouvrir]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-19T02:36:24.0009512Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23640_20191216" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ID of the email template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID du modèle de courrier électronique]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Id of the email template]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The type of view]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Type de vue]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006276Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_4a8c0ace-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Case ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID d'incident]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Case Id]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_6c7f2dbf-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time that is billable]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Durée facturable]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006265Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_6e033082-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ID of the view to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID de la vue à ouvrir]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The Id of the view to be opened]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_9a6161ef-3033-4c8a-89fb-8229bf4539e9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample JSON object]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Exemple d'objet JSON]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006265Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A JSON string representing the attributes and values to be updated]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Chaîne JSON représentant les attributs et les valeurs à mettre à jour]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006276Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_b66cd2ac-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email Recipients]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Destinataires du courrier électronique]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ca97e23b-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application page type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Type de page d'application]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_d61ae14b-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Logical name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nom logique de l'entité à ouvrir]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006276Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_dc1db27b-b27e-4de3-ad4b-a1ba406de050" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Array of custom name-value pairs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tableau de paires nom-valeur personnalisées]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Form ID to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID de formulaire à ouvrir]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Form Id to be opened]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_eb102e60-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ID of the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID de l'onglet]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Id of the tab]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_f729e573-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID d'enregistrement d'entité à ouvrir]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Entity record id to be opened]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_description_fed739aa-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ID of the dashboard to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID du tableau de bord à ouvrir]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006276Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_2a148183-3905-49e9-acee-eed07fe2da18" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application Template ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID de modèle d'application]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_32e1acb9-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Chaîne de recherche]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006276Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_35b0d4dc-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Résolution]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_3a359e47-ec11-ea11-a811-000d3a334ee9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity Primary Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nom principal de l'entité]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-19T02:36:24.0009506Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23640_20191216" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_473decbe-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Template ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID de modèle]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Template Id]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_474f7494-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Type de vue]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006276Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_4a8c0ace-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Incident ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID d'incident]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[IncidentId]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_6c7f2dbf-a0df-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Billable Time]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Durée à facturer]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_6e033082-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID de vue]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[View Id]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_9a6161ef-3033-4c8a-89fb-8229bf4539e9" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample custom JSON Object]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Exemple d'objet JSON personnalisé]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ae9b14cb-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[JSON string of key-value pairs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Chaîne JSON de paires clé-valeur]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006276Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_b66cd2ac-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email Recipients]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Destinataires du courrier électronique]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ca97e23b-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Page Type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Type de page]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-10-02T12:28:54.0006225Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_d61ae14b-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity Logical Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nom logique de l'entité]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:13.0006276Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO21082_20190910" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_dc1db27b-b27e-4de3-ad4b-a1ba406de050" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Attribut]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Custom Attribute]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_ddf27260-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity Form ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID de formulaire d'entité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Entity Form Id]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_eb102e60-9fdf-e911-a81e-000d3a0698dc" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Tab ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID d'onglet]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Tab Id]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_f729e573-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID d'enregistrement d'entité]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Entity record id]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition@msdyn_displayname_fed739aa-f8d2-e911-a81e-000d3a015920" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dashboard ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[ID tableau de bord]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Dashboard id]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-24T07:07:15.000618Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO23860_20191219" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

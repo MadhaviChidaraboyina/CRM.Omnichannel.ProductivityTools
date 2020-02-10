@@ -1,0 +1,17 @@
+﻿{
+	"AppContainer": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']"
+		}
+	},
+	"AdvancedContainer": {
+		"All": {
+			"xPath": "//*[@id='appShellAdvancedContainer']"
+		}
+	},
+		"BasicContainer": {
+		"All": {
+			"xPath": "//*[@id='basicSetupOuterContainer']"
+		}
+	}
+}

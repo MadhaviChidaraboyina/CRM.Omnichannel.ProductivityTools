@@ -1,0 +1,11 @@
+﻿{
+  "xPath": {
+    "Form": "//*[@id='ApplicationShell']//form[@data-id='editFormRoot']",
+    "Tab": "//*[@id='ApplicationShell']//form[@data-id='editFormRoot']//*[@id='tab-section']/div/section/div/ul/li[@data-id='tablist-{0}']",
+    "Section": "//*[@id='ApplicationShell']//form[@data-id='editFormRoot']//*[@id='tab-section']/div/section/div[@data-id='tabpanel-{0}']//section[@data-id='{1}']",
+    "List": "//*[@id='ApplicationShell']//form[@data-id='editFormRoot']//*[@id='tab-section']/div/section/div[@data-id='tabpanel-{0}']//section[@data-id='{1}']//div[@data-id='{2}']",
+    "ControlSelector": "//*[@data-id='{0}']",
+    "SubGridControlSelector": "//*[@id='ApplicationShell']//form[@data-id='editFormRoot']//*[@id='tab-section']/div/section/div[@data-id='tabpanel-{0}']//section[@data-id='{1}']//*[@data-id='{2}']",
+    "ButtonId": "//button[@id='{0}']",
+  }
+}

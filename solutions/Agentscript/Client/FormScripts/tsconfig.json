@@ -1,0 +1,13 @@
+﻿{
+	"include": [
+		"AgentScriptStepFormScript.ts",
+		"Constants.ts"
+	],
+	"exclude": [
+		"node_modules"
+	],
+	"compileOnSave": true,
+	"compilerOptions": {
+		"outFile": "../../Solution/WebResources/msdyn_AgentScriptStepFormScript.js"
+	}
+}

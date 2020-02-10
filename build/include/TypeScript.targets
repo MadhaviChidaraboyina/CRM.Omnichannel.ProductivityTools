@@ -1,0 +1,46 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<UglifyJsMangle>true</UglifyJsMangle>
+		<UglifyJsCompress>true</UglifyJsCompress>
+		<UglifyGlobalDefs></UglifyGlobalDefs>
+		
+		<TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
+		<TypeScriptOutDir>$(OutputPath)WebResources</TypeScriptOutDir>
+    <TypeScriptDeclarationDir>$(OutputPath)\TypeDefinitions</TypeScriptDeclarationDir>
+		<MinifyOnDebug Condition="'$(MinifyOnDebug)' == ''">false</MinifyOnDebug>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+	
+	<Import Project="$(WSRoot)\build\include\TypeScriptCommonTypes.targets" />
+  <ItemGroup>
+    <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
+  </ItemGroup>
+	
+	<Import Project="$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.targets" />
+	<!--<Import Project="$(PKG_XRMAPP_TOOLS)\build\include\Tslint.targets" />-->
+	<Import Project="$(PKG_XRMAPP_TOOLS)\build\include\Uglify.targets" 
+		Condition="'$(BuildConfiguration)' == 'retail' OR '$(MinifyOnDebug)' == 'true'"	/>
+	
+	<Target Name="BeforeBuild">
+    <CallTarget Targets="TypeScriptClean" />
+  </Target>
+	
+	<PropertyGroup Condition="'$(Configuration)' == 'debug'">
+    <TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
+    <TypeScriptOutFile />
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+	
+	<ItemGroup>
+    <AvailableItemName Include="TypeScriptCompile">
+      <Visible>False</Visible>
+    </AvailableItemName>
+    <AvailableItemName Include="Content">
+      <Visible>False</Visible>
+    </AvailableItemName>
+  </ItemGroup>
+</Project>

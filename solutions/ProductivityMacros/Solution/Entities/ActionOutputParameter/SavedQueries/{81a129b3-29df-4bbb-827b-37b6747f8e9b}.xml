@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries>
+	<savedquery>
+		<IsCustomizable>1</IsCustomizable>
+		<CanBeDeleted>0</CanBeDeleted>
+		<isquickfindquery>1</isquickfindquery>
+		<isprivate>0</isprivate>
+		<isdefault>1</isdefault>
+		<savedqueryid>{81a129b3-29df-4bbb-827b-37b6747f8e9b}</savedqueryid>
+		<layoutxml>
+			<grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
+				<row name="result" id="msdyn_actionoutputparameterid">
+					<cell name="msdyn_name" width="300" />
+					<cell name="createdon" width="125" />
+				</row>
+			</grid>
+		</layoutxml>
+		<querytype>4</querytype>
+		<fetchxml>
+			<fetch version="1.0" mapping="logical">
+				<entity name="msdyn_actionoutputparameter">
+					<attribute name="msdyn_actionoutputparameterid" />
+					<attribute name="msdyn_name" />
+					<attribute name="createdon" />
+					<order attribute="msdyn_name" descending="false" />
+					<filter type="and">
+						<condition attribute="statecode" operator="eq" value="0" />
+					</filter>
+					<filter type="or" isquickfindfields="1">
+						<condition attribute="msdyn_name" operator="like" value="{0}" />
+					</filter>
+				</entity>
+			</fetch>
+		</fetchxml>
+		<IntroducedVersion>1.0</IntroducedVersion>
+		<LocalizedNames>
+			<LocalizedName description="Quick Find Active Action Output Parameters" languagecode="1033" />
+		</LocalizedNames>
+	</savedquery>
+</savedqueries>

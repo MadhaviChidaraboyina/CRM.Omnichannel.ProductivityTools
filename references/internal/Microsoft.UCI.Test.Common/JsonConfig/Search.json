@@ -1,0 +1,152 @@
+﻿{
+	"Form": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']"
+		}
+	},
+	"Section": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']"
+		}
+	},
+	"ButtonId": {
+		"All": {
+			"xPath": "//button"
+		}
+	},
+	"Table": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']/section[2]/section/section/section[2]/section[2]/section/table"
+		}
+	},
+	"ControlSelector": {
+		"All": {
+			"xPath": "//*[@data-id='{0}']"
+		}
+	},
+	"RelevanceSearchSelect": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//select[@data-id='search-root-selector']"
+		}
+	},
+	"CategorizedSearchTextbox": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//input[@data-id='categorized-search-text-input']"
+		}
+	},
+	"CategorizedSearchButton": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//button[@data-id='categorized-search-submit-button']"
+		}
+	},
+	"CategorizedSearchFilter": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//select[@data-id='categorized-search-filter-select']"
+		}
+	},
+	"CategorizedSearchSelect": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//select[@data-id='search-root-selector']"
+		}
+	},
+	"RelevanceSearchTextbox": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//input[@data-id='MscrmControls.Containers.RelevanceSearchControl-text-input-props']"
+		}
+	},
+	"RelevanceSearchButton": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//span[@data-id='MscrmControls.Containers.RelevanceSearchControl-microsoftIcon_searchButton']"
+		}
+	},
+	"RelevanceSearchFacetContainer": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='MscrmControls.Containers.RelevanceSearchControl-facetContainer']"
+		}
+	},
+	"RelevanceSearchResultDivLabel": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//label[@data-id='MscrmControls.Containers.RelevanceSearchControl-ResultLine{0}-{1}']"
+		}
+	},
+	"RelevanceSearchWholeContainer": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='MscrmControls.Containers.RelevanceSearchControl-wholeContainer']"
+		}
+	},
+	"RelevanceSearchNoResultFoundLabel": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='MscrmControls.Containers.RelevanceSearchControl-wholeContainer']/label"
+		}
+	},
+	"RelevanceSearchResultDivsContainer": {
+		"All": {
+			"xPath": "{0}/div[3]/div"
+		}
+	},
+	"RelevanceSearchResultDivEnityIcon": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='MscrmControls.Containers.RelevanceSearchControl-resultsContainer {0}']/div/img"
+		}
+	},
+	"RelevanceSearchResultViewColumnDiv": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='MscrmControls.Containers.RelevanceSearchControl-resultsContainer {0}']/div[2]/div"
+		}
+	},
+	"RelevanceSearchResultDivEnityNameLabel": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='MscrmControls.Containers.RelevanceSearchControl-resultsContainer {0}']/div[2]/label"
+		}
+	},
+	"RelevanceSearchResultWholeContainerDiv": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='MscrmControls.Containers.RelevanceSearchControl-wholeContainer']"
+		}
+	},
+	"DropdownControlSelector": {
+		"All": {
+			"xPath": "//*[@data-id='{0}']"
+		}
+	},
+	"RelevanceSearchLeftPaneIconForRecordTypeFacet": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='@search.emtityname']//div[@data-id='MscrmControls.Containers.RelevanceSearchControl.FacetFilter-listContainerChildren0']/div/div"
+		}
+	},
+	"RelevanceSearchFacetDiv": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='{0}']"
+		}
+	},
+	"HeaderForGlobalFilterRecordType": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//label[@data-id='MscrmControls.Containers.RelevanceSearchControl.FacetFilter-entityname_header_title_{0}']"
+		}
+	},
+	"RelevanceSearchBarChartContainer": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='{0}']/div[2]/div/div/div/div/div/div/span/div[@id='createdon_ctl00_PlaceHolderLeftNavBar_ctl00_csr6HistogramContainer']"
+		}
+	},
+	"RelevanceSearchBarChartHistogramBar": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='{0}']//a[@id='{0}_histogram_bar_link{1}']"
+		}
+	},
+	"FacetParentContainer": {
+		"All": {
+			"xPath": "//*[@id='FacetDiv']"
+		}
+	},
+	"RelevanceSearchSliderHandler": {
+		"All": {
+			"xPath": "//*[@id='SearchRoot']//div[@data-id='{0}']//[@id='{0}_ctl00_PlaceHolderLeftNavBar_ctl00_csr6SliderBehaviour_handle_{1}']"
+		}
+	},
+	"RelevanceSearchViewColumnLabel": {
+		"All": {
+			"xPath": "/label"
+		}
+	}
+}

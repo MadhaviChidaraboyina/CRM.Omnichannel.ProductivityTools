@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="RunLinkControl.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="lv-LV" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";RunLinkControl.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";RUNLINKCONTROL_CONFIRMBUTTONLABEL" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aizvērt]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T02:39:34.0000584Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for no run history found alert box button]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";RUNLINKCONTROL_LINKLABEL" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View run history]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skatīt izpildes vēsturi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T02:39:34.0000584Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for the link which opens run histories grid]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";RUNLINKCONTROL_NOHISTORY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[There's no run history associated with this macro record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ar šo makro ierakstu nav saistīta neviena izpildes vēsture.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T02:39:34.0000584Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Alert box text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";RUNLINKCONTROL_NORUNALERTTITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No run history]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nav izpildes vēstures]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-05T02:39:34.0000584Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for no run history found alert box title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>
