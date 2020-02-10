@@ -1,1 +1,0 @@
-E:\amd64\1033\DVD\Server\amd64\SetupServer.exe /Q /config E:\CRMSetupconfig.xml /L c:\SetupServer.log

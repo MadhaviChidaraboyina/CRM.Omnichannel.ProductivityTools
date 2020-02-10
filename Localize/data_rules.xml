@@ -1,5 +1,0 @@
-<entities xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <entity name="msdyn_productivitypaneconfiguration">
-      <field name="msdyn_name" localizableAttribute="value" loc="Yes" />
-  </entity>
-</entities>
