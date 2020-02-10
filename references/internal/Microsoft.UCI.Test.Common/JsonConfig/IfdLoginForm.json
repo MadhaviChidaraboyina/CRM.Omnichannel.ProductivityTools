@@ -1,0 +1,27 @@
+﻿{
+	"Form": {
+		"All": {
+			"xPath": "//*[@id='loginForm']"
+		}
+	},
+	"ControlSelector": {
+		"All": {
+			"xPath": "//*[@id='{0}']"
+		}
+	},
+	"UsernameSelector": {
+		"All": {
+			"xPath": "//*[@id='userNameInput']"
+		}
+	},
+	"PasswordSelector": {
+		"All": {
+			"xPath": "//*[@id='passwordInput']"
+		}
+	},
+	"SignInButtonSelector": {
+		"All": {
+			"xPath": "//*[@id='submitButton']"
+		}
+	}
+}

@@ -1,0 +1,7 @@
+﻿{
+   "FormSubGridControl": {
+    "All": {
+      "xPath": "//*[@data-id='dataSetRoot_{0}']"
+    }
+  }
+}

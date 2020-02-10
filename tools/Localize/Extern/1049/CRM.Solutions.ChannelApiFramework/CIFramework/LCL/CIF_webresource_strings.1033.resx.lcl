@@ -1,0 +1,1003 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="CIF_webresource_strings.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="ru-RU" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <Props>
+    <Str Name="CustomName1" Val="Custom 1" />
+    <Str Name="CustomName2" Val="Custom 2" />
+    <Str Name="CustomName3" Val="Custom 3" />
+    <Str Name="CustomName4" Val="Custom 4" />
+    <Str Name="CustomName5" Val="Custom 5" />
+    <Str Name="CustomName6" Val="IQA" />
+  </Props>
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Loc" />
+    <Cmt Name="LPK" />
+    <Cmt Name="Note" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Settings Name="..\LSS\locver.lss" Type="Lss" />
+  <Item ItemId=";CIF_webresource_strings.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";ACCEPT_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Accept]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Принять]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006174Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for notification button.]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";ADD_NOTE_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Add note]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Добавить заметку]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:00:26Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for adding notes]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
+        </Props>
+      </Item>
+      <Item ItemId=";AGENT_IMAGE_ALT_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent Image]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Изображение агента]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006174Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Alt text for Agent Image.]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";CANCEL_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cancel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Отмена]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:00:26Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Cancel Button Text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
+        </Props>
+      </Item>
+      <Item ItemId=";CLOSE_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Закрыть]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006174Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for close button.]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_COMPREHENSIVEVIEW_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View and access all the customer information at your fingertips at one place to deliver a faster service.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Получите удобный доступ к полной информации о клиентах, чтобы быстрее обслуживать их.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008079Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Comprehensive View Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_COMPREHENSIVEVIEW_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Comprehensive view of your customers' journey]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Полное представление цикла взаимодействия с клиентом]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Comprehensive View Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONSULT_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invite other agents, supervisors to collaborate and solve the issues faster.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Приглашайте других агентов и супервайзеров, чтобы совместными усилиями быстрее решать проблемы.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Consult With Users Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONSULT_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Consult with users]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Советуйтесь с пользователями]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Consult With Users Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONTEXTUALAPPS_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Access and manage sitemap applications that lie within the context of a session.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Работайте с приложениями карты сайта в контексте сеанса.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Contextual Applications Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_CONTEXTUALAPPS_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Contextual applications]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Контекстные приложения]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Contextual Applications Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_DONTSHOWMEAGAIN" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Don't show me again]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Больше не показывать]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Opt-out checkbox label for FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_GETMOREDONE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Quickly open work items with keyboard and mouse-click gesture and maximize your productivity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Быстро открывайте рабочие элементы с помощью клавиатуры и жестов мыши для максимально эффективной работы.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Get More Done Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_GETMOREDONE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get more done]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Добивайтесь большего]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Get More Done Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_GETSTARTED" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get Started]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Начало работы]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Get Started Button Text for FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_INTRO_SLIDE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Take a quick tour to learn how to deliver fast, personalized service to your customers.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ознакомьтесь с кратким обзором возможностей для быстрого и персонализированного обслуживания клиентов.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for the First Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_INTRO_SLIDE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Welcome to Omnichannel for Dynamics 365 Customer Service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Многоканальное взаимодействие для Dynamics 365 Customer Service]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for the First Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_LASTSLIDE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All Done]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Все готово]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008052Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for the Last Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_PAGINATION_OF" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[of]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[из]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008024Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[of Word of Pagination on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_TRANSFER_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transfer the conversations smoothly to the best-qualified agents to resolve them fast.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Быстро переключайте беседы на наиболее квалифицированных агентов для быстрого разрешения обращений.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008024Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Transfer the Conversation Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_TRANSFER_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transfer the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Передавайте разговоры]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008024Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Transfer the Conversation Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_WORKWITHMULTIPLE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Manage multiple customer conversations simultaneously with complete control of the context and customer details.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Управляйте несколькими разговорами одновременно, обладая полной информацией о клиенте.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008024Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for Work With Multiple Customers Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";FRE_WORKWITHMULTIPLE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Work with multiple customers]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Работайте с несколькими клиентами]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2019-09-20T14:08:50.0008024Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Work With Multiple Customers Slide on FRE]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";LAUNCH_PRESENCE_DIALOG_TOOLTIP" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Launch presence dialog]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Открыть диалоговое окно присутствия]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-06-13T07:06:05.0007851Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Tooltip for presence control in navbar]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19059_20190610" />
+        </Props>
+      </Item>
+      <Item ItemId=";NOTES_TOOLTIP_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Take Notes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ведение заметок]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:00:27Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for assisting user for notes.]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
+        </Props>
+      </Item>
+      <Item ItemId=";NOTIFICATION_DETAIL_COMMENT_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Comment]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Комментарий]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006174Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for notification comment detail]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";NOTIFICATION_DETAIL_WAIT_TIME_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Wait time]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Время ожидания]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006174Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for notification waittime detail]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";NOTIFICATION_WAIT_TIME_SECONDS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[secs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[сек.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006174Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Seconds unit to denote notification wait time]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";OPEN_ITEM_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Item]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Открыть элемент]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006174Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for launching work item assigned.]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";PRESENCE_AVAILABLE_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Available]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[В сети]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:00:27Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text to denote available presence]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
+        </Props>
+      </Item>
+      <Item ItemId=";PRESENCE_AWAY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Away]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Нет на месте]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006165Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text to denote away presence]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";PRESENCE_BUSY_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Busy]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Занят]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:00:27Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text to denote busy presence]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
+        </Props>
+      </Item>
+      <Item ItemId=";PRESENCE_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Presence]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Присутствие]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006165Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for presence button]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";PRESENCE_DO_NOT_DISTURB_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do Not Disturb]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Не беспокоить]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006165Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text to denote do not disturb presence]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";PRESENCE_OFFLINE_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Offline]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Не в сети]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-12-13T19:00:27Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text to denote offline presence]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+          <Str Name="Custom4" Val="Accepted" />
+        </Props>
+      </Item>
+      <Item ItemId=";PRESENCE_UNKOWN_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unknown]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Неизвестно]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-06-13T07:06:05.0007851Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text to denote unknown presence]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO19059_20190610" />
+        </Props>
+      </Item>
+      <Item ItemId=";REJECT_BUTTON_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reject]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Отклонить]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006165Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Reject Button Text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";START_NOTES_TOOLTIP_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start adding notes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Начать добавление заметок]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2019-05-31T02:41:26.0006165Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text for assisting user for notes.]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO18898_20190528" />
+        </Props>
+      </Item>
+      <Item ItemId=";V2_API_INFORMATION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamics 365 Channel Integration Framework version 2.0 supports only Telephony channels.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Инфраструктура интеграции каналов Dynamics 365 версии 2.0 поддерживает только каналы телефонии.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002354Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[V2 api information message]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";VISITOR_TEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Visitor]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Посетитель]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-30T11:01:01.0002406Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Visitor Slug for provider name in third party live workitem]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24633_20200127" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Обновить вкладку]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Refresh the tab.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:56:33.0005366Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24462_20200121" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Фокус на вкладке]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:56:33.0005366Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24462_20200121" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Получить текущую вкладку]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:56:33.0005366Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24462_20200121" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Обновить вкладку]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002354Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Фокус на вкладке]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:56:33.0005366Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24462_20200121" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Получить текущую вкладку]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:56:33.0005366Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Display  Name]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24462_20200121" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Соединитель сеанса]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002354Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Соединитель сеанса]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002347Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Соединитель сеанса]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002347Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Обновить вкладку]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002347Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Фокус на вкладке]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:56:33.0005335Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24462_20200121" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Получить текущую вкладку]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:56:33.0005335Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24462_20200121" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_48fc87c4_f480_4129_9c1d_682442d7bc60" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Обновить вкладку]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002347Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Фокус на вкладке]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Focus tab]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:56:33.0005335Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24462_20200121" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Получить текущую вкладку]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Get the current page]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-jachyl" DateTime="2020-01-24T15:56:33.0005335Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24462_20200121" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_categorylabel_ac627bea_31f2_4378_9a21_6e1e2d74e278" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Предопределенные действия автоматизации]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002347Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Category Label]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_description_ac627bea_31f2_4378_9a21_6e1e2d74e278" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used session actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Автоматизация часто используемых действий сеанса]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002347Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Description]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_displayname_ac627bea_31f2_4378_9a21_6e1e2d74e278" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Соединитель сеанса]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002347Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Display Name]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroconnector_msdyn_title_ac627bea_31f2_4378_9a21_6e1e2d74e278" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Соединитель сеанса]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-01-17T04:35:15.0002347Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Connector Category Label]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

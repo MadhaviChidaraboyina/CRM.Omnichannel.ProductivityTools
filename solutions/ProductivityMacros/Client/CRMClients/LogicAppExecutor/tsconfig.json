@@ -1,0 +1,20 @@
+{
+	"extends": "../../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+	"include": [
+		"Interfaces.ts",
+		"LogicAppExecutorUtils.ts",
+		"IfAction.ts",
+		"SetDefaultCallScriptAction.ts",
+		"LogicAppExecutor.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"wwwroot"
+	],
+	"compileOnSave": true,
+	"compilerOptions": {
+		"sourceMap": true,
+		"outFile": "../../../Solution/WebResources/CRMClients/msdyn_LogicAppExecutor.js",
+		"allowJs": true
+	}
+}

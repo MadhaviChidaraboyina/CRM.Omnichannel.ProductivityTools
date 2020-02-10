@@ -1,0 +1,12 @@
+﻿{
+	"NotificationId": {
+		"All": {
+			"xPath": "//*[@id='notificationList']"
+		}
+	},
+	"NotificationLabel": {
+		"All": {
+			"xPath": "//*[@id='notificationFlyout']/ul/li/span"
+		}
+	}
+}

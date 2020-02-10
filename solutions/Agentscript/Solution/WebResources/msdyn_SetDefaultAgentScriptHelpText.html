@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<link href="/uclient/resources/styles/Styles.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript">
+		function setLocalizedStringsForSetDefaultAgentScriptDisclaimer()
+		{
+			var enableBuildExpression = parent.Xrm.Page.getAttribute("msdyn_enablebuildexpression");
+			setInnerHTML(enableBuildExpression.getValue());
+			enableBuildExpression.addOnChange(function () {
+				setInnerHTML(enableBuildExpression.getValue());
+			});				
+		}
+		
+		function setInnerHTML(enableBuildExpression)
+		{
+			if (enableBuildExpression) {
+				document.getElementById("disclaimer-string").innerHTML = parent.Xrm.Utility.getResourceString("Localization/msdyn_Agentscript", "Set_Default_AgentScript_No_Help_Text");
+			}
+			else {
+				document.getElementById("disclaimer-string").innerHTML = parent.Xrm.Utility.getResourceString("Localization/msdyn_Agentscript", "Set_Default_AgentScript_Yes_Help_Text");
+			}
+		}
+		</script>
+		<style>
+			.disclaimer-text-body {
+				background-color: #F4F4F4 !important;
+				font-family: "Segoe UI", sans-serif;
+			}
+
+			.disclaimer-text {
+				padding: 10px;			
+				display: table;				
+			}
+
+			#msdyn_disclaimerimage {
+				top: 6px;
+				left: 7px;
+				position: absolute;
+				width: 16px;
+				height: 16px;
+				font-size: 15px;
+				line-height: 18px;
+				text-align: center;
+				color: #333333;
+				display: table-cell;
+			}
+
+			#disclamer-string-wrap
+			{
+				left: 27px;
+				right: 20px;
+				top: 4px;
+				height:64px;
+				display: table-cell;
+				font-size: 12px;
+				line-height: 14px;
+				color: #333333;
+				position: absolute;				
+				display: table-cell;
+			}
+		</style>
+	</head>
+	<body onload="setLocalizedStringsForSetDefaultAgentScriptDisclaimer();" class="disclaimer-text-body" style="overflow-wrap: break-word;">
+		<div class="disclaimer-text">
+			<span id="msdyn_disclaimerimage" class="symbolFont InformationIcon-symbol"></span>
+			<span id="disclamer-string-wrap">
+				<span id="disclaimer-string"></span>
+			</span>
+		</div>
+	</body>
+</html>

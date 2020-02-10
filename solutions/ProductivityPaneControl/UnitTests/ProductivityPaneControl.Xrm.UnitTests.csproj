@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\Packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props" />
+  <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{3394C184-BEA8-46D3-92D5-525EB27457A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Dynamics.ProductivityPaneControl.UnitTests</RootNamespace>
+    <AssemblyName>ProductivityPaneControl.Xrm.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TestProjectType>UnitTest</TestProjectType>
+    <nowarn>2008</nowarn>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\build\config\mssharedlibsn1024.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Dynamics.Solution.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>$(PKG_XRMAPP_SOLUTIONCOMMON)\$(SCPATH)\Microsoft.Dynamics.Solution.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>$(PKG_MOQ)\lib\net40\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="..\..\..\build\config\mssharedlibsn1024.snk">
+      <Link>mssharedlibsn1024.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\ProductivityPaneControlCommon.csproj">
+      <Project>{14D5A07C-BF4C-4CAF-AA28-ACD97221C2EE}</Project>
+      <Name>ProductivityPaneControlCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestCommon\ProductivityPaneControlTestCommon.csproj">
+      <Project>{2B5435A0-A313-4473-8A2D-D0E1184B90DF}</Project>
+      <Name>ProductivityPaneControlTestCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\ServerTests.targets" />
+  <Import Project="$(PKG_STYLECOP)\build\StyleCop.MSBuild.Targets" Condition=" '$(EnableStyleCopCheck)' == 'true' " />
+</Project>

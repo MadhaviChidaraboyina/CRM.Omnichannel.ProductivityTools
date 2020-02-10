@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+	<WebResourceId>{3BDC80C8-45A2-4B40-8C2E-508A1E74CE87}</WebResourceId>
+	<Name>Localization/ProductivityMacros_webresource_strings.2074.resx</Name>
+	<DisplayName>Localization/ProductivityMacros_webresource_strings.2074.resx</DisplayName>
+	<Description>This resx file contains strings for ProductivityMacros.</Description>
+	<LanguageCode>2074</LanguageCode>
+	<WebResourceType>12</WebResourceType>
+	<IntroducedVersion>1.0</IntroducedVersion>
+	<IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+	<IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+	<DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+	<IsCustomizable>0</IsCustomizable>
+	<CanBeDeleted>0</CanBeDeleted>
+	<IsHidden>1</IsHidden>
+	<FileName>/WebResources/Localization/ProductivityMacros_webresource_strings.2074.resx</FileName>
+</WebResource>

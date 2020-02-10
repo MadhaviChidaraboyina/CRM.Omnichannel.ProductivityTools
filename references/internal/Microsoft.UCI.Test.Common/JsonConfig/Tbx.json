@@ -1,0 +1,97 @@
+﻿{
+	"TbxMenuLauncher": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//ul[@data-id='CommandBar']//button[@data-id='tbxMenuLauncher']"
+		}
+	},
+	"ApplicationShell": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']"
+		}
+	},
+	"TbxMenu": {
+		"All": {
+			"xPath": "//*[@id='__flyoutRootNode']//div[@id='tbxMenu']"
+		}
+	},
+	"TbxMenuButton": {
+		"All": {
+			"xPath": "//*[@id='__flyoutRootNode']//button[@data-id='{0}']"
+		}
+	},
+	"TbxForm": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='tbxRoot']"
+		}
+	},
+	"ControlSelector": {
+		"All": {
+			"xPath": "//*[@data-id='{0}']"
+		}
+	},
+	"TbxLookupSelector": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='tbxRoot']//div[@id='{0}']/div/div/ul/li/input"
+		}
+	},
+	"CloseButton": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='tbxRoot']//button[@data-id='tbxCancelBtn']"
+		}
+	},
+	"NextButton": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='tbxRoot']//button[@data-id='Next_button']"
+		}
+	},
+	"DoneButton": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='tbxRoot']//button[@data-id='Done_button']"
+		}
+	},
+	"Tab": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='tbxRoot']//div[@data-id='tabpanel-{0}']"
+		}
+	},
+	"Section": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='tbxRoot']//div[@data-id='tabpanel-{0}']//section[@data-id='{0}_{1}']"
+		}
+	},
+	"ConfirmDialog": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//div[@data-id='confirmdialog']"
+		}
+	},
+	"ConfirmButton": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//button[@data-id='confirmButton']"
+		}
+	},
+	"CancelButton": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//button[@data-id='cancelButton']"
+		}
+	},
+	"TbxHeader": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='tbxRoot']//div[@data-id='tbxHeaderContainer']"
+		}
+	},
+	"TbxFooter": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='tbxRoot']//div[@id='tbxFooterContainer_1']"
+		}
+	},
+	"TbxImage": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//section[@data-id='tbxRoot']//div[@data-id='tbxHeaderContainer']/img"
+		}
+	},
+	"DropdownControlSelector": {
+		"All": {
+			"xPath": "//*[@data-id='{0}.fieldControl-option-set-select']"
+		}
+	}
+}

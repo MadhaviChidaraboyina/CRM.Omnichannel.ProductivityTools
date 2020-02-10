@@ -1,0 +1,76 @@
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="Environment.targets" />
+	<PropertyGroup>
+		<Name>XRMSolution</Name>
+		<BuildConfiguration Condition=" '$(BuildConfiguration)' == '' ">debug</BuildConfiguration>
+		<BuildType>$(BuildConfiguration)</BuildType>
+		<BuildPlatform Condition=" '$(BuildPlatform)' == '' ">amd64</BuildPlatform>
+		<BuildTarget>$(BuildPlatform)</BuildTarget>
+		<Configuration Condition=" '$(Configuration)' == '' ">$(BuildType)</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">$(BuildPlatform)</Platform>
+
+		<ConfigurationIsDebug Condition=" '$(BuildConfiguration)' == 'debug' ">true</ConfigurationIsDebug>
+		<EnvironmentReady>false</EnvironmentReady>
+		<EnableStyleCopCheck Condition=" '$(EnableStyleCopCheck)' != 'false' ">true</EnableStyleCopCheck>
+		
+		<OutputPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\$(MSBuildProjectName)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'debug|amd64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StyleCopTreatErrorsAsWarnings>true</StyleCopTreatErrorsAsWarnings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'release|amd64' or '$(Configuration)|$(Platform)' == 'retail|amd64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StyleCopTreatErrorsAsWarnings>true</StyleCopTreatErrorsAsWarnings>
+  </PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StyleCopTreatErrorsAsWarnings>true</StyleCopTreatErrorsAsWarnings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'release|AnyCPU' or '$(Configuration)|$(Platform)' == 'retail|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StyleCopTreatErrorsAsWarnings>true</StyleCopTreatErrorsAsWarnings>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<PKG_BASEAPP_DEPENDENCIES>$(XrmSolutionsRoot)\references\internal\Microsoft.Crm.BaseApp.ObjectModel.Dependencies</PKG_BASEAPP_DEPENDENCIES>
+		<PKG_KERNEL_CONTRACTS>$(XrmSolutionsRoot)\references\internal\Microsoft.Xrm.Kernel.Contracts</PKG_KERNEL_CONTRACTS>
+		<PKG_NUGET>$(XrmSolutionsRoot)</PKG_NUGET>
+		<PKG_PRIVATE_CLIENTAPITYPINGS>$(XrmSolutionsRoot)\references\internal\TypeDefinitions\XrmClientApi</PKG_PRIVATE_CLIENTAPITYPINGS>
+		<PKG_XRMTESTCOMMON>$(XrmSolutionsRoot)\references\internal\Microsoft.Xrm.Test.Common</PKG_XRMTESTCOMMON>
+	</PropertyGroup>
+
+	<Choose>
+		<When Condition="('$(BuildConfiguration)' == 'debug')">
+			<PropertyGroup>
+				<SCPATH>debug\AnyCPU\SolutionCommon</SCPATH>
+			</PropertyGroup>
+		</When>
+		<Otherwise>
+			<PropertyGroup>
+				<SCPATH>lib\AnyCPU\SolutionCommon</SCPATH>
+			</PropertyGroup>
+		</Otherwise>
+	</Choose>
+	
+	<Target Name="DeployStyleCopSetting" BeforeTargets="Build"
+		Condition="('$(OverrideXRMSolutionsStyleCopSettings)' == '') or ('$(OverrideXRMSolutionsStyleCopSettings)' == 'false')">
+		<ItemGroup>
+			<SettingsFile Include="$(XrmSolutionsRoot)\build\config\Settings.StyleCop" />
+		</ItemGroup>
+		<Copy SourceFiles="@(SettingsFile)" DestinationFolder="$(ProjectDir)" Retries="20" SkipUnchangedFiles="true" RetryDelayMilliseconds="1000" ContinueOnError="true" Condition="'$(ProjectDir)' != ''"/>
+	</Target>
+	<Target Name="Clean">
+		<RemoveDir Directories="$(OutputPath)" />
+	</Target>
+</Project>

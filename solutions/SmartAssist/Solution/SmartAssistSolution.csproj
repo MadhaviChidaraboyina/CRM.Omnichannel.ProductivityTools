@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{284fee46-896c-48dd-bde0-80020a8ca795}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <NOTARGET>true</NOTARGET>
+    <SolutionProjectNamePrefix>SmartAssist</SolutionProjectNamePrefix>
+    <SolutionFileNamePrefix>msdyn_smartassist</SolutionFileNamePrefix>
+    <ApplicationFolder>$(WSRoot)\solutions\SmartAssist</ApplicationFolder>
+    <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
+    <PluginMapFile></PluginMapFile>
+    <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\SmartassistControls</CustomControlsPath>
+    <SystemConverted>false</SystemConverted>
+  </PropertyGroup>
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
+</Project>

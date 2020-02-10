@@ -1,0 +1,22 @@
+﻿{
+	"Container": {
+		"All": {
+			"xPath": "//*[@data-id='recordSetNav']"
+		}
+	},
+	"Items": {
+		"All": {
+			"xPath": "//*[@data-id='recordSetNavList']"
+		}
+	},
+	"CollapseIcon": {
+		"All": {
+			"xPath": "//*[@data-id='recordSetNavCollapseIcon']"
+		}
+	},
+	"ExpandIcon": {
+		"All": {
+			"xPath": "//*[@data-id='recordSetNavExpandIcon']"
+		}
+	}
+}

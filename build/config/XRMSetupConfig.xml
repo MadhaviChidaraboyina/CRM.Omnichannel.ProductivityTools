@@ -1,0 +1,38 @@
+<CRMSetup>
+	<Server>
+		<Patch update="true" />
+		<SqlServer>machineName</SqlServer>
+		<Database create="true" />
+		<Organization>Contoso</Organization>
+		<OrganizationUniqueName>contoso</OrganizationUniqueName>
+		<muoptin optin="true" />
+		<OU>DC=machineNamedom,DC=extest,DC=microsoft,DC=com</OU>
+		<PreferredDC>machineNamedom.extest.microsoft.com</PreferredDC>
+		<LicenseKey>VYRNY-CCK6T-XD6RG-DKFGX-P38RF</LicenseKey>
+		<WebsiteURL>/LM/W3SVC/1</WebsiteURL>
+		<InstallDir>C:\Program Files\Dynamics 365</InstallDir>
+		<basecurrency isocurrencycode="USD" currencyname="US Dollar" currencysymbol="$" currencyprecision="2" />
+		<OrganizationCollation>Latin1_General_CI_AI</OrganizationCollation>
+		<IsXRM>1</IsXRM>
+		<CrmServiceAccount type="NetworkService" />
+		<SandboxServiceAccount type="NetworkService" />
+		<DeploymentServiceAccount type="NetworkService" />
+		<AsyncServiceAccount type="NetworkService" />
+		<VSSWriterServiceAccount type="NetworkService" />
+		<MonitoringServiceAccount type="NetworkService" />
+		<SQM optin="false" />
+		<muoptin optin="true"/>
+		<Reporting URL="http://machineName/reportserver"/>
+		<OrganizationCollation>Latin1_General_CI_AI</OrganizationCollation>
+		<LaunchReportingExtensionsSetup>true</LaunchReportingExtensionsSetup>
+	</Server>
+	<srsdataconnector>
+		<Patch update="true" />
+		<InstallType>Repair</InstallType>
+		<configdbserver>machineName</configdbserver>
+		<muoptin optin="true" />
+		<MonitoringServiceAccount type="NetworkService" />
+		<InstallDir>C:\Program Files\Dynamics 365 Reporting Extensions</InstallDir>
+		<autogroupmanagementoff>0</autogroupmanagementoff>
+	</srsdataconnector>
+</CRMSetup>

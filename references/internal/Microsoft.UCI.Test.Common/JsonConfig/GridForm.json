@@ -1,0 +1,42 @@
+﻿{
+	"Form": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']"
+		}
+	},
+	"ButtonId": {
+		"All": {
+			"xPath": "//button[@id='{0}']"
+		}
+	},
+	"Table": {
+		"All": {
+			"xPath": "//*[@id='gridRoot']/div//div/table"
+		}
+	},
+	"Calendar": {
+		"All": {
+			"xPath": "//*[@data-id='entity_control_container']"
+		}
+	},
+	"ViewSelector": {
+		"All": {
+			"xPath": "//*[@id='ApplicationShell']//*[@id='gridRoot']/div/div[1]//button"
+		}
+	},
+	"ViewSelectorFlyout": {
+		"All": {
+			"xPath": "//*[@id='__flyoutRootNode']//div[@id='ViewSelector_Flyout_{0}']//span[contains(text(),'{1}')]"
+		}
+	},
+  "ChartContainer": {
+    "All": {
+      "xPath": "//*[@id='shell-container']//div[@id='ApplicationShell']//div[contains(@class, 'customControl MscrmControls Chart.ChartControl')]//div[contains(@data-highcharts-chart, '')]"
+    }
+  },
+  "ControlSelector": {
+		"All": {
+			"xPath": "//*[@data-id='{0}']"
+		}
+	}
+}

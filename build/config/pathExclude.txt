@@ -1,0 +1,3 @@
+*\tools\commands
+*\tools\nuget
+*\tools\ImportSolution

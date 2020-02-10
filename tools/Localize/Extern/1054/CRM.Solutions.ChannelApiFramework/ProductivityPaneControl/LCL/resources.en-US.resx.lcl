@@ -1,0 +1,976 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="resources.en-US.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="th-TH" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";resources.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";10:Description,lk_msdyn_productivitypaneconfiguration_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสเฉพาะของผู้ใช้ที่สร้างเรกคอร์ด]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008602Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,lk_msdyn_productivitypaneconfiguration_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสเฉพาะของผู้ใช้ที่ปรับเปลี่ยนเรกคอร์ด]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008602Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";10:Description,organization_msdyn_productivitypaneconfiguration" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the organization]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสเฉพาะขององค์กร]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008602Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:Description,ProductivityPaneControl" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamics 365 ProductivityPaneControl workload]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ปริมาณงานของการควบคุมบานหน้าต่างการเพิ่มประสิทธิภาพของ Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008533Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,ProductivityPaneControl" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Pane Control]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[การควบคุมบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008533Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamics 365]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dynamics 365]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008533Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Productivity pane configuration{4d182267-6a95-40e1-9c02-ae8db486af12}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A form for this entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ฟอร์มสำหรับเอนทิตีนี้]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008533Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสเฉพาะของผู้ใช้ที่สร้างเรกคอร์ด]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008533Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[วันที่และเวลาที่สร้างเรกคอร์ด]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008533Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสเฉพาะของผู้ใช้ที่เป็นผู้รับมอบสิทธิ์ที่สร้างเรกคอร์ด]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008533Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sequence number of the import that created this record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[หมายเลขลำดับการนำเข้าที่สร้างเรกคอร์ดนี้]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008533Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสเฉพาะของผู้ใช้ที่ปรับเปลี่ยนเรกคอร์ด]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008533Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[วันที่และเวลาที่ปรับเปลี่ยนเรกคอร์ด]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสเฉพาะของผู้ใช้ที่เป็นผู้รับมอบสิทธิ์ที่ปรับเปลี่ยนเรกคอร์ด]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationOrganizationId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the organization]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสเฉพาะขององค์กร]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[วันที่และเวลาที่ย้ายเรกคอร์ด]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สำหรับใช้งานภายในเท่านั้น]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสโซนเวลาที่ใช้งานตอนที่สร้างเรกคอร์ด]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationentitymsdyn_productivitypaneconfiguration" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_Applicationname" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_Productivitypanemode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008261Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_Productivitypanestate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008241Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The name of the custom entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ชื่อของเอนทิตีแบบกำหนดเอง]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008241Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfigurationId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for entity instances]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสเฉพาะของอินสแตนซ์ของเอนทิตี]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008241Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanemode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008241Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008241Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Productivity pane configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สถานะของการกำหนดค่าบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008241Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Productivity pane configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[เหตุผลสำหรับสถานะของการกำหนดค่าบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008241Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Productivity pane configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สถานะของการกำหนดค่าบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008241Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Productivity pane configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[เหตุผลสำหรับสถานะของการกำหนดค่าบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008241Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_productivitypaneconfigurationentitymsdyn_productivitypaneconfiguration" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity pane configurations]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[การกำหนดค่าบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Productivity pane configuration{4d182267-6a95-40e1-9c02-ae8db486af12}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity pane]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[บานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,msdyn_productivitypaneconfigurationentitymsdyn_productivitypaneconfiguration" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity pane configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[การกำหนดค่าบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สร้างโดย]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สร้างเมื่อ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สร้างโดย (ผู้รับมอบสิทธิ์)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008464Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationImportSequenceNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import Sequence Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[หมายเลขลำดับการนำเข้า]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[แก้ไขโดย]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ปรับเปลี่ยนเมื่อ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ปรับเปลี่ยนโดย (ผู้รับมอบสิทธิ์)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationOrganizationId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Organization Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสองค์กร]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สร้างเรกคอร์ดเมื่อ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008194Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[หมายเลขรุ่นของกฎโซนเวลา]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008396Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[รหัสโซนเวลาที่ใช้ในการแปลง UTC]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008396Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_Applicationname" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ชื่อแอปพลิเคชัน]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008396Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_Productivitypanemode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity pane mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[โหมดบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008396Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_Productivitypanestate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity pane state]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สถานะบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008396Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ชื่อ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008396Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfigurationId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity pane configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[การกำหนดค่าบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008396Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanemode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity pane mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[โหมดบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008396Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity pane state]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สถานะบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008396Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สถานะ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008137Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[คำอธิบายรายการของสถานะ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008137Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[สถานะ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008137Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[คำอธิบายรายการของสถานะ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008137Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Productivity pane configuration{09e9c271-36bd-db1d-9580-a7a68aea45bc}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Section]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ส่วน]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008137Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Productivity pane configuration{0d4b5d0c-9346-681e-8b55-ccb1493da775}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Default mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[โหมดเริ่มต้น]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008137Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Productivity pane configuration{1d232692-b84d-3a66-920a-aa61b957a77c}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Settings]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[การตั้งค่า]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008137Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Productivity pane configuration{2001b56e-bd86-d68b-822b-83b0b06c2b74}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ชื่อแอปพลิเคชัน]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008137Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Productivity pane configuration{2a7739b1-fb2c-489c-aa09-58a8c58aee88}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ชื่อ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008137Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Productivity pane configuration{30a60635-8c70-ac66-40ec-b14b9e336aab}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Section]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ส่วน]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008115Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Productivity pane configuration{37327a0c-5867-b4d8-4e34-12107a7db3a1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable productivity pane]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[เปิดใช้งานบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008115Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Productivity pane configuration{5e7ac5d0-172a-89e4-e506-91ec8a282253}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Section]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ส่วน]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008115Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Productivity pane configuration{7131592a-8239-bedc-0585-a975894a0a2e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008115Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanemode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Collapsed]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ยุบแล้ว]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008115Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanemode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Expanded]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ขยายแล้ว]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008115Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ไม่ใช่]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008115Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Yes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ใช่]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008115Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ใช้งาน]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008115Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ไม่ใช้งาน]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008115Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ใช้งาน]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008087Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ไม่ใช้งาน]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008087Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";29:Description,{7753e97d-af27-ea11-a810-000d3a1026fe}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Click to add description]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[คลิกเพื่อเพิ่มคำอธิบาย]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008087Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+      <Item ItemId=";29:LocalizedName,{7753e97d-af27-ea11-a810-000d3a1026fe}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable disable productivity pane mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[เปิดใช้งาน/ปิดใช้งานโหมดบานหน้าต่างการเพิ่มประสิทธิภาพ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0008087Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO24766_20200203" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

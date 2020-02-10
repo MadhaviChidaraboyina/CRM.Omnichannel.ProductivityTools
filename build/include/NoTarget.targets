@@ -1,0 +1,50 @@
+﻿<!--
+***********************************************************************************************
+NoTarget.targets
+
+Extended targets file provides for proper extensibility throughout msbuild
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+***********************************************************************************************
+-->
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- 
+    Since non-compiling "proj" formats are not fully supported by Visual Studio, let's
+    make this actually work like a "csproj", by building a dummy assembly 
+  -->
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetName>DummyOutputAssembly$(AssemblyNameAppend)</TargetName>
+    <AssemblyName>DummyOutputAssembly$(AssemblyNameAppend)</AssemblyName>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <SkipSymbolDrop>true</SkipSymbolDrop>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <!-- Custom BuildMarker support -->
+  <PropertyGroup>
+    <BuildMarkerOutputPath>obj\$(Configuration)\</BuildMarkerOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMarker Include="$(BuildMarkerOutputPath)LastBuild.txt"/>
+  </ItemGroup>
+  <PropertyGroup>
+    <CreateBuildMarkerRun>
+	
+	REM Create file for incremental build tracking
+	echo Creating $(BuildMarkerOutputPath)LastBuild.txt
+	mkdir $(BuildMarkerOutputPath)
+	del $(BuildMarkerOutputPath)LastBuild.txt
+	echo Last Build Marker > $(BuildMarkerOutputPath)LastBuild.txt
+
+    </CreateBuildMarkerRun>
+  </PropertyGroup>
+  <Target Name="ProduceBuildMarker">
+		<Exec Command="$(CreateBuildMarkerRun)"/>
+  </Target>
+  <Target Name="CleanBuildMarker" AfterTargets="Clean">
+		<Delete Files="@(BuildMarker)"/>
+  </Target>  
+</Project>

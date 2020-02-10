@@ -1,0 +1,27 @@
+﻿{
+  "Form": {
+    "All": {
+      "xPath": "//*[@id='ApplicationShell']"
+    }
+  },
+  "DashboardFlyout": {
+    "All": {
+      "xPath": "//*[@id='__flyoutRootNode']/div//ul/div"
+    }
+  },
+  "DashboardSelector": {
+    "All": {
+      "xPath": "//*[@id='ApplicationShell']/div/div[@id='DashboardView']//div[@id='Dashboard_Selector']/div/span"
+    }
+  },
+  "DashboardViewSelectorId": {
+    "All": {
+      "xPath": "//*[@id='__flyoutRootNode']/div//ul//li[@data-value='{0}']"
+    }
+  },
+  "DateRangeFilter": {
+    "All": {
+      "xPath": "//*[@id='ApplicationShell']//div[@id='DashboardView']//button[@data-id='Dashboard_DateRangeFilter-DateRangeFilter']"
+    }
+  }
+}

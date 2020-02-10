@@ -1,0 +1,10 @@
+{
+	"extends":  "../../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+	"include": [
+		"StringProvider.ts"
+	],
+	"compilerOptions": {
+		"outFile": "StringProvider.js",
+      	"target": "es5"
+	}
+}

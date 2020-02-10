@@ -1,0 +1,29 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<LocalizationExtractFolderOutput>$(OutputPath)\$(SolutionFileNamePrefix)\Extract</LocalizationExtractFolderOutput>
+	</PropertyGroup>
+
+	<Target Name="UpdateLoc" AfterTargets="AfterBuild" Condition="'$(EnableLocalization)' == 'true' And '$(ThrowsLocalizeError)' == ''" >
+		<Message text="Localization Extraction Started" Importance="High" />
+		<MakeDir Directories="$(LocalizationExtractFolderOutput)" Condition="!Exists('$(LocalizationExtractFolderOutput)')"/>
+		
+		<!--Extract solution zip with /loc flags to produce metadata resx file-->
+		<Exec Command="$(PKG_XRMAPP_TOOLS)\tools\Microsoft.Crm.SolutionPackager\retail\i386\SolutionPackager.exe /n /action:extract /packagetype:both /folder:$(LocalizationExtractFolderOutput) /zipfile:$(UnmanagedSolutionName).zip /errorLevel:verbose /src /loc" />
+		
+		<!--Copy Resx Files to destinations for local builds to check in changes.-->
+		<Copy SkipUnchangedFiles="true" SourceFiles="$(LocalizationExtractFolderOutput)\Resources\en-us\resources.en-US.resx" DestinationFolder="$(SolutionFolder)\Resources\en-us\" />	
+		<Copy SkipUnchangedFiles="true" SourceFiles="$(LocalizationExtractFolderOutput)\Resources\template_resources.resx" DestinationFolder="$(SolutionFolder)\Resources\" />
+		
+		<!--Copy Plugin and Web Resources resx files-->
+		<Exec Command="xcopy $(ApplicationFolder)\*.en-US.resx $(XrmSolutionsRoot)\drop\Resources\$(SolutionFileNamePrefix)\* /sy /EXCLUDE:$(XrmSolutionsRoot)\build\config\LocExclude.txt" />
+		
+		<!--Rename Plugin and Web Resources Resx Files-->
+		<!--<Exec Command="for /r $(XrmSolutionsRoot)\drop\Resources\$(SolutionFileNamePrefix)\ %%i IN (*.resx) do ren %%i %%~ni.en-us.resx " />-->
+		
+		<!--Copy Metadata Resx file-->
+		<Exec Command="xcopy $(ApplicationFolder)\solution\resources\en-us\*.resx $(XrmSolutionsRoot)\drop\Resources\$(SolutionFileNamePrefix)\solution\resources\en-us\* /y" />
+		<Exec Command="rmdir /s /q $(OutputPath)\$(SolutionFileNamePrefix)" />
+		<Message text="Localization Extract Complete" Importance="High" />
+	</Target>
+
+</Project>
