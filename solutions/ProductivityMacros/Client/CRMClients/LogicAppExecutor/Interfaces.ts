@@ -21,6 +21,20 @@ namespace Microsoft.LogicAppExecutor {
 	}
 
 	export interface ActionExecutor {
-		ExecuteAction(action: IActionItem): Promise<string>;
+		ExecuteAction(action: IActionItem, state: any, runHistoryData: executionJSON): Promise<string>;
+	}
+
+	export interface executionJSON {
+		waitEndTime: string,
+		startTime: string,
+		endTime: string,
+		status: string,
+		id: string,
+		name: string,
+		type: string,
+		definition: any,
+		connectionReferences: any,
+		trigger: any,
+		macroid: string
 	}
 }

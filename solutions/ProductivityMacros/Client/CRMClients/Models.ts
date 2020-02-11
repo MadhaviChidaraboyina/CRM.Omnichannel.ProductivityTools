@@ -4,21 +4,6 @@
 /** @internal */
 namespace Microsoft.ProductivityMacros {
 
-	export interface executionJSON {
-
-		waitEndTime: string,
-		startTime: string,
-		endTime: string,
-		status: string,
-		id: string,
-		name: string,
-		type: string,
-		definition: any,
-		connectionReferences: any,
-		trigger: any,
-		macroid: string
-	}
-
 	export interface IActionItem {
 		name: string;
 		type: string,

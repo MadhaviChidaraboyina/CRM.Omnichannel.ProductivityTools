@@ -4,13 +4,14 @@
 
 module MscrmControls.ProductivityToolAgentGuidance {
 
-	export class ControlStyle {
-        public static agentGuidanceTitleStyle() {
+    export class ControlStyle {
+
+        public static agentGuidanceTitleStyle(isRTL: boolean) {
 
             let style: any = {
                 position: "relative",
-                left: "15px",
-                right: "12.57 %",
+                left: !isRTL ? "15px" : "12.57 %",
+                right: !isRTL ? "12.57 %" : "15px",
                 top: "8 %",
                 bottom: "88.5 %",
                 fontFamily: "Segoe UI",
@@ -22,7 +23,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
             };
 
             return style;
-		}
+        }
 
         public static agentGuidanceContainerStyle() {
 

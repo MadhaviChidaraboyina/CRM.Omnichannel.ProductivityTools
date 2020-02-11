@@ -18,7 +18,7 @@ namespace Microsoft.LogicAppExecutor {
 			}
 			return IfAction._instance;
 		}
-		ExecuteAction(action: IActionItem): Promise<string> {
+		ExecuteAction(action: IActionItem, state: any, runHistoryData: executionJSON): Promise<string> {
 			return new Promise((resolve, reject) => {
 				let expressions = action.expression;
 				this.evaluvateExpression(expressions).then(
@@ -30,7 +30,7 @@ namespace Microsoft.LogicAppExecutor {
 						else {
 							innerActions = action.else.actions;
 						}
-						let executeActionPromise = ExecuteActions(innerActions).then(
+						let executeActionPromise = ExecuteActions(innerActions, state, runHistoryData).then(
 							function (result: any) {
 								return (result);
 							},

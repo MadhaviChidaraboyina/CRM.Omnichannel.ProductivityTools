@@ -1,4 +1,6 @@
 ﻿/// <reference path="Constants.ts" />
+/// <reference path="Models.ts" />
+
 
 namespace Microsoft.ProductivityMacros.RunHistory {
 
@@ -16,14 +18,14 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 		return s ? "-" + p.substr(0, 4) + "-" + p.substr(4, 4) : p;
 	}
 
-	function initializeRunHistoryJSON(data: any, inputJSONstring: any, macroName: string): any{
+	export function initializeRunHistoryJSON(data: any, inputJSONstring: any, macroName: string): any{
 		data.id = newGuid();
 		data.startTime = new Date().toISOString();
 		data.waitEndTime = data.startTime;
 		data.type = Microsoft.ProductivityMacros.Constants.typeOfExecution;
 		data.name = macroName;
-		data.connectionReferences = JSON.parse(inputJSONstring).properties.connectionReferences;
-		data.definition.triggers = JSON.parse(inputJSONstring).properties.definition.triggers;
+		data.definition = {};
+		data.definition.triggers = JSON.parse(inputJSONstring).definition.triggers;
 		//data.definition.triggers.status = "Succeeded" // TODO: What to do if trigger can also execute
 		data.trigger = {
 			"name": Object.keys(data.definition.triggers)[0],
@@ -32,12 +34,12 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 			"scheduledTime": data.startTime,
 			"endTime": data.startTime
 		};
-		data.definition.contentVersion = JSON.parse(inputJSONstring).properties.definition.contentVersion;
+		data.definition.contentVersion = JSON.parse(inputJSONstring).definition.contentVersion;
 		data.definition.id = newGuid();
 		data.definition.version = data.definition.id;
 		data.definition.name = data.definition.id;
 		data.definition.type = Microsoft.ProductivityMacros.Constants.typeOfDefinition;
-		data.definition.$schema = JSON.parse(inputJSONstring).properties.definition.$schema;
+		data.definition.$schema = JSON.parse(inputJSONstring).definition.$schema;
 		return data;
 	}
 
@@ -47,8 +49,7 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 		data.definition.changedTime = result.entities[0].modifiedon;
 	}
 
-	export function setActionsInJSON(data: any, actions: IActionItem[], inputJSONstring: string, macroName: string): any {
-		initializeRunHistoryJSON(data, inputJSONstring, macroName);
+	export function setActionsInJSON(data: any, actions: IActionItem[]): any {	
 		data.definition.actions = {};
 		for (var i = 0; i < actions.length; i++) {
 			data.definition.actions[actions[i].name] = {

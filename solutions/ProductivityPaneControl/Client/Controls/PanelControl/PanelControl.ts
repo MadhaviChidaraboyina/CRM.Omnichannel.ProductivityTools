@@ -108,6 +108,7 @@ module MscrmControls.ProductivityToolPanel {
 		 * getPanelContainer generates a side panel.
 		 */
         private getPanelContainer(): Mscrm.Component {
+            let isRTL = this.context.client.isRTL;
             let sessionContextJSON = JSON.stringify(this.sessionChangeManager.getSessionChangeEventData());
             let isCallScriptAvail = this.panelState.checkAgentScript(this.currentSessionId);
             let isSmartassistAvail = this.panelState.checkSmartAssist(this.currentSessionId);
@@ -152,7 +153,7 @@ module MscrmControls.ProductivityToolPanel {
                 {
                     id: Constants.panelContainerId,
                     key: "panelContainer",
-                    style: this.panelToggle ? ControlStyle.getProductivityPaneStyle(Constants.TRUE) : ControlStyle.getProductivityPaneStyle(Constants.FALSE)
+                    style: this.panelToggle ? ControlStyle.getProductivityPaneStyle(Constants.TRUE, isRTL) : ControlStyle.getProductivityPaneStyle(Constants.FALSE, isRTL)
                 },
                 agentguidance);
 
@@ -295,6 +296,7 @@ module MscrmControls.ProductivityToolPanel {
 		 * @params context The "Input Bag" as described above
 		 */
         public updateView(context: Mscrm.ControlData<IInputBag>): Mscrm.Component {
+            let isRTL = context.client.isRTL;
             // fetch data 
             let navbarContainer;
             if (this.isDataFetched) {
@@ -319,7 +321,7 @@ module MscrmControls.ProductivityToolPanel {
                         {
                             id: "navbar-container-container",
                             key: "navbarContainer",
-                            style: ControlStyle.getProductivityNavBarStyle()
+                            style: ControlStyle.getProductivityNavBarStyle(isRTL)
                         },
                         this.controls
                     );
