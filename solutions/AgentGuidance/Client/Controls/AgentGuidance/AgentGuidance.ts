@@ -157,14 +157,14 @@ module MscrmControls.ProductivityToolAgentGuidance {
         }
 
         private getAgentGuidanceLabel(context: Mscrm.ControlData<IInputBag>): Mscrm.Component {
-            
+            let isRTL = context.client.isRTL;
             let agentGuidanceLabel = context.factory.createElement(
                 "TEXT",
                 {
                     id: Constants.AgentGuidanceLabel,
                     key: Constants.AgentGuidanceLabel,
                     title: this.context.resources.getString("Agent_Guidance"),
-                    style: ControlStyle.agentGuidanceTitleStyle(),
+                    style: ControlStyle.agentGuidanceTitleStyle(isRTL),
                 },
                 this.context.resources.getString(Constants.agentGuidanceResourceKey));
             return agentGuidanceLabel;

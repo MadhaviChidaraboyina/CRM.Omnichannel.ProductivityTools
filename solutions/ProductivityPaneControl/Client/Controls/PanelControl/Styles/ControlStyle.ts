@@ -41,32 +41,34 @@ module MscrmControls.ProductivityToolPanel {
 			};
 		}
 
-		public static getProductivityPaneStyle(flag: boolean){
-			return {
-				height: "100%",
-				width: flag ? "295px" : "0px",
-				position: "fixed",
-				top: "48px",
-				right: "44px",
-				backgroundColor: "#FFFFFF",
+        public static getProductivityPaneStyle(flag: boolean, isRTL: boolean) {
+            return {
+                height: "100%",
+                width: flag ? "295px" : "0px",
+                position: "fixed",
+                top: "48px",
+                right: !isRTL ? "44px" : "unset",
+                left: isRTL ? "44px" : "unset",
+                backgroundColor: "#FFFFFF",
                 overflow: "hidden",
-				borderLeftColor: "#E8EAEC",
-				borderLeftStyle: "solid",
-				borderLeftWidth: flag ? "1px" : "0px"
-			};
-		}
+                borderLeftColor: "#E8EAEC",
+                borderLeftStyle: "solid",
+                borderLeftWidth: flag ? "1px" : "0px"
+            };
+        }
 
-		public static getProductivityNavBarStyle() {
-			return {
-				display: "block",
-				backgroundColor: "#efefef",
-				width: "44px",
-				position: "absolute",
-				height: "100%",
-				top: "0px",
-				right: "0px",
-				borderColor: "none"
-			};
+        public static getProductivityNavBarStyle(isRTL: boolean) {
+            return {
+                display: "block",
+                backgroundColor: "#efefef",
+                width: "44px",
+                position: "absolute",
+                height: "100%",
+                top: "0px",
+                right: !isRTL ? "0px" : "unset",
+                left: isRTL ? "0px" : "unset",
+                borderColor: "none"
+            };
         }
 
         public static toolSeparatorStyle(flag: boolean) {

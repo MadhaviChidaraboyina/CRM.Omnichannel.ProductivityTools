@@ -5,6 +5,7 @@
 		"LogicAppExecutorUtils.ts",
 		"IfAction.ts",
 		"SetDefaultCallScriptAction.ts",
+		"MacroAction.ts",
 		"LogicAppExecutor.ts"
 	],
 	"exclude": [

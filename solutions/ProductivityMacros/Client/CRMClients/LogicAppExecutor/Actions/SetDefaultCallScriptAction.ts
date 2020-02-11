@@ -18,7 +18,7 @@ namespace Microsoft.LogicAppExecutor {
 			}
 			return SetDefaultCallScriptAction._instance;
 		}
-		ExecuteAction(action: IActionItem): Promise<string> {
+		ExecuteAction(action: IActionItem, state: any, runHistoryData: executionJSON): Promise<string> {
 			return new Promise((resolve, reject) => {
 				console.log(action.inputs);
 				return resolve(action.inputs.callscriptId);
