@@ -833,20 +833,22 @@ export class runInstanceServiceImpl implements LogicAppsRunInstanceService {
 			}
 
 			var o: any[] = [];
-			var actionList = this.executionStatusJSON.definition.actions;
-			actionList = Object.keys(actionList);
 
-			for (var i = 0; i < actionList.length; i++) {
-				var actionName = actionList[i];
-				var id = this.executionStatusJSON.definition.actions[actionList[i]].id;
-				var type = this.executionStatusJSON.definition.actions[actionList[i]].type;
-				var properties = {
-					"startTime": this.executionStatusJSON.definition.actions[actionList[i]].startTime,
-					"endTime": this.executionStatusJSON.definition.actions[actionList[i]].endTime,
-					"status": this.executionStatusJSON.definition.actions[actionList[i]].status
-				}
-				o.push({ "id": id, "type": type, "name": actionName, "properties": properties })
-			}
+			o = getActionList(this.executionStatusJSON.definition.actions);
+			//var actionList = this.executionStatusJSON.definition.actions;
+			//actionList = Object.keys(actionList);
+
+			//for (var i = 0; i < actionList.length; i++) {
+			//	var actionName = actionList[i];
+			//	var id = this.executionStatusJSON.definition.actions[actionList[i]].id;
+			//	var type = this.executionStatusJSON.definition.actions[actionList[i]].type;
+			//	var properties = {
+			//		"startTime": this.executionStatusJSON.definition.actions[actionList[i]].startTime,
+			//		"endTime": this.executionStatusJSON.definition.actions[actionList[i]].endTime,
+			//		"status": this.executionStatusJSON.definition.actions[actionList[i]].status
+			//	}
+			//	o.push({ "id": id, "type": type, "name": actionName, "properties": properties })
+			//}
 
 			var s = r.properties.workflow;
 
@@ -862,4 +864,25 @@ export class runInstanceServiceImpl implements LogicAppsRunInstanceService {
 			resolve(retObj);
 		});
 	}
+}
+
+function getActionList(actionList: any): any[] {
+
+	let keys = Object.keys(actionList);
+	var onlyActionList: any[] = [];
+	for (var i = 0; i < keys.length; i++) {
+		var actionName = keys[i];
+		var id = actionList[keys[i]].id;
+		var type = actionList[keys[i]].type;
+		var properties = {
+			"startTime": actionList[keys[i]].startTime,
+			"endTime": actionList[keys[i]].endTime,
+			"status": actionList[keys[i]].status
+		}
+		onlyActionList.push({ "id": id, "type": type, "name": actionName, "properties": properties })
+		if (keys[i].startsWith("Condition")) {
+			onlyActionList.concat(getActionList(actionList[keys[i]]))
+		}
+	}
+	return onlyActionList;
 }

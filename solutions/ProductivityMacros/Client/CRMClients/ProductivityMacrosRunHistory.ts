@@ -57,7 +57,11 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 				name: actions[i].name,
 				type: actions[i].type,
 				runAfter: actions[i].runAfter,
-				status: Microsoft.ProductivityMacros.Constants.StatusSkipped
+				status: Microsoft.ProductivityMacros.Constants.StatusSkipped,
+				inputs: actions[i].inputs,
+				actions: actions[i].actions,
+				else: actions[i].else,
+				expression: actions[i].expression
 			};
 		}
 		return data;
@@ -95,12 +99,27 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 	}
 
 	export function setActionStatus(data: any, status: string, startTime: any, outputs: any, actionName: string, actionInputs: any): any {
-		var endTime = new Date().toISOString();
-		data.definition.actions[actionName].inputs = { "body": actionInputs };
-		data.definition.actions[actionName].startTime = startTime;
-		data.definition.actions[actionName].status = status;
-		data.definition.actions[actionName].endTime = endTime;
-		data.definition.actions[actionName].outputs = { "body": outputs };
+		data.definition.actions = setActionStatusRecursively(data.definition.actions, status, startTime, outputs, actionName, actionInputs)
 		return data;
+	}
+
+	function setActionStatusRecursively(parent: any, status: string, startTime: any, outputs: any, actionName: string, actionInputs: any): any {
+		var endTime = new Date().toISOString();
+		var keys = Object.keys(parent);
+		for (var i = 0; i < keys.length; i++) {
+			if (actionName == keys[i]) {
+				parent[actionName].inputs = { "body": actionInputs };
+				parent[actionName].outputs = { "body": outputs };
+				parent[actionName].startTime = startTime;
+				parent[actionName].status = status;
+				parent[actionName].endTime = endTime;
+				break;
+			}
+			else if (keys[i].startsWith("Condition")) {
+				parent[keys[i]].actions = setActionStatusRecursively(parent[keys[i]].actions, status, startTime, outputs, actionName, actionInputs)
+				parent[keys[i]].status = status;
+			}
+		}
+		return parent;
 	}
 }

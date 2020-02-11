@@ -7,8 +7,11 @@ namespace Microsoft.ProductivityMacros {
 	export interface IActionItem {
 		name: string;
 		type: string,
-		inputs: any,
-		runAfter: any
+		inputs?: any,
+		runAfter: any,
+		actions?: any,
+		else?: any,
+		expression?: any;
 	}
 
 	export interface IMacroActions {
