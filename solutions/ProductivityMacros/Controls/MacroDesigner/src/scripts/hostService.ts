@@ -718,19 +718,31 @@ export interface LogicAppsRunService {
 
 function getActionIORecursively(parent: any, actionName: string, IorO: string): any {
 	var keys = Object.keys(parent);
+	var ret = -1;
 	for (var i = 0; i < keys.length; i++) {
 		if (actionName == keys[i]) {
 			if (IorO == "I") {
-				return parent[actionName].inputs.body;
+				ret =  parent[actionName].inputs.body;
 			}
 			else if (IorO == "O") {
-				return parent[actionName].outputs.body;
+				ret =  parent[actionName].outputs.body;
 			}
+			break;
 		}
 		if (keys[i].startsWith("Condition")) {
-			return getActionIORecursively(parent[keys[i]].actions, actionName, IorO)
+			var found = getActionIORecursively(parent[keys[i]].actions, actionName, IorO);
+			if (found == -1) {
+				ret = getActionIORecursively(parent[keys[i]].else.actions, actionName, IorO)
+			}
+			else {
+				ret = found;
+			}
+			if (ret !== -1) {
+				break;
+			}
 		}
 	}
+	return ret;
 }
 
 export class runServiceImpl implements LogicAppsRunService {
@@ -976,6 +988,7 @@ function getActionList(actionList: any): any[] {
 		onlyActionList.push({ "id": id, "type": type, "name": actionName, "properties": properties })
 		if (keys[i].startsWith("Condition")) {
 			onlyActionList = onlyActionList.concat(getActionList(actionList[keys[i]].actions))
+			onlyActionList = onlyActionList.concat(getActionList(actionList[keys[i]].else.actions))
 		}
 	}
 	return onlyActionList;

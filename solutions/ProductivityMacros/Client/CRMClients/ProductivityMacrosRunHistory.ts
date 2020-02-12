@@ -49,10 +49,45 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 		data.definition.changedTime = result.entities[0].modifiedon;
 	}
 
+	function setActionsInConditionJSON(data: any, sessionID: string): any {
+
+		let keys = Object.keys(data);
+
+		for (var i = 0; i < keys.length; i++) {
+
+			if (keys[i].startsWith("Condition")) {
+				data[keys[i]] = {
+					id: sessionID + "/actions/" + keys[i],
+					name: keys[i],
+					type: data[keys[i]].type,
+					runAfter: data[keys[i]].runAfter,
+					status: Microsoft.ProductivityMacros.Constants.StatusSkipped,
+					actions: data[keys[i]].actions,
+					else: data[keys[i]].else,
+					expression: data[keys[i]].expression,
+					inputs: data[keys[i]].inputs
+				};
+				data[keys[i]].actions = setActionsInConditionJSON(data[keys[i]].actions, sessionID);
+				data[keys[i]].else.actions = setActionsInConditionJSON(data[keys[i]].else.actions, sessionID);
+			}
+			else {
+				data[keys[i]] = {
+					id: sessionID + "/actions/" + keys[i],
+					name: keys[i],
+					type: data[keys[i]].type,
+					runAfter: data[keys[i]].runAfter,
+					status: Microsoft.ProductivityMacros.Constants.StatusSkipped,
+					inputs: data[keys[i]].inputs
+				};
+			}
+		}
+		return data;
+	}
+
 	export function setActionsInJSON(data: any, actions: IActionItem[], sessionID: string): any {	
 		
 		for (var i = 0; i < actions.length; i++) {
-			if (actions[i].name.startsWith("Condition") || ) {
+			if (actions[i].name.startsWith("Condition")) {
 				data[actions[i].name] = {
 					id: sessionID + "/actions/" + actions[i].name,
 					name: actions[i].name,
@@ -64,8 +99,8 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 					expression: actions[i].expression,
 					inputs: actions[i].inputs
 				};
-				const values = Object.keys(actions[i].actions).map(key => actions[i].actions[key]);
-				data[actions[i].name].actions = setActionsInJSON(data[actions[i].name].actions, values, sessionID);
+				data[actions[i].name].actions = setActionsInConditionJSON(data[actions[i].name].actions, sessionID);
+				data[actions[i].name].else.actions = setActionsInConditionJSON(data[actions[i].name].else.actions, sessionID);
 			}
 			else {
 				data[actions[i].name] = {
@@ -132,6 +167,7 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 			else if (keys[i].startsWith("Condition")) {
 				parent[keys[i]].actions = setActionStatusRecursively(parent[keys[i]].actions, status, startTime, outputs, actionName, actionInputs)
 				parent[keys[i]].status = status;
+				parent[keys[i]].else.actions = setActionStatusRecursively(parent[keys[i]].else.actions, status, startTime, outputs, actionName, actionInputs)
 			}
 		}
 		return parent;
