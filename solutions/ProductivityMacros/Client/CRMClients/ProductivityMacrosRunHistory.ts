@@ -49,20 +49,34 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 		data.definition.changedTime = result.entities[0].modifiedon;
 	}
 
-	export function setActionsInJSON(data: any, actions: IActionItem[]): any {	
-		data.definition.actions = {};
+	export function setActionsInJSON(data: any, actions: IActionItem[], sessionID: string): any {	
+		
 		for (var i = 0; i < actions.length; i++) {
-			data.definition.actions[actions[i].name] = {
-				id: data.id + "/actions/" + actions[i].name,
-				name: actions[i].name,
-				type: actions[i].type,
-				runAfter: actions[i].runAfter,
-				status: Microsoft.ProductivityMacros.Constants.StatusSkipped,
-				inputs: actions[i].inputs,
-				actions: actions[i].actions,
-				else: actions[i].else,
-				expression: actions[i].expression
-			};
+			if (actions[i].name.startsWith("Condition") || ) {
+				data[actions[i].name] = {
+					id: sessionID + "/actions/" + actions[i].name,
+					name: actions[i].name,
+					type: actions[i].type,
+					runAfter: actions[i].runAfter,
+					status: Microsoft.ProductivityMacros.Constants.StatusSkipped,
+					actions: actions[i].actions,
+					else: actions[i].else,
+					expression: actions[i].expression,
+					inputs: actions[i].inputs
+				};
+				const values = Object.keys(actions[i].actions).map(key => actions[i].actions[key]);
+				data[actions[i].name].actions = setActionsInJSON(data[actions[i].name].actions, values, sessionID);
+			}
+			else {
+				data[actions[i].name] = {
+					id: sessionID + "/actions/" + actions[i].name,
+					name: actions[i].name,
+					type: actions[i].type,
+					runAfter: actions[i].runAfter,
+					status: Microsoft.ProductivityMacros.Constants.StatusSkipped,
+					inputs: actions[i].inputs
+				};
+			}
 		}
 		return data;
 	}

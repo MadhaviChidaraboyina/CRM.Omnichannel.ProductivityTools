@@ -60,7 +60,8 @@ namespace Microsoft.LogicAppExecutor {
 		return new Promise((resolve, reject) => {
 			let sortedActions = getSortedActionsList(actions);
 			if (!Microsoft.ProductivityMacros.Internal.isNullOrUndefined(runHistoryData.id) && Microsoft.ProductivityMacros.Internal.isNullOrUndefined(runHistoryData.definition.actions)) {
-				Microsoft.ProductivityMacros.RunHistory.setActionsInJSON(runHistoryData, sortedActions);
+				runHistoryData.definition.actions = {};
+				Microsoft.ProductivityMacros.RunHistory.setActionsInJSON(runHistoryData.definition.actions, sortedActions, runHistoryData.id);
 			}
 			let executeActionsPromise = sortedActions.reduce((accumulatorPromise, nextId) => {
 				return accumulatorPromise.then(
