@@ -805,4 +805,8 @@
     <value>Dashboard ID</value>
     <comment>Parameter definition Title</comment>
   </data>
+	<data name="Built-in" xml:space="preserve">
+    <value>Built-in</value>
+    <comment>Text for built-in category tab</comment>
+  </data>
 </root>

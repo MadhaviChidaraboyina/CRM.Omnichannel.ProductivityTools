@@ -232,10 +232,6 @@ function initializeDesigner(req) {
 				rpc.register(SharedDefines.DesignerMessages.Initialize, function (options) {
 					//console.log("Start initialize");
 					let designerOptions: SharedDefines.IDesignerOptions = JSON.parse(options);
-					designerOptions.Categories.push({
-						"itemKey": SharedDefines.Constants.BUILTIN_CATEGORY,
-						"linkText": SharedDefines.Constants.BUILTIN_CATEGORY_DISPLAY
-					})
 
 					let builtInTypeServiceFactory = function (analytics, schemaVersion) {
 						return new DesignerCore.LogicAppsBuiltInTypeService(schemaVersion, designerOptions);
@@ -315,10 +311,6 @@ function initializeDesigner(req) {
 				rpc.register(SharedDefines.DesignerMessages.LoadDefinition, function (workflowDefn, options) {
 					//console.log("Start loadDefinition");
 					let designerOptions = JSON.parse(options);
-					designerOptions.Categories.push({
-						"itemKey": SharedDefines.Constants.BUILTIN_CATEGORY,
-						"linkText": SharedDefines.Constants.BUILTIN_CATEGORY_DISPLAY
-					})
 					let workflowParsed = JSON.parse(workflowDefn);
 					let workflow = {
 						definition: workflowParsed.definition,

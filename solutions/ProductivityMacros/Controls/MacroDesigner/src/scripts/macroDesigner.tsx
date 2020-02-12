@@ -175,7 +175,7 @@ async function startDesigner(rpc) {
             Actions: [
             ],
             operationKindDisplayText: operKindDisplayText
-        };
+		};
         try {
             let designerConfig: SharedDefines.MacroDesignerConfig = await initOperations[RequiredCDSOpersForInit.DesignerConfig] as SharedDefines.MacroDesignerConfig;
             let templates = await initOperations[RequiredCDSOpersForInit.Templates] as SharedDefines.DesignerTemplateConfig;
@@ -185,7 +185,11 @@ async function startDesigner(rpc) {
             designerOptions.UserVoiceURL = designerConfig.UserVoiceLink;
             designerOptions.Actions = templates.actions;
             designerOptions.Connectors = templates.connectors;
-            designerOptions.Categories = templates.categories;
+			designerOptions.Categories = templates.categories;
+			designerOptions.Categories.push({
+				"itemKey": SharedDefines.Constants.BUILTIN_CATEGORY,
+				"linkText": Utils.Utils.getResourceString(SharedDefines.Constants.BUILTIN_CATEGORY_DISPLAY)
+			})
             let obj: SharedDefines.LogObject = {
                 level: SharedDefines.LogLevel.Info,
                 eventName: WrapperEvents.WrapperConfigLoadEvent,
