@@ -49,17 +49,6 @@ export default <OperationManifest>{
         },
         isInputsOptional: false,
 
-        outputs: {
-            type: 'object',
-            required: ['body'],
-            properties: {
-                body: {
-                    type: 'object',
-                    title: Utils.getResourceString("LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE"),//'Default Call Script',
-                    description: Utils.getResourceString("LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION")//'Default Call Script'
-                }
-            }
-        },
-        isOutputsOptional: false,
+        isOutputsOptional: true,
     }
 };
