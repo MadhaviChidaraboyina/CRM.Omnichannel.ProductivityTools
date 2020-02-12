@@ -1,5 +1,5 @@
 ﻿/// <reference path="Constants.ts" />
-/// <reference path="Models.ts" />
+/// <reference path="LogicAppExecutor/Interfaces.ts" />
 
 
 namespace Microsoft.ProductivityMacros.RunHistory {
@@ -84,7 +84,7 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 		return data;
 	}
 
-	export function setActionsInJSON(data: any, actions: IActionItem[], sessionID: string): any {	
+	export function setActionsInJSON(data: any, actions: Microsoft.LogicAppExecutor.IActionItem[], sessionID: string): any {	
 		
 		for (var i = 0; i < actions.length; i++) {
 			if (actions[i].name.startsWith("Condition")) {
