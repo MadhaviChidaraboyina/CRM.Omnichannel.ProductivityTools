@@ -473,12 +473,6 @@ export class SmartRecommendationImpl implements RecommendationRouter, Designer.R
 				_this._recommendationProviders[category.itemKey] = new SmartRecommendationProvider(designerOptions, operationManager, category.itemKey, analytics);
 			}
 		});
-  //      designerOptions.Categories.forEach(function (category) {
-  //         // _this._recommendationProviders[category.itemKey] = new SmartRecommendationProvider(designerOptions, operationManager, category.itemKey, analytics);
-		//	[LogicAppsCategories.LOGIC_APPS_BUILTIN]: new BuiltinProvider({ builtInTypeService: recommendationOptions.builtInTypeService }, designerOptions),
-		//	[LogicAppsCategories.CUSTOM]: new CustomRecommendationProvider(designerOptions)
-
-		//});
     }
     public getConnectorBrandColor(category: string, rawConnector: any): string {
         return this._recommendationProviders[category].getConnectorBrandColor(rawConnector);
@@ -582,15 +576,11 @@ export class OperationManifestServiceImpl implements Designer.OperationManifestS
         this.operationManager = operationManager;
     }
 	public isSupported(operationType: string, operationKind: string | undefined): boolean {
-		//if (operationType == "" || operationType == undefined)
-		//	return true;
 		let action1 = this.operationManager.getActionById(operationType);
 		if (action1 || operationType.toLowerCase() == "start") {
 			return true;
 		}
 		return false;
-		//if (operationType == "If" || operationType == "if") { return false; }
-		//return true;
     }
     public getOperationInfo(definition: any): Promise<Designer.OperationInfo> {
         let defaultConnector = this.operationManager.getDefaultConnector();

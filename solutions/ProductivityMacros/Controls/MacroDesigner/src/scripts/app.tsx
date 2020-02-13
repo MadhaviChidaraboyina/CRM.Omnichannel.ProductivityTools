@@ -238,14 +238,9 @@ function initializeDesigner(req) {
 					};
 
 					let operationManager: HostService.OperationManager = new HostService.OperationManager(designerOptions);
-					//Why using DesignerCore.LogicAppsBuiltInTypeService(schemaVersion, designerOptions); in expression builder
-					//let builtInTypeServiceFactory = function (analytics, schemaVersion) {
-					//    return new HostService.BuiltInTypeService(designerOptions, analytics);
-					//};
+					
 					let recommendationServiceFactory = function (analytics, schemaVersion) {
-						//let builtInTypeServiceFactory = function (analytics, schemaVersion) {
-						//	return new DesignerCore.LogicAppsBuiltInTypeService(schemaVersion, designerOptions);
-						//};
+						
 						return new HostService.SmartRecommendationImpl(
 							{ builtInTypeService: builtInTypeServiceFactory(analytics, schemaVersion) },
 							designerOptions,
