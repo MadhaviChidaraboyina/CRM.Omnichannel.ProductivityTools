@@ -68,7 +68,9 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 					inputs: data[keys[i]].inputs
 				};
 				data[keys[i]].actions = setActionsInConditionJSON(data[keys[i]].actions, sessionID);
-				data[keys[i]].else.actions = setActionsInConditionJSON(data[keys[i]].else.actions, sessionID);
+				if (data[keys[i]].else) {
+					data[keys[i]].else.actions = setActionsInConditionJSON(data[keys[i]].else.actions, sessionID);
+				}
 			}
 			else {
 				data[keys[i]] = {
@@ -100,7 +102,9 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 					inputs: actions[i].inputs
 				};
 				data[actions[i].name].actions = setActionsInConditionJSON(data[actions[i].name].actions, sessionID);
-				data[actions[i].name].else.actions = setActionsInConditionJSON(data[actions[i].name].else.actions, sessionID);
+				if (data[actions[i].name].else) {
+					data[actions[i].name].else.actions = setActionsInConditionJSON(data[actions[i].name].else.actions, sessionID);
+				}
 			}
 			else {
 				data[actions[i].name] = {
@@ -167,7 +171,9 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 			else if (keys[i].startsWith("Condition")) {
 				parent[keys[i]].actions = setActionStatusRecursively(parent[keys[i]].actions, status, startTime, outputs, actionName, actionInputs)
 				parent[keys[i]].status = status;
-				parent[keys[i]].else.actions = setActionStatusRecursively(parent[keys[i]].else.actions, status, startTime, outputs, actionName, actionInputs)
+				if (parent[keys[i]].else) {
+					parent[keys[i]].else.actions = setActionStatusRecursively(parent[keys[i]].else.actions, status, startTime, outputs, actionName, actionInputs)
+				}
 			}
 		}
 		return parent;

@@ -35,7 +35,9 @@ namespace Microsoft.LogicAppExecutor {
 							Microsoft.ProductivityMacros.RunHistory.setActionStatus(runHistoryData, status, startTime, outputs, action.name, trueInput);
 						}
 						else {
-							innerActions = action.else.actions;
+							if (action.else) {
+								innerActions = action.else.actions;
+							}
 							status = Microsoft.ProductivityMacros.Constants.StatusFailed;
 							var falseInput = {
 								"expressionResult": false

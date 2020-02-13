@@ -731,7 +731,7 @@ function getActionIORecursively(parent: any, actionName: string, IorO: string): 
 		}
 		if (keys[i].startsWith("Condition")) {
 			var found = getActionIORecursively(parent[keys[i]].actions, actionName, IorO);
-			if (found == -1) {
+			if (found == -1 && parent[keys[i]].else) {
 				ret = getActionIORecursively(parent[keys[i]].else.actions, actionName, IorO)
 			}
 			else {
@@ -988,7 +988,9 @@ function getActionList(actionList: any): any[] {
 		onlyActionList.push({ "id": id, "type": type, "name": actionName, "properties": properties })
 		if (keys[i].startsWith("Condition")) {
 			onlyActionList = onlyActionList.concat(getActionList(actionList[keys[i]].actions))
-			onlyActionList = onlyActionList.concat(getActionList(actionList[keys[i]].else.actions))
+			if (actionList[keys[i]].else) {
+				onlyActionList = onlyActionList.concat(getActionList(actionList[keys[i]].else.actions))
+			}
 		}
 	}
 	return onlyActionList;
