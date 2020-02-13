@@ -62,6 +62,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Built-in.
+        /// </summary>
+        internal static string Built_in {
+            get {
+                return ResourceManager.GetString("Built-in", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Action.
         /// </summary>
         internal static string DESIGNER_ACTION {
