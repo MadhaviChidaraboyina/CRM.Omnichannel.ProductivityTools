@@ -50,9 +50,9 @@ set PATH=%WSRoot%\.tools;%WSRoot%\.tools\VSS.NuGet.AuthHelper;%PATH%
 
 echo Package directory is: %WSRoot%\packages
 nuget restore %WSRoot%\build\config\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
-nuget restore %WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFramework.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
-nuget restore %WSRoot%\solutions\CIFramework\Microsoft.OmniChannel.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
-nuget restore %WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFrameworkV2.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
+REM nuget restore %WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFramework.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
+REM nuget restore %WSRoot%\solutions\CIFramework\Microsoft.OmniChannel.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
+REM nuget restore %WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFrameworkV2.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
 
 @echo.
 echo Setting user variables..
@@ -129,32 +129,8 @@ echo DropInConfigurationFolder=%DropInConfigurationFolderDefault%
 
 REM Set environment variables for remainder of packages
 mkdir %WSRoot%\target\%BuildConfiguration%\%BuildPlatform%
-%PKG_XRMAPP_TOOLS%\build\agent\AgentUtilities.exe /command:listpkgvars /config:%WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFrameworkV2.Test\packages.config /output:%WSRoot%\target\%BuildConfiguration%\%BuildPlatform%\channelApiVariablesV2.txt /packageroot:%WSRoot%\packages
-for /f %%a in (%WSRoot%\target\%BuildConfiguration%\%BuildPlatform%\channelApiVariablesV2.txt) do (
-	set "%%a"
-	echo %%a has been set
-)
-
-REM Set environment variables for remainder of packages
-mkdir %WSRoot%\target\%BuildConfiguration%\%BuildPlatform%
 %PKG_XRMAPP_TOOLS%\build\agent\AgentUtilities.exe /command:listpkgvars /config:%WSRoot%\build\config\packages.config /output:%WSRoot%\target\%BuildConfiguration%\%BuildPlatform%\processVariables.txt /packageroot:%WSRoot%\packages
 for /f %%a in (%WSRoot%\target\%BuildConfiguration%\%BuildPlatform%\processVariables.txt) do (
-	set "%%a"
-	echo %%a has been set
-)
-
-REM Set environment variables for remainder of packages
-mkdir %WSRoot%\target\%BuildConfiguration%\%BuildPlatform%
-%PKG_XRMAPP_TOOLS%\build\agent\AgentUtilities.exe /command:listpkgvars /config:%WSRoot%\solutions\CIFramework\Microsoft.OmniChannel.Test\packages.config /output:%WSRoot%\target\%BuildConfiguration%\%BuildPlatform%\OCEnvVariables.txt /packageroot:%WSRoot%\packages
-for /f %%a in (%WSRoot%\target\%BuildConfiguration%\%BuildPlatform%\OCEnvVariables.txt) do (
-	set "%%a"
-	echo %%a has been set
-)
-
-REM Set environment variables for remainder of packages
-mkdir %WSRoot%\target\%BuildConfiguration%\%BuildPlatform%
-%PKG_XRMAPP_TOOLS%\build\agent\AgentUtilities.exe /command:listpkgvars /config:%WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFramework.Test\packages.config /output:%WSRoot%\target\%BuildConfiguration%\%BuildPlatform%\channelApiVariables.txt /packageroot:%WSRoot%\packages
-for /f %%a in (%WSRoot%\target\%BuildConfiguration%\%BuildPlatform%\channelApiVariables.txt) do (
 	set "%%a"
 	echo %%a has been set
 )

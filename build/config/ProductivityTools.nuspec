@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Microsoft.Dynamics.Service.CIFramework</id>
-    <version>1.0.0</version>
-    <authors>Microsoft Corporation</authors>
-    <owners>soverm</owners>
+    <id>Microsoft.Dynamics.Service.ProductivityTools</id>
+    <version>$version$</version>
+    <authors>Microsoft Dynamics 365 </authors>
+    <owners>Microsoft Dynamics 365</owners>
     <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
     <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
     <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Microsoft Dynamics 365 XRM Solution for Channel Integration.</description>
-    <releaseNotes>This release includes XRM solution: Channel Integration - for partners to integrate 3rd party Channels providers seamlessly into Dynamics 365.</releaseNotes>
+    <description>Microsoft Dynamics 365 XRM Solution for ProductivityTools.</description>
+    <releaseNotes>This release includes XRM solution: ProductivityTools</releaseNotes>
     <copyright>Copyright �2016 Microsoft Corporation</copyright>
-    <tags>CRM XRM CI CIFramework Solution</tags>
+    <tags>CRM XRM Dynamics365 ProductivityTools Solution</tags>
     <dependencies>
     </dependencies>
   </metadata>

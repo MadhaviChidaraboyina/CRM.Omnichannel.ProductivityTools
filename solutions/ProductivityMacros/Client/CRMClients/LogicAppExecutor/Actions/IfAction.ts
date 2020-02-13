@@ -21,7 +21,7 @@ namespace Microsoft.LogicAppExecutor {
 		ExecuteAction(action: IActionItem, state: any, runHistoryData: executionJSON): Promise<string> {
 			return new Promise((resolve, reject) => {
 				let expressions = action.expression;
-				this.evaluvateExpression(expressions).then(
+				this.evaluateExpression(expressions, state).then(
 					function (result: any) {
 						var innerActions: IActionItem[];
 						if (result) {
@@ -53,7 +53,7 @@ namespace Microsoft.LogicAppExecutor {
 			});
 		}		
 
-		evaluvateExpression(expressions: any): Promise<boolean> {
+		evaluateExpression(expressions: any, state: any): Promise<boolean> {
 			return new Promise((resolve, reject) => {
 				for (const expression in expressions) {
 					let operator = expression;
@@ -62,7 +62,7 @@ namespace Microsoft.LogicAppExecutor {
 							let innerExpressions: any[] = expressions[expression];
 							var promises = [];
 							for (const exp in innerExpressions) {
-								var promiseResult = this.evaluvateExpression(innerExpressions[exp]).then(
+								var promiseResult = this.evaluateExpression(innerExpressions[exp], state).then(
 									function (result: any) {
 										if (!result) {
 											return resolve(result);
@@ -85,7 +85,7 @@ namespace Microsoft.LogicAppExecutor {
 							let innerExprs: any[] = expressions[expression];
 							var orPromises = [];
 							for (const exp in innerExprs) {
-								var promiseResult = this.evaluvateExpression(innerExprs[exp]).then(
+								var promiseResult = this.evaluateExpression(innerExprs[exp], state).then(
 									function (result: any) {
 										if (result) {
 											return resolve(result);
@@ -105,7 +105,7 @@ namespace Microsoft.LogicAppExecutor {
 								});
 							break;
 						case "not":
-							this.evaluvateExpression(expressions[expression]).then(
+							this.evaluateExpression(expressions[expression], state).then(
 								function (success: boolean) {
 									console.log(success);
 									return resolve(!success);
@@ -115,11 +115,30 @@ namespace Microsoft.LogicAppExecutor {
 								});
 							break;
 						default:
-							let slugPromise = resolveSlug(expressions[expression][0]).then(
-								function (lhs: any) {
+							var slugPromises: Promise<string | void>[] = [];
+							var lhsValue: any;
+							var rhsValue: any;
+							slugPromises.push(
+								resolveSlug(expressions[expression][0], state.stateParams).then(
+									function (lhs: any) {
+										try {
+											console.log("LHS : " + lhs);
+											lhsValue = lhs;
+										}
+										catch (ex) {
+											console.log(ex);
+											reject(ex);
+										}
+									}.bind(this),
+									function (error: Error) {
+										reject(error);
+									}));
+							slugPromises.push(
+								resolveSlug(expressions[expression][1], state.stateParams).then(
+								function (rhs: any) {
 									try {
-										console.log("LHS : " + lhs);
-										return (this.evaluvateOperation(lhs, expressions[expression][1], operator));
+										console.log("RHS : " + rhs);
+										rhsValue = rhs;										
 									}
 									catch (ex) {
 										console.log(ex);
@@ -128,12 +147,11 @@ namespace Microsoft.LogicAppExecutor {
 								}.bind(this),
 								function (error: Error) {
 									reject(error);
-								});
-							slugPromise.then(
+									}));
+							Promise.all(slugPromises).then(
 								function (result: any) {
-									console.log(result);
-									return resolve(result);
-								},
+									return resolve(this.evaluateOperation(lhsValue, rhsValue, operator));
+								}.bind(this),
 								function (error: Error) {
 									reject(error);
 								}
@@ -143,7 +161,7 @@ namespace Microsoft.LogicAppExecutor {
 			});
 		}
 
-		evaluvateOperation(lhs: any, rhs: any, operator: string): boolean {
+		evaluateOperation(lhs: any, rhs: any, operator: string): boolean {
 			try {
 				switch (operator) {
 					case "greater":

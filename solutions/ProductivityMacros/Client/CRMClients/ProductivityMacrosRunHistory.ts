@@ -1,5 +1,5 @@
 ﻿/// <reference path="Constants.ts" />
-/// <reference path="Models.ts" />
+/// <reference path="LogicAppExecutor/Interfaces.ts" />
 
 
 namespace Microsoft.ProductivityMacros.RunHistory {
@@ -49,7 +49,7 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 		data.definition.changedTime = result.entities[0].modifiedon;
 	}
 
-	export function setActionsInJSON(data: any, actions: IActionItem[]): any {	
+	export function setActionsInJSON(data: any, actions: Microsoft.LogicAppExecutor.IActionItem[]): any {	
 		data.definition.actions = {};
 		for (var i = 0; i < actions.length; i++) {
 			data.definition.actions[actions[i].name] = {

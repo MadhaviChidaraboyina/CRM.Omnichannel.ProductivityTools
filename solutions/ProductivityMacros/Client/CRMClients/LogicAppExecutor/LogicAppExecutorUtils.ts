@@ -72,11 +72,19 @@ namespace Microsoft.LogicAppExecutor {
 		}
 	}
 
-	export function resolveSlug(slug: string): Promise<string> {
-		return Microsoft.ProductivityMacros.Internal.resolveTemplateString(slug, null, "");
+	export function resolveSlug(slug: any, stateParams: any): Promise<string> {
+		if (typeof slug === 'string' || slug instanceof String) {
+			if (slug.startsWith("@outputs")) {
+				slug = resolveActionInputFromPrevActionOutput(slug);
+			}
+			return Microsoft.ProductivityMacros.Internal.resolveTemplateString(slug, stateParams, "");
+		}
+		else {
+			return Promise.resolve(slug);
+		}
 	}
 
-	export function resolveActionInputFromPrevActionOutput(input: string): string {
+	export function resolveActionInputFromPrevActionOutput(input: any): string {
 		let matches = input.match(new RegExp("'(.*?)'", "g"));
 		let prefix = matches[0];
 		let attribute = matches[1];
