@@ -37,7 +37,7 @@ export class Constants {
 	public static SESSION_TEMPLATE_ENTITY = "msdyn_consoleapplicationsessiontemplate";
 	public static EXPRESSION_DATA = "msdyn_expressiondata";
 	public static BUILTIN_CATEGORY = "LOGIC_APPS_BUILTIN";
-	public static BUILTIN_CATEGORY_DISPLAY = "Built-in";
+	public static BUILTIN_CATEGORY_DISPLAY = "LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN";
 };
 
 export class DesignerMessages {
