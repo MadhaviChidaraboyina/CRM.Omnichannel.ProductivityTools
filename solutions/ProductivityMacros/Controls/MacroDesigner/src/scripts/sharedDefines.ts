@@ -444,9 +444,9 @@ export enum WrapperEvents {
 };
 
 export enum RequiredCDSOpersForInit {
-	DesignerConfig = "0",
-	Templates = "1",
-	WorkflowDefinition = "2"
+    DesignerConfig = "0",
+    Templates = "1",
+    WorkflowDefinition = "2"
 };
 
 
