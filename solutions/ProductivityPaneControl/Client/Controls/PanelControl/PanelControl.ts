@@ -186,7 +186,7 @@ module MscrmControls.ProductivityToolPanel {
                 onClick: this.onButtonClick.bind(this, buttonId),
                 style: (this.productivityToolSelected === buttonId && this.panelToggle) ? ControlStyle.getProductivityPanelBtnStyle(Constants.TRUE) : ControlStyle.getProductivityPanelBtnStyle(Constants.FALSE)
             };
-            if (properties != {}) {
+            if (Object.keys(properties).length != 0) {
                 for (let i in properties)
                     btnProperties[i] = properties[i];
             }
