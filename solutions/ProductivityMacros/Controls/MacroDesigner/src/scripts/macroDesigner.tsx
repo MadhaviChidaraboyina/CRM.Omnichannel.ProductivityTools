@@ -157,139 +157,139 @@ let CurrentWorkflowDetails = { definition: "", id: "", name: "", description: ""
 
 
 async function startDesigner(rpc) {
-	try {
-		let designerOptions: SharedDefines.IDesignerOptions = {
-			ApiVersion: "1.0",
-			BaseUrl: window.location.hostname,
-			location: "NAM",
-			resourceGroup: "resourcegroup",
-			subscriptionId: "subscription",
-			resourceId: "resourceId",
-			Categories: [],
-			SearchHint: "",
-			UserVoiceMessage: "",
-			environmentName: window.top.Xrm.Utility.getGlobalContext().getOrgUniqueName(),
-			environmentDescription: window.top.Xrm.Utility.getGlobalContext().getOrgUniqueName(),
-			Connectors: [
-			],
-			Actions: [
-			],
-			operationKindDisplayText: operKindDisplayText
+    try {
+        let designerOptions: SharedDefines.IDesignerOptions = {
+            ApiVersion: "1.0",
+            BaseUrl: window.location.hostname,
+            location: "NAM",
+            resourceGroup: "resourcegroup",
+            subscriptionId: "subscription",
+            resourceId: "resourceId",
+            Categories: [],
+            SearchHint: "",
+            UserVoiceMessage: "",
+            environmentName: window.top.Xrm.Utility.getGlobalContext().getOrgUniqueName(),
+            environmentDescription: window.top.Xrm.Utility.getGlobalContext().getOrgUniqueName(),
+            Connectors: [
+            ],
+            Actions: [
+            ],
+            operationKindDisplayText: operKindDisplayText
 		};
-		try {
-			let designerConfig: SharedDefines.MacroDesignerConfig = await initOperations[RequiredCDSOpersForInit.DesignerConfig] as SharedDefines.MacroDesignerConfig;
-			let templates = await initOperations[RequiredCDSOpersForInit.Templates] as SharedDefines.DesignerTemplateConfig;
-			designerOptions.ApiVersion = designerConfig.DesignerSolutionVersion || designerOptions.ApiVersion;
-			designerOptions.SearchHint = designerConfig.SearchHint || Utils.Utils.getResourceString("DESIGNER_SEARCHMACROS");
-			designerOptions.UserVoiceMessage = designerConfig.UserVoiceText || Utils.Utils.getResourceString("DESIGNER_USERVOICEMSG");
-			designerOptions.UserVoiceURL = designerConfig.UserVoiceLink;
-			designerOptions.Actions = templates.actions;
-			designerOptions.Connectors = templates.connectors;
+        try {
+            let designerConfig: SharedDefines.MacroDesignerConfig = await initOperations[RequiredCDSOpersForInit.DesignerConfig] as SharedDefines.MacroDesignerConfig;
+            let templates = await initOperations[RequiredCDSOpersForInit.Templates] as SharedDefines.DesignerTemplateConfig;
+            designerOptions.ApiVersion = designerConfig.DesignerSolutionVersion || designerOptions.ApiVersion;
+            designerOptions.SearchHint = designerConfig.SearchHint || Utils.Utils.getResourceString("DESIGNER_SEARCHMACROS");
+            designerOptions.UserVoiceMessage = designerConfig.UserVoiceText || Utils.Utils.getResourceString("DESIGNER_USERVOICEMSG");
+            designerOptions.UserVoiceURL = designerConfig.UserVoiceLink;
+            designerOptions.Actions = templates.actions;
+            designerOptions.Connectors = templates.connectors;
 			designerOptions.Categories = templates.categories;
 			designerOptions.Categories.push({
 				"itemKey": SharedDefines.Constants.BUILTIN_CATEGORY,
 				"linkText": Utils.Utils.getResourceString(SharedDefines.Constants.BUILTIN_CATEGORY_DISPLAY)
 			})
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Info,
-				eventName: WrapperEvents.WrapperConfigLoadEvent,
-				message: Utils.Utils.genMsgForTelemetry("Designer action templates loaded"),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-			};
-			doTelemetry(obj);
-		}
-		catch (error) {
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Error,
-				eventName: WrapperEvents.WrapperConfigErrorEvent,
-				message: Utils.Utils.genMsgForTelemetry("Unable to load templates", error),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-				exception: error.stack
-			};
-			doTelemetry(obj, "DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND");
-		}
-		try {
-			let initResult = await rpc.call(SharedDefines.DesignerMessages.Initialize, [JSON.stringify(designerOptions)]);
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Info,
-				eventName: WrapperEvents.DesignerControlInitEvent,
-				message: Utils.Utils.genMsgForTelemetry("Designer control init done"),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-			};
-			doTelemetry(obj);
-		}
-		catch (error) {
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Error,
-				eventName: WrapperEvents.DesignerControlInitErrorEvent,
-				message: Utils.Utils.genMsgForTelemetry("Unable to initialize designer control", error),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-				exception: error.stack
-			};
-			doTelemetry(obj, "DESIGNER_CONTROL_INIT_FAILURE", true);
-			return;
-		}
-		try {
-			CurrentWorkflowDetails = await initOperations[RequiredCDSOpersForInit.WorkflowDefinition];
-			if (CurrentWorkflowDetails.name) {
-				(window.top as any).Xrm.Page.getControl("macrosname_id").getAttribute().setValue(CurrentWorkflowDetails.name);
-			}
-			if (CurrentWorkflowDetails.description) {
-				(window.top as any).Xrm.Page.getControl("macrosdesc_id").getAttribute().setValue(CurrentWorkflowDetails.description);
-			}
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Info,
-				eventName: WrapperEvents.DesignerControlInitEvent,
-				message: Utils.Utils.genMsgForTelemetry("Workflow definition read from CDS done"),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-			};
-			doTelemetry(obj);
-		}
-		catch (error) {
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Error,
-				eventName: WrapperEvents.DesignerControlInitErrorEvent,
-				message: Utils.Utils.genMsgForTelemetry("Unable to read workflow definition from CDS", error),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-				exception: error.stack
-			};
-			doTelemetry(obj, "DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION", true);
-			return;
-		}
-		try {
-			let loadDef = await rpc.call(SharedDefines.DesignerMessages.LoadDefinition, [JSON.stringify({ definition: CurrentWorkflowDetails.definition, references: [], sku: { name: "Free" } }), JSON.stringify(designerOptions)]);
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Info,
-				eventName: WrapperEvents.DesignerControlInitEvent,
-				message: Utils.Utils.genMsgForTelemetry("Macro definition loaded into designer control"),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-			};
-			doTelemetry(obj);
-		}
-		catch (error) {
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Error,
-				eventName: WrapperEvents.DesignerControlInitEvent,
-				message: Utils.Utils.genMsgForTelemetry("Unable to load macro definition to designer", error),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-				exception: error.stack
-			};
-			doTelemetry(obj, "DESIGNER_CONTROL_LOAD_FAILURE", true);
-			return;
-		}
-		try {
-			let rendRes = await rpc.call(SharedDefines.DesignerMessages.RenderDesigner);
-			let spinner = document.getElementById("designerContainerSpinner") as HTMLImageElement;
-			spinner.style.display = "none";
-			let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
+            let obj: SharedDefines.LogObject = {
+                level: SharedDefines.LogLevel.Info,
+                eventName: WrapperEvents.WrapperConfigLoadEvent,
+                message: Utils.Utils.genMsgForTelemetry("Designer action templates loaded"),
+                eventTimeStamp: new Date(),
+                eventType: SharedDefines.TelemetryEventType.Trace,
+            };
+            doTelemetry(obj);
+        }
+        catch (error) {
+            let obj: SharedDefines.LogObject = {
+                level: SharedDefines.LogLevel.Error,
+                eventName: WrapperEvents.WrapperConfigErrorEvent,
+                message: Utils.Utils.genMsgForTelemetry("Unable to load templates", error),
+                eventTimeStamp: new Date(),
+                eventType: SharedDefines.TelemetryEventType.Trace,
+                exception: error.stack
+            };
+            doTelemetry(obj, "DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND");
+        }
+        try {
+            let initResult = await rpc.call(SharedDefines.DesignerMessages.Initialize, [JSON.stringify(designerOptions)]);
+            let obj: SharedDefines.LogObject = {
+                level: SharedDefines.LogLevel.Info,
+                eventName: WrapperEvents.DesignerControlInitEvent,
+                message: Utils.Utils.genMsgForTelemetry("Designer control init done"),
+                eventTimeStamp: new Date(),
+                eventType: SharedDefines.TelemetryEventType.Trace,
+            };
+            doTelemetry(obj);
+        }
+        catch (error) {
+            let obj: SharedDefines.LogObject = {
+                level: SharedDefines.LogLevel.Error,
+                eventName: WrapperEvents.DesignerControlInitErrorEvent,
+                message: Utils.Utils.genMsgForTelemetry("Unable to initialize designer control", error),
+                eventTimeStamp: new Date(),
+                eventType: SharedDefines.TelemetryEventType.Trace,
+                exception: error.stack
+            };
+            doTelemetry(obj, "DESIGNER_CONTROL_INIT_FAILURE", true);
+            return;
+        }
+        try {
+            CurrentWorkflowDetails = await initOperations[RequiredCDSOpersForInit.WorkflowDefinition];
+            if (CurrentWorkflowDetails.name) {
+                (window.top as any).Xrm.Page.getControl("macrosname_id").getAttribute().setValue(CurrentWorkflowDetails.name);
+            }
+            if (CurrentWorkflowDetails.description) {
+                (window.top as any).Xrm.Page.getControl("macrosdesc_id").getAttribute().setValue(CurrentWorkflowDetails.description);
+            }
+            let obj: SharedDefines.LogObject = {
+                level: SharedDefines.LogLevel.Info,
+                eventName: WrapperEvents.DesignerControlInitEvent,
+                message: Utils.Utils.genMsgForTelemetry("Workflow definition read from CDS done"),
+                eventTimeStamp: new Date(),
+                eventType: SharedDefines.TelemetryEventType.Trace,
+            };
+            doTelemetry(obj);
+        }
+        catch (error) {
+            let obj: SharedDefines.LogObject = {
+                level: SharedDefines.LogLevel.Error,
+                eventName: WrapperEvents.DesignerControlInitErrorEvent,
+                message: Utils.Utils.genMsgForTelemetry("Unable to read workflow definition from CDS", error),
+                eventTimeStamp: new Date(),
+                eventType: SharedDefines.TelemetryEventType.Trace,
+                exception: error.stack
+            };
+            doTelemetry(obj, "DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION", true);
+            return;
+        }
+        try {
+            let loadDef = await rpc.call(SharedDefines.DesignerMessages.LoadDefinition, [JSON.stringify({ definition: CurrentWorkflowDetails.definition, references: [], sku: { name: "Free" } }), JSON.stringify(designerOptions)]);
+            let obj: SharedDefines.LogObject = {
+                level: SharedDefines.LogLevel.Info,
+                eventName: WrapperEvents.DesignerControlInitEvent,
+                message: Utils.Utils.genMsgForTelemetry("Macro definition loaded into designer control"),
+                eventTimeStamp: new Date(),
+                eventType: SharedDefines.TelemetryEventType.Trace,
+            };
+            doTelemetry(obj);
+        }
+        catch (error) {
+            let obj: SharedDefines.LogObject = {
+                level: SharedDefines.LogLevel.Error,
+                eventName: WrapperEvents.DesignerControlInitEvent,
+                message: Utils.Utils.genMsgForTelemetry("Unable to load macro definition to designer", error),
+                eventTimeStamp: new Date(),
+                eventType: SharedDefines.TelemetryEventType.Trace,
+                exception: error.stack
+            };
+            doTelemetry(obj, "DESIGNER_CONTROL_LOAD_FAILURE", true);
+            return;
+        }
+        try {
+            let rendRes = await rpc.call(SharedDefines.DesignerMessages.RenderDesigner);
+            let spinner = document.getElementById("designerContainerSpinner") as HTMLImageElement;
+            spinner.style.display = "none";
+            let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
 			designerIframe.style.display = "inline";
 			setTimeout(function () { (window.top as any).Xrm.Page.getControl("macrosname_id").setFocus() }, 500)
 			let obj: SharedDefines.LogObject = {

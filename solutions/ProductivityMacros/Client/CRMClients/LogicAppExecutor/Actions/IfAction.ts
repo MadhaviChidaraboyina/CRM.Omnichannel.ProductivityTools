@@ -21,14 +21,28 @@ namespace Microsoft.LogicAppExecutor {
 		ExecuteAction(action: IActionItem, state: any, runHistoryData: executionJSON): Promise<string> {
 			return new Promise((resolve, reject) => {
 				let expressions = action.expression;
-				this.evaluateExpression(expressions, state).then(
+				var startTime = new Date().toISOString();
+				var outputs = {};
+				this.evaluateExpression(expressions,state).then(
 					function (result: any) {
 						var innerActions: IActionItem[];
 						if (result) {
 							innerActions = action.actions;
+							status = Microsoft.ProductivityMacros.Constants.StatusSucceded;
+							var trueInput = {
+								"expressionResult": true
+							}
+							Microsoft.ProductivityMacros.RunHistory.setActionStatus(runHistoryData, status, startTime, outputs, action.name, trueInput);
 						}
 						else {
-							innerActions = action.else.actions;
+							if (action.else) {
+								innerActions = action.else.actions;
+							}
+							status = Microsoft.ProductivityMacros.Constants.StatusFailed;
+							var falseInput = {
+								"expressionResult": false
+							}
+							Microsoft.ProductivityMacros.RunHistory.setActionStatus(runHistoryData, status, startTime, outputs, action.name, falseInput);
 						}
 						let executeActionPromise = ExecuteActions(innerActions, state, runHistoryData).then(
 							function (result: any) {

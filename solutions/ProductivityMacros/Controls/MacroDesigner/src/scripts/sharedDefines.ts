@@ -34,7 +34,7 @@ export class Constants {
 	public static MWRAPPER_CONTROL_SIGNATURE = "mslamonitor";
 	public static MACROS_SESSION_ENTITY = "msdyn_macrosession";
 	public static MACROS_MONITOR_PATH = "/flowcontrol/DesignerBlob/iframemonitor.html";
-	public static SESSION_TEMPLATE_ENTITY="msdyn_consoleapplicationsessiontemplate";
+	public static SESSION_TEMPLATE_ENTITY = "msdyn_consoleapplicationsessiontemplate";
 	public static EXPRESSION_DATA = "msdyn_expressiondata";
 	public static BUILTIN_CATEGORY = "LOGIC_APPS_BUILTIN";
 	public static BUILTIN_CATEGORY_DISPLAY = "LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN";
@@ -193,39 +193,39 @@ export interface IMonitorOptions {
 export interface LogicAppDesignerTemplateConfig {
 	actions: any[],
 	triggers: any[],
-    connectors: any[],
-    categories: Category[],
-    operationManifestData: any[]
+	connectors: any[],
+	categories: Category[],
+	operationManifestData: any[]
 }
-export interface ILogicAppDesignerOptions{
-    ApiVersion: string,
-    BaseUrl: string,
-    location: string,
-    resourceGroup: string,
-    subscriptionId: string,
-    resourceId: string,
-    //doNotAddRecommendation: true,
-    Categories: Category[],
-    SearchHint: string,
+export interface ILogicAppDesignerOptions {
+	ApiVersion: string,
+	BaseUrl: string,
+	location: string,
+	resourceGroup: string,
+	subscriptionId: string,
+	resourceId: string,
+	//doNotAddRecommendation: true,
+	Categories: Category[],
+	SearchHint: string,
 	Actions: any[],
 	Triggers: any[],
-    Connectors: any[],
-    OperationManifest: any[],
-    UserVoiceMessage: string,
-    UserVoiceURL?: string,
-    environmentName: string,
-    environmentDescription: string,
-    operationKindDisplayText: { [kind: string]: string }
+	Connectors: any[],
+	OperationManifest: any[],
+	UserVoiceMessage: string,
+	UserVoiceURL?: string,
+	environmentName: string,
+	environmentDescription: string,
+	operationKindDisplayText: { [kind: string]: string }
 }
 
 export interface ListDynamicValuesResponse {
-    value: ListDynamicValue[];
+	value: ListDynamicValue[];
 }
 export interface ListDynamicValue {
-    value: any;        // tslint:disable-line: no-any
-    displayName: string;
-    description: string;
-    disabled: boolean;
+	value: any;        // tslint:disable-line: no-any
+	displayName: string;
+	description: string;
+	disabled: boolean;
 }
 
 export enum Visibility {
@@ -434,13 +434,13 @@ const LOCALE_MAP = {
 export { LOCALE_MAP };
 
 export enum WrapperEvents {
-    WrapperConfigErrorEvent = "MSWP.CONFIG_ERROR",
-    WrapperConfigLoadEvent = "MSWP.CONFIG_LOAD",
-    DesignerIframeLoadEvent = "MSWP.IFRAME_LOAD_DONE",
-    DesignerControlInitEvent = "MSWP.DESIGNER_CONTROL_INIT",
-    DesignerControlInitErrorEvent = "MSWP.DESIGNER_CONTROL_INIT_ERROR",
-    DesignerControlExecutionEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_EVENT",
-    DesignerControlExecutionErrorEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_ERROR"
+	WrapperConfigErrorEvent = "MSWP.CONFIG_ERROR",
+	WrapperConfigLoadEvent = "MSWP.CONFIG_LOAD",
+	DesignerIframeLoadEvent = "MSWP.IFRAME_LOAD_DONE",
+	DesignerControlInitEvent = "MSWP.DESIGNER_CONTROL_INIT",
+	DesignerControlInitErrorEvent = "MSWP.DESIGNER_CONTROL_INIT_ERROR",
+	DesignerControlExecutionEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_EVENT",
+	DesignerControlExecutionErrorEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_ERROR"
 };
 
 export enum RequiredCDSOpersForInit {

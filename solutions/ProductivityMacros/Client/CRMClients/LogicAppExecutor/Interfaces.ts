@@ -7,11 +7,11 @@ namespace Microsoft.LogicAppExecutor {
 	export interface IActionItem {
 		name: string;
 		type: string;
-		inputs: any;
+		inputs?: any;
 		runAfter: any;
-		actions: IActionItem[];
-		else: any;
-		expression: any;
+		actions?: IActionItem[];
+		else?: any;
+		expression?: any;
 	}
 
 	export interface ISortByDependency {

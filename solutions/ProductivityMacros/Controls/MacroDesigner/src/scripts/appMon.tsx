@@ -235,7 +235,7 @@ function initializeMonitor(req) {
 							return new DesignerCore.LogicAppsBuiltInTypeService(schemaVersion, monitorOptions);
 						};
 						return new HostService.SmartRecommendationImpl(
-							{builtInTypeService:builtInTypeServiceFactory(analytics, schemaVersion)},
+							{ builtInTypeService: builtInTypeServiceFactory(analytics, schemaVersion) },
 							monitorOptions,
 							operationManager,
 							analytics
