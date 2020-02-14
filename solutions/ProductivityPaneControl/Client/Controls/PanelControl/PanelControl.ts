@@ -190,7 +190,6 @@ module MscrmControls.ProductivityToolPanel {
                 for (let i in properties)
                     btnProperties[i] = properties[i];
             }
-            //btnProperties["accessibilityLabel"] = "Test Sanath";
 
             const toggleButton = this.context.factory.createElement(
                 "BUTTON",
@@ -283,7 +282,6 @@ module MscrmControls.ProductivityToolPanel {
                 iconPath = Constants.panelToggleCollpase;
                 toolTip = Constants.expandToolTip;
             }
-            //const toggleButton =  this.getProductivityToolButton(Constants.toggleIconId, this.panelToggle ? Constants.panelToggleExpand : Constants.panelToggleCollpase, Constants.toggle, false, this.panelToggle ? Constants.collpaseToolTip : Constants.expandToolTip, {"accessibilityLabel":});
 
             const toggleButton = this.getProductivityToolButton(Constants.toggleIconId, iconPath, Constants.toggle, false, toolTip, { "accessibilityLabel": String.format("{0} {1}", this.context.resources.getString(toolTip), this.context.resources.getString('CC_Panel_Control')) });
             const agentGuidanceButton = this.getProductivityToolButton(Constants.agentScriptIconId, Constants.agentScriptIcon, Constants.agentGuidance, true, Constants.agentGuidanceTooltip, { "accessibilityLabel": this.context.resources.getString(Constants.agentGuidanceTooltip) });
