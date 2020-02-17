@@ -178,17 +178,22 @@ module MscrmControls.ProductivityToolPanel {
 		 * getProductivityToolButton generates the toggle button.
 		 */
 
-		private getProductivityToolButton(iconId: string, iconPath: string, buttonId: string, selectionIndicator: boolean, toolTip: string): Mscrm.Component
-		{		
+        private getProductivityToolButton(iconId: string, iconPath: string, buttonId: string, selectionIndicator: boolean, toolTip: string, properties: any = {}): Mscrm.Component {
             const icon = this.getProductivityToolIcon(iconId, iconPath);
+            let btnProperties = {
+                id: buttonId,
+                key: buttonId,
+                onClick: this.onButtonClick.bind(this, buttonId),
+                style: (this.productivityToolSelected === buttonId && this.panelToggle) ? ControlStyle.getProductivityPanelBtnStyle(Constants.TRUE) : ControlStyle.getProductivityPanelBtnStyle(Constants.FALSE)
+            };
+            if (Object.keys(properties).length != 0) {
+                for (let i in properties)
+                    btnProperties[i] = properties[i];
+            }
+
             const toggleButton = this.context.factory.createElement(
                 "BUTTON",
-                {
-                    id: buttonId,
-                    key: buttonId,
-                    onClick: this.onButtonClick.bind(this, buttonId),
-                    style: (this.productivityToolSelected === buttonId && this.panelToggle) ? ControlStyle.getProductivityPanelBtnStyle(Constants.TRUE) : ControlStyle.getProductivityPanelBtnStyle(Constants.FALSE)
-                },
+                btnProperties,
                 [icon, (!this.panelToggle && this.notificationCount > 0 && buttonId == Constants.agentGuidance) ? this.notificationContainer() : Constants.emptyString, selectionIndicator ? this.getProductivityToolSelectionIndicator(buttonId) : Constants.emptyString]);
 
             const listItem = this.context.factory.createElement(
@@ -199,9 +204,9 @@ module MscrmControls.ProductivityToolPanel {
                     style: {
                         display: "flex"
                     },
-					title: this.context.resources.getString(toolTip)
-				},
-				toggleButton);
+                    title: this.context.resources.getString(toolTip)
+                },
+                toggleButton);
 
             return listItem;
         }
@@ -266,11 +271,20 @@ module MscrmControls.ProductivityToolPanel {
         }
 
         private getproductivityToolButtons(): Mscrm.Component {
-			let listItems: Mscrm.Component[] = [];
+            let listItems: Mscrm.Component[] = [];
+            let iconPath;
+            let toolTip;
+            if (this.panelToggle) {
+                iconPath = Constants.panelToggleExpand;
+                toolTip = Constants.collpaseToolTip;
+            }
+            else {
+                iconPath = Constants.panelToggleCollpase;
+                toolTip = Constants.expandToolTip;
+            }
 
-			const toggleButton =  this.getProductivityToolButton(Constants.toggleIconId,
-				this.panelToggle ? Constants.panelToggleExpand : Constants.panelToggleCollpase,Constants.toggle, false, this.panelToggle ? Constants.collpaseToolTip: Constants.expandToolTip);
-			const agentGuidanceButton =  this.getProductivityToolButton(Constants.agentScriptIconId,Constants.agentScriptIcon,Constants.agentGuidance, true, Constants.agentGuidanceTooltip);
+            const toggleButton = this.getProductivityToolButton(Constants.toggleIconId, iconPath, Constants.toggle, false, toolTip, { "accessibilityLabel": String.format("{0} {1}", this.context.resources.getString(toolTip), this.context.resources.getString('CC_Panel_Control')) });
+            const agentGuidanceButton = this.getProductivityToolButton(Constants.agentScriptIconId, Constants.agentScriptIcon, Constants.agentGuidance, true, Constants.agentGuidanceTooltip, { "accessibilityLabel": this.context.resources.getString(Constants.agentGuidanceTooltip) });
             const toolSeparator = this.toolSeparator();
 
             listItems.push(toggleButton);
@@ -289,7 +303,7 @@ module MscrmControls.ProductivityToolPanel {
             return buttonContainer;
         }
 
-		/** 
+		/**
 		 * This function will recieve an "Input Bag" containing the values currently assigned to the parameters in your manifest
 		 * It will send down the latest values (static or dynamic) that are assigned as defined by the manifest & customization experience
 		 * as well as resource, client, and theming info (see mscrm.d.ts)
