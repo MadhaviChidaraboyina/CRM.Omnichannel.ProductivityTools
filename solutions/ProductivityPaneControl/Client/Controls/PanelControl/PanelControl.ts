@@ -304,12 +304,6 @@ module MscrmControls.ProductivityToolPanel {
                 //this.panelToggle = this.productivityPaneConfigData.productivityPaneMode;
                 if (paneState == true) {
 
-                    if(!this.panelState.checkAgentScriptAndSmartAssistBot(this.currentSessionId))
-                    {
-                        this.setSidePanelControlState(SidePanelControlState.Hidden);
-                        return navbarContainer;
-                    }
-
                     this.controls = [];
                     if (this.isSessionChanged ) {
                         this.controls.push(this.getproductivityToolButtons());
