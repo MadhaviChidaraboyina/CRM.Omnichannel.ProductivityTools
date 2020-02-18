@@ -121,4 +121,12 @@
     <value>Agent guidance</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>No items configured</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Looks like your administrator has not configured it yet.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

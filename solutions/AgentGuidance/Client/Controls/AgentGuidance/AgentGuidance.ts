@@ -130,7 +130,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
 
                 agentGuidancePane.push(agentGuidanceTools);
             }
-            else if (sessionContextAttributes.isCallScript || sessionContextAttributes.isSmartassist) {
+            else if (!sessionContextAttributes.isCallScript && !sessionContextAttributes.isSmartassist) {
                 agentGuidancePane.push(this.getErrorScreen());    
             }
 
@@ -141,8 +141,8 @@ module MscrmControls.ProductivityToolAgentGuidance {
 
         private getErrorScreen(): Mscrm.Component {
                 const icon = this.context.factory.createElement("IMG", {
-                    id: "error_icon",
-                    source: "/webresources/msdyn_error_emptystate_icon.svg",
+                    id: Constants.agentGuidance_error_icon_id,
+                    source: Constants.agentGuidance_error_icon
                     style: {
                         verticalAlign: "middle"
                     }
@@ -151,36 +151,29 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 const no_item = this.context.factory.createElement(
                     "Label",
                     {
-                        id: "no_item",
-                        key: "no_item",
-                        style: {
-                            paddingTop: "15px",
-                            fontWeight: "600",
-                            fontFamily: "Segoe UI",
-                            fontSize: "18px",
-                            lineHeight: "20px",
-                            textAlign: "center"
-                        }
+                        id: Constants.agentGuidance_no_item,
+                        key: Constants.agentGuidance_no_item,
+                        style: ControlStyle.agentGuidanceErrorScreenStyle()
                     },
-                    "No items configured");
+                    this.context.resources.getString(Constants.noConfigHeaderResourceKey));  
 
                     const not_configured = this.context.factory.createElement(
                         "Label",
                         {
-                            id: "not_configured",
-                            key: "not_configured",
+                            id: Constants.agentGuidance_not_configured,
+                            key: Constants.agentGuidance_not_configured,
                             style:{
                                 textAlign: "center"
                             }
                         },
-                        "Looks like your administrator has not configured it yet.");
+                        this.context.resources.getString(Constants.noConfigMessageResourceKey));  
 
 
                 let errorScreen = this.context.factory.createElement(
                     "CONTAINER",
                     {
-                        key: "error_container",
-                        id: "error_container",
+                        key: Constants.agentGuidance_error_container,
+                        id: Constants.agentGuidance_error_container,
                         style: ControlStyle.agentGuidanceToolsStyle()
                     },
                     [icon, no_item, not_configured ]
