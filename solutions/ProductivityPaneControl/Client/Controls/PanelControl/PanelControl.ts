@@ -87,8 +87,6 @@ module MscrmControls.ProductivityToolPanel {
                         panelToggle: this.productivityPaneConfigData.productivityPaneMode,
                         notificationCount: 0
                     }
-                    this.panelState.storeSessionTemplateIdInLocStorage(sessionContextData.newSessionId);
-                    this.panelState.storeLiveWorkStreamIdInLocStorage(sessionContextData.newSessionId);
                     PanelState.SetState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData, data);
                 }
                 if (actionType === Constants.sessionSwitched) {
@@ -317,7 +315,8 @@ module MscrmControls.ProductivityToolPanel {
                 let paneState = this.productivityPaneConfigData.productivityPaneState;
                 //this.panelToggle = this.productivityPaneConfigData.productivityPaneMode;
                 if (paneState == true) {
-
+                    this.panelState.storeSessionTemplateIdInLocStorage(this.currentSessionId);
+                    this.panelState.storeLiveWorkStreamIdInLocStorage(this.currentSessionId);
                     if(!this.panelState.checkAgentScriptAndSmartAssistBot(this.currentSessionId))
                     {
                         this.setSidePanelControlState(SidePanelControlState.Hidden);
