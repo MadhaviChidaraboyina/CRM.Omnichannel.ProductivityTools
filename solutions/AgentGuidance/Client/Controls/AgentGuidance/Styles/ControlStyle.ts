@@ -88,6 +88,13 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 textAlign: "center"
             }
         }
+
+        public static agentGuidanceErroContainerStyle() {
+            return {
+                position: "absolute",
+                top: "40%"
+            }
+        }
      
 	}
 }

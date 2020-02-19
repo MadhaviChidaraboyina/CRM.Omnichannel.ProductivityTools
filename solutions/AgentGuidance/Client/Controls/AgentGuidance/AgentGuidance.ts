@@ -174,7 +174,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
                     {
                         key: Constants.agentGuidance_error_container,
                         id: Constants.agentGuidance_error_container,
-                        style: ControlStyle.agentGuidanceToolsStyle()
+                        style: ControlStyle.agentGuidanceErroContainerStyle()
                     },
                     [icon, no_item, not_configured ]
                 );
