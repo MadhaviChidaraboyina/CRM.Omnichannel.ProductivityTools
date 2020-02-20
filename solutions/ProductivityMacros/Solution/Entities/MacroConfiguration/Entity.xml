@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Macro Solution Configurations" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Macro solution related configurations" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -289,7 +289,7 @@
             <displayname description="Designer Blob URL" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets designer fallback url" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_designerurlrelativepath">
@@ -326,7 +326,7 @@
             <displayname description="Relative path to designer blob within the designer URL" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets the path to designer blob with designer URL" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_designerurlconfigentity">
@@ -363,7 +363,7 @@
             <displayname description="Entity from which to read designer URL" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets the entity from which to read designer URL" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_designerurlconfigentityid">
@@ -400,7 +400,7 @@
             <displayname description="Record Id from which to read designer URL" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets the id from which to read designer URL" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_designerurlconfigentityattrib">
@@ -437,7 +437,7 @@
             <displayname description="Attribute from which to read designer URL" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets the attributes of designer url config entity" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_designerurlconfigentityquery">
@@ -474,7 +474,7 @@
             <displayname description="An oData query to retrieve record from which to read designer URL" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="An oData query to retrieve record from which to read designer URL" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_macrosolutionconfigurationId">
@@ -581,7 +581,7 @@
             <displayname description="Search Hint Text" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets the value for serach hint" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_uservoicelink">
@@ -618,7 +618,7 @@
             <displayname description="User Voice Link" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets the value for user voice link" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_uservoicetext">
@@ -655,7 +655,7 @@
             <displayname description="User Voice Text" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets the value for user voice text" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OverriddenCreatedOn">

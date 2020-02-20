@@ -10,7 +10,7 @@
 				<LocalizedCollectionName description="Macro Action Templates" languagecode="1033" />
 			</LocalizedCollectionNames>
 			<Descriptions>
-				<Description description="" languagecode="1033" />
+				<Description description="Attributes for macro action template" languagecode="1033" />
 			</Descriptions>
 			<attributes>
 				<attribute PhysicalName="msdyn_InputParameters">
@@ -118,7 +118,7 @@
 						<displayname description="Brand Color" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="" languagecode="1033" />
+						<Description description="Unique value to set the brand color" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_displayname">
@@ -154,7 +154,7 @@
 						<displayname description="Display  Name" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="" languagecode="1033" />
+						<Description description="Unique value to set the display name" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_icon">
@@ -190,7 +190,7 @@
 						<displayname description="Icon" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="" languagecode="1033" />
+						<Description description="Unique value to set the icon" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_subtitle">
@@ -226,7 +226,7 @@
 						<displayname description="Subtitle" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="" languagecode="1033" />
+						<Description description="Unique value to set the subtitle value" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_runtimeapi">
@@ -298,7 +298,7 @@
 						<displayname description="Summary" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="" languagecode="1033" />
+						<Description description="Unique value to set the summary" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_visibility">
@@ -334,7 +334,7 @@
 						<displayname description="Visibility" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="" languagecode="1033" />
+						<Description description="Unique value to set the visibility value" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="CreatedBy">
@@ -1097,7 +1097,7 @@
 						<displayname description="FUNDU_MACRO_CONNECTOR" languagecode="1033" />
 					</displaynames>
 					<Descriptions>
-						<Description description="" languagecode="1033" />
+						<Description description="Sets the value of macro connector" languagecode="1033" />
 					</Descriptions>
 				</attribute>
 				<attribute PhysicalName="msdyn_kind">

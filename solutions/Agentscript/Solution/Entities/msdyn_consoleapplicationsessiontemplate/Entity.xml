@@ -43,7 +43,7 @@
               <displayname description="Enable build expression" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="" languagecode="1033" />
+              <Description description="Sets value to enable or disable build expression" languagecode="1033" />
             </Descriptions>
             <options>
               <option value="0" Color="#0000ff">
@@ -62,7 +62,7 @@
             <displayname description="Enable build expression" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Unique value to enable or disable build expression" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_expressiondata">
