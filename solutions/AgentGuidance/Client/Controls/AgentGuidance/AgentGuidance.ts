@@ -142,7 +142,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
         private getErrorScreen(): Mscrm.Component {
                 const icon = this.context.factory.createElement("IMG", {
                     id: Constants.agentGuidance_error_icon_id,
-                    source: Constants.agentGuidance_error_icon
+                    source: Constants.agentGuidance_error_icon,
                     style: {
                         verticalAlign: "middle"
                     }
