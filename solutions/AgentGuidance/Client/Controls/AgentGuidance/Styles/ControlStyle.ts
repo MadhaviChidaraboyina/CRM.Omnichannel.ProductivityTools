@@ -74,7 +74,8 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 paddingBottom: "10px",
                 height: "auto",
                 maxHeight: isCallScript ? "50%" : "100%",
-                display: isCardExist ? "" : "none"
+                display: isCardExist ? "" : "none",
+                overflow: "auto"                
             }
         }
      
