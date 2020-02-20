@@ -9,12 +9,16 @@ module MscrmControls.ProductivityToolPanel {
         private dataManager: DataManager;
         private telemetryContext: string;
         private telemetryLogger: TelemetryLogger;
+        private cifExternalUtil: Microsoft.CIFramework.External.CIFExternalUtilityImpl;
 
         constructor(context: Mscrm.ControlData<IInputBag>) {
             this.context = context;
             this.dataManager = new DataManager(context);
             this.telemetryContext = TelemetryComponents.PanelState;
             this.telemetryLogger = new TelemetryLogger(context);
+            if (Microsoft.CIFramework && Microsoft.CIFramework.External) {
+                this.cifExternalUtil = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
+            }
         }
 
         public static SetState(key: string, data: any) {
@@ -128,9 +132,9 @@ module MscrmControls.ProductivityToolPanel {
             let workStreamId: string = "";
 
             try {
-                //couldn't retrieve from CIF, fetch from form query parameters
-                let queryStringParameters = (window as any).Xrm.Page.context.getQueryStringParameters();
-                workStreamId = queryStringParameters.ocContext.config.sessionParams.LiveWorkStreamId;
+                let templateParams = this.cifExternalUtil.getSessionTemplateParams();
+                let data = JSON.parse(templateParams.data);
+                workStreamId = data.ocContext.config.sessionParams.LiveWorkStreamId;
             } catch (error) {
                 let errorMsg = "Failed to retrieve Live WorkStream id from form param";
                 let errorParams = new EventParameters();
@@ -151,9 +155,7 @@ module MscrmControls.ProductivityToolPanel {
             let sessionTemplateId: string = "";
 
             try {
-                //couldn't retrieve from CIF, fetch from form query parameters
-                let queryStringParameters = (window as any).Xrm.Page.context.getQueryStringParameters();
-                sessionTemplateId = queryStringParameters.templateId;
+                sessionTemplateId = this.cifExternalUtil.getTemplateForSession();
             } catch (error) {
                 let errorMsg = "Failed to retrieve session template id from form param";
                 let errorParams = new EventParameters();
