@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-	<control namespace="MscrmControls.ProductivityToolPanel" constructor="ProductivityPanelControl" version="1.0.02" display-name-key="CC_PanelControl_Control" control-type="virtual" hidden="true">
+	<control namespace="MscrmControls.ProductivityToolPanel" constructor="ProductivityPanelControl" version="1.0.3" display-name-key="CC_PanelControl_Control" control-type="virtual" hidden="true">
 		<modes>
 		</modes>
 		<resources>
