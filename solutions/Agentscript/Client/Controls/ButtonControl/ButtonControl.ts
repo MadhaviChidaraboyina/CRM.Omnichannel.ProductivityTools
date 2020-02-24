@@ -132,6 +132,7 @@ module MscrmControls.ButtonControl {
 			let button : any = document.querySelector('[title="' + this.buttonTitle + '"]');
 			if (this.enableBuildExpression.getValue()) {
 				button.disabled = false;
+				button.onclick = this.openExpressionbuilder.bind(this);
 			}
 			else {
 				button.disabled = true;
