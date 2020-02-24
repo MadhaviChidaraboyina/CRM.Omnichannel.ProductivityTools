@@ -29,7 +29,6 @@
     <TypeScriptCompile Include="CRMClients\LogicAppExecutor\Interfaces.ts" />
     <TypeScriptCompile Include="CRMClients\LogicAppExecutor\LogicAppExecutor.ts" />
     <TypeScriptCompile Include="CRMClients\LogicAppExecutor\LogicAppExecutorUtils.ts" />
-    <TypeScriptCompile Include="CRMClients\Models.ts" />
     <TypeScriptCompile Include="CRMClients\ProductivityMacroState.ts" />
     <TypeScriptCompile Include="CRMClients\ProductivityMacrosRunHistory.ts" />
     <TypeScriptCompile Include="Libraries\requirejs\require.d.ts" />

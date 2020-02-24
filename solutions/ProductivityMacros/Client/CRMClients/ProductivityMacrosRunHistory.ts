@@ -1,5 +1,5 @@
 ﻿/// <reference path="Constants.ts" />
-/// <reference path="Models.ts" />
+/// <reference path="LogicAppExecutor/Interfaces.ts" />
 
 
 namespace Microsoft.ProductivityMacros.RunHistory {
@@ -49,16 +49,73 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 		data.definition.changedTime = result.entities[0].modifiedon;
 	}
 
-	export function setActionsInJSON(data: any, actions: IActionItem[]): any {	
-		data.definition.actions = {};
+	function setActionsInConditionJSON(data: any, sessionID: string): any {
+
+		let keys = Object.keys(data);
+
+		for (var i = 0; i < keys.length; i++) {
+
+			if (keys[i].startsWith("Condition")) {
+				data[keys[i]] = {
+					id: sessionID + "/actions/" + keys[i],
+					name: keys[i],
+					type: data[keys[i]].type,
+					runAfter: data[keys[i]].runAfter,
+					status: Microsoft.ProductivityMacros.Constants.StatusSkipped,
+					actions: data[keys[i]].actions,
+					else: data[keys[i]].else,
+					expression: data[keys[i]].expression,
+					inputs: data[keys[i]].inputs
+				};
+				data[keys[i]].actions = setActionsInConditionJSON(data[keys[i]].actions, sessionID);
+				if (data[keys[i]].else) {
+					data[keys[i]].else.actions = setActionsInConditionJSON(data[keys[i]].else.actions, sessionID);
+				}
+			}
+			else {
+				data[keys[i]] = {
+					id: sessionID + "/actions/" + keys[i],
+					name: keys[i],
+					type: data[keys[i]].type,
+					runAfter: data[keys[i]].runAfter,
+					status: Microsoft.ProductivityMacros.Constants.StatusSkipped,
+					inputs: data[keys[i]].inputs
+				};
+			}
+		}
+		return data;
+	}
+
+	export function setActionsInJSON(data: any, actions: Microsoft.LogicAppExecutor.IActionItem[], sessionID: string): any {	
+		
 		for (var i = 0; i < actions.length; i++) {
-			data.definition.actions[actions[i].name] = {
-				id: data.id + "/actions/" + actions[i].name,
-				name: actions[i].name,
-				type: actions[i].type,
-				runAfter: actions[i].runAfter,
-				status: Microsoft.ProductivityMacros.Constants.StatusSkipped
-			};
+			if (actions[i].name.startsWith("Condition")) {
+				data[actions[i].name] = {
+					id: sessionID + "/actions/" + actions[i].name,
+					name: actions[i].name,
+					type: actions[i].type,
+					runAfter: actions[i].runAfter,
+					status: Microsoft.ProductivityMacros.Constants.StatusSkipped,
+					actions: actions[i].actions,
+					else: actions[i].else,
+					expression: actions[i].expression,
+					inputs: actions[i].inputs
+				};
+				data[actions[i].name].actions = setActionsInConditionJSON(data[actions[i].name].actions, sessionID);
+				if (data[actions[i].name].else) {
+					data[actions[i].name].else.actions = setActionsInConditionJSON(data[actions[i].name].else.actions, sessionID);
+				}
+			}
+			else {
+				data[actions[i].name] = {
+					id: sessionID + "/actions/" + actions[i].name,
+					name: actions[i].name,
+					type: actions[i].type,
+					runAfter: actions[i].runAfter,
+					status: Microsoft.ProductivityMacros.Constants.StatusSkipped,
+					inputs: actions[i].inputs
+				};
+			}
 		}
 		return data;
 	}
@@ -95,12 +152,30 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 	}
 
 	export function setActionStatus(data: any, status: string, startTime: any, outputs: any, actionName: string, actionInputs: any): any {
-		var endTime = new Date().toISOString();
-		data.definition.actions[actionName].inputs = { "body": actionInputs };
-		data.definition.actions[actionName].startTime = startTime;
-		data.definition.actions[actionName].status = status;
-		data.definition.actions[actionName].endTime = endTime;
-		data.definition.actions[actionName].outputs = { "body": outputs };
+		data.definition.actions = setActionStatusRecursively(data.definition.actions, status, startTime, outputs, actionName, actionInputs)
 		return data;
+	}
+
+	function setActionStatusRecursively(parent: any, status: string, startTime: any, outputs: any, actionName: string, actionInputs: any): any {
+		var endTime = new Date().toISOString();
+		var keys = Object.keys(parent);
+		for (var i = 0; i < keys.length; i++) {
+			if (actionName == keys[i]) {
+				parent[actionName].inputs = { "body": actionInputs };
+				parent[actionName].outputs = { "body": outputs };
+				parent[actionName].startTime = startTime;
+				parent[actionName].status = status;
+				parent[actionName].endTime = endTime;
+				break;
+			}
+			else if (keys[i].startsWith("Condition")) {
+				parent[keys[i]].actions = setActionStatusRecursively(parent[keys[i]].actions, status, startTime, outputs, actionName, actionInputs)
+				parent[keys[i]].status = status;
+				if (parent[keys[i]].else) {
+					parent[keys[i]].else.actions = setActionStatusRecursively(parent[keys[i]].else.actions, status, startTime, outputs, actionName, actionInputs)
+				}
+			}
+		}
+		return parent;
 	}
 }

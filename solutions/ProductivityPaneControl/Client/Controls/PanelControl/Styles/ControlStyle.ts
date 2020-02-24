@@ -53,7 +53,8 @@ module MscrmControls.ProductivityToolPanel {
                 overflow: "hidden",
                 borderLeftColor: "#E8EAEC",
                 borderLeftStyle: "solid",
-                borderLeftWidth: flag ? "1px" : "0px"
+                borderLeftWidth: flag ? "1px" : "0px",
+                display: flag ? "" : "none"
             };
         }
 

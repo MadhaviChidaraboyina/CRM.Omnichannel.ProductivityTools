@@ -231,7 +231,11 @@ function initializeMonitor(req) {
 						return new HostService.BuiltInTypeService(monitorOptions, analytics);
 					};
 					let recommendationServiceFactory = function (analytics, schemaVersion) {
+						let builtInTypeServiceFactory = function (analytics, schemaVersion) {
+							return new DesignerCore.LogicAppsBuiltInTypeService(schemaVersion, monitorOptions);
+						};
 						return new HostService.SmartRecommendationImpl(
+							{ builtInTypeService: builtInTypeServiceFactory(analytics, schemaVersion) },
 							monitorOptions,
 							operationManager,
 							analytics
