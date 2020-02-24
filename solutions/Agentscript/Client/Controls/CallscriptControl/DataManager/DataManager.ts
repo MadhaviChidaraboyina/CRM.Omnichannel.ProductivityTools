@@ -10,8 +10,9 @@ module MscrmControls.CallscriptControl
 		// Properties
 		private context: Mscrm.ControlData<IInputBag>;
 		private telemetryContext: string;
-		private telemetryLogger: TelemetryLogger;
-		private cifUtil: CIFUtil;
+        private telemetryLogger: TelemetryLogger;
+        private cifUtil: CIFUtil;
+        private macroUtil: MacroUtil;
 		private languageId: number;
 
 		// Data fetch flags
@@ -22,7 +23,8 @@ module MscrmControls.CallscriptControl
 			this.context = context;
 			this.telemetryContext = TelemetryComponents.DataManager;
 			this.telemetryLogger = new TelemetryLogger(context);
-			this.cifUtil = new CIFUtil(context);
+            this.cifUtil = new CIFUtil(context);
+            this.macroUtil = new MacroUtil(context);
 			this.languageId = context.userSettings.languageId;
 			this.isInitialDataFetchCompleted = false;
 		}
@@ -195,9 +197,9 @@ module MscrmControls.CallscriptControl
 				let dataFetchPromise = this.context.webAPI.retrieveMultipleRecords(AgentScriptStepEntity.entityName, fetchXmlQuery);
 
 				dataFetchPromise.then(
-					(dataResponse: any) => {
+					async (dataResponse: any) => {
 						let entityRecords: WebApi.Entity[] = dataResponse.entities;
-						let callScriptStepRecords = this.parseCallScriptStepsData(entityRecords);
+						let callScriptStepRecords = await this.parseCallScriptStepsData(entityRecords);
 
 						let eventParam = new EventParameters();
 						eventParam.addParameter("totalSteps", callScriptStepRecords.length.toString());
@@ -343,8 +345,9 @@ module MscrmControls.CallscriptControl
 		 * @param entityRecords retrieved entity records
 		 * @returns call script steps records
 		 */
-		private parseCallScriptStepsData(entityRecords: WebApi.Entity[]): CallScriptStep[]
-		{
+        private async parseCallScriptStepsData(entityRecords: WebApi.Entity[]): Promise<CallScriptStep[]>
+        {
+            const methodName = "parseCallScriptStepsData";
 			let callScriptStepRecords: CallScriptStep[] = [];
 			try
 			{
@@ -370,7 +373,7 @@ module MscrmControls.CallscriptControl
 								this.logFieldError("StepsDataParser", id, AgentScriptStepEntity.msdyn_textinstruction);
 							}
 
-							stepAction = new TextAction(textInstruction);
+                            stepAction = new TextAction(textInstruction);
 							break;
 
 						case AgentScriptStepActionType.MacroAction:
@@ -412,8 +415,22 @@ module MscrmControls.CallscriptControl
 							break;
 					}
 
-					let stepRecord = new CallScriptStep(id, name, order, description, stepAction, this.context);
-					callScriptStepRecords.push(stepRecord);
+                    await this.macroUtil.resolveInitMacroTemplate();
+                    await this.macroUtil.resolveReplaceableParameters(name).then(
+                        (resolvedText) => {
+                            name = resolvedText; 
+                        },
+                        (error) => {
+                            let errorMessage = "Failed to resolve slug";
+                            let eventParams = new EventParameters();
+                            eventParams.addParameter("stepId", id);
+                            eventParams.addParameter("message", "Error in resolving text instruction for text step");
+                            this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, eventParams);
+                        }
+                    );
+             
+                    let stepRecord = new CallScriptStep(id, name, order, description, stepAction, this.context);
+                    callScriptStepRecords.push(stepRecord);
 				}
 			}
 			catch (error)
@@ -423,8 +440,7 @@ module MscrmControls.CallscriptControl
 				errorParam.addParameter("errorDetails", error);
 				this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.StepsDataFetch, errorMessage, errorParam);
 			}
-
-			return callScriptStepRecords;
+            return callScriptStepRecords;
 		}
 
 

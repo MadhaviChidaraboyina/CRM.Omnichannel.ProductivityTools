@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-	<control namespace="MscrmControls.ButtonControl" constructor="ButtonControl" version="1.0.0" display-name-key="CC_ButtonControl_Name" description-key="CC_ButtonControl_Desc">
+	<control namespace="MscrmControls.ButtonControl" constructor="ButtonControl" version="1.0.1" display-name-key="CC_ButtonControl_Name" description-key="CC_ButtonControl_Desc">
 		<modes>
 			<read />
 			<edit />
