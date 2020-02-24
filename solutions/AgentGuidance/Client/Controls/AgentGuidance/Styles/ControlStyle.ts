@@ -77,6 +77,24 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 display: isCardExist ? "" : "none"
             }
         }
+
+        public static agentGuidanceErrorScreenStyle() {
+            return {
+                paddingTop: "15px",
+                fontWeight: "600",
+                fontFamily: "Segoe UI",
+                fontSize: "18px",
+                lineHeight: "20px",
+                textAlign: "center"
+            }
+        }
+
+        public static agentGuidanceErroContainerStyle() {
+            return {
+                position: "absolute",
+                top: "40%"
+            }
+        }
      
 	}
 }

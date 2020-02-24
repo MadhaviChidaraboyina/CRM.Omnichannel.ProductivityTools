@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{06a35ce5-e2b7-477d-9122-9a0ada6c844a}</WebResourceId>
+  <Name>msdyn_error_emptystate_icon.svg</Name>
+  <DisplayName>Agentguidance error icon</DisplayName>
+  <Description>Agentguidance error or empty state icon</Description>
+  <LanguageCode>1033</LanguageCode>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>1.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/msdyn_error_emptystate_iconsvg06A35CE5-E2B7-477D-9122-9A0ADA6C844A</FileName>
+</WebResource>

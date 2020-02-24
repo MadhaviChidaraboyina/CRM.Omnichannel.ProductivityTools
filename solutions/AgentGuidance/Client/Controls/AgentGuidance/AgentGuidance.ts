@@ -108,28 +108,79 @@ module MscrmControls.ProductivityToolAgentGuidance {
 
             if (sessionContextAttributes.isCallScript || sessionContextAttributes.isSmartassist) {
                 agentGuidancePane.push(this.getAgentGuidanceLabel(context));
+
+                if (sessionContextAttributes.isSmartassist) {
+                    tools.push(this.getSmartAssistComponent(context, sessionContextAttributes));
+                }
+                if (sessionContextAttributes.isCallScript) {
+                    if (sessionContextAttributes.isSmartassist && this.isCardExist)
+                        tools.push(this.toolSeparator());
+                    tools.push(this.getCallScriptComponent(context, sessionContextAttributes));
+                }
+
+                let agentGuidanceTools = context.factory.createElement(
+                    "CONTAINER",
+                    {
+                        key: Constants.agentGuidanceTools,
+                        id: Constants.agentGuidanceTools,
+                        style: ControlStyle.agentGuidanceToolsStyle()
+                    },
+                    tools
+                );
+
+                agentGuidancePane.push(agentGuidanceTools);
             }
-            if (sessionContextAttributes.isSmartassist) {
-                tools.push(this.getSmartAssistComponent(context, sessionContextAttributes));
-            }
-            if (sessionContextAttributes.isCallScript) {
-                if (sessionContextAttributes.isSmartassist && this.isCardExist)
-                    tools.push(this.toolSeparator());
-                tools.push(this.getCallScriptComponent(context, sessionContextAttributes));
+            else if (!sessionContextAttributes.isCallScript && !sessionContextAttributes.isSmartassist) {
+                agentGuidancePane.push(this.getErrorScreen());    
             }
 
-            let agentGuidanceTools = context.factory.createElement(
-                "CONTAINER",
-                {
-                    key: Constants.agentGuidanceTools,
-                    id: Constants.agentGuidanceTools,
-                    style: ControlStyle.agentGuidanceToolsStyle()
-                },
-                tools
-            );
-
-            agentGuidancePane.push(agentGuidanceTools);
+            
             return agentGuidancePane;
+        }
+
+
+        private getErrorScreen(): Mscrm.Component {
+                const icon = this.context.factory.createElement("IMG", {
+                    id: Constants.agentGuidance_error_icon_id,
+                    source: Constants.agentGuidance_error_icon,
+                    style: {
+                        verticalAlign: "middle"
+                    }
+                });
+
+                const no_item = this.context.factory.createElement(
+                    "Label",
+                    {
+                        id: Constants.agentGuidance_no_item,
+                        key: Constants.agentGuidance_no_item,
+                        style: ControlStyle.agentGuidanceErrorScreenStyle()
+                    },
+                    this.context.resources.getString(Constants.noConfigHeaderResourceKey));  
+
+                    const not_configured = this.context.factory.createElement(
+                        "Label",
+                        {
+                            id: Constants.agentGuidance_not_configured,
+                            key: Constants.agentGuidance_not_configured,
+                            style:{
+                                textAlign: "center"
+                            }
+                        },
+                        this.context.resources.getString(Constants.noConfigMessageResourceKey));  
+
+
+                let errorScreen = this.context.factory.createElement(
+                    "CONTAINER",
+                    {
+                        key: Constants.agentGuidance_error_container,
+                        id: Constants.agentGuidance_error_container,
+                        style: ControlStyle.agentGuidanceErroContainerStyle()
+                    },
+                    [icon, no_item, not_configured ]
+                );
+
+
+                return errorScreen;
         }
 
         private toolSeparator(): Mscrm.Component {

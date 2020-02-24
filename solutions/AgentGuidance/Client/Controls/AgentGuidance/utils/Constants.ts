@@ -30,6 +30,10 @@ module MscrmControls.ProductivityToolAgentGuidance {
 
         public static agentGuidanceResourceKey = "Agent_Guidance";
 
+        public static noConfigHeaderResourceKey = "No_items_configured";
+
+        public static noConfigMessageResourceKey = "No_items_configured_message";
+
         public static toolSeparatorId = "toolSeparator";
 
         public static agentGuidanceDataModel = "AgentGuidanceDataModel";
@@ -42,7 +46,15 @@ module MscrmControls.ProductivityToolAgentGuidance {
 
         public static inputArguments = "_inputArguments"
 
+        public static agentGuidance_no_item = "agentGuidance_no_item";
 
+        public static agentGuidance_error_container = "agentGuidance_error_container";
+
+        public static agentGuidance_not_configured = "agentGuidance_not_configured";
+
+        public static agentGuidance_error_icon = "/webresources/msdyn_error_emptystate_icon.svg";
+
+        public static agentGuidance_error_icon_id = "agentGuidance_error_icon_id";
     }
 
     export class TelemetryComponents {
