@@ -31,7 +31,6 @@ module MscrmControls.ProductivityPanel {
 
 	#smartassist-outer-container {
 		max-height: 100%;
-		overflow-y: auto;
 		padding: 2px;
 		padding-right: 14px;
 		padding-bottom: 5px;

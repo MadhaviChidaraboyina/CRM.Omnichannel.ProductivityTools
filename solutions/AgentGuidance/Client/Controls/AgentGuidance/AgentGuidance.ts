@@ -21,7 +21,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
 		 */
         constructor() {
             this.initCompleted = false;
-            this.telemetryContext = TelemetryComponents.MainComponent;
+            this.telemetryContext = TelemetryComponents.MainComponent;  
 		}
 
 		/**
@@ -41,7 +41,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 this.telemetryLogger.logSuccess(this.telemetryContext, "Init", params);
                 let productivityToolAgentGuidance = localStorage.getItem(ProductivityToolAgentGuidance.Constants.agentGuidanceDataModel);
                 if (this.context.utils.isNullOrUndefined(productivityToolAgentGuidance)) localStorage.setItem(ProductivityToolAgentGuidance.Constants.agentGuidanceDataModel, JSON.stringify({}));
-                let windowObject = this.getWindowObject();
+                let windowObject = this.getWindowObject();                
                 windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onSessionSwitched.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionCreate(this.SetDefaultCardFlag.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClosed.bind(this));
@@ -100,7 +100,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
 			);
             
         }
-
+       
         private getAgentGuidanceTools(context: Mscrm.ControlData<IInputBag>, sessionContextAttributes: any): Mscrm.Component[] {
             let agentGuidancePane = [];
             let tools = [];
@@ -196,8 +196,8 @@ module MscrmControls.ProductivityToolAgentGuidance {
             const listItem = this.context.factory.createElement(
                 "CONTAINER",
                 {
-                    id: `${Constants.toolSeparatorId}`,
-                    key: `${Constants.toolSeparatorId}`,
+                    id: `${Constants.toolSeparatorId}_Container`,
+                    key: `${Constants.toolSeparatorId}_Container`,
                     style: {
                         paddingTop: "10px"
                     }
