@@ -1,7 +1,8 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<ProjectToBuild Include="solutions.proj" Condition="'$(EnableSigning)'!='true'" /> 
-	</ItemGroup>
+		<ProjectToBuild Include="solutions.proj" Condition="'$(EnableSigning)'!='true'" />
+    <ProjectToBuild Include="packages.proj" Condition="'$(EnableSigning)'!='true'" />
+  </ItemGroup>
 	<PropertyGroup>
 		<SolutionOutputPath>$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions</SolutionOutputPath>
   	</PropertyGroup>

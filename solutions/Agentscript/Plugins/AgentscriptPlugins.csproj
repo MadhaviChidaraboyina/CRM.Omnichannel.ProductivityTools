@@ -35,7 +35,7 @@
     <Reference Include="Microsoft.Xrm.Kernel.Contracts">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
-      <HintPath>$(PKG_CDSXRMSERVER)\lib\net452\Microsoft.Xrm.Kernel.Contracts.dll</HintPath>
+      <HintPath>$(PKG_CDSXRMSERVER)\lib\net462\Microsoft.Xrm.Kernel.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xrm.Sdk">
       <SpecificVersion>False</SpecificVersion>

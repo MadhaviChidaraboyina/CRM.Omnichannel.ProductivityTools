@@ -13,6 +13,7 @@
     <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityPaneControl</CustomControlsPath>
     <SystemConverted>false</SystemConverted>
   </PropertyGroup>
+  
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
 </Project>

@@ -3,7 +3,7 @@
 		<ProjectToBuild Include="Anchors\ProductivityTools\dirs.proj" />
 		<ProjectToBuild Include="ProductivityMacros\dirs.proj" />
 		<ProjectToBuild Include="Agentscript\dirs.proj" />
-        <ProjectToBuild Include="SmartAssist\dirs.proj" />
+    <ProjectToBuild Include="SmartAssist\dirs.proj" />
 		<ProjectToBuild Include="OmnichannelProductivityToolsSettings\dirs.proj" />
 		<ProjectToBuild Include="ProductivityPaneControl\dirs.proj" />
 		<ProjectToBuild Include="AgentGuidance\dirs.proj" />

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Configuration-->
+  <PropertyGroup>
+    <CodeAnalysisOption Condition=" '$(CodeAnalysis)' == '' or '$(CodeAnalysis)' == false ">RunCodeAnalysis=false;</CodeAnalysisOption>
+    <BuildNumber Condition="'$(BuildNumber)' == ''" >9.2.1.359</BuildNumber>
+    <UpdateLoc Condition="'$(UpdateLoc)' == ''" >false</UpdateLoc>
+  </PropertyGroup>
+  
+  <!--This helps avoid copying referenced dlls-->
+  <ItemDefinitionGroup>
+    <Reference>
+      <Private>False</Private>
+    </Reference>
+  </ItemDefinitionGroup>
+
+	<ItemGroup>
+		<ProjectToBuild Include="Solutions\packages.proj" />
+	</ItemGroup>
+	<Target Name="Clean">
+		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
+	</Target>
+	<Target Name="Build">
+		<MSBuild Projects="@(ProjectToBuild)" />
+	</Target>
+ 
+  
+  <UsingTask TaskName="MSBuildTasks.SetEnvVar"
+          AssemblyFile="$(MSBuildProjectDirectory)\Reference\packages\MSBuildTasks.1.0.0\lib\net45\MSBuildTasks.dll"/>
+		  
+</Project>

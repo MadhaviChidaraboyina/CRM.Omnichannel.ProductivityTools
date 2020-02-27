@@ -1,0 +1,50 @@
+[
+  {
+    "SolutionName": "ProductivityPaneControl",
+    "SolutionNameShort": "ProductivityPaneControl",
+    "SolutionPatchName": "ProductivityPaneControlPatch",
+    "PackageCombinations": {},
+    "EnvironmentVariableForPatching": "ProductivityPaneControlEnablePatchGenerator"
+  },
+  {
+    "SolutionName": "AgentGuidance",
+    "SolutionNameShort": "AgentGuidance",
+    "SolutionPatchName": "AgentGuidancePatch",
+    "PackageCombinations": {},
+    "EnvironmentVariableForPatching": "AgentGuidanceEnablePatchGenerator"
+  },
+  {
+    "SolutionName": "Agentscript",
+    "SolutionNameShort": "Agentscript",
+    "SolutionPatchName": "AgentscriptPatch",
+    "PackageCombinations": {},
+    "EnvironmentVariableForPatching": "AgentscriptEnablePatchGenerator"
+  },
+  {
+    "SolutionName": "OmnichannelProductivityToolsSettings",
+    "SolutionNameShort": "OmnichannelProductivityToolsSettings",
+    "SolutionPatchName": "OmnichannelProductivityToolsSettingsPatch",
+    "PackageCombinations": {},
+    "EnvironmentVariableForPatching": "OmnichannelProductivityToolsSettingsEnablePatchGenerator"
+  },
+  {
+    "SolutionName": "ProductivityMacros",
+    "SolutionNameShort": "ProductivityMacros",
+    "SolutionPatchName": "ProductivityMacrosPatch",
+    "PackageCombinations": {
+      "ProductivityMacros": [
+        "ProductivityMacros"
+      ]
+    },
+    "EnvironmentVariableForPatching": "ProductivityMacrosEnablePatchGenerator"
+  },
+  {
+    "SolutionName": "SmartAssist",
+    "SolutionNameShort": "SmartAssist",
+    "SolutionPatchName": "SmartAssistPatch",
+    "PackageCombinations": {},
+    "EnvironmentVariableForPatching": "SmartAssistEnablePatchGenerator"
+  }
+
+]
+

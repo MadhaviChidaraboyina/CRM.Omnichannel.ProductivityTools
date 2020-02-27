@@ -1,13 +1,11 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ProjectToBuild Include="Client\dirs.proj" />
-    <ProjectToBuild Include="solutions.proj" Condition="'$(EnableSigning)'!='true'" />
-    <ProjectToBuild Include="packages.proj" Condition="'$(EnableSigning)'!='true'" />
+		<ProjectToBuild Include="Solution\ProductivityMacrosSolution.csproj" />
   </ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
 	</Target>
 	<Target Name="Build">
-		<MSBuild Projects="@(ProjectToBuild)" />
+		<MSBuild Projects="@(ProjectToBuild)" Properties="SkipPackageGeneration=true" />
 	</Target>
 </Project>

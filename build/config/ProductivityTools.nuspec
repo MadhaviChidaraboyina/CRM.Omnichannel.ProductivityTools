@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Microsoft.Dynamics.Service.ProductivityTools</id>
-    <version>$version$</version>
+    <version>9.2.1.359</version>
     <authors>Microsoft Dynamics 365 </authors>
     <owners>Microsoft Dynamics 365</owners>
     <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>

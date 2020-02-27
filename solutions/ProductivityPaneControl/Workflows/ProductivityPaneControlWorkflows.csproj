@@ -37,13 +37,13 @@
     </Reference>
     <Reference Include="Microsoft.Xrm.Sdk">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
+      <Private>True</Private>
       <HintPath>$(PKG_CRMSDK_COREASSEMBLIES)\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xrm.Sdk.Workflow">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-      <HintPath>$(PKG_CRMSDK_WORKFLOW)\lib\net452\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
+      <Private>True</Private>
+      <HintPath>$(PKG_CRMSDK_WORKFLOW)\lib\net462\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <SpecificVersion>False</SpecificVersion>
