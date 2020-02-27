@@ -173,7 +173,12 @@ namespace Microsoft.ProductivityMacros.Internal {
             }
             var executionContext = {};
             callbackFun(executionContext, "{" + paramName + "}").then((res: any) => {
-                return resolve(res["result"]);
+                if (res["statusCode"] == 200) {
+                    return resolve(res["result"]);
+                } else {
+                    //TODO: log telemetry
+                    return resolve("");
+                }
             }, function (error: Error) {
                 return reject(error);
             });
