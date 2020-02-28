@@ -1,7 +1,0 @@
-1030 da-DK
-1031 de-DE
-1036 fr-FR
-1040 it-IT
-1041 ja-JP
-1043 nl-NL
-3082 es-ES
