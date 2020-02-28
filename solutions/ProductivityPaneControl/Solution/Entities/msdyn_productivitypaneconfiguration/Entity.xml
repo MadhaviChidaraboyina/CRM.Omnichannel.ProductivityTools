@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Productivity pane configurations" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Attributes related to productivity pane configurations" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -313,7 +313,7 @@
             <displayname description="Application name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets the application name" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_name">
@@ -431,7 +431,7 @@
               <displayname description="Productivity pane mode" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="" languagecode="1033" />
+              <Description description="Sets the productivity pane to expanded or collpased mode" languagecode="1033" />
             </Descriptions>
             <options>
               <option value="0" Color="#0000ff">
@@ -450,7 +450,7 @@
             <displayname description="Productivity pane mode" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Unique value to set the productivity pane to expanded or collpased mode" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_Productivitypanestate">
@@ -492,7 +492,7 @@
               <displayname description="Productivity pane state" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="" languagecode="1033" />
+              <Description description="Sets the productivity state to enabled or disabled mode" languagecode="1033" />
             </Descriptions>
             <options>
               <option value="0" Color="#0000ff">
@@ -511,7 +511,7 @@
             <displayname description="Productivity pane state" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Unique value to set the productivity mode to enabled or disabled mode" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OrganizationId">

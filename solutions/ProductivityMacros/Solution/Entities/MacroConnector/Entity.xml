@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="macroconnectors" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Attributes for macro connectors" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -329,7 +329,7 @@
             <displayname description="Callback" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets the callback value" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_categorykey">
@@ -620,7 +620,7 @@
             <displayname description="Prefix" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Sets the prefix value" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_title">
@@ -734,7 +734,7 @@
             <displayname description="Webresource Name" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Unique identifier for webresource name" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OverriddenCreatedOn">

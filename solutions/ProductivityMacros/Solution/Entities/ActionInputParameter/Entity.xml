@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Action Input Parameters" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Attributes of action input parameters" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -385,7 +385,7 @@
               <displayname description="Parameter Type" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="" languagecode="1033" />
+              <Description description="Sets the parameter type" languagecode="1033" />
             </Descriptions>
             <options>
               <option value="0" Color="#0000ff">
@@ -404,7 +404,7 @@
             <displayname description="Parameter Type" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Unique value to store the parameter type" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="OverriddenCreatedOn">
