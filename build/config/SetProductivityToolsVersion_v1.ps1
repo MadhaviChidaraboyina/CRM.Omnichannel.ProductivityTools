@@ -300,14 +300,17 @@ foreach ($record in $solutionDependencies) {
 		# Calculate the Commits
 		$baseSln.Commits = Get-Commits -solutionObj $baseSln -tags $BetweenTags
 
-		# Add the solution object to an array 
-		$solutionObjects += $baseSln
 
 		# Add the packages to an array and set the version
 		$packages = ($record.PackageCombinations | Get-Member -Type NoteProperty).Name
 
-		Set-SolutionVersion -solutionObj $baseSln -derivedVersion $derivedBaseVersion -versionFile $versionFilePath
+		if($baseSln.Name -ne "ProductivityTools")
+		{
+			# Add the solution object to an array 
+			$solutionObjects += $baseSln
 		
+			Set-SolutionVersion -solutionObj $baseSln -derivedVersion $derivedBaseVersion -versionFile $versionFilePath
+		}
 		 $TotalCommits += $baseSln.Commits 
 			
 	<#	foreach ($pkg in $packages) {
