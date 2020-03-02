@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>8236E3B0-28A3-4D31-84A7-698E2A8CB3C6</WebResourceId>
+  <Name>msdyn_ProductivityPaneControl.1048.resx</Name>
+  <DisplayName>ProductivityPaneControl.1048.resx</DisplayName>
+  <LanguageCode>1048</LanguageCode>
+  <WebResourceType>12</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>1</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>1</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>0</IsCustomizable>
+  <CanBeDeleted>0</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/msdyn_ProductivityPaneControl1048resx8236E3B0-28A3-4D31-84A7-698E2A8CB3C6</FileName>
+</WebResource>

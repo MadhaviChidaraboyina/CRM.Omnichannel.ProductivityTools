@@ -122,8 +122,8 @@
     </Publisher>
     <RootComponents>
       <RootComponent type="1" schemaName="msdyn_productivitypaneconfiguration" behavior="0" />
-      <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />      
-      <RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />      
+      <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
+      <RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />
       <RootComponent type="29" id="{7753e97d-af27-ea11-a810-000d3a1026fe}" behavior="0" />
       <RootComponent type="60" id="{4d182267-6a95-40e1-9c02-ae8db486af12}" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_productivitypaneconfiguration/_imgs/SitemapIcon/ProductivityPane" behavior="0" />
@@ -133,14 +133,58 @@
       <RootComponent type="61" schemaName="cra2b_panel_toggle_collapse_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="cra2b_panel_toggle_expand_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_ProductivityPaneConfigInfo.html" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1033.resx" behavior="0" />      
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1033.resx" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.ProductivityToolPanel.ProductivityPanelControl" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1025.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1026.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1027.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1028.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1029.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1030.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1031.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1032.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1035.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1036.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1037.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1038.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1040.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1041.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1042.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1043.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1044.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1045.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1046.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1048.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1049.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1050.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1051.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1053.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1054.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1055.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1057.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1058.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1060.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1061.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1062.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1063.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1066.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1069.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1081.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1086.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1087.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.1110.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.2052.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.2070.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.2074.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.3076.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.3082.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneControl.3098.resx" behavior="0" />
     </RootComponents>
-    <MissingDependencies >
+    <MissingDependencies>
       <MissingDependency>
         <Required key="18" type="66" schemaName="MscrmControls.FlipSwitch.FlipSwitchControl" displayName="MscrmControls.FlipSwitch.FlipSwitchControl" solution="CustomControlsCore (9.1.0000.10743)" />
         <Dependent key="19" type="60" displayName="Productivity pane" parentDisplayName="Productivity pane configuration" id="{4d182267-6a95-40e1-9c02-ae8db486af12}" />
       </MissingDependency>
-    </MissingDependencies >
+    </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>

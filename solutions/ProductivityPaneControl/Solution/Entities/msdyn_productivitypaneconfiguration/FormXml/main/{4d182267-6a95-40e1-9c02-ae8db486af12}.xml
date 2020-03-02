@@ -53,17 +53,11 @@
                     </row>
                     <row>
                       <cell id="{37327a0c-5867-b4d8-4e34-12107a7db3a1}" showlabel="true" locklevel="0">
-                        <labels>
-                          <label description="Productivity pane" languagecode="1033" />
-                        </labels>
                         <control id="msdyn_productivitypanestate" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_productivitypanestate" disabled="false" uniqueid="{c7abdabe-3362-b09c-e838-cb6e0a930075}" />
                       </cell>
                     </row>
                     <row>
                       <cell id="{0d4b5d0c-9346-681e-8b55-ccb1493da775}" showlabel="true" locklevel="0">
-                        <labels>
-                          <label description="Mode" languagecode="1033" />
-                        </labels>
                         <control id="msdyn_productivitypanemode" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_productivitypanemode" disabled="false" uniqueid="{e1d67a15-a945-0389-18dc-04e5e386d811}" />
                       </cell>
                     </row>
