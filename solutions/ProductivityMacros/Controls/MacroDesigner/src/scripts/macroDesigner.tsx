@@ -4,11 +4,11 @@ import * as Utils from "./sharedUtils";
 import * as Workflow from "./workflowDefinitions";
 import { MouseEvent } from "react";
 
-let cancelButton = document.getElementById("cancelButton");
+let cancelButton = document.getElementById("cancelButton") as HTMLElement;
 async function closeDesigner(event?: Event) {
 	(window.top.Xrm.Page.ui as XrmClientApi.FormUi).close();
 }
-
+cancelButton.innerHTML = Utils.Utils.getResourceString("MACRO_ACTION_CANCEL");
 if (cancelButton) {
 	cancelButton.addEventListener("click", closeDesigner);
 }
@@ -175,7 +175,7 @@ async function startDesigner(rpc) {
             Actions: [
             ],
             operationKindDisplayText: operKindDisplayText
-		};
+        };
         try {
             let designerConfig: SharedDefines.MacroDesignerConfig = await initOperations[RequiredCDSOpersForInit.DesignerConfig] as SharedDefines.MacroDesignerConfig;
             let templates = await initOperations[RequiredCDSOpersForInit.Templates] as SharedDefines.DesignerTemplateConfig;
@@ -185,11 +185,11 @@ async function startDesigner(rpc) {
             designerOptions.UserVoiceURL = designerConfig.UserVoiceLink;
             designerOptions.Actions = templates.actions;
             designerOptions.Connectors = templates.connectors;
-			designerOptions.Categories = templates.categories;
-			designerOptions.Categories.push({
-				"itemKey": SharedDefines.Constants.BUILTIN_CATEGORY,
-				"linkText": Utils.Utils.getResourceString(SharedDefines.Constants.BUILTIN_CATEGORY_DISPLAY)
-			})
+            designerOptions.Categories = templates.categories;
+            designerOptions.Categories.push({
+                "itemKey": SharedDefines.Constants.BUILTIN_CATEGORY,
+                "linkText": Utils.Utils.getResourceString(SharedDefines.Constants.BUILTIN_CATEGORY_DISPLAY)
+            })
             let obj: SharedDefines.LogObject = {
                 level: SharedDefines.LogLevel.Info,
                 eventName: WrapperEvents.WrapperConfigLoadEvent,
@@ -290,30 +290,31 @@ async function startDesigner(rpc) {
             let spinner = document.getElementById("designerContainerSpinner") as HTMLImageElement;
             spinner.style.display = "none";
             let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
-			designerIframe.style.display = "inline";
-			setTimeout(function () { (window.top as any).Xrm.Page.getControl("macrosname_id").setFocus() }, 500)
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Info,
-				eventName: WrapperEvents.DesignerControlInitEvent,
-				message: Utils.Utils.genMsgForTelemetry("Designer render complete"),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-			};
-			doTelemetry(obj);
-		}
-		catch (error) {
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Error,
-				eventName: WrapperEvents.DesignerControlInitErrorEvent,
-				message: Utils.Utils.genMsgForTelemetry("Unable to render designer", error),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-				exception: error.stack
-			};
-			doTelemetry(obj, "DESIGNER_CONTROL_RENDER_FAILURE", true);
-			return;
-		}
-		let saveButton = document.getElementById("saveButton");
+            designerIframe.style.display = "inline";
+            setTimeout(function () { (window.top as any).Xrm.Page.getControl("macrosname_id").setFocus() }, 500)
+            let obj: SharedDefines.LogObject = {
+                level: SharedDefines.LogLevel.Info,
+                eventName: WrapperEvents.DesignerControlInitEvent,
+                message: Utils.Utils.genMsgForTelemetry("Designer render complete"),
+                eventTimeStamp: new Date(),
+                eventType: SharedDefines.TelemetryEventType.Trace,
+            };
+            doTelemetry(obj);
+        }
+        catch (error) {
+            let obj: SharedDefines.LogObject = {
+                level: SharedDefines.LogLevel.Error,
+                eventName: WrapperEvents.DesignerControlInitErrorEvent,
+                message: Utils.Utils.genMsgForTelemetry("Unable to render designer", error),
+                eventTimeStamp: new Date(),
+                eventType: SharedDefines.TelemetryEventType.Trace,
+                exception: error.stack
+            };
+            doTelemetry(obj, "DESIGNER_CONTROL_RENDER_FAILURE", true);
+            return;
+        }
+        let saveButton = document.getElementById("saveButton") as HTMLElement;
+        saveButton.innerHTML = Utils.Utils.getResourceString("MACRO_ACTION_SAVE_AND_CLOSE");
 		if (saveButton) {
 			saveButton.addEventListener("click", async function (event) {
 				try {
