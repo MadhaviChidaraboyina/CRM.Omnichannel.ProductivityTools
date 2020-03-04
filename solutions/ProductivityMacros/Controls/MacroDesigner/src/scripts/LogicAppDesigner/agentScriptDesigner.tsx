@@ -5,7 +5,8 @@ import * as DesignerConstants from "./../../constants/DesignerConstants";
 import * as Workflow from "./workflowDefinitions";
 import { MouseEvent } from "react";
 
-let cancelButton = document.getElementById("cancelButton");
+let cancelButton = document.getElementById("cancelButton") as HTMLElement;
+cancelButton.innerHTML = Utils.Utils.getResourceString("MACRO_ACTION_CANCEL");
 async function closeDesigner(event?: Event) {
     (window.top.Xrm.Page.ui as XrmClientApi.FormUi).close();
 }
@@ -284,8 +285,9 @@ async function startDesigner(rpc) {
             };
             doTelemetry(obj, "DESIGNER_CONTROL_RENDER_FAILURE", true);
             return;
-	    }
-	let saveButton = document.getElementById("saveButton");
+        }
+        let saveButton = document.getElementById("saveButton") as HTMLElement;
+        saveButton.innerHTML = Utils.Utils.getResourceString("MACRO_ACTION_SAVE_AND_CLOSE");
         if (saveButton) {
             saveButton.addEventListener("click", async function (event) {
                 try {
