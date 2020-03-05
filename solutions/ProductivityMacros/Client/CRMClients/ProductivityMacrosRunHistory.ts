@@ -151,8 +151,10 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 		});
 	}
 
-	export function setActionStatus(data: any, status: string, startTime: any, outputs: any, actionName: string, actionInputs: any): any {
-		data.definition.actions = setActionStatusRecursively(data.definition.actions, status, startTime, outputs, actionName, actionInputs)
+    export function setActionStatus(data: any, status: string, startTime: any, outputs: any, actionName: string, actionInputs: any): any {
+        if (Object.keys(data).length !== 0) {
+            data.definition.actions = setActionStatusRecursively(data.definition.actions, status, startTime, outputs, actionName, actionInputs)
+        }
 		return data;
 	}
 
