@@ -609,6 +609,26 @@
     <value>Update an existing record</value>
     <comment>Macro Action Template Title</comment>
   </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Update form attribute</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Update form attribute</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Update form attribute</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Update form attribute</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" xml:space="preserve">
     <value>Start macro execution</value>
     <comment>Macro Action Template Title</comment>

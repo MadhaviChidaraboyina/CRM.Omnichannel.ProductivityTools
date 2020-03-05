@@ -9,7 +9,7 @@
 
 /** @internal */
 namespace Microsoft.ProductivityMacros.Internal {
-
+    
     /**
      * utility func to check whether an object is null or undefined
      */
@@ -29,75 +29,111 @@ namespace Microsoft.ProductivityMacros.Internal {
         return ret;
     }
 
+    function consolidateLookupObj(formInput: any): any {
+        let ret: any = {};
+        if (isNullOrUndefined(formInput)) {
+            return ret;
+        }
+        let temp = formInput;
+        Object.keys(temp).forEach(function (key) {
+            let attribName = "";
+            if (key.endsWith("name"))
+                attribName = key.substr(0, key.length - 4);
+
+            if (key.endsWith("entitytype"))
+                attribName = key.substr(0, key.length - 10);
+
+            if ((attribName != "") && (attribName in formInput) && (attribName + "name" in formInput) && (attribName + "entitytype" in formInput)) {
+                var lookupValue = new Array();
+                lookupValue[0] = new Object();
+                lookupValue[0].id = formInput[attribName];
+                lookupValue[0].name = formInput[attribName + "name"];
+                lookupValue[0].entityType = formInput[attribName + "entitytype"]
+                ret[attribName] = lookupValue;
+
+                delete formInput[attribName];
+                delete formInput[attribName + "name"];
+                delete formInput[attribName + "entitytype"];
+            }
+            else {
+                if (key in formInput)
+                    ret[key] = formInput[key];
+            }
+        });
+
+        return ret;
+    }
+
+
     export function openNewForm(actionName: string, formInputs: any): Promise<string> {
         if (!(isNullOrUndefined(formInputs))) {
-          return new Promise<any>((resolve, reject) => {
-            getNavigationType().then((navigationType: any) => { 
-                if (navigationType == 1) {
-                    var tabInput: XrmClientApi.TabInput = {
-                        pageInput: {
-                            pageType: "entityrecord" as any,
+            return new Promise<any>((resolve, reject) => {
+                getNavigationType().then((navigationType: any) => {
+                    if (navigationType == 1) {
+                        var tabInput: XrmClientApi.TabInput = {
+                            pageInput: {
+                                pageType: "entityrecord" as any,
+                                entityName: formInputs.EntityName,
+                                data: getCustomArray(formInputs)
+                            },
+                            options: { isFocused: true }
+                        }
+                        createTab(tabInput).then(
+                            function (tabId: string) {
+                                var ouputResponse: any = {};
+                                var sessionContextParams: any = {};
+                                sessionContextParams[actionName + ".TabId"] = tabId;
+                                sessionContextParams[actionName + ".EntityName"] = formInputs.EntityName;
+                                sessionContextParams[actionName + ".PageType"] = "entityrecord";
+                                ouputResponse[Constants.OutputResult] = sessionContextParams;
+                                logSuccess("ProductivityMacrosWrapper - openNewForm", "");
+                                resolve(ouputResponse);
+                            },
+                            function (error: Error) {
+                                let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - openNewForm", errorTypes.GenericError);
+                                logFailure("openNewForm", errorObject, "");
+                                reject(error.message);
+                            }
+                        );
+                    } else {
+                        var efo: XrmClientApi.EntityFormOptions = {
                             entityName: formInputs.EntityName,
-                            data: getCustomArray(formInputs)
-                        },
-                        options: { isFocused: true }
-                    }
-                    createTab(tabInput).then(
-                        function (tabId: string) {
+                            useQuickCreateForm: false
+                        }
+
+                        var parameters: XrmClientApi.FormParameters = getCustomArray(formInputs);
+
+                        Xrm.Navigation.openForm(efo, parameters).then(function (res) {
                             var ouputResponse: any = {};
                             var sessionContextParams: any = {};
-                            sessionContextParams[actionName + ".TabId"] = tabId;
                             sessionContextParams[actionName + ".EntityName"] = formInputs.EntityName;
                             sessionContextParams[actionName + ".PageType"] = "entityrecord";
+                            sessionContextParams[actionName + ".EntityId"] = res.savedEntityReference[0].id;
                             ouputResponse[Constants.OutputResult] = sessionContextParams;
-                            logSuccess("ProductivityMacrosWrapper - openNewForm", "");
-                            resolve(ouputResponse);
+                            return resolve(ouputResponse);
                         },
-                        function (error: Error) {
-                            let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - openNewForm", errorTypes.GenericError);
-                            logFailure("openNewForm", errorObject, "");
-                            reject(error.message);
-                        }
-                    );
-                } else {
-                    var efo: XrmClientApi.EntityFormOptions = {
-                        entityName: formInputs.EntityName,
-                        useQuickCreateForm: false
+                            function (error: Error) {
+                                let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
+                                return reject(errorData);
+                            });
                     }
-
-                    var parameters: XrmClientApi.FormParameters = getCustomArray(formInputs);
-
-                    Xrm.Navigation.openForm(efo, parameters).then(function (res) {
-                        var ouputResponse: any = {};
-                        var sessionContextParams: any = {};
-                        sessionContextParams[actionName + ".EntityName"] = formInputs.EntityName;
-                        sessionContextParams[actionName + ".PageType"] = "entityrecord";
-                        sessionContextParams[actionName + ".EntityId"] = res.savedEntityReference[0].id;
-                        ouputResponse[Constants.OutputResult] = sessionContextParams;
-                        return resolve(ouputResponse);
-                    },
-                    function (error: Error) {
-                        let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
-                        return reject(errorData);
-                    });
-                }
+                });
             });
-        });
-    } else {
-        let errorObject = {} as IErrorHandler;
-        errorObject.errorMsg = "formInputs is Null or Undefined";
-        errorObject.errorType = errorTypes.InvalidParams;
-        errorObject.reportTime = new Date().toUTCString();
-        errorObject.sourceFunc = "ProductivityMacrosWrapper - openNewForm";
-        logFailure("openNewForm", errorObject, "");
-        return Promise.reject("openNewForm - formInputs is Null or Undefined");
-    }
+        } else {
+            let errorObject = {} as IErrorHandler;
+            errorObject.errorMsg = "formInputs is Null or Undefined";
+            errorObject.errorType = errorTypes.InvalidParams;
+            errorObject.reportTime = new Date().toUTCString();
+            errorObject.sourceFunc = "ProductivityMacrosWrapper - openNewForm";
+            logFailure("openNewForm", errorObject, "");
+            return Promise.reject("openNewForm - formInputs is Null or Undefined");
+        }
     }
 
     export function openExistingForm(actionName: string, entityFormOptions: any): Promise<string> {
         if (!(isNullOrUndefined(entityFormOptions) || entityFormOptions == "")) {
             return new Promise<any>((resolve, reject) => {
-                getNavigationType().then((navigationType: any) => { 
+                getNavigationType().then((navigationType: any) => {
                     if (navigationType == 1) {
                         var tabInput: XrmClientApi.TabInput = {
                             pageInput: {
@@ -142,23 +178,23 @@ namespace Microsoft.ProductivityMacros.Internal {
                             ouputResponse[Constants.OutputResult] = sessionContextParams;
                             return resolve(ouputResponse);
                         },
-                        function (error: Error) {
-                            let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
-                            return reject(errorData);
-                        });
+                            function (error: Error) {
+                                let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
+                                return reject(errorData);
+                            });
                     }
                 });
             });
-            } else {
-                let errorObject = {} as IErrorHandler;
-                errorObject.errorMsg = "entityFormOptions is Null or Undefined";
-                errorObject.errorType = errorTypes.InvalidParams;
-                errorObject.reportTime = new Date().toUTCString();
-                errorObject.sourceFunc = "ProductivityMacrosWrapper - openExistingForm";
-                logFailure("openExistingForm", errorObject, "");
-                return Promise.reject("openExistingForm - entityFormOptions is Null or Undefined");
-            }
-        
+        } else {
+            let errorObject = {} as IErrorHandler;
+            errorObject.errorMsg = "entityFormOptions is Null or Undefined";
+            errorObject.errorType = errorTypes.InvalidParams;
+            errorObject.reportTime = new Date().toUTCString();
+            errorObject.sourceFunc = "ProductivityMacrosWrapper - openExistingForm";
+            logFailure("openExistingForm", errorObject, "");
+            return Promise.reject("openExistingForm - entityFormOptions is Null or Undefined");
+        }
+
     }
 
     export function draftEmail(actionName: string, entityFormData: any): Promise<string> {
@@ -498,6 +534,87 @@ namespace Microsoft.ProductivityMacros.Internal {
         return data;
     }
 
+    export function updateFormAttribute(actionName: string, entityData: any, telemetryData?: Object | any): Promise<Map<string, any>> {
+        if (!entityData) {
+            return Promise.reject(createErrorMap("Need values to Update for updateFormAttribute", "updateFormAttribute")); // should be removed add logrejectanderror mrthod here
+        }
+        let windowXrm: any;
+        try {
+            //we are using here windows.top.xrm.page and windows.top.xrm.page.ui.formselector
+            //this api will work in case of crm forms are focused
+            //if anything else is focused then it will contradict the action it self as this action for pupulating fields on crm form. 
+            //in that case we are catching exception and returning as macro triggered for invalide form.  
+            windowXrm = (((((window as any).top) as any).Xrm) as any);
+            if (entityData.EntityName != windowXrm.Page.ui.formSelector._entityName) {
+                return Promise.reject(createErrorMap("Macro executed for invalid form", "updateFormAttribute")); // should be removed add logrejectanderror mrthod here
+            }
+        }
+        catch (e) {
+            return Promise.reject(createErrorMap("Macro executed for invalid form", "updateFormAttribute")); // should be removed add logrejectanderror mrthod here
+        }
+        return new Promise<Map<string, any>>((resolve, reject) => {
+            let startTime = new Date();
+
+            try {
+                let data = consolidateLookupObj(getCustomArray(entityData))
+                Object.keys(data).forEach(function (key) {
+
+                    let dataType = windowXrm.Page.getAttribute(key).getAttributeType();
+                    try {
+                        switch (dataType) {
+                            case "money":
+                            case "decimal":
+                            case "optionset":
+                            case "integer":
+                                windowXrm.Page.getAttribute(key).setValue(parseInt(data[key]));
+                                break;
+                            case "boolean":
+                                windowXrm.Page.getAttribute(key).setValue(Boolean.parse(data[key]));
+                                break;
+                            case "double":
+                                windowXrm.Page.getAttribute(key).setValue(parseFloat(data[key]));
+                                break;
+                            case "datetime":
+                                windowXrm.Page.getAttribute(key).setValue(new Date(data[key]));
+                                break;
+                            case "multiselectoptionset":
+                                let tempArray = data[key].split(",");
+                                let multiOptionSet: number[] = new Array();
+                                tempArray.forEach(function (item : string) {
+                                    multiOptionSet.push(parseInt(item));
+                                })
+                                windowXrm.Page.getAttribute(key).setValue(multiOptionSet);
+                                break;
+                            default:
+                                windowXrm.Page.getAttribute(key).setValue(data[key]);
+                        }
+                    }
+                    catch (e) {
+                        let errorData = generateErrorObject(e, "ProductivityMacrosWrapper - updateFormAttribute - unable to parse input parameter " + key + "-" + data[key], errorTypes.InvalidParams);
+                        logFailure("updateFormAttribute", errorData, "");
+                    }
+                });
+                let timeTaken = Date.now() - startTime.getTime();
+                var ouputResponse: any = {};
+                var sessionContextParams: any = {};
+                sessionContextParams[actionName + Constants.SuffixEntityName] = entityData.EntityName;
+                sessionContextParams[actionName + Constants.SuffixTabId] = windowXrm.App.sessions.getFocusedSession().tabs.getFocusedTab().tabId;
+                ouputResponse[Constants.OutputResult] = sessionContextParams;
+                logSuccess("ProductivityMacrosWrapper - updateFormAttribute", "", telemetryData);
+                resolve(ouputResponse);
+            }
+            catch (e) {
+                let errorData = generateErrorObject(e, "ProductivityMacrosWrapper - updateFormAttribute", errorTypes.XrmApiError);
+                logFailure("updateFormAttribute", errorData, "");
+                reject(e);
+            }
+
+        });
+    }
+
+
+
+
     export function updateRecord(actionName: string, entityData: any,telemetryData?: Object | any): Promise<Map<string, any>> {
         if (!entityData) {
             /* let errorData = {} as IErrorHandler;
@@ -620,10 +737,10 @@ namespace Microsoft.ProductivityMacros.Internal {
             var requestUrl = "/api/data/v9.0/ResolveIncident?tag=abortbpf";
             let startTime = new Date();
             var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
-            
+
             let timeTaken = Date.now() - startTime.getTime();
             logNestedApiData(telemetryData, startTime, timeTaken, "Xrm.Utility.getGlobalContext");
-            
+
             var req = new XMLHttpRequest();
             req.open("POST", context.getClientUrl() + requestUrl, true);
             req.setRequestHeader("OData-MaxVersion", "4.0");
@@ -669,10 +786,10 @@ namespace Microsoft.ProductivityMacros.Internal {
             var requestUrl = "/api/data/v9.1/InstantiateTemplate";
             let startTime = new Date();
             var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
-            
+
             let timeTaken = Date.now() - startTime.getTime();
             logNestedApiData(telemetryData, startTime, timeTaken, "Xrm.Utility.getGlobalContext");
-            
+
             var req = new XMLHttpRequest();
             req.open("POST", context.getClientUrl() + requestUrl, true);
             req.setRequestHeader("OData-MaxVersion", "4.0");
