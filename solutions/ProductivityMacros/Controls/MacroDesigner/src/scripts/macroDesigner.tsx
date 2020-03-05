@@ -3,12 +3,13 @@ import * as Utils from "./sharedUtils";
 
 import * as Workflow from "./workflowDefinitions";
 import { MouseEvent } from "react";
+import { constants } from "zlib";
 
 let cancelButton = document.getElementById("cancelButton") as HTMLElement;
 async function closeDesigner(event?: Event) {
 	(window.top.Xrm.Page.ui as XrmClientApi.FormUi).close();
 }
-cancelButton.innerHTML = Utils.Utils.getResourceString("MACRO_ACTION_CANCEL");
+cancelButton.innerHTML = Utils.Utils.getResourceString(SharedDefines.Constants.MACRO_ACTION_CANCEL);
 if (cancelButton) {
 	cancelButton.addEventListener("click", closeDesigner);
 }
@@ -314,7 +315,7 @@ async function startDesigner(rpc) {
             return;
         }
         let saveButton = document.getElementById("saveButton") as HTMLElement;
-        saveButton.innerHTML = Utils.Utils.getResourceString("MACRO_ACTION_SAVE_AND_CLOSE");
+        saveButton.innerHTML = Utils.Utils.getResourceString(SharedDefines.Constants.MACRO_ACTION_SAVE_AND_CLOSE);
 		if (saveButton) {
 			saveButton.addEventListener("click", async function (event) {
 				try {
