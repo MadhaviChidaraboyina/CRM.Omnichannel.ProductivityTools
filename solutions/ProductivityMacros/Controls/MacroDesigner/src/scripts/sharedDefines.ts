@@ -37,7 +37,9 @@ export class Constants {
 	public static SESSION_TEMPLATE_ENTITY = "msdyn_consoleapplicationsessiontemplate";
 	public static EXPRESSION_DATA = "msdyn_expressiondata";
 	public static BUILTIN_CATEGORY = "LOGIC_APPS_BUILTIN";
-	public static BUILTIN_CATEGORY_DISPLAY = "LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN";
+    public static BUILTIN_CATEGORY_DISPLAY = "LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN";
+    public static MACRO_ACTION_SAVE_AND_CLOSE = "MACRO_ACTION_SAVE_AND_CLOSE";
+    public static MACRO_ACTION_CANCEL = "MACRO_ACTION_CANCEL";
 };
 
 export class DesignerMessages {

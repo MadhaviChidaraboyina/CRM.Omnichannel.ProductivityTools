@@ -197,6 +197,14 @@
     <value>Save</value>
     <comment>Action to save</comment>
   </data>
+  <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
+    <value>Save and close</value>
+    <comment>Action to save and close</comment>
+  </data>
+  <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Action to cancel</comment>
+  </data>
   <data name="MACRO_ACTION_SEARCH_BY_RELEVANCE" xml:space="preserve">
     <value>Search by Relevance</value>
     <comment>Action to search by relevance</comment>
