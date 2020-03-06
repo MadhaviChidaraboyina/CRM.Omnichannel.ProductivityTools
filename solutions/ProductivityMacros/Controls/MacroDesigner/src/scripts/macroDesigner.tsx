@@ -3,7 +3,6 @@ import * as Utils from "./sharedUtils";
 
 import * as Workflow from "./workflowDefinitions";
 import { MouseEvent } from "react";
-import { constants } from "zlib";
 
 let cancelButton = document.getElementById("cancelButton") as HTMLElement;
 async function closeDesigner(event?: Event) {
