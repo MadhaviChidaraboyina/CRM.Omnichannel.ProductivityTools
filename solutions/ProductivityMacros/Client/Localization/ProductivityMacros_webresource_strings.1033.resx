@@ -805,4 +805,24 @@
     <value>Dashboard ID</value>
     <comment>Parameter definition Title</comment>
   </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Open kb article</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Open kb article</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Open kb article</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Open kb article</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
 </root>
