@@ -562,7 +562,6 @@ namespace Microsoft.ProductivityMacros.Internal {
                     let dataType = windowXrm.Page.getAttribute(key).getAttributeType();
                     try {
                         switch (dataType) {
-                            case "money":
                             case "decimal":
                             case "optionset":
                             case "integer":
@@ -572,6 +571,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                                 windowXrm.Page.getAttribute(key).setValue(Boolean.parse(data[key]));
                                 break;
                             case "double":
+                            case "money":
                                 windowXrm.Page.getAttribute(key).setValue(parseFloat(data[key]));
                                 break;
                             case "datetime":
