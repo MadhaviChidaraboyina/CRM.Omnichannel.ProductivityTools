@@ -121,4 +121,12 @@
     <value>Guia de l'agent</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>No hi ha cap element configurat</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Pel que sembla, l'administrador encara no l'ha configurat.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

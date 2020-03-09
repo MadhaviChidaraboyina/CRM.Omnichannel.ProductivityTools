@@ -18,6 +18,24 @@
           <Cmt Name="Dev"><![CDATA[Header value for agentguidance control]]></Cmt>
         </Cmts>
       </Item>
+      <Item ItemId=";No_items_configured" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No items configured]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Header value for when no controls are configured]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";No_items_configured_message" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Looks like your administrator has not configured it yet.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Message value for when no controls are configured]]></Cmt>
+        </Cmts>
+      </Item>
     </Item>
   </Item>
 </LCX>

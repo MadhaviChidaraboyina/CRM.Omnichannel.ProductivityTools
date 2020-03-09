@@ -584,15 +584,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparameterentitymsdyn_actioninputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Attributes of action input parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Attribut för åtgärdens indataparametrar]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:15.0003942Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004091Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_ActionTemplateInputParameterId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -623,15 +626,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the parameter type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger parametertypen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:15.0003942Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004091Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -675,15 +681,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_parametertype" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to store the parameter type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Unikt värde för lagring av parametertypen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:15.0003939Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004091Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_visibility" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1195,15 +1204,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Attributes for macro action template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Attribut för makroåtgärdsmallen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:15.0003839Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004071Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_InputParameters" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1247,41 +1259,50 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_brandcolor" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the brand color]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Unikt värde som anger varumärkesfärgen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:15.0003831Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004071Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_displayname" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the display name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Unikt värde som anger visningsnamnet]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:15.0003831Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004071Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_icon" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the icon]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Unikt värde som anger ikonen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:15.0003831Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004071Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_kind" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1338,15 +1359,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_macroconnector" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the value of macro connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger värdet för makrokopplingen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0002372Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004071Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1377,28 +1401,34 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_subtitle" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the subtitle value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Unikt värde som anger värdet för underrubriken]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:15.0003831Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004071Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_summary" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the summary]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Unikt värde som anger sammanfattningen]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:15.0003831Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004042Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_title" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1416,15 +1446,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_visibility" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the visibility value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Unikt värde som anger synlighetsvärdet]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T09:54:15.0003831Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004042Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatestatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1637,15 +1670,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectorentitymsdyn_macroconnector" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Attributes for macro connectors]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Attribut för makrokopplingar]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.000237Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004042Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_Icon" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1676,15 +1712,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_callback" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the callback value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger motringningsvärdet]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:10.0008055Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004042Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_categorykey" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1793,15 +1832,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_prefix" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the prefix value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger prefixvärdet]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:10.0008055Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004009Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_title" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1832,15 +1874,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_webresourcename" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique identifier for webresource name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Unik identifierare för webbresursens namn]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:10.0008055Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0004009Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectorstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2365,93 +2410,114 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Macro solution related configurations]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Relaterade konfigurationer för makrolösning]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0000884Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003981Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerfallbackurl" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets designer fallback url]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger designerns reserv-URL]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0000884Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003981Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentity" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the entity from which to read designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger entiteten som designer-URL:en ska läsas från]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0000854Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003981Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityattrib" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the attributes of designer url config entity]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger attributen för designerns URL-konfigurationsentitet]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0000854Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003981Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the id from which to read designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger ID:t som designer-URL:en ska läsas från]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0000854Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003981Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityquery" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[En oData-fråga som används för att hämta posten som designer-URL:en ska läsas från]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0000854Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003981Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlrelativepath" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the path to designer blob with designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger sökvägen till en designer-blob med designer-URL]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0000854Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003953Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfigurationId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2521,41 +2587,50 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_searchhint" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the value for serach hint]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger värdet för söktips]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0000836Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003953Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_uservoicelink" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the value for user voice link]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger värdet för användarens röstlänk]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0000836Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003953Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_uservoicetext" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the value for user voice text]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger värdet för användarens rösttext]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0000836Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003953Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -4161,11 +4236,14 @@
         <Str Cat="Text">
           <Val><![CDATA[New]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Ny]]></Val>
+            <Val><![CDATA[Skapa]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0001838Z" />
+        <Modified By="v-jinsqi" DateTime="2020-03-06T04:33:09Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[bug1724283]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -4187,11 +4265,14 @@
         <Str Cat="Text">
           <Val><![CDATA[New]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Ny]]></Val>
+            <Val><![CDATA[Skapa]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0001838Z" />
+        <Modified By="v-jinsqi" DateTime="2020-03-06T04:33:09Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[bug1724283]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -5680,15 +5761,18 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_macrosessionModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Modified On]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Redigerat]]></Val>
+          <Val><![CDATA[Executed on]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Kördes den]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Modified On]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:10.0008016Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003842Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_macrosessionModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -5719,15 +5803,18 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_macrosessionOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Owner]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Ägare]]></Val>
+          <Val><![CDATA[User]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Användare]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Owner]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:10.0008016Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003842Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_macrosessionOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8128,17 +8215,33 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
-      <Item ItemId=";68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E72}" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";68:Description,{6DDA9163-2590-4ECC-B6F2-55363E629054}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Create Macros]]></Val>
+          <Val><![CDATA[Expression builder for default agent script]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Skapa makron]]></Val>
+            <Val><![CDATA[Uttrycksverktyget för standardmanuskript för handläggare]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0001899Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003731Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E72}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Makron]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Create Macros]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003731Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E73}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8154,17 +8257,33 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
-      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";68:LocalizedName,{6DDA9163-2590-4ECC-B6F2-55363E629054}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Create macros]]></Val>
+          <Val><![CDATA[Expression builder]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Skapa makron]]></Val>
+            <Val><![CDATA[Uttrycksverktyget]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0001899Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003731Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Makron]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Create macros]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003731Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E72}{505EF84E-0234-43DB-A095-AE2A87872170}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8206,17 +8325,33 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
-      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E73}{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E72}{fc52f700-f280-4190-8246-08a2d0c2bc8e}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Macros Monitor View]]></Val>
+          <Val><![CDATA[Run History]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Vy för makroövervakare]]></Val>
+            <Val><![CDATA[Körningshistorik]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-16T13:50:10.0007979Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003731Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E73}{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Run]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Makrokörning]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Macros Monitor View]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003731Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E73}{BC53D472-1587-4980-944E-F55DFE5D3F1A}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8243,6 +8378,32 @@
         <Modified By="v-rondai" DateTime="2020-01-16T13:50:10.0007979Z" />
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{6DDA9163-2590-4ECC-B6F2-55363E629054}{64C3B49F-EFDB-46D8-BF75-927F1DA0D89F}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Designer]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makrodesigner]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003731Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{6DDA9163-2590-4ECC-B6F2-55363E629054}{B8B207BF-42B4-4FB9-873F-2426B577352F}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Expression builder]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uttrycksverktyget]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0003731Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
     </Item>

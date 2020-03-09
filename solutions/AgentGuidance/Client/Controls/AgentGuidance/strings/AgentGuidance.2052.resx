@@ -121,4 +121,12 @@
     <value>代理指南</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>未配置任何项目</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>您的管理员似乎尚未进行任何配置。</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

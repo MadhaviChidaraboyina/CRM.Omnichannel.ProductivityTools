@@ -121,4 +121,12 @@
     <value>Îndrumare agent</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Nu există elemente configurate</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Se pare că administratorul dvs. nu l-a configurat încă.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

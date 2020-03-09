@@ -249,7 +249,7 @@
     <comment>'msdyn_actioninputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
-    <value />
+    <value>Атрибути на входящи параметри на действие</value>
     <comment> 'msdyn_actioninputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameterImportSequenceNumber" xml:space="preserve">
@@ -273,7 +273,7 @@
     <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_actioninputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype" xml:space="preserve">
-    <value />
+    <value>Задава типа параметър</value>
     <comment>'msdyn_actioninputparameter' : Description for OptionSet 'msdyn_actioninputparameter_msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_statecode" xml:space="preserve">
@@ -293,7 +293,7 @@
     <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparametermsdyn_parametertype" xml:space="preserve">
-    <value />
+    <value>Еднозначна стойност за запазване на типа параметър</value>
     <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparametermsdyn_visibility" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
-    <value />
+    <value>Атрибути за шаблон за действие на макрос</value>
     <comment> 'msdyn_macroactiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplateImportSequenceNumber" xml:space="preserve">
@@ -461,15 +461,15 @@
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_actionDescription' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_brandcolor" xml:space="preserve">
-    <value />
+    <value>Еднозначна стойност за задаване на цвета на марката</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_brandcolor' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_displayname" xml:space="preserve">
-    <value />
+    <value>Еднозначна стойност за задаване на името за показване</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_displayname' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_icon" xml:space="preserve">
-    <value />
+    <value>Еднозначна стойност за задаване на иконата</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_icon' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_InputParameters" xml:space="preserve">
@@ -493,7 +493,7 @@
     <comment>'msdyn_macroactiontemplate' : Description for OptionSet 'msdyn_macroactiontemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroconnector" xml:space="preserve">
-    <value />
+    <value>Задава стойността на конектор на макрос</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_macroconnector' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_name" xml:space="preserve">
@@ -509,11 +509,11 @@
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_runtimeapi' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_subtitle" xml:space="preserve">
-    <value />
+    <value>Еднозначна стойност за задаване на стойността на подзаглавие</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_subtitle' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_summary" xml:space="preserve">
-    <value />
+    <value>Еднозначна стойност за задаване на обобщението</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_summary' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_title" xml:space="preserve">
@@ -521,7 +521,7 @@
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplatemsdyn_visibility" xml:space="preserve">
-    <value />
+    <value>Еднозначна стойност за задаване на стойността на видимост</value>
     <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_visibility' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplateOverriddenCreatedOn" xml:space="preserve">
@@ -573,7 +573,7 @@
     <comment>'msdyn_macroconnector' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
-    <value />
+    <value>Атрибути за конектори на макрос</value>
     <comment> 'msdyn_macroconnector' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnectorImportSequenceNumber" xml:space="preserve">
@@ -597,7 +597,7 @@
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_brandcolor' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnectormsdyn_callback" xml:space="preserve">
-    <value />
+    <value>Задава стойността на обратно обаждане</value>
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_callback' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnectormsdyn_categorykey" xml:space="preserve">
@@ -637,7 +637,7 @@
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnectormsdyn_prefix" xml:space="preserve">
-    <value />
+    <value>Задава стойността на префикса</value>
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_prefix' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnectormsdyn_title" xml:space="preserve">
@@ -649,7 +649,7 @@
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnectormsdyn_webresourcename" xml:space="preserve">
-    <value />
+    <value>Еднозначен идентификатор за името на уеб ресурса</value>
     <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_webresourcename' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnectorOverriddenCreatedOn" xml:space="preserve">
@@ -797,7 +797,7 @@
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
-    <value />
+    <value>Свързани с решение за макрос конфигурации</value>
     <comment> 'msdyn_macrosolutionconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationImportSequenceNumber" xml:space="preserve">
@@ -817,27 +817,27 @@
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
-    <value />
+    <value>Задава резервен URL адрес на дизайнер</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerfallbackurl' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentity" xml:space="preserve">
-    <value />
+    <value>Задава обекта, от който да се чете URL адрес на дизайнер</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentity' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityattrib" xml:space="preserve">
-    <value />
+    <value>Задава атрибутите на обекта на конфигурация на URL адрес на дизайнер</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentityattrib' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityid" xml:space="preserve">
-    <value />
+    <value>Задава ИД, от който да се чете URL адрес на дизайнер</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentityid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityquery" xml:space="preserve">
-    <value />
+    <value>Заявка на oData за извличане на запис, от който да се чете URL адрес на дизайнер</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentityquery' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlrelativepath" xml:space="preserve">
-    <value />
+    <value>Задава пътя към BLOB на дизайнер с URL адреса на дизайнер</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlrelativepath' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfigurationId" xml:space="preserve">
@@ -861,15 +861,15 @@
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_searchhint" xml:space="preserve">
-    <value />
+    <value>Задава стойността за подсказка за търсене</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_searchhint' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_uservoicelink" xml:space="preserve">
-    <value />
+    <value>Задава стойността за връзка към гласа на потребителя</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_uservoicelink' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_uservoicetext" xml:space="preserve">
-    <value />
+    <value>Задава стойността за текст с гласа на потребителя</value>
     <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_uservoicetext' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -1481,7 +1481,7 @@
     <comment>'msdyn_macrosession' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionModifiedOn" xml:space="preserve">
-    <value>Променено на</value>
+    <value>Изпълнено на</value>
     <comment>'msdyn_macrosession' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
@@ -1521,7 +1521,7 @@
     <comment>'msdyn_macrosession' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionOwnerId" xml:space="preserve">
-    <value>Собственик</value>
+    <value>Потребител</value>
     <comment>'msdyn_macrosession' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
@@ -2441,10 +2441,6 @@
     <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
   </data>
   <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
-    <value>Action Input Parameter</value>
-    <comment> 'msdyn_actioninputparameter' : LocalizedName for Entity</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
     <value>Входен параметър на действие</value>
     <comment> 'msdyn_actioninputparameter' : LocalizedName for Entity</comment>
   </data>
@@ -2628,8 +2624,12 @@
     <value>Позволява ви да видите изгледа на монитор за макроси</value>
     <comment> '{2E40DD90-2824-4524-B223-947052798E73}' : Description for Dialog</comment>
   </data>
+  <data name="68:Description,{6DDA9163-2590-4ECC-B6F2-55363E629054}" xml:space="preserve">
+    <value>Инструмент за създаване на израз за скрипт на агент по подразбиране</value>
+    <comment> '{6DDA9163-2590-4ECC-B6F2-55363E629054}' : Description for Dialog</comment>
+  </data>
   <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" xml:space="preserve">
-    <value>Създаване на макроси</value>
+    <value>Макроси</value>
     <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}'</comment>
   </data>
   <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{505EF84E-0234-43DB-A095-AE2A87872170}" xml:space="preserve">
@@ -2644,8 +2644,12 @@
     <value>Име</value>
     <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{D74829E3-D89A-4B89-BEC7-67B6BB0DE2EA}'</comment>
   </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{fc52f700-f280-4190-8246-08a2d0c2bc8e}" xml:space="preserve">
+    <value>Хронология на изпълнение</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{fc52f700-f280-4190-8246-08a2d0c2bc8e}'</comment>
+  </data>
   <data name="68:label,{2E40DD90-2824-4524-B223-947052798E73}{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}" xml:space="preserve">
-    <value>Изглед на монитор за макроси</value>
+    <value>Изпълнение на макрос</value>
     <comment>'{2E40DD90-2824-4524-B223-947052798E73}' : label for cell in Dialog FormXml ID: '{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}'</comment>
   </data>
   <data name="68:label,{2E40DD90-2824-4524-B223-947052798E73}{BC53D472-1587-4980-944E-F55DFE5D3F1A}" xml:space="preserve">
@@ -2656,12 +2660,24 @@
     <value>Име</value>
     <comment>'{2E40DD90-2824-4524-B223-947052798E73}' : label for cell in Dialog FormXml ID: '{D74829E3-D89A-4B89-BEC7-67B6BB0DE3EA}'</comment>
   </data>
+  <data name="68:label,{6DDA9163-2590-4ECC-B6F2-55363E629054}{64C3B49F-EFDB-46D8-BF75-927F1DA0D89F}" xml:space="preserve">
+    <value>Дизайнер на макроси</value>
+    <comment>'{6DDA9163-2590-4ECC-B6F2-55363E629054}' : label for cell in Dialog FormXml ID: '{64C3B49F-EFDB-46D8-BF75-927F1DA0D89F}'</comment>
+  </data>
+  <data name="68:label,{6DDA9163-2590-4ECC-B6F2-55363E629054}{B8B207BF-42B4-4FB9-873F-2426B577352F}" xml:space="preserve">
+    <value>Инструмент за създаване на израз</value>
+    <comment>'{6DDA9163-2590-4ECC-B6F2-55363E629054}' : label for cell in Dialog FormXml ID: '{B8B207BF-42B4-4FB9-873F-2426B577352F}'</comment>
+  </data>
   <data name="68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E72}" xml:space="preserve">
-    <value>Създаване на макроси</value>
+    <value>Макроси</value>
     <comment> '{2E40DD90-2824-4524-B223-947052798E72}' : LocalizedName for Dialog</comment>
   </data>
   <data name="68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E73}" xml:space="preserve">
     <value>Преглед на монитор за макроси</value>
     <comment> '{2E40DD90-2824-4524-B223-947052798E73}' : LocalizedName for Dialog</comment>
+  </data>
+  <data name="68:LocalizedName,{6DDA9163-2590-4ECC-B6F2-55363E629054}" xml:space="preserve">
+    <value>Инструмент за създаване на израз</value>
+    <comment> '{6DDA9163-2590-4ECC-B6F2-55363E629054}' : LocalizedName for Dialog</comment>
   </data>
 </root>

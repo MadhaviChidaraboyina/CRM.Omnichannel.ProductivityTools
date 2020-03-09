@@ -27,15 +27,18 @@
         <Disp Icon="Dir" LocTbl="false" />
         <Item ItemId=";(...) ession" ItemType="0;.resx" PsrId="211" Leaf="true">
           <Str Cat="Text">
-            <Val><![CDATA[]]></Val>
-            <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-              <Val><![CDATA[]]></Val>
+            <Val><![CDATA[Sets value to enable or disable build expression]]></Val>
+            <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+              <Val><![CDATA[Configura o valor único para activar ou desactivar a expresión de compilación]]></Val>
             </Tgt>
+            <Prev Cat="Text">
+              <Val><![CDATA[]]></Val>
+            </Prev>
           </Str>
           <Disp Icon="Str" />
-          <Modified By="v-rondai" DateTime="2020-01-08T11:46:16.0002121Z" />
+          <Modified By="v-loye" DateTime="2020-03-06T03:11:17.0008505Z" />
           <Props>
-            <Str Name="Custom3" Val="WO24046_20200103" />
+            <Str Name="Custom3" Val="WO25253_20200302" />
           </Props>
         </Item>
       </Item>
@@ -1090,15 +1093,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_enablebuildexpression" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to enable or disable build expression]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Valor único para activar ou desactivar a expresión de compilación]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-08T11:46:16.0002113Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:17.000843Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24046_20200103" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3249,6 +3255,19 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,Session Templates{09700f80-4e1b-4f35-a2a9-0a5d37f7e4cf}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Set Default Agent Script]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Configurar o script de axente predefinido]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:17.0008357Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,Session Templates{196dbc51-0ab0-1da7-555e-35cc732cbda3}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name]]></Val>
@@ -3273,6 +3292,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-20T14:08:55.0005462Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Session Templates{2154398b-bde8-698e-e2b9-7b5a959d2c2e}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Expression data]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Datos de expresión]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:17.0008357Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Session Templates{373754d5-d9aa-515a-d227-44bb7726cc44}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3366,6 +3398,19 @@
           <Str Name="Custom3" Val="WO21181_20190917" />
         </Props>
       </Item>
+      <Item ItemId=";1:label,Session Templates{8EFB8D13-ACF6-4DA0-9EA6-4BBC445F3887}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Disclaimer]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Renuncia de responsabilidade]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:17.0008357Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
+        </Props>
+      </Item>
       <Item ItemId=";1:label,Session Templates{b4c27572-1009-3a20-4cbd-4cc2cbc02738}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Section]]></Val>
@@ -3429,6 +3474,19 @@
         <Modified By="v-jachyl" DateTime="2019-09-20T14:08:55.000543Z" />
         <Props>
           <Str Name="Custom3" Val="WO21181_20190917" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:label,Session Templates{e62bb031-3e21-42dc-6561-7816d972cc57}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:17.0008357Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_agentscriptmsdyn_agentscript_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">

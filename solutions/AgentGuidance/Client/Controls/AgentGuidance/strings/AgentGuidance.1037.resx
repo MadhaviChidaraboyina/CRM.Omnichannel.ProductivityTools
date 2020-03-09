@@ -121,4 +121,12 @@
     <value>הדרכת סוכנים</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>לא הוגדרו פריטים</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>נראה שמנהל המערכת שלך עדיין לא הגדיר את התצורה שלו.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

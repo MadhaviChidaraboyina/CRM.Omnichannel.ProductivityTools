@@ -29,7 +29,7 @@
       </Item>
       <Item ItemId=";CollpaseMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Collpase]]></Val>
+          <Val><![CDATA[Collapse]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>

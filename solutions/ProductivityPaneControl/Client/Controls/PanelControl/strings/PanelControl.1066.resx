@@ -134,7 +134,7 @@
     <comment>Expand message</comment>
   </data>
   <data name="CollpaseMessage" xml:space="preserve">
-    <value>Thu hẹp</value>
+    <value>Thu gọn</value>
     <comment>Collapse message</comment>
   </data>
 </root>

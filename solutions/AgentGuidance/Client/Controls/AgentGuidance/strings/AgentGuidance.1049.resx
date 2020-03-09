@@ -121,4 +121,12 @@
     <value>Руководство агента</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Настроенных элементов нет</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Похоже, ваш администратор еще ничего не настроил.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

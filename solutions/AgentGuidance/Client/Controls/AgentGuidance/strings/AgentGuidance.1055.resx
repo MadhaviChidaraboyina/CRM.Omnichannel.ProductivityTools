@@ -121,4 +121,12 @@
     <value>Aracı kılavuzu</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Hiçbir öğe yapılandırılmadı</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Yöneticiniz henüz yapılandırmamış görünüyor.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

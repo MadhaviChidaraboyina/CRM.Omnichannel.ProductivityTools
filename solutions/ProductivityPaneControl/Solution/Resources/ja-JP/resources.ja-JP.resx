@@ -169,7 +169,7 @@
     <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationentitymsdyn_productivitypaneconfiguration" xml:space="preserve">
-    <value />
+    <value>生産性ウィンドウの構成に関連する属性</value>
     <comment> 'msdyn_productivitypaneconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationImportSequenceNumber" xml:space="preserve">
@@ -189,15 +189,15 @@
     <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_Applicationname" xml:space="preserve">
-    <value />
+    <value>アプリケーション名を設定します</value>
     <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'msdyn_Applicationname' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_Productivitypanemode" xml:space="preserve">
-    <value />
+    <value>Unique value to set the productivity pane to expanded or collpased mode</value>
     <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'msdyn_Productivitypanemode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_Productivitypanestate" xml:space="preserve">
-    <value />
+    <value>Unique value to set the productivity mode to enabled or disabled mode</value>
     <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'msdyn_Productivitypanestate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_name" xml:space="preserve">
@@ -209,11 +209,11 @@
     <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'msdyn_productivitypaneconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanemode" xml:space="preserve">
-    <value />
+    <value>生産性ウィンドウを展開または折りたたみモードに設定します</value>
     <comment>'msdyn_productivitypaneconfiguration' : Description for OptionSet 'msdyn_productivitypaneconfiguration_msdyn_productivitypanemode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate" xml:space="preserve">
-    <value />
+    <value>生産性状態を有効または無効モードに設定します</value>
     <comment>'msdyn_productivitypaneconfiguration' : Description for OptionSet 'msdyn_productivitypaneconfiguration_msdyn_productivitypanestate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode" xml:space="preserve">
@@ -223,6 +223,14 @@
   <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statuscode" xml:space="preserve">
     <value>生産性ウィンドウの構成の状態の理由です</value>
     <comment>'msdyn_productivitypaneconfiguration' : Description for OptionSet 'msdyn_productivitypaneconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_Productivitypanemode" xml:space="preserve">
+    <value>生産性ウィンドウを展開または折りたたみモードに設定するための一意の値です</value>
+    <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'msdyn_Productivitypanemode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_Productivitypanestate" xml:space="preserve">
+    <value>生産性モードを有効または無効モードに設定するための一意の値です</value>
+    <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'msdyn_Productivitypanestate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationOrganizationId" xml:space="preserve">
     <value>組織の一意識別子</value>
@@ -293,11 +301,11 @@
     <comment>'msdyn_productivitypaneconfiguration' : displayname for Attribute 'msdyn_productivitypaneconfigurationId' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanemode" xml:space="preserve">
-    <value>生産性ウィンドウ モード</value>
+    <value>既定モード</value>
     <comment>'msdyn_productivitypaneconfiguration' : displayname for OptionSet 'msdyn_productivitypaneconfiguration_msdyn_productivitypanemode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate" xml:space="preserve">
-    <value>生産性ウィンドウの状態</value>
+    <value>生産性ウィンドウを有効にする</value>
     <comment>'msdyn_productivitypaneconfiguration' : displayname for OptionSet 'msdyn_productivitypaneconfiguration_msdyn_productivitypanestate' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode" xml:space="preserve">
@@ -309,11 +317,11 @@
     <comment>'msdyn_productivitypaneconfiguration' : displayname for OptionSet 'msdyn_productivitypaneconfiguration_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitypaneconfigurationmsdyn_Productivitypanemode" xml:space="preserve">
-    <value>生産性ウィンドウ モード</value>
+    <value>既定モード</value>
     <comment>'msdyn_productivitypaneconfiguration' : displayname for Attribute 'msdyn_Productivitypanemode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitypaneconfigurationmsdyn_Productivitypanestate" xml:space="preserve">
-    <value>生産性ウィンドウの状態</value>
+    <value>生産性ウィンドウを有効にする</value>
     <comment>'msdyn_productivitypaneconfiguration' : displayname for Attribute 'msdyn_Productivitypanestate' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitypaneconfigurationOrganizationId" xml:space="preserve">
@@ -349,11 +357,11 @@
     <comment>'msdyn_productivitypaneconfiguration' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate0" xml:space="preserve">
-    <value>なし</value>
+    <value>無効</value>
     <comment>'msdyn_productivitypaneconfiguration' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate1" xml:space="preserve">
-    <value>あり</value>
+    <value>有効</value>
     <comment>'msdyn_productivitypaneconfiguration' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode0" xml:space="preserve">
@@ -376,10 +384,6 @@
     <value>セクション</value>
     <comment>'Productivity pane configuration' : label for section in Entity FormXml ID: '{09e9c271-36bd-db1d-9580-a7a68aea45bc}'</comment>
   </data>
-  <data name="1:label,Productivity pane configuration{0d4b5d0c-9346-681e-8b55-ccb1493da775}" xml:space="preserve">
-    <value>既定のモード</value>
-    <comment>'Productivity pane configuration' : label for cell in Entity FormXml ID: '{0d4b5d0c-9346-681e-8b55-ccb1493da775}'</comment>
-  </data>
   <data name="1:label,Productivity pane configuration{1d232692-b84d-3a66-920a-aa61b957a77c}" xml:space="preserve">
     <value>設定</value>
     <comment>'Productivity pane configuration' : label for tab in Entity FormXml ID: '{1d232692-b84d-3a66-920a-aa61b957a77c}'</comment>
@@ -395,10 +399,6 @@
   <data name="1:label,Productivity pane configuration{30a60635-8c70-ac66-40ec-b14b9e336aab}" xml:space="preserve">
     <value>セクション</value>
     <comment>'Productivity pane configuration' : label for section in Entity FormXml ID: '{30a60635-8c70-ac66-40ec-b14b9e336aab}'</comment>
-  </data>
-  <data name="1:label,Productivity pane configuration{37327a0c-5867-b4d8-4e34-12107a7db3a1}" xml:space="preserve">
-    <value>生産性ウィンドウを有効にする</value>
-    <comment>'Productivity pane configuration' : label for cell in Entity FormXml ID: '{37327a0c-5867-b4d8-4e34-12107a7db3a1}'</comment>
   </data>
   <data name="1:label,Productivity pane configuration{5e7ac5d0-172a-89e4-e506-91ec8a282253}" xml:space="preserve">
     <value>セクション</value>

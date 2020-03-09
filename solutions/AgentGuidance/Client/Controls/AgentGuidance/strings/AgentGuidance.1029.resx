@@ -121,4 +121,12 @@
     <value>Pokyny pro agenty</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Žádné nakonfigurované položky</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Zdá se, že to váš správce zatím nenakonfiguroval.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

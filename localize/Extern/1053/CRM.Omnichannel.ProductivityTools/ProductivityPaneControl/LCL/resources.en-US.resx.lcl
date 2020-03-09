@@ -245,54 +245,66 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationentitymsdyn_productivitypaneconfiguration" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Attributes related to productivity pane configurations]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Attribut som är relaterat till produktivitetsfönstrets konfigurationer]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004108Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.0006348Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_Applicationname" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the application name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger appens namn]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004108Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.0006348Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_Productivitypanemode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the productivity pane to expanded or collpased mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Unikt värde som anger produktivitetsfönstret till visat eller dolt läge]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004108Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.0006348Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_Productivitypanestate" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the productivity mode to enabled or disabled mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Unikt värde som anger produktivitetsläget till aktiverat eller inaktiverat läge]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004108Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.0006348Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -323,28 +335,34 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanemode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the productivity pane to expanded or collpased mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger produktivitetsfönstret till visat eller dolt läge]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004108Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.0006348Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the productivity state to enabled or disabled mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Anger produktivitetstillståndet till aktiverat eller inaktiverat läge]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004084Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.00063Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -596,28 +614,34 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_Productivitypanemode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Productivity pane mode]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Läge för produktivitetsfönster]]></Val>
+          <Val><![CDATA[Default mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Standardläge]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Productivity pane mode]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004024Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.00063Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_Productivitypanestate" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Productivity pane state]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Tillstånd för produktivitetsfönster]]></Val>
+          <Val><![CDATA[Enable productivity pane]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Aktivera produktivitetsfönster]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Productivity pane state]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004024Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.00063Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -648,28 +672,34 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanemode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Productivity pane mode]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Läge för produktivitetsfönster]]></Val>
+          <Val><![CDATA[Default mode]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Standardläge]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Productivity pane mode]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004024Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.00063Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Productivity pane state]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Tillstånd för produktivitetsfönster]]></Val>
+          <Val><![CDATA[Enable productivity pane]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Aktivera produktivitetsfönster]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Productivity pane state]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004024Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.00063Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -737,19 +767,6 @@
           <Str Name="Custom3" Val="WO24766_20200203" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,Productivity pane configuration{0d4b5d0c-9346-681e-8b55-ccb1493da775}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Default mode]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Standardläge]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004022Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
-        </Props>
-      </Item>
       <Item ItemId=";1:label,Productivity pane configuration{1d232692-b84d-3a66-920a-aa61b957a77c}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Settings]]></Val>
@@ -794,19 +811,6 @@
           <Val><![CDATA[Section]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Avsnitt]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0004022Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:label,Productivity pane configuration{37327a0c-5867-b4d8-4e34-12107a7db3a1}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Enable productivity pane]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Aktivera produktivitetsfönster]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -869,28 +873,34 @@
       </Item>
       <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate0" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nej]]></Val>
+          <Val><![CDATA[Disabled]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Inaktiverat]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[No]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0003978Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.0006272Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Yes]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Ja]]></Val>
+          <Val><![CDATA[Enabled]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Aktiverat]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Yes]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T02:39:36.0003978Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:24.0006272Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">

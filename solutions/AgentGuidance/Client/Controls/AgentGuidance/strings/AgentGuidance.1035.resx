@@ -121,4 +121,12 @@
     <value>Asiakaspalvelijan opastus</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Kohteita ei ole määritetty</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Näyttää siltä, että järjestelmänvalvojasi ei ole vielä määrittänyt sitä.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

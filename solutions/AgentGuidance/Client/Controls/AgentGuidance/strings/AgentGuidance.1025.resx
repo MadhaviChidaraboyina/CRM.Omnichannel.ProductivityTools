@@ -121,4 +121,12 @@
     <value>إرشادات المندوب</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>لم يتم تكوين أي عناصر</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>يبدو أن مسؤول النظام لم يقم بتكوينها بعد.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

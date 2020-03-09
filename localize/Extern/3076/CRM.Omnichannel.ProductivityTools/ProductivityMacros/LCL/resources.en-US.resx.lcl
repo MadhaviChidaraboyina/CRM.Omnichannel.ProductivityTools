@@ -584,15 +584,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparameterentitymsdyn_actioninputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Attributes of action input parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[動作輸入參數的屬性]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000073Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000537Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_ActionTemplateInputParameterId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -623,15 +626,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the parameter type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定參數類型]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.000073Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000537Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -675,15 +681,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_parametertype" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to store the parameter type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[儲存參數類型的唯一值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0000702Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000537Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparametermsdyn_visibility" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1195,15 +1204,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Attributes for macro action template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[巨集動作範本的屬性]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0000615Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000513Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_InputParameters" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1247,41 +1259,50 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_brandcolor" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the brand color]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定品牌色彩的唯一值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0000615Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000513Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_displayname" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the display name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定顯示名稱的唯一值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0000615Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000513Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_icon" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the icon]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定圖示的唯一值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0000615Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000481Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_kind" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1338,15 +1359,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_macroconnector" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the value of macro connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定巨集連接器的值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:24:00.000358Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000481Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1377,28 +1401,34 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_subtitle" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the subtitle value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定副標題值的唯一值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0000598Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000481Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_summary" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the summary]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定摘要的唯一值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0000598Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000481Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_title" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1416,15 +1446,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatemsdyn_visibility" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique value to set the visibility value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定顯示性值的唯一值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0000598Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.000049Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21082_20190910" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplatestatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1637,15 +1670,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectorentitymsdyn_macroconnector" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Attributes for macro connectors]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[巨集連接器的屬性]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:24:00.0003526Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.000049Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_Icon" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1676,15 +1712,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_callback" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the callback value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定回撥值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T04:35:16.0005893Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.000049Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_categorykey" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1793,15 +1832,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_prefix" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the prefix value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定首碼值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T04:35:16.0005872Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000446Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_title" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1832,15 +1874,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectormsdyn_webresourcename" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Unique identifier for webresource name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Webresource 名稱的唯一識別碼]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T04:35:16.0005872Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000446Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnectorstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2365,93 +2410,114 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Macro solution related configurations]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[巨集解決方案相關設定]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0009638Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000401Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerfallbackurl" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets designer fallback url]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定設計師遞補 URL]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0009638Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000401Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentity" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the entity from which to read designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定要從中讀取設計師 URL 的實體]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0009638Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000401Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityattrib" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the attributes of designer url config entity]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定設計師 URL 設定實體的屬性]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0009638Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000401Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the id from which to read designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定要從中讀取設計師 URL 的識別碼]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0009638Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000401Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityquery" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[用於擷取要從中讀取設計師 URL 之記錄的 OData 查詢]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0009638Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000401Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlrelativepath" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the path to designer blob with designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[使用設計師 URL 設定設計師 Blob 的路徑]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0009616Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000401Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfigurationId" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2521,41 +2587,50 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_searchhint" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the value for serach hint]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定用於搜尋提示的值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0009616Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000349Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_uservoicelink" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the value for user voice link]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定用於使用者語音連結的值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0009616Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000349Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationmsdyn_uservoicetext" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
+          <Val><![CDATA[Sets the value for user voice text]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[設定用於使用者語音文字的值]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2019-10-09T13:54:52.0009616Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000349Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21129_20191007" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfigurationstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -5680,15 +5755,18 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_macrosessionModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Modified On]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[修改日期]]></Val>
+          <Val><![CDATA[Executed on]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[執行時間]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Modified On]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T04:35:16.0005851Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000243Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_macrosessionModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -5719,15 +5797,18 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_macrosessionOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Owner]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[負責人]]></Val>
+          <Val><![CDATA[User]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[使用者]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Owner]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T04:35:16.0005838Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000243Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_macrosessionOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8128,17 +8209,33 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
-      <Item ItemId=";68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E72}" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";68:Description,{6DDA9163-2590-4ECC-B6F2-55363E629054}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Create Macros]]></Val>
+          <Val><![CDATA[Expression builder for default agent script]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[建立巨集]]></Val>
+            <Val><![CDATA[預設專員底稿的運算式產生器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:24:00.0003442Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000111Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E72}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[巨集]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Create Macros]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000111Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E73}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8154,17 +8251,33 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
-      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";68:LocalizedName,{6DDA9163-2590-4ECC-B6F2-55363E629054}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Create macros]]></Val>
+          <Val><![CDATA[Expression builder]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[建立巨集]]></Val>
+            <Val><![CDATA[運算式產生器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:24:00.0003442Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000111Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[巨集]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Create macros]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000111Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E72}{505EF84E-0234-43DB-A095-AE2A87872170}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8206,17 +8319,33 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
-      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E73}{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E72}{fc52f700-f280-4190-8246-08a2d0c2bc8e}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Macros Monitor View]]></Val>
+          <Val><![CDATA[Run History]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[巨集監視器檢視表]]></Val>
+            <Val><![CDATA[執行歷程記錄]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T04:35:16.0005807Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000111Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24207_20200113" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E73}{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Run]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[巨集執行]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Macros Monitor View]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000111Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";68:label,{2E40DD90-2824-4524-B223-947052798E73}{BC53D472-1587-4980-944E-F55DFE5D3F1A}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -8243,6 +8372,32 @@
         <Modified By="v-rondai" DateTime="2020-01-17T04:35:16.0005807Z" />
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{6DDA9163-2590-4ECC-B6F2-55363E629054}{64C3B49F-EFDB-46D8-BF75-927F1DA0D89F}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro Designer]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[巨集設計師]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000081Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
+        </Props>
+      </Item>
+      <Item ItemId=";68:label,{6DDA9163-2590-4ECC-B6F2-55363E629054}{B8B207BF-42B4-4FB9-873F-2426B577352F}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Expression builder]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[運算式產生器]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:20.0000081Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
     </Item>

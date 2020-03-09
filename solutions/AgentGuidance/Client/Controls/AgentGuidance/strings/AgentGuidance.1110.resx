@@ -121,4 +121,12 @@
     <value>Axuda para axentes</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Non hai elementos configurados</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Parece que o administrador aínda non o configurou.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

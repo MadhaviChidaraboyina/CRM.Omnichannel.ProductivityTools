@@ -121,4 +121,12 @@
     <value>Richtlijn voor agent</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Geen items geconfigureerd</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Het ziet ernaar uit dat de beheerder dit nog niet heeft geconfigureerd.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

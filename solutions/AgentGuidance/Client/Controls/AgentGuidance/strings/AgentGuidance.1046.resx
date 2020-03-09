@@ -121,4 +121,12 @@
     <value>Diretrizes do agente</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Nenhum item configurado</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Parece que o administrador ainda não fez a configuração.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

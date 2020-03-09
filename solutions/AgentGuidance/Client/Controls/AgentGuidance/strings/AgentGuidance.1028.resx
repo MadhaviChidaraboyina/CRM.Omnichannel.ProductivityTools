@@ -121,4 +121,12 @@
     <value>專員指南</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>未設定任何項目</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>似乎您的管理員尚未進行相關設定。</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

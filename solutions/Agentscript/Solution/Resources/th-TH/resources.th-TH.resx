@@ -197,6 +197,10 @@
     <comment> 'Agentscript' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,Agentscript" xml:space="preserve">
+    <value>Agent scripts</value>
+    <comment> 'Agentscript' : LocalizedName for Solution</comment>
+  </data>
+  <data name="15062:LocalizedName,Agentscript" xml:space="preserve">
     <value>สคริปต์ตัวแทน</value>
     <comment> 'Agentscript' : LocalizedName for Solution</comment>
   </data>
@@ -437,11 +441,11 @@
     <comment>'msdyn_agentscript' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpression" xml:space="preserve">
-    <value />
+    <value>ตั้งค่าเพื่อเปิดใช้งานหรือปิดใช้งานนิพจน์การสร้าง</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for OptionSet 'msdyn_consoleapplicationsessiontemplate_msdyn_enablebuildexpression' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">
-    <value />
+    <value>ค่าที่ไม่ซ้ำเพื่อเปิดใช้งานหรือปิดใช้งานนิพจน์การสร้าง</value>
     <comment>'msdyn_consoleapplicationsessiontemplate' : Description for Attribute 'msdyn_enablebuildexpression' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_consoleapplicationsessiontemplatemsdyn_expressiondata" xml:space="preserve">
@@ -992,6 +996,10 @@
     <value>AnchorTab</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{093dd305-a7cc-d998-e489-ac60594b185e}'</comment>
   </data>
+  <data name="1:label,Session Templates{09700f80-4e1b-4f35-a2a9-0a5d37f7e4cf}" xml:space="preserve">
+    <value>ตั้งค่าสคริปต์ตัวแทนเริ่มต้น</value>
+    <comment>'Session Templates' : label for section in Entity FormXml ID: '{09700f80-4e1b-4f35-a2a9-0a5d37f7e4cf}'</comment>
+  </data>
   <data name="1:label,Session Templates{196dbc51-0ab0-1da7-555e-35cc732cbda3}" xml:space="preserve">
     <value>ชื่อ</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{196dbc51-0ab0-1da7-555e-35cc732cbda3}'</comment>
@@ -999,6 +1007,10 @@
   <data name="1:label,Session Templates{1d313718-4d90-7004-cbbc-d98c01d6c01d}" xml:space="preserve">
     <value>ปักหมุดไว้</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{1d313718-4d90-7004-cbbc-d98c01d6c01d}'</comment>
+  </data>
+  <data name="1:label,Session Templates{2154398b-bde8-698e-e2b9-7b5a959d2c2e}" xml:space="preserve">
+    <value>ข้อมูลนิพจน์</value>
+    <comment>'Session Templates' : label for cell in Entity FormXml ID: '{2154398b-bde8-698e-e2b9-7b5a959d2c2e}'</comment>
   </data>
   <data name="1:label,Session Templates{373754d5-d9aa-515a-d227-44bb7726cc44}" xml:space="preserve">
     <value>สคริปต์ตัวแทน</value>
@@ -1028,6 +1040,10 @@
     <value>ชื่อเรื่อง</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{85978531-3836-82b6-4471-e0ecbe36018c}'</comment>
   </data>
+  <data name="1:label,Session Templates{8EFB8D13-ACF6-4DA0-9EA6-4BBC445F3887}" xml:space="preserve">
+    <value>ข้อสงวนสิทธิ์</value>
+    <comment>'Session Templates' : label for cell in Entity FormXml ID: '{8EFB8D13-ACF6-4DA0-9EA6-4BBC445F3887}'</comment>
+  </data>
   <data name="1:label,Session Templates{b4c27572-1009-3a20-4cbd-4cc2cbc02738}" xml:space="preserve">
     <value>ส่วน</value>
     <comment>'Session Templates' : label for section in Entity FormXml ID: '{b4c27572-1009-3a20-4cbd-4cc2cbc02738}'</comment>
@@ -1047,6 +1063,10 @@
   <data name="1:label,Session Templates{d8c75080-1be0-30ce-1890-903eee8db7e6}" xml:space="preserve">
     <value>ไอคอน</value>
     <comment>'Session Templates' : label for cell in Entity FormXml ID: '{d8c75080-1be0-30ce-1890-903eee8db7e6}'</comment>
+  </data>
+  <data name="1:label,Session Templates{e62bb031-3e21-42dc-6561-7816d972cc57}" xml:space="preserve">
+    <value />
+    <comment>'Session Templates' : label for cell in Entity FormXml ID: '{e62bb031-3e21-42dc-6561-7816d972cc57}'</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_agentscriptentitymsdyn_agentscript" xml:space="preserve">
     <value>สคริปต์ตัวแทน</value>

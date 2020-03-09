@@ -121,4 +121,12 @@
     <value>Agendi juhised</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Ühtki üksust ei ole konfigureeritud</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Tundub, et administraator ei ole seda veel konfigureerinud.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

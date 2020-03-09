@@ -43,18 +43,21 @@
       </Item>
       <Item ItemId=";CollpaseMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Collpase]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+          <Val><![CDATA[Collapse]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
             <Val><![CDATA[Tolestu]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Collpase]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-06T02:05:09.0002773Z" />
+        <Modified By="v-loye" DateTime="2020-03-06T03:11:22.0006064Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Collapse message]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO25253_20200302" />
         </Props>
       </Item>
       <Item ItemId=";ExpandMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

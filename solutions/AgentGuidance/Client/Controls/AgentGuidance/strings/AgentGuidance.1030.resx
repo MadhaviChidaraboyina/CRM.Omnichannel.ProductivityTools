@@ -121,4 +121,12 @@
     <value>Vejledning til helpdesk-medarbejder</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Ingen elementer er konfigureret</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Det ser ud til, at administratoren ikke har konfigureret det endnu.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

@@ -121,4 +121,12 @@
     <value>Καθοδήγηση εκπροσώπου</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Δεν έχουν ρυθμιστεί στοιχεία</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Φαίνεται ότι ο διαχειριστής σας δεν έχει ρυθμίσει ακόμα τις παραμέτρους.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

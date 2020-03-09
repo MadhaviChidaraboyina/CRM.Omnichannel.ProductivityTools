@@ -121,4 +121,12 @@
     <value>에이전트 지침</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>구성된 항목 없음</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>관리자가 아직 구성하지 않은 것 같습니다.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

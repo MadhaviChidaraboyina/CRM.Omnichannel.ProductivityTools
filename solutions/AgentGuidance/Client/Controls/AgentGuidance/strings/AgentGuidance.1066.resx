@@ -121,4 +121,12 @@
     <value>Hướng dẫn tổng đài viên</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Không có mục nào được đặt cấu hình</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Có vẻ như quản trị viên của bạn vẫn chưa đặt cấu hình.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

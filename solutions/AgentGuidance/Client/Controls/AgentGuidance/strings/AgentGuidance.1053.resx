@@ -121,4 +121,12 @@
     <value>Vägledning för handläggare</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Inga objekt har konfigurerats</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Det verkar som om administratören ännu inte har konfigurerat några.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

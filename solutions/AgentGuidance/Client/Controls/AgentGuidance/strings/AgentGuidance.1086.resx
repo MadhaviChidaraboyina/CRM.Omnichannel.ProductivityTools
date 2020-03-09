@@ -121,4 +121,12 @@
     <value>Panduan ejen</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>Tiada item dikonfigurasikan</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>Nampaknya pentadbir anda belum mengkonfigurasikannya.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

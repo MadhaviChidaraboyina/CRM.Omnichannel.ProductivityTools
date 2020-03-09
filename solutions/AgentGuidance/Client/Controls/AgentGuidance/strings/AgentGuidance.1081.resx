@@ -121,4 +121,12 @@
     <value>एजेंट मार्गदर्शन</value>
     <comment>Header value for agentguidance control</comment>
   </data>
+  <data name="No_items_configured" xml:space="preserve">
+    <value>कोई आइटम कॉन्फ़िगर नहीं किया गया</value>
+    <comment>Header value for when no controls are configured</comment>
+  </data>
+  <data name="No_items_configured_message" xml:space="preserve">
+    <value>ऐसा लगता है कि आपके व्‍यवस्‍थापक ने अभी तक उसे कॉन्फ़िगर नहीं किया है.</value>
+    <comment>Message value for when no controls are configured</comment>
+  </data>
 </root>

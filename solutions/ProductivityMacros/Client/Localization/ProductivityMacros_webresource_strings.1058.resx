@@ -197,6 +197,14 @@
     <value>Зберегти</value>
     <comment>Action to save</comment>
   </data>
+  <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
+    <value>Save and close</value>
+    <comment>Action to save and close</comment>
+  </data>
+  <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Action to cancel</comment>
+  </data>
   <data name="MACRO_ACTION_SEARCH_BY_RELEVANCE" xml:space="preserve">
     <value>Пошук за відповідністю</value>
     <comment>Action to search by relevance</comment>
@@ -608,6 +616,26 @@
   <data name="msdyn_macroactiontemplate_msdyn_title_ce3390dd_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
     <value>Оновити наявний запис</value>
     <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Update form attribute</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Update form attribute</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Update form attribute</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Update form attribute</value>
+    <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" xml:space="preserve">
     <value>Розпочати виконання макросу</value>
