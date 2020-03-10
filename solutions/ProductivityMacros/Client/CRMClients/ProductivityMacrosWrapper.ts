@@ -163,7 +163,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 
     export function openKbArticle(actionName: string, entityFormOptions: any): Promise<String> {
         if (!(isNullOrUndefined(entityFormOptions) || entityFormOptions == "")) {
-            entityFormOptions.EntityId = "knowledgearticle";
+            entityFormOptions.EntityName = "knowledgearticle";
             return new Promise<any>((resolve, reject) => {
                 openExistingForm(actionName, entityFormOptions).then(
                     (result) => {
