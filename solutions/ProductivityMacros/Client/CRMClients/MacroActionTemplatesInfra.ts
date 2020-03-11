@@ -33,8 +33,8 @@ namespace Microsoft.ProductivityMacros.Internal {
                                 });
                             results[1].entities.forEach(
                                 function (value: any) {
-                                    ProductivityMacroOperation.macroConnectorTemplates.set(value["msdyn_prefix"], new ProductivityMacroConnector(
-                                        value["msdyn_prefix"],
+                                    ProductivityMacroOperation.macroConnectorTemplates.set(value["msdyn_prefix"].toLowerCase(), new ProductivityMacroConnector(
+                                        value["msdyn_prefix"].toLowerCase(),
                                         value["msdyn_callback"],
                                         value["msdyn_webresourcename"]
                                     ));
@@ -129,6 +129,9 @@ namespace Microsoft.ProductivityMacros.Internal {
                     require(resources, function (library: any) {
                         return resolve("success");
                     });
+                    requirejs.onError = function (err: any) {
+                        return reject(err);
+                    }
                 },
                 function (error) {
                     return reject(error);

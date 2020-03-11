@@ -42,17 +42,17 @@ namespace Microsoft.ProductivityMacros.Internal {
                 paramVals.set(param, "");
                 try {
                     let val = "";
-                    if (paramName.startsWith(SlugPrefix.SPLIT_BY_DOLLAR) && !(paramName.startsWith("$odata"))) {
+                    if (paramName.startsWith(SlugPrefix.SPLIT_BY_DOLLAR) && !(paramName.toLowerCase().startsWith("$odata"))) {
                         let prefixes: string[] = paramName.split(SlugPrefix.SPLIT_BY_DOT);
                         if (prefixes.length > 1) {
-                            var connector = Internal.ProductivityMacroOperation.macroConnectorTemplates.get(prefixes[0].substr(1));
+                            var connector = Internal.ProductivityMacroOperation.macroConnectorTemplates.get(prefixes[0].substr(1).toLowerCase());
                             if (!isNullOrUndefined(connector)) {
                                 slugCallbacks.push(connector.callback);
                                 paramName = stripSlugPrefix(paramName);
                             }
                         }
                     }
-                    if (slugCallbacks.length == 0) {
+                    if (!(paramName.toLowerCase().startsWith("$odata")) && slugCallbacks.length == 0) {
                         buildSlugCallbacks(slugCallbacks);
                     }
                     if (!isNullOrUndefined(templateParams) && templateParams.hasOwnProperty(scope) && templateParams[scope].hasOwnProperty(paramName)) {
@@ -66,7 +66,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                                 let executionpromise = slugCallbacks.reduce((accumulatorPromise, nextId) => {
                                     return accumulatorPromise.then(function (result: any) {
                                         if (result === undefined || result === "") {
-                                            return resolveSlugInCallback(nextId, paramName)
+                                            return Internal.resolveSlugInCallback(nextId, paramName)
                                         } else {
                                             return Promise.resolve(result)
                                         }
@@ -84,7 +84,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                        paramResolvers.push(promise);
                     }
 
-					if (paramName.startsWith("$odata")) {
+                    if (paramName.toLowerCase().startsWith("$odata")) {
 						//val is assumed to be of the format $odata.<entityLogicalName>.<entityAttributeName>.<query>
                         let queryParts: string[] = paramName.split(SlugPrefix.SPLIT_BY_DOT);
 						if (queryParts.length < 4) {
@@ -154,19 +154,19 @@ namespace Microsoft.ProductivityMacros.Internal {
     }
 
     function buildSlugCallbacks(slugCallbacks: string[]) {
-        var connector = Internal.ProductivityMacroOperation.macroConnectorTemplates.get("OC");  // Default callback
+        var connector = Internal.ProductivityMacroOperation.macroConnectorTemplates.get("oc");  // Default callback
         if (!isNullOrUndefined(connector)) {
                 slugCallbacks.push(connector.callback);
         }
         Internal.ProductivityMacroOperation.macroConnectorTemplates.forEach((value: ProductivityMacroConnector, key: string) => {
-            if (key != "OC" && !isNullOrUndefined(value.callback)) {  //already added
+            if (key!= "oc" && !isNullOrUndefined(value.callback)) {  //already added
                 slugCallbacks.push(value.callback);
             }
         });
     }
 
-    function resolveSlugInCallback(callback: string, paramName: string) {
-        return new Promise<any>((resolve, reject) => {
+    export function resolveSlugInCallback(callback: string, paramName: string) {
+        var slugPromise = new Promise<any>((resolve, reject) => {
             var callbackParams = stripCallbackParams(callback);
             if (callbackParams.length == 2) {
                 var callbackFun = new Function(callbackParams[0], callbackParams[1], "return " + callback);
@@ -183,12 +183,32 @@ namespace Microsoft.ProductivityMacros.Internal {
                 return reject(error);
             });
         });
+
+        const promiseTimeout = function (ms: any, promise: any) {
+
+            // Create a promise that rejects in <ms> milliseconds
+            let timeout = new Promise((resolve, reject) => {
+                let id = setTimeout(() => {
+                    clearTimeout(id);
+                    //TODO: log telemetry
+                    resolve("")
+                }, ms)
+            })
+
+            // Returns a race between our timeout and the passed in promise
+            return Promise.race([
+                promise,
+                timeout
+            ])
+        }
+
+        return promiseTimeout(1000, slugPromise);
     }
 
 	function stripSlugPrefix(param: string): string {
 		let splitTextArray = param.split(SlugPrefix.SPLIT_BY_DOT);
-		let len = splitTextArray.length;
-		return splitTextArray[len - 1];
+        let slug = splitTextArray[0]
+        return param.substr(slug.length +1);
     }
 
     function stripCallbackParams(param: string): string[] {

@@ -21,6 +21,9 @@
     <Content Include="CRMClients\Client.ts" />
     <Content Include="CRMClients\Constants.ts" />
     <Content Include="Constants.ts" />
+    <Content Include="UnitTests\libs\*" />
+    <Content Include="UnitTests\spec\*" />
+    <Content Include="UnitTests\SpecRunner.html" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="Constants.ts" />
     <TypeScriptCompile Include="CRMClients\LogicAppExecutor\Actions\IfAction.ts" />
