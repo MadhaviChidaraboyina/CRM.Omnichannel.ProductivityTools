@@ -35,6 +35,8 @@ module AgentScriptPackage
 	export class Constants
 	{
 		public static RequiredLevel = "required";
-		public static OptionalLevel = "none";
+        public static OptionalLevel = "none";
+        public static RecordIdParam = "record_Id";
+        public static CreateMacrosDialog = "CreateMacrosMDD";
 	}
 }
