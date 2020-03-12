@@ -157,12 +157,14 @@
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_create_session.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_email.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_email.svg.data.xml" />
-    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_agentConnector.svg" />
-    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_agentConnector.svg.data.xml" />
-    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_manualTrigger.svg" />
-    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_manualTrigger.svg.data.xml" />
-    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_setDefaultAction.svg" />
-    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_setDefaultAction.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_kb_article.svg"/>
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_open_kb_article.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_agentConnector.svg"/>
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_agentConnector.svg.data.xml"/>
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_manualTrigger.svg"/>
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_manualTrigger.svg.data.xml"/>
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_setDefaultAction.svg"/>
+    <Content Include="WebResources\MacroDesigner\AgentScriptDesigner\msdyn_ProductivityMacros_setDefaultAction.svg.data.xml"/>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Other\Customizations.xml">
