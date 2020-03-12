@@ -145,7 +145,7 @@ export class Macros {
                             inputParamType.msdyn_msdyn_paramdef_msdyn_actioninputparam.forEach(function (input) {
                                 let param: Parameter = {
                                     name: input.msdyn_name,
-                                    description: Utils.getResourceString(input.msdyn_description, responseLocale),
+                                    description: "---",
                                     title: Utils.getResourceString(input.msdyn_displayname, responseLocale),
                                     type: input.msdyn_parametertype,
                                     visibility: inputType.msdyn_visibility
@@ -176,7 +176,7 @@ export class Macros {
                             outputParamType.msdyn_msdyn_paramdef_msdyn_actionoutputparam.forEach(function (output) {
                                 let param: Parameter = {
                                     name: output.msdyn_name,
-                                    description: Utils.getResourceString(output.msdyn_description, responseLocale),
+                                    description: "",
                                     title: Utils.getResourceString(output.msdyn_displayname, responseLocale),
                                     type: output.msdyn_parametertype
                                 }
