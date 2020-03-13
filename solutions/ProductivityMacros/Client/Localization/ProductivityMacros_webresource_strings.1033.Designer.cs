@@ -495,9 +495,9 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                         "15920", resourceCulture);
             }
         }
-        
+                
         /// <summary>
-        ///   Looks up a localized string similar to Update form attribute.
+        ///   Looks up a localized string similar to This macro will autofill form fields based on the information you provide..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_37a95038_185a_ea11_a811_000d3a334e98 {
             get {
@@ -505,7 +505,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                         "34e98", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open kb article.
         /// </summary>
@@ -515,7 +515,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                         "eea62", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save the record.
         /// </summary>
@@ -662,16 +662,16 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_1c1af956_fad2_e911_a81e_000d3a015920", resourceCulture);
             }
         }
-        
+                
         /// <summary>
-        ///   Looks up a localized string similar to Update form attribute.
+        ///   Looks up a localized string similar to Autofill form fields.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_37a95038_185a_ea11_a811_000d3a334e98 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open kb article.
         /// </summary>
@@ -680,7 +680,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
@@ -815,7 +815,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_1c1af956_fad2_e911_a81e_000d3a015920", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
@@ -824,7 +824,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_37a95038-185a-ea11-a811-000d3a334e98", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
@@ -833,7 +833,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
             }
         }
-        
+         
         /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
@@ -970,14 +970,14 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update form attribute.
+        ///   Looks up a localized string similar to This macro will autofill form fields based on the information you provide..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_37a95038_185a_ea11_a811_000d3a334e98 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_37a95038-185a-ea11-a811-000d3a334e98", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open kb article.
         /// </summary>
@@ -986,7 +986,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save the record.
         /// </summary>
@@ -1121,16 +1121,16 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_1c1af956_fad2_e911_a81e_000d3a015920", resourceCulture);
             }
         }
-        
+                
         /// <summary>
-        ///   Looks up a localized string similar to Update form attribute.
+        ///   Looks up a localized string similar to Autofill form fields.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_title_37a95038_185a_ea11_a811_000d3a334e98 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_37a95038-185a-ea11-a811-000d3a334e98", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open kb article.
         /// </summary>
@@ -1139,7 +1139,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save the record.
         /// </summary>
