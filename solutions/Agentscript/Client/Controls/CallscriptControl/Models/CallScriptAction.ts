@@ -87,17 +87,34 @@ module MscrmControls.CallscriptControl {
 	 */
 	export class MacroAction extends CallScriptAction {
 		public macroId: string;
-		private macroName: string;
+        private macroName: string;
+        public configuredTextInstruction: string;
+        public resolvedTextInstruction: string;
 
-		constructor(macroId: string, macroName: string) {
+        constructor(macroId: string, macroName: string, macroDescription: string) {
 			super(CallscriptActionType.MacroAction);
 			this.macroId = macroId;
-			this.macroName = macroName;
+            this.macroName = macroName;
+            this.configuredTextInstruction = macroDescription;
+            this.resolvedTextInstruction = macroDescription;
 		}
 
 		public executeAction(macroUtil: MacroUtil): Promise<any> {
 			return macroUtil.executeMacro(this.macroName, this.macroId);
-		}
+        }
+
+        public resolveInstructionText(macroUtil: MacroUtil): Promise<string> {
+            macroUtil.resolveInitMacroTemplate();
+            return macroUtil.resolveReplaceableParameters(this.configuredTextInstruction);
+        }
+
+        public getResolvedTextInstruction(): string {
+            return this.resolvedTextInstruction;
+        }
+
+        public setResolvedInstructionText(resolvedText: string): void {
+            this.resolvedTextInstruction = resolvedText;
+        }
 	}
 
 	/**

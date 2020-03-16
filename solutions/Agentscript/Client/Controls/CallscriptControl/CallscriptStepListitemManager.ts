@@ -42,8 +42,8 @@ module MscrmControls.CallscriptControl {
 			if (isExpandedStep) {
 				this.expandedStepId = Constants.EmptyString;
 			}
-			else {
-                if (stepToExpand.action.actionType === CallscriptActionType.TextAction) {
+            else {
+                if (stepToExpand.action.actionType === CallscriptActionType.TextAction || stepToExpand.action.actionType === CallscriptActionType.MacroAction) {
                     stepToExpand.action.resolveInstructionText(this.macroUtil).then(
 						(resolvedInstructionText) => {
 							stepToExpand.action.setResolvedInstructionText(resolvedInstructionText);

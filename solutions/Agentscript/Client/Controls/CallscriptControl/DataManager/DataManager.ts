@@ -378,14 +378,15 @@ module MscrmControls.CallscriptControl
 
 						case AgentScriptStepActionType.MacroAction:
 							let macroId = entityRecord[AgentScriptStepEntity.msdyn_macroactionId];
-							let macroName = entityRecord[AgentScriptStepEntity.msdyn_macroactionName];
+                            let macroName = entityRecord[AgentScriptStepEntity.msdyn_macroactionName];
+                            let macroDescription = description;
 
 							if (this.context.utils.isNullOrUndefined(macroId))
 							{
 								this.logFieldError("StepsDataParser", id, AgentScriptStepEntity.msdyn_macroactionId);
 							}
 
-							stepAction = new MacroAction(macroId, macroName);
+                            stepAction = new MacroAction(macroId, macroName, macroDescription);
 							break;
 
 						case AgentScriptStepActionType.RouteAction:
