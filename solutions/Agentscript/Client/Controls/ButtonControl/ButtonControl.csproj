@@ -40,9 +40,11 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
-  <EmbeddedResource Include="strings\ButtonControl.1033.resx">
+  <ItemGroup>
+	  <EmbeddedResource Include="strings\ButtonControl.1033.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	  </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="CommonReferences.ts" />
     <TypeScriptCompile Include="ButtonControl.ts" />
