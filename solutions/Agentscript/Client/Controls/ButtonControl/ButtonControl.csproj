@@ -46,6 +46,13 @@
 	  </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="strings\ButtonControl.1033.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ButtonControl.1033.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <TypeScriptCompile Include="CommonReferences.ts" />
     <TypeScriptCompile Include="ButtonControl.ts" />
     <TypeScriptCompile Include="inputsOutputs.g.ts" />
