@@ -274,11 +274,20 @@ module MscrmControls.CallscriptControl {
 				this.setFocus();
 			}
 
+			let controlStyles = ControlStyle.getMainComponentStyle();
+			if (!this.context.utils.isNullOrUndefined(context.parameters["style"])) {
+				let styleProps = context.parameters["style"]["raw"];
+				if (Object.keys(styleProps).length != 0) {
+					for (let i in styleProps)
+						controlStyles[i] = styleProps[i];
+				}
+			}
+
 			return context.factory.createElement(
 				"CONTAINER", {
 					id: "CallScriptContainer",
 					key: "CallScriptContainer",
-					style: ControlStyle.getMainComponentStyle()
+					style: controlStyles
 				}, callscriptComponents);
 		}
 

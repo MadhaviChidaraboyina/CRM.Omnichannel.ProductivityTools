@@ -20,7 +20,7 @@ module MscrmControls.CallscriptControl {
 				paddingLeft: "14px",
 				paddingRight: "14px",
 				"::-webkit-scrollbar": {
-					width: "4px",
+					width: "7px",
 					visibility: "hidden"
 			   },
 				"::-webkit-scrollbar-thumb": {
