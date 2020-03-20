@@ -618,15 +618,15 @@
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
-    <value>Kemas kini atribut borang</value>
+    <value>Mengisi medan borang secara automatik</value>
     <comment>Macro Action Template Displayname</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
-    <value>Kemas kini atribut borang</value>
+    <value>Mengisi medan borang secara automatik</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
-    <value>Kemas kini atribut borang</value>
+    <value>Makro ini akan mengisi medan borang secara automatik berdasarkan maklumat yang anda berikan.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
@@ -634,7 +634,7 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
-    <value>Kemas kini atribut borang</value>
+    <value>Makro ini akan mengisi medan borang secara automatik berdasarkan maklumat yang anda berikan.</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" xml:space="preserve">
@@ -834,23 +834,23 @@
     <comment>Parameter definition Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>Open kb article</value>
+    <value>Buka artikel kb</value>
     <comment>Macro Action Template Displayname</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>Open kb article</value>
+    <value>Buka artikel kb</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>Open kb article</value>
+    <value>Buka artikel kb</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>Productivity automation</value>
+    <value>Automasi produktiviti</value>
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>Open kb article</value>
+    <value>Buka artikel kb</value>
     <comment>Macro Action Template Summary</comment>
   </data>
 </root>
