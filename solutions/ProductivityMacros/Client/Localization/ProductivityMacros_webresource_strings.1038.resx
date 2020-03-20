@@ -198,11 +198,11 @@
     <comment>Action to save</comment>
   </data>
   <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
-    <value>Save and close</value>
+    <value>Mentés és bezárás</value>
     <comment>Action to save and close</comment>
   </data>
   <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Mégse</value>
     <comment>Action to cancel</comment>
   </data>
   <data name="MACRO_ACTION_SEARCH_BY_RELEVANCE" xml:space="preserve">
@@ -618,23 +618,23 @@
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
-    <value>Update form attribute</value>
+    <value>Űrlapmezők automatikus kitöltése</value>
     <comment>Macro Action Template Displayname</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
-    <value>Update form attribute</value>
+    <value>Űrlapmezők automatikus kitöltése</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
-    <value>Update form attribute</value>
+    <value>Az Ön által megadott információk alapján a makró automatikusan kitölti a űrlapmezőket.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
-    <value>Productivity automation</value>
+    <value>Termelékenységi automatizálás</value>
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
-    <value>Update form attribute</value>
+    <value>Az Ön által megadott információk alapján a makró automatikusan kitölti a űrlapmezőket.</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" xml:space="preserve">
@@ -832,5 +832,25 @@
   <data name="msdyn_parameterdefinition_msdyn_displayname_fed739aa_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
     <value>Irányítópult azonosítója</value>
     <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Tudásbáziscikk megnyitása</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Tudásbáziscikk megnyitása</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Tudásbáziscikk megnyitása</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Tudásbáziscikk megnyitása</value>
+    <comment>Macro Action Template Summary</comment>
   </data>
 </root>

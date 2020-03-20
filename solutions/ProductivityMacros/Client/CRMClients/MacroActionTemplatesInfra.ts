@@ -146,38 +146,43 @@ namespace Microsoft.ProductivityMacros.Internal {
             return new Promise<any>((resolve, reject) => {
                 Xrm.WebApi.retrieveMultipleRecords("webresource", "?$select=name,dependencyxml,webresourceid&$filter=name%20eq%20%27" + webresourcename + "%27").then(
                     function (result) {
-                        result.entities.forEach(
-                            function (value, index, array) {
-                                let dependencyResources = getDependendency(value["dependencyxml"]);
-                                if (dependencyResources.length > 0) {
-                                    let promises: Promise<any>[] = [];
-                                    dependencyResources.forEach(
-                                        function (value, index, array) {
-                                            if (!(value in webresources)) {
-                                                if (isResx(value)) {
-                                                    webresources[value] = true;
-                                                } else {
-                                                    webresources[value] = false;
+                        if (result.entities.length > 0) {
+                            result.entities.forEach(
+                                function (value, index, array) {
+                                    let dependencyResources = getDependendency(value["dependencyxml"]);
+                                    if (dependencyResources.length > 0) {
+                                        let promises: Promise<any>[] = [];
+                                        dependencyResources.forEach(
+                                            function (value, index, array) {
+                                                if (!(value in webresources)) {
+                                                    if (isResx(value)) {
+                                                        webresources[value] = true;
+                                                    } else {
+                                                        webresources[value] = false;
+                                                        promises.push(findDepedency(value, webresources));
+                                                    }
+                                                } else if (webresources[value] == false) {
                                                     promises.push(findDepedency(value, webresources));
                                                 }
-                                            } else if (webresources[value] == false) {
-                                                promises.push(findDepedency(value, webresources));
                                             }
-                                        }
-                                    )
-                                    Promise.all(promises).then(
-                                        function (results: any[]) {
-                                            resolve("success");
-                                        },
-                                        function (error) {
-                                            return reject(error);
-                                        }
-                                    );
-                                } else {
-                                    resolve("success");
+                                        )
+                                        Promise.all(promises).then(
+                                            function (results: any[]) {
+                                                resolve("success");
+                                            },
+                                            function (error) {
+                                                return reject(error);
+                                            }
+                                        );
+                                    } else {
+                                        resolve("success");
+                                    }
                                 }
-                            }
-                        );
+                            );
+                        } else {
+                            console.log("Failed to find " + webresourcename);
+                            resolve("success"); //Resolving as success here as error as this point won't be caught in run history
+                        }
                     },
                     function (error) {
                         reject(error);

@@ -38,8 +38,29 @@ module AgentScriptPackage
 			}
 
 			// Set action fields based on action type values
-			this.setActionFields(executionContext, actionTypeValue, resetValue);
-		}
+            this.setActionFields(executionContext, actionTypeValue, resetValue);
+
+            // Set navigation for macro lookup 
+            (formContext.getControl(AgentScriptStepEntity.msdyn_macroactionid) as any).addOnLookupTagClick(this.openMacroRecord);
+        }
+
+        private openMacroRecord(executionContext: XrmClientApi.EventContext) {
+            (executionContext.getEventArgs() as any).preventDefault();
+
+            // Get the Currently Selected Record ID
+            let selectedRecordGuid = executionContext.getFormContext().getAttribute(AgentScriptStepEntity.msdyn_macroactionid).getValue()[0].id;
+            let vpHeight = (window.top as any).Xrm.Page.ui.getViewPortHeight();
+            let vpWidth = (window.top as any).Xrm.Page.ui.getViewPortWidth();
+            const dialogOptions: XrmClientApi.DialogOptions = {
+                width: vpWidth, height: vpHeight, position: XrmClientApi.Constants.WindowPosition.inline
+            };
+
+            const dialogParams: XrmClientApi.DialogParameters = {};
+            dialogParams[Constants.RecordIdParam] = selectedRecordGuid;
+
+            Xrm.Navigation.openDialog(Constants.CreateMacrosDialog, dialogOptions, dialogParams);
+
+        }
 
 		/**
 		 * Set various step action fields based on action type field selection

@@ -169,6 +169,7 @@
       <RootComponent type="61" schemaName="MacroDesigner/AgentScriptDesigner/msdyn_ProductivityMacros_setDefaultAction.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/AgentScriptDesigner/msdyn_ProductivityMacros_manualTrigger.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/AgentScriptDesigner/msdyn_ProductivityMacros_agentConnector.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_kb_article.svg" behavior="0" />
 			<RootComponent type="66" schemaName="MscrmControls.GridControl.MacroSessionAssociatedGridControl" behavior="0" />
 			<RootComponent type="66" schemaName="MscrmControls.RunLinkControl.RunLinkControl" behavior="0" />
       <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />

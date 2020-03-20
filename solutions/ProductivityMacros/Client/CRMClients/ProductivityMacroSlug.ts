@@ -103,8 +103,12 @@ namespace Microsoft.ProductivityMacros.Internal {
 									function (results: string[]) {
 										Xrm.WebApi.retrieveMultipleRecords(results[0], results[2], 1).then(
 											function (result) {
-												try {
-													paramVals.set(param, result.entities[0][results[1]]);
+                                                try {
+                                                    if (result.entities.length > 0) {
+                                                        paramVals.set(param, result.entities[0][results[1]]);
+                                                    } else {
+                                                        paramVals.set(param, "");
+                                                    }
 													console.log("Fullfilled odata for " + param + " got value " + paramVals.get(param));
 													return resolve(paramVals.get(param));
 												}

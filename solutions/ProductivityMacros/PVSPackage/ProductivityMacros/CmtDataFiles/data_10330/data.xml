@@ -151,7 +151,7 @@
         <field name="msdyn_name" value="Custom_Array" />
         <field name="msdyn_parameterdefinitionid" value="dc1db27b-b27e-4de3-ad4b-a1ba406de050" />
         <field name="msdyn_parametertype" value="array" />
-        <field name="msdyn_jsonobjectstructure" value='{"Name":{"title":"MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE","type":"string","description":"MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC"},"Value":{"title":"MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE","type":"string","description":"MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC"}}'/>
+        <field name="msdyn_jsonobjectstructure" value='{"Name":{"title":"MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE","type":"string","description":"---"},"Value":{"title":"MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE","type":"string","description":"---"}}'/>
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_dc1db27b_b27e_4de3_ad4b_a1ba406de050" />
@@ -217,6 +217,7 @@
           <targetid>c8d99e29-fad2-e911-a81e-000d3a015920</targetid>
           <targetid>d54edfed-fcd2-e911-a81e-000d3a015920</targetid>
           <targetid>4de2d295-9fdf-e911-a81e-000d3a0698dc</targetid>
+          <targetid>9ccab33c-3dab-430f-81f9-39fe082ffa28</targetid>
         </targetids>
       </m2mrelationship>
       <m2mrelationship sourceid="6e033082-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
@@ -452,6 +453,15 @@
         <field name="statuscode" value="1" />
         <field name="msdyn_visibility" value="important" />
       </record>
+      <record id="9ccab33c-3dab-430f-81f9-39fe082ffa28">
+        <field name="msdyn_actioninputparameterid" value="9ccab33c-3dab-430f-81f9-39fe082ffa28" />
+        <field name="msdyn_actiontemplateinputparameterid" value="2561bf45-e4e9-4940-8dcd-370705deea62" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Kb_Article" />
+        <field name="msdyn_name" value="open_kb_article_attributes_params_mandatory" />
+        <field name="msdyn_parametertype" value="False" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
     </records>
     <m2mrelationships />
   </entity>
@@ -533,6 +543,13 @@
         <field name="msdyn_name" value="Get_current_page_Output_Params" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
+      </record>
+      <record id="889d3f26-62c6-469a-88be-b58e2d59106e">
+        <field name="msdyn_actionoutputparameterid" value="889d3f26-62c6-469a-88be-b58e2d59106e" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="2561bf45-e4e9-4940-8dcd-370705deea62" lookupentity="msdyn_macroactiontemplate" lookupentityname="Open_Kb_Article" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_name" value="open_kb_article_attribute_output_param" />
       </record>
     </records>
     <m2mrelationships />
@@ -852,6 +869,22 @@
         <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" />
         <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_title_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" />
         <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_summary_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="2561bf45-e4e9-4940-8dcd-370705deea62">
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705deea62" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62" />
+        <field name="msdyn_macroconnector" value="" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_kb_article.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="2561bf45-e4e9-4940-8dcd-370705deea62" />
+        <field name="msdyn_name" value="Open_KB_Article" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.openKbArticle(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
     </records>

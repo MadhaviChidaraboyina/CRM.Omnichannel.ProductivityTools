@@ -197,6 +197,24 @@ namespace Microsoft.ProductivityMacros.Internal {
 
     }
 
+    export function openKbArticle(actionName: string, entityFormOptions: any): Promise<String> {
+        if (!(isNullOrUndefined(entityFormOptions) || entityFormOptions == "")) {
+            entityFormOptions.EntityName = "knowledgearticle";
+            return new Promise<any>((resolve, reject) => {
+                openExistingForm(actionName, entityFormOptions).then(
+                    (result) => {
+                        return resolve(result);
+                    },
+                    function (error: Error) {
+                        let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - openKbArticle", errorTypes.GenericError);
+                        logFailure("openKbArticle", errorObject, "");
+                        return reject(error.message);
+                    }
+                );
+            })
+        }
+    }
+
     export function draftEmail(actionName: string, entityFormData: any): Promise<string> {
         if (!(isNullOrUndefined(entityFormData) || entityFormData == "")) {
             // Create new array
