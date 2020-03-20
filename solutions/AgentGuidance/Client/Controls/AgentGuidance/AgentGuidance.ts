@@ -239,8 +239,14 @@ module MscrmControls.ProductivityToolAgentGuidance {
                             Static: true,
                             Value: sessionContextJSON,
                             Primary: false,
+                        },
+                        style: {
+                            Usage: 1,
+                            Static: true,
+                            Value: { paddingBottom: "40px" },
+                            Primary: false
                         }
-                    },
+                    }                    
                 }
             };
 

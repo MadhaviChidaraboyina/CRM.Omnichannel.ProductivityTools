@@ -34,6 +34,7 @@ module MscrmControls.ProductivityPanel {
 		padding: 2px;
 		padding-right: 14px;
 		padding-bottom: 5px;
+		overflow-y: auto;
 	}
 	
 	.card-new {
