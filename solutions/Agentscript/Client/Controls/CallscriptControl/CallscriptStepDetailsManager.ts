@@ -210,7 +210,7 @@ module MscrmControls.CallscriptControl {
 				key: "CallScriptStepDescription-" + step.id + "-Key",
 				id: "CallScriptStepDescription-" + step.id + "-Id",
 				style: ControlStyle.getActionTextStyle(step.executionStatus, this.context)
-			}, step.stepDescription);
+            }, step.action.getResolvedTextInstruction());
 		}
 
 		/**
