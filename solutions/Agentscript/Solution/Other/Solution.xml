@@ -150,7 +150,51 @@
       <RootComponent type="61" schemaName="msdyn_AgentScriptStepFormScript.js" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_AgentscriptFormScript.js" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_agentscripticon" behavior="0" />
-	  <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1033.resx" behavior="0" />
+	    <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1033.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1025.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1026.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1027.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1028.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1029.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1030.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1031.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1032.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1035.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1036.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1037.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1038.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1040.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1041.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1042.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1043.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1044.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1045.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1046.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1048.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1049.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1050.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1051.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1053.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1054.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1055.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1057.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1058.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1060.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1061.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1062.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1063.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1066.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1069.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1081.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1086.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1087.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1110.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.2052.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.2070.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.2074.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.3076.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.3082.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.3098.resx" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_SetDefaultAgentScriptHelpText.html" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.CallscriptControl.CallscriptControl" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.ButtonControl.ButtonControl" behavior="0" />

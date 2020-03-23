@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+ <WebResourceId>{7EE69DD0-B1B7-4321-AA3A-7456B9AD824A}</WebResourceId>
+ <Name>Localization/msdyn_Agentscript.1032.resx</Name>
+ <DisplayName>Localization/msdyn_Agentscript.1032.resx</DisplayName>
+ <LanguageCode>1032</LanguageCode>
+ <WebResourceType>12</WebResourceType>
+ <IntroducedVersion>1.0.0.1</IntroducedVersion>
+ <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+ <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+ <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+ <IsCustomizable>1</IsCustomizable>
+ <CanBeDeleted>1</CanBeDeleted>
+ <IsHidden>0</IsHidden>
+ <FileName>/WebResources/Localization/msdyn_Agentscript1032resx7EE69DD0-B1B7-4321-AA3A-7456B9AD824A</FileName>
+</WebResource>
