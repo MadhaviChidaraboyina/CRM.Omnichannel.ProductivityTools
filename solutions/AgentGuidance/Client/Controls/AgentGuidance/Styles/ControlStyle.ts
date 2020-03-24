@@ -85,14 +85,16 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 fontFamily: "Segoe UI",
                 fontSize: "18px",
                 lineHeight: "20px",
-                textAlign: "center"
+                textAlign: "center",
+                display: "block"
             }
         }
 
         public static agentGuidanceErroContainerStyle() {
             return {
                 position: "absolute",
-                top: "40%"
+                top: "40%",
+                display: "block"
             }
         }
      
