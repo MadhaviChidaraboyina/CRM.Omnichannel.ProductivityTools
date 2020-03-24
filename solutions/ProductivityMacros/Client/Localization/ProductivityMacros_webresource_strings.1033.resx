@@ -850,7 +850,7 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>You’ll need to enter the entity ID to open the knowledge base article.</value>
+    <value>Open knowledge base article</value>
     <comment>Macro Action Template Summary</comment>
   </data>
 </root>
