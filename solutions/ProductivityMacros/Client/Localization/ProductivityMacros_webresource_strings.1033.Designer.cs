@@ -465,7 +465,29 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string MACRO_ACTION_CANCEL
+        {
+            get
+            {
+                return ResourceManager.GetString("MACRO_ACTION_CANCEL", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string MACRO_ACTION_SAVE_AND_CLOSE
+        {
+            get
+            {
+                return ResourceManager.GetString("MACRO_ACTION_SAVE_AND_CLOSE", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Open a new form to create a record..
         /// </summary>
