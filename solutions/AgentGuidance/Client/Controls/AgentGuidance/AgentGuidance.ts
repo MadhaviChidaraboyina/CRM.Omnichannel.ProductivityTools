@@ -144,7 +144,9 @@ module MscrmControls.ProductivityToolAgentGuidance {
                     id: Constants.agentGuidance_error_icon_id,
                     source: Constants.agentGuidance_error_icon,
                     style: {
-                        verticalAlign: "middle"
+                        verticalAlign: "middle",
+                        display: "block",
+                        margin: "auto"
                     }
                 });
 
@@ -163,7 +165,8 @@ module MscrmControls.ProductivityToolAgentGuidance {
                             id: Constants.agentGuidance_not_configured,
                             key: Constants.agentGuidance_not_configured,
                             style:{
-                                textAlign: "center"
+                                textAlign: "center",
+                                display: "block"
                             }
                         },
                         this.context.resources.getString(Constants.noConfigMessageResourceKey));  
