@@ -122,11 +122,11 @@
     <comment>Button to build an expression</comment>
   </data>
   <data name="CC_ButtonControl_Name" xml:space="preserve">
-    <value>Nút Xây dựng Biểu thức</value>
+    <value>Nút xây dựng biểu thức</value>
     <comment>Build Expression Button</comment>
   </data>
   <data name="CC_Build_Expression" xml:space="preserve">
-    <value>Xây dựng Biểu thức</value>
+    <value>Xây dựng biểu thức</value>
     <comment>Build Expression</comment>
   </data>
   <data name="CC_Field" xml:space="preserve">

@@ -122,7 +122,7 @@
     <comment>Button to build an expression</comment>
   </data>
   <data name="CC_ButtonControl_Name" xml:space="preserve">
-    <value>Knapp for bygging av et uttrykk</value>
+    <value>Knappen Bygg uttrykk</value>
     <comment>Build Expression Button</comment>
   </data>
   <data name="CC_Build_Expression" xml:space="preserve">

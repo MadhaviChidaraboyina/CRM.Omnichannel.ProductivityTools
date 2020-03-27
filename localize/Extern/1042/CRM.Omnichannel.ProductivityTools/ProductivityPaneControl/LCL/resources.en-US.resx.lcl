@@ -50,15 +50,18 @@
       </Item>
       <Item ItemId=";15062:Description,ProductivityPaneControl" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Dynamics 365 ProductivityPaneControl workload]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+          <Val><![CDATA[Dynamics 365 Productivity Pane Control workload]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
             <Val><![CDATA[Dynamics 365 생산성 창 컨트롤 작업 부하]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Dynamics 365 ProductivityPaneControl workload]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0009077Z" />
+        <Modified By="v-rondai" DateTime="2020-03-26T06:17:32.0001827Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO27160_20200323" />
         </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,ProductivityPaneControl" ItemType="0;.resx" PsrId="211" Leaf="true">

@@ -11,7 +11,7 @@
       <Disp Icon="Str" LocTbl="false" />
       <Item ItemId=";CC_Build_Expression" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Build Expression]]></Val>
+          <Val><![CDATA[Build expression]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -29,7 +29,7 @@
       </Item>
       <Item ItemId=";CC_ButtonControl_Name" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Build Expression Button]]></Val>
+          <Val><![CDATA[Build expression button]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>

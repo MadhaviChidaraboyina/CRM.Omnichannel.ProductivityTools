@@ -145,7 +145,7 @@
     <comment>msdyn_productivitypaneconfiguration Description for EntityRelationship 'organization_msdyn_productivitypaneconfiguration'</comment>
   </data>
   <data name="15062:Description,ProductivityPaneControl" xml:space="preserve">
-    <value>Dynamics 365 – delovne naloge za kontrolnik podokna za storilnost</value>
+    <value>Dynamics 365 – delovna naloga za kontrolnik podokna za storilnost</value>
     <comment> 'ProductivityPaneControl' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">

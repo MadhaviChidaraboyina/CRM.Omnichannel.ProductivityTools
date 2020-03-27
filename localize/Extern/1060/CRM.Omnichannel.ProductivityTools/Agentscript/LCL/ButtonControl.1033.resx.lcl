@@ -11,18 +11,21 @@
       <Disp Icon="Str" LocTbl="false" />
       <Item ItemId=";CC_Build_Expression" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Build Expression]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+          <Val><![CDATA[Build expression]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
             <Val><![CDATA[Sestavljanje izraza]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Build Expression]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T11:06:15.0009329Z" />
+        <Modified By="v-rondai" DateTime="2020-03-26T06:17:32.0008001Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Build Expression]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO27160_20200323" />
         </Props>
       </Item>
       <Item ItemId=";CC_ButtonControl_Desc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -43,18 +46,21 @@
       </Item>
       <Item ItemId=";CC_ButtonControl_Name" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Build Expression Button]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+          <Val><![CDATA[Build expression button]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
             <Val><![CDATA[Gumb za sestavljanje izrazov]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Build Expression Button]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-05T11:06:15.0009329Z" />
+        <Modified By="v-rondai" DateTime="2020-03-26T06:17:32.0008001Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Build Expression Button]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO27160_20200323" />
         </Props>
       </Item>
       <Item ItemId=";CC_Field" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

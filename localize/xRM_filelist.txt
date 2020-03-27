@@ -1,4 +1,16 @@
-!RelativeFilePath,ComponentName(in \Localize\Extern\[LCID]\[RepoName]\[ComponentName])
+!  note: 
+!   a. Keep the list sorted
+!   b. Ensure to avoid filename conflict in side of [ComponentName] which is a folder to put the files together to prevent potential MAX_PATH issue during localization process
+!      for instance, following two entries cause a conflict because the target folder("ProductivityPaneControl") and the file name("ProductivityPaneControl.1033.resx") are the same
+!        solutions\ProductivityPaneControl\Client\Localization\Languages\ProductivityPaneControl.1033.resx,ProductivityPaneControl
+!        solutions\ProductivityPaneControl\Solution\WebResources\ProductivityPaneControl.1033.resx,ProductivityPaneControl
+!   c. Localizable strings in 'data.xml/data_cannedmessage.xml/data_localized.xml' will be extracted to 'data.json/data_cannedmessage.json/data_localized.json'
+!      based on respective rule file 'data_rules.xml/data_cannedmessage_rules.xml/data_localized_rules.xml' during localization process
+!      so keep them in consecutive order as putting '!' on 'data*.xml' entry in the list for maintainability and readability reasons
+!      for instance
+!        !solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.xml,ProductivityTools
+!        solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.json,ProductivityTools
+!
 solutions\AgentGuidance\Client\Controls\AgentGuidance\strings\AgentGuidance.1033.resx,AgentGuidance
 solutions\AgentGuidance\Solution\Resources\en-US\resources.en-US.resx,AgentGuidance
 solutions\Agentscript\Client\Controls\ButtonControl\strings\ButtonControl.1033.resx,Agentscript

@@ -145,7 +145,7 @@
     <comment>msdyn_productivitypaneconfiguration Description for EntityRelationship 'organization_msdyn_productivitypaneconfiguration'</comment>
   </data>
   <data name="15062:Description,ProductivityPaneControl" xml:space="preserve">
-    <value>Работно натоварване на ProductivityPaneControl на Dynamics 365</value>
+    <value>Работно натоварване на контрола на екран за продуктивност на Dynamics 365</value>
     <comment> 'ProductivityPaneControl' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">

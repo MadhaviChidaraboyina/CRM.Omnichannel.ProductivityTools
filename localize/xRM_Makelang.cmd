@@ -97,7 +97,7 @@ for /f "usebackq  eol=! tokens=1,2 delims=," %%i in (%~dp0xRM_filelist.txt) do (
         if exist "%xRM_SRCPATH%\!xRM_TRG!" del "%xRM_SRCPATH%\!xRM_TRG!" /f /q
         call powershell -noprofile %~dp0DataXml2json.ps1 -mode generate -sourceDataxmlPath %xRM_SRCPATH%\!xRM_SRC! -referenceFilePath %~dp0%%~ni_rules.xml -jsonFilePath %xRM_SRCPATH%\!xRM_TRG!
     )
-    call :Get_RelativePath "%xRM_SRCPATH%\%%i" %xRM_charcount% %%j
+    call :Get_RelativePath "%xRM_SRCPATH%\%%i" %xRM_charcount% "%%j"
 )
 endlocal
 
@@ -230,6 +230,23 @@ if Exist "%xRM_TMPPATH%\target.txt" (
                     set xRM_TARGETFILE=!xRM_FILE:en-US=%xRM_CULTURE_NAME%!
                     set xRM_PATH=!xRM_PATH:en-US=%xRM_CULTURE_NAME%!
                     set xRM_TARGET=!xRM_TARGET:en-US=%xRM_CULTURE_NAME%!
+                ) else (
+                    if /i "!xRM_PATH:CmtDataFiles\data_=!" == "!xRM_PATH!" (
+                        REM 'CmtDataFiles\data_[lcid]\data.xml' file name doesn't change so only if path doesn't contain 'CmtDataFiles\data_',
+                        REM Add [ll-cc] in the filename as default behavior
+                        REM  note: %%~no (filename only), %%~xo (file extention only) and %%~dpo (target path without filename & file extention)
+                        set FILE_NAME=%%~no
+                        set FILE_EXTENTION=%%~xo
+                        set TARGET_PATHONLY=%%~dpo
+
+                        REM   FILE_NAME        Sample
+                        REM   FILE_EXTENTION   .resx
+                        REM   TARGET_PATHONLY  D:\OneCRM\CRM.OmniChannel.C1Provisioning\solutions\OmnichannelBase\Client\Localization\Languages\
+                        REM   xRM_TARGETFILE   Sample.de-DE.resx
+                        REM   xRM_TARGET       D:\OneCRM\CRM.OmniChannel.C1Provisioning\solutions\OmnichannelBase\Client\Localization\Languages\Sample.de-DE.resx
+                        set xRM_TARGETFILE=!FILE_NAME!.%xRM_CULTURE_NAME%!FILE_EXTENTION!
+                        set xRM_TARGET=!TARGET_PATHONLY!!xRM_TARGETFILE!
+                    )
                 )
             )
             if /i "/Pseudo"=="%xRM_PL_FULL%" (
@@ -249,7 +266,7 @@ if Exist "%xRM_TMPPATH%\target.txt" (
                     echo call powershell -noprofile %~dp0DataXml2json.ps1 -mode importjson -sourceDataxmlPath "!xRM_SOURCE!" -referenceFilePath %~dp0%%~no_rules.xml -jsonFilePath "%xRM_TMPPATH%\%xRM_LCID%\!xRM_PATH!\!xRM_FILE!" -outputDataXmlPath !xRM_TARGET!>>%xRM_TMPPATH%\genXML.cmd
                 ) else ( 
                     REM Generate copy command
-                    echo call copy "%xRM_TMPPATH%\%xRM_LCID%!xRM_PATH!!xRM_FILE!" !xRM_TARGET! /Y>>%xRM_TMPPATH%\copytarget.cmd
+                    echo call copy "%xRM_TMPPATH%\%xRM_LCID%!xRM_PATH!!xRM_FILE!" "!xRM_TARGET!" /Y>>%xRM_TMPPATH%\copytarget.cmd
                 )
             ) else (
                 if NOT DEFINED xRM_BASEDONE (
@@ -358,9 +375,9 @@ if not 2==%ch% (
 )
     if not exist "%xRM_TMPPATH%" md "%xRM_TMPPATH%"
     if DEFINED xRM_TCOMP (
-        if /I %3 EQU %xRM_TCOMP% echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%,%3
+        if /I %3 EQU %xRM_TCOMP% echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%,%~3
     ) else (
-        echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%,%3
+        echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%,%~3
     )
 exit /b
 

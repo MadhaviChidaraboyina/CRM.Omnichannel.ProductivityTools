@@ -122,7 +122,7 @@
     <comment>Button to build an expression</comment>
   </data>
   <data name="CC_ButtonControl_Name" xml:space="preserve">
-    <value>הלחצן 'בנה ביטוי'</value>
+    <value>לחצן 'בנה ביטוי'</value>
     <comment>Build Expression Button</comment>
   </data>
   <data name="CC_Build_Expression" xml:space="preserve">

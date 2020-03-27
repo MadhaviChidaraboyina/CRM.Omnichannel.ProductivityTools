@@ -122,11 +122,11 @@
     <comment>Button to build an expression</comment>
   </data>
   <data name="CC_ButtonControl_Name" xml:space="preserve">
-    <value>Tombol Bangun Ekspresi</value>
+    <value>Tombol ekspresi build</value>
     <comment>Build Expression Button</comment>
   </data>
   <data name="CC_Build_Expression" xml:space="preserve">
-    <value>Bangun Ekspresi</value>
+    <value>Ekspresi build</value>
     <comment>Build Expression</comment>
   </data>
   <data name="CC_Field" xml:space="preserve">
