@@ -79,4 +79,13 @@ module MscrmControls.ProductivityPanel.Smartassist {
 		public static ConversationStateManager = "ConversationStateManager";
 		public static AdaptiveCardHelper = "AdaptiveCardHelper";
 	}
+
+	export class CustomActionConstants {
+		// OOB CustomActions - KB
+		public static SendKB: string = "SendKB";
+		public static OpenKB: string = "OpenKB";
+
+		// CIF Event to copy to conversation control
+		public static onSendKBEvent: string = "onsendkbarticle";
+	}
 }

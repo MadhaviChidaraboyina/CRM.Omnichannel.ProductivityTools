@@ -24,7 +24,7 @@ module MscrmControls.ProductivityPanel.Smartassist {
 			setTimeout(() => {
 				if (this.getState(conversationId, cardId) !== CardStates.Applied && this.getState(conversationId, cardId) !== CardStates.Applied) {
 					self.SetState(conversationId, cardId, CardStates.Default);
-					SmartAssistManager.Instance.ReRenderCards();
+					SmartAssistManager.Instance.ReRenderCards(SmartassistControl.isRTL);
 				}
 			}, 5000);
 		}

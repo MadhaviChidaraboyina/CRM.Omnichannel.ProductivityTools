@@ -28,6 +28,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="CommonReferences.ts" />
     <TypeScriptCompile Include="css\SmartAssistTemplate.ts" />
+    <TypeScriptCompile Include="CustomActionManager.ts" />
     <TypeScriptCompile Include="StateManagement\CardStateManager.ts" />
     <TypeScriptCompile Include="Utils\AdaptiveCardHelper.ts" />
     <TypeScriptCompile Include="SmartAssistManager.ts" />

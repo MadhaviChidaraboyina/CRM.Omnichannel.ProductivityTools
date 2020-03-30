@@ -11,6 +11,7 @@ module MscrmControls.ProductivityPanel {
 
 		private smartAssistContainer: HTMLDivElement = null;
 		public static _context: Mscrm.ControlData<IInputBag> = null;
+		public static isRTL: boolean = false;
         private telemetryReporter: Smartassist.TelemetryLogger;
 		/**
 		 * Empty constructor.
@@ -47,6 +48,9 @@ module MscrmControls.ProductivityPanel {
 					localStorage.setItem(Smartassist.Constants.SessionCloseHandlerId, handlerId);
 					let logger = new Smartassist.TelemetryLogger(context);
 					Smartassist.SmartAssistManager.Instance.SetLogger(logger);
+					if (context.client.isRTL) {
+						SmartassistControl.isRTL = true;
+					}
 					SmartassistControl._context = context;
 					this.smartAssistContainer = container;
 					var el: HTMLDivElement = document.createElement("div");
@@ -77,7 +81,7 @@ module MscrmControls.ProductivityPanel {
 			SmartassistControl._context = context;
 
 			// If coming from a session switch, re-render cards from storage
-			Smartassist.SmartAssistManager.Instance.ReRenderCards();
+            Smartassist.SmartAssistManager.Instance.ReRenderCards(SmartassistControl.isRTL);
 		}
 
 		/** 
