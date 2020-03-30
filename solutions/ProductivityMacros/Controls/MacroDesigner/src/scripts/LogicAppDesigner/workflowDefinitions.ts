@@ -5,6 +5,7 @@ import { Category } from "../DesignerDefinitions";
 import { LogicAppsCategories } from "./hostService";
 
 export class Macros {
+    public static header = Utils.getResourceString("LADESIGNER_START_SUMMARY");
     public static definition = {
         "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json",
         "actions": {
@@ -20,19 +21,20 @@ export class Macros {
                 "type": "If"
             }
         },
-        triggers: {
-            "Start_evaluating_expression__": {
-                "type": "start",
-                "inputs": {
-                    "schema": {
-                        "type": "object",
-                        "required": [],
-                        "properties": {}
-                    }
-                }
+        triggers: {  
+        }
+    };
+    public static start_data = {
+        "type": "start",
+        "inputs": {
+            "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {}
             }
         }
     };
+    
     public static async getActionTemplates(): Promise<LogicAppDesignerTemplateConfig> {
         let actions = CustomOperations.CustomActions;
         let triggers = CustomOperations.CustomTriggers;
@@ -51,6 +53,8 @@ export class Macros {
     }
     public static async getDefinition() {
         let id = Utils.getUrlParam(Constants.MACRO_ID);
+        Macros.definition.triggers[Macros.header] = Macros.start_data;
+
         if (!id) {
             return { definition: Macros.definition, name: "", description: "", id: "" };
         }
