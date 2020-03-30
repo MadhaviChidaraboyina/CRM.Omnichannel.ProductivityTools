@@ -177,8 +177,8 @@ module MscrmControls.CallscriptControl
 			}
         }
 
-        public resolveInitMacroTemplate() {
-            this.initMacroActionTemplatesPromise.then(
+        public async resolveInitMacroTemplate() {
+            await this.initMacroActionTemplatesPromise.then(
                 function (value) {
                     MacroUtil.isInitMacroActionTemplates = value;
                 },
