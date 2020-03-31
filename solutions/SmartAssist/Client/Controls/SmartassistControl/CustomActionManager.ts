@@ -14,6 +14,7 @@ module MscrmControls.ProductivityPanel.Smartassist {
 		 * kbLink - KBSearch
 		 * recordId - RecordId for CustomAction OpenForm/OpenCase
 		 * entityName - Logical Name of the entity for CustomAction OpenForm
+		 * data - Other entity fields
 		 **/
 		public Parameters: any = {};
 		public isValidAction: boolean = false;
@@ -44,7 +45,7 @@ module MscrmControls.ProductivityPanel.Smartassist {
 		 * Validate whethere Parameters contains the following data
 		 * kbLink - KBSearch
 		 * recordId - RecordId for CustomAction OpenForm/OpenCase
-		 * entityName - Logical Name of the entity for CustomAction OpenForm
+		 * entityName - Logical Name of the entity for CustomAction OpenForm/CreateEntity/CloneCase
 		 **/
 		private ValidateCustomAction(): void {
 			switch (this.Name) {
@@ -110,8 +111,6 @@ module MscrmControls.ProductivityPanel.Smartassist {
 
 		/*
 		 * Custom Action to open Form in App tab using CIF
-		 * @params entityLogicalName Entity Logical Name
-		 * @params recordId Record Id
 		 **/
 		public CustomActionOpenForm() {
 
@@ -145,7 +144,6 @@ module MscrmControls.ProductivityPanel.Smartassist {
 
 		/*
 		 * Custom Action to create entity. This opens up create form in a new tab with the prefilled data
-		 * Parameters should passed in data
 		 **/
 		public CustomActionCreateEntity() {
 
