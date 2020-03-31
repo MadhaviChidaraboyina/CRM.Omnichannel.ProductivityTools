@@ -88,7 +88,16 @@ module MscrmControls.ProductivityPanel.Smartassist {
 
 		/*
 		 * Custom Action to Copy to conversation control
-		 * (i.e) Copies the URL to conversation control
+		 * Sample action button json
+		 * {
+			"type" : "Action.Submit",
+			"title" : "Send",
+			"data" : {
+				"CustomAction" : "SendKB",
+				"CustomParameters" : {
+					"kbLink" : "https://ocddemoebc.powerappsportals.com/knowledgebase/article/KA-01011/en-us"
+				}
+			}
 		 **/
 		public CustomActionSendKB(): any {
 			let evt = new CustomEvent(CustomActionConstants.onSendKBEvent, {
@@ -103,6 +112,17 @@ module MscrmControls.ProductivityPanel.Smartassist {
 
 		/*
 		 * Custom Action to open KB article in a new browser tab
+		 * Sample action button json:
+			{
+			"type" : "Action.Submit",
+			"title" : "Open",
+			"data" : {
+				"CustomAction" : "OpenKB",
+				"CustomParameters" : {
+					"entityId" : "8d443ab8-b581-445a-90e8-2a36de67ca58",
+					"kbLink" : "https://ocvaebc.powerappsportals.com/knowledgebase/article/KA-01057/en-us"
+				}
+			}
 		 **/
 		public CustomActionOpenKB(): any {
 			window.open(this.Parameters.kbLink);
@@ -111,6 +131,19 @@ module MscrmControls.ProductivityPanel.Smartassist {
 
 		/*
 		 * Custom Action to open Form in App tab using CIF
+		 * Sample action button json:
+		 * {
+			"type": "Action.Submit",
+			"title": "Open",
+			"data": {
+				"CustomAction": "OpenCase",
+				"CustomParameters": {
+					"entityName": "incident",
+					"entityId": "c3356c37-bba6-4067-b1a1-8c66e1c203a1",
+					"data": {}
+				}
+			}
+		}
 		 **/
 		public CustomActionOpenForm() {
 
@@ -144,6 +177,20 @@ module MscrmControls.ProductivityPanel.Smartassist {
 
 		/*
 		 * Custom Action to create entity. This opens up create form in a new tab with the prefilled data
+		 * Sample action button json:
+		 * {
+			"type" : "Action.Submit",
+			"title" : "Clone Case",
+			"data" : {
+				"CustomAction" : "CloneCase",
+				"CustomParameters": {
+					"entityName": "incident",
+					"data": {
+					"title" : "Cloned case - Offer free replacement",
+					}
+				}
+			}
+		}
 		 **/
 		public CustomActionCreateEntity() {
 
