@@ -41,10 +41,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="strings\ButtonControl.1033.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ButtonControl.1033.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+	  <EmbeddedResource Include="strings\ButtonControl.1033.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	  </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="strings\ButtonControl.1033.Designer.cs">

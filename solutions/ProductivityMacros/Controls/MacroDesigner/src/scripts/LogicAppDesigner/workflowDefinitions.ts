@@ -5,34 +5,38 @@ import { Category } from "../DesignerDefinitions";
 import { LogicAppsCategories } from "./hostService";
 
 export class Macros {
+    public static start_header = Utils.getResourceString("LADESIGNER_START_SUMMARY");
+    public static condition_header = Utils.getResourceString("LADESIGNER_CONDITION_SUMMARY");
     public static definition = {
         "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json",
-        "actions": {
-            "Condition": {
-                "actions": {},
-                "expression": {
-                    "and": [{
-                            "equals": ["", ""]
-                        }
-                    ]
-                },
-                "runAfter": {},
-                "type": "If"
-            }
+        actions: {
         },
-        triggers: {
-            "Start_evaluating_expression__": {
-                "type": "start",
-                "inputs": {
-                    "schema": {
-                        "type": "object",
-                        "required": [],
-                        "properties": {}
-                    }
-                }
+        triggers: {  
+        }
+    };
+    public static start_data = {
+        "type": "start",
+        "inputs": {
+            "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {}
             }
         }
     };
+
+    public static condition_data = {
+        "actions": {},
+        "expression": {
+            "and": [{
+                    "equals": ["", ""]
+                }
+            ]
+        },
+        "runAfter": {},
+        "type": "If"
+    };
+    
     public static async getActionTemplates(): Promise<LogicAppDesignerTemplateConfig> {
         let actions = CustomOperations.CustomActions;
         let triggers = CustomOperations.CustomTriggers;
@@ -51,6 +55,10 @@ export class Macros {
     }
     public static async getDefinition() {
         let id = Utils.getUrlParam(Constants.MACRO_ID);
+        Macros.definition.triggers[Macros.start_header] = Macros.start_data;
+        Macros.definition.actions[Macros.condition_header] = Macros.condition_data;
+
+
         if (!id) {
             return { definition: Macros.definition, name: "", description: "", id: "" };
         }
