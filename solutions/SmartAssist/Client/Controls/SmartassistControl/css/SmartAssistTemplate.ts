@@ -3,7 +3,14 @@
 */
 module MscrmControls.ProductivityPanel {
 	export class SmartAssistTemplate {
-		public static get(): string {
+
+		public static get(isRTL: boolean): string {
+			let alignment = "left: calc(100% - 26px);";
+			let containerPadding = "0px!important";
+			if (isRTL) {
+				alignment = "right: calc(100% - 26px);";
+				containerPadding = "0px";
+			}
 			return `
 <style id="smartassist-style">
 	body, html {
@@ -31,10 +38,10 @@ module MscrmControls.ProductivityPanel {
 
 	#smartassist-outer-container {
 		max-height: 100%;
+		overflow-y: auto;
 		padding: 2px;
 		padding-right: 14px;
 		padding-bottom: 5px;
-		overflow-y: auto;
 	}
 	
 	.card-new {
@@ -51,7 +58,7 @@ module MscrmControls.ProductivityPanel {
 
 	#smartassist-outer-container::-webkit-scrollbar-thumb {
 		background: #FFFFFF;
-        border-radius: 4px;
+		border-radius: 4px;
 	}
 
 	#smartassist-outer-container::-webkit-scrollbar-track {
@@ -77,9 +84,9 @@ module MscrmControls.ProductivityPanel {
 		padding: 16px;
 		font-color: #666666;
 	}
-    .smartassist-card-container:last-child {
-            margin-bottom: 0px;
-    }
+	.smartassist-card-container:last-child {
+			margin-bottom: 0px;
+	}
 	.ac-pushButton {
 		background: none!important;
 		border: none;
@@ -93,7 +100,7 @@ module MscrmControls.ProductivityPanel {
 	}
 
 	.ac-container {
-		padding: 0px!important;
+		padding: ${containerPadding}
 	}
 
 	.ac-pushButton > img{
@@ -104,10 +111,9 @@ module MscrmControls.ProductivityPanel {
 	.Cancel:before {
 		content: '\\E711'
 	}
-
 	.dismiss-button {
 		top: 14px;
-		left: calc(100% - 26px);
+		${alignment}
 		position: absolute;
 		cursor: pointer;
 	}

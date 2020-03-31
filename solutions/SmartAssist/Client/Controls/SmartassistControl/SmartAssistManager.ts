@@ -46,9 +46,9 @@ module MscrmControls.ProductivityPanel.Smartassist {
 			}
 		}
 
-        public ReRenderCards() {
+        public ReRenderCards(isRTL: boolean) {
 
-            this.ResetSmartAssistControl();
+            this.ResetSmartAssistControl(isRTL);
             this.RenderTitle(SmartassistControl.getString(Smartassist.LocalizedStrings.SmartAssistControlHeader));
 
             let conversationId = ConversationStateManager.GetCurrentConversation();
@@ -63,8 +63,8 @@ module MscrmControls.ProductivityPanel.Smartassist {
 			}
 		}
 
-		private ResetSmartAssistControl() {
-			$("#" + Constants.SmartAssistOuterContainer).html(SmartAssistTemplate.get());
+		private ResetSmartAssistControl(isRTL: boolean) {
+			$("#" + Constants.SmartAssistOuterContainer).html(SmartAssistTemplate.get(isRTL));
 		}
 
 		private RenderTitle(title: string) {
@@ -118,6 +118,41 @@ module MscrmControls.ProductivityPanel.Smartassist {
 						break;
 				}
 			}
+        }
+
+		/*
+		* Runs Custom action which can be OOB custom action or custom customaction
+		* @params actionData Required parameters to run custom action
+		*/
+		private RunCustomAction(actionData: any): any {
+			let eventParameters = new Smartassist.EventParameters();
+			eventParameters.addParameter("Message", "Running Custom Action");
+			eventParameters.addParameter("actionData", actionData);
+
+			if (actionData && actionData.CustomAction) {
+				try {
+					let customAction: CustomActionManager = new CustomActionManager(actionData);
+					if (!customAction.isValidAction) {
+						this.logger.logError(this.logger.baseComponent, "RunCustomAction", "Invalid CustomAction", eventParameters);
+						return Promise.resolve();
+					} else {
+						switch (customAction.Name) {
+							case CustomActionConstants.SendKB:
+								customAction.CustomActionSendKB();
+								break;
+							case CustomActionConstants.OpenKB:
+								customAction.CustomActionOpenKB();
+								break;
+							default:
+								this.logger.logSuccess(this.logger.baseComponent, "Running Custom CustomAction", eventParameters);
+								return window.top[customAction.Name](customAction.Parameters);
+						}
+					}
+				} catch (Error) {
+					eventParameters.addParameter("Exception Details", Error);
+					this.logger.logError(this.logger.baseComponent, "RunCustomAction", "Error occurred while running custom action", eventParameters);
+				}
+			}
 		}
 
 		private BindOnExecuteAction() {
@@ -136,12 +171,14 @@ module MscrmControls.ProductivityPanel.Smartassist {
 				let successMessage = ViewTemplates.SuccessMessageTemplate.Format(SmartassistControl.getString(LocalizedStrings.SmartAssistSuccessMessage));
 				let errorMessage = ViewTemplates.FailureMessageTemplates.Format(SmartassistControl.getString(LocalizedStrings.SmartAssistFailureMessage));;
 
-				//Run Macro
+
 				let actionData = JSON.parse(JSON.stringify(action.data));
 				let actionPromise = null;
+				// Run Custom Action
 				if (actionData.CustomAction && actionData.CustomParameters) {
-					actionPromise = window.top[actionData.CustomAction](actionData.CustomParameters);
+					actionPromise = self.RunCustomAction(actionData);
 				}
+				//Run Macro
 				else if (actionData.MacroName && actionData.MacroParameters) {
 					actionPromise = new MacroUtil().executeMacro(actionData.MacroName, actionData.MacroParameters);
 				}
