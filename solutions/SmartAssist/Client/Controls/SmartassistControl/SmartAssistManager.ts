@@ -143,6 +143,13 @@ module MscrmControls.ProductivityPanel.Smartassist {
 							case CustomActionConstants.OpenKB:
 								customAction.CustomActionOpenKB();
 								break;
+							case CustomActionConstants.OpenForm:
+							case CustomActionConstants.OpenCase:
+								customAction.CustomActionOpenForm();
+								break;
+							case CustomActionConstants.CloneCase:
+								customAction.CustomActionCreateEntity();
+								break;
 							default:
 								this.logger.logSuccess(this.logger.baseComponent, "Running Custom CustomAction", eventParameters);
 								return window.top[customAction.Name](customAction.Parameters);

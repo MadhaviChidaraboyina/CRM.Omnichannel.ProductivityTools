@@ -84,6 +84,12 @@ module MscrmControls.ProductivityPanel.Smartassist {
 		// OOB CustomActions - KB
 		public static SendKB: string = "SendKB";
 		public static OpenKB: string = "OpenKB";
+		public static OpenForm: string = "OpenForm";
+		public static OpenCase: string = "OpenCase";
+		public static CloneCase: string = "CloneCase";
+		public static CloneEntity: string = "CloneEntity";
+		public static EntityCaseName: string = "incident";
+		public static RecordPageType: string = "entityrecord";
 
 		// CIF Event to copy to conversation control
 		public static onSendKBEvent: string = "onsendkbarticle";
