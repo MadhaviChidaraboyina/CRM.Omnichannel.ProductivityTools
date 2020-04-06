@@ -1035,7 +1035,7 @@
       <record id="2561bf45-e4e9-4940-8dcd-370705deea62">
         <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705deea62" />
         <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62" />
-        <field name="msdyn_macroconnector" value="" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
         <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_kb_article.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="2561bf45-e4e9-4940-8dcd-370705deea62" />

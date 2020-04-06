@@ -357,6 +357,10 @@
     <value>搜尋 </value>
     <comment>Search string for Designer Control</comment>
   </data>
+  <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
+    <value>Condition</value>
+    <comment>Summary for expression builder for expression evaluation</comment>
+  </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_16fc3387_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
     <value>根據片語進行相關性搜尋</value>
     <comment>Macro Action Template Description</comment>
@@ -842,7 +846,7 @@
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>開啟知識庫文章</value>
+    <value>您將需要輸入實體識別碼，才能開啟知識庫文章。</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">

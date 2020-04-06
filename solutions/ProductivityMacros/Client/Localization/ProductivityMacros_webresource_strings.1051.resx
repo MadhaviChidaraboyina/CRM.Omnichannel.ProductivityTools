@@ -357,6 +357,10 @@
     <value>Hľadať </value>
     <comment>Search string for Designer Control</comment>
   </data>
+  <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
+    <value>Condition</value>
+    <comment>Summary for expression builder for expression evaluation</comment>
+  </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_16fc3387_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
     <value>Vykonať vyhľadávanie podľa relevancie na základe danej frázy</value>
     <comment>Macro Action Template Description</comment>
@@ -834,15 +838,15 @@
     <comment>Parameter definition Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>Otvorte článok KB</value>
+    <value>Otvoriť článok vedomostnej databázy</value>
     <comment>Macro Action Template Displayname</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>Otvorte článok KB</value>
+    <value>Otvoriť článok vedomostnej databázy</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>Otvorte článok KB</value>
+    <value>Ak chcete otvoriť článok vedomostnej databázy, musíte zadať ID entity.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
@@ -850,7 +854,7 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
-    <value>Otvorte článok KB</value>
+    <value>Otvoriť článok vedomostnej databázy</value>
     <comment>Macro Action Template Summary</comment>
   </data>
 </root>
