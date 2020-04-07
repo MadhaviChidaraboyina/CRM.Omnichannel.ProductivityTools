@@ -421,9 +421,9 @@ async function startDesigner(rpc) {
 						message: Utils.Utils.genMsgForTelemetry("Macro definition JSON generation error", error),
 						eventTimeStamp: new Date(),
 						eventType: SharedDefines.TelemetryEventType.Trace,
-						exception: error.stack
+						exception: error						
 					};
-					doTelemetry(obj, "DESIGNER_CONTROL_JSON_GENERATION_ERROR");
+                    doTelemetry(obj, "DESIGNER_CONTROL_JSON_GENERATION_ERROR", undefined, true);
 					return;
 				}
 			});
@@ -443,16 +443,17 @@ async function startDesigner(rpc) {
 	}
 }
 
-function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, toClose?: boolean) {
-	Utils.Utils.logAdminTelemetry(msg);
-	console.log(msg.eventTimeStamp + " " + msg.eventType + " " + msg.level + " " + msg.eventName + " " + msg.message);
-	if (userVisibleError) {
-		window.top.Xrm.Navigation.openAlertDialog({ text: Utils.Utils.getResourceString(userVisibleError) }).then(function () {
-			if (toClose) {
-				closeDesigner();
-			}
-		});
-	}
+function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, toClose?: boolean, showExceptionMsg: boolean = false) {
+    Utils.Utils.logAdminTelemetry(msg);
+    console.log(msg.eventTimeStamp + " " + msg.eventType + " " + msg.level + " " + msg.eventName + " " + msg.message);
+    if (userVisibleError) {
+        let alertMsg = showExceptionMsg ? Utils.Utils.getResourceString(userVisibleError) + ". " + msg.exception.innerException.message : Utils.Utils.getResourceString(userVisibleError);
+        window.top.Xrm.Navigation.openAlertDialog({ text: alertMsg }).then(function () {
+            if (toClose) {
+                closeDesigner();
+            }
+        });
+    }
 }
 
 require(["LogicApps/rpc/Scripts/logicappdesigner/libs/rpc/rpc.standalone"], async function (Rpc) {
