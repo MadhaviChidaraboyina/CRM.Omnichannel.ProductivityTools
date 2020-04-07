@@ -31,16 +31,17 @@ function getMonacoLocale(editorLocaleName) {
         "ko": "ko",
         "ru": "ru",
         "zh-hans": "zh-cn",
-        "zh-hant": "zh-tw"
+        "zh-hant": "zh-tw",
+        "nb": "no",
+        "zh": "zh-hans",
     };
 
     return monacoLocalesMap[editorLocaleName] || "en";
 }
 
 let LOCALE = Utils.Utils.getUrlParam("locale", "en");
-//norway language code "nb" coming in the url, and with respect to "nb", "no" folder
-//is getting installed from nuget
-LOCALE = LOCALE !== "nb" ? LOCALE : "no";
+let monacoLocale = getMonacoLocale(LOCALE);
+LOCALE = monacoLocale === "en" ? LOCALE : monacoLocale;
 document.getElementsByTagName("html")[0].setAttribute("lang", LOCALE);
 let designerSupportedLocales = [
     "bg", "ca", "cs", "da", "de", "el", "es", "et", "eu", "fi", "fr", "gl", "hi", "hr", "hu", "id", "it", "ja", "ja-ploc-jp", "kk", "ko", "lt", "lv", "ms", "nl", "no", "pl", "pt-br", "pt-pt", "qps-ploc", "ro", "ru", "sk", "sl", "sr-cyrl-rs", "sr-latn-rs", "sv", "th", "tr", "uk", "vi", "zh-hans", "zh-hant"
