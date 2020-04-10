@@ -38,7 +38,7 @@ namespace Microsoft.ProductivityMacros {
 	function getMacroInputJSON(macroName: string): Promise<string> {
 		return new Promise((resolve, reject) => {
 			let entityName = "workflow";
-			let query = "?$select=name,clientdata" + "&$filter=name eq '" + macroName + "' and category eq 6";
+            let query = "?$select=name,clientdata" + "&$filter=name eq '" + macroName + "' and category eq 6 and statecode eq 1 and statuscode eq 2";
 			Xrm.WebApi.retrieveMultipleRecords(entityName, query).then(
 				function (result: any) {
 					if (Internal.isNullOrUndefined(result.entities) || result.entities.length <= 0 || (Internal.isNullOrUndefined(result.entities[0].clientdata))) {

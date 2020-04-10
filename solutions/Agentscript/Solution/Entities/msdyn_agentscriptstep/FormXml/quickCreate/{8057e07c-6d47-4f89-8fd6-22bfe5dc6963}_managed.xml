@@ -86,9 +86,9 @@
                             <AutoResolve>true</AutoResolve>
                             <DisableMru>false</DisableMru>
                             <DisableQuickFind>false</DisableQuickFind>
-                            <DisableViewPicker>false</DisableViewPicker>
-                            <DefaultViewId>{012107d2-54d0-e911-a81c-000d3a6e50b0}</DefaultViewId>
-                            <AvailableViewIds>{012107d2-54d0-e911-a81c-000d3a6e50b0}</AvailableViewIds>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DefaultViewId>{46291012-667a-ea11-a811-000d3a8d88aa}</DefaultViewId>
+                            <AvailableViewIds>{46291012-667a-ea11-a811-000d3a8d88aa}</AvailableViewIds>
                             <AllowFilterOff>false</AllowFilterOff>
                           </parameters>
                         </control>

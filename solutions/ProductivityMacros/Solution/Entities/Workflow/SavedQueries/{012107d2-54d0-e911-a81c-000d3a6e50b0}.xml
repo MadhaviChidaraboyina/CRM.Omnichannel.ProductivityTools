@@ -12,6 +12,7 @@
 				<row name="result" id="workflowid">
 					<cell name="name" width="150" />
 					<cell name="description" width="100" disableSorting="1" />
+          <cell name="statecode" width="100" />
 					<cell name="createdon" width="100" />
 					<cell name="modifiedon" width="100" />
 				</row>
