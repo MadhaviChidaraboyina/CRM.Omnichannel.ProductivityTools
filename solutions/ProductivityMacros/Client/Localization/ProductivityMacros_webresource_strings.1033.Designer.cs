@@ -510,6 +510,16 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+		///   Looks up a localized string similar to Close all of the other sessions.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_0F218CC2_0AD4_4089_90EE_A654E0D" +
+                        "D6FA9", resourceCulture);
+            }
+        }
+        
+        /// <summary>																		 
         ///   Looks up a localized string similar to Do a relevance search based on the phrase.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_16fc3387_fcd2_e911_a81e_000d3a015920 {
@@ -698,6 +708,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+		///   Looks up a localized string similar to Close all other sessions.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9", resourceCulture);
+            }
+        }
+        
+        /// <summary>																	  
         ///   Looks up a localized string similar to Search by relevance.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_16fc3387_fcd2_e911_a81e_000d3a015920 {
@@ -869,6 +888,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+		///   Looks up a localized string similar to Session Connector.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9", resourceCulture);
+            }
+        }
+        
+        /// <summary>															   
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_subtitle_16fc3387_fcd2_e911_a81e_000d3a015920 {
@@ -1049,6 +1077,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+		///   Looks up a localized string similar to Close all of the other sessions.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do a relevance search based on the phrase.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_16fc3387_fcd2_e911_a81e_000d3a015920 {
@@ -1220,6 +1257,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+		///   Looks up a localized string similar to Close all other sessions.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9", resourceCulture);
+            }
+        }
+        
+        /// <summary>																	  
         ///   Looks up a localized string similar to Do a relevance search based on the phrase.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_title_16fc3387_fcd2_e911_a81e_000d3a015920 {
