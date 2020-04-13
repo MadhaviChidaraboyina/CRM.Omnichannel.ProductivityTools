@@ -358,7 +358,7 @@
     <comment>Search string for Designer Control</comment>
   </data>
   <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
-    <value>Condition</value>
+    <value>Pogoj</value>
     <comment>Summary for expression builder for expression evaluation</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_16fc3387_fcd2_e911_a81e_000d3a015920" xml:space="preserve">

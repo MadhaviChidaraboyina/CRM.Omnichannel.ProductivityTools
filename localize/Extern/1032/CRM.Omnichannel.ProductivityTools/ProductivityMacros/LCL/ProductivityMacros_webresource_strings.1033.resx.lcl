@@ -341,6 +341,22 @@
           <Str Name="Custom3" Val="WO24046_20200103" />
         </Props>
       </Item>
+      <Item ItemId=";LADESIGNER_CONDITION_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Condition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Συνθήκη]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-09T01:39:41.0001363Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for expression builder for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27721_20200406" />
+        </Props>
+      </Item>
       <Item ItemId=";LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Customer Service]]></Val>
