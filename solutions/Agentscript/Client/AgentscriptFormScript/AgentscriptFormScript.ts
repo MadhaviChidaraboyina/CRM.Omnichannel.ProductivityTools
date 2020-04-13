@@ -42,9 +42,12 @@ module AgentScriptPackage
 				return;
 			}
 
-			// First option is empty, so get the second option and set default value to it
-			let languageOption = languageOptions[1];
-			languageAttribute.setValue(languageOption.value);
+			if (this.isNullOrUndefined(languageAttribute.getValue()))
+			{
+				// First option is empty, so get the second option and set default value to it
+				let languageOption = languageOptions[1];
+				languageAttribute.setValue(languageOption.value);
+			}
 		}
 
 		// Returns true if object is null or undefined
