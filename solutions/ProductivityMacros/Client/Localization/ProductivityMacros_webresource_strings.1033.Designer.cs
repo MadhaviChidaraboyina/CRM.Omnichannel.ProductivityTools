@@ -487,7 +487,18 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("MACRO_ACTION_SAVE_AND_CLOSE", resourceCulture);
             }
         }
-
+		
+		/// <summary>
+        ///   Looks up a localized string similar to Send knowledge base article.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B {
+		 
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C3" +
+                        "8878B", resourceCulture);
+            }
+        }
+		
         /// <summary>
         ///   Looks up a localized string similar to Open a new form to create a record..
         /// </summary>
@@ -547,7 +558,17 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                         "19916", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Close this session.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C54759" +
+                        "93879", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Refresh the tab..
         /// </summary>
@@ -638,6 +659,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
+		/// <summary>
+        ///   Looks up a localized string similar to Send knowledge base article.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
+            }
+        }
+		
         /// <summary>
         ///   Looks up a localized string similar to Open an existing record.
         /// </summary>
@@ -691,6 +721,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static string msdyn_macroactiontemplate_msdyn_displayname_37a95038_185a_ea11_a811_000d3a334e98 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98", resourceCulture);
+            }
+        }
+
+		/// <summary>
+        ///   Looks up a localized string similar to Close session.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
             }
         }
 
@@ -775,6 +814,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
+		/// <summary>
+        ///   Looks up a localized string similar to Omnichannel Connector.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
+            }
+        }
+		
         /// <summary>
         ///   Looks up a localized string similar to Get the current tab.
         /// </summary>
@@ -829,6 +877,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
+		/// <summary>
+        ///   Looks up a localized string similar to Session connector.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
+            }
+        }
+        		
         /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
@@ -910,6 +967,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
+		/// <summary>
+        ///   Looks up a localized string similar to Send knowledge base article.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
+            }
+        }
+		
         /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
@@ -964,6 +1030,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
+		/// <summary>
+        ///   Looks up a localized string similar to Close this session.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Open a new form to create a record.
         /// </summary>
@@ -1045,6 +1120,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
+		/// <summary>
+        ///   Looks up a localized string similar to Send knowledge base article.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
+            }
+        }
+		
         /// <summary>
         ///   Looks up a localized string similar to Link record to the conversation.
         /// </summary>
@@ -1117,6 +1201,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
+		/// <summary>
+        ///   Looks up a localized string similar to Close session.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
+            }
+        }
+		
         /// <summary>
         ///   Looks up a localized string similar to Open a new form to create a record.
         /// </summary>

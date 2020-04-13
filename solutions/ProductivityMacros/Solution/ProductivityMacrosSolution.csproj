@@ -151,6 +151,8 @@
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_update_record.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_clone_record.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_clone_record.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_close_session.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_close_session.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_close_all_sessions.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_close_all_sessions.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_create_session.svg" />

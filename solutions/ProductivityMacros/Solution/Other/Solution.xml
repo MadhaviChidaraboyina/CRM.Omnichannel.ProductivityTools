@@ -147,6 +147,7 @@
 			<RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroMonitor.bundle.js" behavior="0" />
 			<RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroMonitor.html" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_clone_record.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_close_session.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_close_all_sessions.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_create_session.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_email.svg" behavior="0" />
