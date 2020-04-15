@@ -242,6 +242,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Condition.
+        /// </summary>
+        internal static string LADESIGNER_CONDITION_SUMMARY {
+            get {
+                return ResourceManager.GetString("LADESIGNER_CONDITION_SUMMARY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Customer Service.
         /// </summary>
         internal static string LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM {
@@ -341,6 +350,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string MACRO_ACTION_CANCEL {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_CANCEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close All other Sessions.
         /// </summary>
         internal static string MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS {
@@ -413,6 +431,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save and close.
+        /// </summary>
+        internal static string MACRO_ACTION_SAVE_AND_CLOSE {
+            get {
+                return ResourceManager.GetString("MACRO_ACTION_SAVE_AND_CLOSE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search by Relevance.
         /// </summary>
         internal static string MACRO_ACTION_SEARCH_BY_RELEVANCE {
@@ -465,40 +492,17 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to Value.
-        /// </summary>
-        internal static string MACRO_ACTION_CANCEL
-        {
-            get
-            {
-                return ResourceManager.GetString("MACRO_ACTION_CANCEL", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Value.
-        /// </summary>
-        internal static string MACRO_ACTION_SAVE_AND_CLOSE
-        {
-            get
-            {
-                return ResourceManager.GetString("MACRO_ACTION_SAVE_AND_CLOSE", resourceCulture);
-            }
-        }
-		
-		/// <summary>
         ///   Looks up a localized string similar to Send knowledge base article.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B {
-		 
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C3" +
                         "8878B", resourceCulture);
             }
         }
-		
+        
         /// <summary>
         ///   Looks up a localized string similar to Open a new form to create a record..
         /// </summary>
@@ -510,7 +514,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-		///   Looks up a localized string similar to Close all of the other sessions.
+        ///   Looks up a localized string similar to Close all of the other sessions.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9 {
             get {
@@ -519,7 +523,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
-        /// <summary>																		 
+        /// <summary>
         ///   Looks up a localized string similar to Do a relevance search based on the phrase.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_16fc3387_fcd2_e911_a81e_000d3a015920 {
@@ -538,7 +542,17 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                         "15920", resourceCulture);
             }
         }
-                
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You’ll need to enter the entity ID to open the knowledge base article..
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45_e4e9_4940_8dcd_370705deea62 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705d" +
+                        "eea62", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to This macro will autofill form fields based on the information you provide..
         /// </summary>
@@ -548,17 +562,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                         "34e98", resourceCulture);
             }
         }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Open kb article.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45_e4e9_4940_8dcd_370705deea62 {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705d" +
-                        "eea62", resourceCulture);
-            }
-        }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Save the record.
         /// </summary>
@@ -568,17 +572,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                         "19916", resourceCulture);
             }
         }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Close this session.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C5475993879 {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C54759" +
-                        "93879", resourceCulture);
-            }
-        }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Refresh the tab..
         /// </summary>
@@ -586,6 +580,16 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d" +
                         "7bc60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close this session.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C54759" +
+                        "93879", resourceCulture);
             }
         }
         
@@ -616,6 +620,16 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_90a7f632_c89e_40a6_a9ea_3f28d4e" +
                         "58fb3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clone input record.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73_72fe_40c7_baeb_91714890d1f7 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73-72fe-40c7-baeb-9171489" +
+                        "0d1f7", resourceCulture);
             }
         }
         
@@ -669,15 +683,6 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
-		/// <summary>
-        ///   Looks up a localized string similar to Send knowledge base article.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
-            }
-        }
-		
         /// <summary>
         ///   Looks up a localized string similar to Open an existing record.
         /// </summary>
@@ -699,6 +704,25 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clone focused record.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed_aa69_ea11_a811_000d3a54419d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed-aa69-ea11-a811-000d3a5" +
+                        "4419d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send knowledge base article.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create New.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_01a02947_f9d2_e911_a81e_000d3a015920 {
@@ -708,7 +732,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-		///   Looks up a localized string similar to Close all other sessions.
+        ///   Looks up a localized string similar to Close all other sessions.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9 {
             get {
@@ -716,7 +740,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
-        /// <summary>																	  
+        /// <summary>
         ///   Looks up a localized string similar to Search by relevance.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_16fc3387_fcd2_e911_a81e_000d3a015920 {
@@ -733,7 +757,16 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_1c1af956_fad2_e911_a81e_000d3a015920", resourceCulture);
             }
         }
-                
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open knowledge base article.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_2561bf45_e4e9_4940_8dcd_370705deea62 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Autofill form fields.
         /// </summary>
@@ -742,25 +775,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98", resourceCulture);
             }
         }
-
-		/// <summary>
-        ///   Looks up a localized string similar to Close session.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879 {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Open kb article.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_displayname_2561bf45_e4e9_4940_8dcd_370705deea62 {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
-            }
-        }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
@@ -776,6 +791,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static string msdyn_macroactiontemplate_msdyn_displayname_48fc87c4_f480_4129_9c1d_682442d7bc60 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_48fc87c4_f480_4129_9c1d_682442d7bc60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close session.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
             }
         }
         
@@ -807,6 +831,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clone input record.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_b3e9cb73_72fe_40c7_baeb_91714890d1f7 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_b3e9cb73-72fe-40c7-baeb-91714890d1f7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resolve Case.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_cd1fa1a0_a0df_e911_a81e_000d3a0698dc {
@@ -833,15 +866,6 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
-		/// <summary>
-        ///   Looks up a localized string similar to Omnichannel Connector.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
-            }
-        }
-		
         /// <summary>
         ///   Looks up a localized string similar to Get the current tab.
         /// </summary>
@@ -879,6 +903,24 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clone focused record.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_f8c404ed_aa69_ea11_a811_000d3a54419d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_f8c404ed-aa69-ea11-a811-000d3a54419d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Omnichannel Connector.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_subtitle_01a02947_f9d2_e911_a81e_000d3a015920 {
@@ -888,7 +930,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-		///   Looks up a localized string similar to Session Connector.
+        ///   Looks up a localized string similar to Session Connector.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_subtitle_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9 {
             get {
@@ -896,7 +938,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
-        /// <summary>															   
+        /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_subtitle_16fc3387_fcd2_e911_a81e_000d3a015920 {
@@ -905,15 +947,6 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
-		/// <summary>
-        ///   Looks up a localized string similar to Session connector.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879 {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
-            }
-        }
-        		
         /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
@@ -922,16 +955,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_1c1af956_fad2_e911_a81e_000d3a015920", resourceCulture);
             }
         }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Productivity automation.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_subtitle_37a95038_185a_ea11_a811_000d3a334e98 {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_37a95038-185a-ea11-a811-000d3a334e98", resourceCulture);
-            }
-        }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
@@ -940,7 +964,16 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
             }
         }
-         
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Productivity automation.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_37a95038_185a_ea11_a811_000d3a334e98 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_37a95038-185a-ea11-a811-000d3a334e98", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
@@ -956,6 +989,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static string msdyn_macroactiontemplate_msdyn_subtitle_48fc87c4_f480_4129_9c1d_682442d7bc60 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_48fc87c4_f480_4129_9c1d_682442d7bc60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session connector.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
             }
         }
         
@@ -989,21 +1031,21 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_b3e9cb73_72fe_40c7_baeb_91714890d1f7 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_b3e9cb73-72fe-40c7-baeb-91714890d1f7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Productivity automation.
+        /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_subtitle_cd1fa1a0_a0df_e911_a81e_000d3a0698dc {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_cd1fa1a0_a0df_e911_a81e_000d3a0698dc", resourceCulture);
             }
         }
         
-		/// <summary>
-        ///   Looks up a localized string similar to Send knowledge base article.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
-            }
-        }
-		
         /// <summary>
         ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
@@ -1058,15 +1100,24 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
-		/// <summary>
-        ///   Looks up a localized string similar to Close this session.
+        /// <summary>
+        ///   Looks up a localized string similar to Productivity automation.
         /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_f8c404ed_aa69_ea11_a811_000d3a54419d {
             get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_f8c404ed-aa69-ea11-a811-000d3a54419d", resourceCulture);
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send knowledge base article.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Open a new form to create a record.
         /// </summary>
@@ -1077,7 +1128,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-		///   Looks up a localized string similar to Close all of the other sessions.
+        ///   Looks up a localized string similar to Close all of the other sessions.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9 {
             get {
@@ -1104,6 +1155,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open knowledge base article.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_2561bf45_e4e9_4940_8dcd_370705deea62 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This macro will autofill form fields based on the information you provide..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_37a95038_185a_ea11_a811_000d3a334e98 {
@@ -1111,16 +1171,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_37a95038-185a-ea11-a811-000d3a334e98", resourceCulture);
             }
         }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Open kb article.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_summary_2561bf45_e4e9_4940_8dcd_370705deea62 {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
-            }
-        }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Save the record.
         /// </summary>
@@ -1136,6 +1187,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static string msdyn_macroactiontemplate_msdyn_summary_48fc87c4_f480_4129_9c1d_682442d7bc60 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_48fc87c4_f480_4129_9c1d_682442d7bc60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close this session.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
             }
         }
         
@@ -1157,21 +1217,21 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
-		/// <summary>
-        ///   Looks up a localized string similar to Send knowledge base article.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
-            }
-        }
-		
         /// <summary>
         ///   Looks up a localized string similar to Link record to the conversation.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clone input record.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_b3e9cb73_72fe_40c7_baeb_91714890d1f7 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_b3e9cb73-72fe-40c7-baeb-91714890d1f7", resourceCulture);
             }
         }
         
@@ -1238,15 +1298,24 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
-		/// <summary>
-        ///   Looks up a localized string similar to Close session.
+        /// <summary>
+        ///   Looks up a localized string similar to Clone focused record.
         /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+        internal static string msdyn_macroactiontemplate_msdyn_summary_f8c404ed_aa69_ea11_a811_000d3a54419d {
             get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_f8c404ed-aa69-ea11-a811-000d3a54419d", resourceCulture);
             }
         }
-		
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send knowledge base article.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Open a new form to create a record.
         /// </summary>
@@ -1257,7 +1326,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-		///   Looks up a localized string similar to Close all other sessions.
+        ///   Looks up a localized string similar to Close all other sessions.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_title_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9 {
             get {
@@ -1265,7 +1334,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
             }
         }
         
-        /// <summary>																	  
+        /// <summary>
         ///   Looks up a localized string similar to Do a relevance search based on the phrase.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_title_16fc3387_fcd2_e911_a81e_000d3a015920 {
@@ -1282,7 +1351,16 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_1c1af956_fad2_e911_a81e_000d3a015920", resourceCulture);
             }
         }
-                
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open knowledge base article.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_2561bf45_e4e9_4940_8dcd_370705deea62 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Autofill form fields.
         /// </summary>
@@ -1291,16 +1369,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_37a95038-185a-ea11-a811-000d3a334e98", resourceCulture);
             }
         }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Open kb article.
-        /// </summary>
-        internal static string msdyn_macroactiontemplate_msdyn_title_2561bf45_e4e9_4940_8dcd_370705deea62 {
-            get {
-                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
-            }
-        }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Save the record.
         /// </summary>
@@ -1316,6 +1385,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static string msdyn_macroactiontemplate_msdyn_title_48fc87c4_f480_4129_9c1d_682442d7bc60 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_48fc87c4_f480_4129_9c1d_682442d7bc60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close session.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879", resourceCulture);
             }
         }
         
@@ -1343,6 +1421,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static string msdyn_macroactiontemplate_msdyn_title_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clone input record.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_b3e9cb73_72fe_40c7_baeb_91714890d1f7 {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_b3e9cb73-72fe-40c7-baeb-91714890d1f7", resourceCulture);
             }
         }
         
@@ -1406,6 +1493,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static string msdyn_macroactiontemplate_msdyn_title_e903922e_fdd2_e911_a81e_000d3a015920 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_e903922e_fdd2_e911_a81e_000d3a015920", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clone focused record.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_f8c404ed_aa69_ea11_a811_000d3a54419d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_f8c404ed-aa69-ea11-a811-000d3a54419d", resourceCulture);
             }
         }
         
@@ -1626,6 +1722,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Record title.
+        /// </summary>
+        internal static string msdyn_parameterdefinition_msdyn_description_a50fc5ef_5d6e_ea11_a811_000d3a8d88aa {
+            get {
+                return ResourceManager.GetString("msdyn_parameterdefinition_msdyn_description_a50fc5ef-5d6e-ea11-a811-000d3a8d88aa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A JSON string representing the attributes and values to be updated.
         /// </summary>
         internal static string msdyn_parameterdefinition_msdyn_description_ae9b14cb_f8d2_e911_a81e_000d3a015920 {
@@ -1793,6 +1898,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static string msdyn_parameterdefinition_msdyn_displayname_9a6161ef_3033_4c8a_89fb_8229bf4539e9 {
             get {
                 return ResourceManager.GetString("msdyn_parameterdefinition_msdyn_displayname_9a6161ef_3033_4c8a_89fb_8229bf4539e9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Record title.
+        /// </summary>
+        internal static string msdyn_parameterdefinition_msdyn_displayname_a50fc5ef_5d6e_ea11_a811_000d3a8d88aa {
+            get {
+                return ResourceManager.GetString("msdyn_parameterdefinition_msdyn_displayname_a50fc5ef-5d6e-ea11-a811-000d3a8d88aa", resourceCulture);
             }
         }
         

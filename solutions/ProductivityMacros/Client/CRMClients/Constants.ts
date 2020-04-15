@@ -46,7 +46,11 @@ namespace Microsoft.ProductivityMacros {
 		//P2
 		public static OPEN_DASHBOARD = "Open_Dashboard";
 		
-	}
+    }
+
+    export class Attributes {
+        public static commmonAttributes: string[] = ["modifiedby", "createdby", "createdonbehalfby", "createdon", "statuscode", "statecode", "ownerid", "modifiedon", "owningbusinessunit", "FormattedValue", "owninguser"];
+    }
 
 	export class SlugPrefix {
 		public static SPLIT_BY_OPENING_BRACKET = "(";

@@ -129,7 +129,7 @@ namespace Microsoft.ProductivityMacros.Internal {
             return Promise.reject("openNewForm - formInputs is Null or Undefined");
         }
     }
-
+         
     export function openExistingForm(actionName: string, entityFormOptions: any): Promise<string> {
         if (!(isNullOrUndefined(entityFormOptions) || entityFormOptions == "")) {
             return new Promise<any>((resolve, reject) => {
@@ -552,6 +552,264 @@ namespace Microsoft.ProductivityMacros.Internal {
         return data;
     }
 
+    function getAttributeFromCollection(recordTitle: string): any{
+
+        let windowXrm: any;
+        try {
+            //we are using here windows.top.xrm.page 
+            //this api will work in case of crm forms are focused
+            //if anything else is focused then it will contradict the action it self as this action for cloning a record on crm form. 
+            //in that case we are catching exception and returning as macro triggered for invalide form.  
+            windowXrm = (((((window as any).top) as any).Xrm) as any);
+        }
+        catch (e) {
+            return Promise.reject(createErrorMap("Macro executed for invalid form", "cloneRecord"));
+        }
+
+        let entityObj: any = {};
+        entityObj["attributeObj"] = {};
+
+        //let attributeObj: any = {};
+        let col = windowXrm.Page.data.entity.attributes._collection;
+        let entityRef = windowXrm.Page.data.entity.getEntityReference();
+        entityObj["entityName"] = entityRef.entityType;
+        Object.keys(col).forEach(function (key) {          
+            entityObj.attributeObj[key] = col[key].getValue();
+            }
+        );
+        entityObj.attributeObj = removeExtraData(entityObj.attributeObj,entityObj.entityName);
+        return entityObj;
+    }
+
+    function removeExtraData(obj: any, entityName: string): {} {
+        let tempObj = obj;
+        let tempArray = Attributes.commmonAttributes;
+        tempArray.push(entityName + "id");
+        tempArray.forEach(function (attrib) {
+            Object.keys(obj).forEach(function (key) {
+                if (key.includes(attrib) || tempObj[key] == null) {
+                    delete tempObj[key];
+                }
+            });
+        });
+        
+        return tempObj;
+    }
+
+    function arrangeLookupValue(obj: any, entityName: string): {} {
+        let temp: any = obj;
+        let result: any = {};
+        
+        let formatedValue: string = "_value@OData.Community.Display.V1.FormattedValue";
+        let navigationProperty: string = "_value@Microsoft.Dynamics.CRM.associatednavigationproperty";
+        let lookupLogicalName: string = "_value@Microsoft.Dynamics.CRM.lookuplogicalname";
+        let value: string = "_value";
+        let underScor: string = "_";
+
+        Object.keys(temp).forEach(function (key) {
+            let attribName = "";
+            if (key.endsWith(value))
+                attribName = key.substr(1, key.length - value.length-1);
+
+            if (key.endsWith(lookupLogicalName))
+                attribName = key.substr(1, key.length - lookupLogicalName.length-1);
+
+            if (key.endsWith(navigationProperty))
+                attribName = key.substr(1, key.length - navigationProperty.length-1);
+
+            if (key.endsWith(formatedValue))
+                attribName = key.substr(1, key.length - formatedValue.length-1);
+
+            if ((attribName != "") && (underScor + attribName + value in obj) && (underScor + attribName + lookupLogicalName in obj) &&
+                (underScor + attribName + navigationProperty in obj) && (underScor + attribName + formatedValue in obj)) {
+               
+                var lookupValue = new Array();
+                lookupValue[0] = new Object();
+                lookupValue[0].id = obj[underScor + attribName + value];
+                lookupValue[0].name = obj[underScor + attribName + formatedValue];
+                lookupValue[0].entityType = obj[underScor + attribName + lookupLogicalName]
+                result[attribName] = lookupValue;
+
+                delete obj[underScor + attribName + value];
+                delete obj[underScor + attribName + lookupLogicalName];
+                delete obj[underScor + attribName + navigationProperty];
+                delete obj[underScor + attribName + formatedValue];
+            }
+            else {
+                if (key in obj)
+                    result[key] = obj[key];
+            }
+        });
+
+        return result;
+    }
+
+    export function cloneInputRecord(actionName: string, entityData: any, telemetryData?: Object | any): Promise<string> {
+        let recordTitle = "_copy";
+        if (!entityData) {
+            return Promise.reject(createErrorMap("Need values to clone record", "cloneInputRecord")); 
+        }
+        return new Promise<string>((resolve, reject) => {
+
+            if (entityData.hasOwnProperty("RecordTitle") && typeof (entityData.RecordTitle) !== "undefined") {
+                    recordTitle = entityData.RecordTitle;
+                }
+                getPrimaryNameAttribute(entityData.EntityName).then(
+                    function (primaryAttrib) {
+                        getRecordToClone(actionName, entityData, primaryAttrib, recordTitle).then(
+                            function (dataObj) {
+                                cloneRecord_DefaultBehaviour(actionName, entityData.EntityName, dataObj).then(
+                                    function (outParameter) {
+                                        resolve(outParameter);
+                                    },
+                                    function (error) {
+                                        reject(error);
+                                    }
+                                );
+                            },
+                            function (error) {
+                                reject(error);
+                            }
+                        );
+                    }
+                );
+            
+        });
+    }
+
+    export function cloneFocusedRecord(actionName: string, entityData: any, telemetryData?: Object | any): Promise<string> {
+        let recordTitle = "_copy";
+        if (!entityData) {
+            return Promise.reject(createErrorMap("Need values to clone record", "cloneFocusedRecord")); 
+        }
+        return new Promise<string>((resolve, reject) => {
+
+            if (entityData.hasOwnProperty("RecordTitle") && typeof (entityData.RecordTitle) !== "undefined") {
+                recordTitle = entityData.RecordTitle;
+            }
+            let entityObj = getAttributeFromCollection(recordTitle);
+
+            getPrimaryNameAttribute(entityObj.entityName).then(
+                function (primaryAttrib) {
+                    if (primaryAttrib !== "") {
+                        if (recordTitle === "_copy")
+                            entityObj.attributeObj[primaryAttrib] = entityObj.attributeObj[primaryAttrib] + "_copy";
+                        else {
+                            entityObj.attributeObj[primaryAttrib] = recordTitle;
+                        }
+                    }
+                    resolve(cloneRecord_DefaultBehaviour(actionName, entityObj.entityName, entityObj.attributeObj));
+                }
+            );
+            
+        });
+    }
+
+    function getPrimaryNameAttribute(entityName: string): Promise < string > {        
+        return new Promise<string>(function (resolve, reject) {
+            var req = new XMLHttpRequest();
+            req.open("GET", Xrm.Utility.getGlobalContext().getClientUrl() + "/api/data/v9.0/EntityDefinitions(LogicalName='" + entityName + "')/?$select=PrimaryNameAttribute", true);
+            req.setRequestHeader("OData-MaxVersion", "4.0");
+            req.setRequestHeader("OData-Version", "4.0");
+            req.setRequestHeader("Accept", "application/json");
+            req.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+
+            req.onreadystatechange = function () {
+                if (req.readyState === 4) {
+                    req.onreadystatechange = null;
+                    if (req.status === 200) {
+                        let name: string = JSON.parse(req.response).PrimaryNameAttribute;
+                        if (name === undefined) {
+                            name = "";
+                        }
+                        resolve(name);
+                    } else {
+                        resolve("");
+                    }
+                }
+            };
+            req.send();
+        });
+    }
+
+    function getRecordToClone(actionName : string,entityData : any,primaryNameAttribute : string,recordTitle : string): Promise<any> {
+        return new Promise<string>((resolve, reject) => {
+            let startTime = new Date();
+            Xrm.WebApi.retrieveRecord(entityData.EntityName, entityData.EntityId).then(function success(result1 : any){                
+                result1 = arrangeLookupValue(result1, entityData.EntityName);
+                result1 = removeExtraData(result1, entityData.EntityName);
+
+                delete result1["@odata.context"];
+                delete result1["@odata.etag"];
+                if (primaryNameAttribute != "") 
+                    result1[primaryNameAttribute] = (recordTitle == "_copy") ? result1[primaryNameAttribute] + recordTitle : recordTitle;
+                
+                resolve(result1);
+            },
+            function(error){
+                let errorData = generateErrorObject(error, "ProductivityMacrosWrapper - cloneRecord", errorTypes.XrmApiError);
+                logFailure("cloneRecord", errorData, "");
+                reject(error);
+            });
+        });
+    }
+
+    function cloneRecord_DefaultBehaviour(actionName: string, entityName: string, entityData: {}): Promise<string>{
+        
+        return new Promise<any>((resolve, reject) => {
+            getNavigationType().then((navigationType: any) => {
+                if (navigationType == 1) {
+                    var tabInput: XrmClientApi.TabInput = {
+                        pageInput: {
+                            pageType: "entityrecord" as any,
+                            entityName: entityName,
+                            data: entityData
+                        },
+                        options: { isFocused: true }
+                    }
+                    createTab(tabInput).then(
+                        function (tabId: string) {
+                            var ouputResponse: any = {};
+                            var sessionContextParams: any = {};
+                            sessionContextParams[actionName + ".TabId"] = tabId;
+                            sessionContextParams[actionName + ".EntityName"] = entityName;
+                            sessionContextParams[actionName + ".PageType"] = "entityrecord";
+                            ouputResponse[Constants.OutputResult] = sessionContextParams;
+                            logSuccess("ProductivityMacrosWrapper - cloneRecord", "");
+                            resolve(ouputResponse);
+                        },
+                        function (error: Error) {
+                            let errorObject = generateErrorObject(error, "ProductivityMacrosWrapper - cloneRecord", errorTypes.GenericError);
+                            logFailure("cloneRecord", errorObject, "");
+                            reject(error.message);
+                        }
+                    );
+                } else {
+                    var efo: XrmClientApi.EntityFormOptions = {
+                        entityName: entityName,
+                        useQuickCreateForm: false
+                    }
+
+                    var parameters: XrmClientApi.FormParameters = entityData;
+                    Xrm.Navigation.openForm(efo, parameters).then(function (res) {
+                        var ouputResponse: any = {};
+                        var sessionContextParams: any = {};
+                        sessionContextParams[actionName + ".EntityName"] = entityName;
+                        sessionContextParams[actionName + ".PageType"] = "entityrecord";
+                        sessionContextParams[actionName + ".EntityId"] = res.savedEntityReference[0].id;
+                        ouputResponse[Constants.OutputResult] = sessionContextParams;
+                        return resolve(ouputResponse);
+                    },
+                        function (error: Error) {
+                            let errorData = generateErrorObject(error, "client.openForm - Xrm.Navigation.openForm", errorTypes.XrmApiError);
+                            return reject(errorData);
+                        });
+                }
+            });
+        });
+    }
+
+
     export function updateFormAttribute(actionName: string, entityData: any, telemetryData?: Object | any): Promise<Map<string, any>> {
         if (!entityData) {
             return Promise.reject(createErrorMap("Need values to Update for updateFormAttribute", "updateFormAttribute")); // should be removed add logrejectanderror mrthod here
@@ -629,10 +887,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 
         });
     }
-
-
-
-
+    
     export function updateRecord(actionName: string, entityData: any,telemetryData?: Object | any): Promise<Map<string, any>> {
         if (!entityData) {
             /* let errorData = {} as IErrorHandler;
