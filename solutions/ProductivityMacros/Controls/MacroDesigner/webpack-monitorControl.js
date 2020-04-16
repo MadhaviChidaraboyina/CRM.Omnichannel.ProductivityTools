@@ -42,7 +42,7 @@ module.exports = env => {
 			new MiniCssExtractPlugin({
 				filename: 'styles.css'
 			}),
-			new CopyWebpackPlugin([{ from: "node_modules/fuse.js/dist/fuse.js", to: './node_modules/fuse', toType: 'dir' }]),
+			new CopyWebpackPlugin([{ from: "node_modules/fuse.js/src/fuse.js", to: './node_modules/fuse', toType: 'dir' }]),
 			new CopyWebpackPlugin([{ from: "node_modules/react/umd/react.production.min.js", to: './node_modules/react', toType: 'dir' }]),
 			new CopyWebpackPlugin([{ from: "node_modules/react-dom/umd/react-dom.production.min.js", to: './node_modules/react-dom', toType: 'dir' }]),
 			new CopyWebpackPlugin([{ from: "node_modules/immutable/dist/immutable.min.js", to: './node_modules/immutable', toType: 'dir' }]),
