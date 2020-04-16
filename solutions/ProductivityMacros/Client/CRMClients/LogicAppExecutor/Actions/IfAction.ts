@@ -189,11 +189,11 @@ namespace Microsoft.LogicAppExecutor {
 					case "lessOrEquals":
 						return (lhs <= rhs);
 					case "startsWith":
-						return lhs.startsWith(rhs);
+						return lhs.toString().startsWith(rhs.toString());
 					case "endsWith":
-						return lhs.endsWith(rhs);
+						return lhs.toString().endsWith(rhs.toString());
 					case "contains":
-						return lhs.includes(rhs);
+						return lhs.toString().includes(rhs.toString());
 				}
 			}
 			catch (ex)
