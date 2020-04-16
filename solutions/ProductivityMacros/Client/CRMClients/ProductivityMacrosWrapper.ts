@@ -78,6 +78,9 @@ namespace Microsoft.ProductivityMacros.Internal {
                             },
                             options: { isFocused: true }
                         }
+                        if (!isNullOrUndefined(formInputs.FormId)) {
+                            (tabInput.pageInput as XrmClientApi.FormPageInput).formId = formInputs.FormId;
+                        }
                         createTab(tabInput).then(
                             function (tabId: string) {
                                 var ouputResponse: any = {};
@@ -99,6 +102,9 @@ namespace Microsoft.ProductivityMacros.Internal {
                         var efo: XrmClientApi.EntityFormOptions = {
                             entityName: formInputs.EntityName,
                             useQuickCreateForm: false
+                        }
+                        if (!isNullOrUndefined(formInputs.FormId)) {
+                            efo["formId"] = formInputs.FormId;
                         }
 
                         var parameters: XrmClientApi.FormParameters = getCustomArray(formInputs);
@@ -144,7 +150,9 @@ namespace Microsoft.ProductivityMacros.Internal {
                             },
                             options: { isFocused: true }
                         };
-
+                        if (!isNullOrUndefined(entityFormOptions.FormId)) {
+                            (tabInput.pageInput as XrmClientApi.FormPageInput).formId = entityFormOptions.FormId;
+                        }
                         createTab(tabInput).then(
                             function (tabId: string) {
                                 var ouputResponse: any = {};
@@ -167,6 +175,10 @@ namespace Microsoft.ProductivityMacros.Internal {
                         var efo: XrmClientApi.EntityFormOptions = {
                             entityName: entityFormOptions.EntityName,
                             entityId: entityFormOptions.EntityId
+                        }
+
+                        if (!isNullOrUndefined(entityFormOptions.FormId)) {
+                            efo["formId"] = entityFormOptions.FormId;
                         }
 
                         Xrm.Navigation.openForm(efo,null).then(function (res) {
