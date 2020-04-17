@@ -621,6 +621,46 @@
     <value>मौजूदा रिकॉर्ड अद्यतन करें</value>
     <comment>Macro Action Template Title</comment>
   </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Clone focused record</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Clone focused record</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Clone focused record</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Clone focused record</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
+    <value>Clone input record</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
+    <value>Clone input record</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
+    <value>Clone input record</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
+    <value>Clone input record</value>
+  <comment>Macro Action Template Summary</comment>
+  </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
     <value>प्रपत्र के फ़ील्ड स्वतः भरें</value>
     <comment>Macro Action Template Displayname</comment>
@@ -781,6 +821,14 @@
     <value>निकाय का प्राथमिक नाम</value>
     <comment>Parameter definition Title</comment>
   </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_a50fc5ef-5d6e-ea11-a811-000d3a8d88aa" xml:space="preserve">
+    <value>Record title</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_a50fc5ef-5d6e-ea11-a811-000d3a8d88aa" xml:space="preserve">
+    <value>Record title</value>
+    <comment>Parameter definition Title</comment>
+  </data>
   <data name="msdyn_parameterdefinition_msdyn_displayname_473decbe_9fdf_e911_a81e_000d3a0698dc" xml:space="preserve">
     <value>टेम्पलेट ID</value>
     <comment>Parameter definition Title</comment>
@@ -855,6 +903,66 @@
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
     <value>नॉलेज बेस आलेख खोलें</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
+    <value>नॉलेज बेस आलेख भेजें</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
+    <value>नॉलेज बेस आलेख भेजें</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
+    <value>नॉलेज बेस आलेख भेजें</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
+    <value>ओमनीचैनल कनेक्टर</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
+    <value>नॉलेज बेस आलेख भेजें</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
+    <value>सत्र बंद करें</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
+    <value>सत्र बंद करें</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
+    <value>इस सत्र को बंद करें</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
+    <value>सत्र कनेक्टर</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
+    <value>इस सत्र को बंद करें</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" xml:space="preserve">
+    <value>सभी अन्य सत्र बंद करें</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" xml:space="preserve">
+    <value>सभी अन्य सत्र बंद करें</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" xml:space="preserve">
+    <value>सभी अन्य सत्र बंद करें</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" xml:space="preserve">
+    <value>सत्र कनेक्टर</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" xml:space="preserve">
+    <value>सभी अन्य सत्र बंद करें</value>
     <comment>Macro Action Template Summary</comment>
   </data>
 </root>

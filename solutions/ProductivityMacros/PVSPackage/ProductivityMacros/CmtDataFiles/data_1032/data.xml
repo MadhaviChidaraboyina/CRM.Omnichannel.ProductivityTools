@@ -2,6 +2,15 @@
 <entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" timestamp="9/25/2019 8:35:47 PM">
   <entity name="msdyn_parameterdefinition" displayname="Parameter definition">
     <records>
+      <record id="a50fc5ef-5d6e-ea11-a811-000d3a8d88aa">
+        <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_a50fc5ef-5d6e-ea11-a811-000d3a8d88aa" />
+        <field name="msdyn_name" value="RecordTitle" />
+        <field name="msdyn_parameterdefinitionid" value="a50fc5ef-5d6e-ea11-a811-000d3a8d88aa" />
+        <field name="msdyn_parametertype" value="string" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_displayname" value="msdyn_parameterdefinition_msdyn_displayname_a50fc5ef-5d6e-ea11-a811-000d3a8d88aa" />
+      </record>      
       <record id="d61ae14b-f8d2-e911-a81e-000d3a015920">
         <field name="msdyn_description" value="msdyn_parameterdefinition_msdyn_description_d61ae14b_f8d2_e911_a81e_000d3a015920" />
         <field name="msdyn_name" value="EntityName" />
@@ -180,6 +189,8 @@
       <m2mrelationship sourceid="d61ae14b-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
         <targetids>
           <targetid>af738e20-9fdf-e911-a81e-000d3a0698dc</targetid>
+          <targetid>da4e7d32-ad1f-4668-ae72-e8539c5434a3</targetid>
+          <targetid>a36b4c62-d069-ea11-a811-000d3a54419d</targetid>
           <targetid>324255e8-9fdf-e911-a81e-000d3a0698dc</targetid>
           <targetid>64dfc33d-a0df-e911-a81e-000d3a0698dc</targetid>
           <targetid>0b4dd036-385e-ea11-a811-000d3a33497d</targetid>
@@ -189,10 +200,17 @@
           <targetid>a4794d6d-b112-ea11-a811-000d3a334ee9</targetid>
         </targetids>
       </m2mrelationship>
+      <m2mrelationship sourceid="a50fc5ef-5d6e-ea11-a811-000d3a8d88aa" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
+        <targetids>
+          <targetid>ff683dd7-c86c-ea11-a811-000d3a8d88aa</targetid>
+          <targetid>826fa6d8-4a70-4fa0-979f-e8beb8b32c1b</targetid>
+        </targetids>
+      </m2mrelationship>      
       <m2mrelationship sourceid="d61ae14b-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
           <targetid>f530a3d1-f9d2-e911-a81e-000d3a015920</targetid>
           <targetid>c8d99e29-fad2-e911-a81e-000d3a015920</targetid>
+          <targetid>92b24d94-e296-44f9-938c-6dfa7b8118af</targetid>
           <targetid>1d75d16f-fad2-e911-a81e-000d3a015920</targetid>
           <targetid>630796db-185a-ea11-a811-000d3a334e98</targetid>
           <targetid>d54edfed-fcd2-e911-a81e-000d3a015920</targetid>
@@ -217,6 +235,7 @@
       </m2mrelationship>
       <m2mrelationship sourceid="f729e573-f8d2-e911-a81e-000d3a015920" targetentityname="msdyn_actioninputparameter" targetentitynameidfield="msdyn_actioninputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actioninputparam">
         <targetids>
+          <targetid>92b24d94-e296-44f9-938c-6dfa7b8118af</targetid>
           <targetid>c8d99e29-fad2-e911-a81e-000d3a015920</targetid>
           <targetid>d54edfed-fcd2-e911-a81e-000d3a015920</targetid>
           <targetid>4de2d295-9fdf-e911-a81e-000d3a0698dc</targetid>
@@ -249,6 +268,8 @@
       <m2mrelationship sourceid="ca97e23b-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
         <targetids>
           <targetid>af738e20-9fdf-e911-a81e-000d3a0698dc</targetid>
+          <targetid>a36b4c62-d069-ea11-a811-000d3a54419d</targetid>
+          <targetid>da4e7d32-ad1f-4668-ae72-e8539c5434a3</targetid>
           <targetid>324255e8-9fdf-e911-a81e-000d3a0698dc</targetid>
           <targetid>64dfc33d-a0df-e911-a81e-000d3a0698dc</targetid>
           <targetid>76104271-a0df-e911-a81e-000d3a0698dc</targetid>
@@ -258,6 +279,8 @@
       <m2mrelationship sourceid="eb102e60-9fdf-e911-a81e-000d3a0698dc" targetentityname="msdyn_actionoutputparameter" targetentitynameidfield="msdyn_actionoutputparameterid" m2mrelationshipname="msdyn_msdyn_paramdef_msdyn_actionoutputparam">
         <targetids>
           <targetid>af738e20-9fdf-e911-a81e-000d3a0698dc</targetid>
+          <targetid>a36b4c62-d069-ea11-a811-000d3a54419d</targetid>
+          <targetid>da4e7d32-ad1f-4668-ae72-e8539c5434a3</targetid>
           <targetid>0b4dd036-385e-ea11-a811-000d3a33497d</targetid>
           <targetid>324255e8-9fdf-e911-a81e-000d3a0698dc</targetid>
           <targetid>64dfc33d-a0df-e911-a81e-000d3a0698dc</targetid>
@@ -320,6 +343,33 @@
   </entity>
   <entity name="msdyn_actioninputparameter" displayname="Action Input Parameter">
     <records>
+      <record id="826fa6d8-4a70-4fa0-979f-e8beb8b32c1b">
+        <field name="msdyn_actioninputparameterid" value="826fa6d8-4a70-4fa0-979f-e8beb8b32c1b" />
+        <field name="msdyn_actiontemplateinputparameterid" value="b3e9cb73-72fe-40c7-baeb-91714890d1f7" lookupentity="msdyn_macroactiontemplate" lookupentityname="Clone_Input_Record" />
+        <field name="msdyn_name" value="Clone_Input_Record_input_params_optional" />
+        <field name="msdyn_parametertype" value="False" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="important" />
+      </record>
+      <record id="92b24d94-e296-44f9-938c-6dfa7b8118af">
+        <field name="msdyn_actioninputparameterid" value="92b24d94-e296-44f9-938c-6dfa7b8118af" />
+        <field name="msdyn_actiontemplateinputparameterid" value="b3e9cb73-72fe-40c7-baeb-91714890d1f7" lookupentity="msdyn_macroactiontemplate" lookupentityname="Clone_Input_Record" />
+        <field name="msdyn_name" value="Clone_Input_Record_input_params_required" />
+        <field name="msdyn_parametertype" value="False" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
+      <record id="ff683dd7-c86c-ea11-a811-000d3a8d88aa">
+        <field name="msdyn_actioninputparameterid" value="ff683dd7-c86c-ea11-a811-000d3a8d88aa" />
+        <field name="msdyn_actiontemplateinputparameterid" value="f8c404ed-aa69-ea11-a811-000d3a54419d" lookupentity="msdyn_macroactiontemplate" lookupentityname="Clone_focused_Record" />
+        <field name="msdyn_name" value="Clone_focused_Record_input_params_required" />
+        <field name="msdyn_parametertype" value="False" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_visibility" value="required" />
+      </record>
       <record id="630796db-185a-ea11-a811-000d3a334e98">
         <field name="msdyn_actioninputparameterid" value="630796db-185a-ea11-a811-000d3a334e98" />
         <field name="msdyn_actiontemplateinputparameterid" value="37a95038-185a-ea11-a811-000d3a334e98" lookupentity="msdyn_macroactiontemplate" lookupentityname="Update_Form_Attributes" />
@@ -535,6 +585,20 @@
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
       </record>
+      <record id="da4e7d32-ad1f-4668-ae72-e8539c5434a3">
+        <field name="msdyn_actionoutputparameterid" value="da4e7d32-ad1f-4668-ae72-e8539c5434a3" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="b3e9cb73-72fe-40c7-baeb-91714890d1f7" lookupentity="msdyn_macroactiontemplate" lookupentityname="Clone_Input_Record" />
+        <field name="msdyn_name" value="Clone_Input_Record_Output_Params" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="a36b4c62-d069-ea11-a811-000d3a54419d">
+        <field name="msdyn_actionoutputparameterid" value="a36b4c62-d069-ea11-a811-000d3a54419d" />
+        <field name="msdyn_actiontemplateoutputparameterid" value="f8c404ed-aa69-ea11-a811-000d3a54419d" lookupentity="msdyn_macroactiontemplate" lookupentityname="Clone_focused_Record" />
+        <field name="msdyn_name" value="Clone_focused_Record_Output_Params" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>      
       <record id="324255e8-9fdf-e911-a81e-000d3a0698dc">
         <field name="msdyn_actionoutputparameterid" value="324255e8-9fdf-e911-a81e-000d3a0698dc" />
         <field name="msdyn_actiontemplateoutputparameterid" value="e903922e-fdd2-e911-a81e-000d3a015920" lookupentity="msdyn_macroactiontemplate" lookupentityname="Draft_Email" />
@@ -671,6 +735,38 @@
         <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_01a02947_f9d2_e911_a81e_000d3a015920" />
         <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_01a02947_f9d2_e911_a81e_000d3a015920" />
         <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_01a02947_f9d2_e911_a81e_000d3a015920" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="f8c404ed-aa69-ea11-a811-000d3a54419d">
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed-aa69-ea11-a811-000d3a54419d" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_f8c404ed-aa69-ea11-a811-000d3a54419d" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_clone_record.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="f8c404ed-aa69-ea11-a811-000d3a54419d" />
+        <field name="msdyn_name" value="Clone_focused_Record" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.cloneFocusedRecord(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_f8c404ed-aa69-ea11-a811-000d3a54419d" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_f8c404ed-aa69-ea11-a811-000d3a54419d" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_f8c404ed-aa69-ea11-a811-000d3a54419d" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="b3e9cb73-72fe-40c7-baeb-91714890d1f7">
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73-72fe-40c7-baeb-91714890d1f7" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_b3e9cb73-72fe-40c7-baeb-91714890d1f7" />
+        <field name="msdyn_macroconnector" value="60541186-f5dd-e911-a81e-000d3af9c0c2" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_clone_record.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="b3e9cb73-72fe-40c7-baeb-91714890d1f7" />
+        <field name="msdyn_name" value="Clone_Input_Record" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ProductivityMacros.Internal.cloneInputRecord(actionName,actionInputs)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_b3e9cb73-72fe-40c7-baeb-91714890d1f7" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_b3e9cb73-72fe-40c7-baeb-91714890d1f7" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_b3e9cb73-72fe-40c7-baeb-91714890d1f7" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
       <record id="e6c81912-fad2-e911-a81e-000d3a015920">
@@ -1048,6 +1144,54 @@
         <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62" />
         <field name="msdyn_brandcolor" value="#2266E3" />
       </record>
+      <record id="0070F53E-3C12-439E-80A7-39F10C38878B">
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" />
+        <field name="msdyn_macroconnector" value="d2f931e3-70b7-4093-865e-b8075a02c215" lookupentity="msdyn_macroconnector" lookupentityname="Omnichannel Connector" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_send_kb.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="0070F53E-3C12-439E-80A7-39F10C38878B" />
+        <field name="msdyn_name" value="Send_KB" />
+        <field name="msdyn_runtimeapi" value="OmniChannelPackage.Macros.Instance.sendKBArticle(actionName)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="57EB46A5-6D9D-4C09-A462-1C5475993879">
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C5475993879" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879" />
+        <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Session Connector" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_close_session.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="57EB46A5-6D9D-4C09-A462-1C5475993879" />
+        <field name="msdyn_name" value="Close_Session" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ChannelIntegrationFramework.Macros.closeSessionAction(actionName)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>
+      <record id="0F218CC2-0AD4-4089-90EE-A654E0DD6FA9">
+        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" />
+        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" />
+        <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
+        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_close_all_sessions.svg" />
+        <field name="msdyn_kind" value="ACTIONS" />
+        <field name="msdyn_macroactiontemplateid" value="0F218CC2-0AD4-4089-90EE-A654E0DD6FA9" />
+        <field name="msdyn_name" value="Close_All_other_Sessions" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ChannelIntegrationFramework.Macros.closeAllOtherSessionsAction(actionName)" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" />
+        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" />
+        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" />
+        <field name="msdyn_brandcolor" value="#2266E3" />
+      </record>   
     </records>
     <m2mrelationships />
   </entity>

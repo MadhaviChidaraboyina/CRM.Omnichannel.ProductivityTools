@@ -801,6 +801,22 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[傳送知識庫文章]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000282Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Open a new form to create a record.]]></Val>
@@ -815,6 +831,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close all of the other sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[關閉所有其他工作階段]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000282Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_16fc3387_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -917,6 +949,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C5475993879" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close this session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[關閉此工作階段]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000287Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1085,6 +1133,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[傳送知識庫文章]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000287Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Displayname]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Create New]]></Val>
@@ -1099,6 +1163,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close all other sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[關閉所有其他工作階段]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000287Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Displayname]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_16fc3387_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1201,6 +1281,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[關閉工作階段]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000287Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Displayname]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1369,6 +1465,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[全通路連接器]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000287Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Productivity automation]]></Val>
@@ -1383,6 +1495,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[工作階段連接器]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000287Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_16fc3387_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1479,6 +1607,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[工作階段連接器]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000284Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1641,6 +1785,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[傳送知識庫文章]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000287Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Open a new form to create a record]]></Val>
@@ -1655,6 +1815,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close all of the other sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[關閉所有其他工作階段]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000287Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_16fc3387_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1757,6 +1933,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close this session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[關閉此工作階段]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000287Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1925,6 +2117,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[傳送知識庫文章]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000287Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Open a new form to create a record]]></Val>
@@ -1939,6 +2147,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close all other sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[關閉所有其他工作階段]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000289Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_16fc3387_fcd2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2041,6 +2265,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[關閉工作階段]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-15T07:21:33.0000289Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO27892_20200413" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

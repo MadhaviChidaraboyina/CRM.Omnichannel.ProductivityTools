@@ -3443,11 +3443,11 @@
         <Str Cat="Text">
           <Val><![CDATA[My macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[我的最愛 macroconnectors]]></Val>
+            <Val><![CDATA[我的 macroconnectors]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:24:00.0003448Z" />
+        <Modified By="v-rondai" DateTime="2020-04-16T03:47:25Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
