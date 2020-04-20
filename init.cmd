@@ -28,7 +28,7 @@ if not defined AltWSRoot (
 
 if [%AltWSRoot%]==[] (
 	REM configure when there is no alternative workspace root
-	set AltWSRoot=%cd%
+	set AltWSRoot=%~dp0
 )
 
 REM display the value of the workspace root
@@ -40,6 +40,8 @@ echo XrmSolutionsRoot is %XrmSolutionsRoot%
 set WSRoot=%XrmSolutionsRoot%
 echo WSRoot is %WSRoot%
 
+echo CDP_BUILD_TYPE is %CDP_BUILD_TYPE%
+
 @echo.
 echo Restoring nuget packages..
 ==========================================================
@@ -49,7 +51,11 @@ powershell -ExecutionPolicy Bypass -Command %WSRoot%\init.ps1
 set PATH=%WSRoot%\.tools;%WSRoot%\.tools\VSS.NuGet.AuthHelper;%PATH%
 
 echo Package directory is: %WSRoot%\packages
-nuget restore %WSRoot%\build\config\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
+if not defined CDP_BUILD_TYPE (
+	nuget restore %WSRoot%\build\config\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
+) else (
+	nuget restore %WSRoot%\build\config\packages.config -PackagesDirectory %WSRoot%\packages
+)
 REM nuget restore %WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFramework.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
 REM nuget restore %WSRoot%\solutions\CIFramework\Microsoft.OmniChannel.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
 REM nuget restore %WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFrameworkV2.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages

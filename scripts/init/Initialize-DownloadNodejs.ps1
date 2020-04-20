@@ -21,6 +21,8 @@ Try{
 	if($p -ne "v9.9.0"){
 		Write-Host "Please install Version 9.9.0 or newer of Node"
 	}
+	$n = &{npm -v} 2>&1
+	Write-Host "Current npm Verion installed: $n"
 }
 Catch
 {

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <SlnDir>$(MSBuildProjectDirectory)</SlnDir>
+    <SlnName>ProductivityMacros.sln</SlnName>
+    <ProjectName>flowDesignerControl.njsproj</ProjectName>
+    <SlnPath>$(SlnDir)\$(SlnName)</SlnPath>
+    <ProjectPath>$(SlnDir)\Controls\MacroDesigner\$(ProjectName)</ProjectPath>
+    <PackageLocation>$(SlnDir)\drop\$(BuildConfiguration)\$(BuildPlatform)\Blobs</PackageLocation>
+    <VS2017>C:\Program Files (x86)\Microsoft Visual Studio\2017</VS2017>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectToBuild Include="$(ProjectPath)">
+    </ProjectToBuild>
+	
+    <FlowDesignerControl Include ="$(SlnDir)\ProductivityMacros\Controls\MacroDesigner\flowDesignerControl.njsproj">
+    </FlowDesignerControl>
+    
+  </ItemGroup>
+
+  <Target Name="Clean" DependsOnTargets="clean"></Target>
+
+  <Target Name="clean">
+    <MSBuild Projects="@(ProjectToBuild)" Targets="Clean"></MSBuild>
+    <RemoveDir Directories="$(NugetDir)" />
+  </Target>
+
+  <Target Name="All" DependsOnTargets="all"></Target>
+  <Target Name="all">
+    <MSBuild Projects="@(ProjectToBuild)"></MSBuild>
+  </Target>
+
+  <Target Name="Package" DependsOnTargets="All">
+    <MakeDir Directories="$(PackageLocation)/RDPackage"/>
+    <MakeDir Directories="$(PackageLocation)/cvdata"/>
+
+    <Message Text=" PackageLocation = $(PackageLocation)" />
+   </Target>
+
+  <Target Name="ShowInfo">
+    <Message Text="ProjectPath = $(ProjectPath)" />
+    <Message Text="SlnDir = $(SlnDir)" />
+    <Message Text="PackageLocation = $(PackageLocation)" />
+  </Target>
+
+</Project>

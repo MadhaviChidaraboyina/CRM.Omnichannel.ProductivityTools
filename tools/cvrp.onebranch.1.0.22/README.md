@@ -1,0 +1,1 @@
+﻿Please see [CloudVault Replication Plan (CVRP)](https://onebranch.visualstudio.com/Build/_wiki/wikis/Build.wiki?wikiVersion=GBwikiMaster&pagePath=%2FReferences%2FCloudVault%20Replication%20Plan%20(CVRP)) VSTS wiki page.

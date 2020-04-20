@@ -1,0 +1,77 @@
+<!--
+***********************************************************************************************
+GenerateCatalog.targets
+
+***********************************************************************************************
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MsBuildAllProjects>$(MsBuildAllProjects);$(MsBuildThisFileFullPath)</MsBuildAllProjects>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PowershellExeSystemFolder>system32</PowershellExeSystemFolder>
+    <PowershellExeSystemFolder Condition="'$(PROCESSOR_ARCHITECTURE)'=='x86'">sysnative</PowershellExeSystemFolder>
+    <PowershellExe>$(SystemRoot)\$(PowershellExeSystemFolder)\WindowsPowerShell\v1.0\powershell.exe</PowershellExe>
+    <PowershellOptions>-ExecutionPolicy Unrestricted</PowershellOptions>
+    <ScriptsDirectory>$(MSBuildThisFileDirectory)..\scripts</ScriptsDirectory>
+    <GenerateCatalogScriptFile>$(ScriptsDirectory)\GenerateCatalog.ps1</GenerateCatalogScriptFile>
+
+    <CvrpFileNameWithoutExtention Condition="'$(CvrpFileNameWithoutExtention)'==''">$([System.IO.Path]::GetFileNameWithoutExtension($(ManifestOutputFile)))</CvrpFileNameWithoutExtention>
+    <ManifestOutputFolder>$([System.IO.Path]::GetDirectoryName($(ManifestOutputFilePath)))</ManifestOutputFolder>
+
+    <CatalogFileName Condition="'$(CatalogFileName)'==''">$(CvrpFileNameWithoutExtention).cat</CatalogFileName>
+    <CvrpFileName Condition="'$(CvrpFileName)'==''">$(CvrpFileNameWithoutExtention).cvrp</CvrpFileName>
+
+    <CatalogFileFullPath Condition="'$(CatalogFileFullPath)'==''">$(ManifestOutputFolder)\$(CatalogFileName)</CatalogFileFullPath>
+    <CvrpFileFullPath Condition="'$(CvrpFileFullPath)'==''">$(OutDir)$(CvrpFileName)</CvrpFileFullPath>
+
+    <!-- Local output root in local builds and BuildTracker. -->
+    <LocalOutputRoot>$(OutputRoot)</LocalOutputRoot>
+    <!-- Local output root in CloudBuild. -->
+    <LocalOutputRoot Condition="'$(QBUILD_DISTRIBUTED)'=='1'">$(BinariesDirectory)</LocalOutputRoot>
+
+    <CatalogDropFolderPath Condition="'$(CatalogDropFolderPath)'==''">$(TargetDestination)</CatalogDropFolderPath>
+    <BinariesBuildTypeArchDirectoryEx Condition="'$(LocalOutputRoot)'!=''">$(LocalOutputRoot)\$(BuildType)-$(BuildArchitecture)</BinariesBuildTypeArchDirectoryEx>
+    <BinariesBuildTypeArchDirectoryEx Condition="'$(BinariesBuildTypeArchDirectory)' != '' and '$(BinariesBuildTypeArchDirectory.ToLower().Contains($(InetRoot.ToLower())))'">$(LocalOutputRoot)\..\$([MSBuild]::MakeRelative($(InetRoot), $(BinariesBuildTypeArchDirectory)))</BinariesBuildTypeArchDirectoryEx>
+    <CatalogDropFolderPath Condition="'$([System.IO.Path]::IsPathRooted($(CatalogDropFolderPath)))'!='True'">$(BinariesBuildTypeArchDirectoryEx)\$(CatalogDropFolderPath)</CatalogDropFolderPath>
+    <CatalogDropFolderPath Condition="'$(CatalogDropFolderPath)'!=''">$(CatalogDropFolderPath.TrimEnd('\'))</CatalogDropFolderPath>
+  </PropertyGroup>
+
+  <Target Name="GenerateCvrpCatalog">
+    <Error Text="ERROR: Powershell could not be found: $(PowershellExe)" Condition="!Exists('$(PowershellExe)')" />
+    <Error Text="ERROR: GenerateCatalogScriptFile $(GenerateCatalogScriptFile) could not be found." Condition="!Exists('$(GenerateCatalogScriptFile)')" />
+    <Error Text="ERROR: CVRP could not be found: $(CvrpFileFullPath)" Condition="!Exists('$(CvrpFileFullPath)')" />
+
+    <!-- Construct GenerateCvrpCatalog command line -->
+    <PropertyGroup>
+      <GenerateCatalogCommand>$(PowershellExe) $(PowershellOptions) $(GenerateCatalogScriptFile) -inputPath "$(CvrpFileFullPath)" -catalogPath "$(CatalogFileFullPath)"</GenerateCatalogCommand>
+    </PropertyGroup>
+
+    <!-- Generating catalog for CVRP -->
+    <Message Text="Running: $(GenerateCatalogCommand)" />
+
+    <Exec
+      Command="$(GenerateCatalogCommand)"
+      ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" ItemName="GenerateCatalogOutput" />
+      <Output TaskParameter="ExitCode" PropertyName="GenerateCatalogExitCode" />
+    </Exec>
+
+    <!-- Show error message -->
+    <Message Text="%(GenerateCatalogOutput.Identity)" Condition="'$(GenerateCatalogExitCode)' != '0'" />
+
+    <MakeDir Condition="!Exists($(CatalogDropFolderPath))" Directories="$(CatalogDropFolderPath)" />
+    <Message Text="Copying catalog file $(CatalogFileFullPath) to the drop folder: $(CatalogDropFolderPath)..." />
+    <!-- Copy catalog to the drop folder -->
+    <Copy
+        SourceFiles="$(CatalogFileFullPath)"
+        SkipUnchangedFiles="true"
+        DestinationFolder="$(CatalogDropFolderPath)"
+        OverwriteReadOnlyFiles="true"
+        Retries="3"
+        RetryDelayMilliseconds="1000"
+        ContinueOnError="true"
+    />
+  </Target>
+</Project>

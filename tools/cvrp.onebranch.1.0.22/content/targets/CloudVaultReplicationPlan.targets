@@ -1,0 +1,97 @@
+<!--
+***********************************************************************************************
+CloudVaultReplicationPlanTargets.targets
+
+***********************************************************************************************
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MsBuildAllProjects>$(MsBuildAllProjects);$(MsBuildThisFileFullPath)</MsBuildAllProjects>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PowershellExeSystemFolder>system32</PowershellExeSystemFolder>
+    <PowershellExeSystemFolder Condition="'$(PROCESSOR_ARCHITECTURE)'=='x86'">sysnative</PowershellExeSystemFolder>
+    <PowershellExe>$(SystemRoot)\$(PowershellExeSystemFolder)\WindowsPowerShell\v1.0\powershell.exe</PowershellExe>
+    <PowershellOptions>-ExecutionPolicy Unrestricted</PowershellOptions>
+    <ScriptsDirectory>$(MSBuildThisFileDirectory)..\scripts</ScriptsDirectory>
+    <GenerateCvrpScriptFile>$(ScriptsDirectory)\GenerateCvrp.ps1</GenerateCvrpScriptFile>
+
+    <CvrpFileNameWithoutExtention Condition="'$(CvrpFileNameWithoutExtention)'==''">$([System.IO.Path]::GetFileNameWithoutExtension($(ManifestOutputFile)))</CvrpFileNameWithoutExtention>
+    <CvrpFileName Condition="'$(CvrpFileName)'==''">$(CvrpFileNameWithoutExtention).cvrp</CvrpFileName>
+    <CvrpFileFullPath Condition="'$(CvrpFileFullPath)'==''">$(OutDir)$(CvrpFileName)</CvrpFileFullPath>
+
+    <!-- Local output root in local builds and BuildTracker. -->
+    <LocalOutputRoot>$(OutputRoot)</LocalOutputRoot>
+    <!-- Local output root in CloudBuild. -->
+    <LocalOutputRoot Condition="'$(QBUILD_DISTRIBUTED)'=='1'">$(BinariesDirectory)</LocalOutputRoot>
+
+    <CvrpDropFolderPath Condition="'$(CvrpDropFolderPath)'==''">$(TargetDestination)</CvrpDropFolderPath>
+    <BinariesBuildTypeArchDirectoryEx Condition="'$(LocalOutputRoot)'!=''">$(LocalOutputRoot)\$(BuildType)-$(BuildArchitecture)</BinariesBuildTypeArchDirectoryEx>
+    <BinariesBuildTypeArchDirectoryEx Condition="'$(BinariesBuildTypeArchDirectory)' != '' and '$(BinariesBuildTypeArchDirectory.ToLower().Contains($(InetRoot.ToLower())))'">$(LocalOutputRoot)\..\$([MSBuild]::MakeRelative($(InetRoot), $(BinariesBuildTypeArchDirectory)))</BinariesBuildTypeArchDirectoryEx>
+    <CvrpDropFolderPath Condition="'$([System.IO.Path]::IsPathRooted($(CvrpDropFolderPath)))'!='True'">$(BinariesBuildTypeArchDirectoryEx)\$(CvrpDropFolderPath)</CvrpDropFolderPath>
+    <CvrpDropFolderPath Condition="'$(CvrpDropFolderPath)'!=''">$(CvrpDropFolderPath.TrimEnd('\'))</CvrpDropFolderPath>
+
+    <BuildManifest Condition="'$(BuildManifestFlag)'=='true'">-buildManifest</BuildManifest>
+  </PropertyGroup>
+
+  <Target Name="GenerateCvrpFromManifest" Condition="Exists('$(ManifestOutputFilePath)')">
+    <Message Text="INFO: srvreleaseshare: $(srvreleaseshare)" />
+    <Message Text="INFO: OfficialBuildDropRoot: $(OfficialBuildDropRoot)" />
+    <Message Text="INFO: LocalOutputRoot: $(LocalOutputRoot)" />
+    <Message Text="INFO: BinariesDirectory: $(BinariesDirectory)" />
+    <Message Text="INFO: OutputRoot: $(OutputRoot)" />
+    <Message Text="INFO: BinariesBuildTypeArchDirectory: $(BinariesBuildTypeArchDirectory)" />
+    <Message Text="INFO: BinariesBuildTypeArchDirectoryEx: $(BinariesBuildTypeArchDirectoryEx)" />
+    <Message Text="INFO: TargetDestination: $(TargetDestination)" />
+    <Message Text="INFO: CvrpDropFolderPath: $(CvrpDropFolderPath)" />
+
+    <Error Text="ERROR: Powershell could not be found: $(PowershellExe)" Condition="!Exists('$(PowershellExe)')" />
+    <Error Text="ERROR: GenerateCvrpScriptFile $(GenerateCvrpScriptFile) could not be found." Condition="!Exists('$(GenerateCvrpScriptFile)')" />
+    <Error Text="ERROR: Manifest file $(ManifestOutputFilePath) could not be found." Condition="!Exists('$(ManifestOutputFilePath)')" />
+
+    <PropertyGroup>
+      <!-- Release output root in BuildTracker. -->
+      <ReleaseOutputRoot>$(srvreleaseshare)</ReleaseOutputRoot>
+      <!-- Release output root in CloudBuild. OfficialBuildDropRoot is defined in OneBranch.BuildComposition.targets. -->
+      <ReleaseOutputRoot Condition="'$(QBUILD_DISTRIBUTED)'=='1' and '$(OfficialBuildDropRoot)'!=''">$(OfficialBuildDropRoot)</ReleaseOutputRoot>
+      <!-- Release output root in local builds. -->
+      <ReleaseOutputRoot Condition="'$(ReleaseOutputRoot)'==''">$(LocalOutputRoot)</ReleaseOutputRoot>
+    </PropertyGroup>
+
+    <!-- Construct GenerateCvrp command line -->
+    <PropertyGroup>
+      <CvrpDropFolderPath Condition="'$(CvrpDropFolderPath)'!=''">$(CvrpDropFolderPath.TrimEnd('\'))</CvrpDropFolderPath>
+      <GenerateCvrpCommand>$(PowershellExe) $(PowershellOptions) $(GenerateCvrpScriptFile) -manifest "$(ManifestOutputFilePath)" -cvrpPath "$(CvrpFileFullPath)" -cvrpDropFolderPath "$(CvrpDropFolderPath)" -localOutputRoot "$(LocalOutputRoot)" -releaseOutputRoot "$(ReleaseOutputRoot)" $(BuildManifest)</GenerateCvrpCommand>
+    </PropertyGroup>
+
+    <Message Text="INFO: LocalOutputRoot: $(LocalOutputRoot)" />
+    <Message Text="INFO: ReleaseOutputRoot: $(ReleaseOutputRoot)" />
+
+    <!-- Convert Manifest to CVRP -->
+    <Message Text="Running: $(GenerateCvrpCommand)" />
+
+    <Exec
+      Command="$(GenerateCvrpCommand)"
+      ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" ItemName="GenerateCvrpOutput" />
+      <Output TaskParameter="ExitCode" PropertyName="GenerateCvrpExitCode" />
+    </Exec>
+
+    <!-- Show error message -->
+    <Message Text="%(GenerateCvrpOutput.Identity)" Condition="'$(GenerateCvrpExitCode)' != '0'" />
+
+    <MakeDir Condition="!Exists($(CvrpDropFolderPath))" Directories="$(CvrpDropFolderPath)" />
+    <Message Text="Copying CVRP file $(CvrpFileFullPath) to the drop folder: $(CvrpDropFolderPath)..." />
+    <!-- Copy CVRP to the drop folder -->
+    <Copy
+        SourceFiles="$(CvrpFileFullPath)"
+        SkipUnchangedFiles="true"
+        DestinationFolder="$(CvrpDropFolderPath)"
+        OverwriteReadOnlyFiles="true"
+        Retries="3"
+        RetryDelayMilliseconds="1000"
+        ContinueOnError="true"
+    />
+  </Target>
+</Project>

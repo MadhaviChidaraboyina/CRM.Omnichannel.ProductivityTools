@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>CVRP.OneBranch</id>
+    <version>1.0.22</version>
+    <title>CloudVaultReplicationPlan</title>
+    <authors>vlbelov</authors>
+    <owners>wabuild</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://www.microsoft.com/license</licenseUrl>
+    <projectUrl>http://www.microsoft.com/</projectUrl>
+    <description>CloudVault Replication Plan Tools</description>
+    <summary>CloudVault Replication Plan Tools</summary>
+    <releaseNotes>* Add -includeAllFilesInDropRootNonRecursive flag to generating cvrp by paths script.
+      * Revert: Use BinariesDirectory as LocalOutputRoot for both BuildTracker and CloudBuild builds.
+      * Use BinariesDirectory as LocalOutputRoot for both BuildTracker and CloudBuild builds.
+      * Fix catalog name.
+      * Change cvrp and cat files paths to relative in replication manifests when generating cvrp by paths.
+      * Support SHA512 and SHA1.
+      * Trim CvrpDropFolderPath inside the target in case customer override it.
+      * Fail build if CVRP fails to generate.
+      * Compute SHA256 hash of composition items if the hash algorithm is different.</releaseNotes>
+    <copyright>Copyright (c) Microsoft Corporation</copyright>
+    <tags>CVRP.OneBranch;_Origin:https://msazure.visualstudio.com/DefaultCollection/One/_git//EngSys-DevServices-Build _Repository:X:\bt\1017807\repo _Head:master _Project:CVRP.OneBranch.nuproj _ProjectDirectoryPath:\CVRP\Package _AssemblyName:CVRP.OneBranch _OutputType:package _User:azbldrun</tags>
+  </metadata>
+</package>
