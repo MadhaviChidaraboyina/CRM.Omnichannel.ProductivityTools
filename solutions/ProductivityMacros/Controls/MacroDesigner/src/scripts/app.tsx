@@ -105,7 +105,7 @@ function startInit() {
 			'prop-types': 'node_modules/prop-types/prop-types.min',
 			'tslib': 'node_modules/tslib/tslib',
 			'cds-control-expression': 'LogicApps/expr',
-			'Reselect': 'node_modules/reselect/reselect.min',
+			'Reselect': 'node_modules/reselect/reselect',
 			're-reselect': 'node_modules/re-reselect/index',
             /*'draft-js-export-html': 'node_modules/draft-js-export-html/draft-js-export-html.min',
             'draft-js-import-html': 'node_modules/draft-js-import-html/draft-js-import-html.min',*/

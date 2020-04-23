@@ -58,7 +58,7 @@ module.exports = env => {
             new CopyWebpackPlugin([{ from: "node_modules/prop-types/prop-types.min.js", to: './node_modules/prop-types', toType: 'dir' }]),
             new CopyWebpackPlugin([{ from: "node_modules/tslib/tslib.js", to: './node_modules/tslib', toType: 'dir' }]),
             //new CopyWebpackPlugin([{ from: "node_modules/select/**/*.*", to: './node_modules/select', toType: 'dir' }]),
-            new CopyWebpackPlugin([{ from: "node_modules/reselect/dist/reselect.min.js", to: './node_modules/reselect', toType: 'dir' }]),
+            new CopyWebpackPlugin([{ from: "node_modules/reselect/dist/reselect.js", to: './node_modules/reselect', toType: 'dir' }]),
             new CopyWebpackPlugin([{ from: "node_modules/re-reselect/dist/index.js", to: './node_modules/re-reselect', toType: 'dir' }]),
             new CopyWebpackPlugin([{ from: "node_modules/monaco-editor/min/vs/**/*.*", to: '.', toType: 'dir' }]),
             new CopyWebpackPlugin([{ from: "node_modules/requirejs/require.js", to: './node_modules/requirejs', toType: 'dir' }]),
