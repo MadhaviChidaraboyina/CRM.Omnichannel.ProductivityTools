@@ -1018,6 +1018,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73-72fe-40c7-baeb-91714890d1f7" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone input record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Klooni sisendi kirje]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009281Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Action to resolve case]]></Val>
@@ -1131,6 +1147,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone focused record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kloonile fokusseeritud kirje]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009281Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1350,6 +1382,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_b3e9cb73-72fe-40c7-baeb-91714890d1f7" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone input record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Klooni sisendi kirje]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009281Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Displayname]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Resolve Case]]></Val>
@@ -1463,6 +1511,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone focused record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kloonile fokusseeritud kirje]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009278Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Displayname]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1673,6 +1737,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_b3e9cb73-72fe-40c7-baeb-91714890d1f7" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tootlikkuse automatiseerimine]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009278Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Productivity automation]]></Val>
@@ -1783,6 +1863,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tootlikkuse automatiseerimine]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009278Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2002,6 +2098,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_b3e9cb73-72fe-40c7-baeb-91714890d1f7" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone input record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Klooni sisendi kirje]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009278Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Resolve Case]]></Val>
@@ -2115,6 +2227,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone focused record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kloonile fokusseeritud kirje]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009281Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2334,6 +2462,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_b3e9cb73-72fe-40c7-baeb-91714890d1f7" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone input record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Klooni sisendi kirje]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009281Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Action to resolve case]]></Val>
@@ -2447,6 +2591,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone focused record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kloonile fokusseeritud kirje]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009281Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroconnector_msdyn_categorylabel_60541186_f5dd_e911_a81e_000d3af9c0c2" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2836,6 +2996,22 @@
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_description_a50fc5ef-5d6e-ea11-a811-000d3a8d88aa" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record title]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kirje tiitel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009281Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_description_ae9b14cb_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A JSON string representing the attributes and values to be updated]]></Val>
@@ -3150,6 +3326,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_a50fc5ef-5d6e-ea11-a811-000d3a8d88aa" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record title]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kirje tiitel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-04-22T10:43:44.0009282Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Parameter definition Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28231_20200420" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_parameterdefinition_msdyn_displayname_ae9b14cb_f8d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
