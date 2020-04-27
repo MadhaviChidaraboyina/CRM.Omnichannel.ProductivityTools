@@ -13,6 +13,9 @@ namespace Microsoft.ProductivityMacros.Internal {
 
 	export function resolveTemplateString(input: string, templateParams: any, scope: string): Promise<string> {
         return new Promise<string>(function (resolve, reject) {
+            if (isJsonString(input)) {
+                return resolve(input);
+            }
             if (isNullOrUndefined(input)) {
                 return resolve(input);
             }
@@ -155,6 +158,15 @@ namespace Microsoft.ProductivityMacros.Internal {
 					return reject(error);
 				});
 		});
+    }
+
+    function isJsonString(str: string): boolean {
+        try {
+            JSON.parse(str);
+        } catch (e) {
+            return false;
+        }
+        return true;
     }
 
     function buildSlugCallbacks(slugCallbacks: string[]) {

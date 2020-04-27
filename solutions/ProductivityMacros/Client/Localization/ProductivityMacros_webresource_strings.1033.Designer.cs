@@ -554,6 +554,16 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open application tab.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_actionDescription_30e0dd0a_7972_ea11_a811_000d3a54419d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_actionDescription_30e0dd0a-7972-ea11-a811-000d3a5" +
+                        "4419d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This macro will autofill form fields based on the information you provide..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_37a95038_185a_ea11_a811_000d3a334e98 {
@@ -768,6 +778,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open application tab.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_displayname_30e0dd0a_7972_ea11_a811_000d3a54419d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_displayname_30e0dd0a-7972-ea11-a811-000d3a54419d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Autofill form fields.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_37a95038_185a_ea11_a811_000d3a334e98 {
@@ -962,6 +981,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static string msdyn_macroactiontemplate_msdyn_subtitle_2561bf45_e4e9_4940_8dcd_370705deea62 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session Connector.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_subtitle_30e0dd0a_7972_ea11_a811_000d3a54419d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_subtitle_30e0dd0a-7972-ea11-a811-000d3a54419d", resourceCulture);
             }
         }
         
@@ -1164,6 +1192,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open application tab.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_summary_30e0dd0a_7972_ea11_a811_000d3a54419d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_summary_30e0dd0a-7972-ea11-a811-000d3a54419d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This macro will autofill form fields based on the information you provide..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_37a95038_185a_ea11_a811_000d3a334e98 {
@@ -1358,6 +1395,15 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         internal static string msdyn_macroactiontemplate_msdyn_title_2561bf45_e4e9_4940_8dcd_370705deea62 {
             get {
                 return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open application tab.
+        /// </summary>
+        internal static string msdyn_macroactiontemplate_msdyn_title_30e0dd0a_7972_ea11_a811_000d3a54419d {
+            get {
+                return ResourceManager.GetString("msdyn_macroactiontemplate_msdyn_title_30e0dd0a-7972-ea11-a811-000d3a54419d", resourceCulture);
             }
         }
         
