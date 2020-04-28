@@ -719,7 +719,7 @@
         <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_30e0dd0a-7972-ea11-a811-000d3a54419d" />
         <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_30e0dd0a-7972-ea11-a811-000d3a54419d" />
         <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Session Connector" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_open_app_tab.svg" />
+        <field name="msdyn_icon" value="WebResources/Macros/msdyn_ProductivityMacros_open_app_tab.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="30e0dd0a-7972-ea11-a811-000d3a54419d" />
         <field name="msdyn_name" value="Open_Application_Tab" />
