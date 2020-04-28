@@ -723,7 +723,7 @@
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="30e0dd0a-7972-ea11-a811-000d3a54419d" />
         <field name="msdyn_name" value="Open_Application_Tab" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ChannelIntegrationFramework.Macros.openApplicationTamplate(actionName,actionInputs)" />
+        <field name="msdyn_runtimeapi" value="Microsoft.ChannelIntegrationFramework.Macros.openApplicationTemplate(actionName,actionInputs)" />
         <field name="statecode" value="0" />
         <field name="statuscode" value="1" />
         <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_30e0dd0a-7972-ea11-a811-000d3a54419d" />
