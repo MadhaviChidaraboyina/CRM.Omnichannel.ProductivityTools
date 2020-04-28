@@ -554,7 +554,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open application tab.
+        ///   Looks up a localized string similar to This will open an application tab for the given inputs..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_30e0dd0a_7972_ea11_a811_000d3a54419d {
             get {
@@ -634,7 +634,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clone input record.
+        ///   Looks up a localized string similar to This will clone the record given as macro input and open it in new tab as new unsaved record..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73_72fe_40c7_baeb_91714890d1f7 {
             get {
@@ -714,7 +714,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clone focused record.
+        ///   Looks up a localized string similar to This will clone the record in the curent tab and open it in a new tab as new unsaved record..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed_aa69_ea11_a811_000d3a54419d {
             get {
@@ -922,7 +922,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clone focused record.
+        ///   Looks up a localized string similar to Clone current record.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_displayname_f8c404ed_aa69_ea11_a811_000d3a54419d {
             get {
@@ -1192,7 +1192,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open application tab.
+        ///   Looks up a localized string similar to This action will open an application tab for the given inputs..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_30e0dd0a_7972_ea11_a811_000d3a54419d {
             get {
@@ -1264,7 +1264,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clone input record.
+        ///   Looks up a localized string similar to This will clone the record given as macro input and open it in new tab as new unsaved record..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_b3e9cb73_72fe_40c7_baeb_91714890d1f7 {
             get {
@@ -1336,7 +1336,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clone focused record.
+        ///   Looks up a localized string similar to This will clone the record in the curent tab and open it in a new tab as new unsaved record..
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_summary_f8c404ed_aa69_ea11_a811_000d3a54419d {
             get {
@@ -1543,7 +1543,7 @@ namespace Microsoft.Dynamics.ProductivityMacros.WebResources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clone focused record.
+        ///   Looks up a localized string similar to Clone current record.
         /// </summary>
         internal static string msdyn_macroactiontemplate_msdyn_title_f8c404ed_aa69_ea11_a811_000d3a54419d {
             get {
