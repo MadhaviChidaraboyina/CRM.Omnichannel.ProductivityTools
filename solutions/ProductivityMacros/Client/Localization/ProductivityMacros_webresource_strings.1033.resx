@@ -926,15 +926,15 @@
     <comment>Macro Action Template Summary</comment>
   </data> 
   <data name="msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Send knowledge base article</value>
+    <value>Send KB article in chat</value>
     <comment>Macro Action Template Displayname</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Send knowledge base article</value>
+    <value>Send KB article in chat</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Send knowledge base article</value>
+    <value>This will send a knowledgebase article link to the chat.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
@@ -942,7 +942,7 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Send knowledge base article</value>
+    <value>This will send a knowledgebase article link to the chat.</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
