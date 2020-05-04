@@ -446,7 +446,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Val><![CDATA[This will send a knowledgebase article link to the chat.]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -492,6 +492,15 @@
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705deea62" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[You’ll need to enter the entity ID to open the knowledge base article.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will open an application tab for the given inputs.]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -563,7 +572,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73-72fe-40c7-baeb-91714890d1f7" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone input record]]></Val>
+          <Val><![CDATA[This will clone the record given as macro input and open it in new tab as new unsaved record.]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -635,7 +644,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone focused record]]></Val>
+          <Val><![CDATA[This will clone the record in the curent tab and open it in a new tab as new unsaved record.]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -644,7 +653,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Val><![CDATA[Send KB article in chat]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -690,6 +699,15 @@
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Open knowledge base article]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Displayname]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -833,7 +851,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone focused record]]></Val>
+          <Val><![CDATA[Clone current record]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -888,6 +906,15 @@
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Productivity automation]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1040,7 +1067,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Val><![CDATA[This will send a knowledgebase article link to the chat.]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1086,6 +1113,15 @@
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Open knowledge base article]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This action will open an application tab for the given inputs.]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1157,7 +1193,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_b3e9cb73-72fe-40c7-baeb-91714890d1f7" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone input record]]></Val>
+          <Val><![CDATA[This will clone the record given as macro input and open it in new tab as new unsaved record.]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1229,7 +1265,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone focused record]]></Val>
+          <Val><![CDATA[This will clone the record in the curent tab and open it in a new tab as new unsaved record.]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1238,7 +1274,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Send knowledge base article]]></Val>
+          <Val><![CDATA[Send KB article in chat]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1284,6 +1320,15 @@
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Open knowledge base article]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -1427,7 +1472,7 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone focused record]]></Val>
+          <Val><![CDATA[Clone current record]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>

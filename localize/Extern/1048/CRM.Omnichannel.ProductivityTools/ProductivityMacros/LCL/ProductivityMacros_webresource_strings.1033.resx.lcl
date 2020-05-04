@@ -900,6 +900,22 @@
           <Str Name="Custom3" Val="WO27440_20200330" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Deschideți fila aplicației]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-majanc" DateTime="2020-04-29T14:07:55.0009765Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28961_20200427" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_37a95038-185a-ea11-a811-000d3a334e98" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This macro will autofill form fields based on the information you provide.]]></Val>
@@ -1264,6 +1280,22 @@
           <Str Name="Custom3" Val="WO27440_20200330" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Deschideți fila aplicației]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-majanc" DateTime="2020-04-29T14:07:55.0009765Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Displayname]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28961_20200427" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Autofill form fields]]></Val>
@@ -1625,6 +1657,22 @@
           <Str Name="Custom3" Val="WO26840_20200316" />
         </Props>
       </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Conector sesiune]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-majanc" DateTime="2020-04-29T14:07:55.0009723Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Subtitle]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28961_20200427" />
+        </Props>
+      </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_37a95038-185a-ea11-a811-000d3a334e98" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Productivity automation]]></Val>
@@ -1978,6 +2026,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO27440_20200330" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Deschideți fila aplicației]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-majanc" DateTime="2020-04-29T14:07:55.0009723Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28961_20200427" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_37a95038-185a-ea11-a811-000d3a334e98" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2342,6 +2406,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO27440_20200330" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Deschideți fila aplicației]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-majanc" DateTime="2020-04-29T14:07:55.000976Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO28961_20200427" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_37a95038-185a-ea11-a811-000d3a334e98" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
