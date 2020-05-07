@@ -31,16 +31,16 @@ namespace Microsoft.Macros.Utility {
 
 		// Get the Currently Selected Record ID
 		let selectedRecordGuid = selectedControlSelectedItemReferences[0].Id;
-		let vpHeight = (window.top as any).Xrm.Page.ui.getViewPortHeight();
-		let vpWidth = (window.top as any).Xrm.Page.ui.getViewPortWidth();
-		const dialogOptions: XrmClientApi.DialogOptions = {
-			width: vpWidth, height: vpHeight, position: XrmClientApi.Constants.WindowPosition.inline
-		};
-
-		const dialogParams: XrmClientApi.DialogParameters = {};
-		dialogParams[Microsoft.Macros.Constants.RecordIdParam] = selectedRecordGuid;
 
 		if (isMacrosView(viewId)) {
+			let vpHeight = (window.top as any).Xrm.Page.ui.getViewPortHeight();
+			let vpWidth = (window.top as any).Xrm.Page.ui.getViewPortWidth();
+			const dialogOptions: XrmClientApi.DialogOptions = {
+				width: vpWidth, height: vpHeight, position: XrmClientApi.Constants.WindowPosition.inline
+			};
+
+			const dialogParams: XrmClientApi.DialogParameters = {};
+			dialogParams[Microsoft.Macros.Constants.RecordIdParam] = selectedRecordGuid;
 			Xrm.Navigation.openDialog(Microsoft.Macros.Constants.CreateMacrosDialog, dialogOptions, dialogParams);
 		}
 		else {
@@ -87,14 +87,13 @@ namespace Microsoft.Macros.Utility {
 		let viewSelector = selectedControl.getViewSelector();
 		let viewId = viewSelector.getCurrentView().id.toLowerCase();
 
-		let vpHeight = (window.top as any).Xrm.Page.ui.getViewPortHeight();
-		let vpWidth = (window.top as any).Xrm.Page.ui.getViewPortWidth();
-
-		const dialogOptions: XrmClientApi.DialogOptions = {
-			width: vpWidth, height: vpHeight, position: XrmClientApi.Constants.WindowPosition.inline
-		};
-
 		if (isMacrosView(viewId)) {
+			let vpHeight = (window.top as any).Xrm.Page.ui.getViewPortHeight();
+			let vpWidth = (window.top as any).Xrm.Page.ui.getViewPortWidth();
+
+			const dialogOptions: XrmClientApi.DialogOptions = {
+				width: vpWidth, height: vpHeight, position: XrmClientApi.Constants.WindowPosition.inline
+			};
 			Xrm.Navigation.openDialog(Microsoft.Macros.Constants.CreateMacrosDialog, dialogOptions, null);
 		}
 		else {
