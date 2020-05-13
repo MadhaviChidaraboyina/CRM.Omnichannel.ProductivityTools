@@ -630,7 +630,7 @@
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Abrir separador de aplicação</value>
+    <value>Esta operação irá abrir um separador de aplicação para as entradas apresentadas.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
@@ -638,19 +638,19 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Abrir separador de aplicação</value>
+    <value>Esta ação irá abrir um separador de aplicação para as entradas apresentadas.</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Clonar registo que tem o foco</value>
+    <value>Clonar registo atual</value>
     <comment>Macro Action Template Displayname</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Clonar registo que tem o foco</value>
+    <value>Clonar registo atual</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Clonar registo que tem o foco</value>
+    <value>Esta operação irá clonar o registo no separador atual e abri-lo num separador novo como um novo registo não guardado.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
@@ -658,7 +658,7 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Clonar registo que tem o foco</value>
+    <value>Esta operação irá clonar o registo no separador atual e abri-lo num separador novo como um novo registo não guardado.</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
@@ -670,7 +670,7 @@
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
-    <value>Clonar registo de entrada</value>
+    <value>Esta operação irá clonar o registo indicado como entrada da macro e abri-lo num separador novo como um novo registo não guardado.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
@@ -678,7 +678,7 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
-    <value>Clonar registo de entrada</value>
+    <value>Esta operação irá clonar o registo indicado como entrada da macro e abri-lo num separador novo como um novo registo não guardado.</value>
   <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
@@ -926,15 +926,15 @@
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Enviar artigo da base de dados de conhecimento</value>
+    <value>Enviar artigo BDC no chat</value>
     <comment>Macro Action Template Displayname</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Enviar artigo da base de dados de conhecimento</value>
+    <value>Enviar artigo BDC no chat</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Enviar artigo da base de dados de conhecimento</value>
+    <value>Esta operação irá enviar uma ligação para um artigo da base de dados de conhecimento para o chat.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
@@ -942,7 +942,7 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Enviar artigo da base de dados de conhecimento</value>
+    <value>Esta operação irá enviar uma ligação para um artigo da base de dados de conhecimento para o chat.</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">

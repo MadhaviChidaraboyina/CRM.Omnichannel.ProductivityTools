@@ -803,18 +803,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Send knowledge base article]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Gửi bài viết cơ sở kiến thức]]></Val>
+          <Val><![CDATA[This will send a knowledgebase article link to the chat.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Thao tác này sẽ gửi một bài viết trong cơ sở kiến thức liên kết với cuộc trò chuyện.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Send knowledge base article]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-15T11:33:03.0002139Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.0009175Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO27892_20200413" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -902,18 +905,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Open application tab]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Mở tab ứng dụng]]></Val>
+          <Val><![CDATA[This will open an application tab for the given inputs.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Thao tác này sẽ mở một tab ứng dụng cho các đầu vào nhất định.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Open application tab]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-majanc" DateTime="2020-04-29T13:19:55.0005454Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.0009175Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO28961_20200427" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_37a95038-185a-ea11-a811-000d3a334e98" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1036,18 +1042,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73-72fe-40c7-baeb-91714890d1f7" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone input record]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Sao y bản ghi đầu vào]]></Val>
+          <Val><![CDATA[This will clone the record given as macro input and open it in new tab as new unsaved record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Thao tác này sẽ sao chép bản ghi được cung cấp dưới dạng đầu vào macro và mở bản ghi đó trong tab mới dưới dạng bản ghi chưa lưu mới.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clone input record]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-22T09:30:31.000176Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.0009175Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO28231_20200420" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1167,34 +1176,40 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone focused record]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Sao y bản ghi ưu tiên]]></Val>
+          <Val><![CDATA[This will clone the record in the curent tab and open it in a new tab as new unsaved record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Thao tác này sẽ sao chép bản ghi trong tab hiện tại và mở bản ghi đó trong tab mới dưới dạng bản ghi chưa lưu mới.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clone focused record]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-22T09:30:31.0001757Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.0009175Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Description]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO28231_20200420" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Send knowledge base article]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Gửi bài viết cơ sở kiến thức]]></Val>
+          <Val><![CDATA[Send KB article in chat]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Gửi bài viết về cơ sở kiến thức trong cuộc trò chuyện]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Send knowledge base article]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-15T11:33:03.0002139Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.0009175Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Displayname]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO27892_20200413" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1547,18 +1562,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_displayname_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone focused record]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Sao y bản ghi ưu tiên]]></Val>
+          <Val><![CDATA[Clone current record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Sao chép bản ghi hiện tại]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clone focused record]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-22T09:30:31.0001757Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.000918Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Displayname]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO28231_20200420" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -1931,18 +1949,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Send knowledge base article]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Gửi bài viết cơ sở kiến thức]]></Val>
+          <Val><![CDATA[This will send a knowledgebase article link to the chat.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Thao tác này sẽ gửi một bài viết trong cơ sở kiến thức liên kết với cuộc trò chuyện.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Send knowledge base article]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-15T11:33:03.0002135Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.000918Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO27892_20200413" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2030,18 +2051,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_30e0dd0a-7972-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Open application tab]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Mở tab ứng dụng]]></Val>
+          <Val><![CDATA[This action will open an application tab for the given inputs.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Thao tác này sẽ mở một tab ứng dụng cho các đầu vào nhất định.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Open application tab]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-majanc" DateTime="2020-04-29T13:19:55.0005432Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.000918Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO28961_20200427" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_37a95038-185a-ea11-a811-000d3a334e98" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2164,18 +2188,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_b3e9cb73-72fe-40c7-baeb-91714890d1f7" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone input record]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Sao y bản ghi đầu vào]]></Val>
+          <Val><![CDATA[This will clone the record given as macro input and open it in new tab as new unsaved record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Thao tác này sẽ sao chép bản ghi được cung cấp dưới dạng đầu vào macro và mở bản ghi đó trong tab mới dưới dạng bản ghi chưa lưu mới.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clone input record]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-22T09:30:31.0001759Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.0009178Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO28231_20200420" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2295,34 +2322,40 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_summary_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone focused record]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Sao y bản ghi ưu tiên]]></Val>
+          <Val><![CDATA[This will clone the record in the curent tab and open it in a new tab as new unsaved record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Thao tác này sẽ sao chép bản ghi trong tab hiện tại và mở bản ghi đó trong tab mới dưới dạng bản ghi chưa lưu mới.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clone focused record]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-22T09:30:31.0001759Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.0009178Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Summary]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO28231_20200420" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Send knowledge base article]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Gửi bài viết cơ sở kiến thức]]></Val>
+          <Val><![CDATA[Send KB article in chat]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Gửi bài viết về cơ sở kiến thức trong cuộc trò chuyện]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Send knowledge base article]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-15T11:33:03.0002135Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.0009178Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO27892_20200413" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_01a02947_f9d2_e911_a81e_000d3a015920" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -2675,18 +2708,21 @@
       </Item>
       <Item ItemId=";msdyn_macroactiontemplate_msdyn_title_f8c404ed-aa69-ea11-a811-000d3a54419d" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clone focused record]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Sao y bản ghi ưu tiên]]></Val>
+          <Val><![CDATA[Clone current record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Sao chép bản ghi hiện tại]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clone focused record]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-22T09:30:31.0001759Z" />
+        <Modified By="v-rondai" DateTime="2020-05-07T06:28:11.0009189Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Macro Action Template Title]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO28231_20200420" />
+          <Str Name="Custom3" Val="WO29192_20200504" />
         </Props>
       </Item>
       <Item ItemId=";msdyn_macroconnector_msdyn_categorylabel_60541186_f5dd_e911_a81e_000d3af9c0c2" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

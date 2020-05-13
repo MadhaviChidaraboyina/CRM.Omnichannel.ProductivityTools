@@ -630,7 +630,7 @@
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Ouvrir l'onglet d'application</value>
+    <value>Cette action va ouvrir un onglet d'application pour les entrées données.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
@@ -638,19 +638,19 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Ouvrir l'onglet d'application</value>
+    <value>Cette action va ouvrir un onglet d'application pour les entrées données.</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Cloner l'enregistrement ciblé</value>
+    <value>Cloner l'enregistrement actuel</value>
     <comment>Macro Action Template Displayname</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Cloner l'enregistrement ciblé</value>
+    <value>Cloner l'enregistrement actuel</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Cloner l'enregistrement ciblé</value>
+    <value>Cette action va cloner l'enregistrement dans l'onglet actuel et l'ouvrir dans un nouvel onglet en tant que nouvel enregistrement non enregistré.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
@@ -658,7 +658,7 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
-    <value>Cloner l'enregistrement ciblé</value>
+    <value>Cette action va cloner l'enregistrement dans l'onglet actuel et l'ouvrir dans un nouvel onglet en tant que nouvel enregistrement non enregistré.</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
@@ -670,7 +670,7 @@
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
-    <value>Cloner l'enregistrement d'entrée</value>
+    <value>Cette action va cloner l'enregistrement donné en tant qu'entrée de macro et l'ouvrir dans un nouvel onglet en tant que nouvel enregistrement non enregistré.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
@@ -678,7 +678,7 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
-    <value>Cloner l'enregistrement d'entrée</value>
+    <value>Cette action va cloner l'enregistrement donné en tant qu'entrée de macro et l'ouvrir dans un nouvel onglet en tant que nouvel enregistrement non enregistré.</value>
   <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
@@ -926,15 +926,15 @@
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Envoyer l'article de la Base de connaissances</value>
+    <value>Envoyer l'article de la base de connaissances dans la conversation</value>
     <comment>Macro Action Template Displayname</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Envoyer l'article de la Base de connaissances</value>
+    <value>Envoyer l'article de la base de connaissances dans la conversation</value>
     <comment>Macro Action Template Title</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Envoyer l'article de la Base de connaissances</value>
+    <value>Cette action va envoyer un lien vers l'article de la base de connaissances dans la conversation.</value>
     <comment>Macro Action Template Description</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
@@ -942,7 +942,7 @@
     <comment>Macro Action Template Subtitle</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
-    <value>Envoyer l'article de la Base de connaissances</value>
+    <value>Cette action va envoyer un lien vers l'article de la base de connaissances dans la conversation.</value>
     <comment>Macro Action Template Summary</comment>
   </data>
   <data name="msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
