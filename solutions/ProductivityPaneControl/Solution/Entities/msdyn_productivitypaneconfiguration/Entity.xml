@@ -422,7 +422,7 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <AppDefaultValue>1</AppDefaultValue>
+          <AppDefaultValue>0</AppDefaultValue>
           <optionset Name="msdyn_productivitypaneconfiguration_msdyn_productivitypanemode">
             <OptionSetType>bit</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
@@ -484,7 +484,7 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <AppDefaultValue>1</AppDefaultValue>
+          <AppDefaultValue>0</AppDefaultValue>
           <optionset Name="msdyn_productivitypaneconfiguration_msdyn_productivitypanestate">
             <OptionSetType>bit</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>

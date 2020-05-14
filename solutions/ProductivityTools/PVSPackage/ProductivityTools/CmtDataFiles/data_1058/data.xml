@@ -1273,8 +1273,6 @@
     <records>
       <record id="482d09b0-d327-ea11-a810-000d3a1026fe">
         <field name="msdyn_productivitypaneconfigurationid" value="482d09b0-d327-ea11-a810-000d3a1026fe" />
-        <field name="msdyn_productivitypanemode" value="False" />
-        <field name="msdyn_productivitypanestate" value="False" />
         <field name="msdyn_name" value="Конфігурація панелі продуктивності" />
         <field name="msdyn_applicationname" value="OmniChannelEngagementHub" />
       </record>
