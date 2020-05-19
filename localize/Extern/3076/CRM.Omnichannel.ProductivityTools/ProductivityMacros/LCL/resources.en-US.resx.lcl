@@ -287,11 +287,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Active macroconnectors owned by me]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[我所擁有的使用中 macroconnectors]]></Val>
+            <Val><![CDATA[我所擁有的使用中巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:24:00.0003741Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:14Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -326,11 +326,11 @@
         <Str Cat="Text">
           <Val><![CDATA[A form for this entity.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[這個實體的表單。]]></Val>
+            <Val><![CDATA[此實體的表單。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T04:35:16.0005899Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:14Z" />
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
@@ -3040,11 +3040,11 @@
         <Str Cat="Text">
           <Val><![CDATA[macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[macroconnectors]]></Val>
+            <Val><![CDATA[巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:24:00.0003473Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:14Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -3430,11 +3430,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Inactive macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[非使用中 macroconnectors]]></Val>
+            <Val><![CDATA[非使用中巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:24:00.0003448Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:14Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -3443,11 +3443,11 @@
         <Str Cat="Text">
           <Val><![CDATA[My macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[我的 macroconnectors]]></Val>
+            <Val><![CDATA[我的巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-16T03:47:25Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:14Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -3456,11 +3456,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Active macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[使用中 macroconnectors]]></Val>
+            <Val><![CDATA[使用中巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:24:00.0003448Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:14Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -3469,11 +3469,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Quick Find Active macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[快速尋找使用中 macroconnectors]]></Val>
+            <Val><![CDATA[快速尋找使用中巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T11:24:00.0003448Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:14Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>

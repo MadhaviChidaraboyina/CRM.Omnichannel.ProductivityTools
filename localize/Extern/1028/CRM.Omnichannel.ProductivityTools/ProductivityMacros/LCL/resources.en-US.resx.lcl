@@ -287,11 +287,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Active macroconnectors owned by me]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[我所擁有的使用中 macroconnectors]]></Val>
+            <Val><![CDATA[我所擁有的使用中巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0001388Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -326,11 +326,11 @@
         <Str Cat="Text">
           <Val><![CDATA[A form for this entity.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[這個實體的表單。]]></Val>
+            <Val><![CDATA[此實體的表單。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-01-17T04:35:16.0005677Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO24207_20200113" />
         </Props>
@@ -417,11 +417,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was created.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[建立記錄時的日期與時間。]]></Val>
+            <Val><![CDATA[建立記錄的日期與時間。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0009672Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
@@ -469,11 +469,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was modified.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[修改記錄時的日期與時間。]]></Val>
+            <Val><![CDATA[修改記錄的日期與時間。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0009672Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
@@ -751,11 +751,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was created.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[建立記錄時的日期與時間。]]></Val>
+            <Val><![CDATA[建立記錄的日期與時間。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0009609Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
@@ -803,11 +803,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was modified.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[修改記錄時的日期與時間。]]></Val>
+            <Val><![CDATA[修改記錄的日期與時間。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0009609Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
@@ -1037,11 +1037,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was created.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[建立記錄時的日期與時間。]]></Val>
+            <Val><![CDATA[建立記錄的日期與時間。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0009587Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
@@ -1089,11 +1089,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was modified.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[修改記錄時的日期與時間。]]></Val>
+            <Val><![CDATA[修改記錄的日期與時間。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0009587Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
@@ -2676,11 +2676,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was created.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[建立記錄時的日期與時間。]]></Val>
+            <Val><![CDATA[建立記錄的日期與時間。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0009501Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
@@ -2728,11 +2728,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was modified.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[修改記錄時的日期與時間。]]></Val>
+            <Val><![CDATA[修改記錄的日期與時間。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-09-13T07:44:25.0009523Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21082_20190910" />
         </Props>
@@ -3040,11 +3040,11 @@
         <Str Cat="Text">
           <Val><![CDATA[macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[macroconnectors]]></Val>
+            <Val><![CDATA[巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0001175Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -3430,11 +3430,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Inactive macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[非使用中 macroconnectors]]></Val>
+            <Val><![CDATA[非使用中巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0001175Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -3443,11 +3443,11 @@
         <Str Cat="Text">
           <Val><![CDATA[My macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[我的 macroconnectors]]></Val>
+            <Val><![CDATA[我的巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-04-16T03:47:25Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -3456,11 +3456,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Active macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[使用中 macroconnectors]]></Val>
+            <Val><![CDATA[使用中巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0001205Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
@@ -3469,11 +3469,11 @@
         <Str Cat="Text">
           <Val><![CDATA[Quick Find Active macroconnectors]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[快速尋找使用中 macroconnectors]]></Val>
+            <Val><![CDATA[快速尋找使用中巨集連接器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.0001205Z" />
+        <Modified By="v-rondai" DateTime="2020-05-14T10:54:15Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
