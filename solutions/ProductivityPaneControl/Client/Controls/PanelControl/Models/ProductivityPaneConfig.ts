@@ -8,12 +8,30 @@ module MscrmControls.ProductivityToolPanel {
 	export class ProductivityPaneConfig {
 		// Attributes
 		public productivityPaneState: boolean;
-		public productivityPaneMode: boolean;
+        public productivityPaneMode: boolean;
+        public productivityToolsConfig: ProductivityToolsConfig
 
-		constructor(productivityPaneState: boolean, productivityPaneMode: boolean) {
+        constructor(productivityPaneState: boolean, productivityPaneMode: boolean, productivityToolsConfig: ProductivityToolsConfig) {
 			this.productivityPaneState = productivityPaneState;
-			this.productivityPaneMode = productivityPaneMode;
-		}
+            this.productivityPaneMode = productivityPaneMode;
+            this.productivityToolsConfig = productivityToolsConfig;
+        }
+
+        public getDefaultTool(): ToolConfig {
+            for (let tool of this.productivityToolsConfig.ToolsList) {
+                if (tool.isEnabled) {
+                    return tool;
+                }
+            };
+        }
+
+        public getToolByName(toolName): ToolConfig {
+            for (let tool of this.productivityToolsConfig.ToolsList) {
+                if (tool.toolName === toolName) {
+                    return tool;
+                }
+            };
+        }
 	}
 
 	export class SessionTemplateCriteria {

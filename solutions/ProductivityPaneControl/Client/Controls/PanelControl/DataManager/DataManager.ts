@@ -31,7 +31,7 @@ module MscrmControls.ProductivityToolPanel {
                     let retrieveDataPromise = Xrm.WebApi.retrieveMultipleRecords(ProductivityPaneConfigConstants.entityName, productivityPaneQuery);
                     retrieveDataPromise.then(
                         (response: any) => {
-                            let productivityPane = new ProductivityPaneConfig(response.entities[0].msdyn_productivitypanestate, response.entities[0].msdyn_productivitypanemode);
+                            let productivityPane = new ProductivityPaneConfig(response.entities[0].msdyn_productivitypanestate, response.entities[0].msdyn_productivitypanemode, new ProductivityToolsConfig(this.toolsConfigData()));
                             resolve(productivityPane);
                         },
                         (error) => {
@@ -50,6 +50,13 @@ module MscrmControls.ProductivityToolPanel {
                     reject(e.message);
                 });
             }
+        }
+
+        //TODO: read data from config entity and propulate the data model
+        private toolsConfigData(): ToolConfig[] {
+            var toolsList: ToolConfig[] = [];
+            toolsList.push(new ToolConfig("MscrmControls.ProductivityToolAgentGuidance.AgentGuidance", Constants.agentScriptIcon, 10, true, Constants.agentGuidance, Constants.agentGuidanceTooltip));
+            return toolsList;
         }
 
         //This function generates query to fetch productivity pane config data

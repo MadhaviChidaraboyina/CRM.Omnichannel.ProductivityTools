@@ -58,6 +58,12 @@ module MscrmControls.ProductivityToolPanel {
             };
         }
 
+        public static isToolVisible(flag: boolean) {
+            return {
+                display: flag ? "" : "none"
+            }
+        }
+
         public static getProductivityNavBarStyle(isRTL: boolean) {
             return {
                 display: "block",

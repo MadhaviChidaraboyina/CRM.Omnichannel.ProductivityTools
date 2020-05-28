@@ -74,10 +74,8 @@ module MscrmControls.ProductivityToolPanel {
 		//panel container id
         public static panelContainerId = "panel-container";
 
-        //agent guidance control ids and keys
-        public static agentGuidanceControlId = "MscrmControls.ProductivityToolAgentGuidance.AgentGuidance";
-        public static agentGuidanceControlName = "childcontrol1";
-        public static agentGuidanceControlKey = "agentguidancecontrol_child1";
+        public static productivitytoolControlName = "childcontrol";
+        public static productivitytoolControlKey = "productivitytoolcontrol_child";
 
         public static notificationLabelId = "notificationLabelId";
         public static notificationContainerId = "notificationContainerId";

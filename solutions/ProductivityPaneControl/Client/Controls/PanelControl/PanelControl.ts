@@ -37,7 +37,7 @@ module MscrmControls.ProductivityToolPanel {
         constructor() {
             this.initCompleted = false;
             this.telemetryContext = TelemetryComponents.MainComponent;
-            this.productivityPaneConfigData = new ProductivityPaneConfig(false, false);
+            this.productivityPaneConfigData = new ProductivityPaneConfig(false, false, new ProductivityToolsConfig());
         }
 
 		/**
@@ -62,7 +62,7 @@ module MscrmControls.ProductivityToolPanel {
                 this.currentSessionId = Constants.emptyString;
                 this.sessionChangeManager = new SessionChangeManager(this.onSessionContextChanged.bind(this), this.telemetryLogger);
                 this.panelToggle = false;
-                this.productivityToolSelected = Constants.agentGuidance;
+                this.productivityToolSelected = Constants.emptyString;
                 localStorage.setItem(LocalStorageKeyConstants.productivityToolDataModel, JSON.stringify({}));
             }
 
@@ -83,7 +83,7 @@ module MscrmControls.ProductivityToolPanel {
 
                 if (actionType === Constants.sessionCreated) {
                     const data = {
-                        productivityToolSelected: Constants.agentGuidance,
+                        productivityToolSelected: this.productivityPaneConfigData.getDefaultTool().toolName,
                         panelToggle: this.productivityPaneConfigData.productivityPaneMode,
                         notificationCount: 0
                     }
@@ -110,41 +110,56 @@ module MscrmControls.ProductivityToolPanel {
             let sessionContextJSON = JSON.stringify(this.sessionChangeManager.getSessionChangeEventData());
             let isCallScriptAvail = this.panelState.checkAgentScript(this.currentSessionId);
             let isSmartassistAvail = this.panelState.checkSmartAssist(this.currentSessionId);
-            const properties_agentguidance: any = {
-                parameters: {},
-                key: Constants.agentGuidanceControlKey,
-                id: Constants.agentGuidanceControlKey,
-                configuration: {
-                    CustomControlId: Constants.agentGuidanceControlId,
-                    Name: Constants.agentGuidanceControlName,
-                    Parameters: {
-                        SessionContext: {
-                            Usage: 1,
-                            Static: true,
-                            Value: sessionContextJSON,
-                            Primary: false,
-                            Attributes: { isCallScript: isCallScriptAvail, isSmartassist: isSmartassistAvail },
-                            Callback: (value: any) => {
-                                if (!this.panelToggle) {
-                                    const data = {
-                                        productivityToolSelected: this.productivityToolSelected,
-                                        panelToggle: this.panelToggle,
-                                        notificationCount: ++this.notificationCount
+            let toolSelected: ToolConfig = this.productivityPaneConfigData.getToolByName(this.productivityToolSelected);
+
+            let toolsList: Mscrm.Component[] = [];
+            this.productivityPaneConfigData.productivityToolsConfig.ToolsList.forEach((tool, index) => {
+
+                let properties_agentguidance: any = {
+                    parameters: {},
+                    key: Constants.productivitytoolControlKey + index,
+                    id: Constants.productivitytoolControlKey + index,
+                    configuration: {
+                        CustomControlId: tool.toolControlName,
+                        Name: Constants.productivitytoolControlName + index,
+                        Parameters: {
+                            SessionContext: {
+                                Usage: 1,
+                                Static: true,
+                                Value: sessionContextJSON,
+                                Primary: false,
+                                Attributes: { isCallScript: isCallScriptAvail, isSmartassist: isSmartassistAvail },
+                                Callback: (value: any) => {
+                                    if (!this.panelToggle) {
+                                        const data = {
+                                            productivityToolSelected: this.productivityToolSelected,
+                                            panelToggle: this.panelToggle,
+                                            notificationCount: ++this.notificationCount
+                                        }
+                                        PanelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, data);
                                     }
-                                    PanelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, data);
-                                }
-                                this.context.utils.requestRender();
+                                    this.context.utils.requestRender();
+                                },
                             },
                         },
-                    },
-                }
-            };
+                    }
+                };
 
-            let agentguidance = this.context.factory.createComponent(
-                "MscrmControls.ProductivityTool.AgentGuidance",
-                "agentguidancechild1",
-                properties_agentguidance
-            );
+                let toolComponent = this.context.factory.createComponent(
+                    tool.toolControlName,
+                    "productivitytoolchild" + index,
+                    properties_agentguidance
+                );
+
+                toolsList.push(this.context.factory.createElement(
+                    "CONTAINER",
+                    {
+                        id: "toolContainer" + index,
+                        key: "toolContainer" + index,
+                        style: (toolSelected.toolControlName === tool.toolControlName) ? ControlStyle.isToolVisible(Constants.TRUE) : ControlStyle.isToolVisible(Constants.FALSE),
+                    },
+                    toolComponent));
+            });
 
             const panelContainer = this.context.factory.createElement(
                 "CONTAINER",
@@ -153,7 +168,7 @@ module MscrmControls.ProductivityToolPanel {
                     key: "panelContainer",
                     style: this.panelToggle ? ControlStyle.getProductivityPaneStyle(Constants.TRUE, isRTL) : ControlStyle.getProductivityPaneStyle(Constants.FALSE, isRTL)
                 },
-                agentguidance);
+                toolsList);
 
             return panelContainer;
         }
@@ -222,12 +237,12 @@ module MscrmControls.ProductivityToolPanel {
             return lastContainer;
         }
 
-        private toolSeparator(): Mscrm.Component {
+        private toolSeparator(toolId: number): Mscrm.Component {
             const separator = this.context.factory.createElement(
                 "Label",
                 {
-                    id: Constants.toolSeparatorId,
-                    key: Constants.toolSeparatorId,
+                    id: Constants.toolSeparatorId + toolId,
+                    key: Constants.toolSeparatorId + toolId,
                     style: ControlStyle.toolSeparatorStyle(this.panelToggle)
                 },
                 Constants.emptyString);
@@ -235,8 +250,8 @@ module MscrmControls.ProductivityToolPanel {
             const listItem = this.context.factory.createElement(
                 "LISTITEM",
                 {
-                    id: `${Constants.listItemId}${Constants.toolSeparatorId}`,
-                    key: `${Constants.listItemId}${Constants.toolSeparatorId}`,
+                    id: `${Constants.listItemId}${Constants.toolSeparatorId}${toolId}`,
+                    key: `${Constants.listItemId}${Constants.toolSeparatorId}${toolId}`,
                     style: {
                         display: "flex"
                     }
@@ -282,12 +297,14 @@ module MscrmControls.ProductivityToolPanel {
             }
 
             const toggleButton = this.getProductivityToolButton(Constants.toggleIconId, iconPath, Constants.toggle, false, toolTip, { "accessibilityLabel": String.format("{0} {1}", this.context.resources.getString(toolTip), this.context.resources.getString('CC_Panel_Control')) });
-            const agentGuidanceButton = this.getProductivityToolButton(Constants.agentScriptIconId, Constants.agentScriptIcon, Constants.agentGuidance, true, Constants.agentGuidanceTooltip, { "accessibilityLabel": this.context.resources.getString(Constants.agentGuidanceTooltip) });
-            const toolSeparator = this.toolSeparator();
-
             listItems.push(toggleButton);
-            listItems.push(toolSeparator);
-            listItems.push(agentGuidanceButton);
+
+            this.productivityPaneConfigData.productivityToolsConfig.ToolsList.forEach((tool, index) => {
+                if (tool.isEnabled) {
+                    listItems.push(this.toolSeparator(index));
+                    listItems.push(this.getProductivityToolButton(tool.toolName + "Icon", tool.toolIcon, tool.toolName, true, tool.tooltip, { "accessibilityLabel": this.context.resources.getString(tool.tooltip) }));
+                }
+            });
 
             const buttonContainer = this.context.factory.createElement(
                 "LIST",

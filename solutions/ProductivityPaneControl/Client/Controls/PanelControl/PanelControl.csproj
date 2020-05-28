@@ -27,6 +27,7 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="CommonReferences.ts" />
+    <TypeScriptCompile Include="Models\ProductivityToolsConfig.ts" />
     <TypeScriptCompile Include="PanelControl.ts" />
     <TypeScriptCompile Include="inputsOutputs.g.ts" />
     <TypeScriptCompile Include="PrivateReferences.ts" />
@@ -39,6 +40,7 @@
     <TypeScriptCompile Include="Models\ProductivityPaneConfig.ts" />
     <TypeScriptCompile Include="DataManager\DataManager.ts" />
     <TypeScriptCompile Include="$(PKG_TYPESCRIPT_MSBUILD)\tools\tsc\lib.es6.d.ts" />
+    <TypeScriptCompile Include="Utils\Utils.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ControlManifest.xml" />
