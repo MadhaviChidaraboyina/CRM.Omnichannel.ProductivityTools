@@ -64,7 +64,7 @@ module MscrmControls.ProductivityToolPanel {
                 this.panelToggle = false;
                 this.productivityToolSelected = Constants.emptyString;
                 localStorage.setItem(LocalStorageKeyConstants.productivityToolDataModel, JSON.stringify({}));
-            }
+            } 
 
 
         }
@@ -108,8 +108,7 @@ module MscrmControls.ProductivityToolPanel {
         private getPanelContainer(): Mscrm.Component {
             let isRTL = this.context.client.isRTL;
             let sessionContextJSON = JSON.stringify(this.sessionChangeManager.getSessionChangeEventData());
-            let isCallScriptAvail = this.panelState.checkAgentScript(this.currentSessionId);
-            let isSmartassistAvail = this.panelState.checkSmartAssist(this.currentSessionId);
+
             let toolSelected: ToolConfig = this.productivityPaneConfigData.getToolByName(this.productivityToolSelected);
 
             let toolsList: Mscrm.Component[] = [];
@@ -128,7 +127,7 @@ module MscrmControls.ProductivityToolPanel {
                                 Static: true,
                                 Value: sessionContextJSON,
                                 Primary: false,
-                                Attributes: { isCallScript: isCallScriptAvail, isSmartassist: isSmartassistAvail },
+                                Attributes: { },
                                 Callback: (value: any) => {
                                     if (!this.panelToggle) {
                                         const data = {
@@ -330,10 +329,7 @@ module MscrmControls.ProductivityToolPanel {
             let navbarContainer;
             if (this.isDataFetched) {
                 let paneState = this.productivityPaneConfigData.productivityPaneState;
-                //this.panelToggle = this.productivityPaneConfigData.productivityPaneMode;
                 if (paneState == true) {
-                    this.panelState.storeSessionTemplateIdInLocStorage(this.currentSessionId);
-                    this.panelState.storeLiveWorkStreamIdInLocStorage(this.currentSessionId);
                     this.controls = [];
                     if (this.isSessionChanged ) {
                         this.controls.push(this.getproductivityToolButtons());

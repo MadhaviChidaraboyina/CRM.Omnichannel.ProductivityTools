@@ -16,12 +16,19 @@ module MscrmControls.ProductivityToolAgentGuidance {
         private telemetryContext: string;
         private telemetryLogger: TelemetryLogger;
         private isCardExist: boolean;
+        private stateManager: StateManager;
+        private currentSessionId: string; 
 		/**
 		 * Constructor.
 		 */
         constructor() {
             this.initCompleted = false;
             this.telemetryContext = TelemetryComponents.MainComponent;  
+
+            // to do : we need to remove thsi event and handle the invokation of destroy method in proper way.
+            (window as any).addEventListener("unload", function (e) {
+                delete localStorage[LocalStorageKeyConstants.agentGuidanceDataModel];
+            });
 		}
 
 		/**
@@ -34,16 +41,18 @@ module MscrmControls.ProductivityToolAgentGuidance {
 		public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary): void
         {
             if (this.initCompleted == false) {
-				this.context = context;
+                this.context = context;
+                this.currentSessionId = Constants.EmptyString;
                 this.initCompleted = true;
                 this.telemetryLogger = new TelemetryLogger(context);
+                this.stateManager = new StateManager(context);
                 let params = new EventParameters();
                 this.telemetryLogger.logSuccess(this.telemetryContext, "Init", params);
-                let productivityToolAgentGuidance = localStorage.getItem(ProductivityToolAgentGuidance.Constants.agentGuidanceDataModel);
-                if (this.context.utils.isNullOrUndefined(productivityToolAgentGuidance)) localStorage.setItem(ProductivityToolAgentGuidance.Constants.agentGuidanceDataModel, JSON.stringify({}));
+                let productivityToolAgentGuidance = localStorage.getItem(ProductivityToolAgentGuidance.LocalStorageKeyConstants.agentGuidanceDataModel);
+                if (this.context.utils.isNullOrUndefined(productivityToolAgentGuidance)) localStorage.setItem(ProductivityToolAgentGuidance.LocalStorageKeyConstants.agentGuidanceDataModel, JSON.stringify({}));
                 let windowObject = this.getWindowObject();                
                 windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onSessionSwitched.bind(this));
-                windowObject.Xrm.App.sessions.addOnAfterSessionCreate(this.SetDefaultCardFlag.bind(this));
+                windowObject.Xrm.App.sessions.addOnAfterSessionCreate(this.onSessionCreate.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClosed.bind(this));
             }
         }
@@ -61,21 +70,29 @@ module MscrmControls.ProductivityToolAgentGuidance {
             StateManager.DeleteState(closingSessionId + Constants.isSmartCardAvailable);
         }
 
-        private onSessionSwitched(){
-            this.isCardExist = StateManager.getState(this.getCurrentSessionId() + Constants.isSmartCardAvailable);
+        private onSessionSwitched(event : any) {
+            this.currentSessionId = this.getCurrentSessionId();
+            this.isCardExist = StateManager.getState(this.currentSessionId + Constants.isSmartCardAvailable);
         }
 
         //set flag true if smart card available for current session
         private SetCardFlag(flag: boolean) {
-            StateManager.SetState(this.getCurrentSessionId() + Constants.isSmartCardAvailable, flag);
+            StateManager.SetState(this.currentSessionId + Constants.isSmartCardAvailable, flag);
         }
 
         //set flag false if smart card available for new session
         private SetDefaultCardFlag() {
-            let check = StateManager.getState(this.getCurrentSessionId() + Constants.isSmartCardAvailable);
+            // set state for smart assist card
+            let check = StateManager.getState(this.currentSessionId + Constants.isSmartCardAvailable);
             if (this.context.utils.isNullOrUndefined(check)) {
-                StateManager.SetState(this.getCurrentSessionId() + Constants.isSmartCardAvailable, false);
+                StateManager.SetState(this.currentSessionId + Constants.isSmartCardAvailable, false);
             }
+        }
+
+        private onSessionCreate(event : any) {
+            this.currentSessionId = this.getCurrentSessionId();
+
+            this.SetDefaultCardFlag();
         }
 
 		/** 
@@ -86,7 +103,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
 		 */
         public updateView(context: Mscrm.ControlData<IInputBag>): Mscrm.Component {
             let controls = [];
-            let sessionContextAttributes = context.navigation[Constants.customControlProperties].configuration.Parameters.SessionContext.Attributes;
+            let sessionContextAttributes = this.checkAgentScriptAndSmartAssistBot(context);
             controls = this.getAgentGuidanceTools(context, sessionContextAttributes);
 
 			return context.factory.createElement(
@@ -98,13 +115,23 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 },
                 controls
 			);
-            
+        }
+
+        private checkAgentScriptAndSmartAssistBot(context: Mscrm.ControlData<IInputBag>): DisplayCriterias {
+            // stor session template id and workstream id 
+            this.stateManager.storeSessionTemplateIdInLocStorage(this.currentSessionId);
+            this.stateManager.storeLiveWorkStreamIdInLocStorage(this.currentSessionId);
+
+            let isCallScriptAvail = this.stateManager.checkAgentScript(this.currentSessionId);
+            let isSmartassistAvail = this.stateManager.checkSmartAssist(this.currentSessionId);
+
+            return new DisplayCriterias(isCallScriptAvail, isSmartassistAvail);
         }
        
         private getAgentGuidanceTools(context: Mscrm.ControlData<IInputBag>, sessionContextAttributes: any): Mscrm.Component[] {
             let agentGuidancePane = [];
             let tools = [];
-            this.isCardExist = StateManager.getState(this.getCurrentSessionId() + Constants.isSmartCardAvailable);
+            this.isCardExist = StateManager.getState(this.currentSessionId + Constants.isSmartCardAvailable);
 
             if (sessionContextAttributes.isCallScript || sessionContextAttributes.isSmartassist) {
                 agentGuidancePane.push(this.getAgentGuidanceLabel(context));
@@ -328,8 +355,8 @@ module MscrmControls.ProductivityToolAgentGuidance {
 		 * This function will be called when the control is destroyed
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
-		public destroy(): void	{
-
+        public destroy(): void	{
+            delete localStorage[LocalStorageKeyConstants.agentGuidanceDataModel];
 		}
     }
 }

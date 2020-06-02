@@ -34,6 +34,9 @@
     <TypeScriptCompile Include="Utils\Constants.ts" />
     <TypeScriptCompile Include="Utils\TelemetryLogger.ts" />
     <TypeScriptCompile Include="StateManager\StateManager.ts" />
+    <TypeScriptCompile Include="DataManager\DataManager.ts" />
+    <TypeScriptCompile Include="DataModel\DisplayCriteria.ts" />
+    <TypeScriptCompile Include="$(PKG_TYPESCRIPT_MSBUILD)\tools\tsc\lib.es6.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ControlManifest.xml" />
