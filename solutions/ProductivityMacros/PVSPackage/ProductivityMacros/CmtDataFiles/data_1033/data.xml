@@ -1201,7 +1201,7 @@
         <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" />
         <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" />
         <field name="msdyn_macroconnector" value="d2f931e3-70b7-4093-865e-b8075a02c215" lookupentity="msdyn_macroconnector" lookupentityname="Omnichannel Connector" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_send_kb.svg" />
+        <field name="msdyn_icon" value="WebResources/msdyn_OmnichannelBase/_imgs/Macros/msdyn_ProductivityMacros_send_kb.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="0070F53E-3C12-439E-80A7-39F10C38878B" />
         <field name="msdyn_name" value="Send_KB" />
