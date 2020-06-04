@@ -142,8 +142,6 @@
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_kb.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_relevance.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_search_relevance.svg.data.xml" />
-    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_send_kb.svg" />
-    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_send_kb.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_update_form_attribute.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_update_form_attribute.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_update_record.svg" />
