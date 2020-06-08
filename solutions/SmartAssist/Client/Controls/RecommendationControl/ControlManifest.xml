@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+	<control namespace="MscrmControls.Smartassist" constructor="RecommendationControl" version="1.0.0" display-name-key="CC_RecommendationControl_Component">
+    <property name="data" display-name-key="CC_Data" description-key="CC_Data_Desc" of-type="Multiple" usage="input" required="true" hidden="false" />
+    <property name="Template" display-name-key="CC_Template" description-key="CC_Template_Desc" of-type="Multiple" usage="input" required="true" hidden="false" />
+    <property name="DataContext" display-name-key="CC_DataContext" description-key="CC_DataContext_Desc" of-type="Multiple" usage="input" required="false" hidden="false" />
+		<modes>
+		</modes>
+    <resources>
+      <library name="adaptivecards-templating" version=">=0" order="1">
+        <packaged_library path="libs/adaptivecards-templating-1.0.0.js" version="1.0.0" />
+      </library>
+      <library name="adaptivecards" version=">=1" order="2">
+        <packaged_library path="libs/adaptivecards-1.3.0.js" version="2.0.1" />
+      </library>
+      <code path="RecommendationControl.js" order="3" />
+    </resources>		
+	</control>
+</manifest>
