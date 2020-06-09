@@ -48,8 +48,7 @@ module MscrmControls.Smartassist.Recommendation {
             }
 
             this._actionElement = container.render();
-            (<HTMLElement>this._actionElement.getElementsByClassName("ac-actionSet")[0]).style.flexDirection = "column";
-
+            this.setPopupStyleForActions();            
             popupContainer.appendChild(this._actionElement);
             this._renderedItems = popupContainer;
 
@@ -83,9 +82,14 @@ module MscrmControls.Smartassist.Recommendation {
             return window.pageYOffset;
         }
 
-        setPopupWidth() {
-            this._renderedItems.style.minWidth = 180 + "px";
-            return this._renderedItems;
+        setPopupStyleForActions() {
+            (<HTMLElement>this._actionElement.getElementsByClassName(Recommendation.Constants.AdaptiveCardActionSetClassName)[0]).style.flexDirection = "column";
+            const actions = this._actionElement.getElementsByClassName(Recommendation.Constants.AdaptiveCardActionSetClassName)[0].getElementsByClassName(Recommendation.Constants.AdaptiveCardActionButtonClassName);
+            const noOfActions = actions.length;
+            for (let i = 0; i < noOfActions; i++) {
+                let action = <HTMLElement>actions[i];
+                action.style.margin = "5px 40px 5px 10px";
+            }
         }
 
         closePopup() {
@@ -116,7 +120,7 @@ module MscrmControls.Smartassist.Recommendation {
                 document.body.appendChild(this._overlayElement);
                 var rootElementBounds = rootElement.getBoundingClientRect();
 
-                let _popupElement = this.setPopupWidth();
+                let _popupElement = this._renderedItems;
                 this._overlayElement.appendChild(_popupElement);
 
                 var popupElementBounds = _popupElement.getBoundingClientRect();

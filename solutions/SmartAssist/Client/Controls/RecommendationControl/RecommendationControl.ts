@@ -11,7 +11,7 @@ module MscrmControls.Smartassist
 	export class RecommendationControl implements Mscrm.StandardControl<IInputBag, IOutputBag> {
 
 		private _recommendationContainer: HTMLDivElement = null;
-		public static _context: Mscrm.ControlData<IInputBag> = null;
+		public _context: Mscrm.ControlData<IInputBag> = null;
 		private _template: string;
 		private _data: any;
 		private _dataContext: any;
@@ -34,11 +34,11 @@ module MscrmControls.Smartassist
 		{
 			// custom code goes here
 			try {
-				RecommendationControl._context = context;
+				this._context = context;
 				this._recommendationContainer = container;
-				this._data = RecommendationControl._context.parameters.data.raw;
-				this._template = RecommendationControl._context.parameters.Template.raw;
-				this._dataContext = RecommendationControl._context.parameters.DataContext.raw;
+				this._data = context.parameters.data.raw;
+				this._template = context.parameters.Template.raw;
+				this._dataContext = context.parameters.DataContext.raw;
 				var el: HTMLDivElement = document.createElement("div");
 				el.className = Recommendation.Constants.RecommendationOuterContainer;
 				el.id = Recommendation.Constants.RecommendationOuterContainer + this._data.id;
