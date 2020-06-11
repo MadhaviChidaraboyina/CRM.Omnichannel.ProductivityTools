@@ -26,7 +26,7 @@ module MscrmControls.Smartassist.Recommendation {
 				const card = cardTemplate.expand(context);
 				const adaptiveCard = new AdaptiveCards.AdaptiveCard();
 				AdaptiveCardHelper.initializeAdaptiveCardsHostConfig(adaptiveCard);
-				AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Recommendation.Constants.PopupActionName, () => { return new PopupAction(dataToBind.filterActionTag, dataToBind.id); });
+				AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Recommendation.Constants.PopupActionName, () => { return new PopupAction(); });
 				adaptiveCard.parse(card);
 				this.onActionHandler(adaptiveCard);
 				const htmlElement = adaptiveCard.render();

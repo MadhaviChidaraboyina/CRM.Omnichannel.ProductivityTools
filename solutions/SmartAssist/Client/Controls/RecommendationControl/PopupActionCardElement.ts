@@ -4,21 +4,17 @@
 module MscrmControls.Smartassist.Recommendation {
     export class PopupAction extends AdaptiveCards.CardElement {
 
-        private _popupOwner: HTMLElement;
+        private _popupOwner: HTMLElement; // Ellipse Icon
         private _renderedItems: HTMLElement;
         private _overlayElement: HTMLElement;
-        private _actionElement: HTMLElement;
+        private _popupActionContainer: AdaptiveCards.Container;
+        private _popupContainerActionElement: HTMLElement;
         private _isOpen: boolean = false;
-        private _actionSet: AdaptiveCards.ActionSet;
-        private _actionItems: Array<any>;
-        private _actionFilterTag: string;
         private _imageUrl: string;
-        private _contextId: string;  // for KM suggestions, this is KM id.
 
-        constructor(actionFilterTag: string, id: string) {
+        constructor() {
             super();
-            this._contextId = id;
-            this._actionFilterTag = actionFilterTag;
+            this._popupActionContainer = new AdaptiveCards.Container();
             this.onExecuteAction.bind(this);
         }
 
@@ -40,22 +36,11 @@ module MscrmControls.Smartassist.Recommendation {
             imageBox.horizontalAlignment = AdaptiveCards.HorizontalAlignment.Right;
             this._popupOwner = imageBox.render();
 
-
-            let container = new AdaptiveCards.Container();
-            container.id = Recommendation.Constants.PopupContainerId;
-            if (this._actionSet) {
-                container.addItem(this._actionSet);
-            }
-
-            this._actionElement = container.render();
-            this.setPopupStyleForActions();            
-            popupContainer.appendChild(this._actionElement);
+            this._popupContainerActionElement = this._popupActionContainer.render();   
+            popupContainer.appendChild(this._popupContainerActionElement);
+            this.setPopupStyleForActions();  
             this._renderedItems = popupContainer;
 
-            for (let i = 0; i < this._actionSet.getActionCount(); i++) {
-                var action = this._actionSet.getActionAt(i);
-                action.onExecute = this.onExecuteAction;
-            }
 
             this._popupOwner.onclick = (e) => {
 
@@ -71,7 +56,7 @@ module MscrmControls.Smartassist.Recommendation {
         }
 
         onExecuteAction(action: AdaptiveCards.Action) {
-            // TODO;
+            // TODO: Invoke Actions;
         }
 
         getScrollX(): number {
@@ -83,12 +68,11 @@ module MscrmControls.Smartassist.Recommendation {
         }
 
         setPopupStyleForActions() {
-            (<HTMLElement>this._actionElement.getElementsByClassName(Recommendation.Constants.AdaptiveCardActionSetClassName)[0]).style.flexDirection = "column";
-            const actions = this._actionElement.getElementsByClassName(Recommendation.Constants.AdaptiveCardActionSetClassName)[0].getElementsByClassName(Recommendation.Constants.AdaptiveCardActionButtonClassName);
+            const actions = this._popupContainerActionElement.getElementsByClassName(Recommendation.Constants.AdaptiveCardActionButtonClassName) || [];
             const noOfActions = actions.length;
             for (let i = 0; i < noOfActions; i++) {
                 let action = <HTMLElement>actions[i];
-                action.style.margin = "5px 40px 5px 10px";
+                action.style.margin = "2px 40px 2px 10px";
             }
         }
 
@@ -166,14 +150,19 @@ module MscrmControls.Smartassist.Recommendation {
         }
 
         parse(json: any, errors?: Array<AdaptiveCards.IValidationError>) {
-            // TODO: Parse data binding associated with item.tag.
-            this._actionItems = json.items;
+            const actionItems = json.items;
             this._imageUrl = json.image;
-            for (var item of this._actionItems) {
-                if (item && item.tag === this._actionFilterTag) {
-                    this._actionSet = new AdaptiveCards.ActionSet();
-                    this._actionSet.parse(item.actionset, errors);
-                    break;
+            for (var item of actionItems) {
+                const displayAction = item && ((item.hasOwnProperty(Recommendation.Constants.FilterExpression) && item[Recommendation.Constants.FilterExpression]) || !item.hasOwnProperty(Recommendation.Constants.FilterExpression)); 
+                if (displayAction == true) {
+                    let actionSet = new AdaptiveCards.ActionSet();
+                    actionSet.parse(item.actionset, errors);
+                    actionSet.orientation = AdaptiveCards.Orientation.Vertical;
+                    for (let i = 0; i < actionSet.getActionCount(); i++) {
+                        var action = actionSet.getActionAt(i);
+                        action.onExecute = this.onExecuteAction.bind(this);
+                    }
+                    this._popupActionContainer.addItem(actionSet);
                 }
             }
         }
