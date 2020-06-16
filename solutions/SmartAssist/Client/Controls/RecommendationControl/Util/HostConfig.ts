@@ -20,9 +20,9 @@ module MscrmControls.Smartassist.Recommendation {
 			 "lineColor": "#FFFFFF"
 		 },
 		 "fontSizes": {
-			 "small": 12,
-			 "default": 14,
-			 "medium": 17,
+			 "small": 9,
+			 "default": 10,
+			 "medium": 12,
 			 "large": 21,
 			 "extraLarge": 26
 		 },
@@ -105,9 +105,7 @@ module MscrmControls.Smartassist.Recommendation {
 			 }
 		 },
 		 "actions": {
-			 "maxActions": 3,
 			 "spacing": "Default",
-			 "buttonSpacing": 24,
 			 "showCard": {
 				 "actionMode": "Inline",
 				 "inlineTopMargin": 16,

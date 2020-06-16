@@ -18,25 +18,13 @@ module MscrmControls.Smartassist {
 		width: 99%;
 		margin: 0;
 	}
-
-	.card-new {
-		background-color: #F0FAFF!important;
-	}
-
-	.card-applied{
-		background-color: #F6F6F6!important;
-	}
-
-	.card-error {
-		border: 1px solid #A80000!important;
-	}
     
     .recommendation-outer-container {
 		max-width: calc(100% - 15px);
      }
 
     .recommendation-card-container {
-		
+		border-top: 5px solid #FFF;
 		background-color: #FFF;
 		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.18), 0px 2px 4px rgba(0, 0, 0, 0.12);
 		border-radius: 4px;
@@ -54,10 +42,10 @@ module MscrmControls.Smartassist {
 		height: 5px !important;
 	}
 	.ac-pushButton {
-		background: none!important;
+		background: none;
 		border: none;
-		padding: 0!important;
-		color: black!important;
+		padding: 2px!important;
+		color: black;
 		cursor: pointer;
         justify-content: flex-start!important;
         align-items: flex-start!important;
@@ -65,9 +53,14 @@ module MscrmControls.Smartassist {
         font: menu!important;
         font-size: small!important;
 	}
+    
+    .style-positive {
+        background: green;
+        color: white;
+     }
 
-    .ac-pushButton:focus {     
-		background-color:green;    
+    .ac-vertical-separator {
+        width: 7px!important;
     }
 	.ac-textBlock {
 		color: #666666!important;

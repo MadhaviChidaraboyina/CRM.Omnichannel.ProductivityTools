@@ -28,13 +28,13 @@
   <ItemGroup>
     <TypeScriptCompile Include="CommonReferences.ts" />
     <TypeScriptCompile Include="css\RecommendationTemplate.ts" />
-    <TypeScriptCompile Include="CustomActionManager.ts" />
-    <TypeScriptCompile Include="PopupActionCardElement.ts" />
+    <TypeScriptCompile Include="Util\CustomActionHelper.ts" />
+    <TypeScriptCompile Include="Components\PopupAction.ts" />
     <TypeScriptCompile Include="RecommendationControl.ts" />
     <TypeScriptCompile Include="inputsOutputs.g.ts" />
     <TypeScriptCompile Include="PrivateReferences.ts" />
-    <TypeScriptCompile Include="Util\AdaptiveCardHelper.ts" />
-    <TypeScriptCompile Include="Util\Constants.ts" />
+    <TypeScriptCompile Include="AdaptiveCardRenderer.ts" />
+	<TypeScriptCompile Include="Util\Util.ts" />
     <TypeScriptCompile Include="Util\HostConfig.ts" />
     <TypeScriptCompile Include="Util\StringHelper.ts" />
     <TypeScriptCompile Include="Views\ViewTemplates.ts" />
@@ -45,9 +45,7 @@
     <Content Include="libs\adaptivecards-1.3.0.js" />
     <Content Include="libs\adaptivecards-templating-1.0.0.js" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Typings\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="strings\RecommendationControl.1033.resx">
       <Generator>ResXFileCodeGenerator</Generator>

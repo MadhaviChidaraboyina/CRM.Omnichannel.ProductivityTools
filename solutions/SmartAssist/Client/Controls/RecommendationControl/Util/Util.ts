@@ -35,6 +35,9 @@ module MscrmControls.Smartassist.Recommendation {
 		public static FilterExpression = "$when";
 		public static AdaptiveCardActionSetClassName = "ac-actionSet";
 		public static AdaptiveCardActionButtonClassName = "ac-pushButton";
+		public static PositiveFeedback = "yes";
+		public static NegativeFeedback = "no";
+		public static DissmissCardAction = "dismissCard";
 	}
 
 	/**
@@ -43,5 +46,11 @@ module MscrmControls.Smartassist.Recommendation {
 	export class TelemetryComponents {
 		public static MainComponent = "MainComponent";
 		public static AdaptiveCardHelper = "AdaptiveCardHelper";
+	}
+
+	export class Util {
+		public static getSuggestionCardId(suggestionId: string) {
+			return Recommendation.Constants.CardNamePrefix + suggestionId;
+		}
 	}
 }

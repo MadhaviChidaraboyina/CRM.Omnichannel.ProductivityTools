@@ -1,5 +1,4 @@
-﻿/// <reference path="./CommonReferences.ts"/>
-/// <reference path="../../TypeDefinitions/adaptivecards-templating.d.ts"/>
+﻿/// <reference path="../CommonReferences.ts"/>
 
 module MscrmControls.Smartassist.Recommendation {
     export class PopupAction extends AdaptiveCards.CardElement {
@@ -11,9 +10,11 @@ module MscrmControls.Smartassist.Recommendation {
         private _popupContainerActionElement: HTMLElement;
         private _isOpen: boolean = false;
         private _imageUrl: string;
+        private onExecuteAdaptiveCardAction: (action: AdaptiveCards.Action) => void;
 
-        constructor() {
+        constructor(onExecuteAction: (action: AdaptiveCards.Action) => void) {
             super();
+            this.onExecuteAdaptiveCardAction = onExecuteAction;
             this._popupActionContainer = new AdaptiveCards.Container();
             this.onExecuteAction.bind(this);
         }
@@ -36,9 +37,9 @@ module MscrmControls.Smartassist.Recommendation {
             imageBox.horizontalAlignment = AdaptiveCards.HorizontalAlignment.Right;
             this._popupOwner = imageBox.render();
 
-            this._popupContainerActionElement = this._popupActionContainer.render();   
+            this._popupContainerActionElement = this._popupActionContainer.render();
             popupContainer.appendChild(this._popupContainerActionElement);
-            this.setPopupStyleForActions();  
+            this.setPopupStyleForActions();
             this._renderedItems = popupContainer;
 
 
@@ -56,7 +57,7 @@ module MscrmControls.Smartassist.Recommendation {
         }
 
         onExecuteAction(action: AdaptiveCards.Action) {
-            // TODO: Invoke Actions;
+            this.onExecuteAdaptiveCardAction(action);
         }
 
         getScrollX(): number {
@@ -153,7 +154,7 @@ module MscrmControls.Smartassist.Recommendation {
             const actionItems = json.items;
             this._imageUrl = json.image;
             for (var item of actionItems) {
-                const displayAction = item && ((item.hasOwnProperty(Recommendation.Constants.FilterExpression) && item[Recommendation.Constants.FilterExpression]) || !item.hasOwnProperty(Recommendation.Constants.FilterExpression)); 
+                const displayAction = item && ((item.hasOwnProperty(Recommendation.Constants.FilterExpression) && item[Recommendation.Constants.FilterExpression]) || !item.hasOwnProperty(Recommendation.Constants.FilterExpression));
                 if (displayAction == true) {
                     let actionSet = new AdaptiveCards.ActionSet();
                     actionSet.parse(item.actionset, errors);
