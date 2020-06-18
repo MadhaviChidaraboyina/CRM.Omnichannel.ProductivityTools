@@ -164,12 +164,12 @@ module MscrmControls.SmartassistPanelControl {
 
             // Filter out if event has the correct values and tab is anchor tab
             if (event && event.context && event.context.entityName && event.context.entityId && event.context.pageType
-                && event.context.pageType == Smartassist.Constants.CECEntityRecordType && anchorContext && anchorContext.entityName && anchorContext.entityId
-                && event.context.entityName == Smartassist.Constants.IncidentEntityName && Smartassist.Constants.IncidentEntityName == anchorContext.entityName
-                && !Smartassist.Utility.isNullOrEmptyString(event.context.entityId) && !Smartassist.Utility.isNullOrEmptyString(anchorContext.entityId)
-                && Smartassist.Utility.FormatGuid(event.context.entityId) == Smartassist.Utility.FormatGuid(anchorContext.entityId)) {
+                && event.context.pageType == Constants.CECEntityRecordType && anchorContext && anchorContext.entityName && anchorContext.entityId
+                && event.context.entityName == Constants.IncidentEntityName && Constants.IncidentEntityName == anchorContext.entityName
+                && !Utility.isNullOrEmptyString(event.context.entityId) && !Utility.isNullOrEmptyString(anchorContext.entityId)
+                && Utility.FormatGuid(event.context.entityId) == Utility.FormatGuid(anchorContext.entityId)) {
 
-                this.EntityId = Smartassist.Utility.FormatGuid(event.context.entityId);
+                this.EntityId = Utility.FormatGuid(event.context.entityId);
                 this.EntityName = event.context.entityName;
                 this.renderSuggestions();
             }
