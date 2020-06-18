@@ -8,21 +8,35 @@ module MscrmControls.SmartassistPanelControl {
 	* utility methods
 	*/
     export class Utility {
-        private context: Mscrm.ControlData<IInputBag>;
-
-        constructor(context: Mscrm.ControlData<IInputBag>) {
-            this.context = context;
-        }
 
 		/** 
 		*  Utility function - returns empty string if the value provided is null or Undefined
 	    * @param value: string value to be checked null or undefined.
 		*/
-        public GetValue(value: string): any {
-            if (this.context.utils.isNullOrUndefined(value)) {
+        public static GetValue(value: string): any {
+            if (SmartassistPanelControl._context.utils.isNullOrUndefined(value)) {
                 return "";
             }
             return value;
+        }
+
+
+        /**
+         * Check if string is null or empty
+         * @returns boolean
+         * @param value
+         */
+        public static isNullOrEmptyString(value: string): boolean {
+            return SmartassistPanelControl._context.utils.isNullOrEmptyString(value);
+        }
+
+        /**
+         * Removes special chars {} and returns lowercase guid
+         * @returns formated guid
+         * @param value: guid to format
+         */
+        public static FormatGuid(value: string): string {
+            return value.replace(/[{}]/g, "").toLowerCase();
         }
     }
 }

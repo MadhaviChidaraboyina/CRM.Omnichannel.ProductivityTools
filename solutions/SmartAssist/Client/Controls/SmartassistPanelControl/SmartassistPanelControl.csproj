@@ -19,6 +19,7 @@
     <RootNamespace>SmartassistPanelControl</RootNamespace>
     <AssemblyName>SmartassistPanelControl</AssemblyName>
     <TypeScriptOutFile>SmartassistPanelControl.js</TypeScriptOutFile>
+    <TypeScriptSkipLibCheck>true</TypeScriptSkipLibCheck>
   </PropertyGroup>
   <PropertyGroup>
     <UglifyJsMangle>true</UglifyJsMangle>

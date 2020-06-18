@@ -13,6 +13,8 @@ module MscrmControls.SmartassistPanelControl {
         public static _context: Mscrm.ControlData<IInputBag> = null;
         public static isRTL: boolean = false;
         private telemetryReporter: SmartassistPanelControl.TelemetryLogger;
+        private EntityId: string = null;
+        private EntityName: string = null;
 		/**
 		 * Empty constructor.
 		 */
@@ -51,10 +53,10 @@ module MscrmControls.SmartassistPanelControl {
                     SuggestionEl.id = Constants.SuggestionOuterContainer;
                     SuggestionEl.style.maxHeight = "500px";
                     SuggestionEl.style.overflow = "auto";
-                    this.smartAssistContainer.appendChild(SuggestionEl); 
+                    this.smartAssistContainer.appendChild(SuggestionEl);
 
-                    //intiate any enttity Control
-                    this.renderSuggestions();
+                    //Listen to the CEC context change API
+                    Microsoft.AppRuntime.Sessions.addOnContextChange((sessionContext) => this.listenCECContextChangeAPI(sessionContext));
                 }
             } catch (Error) {
 
@@ -113,7 +115,10 @@ module MscrmControls.SmartassistPanelControl {
 
         /**Initialize SmartAssistAnyEntityControl to render suggestions  */
         public async renderSuggestions(): Promise<void> {
-            let recordId = ""; //todo, get record ID from CIF
+            if (this.EntityName != Constants.IncidentEntityName || SmartassistPanelControl._context.utils.isNullOrEmptyString(this.EntityId)) {
+                return;
+            }
+            let recordId = this.EntityId;
             var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
 
             //ToDo: validating Ordering
@@ -149,6 +154,24 @@ module MscrmControls.SmartassistPanelControl {
                 const anyEntityControl = SmartassistPanelControl._context.factory.createComponent("MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl", "SmartAssistAnyEntityControl", properties);
                 SmartassistPanelControl._context.utils.bindDOMElement(anyEntityControl, divElement);
                 $("#" + Constants.SuggestionOuterContainer).append(divElement);
+            }
+        }
+
+        public listenCECContextChangeAPI(event: any) {
+            var context = Microsoft.AppRuntime.Sessions.getFocusedSession().context;
+            if (!context) { return; }
+            var anchorContext = context.getTabContext("anchor") as any;
+
+            // Filter out if event has the correct values and tab is anchor tab
+            if (event && event.context && event.context.entityName && event.context.entityId && event.context.pageType
+                && event.context.pageType == Smartassist.Constants.CECEntityRecordType && anchorContext && anchorContext.entityName && anchorContext.entityId
+                && event.context.entityName == Smartassist.Constants.IncidentEntityName && Smartassist.Constants.IncidentEntityName == anchorContext.entityName
+                && !Smartassist.Utility.isNullOrEmptyString(event.context.entityId) && !Smartassist.Utility.isNullOrEmptyString(anchorContext.entityId)
+                && Smartassist.Utility.FormatGuid(event.context.entityId) == Smartassist.Utility.FormatGuid(anchorContext.entityId)) {
+
+                this.EntityId = Smartassist.Utility.FormatGuid(event.context.entityId);
+                this.EntityName = event.context.entityName;
+                this.renderSuggestions();
             }
         }
     }

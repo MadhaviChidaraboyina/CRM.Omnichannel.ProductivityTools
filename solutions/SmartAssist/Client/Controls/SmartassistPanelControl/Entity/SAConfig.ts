@@ -47,27 +47,26 @@ module MscrmControls.SmartassistPanelControl {
         public ACTemplate = "";
         public StatusCode: number = null;
         public SmartassistConfigurationId = "";
+        public AttributeName: SAConfigSchema = new SAConfigSchema();
 
         /**
          * Sets SAConfig Model Values.
          * @param response: Response from server call.
-         * @param AttributeName: SA Config Schema.
-         * @param _util: Utility reference.
          * @param context:The "Input Bag" containing the parameters and other control metadata.
          */
-        constructor(response: any, AttributeName: SAConfigSchema, AdaptiveCardTemplateAlias: string, _util: Utility, context: Mscrm.ControlData<IInputBag>) {
-            if (!context.utils.isNullOrUndefined(response)) {
-                this.MaxSuggestionCount = _util.GetValue(response[AttributeName.MaxSuggestionCount]);
-                this.Order = _util.GetValue(response[AttributeName.Order]);
-                this.SuggestionControlId = _util.GetValue(response[AttributeName.SuggestionControlId]);
-                this.SuggestionControlType = _util.GetValue(response[AttributeName.SuggestionControlType]) as SuggestionControlType;
-                this.SuggestionType = _util.GetValue(response[AttributeName.SuggestionType]) as SuggestionType;
-                this.StatusCode = _util.GetValue(response[AttributeName.StatusCode]) as SAConfigStatus;
-                this.SuggestionWebresourceFunction = _util.GetValue(response[AttributeName.SuggestionWebresourceFunction]);
-                this.SuggestionWebResourceName = _util.GetValue(response[AttributeName.SuggestionWebResourceName]);
-                this.UniqueName = _util.GetValue(response[AttributeName.UniqueName]);
-                this.ACTemplate = _util.GetValue(response[AdaptiveCardTemplateAlias]);
-                this.SmartassistConfigurationId = _util.GetValue(response[AttributeName.SmartassistConfigurationId]);
+        constructor(response: any, AdaptiveCardTemplateAlias: string) {
+            if (SmartassistPanelControl._context.utils.isNullOrUndefined(response)) {
+                this.MaxSuggestionCount = Utility.GetValue(response[this.AttributeName.MaxSuggestionCount]);
+                this.Order = Utility.GetValue(response[this.AttributeName.Order]);
+                this.SuggestionControlId = Utility.GetValue(response[this.AttributeName.SuggestionControlId]);
+                this.SuggestionControlType = Utility.GetValue(response[this.AttributeName.SuggestionControlType]) as SuggestionControlType;
+                this.SuggestionType = Utility.GetValue(response[this.AttributeName.SuggestionType]) as SuggestionType;
+                this.StatusCode = Utility.GetValue(response[this.AttributeName.StatusCode]) as SAConfigStatus;
+                this.SuggestionWebresourceFunction = Utility.GetValue(response[this.AttributeName.SuggestionWebresourceFunction]);
+                this.SuggestionWebResourceName = Utility.GetValue(response[this.AttributeName.SuggestionWebResourceName]);
+                this.UniqueName = Utility.GetValue(response[this.AttributeName.UniqueName]);
+                this.ACTemplate = Utility.GetValue(response[AdaptiveCardTemplateAlias]);
+                this.SmartassistConfigurationId = Utility.GetValue(response[this.AttributeName.SmartassistConfigurationId]);
             }
         }
     }

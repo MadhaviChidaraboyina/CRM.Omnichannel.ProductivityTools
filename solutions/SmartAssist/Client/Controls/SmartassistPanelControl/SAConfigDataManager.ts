@@ -42,12 +42,10 @@ module MscrmControls.SmartassistPanelControl {
         private async fetchSAConfigurationsData() {
             let eventParameters = new EventParameters();
             try {
-
                 let fetchXml = this.getXmlQueryForSAConfig()
-                var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;
-                let _util = new Utility(SmartassistPanelControl._context);
+                var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;             
                 for (var i = 0; i < result.entities.length; i++) {
-                    this.saConfig.push(new SAConfig(result.entities[i], this.saConfigSchema, this.acConfigSchema.AdaptiveCardTemplateAlias, _util, SmartassistPanelControl._context))
+                    this.saConfig.push(new SAConfig(result.entities[i], this.acConfigSchema.AdaptiveCardTemplateAlias))
                 }
             } catch (error) {
                 eventParameters.addParameter("Exception Details", error.message);
