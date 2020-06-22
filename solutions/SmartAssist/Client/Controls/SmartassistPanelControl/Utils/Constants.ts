@@ -9,11 +9,15 @@ module MscrmControls.SmartassistPanelControl {
 	 * Constants
 	 */
     export class Constants {
+        public static currentContextChangeEeventId = "currentContextChangeEeventId";
+        public static currentContextAnchorEntId = "currentContextAnchorEntId";
+        public static currentContextCurrentCtxEntId = "currentContextCurrentCtxEntId";
         public static SessionCloseHandlerId = "SessionCloseHandlerId";
         public static SuggestionOuterContainer = "sa-suggestion-outer-container";
         public static SuggestionInnerDiv = "sa-suggestion-inner-div-";
         public static IncidentEntityName = "incident";
         public static CECEntityRecordType = "entityrecord";
+        public static CECDashboardType = "dashboard";
     }
 
 	/**

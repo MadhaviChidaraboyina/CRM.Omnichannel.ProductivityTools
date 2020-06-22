@@ -12,9 +12,10 @@ module MscrmControls.SmartassistPanelControl {
         private smartAssistContainer: HTMLDivElement = null;
         public static _context: Mscrm.ControlData<IInputBag> = null;
         public static isRTL: boolean = false;
+        private newInstance: boolean = false;
         private telemetryReporter: SmartassistPanelControl.TelemetryLogger;
-        private EntityId: string = null;
-        private EntityName: string = null;
+        private AnyentityControlInitiated: boolean = false;
+
 		/**
 		 * Empty constructor.
 		 */
@@ -54,9 +55,17 @@ module MscrmControls.SmartassistPanelControl {
                     SuggestionEl.style.maxHeight = "500px";
                     SuggestionEl.style.overflow = "auto";
                     this.smartAssistContainer.appendChild(SuggestionEl);
+                                        
+                    //TODO: Keep local storage in separate module
+                    if (!localStorage.getItem(Constants.currentContextChangeEeventId)) {
 
-                    //Listen to the CEC context change API
-                    Microsoft.AppRuntime.Sessions.addOnContextChange((sessionContext) => this.listenCECContextChangeAPI(sessionContext));
+                        //Listen to the CEC context change API
+                        var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange((sessionContext) => this.listenCECContextChangeAPI(sessionContext));
+                        //TODO: Keep local storage in separate module
+                        localStorage.setItem(Constants.currentContextChangeEeventId, eventId);
+                    }
+                    //TODO: Remove this flag when session type available
+                    this.newInstance = true;
                 }
             } catch (Error) {
 
@@ -76,6 +85,9 @@ module MscrmControls.SmartassistPanelControl {
 		 */
         public updateView(context: Mscrm.ControlData<IInputBag>): void {
             SmartassistPanelControl._context = context;
+            if (this.newInstance)
+                this.renderSuggestions();   
+            this.newInstance = false;
         }
 
 		/** 
@@ -97,7 +109,6 @@ module MscrmControls.SmartassistPanelControl {
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
         public destroy(): void {
-
         }
 
         public static getString(resourceName: string): string {
@@ -110,69 +121,120 @@ module MscrmControls.SmartassistPanelControl {
 
         private handleSessionClose(context: XrmClientApi.EventContext) {
             let handlerId = localStorage.getItem(Constants.SessionCloseHandlerId);
+            let currentContextChangeEeventId = localStorage.getItem(Constants.currentContextChangeEeventId)
             Xrm.App.sessions.removeOnAfterSessionClose(handlerId);
+            Microsoft.AppRuntime.Sessions.removeOnContextChange(currentContextChangeEeventId);
+
+            //TODO: Keep local storage in separate module
+            localStorage.removeItem(Constants.currentContextChangeEeventId);
+            localStorage.removeItem(Constants.currentContextAnchorEntId);
+            localStorage.removeItem(Constants.currentContextCurrentCtxEntId);
         }
 
         /**Initialize SmartAssistAnyEntityControl to render suggestions  */
         public async renderSuggestions(): Promise<void> {
-            if (this.EntityName != Constants.IncidentEntityName || SmartassistPanelControl._context.utils.isNullOrEmptyString(this.EntityId)) {
-                return;
-            }
-            let recordId = this.EntityId;
-            var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
+            // validate current context
+            if (this.validateCurrentContext()) {
 
-            //ToDo: validating Ordering
-            configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
+                //TODO: Keep local storage in separate module
+                let recordId = localStorage.getItem(Constants.currentContextCurrentCtxEntId);
+                var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
+                                
+                configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
 
-            for (let i = 0; i <= (configs.length - 1); i++) {
-                let properties: any =
-                {
-                    parameters: {
-                        SAConfig: {
-                            Type: "Multiple",
-                            Primary: false,
-                            Static: true,
-                            Usage: 1, // input
-                            Value: configs[i]
+                for (let i = 0; i <= (configs.length - 1); i++) {
+                    let properties: any =
+                    {
+                        parameters: {
+                            SAConfig: {
+                                Type: "Multiple",
+                                Primary: false,
+                                Static: true,
+                                Usage: 1, // input
+                                Value: configs[i]
+                            },
+                            RecordId: {
+                                Type: "SingleLine.Text",
+                                Primary: false,
+                                Static: true,
+                                Usage: 1, // input
+                                Value: recordId
+                            }
+                            // TODO: Add Data Context
                         },
-                        RecordId: {
-                            Type: "SingleLine.Text",
-                            Primary: false,
-                            Static: true,
-                            Usage: 1, // input
-                            Value: recordId
-                        }
-                        // TODO: Add Data Context
-                    },
-                    key: "AnyEntityControlComponent",
-                    id: "AnyEntityControlComponent",
-                };
-                var divElement = document.createElement("div");
-                divElement.id = Constants.SuggestionInnerDiv + configs[i].SmartassistConfigurationId;
+                        key: "AnyEntityControlComponent",
+                        id: "AnyEntityControlComponent",
+                    };
+                    var divElement = document.createElement("div");
+                    divElement.id = Constants.SuggestionInnerDiv + configs[i].SmartassistConfigurationId;
 
-                // Init SmartAssistAnyEntityControl
-                const anyEntityControl = SmartassistPanelControl._context.factory.createComponent("MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl", "SmartAssistAnyEntityControl", properties);
-                SmartassistPanelControl._context.utils.bindDOMElement(anyEntityControl, divElement);
-                $("#" + Constants.SuggestionOuterContainer).append(divElement);
+                    // Init SmartAssistAnyEntityControl
+                    const anyEntityControl = SmartassistPanelControl._context.factory.createComponent("MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl", "SmartAssistAnyEntityControl", properties);
+                    SmartassistPanelControl._context.utils.bindDOMElement(anyEntityControl, divElement);
+                    $("#" + Constants.SuggestionOuterContainer).append(divElement);
+                }
             }
         }
+        /**Re-render any entity control */
+        public reRenderSuggestions() {
+            var element = document.getElementById(Constants.SuggestionOuterContainer);
+            element.innerHTML = '';
+            this.renderSuggestions();
+        }
 
-        public listenCECContextChangeAPI(event: any) {
+        /**
+         * CEC AddOnContextChange callback
+         * @param event: Current tab opened context
+         */
+        public listenCECContextChangeAPI(event: any) {            
             var context = Microsoft.AppRuntime.Sessions.getFocusedSession().context;
-            if (!context) { return; }
-            var anchorContext = context.getTabContext("anchor") as any;
+            var anchorContext: any;
 
-            // Filter out if event has the correct values and tab is anchor tab
-            if (event && event.context && event.context.entityName && event.context.entityId && event.context.pageType
-                && event.context.pageType == Constants.CECEntityRecordType && anchorContext && anchorContext.entityName && anchorContext.entityId
-                && event.context.entityName == Constants.IncidentEntityName && Constants.IncidentEntityName == anchorContext.entityName
-                && !Utility.isNullOrEmptyString(event.context.entityId) && !Utility.isNullOrEmptyString(anchorContext.entityId)
-                && Utility.FormatGuid(event.context.entityId) == Utility.FormatGuid(anchorContext.entityId)) {
+            if (event.context.pageType && event.context.pageType == Constants.CECDashboardType) {
 
-                this.EntityId = Utility.FormatGuid(event.context.entityId);
-                this.EntityName = event.context.entityName;
-                this.renderSuggestions();
+                //TODO: Keep local storage in separate module
+                localStorage.removeItem(Constants.currentContextAnchorEntId);
+                localStorage.removeItem(Constants.currentContextCurrentCtxEntId);
             }
+            if (!context && event.context.pageType && event.context.pageType == Constants.CECEntityRecordType) {
+                //Todo:context should not null check with CEC
+            }
+            else {
+                //Get Entity Id from anchor tab
+                anchorContext = context.getTabContext("anchor") as any;
+                if (anchorContext && anchorContext.entityName && anchorContext.entityId
+                    && Constants.IncidentEntityName == anchorContext.entityName
+                    && !Utility.isNullOrEmptyString(anchorContext.entityId)) {
+                    localStorage.setItem(Constants.currentContextAnchorEntId, Utility.FormatGuid(anchorContext.entityId));
+                }
+            }
+
+            //Get Entity Id from current context
+            if (event && event.context && event.context.entityName && event.context.entityId && event.context.pageType
+                && event.context.pageType == Constants.CECEntityRecordType
+                && event.context.entityName == Constants.IncidentEntityName
+                && !Utility.isNullOrEmptyString(event.context.entityId)) {
+                var recordId = Utility.FormatGuid(event.context.entityId);
+                var ctxEntId = localStorage.getItem(Constants.currentContextCurrentCtxEntId);
+                if (ctxEntId != recordId) {
+                    this.AnyentityControlInitiated = false;
+                    localStorage.setItem(Constants.currentContextCurrentCtxEntId, recordId);
+                    if (ctxEntId)
+                        this.reRenderSuggestions();
+                }
+            }
+            else { this.AnyentityControlInitiated = false; }
+        }
+
+        /**Validates valid case id */
+        private validateCurrentContext(): boolean {
+            var currentContextCurrentCtxEntId = localStorage.getItem(Constants.currentContextCurrentCtxEntId);
+            var currentContextAnchorEntId = localStorage.getItem(Constants.currentContextAnchorEntId)
+            if ((currentContextCurrentCtxEntId && currentContextAnchorEntId
+                && currentContextCurrentCtxEntId == currentContextAnchorEntId && this.AnyentityControlInitiated == false) || (!currentContextAnchorEntId && currentContextCurrentCtxEntId)) {
+                return true;
+            }
+            return false;
         }
     }
 }

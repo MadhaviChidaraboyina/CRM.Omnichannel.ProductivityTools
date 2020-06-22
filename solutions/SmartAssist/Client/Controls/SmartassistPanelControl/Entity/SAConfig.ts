@@ -55,7 +55,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param context:The "Input Bag" containing the parameters and other control metadata.
          */
         constructor(response: any, AdaptiveCardTemplateAlias: string) {
-            if (SmartassistPanelControl._context.utils.isNullOrUndefined(response)) {
+            if (!SmartassistPanelControl._context.utils.isNullOrUndefined(response)) {
                 this.MaxSuggestionCount = Utility.GetValue(response[this.AttributeName.MaxSuggestionCount]);
                 this.Order = Utility.GetValue(response[this.AttributeName.Order]);
                 this.SuggestionControlId = Utility.GetValue(response[this.AttributeName.SuggestionControlId]);

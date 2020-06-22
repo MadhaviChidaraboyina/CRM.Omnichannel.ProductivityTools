@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-	<control namespace="MscrmControls.SmartassistPanelControl" constructor="SmartassistPanelControl" version="1.0.0" display-name-key="CC_SmartassistPanel_Control">
-		<property name="FieldControl" display-name-key="CC_FieldControl" description-key="CC_FieldControl_Desc" usage="bound" of-type="SingleLine.Text" hidden="false"/>
-		<modes>
-		</modes>		
-		<resources>
-			<!--Should match the control project name-->
-			<code path="SmartassistPanelControl.js" order="1" />			
-			<resx path="strings/SmartassistPanelControl.1033.resx" version="1.0.1" />
-		</resources>
-	</control>
+  <control namespace="MscrmControls.SmartassistPanelControl" constructor="SmartassistPanelControl" version="1.0.0" display-name-key="CC_SmartassistPanel_Control">
+    <property name="FieldControl" display-name-key="CC_FieldControl" description-key="CC_FieldControl_Desc" usage="bound" of-type="SingleLine.Text" hidden="false"/>
+    <property name="SessionContext" display-name-key="CC_SessionContext" description-key="CC_SessionContext_Desc" of-type="Multiple" usage="input" required="true" hidden="false" />
+    <property name="AnchorTabContext" display-name-key="CC_AnchorTabContext" description-key="CC_AnchorTabContext_Desc" of-type="Multiple" usage="input" required="true" hidden="false" />
+    <modes>
+    </modes>
+    <resources>
+      <!--Should match the control project name-->
+      <code path="SmartassistPanelControl.js" order="1" />
+      <resx path="strings/SmartassistPanelControl.1033.resx" version="1.0.1" />
+    </resources>
+  </control>
 </manifest>
