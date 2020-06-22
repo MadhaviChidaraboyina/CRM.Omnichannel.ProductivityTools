@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <systemform>
-    <formid>{b74dc3b4-219e-4aa1-a1dd-a2f8f35ad220}</formid>
+    <formid>{4f769454-65e7-452d-8e86-2b9141a6a541}</formid>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
     <form>
       <tabs>
-        <tab verticallayout="true" id="{edbd36df-348a-4b15-937d-e4bc12250dfb}" IsUserDefined="1">
+        <tab verticallayout="true" id="{6ad98757-455d-4404-a8ad-d7f19574b752}" IsUserDefined="1">
           <labels>
-            <label description="" languagecode="1033" />
+            <label description="General" languagecode="1033" />
           </labels>
           <columns>
             <column width="100%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{d93f0e3d-ac09-494a-aada-290003efc5d3}">
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{8ccdf690-89e6-4a9f-b134-677e2f31d1de}">
                   <labels>
-                    <label description="GENERAL" languagecode="1033" />
+                    <label description="General" languagecode="1033" />
                   </labels>
                   <rows>
                     <row>
-                      <cell id="{a1741518-546e-4987-adce-a331e278124d}">
+                      <cell id="{683e87c9-558b-4cc1-9d44-dc8241761e57}">
                         <labels>
                           <label description="" languagecode="1033" />
                         </labels>
@@ -40,5 +40,8 @@
     <LocalizedNames>
       <LocalizedName description="Information" languagecode="1033" />
     </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
   </systemform>
 </forms>

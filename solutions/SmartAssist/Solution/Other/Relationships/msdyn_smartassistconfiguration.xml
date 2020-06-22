@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <EntityRelationship Name="msdyn_msdyn_saconfig_msdyn_appconfiguration">
+  <EntityRelationship Name="msdyn_saconfig_msdyn_appconfig">
     <EntityRelationshipType>ManyToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <FirstEntityName>msdyn_saconfig</FirstEntityName>
+    <FirstEntityName>msdyn_smartassistconfiguration</FirstEntityName>
     <SecondEntityName>msdyn_appconfiguration</SecondEntityName>
-    <IntersectEntityName>msdyn_msdyn_saconfig_msdyn_appconfiguration</IntersectEntityName>
+    <IntersectEntityName>msdyn_saconfig_msdyn_appconfig</IntersectEntityName>
     <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
     <EntityRelationshipRoles>
       <EntityRelationshipRole>
         <NavPaneDisplayOption>DoNotDisplay</NavPaneDisplayOption>
-        <NavigationPropertyName>msdyn_msdyn_saconfig_msdyn_appconfiguration</NavigationPropertyName>
+        <NavigationPropertyName>msdyn_saconfig_msdyn_appconfig</NavigationPropertyName>
         <AssociationRoleOrdinal>1</AssociationRoleOrdinal>
       </EntityRelationshipRole>
       <EntityRelationshipRole>
         <NavPaneDisplayOption>DoNotDisplay</NavPaneDisplayOption>
-        <NavigationPropertyName>msdyn_msdyn_saconfig_msdyn_appconfiguration</NavigationPropertyName>
+        <NavigationPropertyName>msdyn_saconfig_msdyn_appconfig</NavigationPropertyName>
         <AssociationRoleOrdinal>2</AssociationRoleOrdinal>
       </EntityRelationshipRole>
     </EntityRelationshipRoles>

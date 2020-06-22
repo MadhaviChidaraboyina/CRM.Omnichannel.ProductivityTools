@@ -124,14 +124,16 @@
 			<RootComponent type="66" schemaName="MscrmControls.ProductivityPanel.SmartassistControl" behavior="0" />
 			<RootComponent type="1" schemaName="msdyn_adaptivecardconfiguration" behavior="0" />
 			<RootComponent type="1" schemaName="msdyn_appconfiguration" behavior="2" />
-			<RootComponent type="1" schemaName="msdyn_saconfig" behavior="0" />
-			<MissingDependencies>
-				<MissingDependency>
-					<Required key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" solution="Active" />
-					<Dependent key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" />
-				</MissingDependency>
-			</MissingDependencies>
+			<RootComponent type="1" schemaName="msdyn_smartassistconfiguration" behavior="0" />
+			<RootComponent type="9" schemaName="msdyn_suggestioncontroltype" behavior="0" />
+			<RootComponent type="9" schemaName="msdyn_suggestiontype" behavior="0" />
+			<MissingDependencies/>
 		</RootComponents>
-		<MissingDependencies />
+		<MissingDependencies>
+			<MissingDependency>
+				<Required key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" solution="CustomerEngagementConfiguration (9.0.0.10)" />
+				<Dependent key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" />
+			</MissingDependency>
+		</MissingDependencies>
 	</SolutionManifest>
 </ImportExportXml>

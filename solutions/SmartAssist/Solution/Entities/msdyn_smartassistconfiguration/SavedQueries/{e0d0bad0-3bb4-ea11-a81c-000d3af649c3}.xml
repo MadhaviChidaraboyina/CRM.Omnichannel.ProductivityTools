@@ -6,12 +6,12 @@
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{9f27cef5-8bac-ea11-a81b-000d3ac622d1}</savedqueryid>
+    <savedqueryid>{e0d0bad0-3bb4-ea11-a81c-000d3af649c3}</savedqueryid>
     <querytype>8192</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical" output-format="xml-platform">
-        <entity name="msdyn_saconfig">
-          <attribute name="msdyn_saconfigid" />
+        <entity name="msdyn_smartassistconfiguration">
+          <attribute name="msdyn_smartassistconfigurationid" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
@@ -20,10 +20,10 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="SA Configs" languagecode="1033" />
+      <LocalizedName description="Smartassist Configurations" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="All active SA Configs" languagecode="1033" />
+      <Description description="All active Smartassist Configurations" languagecode="1033" />
     </Descriptions>
   </savedquery>
 </savedqueries>

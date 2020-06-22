@@ -6,23 +6,22 @@
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{1954175f-ed2d-44b0-9ad6-536a49c4d73f}</savedqueryid>
+    <savedqueryid>{00c582f4-618d-45c6-bdd4-8c8f3c1f52d7}</savedqueryid>
     <layoutxml>
-      <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
-        <row name="result" id="msdyn_saconfigid">
+      <grid name="msdyn_smartassistconfigurations" jump="msdyn_name" select="1" icon="1" preview="0">
+        <row name="msdyn_smartassistconfiguration" id="msdyn_smartassistconfigurationid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
     </layoutxml>
-    <querytype>0</querytype>
+    <querytype>64</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="msdyn_saconfig">
-          <attribute name="msdyn_saconfigid" />
+        <entity name="msdyn_smartassistconfiguration">
+          <attribute name="msdyn_smartassistconfigurationid" />
           <attribute name="msdyn_name" />
           <attribute name="createdon" />
-          <order attribute="msdyn_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
@@ -31,7 +30,7 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Active SA Configs" languagecode="1033" />
+      <LocalizedName description="Smartassist Configuration Lookup View" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

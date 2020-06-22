@@ -3,38 +3,32 @@
   <savedquery>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>0</CanBeDeleted>
-    <isquickfindquery>1</isquickfindquery>
+    <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{61e47d73-8eb1-4030-87da-244366cda748}</savedqueryid>
+    <savedqueryid>{99859c04-6f12-4b05-81b5-0ed5fcef8f83}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
-        <row name="result" id="msdyn_saconfigid">
+        <row name="result" id="msdyn_smartassistconfigurationid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
     </layoutxml>
-    <querytype>4</querytype>
+    <querytype>1</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="msdyn_saconfig">
-          <attribute name="msdyn_saconfigid" />
+        <entity name="msdyn_smartassistconfiguration">
+          <attribute name="msdyn_smartassistconfigurationid" />
           <attribute name="msdyn_name" />
           <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />
-          <filter type="and">
-            <condition attribute="statecode" operator="eq" value="0" />
-          </filter>
-          <filter type="or" isquickfindfields="1">
-            <condition attribute="msdyn_name" operator="like" value="{0}" />
-          </filter>
         </entity>
       </fetch>
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Quick Find Active SA Configs" languagecode="1033" />
+      <LocalizedName description="Smartassist Configuration Advanced Find View" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>
