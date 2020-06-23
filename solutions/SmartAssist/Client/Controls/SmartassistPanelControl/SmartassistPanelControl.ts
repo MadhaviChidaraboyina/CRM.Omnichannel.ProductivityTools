@@ -11,14 +11,16 @@ module MscrmControls.SmartassistPanelControl {
 
         private smartAssistContainer: HTMLDivElement = null;
         public static _context: Mscrm.ControlData<IInputBag> = null;
-        public static isRTL: boolean = false;
         private newInstance: boolean = false;
         private telemetryReporter: SmartassistPanelControl.TelemetryLogger;
         private AnyentityControlInitiated: boolean = false;
+        private tabSwitchEntityId: string = null;
+        private anchorTabEntityId: string = null;
+        private tabSwitchHandlerId: string = null;
 
-		/**
-		 * Empty constructor.
-		 */
+        /**
+         * Empty constructor.
+         */
         constructor() {
 
         }
@@ -35,43 +37,27 @@ module MscrmControls.SmartassistPanelControl {
             // Initialize Telemetry Repoter
             this.telemetryReporter = new TelemetryLogger(context);
             var methodName = "init";
-
-            // Listen for session close
-            let handlerId;
-
             try {
-                handlerId = Xrm.App.sessions.addOnAfterSessionClose(this.handleSessionClose);
-                if (!context.utils.isNullOrUndefined(handlerId) &&
-                    !context.utils.isNullOrEmptyString(handlerId)) {
+                SmartassistPanelControl._context = context;
+                this.smartAssistContainer = container;
+                var SuggestionEl: HTMLDivElement = document.createElement("div");
+                SuggestionEl.id = Constants.SuggestionOuterContainer;
+                SuggestionEl.style.maxHeight = "500px";
+                SuggestionEl.style.overflow = "auto";
+                this.smartAssistContainer.appendChild(SuggestionEl);
 
-                    localStorage.setItem(Constants.SessionCloseHandlerId, handlerId);
-                    if (context.client.isRTL) {
-                        SmartassistPanelControl.isRTL = true;
-                    }
-                    SmartassistPanelControl._context = context;
-                    this.smartAssistContainer = container;
-                    var SuggestionEl: HTMLDivElement = document.createElement("div");
-                    SuggestionEl.id = Constants.SuggestionOuterContainer;
-                    SuggestionEl.style.maxHeight = "500px";
-                    SuggestionEl.style.overflow = "auto";
-                    this.smartAssistContainer.appendChild(SuggestionEl);
-                                        
-                    //TODO: Keep local storage in separate module
-                    if (!localStorage.getItem(Constants.currentContextChangeEeventId)) {
+                if (!this.tabSwitchHandlerId) {
 
-                        //Listen to the CEC context change API
-                        var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange((sessionContext) => this.listenCECContextChangeAPI(sessionContext));
-                        //TODO: Keep local storage in separate module
-                        localStorage.setItem(Constants.currentContextChangeEeventId, eventId);
-                    }
-                    //TODO: Remove this flag when session type available
-                    this.newInstance = true;
+                    //Listen to the CEC context change API
+                    var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange((sessionContext) => this.listenCECContextChangeAPI(sessionContext));
+                    this.tabSwitchHandlerId = eventId;
                 }
+                this.newInstance = true;
+
             } catch (Error) {
 
                 let logConstants = TelemetryComponents;
                 let eventParameters = new EventParameters();
-                eventParameters.addParameter("handlerId", handlerId);
                 let error = { name: "Smart Assist panel Control Init error", message: "Error while initializing smart assist panel control" };
                 this.telemetryReporter.logError(logConstants.MainComponent, methodName, error.message, eventParameters);
             }
@@ -85,8 +71,16 @@ module MscrmControls.SmartassistPanelControl {
 		 */
         public updateView(context: Mscrm.ControlData<IInputBag>): void {
             SmartassistPanelControl._context = context;
-            if (this.newInstance)
-                this.renderSuggestions();   
+            if (this.newInstance) {
+
+                //TODO: get the anchorContext.entityId from PP
+                setTimeout(() => {
+                    var anchorContext = Utility.GetAnchorTabContext();
+
+                    // control rendering for the first time
+                    this.renderSuggestions(anchorContext.entityId);
+                }, Constants.anchorContextDelay);
+            }
             this.newInstance = false;
         }
 
@@ -109,6 +103,7 @@ module MscrmControls.SmartassistPanelControl {
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
         public destroy(): void {
+            Microsoft.AppRuntime.Sessions.removeOnContextChange(this.tabSwitchHandlerId);
         }
 
         public static getString(resourceName: string): string {
@@ -119,29 +114,18 @@ module MscrmControls.SmartassistPanelControl {
             return SmartassistPanelControl._context.resources.getString(resourceName);
         }
 
-        private handleSessionClose(context: XrmClientApi.EventContext) {
-            let handlerId = localStorage.getItem(Constants.SessionCloseHandlerId);
-            let currentContextChangeEeventId = localStorage.getItem(Constants.currentContextChangeEeventId)
-            Xrm.App.sessions.removeOnAfterSessionClose(handlerId);
-            Microsoft.AppRuntime.Sessions.removeOnContextChange(currentContextChangeEeventId);
-
-            //TODO: Keep local storage in separate module
-            localStorage.removeItem(Constants.currentContextChangeEeventId);
-            localStorage.removeItem(Constants.currentContextAnchorEntId);
-            localStorage.removeItem(Constants.currentContextCurrentCtxEntId);
-        }
-
-        /**Initialize SmartAssistAnyEntityControl to render suggestions  */
-        public async renderSuggestions(): Promise<void> {
+        /**
+         * Initialize SmartAssistAnyEntityControl to render suggestions
+         * @param recordId: Anchor tab Entity id from PP control
+         */
+        public async renderSuggestions(recordId: string = null): Promise<void> {
             // validate current context
-            if (this.validateCurrentContext()) {
-
-                //TODO: Keep local storage in separate module
-                let recordId = localStorage.getItem(Constants.currentContextCurrentCtxEntId);
+            if (this.validateCurrentContext() || recordId) {
+                if (Utility.isNullOrEmptyString(recordId)) {
+                    recordId = this.tabSwitchEntityId;
+                }
                 var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
-                                
                 configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
-
                 for (let i = 0; i <= (configs.length - 1); i++) {
                     let properties: any =
                     {
@@ -175,6 +159,7 @@ module MscrmControls.SmartassistPanelControl {
                 }
             }
         }
+
         /**Re-render any entity control */
         public reRenderSuggestions() {
             var element = document.getElementById(Constants.SuggestionOuterContainer);
@@ -186,16 +171,10 @@ module MscrmControls.SmartassistPanelControl {
          * CEC AddOnContextChange callback
          * @param event: Current tab opened context
          */
-        public listenCECContextChangeAPI(event: any) {            
+        public listenCECContextChangeAPI(event: any) {
             var context = Microsoft.AppRuntime.Sessions.getFocusedSession().context;
             var anchorContext: any;
 
-            if (event.context.pageType && event.context.pageType == Constants.CECDashboardType) {
-
-                //TODO: Keep local storage in separate module
-                localStorage.removeItem(Constants.currentContextAnchorEntId);
-                localStorage.removeItem(Constants.currentContextCurrentCtxEntId);
-            }
             if (!context && event.context.pageType && event.context.pageType == Constants.CECEntityRecordType) {
                 //Todo:context should not null check with CEC
             }
@@ -205,7 +184,7 @@ module MscrmControls.SmartassistPanelControl {
                 if (anchorContext && anchorContext.entityName && anchorContext.entityId
                     && Constants.IncidentEntityName == anchorContext.entityName
                     && !Utility.isNullOrEmptyString(anchorContext.entityId)) {
-                    localStorage.setItem(Constants.currentContextAnchorEntId, Utility.FormatGuid(anchorContext.entityId));
+                    this.anchorTabEntityId = anchorContext.entityId
                 }
             }
 
@@ -215,12 +194,13 @@ module MscrmControls.SmartassistPanelControl {
                 && event.context.entityName == Constants.IncidentEntityName
                 && !Utility.isNullOrEmptyString(event.context.entityId)) {
                 var recordId = Utility.FormatGuid(event.context.entityId);
-                var ctxEntId = localStorage.getItem(Constants.currentContextCurrentCtxEntId);
-                if (ctxEntId != recordId) {
+                if (this.tabSwitchEntityId != recordId) {
                     this.AnyentityControlInitiated = false;
-                    localStorage.setItem(Constants.currentContextCurrentCtxEntId, recordId);
-                    if (ctxEntId)
+                    this.tabSwitchEntityId = recordId;
+                    if (this.anchorTabEntityId) {
+                        // Re-render Suggestions for tab switch
                         this.reRenderSuggestions();
+                    }
                 }
             }
             else { this.AnyentityControlInitiated = false; }
@@ -228,8 +208,8 @@ module MscrmControls.SmartassistPanelControl {
 
         /**Validates valid case id */
         private validateCurrentContext(): boolean {
-            var currentContextCurrentCtxEntId = localStorage.getItem(Constants.currentContextCurrentCtxEntId);
-            var currentContextAnchorEntId = localStorage.getItem(Constants.currentContextAnchorEntId)
+            var currentContextCurrentCtxEntId = this.tabSwitchEntityId;
+            var currentContextAnchorEntId = this.anchorTabEntityId;
             if ((currentContextCurrentCtxEntId && currentContextAnchorEntId
                 && currentContextCurrentCtxEntId == currentContextAnchorEntId && this.AnyentityControlInitiated == false) || (!currentContextAnchorEntId && currentContextCurrentCtxEntId)) {
                 return true;

@@ -17,7 +17,7 @@ module MscrmControls.SmartassistPanelControl {
         public static SuggestionInnerDiv = "sa-suggestion-inner-div-";
         public static IncidentEntityName = "incident";
         public static CECEntityRecordType = "entityrecord";
-        public static CECDashboardType = "dashboard";
+        public static anchorContextDelay = 100;
     }
 
 	/**
