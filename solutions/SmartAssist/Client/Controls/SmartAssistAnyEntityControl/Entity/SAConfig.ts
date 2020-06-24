@@ -20,17 +20,17 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
         /**Define SAConfig Entity props schema*/
         constructor() {
-            this.MaxSuggestionCount = "msdyn_maximumsuggestioncount";
+            this.MaxSuggestionCount = "msdyn_maxsuggestioncount";
             this.Order = "msdyn_order";
             this.SuggestionControlId = "msdyn_suggestioncontrolid";
             this.SuggestionControlType = "msdyn_suggestioncontroltype";
             this.SuggestionType = "msdyn_suggestiontype";
-            this.SuggestionWebresourceFunction = "msdyn_suggestionwebresourcemethodname";
+            this.SuggestionWebresourceFunction = "msdyn_suggestionwebresourcemethod";
             this.SuggestionWebResourceName = "msdyn_suggestionwebresourcename";
             this.UniqueName = "msdyn_uniquename";
-            this.SmartassistConfigurationId = "msdyn_saconfigid";
+            this.SmartassistConfigurationId = "msdyn_smartassistconfigid";
             this.StatusCode = "statuscode";
-            this.EntityName = "msdyn_saconfig";
+            this.EntityName = "msdyn_smartassistconfig";
         }
     }
 

@@ -52,7 +52,7 @@ module MscrmControls.SmartassistPanelControl {
 
     /**Smart Assit Configuration Type KM or Case */
     export enum SuggestionType {
-        KnowledgeArticleSuggestion = 192350000,
-        SimilarCaseSuggestion = 192350001
+        KnowledgeArticleSuggestion = 192360000,
+        SimilarCaseSuggestion = 192360001
     }
 }
