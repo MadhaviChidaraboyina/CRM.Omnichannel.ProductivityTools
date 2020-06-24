@@ -41,7 +41,7 @@ module MscrmControls.SmartassistPanelControl {
 
     /**SA config suggestion rendering control type  */
     export enum SuggestionControlType {
-        AdaptiveCard = 192350000
+        AdaptiveCard = 192360000
     }
 
     /**Smart assit config status type */
