@@ -2,7 +2,7 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.Smartassist.Recommendation {
+module MscrmControls.Smartassist.Suggestion {
 	'use strict';
 
 	/**
@@ -38,6 +38,8 @@ module MscrmControls.Smartassist.Recommendation {
 		public static PositiveFeedback = "yes";
 		public static NegativeFeedback = "no";
 		public static DissmissCardAction = "dismissCard";
+		public static CustomActionName = "customActionName";
+		public static CustomActionParams = "customActionParams";
 	}
 
 	/**
@@ -50,7 +52,7 @@ module MscrmControls.Smartassist.Recommendation {
 
 	export class Util {
 		public static getSuggestionCardId(suggestionId: string) {
-			return Recommendation.Constants.CardNamePrefix + suggestionId;
+			return Suggestion.Constants.CardNamePrefix + suggestionId;
 		}
 	}
 }

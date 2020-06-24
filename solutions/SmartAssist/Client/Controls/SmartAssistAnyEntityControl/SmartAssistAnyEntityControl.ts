@@ -13,7 +13,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
         private recordId: string;
-        private anyEntityDataManager: AnyEntityDataManager = null
+        private anyEntityDataManager: AnyEntityDataManager = null;
+        private _sessionStateManager: SessionStateManager;
+        private _localStorageManager: LocalStorageManager;
+        private _handleDismissEvent: (args: any) => void;
 
 		/**
 		 * Empty constructor.
@@ -21,6 +24,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
         constructor() {
             this.initCompleted = false;
             this.anyEntityDataManager = new AnyEntityDataManager();
+            this._sessionStateManager = SessionStateManager.Instance;
+            this._localStorageManager = LocalStorageManager.Instance;
+            this._handleDismissEvent = this.handleDismissEvent.bind(this);
+            window.top.addEventListener(StringConstants.DismissCardEvent, this._handleDismissEvent, false);
         }
 
 		/**
@@ -36,11 +43,14 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     SmartAssistAnyEntityControl._context = context;
                     this.validateParameters(context);
                     this.recordId = context.parameters.RecordId.raw;
+                    //for testing
+                    //this.recordId = "ba6bbdb2-1f72-4968-bc80-993ea048660d";
                     this.saConfig = context.parameters.SAConfig.raw as any;
-                    window.top.addEventListener('dismissCard', this.handleDismissEvent, false);
+                   
                     this.initCompleted = true;
                 }
-                this.InitiateSuggestionControl()
+                // fromcache: true; fromServer: false;
+                this.InitiateSuggestionControl(true, false);
             }
             catch (error) {
                 //TODO: telemetry
@@ -77,15 +87,17 @@ module MscrmControls.SmartAssistAnyEntityControl {
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
         public destroy(): void {
-
+            window.top.removeEventListener(StringConstants.DismissCardEvent, this._handleDismissEvent, false);
+            this._sessionStateManager = null;
+            this._localStorageManager = null;
         }
 
         /**
          * Intitiate Recomendation Control
          */
-        public async InitiateSuggestionControl(): Promise<void> {
+        public async InitiateSuggestionControl(fromcache:boolean, fromServer: boolean): Promise<void> {
             // Get Suggestions data records for provide saConfig
-            var data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId, true) as { [key: string]: any };
+            var data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId, fromcache, fromServer) as { [key: string]: any };
             var dataLength = data[this.saConfig.SmartassistConfigurationId].length;
 
             this.appendTitle();
@@ -179,19 +191,31 @@ module MscrmControls.SmartAssistAnyEntityControl {
         }
 
         /**
-         * Handles dismiss suggestions action
+         * Handles dismiss card.
          * @param args: event argument
          */
         private handleDismissEvent(args: any) {
-            var id = "Suggestion_" + args.detail;
-            var el = <HTMLElement>document.querySelector('#' + id);
-            var speed = 1000;
-            var seconds = 1;
-            el.style.transition = "opacity " + seconds + "s ease";
-            el.style.opacity = "0";
-            setTimeout(function () {
-                el.parentNode.removeChild(el);
-            }, speed);
+            const suggestionId = args.detail.id;
+            const renderedSuggestionIds = this._sessionStateManager.getAllRecordsForConfigId(this.recordId, this.saConfig.SmartassistConfigurationId);
+
+            if (renderedSuggestionIds.indexOf(suggestionId) != -1) {
+                var id = "Suggestion_" + suggestionId;
+                var el = <HTMLElement>document.querySelector('#' + id);
+                if (el) {
+                    var speed = 1000;
+                    var seconds = 1;
+                    el.style.transition = "opacity " + seconds + "s ease";
+                    el.style.opacity = "0";
+                    setTimeout(function () {
+                        el.parentNode.removeChild(el);
+                    }, speed);
+
+                    this._sessionStateManager.deleteRecord(this.recordId, this.saConfig.SmartassistConfigurationId, suggestionId);
+                }
+
+                const dataToOverride = args.detail.data;
+                this._localStorageManager.updateSuggestionData(suggestionId, dataToOverride);
+            }
         }
 
         /**

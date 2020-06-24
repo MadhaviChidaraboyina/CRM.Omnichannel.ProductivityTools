@@ -4,7 +4,7 @@
 /// <reference path="./CommonReferences.ts"/>
 /// <reference path="../../TypeDefinitions/adaptivecards-templating.d.ts"/>
 
-module MscrmControls.Smartassist.Recommendation {
+module MscrmControls.Smartassist.Suggestion {
 
 	export enum CardState {
 		New = 0,
@@ -26,8 +26,12 @@ module MscrmControls.Smartassist.Recommendation {
 
 		private _context: Mscrm.ControlData<IInputBag>;
 		private _suggestionId: string;
+		private _refreshCardCallback: (args: Suggestion.CardRefreshArgs) => void;
+		private _localStorageManager: Suggestion.LocalStorageManager;
 
-		constructor() {
+		constructor(refreshCallback: (args: Suggestion.CardRefreshArgs) => void) {
+			this._refreshCardCallback = refreshCallback;
+			this._localStorageManager = Suggestion.LocalStorageManager.Instance;
 		}
 
 		public SetContext(context: Mscrm.ControlData<IInputBag>) {
@@ -73,7 +77,7 @@ module MscrmControls.Smartassist.Recommendation {
 		 */
 		createCardFromTemplateAndData(suggestionId: string, template: string, data: any): SuggestionCardElement {
 			try {
-				const cardId = Recommendation.Util.getSuggestionCardId(suggestionId);
+				const cardId = Suggestion.Util.getSuggestionCardId(suggestionId);
 				const templatePayload = JSON.parse(template);
 				const cardTemplate = new ACData.Template(templatePayload);
 
@@ -84,7 +88,7 @@ module MscrmControls.Smartassist.Recommendation {
 
 				const card = cardTemplate.expand(context);
 				const suggestionCard: SuggestionCard = { cardId: cardId, cardContent: card, cardState: CardState.New };
-				this.persistCard(suggestionId, suggestionCard);
+				//this.persistCard(suggestionId, suggestionCard);
 
 				const htmlElement = this.createAdaptiveCard(card);
 				const suggestionCardElement: SuggestionCardElement = { card: suggestionCard, cardHTMLElement: htmlElement };
@@ -99,7 +103,7 @@ module MscrmControls.Smartassist.Recommendation {
 		createAdaptiveCard(cardContent: any): HTMLElement {
 			const adaptiveCard = new AdaptiveCards.AdaptiveCard();
 			this.initializeAdaptiveCardsHostConfig(adaptiveCard);
-			AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Recommendation.Constants.PopupActionName, () => { return new PopupAction(this.onExecuteAction.bind(this)) });
+			AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Suggestion.Constants.PopupActionName, () => { return new PopupAction(this.onExecuteAction.bind(this)) });
 			adaptiveCard.parse(cardContent);
 			adaptiveCard.onExecuteAction = this.onExecuteAction.bind(this);
 			const htmlElement = adaptiveCard.render();
@@ -125,25 +129,20 @@ module MscrmControls.Smartassist.Recommendation {
 		 */
 		onExecuteAction(action: AdaptiveCards.Action) {
 			try {
-				const cardId = Recommendation.Util.getSuggestionCardId(this._suggestionId);
-				$("#" + cardId).removeClass(Recommendation.Constants.CardNewClass);
+				const cardId = Suggestion.Util.getSuggestionCardId(this._suggestionId);
 				if (action instanceof AdaptiveCards.SubmitAction) {
 					const submitAction = <AdaptiveCards.SubmitAction>action;
-					if (submitAction.title && submitAction.title.toLowerCase() === Recommendation.Constants.PositiveFeedback) {
-						submitAction.renderedElement.style.background = "#1AAD4B";
-						submitAction.renderedElement.style.color = "white";
-					}
-					if (submitAction.title && submitAction.title.toLowerCase() === Recommendation.Constants.NegativeFeedback) {
-						let dismissEvent = new CustomEvent(Recommendation.Constants.DissmissCardAction, { detail: this._suggestionId });
-						window.top.dispatchEvent(dismissEvent);
-                    }
-					if (Recommendation.CustomActionHelper.validateCustomAction(submitAction.data, this._context)) {
-						Recommendation.CustomActionHelper.invokeCustomAction(submitAction.data);
+					if (Suggestion.CustomActionHelper.validateCustomAction(submitAction.data, this._context)) {
+						let customActionArgs: Suggestion.CustomActionArgs = { customActionParams: submitAction.data[Constants.CustomActionParams], refreshCallback: this._refreshCardCallback };
+						let customAction = {
+							customActionName: submitAction.data[Constants.CustomActionName], customActionArgs: customActionArgs
+						};
+						
+						Suggestion.CustomActionHelper.invokeCustomAction(customAction);
 					}
 					else {
 						//TODO: Telemetry for invalid action
 					}
-
 				}
 				else if (action instanceof AdaptiveCards.OpenUrlAction) {
 					const openAction = <AdaptiveCards.OpenUrlAction>action;
@@ -162,7 +161,7 @@ module MscrmControls.Smartassist.Recommendation {
 		 * @param adaptiveCard: The adaptivecard to be displayed for the recomendation.
 		 */
 		initializeAdaptiveCardsHostConfig(adaptiveCard: AdaptiveCards.AdaptiveCard): void {
-			adaptiveCard.hostConfig = new AdaptiveCards.HostConfig(Recommendation.hostConfig);
+			adaptiveCard.hostConfig = new AdaptiveCards.HostConfig(Suggestion.hostConfig);
 		}
 	}
 }

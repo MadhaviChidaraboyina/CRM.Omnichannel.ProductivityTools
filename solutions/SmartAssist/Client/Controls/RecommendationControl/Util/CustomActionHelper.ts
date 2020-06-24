@@ -1,5 +1,5 @@
 ﻿
-module MscrmControls.Smartassist.Recommendation {
+module MscrmControls.Smartassist.Suggestion {
 	export class CustomActionHelper {
 		/**
 		 * Validate the custom action parameters.
@@ -10,7 +10,7 @@ module MscrmControls.Smartassist.Recommendation {
 				return false;
 			}
 			else {
-				return !context.utils.isNullOrUndefined(actionParams.CustomAction);
+				return !context.utils.isNullOrUndefined(actionParams.customActionName);
 			}
 		}
 
@@ -19,8 +19,8 @@ module MscrmControls.Smartassist.Recommendation {
 		 * @param actionParams Action parameters
 		 */
 		public static invokeCustomAction(actionParams: any) {
-			const actionName = actionParams.CustomAction;
-			const params = actionParams.CustomParameters;
+			const actionName = actionParams.customActionName;
+			const params = actionParams.customActionArgs;
 			return window.top[actionName](params)
 		}
 	}

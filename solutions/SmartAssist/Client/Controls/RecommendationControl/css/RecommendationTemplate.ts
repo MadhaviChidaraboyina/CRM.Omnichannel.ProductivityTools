@@ -27,10 +27,14 @@ module MscrmControls.Smartassist {
 		border-top: 5px solid #FFF;
 		background-color: #FFF;
 		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.18), 0px 2px 4px rgba(0, 0, 0, 0.12);
-		border-radius: 4px;
+		border-radius: 2px;
 		position: relative;
 		margin-bottom: 5px;
-		padding: 10px;
+		margin-left: 1px;
+		padding-left: 10px;
+        padding-right: 10px;
+		padding-top: 5px;
+        padding-bottom: 7px;
 		font-color: #666666;
 	}
     
@@ -45,26 +49,27 @@ module MscrmControls.Smartassist {
 		background: none;
 		border: none;
 		padding: 2px!important;
-		color: black;
+        color: #605E5C;
 		cursor: pointer;
         justify-content: flex-start!important;
         align-items: flex-start!important;
-        margin-left: 10px!important;
-        font: menu!important;
-        font-size: small!important;
+        font-size: 10px;
+        font-weight: 600;
+        font-family: Segoe UI;
 	}
     
+	.ac-selectable {
+		cursor: pointer;
+	}
+
     .style-positive {
-        background: green;
+        background: #1AAD4B;
         color: white;
      }
 
     .ac-vertical-separator {
         width: 7px!important;
     }
-	.ac-textBlock {
-		color: #666666!important;
-	}
 
 	.ac-container {
 		padding: ${containerPadding}

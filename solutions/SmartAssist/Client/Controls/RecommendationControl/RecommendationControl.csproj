@@ -28,13 +28,15 @@
   <ItemGroup>
     <TypeScriptCompile Include="CommonReferences.ts" />
     <TypeScriptCompile Include="css\RecommendationTemplate.ts" />
+    <TypeScriptCompile Include="Model\CustomAction.ts" />
+    <TypeScriptCompile Include="StateManagement\LocalStorageManager.ts" />
     <TypeScriptCompile Include="Util\CustomActionHelper.ts" />
     <TypeScriptCompile Include="Components\PopupAction.ts" />
     <TypeScriptCompile Include="RecommendationControl.ts" />
     <TypeScriptCompile Include="inputsOutputs.g.ts" />
     <TypeScriptCompile Include="PrivateReferences.ts" />
     <TypeScriptCompile Include="AdaptiveCardRenderer.ts" />
-	<TypeScriptCompile Include="Util\Util.ts" />
+    <TypeScriptCompile Include="Util\Util.ts" />
     <TypeScriptCompile Include="Util\HostConfig.ts" />
     <TypeScriptCompile Include="Util\StringHelper.ts" />
     <TypeScriptCompile Include="Views\ViewTemplates.ts" />

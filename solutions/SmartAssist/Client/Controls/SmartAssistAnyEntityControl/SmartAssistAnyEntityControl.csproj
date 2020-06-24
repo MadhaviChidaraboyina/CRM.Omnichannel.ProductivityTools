@@ -19,6 +19,7 @@
     <RootNamespace>SmartAssistAnyEntityControl</RootNamespace>
     <AssemblyName>SmartAssistAnyEntityControl</AssemblyName>
     <TypeScriptOutFile>SmartAssistAnyEntityControl.js</TypeScriptOutFile>
+	<TypeScriptSkipLibCheck>true</TypeScriptSkipLibCheck>
   </PropertyGroup>
   <PropertyGroup>
     <UglifyJsMangle>false</UglifyJsMangle>
@@ -27,6 +28,8 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="CommonReferences.ts" />
+    <TypeScriptCompile Include="StateManagement\LocalStorageManager.ts" />
+    <TypeScriptCompile Include="StateManagement\SessionStateManager.ts" />
     <TypeScriptCompile Include="Utils\Constants.ts" />
     <TypeScriptCompile Include="AnyEntityDataManager.ts" />
     <TypeScriptCompile Include="Entity\SAConfig.ts" />
