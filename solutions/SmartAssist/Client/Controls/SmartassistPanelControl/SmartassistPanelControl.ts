@@ -41,8 +41,7 @@ module MscrmControls.SmartassistPanelControl {
                 SmartassistPanelControl._context = context;
                 this.smartAssistContainer = container;
                 var SuggestionEl: HTMLDivElement = document.createElement("div");
-                SuggestionEl.id = Constants.SuggestionOuterContainer;
-                SuggestionEl.style.maxHeight = "500px";
+                SuggestionEl.id = Constants.SuggestionOuterContainer;                
                 SuggestionEl.style.overflow = "auto";
                 this.smartAssistContainer.appendChild(SuggestionEl);
 
