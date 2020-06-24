@@ -6,10 +6,10 @@
     <isquickfindquery>1</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{c339eb4e-c3e4-4c25-8a99-4d4a317805d3}</savedqueryid>
+    <savedqueryid>{8f024f5a-0a46-40f7-94a2-4c33746ac348}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
-        <row name="result" id="msdyn_smartassistconfigurationid">
+        <row name="result" id="msdyn_smartassistconfigid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
@@ -18,8 +18,8 @@
     <querytype>4</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="msdyn_smartassistconfiguration">
-          <attribute name="msdyn_smartassistconfigurationid" />
+        <entity name="msdyn_smartassistconfig">
+          <attribute name="msdyn_smartassistconfigid" />
           <attribute name="msdyn_name" />
           <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />
@@ -34,7 +34,7 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Quick Find Active Smartassist Configurations" languagecode="1033" />
+      <LocalizedName description="Quick Find Active Smartassist configurations" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

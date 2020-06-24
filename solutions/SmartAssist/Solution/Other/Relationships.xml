@@ -2,9 +2,9 @@
 <EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <EntityRelationship Name="lk_msdyn_adaptivecardconfiguration_createdby" />
   <EntityRelationship Name="lk_msdyn_adaptivecardconfiguration_modifiedby" />
-  <EntityRelationship Name="lk_msdyn_smartassistconfiguration_createdby" />
-  <EntityRelationship Name="lk_msdyn_smartassistconfiguration_modifiedby" />
-  <EntityRelationship Name="msdyn_saconfig_msdyn_appconfig" />
+  <EntityRelationship Name="lk_msdyn_smartassistconfig_createdby" />
+  <EntityRelationship Name="lk_msdyn_smartassistconfig_modifiedby" />
+  <EntityRelationship Name="msdyn_smartassistconfig_msdyn_appconfig" />
   <EntityRelationship Name="organization_msdyn_adaptivecardconfiguration" />
-  <EntityRelationship Name="organization_msdyn_smartassistconfiguration" />
+  <EntityRelationship Name="organization_msdyn_smartassistconfig" />
 </EntityRelationships>

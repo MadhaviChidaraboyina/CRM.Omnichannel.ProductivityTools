@@ -20,12 +20,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="organization_msdyn_smartassistconfiguration">
+  <EntityRelationship Name="organization_msdyn_smartassistconfig">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_smartassistconfiguration</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_smartassistconfig</ReferencingEntityName>
     <ReferencedEntityName>Organization</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
