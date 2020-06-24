@@ -127,7 +127,6 @@
 			<RootComponent type="1" schemaName="msdyn_smartassistconfig" behavior="0" />
 			<RootComponent type="9" schemaName="msdyn_suggestioncontroltype" behavior="0" />
 			<RootComponent type="9" schemaName="msdyn_suggestiontype" behavior="0" />
-			<MissingDependencies/>
 		</RootComponents>
 		<MissingDependencies>
 			<MissingDependency>
