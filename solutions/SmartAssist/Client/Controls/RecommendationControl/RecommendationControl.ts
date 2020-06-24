@@ -16,13 +16,16 @@ module MscrmControls.Smartassist
 		private _data: any;
 		private _dataContext: any;
 		private _suggestionId: string;
-		private _adaptiveCardRenderer: Recommendation.AdaptiveCardRenderer;
+		private _adaptiveCardRenderer: Suggestion.AdaptiveCardRenderer;
+		private _localStorageManager: Suggestion.LocalStorageManager;
+
 		/**
 		 * Empty constructor.
 		 */
 		constructor()
 		{
-			this._adaptiveCardRenderer = new Recommendation.AdaptiveCardRenderer();
+			this._adaptiveCardRenderer = new Suggestion.AdaptiveCardRenderer(this.handleCardRefresh.bind(this));
+			this._localStorageManager = Suggestion.LocalStorageManager.Instance;
 		}
 
 		/**
@@ -49,8 +52,8 @@ module MscrmControls.Smartassist
 				this._adaptiveCardRenderer.SetContext(context);
 				this._adaptiveCardRenderer.SetSuggestionId(this._suggestionId);
 				var el: HTMLDivElement = document.createElement("div");
-				el.className = Recommendation.Constants.RecommendationOuterContainer;
-				el.id = Recommendation.Constants.RecommendationOuterContainer + this._suggestionId;
+				el.className = Suggestion.Constants.RecommendationOuterContainer;
+				el.id = Suggestion.Constants.RecommendationOuterContainer + this._suggestionId;
 				this._recommendationContainer.appendChild(el);
 	
 				$("#" + el.id).html(Smartassist.RecommendationTemplate.get(false));
@@ -66,17 +69,13 @@ module MscrmControls.Smartassist
 		 * */
 		private renderRecommendation(): void {
 			var finalObject = Object.assign({}, this._data, this._dataContext);
-			const suggestionCardElement: Recommendation.SuggestionCardElement = this._adaptiveCardRenderer.getOrCreateSuggestionCard(this._suggestionId, this._template, finalObject);
+			const suggestionCardElement: Suggestion.SuggestionCardElement = this._adaptiveCardRenderer.createCardFromTemplateAndData(this._suggestionId, this._template, finalObject);
 			const cardId = suggestionCardElement.card.cardId;
-			var cardContainer = Smartassist.Recommendation.ViewTemplates.CardContainerTemplate.Format(cardId);
-			$("#" + Recommendation.Constants.RecommendationOuterContainer + this._suggestionId).append(cardContainer);
+			var cardContainer = Smartassist.Suggestion.ViewTemplates.CardContainerTemplate.Format(cardId);
+			$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).append(cardContainer);
 			const cardHtml = suggestionCardElement.cardHTMLElement;
 			if (cardHtml) {
 				$("#" + cardId).append(cardHtml);
-				// Adding css style for the new card.
-				if (suggestionCardElement.card.cardState == Recommendation.CardState.New) {
-					$("#" + cardId).addClass(Recommendation.Constants.CardNewClass);
-				}
 			}
 		}
 
@@ -114,6 +113,30 @@ module MscrmControls.Smartassist
 		{
 			this._context = null;
 			this._adaptiveCardRenderer = null;
+		}
+
+		public handleCardRefresh(args: Suggestion.CardRefreshArgs) {
+			try {
+				const suggestionId = this._suggestionId;
+				const dataToOverride = args.data;
+				const dataToRender = Object.assign({}, this._data, dataToOverride);
+				this._data = dataToRender;
+				this._localStorageManager.createOrUpdateRecord(suggestionId, JSON.stringify({ data: this._data }));
+				const cardId = Suggestion.Util.getSuggestionCardId(suggestionId);
+				var el = <HTMLElement>document.querySelector('#' + cardId);
+				if (el) {
+					if (args.type == "refresh") {
+						el.parentNode.removeChild(el);
+						this.renderRecommendation();
+					}
+					else if (args.type == "dismiss") {
+						let dismissEvent = new CustomEvent(Suggestion.Constants.DissmissCardAction, { detail: { id: this._suggestionId, data: dataToOverride } });
+						window.top.dispatchEvent(dismissEvent);
+                    }
+				}
+			} catch (error) {
+				// TODO: Telemetry: Failed to re-render the card.
+            }
 		}
 	}
 }

@@ -3,7 +3,7 @@
 */
 /// <reference path="../CommonReferences.ts"/>
 
-module MscrmControls.Smartassist.Recommendation {
+module MscrmControls.Smartassist.Suggestion {
 	export class ViewTemplates {
 		public static CardContainerTemplate = '<div id = "{0}" class="' + Constants.RecommendationCardContainerClass + '"></div>';
 	}

@@ -17,6 +17,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static NoSimilarCaseText = "No suggestions found for similar cases";
         public static KnowledgeArticleTitle = "Knowledge article suggestions";
         public static NoKnowledgeArticleText = "No suggestions found for knowledge article";
+        public static DismissCardEvent = 'dismissCard';
     }
 
     /**
