@@ -54,7 +54,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
     /**SA config suggestion rendering control type  */
     export enum SuggestionControlType {
-        AdaptiveCard = 192350000
+        AdaptiveCard = 192360000
     }
 
     /**Smart assit config status type */
@@ -65,7 +65,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
     /**Smart Assit Configuration Type KM or Case */
     export enum SuggestionType {
-        KnowledgeArticleSuggestion = 192350000,
-        SimilarCaseSuggestion = 192350001
+        KnowledgeArticleSuggestion = 192360000,
+        SimilarCaseSuggestion = 192360001
     }
 }
