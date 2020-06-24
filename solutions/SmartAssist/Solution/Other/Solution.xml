@@ -122,6 +122,8 @@
 		</Publisher>
 		<RootComponents>
 			<RootComponent type="66" schemaName="MscrmControls.ProductivityPanel.SmartassistControl" behavior="0" />
+			<RootComponent type="66" schemaName="MscrmControls.SmartassistPanelControl.SmartassistPanelControl" behavior="0" />
+			<RootComponent type="66" schemaName="MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl" behavior="0" />
 			<RootComponent type="1" schemaName="msdyn_adaptivecardconfiguration" behavior="0" />
 			<RootComponent type="1" schemaName="msdyn_appconfiguration" behavior="2" />
 			<RootComponent type="1" schemaName="msdyn_smartassistconfig" behavior="0" />
