@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <WebResourceId>{0fdb8476-c7b6-ea11-a81c-000d3af56372}</WebResourceId>
-  <Name>msdyn_smartassistkbsearchicon</Name>
+  <Name>msdyn_smartassistkbsearchicon.png</Name>
   <DisplayName>Smartassist KB search Icon</DisplayName>
   <Description>KB search icon for smart assist tab</Description>
   <WebResourceType>5</WebResourceType>

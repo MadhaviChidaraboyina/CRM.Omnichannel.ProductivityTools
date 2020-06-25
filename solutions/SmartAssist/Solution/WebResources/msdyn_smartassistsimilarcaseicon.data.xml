@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <WebResourceId>{1a78cfdc-c7b6-ea11-a81c-000d3af56372}</WebResourceId>
-  <Name>msdyn_smartassistsimilarcaseicon</Name>
+  <Name>msdyn_smartassistsimilarcaseicon.png</Name>
   <DisplayName>Smartassist Similar Case Icon</DisplayName>
   <Description>Similar case icon for Smartassist tab</Description>
   <WebResourceType>5</WebResourceType>

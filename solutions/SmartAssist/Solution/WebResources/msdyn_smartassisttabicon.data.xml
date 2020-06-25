@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <WebResourceId>{1e3077ca-c6b6-ea11-a81c-000d3af56372}</WebResourceId>
-  <Name>msdyn_smartassisttabicon</Name>
+  <Name>msdyn_smartassisttabicon.svg</Name>
   <DisplayName>Smartassist Tab Icon</DisplayName>
   <Description>Smart assist productivity pane tab icon</Description>
   <WebResourceType>11</WebResourceType>
