@@ -130,6 +130,9 @@
 			<RootComponent type="1" schemaName="msdyn_smartassistconfig" behavior="0" />
 			<RootComponent type="9" schemaName="msdyn_suggestioncontroltype" behavior="0" />
 			<RootComponent type="9" schemaName="msdyn_suggestiontype" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_smartassistkbsearchicon" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_smartassistsimilarcaseicon" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_smartassisttabicon" behavior="0" />
 		</RootComponents>
 		<MissingDependencies>
 			<MissingDependency>
