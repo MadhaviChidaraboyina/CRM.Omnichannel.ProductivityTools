@@ -63,7 +63,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param childId : Child entity unique identifier
          */
         private getXmlQueryForSAConfig(): string {
-            let query: string = `?fetchXml=<fetch version="1.0" mapping="logical"><entity name="${this.saConfigSchema.EntityName}"> <all-attributes/> <link-entity name="${this.acConfigSchema.EntityName}" to="${this.saConfigSchema.SuggestionControlId}" from="${this.acConfigSchema.AdaptiveCardConfigurationId}" link-type="inner"><attribute name="${this.acConfigSchema.AdaptiveCardTemplate}" alias="${this.acConfigSchema.AdaptiveCardTemplateAlias}"/><filter type='and'><condition attribute='${this.saConfigSchema.StatusCode}' operator='eq' value='${SAConfigStatus.Active}' /></filter></link-entity></entity></fetch>`;
+            let query: string = `?fetchXml=<fetch version="1.0" mapping="logical"><entity name="${this.saConfigSchema.EntityName}"> <all-attributes/> <link-entity name="${this.acConfigSchema.EntityName}" to="${this.saConfigSchema.SuggestionControlConfigUniquename}" from="${this.acConfigSchema.UniqueName}" link-type="inner"><attribute name="${this.acConfigSchema.AdaptiveCardTemplate}" alias="${this.acConfigSchema.AdaptiveCardTemplateAlias}"/><filter type='and'><condition attribute='${this.saConfigSchema.StatusCode}' operator='eq' value='${SAConfigStatus.Active}' /></filter></link-entity></entity></fetch>`;
             return query
         }
     }

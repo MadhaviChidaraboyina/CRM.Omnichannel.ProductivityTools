@@ -20,7 +20,6 @@ module MscrmControls.SmartassistPanelControl {
             return value;
         }
 
-
         /**
          * Check if string is null or empty
          * @returns boolean
@@ -38,6 +37,7 @@ module MscrmControls.SmartassistPanelControl {
         public static FormatGuid(value: string): string {
             return value.replace(/[{}]/g, "").toLowerCase();
         }
+
         /** Get Anchor tab context from CEC*/
         public static GetAnchorTabContext() {
             var context = Microsoft.AppRuntime.Sessions.getFocusedSession().context;
@@ -46,6 +46,19 @@ module MscrmControls.SmartassistPanelControl {
                 anchorContext = context.getTabContext("anchor") as any;
             }
             return anchorContext;
+        }
+
+        /**
+         * Check if string is valid json
+         * @param str: json string
+         */
+        public static IsValidJsonString(str: string) {
+            try {
+                JSON.parse(str);
+            } catch (e) {
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -9,11 +9,12 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
     export class SmartAssistAnyEntityControl implements Mscrm.StandardControl<IInputBag, IOutputBag> {
 
-        private static _context: Mscrm.ControlData<IInputBag> = null;
+        public static _context: Mscrm.ControlData<IInputBag> = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;
+        private parentDiv: string = "";
         private _sessionStateManager: SessionStateManager;
         private _localStorageManager: LocalStorageManager;
         private _handleDismissEvent: (args: any) => void;
@@ -43,10 +44,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     SmartAssistAnyEntityControl._context = context;
                     this.validateParameters(context);
                     this.recordId = context.parameters.RecordId.raw;
-                    //for testing
-                    //this.recordId = "ba6bbdb2-1f72-4968-bc80-993ea048660d";
-                    this.saConfig = context.parameters.SAConfig.raw as any;
-                   
+                    this.saConfig = context.parameters.SAConfig.raw as any;               
+                    
+                    this.parentDiv = StringConstants.SuggestionInnerDiv + this.saConfig.SmartassistConfigurationId;
+                    $("#" + this.parentDiv).html(AnyEntityTemplate.get());
                     this.initCompleted = true;
                 }
                 // fromcache: true; fromServer: false;
@@ -102,20 +103,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
             this.appendTitle();
             if (dataLength < 1) {
-                var emptyRecordElm = document.createElement("div");
-                for (let style in Styles.TitleDivStyle) {
-                    emptyRecordElm.style[style] = Styles.TitleDivStyle[style];
-                }
-                emptyRecordElm.style.marginTop = "10px";
-                switch (this.saConfig.SuggestionType) {
-                    case SuggestionType.KnowledgeArticleSuggestion:
-                        emptyRecordElm.innerHTML = `<img src="${StringConstants.NoRecordDivIcon}" style="height:16px;width:16px; margin-right:5px"><label style="font-family:Segoe UI;font-size:11px;line-height:20px;align-items:center;color:#8A8886">${StringConstants.NoKnowledgeArticleText}</label>`
-                        break;
-                    case SuggestionType.SimilarCaseSuggestion:
-                        emptyRecordElm.innerHTML = `<img src="${StringConstants.NoRecordDivIcon}" style="height:14px;width:14px;margin-right:5px"><label style="font-family:Segoe UI;font-size:11px;line-height:20px;align-items:center;color:#8A8886">${StringConstants.NoSimilarCaseText}</label>`
-                        break;
-                    default:
-                }
+                var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig.SuggestionType);                
                 $("#" + StringConstants.SuggestionInnerDiv + this.saConfig.SmartassistConfigurationId).append(emptyRecordElm)
             }
             for (let i = 0; i <= (dataLength - 1); i++) {
@@ -155,25 +143,13 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 //Initiate Suggestion Control
                 const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", componentId, properties);
                 SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
-                $("#" + StringConstants.SuggestionInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement)
+                $("#" + this.parentDiv).append(divElement)
             }
         }
 
         /** Append title for Specific SA suggestions */
         private appendTitle() {
-            var titleElement = document.createElement("div");
-            for (let style in Styles.TitleDivStyle) {
-                titleElement.style[style] = Styles.TitleDivStyle[style];
-            }
-            switch (this.saConfig.SuggestionType) {
-                case SuggestionType.KnowledgeArticleSuggestion:
-                    titleElement.innerHTML = `<img src="${StringConstants.KnowledgeArticleEncodedIcon}" style="height:16px;width:16px; margin-right:5px"><label style="font-family:Segoe UI;font-size:12px;line-height:16px;align-items:center">${StringConstants.KnowledgeArticleTitle}</label>`
-                    break;
-                case SuggestionType.SimilarCaseSuggestion:
-                    titleElement.innerHTML = `<img src="${StringConstants.CaseEncodedIcon}" style="height:14px;width:14px;margin-right:5px"><label style="font-family:Segoe UI;font-size:12px;line-height:16px;align-items:center;">${StringConstants.SimilarCaseTitle}</label>`
-                    break;
-                default:
-            }
+            var titleElement = ViewTemplates.getTitleTemplate(this.saConfig.TitleIconePath, this.saConfig.SAConfigTitle);
             $("#" + StringConstants.SuggestionInnerDiv + this.saConfig.SmartassistConfigurationId).append(titleElement)
         }
 

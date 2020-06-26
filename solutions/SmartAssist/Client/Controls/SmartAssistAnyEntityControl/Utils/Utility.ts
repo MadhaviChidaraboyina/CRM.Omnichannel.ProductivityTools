@@ -6,26 +6,30 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
     /**Utility methods */
     export class Utility {
-        private context: Mscrm.ControlData<IInputBag>;
-
-        constructor(context: Mscrm.ControlData<IInputBag>) {
-            this.context = context;
-        }
 
 		/** Utility function - returns empty string if the value provided is null or Undefined.
 	    * @param value: string value to be checked null or undefined.
 		*/
-        public GetValue(value: string): string {
-            if (this.context.utils.isNullOrUndefined(value)) {
+        public static GetValue(value: string): any {
+            if (SmartAssistAnyEntityControl._context.utils.isNullOrUndefined(value)) {
                 return "";
             }
             return value;
-        }  
+        }
+
+        /**
+        * Check if string is null or empty
+        * @returns boolean
+        * @param value
+        */
+        public static isNullOrEmptyString(value: string): boolean {
+            return SmartAssistAnyEntityControl._context.utils.isNullOrEmptyString(value);
+        }
 
         /**
          * Get current session context.
          * */
-        public static getCurrentSessionContext(): AppRuntimeClientSdk.ISessionContext{
+        public static getCurrentSessionContext(): AppRuntimeClientSdk.ISessionContext {
             const sessionId = Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
             const sessionContext = Microsoft.AppRuntime.Sessions.getSession(sessionId).context;
             return sessionContext;

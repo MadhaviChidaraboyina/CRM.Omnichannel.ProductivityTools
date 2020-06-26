@@ -9,14 +9,20 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static SuggestionOuterContainer = "sa-suggestion-outer-container";
         public static SuggestionInnerDiv = "sa-suggestion-inner-div-";
 
-        public static NoRecordDivIcon = "";
-        public static CaseEncodedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7ZLRDYIwFEXPsw7ACI7gIiYygi6gq7iAjRNowgA6kgMApQ0UCiWBhC8Szk/zbt/N+zmC55kZQoQfhXmg5IbhaJOk/buepF4JS02IfieU6oyIpuSOyl9c0n98xA/Dy1OZfXcsYCuvprzvTaEUTk836ewb6RmVvZqOTs8DBR+rZ9rqGSCjCs6kAicPMswh3Ik+AAAAAElFTkSuQmCC";
-        public static KnowledgeArticleEncodedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7ZLRDYIwFEXPsw7ACI7gIiYygi6gq7iAjRNowgA6kgMApQ0UCiWBhC8Szk/zbt/N+zmC55kZQoQfhXmg5IbhaJOk/buepF4JS02IfieU6oyIpuSOyl9c0n98xA/Dy1OZfXcsYCuvprzvTaEUTk836ewb6RmVvZqOTs8DBR+rZ9rqGSCjCs6kAicPMswh3Ik+AAAAAElFTkSuQmCC";
-        //TODO: Use string from localization
-        public static SimilarCaseTitle = "Similar case suggestions";
-        public static NoSimilarCaseText = "No suggestions found for similar cases";
-        public static KnowledgeArticleTitle = "Knowledge article suggestions";
-        public static NoKnowledgeArticleText = "No suggestions found for knowledge article";
+        // css
+        public static AnyentityStyleTemplateId = "smartassist-anyentity-style";
+        public static SuggestionsTitleDivCss = "sa-suggestion-title-div";
+        public static SuggestionsTitleIconCss = "sa-suggestions-title-icon";
+        public static SuggestionsTitLelabelCss = "sa-suggestions-title-label";
+        public static NoSuggestionsDivCss = "sa-no-suggestion-div";
+        public static NoSuggestionsIconCss = "sa-no-suggestions-icon";
+        public static NoSuggestionsLabelCss = "sa-no-suggestions-label";
+        public static NoRecordDivIconPath = "";
+
+        //TODO: Use string from localization       
+        public static NoSimilarCaseText = "No suggestions found for similar cases.";
+        public static NoKnowledgeArticleText = "No suggestions found for knowledge articles.";
+
         public static DismissCardEvent = 'dismissCard';
     }
 
@@ -36,15 +42,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static Case = "Case";
     }
 
-    export class Styles {
-
-        public static TitleDivStyle: { [key: string]: string } = {
-            display: 'flex',
-            marginBottom: '10px'
-        }
-
-    }
-
+    /**Adaptive Card States Enum */
     export enum CardStates {
         New = 1,
         Default,

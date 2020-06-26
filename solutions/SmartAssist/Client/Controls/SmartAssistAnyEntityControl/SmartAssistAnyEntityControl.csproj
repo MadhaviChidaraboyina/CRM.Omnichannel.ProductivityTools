@@ -19,7 +19,7 @@
     <RootNamespace>SmartAssistAnyEntityControl</RootNamespace>
     <AssemblyName>SmartAssistAnyEntityControl</AssemblyName>
     <TypeScriptOutFile>SmartAssistAnyEntityControl.js</TypeScriptOutFile>
-	<TypeScriptSkipLibCheck>true</TypeScriptSkipLibCheck>
+    <TypeScriptSkipLibCheck>true</TypeScriptSkipLibCheck>
   </PropertyGroup>
   <PropertyGroup>
     <UglifyJsMangle>false</UglifyJsMangle>
@@ -28,22 +28,23 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="CommonReferences.ts" />
+    <TypeScriptCompile Include="css\AnyEntityTemplate.ts" />
     <TypeScriptCompile Include="StateManagement\LocalStorageManager.ts" />
     <TypeScriptCompile Include="StateManagement\SessionStateManager.ts" />
     <TypeScriptCompile Include="Utils\Constants.ts" />
     <TypeScriptCompile Include="AnyEntityDataManager.ts" />
-    <TypeScriptCompile Include="Entity\SAConfig.ts" />
+    <TypeScriptCompile Include="Entity\SmartassistConfiguration.ts" />
     <TypeScriptCompile Include="inputsOutputs.g.ts" />
     <TypeScriptCompile Include="PrivateReferences.ts" />
     <TypeScriptCompile Include="$(PKG_TYPESCRIPT_MSBUILD)\tools\tsc\lib.es6.d.ts" />
     <TypeScriptCompile Include="SmartAssistAnyEntityControl.ts" />
     <TypeScriptCompile Include="Utils\Utility.ts" />
+    <TypeScriptCompile Include="Views\ViewTemplates.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ControlManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
     <Folder Include="libs\" />
     <Folder Include="Typings\" />
   </ItemGroup>

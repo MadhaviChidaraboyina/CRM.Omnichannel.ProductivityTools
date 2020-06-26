@@ -17,6 +17,7 @@ module MscrmControls.SmartassistPanelControl {
             //for fetchXml
             this.AdaptiveCardTemplateAlias = "AdaptiveCardTemplate"
             this.AdaptiveCardConfigurationId = "msdyn_adaptivecardconfigurationid"
+            this.UniqueName = "msdyn_uniquename"
             this.EntityName = "msdyn_adaptivecardconfiguration"            
         }
     }

@@ -28,8 +28,8 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="CommonReferences.ts" />
-    <TypeScriptCompile Include="Entity\ACConfig.ts" />
-    <TypeScriptCompile Include="Entity\SAConfig.ts" />
+    <TypeScriptCompile Include="Entity\AdaptiveCardConfiguration.ts" />
+    <TypeScriptCompile Include="Entity\SmartassistConfiguration.ts" />
     <TypeScriptCompile Include="SAConfigDataManager.ts" />
     <TypeScriptCompile Include="SmartassistPanelControl.ts" />
     <TypeScriptCompile Include="inputsOutputs.g.ts" />

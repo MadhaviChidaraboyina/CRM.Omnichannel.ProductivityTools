@@ -13,6 +13,8 @@ module MscrmControls.SmartassistPanelControl {
         public static _context: Mscrm.ControlData<IInputBag> = null;
         private newInstance: boolean = false;
         private telemetryReporter: SmartassistPanelControl.TelemetryLogger;
+        private AnchorTabContext: any = null;
+        private ppSessionContext: any = null;
         private AnyentityControlInitiated: boolean = false;
         private tabSwitchEntityId: string = null;
         private anchorTabEntityId: string = null;
@@ -37,21 +39,24 @@ module MscrmControls.SmartassistPanelControl {
             // Initialize Telemetry Repoter
             this.telemetryReporter = new TelemetryLogger(context);
             var methodName = "init";
+            this.newInstance = true;
             try {
                 SmartassistPanelControl._context = context;
                 this.smartAssistContainer = container;
                 var SuggestionEl: HTMLDivElement = document.createElement("div");
-                SuggestionEl.id = Constants.SuggestionOuterContainer;                
+                SuggestionEl.id = Constants.SuggestionOuterContainer;
                 SuggestionEl.style.overflow = "auto";
                 this.smartAssistContainer.appendChild(SuggestionEl);
 
-                if (!this.tabSwitchHandlerId) {
+                if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
+                    this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
+                }
 
+                if (!this.tabSwitchHandlerId) {
                     //Listen to the CEC context change API
                     var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange((sessionContext) => this.listenCECContextChangeAPI(sessionContext));
                     this.tabSwitchHandlerId = eventId;
                 }
-                this.newInstance = true;
 
             } catch (Error) {
 
@@ -70,15 +75,11 @@ module MscrmControls.SmartassistPanelControl {
 		 */
         public updateView(context: Mscrm.ControlData<IInputBag>): void {
             SmartassistPanelControl._context = context;
-            if (this.newInstance) {
-
-                //TODO: get the anchorContext.entityId from PP
-                setTimeout(() => {
-                    var anchorContext = Utility.GetAnchorTabContext();
-
-                    // control rendering for the first time
-                    this.renderSuggestions(false, anchorContext.entityId);
-                }, Constants.anchorContextDelay);
+            if (context.parameters.SessionContext && Utility.IsValidJsonString(context.parameters.SessionContext.raw)) {
+                this.ppSessionContext = JSON.parse(context.parameters.SessionContext.raw);
+            }
+            if (this.newInstance && Constants.IncidentEntityName == this.AnchorTabContext.entityName) {
+                this.renderSuggestions(false, this.AnchorTabContext.entityId);
             }
             this.newInstance = false;
         }
@@ -143,6 +144,13 @@ module MscrmControls.SmartassistPanelControl {
                                 Static: true,
                                 Usage: 1, // input
                                 Value: recordId
+                            },
+                            PPSessionContext: {
+                                type: "Multiple",
+                                Primary: false,
+                                Static: true,
+                                Usage: 1, // input
+                                Value: this.ppSessionContext
                             }
                             // TODO: Add Data Context
                         },
