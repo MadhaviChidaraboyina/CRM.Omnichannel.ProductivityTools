@@ -2,14 +2,14 @@
 <EntityRelationships>
   <EntityRelationship Name="lk_msdyn_paneconfiguration_createdby" />
   <EntityRelationship Name="lk_msdyn_paneconfiguration_modifiedby" />
-  <EntityRelationship Name="lk_msdyn_tabconfiguration_createdby" />
-  <EntityRelationship Name="lk_msdyn_tabconfiguration_modifiedby" />
-  <EntityRelationship Name="lk_msdyn_toolconfiguration_createdby" />
-  <EntityRelationship Name="lk_msdyn_toolconfiguration_modifiedby" />
+  <EntityRelationship Name="lk_msdyn_panetabconfiguration_createdby" />
+  <EntityRelationship Name="lk_msdyn_panetabconfiguration_modifiedby" />
+  <EntityRelationship Name="lk_msdyn_panetoolconfiguration_createdby" />
+  <EntityRelationship Name="lk_msdyn_panetoolconfiguration_modifiedby" />
   <EntityRelationship Name="msdyn_msdyn_paneconfig_msdyn_appconfig" />
   <EntityRelationship Name="msdyn_msdyn_paneconfig_msdyn_tabconfig" />
   <EntityRelationship Name="msdyn_msdyn_toolconfig_msdyn_tabconfig" />
   <EntityRelationship Name="organization_msdyn_paneconfiguration" />
-  <EntityRelationship Name="organization_msdyn_tabconfiguration" />
-  <EntityRelationship Name="organization_msdyn_toolconfiguration" />
+  <EntityRelationship Name="organization_msdyn_panetabconfiguration" />
+  <EntityRelationship Name="organization_msdyn_panetoolconfiguration" />
 </EntityRelationships>

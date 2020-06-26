@@ -5,8 +5,8 @@
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_tabconfiguration</ReferencingEntityName>
-    <ReferencedEntityName>msdyn_toolconfiguration</ReferencedEntityName>
+    <ReferencingEntityName>msdyn_panetabconfiguration</ReferencingEntityName>
+    <ReferencedEntityName>msdyn_panetoolconfiguration</ReferencedEntityName>
     <RelationshipBehavior>Append</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
     <CascadeDelete>RemoveLink</CascadeDelete>
@@ -18,7 +18,7 @@
     <ReferencingAttributeName>msdyn_ToolId</ReferencingAttributeName>
     <RelationshipDescription>
       <Descriptions>
-        <Description description="Unique identifier for Tool configuration associated with Tab configuration." languagecode="1033" />
+        <Description description="Unique identifier for Pane tool configuration associated with Pane tab configuration." languagecode="1033" />
       </Descriptions>
     </RelationshipDescription>
     <EntityRelationshipRoles>

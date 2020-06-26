@@ -120,7 +120,7 @@ module MscrmControls.PanelControl {
 
     export class ToolConfigConstants {
         // Entity constants		
-        public static entityName = "msdyn_toolconfiguration";
+        public static entityName = "msdyn_panetoolconfiguration";
     }
 
 	export class TelemetryComponents {

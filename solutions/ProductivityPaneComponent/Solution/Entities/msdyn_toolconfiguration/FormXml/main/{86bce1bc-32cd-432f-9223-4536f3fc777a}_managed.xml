@@ -62,7 +62,7 @@
                     <row>
                       <cell id="{5684cc01-c0c7-4b62-caa0-eb5140801324}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="tool Configuration Entity" languagecode="1033" />
+                          <label description="Tool Configuration Entity" languagecode="1033" />
                         </labels>
                         <control id="msdyn_toolconfigurationentity" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_toolconfigurationentity" disabled="false" />
                       </cell>

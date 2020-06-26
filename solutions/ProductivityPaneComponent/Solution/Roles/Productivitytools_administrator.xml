@@ -8,17 +8,17 @@
     <RolePrivilege name="prvAppendmsdyn_paneconfiguration" level="Global" />
     <RolePrivilege name="prvAppendTomsdyn_paneconfiguration" level="Global" />
     <RolePrivilege name="prvDeletemsdyn_paneconfiguration" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_tabconfiguration" level="Global" />
-    <RolePrivilege name="prvWritemsdyn_tabconfiguration" level="Global" />
-    <RolePrivilege name="prvCreatemsdyn_tabconfiguration" level="Global" />
-    <RolePrivilege name="prvAppendmsdyn_tabconfiguration" level="Global" />
-    <RolePrivilege name="prvAppendTomsdyn_tabconfiguration" level="Global" />
-    <RolePrivilege name="prvDeletemsdyn_tabconfiguration" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_toolconfiguration" level="Global" />
-    <RolePrivilege name="prvWritemsdyn_toolconfiguration" level="Global" />
-    <RolePrivilege name="prvCreatemsdyn_toolconfiguration" level="Global" />
-    <RolePrivilege name="prvAppendmsdyn_toolconfiguration" level="Global" />
-    <RolePrivilege name="prvAppendTomsdyn_toolconfiguration" level="Global" />
-    <RolePrivilege name="prvDeletemsdyn_toolconfiguration" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_panetoolconfiguration" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_panetoolconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_panetoolconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_panetoolconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_panetoolconfiguration" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_panetoolconfiguration" level="Global" />
   </RolePrivileges>
 </Role>

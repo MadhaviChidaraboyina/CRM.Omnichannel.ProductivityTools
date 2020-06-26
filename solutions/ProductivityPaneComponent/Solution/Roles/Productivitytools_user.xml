@@ -3,7 +3,7 @@
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
     <RolePrivilege name="prvReadmsdyn_paneconfiguration" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_tabconfiguration" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_toolconfiguration" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_panetoolconfiguration" level="Global" />
   </RolePrivileges>
 </Role>

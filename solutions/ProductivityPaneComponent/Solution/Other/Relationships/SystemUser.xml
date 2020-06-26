@@ -40,12 +40,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_tabconfiguration_createdby">
+  <EntityRelationship Name="lk_msdyn_panetabconfiguration_createdby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_tabconfiguration</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_panetabconfiguration</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -60,12 +60,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_tabconfiguration_modifiedby">
+  <EntityRelationship Name="lk_msdyn_panetabconfiguration_modifiedby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_tabconfiguration</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_panetabconfiguration</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -80,12 +80,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_toolconfiguration_createdby">
+  <EntityRelationship Name="lk_msdyn_panetoolconfiguration_createdby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_toolconfiguration</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_panetoolconfiguration</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -100,12 +100,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_toolconfiguration_modifiedby">
+  <EntityRelationship Name="lk_msdyn_panetoolconfiguration_modifiedby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_toolconfiguration</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_panetoolconfiguration</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>

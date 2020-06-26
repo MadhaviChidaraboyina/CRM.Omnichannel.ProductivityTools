@@ -10,8 +10,8 @@
     <querytype>8192</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical" output-format="xml-platform">
-        <entity name="msdyn_tabconfiguration">
-          <attribute name="msdyn_tabconfigurationid" />
+        <entity name="msdyn_panetabconfiguration">
+          <attribute name="msdyn_panetabconfigurationid" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
@@ -20,10 +20,10 @@
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Tab configurations" languagecode="1033" />
+      <LocalizedName description="Pane tab configurations" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="All active Tab configurations" languagecode="1033" />
+      <Description description="All active Pane tab configurations" languagecode="1033" />
     </Descriptions>
   </savedquery>
 </savedqueries>

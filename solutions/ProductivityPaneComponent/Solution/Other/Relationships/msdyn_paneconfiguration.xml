@@ -11,14 +11,14 @@
     <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
     <EntityRelationshipRoles>
       <EntityRelationshipRole>
-        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneDisplayOption>DoNotDisplay</NavPaneDisplayOption>
         <NavPaneArea>Details</NavPaneArea>
         <NavPaneOrder>10000</NavPaneOrder>
         <NavigationPropertyName>msdyn_msdyn_paneconfig_msdyn_appconfig</NavigationPropertyName>
         <AssociationRoleOrdinal>1</AssociationRoleOrdinal>
       </EntityRelationshipRole>
       <EntityRelationshipRole>
-        <NavPaneDisplayOption>DoNotDisplay</NavPaneDisplayOption>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
         <NavPaneArea>Details</NavPaneArea>
         <NavPaneOrder>10000</NavPaneOrder>
         <NavigationPropertyName>msdyn_msdyn_paneconfig_msdyn_appconfig</NavigationPropertyName>
@@ -31,7 +31,7 @@
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_tabconfiguration</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_panetabconfiguration</ReferencingEntityName>
     <ReferencedEntityName>msdyn_paneconfiguration</ReferencedEntityName>
     <RelationshipBehavior>Append</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -44,7 +44,7 @@
     <ReferencingAttributeName>msdyn_ProductivityPaneId</ReferencingAttributeName>
     <RelationshipDescription>
       <Descriptions>
-        <Description description="Unique identifier for Productivity pane configuration associated with Tab configuration." languagecode="1033" />
+        <Description description="Unique identifier for Productivity pane configuration associated with Pane tab configuration." languagecode="1033" />
       </Descriptions>
     </RelationshipDescription>
     <EntityRelationshipRoles>

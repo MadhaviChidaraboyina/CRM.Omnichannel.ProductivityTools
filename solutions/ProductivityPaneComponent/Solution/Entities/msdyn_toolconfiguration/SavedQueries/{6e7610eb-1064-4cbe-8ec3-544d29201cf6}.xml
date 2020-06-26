@@ -8,8 +8,8 @@
     <isdefault>1</isdefault>
     <savedqueryid>{6e7610eb-1064-4cbe-8ec3-544d29201cf6}</savedqueryid>
     <layoutxml>
-      <grid name="msdyn_toolconfigurations" jump="msdyn_name" select="1" icon="1" preview="1">
-        <row name="msdyn_toolconfiguration" id="msdyn_toolconfigurationid">
+      <grid name="msdyn_panetoolconfigurations" jump="msdyn_name" select="1" icon="1" preview="1">
+        <row name="msdyn_panetoolconfiguration" id="msdyn_panetoolconfigurationid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
@@ -18,8 +18,8 @@
     <querytype>2</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="msdyn_toolconfiguration">
-          <attribute name="msdyn_toolconfigurationid" />
+        <entity name="msdyn_panetoolconfiguration">
+          <attribute name="msdyn_panetoolconfigurationid" />
           <attribute name="msdyn_name" />
           <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />
@@ -31,7 +31,7 @@
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Tool configuration Associated View" languagecode="1033" />
+      <LocalizedName description="Pane tool configuration Associated View" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

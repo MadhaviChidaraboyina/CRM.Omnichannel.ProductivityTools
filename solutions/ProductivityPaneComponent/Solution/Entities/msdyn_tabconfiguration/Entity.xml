@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="Tab configuration" OriginalName="Tab configuration">msdyn_tabconfiguration</Name>
+  <Name LocalizedName="Pane tab configuration" OriginalName="Pane tab configuration">msdyn_panetabconfiguration</Name>
   <EntityInfo>
-    <entity Name="msdyn_tabconfiguration">
+    <entity Name="msdyn_panetabconfiguration">
       <LocalizedNames>
-        <LocalizedName description="Tab configuration" languagecode="1033" />
+        <LocalizedName description="Pane tab configuration" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Tab configurations" languagecode="1033" />
+        <LocalizedCollectionName description="Pane tab configurations" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="" languagecode="1033" />
@@ -320,7 +320,7 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <AppDefaultValue>0</AppDefaultValue>
-          <optionset Name="msdyn_tabconfiguration_msdyn_isenabled">
+          <optionset Name="msdyn_panetabconfiguration_msdyn_isenabled">
             <OptionSetType>bit</OptionSetType>
             <IntroducedVersion>1.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -464,13 +464,13 @@
             <displayname description="Productivity Pane" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Unique identifier for Productivity pane configuration associated with Tab configuration." languagecode="1033" />
+            <Description description="Unique identifier for Productivity pane configuration associated with Pane tab configuration." languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_tabconfigurationId">
+        <attribute PhysicalName="msdyn_panetabconfigurationid">
           <Type>primarykey</Type>
-          <Name>msdyn_tabconfigurationid</Name>
-          <LogicalName>msdyn_tabconfigurationid</LogicalName>
+          <Name>msdyn_panetabconfigurationid</Name>
+          <LogicalName>msdyn_panetabconfigurationid</LogicalName>
           <RequiredLevel>systemrequired</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
@@ -498,7 +498,7 @@
           <IsRetrievable>1</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <displaynames>
-            <displayname description="Tab configuration" languagecode="1033" />
+            <displayname description="Pane tab configuration" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Unique identifier for entity instances" languagecode="1033" />
@@ -540,7 +540,7 @@
             <displayname description="Tool" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Unique identifier for Tool configuration associated with Tab configuration." languagecode="1033" />
+            <Description description="Unique identifier for Pane tool configuration associated with Pane tab configuration." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_tooltip">
@@ -730,7 +730,7 @@
           <IsFilterable>1</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_tabconfiguration_statecode">
+          <optionset Name="msdyn_panetabconfiguration_statecode">
             <OptionSetType>state</OptionSetType>
             <IntroducedVersion>1.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -738,7 +738,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the Tab configuration" languagecode="1033" />
+              <Description description="Status of the Pane tab configuration" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -757,7 +757,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the Tab configuration" languagecode="1033" />
+            <Description description="Status of the Pane tab configuration" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -790,7 +790,7 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_tabconfiguration_statuscode">
+          <optionset Name="msdyn_panetabconfiguration_statuscode">
             <OptionSetType>status</OptionSetType>
             <IntroducedVersion>1.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -798,7 +798,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the Tab configuration" languagecode="1033" />
+              <Description description="Reason for the status of the Pane tab configuration" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -817,7 +817,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the Tab configuration" languagecode="1033" />
+            <Description description="Reason for the status of the Pane tab configuration" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">
@@ -915,7 +915,7 @@
           </displaynames>
         </EntityKey>
       </EntityKeys>
-      <EntitySetName>msdyn_tabconfigurations</EntitySetName>
+      <EntitySetName>msdyn_panetabconfigurations</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>

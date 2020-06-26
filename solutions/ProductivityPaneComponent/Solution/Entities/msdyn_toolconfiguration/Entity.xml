@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="Tool configuration" OriginalName="Tool configuration">msdyn_toolconfiguration</Name>
+  <Name LocalizedName="Pane tool configuration" OriginalName="Pane tool configuration">msdyn_panetoolconfiguration</Name>
   <EntityInfo>
-    <entity Name="msdyn_toolconfiguration">
+    <entity Name="msdyn_panetoolconfiguration">
       <LocalizedNames>
-        <LocalizedName description="Tool configuration" languagecode="1033" />
+        <LocalizedName description="Pane tool configuration" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Tool configurations" languagecode="1033" />
+        <LocalizedCollectionName description="Pane tool configurations" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="" languagecode="1033" />
@@ -280,7 +280,7 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <AppDefaultValue>-1</AppDefaultValue>
-          <optionset Name="msdyn_toolconfiguration_msdyn_category">
+          <optionset Name="msdyn_panetoolconfiguration_msdyn_category">
             <OptionSetType>picklist</OptionSetType>
             <IntroducedVersion>1.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -476,7 +476,7 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <AppDefaultValue>0</AppDefaultValue>
-          <optionset Name="msdyn_toolconfiguration_msdyn_isconfigurable">
+          <optionset Name="msdyn_panetoolconfiguration_msdyn_isconfigurable">
             <OptionSetType>bit</OptionSetType>
             <IntroducedVersion>1.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -626,10 +626,10 @@
             <Description description="" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_toolconfigurationId">
+        <attribute PhysicalName="msdyn_panetoolconfigurationid">
           <Type>primarykey</Type>
-          <Name>msdyn_toolconfigurationid</Name>
-          <LogicalName>msdyn_toolconfigurationid</LogicalName>
+          <Name>msdyn_panetoolconfigurationid</Name>
+          <LogicalName>msdyn_panetoolconfigurationid</LogicalName>
           <RequiredLevel>systemrequired</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
@@ -657,7 +657,7 @@
           <IsRetrievable>1</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <displaynames>
-            <displayname description="Tool configuration" languagecode="1033" />
+            <displayname description="Pane tool configuration" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Unique identifier for entity instances" languagecode="1033" />
@@ -810,7 +810,7 @@
           <IsFilterable>1</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_toolconfiguration_statecode">
+          <optionset Name="msdyn_panetoolconfiguration_statecode">
             <OptionSetType>state</OptionSetType>
             <IntroducedVersion>1.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -818,7 +818,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the Tool configuration" languagecode="1033" />
+              <Description description="Status of the Pane tool configuration" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -837,7 +837,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the Tool configuration" languagecode="1033" />
+            <Description description="Status of the Pane tool configuration" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -870,7 +870,7 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_toolconfiguration_statuscode">
+          <optionset Name="msdyn_panetoolconfiguration_statuscode">
             <OptionSetType>status</OptionSetType>
             <IntroducedVersion>1.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -878,7 +878,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the Tool configuration" languagecode="1033" />
+              <Description description="Reason for the status of the Pane tool configuration" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -897,7 +897,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the Tool configuration" languagecode="1033" />
+            <Description description="Reason for the status of the Pane tool configuration" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">
@@ -995,7 +995,7 @@
           </displaynames>
         </EntityKey>
       </EntityKeys>
-      <EntitySetName>msdyn_toolconfigurations</EntitySetName>
+      <EntitySetName>msdyn_panetoolconfigurations</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>

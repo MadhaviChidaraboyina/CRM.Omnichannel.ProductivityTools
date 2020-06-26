@@ -20,12 +20,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="organization_msdyn_tabconfiguration">
+  <EntityRelationship Name="organization_msdyn_panetabconfiguration">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_tabconfiguration</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_panetabconfiguration</ReferencingEntityName>
     <ReferencedEntityName>Organization</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -40,12 +40,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="organization_msdyn_toolconfiguration">
+  <EntityRelationship Name="organization_msdyn_panetoolconfiguration">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_toolconfiguration</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_panetoolconfiguration</ReferencingEntityName>
     <ReferencedEntityName>Organization</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
