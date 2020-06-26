@@ -169,4 +169,8 @@ module MscrmControls.PanelControl {
 		public static hasData = "HasData_"
     }
 
+    export class SessionStorageKeyConstants {
+        public static sidePaneKey = "ProductivityPaneSidePanelId";
+    }
+
 }

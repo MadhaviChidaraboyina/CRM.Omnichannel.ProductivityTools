@@ -6,6 +6,13 @@
     "PackageCombinations": {},
     "EnvironmentVariableForPatching": "ProductivityPaneControlEnablePatchGenerator"
   },
+    {
+    "SolutionName": "ProductivityPaneComponent",
+    "SolutionNameShort": "ProductivityPaneComponent",
+    "SolutionPatchName": "ProductivityPaneComponentPatch",
+    "PackageCombinations": {},
+    "EnvironmentVariableForPatching": "ProductivityPaneComponentEnablePatchGenerator"
+  },
   {
     "SolutionName": "AgentGuidance",
     "SolutionNameShort": "AgentGuidance",

@@ -1,0 +1,29 @@
+<solutioncomponentconfigurations>
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_tabconfiguration">
+    <fileformat>0</fileformat>
+    <filescope>1</filescope>
+    <iscustomizable>0</iscustomizable>
+    <isdisplayable>1</isdisplayable>
+    <name>msdyn_tabconfiguration</name>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentconfiguration>
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_toolconfiguration">
+    <fileformat>0</fileformat>
+    <filescope>1</filescope>
+    <iscustomizable>0</iscustomizable>
+    <isdisplayable>1</isdisplayable>
+    <name>msdyn_toolconfiguration</name>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentconfiguration>
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_paneconfiguration">
+    <fileformat>0</fileformat>
+    <filescope>1</filescope>
+    <iscustomizable>0</iscustomizable>
+    <isdisplayable>1</isdisplayable>
+    <name>msdyn_paneconfiguration</name>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentconfiguration>
+</solutioncomponentconfigurations>
