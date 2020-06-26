@@ -7,14 +7,12 @@ module MscrmControls.PanelControl {
 	export class PanelControlManager {
 		public static toggleSidePanelControl(toggleValue: number): void {
 
-			let windowObject = this.getWindowObject();
+            let windowObject = this.getWindowObject();
+            const sidePanelId = sessionStorage.getItem(SessionStorageKeyConstants.sidePaneKey);
 
-			//Loading pane in try catch till we get the API from platform
-			try {
-				windowObject.Xrm.App.panels.getPanel("sidePanel-1").state = toggleValue;
-			} catch (e) {
-				windowObject.Xrm.App.panels.getPanel("sidePanel-0").state = toggleValue;
-			}
+            if (!Utils.isNullOrUndefined(sidePanelId)) {
+                windowObject.Xrm.App.panels.getPanel(sidePanelId).state = toggleValue;
+            }
 		}
 
 		public static getWindowObject(): any

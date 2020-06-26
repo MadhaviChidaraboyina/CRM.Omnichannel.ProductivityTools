@@ -96,6 +96,7 @@
       <RootComponent type="61" schemaName="cra2b_panel_toggle_collapse_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="cra2b_panel_toggle_expand_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_ProductivityPaneComponent.1033.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_productivitypane_loader.js" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.PanelControl.PanelControl" behavior="0" />
     </RootComponents>
     <MissingDependencies>
