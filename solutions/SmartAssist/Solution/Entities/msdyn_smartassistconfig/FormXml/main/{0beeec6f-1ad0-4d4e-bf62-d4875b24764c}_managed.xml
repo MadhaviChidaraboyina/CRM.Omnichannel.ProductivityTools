@@ -68,19 +68,19 @@
 											</cell>
 										</row>
 										<row>
+											<cell id="{090b5b5b-0115-c0d2-6867-889c31d95ea3}" showlabel="true" locklevel="0">
+												<labels>
+													<label description="Suggestion Control Config Uniquename" languagecode="1033" />
+												</labels>
+												<control id="msdyn_suggestioncontrolconfiguniquename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_suggestioncontrolconfiguniquename" disabled="false" />
+											</cell>
+										</row>
+										<row>
 											<cell id="{6eebea4a-0d66-0908-6ba6-69a1d85822ec}" showlabel="true" locklevel="0">
 												<labels>
 													<label description="Suggestion panel title" languagecode="1033" />
 												</labels>
 												<control id="msdyn_suggestioncontainertitle" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_suggestioncontainertitle" disabled="false" />
-											</cell>
-										</row>
-										<row>
-											<cell id="{88241520-4ad5-5d68-a565-5406206b76d5}" showlabel="true" locklevel="0">
-												<labels>
-													<label description="Suggestion Control Id" languagecode="1033" />
-												</labels>
-												<control id="msdyn_suggestioncontrolid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_suggestioncontrolid" disabled="false" />
 											</cell>
 										</row>
 										<row>
@@ -145,8 +145,8 @@
 				</NavBarAreas>
 			</Navigation>
 		</form>
-		<IsCustomizable>1</IsCustomizable>
-		<CanBeDeleted>1</CanBeDeleted>
+		<IsCustomizable>0</IsCustomizable>
+		<CanBeDeleted>0</CanBeDeleted>
 		<LocalizedNames>
 			<LocalizedName description="Information" languagecode="1033" />
 		</LocalizedNames>
