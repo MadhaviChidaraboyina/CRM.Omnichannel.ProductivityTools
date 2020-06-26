@@ -2,14 +2,18 @@
 	<ItemGroup>
 		<ProjectToBuild Include="Anchors\ProductivityTools\dirs.proj" />
 		<ProjectToBuild Include="ProductivityMacros\dirs.proj" />
+    <ProjectToBuild Include="ProductivityMacrosComponent\dirs.proj" />
+    <ProjectToBuild Include="ProductivityMacrosApplication\dirs.proj" />
+    <ProjectToBuild Include="ProductivityMacrosApplicationOC\dirs.proj" />
 		<ProjectToBuild Include="Agentscript\dirs.proj" />
+    <ProjectToBuild Include="AgentscriptComponent\dirs.proj" />
     <ProjectToBuild Include="SmartAssist\dirs.proj" />
 		<ProjectToBuild Include="OmnichannelProductivityToolsSettings\dirs.proj" />
 		<ProjectToBuild Include="ProductivityPaneControl\dirs.proj" />
+		<ProjectToBuild Include="ProductivityPaneComponent\dirs.proj" />
 		<ProjectToBuild Include="AgentGuidance\dirs.proj" />
 		<ProjectToBuild Include="ProductivityTools\dirs.proj" />
-
-	</ItemGroup>
+  </ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
 	</Target>

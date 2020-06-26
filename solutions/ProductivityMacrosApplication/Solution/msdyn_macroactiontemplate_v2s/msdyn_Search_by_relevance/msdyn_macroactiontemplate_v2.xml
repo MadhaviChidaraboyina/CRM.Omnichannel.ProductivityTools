@@ -1,0 +1,28 @@
+<msdyn_macroactiontemplate_v2 msdyn_uniquename="msdyn_Search_by_relevance">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiondescription default="Do a relevance search based on the phrase">
+    <label description="Do a relevance search based on the phrase" languagecode="1033" />
+  </msdyn_actiondescription>
+  <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
+  <msdyn_displayname default="Search by relevance">
+    <label description="Search by relevance" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_search_relevance.svg</msdyn_icon>
+  <msdyn_kind>ACTIONS</msdyn_kind>
+  <msdyn_macroconnector>
+    <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>
+  </msdyn_macroconnector>
+  <msdyn_name>Search_by_relevance</msdyn_name>
+  <msdyn_runtimeapi>Microsoft.ProductivityMacros.Internal.openSearchPage(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_subtitle default="Productivity automation">
+    <label description="Productivity automation" languagecode="1033" />
+  </msdyn_subtitle>
+  <msdyn_summary default="Do a relevance search based on the phrase">
+    <label description="Do a relevance search based on the phrase" languagecode="1033" />
+  </msdyn_summary>
+  <msdyn_title default="Do a relevance search based on the phrase">
+    <label description="Do a relevance search based on the phrase" languagecode="1033" />
+  </msdyn_title>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_macroactiontemplate_v2>

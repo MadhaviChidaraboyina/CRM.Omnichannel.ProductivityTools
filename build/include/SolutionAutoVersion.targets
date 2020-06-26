@@ -1,0 +1,92 @@
+<Project InitialTargets="PropertyInitialization" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+		  <SolutionXML>$(SolutionFolder)\Other\Solution.xml</SolutionXML>
+      <SolutionVersion Condition="'$(SolutionVersion)' == ''"></SolutionVersion>
+      <SkipArtifactVersioning Condition="'$(SkipArtifactVersioning)' == ''">False</SkipArtifactVersioning>
+  </PropertyGroup>
+
+  <Target Name="ResolveSolutionVersion">
+    <!-- resolve properties before versioning operation -->
+    <PropertyGroup>
+      <BuildNumber>$(ProvidedSolutionVersion)</BuildNumber>
+      
+      <ArtifactBaseVersion Condition="'$(BuildNumber)' != ''">$(BuildNumber)</ArtifactBaseVersion>
+      <ArtifactBaseVersion Condition="'$(ArtifactBaseVersion)' == ''">$(SolutionVersion)</ArtifactBaseVersion>
+      <ResolvedArtifactVersion>$(ArtifactBaseVersion)</ResolvedArtifactVersion>
+
+      <UseBaseVersion Condition="'$(BuildNumber)' != ''">True</UseBaseVersion>
+      <UseBaseVersion Condition="'$(UseBaseVersion)' == ''">False</UseBaseVersion>
+
+      <ReturnNextVersion Condition="'$(BuildNumber)' != ''">False</ReturnNextVersion>
+      <ReturnNextVersion Condition="'$(ReturnNextVersion)' == ''">True</ReturnNextVersion>
+
+      <Artifact>$(SolutionIdentity)</Artifact>
+      <TF_BUILD Condition="'$(TF_BUILD)' == ''">False</TF_BUILD>
+    </PropertyGroup>
+    
+    <!-- display known information before versioning -->
+    <Message Text="Start solution artifact versioning.." />
+    <Message Text="Provided build version is: $(BuildNumber)" />
+    <Message Text="ReturnNextVersion value is: $(ReturnNextVersion)" Importance="High" />
+    <Message Text="UseBaseVersion value is: $(UseBaseVersion)" Importance="High" />
+    <Message Text="Solution xml is: $(SolutionXML)" />
+    <Message Text="Solution xml unique name is: $(SolutionIdentity)" />
+    <Message Text="Solution xml version is: $(SolutionVersion)" />
+    
+    <Message Text="Artifact is: $(Artifact)" />
+    <Message Text="Artifact base version will be: $(ArtifactBaseVersion)" />
+    <Message Text="ArtifactVersioning tool will be skipped: $(SkipArtifactVersioning)" />
+    <Message Text="Triggered from build pipeline: $(TF_BUILD)" />   
+
+    <!-- resolve version using ArtifactVersioning tool -->
+    <Exec Condition="'$(TF_BUILD)' == 'True' AND '$(SkipArtifactVersioning)' != 'True'" 
+      Command="$(PKG_XRMAPP_TOOLS_UPGRADE)\tools\ArtifactVersioning\ResolveArtifactVersion.exe /artifact:$(Artifact) /baseVersion:$(ArtifactBaseVersion) /returnNextVersion:$(ReturnNextVersion) /useBaseVersion:$(UseBaseVersion) /url:$(AutoVersionURL) /username:$(AutoVersionUserName) /password:$(AutoVersionPassword)" />
+
+    <ReadLinesFromFile Condition="'$(TF_BUILD)' == 'True' AND '$(SkipArtifactVersioning)' != 'True'" File="$(Artifact).txt">
+      <Output TaskParameter="Lines" PropertyName="ResolvedArtifactVersion"/>
+    </ReadLinesFromFile>
+
+    <PropertyGroup>
+      <ResolvedArtifactVersion Condition="'$(TF_BUILD)' != 'True'">$(ArtifactBaseVersion)</ResolvedArtifactVersion>
+    </PropertyGroup>
+    
+    <Message text="Artifact resolved version will be: $(ResolvedArtifactVersion)" Importance="High" />
+    
+    <!-- update solution metadata xml when version changed -->
+    <XmlPoke Condition="'$(TF_BUILD)' == 'True' AND Exists($(SolutionXML))" XmlInputPath="$(SolutionXML)" 
+      Query="ImportExportXml/SolutionManifest/Version" Value="$(ResolvedArtifactVersion)" />
+    <Message text="Completed solution artifact versioning." />
+    
+    <!-- set artifact version as build pipeline version -->
+    <Message Condition="'$(UseAsPipelineBuildVersion)' == 'True'" Text="Reflecting as pipeline build version.." />
+    <Exec Condition="'$(TF_BUILD)' == 'True' AND '$(UseAsPipelineBuildVersion)' == 'True'"
+      Command="powershell -Command &quot;&amp;{Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned; $(PKG_XRMAPP_TOOLS_UPGRADE)\tools\commands\setPipelineBuildNumber.ps1 -buildNumber $(ResolvedArtifactVersion) }&quot;"></Exec>
+  </Target>
+
+  <Target Name="PropertyInitialization">
+    <!-- read solution metadata and version information -->
+    <XmlPeek Condition="'$(SolutionVersion)' == '' AND Exists($(SolutionXML))" XmlInputPath="$(SolutionXML)" Query="ImportExportXml/SolutionManifest/Version/text()">
+      <Output TaskParameter="Result" ItemName="QueriedSolutionVersion" />
+    </XmlPeek>
+
+    <XmlPeek Condition="Exists($(SolutionXML))" XmlInputPath="$(SolutionXML)" Query="ImportExportXml/SolutionManifest/UniqueName/text()">
+      <Output TaskParameter="Result" ItemName="QueriedSolutionUniqueName" />
+    </XmlPeek>
+    
+    <!-- retrieve provided solution version from dynamic properties -->
+    <Message text="SolutionVersion variable is: $(SolutionVersion)" />
+
+    <PropertyGroup>
+      <SolutionVersion Condition="'$(SolutionVersion)' == ''">@(QueriedSolutionVersion)</SolutionVersion>
+      <SolutionIdentity>@(QueriedSolutionUniqueName)</SolutionIdentity>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_SolutionUniqueName Include="$(SolutionIdentity.Replace(&quot;.&quot;,&quot;&quot;))" />
+    </ItemGroup>
+    
+    <PropertyGroup>
+      <ProvidedSolutionVersion>$(%(_SolutionUniqueName.Identity))</ProvidedSolutionVersion>
+    </PropertyGroup>
+  </Target>
+</Project>

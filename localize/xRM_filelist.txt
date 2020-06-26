@@ -30,5 +30,9 @@ solutions\ProductivityPaneControl\Client\Controls\PanelControl\strings\PanelCont
 solutions\ProductivityPaneControl\Client\Localization\Languages\ProductivityPaneControl.1033.resx,ProductivityPaneControl
 solutions\ProductivityPaneControl\Solution\Resources\en-us\resources.en-US.resx,ProductivityPaneControl
 solutions\ProductivityPaneControl\Solution\WebResources\msdyn_ProductivityPaneControl.1033.resx,ProductivityPaneControl
+solutions\ProductivityPaneComponent\Client\Controls\PanelControl\strings\ProductivityPanelControl.1033.resx,ProductivityPaneComponent
+solutions\ProductivityPaneComponent\Client\Localization\Languages\ProductivityPaneComponent.1033.resx,ProductivityPaneComponent
+solutions\ProductivityPaneComponent\Solution\Resources\en-us\resources.en-US.resx,ProductivityPaneComponent
+solutions\ProductivityPaneComponent\Solution\WebResources\msdyn_ProductivityPaneComponent.1033.resx,ProductivityPaneComponent
 solutions\SmartAssist\Client\Controls\SmartassistControl\strings\SmartassistControl.1033.resx,SmartAssist
 solutions\SmartAssist\Solution\Resources\en-US\resources.en-US.resx,SmartAssist

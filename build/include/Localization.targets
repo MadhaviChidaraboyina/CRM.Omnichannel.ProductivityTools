@@ -1,29 +1,50 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<LocalizationExtractFolderOutput>$(OutputPath)\$(SolutionFileNamePrefix)\Extract</LocalizationExtractFolderOutput>
+		<ExtractLocalizationFiles Condition="'$(UpdateLocFiles)' != ''">$(UpdateLocFiles)</ExtractLocalizationFiles>
+		<SkipLocalizationExtraction Condition="'$(ThrowsLocalizeError)' != ''">$(ThrowsLocalizeError)</SkipLocalizationExtraction>
+		<LocalizationExtractionOutput Condition="!Exists('$(LocalizationExtractionOutput)')">$(WSRoot)\target\$(BuildConfiguration)\$(BuildPlatform)\LocExt</LocalizationExtractionOutput>
+		<LocalizationDrop>$(WSRoot)\drop\Resources</LocalizationDrop>
+		<MakeLang Condition="!Exists('$(MakeLang)')">$(PKG_XRMAPP_TOOLS_UPGRADE)\tools\command\MakeLang.cmd</MakeLang>
+		<LocaleArgument Condition="!Exists('$(LocaleArgument)')">All</LocaleArgument>
+		<PseudoLocalizeArgument>/FullPL</PseudoLocalizeArgument>
 	</PropertyGroup>
 
-	<Target Name="UpdateLoc" AfterTargets="AfterBuild" Condition="'$(EnableLocalization)' == 'true' And '$(ThrowsLocalizeError)' == ''" >
-		<Message text="Localization Extraction Started" Importance="High" />
-		<MakeDir Directories="$(LocalizationExtractFolderOutput)" Condition="!Exists('$(LocalizationExtractFolderOutput)')"/>
+	<Target Name="ExtractLocalizationResources" Condition="'$(ExtractLocalizationFiles)' == 'true' and '$(SkipLocalizationExtraction)' != 'true'">
+		<Message text="Localization extraction started.." Importance="High" />
+		<MakeDir Directories="$(LocalizationExtractionOutput)\$(SolutionProjectNamePrefix)" Condition="!Exists('$(LocalizationExtractionOutput)\$(SolutionProjectNamePrefix)')" />
 		
-		<!--Extract solution zip with /loc flags to produce metadata resx file-->
-		<Exec Command="$(PKG_XRMAPP_TOOLS)\tools\Microsoft.Crm.SolutionPackager\retail\i386\SolutionPackager.exe /n /action:extract /packagetype:both /folder:$(LocalizationExtractFolderOutput) /zipfile:$(UnmanagedSolutionName).zip /errorLevel:verbose /src /loc" />
+		<!-- extract solution zip with /src /loc flags to produce metadata resx file -->
+		<Exec Command="$(SolutionPackager) /n /action:extract /packagetype:both /folder:$(LocalizationExtractionOutput)\$(SolutionProjectNamePrefix) /zipfile:$(UnmanagedSolutionName).zip /errorLevel:verbose /src /loc" />
 		
-		<!--Copy Resx Files to destinations for local builds to check in changes.-->
-		<Copy SkipUnchangedFiles="true" SourceFiles="$(LocalizationExtractFolderOutput)\Resources\en-us\resources.en-US.resx" DestinationFolder="$(SolutionFolder)\Resources\en-us\" />	
-		<Copy SkipUnchangedFiles="true" SourceFiles="$(LocalizationExtractFolderOutput)\Resources\template_resources.resx" DestinationFolder="$(SolutionFolder)\Resources\" />
+		<!-- copy resx files to destinations for local builds to check in changes -->
+		<Copy SkipUnchangedFiles="true" SourceFiles="$(LocalizationExtractionOutput)\$(SolutionProjectNamePrefix)\Resources\en-US\resources.en-US.resx" DestinationFolder="$(SolutionFolder)\Resources\en-US\" 
+			Condition="Exists('$(LocalizationExtractionOutput)\$(SolutionProjectNamePrefix)\Resources\en-US\resources.en-US.resx')"/>
+				
+		<!-- copy metadata resx file to drop folder -->
+		<Exec Command="xcopy $(LocalizationExtractionOutput)\$(SolutionProjectNamePrefix)\Resources\en-US\*.resx $(LocalizationDrop)\solutions\$(SolutionProjectNamePrefix)\Solution\Resources\en-US\* /y" />
 		
-		<!--Copy Plugin and Web Resources resx files-->
-		<Exec Command="xcopy $(ApplicationFolder)\*.en-US.resx $(XrmSolutionsRoot)\drop\Resources\$(SolutionFileNamePrefix)\* /sy /EXCLUDE:$(XrmSolutionsRoot)\build\config\LocExclude.txt" />
+		<Message text="Removing temporary resource files.." Importance="High" />
+		<Message text="To keep extraction output available, set KeepOutput property to true - /p:KeepOutput=true" Importance="High" />
+		<Exec Command="rmdir /s /q $(LocalizationExtractionOutput)\$(SolutionProjectNamePrefix)" Condition="'$(KeepOutput)'=='false'" />
 		
-		<!--Rename Plugin and Web Resources Resx Files-->
-		<!--<Exec Command="for /r $(XrmSolutionsRoot)\drop\Resources\$(SolutionFileNamePrefix)\ %%i IN (*.resx) do ren %%i %%~ni.en-us.resx " />-->
+		<Message text="Localization extraction completed." Importance="High" />
 		
-		<!--Copy Metadata Resx file-->
-		<Exec Command="xcopy $(ApplicationFolder)\solution\resources\en-us\*.resx $(XrmSolutionsRoot)\drop\Resources\$(SolutionFileNamePrefix)\solution\resources\en-us\* /y" />
-		<Exec Command="rmdir /s /q $(OutputPath)\$(SolutionFileNamePrefix)" />
-		<Message text="Localization Extract Complete" Importance="High" />
-	</Target>
+		<Message text="MakeLang localization started.." Importance="High" />
+		<Exec Command="$(MakeLang) $(LocaleArgument) $(PseudoLocalizeArgument) /component $(SolutionProjectNamePrefix)" Condition="Exists('$(MakeLang)')" />
+		<Message text="MakeLang localization completed.." Importance="High" />
 
+		<CallTarget Targets="GenerateSolutionFiles" />
+	</Target>
+	
+	<Target Name="ExtractComponentLocalizationResources" Condition="'$(ExtractLocalizationFiles)' == 'true' and '$(SkipLocalizationExtraction)' != 'true'">
+		<Message text="Extraction of $(MSBuildProjectName) localization started.." Importance="High" />
+		
+		<!-- copy component resx file to drop folder -->
+		<PropertyGroup>
+			<ComponentRelativePath>$(MSBuildProjectDirectory.Replace('$(WSRoot)', '$(LocalizationDrop)'))</ComponentRelativePath>
+		</PropertyGroup>
+		<Copy SourceFiles="@(EmbeddedResource)" DestinationFiles="@(EmbeddedResource->'$(ComponentRelativePath)\%(Identity)')" />
+		
+		<Message text="Extraction of $(MSBuildProjectName) localization completed." Importance="High" />
+	</Target>
 </Project>

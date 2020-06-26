@@ -1,0 +1,988 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
+    <value>Nem található a tervező konfigurációja</value>
+    <comment>Error message when config entity read fails</comment>
+  </data>
+  <data name="DESIGNER_ACTION" xml:space="preserve">
+    <value>Művelet</value>
+    <comment>Action string for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_CONNECTORDISPLAYNAME" xml:space="preserve">
+    <value>Egyesített felület automatizálása</value>
+    <comment>Display Name String for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_MACROCONNECTOR" xml:space="preserve">
+    <value>Makrócsatlakozó</value>
+    <comment>Macro connector string for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_SEARCHMACROS" xml:space="preserve">
+    <value>Makró keresése</value>
+    <comment>Search Macro string for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_DESC" xml:space="preserve">
+    <value>Makró végrehajtásának indítása</value>
+    <comment>Description Text for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_NAME" xml:space="preserve">
+    <value>Makró végrehajtásának indítása</value>
+    <comment>Name Text for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_SUBTITLE" xml:space="preserve">
+    <value>Makró indítása</value>
+    <comment>Subtitle String for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_SUMMARY" xml:space="preserve">
+    <value>Makró indítása</value>
+    <comment>Summary String for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_TRIGGER" xml:space="preserve">
+    <value>Indító</value>
+    <comment>Trigger String for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_USERVOICEMSG" xml:space="preserve">
+    <value>Mondja el, mit építsünk legközelebb?</value>
+    <comment>User Voice Message for Designer Control</comment>
+  </data>
+  <data name="DESIGNR_STARTMACRO_TITLE" xml:space="preserve">
+    <value>Makró indítása</value>
+    <comment>Title String for Start Macro Trigger</comment>
+  </data>
+  <data name="MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS" xml:space="preserve">
+    <value>Minden egyéb munkamenet bezárása</value>
+    <comment>Action to close all except present session</comment>
+  </data>
+  <data name="MACRO_ACTION_CREATE_SESSION" xml:space="preserve">
+    <value>Munkamenet létrehozása</value>
+    <comment>Action to create session</comment>
+  </data>
+  <data name="MACRO_ACTION_OPEN_DASHBOARD" xml:space="preserve">
+    <value>Irányítópult megnyitása</value>
+    <comment>Action to open dashboard</comment>
+  </data>
+  <data name="MACRO_ACTION_OPEN_FORM" xml:space="preserve">
+    <value>Űrlap megnyitása</value>
+    <comment>Action to open form</comment>
+  </data>
+  <data name="MACRO_ACTION_OPEN_GRID" xml:space="preserve">
+    <value>Rács megnyitása</value>
+    <comment>Action to open grid</comment>
+  </data>
+  <data name="MACRO_ACTION_OPEN_KB_SEARCH" xml:space="preserve">
+    <value>Tudásbázis-keresés megnyitása</value>
+    <comment>Action to open KB search</comment>
+  </data>
+  <data name="MACRO_ACTION_REFRESH" xml:space="preserve">
+    <value>Frissítés</value>
+    <comment>Action to refresh</comment>
+  </data>
+  <data name="MACRO_ACTION_SAVE" xml:space="preserve">
+    <value>Mentés</value>
+    <comment>Action to save</comment>
+  </data>
+  <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
+    <value>Mentés és bezárás</value>
+    <comment>Action to save and close</comment>
+  </data>
+  <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
+    <value>Mégse</value>
+    <comment>Action to cancel</comment>
+  </data>
+  <data name="MACRO_ACTION_SEARCH_BY_RELEVANCE" xml:space="preserve">
+    <value>Relevanciaalapú keresés</value>
+    <comment>Action to search by relevance</comment>
+  </data>
+  <data name="MACRO_ACTION_SEARCH_KB" xml:space="preserve">
+    <value>Keresés a tudásbázisban</value>
+    <comment>Action to search KB</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE" xml:space="preserve">
+    <value>Név</value>
+    <comment>Title string for 'name' field of attribute</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC" xml:space="preserve">
+    <value>Attribútum logikai neve</value>
+    <comment>Description for 'name' field of attribute</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE" xml:space="preserve">
+    <value>Érték</value>
+    <comment>Title string for 'value' field of attribute</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC" xml:space="preserve">
+    <value>Attribútumérték</value>
+    <comment>Description for 'value' field of attribute</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" xml:space="preserve">
+    <value>Nem olvasható a makró definíciója</value>
+    <comment>Error message when the macro definition to be edited could not be read</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
+    <value>Nem olvashatók a műveletsablonok</value>
+    <comment>Error message when templates entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_CDS_WRITE_ERROR" xml:space="preserve">
+    <value>Nem menthető a makró definíciója</value>
+    <comment>Error message when write to CDS fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
+    <value>A tervezővezérlő inicializációja nem sikerült</value>
+    <comment>Error message when designer control initialization fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">
+    <value>Nem lehet létrehozni a makródefiníciót</value>
+    <comment>Error message when designer control cannot generate a valid JSON</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_LOAD_FAILURE" xml:space="preserve">
+    <value>Nem tölthető be a makródefiníció</value>
+    <comment>Error message when the control cannot load the macro definition</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_RENDER_FAILURE" xml:space="preserve">
+    <value>Nem jeleníthető meg a makrótervező-vezérlő</value>
+    <comment>Error message when the control cannot be rendered</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_01a02947_f9d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Új űrlap nyitása egy rekord létrehozásához.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_01a02947_f9d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Új létrehozása</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_01a02947_f9d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_01a02947_f9d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Új űrlap nyitása egy rekord létrehozásához</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_01a02947_f9d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Új űrlap nyitása egy rekord létrehozásához</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_d61ae14b_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>A megnyitandó entitás logikai neve</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_d61ae14b_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Entitás logikai neve</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_macrosolutionconfiguration_msdyn_searchhint" xml:space="preserve">
+    <value>Makró keresése</value>
+    <comment>Macro Solution Configuration Search Hint Text</comment>
+  </data>
+  <data name="msdyn_macrosolutionconfiguration_msdyn_uservoicetext" xml:space="preserve">
+    <value>Mondja el, mit építsünk legközelebb?</value>
+    <comment>Macro Solution Configuration User Voice Text</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_categorylabel_60541186_f5dd_e911_a81e_000d3af9c0c2" xml:space="preserve">
+    <value>Előre meghatározott automatizálási műveletek</value>
+    <comment>Macro Connector Category Label</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_description_60541186_f5dd_e911_a81e_000d3af9c0c2" xml:space="preserve">
+    <value>Gyakran használt ügyféloldali feladatok automatizálása</value>
+    <comment>Macro Connector Description</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_displayname_60541186_f5dd_e911_a81e_000d3af9c0c2" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Connector Display Name</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_title_60541186_f5dd_e911_a81e_000d3af9c0c2" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Connector Title</comment>
+  </data>
+  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
+    <value>Beépített</value>
+    <comment>Display string for logic app built in category</comment>
+  </data>
+  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
+    <value>Ügyfélszolgálat</value>
+    <comment>Display string for custom category</comment>
+  </data>
+  <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
+    <value>Ügynökparancsfájl összekötője</value>
+    <comment>Display name for custom connector</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
+    <value>Alapértelmezett ügynökparancsfájl beállítása</value>
+    <comment>Summary for set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
+    <value>Beállítja az alapértelmezett ügynökparancsfájlt </value>
+    <comment>Description for set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
+    <value>Ügynökparancsfájl </value>
+    <comment>Title for input paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
+    <value>Az ügynökparancsfájl kiválasztása </value>
+    <comment>Description for input paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
+    <value>Alapértelmezett ügynökparancsfájl </value>
+    <comment>Title for output paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
+    <value>Az ügynökparancsfájl neve </value>
+    <comment>Description for output paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
+    <value>A kifejezés kiértékelésének megkezdése  </value>
+    <comment>Summary for start trigger for expression evaluation</comment>
+  </data>
+  <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
+    <value>A munkamenet betöltésekor megkezdődik a kifejezés kiértékelése</value>
+    <comment>Description for start trigger for expression evaluation</comment>
+  </data>
+  <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
+    <value>Keresés </value>
+    <comment>Search string for Designer Control</comment>
+  </data>
+  <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
+    <value>Feltétel</value>
+    <comment>Summary for expression builder for expression evaluation</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_16fc3387_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Relevanciaalapú keresés a kifejezés alapján</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_1c1af956_fad2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Rekordrács megnyitása</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_414bf49a_f06e_4ae2_9dd8_6d23f2619916" xml:space="preserve">
+    <value>A rekord mentése</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_48fc87c4_f480_4129_9c1d_682442d7bc60" xml:space="preserve">
+    <value>Lap frissítése.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
+    <value>Fókusz a lapon</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_85ab814a_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Keresés a Tudásbázisban a megadott kifejezésre</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" xml:space="preserve">
+    <value>Rekord hozzákapcsolása a beszélgetéshez.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Az eset megoldásához szükséges művelet</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_ce3390dd_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Egy létező rekord frissítése</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" xml:space="preserve">
+    <value>Makró végrehajtásának indítása</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
+    <value>Az aktuális lap betöltése</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_d3fef303_b090_44d8_a8f0_e2545a2459ae" xml:space="preserve">
+    <value>Rekord hozzákapcsolásának megszüntetése a beszélgetéssel.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_e6c81912_fad2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Egy létező rekord megnyitása</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_e903922e_fdd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>E-mail-űrlap megnyitása egy előre meghatározott sablonnal</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_16fc3387_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Relevanciaalapú keresés</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_1c1af956_fad2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Rács megnyitása</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_414bf49a_f06e_4ae2_9dd8_6d23f2619916" xml:space="preserve">
+    <value>Mentés</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_48fc87c4_f480_4129_9c1d_682442d7bc60" xml:space="preserve">
+    <value>Lap frissítése</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
+    <value>Fókusz a lapon</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_85ab814a_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Tudásbáziscikk keresése</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" xml:space="preserve">
+    <value>Rekord hozzákapcsolása a beszélgetéshez</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Eset megoldása</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_ce3390dd_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Rekord frissítése</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" xml:space="preserve">
+    <value>Kezdés</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
+    <value>Az aktuális lap betöltése</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_d3fef303_b090_44d8_a8f0_e2545a2459ae" xml:space="preserve">
+    <value>Rekord hozzákapcsolásának megszüntetése a beszélgetéssel</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_e6c81912_fad2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Űrlap megnyitása</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_e903922e_fdd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>E-mail</value>
+    <comment>Macro Action Template Display  Name</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_16fc3387_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_1c1af956_fad2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_414bf49a_f06e_4ae2_9dd8_6d23f2619916" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_48fc87c4_f480_4129_9c1d_682442d7bc60" xml:space="preserve">
+    <value>Munkamenet-összekötő</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
+    <value>Munkamenet-összekötő</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_85ab814a_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" xml:space="preserve">
+    <value>Omnicsatorna-összekötő</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_ce3390dd_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
+    <value>Munkamenet-összekötő</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_d3fef303_b090_44d8_a8f0_e2545a2459ae" xml:space="preserve">
+    <value>Omnicsatorna-összekötő</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_e6c81912_fad2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_e903922e_fdd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_16fc3387_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Relevanciaalapú keresés a kifejezés alapján</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_1c1af956_fad2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Rekordrács megnyitása</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_414bf49a_f06e_4ae2_9dd8_6d23f2619916" xml:space="preserve">
+    <value>A rekord mentése</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_48fc87c4_f480_4129_9c1d_682442d7bc60" xml:space="preserve">
+    <value>Lap frissítése</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
+    <value>Fókusz a lapon</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_85ab814a_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Keresés a Tudásbázisban a megadott kifejezésre</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" xml:space="preserve">
+    <value>Rekord hozzákapcsolása a beszélgetéshez</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Eset megoldása</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_ce3390dd_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Egy létező rekord frissítése</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" xml:space="preserve">
+    <value>Makró végrehajtásának indítása</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
+    <value>Az aktuális lap betöltése</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_d3fef303_b090_44d8_a8f0_e2545a2459ae" xml:space="preserve">
+    <value>Rekord hozzákapcsolásának megszüntetése a beszélgetéssel</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_e6c81912_fad2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Egy létező rekord megnyitása</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_e903922e_fdd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>E-mail-űrlap megnyitása egy előre meghatározott sablonnal</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_16fc3387_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Relevanciaalapú keresés a kifejezés alapján</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_1c1af956_fad2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Rekordrács megnyitása</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_414bf49a_f06e_4ae2_9dd8_6d23f2619916" xml:space="preserve">
+    <value>A rekord mentése</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_48fc87c4_f480_4129_9c1d_682442d7bc60" xml:space="preserve">
+    <value>Lap frissítése</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_761589d3_4fd7_4cab_b2f7_96728d4b9823" xml:space="preserve">
+    <value>Fókusz a lapon</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_85ab814a_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Keresés a Tudásbázisban a megadott kifejezésre</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_90a7f632_c89e_40a6_a9ea_3f28d4e58fb3" xml:space="preserve">
+    <value>Rekord hozzákapcsolása a beszélgetéshez</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_cd1fa1a0_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Az eset megoldásához szükséges művelet</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_ce3390dd_fcd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Egy létező rekord frissítése</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Alkalmazáslap megnyitása</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Alkalmazáslap megnyitása</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Megnyit egy alkalmazáslapot az adott adatbevitelhez.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Munkamenet-összekötő</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_30e0dd0a-7972-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Ez a művelet megnyit egy alkalmazáslapot az adott adatbevitelhez.</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Aktuális rekord klónozása</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Aktuális rekord klónozása</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Klónozza az aktuális lapon lévő rekordot, és megnyitja egy új lapon egy új, nem mentett rekordként.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_f8c404ed-aa69-ea11-a811-000d3a54419d" xml:space="preserve">
+    <value>Klónozza az aktuális lapon lévő rekordot, és megnyitja egy új lapon egy új, nem mentett rekordként.</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
+    <value>Bemeneti rekord klónozása</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
+    <value>Bemeneti rekord klónozása</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
+    <value>Klónozza a makró bemeneteként megadott rekordot, és megnyitja egy új lapon egy új, nem mentett rekordként.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_b3e9cb73-72fe-40c7-baeb-91714890d1f7" xml:space="preserve">
+    <value>Klónozza a makró bemeneteként megadott rekordot, és megnyitja egy új lapon egy új, nem mentett rekordként.</value>
+  <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Űrlapmezők automatikus kitöltése</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Űrlapmezők automatikus kitöltése</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Az Ön által megadott információk alapján a makró automatikusan kitölti a űrlapmezőket.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_37a95038-185a-ea11-a811-000d3a334e98" xml:space="preserve">
+    <value>Az Ön által megadott információk alapján a makró automatikusan kitölti a űrlapmezőket.</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_d1a026a3_9e8d_42e7_8e16_9cdfc26ff43f" xml:space="preserve">
+    <value>Makró végrehajtásának indítása</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_d3ee390f_0299_43e5_8107_e637feeb170d" xml:space="preserve">
+    <value>Az aktuális lap betöltése</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_d3fef303_b090_44d8_a8f0_e2545a2459ae" xml:space="preserve">
+    <value>Rekord hozzákapcsolásának megszüntetése a beszélgetéssel</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_e6c81912_fad2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Egy létező rekord megnyitása</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_e903922e_fdd2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>E-mail-űrlap megnyitása egy előre meghatározott sablonnal</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_categorylabel_ac627bea_31f2_4378_9a21_6e1e2d74e278" xml:space="preserve">
+    <value>Előre meghatározott automatizálási műveletek</value>
+    <comment>Macro Connector Category Label</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_categorylabel_d2f931e3_70b7_4093_865e_b8075a02c215" xml:space="preserve">
+    <value>Előre meghatározott automatizálási műveletek</value>
+    <comment>Macro Connector Category Label</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_description_ac627bea_31f2_4378_9a21_6e1e2d74e278" xml:space="preserve">
+    <value>A gyakran használt munkamenet-műveletek automatizálása</value>
+    <comment>Macro Connector Description</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_description_d2f931e3_70b7_4093_865e_b8075a02c215" xml:space="preserve">
+    <value>A gyakran használt Omnicsatorna-műveletek automatizálása</value>
+    <comment>Macro Connector Description</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_displayname_ac627bea_31f2_4378_9a21_6e1e2d74e278" xml:space="preserve">
+    <value>Munkamenet-összekötő</value>
+    <comment>Macro Connector Display Name</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_displayname_d2f931e3_70b7_4093_865e_b8075a02c215" xml:space="preserve">
+    <value>Omnicsatorna-összekötő</value>
+    <comment>Macro Connector Display Name</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_title_ac627bea_31f2_4378_9a21_6e1e2d74e278" xml:space="preserve">
+    <value>Munkamenet-összekötő</value>
+    <comment>Macro Connector Category Label</comment>
+  </data>
+  <data name="msdyn_macroconnector_msdyn_title_d2f931e3_70b7_4093_865e_b8075a02c215" xml:space="preserve">
+    <value>Omnicsatorna-összekötő</value>
+    <comment>Macro Connector Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_2a148183_3905_49e9_acee_eed07fe2da18" xml:space="preserve">
+    <value>Alkalmazássablon azonosítója</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_32e1acb9_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>A keresett kifejezés"</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_35b0d4dc_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Megoldás oka</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_3a359e47_ec11_ea11_a811_000d3a334ee9" xml:space="preserve">
+    <value>A megnyitandó entitás elsődleges neve</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_473decbe_9fdf_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>E-mail-sablon azonosítója</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_474f7494_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>A nézet típusa</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_4a8c0ace_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Esetazonosító</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_6c7f2dbf_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Számlázható idő</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_6e033082_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>A megnyitandó nézet azonosítója</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_9a6161ef_3033_4c8a_89fb_8229bf4539e9" xml:space="preserve">
+    <value>Minta JSON-objektum</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_ae9b14cb_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>A frissítendő attribútumokat és értékeket meghatározó JSON-karakterlánc</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_b66cd2ac_9fdf_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>E-mail-címzettek</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_ca97e23b_9fdf_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Az alkalmazás oldaltípusa</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_dc1db27b_b27e_4de3_ad4b_a1ba406de050" xml:space="preserve">
+    <value>Egyéni név-érték párok tömbje</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_ddf27260_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>A megnyitandó űrlap azonosítója</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_eb102e60_9fdf_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>A lap azonosítója</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_f729e573_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>A megnyitandó entitásrekord azonosítója</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_fed739aa_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>A megnyitandó irányítópult azonosítója</value>
+    <comment>Parameter definition Description</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_2a148183_3905_49e9_acee_eed07fe2da18" xml:space="preserve">
+    <value>Alkalmazássablon azonosítója</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_32e1acb9_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Keresési karakterlánc</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_35b0d4dc_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Megoldás</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_3a359e47_ec11_ea11_a811_000d3a334ee9" xml:space="preserve">
+    <value>Entitás elsődleges neve</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_a50fc5ef-5d6e-ea11-a811-000d3a8d88aa" xml:space="preserve">
+    <value>Rekord címe</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_description_a50fc5ef-5d6e-ea11-a811-000d3a8d88aa" xml:space="preserve">
+    <value>Rekord címe</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_473decbe_9fdf_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Sablon azonosítója</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_474f7494_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Nézet típusa</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_4a8c0ace_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Ügy azonosítója</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_6c7f2dbf_a0df_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Számlázható idő</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_6e033082_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Nézet azonosítója</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_9a6161ef_3033_4c8a_89fb_8229bf4539e9" xml:space="preserve">
+    <value>Minta egyéni JSON-objektum</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_ae9b14cb_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Kulcs-érték párok JSON-karakterlánca</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_b66cd2ac_9fdf_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>E-mail-címzettek</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_ca97e23b_9fdf_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Oldal típusa</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_dc1db27b_b27e_4de3_ad4b_a1ba406de050" xml:space="preserve">
+    <value>Attribútum</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_ddf27260_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Entitásűrlap azonosítója</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_eb102e60_9fdf_e911_a81e_000d3a0698dc" xml:space="preserve">
+    <value>Lap azonosítója</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_f729e573_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Entitásrekord azonosítója</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_parameterdefinition_msdyn_displayname_fed739aa_f8d2_e911_a81e_000d3a015920" xml:space="preserve">
+    <value>Irányítópult azonosítója</value>
+    <comment>Parameter definition Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Tudásbáziscikk megnyitása</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Tudásbáziscikk megnyitása</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>A tudásbáziscikk megnyitásához meg kell adnia az entitás azonosítóját.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Termelékenységi automatizálás</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_2561bf45-e4e9-4940-8dcd-370705deea62" xml:space="preserve">
+    <value>Tudásbáziscikk megnyitása</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
+    <value>Tudásbáziscikk küldése a csevegésben</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
+    <value>Tudásbáziscikk küldése a csevegésben</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
+    <value>Elküldi egy tudásbáziscikk hivatkozását a csevegésben.</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
+    <value>Omnicsatorna-összekötő</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" xml:space="preserve">
+    <value>Elküldi egy tudásbáziscikk hivatkozását a csevegésben.</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
+    <value>Munkamenet bezárása</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
+    <value>Munkamenet bezárása</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
+    <value>Munkamenet bezárása</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
+    <value>Munkamenet-összekötő</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879" xml:space="preserve">
+    <value>Munkamenet bezárása</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_displayname_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" xml:space="preserve">
+    <value>Minden egyéb munkamenet bezárása</value>
+    <comment>Macro Action Template Displayname</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_title_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" xml:space="preserve">
+    <value>Minden egyéb munkamenet bezárása</value>
+    <comment>Macro Action Template Title</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_actionDescription_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" xml:space="preserve">
+    <value>Minden egyéb munkamenet bezárása</value>
+    <comment>Macro Action Template Description</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_subtitle_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" xml:space="preserve">
+    <value>Munkamenet-összekötő</value>
+    <comment>Macro Action Template Subtitle</comment>
+  </data>
+  <data name="msdyn_macroactiontemplate_msdyn_summary_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" xml:space="preserve">
+    <value>Minden egyéb munkamenet bezárása</value>
+    <comment>Macro Action Template Summary</comment>
+  </data>
+</root>

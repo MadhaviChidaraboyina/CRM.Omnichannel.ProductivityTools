@@ -1,0 +1,11 @@
+<msdyn_actioninputparameter_v2 msdyn_uniquename="msdyn_Open_Existing_Form_Input_Params_Optional">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateinputparameterid>
+    <msdyn_uniquename>msdyn_Open_Form</msdyn_uniquename>
+  </msdyn_actiontemplateinputparameterid>
+  <msdyn_name>Open_Existing_Form_Input_Params_Optional</msdyn_name>
+  <msdyn_parametertype>0</msdyn_parametertype>
+  <msdyn_visibility>important</msdyn_visibility>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_actioninputparameter_v2>

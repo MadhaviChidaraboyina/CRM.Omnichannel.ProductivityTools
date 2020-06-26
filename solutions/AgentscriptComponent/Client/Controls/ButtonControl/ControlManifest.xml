@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+	<control namespace="MscrmControls.ButtonControl" constructor="ButtonControl" version="1.0.1" display-name-key="CC_ButtonControl_Name" description-key="CC_ButtonControl_Desc">
+		<modes>
+			<read />
+			<edit />
+		</modes>
+		<type-group name="text">
+			<type>SingleLine.Text</type>
+			<type>Multiple</type>
+		</type-group>
+		
+		<property name="value" display-name-key="CC_Field" description-key="CC_Field_Desc" of-type-group="text" usage="bound" required="true" hidden="true" />
+
+		<resources>		
+			<code path="ButtonControl.js" order="6" />
+			<resx path="strings/ButtonControl.1033.resx" version="1.0.0" />
+		</resources>
+	</control>
+</manifest>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships>
+  <EntityRelationship Name="lk_msdyn_paneconfiguration_createdby" />
+  <EntityRelationship Name="lk_msdyn_paneconfiguration_modifiedby" />
+  <EntityRelationship Name="lk_msdyn_tabconfiguration_createdby" />
+  <EntityRelationship Name="lk_msdyn_tabconfiguration_modifiedby" />
+  <EntityRelationship Name="lk_msdyn_toolconfiguration_createdby" />
+  <EntityRelationship Name="lk_msdyn_toolconfiguration_modifiedby" />
+  <EntityRelationship Name="msdyn_msdyn_paneconfig_msdyn_appconfig" />
+  <EntityRelationship Name="msdyn_msdyn_paneconfig_msdyn_tabconfig" />
+  <EntityRelationship Name="msdyn_msdyn_toolconfig_msdyn_tabconfig" />
+  <EntityRelationship Name="organization_msdyn_paneconfiguration" />
+  <EntityRelationship Name="organization_msdyn_tabconfiguration" />
+  <EntityRelationship Name="organization_msdyn_toolconfiguration" />
+</EntityRelationships>

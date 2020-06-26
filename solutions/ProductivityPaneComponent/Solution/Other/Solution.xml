@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.0.0000.0330" SolutionPackageVersion="9.0" languagecode="1033" generatedBy="OnPremise" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>ProductivityPaneComponent</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Productivity Pane Component" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Dynamics 365 ProductivityPaneComponent workload" languagecode="1033" />
+    </Descriptions>
+    <Version>9.2.1.0</Version>
+    <Managed>2</Managed>
+    <Publisher>
+      <UniqueName>microsoftdynamics</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Dynamics 365" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true">
+      </EMailAddress>
+      <SupportingWebsiteUrl>http://crm.dynamics.com</SupportingWebsiteUrl>
+      <CustomizationPrefix>msdyn</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>19235</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode xsi:nil="true"></AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode xsi:nil="true"></ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode xsi:nil="true"></AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode xsi:nil="true"></ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
+      <RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_appconfiguration" behavior="1" />
+      <RootComponent type="1" schemaName="msdyn_paneconfiguration" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_tabconfiguration" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_toolconfiguration" behavior="0" />
+      <RootComponent type="60" id="{53119dc8-3b00-44cd-8656-dce8c75bbd35}" behavior="0" />
+      <RootComponent type="60" id="{86bce1bc-32cd-432f-9223-4536f3fc777a}" behavior="0" />
+      <RootComponent type="60" id="{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" behavior="0" />
+      <RootComponent type="61" schemaName="cra2b_callscript_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="cra2b_macros_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="cra2b_notes_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="cra2b_panel_toggle_collapse_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="cra2b_panel_toggle_expand_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_ProductivityPaneComponent.1033.resx" behavior="0" />
+      <RootComponent type="66" schemaName="MscrmControls.PanelControl.PanelControl" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" solution="CustomerEngagementConfiguration (9.0.0.10)" />
+        <Dependent key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

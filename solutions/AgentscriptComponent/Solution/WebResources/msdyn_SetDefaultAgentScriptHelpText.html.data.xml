@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{E3D92944-7308-4B9C-A37E-316DDF5127A8}</WebResourceId>
+  <Name>msdyn_SetDefaultAgentScriptHelpText.html</Name>
+  <DisplayName>Set Default AgentScript Help Text Template</DisplayName>
+  <LanguageCode>1033</LanguageCode>
+  <WebResourceType>1</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>
+		&lt;Dependencies&gt;
+			&lt;Dependency componentType="WebResource"&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1025.resx" displayName="Localization/msdyn_Agentscript.1025.resx" languagecode="1025" description="AgentScript 1025 resx file" libraryUniqueId="{E2093ECB-42A0-47EF-807E-5F01D1CBC056}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1026.resx" displayName="Localization/msdyn_Agentscript.1026.resx" languagecode="1026" description="AgentScript 1026 resx file" libraryUniqueId="{50C18A68-5DD8-4336-888F-28A559D8BFD4}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1027.resx" displayName="Localization/msdyn_Agentscript.1027.resx" languagecode="1027" description="AgentScript 1027 resx file" libraryUniqueId="{91E4FBF1-638C-44D0-8C7B-0F7EB7797F37}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1028.resx" displayName="Localization/msdyn_Agentscript.1028.resx" languagecode="1028" description="AgentScript 1028 resx file" libraryUniqueId="{6C72871F-6C29-47A2-9F75-A3C63955FCA2}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1029.resx" displayName="Localization/msdyn_Agentscript.1029.resx" languagecode="1029" description="AgentScript 1029 resx file" libraryUniqueId="{B2DFBBA4-787A-43A2-B97F-67DC1D401FB6}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1030.resx" displayName="Localization/msdyn_Agentscript.1030.resx" languagecode="1030" description="AgentScript 1030 resx file" libraryUniqueId="{BB2CEF4D-C067-4009-822F-3B78971B9FEF}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1031.resx" displayName="Localization/msdyn_Agentscript.1031.resx" languagecode="1031" description="AgentScript 1031 resx file" libraryUniqueId="{D72F5E92-9509-481A-9C8D-BF70C6B559DA}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1032.resx" displayName="Localization/msdyn_Agentscript.1032.resx" languagecode="1032" description="AgentScript 1032 resx file" libraryUniqueId="{7EE69DD0-B1B7-4321-AA3A-7456B9AD824A}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1033.resx" displayName="Localization/msdyn_Agentscript.1033.resx" languagecode="1033" description="AgentScript 1033 resx file" libraryUniqueId="{9C756E88-1366-4ED9-A691-E286E09BEBC4}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1035.resx" displayName="Localization/msdyn_Agentscript.1035.resx" languagecode="1035" description="AgentScript 1035 resx file" libraryUniqueId="{B0EA3476-20A6-4790-AB98-C2801687B742}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1036.resx" displayName="Localization/msdyn_Agentscript.1036.resx" languagecode="1036" description="AgentScript 1036 resx file" libraryUniqueId="{13CB2204-4976-4F9D-89C7-6D195E4EB0C9}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1037.resx" displayName="Localization/msdyn_Agentscript.1037.resx" languagecode="1037" description="AgentScript 1037 resx file" libraryUniqueId="{2AB72724-748A-401E-88F9-0DF56FF37784}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1038.resx" displayName="Localization/msdyn_Agentscript.1038.resx" languagecode="1038" description="AgentScript 1038 resx file" libraryUniqueId="{B1F831D5-AA9E-468B-B72D-689259BF4729}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1040.resx" displayName="Localization/msdyn_Agentscript.1040.resx" languagecode="1040" description="AgentScript 1040 resx file" libraryUniqueId="{3AF1D743-0704-4321-9750-AAAC7C4336CC}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1041.resx" displayName="Localization/msdyn_Agentscript.1041.resx" languagecode="1041" description="AgentScript 1041 resx file" libraryUniqueId="{E31D2007-E7F4-4C1D-98ED-8D0C528FDB51}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1042.resx" displayName="Localization/msdyn_Agentscript.1042.resx" languagecode="1042" description="AgentScript 1042 resx file" libraryUniqueId="{26424003-1651-4F13-B31B-86C697991952}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1043.resx" displayName="Localization/msdyn_Agentscript.1043.resx" languagecode="1043" description="AgentScript 1043 resx file" libraryUniqueId="{AA91054C-737A-4431-8D78-F1BAA2CB89C8}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1044.resx" displayName="Localization/msdyn_Agentscript.1044.resx" languagecode="1044" description="AgentScript 1044 resx file" libraryUniqueId="{A549AD49-5C54-4340-A148-A4B0BE1A0D9F}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1045.resx" displayName="Localization/msdyn_Agentscript.1045.resx" languagecode="1045" description="AgentScript 1045 resx file" libraryUniqueId="{9E6FE73D-2329-4666-9276-58E590F0CDEE}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1046.resx" displayName="Localization/msdyn_Agentscript.1046.resx" languagecode="1046" description="AgentScript 1046 resx file" libraryUniqueId="{8A7603E7-32C4-41BB-8412-9436D9896542}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1048.resx" displayName="Localization/msdyn_Agentscript.1048.resx" languagecode="1048" description="AgentScript 1048 resx file" libraryUniqueId="{8835F82E-5BCF-47EF-8D8B-CBCC118D4BF4}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1049.resx" displayName="Localization/msdyn_Agentscript.1049.resx" languagecode="1049" description="AgentScript 1049 resx file" libraryUniqueId="{5E1702D1-EBA1-4D84-A0A0-30CA5A826050}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1050.resx" displayName="Localization/msdyn_Agentscript.1050.resx" languagecode="1050" description="AgentScript 1050 resx file" libraryUniqueId="{4B94B344-BD7B-45F9-9BD8-3742740A21D1}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1051.resx" displayName="Localization/msdyn_Agentscript.1051.resx" languagecode="1051" description="AgentScript 1051 resx file" libraryUniqueId="{FD0B8EAE-2B0F-41D3-9111-E58653FD5482}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1053.resx" displayName="Localization/msdyn_Agentscript.1053.resx" languagecode="1053" description="AgentScript 1053 resx file" libraryUniqueId="{4684FA2D-CF2D-40CC-9CB9-083E8F8FB662}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1054.resx" displayName="Localization/msdyn_Agentscript.1054.resx" languagecode="1054" description="AgentScript 1054 resx file" libraryUniqueId="{1844555B-A56E-410E-B139-7A4B476B67CB}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1055.resx" displayName="Localization/msdyn_Agentscript.1055.resx" languagecode="1055" description="AgentScript 1055 resx file" libraryUniqueId="{3D388623-1943-44AC-BF61-2BDAD4EFF475}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1057.resx" displayName="Localization/msdyn_Agentscript.1057.resx" languagecode="1057" description="AgentScript 1057 resx file" libraryUniqueId="{218AA450-6E97-4FA3-BC33-17C28669AF18}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1058.resx" displayName="Localization/msdyn_Agentscript.1058.resx" languagecode="1058" description="AgentScript 1058 resx file" libraryUniqueId="{B771C4A2-7118-4CB5-BA98-92B743E15803}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1060.resx" displayName="Localization/msdyn_Agentscript.1060.resx" languagecode="1060" description="AgentScript 1060 resx file" libraryUniqueId="{4E46F72D-65EB-4042-A64E-0C49B0E6544A}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1061.resx" displayName="Localization/msdyn_Agentscript.1061.resx" languagecode="1061" description="AgentScript 1061 resx file" libraryUniqueId="{E152A8A1-4AB5-4D88-81F5-6BD2E7791B75}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1062.resx" displayName="Localization/msdyn_Agentscript.1062.resx" languagecode="1062" description="AgentScript 1062 resx file" libraryUniqueId="{189EF2BA-B3C9-48C3-BE0E-E0D8820F086B}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1063.resx" displayName="Localization/msdyn_Agentscript.1063.resx" languagecode="1063" description="AgentScript 1063 resx file" libraryUniqueId="{9D48CAED-FEBA-4A23-AF23-0D33F3A14876}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1066.resx" displayName="Localization/msdyn_Agentscript.1066.resx" languagecode="1066" description="AgentScript 1066 resx file" libraryUniqueId="{FE096DBF-82E0-4123-A20D-294EC986D53C}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1069.resx" displayName="Localization/msdyn_Agentscript.1069.resx" languagecode="1069" description="AgentScript 1069 resx file" libraryUniqueId="{5F84ABA6-27D8-4145-B7E7-259FACDCD914}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1081.resx" displayName="Localization/msdyn_Agentscript.1081.resx" languagecode="1081" description="AgentScript 1081 resx file" libraryUniqueId="{D28BC617-F606-4F7E-B712-B113EF3BAB42}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1086.resx" displayName="Localization/msdyn_Agentscript.1086.resx" languagecode="1086" description="AgentScript 1086 resx file" libraryUniqueId="{CA7AAD97-8B0F-46BD-A7A3-196A82FEC009}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1087.resx" displayName="Localization/msdyn_Agentscript.1087.resx" languagecode="1087" description="AgentScript 1087 resx file" libraryUniqueId="{A048C2E1-971A-414B-9CB9-5195CF97CA88}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.1110.resx" displayName="Localization/msdyn_Agentscript.1110.resx" languagecode="1110" description="AgentScript 1110 resx file" libraryUniqueId="{AE27583E-08D1-415F-B6F2-789019D79BB3}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.2052.resx" displayName="Localization/msdyn_Agentscript.2052.resx" languagecode="2052" description="AgentScript 2052 resx file" libraryUniqueId="{5D3A2F6A-A53F-4391-8560-74A37B688C68}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.2070.resx" displayName="Localization/msdyn_Agentscript.2070.resx" languagecode="2070" description="AgentScript 2070 resx file" libraryUniqueId="{1DB9C266-F3F8-41E4-A66E-BF1A01DE2210}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.2074.resx" displayName="Localization/msdyn_Agentscript.2074.resx" languagecode="2074" description="AgentScript 2074 resx file" libraryUniqueId="{20AC098A-2DC2-4D98-83A1-18A501FE3535}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.3076.resx" displayName="Localization/msdyn_Agentscript.3076.resx" languagecode="3076" description="AgentScript 3076 resx file" libraryUniqueId="{FD6B1099-C90C-4750-95D4-CE6DA7983AE2}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.3082.resx" displayName="Localization/msdyn_Agentscript.3082.resx" languagecode="3082" description="AgentScript 3082 resx file" libraryUniqueId="{525F0D17-1DE1-4F00-A5AC-5438248AFA69}" /&gt;
+				&lt;Library name="Localization/msdyn_Agentscript.3098.resx" displayName="Localization/msdyn_Agentscript.3098.resx" languagecode="3098" description="AgentScript 3098 resx file" libraryUniqueId="{5B05E2B7-1FBF-43DB-BADC-ACCB97665E47}" /&gt;
+			&lt;/Dependency&gt;
+		&lt;/Dependencies&gt;
+	</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/msdyn_SetDefaultAgentScriptHelpTexthtmlE3D92944-7308-4B9C-A37E-316DDF5127A8</FileName>
+</WebResource>

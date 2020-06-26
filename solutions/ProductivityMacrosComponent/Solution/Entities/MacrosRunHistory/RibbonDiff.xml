@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml>
+	<CustomActions >
+		<!-- Hide the OOB New Button -->
+		<HideCustomAction HideActionId="Mscrm.HomepageGrid.msdyn_macrosession.NewRecord.Hide" Location="Mscrm.HomepageGrid.msdyn_macrosession.NewRecord" />
+		<CustomAction Id="Mscrm.HomepageGrid.msdyn_macrosession.MainTab.Management.Controls.CustomAction.openRecord" Location="Mscrm.HomepageGrid.msdyn_macrosession.MainTab.Management.Controls._children" Sequence="100">
+			<CommandUIDefinition>
+				<Button
+					Command="Mscrm.OpenRecordItem"
+					Id="Mscrm.OpenRecordItem"
+					LabelText="Open Record"
+					Sequence="5"
+				/>
+			</CommandUIDefinition>
+		</CustomAction>
+	</CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+	<CommandDefinitions>
+		<!-- Command Definition for OpenRecordItem Button -->
+		<CommandDefinition Id="Mscrm.OpenRecordItem">
+			<EnableRules>
+				<EnableRule Id="Mscrm.Disabled" />
+				<EnableRule Id="Mscrm.SelectionCountExactlyOne" />
+			</EnableRules>
+			<DisplayRules />
+			<Actions>
+				<JavaScriptFunction FunctionName="Microsoft.Macros.Utility.openMacrosMonitorRecordHandler" Library="$webresource:CRMClients/msdyn_ProductivityMacros_internal_library_v2.js">
+					<CrmParameter Value="SelectedControlSelectedItemReferences" />
+					<CrmParameter Value="SelectedControl" />
+				</JavaScriptFunction>
+			</Actions>
+		</CommandDefinition>
+	</CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

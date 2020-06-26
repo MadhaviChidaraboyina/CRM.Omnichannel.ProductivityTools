@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{206b5fb0-376f-40cf-9e78-2acce3e61f42}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{4e36e983-16cd-44d0-9a47-b4109cd9f6f7}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{5e19d2ae-6937-47f4-a56f-0225513a296e}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{935770bc-c1f7-43d1-9ffe-ef9631661179}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d8ee59c2-29a5-b691-418a-22cac8077217}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Unique Name" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_uniquename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_uniquename" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8d5a4429-6775-46fa-b5dd-9309be2dad99}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{05132abe-0263-688e-82d2-e8c579762ac0}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Relative path to designer blob within the designer" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_designerurlrelativepath" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_designerurlrelativepath" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{08a014bd-8284-c5c9-be7b-50be9587ad7b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Entity from which to read designer URL" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_designerurlconfigentity" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_designerurlconfigentity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0744d9e1-dbb5-197b-4521-da2d69094d5d}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Record Id from which to read designer URL" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_designerurlconfigentityid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_designerurlconfigentityid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7920744c-e2e7-2ede-4ada-9cdd374da219}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Attribute from which to read designer URL" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_designerurlconfigentityattrib" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_designerurlconfigentityattrib" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1ee16a8d-2001-13d1-a04a-414b44515723}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="An oData query to retrieve record from which to re" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_designerurlconfigentityquery" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_designerurlconfigentityquery" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9624826c-a246-44a3-7a7b-d7b5a8eb4944}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Designer Blob URL" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_designerfallbackurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_designerfallbackurl" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ba003712-52b2-e239-e6a2-c645a5808776}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Search Hint Text" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_searchhint" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_searchhint" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2d18445e-216a-5c93-6122-9211cb1cc23e}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="User Voice Text" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_uservoicetext" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_uservoicetext" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a8ed5c05-ec87-8dc5-e038-d84cc3a035c1}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="User Voice Link" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_uservoicelink" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_uservoicelink" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,14 @@
+<msdyn_parameterdefinition_v2 msdyn_uniquename="msdyn_Custom_Object">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_description default="Sample JSON object">
+    <label description="Sample JSON object" languagecode="1033" />
+  </msdyn_description>
+  <msdyn_displayname default="Sample custom JSON Object">
+    <label description="Sample custom JSON Object" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_jsonobjectstructure>{"Key1":{"title":"Title 1","type":"string","description":"Key1 description"},"Key2":{"title":"Title 2","type":"string","description":"Key2 description"}}</msdyn_jsonobjectstructure>
+  <msdyn_name>Custom_Object</msdyn_name>
+  <msdyn_parametertype>array</msdyn_parametertype>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_parameterdefinition_v2>

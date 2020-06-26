@@ -1,0 +1,28 @@
+<msdyn_macroactiontemplate_v2 msdyn_uniquename="msdyn_Resolve_Case">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiondescription default="Action to resolve case">
+    <label description="Action to resolve case" languagecode="1033" />
+  </msdyn_actiondescription>
+  <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
+  <msdyn_displayname default="Resolve Case">
+    <label description="Resolve Case" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg</msdyn_icon>
+  <msdyn_kind>ACTIONS</msdyn_kind>
+  <msdyn_macroconnector>
+    <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>
+  </msdyn_macroconnector>
+  <msdyn_name>Resolve_Case</msdyn_name>
+  <msdyn_runtimeapi>Microsoft.ProductivityMacros.Internal.resolveIncident(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_subtitle default="Productivity automation">
+    <label description="Productivity automation" languagecode="1033" />
+  </msdyn_subtitle>
+  <msdyn_summary default="Resolve Case">
+    <label description="Resolve Case" languagecode="1033" />
+  </msdyn_summary>
+  <msdyn_title default="Action to resolve case">
+    <label description="Action to resolve case" languagecode="1033" />
+  </msdyn_title>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_macroactiontemplate_v2>

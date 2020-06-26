@@ -1,0 +1,13 @@
+<msdyn_parameterdefinition_v2 msdyn_uniquename="msdyn_EntityId">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_description default="Entity record ID to be opened">
+    <label description="Entity record ID to be opened" languagecode="1033" />
+  </msdyn_description>
+  <msdyn_displayname default="Entity record ID">
+    <label description="Entity record ID" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_name>EntityId</msdyn_name>
+  <msdyn_parametertype>string</msdyn_parametertype>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_parameterdefinition_v2>

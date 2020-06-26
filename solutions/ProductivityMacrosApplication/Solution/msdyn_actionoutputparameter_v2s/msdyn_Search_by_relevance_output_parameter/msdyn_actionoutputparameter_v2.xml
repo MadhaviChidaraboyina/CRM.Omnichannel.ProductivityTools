@@ -1,0 +1,9 @@
+<msdyn_actionoutputparameter_v2 msdyn_uniquename="msdyn_Search_by_relevance_output_parameter">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateoutputparameterid>
+    <msdyn_uniquename>msdyn_Search_by_relevance</msdyn_uniquename>
+  </msdyn_actiontemplateoutputparameterid>
+  <msdyn_name>Search_by_relevance_output_parameter</msdyn_name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_actionoutputparameter_v2>

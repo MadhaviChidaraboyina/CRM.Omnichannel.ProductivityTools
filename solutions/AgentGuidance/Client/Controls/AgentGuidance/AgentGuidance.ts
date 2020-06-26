@@ -4,6 +4,12 @@
 
 /// <reference path="privatereferences.ts"/>
 /// <reference path="utils/TelemetryLogger.ts"/>
+/// <reference path="StateManager/StateManager.ts"/>
+/// <reference path="utils/Constants.ts"/>
+/// <reference path="utils/TelemetryLogger.ts"/>
+/// <reference path="Styles/ControlStyle.ts"/>
+/// <reference path="DataModel/DisplayCriteria.ts" />
+/// <reference path="../../TypeDefinitions/ProductivityPaneInboundEvent.d.ts" />
 
 module MscrmControls.ProductivityToolAgentGuidance {
 	'use strict';
@@ -290,6 +296,12 @@ module MscrmControls.ProductivityToolAgentGuidance {
                     Constants.callScriptChildId,
                     properties_CallScript
                 )]);
+        }
+        
+        private reRenderProductivityPanel() {
+            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel (Constants.agentGuidanceControlId, new MscrmControls.PanelControl.Rerender());
+            let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, {"detail": eventPayload});
+            window.top.dispatchEvent(event);
         }
 
         private getSmartAssistComponent(context: Mscrm.ControlData<IInputBag>, sessionContextAttributes: any): Mscrm.Component {

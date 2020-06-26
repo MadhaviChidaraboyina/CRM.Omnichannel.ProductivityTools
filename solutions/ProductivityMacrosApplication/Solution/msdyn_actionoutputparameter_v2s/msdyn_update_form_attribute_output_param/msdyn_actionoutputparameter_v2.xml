@@ -1,0 +1,9 @@
+<msdyn_actionoutputparameter_v2 msdyn_uniquename="msdyn_update_form_attribute_output_param">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateoutputparameterid>
+    <msdyn_uniquename>msdyn_update_form_attributes</msdyn_uniquename>
+  </msdyn_actiontemplateoutputparameterid>
+  <msdyn_name>update_form_attribute_output_param</msdyn_name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_actionoutputparameter_v2>

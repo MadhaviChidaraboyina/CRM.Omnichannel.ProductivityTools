@@ -1,0 +1,2683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="Source LCID" xml:space="preserve">
+    <value>1033</value>
+  </metadata>
+  <metadata name="Source file" xml:space="preserve">
+    <value>msdyn_ProductivityMacros_managed.zip</value>
+  </metadata>
+  <metadata name="Source package type" xml:space="preserve">
+    <value>Both</value>
+  </metadata>
+  <metadata name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVp
+        bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </metadata>
+  <data name="10:Description,business_unit_msdyn_macrosession" xml:space="preserve">
+    <value>Entydigt id for den virksomhedsafdeling, der ejer posten</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'business_unit_msdyn_macrosession'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_macrosession_createdby" xml:space="preserve">
+    <value>Entydigt id for den bruger, der oprettede posten.</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'lk_msdyn_macrosession_createdby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_macrosession_modifiedby" xml:space="preserve">
+    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'lk_msdyn_macrosession_modifiedby'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_macroactiontemplate_msdyn_actioninput" xml:space="preserve">
+    <value>Entydigt id for skabelon til makrohandling, der er tilknyttet inputparameter til handling.</value>
+    <comment>msdyn_actioninputparameter Description for EntityRelationship 'msdyn_msdyn_macroactiontemplate_msdyn_actioninput'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_macroactiontemplate_msdyn_actionout" xml:space="preserve">
+    <value>Entydigt id for skabelon til makrohandling, der er tilknyttet outputparameter til handling.</value>
+    <comment>msdyn_actionoutputparameter Description for EntityRelationship 'msdyn_msdyn_macroactiontemplate_msdyn_actionout'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector" xml:space="preserve">
+    <value />
+    <comment>msdyn_macroactiontemplate Description for EntityRelationship 'msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector'</comment>
+  </data>
+  <data name="10:Description,msdyn_workflow_msdyn_macrosession_macroname" xml:space="preserve">
+    <value />
+    <comment>msdyn_macrosession Description for EntityRelationship 'msdyn_workflow_msdyn_macrosession_macroname'</comment>
+  </data>
+  <data name="10:Description,owner_msdyn_macrosession" xml:space="preserve">
+    <value>Ejer-id</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'owner_msdyn_macrosession'</comment>
+  </data>
+  <data name="10:Description,team_msdyn_macrosession" xml:space="preserve">
+    <value>Entydigt id for det team, der ejer posten.</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'team_msdyn_macrosession'</comment>
+  </data>
+  <data name="10:Description,user_msdyn_macrosession" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ejer posten.</value>
+    <comment>msdyn_macrosession Description for EntityRelationship 'user_msdyn_macrosession'</comment>
+  </data>
+  <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
+    <value>Microsoft Dynamics 365</value>
+    <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
+  </data>
+  <data name="15062:Description,ProductivityMacros" xml:space="preserve">
+    <value>Denne løsning indeholder webressourcer til brug af makrodesigner og API'er til automatisering af forretningsprocesopgaver.</value>
+    <comment> 'ProductivityMacros' : Description for Solution</comment>
+  </data>
+  <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
+    <value>Microsoft Dynamics 365</value>
+    <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
+  </data>
+  <data name="15062:LocalizedName,ProductivityMacros" xml:space="preserve">
+    <value>Makroer</value>
+    <comment> 'ProductivityMacros' : LocalizedName for Solution</comment>
+  </data>
+  <data name="1:Description,Action Input Parameter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>En formular for dette objekt.</value>
+    <comment>'Action Input Parameter' : Description for systemform in Entity FormXml ID: '{15079f0d-d34e-4cad-9fa3-a1fab0783eac}'</comment>
+  </data>
+  <data name="1:Description,Action Input Parameter{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Aktive inputparametre til handling, der ejes af mig</value>
+    <comment>'Action Input Parameter' : Description for SavedQuery on Entity QueryId: '{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:Description,Action Output Parameter{be58538e-d1d2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Aktive outputparametre til handling, der ejes af mig</value>
+    <comment>'Action Output Parameter' : Description for SavedQuery on Entity QueryId: '{be58538e-d1d2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:Description,Action Output Parameter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>En formular for dette objekt.</value>
+    <comment>'Action Output Parameter' : Description for systemform in Entity FormXml ID: '{d4000272-4cda-436a-a678-cd3fe08ea2f6}'</comment>
+  </data>
+  <data name="1:Description,Macro Action Template{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" xml:space="preserve">
+    <value>En formular for dette objekt.</value>
+    <comment>'Macro Action Template' : Description for systemform in Entity FormXml ID: '{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}'</comment>
+  </data>
+  <data name="1:Description,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
+    <value>Aktive skabeloner til makrohandling, der ejes af mig</value>
+    <comment>'Macro Action Template' : Description for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
+  </data>
+  <data name="1:Description,Macro Connector{8c945d63-c3dd-e911-a81e-000d3af9c0c2}" xml:space="preserve">
+    <value>Aktive makroconnectorer, der ejes af mig</value>
+    <comment>'Macro Connector' : Description for SavedQuery on Entity QueryId: '{8c945d63-c3dd-e911-a81e-000d3af9c0c2}'</comment>
+  </data>
+  <data name="1:Description,Macro Connector{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>En formular for dette objekt.</value>
+    <comment>'Macro Connector' : Description for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
+  </data>
+  <data name="1:Description,Macro Run History{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}" xml:space="preserve">
+    <value>En kortformular til dette objekt.</value>
+    <comment>'Macro Run History' : Description for systemform in Entity FormXml ID: '{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}'</comment>
+  </data>
+  <data name="1:Description,Macro Run History{47492cdb-57ca-4667-a741-35c34491b4f6}" xml:space="preserve">
+    <value>En formular til dette objekt.</value>
+    <comment>'Macro Run History' : Description for systemform in Entity FormXml ID: '{47492cdb-57ca-4667-a741-35c34491b4f6}'</comment>
+  </data>
+  <data name="1:Description,Macro Solution Configuration{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>En formular for dette objekt.</value>
+    <comment>'Macro Solution Configuration' : Description for systemform in Entity FormXml ID: '{4c0f7a89-7e67-4972-828e-1244f593a422}'</comment>
+  </data>
+  <data name="1:Description,Macro Solution Configuration{fe7078c7-dae0-e911-a81f-000d3af9c0c2}" xml:space="preserve">
+    <value>Aktive konfigurationer af makroløsninger, der ejes af mig</value>
+    <comment>'Macro Solution Configuration' : Description for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der oprettede posten.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for oprettelse af posten.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterCreatedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der oprettede posten.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
+    <value>Attributter til inputparametre til handling</value>
+    <comment> 'msdyn_actioninputparameter' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterImportSequenceNumber" xml:space="preserve">
+    <value>Sekvensnummeret for den import, der oprettede denne post.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterModifiedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterModifiedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for ændring af posten.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterModifiedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der ændrede posten.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_actioninputparameterId" xml:space="preserve">
+    <value>Entydigt id for objektforekomster</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_actioninputparameterId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype" xml:space="preserve">
+    <value>Angiver parametertypen</value>
+    <comment>'msdyn_actioninputparameter' : Description for OptionSet 'msdyn_actioninputparameter_msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_statecode" xml:space="preserve">
+    <value>Status for inputparameteren til handlingen</value>
+    <comment>'msdyn_actioninputparameter' : Description for OptionSet 'msdyn_actioninputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode" xml:space="preserve">
+    <value>Årsag til statussen for inputparameteren til handlingen</value>
+    <comment>'msdyn_actioninputparameter' : Description for OptionSet 'msdyn_actioninputparameter_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_ActionTemplateInputParameterId" xml:space="preserve">
+    <value>Entydigt id for skabelon til makrohandling, der er tilknyttet inputparameter til handling.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_ActionTemplateInputParameterId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_name" xml:space="preserve">
+    <value>Navnet på det brugerdefinerede objekt.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_parametertype" xml:space="preserve">
+    <value>Entydig værdi til lagring af parametertypen</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparametermsdyn_visibility" xml:space="preserve">
+    <value>Handlingskortsektion, der gengiver disse parametre. Mulige værdier: påkrævet, avanceret, vigtig, intern og skrivebeskyttet</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'msdyn_visibility' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterOverriddenCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for overførslen af posten.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterOwnerId" xml:space="preserve">
+    <value>Ejer-id</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterOwningBusinessUnit" xml:space="preserve">
+    <value>Entydigt id for den afdeling, der ejer posten</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterOwningTeam" xml:space="preserve">
+    <value>Entydigt id for det team, der ejer posten.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterOwningUser" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ejer posten.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterstatecode" xml:space="preserve">
+    <value>Status for inputparameteren til handlingen</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterstatuscode" xml:space="preserve">
+    <value>Årsag til statussen for inputparameteren til handlingen</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Kun til intern brug.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Den tidszonekode, der var i brug ved oprettelse af posten.</value>
+    <comment>'msdyn_actioninputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterCreatedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der oprettede posten.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for oprettelse af posten.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der oprettede posten.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_actionoutputparameter' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterImportSequenceNumber" xml:space="preserve">
+    <value>Sekvensnummeret for den import, der oprettede denne post.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterModifiedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterModifiedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for ændring af posten.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der ændrede posten.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparametermsdyn_actionoutputparameterId" xml:space="preserve">
+    <value>Entydigt id for objektforekomster</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'msdyn_actionoutputparameterId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode" xml:space="preserve">
+    <value>Status for outputparameteren til handlingen</value>
+    <comment>'msdyn_actionoutputparameter' : Description for OptionSet 'msdyn_actionoutputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode" xml:space="preserve">
+    <value>Årsag til statussen for outputparameteren til handlingen</value>
+    <comment>'msdyn_actionoutputparameter' : Description for OptionSet 'msdyn_actionoutputparameter_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
+    <value>Entydigt id for skabelon til makrohandling, der er tilknyttet outputparameter til handling.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'msdyn_actiontemplateoutputparameterid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparametermsdyn_name" xml:space="preserve">
+    <value>Navnet på det brugerdefinerede objekt.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterOverriddenCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for overførslen af posten.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterOwnerId" xml:space="preserve">
+    <value>Ejer-id</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterOwningBusinessUnit" xml:space="preserve">
+    <value>Entydigt id for den afdeling, der ejer posten</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterOwningTeam" xml:space="preserve">
+    <value>Entydigt id for det team, der ejer posten.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterOwningUser" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ejer posten.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterstatecode" xml:space="preserve">
+    <value>Status for outputparameteren til handlingen</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterstatuscode" xml:space="preserve">
+    <value>Årsag til statussen for outputparameteren til handlingen</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Kun til intern brug.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_actionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Den tidszonekode, der var i brug ved oprettelse af posten.</value>
+    <comment>'msdyn_actionoutputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateCreatedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der oprettede posten.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for oprettelse af posten.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der oprettede posten.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
+    <value>Attributter for skabelon til makrohandling</value>
+    <comment> 'msdyn_macroactiontemplate' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateImportSequenceNumber" xml:space="preserve">
+    <value>Sekvensnummeret for den import, der oprettede denne post.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateModifiedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateModifiedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for ændring af posten.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der ændrede posten.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_actionDescription" xml:space="preserve">
+    <value>Beskrivelsen af denne makrohandling.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_actionDescription' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_brandcolor" xml:space="preserve">
+    <value>Entydig værdi til angivelse af mærkefarven</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_brandcolor' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_displayname" xml:space="preserve">
+    <value>Entydig værdi til angivelse af det viste navn</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_icon" xml:space="preserve">
+    <value>Entydig værdi til angivelse af ikonet</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_icon' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_InputParameters" xml:space="preserve">
+    <value>Inputparametre for skabelonen til makrohandling</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_InputParameters' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_kind" xml:space="preserve">
+    <value>Typen er enten "TRIGGERS" eller "ACTIONS"</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_kind' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplateId" xml:space="preserve">
+    <value>Entydigt id for objektforekomster</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_macroactiontemplateId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode" xml:space="preserve">
+    <value>Status for skabelonen til makrohandling</value>
+    <comment>'msdyn_macroactiontemplate' : Description for OptionSet 'msdyn_macroactiontemplate_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode" xml:space="preserve">
+    <value>Årsag til statussen for skabelonen til makrohandling</value>
+    <comment>'msdyn_macroactiontemplate' : Description for OptionSet 'msdyn_macroactiontemplate_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_macroconnector" xml:space="preserve">
+    <value>Angiver værdien af makroconnectoren</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_macroconnector' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_name" xml:space="preserve">
+    <value>Navnet på denne makroskabelon.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_OutputParameters" xml:space="preserve">
+    <value>Objekt med outputparametre for skabelonen til makrohandling</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_OutputParameters' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_runtimeapi" xml:space="preserve">
+    <value>Funktion, der skal udføres ved kørsel</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_runtimeapi' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_subtitle" xml:space="preserve">
+    <value>Entydig værdi til angivelse af undertekstværdien</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_subtitle' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_summary" xml:space="preserve">
+    <value>Entydig værdi til angivelse af oversigten</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_summary' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_title" xml:space="preserve">
+    <value>Titlen på denne makrohandling.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_title' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatemsdyn_visibility" xml:space="preserve">
+    <value>Entydig værdi til angivelse af synlighedsværdien</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'msdyn_visibility' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOverriddenCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for overførslen af posten.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwnerId" xml:space="preserve">
+    <value>Ejer-id</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwningBusinessUnit" xml:space="preserve">
+    <value>Entydigt id for den afdeling, der ejer posten</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwningTeam" xml:space="preserve">
+    <value>Entydigt id for det team, der ejer posten.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateOwningUser" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ejer posten.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatestatecode" xml:space="preserve">
+    <value>Status for skabelonen til makrohandling</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplatestatuscode" xml:space="preserve">
+    <value>Årsag til statussen for skabelonen til makrohandling</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Kun til intern brug.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Den tidszonekode, der var i brug ved oprettelse af posten.</value>
+    <comment>'msdyn_macroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorCreatedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der oprettede posten.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for oprettelse af posten.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorCreatedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der ændrede posten.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
+    <value>Attributter for makroconnectorer</value>
+    <comment> 'msdyn_macroconnector' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorImportSequenceNumber" xml:space="preserve">
+    <value>Sekvensnummeret for den import, der oprettede denne post.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorModifiedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorModifiedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for ændring af posten.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorModifiedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der har ændret posten.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_brandcolor" xml:space="preserve">
+    <value>Den farve, som feltet for denne connector gengives i</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_brandcolor' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_callback" xml:space="preserve">
+    <value>Angiver tilbagekaldsværdien</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_callback' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_categorykey" xml:space="preserve">
+    <value>En strengetiket til den kategori, som denne connector skal gengives i</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_categorykey' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_categorylabel" xml:space="preserve">
+    <value>Tekstbaseret displaytekst for den kategorinøgle, som denne connector skal vises under</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_categorylabel' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_description" xml:space="preserve">
+    <value>Tekst, der beskriver denne connector, som vises i designeren</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_displayname" xml:space="preserve">
+    <value>Det viste navn for denne connector i designeren</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_Icon" xml:space="preserve">
+    <value>URL-adresse til det ikon, der skal gengives for denne connector</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_Icon' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_macroconnectorId" xml:space="preserve">
+    <value>Entydigt id for objektforekomster</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_macroconnectorId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_macroconnector_statecode" xml:space="preserve">
+    <value>Status for makroconnectoren</value>
+    <comment>'msdyn_macroconnector' : Description for OptionSet 'msdyn_macroconnector_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_macroconnector_statuscode" xml:space="preserve">
+    <value>Årsag til status for makroconnectoren</value>
+    <comment>'msdyn_macroconnector' : Description for OptionSet 'msdyn_macroconnector_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_name" xml:space="preserve">
+    <value>Navnet på det brugerdefinerede objekt.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_prefix" xml:space="preserve">
+    <value>Angiver præfiksværdien</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_prefix' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_title" xml:space="preserve">
+    <value>Den titel, der vises i designeren for denne connector</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_title' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_type" xml:space="preserve">
+    <value>Denne connectors type</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_type' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectormsdyn_webresourcename" xml:space="preserve">
+    <value>Entydigt id for webressourcenavn</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'msdyn_webresourcename' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorOverriddenCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for overførslen af posten.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorOwnerId" xml:space="preserve">
+    <value>Ejer-id</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorOwningBusinessUnit" xml:space="preserve">
+    <value>Entydigt id for den afdeling, der ejer posten</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorOwningTeam" xml:space="preserve">
+    <value>Entydigt id for det team, der ejer posten.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorOwningUser" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ejer posten.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorstatecode" xml:space="preserve">
+    <value>Status for makroconnectoren</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorstatuscode" xml:space="preserve">
+    <value>Årsag til status for makroconnectoren</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Kun til intern brug.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Den tidszonekode, der var i brug ved oprettelse af posten.</value>
+    <comment>'msdyn_macroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionCreatedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der oprettede posten.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for oprettelse af posten.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionCreatedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der ændrede posten.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
+    <value>Gemmer historik for makrokørsel</value>
+    <comment> 'msdyn_macrosession' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
+    <value>Sekvensnummeret for den import, der oprettede denne post.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionModifiedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for ændring af posten.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der har ændret posten.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_executioncontext" xml:space="preserve">
+    <value>Gemmer kørsels-JSON for makroen</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_executioncontext' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_macroname" xml:space="preserve">
+    <value>Opslagsfelt for den makro, som sessionen er oprettet ud fra</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macroname' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_macrosessionid" xml:space="preserve">
+    <value>Entydigt id for objektforekomster</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macrosessionid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_macrosession_statecode" xml:space="preserve">
+    <value>Status for macrosrunhistory</value>
+    <comment>'msdyn_macrosession' : Description for OptionSet 'msdyn_macrosession_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_macrosession_statuscode" xml:space="preserve">
+    <value>Årsag til statussen for macrosrunhistory</value>
+    <comment>'msdyn_macrosession' : Description for OptionSet 'msdyn_macrosession_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_name" xml:space="preserve">
+    <value>Navnet på det brugerdefinerede objekt.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionmsdyn_status" xml:space="preserve">
+    <value>Gemmer, om makroen blev fuldført eller mislykkedes</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_status' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionOverriddenCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for overførslen af posten.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionOwnerId" xml:space="preserve">
+    <value>Ejer-id</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
+    <value>Entydigt id for den virksomhedsafdeling, der ejer posten</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionOwningTeam" xml:space="preserve">
+    <value>Entydigt id for det team, der ejer posten.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionOwningUser" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ejer posten.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionstatecode" xml:space="preserve">
+    <value>Status for macrosrunhistory</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionstatuscode" xml:space="preserve">
+    <value>Årsag til statussen for macrosrunhistory</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Kun til intern brug.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Den tidszonekode, der var i brug ved oprettelse af posten.</value>
+    <comment>'msdyn_macrosession' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationCreatedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der oprettede posten.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for oprettelse af posten.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der ændrede posten.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
+    <value>Makroløsningsrelaterede konfigurationer</value>
+    <comment> 'msdyn_macrosolutionconfiguration' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationImportSequenceNumber" xml:space="preserve">
+    <value>Sekvensnummeret for den import, der oprettede denne post.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationModifiedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der har ændret posten.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationModifiedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for ændring af posten.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der har ændret posten.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
+    <value>Angiver URL-adresse til fallback for designer</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerfallbackurl' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentity" xml:space="preserve">
+    <value>Angiver det objekt, som URL-adressen til designer skal læses fra</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentity' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityattrib" xml:space="preserve">
+    <value>Angiver attributterne for konfigurationsobjektet til designer-URL-adresse</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentityattrib' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityid" xml:space="preserve">
+    <value>Angiver det id, som URL-adressen til designer skal læses fra</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentityid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityquery" xml:space="preserve">
+    <value>En oData-forespørgsel til at hente post, hvorfra URL-adressen til designer skal læses fra</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlconfigentityquery' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_designerurlrelativepath" xml:space="preserve">
+    <value>Angiver stien til designer-blob med designerens URL-adresse</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlrelativepath' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfigurationId" xml:space="preserve">
+    <value>Entydigt id for objektforekomster</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_macrosolutionconfigurationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode" xml:space="preserve">
+    <value>Status på konfiguration af makroløsningen</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for OptionSet 'msdyn_macrosolutionconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode" xml:space="preserve">
+    <value>Årsag til statussen på konfigurationen af makroløsningen</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for OptionSet 'msdyn_macrosolutionconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_macrosversion" xml:space="preserve">
+    <value>Makroløsningsversion</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_macrosversion' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_name" xml:space="preserve">
+    <value>Navnet på det brugerdefinerede objekt.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_searchhint" xml:space="preserve">
+    <value>Angiver værdien for søgetippet</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_searchhint' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_uservoicelink" xml:space="preserve">
+    <value>Angiver værdien for link til brugerstemme</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_uservoicelink' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationmsdyn_uservoicetext" xml:space="preserve">
+    <value>Angiver værdien for tekst til brugerstemme</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'msdyn_uservoicetext' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for overførslen af posten.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationOwnerId" xml:space="preserve">
+    <value>Ejer-id</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
+    <value>Entydigt id for den afdeling, der ejer posten</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationOwningTeam" xml:space="preserve">
+    <value>Entydigt id for det team, der ejer posten.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationOwningUser" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ejer posten.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationstatecode" xml:space="preserve">
+    <value>Status på konfiguration af makroløsningen</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationstatuscode" xml:space="preserve">
+    <value>Årsag til statussen på konfigurationen af makroløsningen</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Kun til intern brug.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_macrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Den tidszonekode, der var i brug ved oprettelse af posten.</value>
+    <comment>'msdyn_macrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionCreatedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der oprettede posten.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for oprettelse af posten.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der oprettede posten.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_parameterdefinition' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionImportSequenceNumber" xml:space="preserve">
+    <value>Sekvensnummeret for den import, der oprettede denne post.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionModifiedBy" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ændrede posten.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionModifiedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for ændring af posten.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
+    <value>Entydigt id for den stedfortræderbruger, der ændrede posten.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_defaultvalue" xml:space="preserve">
+    <value />
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_defaultvalue' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_description" xml:space="preserve">
+    <value />
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_DisplayName" xml:space="preserve">
+    <value />
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_DisplayName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_jsonobjectstructure" xml:space="preserve">
+    <value>JSON-streng, der beskriver parameterstrukturen for en JSON- eller matrixtypeparameter</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_jsonobjectstructure' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_name" xml:space="preserve">
+    <value>Navnet på det brugerdefinerede objekt.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_parameterdefinitionId" xml:space="preserve">
+    <value>Entydigt id for objektforekomster</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_parameterdefinitionId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode" xml:space="preserve">
+    <value>Status for parameterdefinitionen</value>
+    <comment>'msdyn_parameterdefinition' : Description for OptionSet 'msdyn_parameterdefinition_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode" xml:space="preserve">
+    <value>Årsag til statussen for parameterdefinitionen</value>
+    <comment>'msdyn_parameterdefinition' : Description for OptionSet 'msdyn_parameterdefinition_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionmsdyn_parametertype" xml:space="preserve">
+    <value />
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionOverriddenCreatedOn" xml:space="preserve">
+    <value>Dato og klokkeslæt for overførslen af posten.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionOwnerId" xml:space="preserve">
+    <value>Ejer-id</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionOwningBusinessUnit" xml:space="preserve">
+    <value>Entydigt id for den afdeling, der ejer posten</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionOwningTeam" xml:space="preserve">
+    <value>Entydigt id for det team, der ejer posten.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionOwningUser" xml:space="preserve">
+    <value>Entydigt id for den bruger, der ejer posten.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionstatecode" xml:space="preserve">
+    <value>Status for parameterdefinitionen</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionstatuscode" xml:space="preserve">
+    <value>Årsag til statussen for parameterdefinitionen</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Kun til intern brug.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_parameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Den tidszonekode, der var i brug ved oprettelse af posten.</value>
+    <comment>'msdyn_parameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,Parameter definition{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Aktive parameterdefinitioner, der ejes af mig</value>
+    <comment>'Parameter definition' : Description for SavedQuery on Entity QueryId: '{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:Description,Parameter definition{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>En formular for dette objekt.</value>
+    <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
+  </data>
+  <data name="1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
+    <value>Viser alle makroerne</value>
+    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
+    <value>Oprettet af</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterCreatedOn" xml:space="preserve">
+    <value>Oprettet den</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterCreatedOnBehalfBy" xml:space="preserve">
+    <value>Oprettet af (Stedfortræder)</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterImportSequenceNumber" xml:space="preserve">
+    <value>Importsekvensnummer</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterModifiedBy" xml:space="preserve">
+    <value>Ændret af</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterModifiedOn" xml:space="preserve">
+    <value>Ændret den</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterModifiedOnBehalfBy" xml:space="preserve">
+    <value>Ændret af (Stedfortræder)</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_actioninputparameterId" xml:space="preserve">
+    <value>Inputparameter til handling</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_actioninputparameterId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype" xml:space="preserve">
+    <value>Parametertype</value>
+    <comment>'msdyn_actioninputparameter' : displayname for OptionSet 'msdyn_actioninputparameter_msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_actioninputparameter_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_actioninputparameter' : displayname for OptionSet 'msdyn_actioninputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_actioninputparameter' : displayname for OptionSet 'msdyn_actioninputparameter_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_ActionTemplateInputParameterId" xml:space="preserve">
+    <value>Inputparameter til handlingsskabelon</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_ActionTemplateInputParameterId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_name" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_parametertype" xml:space="preserve">
+    <value>Parametertype</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparametermsdyn_visibility" xml:space="preserve">
+    <value>Synlighed</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'msdyn_visibility' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterOverriddenCreatedOn" xml:space="preserve">
+    <value>Post oprettet den</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterOwnerId" xml:space="preserve">
+    <value>Ejer</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterOwningBusinessUnit" xml:space="preserve">
+    <value>Ejende afdeling</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterOwningTeam" xml:space="preserve">
+    <value>Ejende team</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterOwningUser" xml:space="preserve">
+    <value>Ejende bruger</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterstatecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterstatuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Versionsnummer af tidszoneregel</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Tidszonekode for UTC-konvertering</value>
+    <comment>'msdyn_actioninputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterCreatedBy" xml:space="preserve">
+    <value>Oprettet af</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterCreatedOn" xml:space="preserve">
+    <value>Oprettet den</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
+    <value>Oprettet af (Stedfortræder)</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterImportSequenceNumber" xml:space="preserve">
+    <value>Importsekvensnummer</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterModifiedBy" xml:space="preserve">
+    <value>Ændret af</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterModifiedOn" xml:space="preserve">
+    <value>Ændret den</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
+    <value>Ændret af (Stedfortræder)</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparametermsdyn_actionoutputparameterId" xml:space="preserve">
+    <value>Outputparameter til handling</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'msdyn_actionoutputparameterId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for OptionSet 'msdyn_actionoutputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for OptionSet 'msdyn_actionoutputparameter_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
+    <value>Outputparameter til handlingsskabelon</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'msdyn_actiontemplateoutputparameterid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparametermsdyn_name" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterOverriddenCreatedOn" xml:space="preserve">
+    <value>Post oprettet den</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterOwnerId" xml:space="preserve">
+    <value>Ejer</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterOwningBusinessUnit" xml:space="preserve">
+    <value>Ejende afdeling</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterOwningTeam" xml:space="preserve">
+    <value>Ejende team</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterOwningUser" xml:space="preserve">
+    <value>Ejende bruger</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterstatecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterstatuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Versionsnummer af tidszoneregel</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_actionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Tidszonekode for UTC-konvertering</value>
+    <comment>'msdyn_actionoutputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateCreatedBy" xml:space="preserve">
+    <value>Oprettet af</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateCreatedOn" xml:space="preserve">
+    <value>Oprettet den</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
+    <value>Oprettet af (Stedfortræder)</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateImportSequenceNumber" xml:space="preserve">
+    <value>Importsekvensnummer</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateModifiedBy" xml:space="preserve">
+    <value>Ændret af</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateModifiedOn" xml:space="preserve">
+    <value>Ændret den</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
+    <value>Ændret af (Stedfortræder)</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_actionDescription" xml:space="preserve">
+    <value>Beskrivelse</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_actionDescription' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_brandcolor" xml:space="preserve">
+    <value>Mærkefarve</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_brandcolor' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_displayname" xml:space="preserve">
+    <value>Vist navn</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_icon" xml:space="preserve">
+    <value>Ikon</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_icon' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_InputParameters" xml:space="preserve">
+    <value>Inputparametre</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_InputParameters' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_kind" xml:space="preserve">
+    <value>Type</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_kind' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplateId" xml:space="preserve">
+    <value>Skabelon til makrohandling</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_macroactiontemplateId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for OptionSet 'msdyn_macroactiontemplate_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for OptionSet 'msdyn_macroactiontemplate_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_macroconnector" xml:space="preserve">
+    <value>FUNDU_MACRO_CONNECTOR</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_macroconnector' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_name" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_OutputParameters" xml:space="preserve">
+    <value>Outputparametre</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_OutputParameters' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_runtimeapi" xml:space="preserve">
+    <value>Kørsels-API</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_runtimeapi' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_subtitle" xml:space="preserve">
+    <value>Undertitel</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_subtitle' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_summary" xml:space="preserve">
+    <value>Oversigt</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_summary' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_title" xml:space="preserve">
+    <value>Titel</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_title' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatemsdyn_visibility" xml:space="preserve">
+    <value>Synlighed</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'msdyn_visibility' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOverriddenCreatedOn" xml:space="preserve">
+    <value>Post oprettet den</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwnerId" xml:space="preserve">
+    <value>Ejer</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwningBusinessUnit" xml:space="preserve">
+    <value>Ejende afdeling</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwningTeam" xml:space="preserve">
+    <value>Ejende team</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateOwningUser" xml:space="preserve">
+    <value>Ejende bruger</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatestatecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplatestatuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Versionsnummer af tidszoneregel</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Tidszonekode for UTC-konvertering</value>
+    <comment>'msdyn_macroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorCreatedBy" xml:space="preserve">
+    <value>Oprettet af</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorCreatedOn" xml:space="preserve">
+    <value>Oprettet</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorCreatedOnBehalfBy" xml:space="preserve">
+    <value>Oprettet af (Stedfortræder)</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorImportSequenceNumber" xml:space="preserve">
+    <value>Importsekvensnummer</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorModifiedBy" xml:space="preserve">
+    <value>Ændret af</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorModifiedOn" xml:space="preserve">
+    <value>Ændret</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorModifiedOnBehalfBy" xml:space="preserve">
+    <value>Ændret af (Stedfortræder)</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_brandcolor" xml:space="preserve">
+    <value>Mærkefarve</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_brandcolor' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_callback" xml:space="preserve">
+    <value>Tilbagekald</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_callback' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_categorykey" xml:space="preserve">
+    <value>Kategorinøgle</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_categorykey' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_categorylabel" xml:space="preserve">
+    <value>Kategorietiket</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_categorylabel' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_description" xml:space="preserve">
+    <value>Beskrivelse</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_displayname" xml:space="preserve">
+    <value>Vist navn</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_Icon" xml:space="preserve">
+    <value>Ikon</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_Icon' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_macroconnectorId" xml:space="preserve">
+    <value>Makroconnector</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_macroconnectorId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_macroconnector_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macroconnector' : displayname for OptionSet 'msdyn_macroconnector_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_macroconnector_statuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_macroconnector' : displayname for OptionSet 'msdyn_macroconnector_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_name" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_prefix" xml:space="preserve">
+    <value>Præfiks</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_prefix' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_title" xml:space="preserve">
+    <value>Titel</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_title' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_type" xml:space="preserve">
+    <value>Type</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_type' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectormsdyn_webresourcename" xml:space="preserve">
+    <value>Navn på webressource</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'msdyn_webresourcename' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorOverriddenCreatedOn" xml:space="preserve">
+    <value>Post oprettet</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorOwnerId" xml:space="preserve">
+    <value>Ejer</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorOwningBusinessUnit" xml:space="preserve">
+    <value>Afdeling, der ejer</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorOwningTeam" xml:space="preserve">
+    <value>Team, der ejer</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorOwningUser" xml:space="preserve">
+    <value>Bruger, der ejer</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorstatecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorstatuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Versionsnummer for tidszoneregel</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Tidszonekode for UTC-konvertering</value>
+    <comment>'msdyn_macroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionCreatedBy" xml:space="preserve">
+    <value>Oprettet af</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionCreatedOn" xml:space="preserve">
+    <value>Oprettet den</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionCreatedOnBehalfBy" xml:space="preserve">
+    <value>Oprettet af (Stedfortræder)</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
+    <value>Importsekvensnummer</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionModifiedBy" xml:space="preserve">
+    <value>Ændret af</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionModifiedOn" xml:space="preserve">
+    <value>Kørt den</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
+    <value>Ændret af (Stedfortræder)</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_executioncontext" xml:space="preserve">
+    <value>Udførelsesdata</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'msdyn_executioncontext' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_macroname" xml:space="preserve">
+    <value>Makronavn</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'msdyn_macroname' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_macrosessionid" xml:space="preserve">
+    <value>Id for oversigt over makrokørsel</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'msdyn_macrosessionid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_macrosession_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macrosession' : displayname for OptionSet 'msdyn_macrosession_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_macrosession_statuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_macrosession' : displayname for OptionSet 'msdyn_macrosession_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_name" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionmsdyn_status" xml:space="preserve">
+    <value>Makrostatus</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'msdyn_status' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionOverriddenCreatedOn" xml:space="preserve">
+    <value>Post oprettet den</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionOwnerId" xml:space="preserve">
+    <value>Bruger</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
+    <value>Ejende afdeling</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionOwningTeam" xml:space="preserve">
+    <value>Ejende team</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionOwningUser" xml:space="preserve">
+    <value>Ejende bruger</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionstatecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionstatuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Versionsnummer af tidszoneregel</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Tidszonekode for UTC-konvertering</value>
+    <comment>'msdyn_macrosession' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationCreatedBy" xml:space="preserve">
+    <value>Oprettet af</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationCreatedOn" xml:space="preserve">
+    <value>Oprettet den</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>Oprettet af (Stedfortræder)</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationImportSequenceNumber" xml:space="preserve">
+    <value>Importsekvensnummer</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationModifiedBy" xml:space="preserve">
+    <value>Ændret af</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationModifiedOn" xml:space="preserve">
+    <value>Ændret den</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>Ændret af (Stedfortræder)</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
+    <value>URL-adresse til designer-blob</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerfallbackurl' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentity" xml:space="preserve">
+    <value>Objekt, som URL-adressen til designer skal læses fra</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentity' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityattrib" xml:space="preserve">
+    <value>Attribut, som URL-adressen til designer skal læses fra</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityattrib' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityid" xml:space="preserve">
+    <value>Post-id, som URL-adressen til designer skal læses fra</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlconfigentityquery" xml:space="preserve">
+    <value>En oData-forespørgsel til at hente post, hvorfra URL-adressen til designer skal læses fra</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityquery' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_designerurlrelativepath" xml:space="preserve">
+    <value>Relativ sti til designer-blob i designerens URL-adresse</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlrelativepath' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfigurationId" xml:space="preserve">
+    <value>Konfiguration af makroløsning</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_macrosolutionconfigurationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for OptionSet 'msdyn_macrosolutionconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for OptionSet 'msdyn_macrosolutionconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_macrosversion" xml:space="preserve">
+    <value>msdyn_macrosversion</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_macrosversion' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_name" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_searchhint" xml:space="preserve">
+    <value>Søgning i teksten til tip</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_searchhint' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_uservoicelink" xml:space="preserve">
+    <value>Link til brugerstemme</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_uservoicelink' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationmsdyn_uservoicetext" xml:space="preserve">
+    <value>Tekst til brugerstemme</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'msdyn_uservoicetext' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>Post oprettet den</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationOwnerId" xml:space="preserve">
+    <value>Ejer</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
+    <value>Ejende afdeling</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationOwningTeam" xml:space="preserve">
+    <value>Ejende team</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationOwningUser" xml:space="preserve">
+    <value>Ejende bruger</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationstatecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationstatuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Versionsnummer af tidszoneregel</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_macrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Tidszonekode for UTC-konvertering</value>
+    <comment>'msdyn_macrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionCreatedBy" xml:space="preserve">
+    <value>Oprettet af</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionCreatedOn" xml:space="preserve">
+    <value>Oprettet den</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
+    <value>Oprettet af (Stedfortræder)</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionImportSequenceNumber" xml:space="preserve">
+    <value>Importsekvensnummer</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'ImportSequenceNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionModifiedBy" xml:space="preserve">
+    <value>Ændret af</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionModifiedOn" xml:space="preserve">
+    <value>Ændret den</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
+    <value>Ændret af (Stedfortræder)</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_defaultvalue" xml:space="preserve">
+    <value>Standardværdi</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_defaultvalue' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_description" xml:space="preserve">
+    <value>Beskrivelse</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_DisplayName" xml:space="preserve">
+    <value>Titel</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_DisplayName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_jsonobjectstructure" xml:space="preserve">
+    <value>Definition af objektstruktur</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_jsonobjectstructure' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_name" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_parameterdefinitionId" xml:space="preserve">
+    <value>Parameterdefinition</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_parameterdefinitionId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_parameterdefinition' : displayname for OptionSet 'msdyn_parameterdefinition_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_parameterdefinition' : displayname for OptionSet 'msdyn_parameterdefinition_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionmsdyn_parametertype" xml:space="preserve">
+    <value>Parametertype</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionOverriddenCreatedOn" xml:space="preserve">
+    <value>Post oprettet den</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionOwnerId" xml:space="preserve">
+    <value>Ejer</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionOwningBusinessUnit" xml:space="preserve">
+    <value>Ejende afdeling</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionOwningTeam" xml:space="preserve">
+    <value>Ejende team</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionOwningUser" xml:space="preserve">
+    <value>Ejende bruger</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionstatecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionstatuscode" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Versionsnummer af tidszoneregel</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_parameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Tidszonekode for UTC-konvertering</value>
+    <comment>'msdyn_parameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{0bd71d1c-37a0-dc49-8c25-824416047271}" xml:space="preserve">
+    <value />
+    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{0bd71d1c-37a0-dc49-8c25-824416047271}'</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{1db09e91-87dd-4114-9211-ec8dc43882c2}" xml:space="preserve">
+    <value />
+    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{1db09e91-87dd-4114-9211-ec8dc43882c2}'</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{59f79de4-9448-47dc-957a-108da2c131e1}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Action Input Parameter' : label for tab in Entity FormXml ID: '{59f79de4-9448-47dc-957a-108da2c131e1}'</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{8716236a-d69e-6a70-e474-5431a2c3a7a1}" xml:space="preserve">
+    <value />
+    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{8716236a-d69e-6a70-e474-5431a2c3a7a1}'</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Action Input Parameter' : label for section in Entity FormXml ID: '{a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}'</comment>
+  </data>
+  <data name="1:label,Action Input Parameter{eca182a2-7198-417d-8c54-04fba492cd15}" xml:space="preserve">
+    <value />
+    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{eca182a2-7198-417d-8c54-04fba492cd15}'</comment>
+  </data>
+  <data name="1:label,Action Output Parameter{85343452-c484-1dc3-6d73-32567eb03177}" xml:space="preserve">
+    <value />
+    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{85343452-c484-1dc3-6d73-32567eb03177}'</comment>
+  </data>
+  <data name="1:label,Action Output Parameter{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Action Output Parameter' : label for tab in Entity FormXml ID: '{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}'</comment>
+  </data>
+  <data name="1:label,Action Output Parameter{c30d42c3-4d26-4042-8ed4-c811fd2cbd22}" xml:space="preserve">
+    <value />
+    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{c30d42c3-4d26-4042-8ed4-c811fd2cbd22}'</comment>
+  </data>
+  <data name="1:label,Action Output Parameter{f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}" xml:space="preserve">
+    <value />
+    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}'</comment>
+  </data>
+  <data name="1:label,Action Output Parameter{f46781d7-e36b-43b2-9c10-f210b21462e2}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Action Output Parameter' : label for section in Entity FormXml ID: '{f46781d7-e36b-43b2-9c10-f210b21462e2}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{293c9227-65a0-41d0-ba6f-b4b875af8484}" xml:space="preserve">
+    <value>Type</value>
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{293c9227-65a0-41d0-ba6f-b4b875af8484}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{3505e37b-e0e0-4ee6-833a-8607177c16aa}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{3505e37b-e0e0-4ee6-833a-8607177c16aa}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{745b027e-644b-4c55-4260-c8c4eac84cc6}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{745b027e-644b-4c55-4260-c8c4eac84cc6}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{842e8684-f6c1-4495-9c20-679734e10d10}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Macro Action Template' : label for tab in Entity FormXml ID: '{842e8684-f6c1-4495-9c20-679734e10d10}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{8a8ddc6a-b153-ce74-1256-8cea656447e3}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{8a8ddc6a-b153-ce74-1256-8cea656447e3}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{a4341c8f-be9d-4e30-b2dd-a98c437f943a}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Macro Action Template' : label for section in Entity FormXml ID: '{a4341c8f-be9d-4e30-b2dd-a98c437f943a}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{ae619791-7ccc-6c47-2469-50d422be151c}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{ae619791-7ccc-6c47-2469-50d422be151c}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{c6bbb736-1759-6d58-508d-c277bdcb1209}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{c6bbb736-1759-6d58-508d-c277bdcb1209}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{d431e2bb-2356-1dba-9638-676b3902e396}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{d431e2bb-2356-1dba-9638-676b3902e396}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{dffe237b-b08c-41d6-a59d-2dd80d65bca9}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{dffe237b-b08c-41d6-a59d-2dd80d65bca9}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{e4ea49e5-4d75-7ee6-e6da-e06e74bab620}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{e4ea49e5-4d75-7ee6-e6da-e06e74bab620}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{e6413e3c-d426-4c99-be2f-9241f99c4122}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{e6413e3c-d426-4c99-be2f-9241f99c4122}'</comment>
+  </data>
+  <data name="1:label,Macro Action Template{f5ea473e-8d09-4798-b801-b56fbbbe1238}" xml:space="preserve">
+    <value />
+    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{f5ea473e-8d09-4798-b801-b56fbbbe1238}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{099062b1-cd1c-47a7-7c27-1803b509cb3e}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{099062b1-cd1c-47a7-7c27-1803b509cb3e}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{33deeba5-04ad-d3a9-5ae4-9674d18831b1}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{33deeba5-04ad-d3a9-5ae4-9674d18831b1}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{3bb2ebc7-c568-e709-200b-c879d3c071c1}" xml:space="preserve">
+    <value>Præfiks</value>
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{3bb2ebc7-c568-e709-200b-c879d3c071c1}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{40ed711e-a9da-457e-a3cb-2b6ead26a421}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{40ed711e-a9da-457e-a3cb-2b6ead26a421}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{45a6d044-27d6-9ac7-b8a2-5ba21c4d0d98}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{45a6d044-27d6-9ac7-b8a2-5ba21c4d0d98}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{4e98b137-b949-441b-5210-9170ac39c993}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{4e98b137-b949-441b-5210-9170ac39c993}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{51892293-3a82-8a72-e0c8-3bcbdb879cea}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{51892293-3a82-8a72-e0c8-3bcbdb879cea}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{52ce6d0e-b08b-6392-c615-2712d1dacbb6}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{52ce6d0e-b08b-6392-c615-2712d1dacbb6}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{670bc1ee-710d-1194-6e55-9046523de5d6}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{670bc1ee-710d-1194-6e55-9046523de5d6}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{6b36ba6e-da05-5b44-41c4-546aa45e317d}" xml:space="preserve">
+    <value>Tilbagekald</value>
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{6b36ba6e-da05-5b44-41c4-546aa45e317d}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{8eac758a-1050-11ea-8d71-362b9e155667}" xml:space="preserve">
+    <value>Navn på webressource</value>
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{8eac758a-1050-11ea-8d71-362b9e155667}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{c53f9008-ccce-483f-9bd3-136ff1967976}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Macro Connector' : label for section in Entity FormXml ID: '{c53f9008-ccce-483f-9bd3-136ff1967976}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{dd8fc39a-56dd-4b2c-bb8e-e2cc4a1f21e7}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{dd8fc39a-56dd-4b2c-bb8e-e2cc4a1f21e7}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{e3149089-9571-4482-abfc-231d6899cee1}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Macro Connector' : label for tab in Entity FormXml ID: '{e3149089-9571-4482-abfc-231d6899cee1}'</comment>
+  </data>
+  <data name="1:label,Macro Connector{e487c9e3-6bee-dd35-ca00-1d3189b95bc5}" xml:space="preserve">
+    <value />
+    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{e487c9e3-6bee-dd35-ca00-1d3189b95bc5}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{050e1060-85ad-433d-b8b4-408f646d9d46}" xml:space="preserve">
+    <value>Sidefod</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{050e1060-85ad-433d-b8b4-408f646d9d46}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{07c92620-d624-4581-a0a2-42457b5df3f9}" xml:space="preserve">
+    <value>Overskrift</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{07c92620-d624-4581-a0a2-42457b5df3f9}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{3c31625a-2699-40e2-873c-781f358cf215}" xml:space="preserve">
+    <value>Statusårsag</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{3c31625a-2699-40e2-873c-781f358cf215}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{3fd055f1-d7b4-4b60-b901-23bc5f4b91b3}" xml:space="preserve">
+    <value>Farvestribe</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{3fd055f1-d7b4-4b60-b901-23bc5f4b91b3}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{41e98ad1-5713-4aa9-b528-daedf8297658}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{41e98ad1-5713-4aa9-b528-daedf8297658}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{508e0a41-6976-4eff-9f6f-1181a2cf895a}" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{508e0a41-6976-4eff-9f6f-1181a2cf895a}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{64ed9939-befe-4ee0-aa3a-e0922e542d6b}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Macro Run History' : label for tab in Entity FormXml ID: '{64ed9939-befe-4ee0-aa3a-e0922e542d6b}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{6aaca7be-888b-4540-bcfd-c2487685168b}" xml:space="preserve">
+    <value>Oprettet den</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{6aaca7be-888b-4540-bcfd-c2487685168b}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{7bf9e659-6e34-42b3-88f9-2f6461f91889}" xml:space="preserve">
+    <value>Ejer</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{7bf9e659-6e34-42b3-88f9-2f6461f91889}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{861b4ed5-4f00-4f8d-827f-1dd3c27bef53}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for tab in Entity FormXml ID: '{861b4ed5-4f00-4f8d-827f-1dd3c27bef53}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{95bd72f0-f004-42c6-b268-0a442f47a70d}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for tab in Entity FormXml ID: '{95bd72f0-f004-42c6-b268-0a442f47a70d}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{97f77cce-299c-489d-ab2f-ce061f544de8}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{97f77cce-299c-489d-ab2f-ce061f544de8}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{99668ea6-09d4-4166-aa4f-ff5d5c7b8ae5}" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{99668ea6-09d4-4166-aa4f-ff5d5c7b8ae5}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{99be5520-303f-4a7e-95c3-b3fc386f99fc}" xml:space="preserve">
+    <value>Detaljer</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{99be5520-303f-4a7e-95c3-b3fc386f99fc}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{b7524f26-44fa-4373-a1e1-7995184d6751}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{b7524f26-44fa-4373-a1e1-7995184d6751}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{c4c6a2e8-b137-4f4b-8f8b-50ec5d443506}" xml:space="preserve">
+    <value />
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{c4c6a2e8-b137-4f4b-8f8b-50ec5d443506}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{c6dce013-9683-4e1b-8f0c-502f25a140af}" xml:space="preserve">
+    <value>Ejer</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{c6dce013-9683-4e1b-8f0c-502f25a140af}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{e2cbcd92-24bf-4a15-95de-58b25f95d4a5}" xml:space="preserve">
+    <value>Ejer</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{e2cbcd92-24bf-4a15-95de-58b25f95d4a5}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{e835fbc1-1a0a-4bfc-8520-fdf0b4922e28}" xml:space="preserve">
+    <value>GENERELT</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{e835fbc1-1a0a-4bfc-8520-fdf0b4922e28}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{ea219de3-7304-45a4-84bc-40c052ff9f24}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Macro Run History' : label for section in Entity FormXml ID: '{ea219de3-7304-45a4-84bc-40c052ff9f24}'</comment>
+  </data>
+  <data name="1:label,Macro Run History{fe6efbe2-c00a-4b1e-8b40-dc639a12e9c6}" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{fe6efbe2-c00a-4b1e-8b40-dc639a12e9c6}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{10fd4277-739b-47a9-9b1f-5db4d467a93e}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{10fd4277-739b-47a9-9b1f-5db4d467a93e}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{21ea3c85-489b-4dcf-9ac6-b5bede827eb2}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Macro Solution Configuration' : label for section in Entity FormXml ID: '{21ea3c85-489b-4dcf-9ac6-b5bede827eb2}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{430e9a47-ba6c-9b31-911d-20de9a6d9da0}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{430e9a47-ba6c-9b31-911d-20de9a6d9da0}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{478527c1-1de8-7686-c613-0260ca951521}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{478527c1-1de8-7686-c613-0260ca951521}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{73979e36-2019-d539-699c-1c307b1e6e74}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{73979e36-2019-d539-699c-1c307b1e6e74}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{960171e4-d16e-4638-b6c5-6efff843081a}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{960171e4-d16e-4638-b6c5-6efff843081a}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{a8f02afc-4385-49e2-a304-196d5fae8ebb}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{a8f02afc-4385-49e2-a304-196d5fae8ebb}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{b2ce2821-bb29-1777-b8a8-d6c78ec06959}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{b2ce2821-bb29-1777-b8a8-d6c78ec06959}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{ba5af261-d010-4e61-8524-6bcd6abe5a50}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{ba5af261-d010-4e61-8524-6bcd6abe5a50}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{c36ecd71-699d-4768-ae15-d805513a0731}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{c36ecd71-699d-4768-ae15-d805513a0731}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{c68ca0e7-905f-44f9-b782-41b98c85cff3}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{c68ca0e7-905f-44f9-b782-41b98c85cff3}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{d5997eca-5e6d-4b94-b8a2-ba31f6bdab73}" xml:space="preserve">
+    <value />
+    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{d5997eca-5e6d-4b94-b8a2-ba31f6bdab73}'</comment>
+  </data>
+  <data name="1:label,Macro Solution Configuration{def751e7-13fb-4ae7-a5b9-12030a58e054}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Macro Solution Configuration' : label for tab in Entity FormXml ID: '{def751e7-13fb-4ae7-a5b9-12030a58e054}'</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype0" xml:space="preserve">
+    <value>Valgfri</value>
+    <comment>'msdyn_actioninputparameter' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype1" xml:space="preserve">
+    <value>Obligatorisk</value>
+    <comment>'msdyn_actioninputparameter' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statecode0" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_actioninputparameter' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statecode1" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_actioninputparameter' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode1" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_actioninputparameter' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_statuscode2" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_actioninputparameter' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode0" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_actionoutputparameter' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statecode1" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_actionoutputparameter' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode1" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_actionoutputparameter' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_actionoutputparametermsdyn_actionoutputparameter_statuscode2" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_actionoutputparameter' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode0" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_macroactiontemplate' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statecode1" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_macroactiontemplate' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode1" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_macroactiontemplate' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroactiontemplatemsdyn_macroactiontemplate_statuscode2" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_macroactiontemplate' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroconnectormsdyn_macroconnector_statecode0" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_macroconnector' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroconnectormsdyn_macroconnector_statecode1" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_macroconnector' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroconnectormsdyn_macroconnector_statuscode1" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_macroconnector' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macroconnectormsdyn_macroconnector_statuscode2" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_macroconnector' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosessionmsdyn_macrosession_statecode0" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_macrosession' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosessionmsdyn_macrosession_statecode1" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_macrosession' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosessionmsdyn_macrosession_statuscode1" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_macrosession' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosessionmsdyn_macrosession_statuscode2" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_macrosession' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode0" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_macrosolutionconfiguration' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statecode1" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_macrosolutionconfiguration' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode1" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_macrosolutionconfiguration' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_macrosolutionconfigurationmsdyn_macrosolutionconfiguration_statuscode2" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_macrosolutionconfiguration' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode0" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_parameterdefinition' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statecode1" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_parameterdefinition' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode1" xml:space="preserve">
+    <value>Aktiv</value>
+    <comment>'msdyn_parameterdefinition' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_parameterdefinitionmsdyn_parameterdefinition_statuscode2" xml:space="preserve">
+    <value>Inaktiv</value>
+    <comment>'msdyn_parameterdefinition' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,Parameter definition{24d326cb-c8c9-48d3-852d-18543ba33602}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Parameter definition' : label for tab in Entity FormXml ID: '{24d326cb-c8c9-48d3-852d-18543ba33602}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{35e27720-bc40-55a5-1cb0-2a91121ee4ae}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{35e27720-bc40-55a5-1cb0-2a91121ee4ae}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{4efc7cfa-2742-4026-b4b1-ee517663dcb6}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{4efc7cfa-2742-4026-b4b1-ee517663dcb6}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{61aea276-465a-b471-4133-acad2b8644cc}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{61aea276-465a-b471-4133-acad2b8644cc}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{65474f61-b687-41c1-aa88-34e4cc02431f}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{65474f61-b687-41c1-aa88-34e4cc02431f}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{672695b5-9003-4ef2-b2c0-fc9c15663ae2}" xml:space="preserve">
+    <value>Generelt</value>
+    <comment>'Parameter definition' : label for section in Entity FormXml ID: '{672695b5-9003-4ef2-b2c0-fc9c15663ae2}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{e3574eb9-e537-76ed-c9ea-378b0402deda}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{e3574eb9-e537-76ed-c9ea-378b0402deda}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{e4d19051-6d96-43b5-84b4-dd8b8f7524d5}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{e4d19051-6d96-43b5-84b4-dd8b8f7524d5}'</comment>
+  </data>
+  <data name="1:label,Parameter definition{e78b8199-d1cd-2311-5e67-a36565a7494a}" xml:space="preserve">
+    <value />
+    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{e78b8199-d1cd-2311-5e67-a36565a7494a}'</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
+    <value>Inputparametre til handling</value>
+    <comment> 'msdyn_actioninputparameter' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" xml:space="preserve">
+    <value>Outputparametre til handling</value>
+    <comment> 'msdyn_actionoutputparameter' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
+    <value>Skabeloner til makrohandling</value>
+    <comment> 'msdyn_macroactiontemplate' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
+    <value>makroconnectorer</value>
+    <comment> 'msdyn_macroconnector' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
+    <value>Oversigter over makrokørsel</value>
+    <comment> 'msdyn_macrosession' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
+    <value>Konfigurationer af makroløsning</value>
+    <comment> 'msdyn_macrosolutionconfiguration' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
+    <value>Parameterdefinitioner</value>
+    <comment> 'msdyn_parameterdefinition' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Oplysninger</value>
+    <comment>'Action Input Parameter' : LocalizedName for systemform in Entity FormXml ID: '{15079f0d-d34e-4cad-9fa3-a1fab0783eac}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{220c95e7-e853-4196-bcf5-0195392aae41}" xml:space="preserve">
+    <value>Opslagsvisning for inputparameter for handling</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{220c95e7-e853-4196-bcf5-0195392aae41}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Mine inputparametre til handling</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{5b965e27-ff23-48cc-9fa8-5f870282d801}" xml:space="preserve">
+    <value>Inaktive inputparametre til handling</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{5b965e27-ff23-48cc-9fa8-5f870282d801}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{641c26b7-2180-4bd6-86e0-ae67d20f87be}" xml:space="preserve">
+    <value>Visning for tilknyttet inputparameter for handling</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{641c26b7-2180-4bd6-86e0-ae67d20f87be}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{68335c03-9c8e-4941-b3de-3117bba3e5fb}" xml:space="preserve">
+    <value>Aktive inputparametre til handling</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{68335c03-9c8e-4941-b3de-3117bba3e5fb}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{a3cd66c8-212c-4117-a9ec-fe905795224a}" xml:space="preserve">
+    <value>Hurtig søgning efter aktive inputparametre til handling</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{a3cd66c8-212c-4117-a9ec-fe905795224a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Input Parameter{b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}" xml:space="preserve">
+    <value>Visning for avanceret søgning efter inputparameter til handling</value>
+    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{358d764d-f167-46f4-864c-f147de16f5a4}" xml:space="preserve">
+    <value>Visning for tilknyttet outputparameter for handling</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{358d764d-f167-46f4-864c-f147de16f5a4}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{5557f657-0457-4b1b-bef5-b3a20a701cd6}" xml:space="preserve">
+    <value>Aktive outputparametre til handling</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{5557f657-0457-4b1b-bef5-b3a20a701cd6}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{81a129b3-29df-4bbb-827b-37b6747f8e9b}" xml:space="preserve">
+    <value>Hurtig søgning efter aktive outputparametre til handling</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{81a129b3-29df-4bbb-827b-37b6747f8e9b}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{9d540704-b34f-4ecc-b9d8-412acae74cf8}" xml:space="preserve">
+    <value>Inaktive outputparametre til handling</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{9d540704-b34f-4ecc-b9d8-412acae74cf8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}" xml:space="preserve">
+    <value>Opslagsvisning for outputparameter for handling</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{be58538e-d1d2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Mine outputparametre til handling</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{be58538e-d1d2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Oplysninger</value>
+    <comment>'Action Output Parameter' : LocalizedName for systemform in Entity FormXml ID: '{d4000272-4cda-436a-a678-cd3fe08ea2f6}'</comment>
+  </data>
+  <data name="1:LocalizedName,Action Output Parameter{de3156ab-1834-4782-a0d8-97869badb58b}" xml:space="preserve">
+    <value>Visning for avanceret søgning efter outputparameter til handling</value>
+    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{de3156ab-1834-4782-a0d8-97869badb58b}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{2fc6654b-0626-475b-ba71-dba1a5b84ddd}" xml:space="preserve">
+    <value>Inaktive skabeloner til makrohandling</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{2fc6654b-0626-475b-ba71-dba1a5b84ddd}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" xml:space="preserve">
+    <value>Oplysninger</value>
+    <comment>'Macro Action Template' : LocalizedName for systemform in Entity FormXml ID: '{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{728594b5-08ae-442b-b4c5-36baa67c2e52}" xml:space="preserve">
+    <value>Opslagsvisning for skabelon til makrohandling</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{728594b5-08ae-442b-b4c5-36baa67c2e52}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{7edfc44b-9171-4b03-b3fa-8f98c144543c}" xml:space="preserve">
+    <value>Hurtig søgning efter aktive skabeloner til makrohandling</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{7edfc44b-9171-4b03-b3fa-8f98c144543c}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}" xml:space="preserve">
+    <value>Visning for tilknyttede skabeloner til makrohandling</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
+    <value>Mine skabeloner til makrohandling</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}" xml:space="preserve">
+    <value>Aktive skabeloner til makrohandling</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Action Template{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}" xml:space="preserve">
+    <value>Visning for avanceret søgning efter skabelon til makrohandling</value>
+    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}" xml:space="preserve">
+    <value>Opslagsvisning for makroconnector</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{5f76bbd9-6db0-47e3-b819-e8e181a69ef8}" xml:space="preserve">
+    <value>Visning for avanceret søgning efter makroconnector</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{5f76bbd9-6db0-47e3-b819-e8e181a69ef8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{6879ad1e-f3d8-436b-af1d-40219e693010}" xml:space="preserve">
+    <value>Inaktive makroconnectorer</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{6879ad1e-f3d8-436b-af1d-40219e693010}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{8c945d63-c3dd-e911-a81e-000d3af9c0c2}" xml:space="preserve">
+    <value>Mine makroconnectorer</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{8c945d63-c3dd-e911-a81e-000d3af9c0c2}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{8eab9af9-f1b0-41b2-8eac-217db6b0346a}" xml:space="preserve">
+    <value>Aktive makroconnectorer</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{8eab9af9-f1b0-41b2-8eac-217db6b0346a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{b8136d24-03a6-4453-b1d6-f6e96cc59762}" xml:space="preserve">
+    <value>Hurtig søgning efter aktive makroconnectorer</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{b8136d24-03a6-4453-b1d6-f6e96cc59762}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{d238ec0d-ead6-4558-964d-e92e17c8aa42}" xml:space="preserve">
+    <value>Tilknyttet visning for makroconnector</value>
+    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{d238ec0d-ead6-4558-964d-e92e17c8aa42}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Connector{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Oplysninger</value>
+    <comment>'Macro Connector' : LocalizedName for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}" xml:space="preserve">
+    <value>Oplysninger</value>
+    <comment>'Macro Run History' : LocalizedName for systemform in Entity FormXml ID: '{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{25689d1a-88b8-42c0-b9de-8c6e34053e84}" xml:space="preserve">
+    <value>Opslagsvisning for oversigt over makrokørsel</value>
+    <comment>'Macro Run History' : LocalizedName for SavedQuery on Entity QueryId: '{25689d1a-88b8-42c0-b9de-8c6e34053e84}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{372a2dda-7c30-463e-9372-694c51fbdddb}" xml:space="preserve">
+    <value>Oplysninger</value>
+    <comment>'Macro Run History' : LocalizedName for systemform in Entity FormXml ID: '{372a2dda-7c30-463e-9372-694c51fbdddb}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{47492cdb-57ca-4667-a741-35c34491b4f6}" xml:space="preserve">
+    <value>Oplysninger</value>
+    <comment>'Macro Run History' : LocalizedName for systemform in Entity FormXml ID: '{47492cdb-57ca-4667-a741-35c34491b4f6}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{74122ce0-b1f0-4b41-9fae-a8b4e2bb0ca8}" xml:space="preserve">
+    <value>Oversigter over aktiv makrokørsel</value>
+    <comment>'Macro Run History' : LocalizedName for SavedQuery on Entity QueryId: '{74122ce0-b1f0-4b41-9fae-a8b4e2bb0ca8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{755e5412-437a-4156-b1b9-c54d3bd2fcd6}" xml:space="preserve">
+    <value>Hurtig søgning efter aktive makrokørsler</value>
+    <comment>'Macro Run History' : LocalizedName for SavedQuery on Entity QueryId: '{755e5412-437a-4156-b1b9-c54d3bd2fcd6}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Run History{80ed4f96-7878-4274-9838-ad14e562c789}" xml:space="preserve">
+    <value>Tilknyttet visning for makrokørsler</value>
+    <comment>'Macro Run History' : LocalizedName for SavedQuery on Entity QueryId: '{80ed4f96-7878-4274-9838-ad14e562c789}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}" xml:space="preserve">
+    <value>Visning for tilknyttet konfiguration af makroløsning</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{2512f971-7ada-435b-a487-ce8bc79ef734}" xml:space="preserve">
+    <value>Aktive konfigurationer af makroløsning</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{2512f971-7ada-435b-a487-ce8bc79ef734}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Oplysninger</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for systemform in Entity FormXml ID: '{4c0f7a89-7e67-4972-828e-1244f593a422}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{709f8c74-0e07-41f2-ab20-157f309ba509}" xml:space="preserve">
+    <value>Visning for avanceret søgning efter konfiguration af makroløsning</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{709f8c74-0e07-41f2-ab20-157f309ba509}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}" xml:space="preserve">
+    <value>Hurtig søgning efter aktive konfigurationer af makroløsning</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{b33bb17c-9d07-4514-b073-165721b935e9}" xml:space="preserve">
+    <value>Inaktive konfigurationer af makroløsning</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{b33bb17c-9d07-4514-b073-165721b935e9}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}" xml:space="preserve">
+    <value>Opslagsvisning for konfiguration af makroløsning</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}'</comment>
+  </data>
+  <data name="1:LocalizedName,Macro Solution Configuration{fe7078c7-dae0-e911-a81f-000d3af9c0c2}" xml:space="preserve">
+    <value>Mine konfigurationer af makroløsning</value>
+    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
+    <value>Inputparameter til handling</value>
+    <comment> 'msdyn_actioninputparameter' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" xml:space="preserve">
+    <value>Outputparameter til handling</value>
+    <comment> 'msdyn_actionoutputparameter' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
+    <value>Skabelon til makrohandling</value>
+    <comment> 'msdyn_macroactiontemplate' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
+    <value>Makroconnector</value>
+    <comment> 'msdyn_macroconnector' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
+    <value>Oversigt over makrokørsel</value>
+    <comment> 'msdyn_macrosession' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
+    <value>Konfiguration af makroløsning</value>
+    <comment> 'msdyn_macrosolutionconfiguration' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
+    <value>Parameterdefinition</value>
+    <comment> 'msdyn_parameterdefinition' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{07a33cec-34c5-447a-b091-76a54ea8dcc0}" xml:space="preserve">
+    <value>Aktive parameterdefinitioner</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{07a33cec-34c5-447a-b091-76a54ea8dcc0}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}" xml:space="preserve">
+    <value>Hurtig søgning efter aktive parameterdefinitioner</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{52db0469-ff43-48fb-af2f-69f8355a174c}" xml:space="preserve">
+    <value>Opslagsvisning for parameterdefinition</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{52db0469-ff43-48fb-af2f-69f8355a174c}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{57347866-53ad-4011-9024-d5161ce8391e}" xml:space="preserve">
+    <value>Inaktive parameterdefinitioner</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{57347866-53ad-4011-9024-d5161ce8391e}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{5811f646-830b-4439-aecd-0b1eb4c4910f}" xml:space="preserve">
+    <value>Visning for tilknyttede parameterdefinitioner</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{5811f646-830b-4439-aecd-0b1eb4c4910f}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+    <value>Mine parameterdefinitioner</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Oplysninger</value>
+    <comment>'Parameter definition' : LocalizedName for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
+  </data>
+  <data name="1:LocalizedName,Parameter definition{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}" xml:space="preserve">
+    <value>Visning for avanceret søgning efter parameterdefinition</value>
+    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}'</comment>
+  </data>
+  <data name="1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
+    <value>Alle makroer</value>
+    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
+  </data>
+  <data name="1:Title,Action Input ParameterInfo{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Fælles</value>
+    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Action Input ParameterMarketing{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Action Input ParameterProcessCenter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Processessioner</value>
+    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Action Input ParameterSales{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Salg</value>
+    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Action Input ParameterService{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+    <value>Service</value>
+    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Action Output ParameterInfo{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Fælles</value>
+    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Action Output ParameterMarketing{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Action Output ParameterProcessCenter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Processessioner</value>
+    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Action Output ParameterSales{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Salg</value>
+    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Action Output ParameterService{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+    <value>Service</value>
+    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Macro ConnectorInfo{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Fælles</value>
+    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Macro ConnectorMarketing{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Macro ConnectorProcessCenter{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Processessioner</value>
+    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Macro ConnectorSales{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Salg</value>
+    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Macro ConnectorService{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+    <value>Service</value>
+    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Macro Solution ConfigurationInfo{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Fælles</value>
+    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Macro Solution ConfigurationMarketing{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Macro Solution ConfigurationProcessCenter{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Processessioner</value>
+    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Macro Solution ConfigurationSales{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Salg</value>
+    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Macro Solution ConfigurationService{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+    <value>Service</value>
+    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Parameter definitionInfo{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Fælles</value>
+    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Parameter definitionMarketing{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Parameter definitionProcessCenter{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Processessioner</value>
+    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Parameter definitionSales{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Salg</value>
+    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Parameter definitionService{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+    <value>Service</value>
+    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Processworkflow.HomePageGrid.New.Button.LabelText" xml:space="preserve">
+    <value>Ny</value>
+    <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.LabelText'</comment>
+  </data>
+  <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipDesc" xml:space="preserve">
+    <value>Opret en ny post</value>
+    <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipDesc'</comment>
+  </data>
+  <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipTitle" xml:space="preserve">
+    <value>Ny</value>
+    <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipTitle'</comment>
+  </data>
+  <data name="68:Description,{2E40DD90-2824-4524-B223-947052798E72}" xml:space="preserve">
+    <value>Gør det muligt at oprette makroer</value>
+    <comment> '{2E40DD90-2824-4524-B223-947052798E72}' : Description for Dialog</comment>
+  </data>
+  <data name="68:Description,{2E40DD90-2824-4524-B223-947052798E73}" xml:space="preserve">
+    <value>Giver dig mulighed for at se Makroovervågningsvisning</value>
+    <comment> '{2E40DD90-2824-4524-B223-947052798E73}' : Description for Dialog</comment>
+  </data>
+  <data name="68:Description,{6DDA9163-2590-4ECC-B6F2-55363E629054}" xml:space="preserve">
+    <value>Udtryksgenerator til standardscriptet for helpdesk-medarbejder</value>
+    <comment> '{6DDA9163-2590-4ECC-B6F2-55363E629054}' : Description for Dialog</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}" xml:space="preserve">
+    <value>Makroer</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{43B5C72B-831C-49D9-B2C1-F91BA694DEF0}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{505EF84E-0234-43DB-A095-AE2A87872170}" xml:space="preserve">
+    <value>Beskrivelse</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{505EF84E-0234-43DB-A095-AE2A87872170}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{BC53D472-1587-4980-944E-F55DFE5D3F0A}" xml:space="preserve">
+    <value>Makrodesigner</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{BC53D472-1587-4980-944E-F55DFE5D3F0A}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{D74829E3-D89A-4B89-BEC7-67B6BB0DE2EA}" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{D74829E3-D89A-4B89-BEC7-67B6BB0DE2EA}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E72}{fc52f700-f280-4190-8246-08a2d0c2bc8e}" xml:space="preserve">
+    <value>Historik over kørsel</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E72}' : label for cell in Dialog FormXml ID: '{fc52f700-f280-4190-8246-08a2d0c2bc8e}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E73}{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}" xml:space="preserve">
+    <value>Makrokørsel</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E73}' : label for cell in Dialog FormXml ID: '{43B5C72B-831C-49D9-B2C1-F91BA694DEF1}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E73}{BC53D472-1587-4980-944E-F55DFE5D3F1A}" xml:space="preserve">
+    <value>Makroovervågning</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E73}' : label for cell in Dialog FormXml ID: '{BC53D472-1587-4980-944E-F55DFE5D3F1A}'</comment>
+  </data>
+  <data name="68:label,{2E40DD90-2824-4524-B223-947052798E73}{D74829E3-D89A-4B89-BEC7-67B6BB0DE3EA}" xml:space="preserve">
+    <value>Navn</value>
+    <comment>'{2E40DD90-2824-4524-B223-947052798E73}' : label for cell in Dialog FormXml ID: '{D74829E3-D89A-4B89-BEC7-67B6BB0DE3EA}'</comment>
+  </data>
+  <data name="68:label,{6DDA9163-2590-4ECC-B6F2-55363E629054}{64C3B49F-EFDB-46D8-BF75-927F1DA0D89F}" xml:space="preserve">
+    <value>Makrodesigner</value>
+    <comment>'{6DDA9163-2590-4ECC-B6F2-55363E629054}' : label for cell in Dialog FormXml ID: '{64C3B49F-EFDB-46D8-BF75-927F1DA0D89F}'</comment>
+  </data>
+  <data name="68:label,{6DDA9163-2590-4ECC-B6F2-55363E629054}{B8B207BF-42B4-4FB9-873F-2426B577352F}" xml:space="preserve">
+    <value>Udtryksgenerator</value>
+    <comment>'{6DDA9163-2590-4ECC-B6F2-55363E629054}' : label for cell in Dialog FormXml ID: '{B8B207BF-42B4-4FB9-873F-2426B577352F}'</comment>
+  </data>
+  <data name="68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E72}" xml:space="preserve">
+    <value>Makroer</value>
+    <comment> '{2E40DD90-2824-4524-B223-947052798E72}' : LocalizedName for Dialog</comment>
+  </data>
+  <data name="68:LocalizedName,{2E40DD90-2824-4524-B223-947052798E73}" xml:space="preserve">
+    <value>Vis makroovervågning</value>
+    <comment> '{2E40DD90-2824-4524-B223-947052798E73}' : LocalizedName for Dialog</comment>
+  </data>
+  <data name="68:LocalizedName,{6DDA9163-2590-4ECC-B6F2-55363E629054}" xml:space="preserve">
+    <value>Udtryksgenerator</value>
+    <comment> '{6DDA9163-2590-4ECC-B6F2-55363E629054}' : LocalizedName for Dialog</comment>
+  </data>
+</root>

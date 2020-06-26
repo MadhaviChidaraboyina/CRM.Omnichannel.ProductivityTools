@@ -1,0 +1,13 @@
+<msdyn_parameterdefinition_v2 msdyn_uniquename="msdyn_RecordTitle">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_description default="This is the title of the record">
+    <label description="This is the title of the record" languagecode="1033" />
+  </msdyn_description>
+  <msdyn_displayname default="Record title">
+    <label description="Record title" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_name>RecordTitle</msdyn_name>
+  <msdyn_parametertype>string</msdyn_parametertype>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_parameterdefinition_v2>

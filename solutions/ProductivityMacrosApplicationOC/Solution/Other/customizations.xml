@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entities></Entities>
+  <Roles></Roles>
+  <Workflows></Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <EntityDataProviders />
+  <msdyn_msdyn_actioninputparameter_v2_msdyn_parset>    		
+    <msdyn_msdyn_actioninputparameter_v2_msdyn_par msdyn_actioninputparameter_v2id.msdyn_uniquename="msdyn_Link_record_to_conversation_Input_Params_Mandatory" msdyn_parameterdefinition_v2id.msdyn_uniquename="msdyn_EntityName">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_actioninputparameter_v2_msdyn_par>	
+    <msdyn_msdyn_actioninputparameter_v2_msdyn_par msdyn_parameterdefinition_v2id.msdyn_uniquename="msdyn_EntityId" msdyn_actioninputparameter_v2id.msdyn_uniquename="msdyn_Link_record_to_conversation_Input_Params_Mandatory">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_actioninputparameter_v2_msdyn_par>  
+    <msdyn_msdyn_actioninputparameter_v2_msdyn_par msdyn_actioninputparameter_v2id.msdyn_uniquename="msdyn_Link_record_to_conversation_Input_Params_Mandatory" msdyn_parameterdefinition_v2id.msdyn_uniquename="msdyn_PrimaryNameAttributeValue">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_actioninputparameter_v2_msdyn_par>   
+    <msdyn_msdyn_actioninputparameter_v2_msdyn_par msdyn_actioninputparameter_v2id.msdyn_uniquename="msdyn_Unlink_record_from_conversation_Input_Params_Mandatory" msdyn_parameterdefinition_v2id.msdyn_uniquename="msdyn_EntityId">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_actioninputparameter_v2_msdyn_par>
+    <msdyn_msdyn_actioninputparameter_v2_msdyn_par msdyn_actioninputparameter_v2id.msdyn_uniquename="msdyn_Unlink_record_from_conversation_Input_Params_Mandatory" msdyn_parameterdefinition_v2id.msdyn_uniquename="msdyn_EntityName">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_actioninputparameter_v2_msdyn_par>
+    <msdyn_msdyn_actioninputparameter_v2_msdyn_par msdyn_parameterdefinition_v2id.msdyn_uniquename="msdyn_PrimaryNameAttributeValue" msdyn_actioninputparameter_v2id.msdyn_uniquename="msdyn_Unlink_record_from_conversation_Input_Params_Mandatory">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_actioninputparameter_v2_msdyn_par>
+   </msdyn_msdyn_actioninputparameter_v2_msdyn_parset>
+  <msdyn_msdyn_actionoutputparameter_v2_msdyn_paset>
+  </msdyn_msdyn_actionoutputparameter_v2_msdyn_paset>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

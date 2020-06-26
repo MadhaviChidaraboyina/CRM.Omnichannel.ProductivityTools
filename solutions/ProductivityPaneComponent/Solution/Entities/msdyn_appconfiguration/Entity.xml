@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity>
+  <Name LocalizedName="App Configuration" OriginalName="App Configuration">msdyn_appconfiguration</Name>
+  <RibbonDiffXml />
+</Entity>

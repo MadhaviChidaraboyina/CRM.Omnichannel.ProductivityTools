@@ -7,8 +7,11 @@
 namespace PVSPackage
 {
     using Microsoft.Uii.Common.Entities;
+    using Microsoft.Xrm.Sdk;
+    using Microsoft.Xrm.Sdk.Query;
     using Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase;
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.Composition;
 
     /// <summary>
@@ -79,6 +82,12 @@ namespace PVSPackage
         /// <returns>Import action object</returns>
         public override UserRequestedImportAction OverrideSolutionImportDecision(string solutionUniqueName, Version organizationVersion, Version packageSolutionVersion, Version inboundSolutionVersion, Version deployedSolutionVersion, ImportAction systemSelectedImportAction)
         {
+            //Skipping install of OC related solution in case of CEC & Omnichannel not installed
+            //TODO: to add version check too to ensure OC solution don't get upgraded with CEC install & to add other solutions too
+            //if (!IsSolutionInstalled("OmnichannelBase") && (solutionUniqueName.Equals("msdyn_OmnichannelProductivityToolsSettings") || solutionUniqueName.Equals("Agentscript")))
+            //{
+            //   return UserRequestedImportAction.Skip;
+            //}
             // Perform “Update” to the existing solution
             // instead of “Delete And Promote” when a new version
             // of an existing solution is detected.
@@ -130,5 +139,21 @@ namespace PVSPackage
         }
 
         #endregion
+
+        /// <summary>
+        /// Checks whether the Solution Health Solution is installed in the organization
+        /// This should be called before trying to register any solution health rules
+        /// </summary>
+        /// <returns></returns>
+        private bool IsSolutionInstalled(String solutionName)
+        {
+            String uniqueName = solutionName;
+            var query = new QueryExpression("solution");
+            query.ColumnSet = new ColumnSet("uniquename");
+            query.Criteria.AddCondition("uniquename", ConditionOperator.Equal, uniqueName);
+
+            EntityCollection solutions = CrmSvc.RetrieveMultiple(query);
+            return solutions != null && solutions.Entities != null && solutions.Entities.Count > 0;
+        }
     }
 }

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{1B68FF28-C6AF-4CBE-BE05-DA1B968CDDD4}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form maxWidth="1920">
+      <tabs>
+        <tab id="{06E780F6-7CD5-4C96-8376-99276FC53A43}" name="tab_1" showlabel="false">
+          <labels>
+            <label description="Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="33%">
+              <sections>
+                <section id="{7102DCC7-3682-4993-B803-1D4CEA4E0B8E}" name="tab_1_column_1_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0">
+                  <labels>
+                    <label description="section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{F327F271-497A-4D4B-A7A5-81B050BAE7D3}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{767551D7-DF70-41FE-B0DF-385686700A41}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Unique Name" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_uniquename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_uniquename" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{854BA292-DE35-4E18-A01B-CDECA533BE77}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{BFCFAAFC-A65B-406C-9257-6F1DB1AE01ED}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Agent script" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_agentscriptid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_agentscriptid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4DF0386F-3B14-47C1-BD14-E375CBADEAB0}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Order" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_order" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="msdyn_order" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{11365ECC-7DDC-4A41-BF60-A8EC8910E06E}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Action type" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_actiontype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_actiontype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7E95DE87-E1BC-473E-A20A-ED409753528B}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_description" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_description" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0BDFC78D-0DCA-4442-B3C0-7533CD6E834A}" showlabel="true" locklevel="0" rowspan="2">
+                        <labels>
+                          <label description="Text instructions" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_textinstruction" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_textinstruction" disabled="false" />
+                      </cell>
+                    </row>
+                    <row></row>
+                    <row>
+                      <cell id="{73164938-5F38-4087-B442-98BCF42CDED8}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Target macro" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_macroactionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_macroactionid" disabled="false" uniqueid="{d77305ed-2a64-8c23-c0a4-e5eea3e58acc}">
+                          <parameters>
+                            <AutoResolve>true</AutoResolve>
+                            <DisableMru>false</DisableMru>
+                            <DisableQuickFind>false</DisableQuickFind>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DefaultViewId>{46291012-667a-ea11-a811-000d3a8d88aa}</DefaultViewId>
+                            <AvailableViewIds>{46291012-667a-ea11-a811-000d3a8d88aa}</AvailableViewIds>
+                            <AllowFilterOff>false</AllowFilterOff>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{10AF75E8-453B-4B45-94E1-FCA4CC3A4EAB}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Target script" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_routeactionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_routeactionid" disabled="false" uniqueid="{13c1d720-1d16-47aa-e8ea-32257aea7a36}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="{28C9C2CC-4450-4E23-A7A9-EE09121B4826}" name="tab_1_column_2_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0">
+                  <labels>
+                    <label description="section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{08AAD7E8-EAC9-4026-A48F-AE5C162E8638}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="{4877817D-BAF0-4347-B5CE-DAF8C0BCF156}" name="tab_1_column_3_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0">
+                  <labels>
+                    <label description="section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9B4F9B5E-8321-49E7-82A5-00CFEA6F4AA2}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <controlDescriptions />
+      <formLibraries>
+        <Library name="msdyn_AgentScriptStepFormScript.js" libraryUniqueId="{6d9d8a6b-b2a8-96b7-8b89-5b0aad148a3a}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onFormLoad" libraryName="msdyn_AgentScriptStepFormScript.js" handlerUniqueId="{a1e5cc91-3d2a-7be0-3855-55108adb4858}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onsave" application="false" active="false">
+          <Handlers>
+            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onFormSave" libraryName="msdyn_AgentScriptStepFormScript.js" handlerUniqueId="{7aa621c6-09b3-4571-d540-560c4dbc9158}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_actiontype">
+          <Handlers>
+            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onActionTypeChange" libraryName="msdyn_AgentScriptStepFormScript.js" handlerUniqueId="{8b4c8ba1-b92b-a500-d99b-502053aa6012}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+      <DisplayConditions Order="1">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>0</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

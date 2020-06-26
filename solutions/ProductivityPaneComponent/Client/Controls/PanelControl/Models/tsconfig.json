@@ -1,0 +1,12 @@
+{
+    "extends": "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+    "include": [
+      "./ProductivityPaneInboundEvent.ts"
+    ],
+    "compilerOptions": {
+      "sourceMap": true,
+      "declaration": true,
+      "outFile": "../Typings/ProductivityPaneInboundEvent.js",
+      "module": "amd"
+    }
+  }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Role id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" name="Productivity tools administrator">
+  <IsCustomizable>0</IsCustomizable>
+  <RolePrivileges>
+    <RolePrivilege name="prvReadmsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_tabconfiguration" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_tabconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_tabconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_tabconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_tabconfiguration" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_tabconfiguration" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_toolconfiguration" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_toolconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_toolconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_toolconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_toolconfiguration" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_toolconfiguration" level="Global" />
+  </RolePrivileges>
+</Role>

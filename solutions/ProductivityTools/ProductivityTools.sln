@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityToolsPVS", "PVSPackage\ProductivityToolsPVS.csproj", "{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|amd64 = Debug|amd64
+		Debug|Any CPU = Debug|Any CPU
+		Release|amd64 = Release|amd64
+		Release|Any CPU = Release|Any CPU
+		retail|amd64 = retail|amd64
+		retail|Any CPU = retail|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Debug|amd64.ActiveCfg = debug|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Debug|amd64.Build.0 = debug|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Debug|Any CPU.ActiveCfg = debug|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Debug|Any CPU.Build.0 = debug|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Release|amd64.ActiveCfg = release|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Release|amd64.Build.0 = release|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Release|Any CPU.ActiveCfg = release|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Release|Any CPU.Build.0 = release|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.retail|amd64.ActiveCfg = retail|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.retail|amd64.Build.0 = retail|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.retail|Any CPU.ActiveCfg = retail|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.retail|Any CPU.Build.0 = retail|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

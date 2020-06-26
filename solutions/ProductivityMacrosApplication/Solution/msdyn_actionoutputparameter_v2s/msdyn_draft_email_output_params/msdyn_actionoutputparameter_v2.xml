@@ -1,0 +1,9 @@
+<msdyn_actionoutputparameter_v2 msdyn_uniquename="msdyn_draft_email_output_params">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateoutputparameterid>
+    <msdyn_uniquename>msdyn_Draft_Email</msdyn_uniquename>
+  </msdyn_actiontemplateoutputparameterid>
+  <msdyn_name>draft_email_output_params</msdyn_name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_actionoutputparameter_v2>

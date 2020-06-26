@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Microsoft.Dynamics.Service.ProductivityTools</id>
+    <id>Microsoft.Dynamics.XrmSolutions.ProductivityTools</id>
     <version>9.2.1.359</version>
     <authors>Microsoft Dynamics 365 </authors>
     <owners>Microsoft Dynamics 365</owners>
@@ -18,8 +18,6 @@
   </metadata>
 	<files>
 		<!-- retail artifacts -->
-		<file src="..\..\drop\retail\AnyCPU\Solutions\*.*" target="Solutions" />
-		<file src="..\..\drop\retail\AnyCPU\PVSPackages\*.*" target="PVSPackages" />
-		<file src="..\..\drop\retail\AnyCPU\Blobs\*.*" target="Blobs" />
+		<file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityPaneComponent_*.zip" target="Solutions" />
   </files>
 </package>

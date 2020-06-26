@@ -28,6 +28,17 @@
     "EnvironmentVariableForPatching": "OmnichannelProductivityToolsSettingsEnablePatchGenerator"
   },
   {
+    "SolutionName": "ProductivityMacrosComponent",
+    "SolutionNameShort": "ProductivityMacrosComponent",
+    "SolutionPatchName": "ProductivityMacrosComponentPatch",
+    "PackageCombinations": {
+      "ProductivityMacros": [
+        "ProductivityMacrosComponent"
+      ]
+    },
+    "EnvironmentVariableForPatching": "ProductivityMacrosComponentEnablePatchGenerator"
+  },
+  {
     "SolutionName": "ProductivityMacros",
     "SolutionNameShort": "ProductivityMacros",
     "SolutionPatchName": "ProductivityMacrosPatch",
@@ -37,6 +48,28 @@
       ]
     },
     "EnvironmentVariableForPatching": "ProductivityMacrosEnablePatchGenerator"
+  },
+  {
+    "SolutionName": "ProductivityMacrosApplication",
+    "SolutionNameShort": "ProductivityMacrosApplication",
+    "SolutionPatchName": "ProductivityMacrosApplicationPatch",
+    "PackageCombinations": {
+      "ProductivityMacros": [
+        "ProductivityMacrosApplication"
+      ]
+    },
+    "EnvironmentVariableForPatching": "ProductivityMacrosApplicationEnablePatchGenerator"
+  },
+  {
+    "SolutionName": "ProductivityMacrosApplicationOC",
+    "SolutionNameShort": "ProductivityMacrosApplicationOC",
+    "SolutionPatchName": "ProductivityMacrosApplicationOCPatch",
+    "PackageCombinations": {
+      "ProductivityMacros": [
+        "ProductivityMacrosApplicationOC"
+      ]
+    },
+    "EnvironmentVariableForPatching": "ProductivityMacrosApplicationOCEnablePatchGenerator"
   },
   {
     "SolutionName": "SmartAssist",

@@ -1,0 +1,24 @@
+<msdyn_macroconnector_v2 msdyn_uniquename="msdyn_SessionConnector">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
+  <msdyn_callback>Microsoft.ChannelIntegrationFramework.Macros.resolveSlug(context,paramName)</msdyn_callback>
+  <msdyn_categorykey>CONNECTORS</msdyn_categorykey>
+  <msdyn_categorylabel default="Predefined automation actions">
+    <label description="Predefined automation actions" languagecode="1033" />
+  </msdyn_categorylabel>
+  <msdyn_description default="Automate commonly used session actions">
+    <label description="Automate commonly used session actions" languagecode="1033" />
+  </msdyn_description>
+  <msdyn_displayname default="Session Connector">
+    <label description="Session Connector" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_icon>WebResources/Macros/msdyn_sessionConnector_macro_connector.svg</msdyn_icon>
+  <msdyn_name>Session Connector</msdyn_name>
+  <msdyn_prefix>Session</msdyn_prefix>
+  <msdyn_title default="Session Connector">
+    <label description="Session Connector" languagecode="1033" />
+  </msdyn_title>
+  <msdyn_type>CDSClientAutomation</msdyn_type>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_macroconnector_v2>

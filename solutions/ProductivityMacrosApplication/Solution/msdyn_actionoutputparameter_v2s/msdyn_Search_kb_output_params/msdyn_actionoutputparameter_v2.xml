@@ -1,0 +1,9 @@
+<msdyn_actionoutputparameter_v2 msdyn_uniquename="msdyn_Search_kb_output_params">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateoutputparameterid>
+    <msdyn_uniquename>msdyn_Search_knowledge_base</msdyn_uniquename>
+  </msdyn_actiontemplateoutputparameterid>
+  <msdyn_name>Search_kb_output_params</msdyn_name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_actionoutputparameter_v2>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
+  <PropertyGroup>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <NOTARGET>true</NOTARGET>
+    <SolutionProjectNamePrefix>ProductivityMacrosApplicationOC</SolutionProjectNamePrefix>
+    <SolutionFileNamePrefix>msdyn_ProductivityMacrosApplicationOC</SolutionFileNamePrefix>
+    <ApplicationFolder>$(XrmSolutionsRoot)\solutions\ProductivityMacrosApplicationOC</ApplicationFolder>
+    <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
+    <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
+    <ProjectGuid>{4848F16D-75E2-4190-BD50-BBEF3C089F57}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(WSRoot)\drop\debug\AnyCPU\Solutions</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\Sales_LinkedInIntegration.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(WSRoot)\drop\Release\AnyCPU\Solutions</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Link_record_to_conversation_Input_Params_Mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Unlink_record_from_conversation_Input_Params_Mandatory\msdyn_actioninputparameter_v2.xml" />   
+    <Folder Include="msdyn_actionoutputparameter_v2s\" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Link_record_to_conversation\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Send_KB\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Unlink_record_from_conversation\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroconnector_v2s\msdyn_OmnichannelConnector\msdyn_macroconnector_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_EntityId\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_EntityName\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_PrimaryNameAttributeValue\msdyn_parameterdefinition_v2.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Other\Customizations.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Other\Solution.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\en-US\resources.en-US.resx" />
+    <Content Include="Resources\template_resources.resx" />
+  </ItemGroup>
+  <Import Project="$(PKG_XRMAPP_TOOLS_UPGRADE)\build\include\NoTarget.targets" />
+  <Import Project="$(WSRoot)\build\include\SolutionPackager.targets" />
+</Project>

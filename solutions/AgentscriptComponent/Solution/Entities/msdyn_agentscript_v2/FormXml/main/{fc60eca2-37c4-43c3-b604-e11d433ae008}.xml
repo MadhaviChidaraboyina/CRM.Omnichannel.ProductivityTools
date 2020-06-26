@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{fc60eca2-37c4-43c3-b604-e11d433ae008}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{7f39d554-3ee1-42fd-9e13-39337380e4a8}" IsUserDefined="1" name="{7f39d554-3ee1-42fd-9e13-39337380e4a8}" locklevel="0" expanded="true" showlabel="true">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{154eaff3-a573-40d0-a014-d4884a232a50}" height="auto">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{29a59df8-1979-4af1-9032-d72581380b50}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4ebb7bb5-c7de-2e3a-d381-9bd714ecb824}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Unique Name" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_uniquename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_uniquename" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fe273ef3-8d02-41ab-95a8-e8ce7c389aaf}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b0a2c3c8-a5b4-80e8-8db8-029c72e6b0e4}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Language" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_language" classid="{671A9387-CA5A-4d1e-8AB7-06E39DDCF6B5}" datafieldname="msdyn_language" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{87e8ab98-d0a2-ab1e-4e49-da61dc2ac315}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_description" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_description" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+			      <column width="66%">
+              <sections>
+                <section name="{7f39d554-3ee1-42fd-9e13-39337380e4a8}_section_2" showlabel="false" showbar="false" locklevel="0" id="{D9FE4353-9B2B-49BC-8C25-A9A9A209AACF}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" height="auto">
+                  <labels>
+                    <label description="Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{B1716419-3C10-4908-999F-AD10A60CED21}" showlabel="true" colspan="1" auto="true" rowspan="5" availableforphone="false">
+                        <labels>
+                          <label description="Agent script steps" languagecode="1033" />
+                        </labels>
+                        <control id="AgentScriptSteps" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{b438ed55-649e-74b8-de5e-00e420bc480c}">
+                          <parameters>
+                            <ViewId>{05EBE83F-7DE2-4A01-ADBF-F99EB0871579}</ViewId>
+                            <IsUserView>false</IsUserView>
+                            <RelationshipName>msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_agentscriptid</RelationshipName>
+                            <TargetEntityType>msdyn_agentscriptstep_v2</TargetEntityType>
+                            <AutoExpand>Auto</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <ViewIds>{1ea4f420-f9df-4cb5-aace-00a69b77b8c7},{05EBE83F-7DE2-4A01-ADBF-F99EB0871579}</ViewIds>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <ChartGridMode>Grid</ChartGridMode>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>false</EnableChartPicker>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row height="auto" />
+                  </rows>
+                </section>
+              </sections>
+            </column>				
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions />
+      <formLibraries>
+        <Library name="msdyn_AgentscriptFormScript.js" libraryUniqueId="{2aceaca6-4299-b381-c2ae-072228acb58a}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="AgentScriptPackage.AgentscriptFormScript.Instance.onFormLoad" libraryName="msdyn_AgentscriptFormScript.js" handlerUniqueId="{30d84e6b-5066-95b1-57eb-edca9d813c36}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>							 
+    </form>
+    <IsCustomizable>0</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
