@@ -32,7 +32,11 @@
          */
         getAllRecordsForConfigId(entityId: string, configId: string): string[] {
             const sessionContext = Utility.getCurrentSessionContext();
-            return sessionContext.get(entityId)[configId];
+            const data = sessionContext.get(entityId);
+            if (data) {
+                return sessionContext.get(entityId)[configId];
+            }
+            return [];
         }
 
         /**

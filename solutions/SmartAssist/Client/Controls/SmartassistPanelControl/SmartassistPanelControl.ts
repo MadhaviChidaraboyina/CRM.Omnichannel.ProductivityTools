@@ -77,7 +77,7 @@ module MscrmControls.SmartassistPanelControl {
                     var anchorContext = Utility.GetAnchorTabContext();
 
                     // control rendering for the first time
-                    this.renderSuggestions(anchorContext.entityId);
+                    this.renderSuggestions(false, anchorContext.entityId);
                 }, Constants.anchorContextDelay);
             }
             this.newInstance = false;
@@ -117,7 +117,7 @@ module MscrmControls.SmartassistPanelControl {
          * Initialize SmartAssistAnyEntityControl to render suggestions
          * @param recordId: Anchor tab Entity id from PP control
          */
-        public async renderSuggestions(recordId: string = null): Promise<void> {
+        public async renderSuggestions(update:boolean, recordId: string = null): Promise<void> {
             // validate current context
             if (this.validateCurrentContext() || recordId) {
                 if (Utility.isNullOrEmptyString(recordId)) {
@@ -126,6 +126,7 @@ module MscrmControls.SmartassistPanelControl {
                 var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
                 configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
                 for (let i = 0; i <= (configs.length - 1); i++) {
+                    const componentId = "SAAnyEntityControl_" + configs[i].SmartassistConfigurationId;
                     let properties: any =
                     {
                         parameters: {
@@ -145,14 +146,16 @@ module MscrmControls.SmartassistPanelControl {
                             }
                             // TODO: Add Data Context
                         },
-                        key: "AnyEntityControlComponent",
-                        id: "AnyEntityControlComponent",
+                        key: componentId,
+                        id: componentId,
                     };
                     var divElement = document.createElement("div");
                     divElement.id = Constants.SuggestionInnerDiv + configs[i].SmartassistConfigurationId;
-
                     // Init SmartAssistAnyEntityControl
-                    const anyEntityControl = SmartassistPanelControl._context.factory.createComponent("MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl", "SmartAssistAnyEntityControl", properties);
+                    if (update) {
+                        SmartassistPanelControl._context.utils.unbindDOMComponent(componentId);
+                    }
+                    let anyEntityControl = SmartassistPanelControl._context.factory.createComponent("MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl", componentId, properties);
                     SmartassistPanelControl._context.utils.bindDOMElement(anyEntityControl, divElement);
                     $("#" + Constants.SuggestionOuterContainer).append(divElement);
                 }
@@ -163,7 +166,8 @@ module MscrmControls.SmartassistPanelControl {
         public reRenderSuggestions() {
             var element = document.getElementById(Constants.SuggestionOuterContainer);
             element.innerHTML = '';
-            this.renderSuggestions();
+
+            this.renderSuggestions(true);
         }
 
         /**

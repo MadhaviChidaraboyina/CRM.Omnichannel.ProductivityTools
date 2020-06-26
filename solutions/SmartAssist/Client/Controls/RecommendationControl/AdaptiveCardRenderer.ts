@@ -88,7 +88,6 @@ module MscrmControls.Smartassist.Suggestion {
 
 				const card = cardTemplate.expand(context);
 				const suggestionCard: SuggestionCard = { cardId: cardId, cardContent: card, cardState: CardState.New };
-				//this.persistCard(suggestionId, suggestionCard);
 
 				const htmlElement = this.createAdaptiveCard(card);
 				const suggestionCardElement: SuggestionCardElement = { card: suggestionCard, cardHTMLElement: htmlElement };

@@ -12,24 +12,31 @@
          * Gets suggestion data records.
          * @param saConfig: Smart Assist configuration for suggestion.
          * @param recordId: Record id to find the suggestion upon.
-         * @param fromCache: get the data from cache.
-         * @param fromServer: Force records to fetch from API
          */
-        public async getSuggestionsData(saConfig: SAConfig, recordId: string, fromCache: boolean, fromServer: boolean = false) {
-            if (fromCache) {
-                this.getSuggestionsDataFromSessionCache(saConfig, recordId);
+        public async getSuggestionsData(saConfig: SAConfig, recordId: string) {
+            const suggestionIdsFromSession = this._sessionStateManager.getAllRecords(recordId) || {};
+            const suggestionIdsForSAConfig = suggestionIdsFromSession[saConfig.SmartassistConfigurationId];
+            const fromServer = !suggestionIdsForSAConfig;
+            if (suggestionIdsForSAConfig) {
+                this.getSuggestionsDataFromSessionCache(saConfig, suggestionIdsForSAConfig);
             }
+            
+            // call API if the data is not available in cache.
             if (!this.Suggestions || fromServer) {
                 await this.getSuggestionsDataFromAPI(saConfig, recordId)
             }
             return this.Suggestions;
         }
 
-        private getSuggestionsDataFromSessionCache(saConfig: SAConfig, recordId: string) {
+        private getSuggestionsDataFromSessionCache(saConfig: SAConfig, suggestionIds: string[]) {
             try {
-                const suggestionIdsFromCache = this._sessionStateManager.getAllRecords(recordId)[saConfig.SmartassistConfigurationId];
-                let data = suggestionIdsFromCache.map(id => JSON.parse(this._localStorageManager.getRecord(id)).data);
-                this.Suggestions[saConfig.SmartassistConfigurationId] = data;
+                const data = suggestionIds.map(id => JSON.parse(this._localStorageManager.getRecord(id)).data);
+                if (data) {
+                    this.Suggestions[saConfig.SmartassistConfigurationId] = data;
+                }
+                else {
+                    this.Suggestions = null;
+                }
             } catch (error) {
                 //TODO: Telemetry
                 this.Suggestions = null;
@@ -61,7 +68,7 @@
                     "ResolvedById": "56a382d2-69a1-4390-a247-e96e9165c6b9",
                     "ResolvedByName": "John Doe Sr",
                     "IsLinked": false,
-                    "Feedback": 2
+                    "HelpfulVote": 2
                 },
                 {
                     "SuggestionId": "f14277ca-4fab-48fc-9a22-205adea7d123",
@@ -80,7 +87,7 @@
                     "ResolvedById": "56a382d2-69a1-4390-a247-e96e9165c6b9",
                     "ResolvedByName": "John Doe Sr",
                     "IsLinked": false,
-                    "Feedback": 2
+                    "HelpfulVote": 2
                 }
             ];
             var kmMockData = [{
@@ -90,7 +97,7 @@
                 filterActionTag: "Published",
                 new_confidencescore: "",
                 PublishAction: true,
-                Feedback : 2
+                HelpfulVote : 2
             },
             {
                 SuggestionId: "123",
@@ -99,7 +106,7 @@
                 filterActionTag: "Published",
                 new_confidencescore: "",
                 PublishAction: false,
-                Feedback: 2
+                HelpfulVote: 2
             }];
 
             this.Suggestions = {};

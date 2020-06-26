@@ -16,7 +16,17 @@
         refreshCallback?: (args: CardRefreshArgs) => void;
     }
 
-    export type action = "refresh" | "dismiss";
+    export enum Action {
+        /**
+         * To refresh the card
+         */
+        Refresh,
+
+        /**
+         * To dismiss the card.
+         */
+        Dismiss
+    }
 
     /**
      * Interface for the argument to be passed in refresh callback.
@@ -26,7 +36,7 @@
         /**
          * The value should be refresh or dismiss.
          * */
-        type: action;
+        type: Action;
 
         /**
          * The data to override.

@@ -50,7 +50,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this.initCompleted = true;
                 }
                 // fromcache: true; fromServer: false;
-                this.InitiateSuggestionControl(true, false);
+                this.InitiateSuggestionControl();
             }
             catch (error) {
                 //TODO: telemetry
@@ -95,9 +95,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
         /**
          * Intitiate Recomendation Control
          */
-        public async InitiateSuggestionControl(fromcache:boolean, fromServer: boolean): Promise<void> {
+        public async InitiateSuggestionControl(): Promise<void> {
             // Get Suggestions data records for provide saConfig
-            var data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId, fromcache, fromServer) as { [key: string]: any };
+            var data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
             var dataLength = data[this.saConfig.SmartassistConfigurationId].length;
 
             this.appendTitle();
@@ -120,6 +120,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }
             for (let i = 0; i <= (dataLength - 1); i++) {
                 var record = data[this.saConfig.SmartassistConfigurationId][i];
+                const componentId = Utility.getComponentId(record.SuggestionId);
                 let properties: any =
                 {
                     parameters: {
@@ -145,14 +146,14 @@ module MscrmControls.SmartAssistAnyEntityControl {
                             Value: { resource: "" }
                         }
                     },
-                    key: "Suggestion_" + record.SuggestionId,
-                    id: "Suggestion_" + record.SuggestionId,
+                    key: componentId,
+                    id: componentId,
                 };
                 var divElement = document.createElement("div");
                 divElement.id = "Suggestion_" + record.SuggestionId;
 
                 //Initiate Suggestion Control
-                const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", "RecommendationControl", properties);
+                const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", componentId, properties);
                 SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
                 $("#" + StringConstants.SuggestionInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement)
             }
@@ -195,26 +196,32 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param args: event argument
          */
         private handleDismissEvent(args: any) {
-            const suggestionId = args.detail.id;
-            const renderedSuggestionIds = this._sessionStateManager.getAllRecordsForConfigId(this.recordId, this.saConfig.SmartassistConfigurationId);
+            try {
+                const suggestionId = args.detail.id;
+                const renderedSuggestionIds = this._sessionStateManager.getAllRecordsForConfigId(this.recordId, this.saConfig.SmartassistConfigurationId);
 
-            if (renderedSuggestionIds.indexOf(suggestionId) != -1) {
-                var id = "Suggestion_" + suggestionId;
-                var el = <HTMLElement>document.querySelector('#' + id);
-                if (el) {
-                    var speed = 1000;
-                    var seconds = 1;
-                    el.style.transition = "opacity " + seconds + "s ease";
-                    el.style.opacity = "0";
-                    setTimeout(function () {
-                        el.parentNode.removeChild(el);
-                    }, speed);
+                if (renderedSuggestionIds.indexOf(suggestionId) != -1) {
+                    const componentId = Utility.getComponentId(suggestionId);
+                    var id = "Suggestion_" + suggestionId;
+                    var el = <HTMLElement>document.querySelector('#' + id);
+                    if (el) {
+                        var speed = 1000;
+                        var seconds = 1;
+                        el.style.transition = "opacity " + seconds + "s ease";
+                        el.style.opacity = "0";
+                        setTimeout(function () {
+                            SmartAssistAnyEntityControl._context.utils.unbindDOMComponent(componentId);
+                            el.parentNode.removeChild(el);
+                        }, speed);
 
-                    this._sessionStateManager.deleteRecord(this.recordId, this.saConfig.SmartassistConfigurationId, suggestionId);
+                        this._sessionStateManager.deleteRecord(this.recordId, this.saConfig.SmartassistConfigurationId, suggestionId);
+                    }
+
+                    const dataToOverride = args.detail.data;
+                    this._localStorageManager.updateSuggestionData(suggestionId, dataToOverride);
                 }
-
-                const dataToOverride = args.detail.data;
-                this._localStorageManager.updateSuggestionData(suggestionId, dataToOverride);
+            } catch (error) {
+                //TODO: Telemetry: Error logged in dismiss event.
             }
         }
 

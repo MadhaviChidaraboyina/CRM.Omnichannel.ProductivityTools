@@ -125,11 +125,11 @@ module MscrmControls.Smartassist
 				const cardId = Suggestion.Util.getSuggestionCardId(suggestionId);
 				var el = <HTMLElement>document.querySelector('#' + cardId);
 				if (el) {
-					if (args.type == "refresh") {
+					if (args.type == Suggestion.Action.Refresh) {
 						el.parentNode.removeChild(el);
 						this.renderRecommendation();
 					}
-					else if (args.type == "dismiss") {
+					else if (args.type == Suggestion.Action.Dismiss) {
 						let dismissEvent = new CustomEvent(Suggestion.Constants.DissmissCardAction, { detail: { id: this._suggestionId, data: dataToOverride } });
 						window.top.dispatchEvent(dismissEvent);
                     }

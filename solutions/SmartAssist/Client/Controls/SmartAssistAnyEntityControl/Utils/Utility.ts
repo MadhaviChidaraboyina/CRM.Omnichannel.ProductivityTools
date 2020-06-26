@@ -30,5 +30,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
             const sessionContext = Microsoft.AppRuntime.Sessions.getSession(sessionId).context;
             return sessionContext;
         }
+
+        public static getComponentId(suggestionId: string) {
+            return "Suggestion_" + suggestionId + "_component";
+        }
     }
 }
