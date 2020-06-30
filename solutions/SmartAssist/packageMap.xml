@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mapping>
+  <!-- Match specific named files to an alternate folder -->
+  <FileToFile
+    map="PluginAssemblies/MicrosoftDynamicsSmartAssistPlugins-ED5F5BED-FCD1-48F1-8066-A33396EBBD7C/MicrosoftDynamicsSmartAssistPlugins.dll"
+    to="%WSRoot%\drop\%BuildConfiguration%\%BuildPlatform%\Plugins\Microsoft.Dynamics.SmartAssist.Plugins.dll" />
+</Mapping>
