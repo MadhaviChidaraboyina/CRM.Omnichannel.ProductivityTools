@@ -91,32 +91,56 @@
                 }
             ];
             var kmMockData = [{
-                SuggestionId: "54321",
-                title: "Test Title2",
-                description: "test Description",
-                filterActionTag: "Published",
-                new_confidencescore: "",
-                PublishAction: true,
-                HelpfulVote : 2
+                "SuggestionId": "f14277ca-4fab-48fc-9a22-205adea7d81a",
+                "Rank": 1,
+                "ConfidenceScore": 82,
+                "Tags": "Tag-Value-1,Tag-Value-2",
+                "TargetKnowledgeArticleId": "825e8824-93c1-439d-98fc-9fe751a6aa6b",
+                "Title": "Printer does not work-1",
+                "Description": "Post replacing the color refill, the printer has stopped working.",
+                "StateCode": 0,
+                "CreatedOn": "2020-05-20T04:24:34Z",
+                "OwnerId": "16bbd4a6-5a4c-ea11-a815-000d3a30f195",
+                "IsLinked": false,
+                "HelpfulVote": 1,
+                "EnableLinkArticle": true,
+                "EnableUnlinkArticle": false,
+                "EnableCopyLink": true,
+                "EnableEmailArticle": true,
+                "EnableEmailArticleContent": true,
+                "EnableSendToCTI": true
             },
             {
-                SuggestionId: "123",
-                title: "Test Title1",
-                description: "test Description",
-                filterActionTag: "Published",
-                new_confidencescore: "",
-                PublishAction: false,
-                HelpfulVote: 2
+                "SuggestionId": "f14277ca-4fab-48fc-9a22-205adea7d81b",
+                "Rank": 2,
+                "ConfidenceScore": 90,
+                "Tags": "Tag-Value-1,Tag-Value-2",
+                "TargetKnowledgeArticleId": "825e8824-93c1-439d-98fc-9fe751a6aa6c",
+                "Title": "Printer does not work-1",
+                "Description": "Post replacing the color refill, the printer has stopped working.",
+                "StateCode": 3,
+                "CreatedOn": "2020-05-20T04:24:34Z",
+                "OwnerId": "16bbd4a6-5a4c-ea11-a815-000d3a30f195",
+                "IsLinked": false,
+                "HelpfulVote": 2,
+                "EnableLinkArticle": false,
+                "EnableUnlinkArticle": true,
+                "EnableCopyLink": true,
+                "EnableEmailArticle": true,
+                "EnableEmailArticleContent": true,
+                "EnableSendToCTI": true
             }];
 
             this.Suggestions = {};
+            let data;
             if (saConfig.SuggestionType == SuggestionType.KnowledgeArticleSuggestion) {
-                this.Suggestions[saConfig.SmartassistConfigurationId] = kmMockData;
+                data = kmMockData;
             }
             else {
-                this.Suggestions[saConfig.SmartassistConfigurationId] = caseMockData;
+                data = caseMockData;
             }
-            
+            data = data.sort((a, b) => a.ConfidenceScore > b.ConfidenceScore ? -1 : 1);
+            this.Suggestions[saConfig.SmartassistConfigurationId] = data;
             this.initializeCacheForSuggestions(saConfig, RecordId);
         }
 

@@ -32,11 +32,24 @@ module MscrmControls.SmartassistPanelControl {
 
         /**Gets SA configuration from memory if available otherwise from cds */
         public async getSAConfigurations() {
+            this.getSAConfigurationFromCache();
             if (this.saConfig.length < 1) {
                 await this.fetchSAConfigurationsData();
             }
             return this.saConfig;
         }
+
+        private getSAConfigurationFromCache() {
+            try {
+                var data = window.sessionStorage.getItem(Constants.SAConfigCacheKey);
+                if (data) {
+                    this.saConfig = JSON.parse(data);
+                }
+            }
+            catch (error) {
+                //TODO: Telemetry: Failed to fetch SAConfig from cache.
+            }
+        };
 
         /**Fetch SA config from cds */
         private async fetchSAConfigurationsData() {
@@ -46,6 +59,12 @@ module MscrmControls.SmartassistPanelControl {
                 var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;             
                 for (var i = 0; i < result.entities.length; i++) {
                     this.saConfig.push(new SAConfig(result.entities[i], this.acConfigSchema.AdaptiveCardTemplateAlias))
+                }
+                try {
+                    window.sessionStorage.setItem(Constants.SAConfigCacheKey, JSON.stringify(this.saConfig));
+                }
+                catch (error) {
+                    // TODO: Telemetry: Failer to store data in cache.
                 }
             } catch (error) {
                 eventParameters.addParameter("Exception Details", error.message);

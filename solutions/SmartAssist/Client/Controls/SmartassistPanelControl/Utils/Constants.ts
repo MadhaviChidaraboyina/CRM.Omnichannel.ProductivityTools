@@ -16,7 +16,8 @@ module MscrmControls.SmartassistPanelControl {
         public static SuggestionOuterContainer = "sa-suggestion-outer-container";
         public static SuggestionInnerDiv = "sa-suggestion-inner-div-";
         public static IncidentEntityName = "incident";
-        public static CECEntityRecordType = "entityrecord";        
+        public static CECEntityRecordType = "entityrecord";
+        public static SAConfigCacheKey = "SAConfig";
     }
 
 	/**

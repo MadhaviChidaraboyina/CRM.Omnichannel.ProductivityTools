@@ -20,7 +20,7 @@ module MscrmControls.Smartassist {
 	}
     
     .recommendation-outer-container {
-		max-width: calc(100% - 15px);
+		max-width: calc(100% - 30px);
 		margin: 0 auto;
      }
 
