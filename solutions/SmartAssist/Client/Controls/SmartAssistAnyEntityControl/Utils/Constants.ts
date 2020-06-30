@@ -8,6 +8,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
     export class StringConstants {
         public static SuggestionOuterContainer = "sa-suggestion-outer-container";
         public static SuggestionInnerDiv = "sa-suggestion-inner-div-";
+        public static ControlId = "MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl";
 
         // css
         public static AnyentityStyleTemplateId = "smartassist-anyentity-style";

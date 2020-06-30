@@ -38,5 +38,15 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static getComponentId(suggestionId: string) {
             return "Suggestion_" + suggestionId + "_component";
         }
+
+        /**
+         * Dispatches Productivity Panel In Bound Event
+         * @param notificationNumber: Notification Number
+         */
+        public static DispatchPanelInboundEvent(notificationNumber: number, sesssionId: string) {
+            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(StringConstants.ControlId, new MscrmControls.PanelControl.PanelNotification(notificationNumber, sesssionId));
+            let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
+            window.top.dispatchEvent(event);
+        }
     }
 }
