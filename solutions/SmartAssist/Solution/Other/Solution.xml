@@ -133,6 +133,7 @@
 			<RootComponent type="61" schemaName="msdyn_smartassistkbsearchicon.png" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_smartassistsimilarcaseicon.png" behavior="0" />
 			<RootComponent type="61" schemaName="msdyn_smartassisttabicon.svg" behavior="0" />
+			<RootComponent type="91" id="{ed5f5bed-fcd1-48f1-8066-a33396ebbd7c}" schemaName="Microsoft.Dynamics.SmartAssist.Plugins, Version=9.0.0.0, Culture=neutral, PublicKeyToken=d5bf6fb07843d8e8" behavior="0" />
 		</RootComponents>
 		<MissingDependencies>
 			<MissingDependency>
