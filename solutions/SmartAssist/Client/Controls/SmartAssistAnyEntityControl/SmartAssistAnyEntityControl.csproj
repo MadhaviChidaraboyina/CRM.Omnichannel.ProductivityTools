@@ -49,9 +49,8 @@
     <Folder Include="Typings\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="strings\SmartAssistAnyEntityControl.resx">
+    <EmbeddedResource Include="strings\SmartAssistAnyEntityControl.1033.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>SmartAssistAnyEntityControl.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

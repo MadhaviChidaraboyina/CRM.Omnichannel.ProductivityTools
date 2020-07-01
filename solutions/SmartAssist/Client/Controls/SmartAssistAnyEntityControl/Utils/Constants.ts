@@ -6,8 +6,8 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
     /** Control level constants */
     export class StringConstants {
-        public static SuggestionOuterContainer = "sa-suggestion-outer-container";
-        public static SuggestionInnerDiv = "sa-suggestion-inner-div-";
+        public static AnyEntityContainer = "sa-anyentity-container-";
+        public static AnyEntityInnerDiv = "sa-anyentity-inner-div-";
 
         // css
         public static AnyentityStyleTemplateId = "smartassist-anyentity-style";
@@ -18,6 +18,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static NoSuggestionsIconCss = "sa-no-suggestions-icon";
         public static NoSuggestionsLabelCss = "sa-no-suggestions-label";
         public static NoRecordDivIconPath = "";
+        public static SALoaderCss = "sa-loader";
+        public static SALoaderParentCss = "sa-loader-parent";
+        public static hideElementCss = "hide-element";
+        public static LoaderTimeout = 200;
 
         //TODO: Use string from localization       
         public static NoSimilarCaseText = "No suggestions found for similar cases.";
@@ -34,6 +38,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static NoKnowledgeArticleText = "NoKMSuggestionText";
         public static SimilarCaseTitle = "SimilarCasesSuggestionTitle";
         public static NoSimilarCaseText = "NoSimilarCaseSuggestionText";
+        public static LoadingText = "LoadingText";
     }
 
     /**Smart assist config type */

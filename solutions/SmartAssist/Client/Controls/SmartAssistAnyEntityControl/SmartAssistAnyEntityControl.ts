@@ -10,11 +10,12 @@ module MscrmControls.SmartAssistAnyEntityControl {
     export class SmartAssistAnyEntityControl implements Mscrm.StandardControl<IInputBag, IOutputBag> {
 
         public static _context: Mscrm.ControlData<IInputBag> = null;
+        private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;
-        private parentDiv: string = "";
+        private parentDivId: string = "";
         private _sessionStateManager: SessionStateManager;
         private _localStorageManager: LocalStorageManager;
         private _handleDismissEvent: (args: any) => void;
@@ -42,12 +43,31 @@ module MscrmControls.SmartAssistAnyEntityControl {
             try {
                 if (this.initCompleted == false) {
                     SmartAssistAnyEntityControl._context = context;
+                    this.anyEntityContainer = container;
                     this.validateParameters(context);
                     this.recordId = context.parameters.RecordId.raw;
-                    this.saConfig = context.parameters.SAConfig.raw as any;               
-                    
-                    this.parentDiv = StringConstants.SuggestionInnerDiv + this.saConfig.SmartassistConfigurationId;
-                    $("#" + this.parentDiv).html(AnyEntityTemplate.get());
+                    this.saConfig = context.parameters.SAConfig.raw as any;
+
+                    // Anyentity Main Container
+                    this.parentDivId = StringConstants.AnyEntityContainer + this.saConfig.SmartassistConfigurationId;
+                    var anyEntityElement: HTMLDivElement = document.createElement("div");
+                    anyEntityElement.id = this.parentDivId;
+                    this.anyEntityContainer.appendChild(anyEntityElement);
+
+
+                    // Anyentity inner Container with style
+                    var currentElement = $("#" + this.parentDivId);
+                    currentElement.html(AnyEntityTemplate.get());
+                    var innerElm: HTMLDivElement = document.createElement("div");
+                    innerElm.id = StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId;
+                    $("#" + this.parentDivId).append(innerElm);
+
+                    // Loader element
+                    var loaderElement: HTMLDivElement = document.createElement("div");
+                    var loaderLocale = Utility.getString(LocalizedStrings.LoadingText);
+                    loaderElement.innerHTML = ViewTemplates.SALoader.Format(this.saConfig.SmartassistConfigurationId, loaderLocale);
+                    $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(loaderElement);
+
                     this.initCompleted = true;
                 }
                 // fromcache: true; fromServer: false;
@@ -56,6 +76,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             catch (error) {
                 //TODO: telemetry
                 console.log(error);
+                this.hideLoader();
             }
         }
 
@@ -97,14 +118,15 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Intitiate Recomendation Control
          */
         public async InitiateSuggestionControl(): Promise<void> {
+            this.appendTitle();
+            this.showLoader();
             // Get Suggestions data records for provide saConfig
             var data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
             var dataLength = data[this.saConfig.SmartassistConfigurationId].length;
 
-            this.appendTitle();
             if (dataLength < 1) {
-                var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig.SuggestionType);                
-                $("#" + StringConstants.SuggestionInnerDiv + this.saConfig.SmartassistConfigurationId).append(emptyRecordElm)
+                var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig.SuggestionType);
+                $("#" + this.parentDivId).append(emptyRecordElm)
             }
             for (let i = 0; i <= (dataLength - 1); i++) {
                 var record = data[this.saConfig.SmartassistConfigurationId][i];
@@ -143,14 +165,17 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 //Initiate Suggestion Control
                 const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", componentId, properties);
                 SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
-                $("#" + this.parentDiv).append(divElement)
+                $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
             }
+            setTimeout(() => {
+                this.hideLoader();
+            }, StringConstants.LoaderTimeout);
         }
 
         /** Append title for Specific SA suggestions */
         private appendTitle() {
             var titleElement = ViewTemplates.getTitleTemplate(this.saConfig.TitleIconePath, this.saConfig.SAConfigTitle);
-            $("#" + StringConstants.SuggestionInnerDiv + this.saConfig.SmartassistConfigurationId).append(titleElement)
+            $("#" + this.parentDivId).prepend(titleElement)
         }
 
         /**
@@ -201,15 +226,16 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }
         }
 
-        /**
-         * Get localized value
-         * @param resourceName: Localized resource constant
-         */
-        public static getString(resourceName: string): string {
-            if (this._context) {
-                return resourceName;
-            }
-            return this._context.resources.getString(resourceName);
+        /**Show loader element in the UI */
+        private showLoader() {
+            $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).addClass("relative-parent");
+            $("#" + Utility.getLoaderComponent(this.saConfig.SmartassistConfigurationId)).removeClass(StringConstants.hideElementCss);
+        }
+
+        /**Hide loader element in the UI */
+        private hideLoader() {
+            $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).removeClass("relative-parent");
+            $("#" + Utility.getLoaderComponent(this.saConfig.SmartassistConfigurationId)).addClass(StringConstants.hideElementCss);
         }
     }
 }

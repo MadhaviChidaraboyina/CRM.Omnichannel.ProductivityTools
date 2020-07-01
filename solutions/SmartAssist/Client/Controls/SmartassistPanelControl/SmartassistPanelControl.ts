@@ -43,11 +43,15 @@ module MscrmControls.SmartassistPanelControl {
             try {
                 SmartassistPanelControl._context = context;
                 this.smartAssistContainer = container;
+                // Loader Element
+                var loaderElement: HTMLDivElement = document.createElement("div");
+                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
+                this.smartAssistContainer.appendChild(loaderElement);
+
                 var SuggestionEl: HTMLDivElement = document.createElement("div");
                 SuggestionEl.id = Constants.SuggestionOuterContainer;
                 SuggestionEl.style.overflow = "auto";
                 this.smartAssistContainer.appendChild(SuggestionEl);
-
                 if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
                     this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
                 }
@@ -59,7 +63,7 @@ module MscrmControls.SmartassistPanelControl {
                 }
 
             } catch (Error) {
-
+                this.hideLoader();
                 let logConstants = TelemetryComponents;
                 let eventParameters = new EventParameters();
                 let error = { name: "Smart Assist panel Control Init error", message: "Error while initializing smart assist panel control" };
@@ -79,6 +83,7 @@ module MscrmControls.SmartassistPanelControl {
                 this.ppSessionContext = JSON.parse(context.parameters.SessionContext.raw);
             }
             if (this.newInstance && Constants.IncidentEntityName == this.AnchorTabContext.entityName) {
+                this.showLoader();
                 this.renderSuggestions(false, this.AnchorTabContext.entityId);
             }
             this.newInstance = false;
@@ -106,19 +111,11 @@ module MscrmControls.SmartassistPanelControl {
             Microsoft.AppRuntime.Sessions.removeOnContextChange(this.tabSwitchHandlerId);
         }
 
-        public static getString(resourceName: string): string {
-            if (!SmartassistPanelControl._context) {
-                //TODO: add telemetry.
-                return resourceName;
-            }
-            return SmartassistPanelControl._context.resources.getString(resourceName);
-        }
-
         /**
          * Initialize SmartAssistAnyEntityControl to render suggestions
          * @param recordId: Anchor tab Entity id from PP control
          */
-        public async renderSuggestions(update:boolean, recordId: string = null): Promise<void> {
+        public async renderSuggestions(update: boolean, recordId: string = null): Promise<void> {
             // validate current context
             if (this.validateCurrentContext() || recordId) {
                 if (Utility.isNullOrEmptyString(recordId)) {
@@ -167,11 +164,13 @@ module MscrmControls.SmartassistPanelControl {
                     SmartassistPanelControl._context.utils.bindDOMElement(anyEntityControl, divElement);
                     $("#" + Constants.SuggestionOuterContainer).append(divElement);
                 }
+                this.hideLoader();
             }
         }
 
         /**Re-render any entity control */
         public reRenderSuggestions() {
+            this.showLoader();
             var element = document.getElementById(Constants.SuggestionOuterContainer);
             element.innerHTML = '';
 
@@ -226,6 +225,16 @@ module MscrmControls.SmartassistPanelControl {
                 return true;
             }
             return false;
+        }
+
+        /**Show loader component */
+        private showLoader() {
+            $("#" + Constants.SAPanelLoaderId).removeClass(Constants.hideElementCss);
+        }
+
+        /**Hide loader component */
+        private hideLoader() {
+            $("#" + Constants.SAPanelLoaderId).addClass(Constants.hideElementCss);
         }
     }
 }

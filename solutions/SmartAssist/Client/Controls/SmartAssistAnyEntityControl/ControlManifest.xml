@@ -8,7 +8,7 @@
 		</modes>		
 		<resources>
       <code path="SmartAssistAnyEntityControl.js" order="1" />
-      <resx path="strings/SmartassistControl.1033.resx" version="1.0.0" />
+      <resx path="strings/SmartAssistAnyEntityControl.1033.resx" version="1.0.0" />
 		</resources>		
 	</control>
 </manifest>
