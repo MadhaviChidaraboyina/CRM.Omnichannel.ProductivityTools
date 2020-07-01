@@ -30,9 +30,16 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Get current session context.
          * */
         public static getCurrentSessionContext(): AppRuntimeClientSdk.ISessionContext {
-            const sessionId = Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
+            const sessionId = Utility.getCurrentSessionId();
             const sessionContext = Microsoft.AppRuntime.Sessions.getSession(sessionId).context;
             return sessionContext;
+        }
+
+        /**
+        * Get current session id.
+        * */
+        public static getCurrentSessionId(): string {
+            return Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
         }
 
         public static getComponentId(suggestionId: string) {
@@ -44,7 +51,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param notificationNumber: Notification Number
          */
         public static DispatchPanelInboundEvent(notificationNumber: number, sesssionId: string) {
-            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(StringConstants.ControlId, new MscrmControls.PanelControl.PanelNotification(notificationNumber, sesssionId));
+            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(StringConstants.PPChildControlId, new MscrmControls.PanelControl.PanelNotification(notificationNumber, sesssionId));
             let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
             window.top.dispatchEvent(event);
         }

@@ -20,10 +20,18 @@
             if (suggestionIdsForSAConfig) {
                 this.getSuggestionsDataFromSessionCache(saConfig, suggestionIdsForSAConfig);
             }
-            
+
             // call API if the data is not available in cache.
             if (!this.Suggestions || fromServer) {
                 await this.getSuggestionsDataFromAPI(saConfig, recordId)
+
+                // Raise PP notification
+                var saConfigData = this.Suggestions[saConfig.SmartassistConfigurationId];
+                if (saConfigData) {
+                    var sessionId = Utility.getCurrentSessionId();
+                    var dataCount = saConfigData.length;
+                    Utility.DispatchPanelInboundEvent(dataCount, sessionId);
+                }
             }
             return this.Suggestions;
         }
