@@ -47,8 +47,7 @@ module MscrmControls.ProductivityPanel {
 
                     localStorage.setItem(Smartassist.Constants.SessionCloseHandlerId, handlerId);
                     let logger = new Smartassist.TelemetryLogger(context);
-                    Smartassist.SmartAssistManager.Instance.SetLogger(logger);
-                    Smartassist.SAConfigDataManager.Instance.SetLogger(logger);
+                    Smartassist.SmartAssistManager.Instance.SetLogger(logger);                    
                     if (context.client.isRTL) {
                         SmartassistControl.isRTL = true;
                     }
@@ -58,17 +57,10 @@ module MscrmControls.ProductivityPanel {
                     el.id = Smartassist.Constants.SmartAssistOuterContainer;
                     this.smartAssistContainer.appendChild(el);
 
-                    var SuggestionEl: HTMLDivElement = document.createElement("div");
-                    SuggestionEl.id = Smartassist.Constants.SuggestionOuterContainer;
-                    SuggestionEl.style.maxHeight = "500px";
-                    SuggestionEl.style.overflow = "auto";
-                    this.smartAssistContainer.appendChild(SuggestionEl);
-
                     Xrm.WebApi.retrieveMultipleRecords(Smartassist.Constants.ServiceEndpointEntity, Smartassist.Constants.CDNEndpointFilter).then((data: any) => {
                         window[Smartassist.Constants.ConversatonControlOrigin] = data.entities[0].path;
                         window.top.addEventListener("message", this.receiveMessage, false);
                     });
-                    this.renderSuggestions();
                 }
             } catch (Error) {
 
@@ -121,47 +113,6 @@ module MscrmControls.ProductivityPanel {
                 return resourceName;
             }
             return SmartassistControl._context.resources.getString(resourceName);
-        }
-
-        /**Initialize SmartAssistAnyEntityControl to render suggestions  */
-        public async renderSuggestions(): Promise<void> {
-            let recordId = ""; //todo, get record ID from CIF
-            var configs = await Smartassist.SAConfigDataManager.Instance.getSAConfigurations() as Smartassist.SAConfig[];
-          
-            //ToDo: validating Ordering
-            configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1)
-
-            for (let i = 0; i <= (configs.length - 1); i++) {
-                let properties: any =
-                {
-                    parameters: {
-                        SAConfig: {
-                            Type: "Multiple",
-                            Primary: false,
-                            Static: true,
-                            Usage: 1, // input
-                            Value: configs[i]
-                        },
-                        RecordId: {
-                            Type: "SingleLine.Text",
-                            Primary: false,
-                            Static: true,
-                            Usage: 1, // input
-                            Value: recordId
-                        }
-                        // TODO: Add Data Context
-                    },
-                    key: "AnyEntityControlComponent",
-                    id: "AnyEntityControlComponent",                    
-                };
-
-                var divElement = document.createElement("div");
-                divElement.id = Smartassist.Constants.SuggestionInnerDiv + configs[i].SmartassistConfigurationId;
-                // Init SmartAssistAnyEntityControl
-                const anyEntityControl = SmartassistControl._context.factory.createComponent("MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl", "SmartAssistAnyEntityControl", properties);
-                SmartassistControl._context.utils.bindDOMElement(anyEntityControl, divElement);
-                $("#" + Smartassist.Constants.SuggestionOuterContainer).append(divElement);
-            }
         }
 
         private receiveMessage(event: any): void {

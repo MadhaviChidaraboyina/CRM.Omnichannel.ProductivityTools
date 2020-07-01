@@ -26,20 +26,6 @@ module MscrmControls.ProductivityPanel.Smartassist {
         Error
     }
 
-    export enum SuggestionControlType {
-        AdaptiveCard = 192350000
-    }
-
-    export enum SAConfigStatus {
-        Active = 1,
-        Inactive = 2  
-    }
-
-    export enum SuggestionType {
-        KnowledgeArticleSuggestion = 192350000,
-        SimilarCaseSuggestion = 192350001
-    }
-
 	/**
 	 * Constants
 	 */
