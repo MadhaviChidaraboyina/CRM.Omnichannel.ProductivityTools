@@ -14,6 +14,6 @@ declare module Microsoft.Smartassist.SuggestionProvider {
          * Returns data for smartassist suggestions.
          * @param param SuggestionContext
          */
-        getSuggestions(param: SuggestionContext): Array<any>;
+        getSuggestions(param: SuggestionContext): Promise<Array<any>>;
     }
 }
