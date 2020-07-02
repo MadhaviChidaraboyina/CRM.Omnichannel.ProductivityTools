@@ -31,6 +31,7 @@
     <TypeScriptCompile Include="css\AnyEntityTemplate.ts" />
     <TypeScriptCompile Include="StateManagement\LocalStorageManager.ts" />
     <TypeScriptCompile Include="StateManagement\SessionStateManager.ts" />
+    <TypeScriptCompile Include="SuggestionProvider\SuggestionProvider.ts" />
     <TypeScriptCompile Include="Utils\Constants.ts" />
     <TypeScriptCompile Include="AnyEntityDataManager.ts" />
     <TypeScriptCompile Include="Entity\SmartassistConfiguration.ts" />
@@ -49,9 +50,8 @@
     <Folder Include="Typings\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="strings\SmartAssistAnyEntityControl.resx">
+    <EmbeddedResource Include="strings\SmartAssistAnyEntityControl.1033.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>SmartAssistAnyEntityControl.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

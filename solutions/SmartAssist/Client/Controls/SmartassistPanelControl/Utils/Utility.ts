@@ -60,5 +60,16 @@ module MscrmControls.SmartassistPanelControl {
             }
             return true;
         }
+
+        /**
+         * Get localization string
+         * @param resourceName: resource id
+         */
+        public static getString(resourceName: string): string {
+            if (!SmartassistPanelControl._context) {               
+                return resourceName;
+            }
+            return SmartassistPanelControl._context.resources.getString(resourceName);
+        }
     }
 }

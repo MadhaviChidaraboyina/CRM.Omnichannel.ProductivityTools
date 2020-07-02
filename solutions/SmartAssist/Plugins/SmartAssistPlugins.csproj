@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{3B1B06F4-285F-4424-B35A-A00E09E37A5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Dynamics.SmartAssist.Plugins</RootNamespace>
+    <AssemblyName>Microsoft.Dynamics.SmartAssist.Plugins</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AssemblyClsCompliant>false</AssemblyClsCompliant>
+    <nowarn>0618,2008</nowarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\build\config\mssharedlibsn1024.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy">
+      <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Solution.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>$(PKG_XRMAPP_SOLUTIONCOMMON)\$(SCPATH)\Microsoft.Dynamics.Solution.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Kernel.Contracts">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>$(PKG_XRMSERVER)\lib\net452\Microsoft.Xrm.Kernel.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>$(PKG_CRMSDK_CORETOOLS)\content\bin\coretools\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>true</Private>
+      <HintPath>$(PKG_JSON)\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\build\config\mssharedlibsn1024.snk">
+      <Link>mssharedlibsn1024.snk</Link>
+    </None>
+  </ItemGroup>
+	<ItemGroup>
+		<None Include="mssharedlibsn1024.snk" />
+	</ItemGroup>
+	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+	<Target Name="WriteToAssemblyIdentityLog" />
+	<Target Name="BuildGenerated" />
+	<Target Name="BuildCompiled" DependsOnTargets="Build" />
+	<Target Name="BuildLinked" />
+	<Choose>
+		<When Condition="('$(DropInConfigurationFolder)' == 'true')">
+			<PropertyGroup>
+				<DropDir>$(XrmSolutionsRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Plugins</DropDir>
+			</PropertyGroup>
+		</When>
+		<Otherwise>
+			<PropertyGroup>
+				<DropDir>$(XrmSolutionsRoot)\drop\Plugins</DropDir>
+			</PropertyGroup>
+		</Otherwise>
+	</Choose>
+	<ItemGroup>
+		<PluginDropFiles Include="$(XrmSolutionsRoot)\target\$(BuildConfiguration)\$(BuildPlatform)\SmartAssistPlugins\Microsoft.Dynamics.SmartAssist.Plugins.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</PluginDropFiles>
+		<PluginDropFiles Include="$(XrmSolutionsRoot)\target\$(BuildConfiguration)\$(BuildPlatform)\SmartAssistPlugins\Microsoft.Dynamics.SmartAssist.Plugins.pdb" Condition="'$(Configuration)'=='Debug'" />
+	</ItemGroup>
+	<ItemGroup />
+	<Target Name="AfterBuild">
+		<Copy SourceFiles="@(PluginDropFiles)" DestinationFolder="$(DropDir)" SkipUnchangedFiles="true" />
+	</Target>
+</Project>

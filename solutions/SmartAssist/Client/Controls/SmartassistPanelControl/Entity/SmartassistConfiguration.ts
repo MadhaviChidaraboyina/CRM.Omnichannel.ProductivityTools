@@ -9,8 +9,7 @@ module MscrmControls.SmartassistPanelControl {
         public EntityName: string;
 
         public MaxSuggestionCount: string;
-        public Order: string;
-        public SuggestionControlId: string;
+        public Order: string;        
         public SuggestionControlType: string;
         public SuggestionType: string;
         public SuggestionWebresourceFunction: string;
@@ -26,7 +25,6 @@ module MscrmControls.SmartassistPanelControl {
         constructor() {
             this.MaxSuggestionCount = "msdyn_maxsuggestioncount";
             this.Order = "msdyn_order";
-            this.SuggestionControlId = "msdyn_suggestioncontrolid";
             this.SuggestionControlType = "msdyn_suggestioncontroltype";
             this.SuggestionType = "msdyn_suggestiontype";
             this.SuggestionWebresourceFunction = "msdyn_suggestionwebresourcemethod";
@@ -48,7 +46,6 @@ module MscrmControls.SmartassistPanelControl {
         public ACTemplate = "";
         public MaxSuggestionCount = "";
         public Order = "";
-        public SuggestionControlId = "";
         public SuggestionControlType: SuggestionControlType = null;
         public SuggestionType: number = null;
         public SuggestionWebresourceFunction = "";
@@ -70,7 +67,6 @@ module MscrmControls.SmartassistPanelControl {
                 this.ACTemplate = Utility.GetValue(response[AdaptiveCardTemplateAlias]);
                 this.MaxSuggestionCount = Utility.GetValue(response[this.AttributeName.MaxSuggestionCount]);
                 this.Order = Utility.GetValue(response[this.AttributeName.Order]);
-                this.SuggestionControlId = Utility.GetValue(response[this.AttributeName.SuggestionControlId]);
                 this.SuggestionControlType = Utility.GetValue(response[this.AttributeName.SuggestionControlType]) as SuggestionControlType;
                 this.SuggestionType = Utility.GetValue(response[this.AttributeName.SuggestionType]) as SuggestionType;
                 this.StatusCode = Utility.GetValue(response[this.AttributeName.StatusCode]) as SAConfigStatus;

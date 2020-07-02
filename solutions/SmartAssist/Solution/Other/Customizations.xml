@@ -11,6 +11,7 @@
 	<optionsets />
 	<WebResources />
 	<CustomControls />
+	<SolutionPluginAssemblies />
 	<EntityDataProviders />
 	<Languages>
 		<Language>1033</Language>

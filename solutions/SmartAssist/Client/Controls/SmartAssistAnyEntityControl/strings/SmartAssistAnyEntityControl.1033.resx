@@ -125,6 +125,10 @@
     <value>Knowledge article suggestions</value>
     <comment>Title for KM suggstions</comment>
   </data>
+  <data name="LoadingText" xml:space="preserve">
+    <value>Loading...</value>
+    <comment>Loading</comment>
+  </data>
   <data name="NoKMSuggestionText" xml:space="preserve">
     <value>No suggestions found for knowledge article</value>
     <comment>No KM records</comment>

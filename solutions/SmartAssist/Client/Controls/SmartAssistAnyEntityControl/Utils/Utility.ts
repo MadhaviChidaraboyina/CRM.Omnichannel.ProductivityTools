@@ -36,14 +36,37 @@ module MscrmControls.SmartAssistAnyEntityControl {
         }
 
         /**
-        * Get current session id.
-        * */
+         * Get current session id.
+         */
         public static getCurrentSessionId(): string {
             return Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
         }
 
+        /**
+         * Get RC Component Id
+         * @param suggestionId: suggestion entity record id
+         */
         public static getComponentId(suggestionId: string) {
             return "Suggestion_" + suggestionId + "_component";
+        }
+
+        /**
+         * get Loading Component dynamic id
+         * @param saConfigId: smart assist config id
+         */
+        public static getLoaderComponent(saConfigId: string) {
+            return StringConstants.SALoaderCss + "-" + saConfigId;
+        }
+
+        /**
+         * Get localization string
+         * @param resourceName: resource id
+         */
+        public static getString(resourceName: string): string {
+            if (!SmartAssistAnyEntityControl._context) {
+                return resourceName;
+            }
+            return SmartAssistAnyEntityControl._context.resources.getString(resourceName);
         }
 
         /**

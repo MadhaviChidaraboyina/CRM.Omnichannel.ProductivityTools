@@ -25,8 +25,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         /**Define SAConfig Entity props schema*/
         constructor() {
             this.MaxSuggestionCount = "msdyn_maxsuggestioncount";
-            this.Order = "msdyn_order";
-            this.SuggestionControlId = "msdyn_suggestioncontrolid";
+            this.Order = "msdyn_order";            
             this.SuggestionControlType = "msdyn_suggestioncontroltype";
             this.SuggestionType = "msdyn_suggestiontype";
             this.SuggestionWebresourceFunction = "msdyn_suggestionwebresourcemethod";
@@ -45,8 +44,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
     export class SAConfig {
         public ACTemplate = "";
         public MaxSuggestionCount = "";
-        public Order = "";
-        public SuggestionControlId = "";
+        public Order = "";        
         public SuggestionControlType: SuggestionControlType = null;
         public SuggestionType: number = null;
         public SuggestionWebresourceFunction = "";

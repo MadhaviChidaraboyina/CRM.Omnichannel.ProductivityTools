@@ -133,6 +133,10 @@
     <value>Something went wrong. Please try again</value>
     <comment>Failure Message</comment>
   </data>
+  <data name="LoadingText" xml:space="preserve">
+    <value>Loading...</value>
+    <comment>Loading</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Done!</value>
     <comment>Success Message</comment>

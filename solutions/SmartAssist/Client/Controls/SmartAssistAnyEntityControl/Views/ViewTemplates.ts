@@ -9,6 +9,8 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private static TitleTextTemplate = '<div class="' + StringConstants.SuggestionsTitleDivCss + '" >{0}<label class="' + StringConstants.SuggestionsTitLelabelCss + '">{1}</label></div>';
         private static NoSugegstionsIconTemplate = '<img src="{0}" class="' + StringConstants.NoSuggestionsIconCss + '">';
         private static NoSugegstionsTextTemplate = '<div class="' + StringConstants.NoSuggestionsDivCss + '" >{0}<label class="' + StringConstants.NoSuggestionsLabelCss + '">{1}</label></div>';
+        //public static SALoader = '<div id="' + Utility.getLoaderComponent("{0}") + '" class="hide-element ' + StringConstants.SALoaderCss + '" ></div>';
+        public static SALoader = '<div id="' + Utility.getLoaderComponent("{0}") + '" class="hide-element ' + StringConstants.SALoaderParentCss + '"><div class="' + StringConstants.SALoaderCss + '"></div><label>{1}</label></div>';
 
         /**
          * Gets html template for suggestions title.
