@@ -130,11 +130,11 @@
     <comment>Loading</comment>
   </data>
   <data name="NoKMSuggestionText" xml:space="preserve">
-    <value>No suggestions found for knowledge article</value>
+    <value>No suggestions found for knowledge article.</value>
     <comment>No KM records</comment>
   </data>
   <data name="NoSimilarCaseSuggestionText" xml:space="preserve">
-    <value>No suggestions found for similar cases</value>
+    <value>No suggestions found for similar cases.</value>
     <comment>No Case records</comment>
   </data>
   <data name="SimilarCasesSuggestionTitle" xml:space="preserve">

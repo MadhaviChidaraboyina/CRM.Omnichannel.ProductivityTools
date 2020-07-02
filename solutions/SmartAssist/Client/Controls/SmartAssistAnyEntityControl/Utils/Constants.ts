@@ -22,11 +22,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static SALoaderParentCss = "sa-loader-parent";
         public static hideElementCss = "hide-element";
         public static LoaderTimeout = 200;
-
-        //TODO: Use string from localization       
-        public static NoSimilarCaseText = "No suggestions found for similar cases.";
-        public static NoKnowledgeArticleText = "No suggestions found for knowledge articles.";
-
         public static DismissCardEvent = 'dismissCard';
     }
 

@@ -155,7 +155,6 @@ module MscrmControls.SmartassistPanelControl {
                                 Usage: 1, // input
                                 Value: this.ppSessionContext
                             }
-                            // TODO: Add Data Context
                         },
                         key: componentId,
                         id: componentId,
