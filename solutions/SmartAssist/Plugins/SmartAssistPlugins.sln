@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAssistPlugins", "SmartAssistPlugins.csproj", "{3B1B06F4-285F-4424-B35A-A00E09E37A5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug|amd64 = debug|amd64
+		debug|Any CPU = debug|Any CPU
+		release|amd64 = release|amd64
+		release|Any CPU = release|Any CPU
+		retail|amd64 = retail|amd64
+		retail|Any CPU = retail|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.debug|amd64.ActiveCfg = debug|amd64
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.debug|amd64.Build.0 = debug|amd64
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.debug|Any CPU.ActiveCfg = debug|Any CPU
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.debug|Any CPU.Build.0 = debug|Any CPU
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.release|amd64.ActiveCfg = release|amd64
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.release|amd64.Build.0 = release|amd64
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.release|Any CPU.ActiveCfg = release|Any CPU
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.release|Any CPU.Build.0 = release|Any CPU
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.retail|amd64.ActiveCfg = retail|amd64
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.retail|amd64.Build.0 = retail|amd64
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.retail|Any CPU.ActiveCfg = retail|Any CPU
+		{3B1B06F4-285F-4424-B35A-A00E09E37A5C}.retail|Any CPU.Build.0 = retail|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F03CA31F-1777-4474-B915-A658031C011A}
+	EndGlobalSection
+EndGlobal
