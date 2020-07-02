@@ -13,6 +13,19 @@
 	<CustomControls />
 	<SolutionPluginAssemblies />
 	<EntityDataProviders />
+	<msdyn_panetoolconfigurations>
+		<msdyn_panetoolconfiguration msdyn_uniquename="msdyn_smartassist_tool_config">
+		<iscustomizable>1</iscustomizable>
+		<msdyn_category>100000001</msdyn_category>
+		<msdyn_controlname>MscrmControls.SmartassistPanelControl.SmartassistPanelControl</msdyn_controlname>
+		<msdyn_data>{}</msdyn_data>
+		<msdyn_isconfigurable>0</msdyn_isconfigurable>
+		<msdyn_name>Smartassist tool config</msdyn_name>
+		<msdyn_toolconfigurationentity>msdyn_smartassistconfig</msdyn_toolconfigurationentity>
+		<statecode>0</statecode>
+		<statuscode>1</statuscode>
+		</msdyn_panetoolconfiguration>
+	</msdyn_panetoolconfigurations>
 	<Languages>
 		<Language>1033</Language>
 	</Languages>
