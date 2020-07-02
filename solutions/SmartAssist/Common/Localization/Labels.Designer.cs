@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.Dynamics.OmnichannelFacebook.Localization {
+namespace Microsoft.Dynamics.SmartAssist.Localization {
     using System;
     
     
@@ -39,8 +39,8 @@ namespace Microsoft.Dynamics.OmnichannelFacebook.Localization {
         public static Microsoft.Dynamics.Solution.Common.PluginResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    Microsoft.Dynamics.Solution.Common.PluginResourceManager temp = new Microsoft.Dynamics.Solution.Common.PluginResourceManager("OmnichannelFacebook", typeof(Labels).Assembly);
-                    resourceMan = temp; resourceMan.SolutionName = "OmnichannelFacebook";
+                    Microsoft.Dynamics.Solution.Common.PluginResourceManager temp = new Microsoft.Dynamics.Solution.Common.PluginResourceManager("SmartAssist", typeof(Labels).Assembly);
+                    resourceMan = temp; resourceMan.SolutionName = "SmartAssist";
                 }
                 return resourceMan;
             }
