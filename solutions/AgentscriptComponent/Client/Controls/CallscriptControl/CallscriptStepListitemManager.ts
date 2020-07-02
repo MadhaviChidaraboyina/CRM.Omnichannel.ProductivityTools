@@ -13,7 +13,7 @@ module MscrmControls.CallscriptControl {
 		private stateManager: StateManager;
 		public expandedStepId: string;
 		private stepDetailsManager: CallscriptStepDetailsManager;
-        private cifUtil: CIFUtil;
+        private cecUtil: CECUtil;
         private macroUtil: MacroUtil;
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
@@ -26,7 +26,7 @@ module MscrmControls.CallscriptControl {
 			this.expandedStepId = Constants.EmptyString;
 			this.stateManager = stateManager;
 			this.stepDetailsManager = stepDetailsManager;
-            this.cifUtil = new CIFUtil(this.context);
+            this.cecUtil = new CECUtil(this.context);
             this.macroUtil = new MacroUtil(this.context);
 			this.telemetryContext = TelemetryComponents.CallscriptStepListitemManager;
 			this.telemetryLogger = new TelemetryLogger(this.context);

@@ -9,7 +9,7 @@ module MscrmControls.CallscriptControl {
 
 		private context: Mscrm.ControlData<IInputBag>;
 		private dataManager: DataManager;
-		private cifUtil: CIFUtil;
+		private cecUtil: CECUtil;
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
 
@@ -26,7 +26,7 @@ module MscrmControls.CallscriptControl {
 		constructor(context: Mscrm.ControlData<IInputBag>) {
 			this.context = context;
 			this.dataManager = new DataManager(context);
-			this.cifUtil = new CIFUtil(context);
+			this.cecUtil = new CECUtil(context);
 			this.callscriptsForCurrentSession = null;
 			this.selectedScriptForCurrentSession = null;
 			this.telemetryContext = TelemetryComponents.StateManager;
@@ -35,19 +35,22 @@ module MscrmControls.CallscriptControl {
 			this.scriptDataFetchFailed = false;
 
 			this.setCurrentUciSessionId();
-			this.initializeControlStateFromCIF();
+			this.initializeControlStateFromCEC();
         }
 
         // this method reset the required properties when session switch / create
         public onSessionSwitch(): void {
-            this.updateControlStateInCIF();
+            this.updateControlStateInCEC();
             this.setCurrentUciSessionId();
-            this.initializeControlStateFromCIF();
+            this.initializeControlStateFromCEC();
             if (this.context.utils.isNullOrUndefined(this.callscriptsForCurrentSession)) {
                 this.callscriptsForCurrentSession = null;
                 this.selectedScriptForCurrentSession = null;
                 this.isScriptsDataRequested = false;
                 this.scriptDataFetchFailed = false;
+                //TODO: need to remove this code once CEC bug is fixed related to null context on
+                //session create and session switch
+                this.context.utils.requestRender();
             }
         }
 
@@ -70,15 +73,15 @@ module MscrmControls.CallscriptControl {
 		/**
 		 * Initializes control state from CIF session template params
 		 */
-		private initializeControlStateFromCIF(): void {
-			this.callscriptsForCurrentSession = this.cifUtil.getValueFromSessionTemplateParams(Constants.ControlStateKey);
+		private initializeControlStateFromCEC(): void {
+			this.callscriptsForCurrentSession = this.cecUtil.getValueFromSessionTemplateParams(Constants.ControlStateKey);
 		}
 
 		/**
 		 *  Updates/Adds control state into CIF session template params
 		 */
-		public updateControlStateInCIF(): void {
-			this.cifUtil.setValueInSessionTemplateParams(Constants.ControlStateKey, this.callscriptsForCurrentSession, this.currentUciSessionId);
+		public updateControlStateInCEC(): void {
+			this.cecUtil.setValueInSessionTemplateParams(Constants.ControlStateKey, this.callscriptsForCurrentSession, this.currentUciSessionId);
 		}
 
 		/**

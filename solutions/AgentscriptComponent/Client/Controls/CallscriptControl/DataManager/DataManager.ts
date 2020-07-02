@@ -11,7 +11,7 @@ module MscrmControls.CallscriptControl
 		private context: Mscrm.ControlData<IInputBag>;
 		private telemetryContext: string;
         private telemetryLogger: TelemetryLogger;
-        private cifUtil: CIFUtil;
+        private cecUtil: CECUtil;
         private macroUtil: MacroUtil;
 		private languageId: number;
 
@@ -23,7 +23,7 @@ module MscrmControls.CallscriptControl
 			this.context = context;
 			this.telemetryContext = TelemetryComponents.DataManager;
 			this.telemetryLogger = new TelemetryLogger(context);
-            this.cifUtil = new CIFUtil(context);
+            this.cecUtil = new CECUtil(context);
             this.macroUtil = new MacroUtil(context);
 			this.languageId = context.userSettings.languageId;
 			this.isInitialDataFetchCompleted = false;
@@ -34,11 +34,10 @@ module MscrmControls.CallscriptControl
 		 * It gets session template and then retrieves call scripts associated with it
 		 */
 		public retrieveInitialData(): Promise<CallScript[]> {
-			return new Promise<CallScript[]>((resolve, reject) => {
-				let sessionTemplateId = this.cifUtil.getSessionTemplateId();
-
-				if (!this.context.utils.isNullOrUndefined(sessionTemplateId) && !this.context.utils.isNullOrEmptyString(sessionTemplateId)) {
-					let retrieveDataPromise = this.retrieveCallscriptRecords(sessionTemplateId);
+            return new Promise<CallScript[]>((resolve, reject) => {
+                let sessionTemplateUniqueName = this.cecUtil.getSessionTemplateName();
+                if (!this.context.utils.isNullOrUndefined(sessionTemplateUniqueName) && !this.context.utils.isNullOrEmptyString(sessionTemplateUniqueName)) {
+                    let retrieveDataPromise = this.retrieveCallscriptRecords(sessionTemplateUniqueName);
 					retrieveDataPromise.then(
 						(records: CallScript[]) => {
 							// Resolve the promise with record set
@@ -50,8 +49,8 @@ module MscrmControls.CallscriptControl
 					);
 
 					let eventParam = new EventParameters();
-					eventParam.addParameter("sessionTemplateId", sessionTemplateId);
-					eventParam.addParameter("scenario", "Session template Id retrieved");
+                    eventParam.addParameter("sessionTemplateUniqueName", sessionTemplateUniqueName);
+					eventParam.addParameter("scenario", "Session template unique name retrieved");
 					this.telemetryLogger.logSuccess(this.telemetryContext, DataManagerComponents.InitialDataFetch, eventParam);
 				}
 				else {
@@ -62,7 +61,7 @@ module MscrmControls.CallscriptControl
 
 					//Reject the promise
 					reject(errorMessage);
-				}
+                }   
 			});
 		}
 
@@ -72,12 +71,12 @@ module MscrmControls.CallscriptControl
 		 */
 		public retrieveDefaultCallScript(): Promise<string> {
 			return new Promise<string>((resolve, reject) => {
-				let sessionTemplateId = this.cifUtil.getSessionTemplateId();
-				if (!this.context.utils.isNullOrUndefined(sessionTemplateId) && !this.context.utils.isNullOrEmptyString(sessionTemplateId)) {
+                let sessionTemplateName = this.cecUtil.getSessionTemplateName();
+                if (!this.context.utils.isNullOrUndefined(sessionTemplateName) && !this.context.utils.isNullOrEmptyString(sessionTemplateName)) {
 					var request = new XMLHttpRequest();
 					var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
-                    var requestUrl = context.getClientUrl() + "/api/data/v9.0/msdyn_sessiontemplates(" + sessionTemplateId + ")?$select=msdyn_enablebuildexpression,msdyn_expressiondata";
-					request.open('GET', requestUrl, false);
+                    var requestUrl = context.getClientUrl() + "/api/data/v9.0/msdyn_sessiontemplates?$filter=msdyn_uniquename eq '" + sessionTemplateName + "'&$select=msdyn_enablebuildexpression,msdyn_expressiondata";
+                    request.open('GET', requestUrl, false);
 					request.send(null);
 					if (request.status === 200) {
 						var response = JSON.parse(request.responseText);
@@ -86,7 +85,7 @@ module MscrmControls.CallscriptControl
 							retrieveDataPromise.then(
 								function (callScriptID: string) {
 									let param = new EventParameters();
-									param.addParameter("sessionTemplateId", sessionTemplateId);
+                                    param.addParameter("sessionTemplateName", sessionTemplateName);
 									param.addParameter("defaultCallScriptId", callScriptID);
 									param.addParameter("scenario", "Default CallScript Id retrieved");
 									this.telemetryLogger.logSuccess(this.telemetryContext, DataManagerComponents.RetrieveDefaultCallScript, param);
@@ -103,7 +102,7 @@ module MscrmControls.CallscriptControl
 						}
 						else {
 							let param = new EventParameters();
-							param.addParameter("sessionTemplateId", sessionTemplateId);
+                            param.addParameter("sessionTemplateName", sessionTemplateName);
 							param.addParameter("scenario", "build expression is Disabled");
 							this.telemetryLogger.logSuccess(this.telemetryContext, DataManagerComponents.RetrieveDefaultCallScript, param);
 							resolve(null);
@@ -112,7 +111,7 @@ module MscrmControls.CallscriptControl
 					else {
 						let errorMessage = "Failed to fetch expression details to retrieve default call script Id";
 						let errorParams = new EventParameters();
-						errorParams.addParameter("sessionTemplateId", sessionTemplateId);
+                        errorParams.addParameter("sessionTemplateName", sessionTemplateName);
 						this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.RetrieveDefaultCallScript, errorMessage, errorParams);
 
 						//Reject the promise
@@ -120,7 +119,7 @@ module MscrmControls.CallscriptControl
 					}
 				}
 				else {
-					let errorMessage = "Failed to retrieve session template Id";
+					let errorMessage = "Failed to retrieve session template name";
 					let errorParam = new EventParameters();
 					this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.RetrieveDefaultCallScript, errorMessage, errorParam);
 
@@ -132,15 +131,15 @@ module MscrmControls.CallscriptControl
 
 
 		/**
-		 * Retrieves initial call script records associated with given session template id
+		 * Retrieves initial call script records associated with given session template name
 		 * Minimal details required to show call script records in selector are retrieved
-		 * @param sessionTemplateId session template id
+		 * @param sessionTemplateUniqueName session template unique name
 		 */
-		private retrieveCallscriptRecords(sessionTemplateId: string): Promise<CallScript[]>
+        private retrieveCallscriptRecords(sessionTemplateUniqueName: string): Promise<CallScript[]>
 		{
 			return new Promise<CallScript[]>((resolve, reject) => {
 
-				let fetchXml = this.getCallscriptFetchxml(sessionTemplateId);
+                let fetchXml = this.getCallscriptFetchxml(sessionTemplateUniqueName);
 				let fetchXmlQuery = FetchXmlConstants.FetchOperator + encodeURIComponent(fetchXml);
 				let dataFetchPromise = this.context.webAPI.retrieveMultipleRecords(AgentScriptEntity.entityName, fetchXmlQuery);
 
@@ -460,10 +459,10 @@ module MscrmControls.CallscriptControl
 		}
 
 		/**
-		 * Get fetchxml query to get call script records associated with given session template id
-		 * @param sessionTemplateId session template id
+		 * Get fetchxml query to get call script records associated with given session template unique name
+		 * @param sessionTemplateUniqueName session template unique name
 		 */
-		private getCallscriptFetchxml(sessionTemplateId: string): string
+        private getCallscriptFetchxml(sessionTemplateUniqueName: string): string
 		{
 			let fetchXml = "<fetch version='1.0' output-format='xml-platform' mapping='logical' returntotalrecordcount='true' page='1' no-lock='false'>" +
 								"<entity name='msdyn_agentscript_v2'>" + 
@@ -477,7 +476,7 @@ module MscrmControls.CallscriptControl
 									"<link-entity name='msdyn_msdyn_agentscript_v2_msdyn_sessiontempl' intersect='true' visible='false' to='msdyn_agentscript_v2id' from='msdyn_agentscript_v2id'>" +
 									"<link-entity name='msdyn_sessiontemplate' from='msdyn_sessiontemplateid' to='msdyn_sessiontemplateid' alias='bb'>" +
 									"<filter type='and'>" +
-										`<condition attribute='msdyn_sessiontemplateid' operator='eq' value='${sessionTemplateId}'/>` +
+										`<condition attribute='msdyn_uniquename' operator='eq' value='${sessionTemplateUniqueName}'/>` +
 									"</filter>"  +
 									"</link-entity>" +
 									"</link-entity>" +
@@ -513,6 +512,6 @@ module MscrmControls.CallscriptControl
 								"</fetch>";
 
 			return fetchxml;
-		}
+        }     
 	}
 }

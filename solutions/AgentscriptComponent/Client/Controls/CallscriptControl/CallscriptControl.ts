@@ -11,7 +11,7 @@ module MscrmControls.CallscriptControl {
 
 		private context: Mscrm.ControlData<IInputBag>;
 		public stateManager: StateManager;
-		public cifUtil: CIFUtil;
+		public cecUtil: CECUtil;
 		public stepsListManager: CallscriptStepsListManager;
 		public stepListitemManager: CallscriptStepListitemManager;
 		public stepDetailsManager: CallscriptStepDetailsManager;
@@ -42,7 +42,7 @@ module MscrmControls.CallscriptControl {
 			{
 				this.context = context;
 				this.telemetryLogger = new TelemetryLogger(context);
-				this.cifUtil = new CIFUtil(context);
+				this.cecUtil = new CECUtil(context);
 				this.stateManager = new StateManager(context);
 
 				this.stepDetailsManager = new CallscriptStepDetailsManager(context, this.stateManager);
@@ -55,7 +55,7 @@ module MscrmControls.CallscriptControl {
 				this.telemetryLogger.logSuccess(this.telemetryContext, "Init", params);
             }
             let windowObject = this.getWindowObject();
-            windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.handleSessionSwitch.bind(this));  
+            Microsoft.AppRuntime.Sessions.addOnAfterSessionSwitch(this.handleSessionSwitch.bind(this));
 		}
 
         private getWindowObject(): any {
@@ -335,7 +335,7 @@ module MscrmControls.CallscriptControl {
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
 		public destroy(): void	{
-			this.stateManager.updateControlStateInCIF();
+			this.stateManager.updateControlStateInCEC();
 		}
 	}
 }
