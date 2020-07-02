@@ -31,6 +31,7 @@
     <TypeScriptCompile Include="css\AnyEntityTemplate.ts" />
     <TypeScriptCompile Include="StateManagement\LocalStorageManager.ts" />
     <TypeScriptCompile Include="StateManagement\SessionStateManager.ts" />
+    <TypeScriptCompile Include="SuggestionProvider\SuggestionProvider.ts" />
     <TypeScriptCompile Include="Utils\Constants.ts" />
     <TypeScriptCompile Include="AnyEntityDataManager.ts" />
     <TypeScriptCompile Include="Entity\SmartassistConfiguration.ts" />
