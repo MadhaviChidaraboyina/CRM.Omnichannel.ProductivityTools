@@ -17,7 +17,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static NoSuggestionsDivCss = "sa-no-suggestion-div";
         public static NoSuggestionsIconCss = "sa-no-suggestions-icon";
         public static NoSuggestionsLabelCss = "sa-no-suggestions-label";
-        public static NoRecordDivIconPath = "";
+        public static NoRecordDivIconPath = "/WebResources/msdyn_infoicongrey.svg";
         public static SALoaderCss = "sa-loader";
         public static SALoaderParentCss = "sa-loader-parent";
         public static hideElementCss = "hide-element";

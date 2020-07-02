@@ -25,6 +25,11 @@ module MscrmControls.SmartassistPanelControl {
         public static SAPanelLoaderId = "sa-panel-loader-id";
         public static hideElementCss = "hide-element";        
         public static SAPanelLoaderDiv = '<div id="' + Constants.SAPanelLoaderId + '" class="hide-element ' + Constants.SAPanelLoaderParentCss + '"><div class="' + Constants.SAPanelLoaderCss + '"></div><label>{0}</label></div>';
+        public static TitleDivCss = "sapanel-title-div";        
+        public static TitleLabelCss = "sapanel-title-label";        
+        public static TitleImgCss = "sapanel-title-img";
+        public static SAPanelTitleIconPath = "/WebResources/msdyn_infoiconblue.svg";
+        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}"><label class="${Constants.TitleLabelCss}">{0}</label><img class="${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/></div>`;
         public static SAPanelStyle =
             `<style id="sa-panel-style">
 	        .hide-element{
@@ -59,6 +64,22 @@ module MscrmControls.SmartassistPanelControl {
 	            0% { transform: rotate(0deg); }
 	            100% { transform: rotate(360deg); }
 	        }
+            .sapanel-title-div {
+                font-family: Segoe UI;    
+                line-height: 28px;
+                margin: 10px 0px 0 15px;
+            }
+            .sapanel-title-label {
+                font-size: 20px;
+                color: #323130;
+                font-weight: 600;
+            }
+            .sapanel-title-img {
+                font-size: 16px;
+                margin-left: 5px;
+                height: 16px;
+                width: 16px;
+            }
         </style>`;
     }
 
@@ -70,6 +91,7 @@ module MscrmControls.SmartassistPanelControl {
         public static SmartAssistSuccessMessage = "SuccessMessage";
         public static SmartAssistFailureMessage = "FailureMessage";
         public static LoadingText = "LoadingText";
+        public static SuggestionControlTitle = "SuggestionControlTitle";
 
         //Accessibility Labels
         public static Accessibility_ExecutedTextStepIndicator = "StepListItem_ExecutedTextStepAccessibilityLabel";

@@ -43,9 +43,15 @@ module MscrmControls.SmartassistPanelControl {
             try {
                 SmartassistPanelControl._context = context;
                 this.smartAssistContainer = container;
+
+                //Control title
+                var loaderElement: HTMLDivElement = document.createElement("div");
+                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle));
+                this.smartAssistContainer.appendChild(loaderElement);
+
                 // Loader Element
                 var loaderElement: HTMLDivElement = document.createElement("div");
-                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
+                loaderElement.innerHTML = Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
                 this.smartAssistContainer.appendChild(loaderElement);
 
                 var SuggestionEl: HTMLDivElement = document.createElement("div");

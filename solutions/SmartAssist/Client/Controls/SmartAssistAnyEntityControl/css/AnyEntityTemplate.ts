@@ -16,7 +16,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 					display: flex;
 					margin-bottom: 10px;
 					margin-top: 8px;
-					margin-left: 8px;
+					margin-left: 15px;
 				}
 				.sa-suggestions-title-icon {
 					height:16px;
