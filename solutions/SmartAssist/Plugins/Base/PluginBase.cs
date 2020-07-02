@@ -1,5 +1,6 @@
-﻿namespace Microsoft.Dynamics.SmartAssist.Common.Plugin
+﻿namespace Microsoft.Dynamics.SmartAssist.Plugin.Base
 {
+
 	using System;
 	using System.Diagnostics;
 	using System.Globalization;
@@ -7,16 +8,15 @@
 
 	/// <summary>
 	/// Base class for all plug-in classes.
-	/// </summary>    
+	/// </summary>
 	public abstract class PluginBase : IPlugin
-	{ 
-
+	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="PluginBase"/> class.
 		/// </summary>
 		/// <param name="childClassName">The <see cref=" cred="Type"/> of the derived class.</param>
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "PluginBase")]
-		internal PluginBase(Type childClassName)
+		public PluginBase(Type childClassName)
 		{
 			this.ChildClassName = childClassName.ToString();
 		}
@@ -29,16 +29,9 @@
 		protected string ChildClassName { get; private set; }
 
 		/// <summary>
-		/// Main entry point for he business logic that the plug-in is to execute.
+		/// Main entry point for the business logic that the plug-in is to execute.
 		/// </summary>
 		/// <param name="serviceProvider">The service provider.</param>
-		/// <remarks>
-		/// For improved performance, Microsoft Dynamics CRM caches plug-in instances. 
-		/// The plug-in's Execute method should be written to be stateless as the constructor 
-		/// is not called for every invocation of the plug-in. Also, multiple system threads 
-		/// could execute the plug-in at the same time. All per invocation state information 
-		/// is stored in the context. This means that you should not use global variables in plug-ins.
-		/// </remarks>
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "CrmVSSolution411.NewProj.PluginBase+LocalPluginContext.Trace(System.String)", Justification = "Execute")]
 		public void Execute(IServiceProvider serviceProvider)
 		{
@@ -80,43 +73,5 @@
 		/// </summary>
 		/// <param name="localcontext">Context for the current plug-in.</param>
 		public abstract void ExecuteCrmPlugin(LocalPluginContext localcontext);
-
-		/// <summary>
-		/// Validates if the plugin is registered with the right entity
-		/// </summary>
-		/// <param name="localcontext">Local Plugin Context</param>
-		/// <param name="entityName">The Entity Name to Validate against</param>
-		protected void ValidatePlugin(LocalPluginContext localcontext, string entityName)
-		{
-			bool isValid = false;
-
-			if (localcontext.PluginExecutionContext.InputParameters.Contains("Target"))
-			{
-				if (localcontext.PluginExecutionContext.InputParameters["Target"] is Entity)
-				{
-					// Obtain the target entity from the input parameters.
-					Entity entity = (Entity)localcontext.PluginExecutionContext.InputParameters["Target"];
-
-					// Verify that the target entity represents a given entityName. If not, this plug-in was not registered correctly.
-					if (string.Equals(entity.LogicalName, entityName))
-					{
-						isValid = true;
-					}
-				}
-				else if (localcontext.PluginExecutionContext.InputParameters["Target"] is EntityReference)
-				{
-					EntityReference entityReference = (EntityReference)localcontext.PluginExecutionContext.InputParameters["Target"];
-					if (string.Equals(entityReference.LogicalName, entityName))
-					{
-						isValid = true;
-					}
-				}
-			}
-
-			if(!isValid)
-			{
-				throw new InvalidPluginExecutionException($"The plugin is not registered correctly to the entity {entityName}");
-			}
-		}
 	}
 }

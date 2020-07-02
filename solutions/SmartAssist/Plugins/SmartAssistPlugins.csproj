@@ -26,6 +26,9 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.Dynamics.SmartAssist.Common">
+      <HintPath>..\Common\obj\amd64\debug\Microsoft.Dynamics.SmartAssist.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Dynamics.Solution.Common">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
@@ -84,8 +87,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\LocalPluginContext.cs" />
+    <Compile Include="Base\PluginBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmartAssistConfig\SAConfig.cs" />
+    <Compile Include="SmartAssistConfig\CreateAppExtensionPlugin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\build\config\mssharedlibsn1024.snk">
@@ -113,12 +118,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <PluginDropFiles Include="$(XrmSolutionsRoot)\target\debug\amd64\SmartAssistPlugins\Microsoft.Dynamics.SmartAssist.Plugins.dll">
+    <PluginDropFiles Include="$(XrmSolutionsRoot)\target\$(BuildConfiguration)\$(BuildPlatform)\SmartAssistPlugins\Microsoft.Dynamics.SmartAssist.Plugins.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </PluginDropFiles>
-    <PluginDropFiles Include="$(XrmSolutionsRoot)\target\debug\amd64\SmartAssistPlugins\Microsoft.Dynamics.SmartAssist.Plugins.pdb" />
+    <PluginDropFiles Include="$(XrmSolutionsRoot)\target\$(BuildConfiguration)\$(BuildPlatform)\SmartAssistPlugins\Microsoft.Dynamics.SmartAssist.Plugins.pdb" Condition="'$(Configuration)'=='Debug'" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Common\SmartAssistCommon.csproj">
+      <Project>{b4c716ed-ca86-4c68-b5a9-6330ada7a8ab}</Project>
+      <Name>SmartAssistCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Target Name="AfterBuild">
     <Copy SourceFiles="@(PluginDropFiles)" DestinationFolder="$(DropDir)" SkipUnchangedFiles="true" />
   </Target>

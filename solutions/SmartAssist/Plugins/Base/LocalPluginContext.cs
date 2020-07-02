@@ -1,6 +1,6 @@
-﻿namespace Microsoft.Dynamics.SmartAssist.Common.Plugin
+﻿namespace Microsoft.Dynamics.SmartAssist.Plugin.Base
 {
-	using Proxies;
+	using Microsoft.Dynamics.SmartAssist.Common.Proxies;
 	using System;
 	using Xrm.Sdk;
 
