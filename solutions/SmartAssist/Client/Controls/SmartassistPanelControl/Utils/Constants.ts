@@ -9,6 +9,7 @@ module MscrmControls.SmartassistPanelControl {
 	 * Constants
 	 */
     export class Constants {
+        public static ControlId = "MscrmControls.SmartassistPanelControl.SmartassistPanelControl";
         public static currentContextChangeEeventId = "currentContextChangeEeventId";
         public static currentContextAnchorEntId = "currentContextAnchorEntId";
         public static currentContextCurrentCtxEntId = "currentContextCurrentCtxEntId";

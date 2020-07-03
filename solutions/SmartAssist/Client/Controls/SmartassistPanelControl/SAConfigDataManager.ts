@@ -9,17 +9,8 @@ module MscrmControls.SmartassistPanelControl {
         private saConfigSchema: SAConfigSchema = new SAConfigSchema();
         private acConfigSchema: ACConfigSchema = new ACConfigSchema();
         private saConfig: SAConfig[] = [];
-        private logger: TelemetryLogger;
 
         constructor() {
-        }
-
-        /**
-         * Set Telemetry logger for SAConfigDataManager
-         * @param logger: Telemetry logger instance
-         */
-        public SetLogger(logger: TelemetryLogger) {
-            this.logger = logger;
         }
 
         /**Get SAConfigDataManager singleton instance  */
@@ -53,10 +44,10 @@ module MscrmControls.SmartassistPanelControl {
 
         /**Fetch SA config from cds */
         private async fetchSAConfigurationsData() {
-            let eventParameters = new EventParameters();
+            let eventParameters = new TelemetryLogger.EventParameters();
             try {
                 let fetchXml = this.getXmlQueryForSAConfig()
-                var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;             
+                var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;
                 for (var i = 0; i < result.entities.length; i++) {
                     this.saConfig.push(new SAConfig(result.entities[i], this.acConfigSchema.AdaptiveCardTemplateAlias))
                 }
@@ -64,11 +55,12 @@ module MscrmControls.SmartassistPanelControl {
                     window.sessionStorage.setItem(Constants.SAConfigCacheKey, JSON.stringify(this.saConfig));
                 }
                 catch (error) {
-                    // TODO: Telemetry: Failer to store data in cache.
+                    eventParameters.addParameter("Exception Details", error.message);
+                    SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "fetchSAConfigurationsData", "Error occurred while to store sa config data in cache.", eventParameters);
                 }
             } catch (error) {
                 eventParameters.addParameter("Exception Details", error.message);
-                this.logger.logError(this.logger.baseComponent, "fetchSAConfigurationsData", "Error occurred while fetching SA Configurations Data", eventParameters);
+                SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "fetchSAConfigurationsData", "Error occurred while fetching SA Configurations Data", eventParameters);
                 throw error;
             }
 

@@ -36,7 +36,6 @@
     <TypeScriptCompile Include="PrivateReferences.ts" />
     <TypeScriptCompile Include="Utils\StringHelper.ts" />
     <TypeScriptCompile Include="Utils\Constants.ts" />
-    <TypeScriptCompile Include="Utils\TelemetryLogger.ts" />
     <TypeScriptCompile Include="$(PKG_TYPESCRIPT_MSBUILD)\tools\tsc\lib.es6.d.ts" />
     <TypeScriptCompile Include="Utils\Utility.ts" />
   </ItemGroup>

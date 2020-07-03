@@ -8,8 +8,8 @@ module MscrmControls.SmartAssistAnyEntityControl {
     'use strict';
 
     export class SmartAssistAnyEntityControl implements Mscrm.StandardControl<IInputBag, IOutputBag> {
-
         public static _context: Mscrm.ControlData<IInputBag> = null;
+        public static _telemetryReporter: TelemetryLogger.TelemetryLogger = null;
         private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
@@ -43,6 +43,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             try {
                 if (this.initCompleted == false) {
                     SmartAssistAnyEntityControl._context = context;
+                    SmartAssistAnyEntityControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, "MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl")
                     this.anyEntityContainer = container;
                     this.validateParameters(context);
                     this.recordId = context.parameters.RecordId.raw;
@@ -74,9 +75,11 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 this.InitiateSuggestionControl();
             }
             catch (error) {
-                //TODO: telemetry
-                console.log(error);
                 this.hideLoader();
+                //Log error
+                let eventParameters = new TelemetryLogger.EventParameters();
+                eventParameters.addParameter("Exception Details", error.message);
+                SmartAssistAnyEntityControl._telemetryReporter.logError("MainComponent", "init", "Smart Assist Any Entity Control Init error", eventParameters);
             }
         }
 
@@ -183,11 +186,16 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param context: The "Input Bag" containing the parameters and other control metadata.
          */
         private validateParameters(context: Mscrm.ControlData<IInputBag>) {
-            if (context.utils.isNullOrUndefined(context.parameters.SAConfig) ||
-                context.utils.isNullOrUndefined(context.parameters.RecordId)) {
+            if (context.utils.isNullOrUndefined(context.parameters.SAConfig.raw) ||
+                context.utils.isNullOrUndefined(context.parameters.RecordId.raw)) {
                 // one or more required parameters are null or undefined
-                let errorMessage = "In-correct parameters are passed";
-                //todo: Add telemetry     
+                let errorMessage = "In-correct parameters are passed.";
+
+                //Log error
+                let eventParameters = new TelemetryLogger.EventParameters();
+                eventParameters.addParameter("SAConfig", context.parameters.SAConfig.raw);
+                eventParameters.addParameter("RecordId", context.parameters.RecordId.raw);
+                SmartAssistAnyEntityControl._telemetryReporter.logError("MainComponent", "validateParameters", errorMessage, eventParameters);
                 throw errorMessage;
             }
         }
@@ -197,8 +205,8 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param args: event argument
          */
         private handleDismissEvent(args: any) {
+            const suggestionId = args.detail.id;
             try {
-                const suggestionId = args.detail.id;
                 const renderedSuggestionIds = this._sessionStateManager.getAllRecordsForConfigId(this.recordId, this.saConfig.SmartassistConfigurationId);
 
                 if (renderedSuggestionIds.indexOf(suggestionId) != -1) {
@@ -222,7 +230,12 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this._localStorageManager.updateSuggestionData(suggestionId, dataToOverride);
                 }
             } catch (error) {
-                //TODO: Telemetry: Error logged in dismiss event.
+                //Log error
+                let eventParameters = new TelemetryLogger.EventParameters();
+                eventParameters.addParameter("Exception Details", error.message);
+                eventParameters.addParameter("suggestionId", suggestionId)
+                let message = "Smart Assist Any Entity Control handleDismissEvent error.";
+                SmartAssistAnyEntityControl._telemetryReporter.logError("MainComponent", "handleDismissEvent", message, eventParameters);
             }
         }
 

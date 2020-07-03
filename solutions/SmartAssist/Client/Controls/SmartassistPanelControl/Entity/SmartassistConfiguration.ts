@@ -12,7 +12,7 @@ module MscrmControls.SmartassistPanelControl {
         public Order: string;        
         public SuggestionControlType: string;
         public SuggestionType: string;
-        public SuggestionWebresourceFunction: string;
+        public SuggestionProvider: string;
         public SuggestionWebResourceUrl: string;        
         public SAConfigTitle: string;
         public SmartassistConfigurationId: string;
@@ -27,7 +27,7 @@ module MscrmControls.SmartassistPanelControl {
             this.Order = "msdyn_order";
             this.SuggestionControlType = "msdyn_suggestioncontroltype";
             this.SuggestionType = "msdyn_suggestiontype";
-            this.SuggestionWebresourceFunction = "msdyn_suggestionwebresourcemethod";
+            this.SuggestionProvider = "msdyn_suggestionprovider";
             this.SuggestionWebResourceUrl = "msdyn_suggestionwebresourceurl";
             this.UniqueName = "msdyn_uniquename";
             this.SAConfigTitle = "msdyn_suggestioncontainertitle";
@@ -70,7 +70,7 @@ module MscrmControls.SmartassistPanelControl {
                 this.SuggestionControlType = Utility.GetValue(response[this.AttributeName.SuggestionControlType]) as SuggestionControlType;
                 this.SuggestionType = Utility.GetValue(response[this.AttributeName.SuggestionType]) as SuggestionType;
                 this.StatusCode = Utility.GetValue(response[this.AttributeName.StatusCode]) as SAConfigStatus;
-                this.SuggestionWebresourceFunction = Utility.GetValue(response[this.AttributeName.SuggestionWebresourceFunction]);
+                this.SuggestionWebresourceFunction = Utility.GetValue(response[this.AttributeName.SuggestionProvider]);
                 this.SuggestionWebResourceName = Utility.GetValue(response[this.AttributeName.SuggestionWebResourceUrl]);
                 this.UniqueName = Utility.GetValue(response[this.AttributeName.UniqueName]);                
                 this.SmartassistConfigurationId = Utility.GetValue(response[this.AttributeName.SmartassistConfigurationId]);
