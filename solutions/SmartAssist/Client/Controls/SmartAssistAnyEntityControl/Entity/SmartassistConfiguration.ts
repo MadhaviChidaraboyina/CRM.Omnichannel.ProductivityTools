@@ -47,7 +47,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public Order = "";        
         public SuggestionControlType: SuggestionControlType = null;
         public SuggestionType: number = null;
-        public SuggestionWebresourceFunction = "";
+        public SuggestionProvider = "";
         public SuggestionWebResourceName = "";
         public SAConfigTitle = "";
         public UniqueName = "";

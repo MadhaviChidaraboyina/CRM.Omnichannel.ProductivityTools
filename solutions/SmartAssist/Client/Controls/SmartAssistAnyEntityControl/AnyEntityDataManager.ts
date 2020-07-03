@@ -68,7 +68,7 @@
          * @param saconfig Smartassist configuration record.
          */
         private getSuggestionProvider(saconfig: SAConfig): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider {
-                const suggestionProviderName = saconfig.SuggestionWebresourceFunction;
+                const suggestionProviderName = saconfig.SuggestionProvider;
                 let ctor = this.CONSTRUCTOR_CACHE[suggestionProviderName];
                 if (!ctor) {
                     let findCtor = window;

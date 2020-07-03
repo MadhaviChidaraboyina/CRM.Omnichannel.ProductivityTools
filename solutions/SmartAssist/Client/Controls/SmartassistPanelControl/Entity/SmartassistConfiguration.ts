@@ -48,7 +48,7 @@ module MscrmControls.SmartassistPanelControl {
         public Order = "";
         public SuggestionControlType: SuggestionControlType = null;
         public SuggestionType: number = null;
-        public SuggestionWebresourceFunction = "";
+        public SuggestionProvider = "";
         public SuggestionWebResourceName = "";
         public SAConfigTitle = "";
         public UniqueName = "";
@@ -70,7 +70,7 @@ module MscrmControls.SmartassistPanelControl {
                 this.SuggestionControlType = Utility.GetValue(response[this.AttributeName.SuggestionControlType]) as SuggestionControlType;
                 this.SuggestionType = Utility.GetValue(response[this.AttributeName.SuggestionType]) as SuggestionType;
                 this.StatusCode = Utility.GetValue(response[this.AttributeName.StatusCode]) as SAConfigStatus;
-                this.SuggestionWebresourceFunction = Utility.GetValue(response[this.AttributeName.SuggestionProvider]);
+                this.SuggestionProvider = Utility.GetValue(response[this.AttributeName.SuggestionProvider]);
                 this.SuggestionWebResourceName = Utility.GetValue(response[this.AttributeName.SuggestionWebResourceUrl]);
                 this.UniqueName = Utility.GetValue(response[this.AttributeName.UniqueName]);                
                 this.SmartassistConfigurationId = Utility.GetValue(response[this.AttributeName.SmartassistConfigurationId]);
