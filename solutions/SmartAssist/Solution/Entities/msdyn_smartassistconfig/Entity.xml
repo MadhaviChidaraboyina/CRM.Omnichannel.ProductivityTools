@@ -483,10 +483,10 @@
             <Description description="Denotes the type of suggestions like Similar case or KB article suggestion" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_suggestionwebresourcemethod">
+        <attribute PhysicalName="msdyn_SuggestionProvider">
           <Type>nvarchar</Type>
-          <Name>msdyn_suggestionwebresourcemethod</Name>
-          <LogicalName>msdyn_suggestionwebresourcemethod</LogicalName>
+          <Name>msdyn_suggestionprovider</Name>
+          <LogicalName>msdyn_suggestionprovider</LogicalName>
           <RequiredLevel>none</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
@@ -496,7 +496,7 @@
           <IsCustomField>1</IsCustomField>
           <IsAuditEnabled>1</IsAuditEnabled>
           <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IntroducedVersion>9.2.1.359</IntroducedVersion>
           <IsCustomizable>0</IsCustomizable>
           <IsRenameable>0</IsRenameable>
           <CanModifySearchSettings>1</CanModifySearchSettings>
@@ -517,10 +517,10 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-            <displayname description="Suggestionwebresourcemethod" languagecode="1033" />
+              <displayname description="Suggestion Provider" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="This method will be called by smart assist to retrieve suggestions." languagecode="1033" />
+              <Description description="Provide the class name of Suggestion provider" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SuggestionWebresourceURL">

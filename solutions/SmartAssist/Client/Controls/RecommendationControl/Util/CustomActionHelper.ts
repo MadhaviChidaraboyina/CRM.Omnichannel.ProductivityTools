@@ -21,8 +21,28 @@ module MscrmControls.Smartassist.Suggestion {
 		public static invokeCustomAction(actionParams: any) {
 			const actionName = actionParams.customActionName;
 			const params = actionParams.customActionArgs;
-			return window.top[actionName](params)
+
+			return CustomActionHelper.getCustiomActionMethod(actionName)(params);
 		}
+
+		/**
+		 * Returns the custom action method to be invoked.
+		 * @param customActioName Full qualified name for action.
+		 */
+		public static getCustiomActionMethod(customActioName: string): (param: any) => Promise<any> {
+			let findFunc = window;
+			for (const ctorNamePart of customActioName.split(".")) {
+				findFunc = findFunc[ctorNamePart];
+				if (!findFunc) {
+					break;
+				}
+			}
+
+			if (!findFunc || typeof findFunc !== "function") {
+				throw new Error(`Could not find/invoke ${customActioName}`);
+			}
+			return findFunc;
+        }
 	}
 }
 

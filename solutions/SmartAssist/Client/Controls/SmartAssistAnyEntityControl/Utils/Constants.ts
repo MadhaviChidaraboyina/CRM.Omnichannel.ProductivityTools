@@ -8,6 +8,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
     export class StringConstants {
         public static AnyEntityContainer = "sa-anyentity-container-";
         public static AnyEntityInnerDiv = "sa-anyentity-inner-div-";
+        public static PPChildControlId = "MscrmControls.SmartassistPanelControl.SmartassistPanelControl";
 
         // css
         public static AnyentityStyleTemplateId = "smartassist-anyentity-style";

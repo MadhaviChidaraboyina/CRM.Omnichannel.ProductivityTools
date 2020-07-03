@@ -16,16 +16,16 @@
         refreshCallback?: (args: CardRefreshArgs) => void;
     }
 
-    export enum Action {
+    export const enum Action {
         /**
          * To refresh the card
          */
-        Refresh,
+        Refresh = 0,
 
         /**
          * To dismiss the card.
          */
-        Dismiss
+        Dismiss = 1
     }
 
     /**
