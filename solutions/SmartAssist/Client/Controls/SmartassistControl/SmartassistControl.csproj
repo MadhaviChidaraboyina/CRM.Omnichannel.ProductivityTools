@@ -29,9 +29,6 @@
     <TypeScriptCompile Include="CommonReferences.ts" />
     <TypeScriptCompile Include="css\SmartAssistTemplate.ts" />
     <TypeScriptCompile Include="CustomActionManager.ts" />
-    <TypeScriptCompile Include="Entity\ACConfig.ts" />
-    <TypeScriptCompile Include="Entity\SAConfig.ts" />
-    <TypeScriptCompile Include="SAConfigDataManager.ts" />
     <TypeScriptCompile Include="StateManagement\CardStateManager.ts" />
     <TypeScriptCompile Include="Utils\AdaptiveCardHelper.ts" />
     <TypeScriptCompile Include="SmartAssistManager.ts" />
@@ -45,7 +42,6 @@
     <TypeScriptCompile Include="Utils\Constants.ts" />
     <TypeScriptCompile Include="Utils\TelemetryLogger.ts" />
     <TypeScriptCompile Include="$(PKG_TYPESCRIPT_MSBUILD)\tools\tsc\lib.es6.d.ts" />
-    <TypeScriptCompile Include="Utils\Utility.ts" />
     <TypeScriptCompile Include="Views\ViewTemplates.ts" />
   </ItemGroup>
   <ItemGroup>

@@ -30,13 +30,20 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Get current session context.
          * */
         public static getCurrentSessionContext(): AppRuntimeClientSdk.ISessionContext {
-            const sessionId = Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
+            const sessionId = Utility.getCurrentSessionId();
             const sessionContext = Microsoft.AppRuntime.Sessions.getSession(sessionId).context;
             return sessionContext;
         }
 
         /**
-         * Get RC Component Id 
+         * Get current session id.
+         */
+        public static getCurrentSessionId(): string {
+            return Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
+        }
+
+        /**
+         * Get RC Component Id
          * @param suggestionId: suggestion entity record id
          */
         public static getComponentId(suggestionId: string) {
@@ -60,6 +67,16 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 return resourceName;
             }
             return SmartAssistAnyEntityControl._context.resources.getString(resourceName);
+        }
+
+        /**
+         * Dispatches Productivity Panel In Bound Event
+         * @param notificationNumber: Notification Number
+         */
+        public static DispatchPanelInboundEvent(notificationNumber: number, sesssionId: string) {
+            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(StringConstants.PPChildControlId, new MscrmControls.PanelControl.PanelNotification(notificationNumber, sesssionId));
+            let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
+            window.top.dispatchEvent(event);
         }
     }
 }
