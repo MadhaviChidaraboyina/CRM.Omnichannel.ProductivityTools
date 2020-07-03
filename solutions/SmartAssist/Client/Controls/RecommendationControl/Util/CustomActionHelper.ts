@@ -18,7 +18,7 @@ module MscrmControls.Smartassist.Suggestion {
 		 * Invoke the custom actions which will be executed in webresource.
 		 * @param actionParams Action parameters
 		 */
-		public static invokeCustomAction(actionParams: any) {
+		public static invokeCustomAction(actionParams: any) : Promise<any> {
 			const actionName = actionParams.customActionName;
 			const params = actionParams.customActionArgs;
 
@@ -42,7 +42,15 @@ module MscrmControls.Smartassist.Suggestion {
 				throw new Error(`Could not find/invoke ${customActioName}`);
 			}
 			return findFunc;
-        }
+		}
+
+		/**
+		 * Gets localized string for custom action's resolve or error states.
+		 * @param resourceName : key for localized string.
+		 */
+		public static getString(context: Mscrm.ControlData<IInputBag>, resourceName: string): string {
+			return context.resources.getString(resourceName);
+		}
 	}
 }
 

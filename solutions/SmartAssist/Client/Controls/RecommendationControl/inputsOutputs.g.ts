@@ -9,7 +9,6 @@ module MscrmControls.Smartassist {
 	export interface IInputBag {
 		data: Mscrm.StringProperty;
 		Template: Mscrm.StringProperty;
-		DataContext?: Mscrm.StringProperty;
 	}
 
 	export interface IOutputBag {

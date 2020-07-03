@@ -37,7 +37,11 @@ module MscrmControls.Smartassist.Suggestion {
                 "foregroundColors": {
                     "default": {
                         "default": "#605E5C",
-                        "subtle": "#EE333333"
+                        "subtle": "#EE333333",
+                        "highlightColors": {
+                            "default": "#B5D0FF",
+                            "subtle": "#11000000"
+                        }
                     },
                     "dark": {
                         "default": "#000000",
