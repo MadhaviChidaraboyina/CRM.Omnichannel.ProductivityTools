@@ -20,17 +20,27 @@ module MscrmControls.Smartassist {
 	}
     
     .recommendation-outer-container {
-		max-width: calc(100% - 30px);
+		max-width: calc(100% - 25px);
 		margin: 0 auto;
+		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.18), 0px 2px 4px rgba(0, 0, 0, 0.12);
+		border-radius: 2px;
+        margin-bottom: 5px;
+     }
+
+     .ca-success-style {
+        border: 1px solid #1AD358;
+		border-radius: 2px;
+     }
+
+    .cs-failure-style {
+        border: 1px solid #FF7676;
+		border-radius: 2px;
      }
 
     .recommendation-card-container {
 		border-top: 5px solid #FFF;
 		background-color: #FFF;
-		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.18), 0px 2px 4px rgba(0, 0, 0, 0.12);
-		border-radius: 2px;
 		position: relative;
-		margin-bottom: 5px;
 		margin-left: 1px;
 		padding-left: 10px;
         padding-right: 10px;
@@ -42,6 +52,24 @@ module MscrmControls.Smartassist {
     .new-card {
 		border-top: 5px solid #76A6FF;
 	}
+
+    .ca-failure-message {
+		height: 20px;
+        font-family: Segoe UI;
+        font-size: 12px;
+		color: #444444;
+        background: #FDE7E9;
+        padding: 5px
+     }
+
+    .ca-success-message {
+		height: 20px;
+        font-family: Segoe UI;
+        font-size: 12px;
+		color: #444444;
+        background: #DFF6DD;
+        padding: 5px;
+	 }
 
     .ac-horizontal-separator {
 		height: 5px !important;

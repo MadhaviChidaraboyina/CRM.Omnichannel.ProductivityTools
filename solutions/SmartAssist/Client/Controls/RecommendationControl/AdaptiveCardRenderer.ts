@@ -137,7 +137,18 @@ module MscrmControls.Smartassist.Suggestion {
 							customActionName: submitAction.data[Constants.CustomActionName], customActionArgs: customActionArgs
 						};
 						
-						Suggestion.CustomActionHelper.invokeCustomAction(customAction);
+						let actionPromise = Suggestion.CustomActionHelper.invokeCustomAction(customAction);
+						const successMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.SuccessImageEncode, CustomActionHelper.getString(this._context, LocalizedStrings.CustomActionSuccessMessage));
+						const successMessage = ViewTemplates.SuccessMessageTemplate.Format(successMessageTemplate);
+						const errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, CustomActionHelper.getString(this._context, LocalizedStrings.CustomActionFailureMessage));
+						let errorMessage = ViewTemplates.FailureMessageTemplates.Format(errorMessageTemplate);;
+						actionPromise.then((data) => {
+							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(successMessage);
+							$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionSuccessStyle);
+						}).catch((e) => {
+							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(errorMessage);
+							$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionErrorStyle);
+						});
 					}
 					else {
 						//TODO: Telemetry for invalid action

@@ -121,16 +121,20 @@
     <value>data</value>
     <comment>data</comment>
   </data>
-  <data name="CC_DataContext" xml:space="preserve">
-    <value>DataContext</value>
-    <comment>data context</comment>
-  </data>
   <data name="CC_RecommendationControl_Component" xml:space="preserve">
-    <value>Recommendation control</value>
+    <value>Suggestion control</value>
     <comment>Control name</comment>
   </data>
   <data name="CC_Template" xml:space="preserve">
     <value>template</value>
     <comment>adaptivecard template</comment>
+  </data>
+  <data name="FailureMessage" xml:space="preserve">
+    <value>Something went wrong. Please try again.</value>
+    <comment>Failure Message</comment>
+  </data>
+  <data name="SuccessMessage" xml:space="preserve">
+    <value>Done!</value>
+    <comment>Success Message</comment>
   </data>
 </root>

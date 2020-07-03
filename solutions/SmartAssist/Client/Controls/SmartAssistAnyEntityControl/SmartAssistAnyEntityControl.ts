@@ -148,13 +148,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
                             Static: true,
                             Usage: 1,
                             Value: this.saConfig.ACTemplate
-                        },
-                        DataContext: {
-                            Type: "Multiple",
-                            Primary: false,
-                            Static: true,
-                            Usage: 1,
-                            Value: { resource: "" }
                         }
                     },
                     key: componentId,

@@ -14,7 +14,6 @@ module MscrmControls.Smartassist
 		public _context: Mscrm.ControlData<IInputBag> = null;
 		private _template: string;
 		private _data: any;
-		private _dataContext: any;
 		private _suggestionId: string;
 		private _adaptiveCardRenderer: Suggestion.AdaptiveCardRenderer;
 		private _localStorageManager: Suggestion.LocalStorageManager;
@@ -44,9 +43,6 @@ module MscrmControls.Smartassist
 
 				this._data = context.parameters.data.raw;
 				this._template = context.parameters.Template.raw;
-				if (context.parameters.DataContext) {
-					this._dataContext = context.parameters.DataContext.raw;
-				}
 
 				this._suggestionId = this._data.SuggestionId;
 				this._adaptiveCardRenderer.SetContext(context);
@@ -68,8 +64,7 @@ module MscrmControls.Smartassist
 		 * control's container.
 		 * */
 		private renderRecommendation(): void {
-			var finalObject = Object.assign({}, this._data, this._dataContext);
-			const suggestionCardElement: Suggestion.SuggestionCardElement = this._adaptiveCardRenderer.createCardFromTemplateAndData(this._suggestionId, this._template, finalObject);
+			const suggestionCardElement: Suggestion.SuggestionCardElement = this._adaptiveCardRenderer.createCardFromTemplateAndData(this._suggestionId, this._template, this._data);
 			const cardId = suggestionCardElement.card.cardId;
 			var cardContainer = Smartassist.Suggestion.ViewTemplates.CardContainerTemplate.Format(cardId);
 			$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).append(cardContainer);
