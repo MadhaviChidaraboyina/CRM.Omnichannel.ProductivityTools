@@ -53,7 +53,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     var anyEntityElement: HTMLDivElement = document.createElement("div");
                     anyEntityElement.id = this.parentDivId;
                     this.anyEntityContainer.appendChild(anyEntityElement);
-
+                    this.anyEntityDataManager.initializeContextParameters(context);
 
                     // Anyentity inner Container with style
                     var currentElement = $("#" + this.parentDivId);
@@ -88,6 +88,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 		 */
         public updateView(context: Mscrm.ControlData<IInputBag>): void {
             // custom code goes here
+            this.anyEntityDataManager.initializeContextParameters(context);
         }
 
 		/** 
