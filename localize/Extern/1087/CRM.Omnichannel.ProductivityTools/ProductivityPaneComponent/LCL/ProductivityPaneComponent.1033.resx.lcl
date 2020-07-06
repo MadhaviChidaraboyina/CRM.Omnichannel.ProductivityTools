@@ -12,23 +12,31 @@
       <Item ItemId=";ProductivityPaneConfig_LearnMore_String" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Learn more.]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Learn more.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Қосымша ақпарат алыңыз.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-02T07:04:34.0005282Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO31294_20200629" />
+        </Props>
       </Item>
       <Item ItemId=";ProductivityPaneConfig_info_text" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Productivity pane provides agents quick access to productivity apps and tools. {0}]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Productivity pane provides agents quick access to productivity apps and tools. {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Өнімділік тақтасы агенттер үшін өнімділік бағдарламалары мен құралдарына жылдам қол жеткізуді қамтамасыз етеді. {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-02T07:04:34.0005282Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[DO NOT CHANGE {0} as it will be replaced with ProductivityPaneConfig_LearnMore_String.]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO31294_20200629" />
+        </Props>
       </Item>
     </Item>
   </Item>
