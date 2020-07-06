@@ -2,21 +2,21 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.SmartassistPanelControl
+module TelemetryLogger
 {
 	'use strict';
 
 	export class TelemetryLogger
 	{
 		// properties
-		private context: Mscrm.ControlData<IInputBag>;
+		private context: Mscrm.ControlData<any>;
 		public baseComponent: string;
 		private separator: string;
 
 		// Initialize context variable during init
-		constructor(context: Mscrm.ControlData<IInputBag>)
+		constructor(context: Mscrm.ControlData<any>, baseComponent: string)
 		{
-			this.baseComponent = "MscrmControls.SmartassistPanelControl";
+			this.baseComponent = baseComponent;
 			this.separator = ".";
 			this.context = context;
 		}

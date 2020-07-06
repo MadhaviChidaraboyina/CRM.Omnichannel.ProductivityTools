@@ -141,4 +141,8 @@
     <value>Done!</value>
     <comment>Success Message</comment>
   </data>
+  <data name="SuggestionControlTitle" xml:space="preserve">
+    <value>Smart assist</value>
+    <comment>Suggestions parent control title</comment>
+  </data>
 </root>

@@ -11,8 +11,8 @@ module MscrmControls.SmartassistPanelControl {
 
         private smartAssistContainer: HTMLDivElement = null;
         public static _context: Mscrm.ControlData<IInputBag> = null;
+        public static _telemetryReporter: TelemetryLogger.TelemetryLogger = null;
         private newInstance: boolean = false;
-        private telemetryReporter: SmartassistPanelControl.TelemetryLogger;
         private AnchorTabContext: any = null;
         private ppSessionContext: any = null;
         private AnyentityControlInitiated: boolean = false;
@@ -37,15 +37,21 @@ module MscrmControls.SmartassistPanelControl {
         public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
 
             // Initialize Telemetry Repoter
-            this.telemetryReporter = new TelemetryLogger(context);
+            SmartassistPanelControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, Constants.ControlId);
             var methodName = "init";
             this.newInstance = true;
             try {
                 SmartassistPanelControl._context = context;
                 this.smartAssistContainer = container;
+
+                //Control title
+                var loaderElement: HTMLDivElement = document.createElement("div");
+                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle));
+                this.smartAssistContainer.appendChild(loaderElement);
+
                 // Loader Element
                 var loaderElement: HTMLDivElement = document.createElement("div");
-                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
+                loaderElement.innerHTML = Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
                 this.smartAssistContainer.appendChild(loaderElement);
 
                 var SuggestionEl: HTMLDivElement = document.createElement("div");
@@ -57,6 +63,7 @@ module MscrmControls.SmartassistPanelControl {
                 }
 
                 if (!this.tabSwitchHandlerId) {
+
                     //Listen to the CEC context change API
                     var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange((sessionContext) => this.listenCECContextChangeAPI(sessionContext));
                     this.tabSwitchHandlerId = eventId;
@@ -64,10 +71,10 @@ module MscrmControls.SmartassistPanelControl {
 
             } catch (Error) {
                 this.hideLoader();
-                let logConstants = TelemetryComponents;
-                let eventParameters = new EventParameters();
-                let error = { name: "Smart Assist panel Control Init error", message: "Error while initializing smart assist panel control" };
-                this.telemetryReporter.logError(logConstants.MainComponent, methodName, error.message, eventParameters);
+                let eventParameters = new TelemetryLogger.EventParameters();
+                eventParameters.addParameter("Exception Details", Error.message);
+                let message = "Error while initializing smart assist panel control";
+                SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, methodName, message, eventParameters);
             }
         }
 
@@ -149,7 +156,6 @@ module MscrmControls.SmartassistPanelControl {
                                 Usage: 1, // input
                                 Value: this.ppSessionContext
                             }
-                            // TODO: Add Data Context
                         },
                         key: componentId,
                         id: componentId,

@@ -56,8 +56,10 @@
                     this.Suggestions = null;
                 }
             } catch (error) {
-                //TODO: Telemetry
                 this.Suggestions = null;
+                let eventParameters = new TelemetryLogger.EventParameters();
+                eventParameters.addParameter("Exception Details", error.message);
+                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "fetchSAConfigurationsData", "Error occurred while fetching SA Configurations Data from cache", eventParameters);
             }
         }
 
@@ -66,7 +68,7 @@
          * @param saconfig Smartassist configuration record.
          */
         private getSuggestionProvider(saconfig: SAConfig): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider {
-                const suggestionProviderName = saconfig.SuggestionWebresourceFunction;
+                const suggestionProviderName = saconfig.SuggestionProvider;
                 let ctor = this.CONSTRUCTOR_CACHE[suggestionProviderName];
                 if (!ctor) {
                     let findCtor = window;
@@ -120,7 +122,9 @@
          * @param recordId Caches the data for this record id.
          */
         initializeCacheForSuggestions(saConfig: SAConfig, recordId: string) {
+            let eventParameters = new TelemetryLogger.EventParameters();
             try {
+                eventParameters.addParameter("recordId", recordId)
                 const data = <Array<any>>this.Suggestions[saConfig.SmartassistConfigurationId];
                 const suggestionIds = data.map(item => item.SuggestionId);
                 let sessionContextCache = {};
@@ -128,7 +132,8 @@
                 this._sessionStateManager.createOrUpdateRecord(recordId, sessionContextCache);
                 data.forEach(item => this._localStorageManager.createRecord(item.SuggestionId, JSON.stringify({ data: item })));
             } catch (error) {
-                // TODO: Telemetry for cache initialization errors.
+                eventParameters.addParameter("Exception Details", error.message);
+                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "initializeCacheForSuggestions", "Error occurred while initializing cache suggestions", eventParameters);
             }
         }
     }

@@ -16,22 +16,25 @@ module MscrmControls.SmartAssistAnyEntityControl {
 					display: flex;
 					margin-bottom: 10px;
 					margin-top: 8px;
-					margin-left: 8px;
+					margin-left: 15px;					
 				}
 				.sa-suggestions-title-icon {
 					height:16px;
 					width:16px; 
 					margin-right:5px;
+					letter-spacing: 0.02em;
 				}
 				.sa-suggestions-title-label	{
 					font-family:Segoe UI;
 					font-size:12px;
 					line-height:16px;
 					align-items:center;
+					color: #605E5C;
+					font-weight: 600;
 				}
 				.sa-no-suggestion-div	{
 					display: flex;
-					margin: 10px;
+					margin: 10px 10px 10px 20px;  
 				}
 				.sa-no-suggestions-icon	{
 					font-family:Segoe UI;
@@ -42,9 +45,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
 				}
 				.sa-no-suggestions-label	{
 					font-family:Segoe UI;
-					font-size:12px;
+					font-size:11px;
 					line-height:16px;
 					align-items:center;
+					color: #8A8886;
 				}
 				.hide-element{
 					display:none !important;

@@ -18,16 +18,11 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static NoSuggestionsDivCss = "sa-no-suggestion-div";
         public static NoSuggestionsIconCss = "sa-no-suggestions-icon";
         public static NoSuggestionsLabelCss = "sa-no-suggestions-label";
-        public static NoRecordDivIconPath = "";
+        public static NoRecordDivIconPath = "/WebResources/msdyn_infoicongrey.svg";
         public static SALoaderCss = "sa-loader";
         public static SALoaderParentCss = "sa-loader-parent";
         public static hideElementCss = "hide-element";
         public static LoaderTimeout = 200;
-
-        //TODO: Use string from localization       
-        public static NoSimilarCaseText = "No suggestions found for similar cases.";
-        public static NoKnowledgeArticleText = "No suggestions found for knowledge articles.";
-
         public static DismissCardEvent = 'dismissCard';
     }
 

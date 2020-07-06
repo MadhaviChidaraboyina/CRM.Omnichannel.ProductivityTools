@@ -13,7 +13,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public SuggestionControlId: string;
         public SuggestionControlType: string;
         public SuggestionType: string;
-        public SuggestionWebresourceFunction: string;
+        public SuggestionProvider: string;
         public SuggestionWebResourceUrl: string;
         public SAConfigTitle: string;
         public SmartassistConfigurationId: string;
@@ -28,7 +28,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             this.Order = "msdyn_order";            
             this.SuggestionControlType = "msdyn_suggestioncontroltype";
             this.SuggestionType = "msdyn_suggestiontype";
-            this.SuggestionWebresourceFunction = "msdyn_suggestionwebresourcemethod";
+            this.SuggestionProvider = "msdyn_suggestionprovider";
             this.SuggestionWebResourceUrl = "msdyn_suggestionwebresourceurl";
             this.UniqueName = "msdyn_uniquename";
             this.SAConfigTitle = "msdyn_suggestioncontainertitle";
@@ -47,7 +47,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public Order = "";        
         public SuggestionControlType: SuggestionControlType = null;
         public SuggestionType: number = null;
-        public SuggestionWebresourceFunction = "";
+        public SuggestionProvider = "";
         public SuggestionWebResourceName = "";
         public SAConfigTitle = "";
         public UniqueName = "";

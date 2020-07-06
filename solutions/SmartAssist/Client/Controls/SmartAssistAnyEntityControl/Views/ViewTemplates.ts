@@ -36,10 +36,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
             switch (suggestionType) {
                 case SuggestionType.KnowledgeArticleSuggestion:
-                    text = StringConstants.NoKnowledgeArticleText;
+                    
                     break;
                 case SuggestionType.SimilarCaseSuggestion:
-                    text = StringConstants.NoSimilarCaseText;
+                    text = Utility.getString(LocalizedStrings.NoSimilarCaseText);
                     break;
                 default:
             }
