@@ -138,16 +138,28 @@ module MscrmControls.Smartassist.Suggestion {
 						};
 						
 						let actionPromise = Suggestion.CustomActionHelper.invokeCustomAction(customAction);
+						const notificationBarId = "resolve_" + this._suggestionId;
 						const successMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.SuccessImageEncode, CustomActionHelper.getString(this._context, LocalizedStrings.CustomActionSuccessMessage));
-						const successMessage = ViewTemplates.SuccessMessageTemplate.Format(successMessageTemplate);
+						const successMessage = ViewTemplates.SuccessMessageTemplate.Format(notificationBarId, successMessageTemplate);
 						const errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, CustomActionHelper.getString(this._context, LocalizedStrings.CustomActionFailureMessage));
-						let errorMessage = ViewTemplates.FailureMessageTemplates.Format(errorMessageTemplate);;
+						let errorMessage = ViewTemplates.FailureMessageTemplates.Format(notificationBarId, errorMessageTemplate);
+
 						actionPromise.then((data) => {
+
 							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(successMessage);
 							$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionSuccessStyle);
+							setTimeout(() => {
+								$('#' + notificationBarId).remove();
+								$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionSuccessStyle);
+							}, 3000);
+
 						}).catch((e) => {
 							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(errorMessage);
 							$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionErrorStyle);
+							setTimeout(() => {
+								$('#' + notificationBarId).remove();
+								$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionErrorStyle);
+							}, 3000);
 						});
 					}
 					else {
