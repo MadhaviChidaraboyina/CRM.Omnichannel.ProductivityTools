@@ -127,7 +127,6 @@ module MscrmControls.PanelControl {
             let isRTL = this.context.client.isRTL;
             let sessionContextJSON = JSON.stringify(this.sessionChangeManager.getSessionChangeEventData());
             let anchorTabContextJSON = JSON.stringify(this.sessionChangeManager.AnchorTabContext);
-            let staticData = null; // To add static data from tools configuration
 
             let toolSelected: ToolConfig = this.productivityPaneConfigData.getToolByName(this.productivityToolSelected);
 
@@ -157,7 +156,7 @@ module MscrmControls.PanelControl {
                         StaticData: {
                             Usage: 1,
                             Static: true,
-                            Value: staticData,
+                            Value: tool.staticData,
                             Primary: false
                         }
                     },
