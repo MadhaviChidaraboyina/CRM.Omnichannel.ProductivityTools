@@ -10,6 +10,7 @@
     <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
     <ProjectGuid>{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}</ProjectGuid>
     <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls</CustomControlsPath>
+	<SkipArtifactVersioning>True</SkipArtifactVersioning>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -191,5 +192,5 @@
     <Folder Include="Roles\" />
   </ItemGroup>
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
-  <Import Project="$(XrmSolutionsRoot)\build\include\SolutionPackager.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
 </Project>

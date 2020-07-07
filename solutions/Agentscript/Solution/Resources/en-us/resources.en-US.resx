@@ -200,10 +200,6 @@
     <value>Agent scripts</value>
     <comment> 'Agentscript' : LocalizedName for Solution</comment>
   </data>
-  <data name="15062:LocalizedName,Agentscript" xml:space="preserve">
-    <value>Agent scripts</value>
-    <comment> 'Agentscript' : LocalizedName for Solution</comment>
-  </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
     <value>Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>

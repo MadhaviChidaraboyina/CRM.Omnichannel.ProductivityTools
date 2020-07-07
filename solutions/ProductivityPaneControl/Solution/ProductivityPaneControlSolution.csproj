@@ -12,6 +12,7 @@
     <PluginMapFile></PluginMapFile>
     <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityPaneControl</CustomControlsPath>
     <SystemConverted>false</SystemConverted>
+	<SkipArtifactVersioning>True</SkipArtifactVersioning>
   </PropertyGroup>
   
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />

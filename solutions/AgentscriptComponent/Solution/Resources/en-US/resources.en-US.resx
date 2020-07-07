@@ -864,10 +864,6 @@
     <value />
     <comment>'Agent script' : label for tab in Entity FormXml ID: '{38af55ec-102d-4071-9d3b-64163c760b2a}'</comment>
   </data>
-  <data name="1:label,Agent script{3a85372d-b6c7-2a17-1e8c-5bb27d66d753}" xml:space="preserve">
-    <value>Section</value>
-    <comment>'Agent script' : label for section in Entity FormXml ID: '{3a85372d-b6c7-2a17-1e8c-5bb27d66d753}'</comment>
-  </data>
   <data name="1:label,Agent script{445efd7f-e371-4794-9940-6afae7b974c9}" xml:space="preserve">
     <value>GENERAL</value>
     <comment>'Agent script' : label for section in Entity FormXml ID: '{445efd7f-e371-4794-9940-6afae7b974c9}'</comment>
@@ -928,9 +924,9 @@
     <value>Language</value>
     <comment>'Agent script' : label for cell in Entity FormXml ID: '{b0a2c3c8-a5b4-80e8-8db8-029c72e6b0e4}'</comment>
   </data>
-  <data name="1:label,Agent script{c724137e-da9a-795a-858a-6a42a5c639ac}" xml:space="preserve">
+  <data name="1:label,Agent script{B1716419-3C10-4908-999F-AD10A60CED21}" xml:space="preserve">
     <value>Agent script steps</value>
-    <comment>'Agent script' : label for cell in Entity FormXml ID: '{c724137e-da9a-795a-858a-6a42a5c639ac}'</comment>
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{B1716419-3C10-4908-999F-AD10A60CED21}'</comment>
   </data>
   <data name="1:label,Agent script{c92a251d-4c9e-48c9-9ad9-a13c2ca92bfe}" xml:space="preserve">
     <value />
@@ -939,6 +935,10 @@
   <data name="1:label,Agent script{d66eb945-6a2a-414a-8020-92b0662261bf}" xml:space="preserve">
     <value />
     <comment>'Agent script' : label for cell in Entity FormXml ID: '{d66eb945-6a2a-414a-8020-92b0662261bf}'</comment>
+  </data>
+  <data name="1:label,Agent script{D9FE4353-9B2B-49BC-8C25-A9A9A209AACF}" xml:space="preserve">
+    <value>Section</value>
+    <comment>'Agent script' : label for section in Entity FormXml ID: '{D9FE4353-9B2B-49BC-8C25-A9A9A209AACF}'</comment>
   </data>
   <data name="1:label,Agent script{dc6613e4-99e1-44d1-bf04-fc0c82998b00}" xml:space="preserve">
     <value />
