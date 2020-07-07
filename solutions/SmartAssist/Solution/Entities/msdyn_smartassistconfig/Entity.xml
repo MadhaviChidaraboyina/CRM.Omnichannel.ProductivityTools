@@ -594,8 +594,8 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>128</MaxLength>
-          <Length>256</Length>
+          <MaxLength>1000</MaxLength>
+          <Length>2000</Length>
           <displaynames>
             <displayname description="Unique Name" languagecode="1033" />
           </displaynames>
@@ -603,7 +603,7 @@
             <Description description="Unique Name for the entity." languagecode="1033" />
           </Descriptions>
         </attribute>
-                  <attribute PhysicalName="msdyn_IconURL">
+        <attribute PhysicalName="msdyn_IconURL">
           <Type>nvarchar</Type>
           <Name>msdyn_iconurl</Name>
           <LogicalName>msdyn_iconurl</LogicalName>
@@ -634,8 +634,8 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
+          <MaxLength>1000</MaxLength>
+          <Length>2000</Length>
           <displaynames>
             <displayname description="Icon Webresource URL" languagecode="1033" />
           </displaynames>
@@ -713,7 +713,7 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>100</MaxLength>
+          <MaxLength>1000</MaxLength>
           <Length>200</Length>
           <displaynames>
             <displayname description="Suggestion panel title" languagecode="1033" />
