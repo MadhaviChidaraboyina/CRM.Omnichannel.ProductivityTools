@@ -18,8 +18,7 @@
   </metadata>
 	<files>
 		<!-- retail artifacts -->
-		<file src="..\..\drop\retail\AnyCPU\Solutions\*.*" target="Solutions" />
-		<file src="..\..\drop\retail\AnyCPU\PVSPackages\*.*" target="PVSPackages" />
-		<file src="..\..\drop\retail\AnyCPU\Blobs\*.*" target="Blobs" />
+		<file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_smartassist_*.zip" target="Solutions" />
   </files>
 </package>
+
