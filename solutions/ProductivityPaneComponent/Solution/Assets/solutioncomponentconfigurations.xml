@@ -1,19 +1,19 @@
 <solutioncomponentconfigurations>
-  <solutioncomponentconfiguration entityid.logicalname="msdyn_tabconfiguration">
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_panetabconfiguration">
     <fileformat>0</fileformat>
     <filescope>1</filescope>
     <iscustomizable>0</iscustomizable>
     <isdisplayable>1</isdisplayable>
-    <name>msdyn_tabconfiguration</name>
+    <name>msdyn_panetabconfiguration</name>
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentconfiguration>
-  <solutioncomponentconfiguration entityid.logicalname="msdyn_toolconfiguration">
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_panetoolconfiguration">
     <fileformat>0</fileformat>
     <filescope>1</filescope>
     <iscustomizable>0</iscustomizable>
     <isdisplayable>1</isdisplayable>
-    <name>msdyn_toolconfiguration</name>
+    <name>msdyn_panetoolconfiguration</name>
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentconfiguration>

@@ -55,80 +55,74 @@ module MscrmControls.PanelControl
 			}
 		}
 
-		private onSessionSwitched(event: any)
+		private async onSessionSwitched(event: any)
         {
-            setTimeout(() => {
-                try {
-                    let currentSessionId = event.getEventArgs()._inputArguments.newSessionId;
-                    let previousSessionId = event.getEventArgs()._inputArguments.previousSessionId;
-                    let sessionContext = Microsoft.AppRuntime.Sessions.getFocusedSession().context;
+            try {
+                let currentSessionId = event.getEventArgs()._inputArguments.newSessionId;
+                let previousSessionId = event.getEventArgs()._inputArguments.previousSessionId;
+                let sessionContext = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
 
-                    this.sessionChangeEventData.event = SessionEvent.SessionSwitch;
-                    this.sessionChangeEventData.prevSessionId = previousSessionId;
-                    this.sessionChangeEventData.newSessionId = currentSessionId;
+                this.sessionChangeEventData.event = SessionEvent.SessionSwitch;
+                this.sessionChangeEventData.prevSessionId = previousSessionId;
+                this.sessionChangeEventData.newSessionId = currentSessionId;
 
-                    if (!Utils.isNullOrUndefined(sessionContext)) {
-                        this.anchorTabContext = sessionContext.getTabContext('anchor');
-                    }
-
-                    this.sessionContextChanged(this.sessionChangeEventData, Constants.sessionSwitched);
+                if (!Utils.isNullOrUndefined(sessionContext)) {
+                    this.anchorTabContext = sessionContext.getTabContext('anchor');
                 }
-                catch (e) {
-                    console.log("error occured" + e);
-                    let errorParam = new EventParameters();
-                    errorParam.addParameter("errorObj", JSON.stringify(e));
-                    this.telemetryLogger.logError(this.telemetryContext, TelemetryComponents.onSessionSwitched, e.message, errorParam);
-                }
-            });
+
+                this.sessionContextChanged(this.sessionChangeEventData, Constants.sessionSwitched);
+            }
+            catch (e) {
+                console.log("error occured" + e);
+                let errorParam = new EventParameters();
+                errorParam.addParameter("errorObj", JSON.stringify(e));
+                this.telemetryLogger.logError(this.telemetryContext, TelemetryComponents.onSessionSwitched, e.message, errorParam);
+            }
 		}
 
-		private onSessionCreated(event: any)
+		private async onSessionCreated(event: any)
         {
-            setTimeout(() => { 
-                try {
-                    let createdSessionId = event.getEventArgs()._inputArguments.sessionId;
-                    let sessionContext = Microsoft.AppRuntime.Sessions.getFocusedSession().context;
+            try {
+                let createdSessionId = event.getEventArgs()._inputArguments.sessionId;
+                let sessionContext = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
 
-                    this.sessionChangeEventData.event = SessionEvent.SessionCreate;
-                    this.sessionChangeEventData.prevSessionId = "Not Available";
-                    this.sessionChangeEventData.newSessionId = createdSessionId;
+                this.sessionChangeEventData.event = SessionEvent.SessionCreate;
+                this.sessionChangeEventData.prevSessionId = "Not Available";
+                this.sessionChangeEventData.newSessionId = createdSessionId;
 
-                    if (!Utils.isNullOrUndefined(sessionContext)) {
-                        this.anchorTabContext = sessionContext.getTabContext('anchor');
-                    }
-
-                    this.sessionContextChanged(this.sessionChangeEventData, Constants.sessionCreated);
+                if (!Utils.isNullOrUndefined(sessionContext)) {
+                    this.anchorTabContext = sessionContext.getTabContext('anchor');
                 }
-                catch (e) {
-                    console.log("error occured" + e);
-                    let errorParam = new EventParameters();
-                    errorParam.addParameter("errorObj", JSON.stringify(e));
-                    this.telemetryLogger.logError(this.telemetryContext, TelemetryComponents.onSessionCreated, e.message, errorParam);
-                }
-            });
+
+                this.sessionContextChanged(this.sessionChangeEventData, Constants.sessionCreated);
+            }
+            catch (e) {
+                console.log("error occured" + e);
+                let errorParam = new EventParameters();
+                errorParam.addParameter("errorObj", JSON.stringify(e));
+                this.telemetryLogger.logError(this.telemetryContext, TelemetryComponents.onSessionCreated, e.message, errorParam);
+            }
 		}
 
 		private onSessionClosed(event: any)
         {
-            setTimeout(() => {
-                try {
-                    let closedSessionId = event.getEventArgs()._inputArguments.sessionId;
+            try {
+                let closedSessionId = event.getEventArgs()._inputArguments.sessionId;
 
-                    this.sessionChangeEventData.event = SessionEvent.SessionClose;
-                    this.sessionChangeEventData.prevSessionId = "Not Available";
-                    this.sessionChangeEventData.newSessionId = closedSessionId;
+                this.sessionChangeEventData.event = SessionEvent.SessionClose;
+                this.sessionChangeEventData.prevSessionId = "Not Available";
+                this.sessionChangeEventData.newSessionId = closedSessionId;
 
-                    this.anchorTabContext = {};
+                this.anchorTabContext = {};
 
-                    this.sessionContextChanged(this.sessionChangeEventData, Constants.sessionClosed);
-                }
-                catch (e) {
-                    console.log("error occured" + e);
-                    let errorParam = new EventParameters();
-                    errorParam.addParameter("errorObj", JSON.stringify(e));
-                    this.telemetryLogger.logError(this.telemetryContext, TelemetryComponents.onSessionClosed, e.message, errorParam);
-                }
-            });
+                this.sessionContextChanged(this.sessionChangeEventData, Constants.sessionClosed);
+            }
+            catch (e) {
+                console.log("error occured" + e);
+                let errorParam = new EventParameters();
+                errorParam.addParameter("errorObj", JSON.stringify(e));
+                this.telemetryLogger.logError(this.telemetryContext, TelemetryComponents.onSessionClosed, e.message, errorParam);
+            }
 		}
 
 		public getCurrentFocusedSessionId(): string

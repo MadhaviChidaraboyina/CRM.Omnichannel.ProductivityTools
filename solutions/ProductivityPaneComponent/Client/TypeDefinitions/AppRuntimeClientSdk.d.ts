@@ -198,9 +198,9 @@ declare namespace AppRuntimeClientSdk {
 		getAllTabs(): Array<string>;
 
 		/**
-		 * Returns the SessionContext for this session 
+		 * Returns a Promise of SessionContext for this session 
 		 */
-		context: ISessionContext;
+		getContext(): Promise<ISessionContext>;
 
 		/**
 		 * Indicates if a KPI has been breached in this session
