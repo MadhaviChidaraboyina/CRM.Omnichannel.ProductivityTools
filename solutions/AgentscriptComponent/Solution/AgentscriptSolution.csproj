@@ -14,5 +14,5 @@
     <SystemConverted>false</SystemConverted>
   </PropertyGroup>
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
-  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
+  <Import Project="$(XrmSolutionsRoot)\build\include\SolutionPackager.targets" />
 </Project>
