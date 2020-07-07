@@ -79,16 +79,16 @@
                         }
                     }
 
-                    if (!findCtor || typeof findCtor !== "function") {
-                        throw new Error(`Could not find/invoke ${suggestionProviderName}'s constructor`);
-                    }
-
-                    ctor = findCtor as {
-                        new(): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider;
-                    };
-                    this.CONSTRUCTOR_CACHE[suggestionProviderName] = ctor;
-                    return new ctor();
+                if (!findCtor || typeof findCtor !== "function") {
+                    throw new Error(`Could not find/invoke ${suggestionProviderName}'s constructor`);
                 }
+
+                ctor = findCtor as {
+                    new(): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider;
+                };
+                this.CONSTRUCTOR_CACHE[suggestionProviderName] = ctor;
+                return new ctor();
+            }
         }
 
         /**
@@ -98,7 +98,7 @@
          */
         private async getSuggestionsDataFromAPI(saConfig: SAConfig, RecordId: string) {
             const suggestionProvider = this.getSuggestionProvider(saConfig);
-            var context = Microsoft.AppRuntime.Sessions.getFocusedSession().context;
+            var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext() as any;
             let tabcontext;
             if (context) {
                 tabcontext = context.getTabContext("anchor");
@@ -131,10 +131,26 @@
                 sessionContextCache[saConfig.SmartassistConfigurationId] = suggestionIds;
                 this._sessionStateManager.createOrUpdateRecord(recordId, sessionContextCache);
                 data.forEach(item => this._localStorageManager.createRecord(item.SuggestionId, JSON.stringify({ data: item })));
+                this.saveAllSuggestionIdsInSessionStorage(suggestionIds);
             } catch (error) {
                 eventParameters.addParameter("Exception Details", error.message);
                 SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "initializeCacheForSuggestions", "Error occurred while initializing cache suggestions", eventParameters);
             }
+        }
+
+        /**
+         * Saving all the suggestionIds against session id. This is required to clear the data on session close.
+         * @param suggestionIds
+         */
+        saveAllSuggestionIdsInSessionStorage(suggestionIds: string[]) {
+            const sessionId = Utility.getCurrentSessionId();
+            let previousSuggestionIds = [];
+            if (window.sessionStorage.getItem(sessionId)) {
+                previousSuggestionIds = JSON.parse(window.sessionStorage.getItem(sessionId));
+            }
+
+            let suggestionIdsToSave = previousSuggestionIds.concat(suggestionIds);
+            window.sessionStorage.setItem(sessionId, JSON.stringify(suggestionIdsToSave));   
         }
     }
 }

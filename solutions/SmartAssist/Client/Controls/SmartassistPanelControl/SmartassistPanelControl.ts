@@ -91,7 +91,7 @@ module MscrmControls.SmartassistPanelControl {
             }
             if (this.newInstance && Constants.IncidentEntityName == this.AnchorTabContext.entityName) {
                 this.showLoader();
-                this.renderSuggestions(false, this.AnchorTabContext.entityId);
+                this.renderSuggestions(false, Utility.FormatGuid(this.AnchorTabContext.entityId));
             }
             this.newInstance = false;
         }
@@ -187,8 +187,8 @@ module MscrmControls.SmartassistPanelControl {
          * CEC AddOnContextChange callback
          * @param event: Current tab opened context
          */
-        public listenCECContextChangeAPI(event: any) {
-            var context = Microsoft.AppRuntime.Sessions.getFocusedSession().context;
+        public async listenCECContextChangeAPI(event: any) {
+            var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
             var anchorContext: any;
 
             if (!context && event.context.pageType && event.context.pageType == Constants.CECEntityRecordType) {

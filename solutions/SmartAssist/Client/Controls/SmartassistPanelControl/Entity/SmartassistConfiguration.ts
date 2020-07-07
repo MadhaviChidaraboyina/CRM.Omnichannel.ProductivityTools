@@ -35,7 +35,7 @@ module MscrmControls.SmartassistPanelControl {
             this.StatusCode = "statuscode";
             this.TitleIconePath = "msdyn_iconurl";
             this.SuggestionControlConfigUniquename = "msdyn_suggestioncontrolconfiguniquename";
-            this.EntityName = "msdyn_smartassistconfig";
+            this.EntityName = "msdyn_smartassistconfig";            
         }
     }
 
@@ -49,7 +49,7 @@ module MscrmControls.SmartassistPanelControl {
         public SuggestionControlType: SuggestionControlType = null;
         public SuggestionType: number = null;
         public SuggestionProvider = "";
-        public SuggestionWebResourceName = "";
+        public SuggestionWebResourceUrl = "";
         public SAConfigTitle = "";
         public UniqueName = "";
         public StatusCode: number = null;
@@ -71,7 +71,7 @@ module MscrmControls.SmartassistPanelControl {
                 this.SuggestionType = Utility.GetValue(response[this.AttributeName.SuggestionType]) as SuggestionType;
                 this.StatusCode = Utility.GetValue(response[this.AttributeName.StatusCode]) as SAConfigStatus;
                 this.SuggestionProvider = Utility.GetValue(response[this.AttributeName.SuggestionProvider]);
-                this.SuggestionWebResourceName = Utility.GetValue(response[this.AttributeName.SuggestionWebResourceUrl]);
+                this.SuggestionWebResourceUrl = Utility.GetValue(response[this.AttributeName.SuggestionWebResourceUrl]);
                 this.UniqueName = Utility.GetValue(response[this.AttributeName.UniqueName]);                
                 this.SmartassistConfigurationId = Utility.GetValue(response[this.AttributeName.SmartassistConfigurationId]);
                 this.SAConfigTitle = Utility.GetValue(response[this.AttributeName.SAConfigTitle]);

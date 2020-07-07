@@ -10,6 +10,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
     export class SmartAssistAnyEntityControl implements Mscrm.StandardControl<IInputBag, IOutputBag> {
         public static _context: Mscrm.ControlData<IInputBag> = null;
         public static _telemetryReporter: TelemetryLogger.TelemetryLogger = null;
+        public static _sessionContext: AppRuntimeClientSdk.ISessionContext = null;
         private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
@@ -19,6 +20,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private _sessionStateManager: SessionStateManager;
         private _localStorageManager: LocalStorageManager;
         private _handleDismissEvent: (args: any) => void;
+        private sessionCloseHandlerId: string;
 
 		/**
 		 * Empty constructor.
@@ -30,6 +32,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             this._localStorageManager = LocalStorageManager.Instance;
             this._handleDismissEvent = this.handleDismissEvent.bind(this);
             window.top.addEventListener(StringConstants.DismissCardEvent, this._handleDismissEvent, false);
+            this.sessionCloseHandlerId = Microsoft.AppRuntime.Sessions.addOnAfterSessionClose(this.handleSessionClose.bind(this));
         }
 
 		/**
@@ -92,6 +95,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public updateView(context: Mscrm.ControlData<IInputBag>): void {
             // custom code goes here
             this.anyEntityDataManager.initializeContextParameters(context);
+
+            //Note: call getCurrentContext to get current session context on tab switch, 
+            //currently it's destroyed everytime but this is temp solution, when this issue is fixed need to get context tab switch as well.
         }
 
 		/** 
@@ -114,6 +120,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 		 */
         public destroy(): void {
             window.top.removeEventListener(StringConstants.DismissCardEvent, this._handleDismissEvent, false);
+            Microsoft.AppRuntime.Sessions.removeOnAfterSessionClose(this.sessionCloseHandlerId);
             this._sessionStateManager = null;
             this._localStorageManager = null;
         }
@@ -122,6 +129,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Intitiate Recomendation Control
          */
         public async InitiateSuggestionControl(): Promise<void> {
+
+            //Get Current context
+            await this.getCurrentContext();
+
             this.appendTitle();
             this.showLoader();
             // Get Suggestions data records for provide saConfig
@@ -194,6 +205,20 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }
         }
 
+        private handleSessionClose(event: any) {
+            try {
+                const sessionId = event.getEventArgs()._inputArguments.sessionId;
+                const cacheData = window.sessionStorage.getItem(sessionId)
+                if (cacheData) {
+                    const suggestionIds = JSON.parse(cacheData) as Array<string>;
+                    suggestionIds.forEach(id => this._localStorageManager.deleteRecord(id));
+                    window.sessionStorage.removeItem(sessionId);
+                }
+            } catch (error) {
+                // TODo: Unable to clear cache.
+            }
+        }
+
         /**
          * Handles dismiss card.
          * @param args: event argument
@@ -243,6 +268,12 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private hideLoader() {
             $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).removeClass("relative-parent");
             $("#" + Utility.getLoaderComponent(this.saConfig.SmartassistConfigurationId)).addClass(StringConstants.hideElementCss);
+        }
+
+        /**Get CEC current context */
+        private async getCurrentContext() {
+            const sessionId = Utility.getCurrentSessionId();
+            SmartAssistAnyEntityControl._sessionContext = await Microsoft.AppRuntime.Sessions.getSession(sessionId).getContext();
         }
     }
 }

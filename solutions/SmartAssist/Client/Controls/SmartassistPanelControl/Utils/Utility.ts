@@ -38,16 +38,6 @@ module MscrmControls.SmartassistPanelControl {
             return value.replace(/[{}]/g, "").toLowerCase();
         }
 
-        /** Get Anchor tab context from CEC*/
-        public static GetAnchorTabContext() {
-            var context = Microsoft.AppRuntime.Sessions.getFocusedSession().context;
-            var anchorContext: any = null;
-            if (context) {
-                anchorContext = context.getTabContext("anchor") as any;
-            }
-            return anchorContext;
-        }
-
         /**
          * Check if string is valid json
          * @param str: json string
