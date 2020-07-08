@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="CallscriptControl.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="ms-MY" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";CallscriptControl.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";CC_Callscript_Control" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script control]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Agent script control]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Agent script control name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";CC_FieldControl" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script property]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Agent script property]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Input property name]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";CC_FieldControl_Desc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script property]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Agent script property]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Input property description]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";CompletedMacroStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} macro step completed successfully.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[{0} macro step completed successfully.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[When macro execution step completed successfully]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";CompletedScriptStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} script step completed successfully.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[{0} script step completed successfully.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[When script step loading completed successfully]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";CompletedTextStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} text instruction step completed successfully.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[{0} text instruction step completed successfully.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[When text instruction step completed successfully]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";ControlHeader" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Agent script]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Header value for callscript control]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";FailedMacroStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} macro step failed.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[{0} macro step failed.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[When macro execution step failed]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";FailedScriptStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} script step failed.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[{0} script step failed.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[When script step loading fails]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";FailedTextStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} text instruction step failed.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[{0} text instruction step failed.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[When text instruction step failed]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";InitialScriptDataLoadFailure" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[We couldn't load the agent script records. Please contact your admin.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[We couldn't load the agent script records. Please contact your admin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Generic error message when initial script data load fails]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LoadButtonLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Load]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Load]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Button label for Load button]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";LoadingText" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Loading...]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Loading...]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Loading text to show when data fetch is in progress]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MacroStepFailure_AccessibilityMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro failed for step {0}. Please contact your admin.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Macro failed for step {0}. Please contact your admin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Screen reader message when macro execution failed]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MacroStepFailure_ErrorMessageWithError" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro failed.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Macro failed.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message to show when macro execution failed]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MacroStepFailure_ErrorMessageWithoutError" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro failed. Please contact your admin.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Macro failed. Please contact your admin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Generic error message to show when macro execution failed]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";MacroStepSuccess_AccessibilityMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro completed for step {0}.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Macro completed for step {0}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Screen reader message when macro execution successful]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";NoCallScriptFoundErrorMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No agent scripts are linked with current session]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[No agent scripts are linked with current session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when no agent scripts are linked with session template]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";ScriptActionStepLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Load script]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Load script]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Label for script action step]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";ScriptCombobox_EmptyOption" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select a script]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Select a script]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Label for empty option in script select combobox]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";ScriptStepsDataLoadFailure" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[We couldn't load the agent script details. Please contact your admin.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[We couldn't load the agent script details. Please contact your admin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Generic error message when script steps data load fails]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";SlugResolutionFailure" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Failed to resolve replaceable parameter in step {0}. Please contact your admin.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Failed to resolve replaceable parameter in step {0}. Please contact your admin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when slug resolution fails]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";StepExecutionBtn_LabelForCompletedStep" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Run again]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Run again]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Button text to prompt user to execute a completed step again]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";StepExecutionBtn_LabelForFailedStep" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Retry]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Retry]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Button text to prompt user to retry a failed step]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";StepExecutionBtn_LabelForNotExecutedStep" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Run]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Run]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Button text to prompt user to execute a step]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";StepExecutionBtn_LabelForStepInProgress" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Running...]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Running...]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Disabled button text to be displayed on a step in progress]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";StepExeutionBtn_LabelForRouteAction" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[View]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Button text to prompt user to view configured route callscript]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";StepExeutionBtn_LabelForTextAction" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Mark as done]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Mark as done]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Button text to Mark a text step as done]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";StepListItem_UnexecutedMacroStepAccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} macro step.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[{0} macro step.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text to be read by screen-reader on callscript step focus]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";StepListItem_UnexecutedRouteStepAccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} script step.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[{0} script step.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text to be read by screen-reader on callscript step focus]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";StepListItem_UnexecutedTextStepAccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} text instruction step.]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[{0} text instruction step.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Text to be read by screen-reader on callscript step focus]]></Cmt>
+        </Cmts>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="ButtonControl.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="hr-HR" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";ButtonControl.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";CC_Build_Expression" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Build expression]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Build expression]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Build Expression]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";CC_ButtonControl_Desc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Button to build an expression]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Button to build an expression]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Button to build an expression]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";CC_ButtonControl_Name" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Build expression button]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Build expression button]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Build Expression Button]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";CC_Field" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Value]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Value]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Value]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";CC_Field_Desc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute details]]></Val>
+          <Tgt Cat="Text" Orig="New">
+            <Val><![CDATA[Attribute details]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Attribute details]]></Cmt>
+        </Cmts>
+      </Item>
+    </Item>
+  </Item>
+</LCX>
