@@ -18,6 +18,6 @@
   </metadata>
 	<files>
 		<!-- retail artifacts -->
-		<file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityPaneComponent_*.zip" target="Solutions" />
+    <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityPaneComponent_*.*" target="Solutions" />
   </files>
 </package>
