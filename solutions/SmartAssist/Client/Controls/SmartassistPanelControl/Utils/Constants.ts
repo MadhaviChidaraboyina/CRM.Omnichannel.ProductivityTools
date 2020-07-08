@@ -30,7 +30,7 @@ module MscrmControls.SmartassistPanelControl {
         public static TitleLabelCss = "sapanel-title-label";        
         public static TitleImgCss = "sapanel-title-img";
         public static SAPanelTitleIconPath = "/WebResources/msdyn_infoiconblue.svg";
-        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}"><label class="${Constants.TitleLabelCss}">{0}</label><img class="${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/></div>`;
+        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" tabindex="0"><label class="${Constants.TitleLabelCss}">{0}</label><img class="${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/></div>`;
         public static SAPanelStyle =
             `<style id="sa-panel-style">
 	        .hide-element{

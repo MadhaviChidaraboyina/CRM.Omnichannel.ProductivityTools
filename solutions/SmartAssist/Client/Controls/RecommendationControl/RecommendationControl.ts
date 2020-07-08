@@ -11,6 +11,7 @@ module MscrmControls.Smartassist
 	export class RecommendationControl implements Mscrm.StandardControl<IInputBag, IOutputBag> {
 
 		private _recommendationContainer: HTMLDivElement = null;
+		public  static _telemetryReporter: TelemetryLogger.TelemetryLogger = null;
 		public _context: Mscrm.ControlData<IInputBag> = null;
 		private _template: string;
 		private _data: any;
@@ -44,6 +45,7 @@ module MscrmControls.Smartassist
 				this._data = context.parameters.data.raw;
 				this._template = context.parameters.Template.raw;
 
+				RecommendationControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, "MscrmControls.Smartassist.RecommendationControl")
 				this._suggestionId = this._data.SuggestionId;
 				this._adaptiveCardRenderer.SetContext(context);
 				this._adaptiveCardRenderer.SetSuggestionId(this._suggestionId);
@@ -55,7 +57,9 @@ module MscrmControls.Smartassist
 				$("#" + el.id).html(Smartassist.RecommendationTemplate.get(false));
 				this.renderRecommendation();
 			} catch (error) {
-				/* TODO: Add Telemetry logs  */
+				let eventParameters = new TelemetryLogger.EventParameters();
+				eventParameters.addParameter("Exception Details", error.message);
+				RecommendationControl._telemetryReporter.logError("MainComponent", "init", "Recommendation control fails to initialize", eventParameters)
             }
 		}
 
@@ -130,7 +134,9 @@ module MscrmControls.Smartassist
                     }
 				}
 			} catch (error) {
-				// TODO: Telemetry: Failed to re-render the card.
+				let eventParameters = new TelemetryLogger.EventParameters();
+				eventParameters.addParameter("Exception Details", error.message);
+				RecommendationControl._telemetryReporter.logError("MainComponent", "handleCardRefresh", "Recommendation control fails to refresh", eventParameters)
             }
 		}
 	}

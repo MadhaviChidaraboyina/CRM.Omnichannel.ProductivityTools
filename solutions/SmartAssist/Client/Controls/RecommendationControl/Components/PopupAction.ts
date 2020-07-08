@@ -22,6 +22,7 @@ module MscrmControls.Smartassist.Suggestion {
         protected internalRender(): HTMLElement {
             // Creating the popup container.
             var popupContainer = document.createElement("div");
+            popupContainer.setAttribute('aria-label', 'popup');
             popupContainer.className = Suggestion.Constants.PopupContainerClassName;
             popupContainer.style.border = "1px solid #EEEEEE";
             popupContainer.style.backgroundColor = "#FFFFFF";
@@ -34,6 +35,7 @@ module MscrmControls.Smartassist.Suggestion {
             imageBox.url = this._imageUrl;
             imageBox.size = AdaptiveCards.Size.Small;
             imageBox.pixelWidth = 16;
+            imageBox.altText = "popup button";
             imageBox.horizontalAlignment = AdaptiveCards.HorizontalAlignment.Right;
             this._popupOwner = imageBox.render();
             (<HTMLElement>this._popupOwner.children[0]).style.cursor = "pointer";
@@ -43,6 +45,13 @@ module MscrmControls.Smartassist.Suggestion {
             this.setPopupStyleForActions();
             this._renderedItems = popupContainer;
 
+            this._popupOwner.tabIndex = 0;
+            this._popupOwner.onkeydown = (e: KeyboardEvent) => {
+                switch (e.keyCode) {
+                    case KeyCodes.ENTER_KEY:
+                        this._popupOwner.onclick(null);
+                }
+            }
 
             this._popupOwner.onclick = (e) => {
 
@@ -53,6 +62,14 @@ module MscrmControls.Smartassist.Suggestion {
                     this.popup(this._popupOwner);
                 }
             };
+            this._popupContainerActionElement.tabIndex = 0;
+            this._popupContainerActionElement.setAttribute('aria-label', 'popup');
+            this._popupContainerActionElement.onkeydown = (e: KeyboardEvent) => {
+                switch (e.keyCode) {
+                    case KeyCodes.ESCAPE_KEY:
+                        this.closePopup();
+                }
+            }
 
             return this._popupOwner;
         }
@@ -79,6 +96,19 @@ module MscrmControls.Smartassist.Suggestion {
                 action.style.fontFamily = "Segoe UI";
                 action.style.fontSize = "12px";
                 action.style.fontWeight = "400";
+                action.onkeydown = (e: KeyboardEvent) => {
+                    switch (e.keyCode) {
+                        case KeyCodes.UP_ARROW_KEY:
+                            (<HTMLElement>actions[(i - 1) % noOfActions]).focus();
+                            break;
+                        case KeyCodes.DOWN_ARROW_KEY:
+                            (<HTMLElement>actions[(i + 1) % noOfActions]).focus();
+                            break;
+                        case Suggestion.KeyCodes.TAB_KEY:
+                            action.focus();
+                            e.preventDefault();
+                    }
+                }
             }
         }
 
@@ -147,6 +177,9 @@ module MscrmControls.Smartassist.Suggestion {
                 left = rootElementBounds.right - popupElementBounds.width;
                 _popupElement.style.left = left + "px";
                 _popupElement.style.top = top + "px";
+                if (_popupElement) {
+                    (<HTMLElement>_popupElement.firstElementChild).focus();
+                }
                 this._isOpen = true;
             }
         }

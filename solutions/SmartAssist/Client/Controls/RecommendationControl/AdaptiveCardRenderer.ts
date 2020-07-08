@@ -43,33 +43,6 @@ module MscrmControls.Smartassist.Suggestion {
 		}
 
 		/**
-		 * Create or get the suggestion card from caches.
-		 * @param suggestionId This id is used to fetch the card from caches.
-		 * @param template AdaptiveCard template.
-		 * @param data Data to bind with template.
-		 */
-		getOrCreateSuggestionCard(suggestionId: string, template: string, data: any): SuggestionCardElement {
-			try {
-				const cacheResult = window.localStorage.getItem(suggestionId);
-				let cacheData: SuggestionCard;
-				if (cacheResult) {
-					cacheData = JSON.parse(window.localStorage.getItem(suggestionId));
-				}
-				if (cacheData && cacheData.cardId && cacheData.cardContent) {
-					const htmlElement = this.createAdaptiveCard(cacheData.cardContent);
-					return { card: cacheData, cardHTMLElement: htmlElement };
-				}
-				else {
-
-					return this.createCardFromTemplateAndData(suggestionId, template, data);
-				}
-			} catch (error) {
-				// TODO: Telemetry.
-				return null;
-			}
-		}
-
-		/**
 		 * This method binds the template and data using adaptivecards-template sdk.
 		 * @param suggestionId this is used to generate the unique card id.
 		 * @param template AdaptiveCard template
@@ -94,7 +67,9 @@ module MscrmControls.Smartassist.Suggestion {
 
 				return suggestionCardElement;
 			} catch (error) {
-				// TODO: Telemetry for erors in template parsing.
+				let eventParameters = new TelemetryLogger.EventParameters();
+				eventParameters.addParameter("Exception Details", error.message);
+				RecommendationControl._telemetryReporter.logError("MainComponent", "create card", "Recommendation control fails to create adaptivecard", eventParameters)
 				return null;
 			}
 		}
@@ -163,7 +138,9 @@ module MscrmControls.Smartassist.Suggestion {
 						});
 					}
 					else {
-						//TODO: Telemetry for invalid action
+						let eventParameters = new TelemetryLogger.EventParameters();
+						eventParameters.addParameter("CustomAction Validation", "Invalid custom action");
+						RecommendationControl._telemetryReporter.logError("MainComponent", "onExecuteAction", "invalid custom action", eventParameters);
 					}
 				}
 				else if (action instanceof AdaptiveCards.OpenUrlAction) {
@@ -171,10 +148,14 @@ module MscrmControls.Smartassist.Suggestion {
 					window.open(openAction.url.toString());
 				}
 				else {
-					//TODO: Telemetry for any other adaptivecard action.
+					let eventParameters = new TelemetryLogger.EventParameters();
+					eventParameters.addParameter("CustomAction", "Action not supported");
+					RecommendationControl._telemetryReporter.logError("MainComponent", "onExecuteAction", "action not supported", eventParameters);
 				}
 			} catch (error) {
-				//TODO: Telemetry
+				let eventParameters = new TelemetryLogger.EventParameters();
+				eventParameters.addParameter("CustomAction", "Unable to invoke custom action");
+				RecommendationControl._telemetryReporter.logError("MainComponent", "onExecuteAction", "unable to invoke custom action", eventParameters);
 			}
 		}
 

@@ -9,6 +9,7 @@ module MscrmControls.Smartassist.Suggestion {
 	 * Key codes used for keyboard accessibility
 	 */
 	export enum KeyCodes {
+		TAB_KEY = 9,
 		ENTER_KEY = 13,
 		ESCAPE_KEY = 27,
 		SPACE_KEY = 32,
