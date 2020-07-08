@@ -554,8 +554,8 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>100</MaxLength>
-          <Length>200</Length>
+          <MaxLength>256</MaxLength>
+          <Length>512</Length>
           <displaynames>
               <displayname description="Suggestion Webresource URL" languagecode="1033" />
           </displaynames>
@@ -594,8 +594,8 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>1000</MaxLength>
-          <Length>2000</Length>
+          <MaxLength>128</MaxLength>
+          <Length>256</Length>
           <displaynames>
             <displayname description="Unique Name" languagecode="1033" />
           </displaynames>
@@ -634,8 +634,8 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>1000</MaxLength>
-          <Length>2000</Length>
+          <MaxLength>256</MaxLength>
+          <Length>512</Length>
           <displaynames>
             <displayname description="Icon Webresource URL" languagecode="1033" />
           </displaynames>
@@ -713,7 +713,7 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>1000</MaxLength>
+          <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
             <displayname description="Suggestion panel title" languagecode="1033" />
