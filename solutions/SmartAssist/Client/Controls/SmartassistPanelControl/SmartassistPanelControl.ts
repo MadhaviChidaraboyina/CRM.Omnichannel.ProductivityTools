@@ -65,7 +65,7 @@ module MscrmControls.SmartassistPanelControl {
                 if (!this.tabSwitchHandlerId) {
 
                     //Listen to the CEC context change API
-                    var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange((sessionContext) => this.listenCECContextChangeAPI(sessionContext));
+                    var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange(this.listenCECContextChangeAPI.bind(this));
                     this.tabSwitchHandlerId = eventId;
                 }
 
@@ -119,6 +119,75 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**
+         * Load webresource for the given url in SAConfig.
+         * @param saConfig saConfig
+         * @param callback callback to create SmartassistAnyEntityControl
+         */
+        public loadWebresourceAndRenderSmartassistAnyEntity(saConfig: SAConfig, callback: (config: SAConfig, recordId: string, update: boolean) => void, recordId: string, update: boolean): void {
+            let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
+            if (!document.getElementById(src)) {
+                let script = document.createElement("script");
+                script.onerror = function (event: ErrorEvent) {
+                    let eventParameters = new TelemetryLogger.EventParameters();
+                    eventParameters.addParameter("Exception Details", event.message);
+                    let message = "Error while loading webresource for suggestion";
+                    SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "loadWebresourceAndRenderSmartassistAnyEntity", message, eventParameters);
+                };
+                script.onload = function () {
+                    callback(saConfig, recordId, update);
+                };
+
+                script.src = src;
+                script.id = src;
+                script.type = "text/javascript";
+                document.getElementsByTagName("head")[0].appendChild(script);
+            } else {
+                callback(saConfig, recordId, update);
+            }
+        }
+
+        public renderSmartassistAnyEntityControl(config: SAConfig, recordId: string, update: boolean): void {
+            const componentId = "SAAnyEntityControl_" + config.SmartassistConfigurationId;
+            let properties: any =
+            {
+                parameters: {
+                    SAConfig: {
+                        Type: "Multiple",
+                        Primary: false,
+                        Static: true,
+                        Usage: 1, // input
+                        Value: config
+                    },
+                    RecordId: {
+                        Type: "SingleLine.Text",
+                        Primary: false,
+                        Static: true,
+                        Usage: 1, // input
+                        Value: recordId
+                    },
+                    PPSessionContext: {
+                        type: "Multiple",
+                        Primary: false,
+                        Static: true,
+                        Usage: 1, // input
+                        Value: this.ppSessionContext
+                    }
+                },
+                key: componentId,
+                id: componentId,
+            };
+            var divElement = document.createElement("div");
+            divElement.id = Constants.SuggestionInnerDiv + config.SmartassistConfigurationId;
+            // Init SmartAssistAnyEntityControl
+            if (update) {
+                SmartassistPanelControl._context.utils.unbindDOMComponent(componentId);
+            }
+            let anyEntityControl = SmartassistPanelControl._context.factory.createComponent("MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl", componentId, properties);
+            SmartassistPanelControl._context.utils.bindDOMElement(anyEntityControl, divElement);
+            $("#" + Constants.SuggestionOuterContainer).append(divElement);
+        }
+
+        /**
          * Initialize SmartAssistAnyEntityControl to render suggestions
          * @param recordId: Anchor tab Entity id from PP control
          */
@@ -131,44 +200,7 @@ module MscrmControls.SmartassistPanelControl {
                 var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
                 configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
                 for (let i = 0; i <= (configs.length - 1); i++) {
-                    const componentId = "SAAnyEntityControl_" + configs[i].SmartassistConfigurationId;
-                    let properties: any =
-                    {
-                        parameters: {
-                            SAConfig: {
-                                Type: "Multiple",
-                                Primary: false,
-                                Static: true,
-                                Usage: 1, // input
-                                Value: configs[i]
-                            },
-                            RecordId: {
-                                Type: "SingleLine.Text",
-                                Primary: false,
-                                Static: true,
-                                Usage: 1, // input
-                                Value: recordId
-                            },
-                            PPSessionContext: {
-                                type: "Multiple",
-                                Primary: false,
-                                Static: true,
-                                Usage: 1, // input
-                                Value: this.ppSessionContext
-                            }
-                        },
-                        key: componentId,
-                        id: componentId,
-                    };
-                    var divElement = document.createElement("div");
-                    divElement.id = Constants.SuggestionInnerDiv + configs[i].SmartassistConfigurationId;
-                    // Init SmartAssistAnyEntityControl
-                    if (update) {
-                        SmartassistPanelControl._context.utils.unbindDOMComponent(componentId);
-                    }
-                    let anyEntityControl = SmartassistPanelControl._context.factory.createComponent("MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl", componentId, properties);
-                    SmartassistPanelControl._context.utils.bindDOMElement(anyEntityControl, divElement);
-                    $("#" + Constants.SuggestionOuterContainer).append(divElement);
+                    this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), recordId, update);
                 }
                 this.hideLoader();
             }
@@ -200,7 +232,7 @@ module MscrmControls.SmartassistPanelControl {
                 if (anchorContext && anchorContext.entityName && anchorContext.entityId
                     && Constants.IncidentEntityName == anchorContext.entityName
                     && !Utility.isNullOrEmptyString(anchorContext.entityId)) {
-                    this.anchorTabEntityId = anchorContext.entityId
+                    this.anchorTabEntityId = Utility.FormatGuid(anchorContext.entityId);
                 }
             }
 
