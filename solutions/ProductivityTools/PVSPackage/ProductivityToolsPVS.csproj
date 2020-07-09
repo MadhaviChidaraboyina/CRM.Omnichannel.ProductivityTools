@@ -41,6 +41,28 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.Uii.Common">
+      <HintPath>$(PKG_CRMSDK_UII)\lib\net45\Microsoft.Uii.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(PKG_XRMSERVER)\lib\net452\Microsoft.Xrm.Sdk.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Deployment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(XrmSolutionsRoot)\Packages\Microsoft.CrmSdk.Deployment.8.2.0\lib\net45\Microsoft.Xrm.Sdk.Deployment.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Tooling.Connector">
+      <HintPath>$(PKG_CRMSDK_XRMTOOLING_COREASSEMBLY)\lib\net452\Microsoft.Xrm.Tooling.Connector.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase">
+      <HintPath>$(PKG_CRMSDK_XRMTOOLING_DEPLOYMENT)\lib\net452\Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PackageProductivityTools.cs" />

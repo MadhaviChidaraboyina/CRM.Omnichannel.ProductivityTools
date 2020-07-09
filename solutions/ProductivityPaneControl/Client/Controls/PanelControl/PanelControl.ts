@@ -71,7 +71,7 @@ module MscrmControls.ProductivityToolPanel {
 
         private onSessionContextChanged(sessionContextData: SessionChangeEventData, actionType: string): void {
             this.isSessionChanged = true;
-            this.currentSessionId = this.sessionChangeManager.getCurrentFocusedSessionId();
+            this.currentSessionId = sessionContextData.newSessionId;
 
             if (this.currentSessionId == Constants.homeSessionId) {
                 this.isSessionChanged = false;
@@ -98,6 +98,11 @@ module MscrmControls.ProductivityToolPanel {
                 }
                 if (actionType === Constants.sessionClosed) {
                     PanelState.DeleteState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
+                    this.currentSessionId = this.sessionChangeManager.getCurrentFocusedSessionId();
+                    if (this.currentSessionId == Constants.homeSessionId) {
+                        this.isSessionChanged = false;
+                        this.currentSessionId = Constants.emptyString;
+                    }
                 }
             }
         }

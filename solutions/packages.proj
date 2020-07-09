@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-	<ProjectToBuild Include="Anchors\ProductivityTools\packages.proj" />
-	<ProjectToBuild Include="ProductivityMacros\packages.proj" />
-    <ProjectToBuild Include="Agentscript\packages.proj" />
-	<ProjectToBuild Include="ProductivityTools\packages.proj" />
-	</ItemGroup>
+		<ProjectToBuild Include="Anchors\ProductivityTools\packages.proj" />
+		<ProjectToBuild Include="ProductivityMacros\packages.proj" />
+		<ProjectToBuild Include="ProductivityMacrosComponent\packages.proj" />
+		<ProjectToBuild Include="ProductivityMacrosApplication\packages.proj" />
+		<ProjectToBuild Include="ProductivityMacrosApplicationOC\packages.proj" />
+		<ProjectToBuild Include="Agentscript\packages.proj" />
+		<ProjectToBuild Include="AgentscriptComponent\packages.proj" />
+		<ProjectToBuild Include="ProductivityTools\packages.proj" />
+  </ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
 	</Target>

@@ -1,0 +1,52 @@
+﻿/**
+* @license Copyright (c) Microsoft Corporation.  All rights reserved.
+*/
+
+.accordionRightArrow::after {
+	content: "\E974";
+	vertical-align: middle;
+}
+
+.accordionDownArrow::after {
+	content: "\E972";
+	vertical-align: middle;
+}
+
+.failedStepIcon::after {
+	content: "\EA39";
+}
+
+.completedStepIcon::after {
+	content: "\E930";
+}
+
+.textActionIcon::after {
+	content: "\EDC3";
+}
+
+.routeActionIcon::after {
+	content: "\F005";
+}
+
+.macroActionIcon::after {
+	content: "\F075";
+}
+
+.textActionIcon:hover {
+	background: #0078D4 !important;
+	color: #FFFFFF;
+}
+
+.routeActionIcon:hover {
+	background: #0078D4 !important;
+	color: #FFFFFF;
+}
+
+.macroActionIcon:hover {
+	background: #0078D4 !important;
+	color: #FFFFFF;
+}
+
+.mscrm-agentscript-selectContainer select:focus {
+	border: 1px dotted #000000;
+}

@@ -37,23 +37,29 @@ namespace Microsoft.ProductivityMacros.Internal {
         let temp = formInput;
         Object.keys(temp).forEach(function (key) {
             let attribName = "";
+            let _flag = true;
             if (key.endsWith("name"))
                 attribName = key.substr(0, key.length - 4);
 
-            if (key.endsWith("entitytype"))
+            if (key.endsWith("entitytype")) {
                 attribName = key.substr(0, key.length - 10);
+                _flag = false;
+            }
 
-            if ((attribName != "") && (attribName in formInput) && (attribName + "name" in formInput) && (attribName + "entitytype" in formInput)) {
+            if (_flag && key.endsWith("type"))
+                attribName = key.substr(0, key.length - 4);
+
+            if ((attribName != "") && (attribName in formInput) && (attribName + "name" in formInput) && ((attribName + "entitytype" in formInput) || (attribName + "type" in formInput))) {
                 var lookupValue = new Array();
                 lookupValue[0] = new Object();
                 lookupValue[0].id = formInput[attribName];
                 lookupValue[0].name = formInput[attribName + "name"];
-                lookupValue[0].entityType = formInput[attribName + "entitytype"]
+                lookupValue[0].entityType = (attribName + "type" in formInput) ? formInput[attribName + "type"] : formInput[attribName + "entitytype"];
                 ret[attribName] = lookupValue;
 
                 delete formInput[attribName];
                 delete formInput[attribName + "name"];
-                delete formInput[attribName + "entitytype"];
+                attribName + "type" in formInput ? delete formInput[attribName + "type"] : delete formInput[attribName + "entitytype"];
             }
             else {
                 if (key in formInput)
@@ -821,8 +827,32 @@ namespace Microsoft.ProductivityMacros.Internal {
         });
     }
 
+    function getPartyListValue(data: any): any {
+        try {
+            let partyList = JSON.parse(data);
+            if (Array.isArray(partyList)) {
+                let partylistData = new Array();
+                let i: number = 0;
+                partyList.forEach((item: any) => {
+                    if (item.hasOwnProperty("id") && item.hasOwnProperty("name") && (item.hasOwnProperty("entitytype") || item.hasOwnProperty("type"))) {
+                        partylistData[i] = new Object();
+                        partylistData[i].id = item.id;
+                        partylistData[i].name = item.name;
+                        partylistData[i].entityType = item.hasOwnProperty("entitytype") ? item.entitytype : item.type;
+                        i++;
+                    }
+                });
+                return partylistData;
+            }
+        }
+        catch (e) {
+            return data;
+        }
+        return data;
+    }
 
     export function updateFormAttribute(actionName: string, entityData: any, telemetryData?: Object | any): Promise<Map<string, any>> {
+        
         if (!entityData) {
             return Promise.reject(createErrorMap("Need values to Update for updateFormAttribute", "updateFormAttribute")); // should be removed add logrejectanderror mrthod here
         }
@@ -847,7 +877,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                 let data = consolidateLookupObj(getCustomArray(entityData))
                 Object.keys(data).forEach(function (key) {
 
-                    let dataType = windowXrm.Page.getAttribute(key).getAttributeType();
+                    let dataType = windowXrm.Page.getAttribute(key).getAttributeType();    
                     try {
                         switch (dataType) {
                             case "decimal":
@@ -872,6 +902,10 @@ namespace Microsoft.ProductivityMacros.Internal {
                                     multiOptionSet.push(parseInt(item));
                                 })
                                 windowXrm.Page.getAttribute(key).setValue(multiOptionSet);
+                                break;
+                            case "lookup":
+                                    data[key] = getPartyListValue(data[key]);
+                                windowXrm.Page.getAttribute(key).setValue(data[key]);
                                 break;
                             default:
                                 windowXrm.Page.getAttribute(key).setValue(data[key]);

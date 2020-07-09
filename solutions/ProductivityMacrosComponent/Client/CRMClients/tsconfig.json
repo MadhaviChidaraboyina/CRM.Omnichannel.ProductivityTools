@@ -1,0 +1,20 @@
+{
+	"extends":  "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
+  "include": [
+    "../ProductivityMacrosUtilities.ts",
+    "ProductivityMacroState.ts",
+    "ProductivityMacrosWrapper.ts",
+    "ProductivityMacroSlug.ts",
+    "ProductivityMacroRuntime.ts",
+    "aria-webjs-sdk-1.8.3.js",
+    "../Libraries/requirejs/require.js",
+    "Constants.ts",
+    "MacroActionTemplatesInfra.ts"
+  ],
+  "compilerOptions": {
+    "sourceMap": true,
+    "outFile": "../../Solution/WebResources/CRMClients/msdyn_ProductivityMacros_internal_library_v2.js",
+    "module": "amd",
+    "allowJs": true
+  }
+}

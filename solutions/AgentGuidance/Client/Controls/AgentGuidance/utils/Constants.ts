@@ -23,6 +23,9 @@ module MscrmControls.ProductivityToolAgentGuidance {
         // agent guidance Label id
         public static AgentGuidanceLabel = "AgentGuidanceLabel";
 
+        // agent guidance control id 
+        public static agentGuidanceControlId = "MscrmControls.ProductivityToolAgentGuidance.AgentGuidance";
+
         //agent guidance control id
         public static agentGuidanceControlKey = "agentguidancecontrol_child1";
 

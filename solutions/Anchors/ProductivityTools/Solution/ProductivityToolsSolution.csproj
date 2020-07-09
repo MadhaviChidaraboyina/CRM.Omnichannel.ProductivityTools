@@ -12,6 +12,7 @@
     <PluginMapFile></PluginMapFile>
     <SystemConverted>false</SystemConverted>
     <ThrowsLocalizeError>true</ThrowsLocalizeError>
+	<SkipArtifactVersioning>True</SkipArtifactVersioning>
 	<MakeCab>false</MakeCab>
   </PropertyGroup>
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />

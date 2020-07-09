@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entities />
+  <Roles />
+  <Workflows />
+  <FieldSecurityProfiles />
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <WebResources />
+  <CustomControls />
+  <EntityDataProviders />
+  <msdyn_applicationextensions>
+    <msdyn_applicationextension msdyn_uniquename="pp_loader">
+      <iscustomizable>0</iscustomizable>
+      <msdyn_appconfig_relationshipname>msdyn_msdyn_paneconfig_msdyn_appconfig</msdyn_appconfig_relationshipname>
+      <msdyn_name>Productivity Pane Loader</msdyn_name>
+      <msdyn_relationship_cardinality>387300000</msdyn_relationship_cardinality>
+      <msdyn_type>387300000</msdyn_type>
+      <msdyn_webresource_url>WebResources/msdyn_productivitypane_loader.js</msdyn_webresource_url>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </msdyn_applicationextension>
+  </msdyn_applicationextensions>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

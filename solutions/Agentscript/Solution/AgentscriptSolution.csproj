@@ -12,6 +12,7 @@
     <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
     <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptControls</CustomControlsPath>
     <SystemConverted>false</SystemConverted>
+	<SkipArtifactVersioning>True</SkipArtifactVersioning>
   </PropertyGroup>
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />

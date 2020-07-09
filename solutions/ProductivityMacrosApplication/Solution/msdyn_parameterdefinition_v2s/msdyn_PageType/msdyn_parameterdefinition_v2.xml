@@ -1,0 +1,13 @@
+<msdyn_parameterdefinition_v2 msdyn_uniquename="msdyn_PageType">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_description default="Application page type">
+    <label description="Application page type" languagecode="1033" />
+  </msdyn_description>
+  <msdyn_displayname default="Page type">
+    <label description="Page type" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_name>PageType</msdyn_name>
+  <msdyn_parametertype>string</msdyn_parametertype>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_parameterdefinition_v2>

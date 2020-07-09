@@ -1,0 +1,9 @@
+<msdyn_actionoutputparameter_v2 msdyn_uniquename="msdyn_save_output_params">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateoutputparameterid>
+    <msdyn_uniquename>msdyn_Save</msdyn_uniquename>
+  </msdyn_actiontemplateoutputparameterid>
+  <msdyn_name>save_output_params</msdyn_name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_actionoutputparameter_v2>

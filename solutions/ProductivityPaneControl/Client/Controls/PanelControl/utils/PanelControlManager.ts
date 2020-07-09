@@ -8,7 +8,13 @@ module MscrmControls.ProductivityToolPanel {
 		public static toggleSidePanelControl(toggleValue: number): void {
 
 			let windowObject = this.getWindowObject();
-			windowObject.Xrm.App.panels.getPanel("sidePanel-1").state = toggleValue;
+
+			//Loading pane in try catch till we get the API from platform
+			try {
+				windowObject.Xrm.App.panels.getPanel("sidePanel-1").state = toggleValue;
+			} catch (e) {
+				windowObject.Xrm.App.panels.getPanel("sidePanel-0").state = toggleValue;
+			}
 		}
 
 		public static getWindowObject(): any

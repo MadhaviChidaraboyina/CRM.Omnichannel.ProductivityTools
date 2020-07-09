@@ -7,10 +7,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Microsoft.Dynamics.SmartAssist.Plugins</RootNamespace>
     <AssemblyName>Microsoft.Dynamics.SmartAssist.Plugins</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AssemblyClsCompliant>false</AssemblyClsCompliant>
     <nowarn>0618,2008</nowarn>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>

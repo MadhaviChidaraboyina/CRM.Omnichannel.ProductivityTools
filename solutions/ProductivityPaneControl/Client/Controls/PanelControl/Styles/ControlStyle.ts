@@ -45,8 +45,8 @@ module MscrmControls.ProductivityToolPanel {
             return {
                 height: "100%",
                 width: flag ? "295px" : "0px",
-                position: "fixed",
-                top: "48px",
+                position: "absolute",
+                top: "0px",
                 right: !isRTL ? "44px" : "unset",
                 left: isRTL ? "44px" : "unset",
                 backgroundColor: "#FFFFFF",

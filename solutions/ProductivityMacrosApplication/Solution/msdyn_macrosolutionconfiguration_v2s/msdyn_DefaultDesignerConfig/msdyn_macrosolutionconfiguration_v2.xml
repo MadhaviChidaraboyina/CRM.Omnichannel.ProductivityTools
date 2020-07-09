@@ -1,0 +1,13 @@
+<msdyn_macrosolutionconfiguration_v2 msdyn_uniquename="msdyn_DefaultDesignerConfig">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_designerurlconfigentity>serviceendpoint</msdyn_designerurlconfigentity>
+  <msdyn_designerurlconfigentityattrib>path</msdyn_designerurlconfigentityattrib>
+  <msdyn_designerurlconfigentityid>38bd8b51-de34-4c45-bf43-5a913aeec49f</msdyn_designerurlconfigentityid>
+  <msdyn_designerurlrelativepath>/flowcontrol/DesignerBlob/iframedesigner.html</msdyn_designerurlrelativepath>
+  <msdyn_name>Default Designer Config</msdyn_name>
+  <msdyn_searchhint>msdyn_macrosolutionconfiguration_msdyn_searchhint</msdyn_searchhint>
+  <msdyn_uservoicelink>https://experience.dynamics.com/ideas/categories/list/?category=31047c64-7e28-e911-a95a-000d3a4f3883&amp;forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad</msdyn_uservoicelink>
+  <msdyn_uservoicetext>msdyn_macrosolutionconfiguration_msdyn_uservoicetext</msdyn_uservoicetext>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_macrosolutionconfiguration_v2>

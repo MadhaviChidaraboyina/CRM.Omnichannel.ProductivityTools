@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.0.0000.0000" SolutionPackageVersion="9.0" languagecode="1033" generatedBy="OnPremise" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>ProductivityMacrosComponent</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Macros" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="This solution provides web resources to use Macros designer and APIs to automate business process tasks." languagecode="1033" />
+    </Descriptions>
+    <Version>1.0.0.000</Version>
+    <Managed>2</Managed>
+    <Publisher>
+      <UniqueName>microsoftdynamics</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Microsoft Dynamics 365" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="Microsoft Dynamics 365" languagecode="1033" />
+      </Descriptions>
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>msdyn</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>10000</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode xsi:nil="true"></AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode xsi:nil="true"></ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode xsi:nil="true"></AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode xsi:nil="true"></ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="msdyn_actioninputparameter_v2" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_actionoutputparameter_v2" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_macroactiontemplate_v2" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_macroconnector_v2" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_macrosolutionconfiguration_v2" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_parameterdefinition_v2" behavior="0" />
+      <RootComponent type="60" id="{206b5fb0-376f-40cf-9e78-2acce3e61f42}" behavior="0" />
+      <RootComponent type="60" id="{4956d6b7-1d8c-4767-b73b-d4d9de0dd17d}" behavior="0" />
+      <RootComponent type="60" id="{55d8cfea-d1d1-43b8-b581-e83b6d276695}" behavior="0" />
+      <RootComponent type="60" id="{b00b65d5-efef-4fc6-871e-8ace809eae26}" behavior="0" />
+      <RootComponent type="60" id="{b520abfd-79f7-44e8-80bd-430d66619828}" behavior="0" />
+      <RootComponent type="60" id="{d9f3060d-a09b-4966-a1d0-aba226880a1d}" behavior="0" />
+      <RootComponent type="1" schemaName="workflow" behavior="0" />
+			<RootComponent type="1" schemaName="msdyn_macrosession" behavior="0" />
+      <RootComponent type="60" id="{6de78dfd-c198-4ab9-85e8-0e1bd20f5542}" behavior="0" />
+      <RootComponent type="60" id="{f72b3711-7317-4308-a1ee-d4ac37dec789}" behavior="0" />
+			<RootComponent type="60" id="{328f1cc4-c84d-412a-b4f2-d6c560fb1dc9}" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1025.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1026.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1027.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1028.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1029.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1030.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1031.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1032.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1033.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1035.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1036.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1037.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1038.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1040.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1041.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1042.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1043.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1044.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1045.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1046.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1048.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1049.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1050.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1051.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1053.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1054.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1055.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1057.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1058.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1060.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1061.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1062.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1063.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1066.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1069.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1081.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1086.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1087.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.1110.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.2052.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.2070.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.2074.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.3076.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.3082.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/ProductivityMacros_webresource_strings.3098.resx" behavior="0" />
+      <RootComponent type="61" schemaName="CRMClients/msdyn_ProductivityMacros_internal_library_v2.js" behavior="0" />
+			<RootComponent type="61" schemaName="CRMClients/msdyn_LogicAppExecutor_v2.js" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroDesigner_v2.bundle.js" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroDesigner_v2.html" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_agentScriptDesigner_v2.bundle.js" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_agentScriptDesigner_v2.html" behavior="0" />
+			<RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroMonitor_v2.bundle.js" behavior="0" />
+			<RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macroMonitor_v2.html" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_clone_record.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_close_session.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_close_all_sessions.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_create_session.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_email.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macro_connector.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_associated.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_dashboard.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_form.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_grid.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_kb.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_new_form.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_refresh.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_save.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_search_kb.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_search_relevance.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_update_record.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_spinner.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_update_form_attribute.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/AgentScriptDesigner/msdyn_ProductivityMacros_setDefaultAction.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/AgentScriptDesigner/msdyn_ProductivityMacros_manualTrigger.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/AgentScriptDesigner/msdyn_ProductivityMacros_agentConnector.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_kb_article.svg" behavior="0" />
+			<RootComponent type="66" schemaName="MscrmControls.GridControl.MacroSessionAssociatedGridControl" behavior="0" />
+			<RootComponent type="66" schemaName="MscrmControls.RunLinkControl.RunLinkControl" behavior="0" />
+      <RootComponent type="20" id="{702ddd04-6ea4-4534-82f9-b05ede681b55}" behavior="0" />
+      <RootComponent type="20" id="{9af48dd6-dbc2-437e-ad7c-14a01ae3492d}" behavior="0" />
+    </RootComponents>
+    <MissingDependencies />
+  </SolutionManifest>
+</ImportExportXml>

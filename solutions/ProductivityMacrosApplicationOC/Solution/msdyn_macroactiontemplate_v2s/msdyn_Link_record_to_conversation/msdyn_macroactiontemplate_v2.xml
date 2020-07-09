@@ -1,0 +1,28 @@
+<msdyn_macroactiontemplate_v2 msdyn_uniquename="msdyn_Link_record_to_conversation">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiondescription default="Link record to the conversation">
+    <label description="Link record to the conversation" languagecode="1033" />
+  </msdyn_actiondescription>
+  <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
+  <msdyn_displayname default="Link record to the conversation">
+    <label description="Link record to the conversation" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_icon>WebResources/msdyn_OmnichannelBase/_imgs/Macros/msdyn_ProductivityMacros_Link_record_to_conversation.svg</msdyn_icon>
+  <msdyn_kind>ACTIONS</msdyn_kind>
+  <msdyn_macroconnector>
+    <msdyn_uniquename>msdyn_OmnichannelConnector</msdyn_uniquename>
+  </msdyn_macroconnector>
+  <msdyn_name>Link_record_to_conversation</msdyn_name>
+  <msdyn_runtimeapi>OmniChannelPackage.Macros.Instance.linkToConversation(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_subtitle default="Omnichannel connector">
+    <label description="Omnichannel connector" languagecode="1033" />
+  </msdyn_subtitle>
+  <msdyn_summary default="Link record to the conversation">
+    <label description="Link record to the conversation" languagecode="1033" />
+  </msdyn_summary>
+  <msdyn_title default="Link record to the conversation">
+    <label description="Link record to the conversation" languagecode="1033" />
+  </msdyn_title>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_macroactiontemplate_v2>

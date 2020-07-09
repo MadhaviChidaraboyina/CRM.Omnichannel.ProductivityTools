@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
+  <PropertyGroup>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <NOTARGET>true</NOTARGET>
+    <SolutionProjectNamePrefix>ProductivityMacrosApplication</SolutionProjectNamePrefix>
+    <SolutionFileNamePrefix>msdyn_ProductivityMacrosApplication</SolutionFileNamePrefix>
+    <ApplicationFolder>$(XrmSolutionsRoot)\solutions\ProductivityMacrosApplication</ApplicationFolder>
+    <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
+    <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
+    <ProjectGuid>{E2AF167D-085E-437D-BB5A-83578E689914}</ProjectGuid>
+	<SkipArtifactVersioning>True</SkipArtifactVersioning>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(WSRoot)\drop\debug\AnyCPU\Solutions</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\Sales_LinkedInIntegration.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(WSRoot)\drop\Release\AnyCPU\Solutions</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Clone_focused_Record_input_params_required\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Clone_Input_Record_input_params_optional\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Clone_Input_Record_input_params_required\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Create_New_Input_Params_Advanced\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Create_New_Input_Params_Mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Create_New_Input_Params_Optional\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_draft_email_input_params_mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Focus_tab_Input_Params_Mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Open_Application_Tab_input_param_advanced\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Open_Application_Tab_input_param_required\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Open_Dashboard_Input_Param_Mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Open_Existing_Form_Input_Params_Mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Open_Existing_Form_Input_Params_Optional\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Open_Grid_Input_Params_Mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Open_Grid_Input_Params_Optional\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_open_kb_article_attributes_params_mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Refresh_Input_Params_Mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Resolve_Case_Input_Mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Search_by_relevance_input_parameter\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Search_kb_input_params\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_update_form_attributes_params_advanced\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_update_form_attributes_params_mandatory\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Update_record_input_params_advanced\msdyn_actioninputparameter_v2.xml" />
+    <Content Include="msdyn_actioninputparameter_v2s\msdyn_Update_record_input_params_mandatory\msdyn_actioninputparameter_v2.xml" />
+
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_Clone_focused_Record_Output_Params\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_Clone_Input_Record_Output_Params\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_Create_New_Output_Params\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_draft_email_output_params\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_Get_current_page_Output_Params\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_Open_Application_Tab_output_param\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_Open_Exisiting_Form_Output_Params\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_Open_Grid_Output_Params\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_open_kb_article_attribute_output_param\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_resolve_case_ouput_params\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_save_output_params\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_Search_by_relevance_output_parameter\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_Search_kb_output_params\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_update_form_attribute_output_param\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="msdyn_actionoutputparameter_v2s\msdyn_Update_record_output_params\msdyn_actionoutputparameter_v2.xml" />
+
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Clone_focused_Record\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Clone_Input_Record\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Create_New\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Draft_Email\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Focus_tab\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Get_current_page\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Open_Application_Tab\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Open_Form\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Open_Grid\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Open_KB_Article\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Refresh\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Resolve_Case\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Save\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Search_by_relevance\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Search_knowledge_base\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Start\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_update_form_attributes\msdyn_macroactiontemplate_v2.xml" />
+    <Content Include="msdyn_macroactiontemplate_v2s\msdyn_Update_Record\msdyn_macroactiontemplate_v2.xml" />
+
+    <Content Include="msdyn_macroconnector_v2s\msdyn_ProductivityAutomation\msdyn_macroconnector_v2.xml" />
+    <Content Include="msdyn_macroconnector_v2s\msdyn_SessionConnector\msdyn_macroconnector_v2.xml" />
+
+    <Content Include="msdyn_macrosolutionconfiguration_v2s\msdyn_DefaultDesignerConfig\msdyn_macrosolutionconfiguration_v2.xml" />
+    
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_ApplicationTemplateId\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_BillableTime\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_Custom_Array\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_Custom_Object\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_DashboardId\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_EntityId\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_EntityName\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_FormId\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_IncidentId\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_PageType\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_PartyListName\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_PrimaryNameAttributeValue\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_RecordTitle\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_Resolution\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_SearchString\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_TabId\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_TemplateId\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_UpdateData\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_ViewId\msdyn_parameterdefinition_v2.xml" />
+    <Content Include="msdyn_parameterdefinition_v2s\msdyn_ViewType\msdyn_parameterdefinition_v2.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Other\Customizations.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Other\Solution.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\en-US\resources.en-US.resx" />
+    <Content Include="Resources\template_resources.resx" />
+  </ItemGroup>
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
+</Project>

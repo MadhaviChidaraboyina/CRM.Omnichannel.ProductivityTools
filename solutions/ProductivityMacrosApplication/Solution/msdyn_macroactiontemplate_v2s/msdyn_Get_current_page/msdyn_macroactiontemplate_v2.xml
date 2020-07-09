@@ -1,0 +1,28 @@
+<msdyn_macroactiontemplate_v2 msdyn_uniquename="msdyn_Get_current_page">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiondescription default="Get the current tab">
+    <label description="Get the current tab" languagecode="1033" />
+  </msdyn_actiondescription>
+  <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
+  <msdyn_displayname default="Get the current tab">
+    <label description="Get the current tab" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_icon>WebResources/Macros/msdyn_ProductivityMacros_get_current_page.svg</msdyn_icon>
+  <msdyn_kind>ACTIONS</msdyn_kind>
+  <msdyn_macroconnector>
+    <msdyn_uniquename>msdyn_SessionConnector</msdyn_uniquename>
+  </msdyn_macroconnector>
+  <msdyn_name>Get_current_page</msdyn_name>
+  <msdyn_runtimeapi>Microsoft.ChannelIntegrationFramework.Macros.getCurrentPageAction(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_subtitle default="Session connector">
+    <label description="Session connector" languagecode="1033" />
+  </msdyn_subtitle>
+  <msdyn_summary default="Get the current tab">
+    <label description="Get the current tab" languagecode="1033" />
+  </msdyn_summary>
+  <msdyn_title default="Get the current tab">
+    <label description="Get the current tab" languagecode="1033" />
+  </msdyn_title>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_macroactiontemplate_v2>

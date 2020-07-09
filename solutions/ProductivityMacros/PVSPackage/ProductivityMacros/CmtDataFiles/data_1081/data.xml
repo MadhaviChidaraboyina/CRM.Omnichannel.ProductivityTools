@@ -1202,7 +1202,7 @@
         <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_0070F53E_3C12_439E_80A7_39F10C38878B" />
         <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_0070F53E_3C12_439E_80A7_39F10C38878B" />
         <field name="msdyn_macroconnector" value="d2f931e3-70b7-4093-865e-b8075a02c215" lookupentity="msdyn_macroconnector" lookupentityname="Omnichannel Connector" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_send_kb.svg" />
+        <field name="msdyn_icon" value="WebResources/msdyn_OmnichannelBase/_imgs/Macros/msdyn_ProductivityMacros_send_kb.svg" />
         <field name="msdyn_kind" value="ACTIONS" />
         <field name="msdyn_macroactiontemplateid" value="0070F53E-3C12-439E-80A7-39F10C38878B" />
         <field name="msdyn_name" value="Send_KB" />
@@ -1213,39 +1213,7 @@
         <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_0070F53E_3C12_439E_80A7_39F10C38878B" />
         <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_0070F53E_3C12_439E_80A7_39F10C38878B" />
         <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="57EB46A5-6D9D-4C09-A462-1C5475993879">
-        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_57EB46A5_6D9D_4C09_A462_1C5475993879" />
-        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_57EB46A5_6D9D_4C09_A462_1C5475993879" />
-        <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Session Connector" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_close_session.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_macroactiontemplateid" value="57EB46A5-6D9D-4C09-A462-1C5475993879" />
-        <field name="msdyn_name" value="Close_Session" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ChannelIntegrationFramework.Macros.closeSessionAction(actionName)" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_57EB46A5_6D9D_4C09_A462_1C5475993879" />
-        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_57EB46A5_6D9D_4C09_A462_1C5475993879" />
-        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_57EB46A5_6D9D_4C09_A462_1C5475993879" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>
-      <record id="0F218CC2-0AD4-4089-90EE-A654E0DD6FA9">
-        <field name="msdyn_actionDescription" value="msdyn_macroactiontemplate_msdyn_actionDescription_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" />
-        <field name="msdyn_displayname" value="msdyn_macroactiontemplate_msdyn_displayname_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" />
-        <field name="msdyn_macroconnector" value="ac627bea-31f2-4378-9a21-6e1e2d74e278" lookupentity="msdyn_macroconnector" lookupentityname="Productivity Automation" />
-        <field name="msdyn_icon" value="WebResources/MacroDesigner/msdyn_ProductivityMacros_close_all_sessions.svg" />
-        <field name="msdyn_kind" value="ACTIONS" />
-        <field name="msdyn_macroactiontemplateid" value="0F218CC2-0AD4-4089-90EE-A654E0DD6FA9" />
-        <field name="msdyn_name" value="Close_All_other_Sessions" />
-        <field name="msdyn_runtimeapi" value="Microsoft.ChannelIntegrationFramework.Macros.closeAllOtherSessionsAction(actionName)" />
-        <field name="statecode" value="0" />
-        <field name="statuscode" value="1" />
-        <field name="msdyn_subtitle" value="msdyn_macroactiontemplate_msdyn_subtitle_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" />
-        <field name="msdyn_summary" value="msdyn_macroactiontemplate_msdyn_summary_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" />
-        <field name="msdyn_title" value="msdyn_macroactiontemplate_msdyn_title_0F218CC2_0AD4_4089_90EE_A654E0DD6FA9" />
-        <field name="msdyn_brandcolor" value="#2266E3" />
-      </record>   
+      </record>            
     </records>
     <m2mrelationships />
   </entity>

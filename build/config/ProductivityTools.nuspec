@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Microsoft.Dynamics.Service.ProductivityTools</id>
+    <id>Microsoft.Dynamics.XrmSolutions.ProductivityTools</id>
     <version>9.2.1.359</version>
     <authors>Microsoft Dynamics 365 </authors>
     <owners>Microsoft Dynamics 365</owners>

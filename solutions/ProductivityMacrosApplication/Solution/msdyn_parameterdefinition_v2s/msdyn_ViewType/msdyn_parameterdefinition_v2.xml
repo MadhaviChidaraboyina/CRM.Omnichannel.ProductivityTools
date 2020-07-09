@@ -1,0 +1,13 @@
+<msdyn_parameterdefinition_v2 msdyn_uniquename="msdyn_ViewType">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_description default="The type of view">
+    <label description="The type of view" languagecode="1033" />
+  </msdyn_description>
+  <msdyn_displayname default="View type">
+    <label description="View type" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_name>ViewType</msdyn_name>
+  <msdyn_parametertype>string</msdyn_parametertype>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_parameterdefinition_v2>

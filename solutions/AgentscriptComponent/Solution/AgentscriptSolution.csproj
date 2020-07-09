@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{7F16C51D-12D0-488B-9583-118107D833F0}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <NOTARGET>true</NOTARGET>
+    <SolutionProjectNamePrefix>AgentscriptComponent</SolutionProjectNamePrefix>
+    <SolutionFileNamePrefix>msdyn_AgentscriptComponent</SolutionFileNamePrefix>
+    <ApplicationFolder>$(WSRoot)\solutions\AgentscriptComponent</ApplicationFolder>
+    <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
+    <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
+    <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\AgentscriptComponentControls</CustomControlsPath>
+    <SystemConverted>false</SystemConverted>
+	<SkipArtifactVersioning>True</SkipArtifactVersioning>
+  </PropertyGroup>
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
+</Project>
