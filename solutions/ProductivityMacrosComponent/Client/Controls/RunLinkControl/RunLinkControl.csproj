@@ -63,13 +63,13 @@
 			<SelectedimgOutputs Include="img\*.*" />
 			<SelectedStringOutputs Include="strings\*.*" />
 		</ItemGroup>
-		<Copy SourceFiles="@(SelectedOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl" />
-		<Copy SourceFiles="@(SelectedLibsOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl\libs\%(RecursiveDir)" />
-		<Copy SourceFiles="@(SelectedcssOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl\css" />
-		<Copy SourceFiles="@(SelectedimgOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl\img" />
-		<Copy SourceFiles="@(SelectedStringOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl\Strings" />
+		<Copy SourceFiles="@(SelectedOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\RunLinkControl" />
+		<Copy SourceFiles="@(SelectedLibsOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\RunLinkControl\libs\%(RecursiveDir)" />
+		<Copy SourceFiles="@(SelectedcssOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\RunLinkControl\css" />
+		<Copy SourceFiles="@(SelectedimgOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\RunLinkControl\img" />
+		<Copy SourceFiles="@(SelectedStringOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\RunLinkControl\Strings" />
 	</Target>
 	<Target Name="Clean">
-		<RemoveDir Directories="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\RunLinkControl" />
+		<RemoveDir Directories="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\RunLinkControl" />
 	</Target>
 </Project>

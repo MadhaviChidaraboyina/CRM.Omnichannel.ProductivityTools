@@ -9,7 +9,7 @@
     <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
     <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
     <ProjectGuid>{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}</ProjectGuid>
-    <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls</CustomControlsPath>
+    <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls</CustomControlsPath>
 	<SkipArtifactVersioning>True</SkipArtifactVersioning>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

@@ -61,13 +61,13 @@
 			<SelectedimgOutputs Include="img\*.*" />
 			<SelectedStringOutputs Include="strings\*.*" />
 		</ItemGroup>
-		<Copy SourceFiles="@(SelectedOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\MacroSessionAssociatedGridControl" />
-		<Copy SourceFiles="@(SelectedLibsOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\MacroSessionAssociatedGridControl\libs\%(RecursiveDir)" />
-		<Copy SourceFiles="@(SelectedcssOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\MacroSessionAssociatedGridControl\css" />
-		<Copy SourceFiles="@(SelectedimgOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\MacroSessionAssociatedGridControl\img" />
-		<Copy SourceFiles="@(SelectedStringOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\MacroSessionAssociatedGridControl\strings" />
+		<Copy SourceFiles="@(SelectedOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl" />
+		<Copy SourceFiles="@(SelectedLibsOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\libs\%(RecursiveDir)" />
+		<Copy SourceFiles="@(SelectedcssOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\css" />
+		<Copy SourceFiles="@(SelectedimgOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\img" />
+		<Copy SourceFiles="@(SelectedStringOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\strings" />
 	</Target>
 	<Target Name="Clean">
-		<RemoveDir Directories="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosControls\MacroSessionAssociatedGridControl" />
+		<RemoveDir Directories="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl" />
 	</Target>
 </Project>

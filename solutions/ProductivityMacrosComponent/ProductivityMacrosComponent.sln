@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebResources", "Client\WebResources.csproj", "{4414E1A3-E56E-4A8F-A7DA-82D3837D6809}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityMacrosComponentWebResources", "Client\ProductivityMacrosComponentWebResources.csproj", "{4414E1A3-E56E-4A8F-A7DA-82D3837D6809}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityMacrosSolution", "Solution\ProductivityMacrosSolution.csproj", "{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityMacrosComponentSolution", "Solution\ProductivityMacrosComponentSolution.csproj", "{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "flowDesignerControl", "Controls\MacroDesigner\flowDesignerControl.njsproj", "{4087A27A-8FEA-457D-8080-DEC306F13126}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityMacrosComponentPVS", "PVSPackage\ProductivityMacrosComponentPVS.csproj", "{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,18 @@ Global
 		{4087A27A-8FEA-457D-8080-DEC306F13126}.Release|Any CPU.ActiveCfg = release|Any CPU
 		{4087A27A-8FEA-457D-8080-DEC306F13126}.retail|amd64.ActiveCfg = retail|Any CPU
 		{4087A27A-8FEA-457D-8080-DEC306F13126}.retail|Any CPU.ActiveCfg = retail|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Debug|amd64.ActiveCfg = debug|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Debug|amd64.Build.0 = debug|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Debug|Any CPU.ActiveCfg = debug|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Debug|Any CPU.Build.0 = debug|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Release|amd64.ActiveCfg = release|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Release|amd64.Build.0 = release|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Release|Any CPU.ActiveCfg = release|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.Release|Any CPU.Build.0 = release|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.retail|amd64.ActiveCfg = retail|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.retail|amd64.Build.0 = retail|amd64
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.retail|Any CPU.ActiveCfg = retail|Any CPU
+		{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}.retail|Any CPU.Build.0 = retail|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

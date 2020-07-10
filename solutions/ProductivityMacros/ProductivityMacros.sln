@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebResources", "Client\WebResources.csproj", "{8BE01C28-FF42-41F6-AA6B-6A0FC9AD64F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityMacrosWebResources", "Client\ProductivityMacrosWebResources.csproj", "{8BE01C28-FF42-41F6-AA6B-6A0FC9AD64F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityMacrosSolution", "Solution\ProductivityMacrosSolution.csproj", "{4366FFE6-15A7-462D-B812-BDB8AECFAC8B}"
 EndProject

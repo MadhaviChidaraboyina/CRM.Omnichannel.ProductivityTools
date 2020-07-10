@@ -1,6 +1,6 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ProjectToBuild Include="PVSPackage\ProductivityMacrosPVS.csproj" />
+    <ProjectToBuild Include="PVSPackage\ProductivityMacrosComponentPVS.csproj" />
   </ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />

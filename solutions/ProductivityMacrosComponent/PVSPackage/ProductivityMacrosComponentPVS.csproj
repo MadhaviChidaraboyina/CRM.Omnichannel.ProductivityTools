@@ -3,7 +3,7 @@
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\PVSPackage.targets" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <PropertyGroup>
-    <ProjectGuid>{dc45c0fa-83de-404e-ac8f-dd4311fcd7a8}</ProjectGuid>
+    <ProjectGuid>{DC45C0FA-83DE-404E-AC8F-DD4311FCD7A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Microsoft.Dynamics.ProductivityMacrosComponent.PVSPackage</RootNamespace>
