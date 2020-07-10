@@ -24,24 +24,32 @@
          * @param recordId: Record id to find the suggestion upon.
          */
         public async getSuggestionsData(saConfig: SAConfig, recordId: string) {
-            const suggestionIdsFromSession = this._sessionStateManager.getAllRecords(recordId) || {};
-            const suggestionIdsForSAConfig = suggestionIdsFromSession[saConfig.SmartassistConfigurationId];
-            const fromServer = !suggestionIdsForSAConfig;
-            if (suggestionIdsForSAConfig) {
-                this.getSuggestionsDataFromSessionCache(saConfig, suggestionIdsForSAConfig);
-            }
-
-            // call API if the data is not available in cache.
-            if (!this.Suggestions || fromServer) {
-                await this.getSuggestionsDataFromAPI(saConfig, recordId)
-
-                // Raise PP notification
-                var saConfigData = this.Suggestions[saConfig.SmartassistConfigurationId];
-                if (saConfigData) {
-                    var sessionId = Utility.getCurrentSessionId();
-                    var dataCount = saConfigData.length;
-                    Utility.DispatchPanelInboundEvent(dataCount, sessionId);
+            let eventParameters = new TelemetryLogger.EventParameters();
+            try {
+                const suggestionIdsFromSession = this._sessionStateManager.getAllRecords(recordId) || {};
+                const suggestionIdsForSAConfig = suggestionIdsFromSession[saConfig.SmartassistConfigurationId];
+                const fromServer = !suggestionIdsForSAConfig;
+                if (suggestionIdsForSAConfig) {
+                    this.getSuggestionsDataFromSessionCache(saConfig, suggestionIdsForSAConfig);
                 }
+
+                // call API if the data is not available in cache.
+                if (!this.Suggestions || fromServer) {
+                    await this.getSuggestionsDataFromAPI(saConfig, recordId)
+
+                    // Raise PP notification
+                    var saConfigData = this.Suggestions;
+                    if (saConfigData && this.Suggestions[saConfig.SmartassistConfigurationId]) {
+                        var sessionId = Utility.getCurrentSessionId();
+                        var dataCount = saConfigData[saConfig.SmartassistConfigurationId].length;
+                        Utility.DispatchPanelInboundEvent(dataCount, sessionId);
+                    }
+                }
+            }
+            catch (error) {
+                this.Suggestions = null;
+                eventParameters.addParameter("Exception Details", error.message);
+                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "getSuggestionsData", "Error occurred while getting suggestions data", eventParameters);
             }
             return this.Suggestions;
         }
@@ -68,16 +76,16 @@
          * @param saconfig Smartassist configuration record.
          */
         private getSuggestionProvider(saconfig: SAConfig): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider {
-                const suggestionProviderName = saconfig.SuggestionProvider;
-                let ctor = this.CONSTRUCTOR_CACHE[suggestionProviderName];
-                if (!ctor) {
-                    let findCtor = window;
-                    for (const ctorNamePart of suggestionProviderName.split(".")) {
-                        findCtor = findCtor[ctorNamePart];
-                        if (!findCtor) {
-                            break;
-                        }
+            const suggestionProviderName = saconfig.SuggestionProvider;
+            let ctor = this.CONSTRUCTOR_CACHE[suggestionProviderName];
+            if (!ctor) {
+                let findCtor = window;
+                for (const ctorNamePart of suggestionProviderName.split(".")) {
+                    findCtor = findCtor[ctorNamePart];
+                    if (!findCtor) {
+                        break;
                     }
+                }
 
                 if (!findCtor || typeof findCtor !== "function") {
                     throw new Error(`Could not find/invoke ${suggestionProviderName}'s constructor`);
@@ -97,23 +105,31 @@
          * @param RecordId: Record id to find the suggestion upon.
          */
         private async getSuggestionsDataFromAPI(saConfig: SAConfig, RecordId: string) {
-            const suggestionProvider = this.getSuggestionProvider(saConfig);
-            var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext() as any;
-            let tabcontext;
-            if (context) {
-                tabcontext = context.getTabContext("anchor");
-            }
-            const param: Microsoft.Smartassist.SuggestionProvider.SuggestionContext = { controlContext: this._controlContext, tabcontext: tabcontext };
-            let suggestionDataFromAPI = [];
-            if (suggestionProvider) {
-                suggestionDataFromAPI = await suggestionProvider.getSuggestions(param);
-            }
+            let eventParameters = new TelemetryLogger.EventParameters();
+            try {
+                const suggestionProvider = this.getSuggestionProvider(saConfig);
+                var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext() as any;
+                let tabcontext;
+                if (context) {
+                    tabcontext = context.getTabContext("anchor");
+                }
+                const param: Microsoft.Smartassist.SuggestionProvider.SuggestionContext = { controlContext: this._controlContext, tabcontext: tabcontext };
+                let suggestionDataFromAPI = [];
+                if (suggestionProvider) {
+                    suggestionDataFromAPI = await suggestionProvider.getSuggestions(param);
+                }
 
-            this.Suggestions = {};
-            let data = suggestionDataFromAPI;
-            data = data.sort((a, b) => a.ConfidenceScore > b.ConfidenceScore ? -1 : 1);
-            this.Suggestions[saConfig.SmartassistConfigurationId] = data;
-            this.initializeCacheForSuggestions(saConfig, RecordId);
+                this.Suggestions = {};
+                let data = suggestionDataFromAPI;
+                data = data.sort((a, b) => a.ConfidenceScore > b.ConfidenceScore ? -1 : 1);
+                this.Suggestions[saConfig.SmartassistConfigurationId] = data;
+                this.initializeCacheForSuggestions(saConfig, RecordId);
+            }
+            catch (error) {
+                this.Suggestions = null;
+                eventParameters.addParameter("Exception Details", error.message);
+                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "getSuggestionsDataFromAPI", "Error occurred while getting suggestions from API", eventParameters);
+            }
         }
 
         /**
@@ -150,7 +166,7 @@
             }
 
             let suggestionIdsToSave = previousSuggestionIds.concat(suggestionIds);
-            window.sessionStorage.setItem(sessionId, JSON.stringify(suggestionIdsToSave));   
+            window.sessionStorage.setItem(sessionId, JSON.stringify(suggestionIdsToSave));
         }
     }
 }

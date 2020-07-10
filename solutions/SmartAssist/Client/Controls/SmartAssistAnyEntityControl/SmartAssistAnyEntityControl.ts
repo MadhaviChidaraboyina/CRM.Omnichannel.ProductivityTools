@@ -137,8 +137,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
             this.showLoader();
             // Get Suggestions data records for provide saConfig
             var data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
-            var dataLength = data[this.saConfig.SmartassistConfigurationId].length;
-
+            var dataLength = 0;
+            if (data && data[this.saConfig.SmartassistConfigurationId]) {
+                dataLength = data[this.saConfig.SmartassistConfigurationId].length;
+            }                
             if (dataLength < 1) {
                 var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig.SuggestionType);
                 $("#" + this.parentDivId).append(emptyRecordElm)
