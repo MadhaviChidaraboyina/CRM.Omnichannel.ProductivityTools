@@ -139,7 +139,7 @@
 		</RootComponents>
 		<MissingDependencies>
 			<MissingDependency>
-				<Required key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" solution="CustomerEngagementConfiguration (9.0.0.10)" />
+				<Required key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" solution="ExperienceDesigner" />
 				<Dependent key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" />
 			</MissingDependency>
 		</MissingDependencies>

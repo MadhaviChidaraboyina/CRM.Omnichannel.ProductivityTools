@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Microsoft.Dynamics.XrmSolutions.ProductivityTools</id>
+    <id>Microsoft.Dynamics.XrmSolutions.ProductivityTools.SmartAssist</id>
     <version>9.2.1.359</version>
     <authors>Microsoft Dynamics 365 </authors>
     <owners>Microsoft Dynamics 365</owners>
@@ -9,16 +9,16 @@
     <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
     <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Microsoft Dynamics 365 XRM Solution for ProductivityTools.</description>
-    <releaseNotes>This release includes XRM solution: ProductivityTools</releaseNotes>
+    <description>Microsoft Dynamics 365 XRM Smartassist Solution for ProductivityTools.</description>
+    <releaseNotes>This release includes XRM Smartassist solution: ProductivityTools</releaseNotes>
     <copyright>Copyright �2016 Microsoft Corporation</copyright>
-    <tags>CRM XRM Dynamics365 ProductivityTools Solution</tags>
+    <tags>CRM XRM Dynamics365 ProductivityTools Smartassist Solution</tags>
     <dependencies>
     </dependencies>
   </metadata>
-	<files>
-		<!-- retail artifacts -->
-		<file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_smartassist_*.zip" target="Solutions" />
+    <files>
+        <!-- retail artifacts -->
+        <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_smartassist_*.zip" target="Solutions" />
   </files>
 </package>
 
