@@ -109,11 +109,11 @@
 				</events>
 				<controlDescriptions>
 					<controlDescription forControl="{d0a99063-9af2-42a1-b336-47b79ba30112}">
-						<customControl name="MscrmControls.RunLinkControl.RunLinkControl" formFactor="0">
+						<customControl name="MscrmControls.RunLinkControl.RunLinkControlv2" formFactor="0">
 						</customControl>
-						<customControl name="MscrmControls.RunLinkControl.RunLinkControl" formFactor="1">
+						<customControl name="MscrmControls.RunLinkControl.RunLinkControlv2" formFactor="1">
 						</customControl>
-						<customControl name="MscrmControls.RunLinkControl.RunLinkControl" formFactor="2">
+						<customControl name="MscrmControls.RunLinkControl.RunLinkControlv2" formFactor="2">
 						</customControl>
 					</controlDescription>
 				</controlDescriptions>

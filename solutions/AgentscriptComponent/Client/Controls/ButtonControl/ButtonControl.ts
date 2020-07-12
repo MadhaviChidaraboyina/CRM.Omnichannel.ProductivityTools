@@ -7,7 +7,7 @@
 module MscrmControls.ButtonControl {
 	'use strict';
 
-	export class ButtonControl extends MscrmCommon.FieldControlBase<IInputBag, IOutputBag> {
+	export class ButtonControlv2 extends MscrmCommon.FieldControlBase<IInputBag, IOutputBag> {
 
 		private _context: Mscrm.ControlData<IInputBag>;
 		private buttonDomElement: any;

@@ -6,8 +6,8 @@
     <ProjectGuid>{4414E1A3-E56E-4A8F-A7DA-82D3837D6809}</ProjectGuid>
     <ProjectTypeGuids>{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Microsoft.Dynamics.ProductivityMacros.WebResources</RootNamespace>
-    <AssemblyName>Microsoft.Dynamics.ProductivityMacros.WebResources</AssemblyName>
+    <RootNamespace>Microsoft.Dynamics.ProductivityMacrosComponent.WebResources</RootNamespace>
+    <AssemblyName>Microsoft.Dynamics.ProductivityMacrosComponent.WebResources</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
@@ -75,16 +75,16 @@
     <Content Include="CRMClients\LogicAppExecutor\tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Localization\ProductivityMacros_webresource_strings.1033.resx">
+    <EmbeddedResource Include="Localization\ProductivityMacrosComponent_webresource_strings.1033.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ProductivityMacros_webresource_strings.1033.Designer.cs</LastGenOutput>
+      <LastGenOutput>ProductivityMacrosComponent_webresource_strings.1033.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Localization\ProductivityMacros_webresource_strings.1033.Designer.cs">
+    <Compile Include="Localization\ProductivityMacrosComponent_webresource_strings.1033.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProductivityMacros_webresource_strings.1033.resx</DependentUpon>
+      <DependentUpon>ProductivityMacrosComponent_webresource_strings.1033.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <Target Name="CopyStatic">
@@ -94,7 +94,7 @@
     <Copy SourceFiles="@(StaticWebResources)" DestinationFiles="@(StaticWebResources->'$(TypeScriptOutDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="True" />
   </Target>
   <ItemGroup>
-    <LocResx Include="Localization\ProductivityMacros_webresource_strings.*.resx" />
+    <LocResx Include="Localization\ProductivityMacrosComponent_webresource_strings.*.resx" />
   </ItemGroup>
   <ItemGroup />
   <Target Name="SelectedOutputs" DependsOnTargets="CopyStatic">
@@ -113,7 +113,7 @@
     </ItemGroup>
   </Target>
   <Target Name="AfterBuild" DependsOnTargets="SelectedOutputs" Inputs="@(WebResources)" Outputs="@(WebResources->'$(SolutionPackagePath)\%(RecursiveDir)')">
-    <Copy SourceFiles="@(LocResx)" DestinationFolder="$(XrmSolutionsRoot)\solutions\ProductivityMacros\Solution\WebResources\Localization" Retries="3" RetryDelayMilliseconds="300" />
+    <Copy SourceFiles="@(LocResx)" DestinationFolder="$(XrmSolutionsRoot)\solutions\ProductivityMacrosComponent\Solution\WebResources\Localization" Retries="3" RetryDelayMilliseconds="300" />
     <PropertyGroup>
       <ExcludedFromMinification>$(TypeScriptOutDir)\**\*.js</ExcludedFromMinification>
     </PropertyGroup>

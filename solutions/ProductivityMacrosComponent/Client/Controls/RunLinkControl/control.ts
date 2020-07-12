@@ -7,7 +7,7 @@
 module MscrmControls.RunLinkControl {
 	'use strict';
 
-	export class RunLinkControl implements Mscrm.Control<IInputBag, IOutputBag> {
+	export class RunLinkControlv2 implements Mscrm.Control<IInputBag, IOutputBag> {
 
 		private _context: Mscrm.ControlData<IInputBag>;
 		private color: string;
