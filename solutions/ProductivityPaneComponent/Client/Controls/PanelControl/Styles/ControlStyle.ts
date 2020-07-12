@@ -60,6 +60,7 @@ module MscrmControls.PanelControl {
 
         public static isToolVisible(flag: boolean) {
             return {
+                width: "100%",
                 display: flag ? "" : "none"
             }
         }
