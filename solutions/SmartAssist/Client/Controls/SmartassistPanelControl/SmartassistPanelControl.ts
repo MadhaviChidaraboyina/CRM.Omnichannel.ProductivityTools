@@ -43,6 +43,7 @@ module MscrmControls.SmartassistPanelControl {
             try {
                 SmartassistPanelControl._context = context;
                 this.smartAssistContainer = container;
+                this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
 
                 //Control title
                 var loaderElement: HTMLDivElement = document.createElement("div");
@@ -56,7 +57,6 @@ module MscrmControls.SmartassistPanelControl {
 
                 var SuggestionEl: HTMLDivElement = document.createElement("div");
                 SuggestionEl.id = Constants.SuggestionOuterContainer;
-                SuggestionEl.style.overflow = "auto";
                 this.smartAssistContainer.appendChild(SuggestionEl);
                 if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
                     this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);

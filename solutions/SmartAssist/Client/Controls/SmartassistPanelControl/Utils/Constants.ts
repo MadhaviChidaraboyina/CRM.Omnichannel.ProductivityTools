@@ -24,10 +24,10 @@ module MscrmControls.SmartassistPanelControl {
         public static SAPanelLoaderCss = "sa-panel-loader";
         public static SAPanelLoaderParentCss = "sa-panel-loader-parent";
         public static SAPanelLoaderId = "sa-panel-loader-id";
-        public static hideElementCss = "hide-element";        
+        public static hideElementCss = "hide-element";
         public static SAPanelLoaderDiv = '<div id="' + Constants.SAPanelLoaderId + '" class="hide-element ' + Constants.SAPanelLoaderParentCss + '"><div class="' + Constants.SAPanelLoaderCss + '"></div><label>{0}</label></div>';
-        public static TitleDivCss = "sapanel-title-div";        
-        public static TitleLabelCss = "sapanel-title-label";        
+        public static TitleDivCss = "sapanel-title-div";
+        public static TitleLabelCss = "sapanel-title-label";
         public static TitleImgCss = "sapanel-title-img";
         public static SAPanelTitleIconPath = "/WebResources/msdyn_infoiconblue.svg";
         public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" tabindex="0"><label class="${Constants.TitleLabelCss}">{0}</label><img class="${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/></div>`;
@@ -82,6 +82,7 @@ module MscrmControls.SmartassistPanelControl {
                 width: 16px;
             }
         </style>`;
+        public static SAPanelControlDivCss = "overflow:auto;max-height:100%;width:100%;";
     }
 
     /**
