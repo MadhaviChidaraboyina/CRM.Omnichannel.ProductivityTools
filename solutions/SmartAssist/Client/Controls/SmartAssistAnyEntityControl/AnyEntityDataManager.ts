@@ -122,6 +122,7 @@
                 this.Suggestions = {};
                 let data = suggestionDataFromAPI;
                 data = data.sort((a, b) => a.ConfidenceScore > b.ConfidenceScore ? -1 : 1);
+                data = data.slice(0, parseInt(saConfig.MaxSuggestionCount));
                 this.Suggestions[saConfig.SmartassistConfigurationId] = data;
                 this.initializeCacheForSuggestions(saConfig, RecordId);
             }
