@@ -68,5 +68,13 @@ module MscrmControls.SmartassistPanelControl {
         public static getCurrentSessionId(): string {
             return Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
         }
+
+        /**
+         * Returns id for the config div.
+         * @param configId
+         */
+        public static getConfigDivId(configId: string): string {
+            return "config-" + configId;
+        }
     }
 }

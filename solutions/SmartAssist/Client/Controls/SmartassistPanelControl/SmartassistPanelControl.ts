@@ -185,7 +185,7 @@ module MscrmControls.SmartassistPanelControl {
             }
             let anyEntityControl = SmartassistPanelControl._context.factory.createComponent("MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl", componentId, properties);
             SmartassistPanelControl._context.utils.bindDOMElement(anyEntityControl, divElement);
-            $("#" + Constants.SuggestionOuterContainer).append(divElement);
+            $("#" + Utility.getConfigDivId(config.SmartassistConfigurationId)).append(divElement);
         }
 
         /**
@@ -201,11 +201,22 @@ module MscrmControls.SmartassistPanelControl {
                 }
                 var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
                 configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
+                
                 for (let i = 0; i <= (configs.length - 1); i++) {
+                    this.addDivForSmartAssistConfig(configs[i]);
                     this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), recordId, update);
                 }
             }
             this.hideLoader();
+        }
+
+        private addDivForSmartAssistConfig(config: SAConfig) {
+            var configDivId = Utility.getConfigDivId(config.SmartassistConfigurationId);
+            if (!document.getElementById(configDivId)) {
+                var divElement = document.createElement("div");
+                divElement.id = configDivId;
+                $("#" + Constants.SuggestionOuterContainer).append(divElement);
+            }
         }
 
         /**
