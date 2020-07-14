@@ -114,7 +114,7 @@
                     tabcontext = context.getTabContext("anchor");
                 }
                 const param: Microsoft.Smartassist.SuggestionProvider.SuggestionContext = { controlContext: this._controlContext, tabcontext: tabcontext };
-                let suggestionDataFromAPI = [];
+                let suggestionDataFromAPI: any[] = [];
                 if (suggestionProvider) {
                     suggestionDataFromAPI = await suggestionProvider.getSuggestions(param);
                 }
@@ -123,6 +123,11 @@
                 let data = suggestionDataFromAPI;
                 data = data.sort((a, b) => a.ConfidenceScore > b.ConfidenceScore ? -1 : 1);
                 data = data.slice(0, parseInt(saConfig.MaxSuggestionCount));
+                for (let item of data) {
+                    // Creating an unique id for UI construct.
+                    let suggestionId = RecordId + item.SuggestionId;
+                    item.SuggestionId = suggestionId;
+                }
                 this.Suggestions[saConfig.SmartassistConfigurationId] = data;
                 this.initializeCacheForSuggestions(saConfig, RecordId);
             }
