@@ -162,11 +162,11 @@
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">
-    <value>Laden</value>
+    <value>Laden...</value>
     <comment>Button label for Load button</comment>
   </data>
   <data name="LoadingText" xml:space="preserve">
-    <value>Bezig met laden...</value>
+    <value>Laden...</value>
     <comment>Loading text to show when data fetch is in progress</comment>
   </data>
   <data name="MacroStepFailure_AccessibilityMessage" xml:space="preserve">

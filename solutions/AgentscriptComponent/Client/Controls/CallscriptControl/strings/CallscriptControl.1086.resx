@@ -142,7 +142,7 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Ejen skrip</value>
+    <value>Skrip ejen</value>
     <comment>Header value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
@@ -226,7 +226,7 @@
     <comment>Button text to prompt user to view configured route callscript</comment>
   </data>
   <data name="StepExeutionBtn_LabelForTextAction" xml:space="preserve">
-    <value>Tandai sebagai selesai</value>
+    <value>Tandai sebagai siap</value>
     <comment>Button text to Mark a text step as done</comment>
   </data>
   <data name="StepListItem_UnexecutedMacroStepAccessibilityLabel" xml:space="preserve">

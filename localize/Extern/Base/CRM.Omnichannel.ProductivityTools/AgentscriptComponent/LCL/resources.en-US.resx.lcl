@@ -1341,12 +1341,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,Agent script{3a85372d-b6c7-2a17-1e8c-5bb27d66d753}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Section]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";1:label,Agent script{445efd7f-e371-4794-9940-6afae7b974c9}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[GENERAL]]></Val>
@@ -1425,6 +1419,18 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:label,Agent script{B1716419-3C10-4908-999F-AD10A60CED21}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script steps]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:label,Agent script{D9FE4353-9B2B-49BC-8C25-A9A9A209AACF}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Section]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:label,Agent script{acb81a22-384c-4709-96bd-dd1f734d4bd1}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[]]></Val>
@@ -1434,12 +1440,6 @@
       <Item ItemId=";1:label,Agent script{b0a2c3c8-a5b4-80e8-8db8-029c72e6b0e4}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Language]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:label,Agent script{c724137e-da9a-795a-858a-6a42a5c639ac}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Agent script steps]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

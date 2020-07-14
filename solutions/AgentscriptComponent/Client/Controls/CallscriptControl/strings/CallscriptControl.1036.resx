@@ -166,7 +166,7 @@
     <comment>Button label for Load button</comment>
   </data>
   <data name="LoadingText" xml:space="preserve">
-    <value>Chargement...</value>
+    <value>Chargement en cours...</value>
     <comment>Loading text to show when data fetch is in progress</comment>
   </data>
   <data name="MacroStepFailure_AccessibilityMessage" xml:space="preserve">

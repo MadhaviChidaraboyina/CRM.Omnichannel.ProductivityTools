@@ -166,7 +166,7 @@
     <comment>Button label for Load button</comment>
   </data>
   <data name="LoadingText" xml:space="preserve">
-    <value>読み込んでいます...</value>
+    <value>読み込み中...</value>
     <comment>Loading text to show when data fetch is in progress</comment>
   </data>
   <data name="MacroStepFailure_AccessibilityMessage" xml:space="preserve">

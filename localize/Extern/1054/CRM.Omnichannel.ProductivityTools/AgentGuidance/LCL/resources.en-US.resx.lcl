@@ -9,17 +9,30 @@
     <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
-      <Item ItemId=";15062:Description,msdyn_smartassist" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";15062:Description,AgentGuidance" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[This solution enables smart assist and call script functionality for agents. ]]></Val>
+          <Val><![CDATA[This solution hold agent acript and smart assist control. ]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[โซลูชันนี้ช่วยให้ตัวแทนสามารถใช้ฟังก์ชันของระบบช่วยเหลืออัจฉริยะและสคริปต์การโทร ]]></Val>
+            <Val><![CDATA[โซลูชันนี้เก็บสคริปต์ตัวแทนและตัวควบคุมช่วยเหลืออัจฉริยะ ]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0000128Z" />
+        <Modified By="v-rondai" DateTime="2020-07-13T08:02:56.0007623Z" />
         <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,AgentGuidance" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent guidance]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[คำแนะนำตัวแทน]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T08:02:56.0007623Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -27,19 +40,6 @@
           <Val><![CDATA[Dynamics 365]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Dynamics 365]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-licha2" DateTime="2020-02-06T01:18:02.0000128Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO24766_20200203" />
-        </Props>
-      </Item>
-      <Item ItemId=";15062:LocalizedName,msdyn_smartassist" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Agent Guidance]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[คำแนะนำตัวแทน]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

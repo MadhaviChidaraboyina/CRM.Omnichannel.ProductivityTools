@@ -142,7 +142,7 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Skrip Agen</value>
+    <value>Skrip agen</value>
     <comment>Header value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
@@ -158,7 +158,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Kami tidak dapat memuat data skrip agen. Hubungi admin Anda.</value>
+    <value>Kami tidak dapat memuat rekaman skrip agen. Hubungi admin Anda.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

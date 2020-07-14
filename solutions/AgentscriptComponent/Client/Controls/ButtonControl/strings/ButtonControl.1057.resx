@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CC_ButtonControl_Desc" xml:space="preserve">
-    <value>Tombol untuk membangun ekspresi</value>
+    <value>Tombol untuk membuat ekspresi</value>
     <comment>Button to build an expression</comment>
   </data>
   <data name="CC_ButtonControl_Name" xml:space="preserve">

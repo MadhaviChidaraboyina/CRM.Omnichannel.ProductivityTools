@@ -400,6 +400,32 @@
           <Str Name="Custom3" Val="WO21128_20190930" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[List of Active Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lista med aktiva makron]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T08:02:57.0004051Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[List of Inactive Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lista med inaktiva makron]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T08:02:57.0004051Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
+      </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparameterCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
@@ -3814,6 +3840,32 @@
         <Modified By="v-jachyl" DateTime="2019-10-02T08:11:56.000224Z" />
         <Props>
           <Str Name="Custom3" Val="WO21128_20190930" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aktiva makron]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T08:02:57.0004052Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Inactive Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Inaktiva makron]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T08:02:57.0004052Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">
