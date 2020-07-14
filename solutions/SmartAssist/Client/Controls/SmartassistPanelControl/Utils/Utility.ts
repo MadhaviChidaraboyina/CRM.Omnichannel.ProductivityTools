@@ -61,5 +61,12 @@ module MscrmControls.SmartassistPanelControl {
             }
             return SmartassistPanelControl._context.resources.getString(resourceName);
         }
+
+        /**
+        * Get current session id.
+        */
+        public static getCurrentSessionId(): string {
+            return Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
+        }
     }
 }

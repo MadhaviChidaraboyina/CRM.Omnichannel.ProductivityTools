@@ -15,6 +15,7 @@ module MscrmControls.SmartassistPanelControl {
         private newInstance: boolean = false;
         private AnchorTabContext: any = null;
         private ppSessionContext: any = null;
+        private previousSessionId: any = null;
         private AnyentityControlInitiated: boolean = false;
         private tabSwitchEntityId: string = null;
         private anchorTabEntityId: string = null;
@@ -40,6 +41,7 @@ module MscrmControls.SmartassistPanelControl {
             SmartassistPanelControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, Constants.ControlId);
             var methodName = "init";
             this.newInstance = true;
+            this.previousSessionId = Utility.getCurrentSessionId();
             try {
                 SmartassistPanelControl._context = context;
                 this.smartAssistContainer = container;
@@ -90,7 +92,6 @@ module MscrmControls.SmartassistPanelControl {
                 this.ppSessionContext = JSON.parse(context.parameters.SessionContext.raw);
             }
             if (this.newInstance && Constants.IncidentEntityName == this.AnchorTabContext.entityName) {
-                this.showLoader();
                 this.renderSuggestions(false, Utility.FormatGuid(this.AnchorTabContext.entityId));
             }
             this.newInstance = false;
@@ -192,8 +193,9 @@ module MscrmControls.SmartassistPanelControl {
          * @param recordId: Anchor tab Entity id from PP control
          */
         public async renderSuggestions(update: boolean, recordId: string = null): Promise<void> {
+            this.showLoader();
             // validate current context
-            if (this.validateCurrentContext() || recordId) {
+            if (recordId) {
                 if (Utility.isNullOrEmptyString(recordId)) {
                     recordId = this.tabSwitchEntityId;
                 }
@@ -202,17 +204,8 @@ module MscrmControls.SmartassistPanelControl {
                 for (let i = 0; i <= (configs.length - 1); i++) {
                     this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), recordId, update);
                 }
-                this.hideLoader();
             }
-        }
-
-        /**Re-render any entity control */
-        public reRenderSuggestions() {
-            this.showLoader();
-            var element = document.getElementById(Constants.SuggestionOuterContainer);
-            element.innerHTML = '';
-
-            this.renderSuggestions(true);
+            this.hideLoader();
         }
 
         /**
@@ -220,6 +213,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param event: Current tab opened context
          */
         public async listenCECContextChangeAPI(event: any) {
+            var sessionId = Utility.getCurrentSessionId()
             var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
             var anchorContext: any;
 
@@ -245,17 +239,18 @@ module MscrmControls.SmartassistPanelControl {
                 if (this.tabSwitchEntityId != recordId) {
                     this.AnyentityControlInitiated = false;
                     this.tabSwitchEntityId = recordId;
-                    if (this.anchorTabEntityId) {
+                    if (this.anchorTabEntityId && !this.isSameSession(sessionId)) {
                         // Re-render Suggestions for tab switch
-                        this.reRenderSuggestions();
+                        this.renderSuggestions(true, this.anchorTabEntityId);
                     }
                 }
             }
             else { this.AnyentityControlInitiated = false; }
+            this.previousSessionId = sessionId;
         }
 
-        /**Validates valid case id */
-        private validateCurrentContext(): boolean {
+        /**Validates valid case id - to be used when tab switch between session is considered */
+        private validateCurrentContext(sessionId: string): boolean {
             var currentContextCurrentCtxEntId = this.tabSwitchEntityId;
             var currentContextAnchorEntId = this.anchorTabEntityId;
             if ((currentContextCurrentCtxEntId && currentContextAnchorEntId
@@ -273,6 +268,19 @@ module MscrmControls.SmartassistPanelControl {
         /**Hide loader component */
         private hideLoader() {
             $("#" + Constants.SAPanelLoaderId).addClass(Constants.hideElementCss);
+        }
+
+        /**
+         * Check for same session comparing session id
+         * 
+         * @param sessionId: CEC Current session id
+         */
+        private isSameSession(sessionId: string): boolean {
+            // From home to session switch PreviousSessionId will always be null and return false.
+            if (Utility.isNullOrEmptyString(this.previousSessionId) || this.previousSessionId != sessionId) {
+                return false;
+            }
+            return true;
         }
     }
 }
