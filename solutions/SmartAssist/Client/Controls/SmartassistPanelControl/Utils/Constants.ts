@@ -30,7 +30,9 @@ module MscrmControls.SmartassistPanelControl {
         public static TitleLabelCss = "sapanel-title-label";
         public static TitleImgCss = "sapanel-title-img";
         public static SAPanelTitleIconPath = "/WebResources/msdyn_infoiconblue.svg";
-        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" tabindex="0"><label class="${Constants.TitleLabelCss}">{0}</label><img class="${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/></div>`;
+        public static IconPopOutId = "IconPopOutId";
+        public static SAPanelTitleIconInfoDiv = `<div tabindex="0" onclick="var popup = document.getElementById('${Constants.IconPopOutId}');popup.classList.toggle('show');" class="popup"><img class="popup ${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/>  <span class="popuptext" id="${Constants.IconPopOutId}">{1}</span></div>`;
+        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" ><label tabindex="0" class="${Constants.TitleLabelCss}">{0}</label>${Constants.SAPanelTitleIconInfoDiv}</div>`;        
         public static SAPanelStyle =
             `<style id="sa-panel-style">
 	        .hide-element{
@@ -81,6 +83,66 @@ module MscrmControls.SmartassistPanelControl {
                 height: 16px;
                 width: 16px;
             }
+            .popup {
+              position: relative;
+              display: inline-block;
+              cursor: pointer;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+            }
+
+            /* The actual popup */
+            .popup .popuptext {
+	            visibility: hidden;
+                background-color: #fff;
+                color: #323130;
+                text-align: center;
+                border-radius: 2px;
+                padding: 6px;
+                position: fixed;
+                z-index: 1;
+                margin-left: -111px;   
+                opacity: 1;
+                width: 184px;
+                max-height: 52px;   
+                margin-top: 35px;
+                font-family: Segoe UI;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                box-shadow: 0.5px 0.5px 10px #ccc !important;
+                position:absolute;
+
+            }
+            /* Popup arrow */
+            .popup .popuptext::after {
+                content: "▲";
+                position: absolute;
+                top: -20px;
+                left: 47%;
+                color: #fff;
+                font-size: 25px;
+                text-shadow: 1px -3px 6px #ccc;
+            }
+            /* Toggle this class - hide and show the popup */
+            .popup .show {
+              visibility: visible;
+              -webkit-animation: fadeIn .5s;
+              animation: fadeIn .5s;
+            }
+
+            /* Add animation (fade in the popup) */
+            @-webkit-keyframes fadeIn {
+              from {opacity: 0;} 
+              to {opacity: 1;}
+            }
+
+            @keyframes fadeIn {
+              from {opacity: 0;}
+              to {opacity:1 ;}
+            }
         </style>`;
         public static SAPanelControlDivCss = "overflow:auto;max-height:100%;width:100%;";
     }
@@ -94,6 +156,7 @@ module MscrmControls.SmartassistPanelControl {
         public static SmartAssistFailureMessage = "FailureMessage";
         public static LoadingText = "LoadingText";
         public static SuggestionControlTitle = "SuggestionControlTitle";
+        public static TitleIconInfoText = "SuggestionControlTitleIconText";
 
         //Accessibility Labels
         public static Accessibility_ExecutedTextStepIndicator = "StepListItem_ExecutedTextStepAccessibilityLabel";

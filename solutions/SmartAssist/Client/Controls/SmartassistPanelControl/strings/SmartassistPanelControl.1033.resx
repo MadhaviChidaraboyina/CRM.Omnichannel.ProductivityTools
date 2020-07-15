@@ -145,4 +145,8 @@
     <value>Smart assist</value>
     <comment>Suggestions parent control title</comment>
   </data>
+  <data name="SuggestionControlTitleIconText" xml:space="preserve">
+    <value>AI suggestions for knowledge articles and similar cases.</value>
+    <comment>Title Icon text</comment>
+  </data>
 </root>
