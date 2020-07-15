@@ -18,7 +18,7 @@
   </metadata>
     <files>
         <!-- retail artifacts -->
-        <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_smartassist_*.zip" target="Solutions" />
+        <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_smartassist_*.*" target="Solutions" />
   </files>
 </package>
 
