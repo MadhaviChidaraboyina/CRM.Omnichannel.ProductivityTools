@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-	<control namespace="MscrmControls.SmartAssistAnyEntityControl" constructor="SmartAssistAnyEntityControl" version="1.0.0" display-name-key="CC_SmartAssist_Any_Entity_Control">    
+	<control namespace="MscrmControls.SmartAssistAnyEntityControl" constructor="SmartAssistAnyEntityControl" version="1.0.1" display-name-key="CC_SmartAssist_Any_Entity_Control">    
     <property name="SAConfig" display-name-key="CC_SAConfig" description-key="CC_SAConfig_Desc" of-type="Multiple" usage="input" required="true" hidden="false" />    
     <property name="RecordId" display-name-key="CC_RecordId" description-key="CC_RecordId_Desc" of-type="SingleLine.Text" usage="input" required="true" hidden="false" />
     <property name="PPSessionContext" display-name-key="CC_PPSessionContext" description-key="CC_PPSessionContext_Desc" of-type="Multiple" usage="input" required="false" hidden="false" />

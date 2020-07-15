@@ -1,24 +1,24 @@
-﻿module MscrmControls.SmartAssistAnyEntityControl {
-    export class LocalStorageManager {
+﻿module MscrmControls.Smartassist.Suggestion {
+    export class SessionStorageManager {
 
-        private static instance: LocalStorageManager = null;
+        private static instance: SessionStorageManager = null;
 
         private constructor() {
         }
 
-        public static get Instance(): LocalStorageManager {
-            if (!LocalStorageManager.instance) {
-                LocalStorageManager.instance = new LocalStorageManager();
+        public static get Instance(): SessionStorageManager {
+            if (!SessionStorageManager.instance) {
+                SessionStorageManager.instance = new SessionStorageManager();
             }
-            return LocalStorageManager.instance;
+            return SessionStorageManager.instance;
         }
 
         /**
-         * Get the record for the given suggestionId.
-         * @param suggestionId
+         * Get the record for the given suggestionId
+         * @param suggestionId 
          */
-        getRecord(suggestionId: string) : any {
-            return window.localStorage.getItem(suggestionId);
+        getRecord(suggestionId: string): any {
+            return window.sessionStorage.getItem(suggestionId);
         }
 
         /**
@@ -26,16 +26,16 @@
          * @param suggestionId Creates the record for this suggestionId.
          * @param data The data to be stored in cache.
          */
-        createRecord(suggestionId: string, data: string) {
-            window.localStorage.setItem(suggestionId, data);
+        createOrUpdateRecord(suggestionId: string, data: string) {
+            window.sessionStorage.setItem(suggestionId, data);
         }
 
         /**
          * delete the record for the given suggestionId.
-         * @param suggestionId
+         * @param suggestionId SuggestionId.
          */
         deleteRecord(suggestionId: string) {
-            window.localStorage.removeItem(suggestionId);
+            window.sessionStorage.removeItem(suggestionId);
         }
 
         /**
@@ -46,7 +46,7 @@
         updateSuggestionData(suggestionId: string, newData: any) {
             let cacheData = JSON.parse(this.getRecord(suggestionId)).data;
             let dataToStore = Object.assign({}, cacheData, newData);
-            window.localStorage.setItem(suggestionId, JSON.stringify({ data: dataToStore }));
+            window.sessionStorage.setItem(suggestionId, JSON.stringify({ data: dataToStore }));
         }
     }
 }

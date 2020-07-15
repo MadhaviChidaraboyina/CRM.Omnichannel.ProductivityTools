@@ -18,7 +18,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private anyEntityDataManager: AnyEntityDataManager = null;
         private parentDivId: string = "";
         private _sessionStateManager: SessionStateManager;
-        private _localStorageManager: LocalStorageManager;
+        private _sessionStorageManager: SessionStorageManager;
         private _handleDismissEvent: (args: any) => void;
         private sessionCloseHandlerId: string;
 
@@ -29,7 +29,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             this.initCompleted = false;
             this.anyEntityDataManager = new AnyEntityDataManager();
             this._sessionStateManager = SessionStateManager.Instance;
-            this._localStorageManager = LocalStorageManager.Instance;
+            this._sessionStorageManager = SessionStorageManager.Instance;
             this._handleDismissEvent = this.handleDismissEvent.bind(this);
             window.top.addEventListener(StringConstants.DismissCardEvent, this._handleDismissEvent, false);
             this.sessionCloseHandlerId = Microsoft.AppRuntime.Sessions.addOnAfterSessionClose(this.handleSessionClose.bind(this));
@@ -122,7 +122,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             window.top.removeEventListener(StringConstants.DismissCardEvent, this._handleDismissEvent, false);
             Microsoft.AppRuntime.Sessions.removeOnAfterSessionClose(this.sessionCloseHandlerId);
             this._sessionStateManager = null;
-            this._localStorageManager = null;
+            this._sessionStorageManager = null;
         }
 
         /**
@@ -213,7 +213,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 const cacheData = window.sessionStorage.getItem(sessionId)
                 if (cacheData) {
                     const suggestionIds = JSON.parse(cacheData) as Array<string>;
-                    suggestionIds.forEach(id => this._localStorageManager.deleteRecord(id));
+                    suggestionIds.forEach(id => this._sessionStorageManager.deleteRecord(id));
                     window.sessionStorage.removeItem(sessionId);
                 }
             } catch (error) {
@@ -248,7 +248,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     }
 
                     const dataToOverride = args.detail.data;
-                    this._localStorageManager.updateSuggestionData(suggestionId, dataToOverride);
+                    this._sessionStorageManager.updateSuggestionData(suggestionId, dataToOverride);
                 }
             } catch (error) {
                 //Log error

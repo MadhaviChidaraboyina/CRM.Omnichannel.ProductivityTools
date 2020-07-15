@@ -17,7 +17,7 @@ module MscrmControls.Smartassist
 		private _data: any;
 		private _suggestionId: string;
 		private _adaptiveCardRenderer: Suggestion.AdaptiveCardRenderer;
-		private _localStorageManager: Suggestion.LocalStorageManager;
+		private _sessionStorageManager: Suggestion.SessionStorageManager;
 
 		/**
 		 * Empty constructor.
@@ -25,7 +25,7 @@ module MscrmControls.Smartassist
 		constructor()
 		{
 			this._adaptiveCardRenderer = new Suggestion.AdaptiveCardRenderer(this.handleCardRefresh.bind(this));
-			this._localStorageManager = Suggestion.LocalStorageManager.Instance;
+			this._sessionStorageManager = Suggestion.SessionStorageManager.Instance;
 		}
 
 		/**
@@ -120,7 +120,7 @@ module MscrmControls.Smartassist
 				const dataToOverride = args.data;
 				const dataToRender = Object.assign({}, this._data, dataToOverride);
 				this._data = dataToRender;
-				this._localStorageManager.createOrUpdateRecord(suggestionId, JSON.stringify({ data: this._data }));
+				this._sessionStorageManager.createOrUpdateRecord(suggestionId, JSON.stringify({ data: this._data }));
 				const cardId = Suggestion.Util.getSuggestionCardId(suggestionId);
 				var el = <HTMLElement>document.querySelector('#' + cardId);
 				if (el) {

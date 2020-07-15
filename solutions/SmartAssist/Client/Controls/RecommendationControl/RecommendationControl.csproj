@@ -29,7 +29,7 @@
     <TypeScriptCompile Include="CommonReferences.ts" />
     <TypeScriptCompile Include="css\RecommendationTemplate.ts" />
     <TypeScriptCompile Include="Model\CustomAction.ts" />
-    <TypeScriptCompile Include="StateManagement\LocalStorageManager.ts" />
+    <TypeScriptCompile Include="StateManagement\SessionStorageManager.ts" />
     <TypeScriptCompile Include="Util\CustomActionHelper.ts" />
     <TypeScriptCompile Include="Components\PopupAction.ts" />
     <TypeScriptCompile Include="RecommendationControl.ts" />

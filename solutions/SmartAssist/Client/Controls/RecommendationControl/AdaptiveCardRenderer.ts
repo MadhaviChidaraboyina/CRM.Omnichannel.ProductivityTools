@@ -27,11 +27,11 @@ module MscrmControls.Smartassist.Suggestion {
 		private _context: Mscrm.ControlData<IInputBag>;
 		private _suggestionId: string;
 		private _refreshCardCallback: (args: Suggestion.CardRefreshArgs) => void;
-		private _localStorageManager: Suggestion.LocalStorageManager;
+		private _sessionStorageManager: Suggestion.SessionStorageManager;
 
 		constructor(refreshCallback: (args: Suggestion.CardRefreshArgs) => void) {
 			this._refreshCardCallback = refreshCallback;
-			this._localStorageManager = Suggestion.LocalStorageManager.Instance;
+			this._sessionStorageManager = Suggestion.SessionStorageManager.Instance;
 		}
 
 		public SetContext(context: Mscrm.ControlData<IInputBag>) {
@@ -91,7 +91,7 @@ module MscrmControls.Smartassist.Suggestion {
 		 */
 		persistCard(suggestionId: string, card: SuggestionCard) {
 			try {
-				window.localStorage.setItem(suggestionId, JSON.stringify(card));
+				window.sessionStorage.setItem(suggestionId, JSON.stringify(card));
 			} catch (error) {
 				//TODO: Telemetry: Unable to catch the card.
 			}

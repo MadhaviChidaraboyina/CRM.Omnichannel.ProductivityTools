@@ -2,7 +2,7 @@
     export class AnyEntityDataManager {
         private Suggestions: { [key: string]: any } = {};
         private _sessionStateManager: SessionStateManager;
-        private _localStorageManager: LocalStorageManager;
+        private _sessionStorageManager: SessionStorageManager;
         private _controlContext: Mscrm.ControlData<IInputBag>;
         private CONSTRUCTOR_CACHE: {
             [name: string]: {
@@ -11,7 +11,7 @@
         } = {};
         constructor() {
             this._sessionStateManager = SessionStateManager.Instance;
-            this._localStorageManager = LocalStorageManager.Instance;
+            this._sessionStorageManager = SessionStorageManager.Instance;
         }
 
         public initializeContextParameters(context: Mscrm.ControlData<IInputBag>) {
@@ -56,7 +56,7 @@
 
         private getSuggestionsDataFromSessionCache(saConfig: SAConfig, suggestionIds: string[]) {
             try {
-                const data = suggestionIds.map(id => JSON.parse(this._localStorageManager.getRecord(id)).data);
+                const data = suggestionIds.map(id => JSON.parse(this._sessionStorageManager.getRecord(id)).data);
                 if (data) {
                     this.Suggestions[saConfig.SmartassistConfigurationId] = data;
                 }
@@ -152,7 +152,7 @@
                 let sessionContextCache = {};
                 sessionContextCache[saConfig.SmartassistConfigurationId] = suggestionIds;
                 this._sessionStateManager.createOrUpdateRecord(recordId, sessionContextCache);
-                data.forEach(item => this._localStorageManager.createRecord(item.SuggestionId, JSON.stringify({ data: item })));
+                data.forEach(item => this._sessionStorageManager.createRecord(item.SuggestionId, JSON.stringify({ data: item })));
                 this.saveAllSuggestionIdsInSessionStorage(suggestionIds);
             } catch (error) {
                 eventParameters.addParameter("Exception Details", error.message);
