@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="Microsoft.Dynamics.SmartAssist.Plugins.SmartAssistConfig.AdminSettingsPlugin: Update of msdyn_suggestionssetting (Profiled)" SdkMessageProcessingStepId="{e70d32fc-80c6-ea11-a81f-000d3af585a7}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>Microsoft.Dynamics.SmartAssist.Plugins.SmartAssistConfig.AdminSettingsPlugin, Microsoft.Dynamics.SmartAssist.Plugins, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</PluginTypeName>
+  <PluginTypeId>f9579ee8-e059-4e85-bf39-28bb56ff4768</PluginTypeId>
+  <PrimaryEntity>msdyn_suggestionssetting</PrimaryEntity>
+  <AsyncAutoDelete>1</AsyncAutoDelete>
+  <Description>Microsoft.Dynamics.SmartAssist.Plugins.SmartAssistConfig.AdminSettingsPlugin: Update of msdyn_suggestionssetting</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>1</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

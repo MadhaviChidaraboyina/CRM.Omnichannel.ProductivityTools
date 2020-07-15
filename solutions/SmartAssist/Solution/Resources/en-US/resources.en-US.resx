@@ -324,13 +324,13 @@
     <value>Denotes the control type for suggestions, (e.g) Adaptive card</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestioncontroltype' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_SuggestionProvider" xml:space="preserve">
+    <value>Provide the class name of Suggestion provider</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SuggestionProvider' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_Suggestiontype" xml:space="preserve">
     <value>Denotes the type of suggestions like Similar case or KB article suggestion</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestiontype' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_smartassistconfigmsdyn_suggestionwebresourcemethod" xml:space="preserve">
-    <value>This method will be called by smart assist to retrieve suggestions.</value>
-    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_suggestionwebresourcemethod' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_SuggestionWebresourceURL" xml:space="preserve">
     <value>Suggestion Webresource which brings smart assist actions or api to retrieve suggestions</value>
@@ -512,13 +512,13 @@
     <value>Suggestioncontroltype</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_Suggestioncontroltype' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_SuggestionProvider" xml:space="preserve">
+    <value>Suggestion Provider</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_SuggestionProvider' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_Suggestiontype" xml:space="preserve">
     <value>Suggestiontype</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_Suggestiontype' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_smartassistconfigmsdyn_suggestionwebresourcemethod" xml:space="preserve">
-    <value>Suggestionwebresourcemethod</value>
-    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_suggestionwebresourcemethod' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_SuggestionWebresourceURL" xml:space="preserve">
     <value>Suggestion Webresource URL</value>

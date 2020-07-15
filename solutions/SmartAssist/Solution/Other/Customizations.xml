@@ -12,6 +12,7 @@
 	<WebResources />
 	<CustomControls />
 	<SolutionPluginAssemblies />
+	<SdkMessageProcessingSteps />
 	<EntityDataProviders />
 	<msdyn_panetoolconfigurations>
 		<msdyn_panetoolconfiguration msdyn_uniquename="msdyn_smartassist_tool_config">
