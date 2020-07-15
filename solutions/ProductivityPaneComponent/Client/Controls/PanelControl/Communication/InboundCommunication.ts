@@ -9,10 +9,12 @@
 module MscrmControls.PanelControl {
 
     export class InboundCommunication {
-        private context: Mscrm.ControlData<IInputBag>; 
+        private context: Mscrm.ControlData<IInputBag>;
+        private panelState: PanelState;
 
-        constructor(context: Mscrm.ControlData<IInputBag>) {
+        constructor(context: Mscrm.ControlData<IInputBag>, panelState: PanelState) {
             this.context = context;
+            this.panelState = panelState;
         }
 
         public requestRerender(data : PanelInboundEventDataModel,currentSessionId : string, productivityPaneConfig : ProductivityPaneConfig): void{
@@ -34,7 +36,7 @@ module MscrmControls.PanelControl {
                 return;
             }
             
-            let sessionData = PanelState.getState(sessionId + LocalStorageKeyConstants.sessionData);  
+            let sessionData = this.panelState.getState(sessionId + LocalStorageKeyConstants.sessionData);  
             if(sessionData[LocalStorageKeyConstants.hasData+controlName] == !noData){
                 return;
             }
@@ -46,7 +48,7 @@ module MscrmControls.PanelControl {
                 }
                 sessionData.panelToggle = (noData && !doCollpse) ? false : (true && productivityPaneConfig.productivityPaneMode);
             }
-            PanelState.SetState(sessionId+LocalStorageKeyConstants.sessionData,sessionData);
+            this.panelState.SetState(sessionId+LocalStorageKeyConstants.sessionData,sessionData);
 
             if(sessionId == currentSessionId && !sessionData.isCollapsedByUser )
             {
@@ -75,7 +77,7 @@ module MscrmControls.PanelControl {
                 return;
             }
 
-            let sessionNotifications = PanelState.getState(sessionId+LocalStorageKeyConstants.notificationCount);
+            let sessionNotifications = this.panelState.getState(sessionId+LocalStorageKeyConstants.notificationCount);
             if(sessionNotifications == undefined){
                 sessionNotifications={};
             }
@@ -88,7 +90,7 @@ module MscrmControls.PanelControl {
                 sessionNotifications[controlName] = notificationNumber < 0 ? 0 : notificationNumber;
             }
 
-            PanelState.SetState(sessionId+LocalStorageKeyConstants.notificationCount,sessionNotifications);
+            this.panelState.SetState(sessionId+LocalStorageKeyConstants.notificationCount,sessionNotifications);
 
             if(sessionId == currentSessionId){
                 this.context.utils.requestRender();
