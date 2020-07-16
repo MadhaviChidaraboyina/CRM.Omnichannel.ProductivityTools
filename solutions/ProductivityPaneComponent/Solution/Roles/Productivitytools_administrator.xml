@@ -1,7 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Role id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" name="Productivity tools administrator">
   <IsCustomizable>0</IsCustomizable>
-  <RolePrivileges>
+  <RolePrivileges>   
+    <RolePrivilege name="prvReadmsdyn_appconfiguration" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_appconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_appconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_appconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_appconfiguration" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_appconfiguration" level="Global" />
+
+    <RolePrivilege name="prvReadmsdyn_applicationextension" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_applicationextension" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_applicationextension" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_applicationextension" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_applicationextension" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_applicationextension" level="Global" />
+    
+    <RolePrivilege name="prvReadmsdyn_applicationtabtemplate" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_applicationtabtemplate" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_applicationtabtemplate" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_applicationtabtemplate" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_applicationtabtemplate" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_applicationtabtemplate" level="Global" />
+
+    <RolePrivilege name="prvReadmsdyn_notificationfield" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_notificationfield" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_notificationfield" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_notificationfield" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_notificationfield" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_notificationfield" level="Global" />
+    
+    <RolePrivilege name="prvReadmsdyn_notificationtemplate" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_notificationtemplate" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_notificationtemplate" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_notificationtemplate" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_notificationtemplate" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_notificationtemplate" level="Global" />
+
+    <RolePrivilege name="prvReadmsdyn_sessiontemplate" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_sessiontemplate" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_sessiontemplate" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_sessiontemplate" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_sessiontemplate" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_sessiontemplate" level="Global" />
+    
+    <RolePrivilege name="prvReadmsdyn_templateparameter" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_templateparameter" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_templateparameter" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_templateparameter" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_templateparameter" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_templateparameter" level="Global" />
+    
     <RolePrivilege name="prvReadmsdyn_paneconfiguration" level="Global" />
     <RolePrivilege name="prvWritemsdyn_paneconfiguration" level="Global" />
     <RolePrivilege name="prvCreatemsdyn_paneconfiguration" level="Global" />
