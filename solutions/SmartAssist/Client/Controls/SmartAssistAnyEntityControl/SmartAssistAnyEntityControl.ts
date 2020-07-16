@@ -140,10 +140,13 @@ module MscrmControls.SmartAssistAnyEntityControl {
             var dataLength = 0;
             if (data && data[this.saConfig.SmartassistConfigurationId]) {
                 dataLength = data[this.saConfig.SmartassistConfigurationId].length;
-            }                
+            }
             if (dataLength < 1) {
-                var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig.SuggestionType);
-                $("#" + this.parentDivId).append(emptyRecordElm)
+                var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
+                if (!noSuggestionElm) {
+                    var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig);
+                    $("#" + this.parentDivId).append(emptyRecordElm);
+                }
             }
             for (let i = 0; i <= (dataLength - 1); i++) {
                 var record = data[this.saConfig.SmartassistConfigurationId][i];
@@ -184,8 +187,11 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
         /** Append title for Specific SA suggestions */
         private appendTitle() {
-            var titleElement = ViewTemplates.getTitleTemplate(this.saConfig.TitleIconePath, this.saConfig.SAConfigTitle);
-            $("#" + this.parentDivId).prepend(titleElement)
+            var titleElm = document.getElementById(StringConstants.TitleDivId + this.saConfig.SmartassistConfigurationId);
+            if (!titleElm) {
+                var titleElement = ViewTemplates.getTitleTemplate(StringConstants.TitleDivId + this.saConfig.SmartassistConfigurationId, this.saConfig.TitleIconePath, this.saConfig.SAConfigTitle);
+                $("#" + this.parentDivId).prepend(titleElement)
+            }
         }
 
         /**

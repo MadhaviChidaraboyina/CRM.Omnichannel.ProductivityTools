@@ -56,7 +56,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param resourceName: resource id
          */
         public static getString(resourceName: string): string {
-            if (!SmartassistPanelControl._context) {               
+            if (!SmartassistPanelControl._context) {
                 return resourceName;
             }
             return SmartassistPanelControl._context.resources.getString(resourceName);
@@ -75,6 +75,16 @@ module MscrmControls.SmartassistPanelControl {
          */
         public static getConfigDivId(configId: string): string {
             return "config-" + configId;
+        }
+
+        /**
+         * Dispatches Productivity Panel In Bound Event
+         * @param rerender: PP Rerender obj
+         */
+        public static DispatchPanelInboundEvent(rerender: MscrmControls.PanelControl.Rerender | MscrmControls.PanelControl.PanelNotification) {
+            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(Constants.ControlId, rerender);
+            let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
+            window.top.dispatchEvent(event);
         }
     }
 }

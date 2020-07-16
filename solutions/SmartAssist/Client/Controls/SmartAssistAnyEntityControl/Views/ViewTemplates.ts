@@ -6,9 +6,9 @@
 module MscrmControls.SmartAssistAnyEntityControl {
     export class ViewTemplates {
         private static TitleIconTemplate = '<img src="{0}" class="' + StringConstants.SuggestionsTitleIconCss + '">';
-        private static TitleTextTemplate = '<div class="' + StringConstants.SuggestionsTitleDivCss + '" tabindex= "0">{0}<label class="' + StringConstants.SuggestionsTitLelabelCss + '">{1}</label></div>';
+        private static TitleTextTemplate = '<div id="{0}" class="' + StringConstants.SuggestionsTitleDivCss + '" tabindex= "0">{1}<label class="' + StringConstants.SuggestionsTitLelabelCss + '">{2}</label></div>';
         private static NoSugegstionsIconTemplate = '<img src="{0}" class="' + StringConstants.NoSuggestionsIconCss + '">';
-        private static NoSugegstionsTextTemplate = '<div class="' + StringConstants.NoSuggestionsDivCss + '" >{0}<label class="' + StringConstants.NoSuggestionsLabelCss + '">{1}</label></div>';
+        private static NoSugegstionsTextTemplate = '<div id="{0}" class="' + StringConstants.NoSuggestionsDivCss + '" >{1}<label class="' + StringConstants.NoSuggestionsLabelCss + '">{2}</label></div>';
         //public static SALoader = '<div id="' + Utility.getLoaderComponent("{0}") + '" class="hide-element ' + StringConstants.SALoaderCss + '" ></div>';
         public static SALoader = '<div id="' + Utility.getLoaderComponent("{0}") + '" class="hide-element ' + StringConstants.SALoaderParentCss + '"><div class="' + StringConstants.SALoaderCss + '"></div><label>{1}</label></div>';
 
@@ -17,24 +17,24 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param icon: given html icon
          * @param text: label to display
          */
-        public static getTitleTemplate(icon, text) {
+        public static getTitleTemplate(divId, icon, text) {
             var iconTemp = "";
             if (!Utility.isNullOrEmptyString(icon))
                 iconTemp = this.TitleIconTemplate.Format(icon);
-            return this.TitleTextTemplate.Format(iconTemp, text ? text : "");
+            return this.TitleTextTemplate.Format(divId, iconTemp, text ? text : "");
         }
 
         /**
          * Gets html template for no suggestions
          * @param suggestionType: SA config type
          */
-        public static getNoSuggestionsTemplate(suggestionType: number) {
+        public static getNoSuggestionsTemplate(saConfig: SAConfig) {
             var iconTemp = "";
             var text = ""
             if (!Utility.isNullOrEmptyString(StringConstants.NoRecordDivIconPath))
                 iconTemp = this.NoSugegstionsIconTemplate.Format(StringConstants.NoRecordDivIconPath);
 
-            switch (suggestionType) {
+            switch (saConfig.SuggestionType) {
                 case SuggestionType.KnowledgeArticleSuggestion:
                     text = Utility.getString(LocalizedStrings.NoKnowledgeArticleText);
                     break;
@@ -43,7 +43,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     break;
                 default:
             }
-            return this.NoSugegstionsTextTemplate.Format(iconTemp, text);
+            return this.NoSugegstionsTextTemplate.Format(StringConstants.NoSugegstionsDivId + saConfig.SmartassistConfigurationId, iconTemp, text);
         }
 
     }

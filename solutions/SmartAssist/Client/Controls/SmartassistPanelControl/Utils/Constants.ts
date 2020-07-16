@@ -19,6 +19,7 @@ module MscrmControls.SmartassistPanelControl {
         public static IncidentEntityName = "incident";
         public static CECEntityRecordType = "entityrecord";
         public static SAConfigCacheKey = "SAConfig";
+        public static SAAnyEntityControlContainerId = "SAAnyEntityControl_";
 
         // CSS
         public static SAPanelLoaderCss = "sa-panel-loader";
@@ -114,13 +115,13 @@ module MscrmControls.SmartassistPanelControl {
                 font-size: 12px;
                 box-shadow: 0.5px 0.5px 10px #ccc !important;
                 position:absolute;
-
+                line-height: 16px;
             }
             /* Popup arrow */
             .popup .popuptext::after {
                 content: "▲";
                 position: absolute;
-                top: -20px;
+                top: -16px;
                 left: 47%;
                 color: #fff;
                 font-size: 25px;

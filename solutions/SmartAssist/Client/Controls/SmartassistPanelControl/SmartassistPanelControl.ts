@@ -16,7 +16,6 @@ module MscrmControls.SmartassistPanelControl {
         private AnchorTabContext: any = null;
         private ppSessionContext: any = null;
         private previousSessionId: any = null;
-        private AnyentityControlInitiated: boolean = false;
         private tabSwitchEntityId: string = null;
         private anchorTabEntityId: string = null;
         private tabSwitchHandlerId: string = null;
@@ -148,7 +147,7 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         public renderSmartassistAnyEntityControl(config: SAConfig, recordId: string, update: boolean): void {
-            const componentId = "SAAnyEntityControl_" + config.SmartassistConfigurationId;
+            const componentId = Constants.SAAnyEntityControlContainerId + config.SmartassistConfigurationId;
             let properties: any =
             {
                 parameters: {
@@ -201,7 +200,7 @@ module MscrmControls.SmartassistPanelControl {
                 }
                 var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
                 configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
-                
+
                 for (let i = 0; i <= (configs.length - 1); i++) {
                     this.addDivForSmartAssistConfig(configs[i]);
                     this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), recordId, update);
@@ -226,49 +225,33 @@ module MscrmControls.SmartassistPanelControl {
         public async listenCECContextChangeAPI(event: any) {
             var sessionId = Utility.getCurrentSessionId()
             var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
-            var anchorContext: any;
-
-            if (!context && event.context.pageType && event.context.pageType == Constants.CECEntityRecordType) {
-                //Todo:context should not null check with CEC
+            //Get anchor context
+            var anchorContext = context.getTabContext("anchor") as any;
+            var recordId = null;
+            if (event && event.context && event.context.entityId) {
+                recordId = Utility.FormatGuid(event.context.entityId);
             }
-            else {
-                //Get Entity Id from anchor tab
-                anchorContext = context.getTabContext("anchor") as any;
-                if (anchorContext && anchorContext.entityName && anchorContext.entityId
-                    && Constants.IncidentEntityName == anchorContext.entityName
-                    && !Utility.isNullOrEmptyString(anchorContext.entityId)) {
-                    this.anchorTabEntityId = Utility.FormatGuid(anchorContext.entityId);
-                }
-            }
+            if (!this.isSameSession(sessionId)) {
+                if (anchorContext && anchorContext.entityName && anchorContext.entityId) {
+                    if (anchorContext.entityName != Constants.IncidentEntityName) {
+                        var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
+                        for (let i = 0; i <= (configs.length - 1); i++) {
+                            const componentId = Constants.SAAnyEntityControlContainerId + configs[i].SmartassistConfigurationId;
+                            SmartassistPanelControl._context.utils.unbindDOMComponent(componentId);
 
-            //Get Entity Id from current context
-            if (event && event.context && event.context.entityName && event.context.entityId && event.context.pageType
-                && event.context.pageType == Constants.CECEntityRecordType
-                && event.context.entityName == Constants.IncidentEntityName
-                && !Utility.isNullOrEmptyString(event.context.entityId)) {
-                var recordId = Utility.FormatGuid(event.context.entityId);
-                if (this.tabSwitchEntityId != recordId) {
-                    this.AnyentityControlInitiated = false;
-                    this.tabSwitchEntityId = recordId;
-                    if (this.anchorTabEntityId && !this.isSameSession(sessionId)) {
-                        // Re-render Suggestions for tab switch
+                            // Collapse PP : TODO: discuss with PP team and enable rerendering fro other entities
+                            //var ppRerender = new MscrmControls.PanelControl.Rerender(sessionId, true);
+                            //Utility.DispatchPanelInboundEvent(ppRerender);
+                        }
+                    }
+                    else {
+                        this.anchorTabEntityId = Utility.FormatGuid(anchorContext.entityId);
                         this.renderSuggestions(true, this.anchorTabEntityId);
                     }
                 }
             }
-            else { this.AnyentityControlInitiated = false; }
+            this.tabSwitchEntityId = recordId;
             this.previousSessionId = sessionId;
-        }
-
-        /**Validates valid case id - to be used when tab switch between session is considered */
-        private validateCurrentContext(sessionId: string): boolean {
-            var currentContextCurrentCtxEntId = this.tabSwitchEntityId;
-            var currentContextAnchorEntId = this.anchorTabEntityId;
-            if ((currentContextCurrentCtxEntId && currentContextAnchorEntId
-                && currentContextCurrentCtxEntId == currentContextAnchorEntId && this.AnyentityControlInitiated == false) || (!currentContextAnchorEntId && currentContextCurrentCtxEntId)) {
-                return true;
-            }
-            return false;
         }
 
         /**Show loader component */

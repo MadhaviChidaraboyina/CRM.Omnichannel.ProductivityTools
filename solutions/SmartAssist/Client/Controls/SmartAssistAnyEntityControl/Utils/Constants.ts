@@ -24,6 +24,8 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static hideElementCss = "hide-element";
         public static LoaderTimeout = 200;
         public static DismissCardEvent = 'dismissCard';
+        public static NoSugegstionsDivId = "noSuggestionsDiv-";
+        public static TitleDivId = "saConfigTitleDiv-";
     }
 
     /**
