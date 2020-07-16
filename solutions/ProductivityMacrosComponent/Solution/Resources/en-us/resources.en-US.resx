@@ -1745,7 +1745,7 @@
     <comment>'msdyn_macrosolutionconfiguration_v2' : displayname for Attribute 'msdyn_designerurlconfigentityid' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfiguration_v2msdyn_designerurlconfigentityquery" xml:space="preserve">
-    <value>An oData query to retrieve record from which to re</value>
+    <value>An oData query to retrieve record from which to read designer URL</value>
     <comment>'msdyn_macrosolutionconfiguration_v2' : displayname for Attribute 'msdyn_designerurlconfigentityquery' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosolutionconfiguration_v2msdyn_designerurlrelativepath" xml:space="preserve">
