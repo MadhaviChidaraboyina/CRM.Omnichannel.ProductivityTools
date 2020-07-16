@@ -168,6 +168,10 @@
     <value>Smart assist</value>
     <comment> 'msdyn_smartassist' : LocalizedName for Solution</comment>
   </data>
+  <data name="15062:LocalizedName,msdyn_smartassist" xml:space="preserve">
+    <value>Smart assist</value>
+    <comment> 'msdyn_smartassist' : LocalizedName for Solution</comment>
+  </data>
   <data name="1:Description,Adaptive Card Configuration{3919736b-aeab-ea11-a81b-000d3ac622d1}" xml:space="preserve">
     <value>All active adaptivecardconfigurations</value>
     <comment>'Adaptive Card Configuration' : Description for SavedQuery on Entity QueryId: '{3919736b-aeab-ea11-a81b-000d3ac622d1}'</comment>

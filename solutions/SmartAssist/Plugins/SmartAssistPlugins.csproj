@@ -12,6 +12,7 @@
     <AssemblyClsCompliant>false</AssemblyClsCompliant>
     <nowarn>0618,2008</nowarn>
     <TargetFrameworkProfile />
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -105,5 +106,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(PKG_STYLECOP)\build\StyleCop.MSBuild.Targets" Condition=" '$(EnableStyleCopCheck)' == 'true' " />
-  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\PluginAssembly.targets" />
+  <Target Name="AfterBuild">
+    <Message Text="Binplacing plugin assemblies.." Importance="High" />
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Plugins" />
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).pdb" DestinationFolder="$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Plugins" />
+  </Target>
 </Project>
