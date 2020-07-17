@@ -145,10 +145,6 @@
 				<Required key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" solution="ExperienceDesigner" />
 				<Dependent key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" />
 			</MissingDependency>
-			<MissingDependency>
-				<Required key="3" type="1" schemaName="msdyn_suggestionssetting" displayName="Suggestions Setting" solution="msdyn_DataInsightsAndAnalytics" />
-				<Dependent key="4" type="92" displayName="Microsoft.Dynamics.SmartAssist.Plugins.SmartAssistConfig.AdminSettingsPlugin: Update of msdyn_suggestionssetting" id="{ec406298-28c7-ea11-a81f-000d3af585a7}" />
-			</MissingDependency>
 		</MissingDependencies>
 	</SolutionManifest>
 </ImportExportXml>
