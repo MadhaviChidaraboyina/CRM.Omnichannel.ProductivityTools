@@ -186,4 +186,10 @@ module MscrmControls.SmartassistPanelControl {
         KnowledgeArticleSuggestion = 192360000,
         SimilarCaseSuggestion = 192360001
     }
+
+    /**Suggestions Setting  status type */
+    export enum SuggestionsSettingState {
+        Active = 0,
+        Inactive = 1
+    }
 }

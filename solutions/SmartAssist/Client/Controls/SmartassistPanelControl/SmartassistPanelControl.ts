@@ -193,14 +193,18 @@ module MscrmControls.SmartassistPanelControl {
          */
         public async renderSuggestions(update: boolean, recordId: string = null): Promise<void> {
             this.showLoader();
+
             // validate current context
             if (recordId) {
                 if (Utility.isNullOrEmptyString(recordId)) {
                     recordId = this.tabSwitchEntityId;
-                }
-                var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
+                }                
+                var configs = await SAConfigDataManager.Instance.getFilteredSAConfig() as SmartassistPanelControl.SAConfig[];                
+                // remove and unbind current configs 
+                //for (let i = 0; i <= (configs.length - 1); i++) {
+                //    SmartassistPanelControl._context.utils.unbindDOMComponent(Constants.SAAnyEntityControlContainerId + configs[i].SmartassistConfigurationId);
+                //}
                 configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
-
                 for (let i = 0; i <= (configs.length - 1); i++) {
                     this.addDivForSmartAssistConfig(configs[i]);
                     this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), recordId, update);
