@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="msdyn_AgentscriptComponent.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="uk-UA" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";msdyn_AgentscriptComponent.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";Set_Default_AgentScript_No_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Set the toggle to No to disable the expression to set the default script for a particular session type.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Установіть перемикач у положення "Ні". Таким чином, ви вимкнете вираз, щоб визначити стандартний сценарій для певного типу сеансу.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:27.0006876Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";Set_Default_AgentScript_Yes_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Set the toggle to Yes to enable and build expression to set the default script for a particular session type.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Установіть перемикач у положення "Так". Таким чином, ви ввімкнете та створите вираз, щоб визначити стандартний сценарій для певного типу сеансу.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:27.0006876Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

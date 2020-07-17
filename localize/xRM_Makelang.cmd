@@ -195,8 +195,10 @@ if Exist "%xRM_TMPPATH%\target.txt" (
                     REM generate twice
                     REM 1. under 'Localize\Temp\[ll-cc]' to copy to 'D365_CE' repo
                     REM 2. under 'Localize\Extern\[lcid]' to copy to core team repo
-                    call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LCID! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\!LCID!\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_LOCPATH%\!LCID!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
-                    call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LL-CC! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\!LCID!\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_TMPPATH%\!LL-CC!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
+                    REM After the change to stop checking in lcl files to core team repo, not all languages lcl files are available since 'Localize\Extern\ folder deleted
+                    REM and we only copy Base and one language ('1031') while running 'xx_makelang.cmd 1031 /handoff' so use 'Base\%FS_PNAME%\LSS\lss.lss' to generate language lcl files for new files
+                    call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LCID! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_LOCPATH%\!LCID!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
+                    call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LL-CC! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_TMPPATH%\!LL-CC!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
                 )
             )
         )

@@ -1,0 +1,814 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="ProductivityMacrosComponent_webresource_strings.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="lt-LT" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";ProductivityMacrosComponent_webresource_strings.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";DESIGNER_ACTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Veiksmas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009232Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to read macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nepavyksta nuskaityti makrokomandos apibrėžties]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009232Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the macro definition to be edited could not be read]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to read action templates]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nepavyksta nuskaityti veiksmo šablonų]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009232Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when templates entity read fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to find designer configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nepavyksta rasti dizaino įrankio konfigūracijos]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009232Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when config entity read fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONNECTORDISPLAYNAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unified Interface automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Vieningosios sąsajos automatizavimas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009232Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display Name String for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_CDS_WRITE_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to save macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nepavyksta įrašyti makrokomandos apibrėžties]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when write to CDS fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_INIT_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Designer control initialization failed]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nepavyko inicijuoti dizaino įrankio valdiklio]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when designer control initialization fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_JSON_GENERATION_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to create macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nepavyksta sukurti makrokomandos apibrėžties]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when designer control cannot generate a valid JSON]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_LOAD_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to load macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nepavyksta įkelti makrokomandos apibrėžties]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the control cannot load the macro definition]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_RENDER_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to render macro designer control]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nepavyksta atvaizduoti makrokomandų dizaino įrankio valdiklio]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the control cannot be rendered]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_MACROCONNECTOR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makrokomandos jungtis]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro connector string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_SEARCHMACROS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieškoti makrokomandos]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Search Macro string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro Execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pradėti makrokomandos vykdymą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description Text for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_NAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro Execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pradėti makrokomandos vykdymą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Name Text for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_SUBTITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Paleisti makrokomandą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Subtitle String for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Paleisti makrokomandą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary String for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_TRIGGER" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Trigger]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Paleidiklis]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009239Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Trigger String for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_USERVOICEMSG" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Let us know what you would like us to build next]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Praneškite mums, ką turėtume sukurti vėliau]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[User Voice Message for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNR_STARTMACRO_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Paleisti makrokomandą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title String for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Agento scenarijaus jungtis]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display name for custom connector]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_CONDITION_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Condition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sąlyga]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for expression builder for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer Service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Klientų aptarnavimas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display string for custom category]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Built-in]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Įtaisytoji]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display string for logic app built in category]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SEARCHTEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieškoti ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Search string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sets the default agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nustatomas numatytasis agento scenarijus ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select the agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pasirinkti agento scenarijų ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for input paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Agento scenarijus ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for input paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name of the agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Agento scenarijaus pavadinimas ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for output paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Default agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Numatytojo agento scenarijus ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for output paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Set default agent script]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nustatyti numatytąjį agento scenarijų]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009224Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_START_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[When the session loads, start evaluating the expression]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Įkeliant seansą, pradėti vertinti išraišką]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009225Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for start trigger for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_START_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start evaluating expression  ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pradėti vertinti išraišką  ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009225Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for start trigger for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_CANCEL" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cancel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atšaukti]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009225Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to cancel]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uždaryti visus kitus seansus]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009225Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to close all except present session]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_CREATE_SESSION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create Session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kurti seansą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009225Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to create session]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_DASHBOARD" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atidaryti ataskaitų sritį]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009266Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open dashboard]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_FORM" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Form]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atidaryti formą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009266Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open form]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_GRID" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atidaryti tinklelį]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009266Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open grid]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_KB_SEARCH" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Knowledge Search]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atidaryti žinių iešką]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009266Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open KB search]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_REFRESH" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Naujinti]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009266Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to refresh]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SAVE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Įrašyti]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009257Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to save]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SAVE_AND_CLOSE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save and close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Įrašyti ir uždaryti]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009257Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to save and close]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SEARCH_BY_RELEVANCE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search by Relevance]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieškoti pagal tinkamumą]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009257Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to search by relevance]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SEARCH_KB" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search Knowledge Base]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Žinių bazės ieška]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009257Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to search KB]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute logical name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atributo loginis pavadinimas]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009257Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for 'name' field of attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pavadinimas / vardas ir pavardė]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009257Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title string for 'name' field of attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Atributo reikšmė]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009253Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for 'value' field of attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Reikšmė]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009253Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title string for 'value' field of attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macrosolutionconfiguration_msdyn_searchhint" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ieškoti makrokomandos]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009253Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Solution Configuration Search Hint Text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macrosolutionconfiguration_msdyn_uservoicetext" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Let us know what you would like us to build next]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Praneškite mums, ką turėtume sukurti vėliau]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0009253Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Solution Configuration User Voice Text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

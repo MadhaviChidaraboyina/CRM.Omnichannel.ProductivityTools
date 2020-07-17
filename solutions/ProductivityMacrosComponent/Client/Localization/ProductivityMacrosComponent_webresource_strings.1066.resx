@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
+    <value>Không thể tìm thấy cấu hình công cụ thiết kế</value>
+    <comment>Error message when config entity read fails</comment>
+  </data>
+  <data name="DESIGNER_ACTION" xml:space="preserve">
+    <value>Hành động</value>
+    <comment>Action string for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_CONNECTORDISPLAYNAME" xml:space="preserve">
+    <value>Tự động hóa Giao diện Hợp nhất</value>
+    <comment>Display Name String for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_MACROCONNECTOR" xml:space="preserve">
+    <value>Bộ kết nối macro</value>
+    <comment>Macro connector string for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_SEARCHMACROS" xml:space="preserve">
+    <value>Tìm kiếm macro</value>
+    <comment>Search Macro string for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_DESC" xml:space="preserve">
+    <value>Bắt đầu Thực thi Macro</value>
+    <comment>Description Text for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_NAME" xml:space="preserve">
+    <value>Bắt đầu Thực thi Macro</value>
+    <comment>Name Text for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_SUBTITLE" xml:space="preserve">
+    <value>Bắt đầu Macro</value>
+    <comment>Subtitle String for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_STARTMACRO_SUMMARY" xml:space="preserve">
+    <value>Bắt đầu Macro</value>
+    <comment>Summary String for Start Macro Trigger</comment>
+  </data>
+  <data name="DESIGNER_TRIGGER" xml:space="preserve">
+    <value>Kích hoạt</value>
+    <comment>Trigger String for Designer Control</comment>
+  </data>
+  <data name="DESIGNER_USERVOICEMSG" xml:space="preserve">
+    <value>Hãy cho chúng tôi biết những gì bạn muốn chúng tôi xây dựng tiếp theo</value>
+    <comment>User Voice Message for Designer Control</comment>
+  </data>
+  <data name="DESIGNR_STARTMACRO_TITLE" xml:space="preserve">
+    <value>Bắt đầu Macro</value>
+    <comment>Title String for Start Macro Trigger</comment>
+  </data>
+  <data name="MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS" xml:space="preserve">
+    <value>Đóng tất cả các phiên khác</value>
+    <comment>Action to close all except present session</comment>
+  </data>
+  <data name="MACRO_ACTION_CREATE_SESSION" xml:space="preserve">
+    <value>Tạo phiên</value>
+    <comment>Action to create session</comment>
+  </data>
+  <data name="MACRO_ACTION_OPEN_DASHBOARD" xml:space="preserve">
+    <value>Mở bảng thông tin</value>
+    <comment>Action to open dashboard</comment>
+  </data>
+  <data name="MACRO_ACTION_OPEN_FORM" xml:space="preserve">
+    <value>Mở biểu mẫu</value>
+    <comment>Action to open form</comment>
+  </data>
+  <data name="MACRO_ACTION_OPEN_GRID" xml:space="preserve">
+    <value>Mở lưới</value>
+    <comment>Action to open grid</comment>
+  </data>
+  <data name="MACRO_ACTION_OPEN_KB_SEARCH" xml:space="preserve">
+    <value>Mở phần tìm kiếm kiến thức</value>
+    <comment>Action to open KB search</comment>
+  </data>
+  <data name="MACRO_ACTION_REFRESH" xml:space="preserve">
+    <value>Làm mới</value>
+    <comment>Action to refresh</comment>
+  </data>
+  <data name="MACRO_ACTION_SAVE" xml:space="preserve">
+    <value>Lưu</value>
+    <comment>Action to save</comment>
+  </data>
+  <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
+    <value>Lưu và đóng</value>
+    <comment>Action to save and close</comment>
+  </data>
+  <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
+    <value>Hủy</value>
+    <comment>Action to cancel</comment>
+  </data>
+  <data name="MACRO_ACTION_SEARCH_BY_RELEVANCE" xml:space="preserve">
+    <value>Tìm kiếm theo Mức độ liên quan</value>
+    <comment>Action to search by relevance</comment>
+  </data>
+  <data name="MACRO_ACTION_SEARCH_KB" xml:space="preserve">
+    <value>Tìm kiếm cơ sở kiến thức</value>
+    <comment>Action to search KB</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE" xml:space="preserve">
+    <value>Tên</value>
+    <comment>Title string for 'name' field of attribute</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC" xml:space="preserve">
+    <value>Tên lôgic thuộc tính</value>
+    <comment>Description for 'name' field of attribute</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE" xml:space="preserve">
+    <value>Giá trị</value>
+    <comment>Title string for 'value' field of attribute</comment>
+  </data>
+  <data name="MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC" xml:space="preserve">
+    <value>Giá trị thuộc tính</value>
+    <comment>Description for 'value' field of attribute</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" xml:space="preserve">
+    <value>Không thể đọc định nghĩa macro</value>
+    <comment>Error message when the macro definition to be edited could not be read</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
+    <value>Không thể đọc các mẫu hành động</value>
+    <comment>Error message when templates entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_CDS_WRITE_ERROR" xml:space="preserve">
+    <value>Không thể lưu định nghĩa macro</value>
+    <comment>Error message when write to CDS fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
+    <value>Khởi tạo kiểm soát công cụ thiết kế không thành công</value>
+    <comment>Error message when designer control initialization fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">
+    <value>Không thể tạo định nghĩa macro</value>
+    <comment>Error message when designer control cannot generate a valid JSON</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_LOAD_FAILURE" xml:space="preserve">
+    <value>Không thể tải định nghĩa macro</value>
+    <comment>Error message when the control cannot load the macro definition</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_RENDER_FAILURE" xml:space="preserve">
+    <value>Không thể kết xuất kiểm soát công cụ thiết kế macro</value>
+    <comment>Error message when the control cannot be rendered</comment>
+  </data>
+  <data name="msdyn_macrosolutionconfiguration_msdyn_searchhint" xml:space="preserve">
+    <value>Tìm kiếm macro</value>
+    <comment>Macro Solution Configuration Search Hint Text</comment>
+  </data>
+  <data name="msdyn_macrosolutionconfiguration_msdyn_uservoicetext" xml:space="preserve">
+    <value>Hãy cho chúng tôi biết bạn muốn chúng tôi xây dựng điều gì trong thời gian tới</value>
+    <comment>Macro Solution Configuration User Voice Text</comment>
+  </data>
+  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
+    <value>Tích hợp sẵn</value>
+    <comment>Display string for logic app built in category</comment>
+  </data>
+  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
+    <value>Dịch vụ Khách hàng</value>
+    <comment>Display string for custom category</comment>
+  </data>
+  <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
+    <value>Trình kết nối kịch bản của tổng đài viên</value>
+    <comment>Display name for custom connector</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
+    <value>Đặt kịch bản tổng đài viên mặc định</value>
+    <comment>Summary for set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
+    <value>Đặt kịch bản tổng đài viên mặc định </value>
+    <comment>Description for set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
+    <value>Kịch bản tổng đài viên </value>
+    <comment>Title for input paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
+    <value>Chọn kịch bản cho tổng đài viên </value>
+    <comment>Description for input paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
+    <value>Kịch bản mặc định cho tổng đài viên </value>
+    <comment>Title for output paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
+    <value>Tên kịch bản cho tổng đài viên </value>
+    <comment>Description for output paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
+    <value>Bắt đầu đánh giá biểu thức  </value>
+    <comment>Summary for start trigger for expression evaluation</comment>
+  </data>
+  <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
+    <value>Khi tải phiên, hãy bắt đầu đánh giá biểu thức</value>
+    <comment>Description for start trigger for expression evaluation</comment>
+  </data>
+  <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
+    <value>Tìm kiếm </value>
+    <comment>Search string for Designer Control</comment>
+  </data>
+  <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
+    <value>Điều kiện</value>
+    <comment>Summary for expression builder for expression evaluation</comment>
+  </data>
+</root>
