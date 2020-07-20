@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1169
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "flowDesignerControl", "FlowDesigner\flowDesignerControl.njsproj", "{4087A27A-8FEA-457D-8080-DEC306F13126}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|amd64 = Debug|amd64
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|amd64 = Release|amd64
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		retail|amd64 = retail|amd64
+		retail|Any CPU = retail|Any CPU
+		retail|x86 = retail|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4087A27A-8FEA-457D-8080-DEC306F13126}.Debug|amd64.ActiveCfg = debug|Any CPU
+		{4087A27A-8FEA-457D-8080-DEC306F13126}.Debug|Any CPU.ActiveCfg = debug|Any CPU
+		{4087A27A-8FEA-457D-8080-DEC306F13126}.Debug|x86.ActiveCfg = debug|Any CPU
+		{4087A27A-8FEA-457D-8080-DEC306F13126}.Release|amd64.ActiveCfg = release|Any CPU
+		{4087A27A-8FEA-457D-8080-DEC306F13126}.Release|Any CPU.ActiveCfg = release|Any CPU
+		{4087A27A-8FEA-457D-8080-DEC306F13126}.Release|x86.ActiveCfg = release|Any CPU
+		{4087A27A-8FEA-457D-8080-DEC306F13126}.retail|amd64.ActiveCfg = retail|Any CPU
+		{4087A27A-8FEA-457D-8080-DEC306F13126}.retail|Any CPU.ActiveCfg = retail|Any CPU
+		{4087A27A-8FEA-457D-8080-DEC306F13126}.retail|x86.ActiveCfg = retail|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF3C2E0F-CFAA-48C8-8CF3-76D4BF2C5421}
+	EndGlobalSection
+	GlobalSection(CRMSolutionProperties) = preSolution
+		SolutionIsBoundToCRM = True
+	EndGlobalSection
+EndGlobal

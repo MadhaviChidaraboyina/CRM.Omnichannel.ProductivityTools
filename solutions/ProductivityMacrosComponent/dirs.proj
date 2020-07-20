@@ -1,6 +1,5 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<ProjectToBuild Include="Controls\MacroDesigner\flowDesignerControl.njsproj" />
 		<ProjectToBuild Include="Client\ProductivityMacrosComponentWebResources.csproj" />
 		<ProjectToBuild Include="Client\Controls\MacroSessionAssociatedGridControl\MacroSessionAssociatedGridControl.csproj" />
 		<ProjectToBuild Include="Client\Controls\RunLinkControl\RunLinkControl.csproj" />

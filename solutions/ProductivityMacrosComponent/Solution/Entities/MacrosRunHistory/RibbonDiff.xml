@@ -26,7 +26,7 @@
 			</EnableRules>
 			<DisplayRules />
 			<Actions>
-				<JavaScriptFunction FunctionName="Microsoft.Macros.Utility.openMacrosMonitorRecordHandler" Library="$webresource:CRMClients/msdyn_ProductivityMacros_internal_library_v2.js">
+				<JavaScriptFunction FunctionName="Microsoft.Macros.Utility.openMacrosMonitorRecordHandler" Library="$webresource:CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js">
 					<CrmParameter Value="SelectedControlSelectedItemReferences" />
 					<CrmParameter Value="SelectedControl" />
 				</JavaScriptFunction>

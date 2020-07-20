@@ -153,17 +153,17 @@
 							<datafieldname>msdyn_expressiondata</datafieldname>
 						</parameters>
 					</customControl>
-					<customControl formFactor="0" name="MscrmControls.ButtonControl.ButtonControlv2">
+					<customControl formFactor="0" name="MscrmControls.Button.ButtonControl">
 						<parameters>
 							<value>msdyn_expressiondata</value>
 						</parameters>
 					</customControl>
-					<customControl formFactor="1" name="MscrmControls.ButtonControl.ButtonControlv2">
+					<customControl formFactor="1" name="MscrmControls.Button.ButtonControl">
 						<parameters>
 							<value>msdyn_expressiondata</value>
 						</parameters>
 					</customControl>
-					<customControl formFactor="2" name="MscrmControls.ButtonControl.ButtonControlv2">
+					<customControl formFactor="2" name="MscrmControls.Button.ButtonControl">
 						<parameters>
 							<value>msdyn_expressiondata</value>
 						</parameters>

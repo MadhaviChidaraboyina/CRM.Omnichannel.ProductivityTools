@@ -2,7 +2,7 @@
 /// <reference path="Constants.ts" />
 
 namespace Microsoft.Macros.Utility {
-	var webresourceName = "Localization/ProductivityMacros_webresource_strings";
+	var webresourceName = "Localization/ProductivityMacrosComponent_webresource_strings";
 
 	export function getResourceString(key: any) {
 		var value = key;
@@ -110,7 +110,7 @@ namespace Microsoft.Macros.Utility {
 		let formContext = eventContext.getFormContext();
 		let designerControl = formContext.getControl(Microsoft.Macros.Constants.DesignerID);
 		let appUrl = new URL(Xrm.Utility.getGlobalContext().getCurrentAppUrl());
-		let iframeUrl = appUrl.origin + "/WebResources/MacroDesigner/msdyn_ProductivityMacros_macroDesigner_v2.html";
+		let iframeUrl = appUrl.origin + "/WebResources/MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner.html";
 		let input = formContext.data.attributes.getByName(Microsoft.Macros.Constants.RecordIdParam).getValue();
 		if (input == null) {
 			designerControl.setSrc(iframeUrl);
@@ -120,26 +120,11 @@ namespace Microsoft.Macros.Utility {
 		}
 	}
 
-		// Handler Function for the MDD OnLoad to pass the RecordID from MDD to the IFrame Control
-		export function agentScriptDialogOnLoadHandler(eventContext: any) {
-			let formContext = eventContext.getFormContext();
-			let designerControl = formContext.getControl(Microsoft.Macros.Constants.DesignerID);
-			let appUrl = new URL(Xrm.Utility.getGlobalContext().getCurrentAppUrl());
-			let iframeUrl = appUrl.origin + "/WebResources/MacroDesigner/msdyn_ProductivityMacros_agentScriptDesigner_v2.html";
-			let input = formContext.data.attributes.getByName(Microsoft.Macros.Constants.RecordIdParam).getValue();
-			if (input == null) {
-				designerControl.setSrc(iframeUrl);
-			}
-			else {
-				designerControl.setSrc(iframeUrl+ "?id=" + input);
-			}
-		}
-
 	export function monitorDialogOnLoadHandler(eventContext: any) {
 		let formContext = eventContext.getFormContext();
 		let monitorControl = formContext.getControl(Microsoft.Macros.Constants.MonitorID);
 		let appUrl = new URL(Xrm.Utility.getGlobalContext().getCurrentAppUrl());
-		let iframeUrl = appUrl.origin + "/WebResources/MacroDesigner/msdyn_ProductivityMacros_macroMonitor_v2.html";        //Check Name
+        let iframeUrl = appUrl.origin + "/WebResources/MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor.html";
 		let input = formContext.data.attributes.getByName(Microsoft.Macros.Constants.RecordIdParam).getValue();
 		if (input == null) {
 			monitorControl.setSrc(iframeUrl);

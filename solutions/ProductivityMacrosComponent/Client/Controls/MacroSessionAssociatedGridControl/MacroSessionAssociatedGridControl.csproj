@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
-	<Import Project="$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.props')" />
-	<PropertyGroup>
+  <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
+  <Import Project="$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.props')" />
+  <PropertyGroup>
     <Configuration Condition=" '$(BUILDTYPE)' == '' ">Debug</Configuration>
     <Configuration Condition=" '$(BUILDTYPE)' == 'Debug' ">Debug</Configuration>
     <Configuration Condition=" '$(BUILDTYPE)' == 'cover' ">Release</Configuration>
     <Configuration Condition=" '$(BUILDTYPE)' == 'retail' ">Release</Configuration>
-    <ProjectGuid>{C4C324B9-88A7-497B-828D-9E6E4E91C6B9}</ProjectGuid>
+    <ProjectGuid>{B10F0A5D-65D6-4C48-A248-5E3B7BF3B7C1}</ProjectGuid>
     <ProjectTypeGuids>{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>$(MSBuildProjectDirectory)</OutputPath>
     <TargetFrameworkVersion>$(CRMdotNetTargetFrameWork)</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>false</DebugSymbols>
-		<TypeScriptSkipLibCheck>true</TypeScriptSkipLibCheck>
+    <TypeScriptSkipLibCheck>true</TypeScriptSkipLibCheck>
   </PropertyGroup>
   <PropertyGroup>
     <RootNamespace>MacroSessionAssociatedGridControl</RootNamespace>
     <AssemblyName>MacroSessionAssociatedGridControl</AssemblyName>
-		<TypeScriptOutFile>MacroSessionAssociatedGridControl.js</TypeScriptOutFile>
+    <TypeScriptOutFile>MacroSessionAssociatedGridControl.js</TypeScriptOutFile>
   </PropertyGroup>
   <PropertyGroup>
     <UglifyJsMangle>true</UglifyJsMangle>
@@ -32,9 +32,9 @@
     <TypeScriptCompile Include="inputsOutputs.g.ts" />
     <TypeScriptCompile Include="PrivateReferences.ts" />
   </ItemGroup>
-	<ItemGroup>
-		<Content Include="libs\mscommonlib-1.0.0.js" />
-	</ItemGroup>
+  <ItemGroup>
+    <Content Include="libs\mscommonlib-1.0.0.js" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="ControlManifest.xml" />
   </ItemGroup>
@@ -44,30 +44,30 @@
     <Folder Include="Typings\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-	<Import Project="$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.targets" />
-	<Import Project="$(XrmSolutionsRoot)\build\include\TypeScriptCommonTypes.targets" />
-	<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), CustomBuild.targets))\CustomBuild.targets" Condition="'$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), CustomBuild.targets))'!=''" />
-	<Import Project="$(XrmSolutionsRoot)\build\include\Uglify.targets" Condition="'$(Configuration)' == 'retail' OR '$(MinifyOnDebug)' == 'true'" />
-	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+  <Import Project="$(PKG_TYPESCRIPT_MSBUILD)\build\Microsoft.TypeScript.MSBuild.targets" />
+  <Import Project="$(XrmSolutionsRoot)\build\include\TypeScriptCommonTypes.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), CustomBuild.targets))\CustomBuild.targets" Condition="'$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), CustomBuild.targets))'!=''" />
+  <Import Project="$(XrmSolutionsRoot)\build\include\Uglify.targets" Condition="'$(Configuration)' == 'retail' OR '$(MinifyOnDebug)' == 'true'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
   </PropertyGroup>
-	<Target Name="AfterBuild">
-		<ItemGroup>
-			<SelectedLibsOutputs Include="libs\**\*.*" />
-			<SelectedcssOutputs Include="css\*.*" />
-			<SelectedOutputs Include="$(TypeScriptOutFile)" />
-			<!--<SelectedOutputs Include="bin\MinifiedWebResources\$(TypeScriptOutFile)" Condition="'$(Configuration)' == 'retail' OR '$(MinifyOnDebug)' == 'true'" />-->
-			<SelectedOutputs Include="ControlManifest.xml" />
-			<SelectedimgOutputs Include="img\*.*" />
-			<SelectedStringOutputs Include="strings\*.*" />
-		</ItemGroup>
-		<Copy SourceFiles="@(SelectedOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl" />
-		<Copy SourceFiles="@(SelectedLibsOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\libs\%(RecursiveDir)" />
-		<Copy SourceFiles="@(SelectedcssOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\css" />
-		<Copy SourceFiles="@(SelectedimgOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\img" />
-		<Copy SourceFiles="@(SelectedStringOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\strings" />
-	</Target>
-	<Target Name="Clean">
-		<RemoveDir Directories="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl" />
-	</Target>
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <SelectedLibsOutputs Include="libs\**\*.*" />
+      <SelectedcssOutputs Include="css\*.*" />
+      <SelectedOutputs Include="$(TypeScriptOutFile)" />
+      <!--<SelectedOutputs Include="bin\MinifiedWebResources\$(TypeScriptOutFile)" Condition="'$(Configuration)' == 'retail' OR '$(MinifyOnDebug)' == 'true'" />-->
+      <SelectedOutputs Include="ControlManifest.xml" />
+      <SelectedimgOutputs Include="img\*.*" />
+      <SelectedStringOutputs Include="strings\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(SelectedOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl" />
+    <Copy SourceFiles="@(SelectedLibsOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\libs\%(RecursiveDir)" />
+    <Copy SourceFiles="@(SelectedcssOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\css" />
+    <Copy SourceFiles="@(SelectedimgOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\img" />
+    <Copy SourceFiles="@(SelectedStringOutputs)" DestinationFolder="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl\strings" />
+  </Target>
+  <Target Name="Clean">
+    <RemoveDir Directories="$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\ProductivityMacrosComponentControls\MacroSessionAssociatedGridControl" />
+  </Target>
 </Project>

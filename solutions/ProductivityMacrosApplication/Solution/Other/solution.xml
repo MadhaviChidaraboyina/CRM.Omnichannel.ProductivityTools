@@ -78,7 +78,28 @@
         </Address>
       </Addresses>
     </Publisher>
-    <RootComponents></RootComponents>
+    <RootComponents>
+	  <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_clone_record.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_close_session.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_close_all_sessions.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_create_session.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_email.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_macro_connector.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_associated.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_dashboard.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_form.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_grid.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_kb.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_new_form.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_refresh.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_save.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_search_kb.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_search_relevance.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_update_record.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg" behavior="0" />
+	  <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_update_form_attribute.svg" behavior="0" />
+	  <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_open_kb_article.svg" behavior="0" />
+	</RootComponents>
     <MissingDependencies />
   </SolutionManifest>
 </ImportExportXml>

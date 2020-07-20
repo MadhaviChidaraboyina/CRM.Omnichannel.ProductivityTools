@@ -4,10 +4,10 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.CallscriptControl {
+module MscrmControls.Callscript {
 	'use strict';
 
-    export class CallscriptControlV2 implements Mscrm.Control<IInputBag, IOutputBag> {
+    export class CallscriptControl implements Mscrm.Control<IInputBag, IOutputBag> {
 
 		private context: Mscrm.ControlData<IInputBag>;
 		public stateManager: StateManager;

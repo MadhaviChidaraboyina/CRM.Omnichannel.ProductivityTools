@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+	<WebResourceId>{0080F8DE-C738-4209-8B82-FE97B0E801D8}</WebResourceId>
+	<Name>AgentScriptDesigner/msdyn_agentScriptDesigner.bundle.js</Name>
+	<DisplayName>AgentScriptDesigner/msdyn_agentScriptDesigner.bundle.js</DisplayName>
+	<WebResourceType>3</WebResourceType>
+	<IntroducedVersion>1.0</IntroducedVersion>
+	<IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+	<IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+	<DependencyXml>
+		&lt;Dependencies&gt;
+            &lt;Dependency componentType="WebResource"&gt;
+				&lt;Library name="Localization/msdyn_AgentscriptComponent.1033.resx" displayName="Localization/msdyn_AgentscriptComponent.1033.resx" languagecode="1033" description="AgentscriptComponent 1033 resx file" libraryUniqueId="{566D352A-1347-4F67-A7B4-CAA784BD655F}" /&gt;
+			&lt;/Dependency&gt;
+		&lt;/Dependencies&gt;
+	</DependencyXml>
+	<IsCustomizable>1</IsCustomizable>
+	<CanBeDeleted>0</CanBeDeleted>
+	<IsHidden>0</IsHidden>
+	<FileName>/WebResources/AgentScriptDesigner/msdyn_agentScriptDesigner.bundle.js</FileName>
+</WebResource>

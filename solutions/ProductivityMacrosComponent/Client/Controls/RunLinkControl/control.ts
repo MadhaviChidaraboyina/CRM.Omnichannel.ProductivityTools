@@ -4,10 +4,10 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.RunLinkControl {
+module MscrmControls.RunLink {
 	'use strict';
 
-	export class RunLinkControlv2 implements Mscrm.Control<IInputBag, IOutputBag> {
+	export class RunLinkControl implements Mscrm.Control<IInputBag, IOutputBag> {
 
 		private _context: Mscrm.ControlData<IInputBag>;
 		private color: string;

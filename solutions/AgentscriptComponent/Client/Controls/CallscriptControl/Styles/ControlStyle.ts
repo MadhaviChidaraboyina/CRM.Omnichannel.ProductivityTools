@@ -2,7 +2,7 @@
  * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.CallscriptControl {
+module MscrmControls.Callscript {
 
 	export class ControlStyle {
 

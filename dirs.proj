@@ -1,5 +1,6 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
+		<ProjectToBuild Include="src\Designer\FlowDesigner\flowDesignerControl.njsproj" />
 		<ProjectToBuild Include="solutions\dirs.proj" />
 	</ItemGroup>
 	<Target Name="Clean">

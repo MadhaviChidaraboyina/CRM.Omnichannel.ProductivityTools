@@ -18,7 +18,7 @@
   <PropertyGroup>
     <RootNamespace>CallscriptControl</RootNamespace>
     <AssemblyName>CallscriptControl</AssemblyName>
-    <TypeScriptOutFile>CallscriptControl_v2.js</TypeScriptOutFile>
+    <TypeScriptOutFile>CallscriptControl.js</TypeScriptOutFile>
   </PropertyGroup>
   <PropertyGroup>
     <UglifyJsMangle>true</UglifyJsMangle>

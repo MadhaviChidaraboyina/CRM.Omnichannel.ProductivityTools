@@ -4,7 +4,7 @@
 
 /// <reference path="../privatereferences.ts"/>
 
-module MscrmControls.CallscriptControl {
+module MscrmControls.Callscript {
 	'use strict';
 
 	/**

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+	<WebResourceId>{73A8ECE3-C5A4-4FD8-96FA-B92AD9B4F462}</WebResourceId>
+	<Name>MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor.bundle.js</Name>
+	<DisplayName>MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor.bundle.js</DisplayName>
+	<WebResourceType>3</WebResourceType>
+	<IntroducedVersion>1.0</IntroducedVersion>
+	<IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+	<IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+	<DependencyXml>
+		&lt;Dependencies&gt;
+			&lt;Dependency componentType="WebResource"&gt;
+				&lt;Library name="Localization/ProductivityMacrosComponent_webresource_strings.1033.resx" displayName="Localization/ProductivityMacrosComponent_webresource_strings.1033.resx" languagecode="1033" description="ProductivityMacros 1033 resx file" libraryUniqueId="{66538EC3-A111-426E-B608-556F0D3B85D6}" /&gt;
+			&lt;/Dependency&gt;
+		&lt;/Dependencies&gt;
+	</DependencyXml>
+	<IsCustomizable>0</IsCustomizable>
+	<CanBeDeleted>0</CanBeDeleted>
+	<IsHidden>0</IsHidden>
+	<FileName>/WebResources/MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor.bundle.js</FileName>
+</WebResource>

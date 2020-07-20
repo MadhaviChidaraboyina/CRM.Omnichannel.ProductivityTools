@@ -75,11 +75,6 @@ SolutionPackage/
 *.dll
 *.pdb
 
-solutions/TypeDefinitions/CIFramework/
-
-# Generated tsconfig.json files
-/src/**/tsconfig.json
-
 #Generated js files 
 /solutions/**/**/**/*.js
 /solutions/**/**/**/*.map

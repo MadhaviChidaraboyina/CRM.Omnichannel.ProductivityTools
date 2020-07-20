@@ -3288,10 +3288,6 @@
     <value>Allows you to create Macros</value>
     <comment> '{6DE78DFD-C198-4AB9-85E8-0E1BD20F5542}' : Description for Dialog</comment>
   </data>
-  <data name="68:Description,{F72B3711-7317-4308-A1EE-D4AC37DEC789}" xml:space="preserve">
-    <value>Expression builder for default agent script</value>
-    <comment> '{F72B3711-7317-4308-A1EE-D4AC37DEC789}' : Description for Dialog</comment>
-  </data>
   <data name="68:label,{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}{47D3F569-D09B-4800-BE5E-2F390796C597}" xml:space="preserve">
     <value>Macro Run</value>
     <comment>'{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}' : label for cell in Dialog FormXml ID: '{47D3F569-D09B-4800-BE5E-2F390796C597}'</comment>
@@ -3324,14 +3320,6 @@
     <value>Description</value>
     <comment>'{6DE78DFD-C198-4AB9-85E8-0E1BD20F5542}' : label for cell in Dialog FormXml ID: '{83E38314-B01D-4CC2-8092-153B30F3DBC5}'</comment>
   </data>
-  <data name="68:label,{F72B3711-7317-4308-A1EE-D4AC37DEC789}{0988560E-093E-4CC0-88E6-85B92A75E973}" xml:space="preserve">
-    <value>Expression builder</value>
-    <comment>'{F72B3711-7317-4308-A1EE-D4AC37DEC789}' : label for cell in Dialog FormXml ID: '{0988560E-093E-4CC0-88E6-85B92A75E973}'</comment>
-  </data>
-  <data name="68:label,{F72B3711-7317-4308-A1EE-D4AC37DEC789}{84C68612-4308-41D2-A1DC-A808B448119F}" xml:space="preserve">
-    <value>Macro Designer</value>
-    <comment>'{F72B3711-7317-4308-A1EE-D4AC37DEC789}' : label for cell in Dialog FormXml ID: '{84C68612-4308-41D2-A1DC-A808B448119F}'</comment>
-  </data>
   <data name="68:LocalizedName,{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}" xml:space="preserve">
     <value>View Macros Monitor v2</value>
     <comment> '{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}' : LocalizedName for Dialog</comment>
@@ -3339,9 +3327,5 @@
   <data name="68:LocalizedName,{6DE78DFD-C198-4AB9-85E8-0E1BD20F5542}" xml:space="preserve">
     <value>Macros</value>
     <comment> '{6DE78DFD-C198-4AB9-85E8-0E1BD20F5542}' : LocalizedName for Dialog</comment>
-  </data>
-  <data name="68:LocalizedName,{F72B3711-7317-4308-A1EE-D4AC37DEC789}" xml:space="preserve">
-    <value>Expression builder v2</value>
-    <comment> '{F72B3711-7317-4308-A1EE-D4AC37DEC789}' : LocalizedName for Dialog</comment>
   </data>
 </root>

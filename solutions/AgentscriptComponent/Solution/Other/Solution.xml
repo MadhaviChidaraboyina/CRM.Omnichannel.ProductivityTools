@@ -84,6 +84,7 @@
       <RootComponent type="1" schemaName="msdyn_agentscript_v2" behavior="0" />
       <RootComponent type="1" schemaName="msdyn_sessiontemplate" behavior="1" />
       <RootComponent type="1" schemaName="workflow" behavior="0" />
+	  <RootComponent type="60" id="{e99fa2c8-de6b-4c33-9f51-27b3ad3963ce}" behavior="0" />
       <RootComponent type="60" id="{371db648-34af-4f9e-817e-cfb9ea67540a}" behavior="0" />
       <RootComponent type="60" id="{1B68FF28-C6AF-4CBE-BE05-DA1B968CDDD4}" behavior="0" />
       <RootComponent type="60" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
@@ -107,10 +108,17 @@
       <RootComponent type="61" schemaName="msdyn_agentscripticon" behavior="0" />
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1033.resx" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_SetDefaultAgentScriptHelpText.html" behavior="0" />
-      <RootComponent type="66" schemaName="MscrmControls.CallscriptControl.CallscriptControlV2" behavior="0" />
-      <RootComponent type="66" schemaName="MscrmControls.ButtonControl.ButtonControlv2" behavior="0" />
+      <RootComponent type="66" schemaName="MscrmControls.Callscript.CallscriptControl" behavior="0" />
+      <RootComponent type="66" schemaName="MscrmControls.Button.ButtonControl" behavior="0" />
       <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
       <RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />
+	  <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_setDefaultAction.svg" behavior="0" />
+      <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_manualTrigger.svg" behavior="0" />
+      <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_agentConnector.svg" behavior="0" />
+	  <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_Agentscript_spinner.svg" behavior="0" />
+	  <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_agentScriptDesigner.bundle.js" behavior="0" />
+      <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_agentScriptDesigner.html" behavior="0" />
+	  <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_AgentscriptDesginer_internal_libarary.js" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>

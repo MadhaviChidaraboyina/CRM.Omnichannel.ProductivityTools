@@ -2,7 +2,7 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.CallscriptControl
+module MscrmControls.Callscript
 {
 	'use strict';
 
@@ -34,8 +34,8 @@ module MscrmControls.CallscriptControl
 		 * It gets session template and then retrieves call scripts associated with it
 		 */
 		public retrieveInitialData(): Promise<CallScript[]> {
-            return new Promise<CallScript[]>((resolve, reject) => {
-                let sessionTemplateUniqueName = this.cecUtil.getSessionTemplateName();
+            return new Promise<CallScript[]>(async (resolve, reject) => {
+                let sessionTemplateUniqueName = await this.cecUtil.getSessionTemplateName();
                 if (!this.context.utils.isNullOrUndefined(sessionTemplateUniqueName) && !this.context.utils.isNullOrEmptyString(sessionTemplateUniqueName)) {
                     let retrieveDataPromise = this.retrieveCallscriptRecords(sessionTemplateUniqueName);
 					retrieveDataPromise.then(
@@ -70,8 +70,8 @@ module MscrmControls.CallscriptControl
 		 * It gets session template and then retrieves default script for it by executing logicAppExecutor
 		 */
 		public retrieveDefaultCallScript(): Promise<string> {
-			return new Promise<string>((resolve, reject) => {
-                let sessionTemplateName = this.cecUtil.getSessionTemplateName();
+			return new Promise<string>(async (resolve, reject) => {
+                let sessionTemplateName = await this.cecUtil.getSessionTemplateName();
                 if (!this.context.utils.isNullOrUndefined(sessionTemplateName) && !this.context.utils.isNullOrEmptyString(sessionTemplateName)) {
 					var request = new XMLHttpRequest();
 					var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();

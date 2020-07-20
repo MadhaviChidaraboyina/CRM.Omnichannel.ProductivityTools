@@ -4,10 +4,10 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.ButtonControl {
+module MscrmControls.Button {
 	'use strict';
 
-	export class ButtonControlv2 extends MscrmCommon.FieldControlBase<IInputBag, IOutputBag> {
+	export class ButtonControl extends MscrmCommon.FieldControlBase<IInputBag, IOutputBag> {
 
 		private _context: Mscrm.ControlData<IInputBag>;
 		private buttonDomElement: any;
@@ -117,7 +117,7 @@ module MscrmControls.ButtonControl {
 			};
 			const dialogParams: XrmClientApi.DialogParameters = {};
 			dialogParams["record_Id"] = Xrm.Page.data.entity.getId();
-			this._context.navigation.openDialog("OpenExpressionBuilder", dialogOptions, dialogParams).then(
+            this._context.navigation.openDialog("OpenExpressionBuilderV2", dialogOptions, dialogParams).then(
 				function (response: any) {
 					this._context.utils.requestRender();
 					//context.accessibility.focusElementById(Constants.AddUserButtonKey);

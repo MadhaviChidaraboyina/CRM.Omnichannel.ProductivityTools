@@ -13,7 +13,7 @@
   ],
   "compilerOptions": {
     "sourceMap": true,
-    "outFile": "../../Solution/WebResources/CRMClients/msdyn_ProductivityMacros_internal_library_v2.js",
+    "outFile": "../../Solution/WebResources/CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js",
     "module": "amd",
     "allowJs": true
   }
