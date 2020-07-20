@@ -104,8 +104,8 @@ module MscrmControls.PanelControl {
                     this.eventManager.CurrentSessionId = this.currentSessionId;
                     if (this.panelToggle) {
                         this.eventManager.SelectedTool = this.productivityPaneConfigData.getToolByName(this.productivityToolSelected).toolControlName;
+                        this.setNotificationCountToZero();
                     }
-                    this.setNotificationCountToZero();
                     this.context.utils.requestRender();
                 }
                 if (actionType === Constants.sessionClosed) {
@@ -285,7 +285,9 @@ module MscrmControls.PanelControl {
             if(notificationCount == 0){
                 return Constants.emptyString;
             }
-                   
+
+            //notificationLabel shows the total count of notification, since we are not showing count
+            //and not using notificationLabel but keeping for future
             const notificationLabel = this.context.factory.createElement(
                 "Label",
                 {
@@ -302,7 +304,7 @@ module MscrmControls.PanelControl {
                     key: Constants.notificationContainerId,
                     style: ControlStyle.getNotificationContainerStyle(toolIndex+1)
                 },
-                notificationLabel);
+                Constants.emptyString);
 
             return notificationContainer;
         }
