@@ -64,6 +64,32 @@ namespace Microsoft.ProductivityMacros {
 		public static ConnectorEntityName = "msdyn_macroconnector_v2";
 		public static RunHistoryEntity = "msdyn_macrosession";
 		public static WorkflowEntity = "workflow"
-	}
+    }
+
+    export class OpenAppTabType {
+        public static data = "data";
+        public static url = "url";
+        public static relationship = "relationship";
+        public static createFromEntity = "createfromentity";
+        public static searchType = "searchtype";
+
+        public static CustomControlInputString = "customcontrol";
+        public static ThirdPartyWebsiteInputString = "websiteurl";
+        public static ThirdPartyWebsiteInputString1 = "thirdpartywebsite";
+        public static EntityViewInputString = "entityview";
+        public static DashboardInputString = "dashboard";
+        public static EntityRecordInputString = "entityrecord";
+        public static EntitySearchInputString = "entitysearch";
+        public static WebResourceInputString = "webresource";
+
+        public static control = "control";
+        public static dashboard = "dashboard";
+        public static entitylist = "entitylist";
+        public static entityrecord = "entityrecord";
+        public static search = "search";
+        public static webresource = "webresource";
+        public static thirdPartyWebsite = "webresource"; //ThirdPartyWebsite
+
+    }
 
 }
