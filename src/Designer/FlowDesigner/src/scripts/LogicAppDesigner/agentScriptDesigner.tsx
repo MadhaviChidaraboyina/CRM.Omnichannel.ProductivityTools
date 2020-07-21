@@ -382,11 +382,11 @@ async function getCRMData() {
     let sessionTemplateId = Utils.Utils.getUrlParam(SharedDefines.Constants.MACRO_ID);
     let agentScriptList : SharedDefines.ListDynamicValue[] =[];
     try {
-        let result = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_sessiontemplate", "?$filter=msdyn_sessiontemplateid eq '" + sessionTemplateId +"'&$expand=msdyn_msdyn_agentscript_v2_msdyn_sessiontemplat($select=msdyn_name,msdyn_agentscriptid,msdyn_description)&$select=msdyn_name");   
+        let result = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_sessiontemplate", "?$filter=msdyn_sessiontemplateid eq '" + sessionTemplateId +"'&$expand=msdyn_msdyn_agentscript_v2_msdyn_sessiontemplat($select=msdyn_name,msdyn_agentscript_v2id,msdyn_description)&$select=msdyn_name");   
         result.entities.forEach(function (item) {
-            item.msdyn_msdyn_agentscript_msdyn_sessiontemplate.forEach(function (input) {
+            item.msdyn_msdyn_agentscript_v2_msdyn_sessiontemplat.forEach(function (input) {
                 let agentScriptItem: SharedDefines.ListDynamicValue= {
-                    value: input.msdyn_agentscriptid,
+                    value: input.msdyn_agentscript_v2id,
                     displayName: input.msdyn_name,
                     description: input.msdyn_description,
                     disabled: false

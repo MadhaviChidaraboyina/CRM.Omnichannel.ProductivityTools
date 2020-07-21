@@ -79,7 +79,8 @@ module MscrmControls.Callscript
                     request.open('GET', requestUrl, false);
 					request.send(null);
 					if (request.status === 200) {
-						var response = JSON.parse(request.responseText);
+                        var parseResponse = JSON.parse(request.responseText);
+                        var response = parseResponse.value[0];
 						if (response.msdyn_enablebuildexpression && !this.context.utils.isNullOrEmptyString(response.msdyn_expressiondata)) {
 							let retrieveDataPromise = Microsoft.LogicAppExecutor.ExecuteLogicApp(response.msdyn_expressiondata);
 							retrieveDataPromise.then(
