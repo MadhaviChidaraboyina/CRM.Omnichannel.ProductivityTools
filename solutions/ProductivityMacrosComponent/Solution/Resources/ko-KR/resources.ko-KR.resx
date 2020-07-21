@@ -1165,7 +1165,7 @@
     <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{bf2b6722-14f7-4ebe-b551-b64e96bff693}'</comment>
   </data>
   <data name="1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
-    <value>모든 매크로를 나열</value>
+    <value>모든 매크로 나열</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
   </data>
   <data name="1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
@@ -1173,7 +1173,7 @@
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:Description,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
-    <value>비활성 매크로 목록</value>
+    <value>초안 매크로 목록</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{97a5e446-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:displayname,msdyn_actioninputparameter_v2CreatedBy" xml:space="preserve">
@@ -3145,7 +3145,7 @@
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:LocalizedName,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
-    <value>비활성 매크로</value>
+    <value>초안 매크로</value>
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{97a5e446-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:Title,Action Input ParameterInfo{b00b65d5-efef-4fc6-871e-8ace809eae26}" xml:space="preserve">
@@ -3288,10 +3288,6 @@
     <value>매크로 생성 가능</value>
     <comment> '{6DE78DFD-C198-4AB9-85E8-0E1BD20F5542}' : Description for Dialog</comment>
   </data>
-  <data name="68:Description,{F72B3711-7317-4308-A1EE-D4AC37DEC789}" xml:space="preserve">
-    <value>기본 에이전트 스크립트에 대한 식 작성기</value>
-    <comment> '{F72B3711-7317-4308-A1EE-D4AC37DEC789}' : Description for Dialog</comment>
-  </data>
   <data name="68:label,{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}{47D3F569-D09B-4800-BE5E-2F390796C597}" xml:space="preserve">
     <value>매크로 실행</value>
     <comment>'{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}' : label for cell in Dialog FormXml ID: '{47D3F569-D09B-4800-BE5E-2F390796C597}'</comment>
@@ -3324,14 +3320,6 @@
     <value>설명</value>
     <comment>'{6DE78DFD-C198-4AB9-85E8-0E1BD20F5542}' : label for cell in Dialog FormXml ID: '{83E38314-B01D-4CC2-8092-153B30F3DBC5}'</comment>
   </data>
-  <data name="68:label,{F72B3711-7317-4308-A1EE-D4AC37DEC789}{0988560E-093E-4CC0-88E6-85B92A75E973}" xml:space="preserve">
-    <value>식 작성기</value>
-    <comment>'{F72B3711-7317-4308-A1EE-D4AC37DEC789}' : label for cell in Dialog FormXml ID: '{0988560E-093E-4CC0-88E6-85B92A75E973}'</comment>
-  </data>
-  <data name="68:label,{F72B3711-7317-4308-A1EE-D4AC37DEC789}{84C68612-4308-41D2-A1DC-A808B448119F}" xml:space="preserve">
-    <value>매크로 디자이너</value>
-    <comment>'{F72B3711-7317-4308-A1EE-D4AC37DEC789}' : label for cell in Dialog FormXml ID: '{84C68612-4308-41D2-A1DC-A808B448119F}'</comment>
-  </data>
   <data name="68:LocalizedName,{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}" xml:space="preserve">
     <value>매크로 모니터 보기(v2)</value>
     <comment> '{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}' : LocalizedName for Dialog</comment>
@@ -3339,9 +3327,5 @@
   <data name="68:LocalizedName,{6DE78DFD-C198-4AB9-85E8-0E1BD20F5542}" xml:space="preserve">
     <value>매크로</value>
     <comment> '{6DE78DFD-C198-4AB9-85E8-0E1BD20F5542}' : LocalizedName for Dialog</comment>
-  </data>
-  <data name="68:LocalizedName,{F72B3711-7317-4308-A1EE-D4AC37DEC789}" xml:space="preserve">
-    <value>식 작성기(v2)</value>
-    <comment> '{F72B3711-7317-4308-A1EE-D4AC37DEC789}' : LocalizedName for Dialog</comment>
   </data>
 </root>

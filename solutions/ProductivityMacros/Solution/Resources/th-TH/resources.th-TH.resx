@@ -1029,7 +1029,7 @@
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:Description,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
-    <value>รายการของแมโครที่ไม่ใช้งาน</value>
+    <value>รายการของแมโครแบบร่าง</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{97a5e446-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:displayname,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
@@ -2517,7 +2517,7 @@
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:LocalizedName,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
-    <value>แมโครที่ไม่ใช้งาน</value>
+    <value>แมโครแบบร่าง</value>
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{97a5e446-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:Title,Action Input ParameterInfo{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">

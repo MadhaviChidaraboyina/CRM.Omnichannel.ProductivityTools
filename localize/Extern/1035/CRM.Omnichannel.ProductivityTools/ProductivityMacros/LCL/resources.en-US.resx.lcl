@@ -389,41 +389,50 @@
       </Item>
       <Item ItemId=";1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Lists down all the Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+          <Val><![CDATA[Lists down all the macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
             <Val><![CDATA[Luettelee kaikki makrot]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Lists down all the Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:55.0006943Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008553Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[List of Active Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+          <Val><![CDATA[List of active macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
             <Val><![CDATA[Aktiivisten makrojen luettelo]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[List of Active Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003147Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008553Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[List of Inactive Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Passiivisten makrojen luettelo]]></Val>
+          <Val><![CDATA[List of draft macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Luonnosmakrojen luettelo]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[List of Inactive Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003147Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008553Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparameterCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3831,41 +3840,50 @@
       </Item>
       <Item ItemId=";1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[All Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+          <Val><![CDATA[All macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
             <Val><![CDATA[Kaikki makrot]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[All Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:55.0006758Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008586Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Active Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+          <Val><![CDATA[Active macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
             <Val><![CDATA[Aktiiviset makrot]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Active Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003147Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008545Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Inactive Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Passiiviset makrot]]></Val>
+          <Val><![CDATA[Draft macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Luonnosmakrot]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Inactive Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003147Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008545Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">

@@ -269,46 +269,6 @@
     <value>مضمّن</value>
     <comment>Display string for logic app built in category</comment>
   </data>
-  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
-    <value>خدمة العملاء</value>
-    <comment>Display string for custom category</comment>
-  </data>
-  <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
-    <value>موصل البرنامج النصي للمندوب</value>
-    <comment>Display name for custom connector</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
-    <value>تعيين البرنامج النصي للمندوب الافتراضي</value>
-    <comment>Summary for set call script action</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
-    <value>تعيين البرنامج النصي للمندوب الافتراضي </value>
-    <comment>Description for set call script action</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
-    <value>البرنامج النصي للمندوب </value>
-    <comment>Title for input paramater  set call script action</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>حدد البرنامج النصي للمندوب </value>
-    <comment>Description for input paramater  set call script action</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
-    <value>البرنامج النصي للمندوب الافتراضي </value>
-    <comment>Title for output paramater  set call script action</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>اسم البرنامج النصي للمندوب </value>
-    <comment>Description for output paramater  set call script action</comment>
-  </data>
-  <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
-    <value>بدء تقييم التعبير  </value>
-    <comment>Summary for start trigger for expression evaluation</comment>
-  </data>
-  <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
-    <value>عند تحميل جلسة العمل، ابدأ تقييم التعبير</value>
-    <comment>Description for start trigger for expression evaluation</comment>
-  </data>
   <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
     <value>بحث </value>
     <comment>Search string for Designer Control</comment>

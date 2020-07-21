@@ -184,19 +184,19 @@
       </Item>
       <Item ItemId=";1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Lists down all the Macros]]></Val>
+          <Val><![CDATA[Lists down all the macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[List of Active Macros]]></Val>
+          <Val><![CDATA[List of active macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:Description,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[List of Inactive Macros]]></Val>
+          <Val><![CDATA[List of draft macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1738,19 +1738,19 @@
       </Item>
       <Item ItemId=";1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[All Macros]]></Val>
+          <Val><![CDATA[All macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Active Macros]]></Val>
+          <Val><![CDATA[Active macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:LocalizedName,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Inactive Macros]]></Val>
+          <Val><![CDATA[Draft macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

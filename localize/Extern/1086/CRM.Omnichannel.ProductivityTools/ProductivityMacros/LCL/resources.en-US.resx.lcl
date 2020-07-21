@@ -389,41 +389,50 @@
       </Item>
       <Item ItemId=";1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Lists down all the Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Senaraikan semua Makro]]></Val>
+          <Val><![CDATA[Lists down all the macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Senaraikan semua makro]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Lists down all the Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:55.0008058Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008795Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[List of Active Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Senarai Makro Aktif]]></Val>
+          <Val><![CDATA[List of active macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Senarai makro aktif]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[List of Active Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:21.0001442Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008795Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[List of Inactive Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Senarai Makro Tidak Aktif]]></Val>
+          <Val><![CDATA[List of draft macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Senarai makro draf]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[List of Inactive Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:21.0001442Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008795Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparameterCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3831,41 +3840,50 @@
       </Item>
       <Item ItemId=";1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[All Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Semua Makro]]></Val>
+          <Val><![CDATA[All macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Semua makro]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[All Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-jachyl" DateTime="2019-10-02T08:11:55.0007858Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008787Z" />
         <Props>
-          <Str Name="Custom3" Val="WO21128_20190930" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Active Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Makro Aktif]]></Val>
+          <Val><![CDATA[Active macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Makro aktif]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Active Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:21.0001425Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008787Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Inactive Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Makro Tidak Aktif]]></Val>
+          <Val><![CDATA[Draft macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Makro draf]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Inactive Macros]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:21.0001425Z" />
+        <Modified By="v-rondai" DateTime="2020-07-20T04:57:18.0008787Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32576_20200716" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" ItemType="0;.resx" PsrId="211" Leaf="true">

@@ -123,4 +123,64 @@
   <data name="Set_Default_AgentScript_Yes_Help_Text" xml:space="preserve">
     <value>Ορίστε την εναλλαγή σε "Ναι" για να ενεργοποιήσετε και να δημιουργήσετε μια παράσταση για να οριστεί η προεπιλεγμένη δέσμη ενεργειών για έναν συγκεκριμένο τύπο περιόδου λειτουργίας.</value>
   </data>
+  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
+    <value>Built-in</value>
+    <comment>Display string for logic app built in category</comment>
+  </data>
+  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
+    <value>Customer Service</value>
+    <comment>Display string for custom category</comment>
+  </data>
+  <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
+    <value>Agent script connector</value>
+    <comment>Display name for custom connector</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
+    <value>Set default agent script</value>
+    <comment>Summary for set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
+    <value>Sets the default agent script </value>
+    <comment>Description for set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
+    <value>Agent script </value>
+    <comment>Title for input paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
+    <value>Select the agent script </value>
+    <comment>Description for input paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
+    <value>Default agent script </value>
+    <comment>Title for output paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
+    <value>Name of the agent script </value>
+    <comment>Description for output paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
+    <value>Start evaluating expression  </value>
+    <comment>Summary for start trigger for expression evaluation</comment>
+  </data>
+  <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
+    <value>When the session loads, start evaluating the expression</value>
+    <comment>Description for start trigger for expression evaluation</comment>
+  </data>
+  <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
+    <value>Search </value>
+    <comment>Search string for Designer Control</comment>
+  </data>
+  <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
+    <value>Condition</value>
+    <comment>Summary for expression builder for expression evaluation</comment>
+  </data>
+  <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
+    <value>Save and close</value>
+    <comment>Action to save and close</comment>
+  </data>
+  <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Action to cancel</comment>
+  </data>
 </root>

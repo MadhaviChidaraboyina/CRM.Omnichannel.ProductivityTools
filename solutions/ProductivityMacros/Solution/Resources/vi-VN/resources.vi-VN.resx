@@ -1021,15 +1021,15 @@
     <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
   </data>
   <data name="1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
-    <value>Liệt kê tất cả các Macro</value>
+    <value>Liệt kê tất cả các macro</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
   </data>
   <data name="1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
-    <value>Danh sách macro hiện hoạt</value>
+    <value>Danh sách các macro hiện hoạt</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:Description,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
-    <value>Danh sách macro không hoạt động</value>
+    <value>Danh sách các macro bản nháp</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{97a5e446-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:displayname,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
@@ -2509,7 +2509,7 @@
     <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}'</comment>
   </data>
   <data name="1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
-    <value>Tất cả các Macro</value>
+    <value>Tất cả các macro</value>
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
   </data>
   <data name="1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
@@ -2517,7 +2517,7 @@
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:LocalizedName,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
-    <value>Macro không hoạt động</value>
+    <value>Macro bản nháp</value>
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{97a5e446-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:Title,Action Input ParameterInfo{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">

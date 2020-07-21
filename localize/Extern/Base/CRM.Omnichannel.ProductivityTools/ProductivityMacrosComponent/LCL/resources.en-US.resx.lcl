@@ -395,19 +395,19 @@
       </Item>
       <Item ItemId=";1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Lists down all the Macros]]></Val>
+          <Val><![CDATA[Lists down all the macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[List of Active Macros]]></Val>
+          <Val><![CDATA[List of active macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:Description,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[List of Inactive Macros]]></Val>
+          <Val><![CDATA[List of draft macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2021,19 +2021,19 @@
       </Item>
       <Item ItemId=";1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[All Macros]]></Val>
+          <Val><![CDATA[All macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Active Macros]]></Val>
+          <Val><![CDATA[Active macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";1:LocalizedName,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Inactive Macros]]></Val>
+          <Val><![CDATA[Draft macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3179,7 +3179,7 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_macrosolutionconfiguration_v2msdyn_designerurlconfigentityquery" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[An oData query to retrieve record from which to re]]></Val>
+          <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4743,12 +4743,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";68:Description,{F72B3711-7317-4308-A1EE-D4AC37DEC789}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Expression builder for default agent script]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";68:LocalizedName,{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[View Macros Monitor v2]]></Val>
@@ -4758,12 +4752,6 @@
       <Item ItemId=";68:LocalizedName,{6DE78DFD-C198-4AB9-85E8-0E1BD20F5542}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Macros]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";68:LocalizedName,{F72B3711-7317-4308-A1EE-D4AC37DEC789}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Expression builder v2]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4812,18 +4800,6 @@
       <Item ItemId=";68:label,{6DE78DFD-C198-4AB9-85E8-0E1BD20F5542}{83E38314-B01D-4CC2-8092-153B30F3DBC5}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Description]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";68:label,{F72B3711-7317-4308-A1EE-D4AC37DEC789}{0988560E-093E-4CC0-88E6-85B92A75E973}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Expression builder]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";68:label,{F72B3711-7317-4308-A1EE-D4AC37DEC789}{84C68612-4308-41D2-A1DC-A808B448119F}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Macro Designer]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

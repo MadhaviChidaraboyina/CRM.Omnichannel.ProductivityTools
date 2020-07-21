@@ -269,46 +269,6 @@
     <value>기본 제공</value>
     <comment>Display string for logic app built in category</comment>
   </data>
-  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
-    <value>고객 서비스</value>
-    <comment>Display string for custom category</comment>
-  </data>
-  <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
-    <value>에이전트 스크립트 커넥터</value>
-    <comment>Display name for custom connector</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
-    <value>기본 에이전트 스크립트 설정 </value>
-    <comment>Summary for set call script action</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
-    <value>기본 에이전트 스크립트 설정 </value>
-    <comment>Description for set call script action</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
-    <value>에이전트 스크립트 </value>
-    <comment>Title for input paramater  set call script action</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>에이전트 스크립트 선택 </value>
-    <comment>Description for input paramater  set call script action</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
-    <value>기본 에이전트 스크립트 </value>
-    <comment>Title for output paramater  set call script action</comment>
-  </data>
-  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>에이전트 스크립트의 이름 </value>
-    <comment>Description for output paramater  set call script action</comment>
-  </data>
-  <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
-    <value>평가 식 시작  </value>
-    <comment>Summary for start trigger for expression evaluation</comment>
-  </data>
-  <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
-    <value>세션이 로드될 때 식 평가 시작</value>
-    <comment>Description for start trigger for expression evaluation</comment>
-  </data>
   <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
     <value>검색 </value>
     <comment>Search string for Designer Control</comment>
