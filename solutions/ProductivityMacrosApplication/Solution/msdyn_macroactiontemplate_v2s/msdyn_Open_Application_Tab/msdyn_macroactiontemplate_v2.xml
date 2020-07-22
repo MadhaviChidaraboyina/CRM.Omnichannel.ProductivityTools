@@ -13,7 +13,7 @@
     <msdyn_uniquename>msdyn_SessionConnector</msdyn_uniquename>
   </msdyn_macroconnector>
   <msdyn_name>Open_Application_Tab</msdyn_name>
-  <msdyn_runtimeapi>Microsoft.ChannelIntegrationFramework.Macros.openApplicationTemplate(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_runtimeapi>Microsoft.ProductivityMacros.Internal.openApplicationTemplate(actionName,actionInputs)</msdyn_runtimeapi>
   <msdyn_subtitle default="Session Connector">
     <label description="Session Connector" languagecode="1033" />
   </msdyn_subtitle>

@@ -13,7 +13,7 @@
     <msdyn_uniquename>msdyn_SessionConnector</msdyn_uniquename>
   </msdyn_macroconnector>
   <msdyn_name>Get_current_page</msdyn_name>
-  <msdyn_runtimeapi>Microsoft.ChannelIntegrationFramework.Macros.getCurrentPageAction(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_runtimeapi>Microsoft.ProductivityMacros.Internal.getCurrentPageAction(actionName,actionInputs)</msdyn_runtimeapi>
   <msdyn_subtitle default="Session connector">
     <label description="Session connector" languagecode="1033" />
   </msdyn_subtitle>

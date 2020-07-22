@@ -1,7 +1,7 @@
 <msdyn_macroconnector_v2 msdyn_uniquename="msdyn_SessionConnector">
   <iscustomizable>0</iscustomizable>
   <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
-  <msdyn_callback>Microsoft.ChannelIntegrationFramework.Macros.resolveSlug(context,paramName)</msdyn_callback>
+  <msdyn_callback>Microsoft.ProductivityMacros.Internal.resolveSlug(context,paramName)</msdyn_callback>
   <msdyn_categorykey>CONNECTORS</msdyn_categorykey>
   <msdyn_categorylabel default="Predefined automation actions">
     <label description="Predefined automation actions" languagecode="1033" />
