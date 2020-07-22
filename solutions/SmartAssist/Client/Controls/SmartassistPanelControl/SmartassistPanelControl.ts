@@ -93,6 +93,10 @@ module MscrmControls.SmartassistPanelControl {
             if (this.newInstance && Constants.IncidentEntityName == this.AnchorTabContext.entityName) {
                 this.renderSuggestions(false, Utility.FormatGuid(this.AnchorTabContext.entityId));
             }
+            else if (this.newInstance) {
+                // No data to PP
+                this.DispatchNoDataEvent();
+            }
             this.newInstance = false;
         }
 
@@ -198,12 +202,14 @@ module MscrmControls.SmartassistPanelControl {
             if (recordId) {
                 if (Utility.isNullOrEmptyString(recordId)) {
                     recordId = this.tabSwitchEntityId;
-                }                
-                var configs = await SAConfigDataManager.Instance.getFilteredSAConfig() as SmartassistPanelControl.SAConfig[];                
-                // remove and unbind current configs 
-                //for (let i = 0; i <= (configs.length - 1); i++) {
-                //    SmartassistPanelControl._context.utils.unbindDOMComponent(Constants.SAAnyEntityControlContainerId + configs[i].SmartassistConfigurationId);
-                //}
+                }
+                var configs = await SAConfigDataManager.Instance.getFilteredSAConfig() as SmartassistPanelControl.SAConfig[];
+
+                if (configs.length < 1) {
+
+                    // No Data to PP
+                    this.DispatchNoDataEvent();
+                }
                 configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
                 for (let i = 0; i <= (configs.length - 1); i++) {
                     this.addDivForSmartAssistConfig(configs[i]);
@@ -243,9 +249,8 @@ module MscrmControls.SmartassistPanelControl {
                             const componentId = Constants.SAAnyEntityControlContainerId + configs[i].SmartassistConfigurationId;
                             SmartassistPanelControl._context.utils.unbindDOMComponent(componentId);
 
-                            // Collapse PP : TODO: discuss with PP team and enable rerendering fro other entities
-                            //var ppRerender = new MscrmControls.PanelControl.Rerender(sessionId, true);
-                            //Utility.DispatchPanelInboundEvent(ppRerender);
+                            // No Data to PP
+                            this.DispatchNoDataEvent();
                         }
                     }
                     else {
@@ -279,6 +284,15 @@ module MscrmControls.SmartassistPanelControl {
                 return false;
             }
             return true;
+        }
+
+        /**Dispatch No data event to PP */
+        private DispatchNoDataEvent() {
+            var sessionId = Utility.getCurrentSessionId();
+            var ppRerender = new MscrmControls.PanelControl.Rerender(sessionId, true);
+
+            // Dispatch No Data PP event 
+            Utility.DispatchPanelInboundEvent(ppRerender);
         }
     }
 }
