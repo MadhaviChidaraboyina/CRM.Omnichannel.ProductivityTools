@@ -12,7 +12,7 @@
   <msdyn_displayname default="Session Connector">
     <label description="Session Connector" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/MacroDesigner/msdyn_sessionConnector_macro_connector.svg</msdyn_icon>
+  <msdyn_icon>WebResources/Macros/msdyn_sessionConnector_macro_connector.svg</msdyn_icon>
   <msdyn_name>Session Connector</msdyn_name>
   <msdyn_prefix>Session</msdyn_prefix>
   <msdyn_title default="Session Connector">

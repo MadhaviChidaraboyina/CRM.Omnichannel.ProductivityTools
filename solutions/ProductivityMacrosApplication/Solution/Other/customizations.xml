@@ -10,7 +10,6 @@
   <OrganizationSettings />
   <optionsets />
   <CustomControls />
-  <WebResources />
   <EntityDataProviders />
   <msdyn_msdyn_actioninputparameter_v2_msdyn_parset>
     <msdyn_msdyn_actioninputparameter_v2_msdyn_par msdyn_actioninputparameter_v2id.msdyn_uniquename="msdyn_Open_Grid_Input_Params_Optional" msdyn_parameterdefinition_v2id.msdyn_uniquename="msdyn_ViewId">
