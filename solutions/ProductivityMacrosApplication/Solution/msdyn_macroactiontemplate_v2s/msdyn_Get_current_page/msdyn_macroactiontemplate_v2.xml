@@ -7,7 +7,7 @@
   <msdyn_displayname default="Get the current tab">
     <label description="Get the current tab" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/Macros/msdyn_ProductivityMacros_get_current_page.svg</msdyn_icon>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_get_current_page.svg</msdyn_icon>
   <msdyn_kind>ACTIONS</msdyn_kind>
   <msdyn_macroconnector>
     <msdyn_uniquename>msdyn_SessionConnector</msdyn_uniquename>
