@@ -90,13 +90,17 @@ module MscrmControls.SmartassistPanelControl {
             if (context.parameters.SessionContext && Utility.IsValidJsonString(context.parameters.SessionContext.raw)) {
                 this.ppSessionContext = JSON.parse(context.parameters.SessionContext.raw);
             }
-            if (this.newInstance && Constants.IncidentEntityName == this.AnchorTabContext.entityName) {
-                this.renderSuggestions(false, Utility.FormatGuid(this.AnchorTabContext.entityId));
+
+            if (this.newInstance) {
+                if (Constants.IncidentEntityName == this.AnchorTabContext.entityName && !Utility.isNullOrEmptyString(this.AnchorTabContext.entityId)) {
+                    this.renderSuggestions(false, Utility.FormatGuid(this.AnchorTabContext.entityId));
+                }
+                else {
+                    // No data to PP
+                    this.DispatchNoDataEvent();
+                }
             }
-            else if (this.newInstance) {
-                // No data to PP
-                this.DispatchNoDataEvent();
-            }
+
             this.newInstance = false;
         }
 
@@ -242,16 +246,17 @@ module MscrmControls.SmartassistPanelControl {
                 recordId = Utility.FormatGuid(event.context.entityId);
             }
             if (!this.isSameSession(sessionId)) {
-                if (anchorContext && anchorContext.entityName && anchorContext.entityId) {
-                    if (anchorContext.entityName != Constants.IncidentEntityName) {
+                if (anchorContext && anchorContext.entityName) {
+                    if (anchorContext.entityName != Constants.IncidentEntityName
+                        || Utility.isNullOrEmptyString(anchorContext.entityId)) {
                         var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
                         for (let i = 0; i <= (configs.length - 1); i++) {
                             const componentId = Constants.SAAnyEntityControlContainerId + configs[i].SmartassistConfigurationId;
                             SmartassistPanelControl._context.utils.unbindDOMComponent(componentId);
-
-                            // No Data to PP
-                            this.DispatchNoDataEvent();
                         }
+
+                        // No Data to PP
+                        this.DispatchNoDataEvent();
                     }
                     else {
                         this.anchorTabEntityId = Utility.FormatGuid(anchorContext.entityId);
