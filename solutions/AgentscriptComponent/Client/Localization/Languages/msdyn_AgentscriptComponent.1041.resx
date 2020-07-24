@@ -124,63 +124,63 @@
     <value>特定のセッションの種類に既定のスクリプトを設定するには、[はい] に切り替え、式をビルドします。</value>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
-    <value>Built-in</value>
+    <value>組み込み</value>
     <comment>Display string for logic app built in category</comment>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
-    <value>Customer Service</value>
+    <value>顧客サービス</value>
     <comment>Display string for custom category</comment>
   </data>
   <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
-    <value>Agent script connector</value>
+    <value>エージェント スクリプト コネクタ</value>
     <comment>Display name for custom connector</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
-    <value>Set default agent script</value>
+    <value>既定のエージェント スクリプトの設定</value>
     <comment>Summary for set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
-    <value>Sets the default agent script </value>
+    <value>既定のエージェント スクリプトを設定します </value>
     <comment>Description for set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
-    <value>Agent script </value>
+    <value>エージェント スクリプト </value>
     <comment>Title for input paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>Select the agent script </value>
+    <value>エージェント スクリプトの選択 </value>
     <comment>Description for input paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
-    <value>Default agent script </value>
+    <value>既定のエージェント スクリプト </value>
     <comment>Title for output paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>Name of the agent script </value>
+    <value>エージェント スクリプトの名前 </value>
     <comment>Description for output paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
-    <value>Start evaluating expression  </value>
+    <value>式の評価を開始  </value>
     <comment>Summary for start trigger for expression evaluation</comment>
   </data>
   <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
-    <value>When the session loads, start evaluating the expression</value>
+    <value>セッションが読み込まれたら、式の評価を開始します</value>
     <comment>Description for start trigger for expression evaluation</comment>
   </data>
   <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
-    <value>Search </value>
+    <value>検索 </value>
     <comment>Search string for Designer Control</comment>
   </data>
   <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
-    <value>Condition</value>
+    <value>条件</value>
     <comment>Summary for expression builder for expression evaluation</comment>
   </data>
   <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
-    <value>Save and close</value>
+    <value>保存して閉じる</value>
     <comment>Action to save and close</comment>
   </data>
   <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
     <comment>Action to cancel</comment>
   </data>
 </root>

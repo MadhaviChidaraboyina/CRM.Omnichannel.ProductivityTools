@@ -124,63 +124,63 @@
     <value>Belirli bir oturum türü için varsayılan komut dosyasını ayarlamak isterseniz ifadeyi etkinleştirip oluşturmak için seçeneği Evet olarak ayarlayın.</value>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
-    <value>Built-in</value>
+    <value>Yerleşik</value>
     <comment>Display string for logic app built in category</comment>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
-    <value>Customer Service</value>
+    <value>Müşteri Hizmetleri</value>
     <comment>Display string for custom category</comment>
   </data>
   <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
-    <value>Agent script connector</value>
+    <value>Aracı hazır metni bağlayıcısı</value>
     <comment>Display name for custom connector</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
-    <value>Set default agent script</value>
+    <value>Varsayılan aracı hazır metnini ayarla</value>
     <comment>Summary for set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
-    <value>Sets the default agent script </value>
+    <value>Varsayılan aracı hazır metnini ayarlar </value>
     <comment>Description for set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
-    <value>Agent script </value>
+    <value>Aracı hazır metni </value>
     <comment>Title for input paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>Select the agent script </value>
+    <value>Aracı hazır metnini seçin </value>
     <comment>Description for input paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
-    <value>Default agent script </value>
+    <value>Varsayılan aracı hazır metni </value>
     <comment>Title for output paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>Name of the agent script </value>
+    <value>Aracı hazır metninin adı </value>
     <comment>Description for output paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
-    <value>Start evaluating expression  </value>
+    <value>İfadeyi değerlendirmeye başla  </value>
     <comment>Summary for start trigger for expression evaluation</comment>
   </data>
   <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
-    <value>When the session loads, start evaluating the expression</value>
+    <value>Oturum yüklendiğinde ifadeyi değerlendirmeye başlayın</value>
     <comment>Description for start trigger for expression evaluation</comment>
   </data>
   <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
-    <value>Search </value>
+    <value>Ara </value>
     <comment>Search string for Designer Control</comment>
   </data>
   <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
-    <value>Condition</value>
+    <value>Koşul</value>
     <comment>Summary for expression builder for expression evaluation</comment>
   </data>
   <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
-    <value>Save and close</value>
+    <value>Kaydet ve kapat</value>
     <comment>Action to save and close</comment>
   </data>
   <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
-    <value>Cancel</value>
+    <value>İptal</value>
     <comment>Action to cancel</comment>
   </data>
 </root>

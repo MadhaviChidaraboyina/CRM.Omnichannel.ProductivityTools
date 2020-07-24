@@ -9,6 +9,246 @@
     <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Poveznik skripte agenta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000898Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display name for custom connector]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_CONDITION_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Condition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uvjet]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000898Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for expression builder for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer Service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Služba za korisnike]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000898Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display string for custom category]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Built-in]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ugrađeno]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000898Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display string for logic app built in category]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SEARCHTEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Pretraživanje ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Search string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sets the default agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Postavlja zadanu skriptu agenta ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select the agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Odabir skripte agenta ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for input paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skripta agenta ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for input paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name of the agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Naziv skripte agenta ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for output paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Default agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Zadana skripta agenta ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for output paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Set default agent script]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Postavi zadanu skriptu agenta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_START_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[When the session loads, start evaluating the expression]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kada se sesija učita, započni procjenu izraza]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for start trigger for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_START_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start evaluating expression  ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Započni procjenu izraza  ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for start trigger for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_CANCEL" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cancel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Odustani]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to cancel]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SAVE_AND_CLOSE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save and close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Spremi i zatvori]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.00009Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to save and close]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
       <Item ItemId=";Set_Default_AgentScript_No_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Set the toggle to No to disable the expression to set the default script for a particular session type.]]></Val>

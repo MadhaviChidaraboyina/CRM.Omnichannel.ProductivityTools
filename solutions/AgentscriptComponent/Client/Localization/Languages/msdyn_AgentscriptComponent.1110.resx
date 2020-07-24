@@ -124,63 +124,63 @@
     <value>Defina a opción en Si para activar e compilar a expresión para configurar o script predefinido para un tipo de sesión en particular.</value>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
-    <value>Built-in</value>
+    <value>Integrada</value>
     <comment>Display string for logic app built in category</comment>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
-    <value>Customer Service</value>
+    <value>Servizo de atención ao cliente</value>
     <comment>Display string for custom category</comment>
   </data>
   <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
-    <value>Agent script connector</value>
+    <value>Conector do script de axente</value>
     <comment>Display name for custom connector</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
-    <value>Set default agent script</value>
+    <value>Configurar o script de axente predefinido</value>
     <comment>Summary for set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
-    <value>Sets the default agent script </value>
+    <value>Configura o script de axente predefinido </value>
     <comment>Description for set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
-    <value>Agent script </value>
+    <value>Script de axente </value>
     <comment>Title for input paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>Select the agent script </value>
+    <value>Seleccionar o script de axente </value>
     <comment>Description for input paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
-    <value>Default agent script </value>
+    <value>Script de axente predefinido </value>
     <comment>Title for output paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>Name of the agent script </value>
+    <value>Nome do script de axente </value>
     <comment>Description for output paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
-    <value>Start evaluating expression  </value>
+    <value>Iniciar a avaliación da expresión  </value>
     <comment>Summary for start trigger for expression evaluation</comment>
   </data>
   <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
-    <value>When the session loads, start evaluating the expression</value>
+    <value>Cando se cargue a sesión, iniciar a avaliación da expresión</value>
     <comment>Description for start trigger for expression evaluation</comment>
   </data>
   <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
-    <value>Search </value>
+    <value>Buscar </value>
     <comment>Search string for Designer Control</comment>
   </data>
   <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
-    <value>Condition</value>
+    <value>Condición</value>
     <comment>Summary for expression builder for expression evaluation</comment>
   </data>
   <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
-    <value>Save and close</value>
+    <value>Gardar e pechar</value>
     <comment>Action to save and close</comment>
   </data>
   <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
     <comment>Action to cancel</comment>
   </data>
 </root>

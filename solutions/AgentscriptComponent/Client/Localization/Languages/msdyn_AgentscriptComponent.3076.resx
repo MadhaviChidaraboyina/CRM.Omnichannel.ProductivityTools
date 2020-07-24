@@ -124,63 +124,63 @@
     <value>將開關設定為 [是] 以啟用和建置運算式，為特定工作階段類型設定預設的指令碼。</value>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
-    <value>Built-in</value>
+    <value>內建</value>
     <comment>Display string for logic app built in category</comment>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
-    <value>Customer Service</value>
+    <value>客戶服務</value>
     <comment>Display string for custom category</comment>
   </data>
   <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
-    <value>Agent script connector</value>
+    <value>專員指令碼連接器</value>
     <comment>Display name for custom connector</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
-    <value>Set default agent script</value>
+    <value>設定預設專員指令碼</value>
     <comment>Summary for set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
-    <value>Sets the default agent script </value>
+    <value>設定預設專員指令碼</value>
     <comment>Description for set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
-    <value>Agent script </value>
+    <value>專員指令碼</value>
     <comment>Title for input paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>Select the agent script </value>
+    <value>選取專員指令碼</value>
     <comment>Description for input paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
-    <value>Default agent script </value>
+    <value>預設專員指令碼</value>
     <comment>Title for output paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>Name of the agent script </value>
+    <value>專員指令碼的名稱</value>
     <comment>Description for output paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
-    <value>Start evaluating expression  </value>
+    <value>開始評估運算式</value>
     <comment>Summary for start trigger for expression evaluation</comment>
   </data>
   <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
-    <value>When the session loads, start evaluating the expression</value>
+    <value>工作階段載入時，開始評估運算式</value>
     <comment>Description for start trigger for expression evaluation</comment>
   </data>
   <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
-    <value>Search </value>
+    <value>搜尋</value>
     <comment>Search string for Designer Control</comment>
   </data>
   <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
-    <value>Condition</value>
+    <value>條件</value>
     <comment>Summary for expression builder for expression evaluation</comment>
   </data>
   <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
-    <value>Save and close</value>
+    <value>儲存並關閉</value>
     <comment>Action to save and close</comment>
   </data>
   <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
-    <value>Cancel</value>
+    <value>取消</value>
     <comment>Action to cancel</comment>
   </data>
 </root>

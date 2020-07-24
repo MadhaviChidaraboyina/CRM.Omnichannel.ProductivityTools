@@ -124,63 +124,63 @@
     <value>बिल्ड व्यंजक को सक्षम करने के लिए टॉगल को हाँ पर सेट करें, ताकि किसी विशेष सत्र प्रकार के लिए डिफ़ॉल्ट स्क्रिप्ट सेट की जा सके.</value>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
-    <value>Built-in</value>
+    <value>अंतर्निहित</value>
     <comment>Display string for logic app built in category</comment>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
-    <value>Customer Service</value>
+    <value>ग्राहक सेवा</value>
     <comment>Display string for custom category</comment>
   </data>
   <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
-    <value>Agent script connector</value>
+    <value>एजेंट स्क्रिप्ट कनेक्टर</value>
     <comment>Display name for custom connector</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
-    <value>Set default agent script</value>
+    <value>डिफ़ॉल्ट एजेंट स्क्रिप्ट सेट करें</value>
     <comment>Summary for set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
-    <value>Sets the default agent script </value>
+    <value>डिफ़ॉल्ट एजेंट स्क्रिप्ट सेट करता है </value>
     <comment>Description for set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
-    <value>Agent script </value>
+    <value>एजेंट स्क्रिप्ट </value>
     <comment>Title for input paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>Select the agent script </value>
+    <value>एजेंट स्क्रिप्ट चुनें </value>
     <comment>Description for input paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
-    <value>Default agent script </value>
+    <value>डिफ़ॉल्ट एजेंट स्क्रिप्ट </value>
     <comment>Title for output paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
-    <value>Name of the agent script </value>
+    <value>एजेंट स्क्रिप्ट का नाम </value>
     <comment>Description for output paramater  set call script action</comment>
   </data>
   <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
-    <value>Start evaluating expression  </value>
+    <value>व्यंजक का मूल्यांकन प्रारंभ करें  </value>
     <comment>Summary for start trigger for expression evaluation</comment>
   </data>
   <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
-    <value>When the session loads, start evaluating the expression</value>
+    <value>सत्र लोड होने पर, व्यंजक का मूल्यांकन करना प्रारंभ करें</value>
     <comment>Description for start trigger for expression evaluation</comment>
   </data>
   <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
-    <value>Search </value>
+    <value>खोजें </value>
     <comment>Search string for Designer Control</comment>
   </data>
   <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
-    <value>Condition</value>
+    <value>शर्त</value>
     <comment>Summary for expression builder for expression evaluation</comment>
   </data>
   <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
-    <value>Save and close</value>
+    <value>सहेजें और बंद करें</value>
     <comment>Action to save and close</comment>
   </data>
   <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
-    <value>Cancel</value>
+    <value>रद्द करें</value>
     <comment>Action to cancel</comment>
   </data>
 </root>

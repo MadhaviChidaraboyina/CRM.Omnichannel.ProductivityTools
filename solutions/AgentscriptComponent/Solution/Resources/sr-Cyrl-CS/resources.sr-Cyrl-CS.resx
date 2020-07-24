@@ -1189,19 +1189,19 @@
     <comment>'Agent script' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="68:Description,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}" xml:space="preserve">
-    <value>Expression builder for default agent script</value>
+    <value>Израда израза за подразумевану скрипту агента</value>
     <comment> '{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : Description for Dialog</comment>
   </data>
   <data name="68:label,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}{0988560E-093E-4CC0-88E6-85B92A75E973}" xml:space="preserve">
-    <value>Expression builder</value>
+    <value>Израда израза</value>
     <comment>'{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : label for cell in Dialog FormXml ID: '{0988560E-093E-4CC0-88E6-85B92A75E973}'</comment>
   </data>
   <data name="68:label,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}{84C68612-4308-41D2-A1DC-A808B448119F}" xml:space="preserve">
-    <value>Macro Designer</value>
+    <value>Дизајнер макроа</value>
     <comment>'{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : label for cell in Dialog FormXml ID: '{84C68612-4308-41D2-A1DC-A808B448119F}'</comment>
   </data>
   <data name="68:LocalizedName,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}" xml:space="preserve">
-    <value>Expression builder</value>
+    <value>Израда израза</value>
     <comment> '{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : LocalizedName for Dialog</comment>
   </data>
 </root>
