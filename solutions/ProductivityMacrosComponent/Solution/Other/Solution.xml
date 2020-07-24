@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ImportExportXml version="9.0.0000.0000" SolutionPackageVersion="9.0" languagecode="1033" generatedBy="OnPremise" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
-    <UniqueName>ProductivityMacrosComponent</UniqueName>
+    <UniqueName>msdyn_ProductivityMacrosComponent</UniqueName>
     <LocalizedNames>
       <LocalizedName description="Macros" languagecode="1033" />
     </LocalizedNames>

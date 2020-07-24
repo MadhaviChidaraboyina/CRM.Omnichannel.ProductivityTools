@@ -1,6 +1,6 @@
 <ImportExportXml version="9.1.0.18311" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
-    <UniqueName>ProductivityMacrosApplication</UniqueName>
+    <UniqueName>msdyn_ProductivityMacrosApplication</UniqueName>
     <LocalizedNames>
       <LocalizedName description="Macros" languagecode="1033" />
     </LocalizedNames>

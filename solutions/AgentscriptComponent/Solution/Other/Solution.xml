@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ImportExportXml version="9.1.0.19405" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
-    <UniqueName>AgentscriptComponent</UniqueName>
+    <UniqueName>msdyn_AgentscriptComponent</UniqueName>
     <LocalizedNames>
       <LocalizedName description="Agent scripts" languagecode="1033" />
     </LocalizedNames>
