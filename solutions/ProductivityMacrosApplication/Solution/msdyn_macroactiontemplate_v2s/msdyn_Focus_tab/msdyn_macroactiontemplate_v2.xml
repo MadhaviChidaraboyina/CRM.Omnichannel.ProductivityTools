@@ -7,13 +7,13 @@
   <msdyn_displayname default="Focus on the tab">
     <label description="Focus on the tab" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/Macros/msdyn_ProductivityMacros_focus_tab.svg</msdyn_icon>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_focus_tab.svg</msdyn_icon>
   <msdyn_kind>ACTIONS</msdyn_kind>
   <msdyn_macroconnector>
     <msdyn_uniquename>msdyn_SessionConnector</msdyn_uniquename>
   </msdyn_macroconnector>
   <msdyn_name>Focus_tab</msdyn_name>
-  <msdyn_runtimeapi>Microsoft.ChannelIntegrationFramework.Macros.foucsTabAction(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_runtimeapi>Microsoft.ProductivityMacros.Internal.foucsTabAction(actionName,actionInputs)</msdyn_runtimeapi>
   <msdyn_subtitle default="Session connector">
     <label description="Session connector" languagecode="1033" />
   </msdyn_subtitle>
