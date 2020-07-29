@@ -162,13 +162,13 @@ namespace Microsoft.ProductivityMacros.Internal {
         let AppTabConstant = OpenAppTabType;
         switch (entityData.PageType.replace(/\s/g, "").toLowerCase()) {
             case AppTabConstant.CustomControlInputString:
-            case AppTabConstant.control:
-                pageInput.pageType = AppTabConstant.control;
+            case AppTabConstant.Control:
+                pageInput.pageType = AppTabConstant.Control;
                 for (i = 0; i < entityData.Custom_Array.length; i++) {
                     try {
                         if (entityData.Custom_Array[i].Value !== undefined) {
                             pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
-                            if (entityData.Custom_Array[i].Name.toLowerCase() == AppTabConstant.data)
+                            if (entityData.Custom_Array[i].Name.toLowerCase() == AppTabConstant.Data)
                                 pageInput[entityData.Custom_Array[i].Name] = JSON.parse(entityData.Custom_Array[i].Value);
                         }
                     }
@@ -178,7 +178,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                 }
                 break;
             case AppTabConstant.DashboardInputString:
-                pageInput.pageType = AppTabConstant.dashboard;
+                pageInput.pageType = AppTabConstant.Dashboard;
                 for (i = 0; i < entityData.Custom_Array.length; i++) {
                     if (entityData.Custom_Array[i].Value !== undefined) {
                         pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
@@ -186,8 +186,8 @@ namespace Microsoft.ProductivityMacros.Internal {
                 }
                 break;
             case AppTabConstant.EntityViewInputString:
-            case AppTabConstant.entitylist:
-                pageInput.pageType = AppTabConstant.entitylist;
+            case AppTabConstant.Entitylist:
+                pageInput.pageType = AppTabConstant.Entitylist;
                 for (i = 0; i < entityData.Custom_Array.length; i++) {
                     if (entityData.Custom_Array[i].Value !== undefined) {
                         pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
@@ -195,18 +195,18 @@ namespace Microsoft.ProductivityMacros.Internal {
                 }
                 break;
             case AppTabConstant.EntityRecordInputString:
-                pageInput.pageType = AppTabConstant.entityrecord;
+                pageInput.pageType = AppTabConstant.Entityrecord;
                 for (i = 0; i < entityData.Custom_Array.length; i++) {
                     try {
                         if (entityData.Custom_Array[i].Value !== undefined) {
                             switch (entityData.Custom_Array[i].Name.toLowerCase()) {
-                                case AppTabConstant.relationship:
+                                case AppTabConstant.Relationship:
                                     pageInput.relationship = JSON.parse(entityData.Custom_Array[i].Value);
                                     break;
-                                case AppTabConstant.createFromEntity:
+                                case AppTabConstant.CreateFromEntity:
                                     pageInput.processInstanceId = JSON.parse(entityData.Custom_Array[i].Value);
                                     break;
-                                case AppTabConstant.data:
+                                case AppTabConstant.Data:
                                     pageInput.data = JSON.parse(entityData.Custom_Array[i].Value);
                                     break;
                                 default:
@@ -220,12 +220,12 @@ namespace Microsoft.ProductivityMacros.Internal {
                 }
                 break;
             case AppTabConstant.EntitySearchInputString:
-                pageInput.pageType = AppTabConstant.search;
+                pageInput.pageType = AppTabConstant.Search;
                 for (i = 0; i < entityData.Custom_Array.length; i++) {
                     try {
                         if (entityData.Custom_Array[i].Value !== undefined) {
                             pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
-                            if (entityData.Custom_Array[i].Name == AppTabConstant.searchType)
+                            if (entityData.Custom_Array[i].Name == AppTabConstant.SearchType)
                                 pageInput[entityData.Custom_Array[i].Name] = parseInt(entityData.Custom_Array[i].Value);
                         }
                     }
@@ -235,7 +235,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                 }
                 break;
             case AppTabConstant.WebResourceInputString:
-                pageInput.pageType = AppTabConstant.webresource;
+                pageInput.pageType = AppTabConstant.Webresource;
                 for (i = 0; i < entityData.Custom_Array.length; i++) {
                     if (entityData.Custom_Array[i].Value !== undefined) {
                         pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
@@ -247,15 +247,15 @@ namespace Microsoft.ProductivityMacros.Internal {
                 //keeping thirthpartyWebsite as weresource as currently we are not able to access
                 //CIF public API and we are consuming Microsoft.CIFramework.External.CIFExternalUtilityImpl() to create tab
                 //pageInput.pageType = "ThirdPartyWebsite";
-                pageInput.pageType = AppTabConstant.webresource;
+                pageInput.pageType = AppTabConstant.Webresource;
                 for (i = 0; i < entityData.Custom_Array.length; i++) {
                     if (entityData.Custom_Array[i].Value !== undefined) {
                         switch (entityData.Custom_Array[i].Name) {
-                            case AppTabConstant.data:
+                            case AppTabConstant.Data:
                                 //pageInput.data = entityData.Custom_Array[i].Value;
                                 pageInput.webresourceName = "msdyn_ExternalWebPageContainer.html";
                                 break;
-                            case AppTabConstant.url:
+                            case AppTabConstant.Url:
                                 //pageInput.url = entityData.Custom_Array[i].Value;
                                 pageInput.data = "cif_thirdpartyurl" + entityData.Custom_Array[i].Value;
                                 break;

@@ -67,11 +67,11 @@ namespace Microsoft.ProductivityMacros {
     }
 
     export class OpenAppTabType {
-        public static data = "data";
-        public static url = "url";
-        public static relationship = "relationship";
-        public static createFromEntity = "createfromentity";
-        public static searchType = "searchtype";
+        public static Data = "data";
+        public static Url = "url";
+        public static Relationship = "relationship";
+        public static CreateFromEntity = "createfromentity";
+        public static SearchType = "searchtype";
 
         public static CustomControlInputString = "customcontrol";
         public static ThirdPartyWebsiteInputString = "websiteurl";
@@ -82,13 +82,13 @@ namespace Microsoft.ProductivityMacros {
         public static EntitySearchInputString = "entitysearch";
         public static WebResourceInputString = "webresource";
 
-        public static control = "control";
-        public static dashboard = "dashboard";
-        public static entitylist = "entitylist";
-        public static entityrecord = "entityrecord";
-        public static search = "search";
-        public static webresource = "webresource";
-        public static thirdPartyWebsite = "webresource"; //ThirdPartyWebsite
+        public static Control = "control";
+        public static Dashboard = "dashboard";
+        public static Entitylist = "entitylist";
+        public static Entityrecord = "entityrecord";
+        public static Search = "search";
+        public static Webresource = "webresource";
+        public static ThirdPartyWebsite = "webresource"; //ThirdPartyWebsite
 
     }
 
