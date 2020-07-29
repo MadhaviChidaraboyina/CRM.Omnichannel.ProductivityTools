@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Macro Action Templates" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="Attributes for macro action template v3" languagecode="1033" />
+        <Description description="Attributes for macro action template" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">

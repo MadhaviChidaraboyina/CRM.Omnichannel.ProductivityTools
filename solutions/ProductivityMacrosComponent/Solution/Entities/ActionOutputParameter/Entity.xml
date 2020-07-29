@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Action Output Parameters" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="Attributes of action output parameters v3" languagecode="1033" />
+        <Description description="Attributes of action output parameters" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">

@@ -78,7 +78,7 @@
                     <row>
                       <cell id="{1ee16a8d-2001-13d1-a04a-414b44515723}" showlabel="true" locklevel="0">
                         <labels>
-                          <label description="An oData query to retrieve record from which to re" languagecode="1033" />
+                          <label description="An oData query to retrieve record from which to read designer URL" languagecode="1033" />
                         </labels>
                         <control id="msdyn_designerurlconfigentityquery" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_designerurlconfigentityquery" disabled="false" />
                       </cell>

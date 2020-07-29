@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Macro Solution Configurations" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="Macro solution related configurations v3" languagecode="1033" />
+        <Description description="Macro solution related configurations" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">

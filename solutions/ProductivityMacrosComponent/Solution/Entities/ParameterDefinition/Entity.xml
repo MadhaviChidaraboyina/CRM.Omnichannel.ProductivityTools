@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Parameter definitions" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="Macro parameter definitions v3" languagecode="1033" />
+        <Description description="Macro parameter definitions" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
