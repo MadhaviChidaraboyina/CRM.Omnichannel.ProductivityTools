@@ -1,6 +1,20 @@
 ﻿/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 ///<reference path="Constants.ts" />
 
+let loadMacrosComponentInternal = function () {
+    try {
+        let macrosLibScript = document.createElement("script");
+        macrosLibScript.src = Xrm.Utility.getGlobalContext().getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js";
+        document.getElementsByTagName("body")[0].appendChild(macrosLibScript);
+        console.log("Loaded msdyn_ProductivityMacrosComponent_internal_library.js");
+
+    } catch (error) {
+        console.log("Failed to load msdyn_ProductivityMacrosComponent_internal_library.js");
+    }
+};
+
+loadMacrosComponentInternal();
+
 let _xrmApp: any = Xrm.App;
 _xrmApp.panels.loadPanel({
     pageInput: {
