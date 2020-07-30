@@ -13,6 +13,20 @@ let loadMacrosComponentInternal = function () {
     }
 };
 
+let loadLogicAppExecutor = function () {
+    try {
+        let macrosLibScript = document.createElement("script");
+        macrosLibScript.src = Xrm.Utility.getGlobalContext().getClientUrl() + "/" + "/WebResources/CRMClients/msdyn_LogicAppExecutor_v2.js";
+        document.getElementsByTagName("body")[0].appendChild(macrosLibScript);
+        console.log("Loaded msdyn_LogicAppExecutor_v2.js");
+
+    } catch (error) {
+        console.log("Failed to load msdyn_LogicAppExecutor_v2.js");
+    }
+};
+
+
+loadLogicAppExecutor();
 loadMacrosComponentInternal();
 
 let _xrmApp: any = Xrm.App;
