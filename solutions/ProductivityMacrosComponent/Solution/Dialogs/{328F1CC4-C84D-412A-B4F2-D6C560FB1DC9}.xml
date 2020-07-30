@@ -2,7 +2,7 @@
 <Dialog>
 	<FormId>{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}</FormId>
 	<LocalizedNames>
-		<LocalizedName description="View Macros Monitor v2" languagecode="1033" />
+		<LocalizedName description="View Macros Monitor" languagecode="1033" />
 	</LocalizedNames>
 	<Descriptions>
 		<Description description="Allows you to view Macro Monitor View" languagecode="1033" />
