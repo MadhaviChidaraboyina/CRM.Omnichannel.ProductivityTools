@@ -107,6 +107,14 @@
 												<control id="msdyn_suggestionwebresourcemethod" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_suggestionwebresourcemethod" disabled="false" />
 											</cell>
 										</row>
+										<row>
+											<cell id="{bdcf237b-84b5-4aa1-b0da-296d76be1279}" showlabel="true" locklevel="0">
+												<labels>
+													<label description="Source Entity Name" languagecode="1033" />
+												</labels>
+												<control id="msdyn_sourceentityname" classid="{0c93c5e4-b63c-4c23-b1c2-7b0ae0a526aa}" datafieldname="msdyn_sourceentityname" disabled="false" />
+											</cell>
+										</row>
 									</rows>
 								</section>
 							</sections>
