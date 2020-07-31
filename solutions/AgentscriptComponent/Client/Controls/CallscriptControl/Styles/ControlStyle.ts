@@ -46,9 +46,10 @@ module MscrmControls.Callscript {
 		}
 
 		public static getHeaderContainerStyle() {
-			return {
+            return {
+                height: "68px",
+                background: "#FAF9F8",
 				"align-items": "left",
-				marginBottom: "12px",
 				minWidth: "234px"
 			}
 		}
@@ -56,10 +57,34 @@ module MscrmControls.Callscript {
 		public static getControlHeaderStyle(context: Mscrm.ControlData<IInputBag>) {
 			return {
 				fontFamily: context.theming.fontfamilies.regular,
-				fontSize: "16px",
-				fontWeight: 600,
+                fontSize: "20px",
+                fontWeight: 600,
+                lineHeight: "28px",
+                marginTop: "18px",
 				color: "#323130"
 			}
+        }
+
+        public static getControlHeaderInfoIconStyle(context: Mscrm.ControlData<IInputBag>) {
+            let backgroundIconUrl = Utility.getIconUrl(context, Constants.infoButtonIcon);
+			return {
+				width: "16px",
+				height: "16px",
+				"background-image": "url(" + backgroundIconUrl + ")",
+				"background-repeat": "no-repeat",
+				"background-position": "center",
+				marginTop: "22px",
+                paddingLeft: "15px",
+
+                fontFamily: "Full MDL2 Assets",
+                fontSize: "16px",
+                lineHeight: "19px",
+                textAlign: "center",
+
+                /* Dynamics / DYN Primary #2266E3 */
+
+                color: "#2266E3",
+			};
 		}
 
 		public static getDropDownArrowComponentStyle() {

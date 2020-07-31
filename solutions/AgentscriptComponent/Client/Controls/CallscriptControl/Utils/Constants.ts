@@ -62,6 +62,8 @@ module MscrmControls.Callscript {
 		public static viewScriptIcon = "msdyn_view_script_icon.svg";
 		public static markdoneTextIcon = "msdyn_markasdone_text_icon.svg";
 		public static runMacroIcon = "msdyn_run_macro_icon.svg";
+        //agent script header info icon
+        public static infoButtonIcon = "msdyn_agent_script_header_info_icon.svg";
 
 		// Accessibility ids
 		public static stepIdPrefix = "CallscriptStepsListItem-";
@@ -73,7 +75,9 @@ module MscrmControls.Callscript {
 	 * Ids for localized strings from resx file
 	 */
 	export class LocalizedStrings {
-		public static CallscriptHeader = "ControlHeader";
+        public static CallscriptHeader = "ControlHeader";
+        public static ControlHeaderInfo = "ControlHeaderInfo";     
+
 		public static ScriptComboboxEmptyOptionLabel = "ScriptCombobox_EmptyOption";
 
 		//Accessibility Labels

@@ -84,7 +84,7 @@
       <RootComponent type="1" schemaName="msdyn_agentscript_v2" behavior="0" />
       <RootComponent type="1" schemaName="msdyn_sessiontemplate" behavior="1" />
       <RootComponent type="1" schemaName="workflow" behavior="0" />
-	  <RootComponent type="60" id="{e99fa2c8-de6b-4c33-9f51-27b3ad3963ce}" behavior="0" />
+	    <RootComponent type="60" id="{e99fa2c8-de6b-4c33-9f51-27b3ad3963ce}" behavior="0" />
       <RootComponent type="60" id="{371db648-34af-4f9e-817e-cfb9ea67540a}" behavior="0" />
       <RootComponent type="60" id="{1B68FF28-C6AF-4CBE-BE05-DA1B968CDDD4}" behavior="0" />
       <RootComponent type="60" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
@@ -103,6 +103,7 @@
       <RootComponent type="61" schemaName="msdyn_markasdone_text_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_run_macro_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_view_script_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_agent_script_header_info_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_AgentScriptStepFormScript.js" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_AgentscriptFormScript.js" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_agentscripticon" behavior="0" />

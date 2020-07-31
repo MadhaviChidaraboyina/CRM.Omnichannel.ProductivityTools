@@ -50,3 +50,43 @@
 .mscrm-agentscript-selectContainer select:focus {
 	border: 1px dotted #000000;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #FFFFFF;
+    color: #323130;
+    text-align: center;
+    border-style: solid;
+    padding: 6px;
+    border-radius: 2px;
+    margin-left: -109px;
+    margin-top: 32px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0.5px 0.5px 10px #ccc !important;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "▲";
+    position: absolute;
+    top: -16px;
+    left: 47%;
+    color: #fff;
+    font-size: 25px;
+    text-shadow: 1px -3px 6px #ccc;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

@@ -18,7 +18,7 @@ module MscrmControls.Callscript {
 		private initCompleted: boolean;
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
-		private setFocusOnSelector: boolean;
+        private setFocusOnSelector: boolean;
 
 		/**
 		 * Constructor.
@@ -26,7 +26,7 @@ module MscrmControls.Callscript {
 		constructor() {
 			this.initCompleted = false;
 			this.telemetryContext = TelemetryComponents.MainComponent;
-			this.setFocusOnSelector = false;
+            this.setFocusOnSelector = false;
 		}
 
 		/**
@@ -165,19 +165,45 @@ module MscrmControls.Callscript {
 		/**
 		 * This function returns control header component
 		 */
-		private getControlHeader(): Mscrm.Component {
+        private getControlHeader(): Mscrm.Component {
+            
+            var controlHeader = [];
+
 			var controlHeaderLabel: Mscrm.Component = this.context.factory.createElement("LABEL", {
 				key: "CallscriptHeaderKey",
-				id: "CallscriptHeaderId",
+                id: "CallscriptHeaderId",               
 				style: ControlStyle.getControlHeaderStyle(this.context)
 			}, this.context.resources.getString(LocalizedStrings.CallscriptHeader));
+
+            controlHeader.push(controlHeaderLabel);
+
+            var controlHeaderInfoIcon: Mscrm.Component =  this.context.factory.createElement("CONTAINER", {
+                key: "CallscriptHeaderInfoIconKey",
+                id: "CallscriptHeaderInfoIconId",
+                className: "tooltip",
+                style: ControlStyle.getControlHeaderInfoIconStyle(this.context)
+            }, [this.getInfoMessage()]);
+
+            controlHeader.push(controlHeaderInfoIcon);
 
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallscriptHeaderContainerKey",
 				id: "CallscriptHeaderContainerId",
 				style: ControlStyle.getHeaderContainerStyle()
-			}, controlHeaderLabel);
-		}
+			}, controlHeader);
+        }
+
+        /**
+		 * This function returns the information when mouse over on info icon in call script header
+		 */
+        private getInfoMessage() {
+            return this.context.factory.createElement(
+                "CONTAINER", {
+                id: "CallscriptInfoMessageId",
+                key: "CallscriptInfoMessageKey",
+                className: "tooltiptext",
+            }, this.context.resources.getString(LocalizedStrings.ControlHeaderInfo));
+        }
 
 		/**
 		 * This function returns loading wheel until callscript data fetch is complete
@@ -257,9 +283,7 @@ module MscrmControls.Callscript {
 
 			let callscriptComponents: Mscrm.Component[] = [];
 
-			/* Control header not required on form, to be un-commented when control is moved to Panel
 			callscriptComponents.push(this.getControlHeader());
-			*/
 
 			callscriptComponents.push(this.getScriptsDropdown());
 
