@@ -25,7 +25,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                             results[0].entities.forEach(
                                 function (value: any) {
                                     ProductivityMacroOperation.macroActionTemplates.set(value["msdyn_name"], new ProductivityMacroActionTemplate(
-                                        value["msdyn_macroactiontemplateId"],
+                                        value["msdyn_macroactiontemplate_v2id"],
                                         value["msdyn_name"],
                                         value["msdyn_title"],
                                         value["msdyn_runtimeapi"]
