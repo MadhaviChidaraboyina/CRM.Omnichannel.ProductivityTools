@@ -152,7 +152,7 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";15062:Description,ProductivityPaneComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";15062:Description,msdyn_ProductivityPaneComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Dynamics 365 ProductivityPaneComponent workload]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -160,22 +160,9 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-02T07:04:35.0005419Z" />
+        <Modified By="v-rondai" DateTime="2020-07-29T04:44:08.0008987Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31294_20200629" />
-        </Props>
-      </Item>
-      <Item ItemId=";15062:LocalizedName,ProductivityPaneComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Productivity Pane Component]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Komponenta podokna za storilnost]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-02T07:04:35.0005419Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31294_20200629" />
+          <Str Name="Custom3" Val="WO32880_20200727" />
         </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -189,6 +176,19 @@
         <Modified By="v-rondai" DateTime="2020-07-02T07:04:35.0005419Z" />
         <Props>
           <Str Name="Custom3" Val="WO31294_20200629" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,msdyn_ProductivityPaneComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Pane Component]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Komponenta podokna za storilnost]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-29T04:44:08.0008987Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO32880_20200727" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,Pane tab configuration{53119dc8-3b00-44cd-8656-dce8c75bbd35}" ItemType="0;.resx" PsrId="211" Leaf="true">

@@ -176,17 +176,17 @@
     <value>Identificateur unique de l’organisation</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
-  <data name="15062:Description,ProductivityPaneComponent" xml:space="preserve">
+  <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
     <value>Charge de travail ProductivityPaneComponent de Dynamics 365</value>
-    <comment> 'ProductivityPaneComponent' : Description for Solution</comment>
+    <comment> 'msdyn_ProductivityPaneComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
     <value>Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,ProductivityPaneComponent" xml:space="preserve">
+  <data name="15062:LocalizedName,msdyn_ProductivityPaneComponent" xml:space="preserve">
     <value>Composant du volet de productivité</value>
-    <comment> 'ProductivityPaneComponent' : LocalizedName for Solution</comment>
+    <comment> 'msdyn_ProductivityPaneComponent' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedBy" xml:space="preserve">
     <value>Identificateur unique de l’utilisateur ayant créé l’enregistrement.</value>

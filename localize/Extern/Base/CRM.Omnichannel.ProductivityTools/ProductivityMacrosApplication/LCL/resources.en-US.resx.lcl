@@ -15,15 +15,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";15062:LocalizedName,ProductivityMacrosApplication" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Macros]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";15062:LocalizedName,msdyn_ProductivityMacrosApplication" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

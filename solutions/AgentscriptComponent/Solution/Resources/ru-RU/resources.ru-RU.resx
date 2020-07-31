@@ -196,13 +196,13 @@
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,AgentscriptComponent" xml:space="preserve">
-    <value>Скрипты агентов</value>
-    <comment> 'AgentscriptComponent' : LocalizedName for Solution</comment>
-  </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19236" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
+  </data>
+  <data name="15062:LocalizedName,msdyn_AgentscriptComponent" xml:space="preserve">
+    <value>Скрипты агентов</value>
+    <comment> 'msdyn_AgentscriptComponent' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,Agent script step{194a3727-e2aa-ea11-a81c-000d3ac5e423}" xml:space="preserve">
     <value>Активные шаги скрипта агента, за которые я отвечаю</value>

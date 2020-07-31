@@ -140,8 +140,8 @@
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,ProductivityMacrosApplication" xml:space="preserve">
+  <data name="15062:LocalizedName,msdyn_ProductivityMacrosApplication" xml:space="preserve">
     <value>Makron</value>
-    <comment> 'ProductivityMacrosApplication' : LocalizedName for Solution</comment>
+    <comment> 'msdyn_ProductivityMacrosApplication' : LocalizedName for Solution</comment>
   </data>
 </root>

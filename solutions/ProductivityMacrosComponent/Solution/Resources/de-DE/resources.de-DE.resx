@@ -296,17 +296,17 @@
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
-  <data name="15062:Description,ProductivityMacrosComponent" xml:space="preserve">
-    <value>Diese Lösung liefert Webressourcen zur Verwendung von Makrodesignern und APIs zur Automatisierung von Geschäftsprozessaufgaben.</value>
-    <comment> 'ProductivityMacrosComponent' : Description for Solution</comment>
+  <data name="15062:Description,msdyn_ProductivityMacrosComponent" xml:space="preserve">
+    <value>Diese Lösung liefert Webressourcen zur Verwendung von Makro-Designern und APIs zur Automatisierung von Geschäftsprozessaufgaben.</value>
+    <comment> 'msdyn_ProductivityMacrosComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,ProductivityMacrosComponent" xml:space="preserve">
+  <data name="15062:LocalizedName,msdyn_ProductivityMacrosComponent" xml:space="preserve">
     <value>Makros</value>
-    <comment> 'ProductivityMacrosComponent' : LocalizedName for Solution</comment>
+    <comment> 'msdyn_ProductivityMacrosComponent' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,Action Input Parameter{a050bc67-9e91-4cc6-8987-5bfb058988e5}" xml:space="preserve">
     <value>Ein Kartenformular für diese Entität</value>

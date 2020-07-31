@@ -22,19 +22,6 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";15062:LocalizedName,ProductivityMacrosApplication" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Macros]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Macros]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:23.0001635Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Microsoft Dynamics 365]]></Val>
@@ -46,6 +33,19 @@
         <Modified By="v-rondai" DateTime="2020-07-13T09:39:23.0001635Z" />
         <Props>
           <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,msdyn_ProductivityMacrosApplication" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Macros]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-29T08:46:18.0002552Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO32880_20200727" />
         </Props>
       </Item>
     </Item>

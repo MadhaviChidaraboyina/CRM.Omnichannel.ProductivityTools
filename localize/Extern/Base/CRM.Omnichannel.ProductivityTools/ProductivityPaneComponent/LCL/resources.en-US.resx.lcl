@@ -75,21 +75,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";15062:Description,ProductivityPaneComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";15062:Description,msdyn_ProductivityPaneComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Dynamics 365 ProductivityPaneComponent workload]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";15062:LocalizedName,ProductivityPaneComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Productivity Pane Component]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Dynamics 365]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";15062:LocalizedName,msdyn_ProductivityPaneComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Pane Component]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

@@ -176,17 +176,17 @@
     <value>组织的唯一标识符</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
-  <data name="15062:Description,ProductivityPaneComponent" xml:space="preserve">
+  <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
     <value>Dynamics 365 工作效率窗格组件工作负荷</value>
-    <comment> 'ProductivityPaneComponent' : Description for Solution</comment>
+    <comment> 'msdyn_ProductivityPaneComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
     <value>Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,ProductivityPaneComponent" xml:space="preserve">
+  <data name="15062:LocalizedName,msdyn_ProductivityPaneComponent" xml:space="preserve">
     <value>工作效率窗格组件</value>
-    <comment> 'ProductivityPaneComponent' : LocalizedName for Solution</comment>
+    <comment> 'msdyn_ProductivityPaneComponent' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedBy" xml:space="preserve">
     <value>创建记录的用户的唯一标识符。</value>

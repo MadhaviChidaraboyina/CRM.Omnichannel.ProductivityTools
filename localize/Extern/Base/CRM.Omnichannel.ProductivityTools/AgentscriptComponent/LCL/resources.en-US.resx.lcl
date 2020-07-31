@@ -105,15 +105,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";15062:LocalizedName,AgentscriptComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Agent scripts]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19236" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";15062:LocalizedName,msdyn_AgentscriptComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent scripts]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

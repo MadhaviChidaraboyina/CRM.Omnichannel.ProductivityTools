@@ -176,17 +176,17 @@
     <value>Mã định danh duy nhất cho tổ chức</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
-  <data name="15062:Description,ProductivityPaneComponent" xml:space="preserve">
+  <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
     <value>Khối lượng công việc Dynamics 365 ProductivityPaneComponent</value>
-    <comment> 'ProductivityPaneComponent' : Description for Solution</comment>
+    <comment> 'msdyn_ProductivityPaneComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
     <value>Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,ProductivityPaneComponent" xml:space="preserve">
+  <data name="15062:LocalizedName,msdyn_ProductivityPaneComponent" xml:space="preserve">
     <value>Thành phần ngăn năng suất</value>
-    <comment> 'ProductivityPaneComponent' : LocalizedName for Solution</comment>
+    <comment> 'msdyn_ProductivityPaneComponent' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedBy" xml:space="preserve">
     <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>

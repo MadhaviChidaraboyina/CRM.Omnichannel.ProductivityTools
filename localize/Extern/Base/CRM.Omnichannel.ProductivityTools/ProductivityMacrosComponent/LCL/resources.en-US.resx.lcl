@@ -249,27 +249,27 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";15062:Description,ProductivityMacrosComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[This solution provides web resources to use Macros designer and APIs to automate business process tasks.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";15062:Description,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Microsoft Dynamics 365]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";15062:LocalizedName,ProductivityMacrosComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";15062:Description,msdyn_ProductivityMacrosComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Macros]]></Val>
+          <Val><![CDATA[This solution provides web resources to use Macros designer and APIs to automate business process tasks.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Microsoft Dynamics 365]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";15062:LocalizedName,msdyn_ProductivityMacrosComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -491,7 +491,7 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparameter_v2entitymsdyn_actioninputparameter_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Attributes of action input parameters v3]]></Val>
+          <Val><![CDATA[Attributes of action input parameters]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -641,7 +641,7 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_actionoutputparameter_v2entitymsdyn_actionoutputparameter_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Attributes of action output parameters v3]]></Val>
+          <Val><![CDATA[Attributes of action output parameters]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -773,7 +773,7 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplate_v2entitymsdyn_macroactiontemplate_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Attributes for macro action template v3]]></Val>
+          <Val><![CDATA[Attributes for macro action template]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -977,7 +977,7 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnector_v2entitymsdyn_macroconnector_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Attributes for macro connectors v3]]></Val>
+          <Val><![CDATA[Attributes for macro connectors]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1313,7 +1313,7 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfiguration_v2entitymsdyn_macrosolutionconfiguration_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Macro solution related configurations v3]]></Val>
+          <Val><![CDATA[Macro solution related configurations]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1499,7 +1499,7 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_parameterdefinition_v2entitymsdyn_parameterdefinition_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Macro parameter definitions v3]]></Val>
+          <Val><![CDATA[Macro parameter definitions]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4229,7 +4229,7 @@
       </Item>
       <Item ItemId=";1:label,Macro Solution Configuration{1ee16a8d-2001-13d1-a04a-414b44515723}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[An oData query to retrieve record from which to re]]></Val>
+          <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

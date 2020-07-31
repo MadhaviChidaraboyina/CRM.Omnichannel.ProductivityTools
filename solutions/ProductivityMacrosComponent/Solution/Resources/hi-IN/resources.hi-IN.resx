@@ -296,17 +296,17 @@
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
-  <data name="15062:Description,ProductivityMacrosComponent" xml:space="preserve">
+  <data name="15062:Description,msdyn_ProductivityMacrosComponent" xml:space="preserve">
     <value>यह समाधान व्यावसायिक प्रक्रिया कार्यों को स्वचालित करने के लिए मैक्रो डिज़ाइनर और API का उपयोग करने हेतु वेब संसाधन प्रदान करता है.</value>
-    <comment> 'ProductivityMacrosComponent' : Description for Solution</comment>
+    <comment> 'msdyn_ProductivityMacrosComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,ProductivityMacrosComponent" xml:space="preserve">
+  <data name="15062:LocalizedName,msdyn_ProductivityMacrosComponent" xml:space="preserve">
     <value>मैक्रोज़</value>
-    <comment> 'ProductivityMacrosComponent' : LocalizedName for Solution</comment>
+    <comment> 'msdyn_ProductivityMacrosComponent' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,Action Input Parameter{a050bc67-9e91-4cc6-8987-5bfb058988e5}" xml:space="preserve">
     <value>इस निकाय के लिए एक कार्ड प्रपत्र.</value>

@@ -529,19 +529,6 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";15062:Description,ProductivityMacrosComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[This solution provides web resources to use Macros designer and APIs to automate business process tasks.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Esta solución proporciona recursos web para usar el Diseñador de macros y API con el fin de automatizar tareas de proceso de negocio.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:22.0001468Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
       <Item ItemId=";15062:Description,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Microsoft Dynamics 365]]></Val>
@@ -555,17 +542,17 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";15062:LocalizedName,ProductivityMacrosComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";15062:Description,msdyn_ProductivityMacrosComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Macros]]></Val>
+          <Val><![CDATA[This solution provides web resources to use Macros designer and APIs to automate business process tasks.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Macros]]></Val>
+            <Val><![CDATA[Esta solución proporciona recursos web para usar el Diseñador de macros y API con el fin de automatizar tareas de proceso de negocio.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:22.0001468Z" />
+        <Modified By="v-rondai" DateTime="2020-07-29T08:46:17.0001605Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32880_20200727" />
         </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -579,6 +566,19 @@
         <Modified By="v-rondai" DateTime="2020-07-13T09:39:22.0001468Z" />
         <Props>
           <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
+      </Item>
+      <Item ItemId=";15062:LocalizedName,msdyn_ProductivityMacrosComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Macros]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-29T08:46:17.0001605Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO32880_20200727" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,Action Input Parameter{a050bc67-9e91-4cc6-8987-5bfb058988e5}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -10287,19 +10287,6 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";68:Description,{F72B3711-7317-4308-A1EE-D4AC37DEC789}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Expression builder for default agent script]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Generador de expresiones para script de agente predeterminado]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:22.0001464Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
       <Item ItemId=";68:LocalizedName,{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[View Macros Monitor v2]]></Val>
@@ -10318,19 +10305,6 @@
           <Val><![CDATA[Macros]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Macros]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:22.0001464Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";68:LocalizedName,{F72B3711-7317-4308-A1EE-D4AC37DEC789}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Expression builder v2]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Generador de expresiones v2]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10435,32 +10409,6 @@
           <Val><![CDATA[Description]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
             <Val><![CDATA[Descripción]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:22.0001468Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";68:label,{F72B3711-7317-4308-A1EE-D4AC37DEC789}{0988560E-093E-4CC0-88E6-85B92A75E973}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Expression builder]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Generador de expresiones]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:22.0001468Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";68:label,{F72B3711-7317-4308-A1EE-D4AC37DEC789}{84C68612-4308-41D2-A1DC-A808B448119F}" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Macro Designer]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Diseñador de macros]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
