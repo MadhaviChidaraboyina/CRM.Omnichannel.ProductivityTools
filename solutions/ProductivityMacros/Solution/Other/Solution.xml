@@ -8,7 +8,7 @@
     <Descriptions>
       <Description description="This solution provides web resources to use Macros designer and APIs to automate business process tasks." languagecode="1033" />
     </Descriptions>
-    <Version>9.2.1.359</Version>
+    <Version>9.2.1.360</Version>
     <Managed>2</Managed>
     <Publisher>
       <UniqueName>microsoftdynamics</UniqueName>
