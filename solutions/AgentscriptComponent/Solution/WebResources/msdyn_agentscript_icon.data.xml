@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <WebResourceId>{faacea3b-06f1-e911-a81c-000d3a6e73df}</WebResourceId>
+  <WebResourceId>{4B20A2E3-25DA-474F-8CD6-E5D4DFDE928D}</WebResourceId>
   <Name>msdyn_agentscripticon</Name>
   <DisplayName>Agent script icon</DisplayName>
   <Description>Agent script icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>1</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/msdyn_agentscripticonFAACEA3B-06F1-E911-A81C-000D3A6E73DF</FileName>
+  <FileName>/WebResources/msdyn_agentscripticon4B20A2E3-25DA-474F-8CD6-E5D4DFDE928D</FileName>
 </WebResource>
