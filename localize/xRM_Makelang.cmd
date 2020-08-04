@@ -196,7 +196,7 @@ if Exist "%xRM_TMPPATH%\target.txt" (
                     REM 1. under 'Localize\Temp\[ll-cc]' to copy to 'D365_CE' repo
                     REM 2. under 'Localize\Extern\[lcid]' to copy to core team repo
                     REM After the change to stop checking in lcl files to core team repo, not all languages lcl files are available since 'Localize\Extern\ folder deleted
-                    REM and we only copy Base and one language ('1031') while running 'xx_makelang.cmd 1031 /handoff' so use 'Base\%FS_PNAME%\LSS\lss.lss' to generate language lcl files for new files
+                    REM and we only copy Base and one language ('1031') while running 'xx_makelang.cmd 1031 /handoff' so use 'Base\%xRM_PNAME%\LSS\lss.lss' to generate language lcl files for new files
                     call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LCID! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_LOCPATH%\!LCID!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
                     call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LL-CC! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_TMPPATH%\!LL-CC!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
                 )
@@ -204,15 +204,16 @@ if Exist "%xRM_TMPPATH%\target.txt" (
         )
 
         if exist "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" (
-            if NOT DEFINED xRM_BASEDONE (
-                REM ExtractOnly - Copy the source file to Master folder
-                echo "Extracting source"
+            REM Just need to copy the source file to Master folder once so check if the source file exists in Master folder
+            if not exist %xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\!xRM_FILE! (
+                echo "Copy the source file (%%~do%%~po!xRM_FILE!) to Master folder (%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!)"
                 if /i "%%~xo"==".json" (
                     call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE! /MOV
                 ) else (
                     call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE!
                 )
             )
+
             REM Set LSBuild Parser and Target file name
             REM Default to RESX Parser
             set xRM_PARSER=211

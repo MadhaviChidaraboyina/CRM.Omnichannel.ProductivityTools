@@ -389,7 +389,7 @@
     <comment>'msdyn_actioninputparameter_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameter_v2entitymsdyn_actioninputparameter_v2" xml:space="preserve">
-    <value>Әрекет кірісі параметрлері төлсипаттарының 3-нұсқасы</value>
+    <value>Әрекет кірісі параметрлерінің төлсипаттары</value>
     <comment> 'msdyn_actioninputparameter_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameter_v2ModifiedBy" xml:space="preserve">
@@ -489,7 +489,7 @@
     <comment>'msdyn_actionoutputparameter_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actionoutputparameter_v2entitymsdyn_actionoutputparameter_v2" xml:space="preserve">
-    <value>Әрекет шығысы параметрлері төлсипаттарының 3-нұсқасы</value>
+    <value>Әрекет шығысы параметрлерінің төлсипаттары</value>
     <comment> 'msdyn_actionoutputparameter_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actionoutputparameter_v2ModifiedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_macroactiontemplate_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplate_v2entitymsdyn_macroactiontemplate_v2" xml:space="preserve">
-    <value>Макрос әрекетінің үлгі төлсипаттарының 3-нұсқасы</value>
+    <value>Макрос әрекеті үлгісінің төлсипаттары</value>
     <comment> 'msdyn_macroactiontemplate_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplate_v2ModifiedBy" xml:space="preserve">
@@ -713,7 +713,7 @@
     <comment>'msdyn_macroconnector_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnector_v2entitymsdyn_macroconnector_v2" xml:space="preserve">
-    <value>Макрос қосқыштары төлсипаттарының 3-нұсқасы</value>
+    <value>Макрос қосқыштардың төлсипаттары</value>
     <comment> 'msdyn_macroconnector_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnector_v2ModifiedBy" xml:space="preserve">
@@ -937,7 +937,7 @@
     <comment>'msdyn_macrosolutionconfiguration_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfiguration_v2entitymsdyn_macrosolutionconfiguration_v2" xml:space="preserve">
-    <value>Макрос шешіміне қатысты конфигурациялардың 3-нұсқасы</value>
+    <value>Макрос шешіміне қатысты конфигурациялар</value>
     <comment> 'msdyn_macrosolutionconfiguration_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfiguration_v2ModifiedBy" xml:space="preserve">
@@ -1061,7 +1061,7 @@
     <comment>'msdyn_parameterdefinition_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinition_v2entitymsdyn_parameterdefinition_v2" xml:space="preserve">
-    <value>Макрос параметрі анықтамаларының 3-нұсқасы</value>
+    <value>Макрос параметрінің анықтамалары</value>
     <comment> 'msdyn_parameterdefinition_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinition_v2ModifiedBy" xml:space="preserve">

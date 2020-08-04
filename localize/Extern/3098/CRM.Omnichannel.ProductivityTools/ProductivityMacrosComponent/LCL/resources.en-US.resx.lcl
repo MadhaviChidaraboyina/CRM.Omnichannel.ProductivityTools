@@ -1060,15 +1060,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparameter_v2entitymsdyn_actioninputparameter_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Attributes of action input parameters v3]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Атрибути улазних параметара радње, верзија 3]]></Val>
+          <Val><![CDATA[Attributes of action input parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Атрибути параметара улазне радње]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Attributes of action input parameters v3]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:23.0001456Z" />
+        <Modified By="v-rondai" DateTime="2020-08-03T06:03:40.0006277Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32969_20200730" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_actioninputparameter_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1385,15 +1388,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_actionoutputparameter_v2entitymsdyn_actionoutputparameter_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Attributes of action output parameters v3]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Атрибути излазних параметара радње, верзија 3]]></Val>
+          <Val><![CDATA[Attributes of action output parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Атрибути параметара одлазне радње]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Attributes of action output parameters v3]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:23.0001458Z" />
+        <Modified By="v-rondai" DateTime="2020-08-03T06:03:40.0006491Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32969_20200730" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_actionoutputparameter_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1671,15 +1677,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplate_v2entitymsdyn_macroactiontemplate_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Attributes for macro action template v3]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Атрибути за предложак радње макроа, верзија 3]]></Val>
+          <Val><![CDATA[Attributes for macro action template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Атрибути за предложак радње макроа]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Attributes for macro action template v3]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:23.0001456Z" />
+        <Modified By="v-rondai" DateTime="2020-08-03T06:03:40.0006491Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32969_20200730" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroactiontemplate_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2113,15 +2122,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnector_v2entitymsdyn_macroconnector_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Attributes for macro connectors v3]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Атрибути за макро конекторе, верзија 3]]></Val>
+          <Val><![CDATA[Attributes for macro connectors]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Атрибути за макро конекторе]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Attributes for macro connectors v3]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:23.0001456Z" />
+        <Modified By="v-rondai" DateTime="2020-08-03T06:03:40.0006483Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32969_20200730" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macroconnector_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -2841,15 +2853,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfiguration_v2entitymsdyn_macrosolutionconfiguration_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Macro solution related configurations v3]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Конфигурације повезане са решењем макроа, верзија 3]]></Val>
+          <Val><![CDATA[Macro solution related configurations]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Конфигурације повезане са решењем макроа]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Macro solution related configurations v3]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:23.0001457Z" />
+        <Modified By="v-rondai" DateTime="2020-08-03T06:03:40.0006481Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32969_20200730" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_macrosolutionconfiguration_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3244,15 +3259,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_parameterdefinition_v2entitymsdyn_parameterdefinition_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Macro parameter definitions v3]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Дефиниције параметра макроа, верзија 3]]></Val>
+          <Val><![CDATA[Macro parameter definitions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Дефиниције параметара макроа]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Macro parameter definitions v3]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:23.0001457Z" />
+        <Modified By="v-rondai" DateTime="2020-08-03T06:03:40.0006481Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32969_20200730" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_parameterdefinition_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9171,15 +9189,18 @@
       </Item>
       <Item ItemId=";1:label,Macro Solution Configuration{1ee16a8d-2001-13d1-a04a-414b44515723}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[An oData query to retrieve record from which to re]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[oData упит за враћање записа из којег треба про]]></Val>
+          <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[oData упит за враћање записа из којег треба прочитати URL дизајнера]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[An oData query to retrieve record from which to re]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:23.0001457Z" />
+        <Modified By="v-rondai" DateTime="2020-08-03T06:03:40.0006285Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO32969_20200730" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Macro Solution Configuration{2d18445e-216a-5c93-6122-9211cb1cc23e}" ItemType="0;.resx" PsrId="211" Leaf="true">

@@ -389,7 +389,7 @@
     <comment>'msdyn_actioninputparameter_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameter_v2entitymsdyn_actioninputparameter_v2" xml:space="preserve">
-    <value>Eylem giriş parametrelerinin öznitelikleri v3</value>
+    <value>Eylem giriş parametrelerinin öznitelikleri</value>
     <comment> 'msdyn_actioninputparameter_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameter_v2ModifiedBy" xml:space="preserve">
@@ -489,7 +489,7 @@
     <comment>'msdyn_actionoutputparameter_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actionoutputparameter_v2entitymsdyn_actionoutputparameter_v2" xml:space="preserve">
-    <value>Eylem çıkış parametrelerinin öznitelikleri v3</value>
+    <value>Eylem çıkış parametrelerinin öznitelikleri</value>
     <comment> 'msdyn_actionoutputparameter_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actionoutputparameter_v2ModifiedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_macroactiontemplate_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplate_v2entitymsdyn_macroactiontemplate_v2" xml:space="preserve">
-    <value>Makro eylem şablonunun öznitelikleri v3</value>
+    <value>Makro eylem şablonunun öznitelikleri</value>
     <comment> 'msdyn_macroactiontemplate_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplate_v2ModifiedBy" xml:space="preserve">
@@ -713,7 +713,7 @@
     <comment>'msdyn_macroconnector_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnector_v2entitymsdyn_macroconnector_v2" xml:space="preserve">
-    <value>Makro bağlayıcılarının öznitelikleri v3</value>
+    <value>Makro bağlayıcılarının öznitelikleri</value>
     <comment> 'msdyn_macroconnector_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnector_v2ModifiedBy" xml:space="preserve">
@@ -937,7 +937,7 @@
     <comment>'msdyn_macrosolutionconfiguration_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfiguration_v2entitymsdyn_macrosolutionconfiguration_v2" xml:space="preserve">
-    <value>Makro çözümüyle ilgili yapılandırmalar v3</value>
+    <value>Makro çözümle ilgili yapılandırmalar</value>
     <comment> 'msdyn_macrosolutionconfiguration_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfiguration_v2ModifiedBy" xml:space="preserve">
@@ -1061,7 +1061,7 @@
     <comment>'msdyn_parameterdefinition_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinition_v2entitymsdyn_parameterdefinition_v2" xml:space="preserve">
-    <value>Makro parametre tanımları v3</value>
+    <value>Makro parametre tanımları</value>
     <comment> 'msdyn_parameterdefinition_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinition_v2ModifiedBy" xml:space="preserve">

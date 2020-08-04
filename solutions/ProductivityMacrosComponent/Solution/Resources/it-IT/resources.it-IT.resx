@@ -389,7 +389,7 @@
     <comment>'msdyn_actioninputparameter_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameter_v2entitymsdyn_actioninputparameter_v2" xml:space="preserve">
-    <value>Attributi dei parametri di input azione v3</value>
+    <value>Attributi dei parametri di input azione</value>
     <comment> 'msdyn_actioninputparameter_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameter_v2ModifiedBy" xml:space="preserve">
@@ -489,7 +489,7 @@
     <comment>'msdyn_actionoutputparameter_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actionoutputparameter_v2entitymsdyn_actionoutputparameter_v2" xml:space="preserve">
-    <value>Attributi dei parametri di output azione v3</value>
+    <value>Attributi dei parametri di output azione</value>
     <comment> 'msdyn_actionoutputparameter_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actionoutputparameter_v2ModifiedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_macroactiontemplate_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplate_v2entitymsdyn_macroactiontemplate_v2" xml:space="preserve">
-    <value>Attributi per il modello di azione macro v3</value>
+    <value>Attributi per il modello di azione macro</value>
     <comment> 'msdyn_macroactiontemplate_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplate_v2ModifiedBy" xml:space="preserve">
@@ -713,7 +713,7 @@
     <comment>'msdyn_macroconnector_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnector_v2entitymsdyn_macroconnector_v2" xml:space="preserve">
-    <value>Attributi per connettori macro v3</value>
+    <value>Attributi per connettori macro</value>
     <comment> 'msdyn_macroconnector_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnector_v2ModifiedBy" xml:space="preserve">
@@ -937,7 +937,7 @@
     <comment>'msdyn_macrosolutionconfiguration_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfiguration_v2entitymsdyn_macrosolutionconfiguration_v2" xml:space="preserve">
-    <value>Configurazioni correlate alla soluzione macro v3</value>
+    <value>Configurazioni correlate alla soluzione macro</value>
     <comment> 'msdyn_macrosolutionconfiguration_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfiguration_v2ModifiedBy" xml:space="preserve">
@@ -1061,7 +1061,7 @@
     <comment>'msdyn_parameterdefinition_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinition_v2entitymsdyn_parameterdefinition_v2" xml:space="preserve">
-    <value>Definizioni parametro macro v3</value>
+    <value>Definizioni parametri macro</value>
     <comment> 'msdyn_parameterdefinition_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinition_v2ModifiedBy" xml:space="preserve">

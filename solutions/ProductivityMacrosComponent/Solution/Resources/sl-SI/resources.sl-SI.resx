@@ -389,7 +389,7 @@
     <comment>'msdyn_actioninputparameter_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameter_v2entitymsdyn_actioninputparameter_v2" xml:space="preserve">
-    <value>Atributi vhodnih parametrov dejanja v3</value>
+    <value>Atributi vhodnih parametrov dejanja</value>
     <comment> 'msdyn_actioninputparameter_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameter_v2ModifiedBy" xml:space="preserve">
@@ -489,7 +489,7 @@
     <comment>'msdyn_actionoutputparameter_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actionoutputparameter_v2entitymsdyn_actionoutputparameter_v2" xml:space="preserve">
-    <value>Atributi izhodnih parametrov dejanja v3</value>
+    <value>Atributi izhodnih parametrov dejanja</value>
     <comment> 'msdyn_actionoutputparameter_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actionoutputparameter_v2ModifiedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_macroactiontemplate_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplate_v2entitymsdyn_macroactiontemplate_v2" xml:space="preserve">
-    <value>Atributi za predlogo dejanja makra v3</value>
+    <value>Atributi za predlogo dejanja makra</value>
     <comment> 'msdyn_macroactiontemplate_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplate_v2ModifiedBy" xml:space="preserve">
@@ -713,7 +713,7 @@
     <comment>'msdyn_macroconnector_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnector_v2entitymsdyn_macroconnector_v2" xml:space="preserve">
-    <value>Atributi za povezovalnike makra v3</value>
+    <value>Atributi za povezovalnike makra</value>
     <comment> 'msdyn_macroconnector_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnector_v2ModifiedBy" xml:space="preserve">
@@ -937,7 +937,7 @@
     <comment>'msdyn_macrosolutionconfiguration_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfiguration_v2entitymsdyn_macrosolutionconfiguration_v2" xml:space="preserve">
-    <value>Konfiguracije, povezane z makrorešitvijo v3</value>
+    <value>Konfiguracije, povezane z makrorešitvijo</value>
     <comment> 'msdyn_macrosolutionconfiguration_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfiguration_v2ModifiedBy" xml:space="preserve">
@@ -1061,7 +1061,7 @@
     <comment>'msdyn_parameterdefinition_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinition_v2entitymsdyn_parameterdefinition_v2" xml:space="preserve">
-    <value>Definicije parametrov makra v3</value>
+    <value>Definicije parametrov makra</value>
     <comment> 'msdyn_parameterdefinition_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinition_v2ModifiedBy" xml:space="preserve">
@@ -2477,7 +2477,7 @@
     <comment>'Macro Solution Configuration' : label for tab in Entity FormXml ID: '{15d08adf-93a3-489b-9fdc-7bd260a092be}'</comment>
   </data>
   <data name="1:label,Macro Solution Configuration{1ee16a8d-2001-13d1-a04a-414b44515723}" xml:space="preserve">
-    <value>Poizvedba oData za pridobivanje zapisov, iz katerih naj se pre</value>
+    <value>Poizvedba oData za pridobivanje zapisov, iz katerih naj se prebere URL oblikovalnika</value>
     <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{1ee16a8d-2001-13d1-a04a-414b44515723}'</comment>
   </data>
   <data name="1:label,Macro Solution Configuration{2d18445e-216a-5c93-6122-9211cb1cc23e}" xml:space="preserve">

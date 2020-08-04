@@ -389,7 +389,7 @@
     <comment>'msdyn_actioninputparameter_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameter_v2entitymsdyn_actioninputparameter_v2" xml:space="preserve">
-    <value>Ekintzen sarrera-parametroen atributuak, 3. bertsioa</value>
+    <value>Ekintzen sarrera-parametroen atributuak</value>
     <comment> 'msdyn_actioninputparameter_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameter_v2ModifiedBy" xml:space="preserve">
@@ -489,7 +489,7 @@
     <comment>'msdyn_actionoutputparameter_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_actionoutputparameter_v2entitymsdyn_actionoutputparameter_v2" xml:space="preserve">
-    <value>Ekintzen irteera-parametroen atributuak, 3. bertsioa</value>
+    <value>Ekintzen irteera-parametroen atributuak</value>
     <comment> 'msdyn_actionoutputparameter_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_actionoutputparameter_v2ModifiedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_macroactiontemplate_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplate_v2entitymsdyn_macroactiontemplate_v2" xml:space="preserve">
-    <value>Makro-ekintzen txantiloiaren atributuak, 3. bertsioa</value>
+    <value>Makro-ekintzen txantiloiaren atributuak</value>
     <comment> 'msdyn_macroactiontemplate_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroactiontemplate_v2ModifiedBy" xml:space="preserve">
@@ -713,7 +713,7 @@
     <comment>'msdyn_macroconnector_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnector_v2entitymsdyn_macroconnector_v2" xml:space="preserve">
-    <value>Makro-konektoreen atributuak, 3. bertsioa</value>
+    <value>Makro-konektoreen atributuak</value>
     <comment> 'msdyn_macroconnector_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macroconnector_v2ModifiedBy" xml:space="preserve">
@@ -937,7 +937,7 @@
     <comment>'msdyn_macrosolutionconfiguration_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfiguration_v2entitymsdyn_macrosolutionconfiguration_v2" xml:space="preserve">
-    <value>Makro-soluzioekin erlazionatutako konfigurazioak, 3. bertsioa</value>
+    <value>Makro-soluzioekin erlazionatutako konfigurazioak</value>
     <comment> 'msdyn_macrosolutionconfiguration_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosolutionconfiguration_v2ModifiedBy" xml:space="preserve">
@@ -1061,7 +1061,7 @@
     <comment>'msdyn_parameterdefinition_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinition_v2entitymsdyn_parameterdefinition_v2" xml:space="preserve">
-    <value>Makro-parametroen definizioak, 3. bertsioa</value>
+    <value>Makro-parametroen definizioak</value>
     <comment> 'msdyn_parameterdefinition_v2' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_parameterdefinition_v2ModifiedBy" xml:space="preserve">
