@@ -5,8 +5,8 @@
     <IsCustomizable>0</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_agentscriptstep_v2</ReferencingEntityName>
-    <ReferencedEntityName>msdyn_agentscript_v2</ReferencedEntityName>
+    <ReferencingEntityName>msdyn_productivityagentscriptstep</ReferencingEntityName>
+    <ReferencedEntityName>msdyn_productivityagentscript</ReferencedEntityName>
     <RelationshipBehavior>Append</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
     <CascadeDelete>Cascade</CascadeDelete>
@@ -40,8 +40,8 @@
     <IsCustomizable>0</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_agentscriptstep_v2</ReferencingEntityName>
-    <ReferencedEntityName>msdyn_agentscript_v2</ReferencedEntityName>
+    <ReferencingEntityName>msdyn_productivityagentscriptstep</ReferencingEntityName>
+    <ReferencedEntityName>msdyn_productivityagentscript</ReferencedEntityName>
     <RelationshipBehavior>Append</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
     <CascadeDelete>RemoveLink</CascadeDelete>
@@ -75,7 +75,7 @@
     <IsCustomizable>0</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <FirstEntityName>msdyn_agentscript_v2</FirstEntityName>
+    <FirstEntityName>msdyn_productivityagentscript</FirstEntityName>
     <SecondEntityName>msdyn_sessiontemplate</SecondEntityName>
     <IntersectEntityName>msdyn_msdyn_agentscript_v2_msdyn_sessiontempl</IntersectEntityName>
     <IsValidForAdvancedFind>1</IsValidForAdvancedFind>

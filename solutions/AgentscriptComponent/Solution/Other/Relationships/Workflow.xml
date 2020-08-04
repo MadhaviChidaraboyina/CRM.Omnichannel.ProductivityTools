@@ -5,7 +5,7 @@
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_agentscriptstep_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivityagentscriptstep</ReferencingEntityName>
     <ReferencedEntityName>Workflow</ReferencedEntityName>
     <RelationshipBehavior>Append</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>

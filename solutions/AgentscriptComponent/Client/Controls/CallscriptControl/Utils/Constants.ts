@@ -150,14 +150,14 @@ module MscrmControls.Callscript {
 	export class AgentScriptEntity
 	{
 		// Attributes
-        public static msdyn_agentscriptId = "msdyn_agentscript_v2id";
+        public static msdyn_agentscriptId = "msdyn_productivityagentscriptid";
 		public static msdyn_description = "msdyn_description";
 		public static msdyn_language = "msdyn_language";
 		public static msdyn_name = "msdyn_name";
 
 		// Entity constants
-		public static entitySetName = "msdyn_agentscript_v2s";
-		public static entityName = "msdyn_agentscript_v2";
+        public static entitySetName = "msdyn_productivityagentscripts";
+        public static entityName = "msdyn_productivityagentscript";
 	}
 
 	/**
@@ -166,9 +166,9 @@ module MscrmControls.Callscript {
 	export class AgentScriptStepEntity
 	{
 		// Attributes
-        public static msdyn_agentscriptstepid = "msdyn_agentscriptstep_v2id";
+        public static msdyn_agentscriptstepid = "msdyn_productivityagentscriptstepid";
 		public static msdyn_name = "msdyn_name";
-        public static msdyn_agentscriptid = "msdyn_agentscript_v2id";
+        public static msdyn_agentscriptid = "msdyn_productivityagentscriptid";
 		public static msdyn_order = "msdyn_order";
 
 		public static msdyn_actiontype = "msdyn_actiontype";
@@ -182,8 +182,8 @@ module MscrmControls.Callscript {
 		public static msdyn_routeactionName = "_msdyn_routeactionid_value@OData.Community.Display.V1.FormattedValue";
 
 		// Entity constants
-        public static entitySetName = "msdyn_agentscriptstep_v2s";
-        public static entityName = "msdyn_agentscriptstep_v2";
+        public static entitySetName = "msdyn_productivityagentscriptsteps";
+        public static entityName = "msdyn_productivityagentscriptstep";
 	}
 
 	/**

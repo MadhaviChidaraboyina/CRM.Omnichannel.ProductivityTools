@@ -1,21 +1,21 @@
 <solutioncomponentconfigurations>
-  <solutioncomponentconfiguration entityid.logicalname="msdyn_agentscript_v2">
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_productivityagentscript">
     <fileformat>0</fileformat>
     <filescope>1</filescope>
     <iscustomizable>0</iscustomizable>
     <isdisplayable>1</isdisplayable>
     <issoftdeleteenabled>0</issoftdeleteenabled>
-    <name>msdyn_agentscript_v2</name>
+    <name>msdyn_productivityagentscript</name>
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentconfiguration>
-  <solutioncomponentconfiguration entityid.logicalname="msdyn_agentscriptstep_v2">
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_productivityagentscriptstep">
     <fileformat>0</fileformat>
     <filescope>1</filescope>
     <iscustomizable>0</iscustomizable>
     <isdisplayable>1</isdisplayable>
     <issoftdeleteenabled>0</issoftdeleteenabled>
-    <name>msdyn_agentscriptstep_v2</name>
+    <name>msdyn_productivityagentscriptstep</name>
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentconfiguration>

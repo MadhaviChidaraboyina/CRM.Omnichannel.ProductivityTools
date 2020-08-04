@@ -3,35 +3,38 @@
   <savedquery>
     <IsCustomizable>0</IsCustomizable>
     <CanBeDeleted>0</CanBeDeleted>
-    <isquickfindquery>0</isquickfindquery>
+    <isquickfindquery>1</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{c5f53883-26b9-4bde-a108-be2a1f7cf468}</savedqueryid>
+    <savedqueryid>{0ee3ef67-758a-4a9a-b066-b6fbb925e777}</savedqueryid>
     <layoutxml>
-      <grid name="msdyn_agentscriptstep_v2s" jump="msdyn_name" select="1" icon="1" preview="1">
-        <row name="msdyn_agentscriptstep_v2" id="msdyn_agentscriptstep_v2id">
+      <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
+        <row name="result" id="msdyn_productivityagentscriptstepid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
     </layoutxml>
-    <querytype>2</querytype>
+    <querytype>4</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="msdyn_agentscriptstep_v2">
-          <attribute name="msdyn_agentscriptstep_v2id" />
+        <entity name="msdyn_productivityagentscriptstep">
+          <attribute name="msdyn_productivityagentscriptstepid" />
           <attribute name="msdyn_name" />
           <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="msdyn_name" operator="like" value="{0}" />
+          </filter>
         </entity>
       </fetch>
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Agent script step Associated View" languagecode="1033" />
+      <LocalizedName description="Quick Find Active Agent script steps" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

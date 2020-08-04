@@ -6,20 +6,20 @@
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{1ea4f420-f9df-4cb5-aace-00a69b77b8c7}</savedqueryid>
+    <savedqueryid>{3f42d88e-78b9-4425-905b-10c86e4b26b8}</savedqueryid>
     <layoutxml>
-      <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
-        <row name="result" id="msdyn_agentscriptstep_v2id">
+      <grid name="msdyn_productivityagentscripts" jump="msdyn_name" select="1" icon="1" preview="1">
+        <row name="msdyn_productivityagentscript" id="msdyn_productivityagentscriptid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
     </layoutxml>
-    <querytype>0</querytype>
+    <querytype>2</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="msdyn_agentscriptstep_v2">
-          <attribute name="msdyn_agentscriptstep_v2id" />
+        <entity name="msdyn_productivityagentscript">
+          <attribute name="msdyn_productivityagentscriptid" />
           <attribute name="msdyn_name" />
           <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />
@@ -31,7 +31,7 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Active Agent script steps" languagecode="1033" />
+      <LocalizedName description="Agent script Associated View" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

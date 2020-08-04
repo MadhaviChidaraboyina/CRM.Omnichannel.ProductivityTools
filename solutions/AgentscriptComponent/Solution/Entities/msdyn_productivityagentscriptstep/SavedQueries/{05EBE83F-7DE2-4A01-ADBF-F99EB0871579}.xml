@@ -9,7 +9,7 @@
     <savedqueryid>{05EBE83F-7DE2-4A01-ADBF-F99EB0871579}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="msdyn_name" select="1" preview="1" icon="1">
-        <row name="result" id="msdyn_agentscriptstep_v2id">
+        <row name="result" id="msdyn_productivityagentscriptstepid">
           <cell name="msdyn_name" width="150" />
           <cell name="msdyn_order" width="50" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
           <cell name="msdyn_actiontype" width="100" />
@@ -20,13 +20,13 @@
     <querytype>0</querytype>
     <fetchxml>
       <fetch version="1.0" output-format="xml-platform" mapping="logical">
-        <entity name="msdyn_agentscriptstep_v2">
+        <entity name="msdyn_productivityagentscriptstep">
           <attribute name="msdyn_name" />
           <order attribute="msdyn_order" descending="false" />
           <attribute name="msdyn_actiontype" />
           <attribute name="msdyn_order" />
           <attribute name="modifiedon" />
-          <attribute name="msdyn_agentscriptstep_v2id" />
+          <attribute name="msdyn_productivityagentscriptstepid" />
         </entity>
       </fetch>
     </fetchxml>

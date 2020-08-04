@@ -46,7 +46,7 @@
                             <ViewId>{CED891B7-5F59-41EC-A83B-BBDBC3983808}</ViewId>
                             <IsUserView>false</IsUserView>
                             <RelationshipName>msdyn_msdyn_agentscript_v2_msdyn_sessiontemplat</RelationshipName>
-                            <TargetEntityType>msdyn_agentscript_v2</TargetEntityType>
+                            <TargetEntityType>msdyn_productivityagentscript</TargetEntityType>
                             <AutoExpand>Auto</AutoExpand>
                             <EnableQuickFind>false</EnableQuickFind>
                             <EnableViewPicker>false</EnableViewPicker>

@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name LocalizedName="Agent script step" OriginalName="Agent script step">msdyn_agentscriptstep_v2</Name>
+  <Name LocalizedName="Agent script" OriginalName="Agent script">msdyn_productivityagentscript</Name>
   <EntityInfo>
-    <entity Name="msdyn_agentscriptstep_v2">
+    <entity Name="msdyn_productivityagentscript">
       <LocalizedNames>
-        <LocalizedName description="Agent script step" languagecode="1033" />
+        <LocalizedName description="Agent script" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Agent script steps" languagecode="1033" />
+        <LocalizedCollectionName description="Agent scripts" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Agent script v2" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -249,124 +249,10 @@
             <Description description="Unique identifier of the delegate user who modified the record." languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_actiontype">
-          <Type>picklist</Type>
-          <Name>msdyn_actiontype</Name>
-          <LogicalName>msdyn_actiontype</LogicalName>
-          <RequiredLevel>required</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.0</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <IsSearchable>0</IsSearchable>
-          <IsFilterable>0</IsFilterable>
-          <IsRetrievable>0</IsRetrievable>
-          <IsLocalizable>0</IsLocalizable>
-          <AppDefaultValue>-1</AppDefaultValue>
-          <optionset Name="msdyn_agentscriptstep_v2_msdyn_actiontype">
-            <OptionSetType>picklist</OptionSetType>
-            <IntroducedVersion>1.0.0.0</IntroducedVersion>
-            <IsCustomizable>1</IsCustomizable>
-            <displaynames>
-              <displayname description="Action type" languagecode="1033" />
-            </displaynames>
-            <Descriptions>
-              <Description description="Action type for agent script step" languagecode="1033" />
-            </Descriptions>
-            <options>
-              <option value="192350000" ExternalValue="" Color="#0000ff">
-                <labels>
-                  <label description="Text" languagecode="1033" />
-                </labels>
-                <Descriptions>
-                  <Description description="Text action" languagecode="1033" />
-                </Descriptions>
-              </option>
-              <option value="192350001" ExternalValue="" Color="#0000ff">
-                <labels>
-                  <label description="Macro" languagecode="1033" />
-                </labels>
-                <Descriptions>
-                  <Description description="Macro action" languagecode="1033" />
-                </Descriptions>
-              </option>
-              <option value="192350002" ExternalValue="" Color="#0000ff">
-                <labels>
-                  <label description="Script" languagecode="1033" />
-                </labels>
-                <Descriptions>
-                  <Description description="Script action" languagecode="1033" />
-                </Descriptions>
-              </option>
-            </options>
-          </optionset>
-          <displaynames>
-            <displayname description="Action type" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Action type for agent script step" languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_agentscriptid">
-          <Type>lookup</Type>
-          <Name>msdyn_agentscriptid</Name>
-          <LogicalName>msdyn_agentscriptid</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>0</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.0</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <IsSearchable>0</IsSearchable>
-          <IsFilterable>0</IsFilterable>
-          <IsRetrievable>0</IsRetrievable>
-          <IsLocalizable>0</IsLocalizable>
-          <LookupStyle>single</LookupStyle>
-          <LookupTypes />
-          <displaynames>
-            <displayname description="Agent script" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Unique identifier for agent script associated with agent script step." languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_agentscriptstep_v2Id">
+        <attribute PhysicalName="msdyn_productivityagentscriptId">
           <Type>primarykey</Type>
-          <Name>msdyn_agentscriptstep_v2id</Name>
-          <LogicalName>msdyn_agentscriptstep_v2id</LogicalName>
+          <Name>msdyn_productivityagentscriptid</Name>
+          <LogicalName>msdyn_productivityagentscriptid</LogicalName>
           <RequiredLevel>systemrequired</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
@@ -394,7 +280,7 @@
           <IsRetrievable>1</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <displaynames>
-            <displayname description="Agent script step" languagecode="1033" />
+            <displayname description="Agent script" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Unique identifier for entity instances" languagecode="1033" />
@@ -431,27 +317,27 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>1</IsLocalizable>
           <Format>text</Format>
-          <MaxLength>2000</MaxLength>
-          <Length>4000</Length>
+          <MaxLength>100</MaxLength>
+          <Length>200</Length>
           <displaynames>
             <displayname description="Description" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Description for agent script step" languagecode="1033" />
+            <Description description="Description of the agent scrip" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_macroactionid">
-          <Type>lookup</Type>
-          <Name>msdyn_macroactionid</Name>
-          <LogicalName>msdyn_macroactionid</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
+        <attribute PhysicalName="msdyn_language">
+          <Type>int</Type>
+          <Name>msdyn_language</Name>
+          <LogicalName>msdyn_language</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>
           <ValidForReadApi>1</ValidForReadApi>
           <ValidForCreateApi>1</ValidForCreateApi>
           <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsAuditEnabled>1</IsAuditEnabled>
           <IsSecured>0</IsSecured>
           <IntroducedVersion>1.0.0.0</IntroducedVersion>
           <IsCustomizable>1</IsCustomizable>
@@ -470,13 +356,14 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <LookupStyle>single</LookupStyle>
-          <LookupTypes />
+          <Format>language</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>2147483647</MaxValue>
           <displaynames>
-            <displayname description="Target macro" languagecode="1033" />
+            <displayname description="Language" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Unique identifier for macro associated with agent script step" languagecode="1033" />
+            <Description description="Language for agent script" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_name">
@@ -517,123 +404,6 @@
           </displaynames>
           <Descriptions>
             <Description description="The name of the custom entity." languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_order">
-          <Type>int</Type>
-          <Name>msdyn_order</Name>
-          <LogicalName>msdyn_order</LogicalName>
-          <RequiredLevel>required</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.0</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <IsSearchable>0</IsSearchable>
-          <IsFilterable>0</IsFilterable>
-          <IsRetrievable>0</IsRetrievable>
-          <IsLocalizable>0</IsLocalizable>
-          <MinValue>1</MinValue>
-          <MaxValue>2147483647</MaxValue>
-          <displaynames>
-            <displayname description="Order" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Display order" languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_routeactionid">
-          <Type>lookup</Type>
-          <Name>msdyn_routeactionid</Name>
-          <LogicalName>msdyn_routeactionid</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>0</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.0</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <IsSearchable>0</IsSearchable>
-          <IsFilterable>0</IsFilterable>
-          <IsRetrievable>0</IsRetrievable>
-          <IsLocalizable>0</IsLocalizable>
-          <LookupStyle>single</LookupStyle>
-          <LookupTypes />
-          <displaynames>
-            <displayname description="Target script" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Unique identifier for target script associated with agent script step" languagecode="1033" />
-          </Descriptions>
-        </attribute>
-        <attribute PhysicalName="msdyn_textinstruction">
-          <Type>ntext</Type>
-          <Name>msdyn_textinstruction</Name>
-          <LogicalName>msdyn_textinstruction</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
-          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
-          <ImeMode>auto</ImeMode>
-          <ValidForUpdateApi>1</ValidForUpdateApi>
-          <ValidForReadApi>1</ValidForReadApi>
-          <ValidForCreateApi>1</ValidForCreateApi>
-          <IsCustomField>1</IsCustomField>
-          <IsAuditEnabled>1</IsAuditEnabled>
-          <IsSecured>0</IsSecured>
-          <IntroducedVersion>1.0.0.0</IntroducedVersion>
-          <IsCustomizable>1</IsCustomizable>
-          <IsRenameable>1</IsRenameable>
-          <CanModifySearchSettings>1</CanModifySearchSettings>
-          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
-          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
-          <SourceType>0</SourceType>
-          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
-          <IsSortableEnabled>0</IsSortableEnabled>
-          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
-          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
-          <IsDataSourceSecret>0</IsDataSourceSecret>
-          <AutoNumberFormat></AutoNumberFormat>
-          <IsSearchable>0</IsSearchable>
-          <IsFilterable>0</IsFilterable>
-          <IsRetrievable>0</IsRetrievable>
-          <IsLocalizable>1</IsLocalizable>
-          <Format></Format>
-          <MaxLength>2000</MaxLength>
-          <displaynames>
-            <displayname description="Text instructions" languagecode="1033" />
-          </displaynames>
-          <Descriptions>
-            <Description description="Instruction for text action type" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_UniqueName">
@@ -904,7 +674,7 @@
           <IsFilterable>1</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_agentscriptstep_v2_statecode">
+          <optionset Name="msdyn_agentscript_v2_statecode">
             <OptionSetType>state</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -912,7 +682,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the Agent script step" languagecode="1033" />
+              <Description description="Status of the Agent script" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -931,7 +701,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the Agent script step" languagecode="1033" />
+            <Description description="Status of the Agent script" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -964,7 +734,7 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_agentscriptstep_v2_statuscode">
+          <optionset Name="msdyn_agentscript_v2_statuscode">
             <OptionSetType>status</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -972,7 +742,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the Agent script step" languagecode="1033" />
+              <Description description="Reason for the status of the Agent script" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -991,7 +761,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the Agent script step" languagecode="1033" />
+            <Description description="Reason for the status of the Agent script" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">
@@ -1075,19 +845,6 @@
       </attributes>
       <EntityKeys>
         <EntityKey>
-          <Name>msdyn_agentscriptsteporder</Name>
-          <LogicalName>msdyn_agentscriptsteporder</LogicalName>
-          <IntroducedVersion>1.0.0.0</IntroducedVersion>
-          <IsCustomizable>0</IsCustomizable>
-          <EntityKeyAttributes>
-            <AttributeName>msdyn_agentscriptid</AttributeName>
-            <AttributeName>msdyn_order</AttributeName>
-          </EntityKeyAttributes>
-          <displaynames>
-            <displayname description="Step order" languagecode="1033" />
-          </displaynames>
-        </EntityKey>
-        <EntityKey>
           <Name>msdyn_uniquename</Name>
           <LogicalName>msdyn_uniquename</LogicalName>
           <IntroducedVersion>1.0.0.0</IntroducedVersion>
@@ -1102,7 +859,7 @@
           </displaynames>
         </EntityKey>
       </EntityKeys>
-      <EntitySetName>msdyn_agentscriptstep_v2s</EntitySetName>
+      <EntitySetName>msdyn_productivityagentscripts</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>
@@ -1135,7 +892,7 @@
       <MobileOfflineFilters></MobileOfflineFilters>
       <IsMapiGridEnabled>1</IsMapiGridEnabled>
       <IsReadingPaneEnabled>0</IsReadingPaneEnabled>
-      <IsQuickCreateEnabled>1</IsQuickCreateEnabled>
+      <IsQuickCreateEnabled>0</IsQuickCreateEnabled>
       <SyncToExternalSearchIndex>0</SyncToExternalSearchIndex>
       <IntroducedVersion>1.0.0.0</IntroducedVersion>
       <IsCustomizable>0</IsCustomizable>
