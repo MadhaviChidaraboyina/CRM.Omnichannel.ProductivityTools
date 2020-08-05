@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name LocalizedName="Macro Action Template" OriginalName="Macro Action Template">msdyn_macroactiontemplate_v2</Name>
+  <Name LocalizedName="Macro Action Template" OriginalName="Macro Action Template">msdyn_productivitymacroactiontemplate</Name>
   <EntityInfo>
-    <entity Name="msdyn_macroactiontemplate_v2">
+    <entity Name="msdyn_productivitymacroactiontemplate">
       <LocalizedNames>
         <LocalizedName description="Macro Action Template" languagecode="1033" />
       </LocalizedNames>
@@ -489,10 +489,10 @@
             <Description description="Kind is either 'TRIGGERS' or 'ACTIONS'" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_macroactiontemplate_v2Id">
+        <attribute PhysicalName="msdyn_productivitymacroactiontemplateId">
           <Type>primarykey</Type>
-          <Name>msdyn_macroactiontemplate_v2id</Name>
-          <LogicalName>msdyn_macroactiontemplate_v2id</LogicalName>
+          <Name>msdyn_productivitymacroactiontemplateid</Name>
+          <LogicalName>msdyn_productivitymacroactiontemplateid</LogicalName>
           <RequiredLevel>systemrequired</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
@@ -1298,7 +1298,7 @@
           </displaynames>
         </EntityKey>
       </EntityKeys>
-      <EntitySetName>msdyn_macroactiontemplate_v2s</EntitySetName>
+      <EntitySetName>msdyn_productivitymacroactiontemplates</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>

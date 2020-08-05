@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ImportExportXml version="9.0.0000.0330" SolutionPackageVersion="9.0" languagecode="1033" generatedBy="OnPremise" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
-    <UniqueName>msdyn_ProductivityPaneComponent</UniqueName>
+    <UniqueName>msdyn_ProductivityPane</UniqueName>
     <LocalizedNames>
       <LocalizedName description="Productivity Pane Component" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="Dynamics 365 ProductivityPaneComponent workload" languagecode="1033" />
+      <Description description="Productivity pane for productivity tools" languagecode="1033" />
     </Descriptions>
     <Version>9.2.1.0</Version>
     <Managed>2</Managed>

@@ -9,7 +9,7 @@
     <savedqueryid>{f4431a78-654f-4ada-b51c-e048e3d6e1fe}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
-        <row name="result" id="msdyn_macroactiontemplate_v2id">
+        <row name="result" id="msdyn_productivitymacroactiontemplateid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
@@ -18,8 +18,8 @@
     <querytype>4</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="msdyn_macroactiontemplate_v2">
-          <attribute name="msdyn_macroactiontemplate_v2id" />
+        <entity name="msdyn_productivitymacroactiontemplate">
+          <attribute name="msdyn_productivitymacroactiontemplateid" />
           <attribute name="msdyn_name" />
           <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />

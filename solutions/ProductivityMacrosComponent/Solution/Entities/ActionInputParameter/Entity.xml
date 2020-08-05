@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name LocalizedName="Action Input Parameter" OriginalName="Action Input Parameter">msdyn_actioninputparameter_v2</Name>
+  <Name LocalizedName="Action Input Parameter" OriginalName="Action Input Parameter">msdyn_productivityactioninputparameter</Name>
   <EntityInfo>
-    <entity Name="msdyn_actioninputparameter_v2">
+    <entity Name="msdyn_productivityactioninputparameter">
       <LocalizedNames>
         <LocalizedName description="Action Input Parameter" languagecode="1033" />
       </LocalizedNames>
@@ -249,10 +249,10 @@
             <Description description="Unique identifier of the delegate user who modified the record." languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_actioninputparameter_v2Id">
+        <attribute PhysicalName="msdyn_productivityactioninputparameterId">
           <Type>primarykey</Type>
-          <Name>msdyn_actioninputparameter_v2id</Name>
-          <LogicalName>msdyn_actioninputparameter_v2id</LogicalName>
+          <Name>msdyn_productivityactioninputparameterid</Name>
+          <LogicalName>msdyn_productivityactioninputparameterid</LogicalName>
           <RequiredLevel>systemrequired</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
@@ -919,7 +919,7 @@
           </displaynames>
         </EntityKey>
       </EntityKeys>
-      <EntitySetName>msdyn_actioninputparameter_v2s</EntitySetName>
+      <EntitySetName>msdyn_productivityactioninputparameters</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>

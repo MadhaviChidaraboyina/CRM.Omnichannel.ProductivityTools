@@ -60,8 +60,8 @@ namespace Microsoft.ProductivityMacros {
     }
 
     export class EntityName {
-        public static ActionTemplateEntityName = "msdyn_macroactiontemplate_v2";
-		public static ConnectorEntityName = "msdyn_macroconnector_v2";
+        public static ActionTemplateEntityName = "msdyn_productivitymacroactiontemplate";
+        public static ConnectorEntityName = "msdyn_productivitymacroconnector";
 		public static RunHistoryEntity = "msdyn_macrosession";
 		public static WorkflowEntity = "workflow"
     }

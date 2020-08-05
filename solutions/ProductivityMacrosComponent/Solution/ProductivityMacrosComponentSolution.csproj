@@ -107,10 +107,10 @@
     <Content Include="Entities\Workflow\SavedQueries\{012107d2-54d0-e911-a81c-000d3a6e50b0}.xml" />
     <Content Include="Other\Relationships.xml" />
     <Content Include="Other\Relationships\BusinessUnit.xml" />
-    <Content Include="Other\Relationships\msdyn_macroactiontemplate_v2.xml" />
-    <Content Include="Other\Relationships\msdyn_macroconnector_v2.xml" />
-    <Content Include="Other\Relationships\msdyn_actioninputparameter_v2.xml" />
-    <Content Include="Other\Relationships\msdyn_actionoutputparameter_v2.xml" />
+    <Content Include="Other\Relationships\msdyn_productivitymacroactiontemplate.xml" />
+    <Content Include="Other\Relationships\msdyn_productivitymacroconnector.xml" />
+    <Content Include="Other\Relationships\msdyn_productivityactioninputparameter.xml" />
+    <Content Include="Other\Relationships\msdyn_productivityactionoutputparameter.xml" />
     <Content Include="Other\Relationships\Owner.xml" />
     <Content Include="Other\Relationships\SystemUser.xml" />
     <Content Include="Other\Relationships\Team.xml" />

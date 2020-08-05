@@ -10,8 +10,8 @@
     <querytype>8192</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical" output-format="xml-platform">
-        <entity name="msdyn_macrosolutionconfiguration_v2">
-          <attribute name="msdyn_macrosolutionconfiguration_v2id" />
+        <entity name="msdyn_productivitymacrosolutionconfiguration">
+          <attribute name="msdyn_productivitymacrosolutionconfigurationid" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
             <condition attribute="ownerid" operator="eq-userid" />

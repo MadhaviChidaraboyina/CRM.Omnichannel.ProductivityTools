@@ -84,8 +84,8 @@ export class Macros {
         let categories: Category[] = [];
         let promises: Promise<boolean>[] = [];
         let res1 = await Promise.all([
-            window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_macroconnector_v2", "?$filter=statecode eq 0&$select=msdyn_macroconnector_v2id,msdyn_name,msdyn_title,msdyn_displayname,msdyn_brandcolor,msdyn_description,msdyn_icon,msdyn_categorykey,msdyn_categorylabel,msdyn_type,msdyn_webresourcename"),
-            window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_macroactiontemplate_v2", "?$filter=statecode eq 0&$select=msdyn_name,msdyn_title,msdyn_subtitle,msdyn_displayname,msdyn_brandcolor,msdyn_actiondescription,msdyn_icon,msdyn_summary,msdyn_visibility,msdyn_kind&$expand=msdyn_msdyn_macroactiontemplate_v2_msdyn_actioninput($select=msdyn_name,msdyn_visibility),msdyn_msdyn_macroactiontemplate_v2_msdyn_actionout($select=msdyn_name),msdyn_macroconnector($select=msdyn_name)")
+            window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_productivitymacroconnector", "?$filter=statecode eq 0&$select=msdyn_productivitymacroconnectorid,msdyn_name,msdyn_title,msdyn_displayname,msdyn_brandcolor,msdyn_description,msdyn_icon,msdyn_categorykey,msdyn_categorylabel,msdyn_type,msdyn_webresourcename"),
+            window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_productivitymacroactiontemplate", "?$filter=statecode eq 0&$select=msdyn_name,msdyn_title,msdyn_subtitle,msdyn_displayname,msdyn_brandcolor,msdyn_actiondescription,msdyn_icon,msdyn_summary,msdyn_visibility,msdyn_kind&$expand=msdyn_msdyn_macroactiontemplate_v2_msdyn_actioninput($select=msdyn_name,msdyn_visibility),msdyn_msdyn_macroactiontemplate_v2_msdyn_actionout($select=msdyn_name),msdyn_macroconnector($select=msdyn_name)")
         ]);
         let connectorData = await res1[0];
         let templates = await res1[1];
@@ -100,7 +100,7 @@ export class Macros {
         let responseLocale = await Promise.all(mPromises);
         connectorData.entities.forEach(function (templ) {
             let connector: Connector = {
-                id: templ.msdyn_macroconnector_v2id,
+                id: templ.msdyn_productivitymacroconnectorid,
                 type: templ.msdyn_type,
                 name: templ.msdyn_name,
                 title: Utils.getResourceString(templ.msdyn_title, responseLocale),
@@ -135,12 +135,12 @@ export class Macros {
                 kind: templ.msdyn_kind,
                 visibility: (templ.msdyn_visibility || "true"),
                 category: "CONNECTORS",
-                connectorId: templ.msdyn_macroconnector && templ.msdyn_macroconnector.msdyn_macroconnector_v2id || ""
+                connectorId: templ.msdyn_macroconnector && templ.msdyn_macroconnector.msdyn_productivitymacroconnectorid || ""
             };
             templ.msdyn_msdyn_macroactiontemplate_v2_msdyn_actioninput.forEach(async function (inputType) {
                 let prom = new Promise<boolean>(async (res, rej) => {
                     try {
-                        let paramData = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_actioninputparameter_v2", "?$filter=msdyn_actioninputparameter_v2id eq '" + inputType.msdyn_actioninputparameter_v2id + "'&$expand=msdyn_msdyn_actioninputparameter_v2_msdyn_par($select=msdyn_defaultvalue,msdyn_description,msdyn_displayname,msdyn_name,msdyn_parametertype,msdyn_jsonobjectstructure)&$select=msdyn_name");
+                        let paramData = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_productivityactioninputparameter", "?$filter=msdyn_productivityactioninputparameterid eq '" + inputType.msdyn_productivityactioninputparameterid + "'&$expand=msdyn_msdyn_actioninputparameter_v2_msdyn_par($select=msdyn_defaultvalue,msdyn_description,msdyn_displayname,msdyn_name,msdyn_parametertype,msdyn_jsonobjectstructure)&$select=msdyn_name");
                         paramData.entities.forEach(function (inputParamType) {
                             inputParamType.msdyn_msdyn_actioninputparameter_v2_msdyn_par.forEach(function (input) {
                                 let param: Parameter = {
@@ -171,7 +171,7 @@ export class Macros {
             templ.msdyn_msdyn_macroactiontemplate_v2_msdyn_actionout.forEach(async function (outputType) {
                 let prom = new Promise<boolean>(async (res, rej) => {
                     try {
-                        let paramData = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_actionoutputparameter_v2", "?$filter=msdyn_actionoutputparameter_v2id eq '" + outputType.msdyn_actionoutputparameter_v2id + "'&$expand=msdyn_msdyn_actionoutputparameter_v2_msdyn_pa($select=msdyn_defaultvalue,msdyn_description,msdyn_displayname,msdyn_name,msdyn_parametertype)&$select=msdyn_name");
+                        let paramData = await (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_productivityactionoutputparameter", "?$filter=msdyn_productivityactionoutputparameterid eq '" + outputType.msdyn_productivityactionoutputparameterid + "'&$expand=msdyn_msdyn_actionoutputparameter_v2_msdyn_pa($select=msdyn_defaultvalue,msdyn_description,msdyn_displayname,msdyn_name,msdyn_parametertype)&$select=msdyn_name");
                         paramData.entities.forEach(function (outputParamType) {
                             outputParamType.msdyn_msdyn_actionoutputparameter_v2_msdyn_pa.forEach(function (output) {
                                 let param: Parameter = {

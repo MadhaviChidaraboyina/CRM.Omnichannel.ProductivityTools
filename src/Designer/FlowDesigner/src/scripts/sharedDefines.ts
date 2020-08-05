@@ -29,7 +29,7 @@ export class Constants {
 	public static WRAPPER_CONTROL_SIGNATURE = "msladesigner";
 	public static MACRO_ID = "id";
 	public static WORKFLOW_ENTITY = "workflow";
-	public static MACRO_CONFIG_ENTITY = "msdyn_macrosolutionconfiguration_v2";
+    public static MACRO_CONFIG_ENTITY = "msdyn_productivitymacrosolutionconfiguration";
 	public static MONITOR_CONTROL_SIGNATURE = "mslamonitor";
 	public static MWRAPPER_CONTROL_SIGNATURE = "mslamonitor";
 	public static MACROS_SESSION_ENTITY = "msdyn_macrosession";

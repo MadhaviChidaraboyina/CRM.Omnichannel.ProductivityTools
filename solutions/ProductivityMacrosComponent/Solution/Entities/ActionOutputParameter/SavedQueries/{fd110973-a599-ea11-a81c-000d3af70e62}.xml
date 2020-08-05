@@ -10,8 +10,8 @@
     <querytype>8192</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical" output-format="xml-platform">
-        <entity name="msdyn_actionoutputparameter_v2">
-          <attribute name="msdyn_actionoutputparameter_v2id" />
+        <entity name="msdyn_productivityactionoutputparameter">
+          <attribute name="msdyn_productivityactionoutputparameterid" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
             <condition attribute="ownerid" operator="eq-userid" />

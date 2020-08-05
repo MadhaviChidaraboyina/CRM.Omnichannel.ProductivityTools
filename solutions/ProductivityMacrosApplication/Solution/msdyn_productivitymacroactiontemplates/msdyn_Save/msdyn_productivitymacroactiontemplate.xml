@@ -1,0 +1,28 @@
+<msdyn_productivitymacroactiontemplate msdyn_uniquename="msdyn_Save">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiondescription default="Save the record">
+    <label description="Save the record" languagecode="1033" />
+  </msdyn_actiondescription>
+  <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
+  <msdyn_displayname default="Save">
+    <label description="Save" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_save.svg</msdyn_icon>
+  <msdyn_kind>ACTIONS</msdyn_kind>
+  <msdyn_macroconnector>
+    <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>
+  </msdyn_macroconnector>
+  <msdyn_name>Save</msdyn_name>
+  <msdyn_runtimeapi>Microsoft.ProductivityMacros.Internal.save(actionName)</msdyn_runtimeapi>
+  <msdyn_subtitle default="Productivity automation">
+    <label description="Productivity automation" languagecode="1033" />
+  </msdyn_subtitle>
+  <msdyn_summary default="Save the record">
+    <label description="Save the record" languagecode="1033" />
+  </msdyn_summary>
+  <msdyn_title default="Save the record">
+    <label description="Save the record" languagecode="1033" />
+  </msdyn_title>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivitymacroactiontemplate>
