@@ -365,7 +365,8 @@ async function startDesigner(rpc) {
 }
 
 function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, toClose?: boolean) {
-    Utils.Utils.logAdminTelemetry(msg);
+    //TODO: add telemetry TASK 1960251
+    //Utils.Utils.logAdminTelemetry(msg);
     console.log(msg.eventTimeStamp + " " + msg.eventType + " " + msg.level + " " + msg.eventName + " " + msg.message);
     if (userVisibleError) {
         window.top.Xrm.Navigation.openAlertDialog({ text: Utils.Utils.getResourceString(userVisibleError) }).then(function () {

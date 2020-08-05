@@ -67,6 +67,6 @@ export class Utils {
         });
     }
     public static logAdminTelemetry(msg: any) {
-        //(window.top as any).Microsoft.ProductivityMacros.Internal.setMacrosAdminData(msg);
+        (window.top as any).Microsoft.ProductivityMacros.Internal.setMacrosAdminData(msg);
     }
 };
