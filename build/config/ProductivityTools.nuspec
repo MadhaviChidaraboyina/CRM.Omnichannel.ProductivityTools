@@ -19,5 +19,9 @@
 	<files>
 		<!-- retail artifacts -->
     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityPaneComponent_*.*" target="Solutions" />
+    <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_AgentscriptComponent_*.*" target="Solutions" />
+    <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityMacrosComponent_*.*" target="Solutions" />
+    <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityMacrosApplication_*.*" target="Solutions" />
+    <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityMacrosApplicationOC_*.*" target="Solutions" />
   </files>
 </package>
