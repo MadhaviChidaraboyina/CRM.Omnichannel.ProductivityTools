@@ -18,11 +18,11 @@
   <EntityRelationship Name="lk_msdyn_productivitymacrosolutionconfiguration_modifiedby" />
   <EntityRelationship Name="lk_msdyn_productivityparameterdefinition_createdby" />
   <EntityRelationship Name="lk_msdyn_productivityparameterdefinition_modifiedby" />
-  <EntityRelationship Name="msdyn_msdyn_actioninputparameter_v2_msdyn_par" />
-  <EntityRelationship Name="msdyn_msdyn_actionoutputparameter_v2_msdyn_pa" />
-  <EntityRelationship Name="msdyn_msdyn_macroactiontemplate_v2_msdyn_actioninput" />
-  <EntityRelationship Name="msdyn_msdyn_macroactiontemplate_v2_msdyn_actionout" />
-  <EntityRelationship Name="msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector_v2" />
+  <EntityRelationship Name="msdyn_msdyn_prod_actioninputparameter_msdyn_par" />
+  <EntityRelationship Name="msdyn_msdyn_prod_actionoutputparameter_msdyn_pa" />
+  <EntityRelationship Name="msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput" />
+  <EntityRelationship Name="msdyn_msdyn_prod_macroactiontemplate_msdyn_actionout" />
+  <EntityRelationship Name="msdyn_msdyn_Prod_macroconnector_msdyn_macroactiontemplate_macroconnector" />
   <EntityRelationship Name="owner_msdyn_productivityactioninputparameter" />
   <EntityRelationship Name="owner_msdyn_productivityactionoutputparameter" />
   <EntityRelationship Name="owner_msdyn_productivitymacroactiontemplate" />

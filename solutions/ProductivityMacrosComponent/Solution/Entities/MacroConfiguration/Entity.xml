@@ -994,7 +994,7 @@
           <IsFilterable>1</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_macrosolutionconfiguration_v2_statecode">
+          <optionset Name="msdyn_productivitymacrosolutionconfiguration_statecode">
             <OptionSetType>state</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -1054,7 +1054,7 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_macrosolutionconfiguration_v2_statuscode">
+          <optionset Name="msdyn_productivitymacrosolutionconfiguration_statuscode">
             <OptionSetType>status</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>

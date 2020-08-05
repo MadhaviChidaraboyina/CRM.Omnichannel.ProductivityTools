@@ -204,17 +204,17 @@
     <value>Unique identifier of the user who modified the record.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_modifiedby'</comment>
   </data>
-  <data name="10:Description,msdyn_msdyn_macroactiontemplate_v2_msdyn_actioninput" xml:space="preserve">
+  <data name="10:Description,msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput" xml:space="preserve">
     <value>Unique identifier for Macro Action Template associated with Action Input Parameter.</value>
-    <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'msdyn_msdyn_macroactiontemplate_v2_msdyn_actioninput'</comment>
+    <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput'</comment>
   </data>
-  <data name="10:Description,msdyn_msdyn_macroactiontemplate_v2_msdyn_actionout" xml:space="preserve">
+  <data name="10:Description,msdyn_msdyn_prod_macroactiontemplate_msdyn_actionout" xml:space="preserve">
     <value />
-    <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'msdyn_msdyn_macroactiontemplate_v2_msdyn_actionout'</comment>
+    <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'msdyn_msdyn_prod_macroactiontemplate_msdyn_actionout'</comment>
   </data>
-  <data name="10:Description,msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector_v2" xml:space="preserve">
+  <data name="10:Description,msdyn_msdyn_Prod_macroconnector_msdyn_macroactiontemplate_macroconnector" xml:space="preserve">
     <value>Sets the value of macro connector</value>
-    <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'msdyn_msdyn_macroconnector_msdyn_macroactiontemplate_macroconnector_v2'</comment>
+    <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'msdyn_msdyn_Prod_macroconnector_msdyn_macroactiontemplate_macroconnector'</comment>
   </data>
   <data name="10:Description,msdyn_workflow_msdyn_macrosession_macroname" xml:space="preserve">
     <value />
@@ -500,18 +500,6 @@
     <value>Unique identifier of the delegate user who modified the record.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_msdyn_parametertype" xml:space="preserve">
-    <value>Unique value to store the parameter type</value>
-    <comment>'msdyn_productivityactioninputparameter' : Description for OptionSet 'msdyn_actioninputparameter_v2_msdyn_parametertype' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_statecode" xml:space="preserve">
-    <value>Status of the Action Input Parameter</value>
-    <comment>'msdyn_productivityactioninputparameter' : Description for OptionSet 'msdyn_actioninputparameter_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_statuscode" xml:space="preserve">
-    <value>Reason for the status of the Action Input Parameter</value>
-    <comment>'msdyn_productivityactioninputparameter' : Description for OptionSet 'msdyn_actioninputparameter_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_actiontemplateinputparameterid" xml:space="preserve">
     <value>Unique identifier for Macro Action Template associated with Action Input Parameter.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_actiontemplateinputparameterid' on Entity</comment>
@@ -527,6 +515,18 @@
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameterId" xml:space="preserve">
     <value>Unique identifier for entity instances</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_productivityactioninputparameterId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_msdyn_parametertype" xml:space="preserve">
+    <value>Unique value to store the parameter type</value>
+    <comment>'msdyn_productivityactioninputparameter' : Description for OptionSet 'msdyn_productivityactioninputparameter_msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_statecode" xml:space="preserve">
+    <value>Status of the Action Input Parameter</value>
+    <comment>'msdyn_productivityactioninputparameter' : Description for OptionSet 'msdyn_productivityactioninputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Action Input Parameter</value>
+    <comment>'msdyn_productivityactioninputparameter' : Description for OptionSet 'msdyn_productivityactioninputparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_UniqueName" xml:space="preserve">
     <value>Unique Name for the entity.</value>
@@ -600,14 +600,6 @@
     <value>Unique identifier of the delegate user who modified the record.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_actionoutputparameter_v2_statecode" xml:space="preserve">
-    <value>Status of the Action Output Parameter</value>
-    <comment>'msdyn_productivityactionoutputparameter' : Description for OptionSet 'msdyn_actionoutputparameter_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_actionoutputparameter_v2_statuscode" xml:space="preserve">
-    <value>Reason for the status of the Action Output Parameter</value>
-    <comment>'msdyn_productivityactionoutputparameter' : Description for OptionSet 'msdyn_actionoutputparameter_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
     <value />
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_actiontemplateoutputparameterid' on Entity</comment>
@@ -619,6 +611,14 @@
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameterId" xml:space="preserve">
     <value>Unique identifier for entity instances</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_productivityactionoutputparameterId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statecode" xml:space="preserve">
+    <value>Status of the Action Output Parameter</value>
+    <comment>'msdyn_productivityactionoutputparameter' : Description for OptionSet 'msdyn_productivityactionoutputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Action Output Parameter</value>
+    <comment>'msdyn_productivityactionoutputparameter' : Description for OptionSet 'msdyn_productivityactionoutputparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_UniqueName" xml:space="preserve">
     <value>Unique Name for the entity.</value>
@@ -712,14 +712,6 @@
     <value>Kind is either 'TRIGGERS' or 'ACTIONS'</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_kind' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_macroactiontemplate_v2_statecode" xml:space="preserve">
-    <value>Status of the Macro Action Template</value>
-    <comment>'msdyn_productivitymacroactiontemplate' : Description for OptionSet 'msdyn_macroactiontemplate_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_macroactiontemplate_v2_statuscode" xml:space="preserve">
-    <value>Reason for the status of the Macro Action Template</value>
-    <comment>'msdyn_productivitymacroactiontemplate' : Description for OptionSet 'msdyn_macroactiontemplate_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_macroconnector" xml:space="preserve">
     <value>Sets the value of macro connector</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_macroconnector' on Entity</comment>
@@ -735,6 +727,14 @@
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplateId" xml:space="preserve">
     <value>Unique identifier for entity instances</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_productivitymacroactiontemplateId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statecode" xml:space="preserve">
+    <value>Status of the Macro Action Template</value>
+    <comment>'msdyn_productivitymacroactiontemplate' : Description for OptionSet 'msdyn_productivitymacroactiontemplate_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Macro Action Template</value>
+    <comment>'msdyn_productivitymacroactiontemplate' : Description for OptionSet 'msdyn_productivitymacroactiontemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_runtimeapi" xml:space="preserve">
     <value>Function to be executed at runtime</value>
@@ -852,14 +852,6 @@
     <value>Icon URL to be rendered for this connector</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_icon' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_productivitymacroconnectormsdyn_macroconnector_v2_statecode" xml:space="preserve">
-    <value>Status of the Macro Connector</value>
-    <comment>'msdyn_productivitymacroconnector' : Description for OptionSet 'msdyn_macroconnector_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivitymacroconnectormsdyn_macroconnector_v2_statuscode" xml:space="preserve">
-    <value>Reason for the status of the Macro Connector</value>
-    <comment>'msdyn_productivitymacroconnector' : Description for OptionSet 'msdyn_macroconnector_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_name" xml:space="preserve">
     <value>The name of the custom entity.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_name' on Entity</comment>
@@ -871,6 +863,14 @@
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnectorId" xml:space="preserve">
     <value>Unique identifier for entity instances</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_productivitymacroconnectorId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statecode" xml:space="preserve">
+    <value>Status of the Macro Connector</value>
+    <comment>'msdyn_productivitymacroconnector' : Description for OptionSet 'msdyn_productivitymacroconnector_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Macro Connector</value>
+    <comment>'msdyn_productivitymacroconnector' : Description for OptionSet 'msdyn_productivitymacroconnector_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_title" xml:space="preserve">
     <value>The title displayed on the desginer for this connector</value>
@@ -976,14 +976,6 @@
     <value>Sets the path to designer blob with designer URL</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_designerurlrelativepath' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_macrosolutionconfiguration_v2_statecode" xml:space="preserve">
-    <value>Status of the Macro Solution Configuration</value>
-    <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for OptionSet 'msdyn_macrosolutionconfiguration_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_macrosolutionconfiguration_v2_statuscode" xml:space="preserve">
-    <value>Reason for the status of the Macro Solution Configuration</value>
-    <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for OptionSet 'msdyn_macrosolutionconfiguration_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_macrosversion" xml:space="preserve">
     <value>Macro solution version</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_macrosversion' on Entity</comment>
@@ -995,6 +987,14 @@
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfigurationId" xml:space="preserve">
     <value>Unique identifier for entity instances</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_productivitymacrosolutionconfigurationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statecode" xml:space="preserve">
+    <value>Status of the Macro Solution Configuration</value>
+    <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for OptionSet 'msdyn_productivitymacrosolutionconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Macro Solution Configuration</value>
+    <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for OptionSet 'msdyn_productivitymacrosolutionconfiguration_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_searchhint" xml:space="preserve">
     <value>Sets the value for serach hint</value>
@@ -1096,14 +1096,6 @@
     <value>The name of the custom entity.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_parameterdefinition_v2_statecode" xml:space="preserve">
-    <value>Status of the Parameter definition</value>
-    <comment>'msdyn_productivityparameterdefinition' : Description for OptionSet 'msdyn_parameterdefinition_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_parameterdefinition_v2_statuscode" xml:space="preserve">
-    <value>Reason for the status of the Parameter definition</value>
-    <comment>'msdyn_productivityparameterdefinition' : Description for OptionSet 'msdyn_parameterdefinition_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_parametertype" xml:space="preserve">
     <value />
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
@@ -1111,6 +1103,14 @@
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinitionId" xml:space="preserve">
     <value>Unique identifier for entity instances</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_productivityparameterdefinitionId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statecode" xml:space="preserve">
+    <value>Status of the Parameter definition</value>
+    <comment>'msdyn_productivityparameterdefinition' : Description for OptionSet 'msdyn_productivityparameterdefinition_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Parameter definition</value>
+    <comment>'msdyn_productivityparameterdefinition' : Description for OptionSet 'msdyn_productivityparameterdefinition_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_UniqueName" xml:space="preserve">
     <value>Unique Name for the entity.</value>
@@ -1292,18 +1292,6 @@
     <value>Modified By (Delegate)</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_msdyn_parametertype" xml:space="preserve">
-    <value>Parameter Type</value>
-    <comment>'msdyn_productivityactioninputparameter' : displayname for OptionSet 'msdyn_actioninputparameter_v2_msdyn_parametertype' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_statecode" xml:space="preserve">
-    <value>Status</value>
-    <comment>'msdyn_productivityactioninputparameter' : displayname for OptionSet 'msdyn_actioninputparameter_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_statuscode" xml:space="preserve">
-    <value>Status Reason</value>
-    <comment>'msdyn_productivityactioninputparameter' : displayname for OptionSet 'msdyn_actioninputparameter_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_productivityactioninputparametermsdyn_actiontemplateinputparameterid" xml:space="preserve">
     <value>Action Template Input Parameter</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'msdyn_actiontemplateinputparameterid' on Entity</comment>
@@ -1319,6 +1307,18 @@
   <data name="1:displayname,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameterId" xml:space="preserve">
     <value>Action Input Parameter</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'msdyn_productivityactioninputparameterId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_msdyn_parametertype" xml:space="preserve">
+    <value>Parameter Type</value>
+    <comment>'msdyn_productivityactioninputparameter' : displayname for OptionSet 'msdyn_productivityactioninputparameter_msdyn_parametertype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_productivityactioninputparameter' : displayname for OptionSet 'msdyn_productivityactioninputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_productivityactioninputparameter' : displayname for OptionSet 'msdyn_productivityactioninputparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparametermsdyn_UniqueName" xml:space="preserve">
     <value>Unique Name</value>
@@ -1388,14 +1388,6 @@
     <value>Modified By (Delegate)</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_productivityactionoutputparametermsdyn_actionoutputparameter_v2_statecode" xml:space="preserve">
-    <value>Status</value>
-    <comment>'msdyn_productivityactionoutputparameter' : displayname for OptionSet 'msdyn_actionoutputparameter_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_productivityactionoutputparametermsdyn_actionoutputparameter_v2_statuscode" xml:space="preserve">
-    <value>Status Reason</value>
-    <comment>'msdyn_productivityactionoutputparameter' : displayname for OptionSet 'msdyn_actionoutputparameter_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_productivityactionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
     <value>Action Template Output Parameter</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'msdyn_actiontemplateoutputparameterid' on Entity</comment>
@@ -1407,6 +1399,14 @@
   <data name="1:displayname,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameterId" xml:space="preserve">
     <value>Action Output Parameter</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'msdyn_productivityactionoutputparameterId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_productivityactionoutputparameter' : displayname for OptionSet 'msdyn_productivityactionoutputparameter_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_productivityactionoutputparameter' : displayname for OptionSet 'msdyn_productivityactionoutputparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparametermsdyn_UniqueName" xml:space="preserve">
     <value>Unique Name</value>
@@ -1496,14 +1496,6 @@
     <value>Kind</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'msdyn_kind' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_productivitymacroactiontemplatemsdyn_macroactiontemplate_v2_statecode" xml:space="preserve">
-    <value>Status</value>
-    <comment>'msdyn_productivitymacroactiontemplate' : displayname for OptionSet 'msdyn_macroactiontemplate_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_productivitymacroactiontemplatemsdyn_macroactiontemplate_v2_statuscode" xml:space="preserve">
-    <value>Status Reason</value>
-    <comment>'msdyn_productivitymacroactiontemplate' : displayname for OptionSet 'msdyn_macroactiontemplate_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplatemsdyn_macroconnector" xml:space="preserve">
     <value>FUNDU_MACRO_CONNECTOR</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'msdyn_macroconnector' on Entity</comment>
@@ -1519,6 +1511,14 @@
   <data name="1:displayname,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplateId" xml:space="preserve">
     <value>Macro Action Template</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'msdyn_productivitymacroactiontemplateId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_productivitymacroactiontemplate' : displayname for OptionSet 'msdyn_productivitymacroactiontemplate_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_productivitymacroactiontemplate' : displayname for OptionSet 'msdyn_productivitymacroactiontemplate_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplatemsdyn_runtimeapi" xml:space="preserve">
     <value>Runtime API</value>
@@ -1632,14 +1632,6 @@
     <value>Icon</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'msdyn_icon' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_productivitymacroconnectormsdyn_macroconnector_v2_statecode" xml:space="preserve">
-    <value>Status</value>
-    <comment>'msdyn_productivitymacroconnector' : displayname for OptionSet 'msdyn_macroconnector_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_productivitymacroconnectormsdyn_macroconnector_v2_statuscode" xml:space="preserve">
-    <value>Status Reason</value>
-    <comment>'msdyn_productivitymacroconnector' : displayname for OptionSet 'msdyn_macroconnector_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_productivitymacroconnectormsdyn_name" xml:space="preserve">
     <value>Name</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'msdyn_name' on Entity</comment>
@@ -1651,6 +1643,14 @@
   <data name="1:displayname,msdyn_productivitymacroconnectormsdyn_productivitymacroconnectorId" xml:space="preserve">
     <value>Macro Connector</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'msdyn_productivitymacroconnectorId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_productivitymacroconnector' : displayname for OptionSet 'msdyn_productivitymacroconnector_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_productivitymacroconnector' : displayname for OptionSet 'msdyn_productivitymacroconnector_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectormsdyn_title" xml:space="preserve">
     <value>Title</value>
@@ -1752,14 +1752,6 @@
     <value>Relative path to designer blob within the designer</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlrelativepath' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_macrosolutionconfiguration_v2_statecode" xml:space="preserve">
-    <value>Status</value>
-    <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for OptionSet 'msdyn_macrosolutionconfiguration_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_macrosolutionconfiguration_v2_statuscode" xml:space="preserve">
-    <value>Status Reason</value>
-    <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for OptionSet 'msdyn_macrosolutionconfiguration_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_macrosversion" xml:space="preserve">
     <value>Macros Version</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'msdyn_macrosversion' on Entity</comment>
@@ -1771,6 +1763,14 @@
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfigurationId" xml:space="preserve">
     <value>Macro Solution Configuration</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'msdyn_productivitymacrosolutionconfigurationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for OptionSet 'msdyn_productivitymacrosolutionconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for OptionSet 'msdyn_productivitymacrosolutionconfiguration_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_searchhint" xml:space="preserve">
     <value>Search Hint Text</value>
@@ -1868,14 +1868,6 @@
     <value>Name</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_productivityparameterdefinitionmsdyn_parameterdefinition_v2_statecode" xml:space="preserve">
-    <value>Status</value>
-    <comment>'msdyn_productivityparameterdefinition' : displayname for OptionSet 'msdyn_parameterdefinition_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_productivityparameterdefinitionmsdyn_parameterdefinition_v2_statuscode" xml:space="preserve">
-    <value>Status Reason</value>
-    <comment>'msdyn_productivityparameterdefinition' : displayname for OptionSet 'msdyn_parameterdefinition_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionmsdyn_parametertype" xml:space="preserve">
     <value>Parameter Type</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'msdyn_parametertype' on Entity</comment>
@@ -1883,6 +1875,14 @@
   <data name="1:displayname,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinitionId" xml:space="preserve">
     <value>Parameter definition</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'msdyn_productivityparameterdefinitionId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_productivityparameterdefinition' : displayname for OptionSet 'msdyn_productivityparameterdefinition_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_productivityparameterdefinition' : displayname for OptionSet 'msdyn_productivityparameterdefinition_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionmsdyn_UniqueName" xml:space="preserve">
     <value>Unique Name</value>
@@ -2600,107 +2600,107 @@
     <value>Inactive</value>
     <comment>'msdyn_macrosession' : label for status '2' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_msdyn_parametertype0" xml:space="preserve">
+  <data name="1:label,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_msdyn_parametertype0" xml:space="preserve">
     <value>Optional</value>
     <comment>'msdyn_productivityactioninputparameter' : label for option '0' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_msdyn_parametertype1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_msdyn_parametertype1" xml:space="preserve">
     <value>Mandatory</value>
     <comment>'msdyn_productivityactioninputparameter' : label for option '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_statecode0" xml:space="preserve">
+  <data name="1:label,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_statecode0" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivityactioninputparameter' : label for state '0' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_statecode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_statecode1" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivityactioninputparameter' : label for state '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_statuscode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_statuscode1" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivityactioninputparameter' : label for status '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityactioninputparametermsdyn_actioninputparameter_v2_statuscode2" xml:space="preserve">
+  <data name="1:label,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_statuscode2" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivityactioninputparameter' : label for status '2' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityactionoutputparametermsdyn_actionoutputparameter_v2_statecode0" xml:space="preserve">
+  <data name="1:label,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statecode0" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivityactionoutputparameter' : label for state '0' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityactionoutputparametermsdyn_actionoutputparameter_v2_statecode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statecode1" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivityactionoutputparameter' : label for state '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityactionoutputparametermsdyn_actionoutputparameter_v2_statuscode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statuscode1" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivityactionoutputparameter' : label for status '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityactionoutputparametermsdyn_actionoutputparameter_v2_statuscode2" xml:space="preserve">
+  <data name="1:label,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statuscode2" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivityactionoutputparameter' : label for status '2' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacroactiontemplatemsdyn_macroactiontemplate_v2_statecode0" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statecode0" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivitymacroactiontemplate' : label for state '0' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacroactiontemplatemsdyn_macroactiontemplate_v2_statecode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statecode1" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivitymacroactiontemplate' : label for state '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacroactiontemplatemsdyn_macroactiontemplate_v2_statuscode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statuscode1" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivitymacroactiontemplate' : label for status '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacroactiontemplatemsdyn_macroactiontemplate_v2_statuscode2" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statuscode2" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivitymacroactiontemplate' : label for status '2' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacroconnectormsdyn_macroconnector_v2_statecode0" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statecode0" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivitymacroconnector' : label for state '0' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacroconnectormsdyn_macroconnector_v2_statecode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statecode1" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivitymacroconnector' : label for state '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacroconnectormsdyn_macroconnector_v2_statuscode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statuscode1" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivitymacroconnector' : label for status '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacroconnectormsdyn_macroconnector_v2_statuscode2" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statuscode2" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivitymacroconnector' : label for status '2' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacrosolutionconfigurationmsdyn_macrosolutionconfiguration_v2_statecode0" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statecode0" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : label for state '0' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacrosolutionconfigurationmsdyn_macrosolutionconfiguration_v2_statecode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statecode1" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : label for state '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacrosolutionconfigurationmsdyn_macrosolutionconfiguration_v2_statuscode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statuscode1" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : label for status '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivitymacrosolutionconfigurationmsdyn_macrosolutionconfiguration_v2_statuscode2" xml:space="preserve">
+  <data name="1:label,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statuscode2" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : label for status '2' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityparameterdefinitionmsdyn_parameterdefinition_v2_statecode0" xml:space="preserve">
+  <data name="1:label,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statecode0" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivityparameterdefinition' : label for state '0' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityparameterdefinitionmsdyn_parameterdefinition_v2_statecode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statecode1" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivityparameterdefinition' : label for state '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityparameterdefinitionmsdyn_parameterdefinition_v2_statuscode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statuscode1" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivityparameterdefinition' : label for status '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityparameterdefinitionmsdyn_parameterdefinition_v2_statuscode2" xml:space="preserve">
+  <data name="1:label,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statuscode2" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivityparameterdefinition' : label for status '2' on Entity</comment>
   </data>

@@ -156,17 +156,17 @@
     <value>Unique identifier of the user who modified the record.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_modifiedby'</comment>
   </data>
-  <data name="10:Description,msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_agentscriptid" xml:space="preserve">
+  <data name="10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid" xml:space="preserve">
     <value>Unique identifier for agent script associated with agent script step.</value>
-    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_agentscriptid'</comment>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid'</comment>
   </data>
-  <data name="10:Description,msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_routeactionid" xml:space="preserve">
+  <data name="10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_routeactionid" xml:space="preserve">
     <value>Unique identifier for target script associated with agent script step</value>
-    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_routeactionid'</comment>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_routeactionid'</comment>
   </data>
-  <data name="10:Description,msdyn_workflow_msdyn_agentscriptstep_v2_macroactionid" xml:space="preserve">
+  <data name="10:Description,msdyn_workflow_msdyn_prod_agentscriptstep_macroactionid" xml:space="preserve">
     <value>Unique identifier for macro associated with agent script step</value>
-    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_workflow_msdyn_agentscriptstep_v2_macroactionid'</comment>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_workflow_msdyn_prod_agentscriptstep_macroactionid'</comment>
   </data>
   <data name="10:Description,owner_msdyn_productivityagentscript" xml:space="preserve">
     <value>Owner Id</value>
@@ -260,14 +260,6 @@
     <value>Unique identifier of the delegate user who modified the record.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_productivityagentscriptmsdyn_agentscript_v2_statecode" xml:space="preserve">
-    <value>Status of the Agent script</value>
-    <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_agentscript_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivityagentscriptmsdyn_agentscript_v2_statuscode" xml:space="preserve">
-    <value>Reason for the status of the Agent script</value>
-    <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_agentscript_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_description" xml:space="preserve">
     <value>Description of the agent scrip</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_description' on Entity</comment>
@@ -283,6 +275,14 @@
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
     <value>Unique identifier for entity instances</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
+    <value>Status of the Agent script</value>
+    <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_productivityagentscript_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Agent script</value>
+    <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_productivityagentscript_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_UniqueName" xml:space="preserve">
     <value>Unique Name for the entity.</value>
@@ -352,18 +352,6 @@
     <value>Unique identifier for agent script associated with agent script step.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_agentscriptid' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_msdyn_actiontype" xml:space="preserve">
-    <value>Action type for agent script step</value>
-    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_agentscriptstep_v2_msdyn_actiontype' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_statecode" xml:space="preserve">
-    <value>Status of the Agent script step</value>
-    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_agentscriptstep_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_statuscode" xml:space="preserve">
-    <value>Reason for the status of the Agent script step</value>
-    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_agentscriptstep_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_description" xml:space="preserve">
     <value>Description for agent script step</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_description' on Entity</comment>
@@ -383,6 +371,18 @@
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
     <value>Unique identifier for entity instances</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
+    <value>Action type for agent script step</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_productivityagentscriptstep_msdyn_actiontype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode" xml:space="preserve">
+    <value>Status of the Agent script step</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_productivityagentscriptstep_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode" xml:space="preserve">
+    <value>Reason for the status of the Agent script step</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_productivityagentscriptstep_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_routeactionid" xml:space="preserve">
     <value>Unique identifier for target script associated with agent script step</value>
@@ -484,14 +484,6 @@
     <value>Modified By (Delegate)</value>
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_agentscript_v2_statecode" xml:space="preserve">
-    <value>Status</value>
-    <comment>'msdyn_productivityagentscript' : displayname for OptionSet 'msdyn_agentscript_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_agentscript_v2_statuscode" xml:space="preserve">
-    <value>Status Reason</value>
-    <comment>'msdyn_productivityagentscript' : displayname for OptionSet 'msdyn_agentscript_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_productivityagentscriptmsdyn_description" xml:space="preserve">
     <value>Description</value>
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_description' on Entity</comment>
@@ -507,6 +499,14 @@
   <data name="1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
     <value>Agent script</value>
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_productivityagentscript' : displayname for OptionSet 'msdyn_productivityagentscript_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_productivityagentscript' : displayname for OptionSet 'msdyn_productivityagentscript_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptmsdyn_UniqueName" xml:space="preserve">
     <value>Unique Name</value>
@@ -572,18 +572,6 @@
     <value>Agent script</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_agentscriptid' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_msdyn_actiontype" xml:space="preserve">
-    <value>Action type</value>
-    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_agentscriptstep_v2_msdyn_actiontype' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_statecode" xml:space="preserve">
-    <value>Status</value>
-    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_agentscriptstep_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_statuscode" xml:space="preserve">
-    <value>Status Reason</value>
-    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_agentscriptstep_v2_statuscode' on Entity</comment>
-  </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_description" xml:space="preserve">
     <value>Description</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_description' on Entity</comment>
@@ -603,6 +591,18 @@
   <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
     <value>Agent script step</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
+    <value>Action type</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_productivityagentscriptstep_msdyn_actiontype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode" xml:space="preserve">
+    <value>Status</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_productivityagentscriptstep_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode" xml:space="preserve">
+    <value>Status Reason</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_productivityagentscriptstep_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_routeactionid" xml:space="preserve">
     <value>Target script</value>
@@ -956,47 +956,47 @@
     <value>Owner</value>
     <comment>'Agent script' : label for cell in Entity FormXml ID: '{fe273ef3-8d02-41ab-95a8-e8ce7c389aaf}'</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptmsdyn_agentscript_v2_statecode0" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode0" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivityagentscript' : label for state '0' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptmsdyn_agentscript_v2_statecode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode1" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivityagentscript' : label for state '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptmsdyn_agentscript_v2_statuscode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode1" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivityagentscript' : label for status '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptmsdyn_agentscript_v2_statuscode2" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode2" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivityagentscript' : label for status '2' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_msdyn_actiontype192350000" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350000" xml:space="preserve">
     <value>Text</value>
     <comment>'msdyn_productivityagentscriptstep' : label for option '192350000' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_msdyn_actiontype192350001" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350001" xml:space="preserve">
     <value>Macro</value>
     <comment>'msdyn_productivityagentscriptstep' : label for option '192350001' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_msdyn_actiontype192350002" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350002" xml:space="preserve">
     <value>Script</value>
     <comment>'msdyn_productivityagentscriptstep' : label for option '192350002' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_statecode0" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode0" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivityagentscriptstep' : label for state '0' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_statecode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode1" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivityagentscriptstep' : label for state '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_statuscode1" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode1" xml:space="preserve">
     <value>Active</value>
     <comment>'msdyn_productivityagentscriptstep' : label for status '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_agentscriptstep_v2_statuscode2" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode2" xml:space="preserve">
     <value>Inactive</value>
     <comment>'msdyn_productivityagentscriptstep' : label for status '2' on Entity</comment>
   </data>

@@ -474,7 +474,7 @@ module MscrmControls.Callscript
 									"<filter type='and'>" +
 										`<condition attribute='msdyn_language' operator='eq' value='${this.languageId}' />` +
 									"</filter>" +
-									"<link-entity name='msdyn_msdyn_agentscript_v2_msdyn_sessiontempl' intersect='true' visible='false' to='msdyn_productivityagentscriptid' from='msdyn_productivityagentscriptid'>" +
+									"<link-entity name='msdyn_msdyn_prod_agentscript_msdyn_sessiontempl' intersect='true' visible='false' to='msdyn_productivityagentscriptid' from='msdyn_productivityagentscriptid'>" +
 									"<link-entity name='msdyn_sessiontemplate' from='msdyn_sessiontemplateid' to='msdyn_sessiontemplateid' alias='bb'>" +
 									"<filter type='and'>" +
 										`<condition attribute='msdyn_uniquename' operator='eq' value='${sessionTemplateUniqueName}'/>` +

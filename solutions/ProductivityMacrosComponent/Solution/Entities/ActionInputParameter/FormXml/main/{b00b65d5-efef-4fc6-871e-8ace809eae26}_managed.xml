@@ -60,7 +60,7 @@
                           <parameters>
                             <ViewId>{FCDEB389-DBF3-46A7-A555-B956D3388C7E}</ViewId>
                             <IsUserView>false</IsUserView>
-                            <RelationshipName>msdyn_msdyn_actioninputparameter_v2_msdyn_par</RelationshipName>
+                            <RelationshipName>msdyn_msdyn_prod_actioninputparameter_msdyn_par</RelationshipName>
                             <TargetEntityType>msdyn_productivityparameterdefinition</TargetEntityType>
                             <AutoExpand>Fixed</AutoExpand>
                             <EnableQuickFind>false</EnableQuickFind>

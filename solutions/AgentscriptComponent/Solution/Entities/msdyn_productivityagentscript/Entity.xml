@@ -674,7 +674,7 @@
           <IsFilterable>1</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_agentscript_v2_statecode">
+          <optionset Name="msdyn_productivityagentscript_statecode">
             <OptionSetType>state</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -734,7 +734,7 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_agentscript_v2_statuscode">
+          <optionset Name="msdyn_productivityagentscript_statuscode">
             <OptionSetType>status</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>

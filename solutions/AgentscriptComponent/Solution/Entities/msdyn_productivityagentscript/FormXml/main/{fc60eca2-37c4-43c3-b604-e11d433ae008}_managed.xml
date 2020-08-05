@@ -79,7 +79,7 @@
                           <parameters>
                             <ViewId>{05EBE83F-7DE2-4A01-ADBF-F99EB0871579}</ViewId>
                             <IsUserView>false</IsUserView>
-                            <RelationshipName>msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_agentscriptid</RelationshipName>
+                            <RelationshipName>msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid</RelationshipName>
                             <TargetEntityType>msdyn_productivityagentscriptstep</TargetEntityType>
                             <AutoExpand>Auto</AutoExpand>
                             <EnableQuickFind>false</EnableQuickFind>

@@ -396,7 +396,7 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <AppDefaultValue>0</AppDefaultValue>
-          <optionset Name="msdyn_actioninputparameter_v2_msdyn_parametertype">
+          <optionset Name="msdyn_productivityactioninputparameter_msdyn_parametertype">
             <OptionSetType>bit</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -734,7 +734,7 @@
           <IsFilterable>1</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_actioninputparameter_v2_statecode">
+          <optionset Name="msdyn_productivityactioninputparameter_statecode">
             <OptionSetType>state</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -794,7 +794,7 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_actioninputparameter_v2_statuscode">
+          <optionset Name="msdyn_productivityactioninputparameter_statuscode">
             <OptionSetType>status</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>

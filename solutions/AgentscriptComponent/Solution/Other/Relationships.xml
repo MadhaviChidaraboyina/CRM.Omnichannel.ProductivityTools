@@ -6,10 +6,10 @@
   <EntityRelationship Name="lk_msdyn_productivityagentscript_modifiedby" />
   <EntityRelationship Name="lk_msdyn_productivityagentscriptstep_createdby" />
   <EntityRelationship Name="lk_msdyn_productivityagentscriptstep_modifiedby" />
-  <EntityRelationship Name="msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_agentscriptid" />
-  <EntityRelationship Name="msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_routeactionid" />
-  <EntityRelationship Name="msdyn_msdyn_agentscript_v2_msdyn_sessiontemplat" />
-  <EntityRelationship Name="msdyn_workflow_msdyn_agentscriptstep_v2_macroactionid" />
+  <EntityRelationship Name="msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid" />
+  <EntityRelationship Name="msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_routeactionid" />
+  <EntityRelationship Name="msdyn_msdyn_prod_agentscript_msdyn_sessiontemplat" />
+  <EntityRelationship Name="msdyn_workflow_msdyn_prod_agentscriptstep_macroactionid" />
   <EntityRelationship Name="owner_msdyn_productivityagentscript" />
   <EntityRelationship Name="owner_msdyn_productivityagentscriptstep" />
   <EntityRelationship Name="team_msdyn_productivityagentscript" />
