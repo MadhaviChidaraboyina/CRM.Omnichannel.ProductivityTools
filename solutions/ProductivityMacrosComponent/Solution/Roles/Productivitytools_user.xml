@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Role id="{9AF48DD6-DBC2-437E-AD7C-14A01AE3492D}" name="Productivity tools user">
+<Role id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" name="Productivity tools user">
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
     <RolePrivilege name="prvReadWorkflow" level="Global" />
