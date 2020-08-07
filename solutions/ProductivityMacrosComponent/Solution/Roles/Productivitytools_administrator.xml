@@ -8,14 +8,14 @@
     <RolePrivilege name="prvDeleteWorkflow" level="Global" />
     <RolePrivilege name="prvReadWorkflow" level="Global" />
     <RolePrivilege name="prvWriteWorkflow" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_actioninputparameter_v2" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_actionoutputparameter_v2" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityactioninputparameter" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityactionoutputparameter" level="Global" />
     <RolePrivilege name="prvReadmsdyn_inputparameters" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_macroconnector_v2" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_parameterdefinition_v2" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivitymacroconnector" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityparameterdefinition" level="Global" />
     <RolePrivilege name="prvReadmsdyn_designeroptions" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_macroactiontemplate_v2" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_macrosolutionconfiguration_v2" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivitymacroactiontemplate" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivitymacrosolutionconfiguration" level="Global" />
     <RolePrivilege name="prvCreatemsdyn_macrosession" level="Global" />
     <RolePrivilege name="prvReadmsdyn_macrosession" level="Global" />
     <RolePrivilege name="prvWritemsdyn_macrosession" level="Global" />

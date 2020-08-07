@@ -1,0 +1,11 @@
+<msdyn_productivityactioninputparameter msdyn_uniquename="msdyn_Clone_Input_Record_input_params_optional">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateinputparameterid>
+    <msdyn_uniquename>msdyn_Clone_Input_Record</msdyn_uniquename>
+  </msdyn_actiontemplateinputparameterid>
+  <msdyn_name>Clone_Input_Record_input_params_optional</msdyn_name>
+  <msdyn_parametertype>0</msdyn_parametertype>
+  <msdyn_visibility>important</msdyn_visibility>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivityactioninputparameter>

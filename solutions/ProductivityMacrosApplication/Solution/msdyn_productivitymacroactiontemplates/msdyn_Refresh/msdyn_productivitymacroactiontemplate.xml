@@ -1,0 +1,28 @@
+<msdyn_productivitymacroactiontemplate msdyn_uniquename="msdyn_Refresh">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiondescription default="Refresh the tab">
+    <label description="Refresh the tab" languagecode="1033" />
+  </msdyn_actiondescription>
+  <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
+  <msdyn_displayname default="Refresh the tab">
+    <label description="Refresh the tab" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_refresh_page.svg</msdyn_icon>
+  <msdyn_kind>ACTIONS</msdyn_kind>
+  <msdyn_macroconnector>
+    <msdyn_uniquename>msdyn_SessionConnector</msdyn_uniquename>
+  </msdyn_macroconnector>
+  <msdyn_name>Refresh</msdyn_name>
+  <msdyn_runtimeapi>Microsoft.ProductivityMacros.Internal.refreshPageAction(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_subtitle default="Session connector">
+    <label description="Session connector" languagecode="1033" />
+  </msdyn_subtitle>
+  <msdyn_summary default="Refresh the tab">
+    <label description="Refresh the tab" languagecode="1033" />
+  </msdyn_summary>
+  <msdyn_title default="Refresh the tab">
+    <label description="Refresh the tab" languagecode="1033" />
+  </msdyn_title>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivitymacroactiontemplate>

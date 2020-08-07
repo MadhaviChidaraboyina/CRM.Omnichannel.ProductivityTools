@@ -9,7 +9,7 @@
     <savedqueryid>{419777b5-8dc0-4375-a5d7-06a4a5d4c4d8}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="msdyn_name" select="1" icon="1" preview="1">
-        <row name="result" id="msdyn_parameterdefinition_v2id">
+        <row name="result" id="msdyn_productivityparameterdefinitionid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
@@ -18,8 +18,8 @@
     <querytype>4</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="msdyn_parameterdefinition_v2">
-          <attribute name="msdyn_parameterdefinition_v2id" />
+        <entity name="msdyn_productivityparameterdefinition">
+          <attribute name="msdyn_productivityparameterdefinitionid" />
           <attribute name="msdyn_name" />
           <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />

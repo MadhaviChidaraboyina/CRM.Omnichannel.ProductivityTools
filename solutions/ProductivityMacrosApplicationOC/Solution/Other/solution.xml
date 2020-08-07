@@ -1,10 +1,12 @@
 <ImportExportXml version="9.1.0.18311" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
-    <UniqueName>msdyn_ProductivityMacrosApplicationOC</UniqueName>
+    <UniqueName>msdyn_MacrosDataOmnichannel</UniqueName>
     <LocalizedNames>
       <LocalizedName description="Macros" languagecode="1033" />
     </LocalizedNames>
-    <Descriptions />
+    <Descriptions>
+      <Description description="Macro data used for omnichannel" languagecode="1033" />
+    </Descriptions>
     <Version>1.0.0.0</Version>
     <Managed>2</Managed>
     <Publisher>

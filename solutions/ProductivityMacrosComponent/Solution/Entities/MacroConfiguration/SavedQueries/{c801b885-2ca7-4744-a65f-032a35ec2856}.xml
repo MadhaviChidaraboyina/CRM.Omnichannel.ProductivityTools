@@ -8,8 +8,8 @@
     <isdefault>1</isdefault>
     <savedqueryid>{c801b885-2ca7-4744-a65f-032a35ec2856}</savedqueryid>
     <layoutxml>
-      <grid name="msdyn_macrosolutionconfiguration_v2s" jump="msdyn_name" select="1" icon="1" preview="1">
-        <row name="msdyn_macrosolutionconfiguration_v2" id="msdyn_macrosolutionconfiguration_v2id">
+      <grid name="msdyn_productivitymacrosolutionconfigurations" jump="msdyn_name" select="1" icon="1" preview="1">
+        <row name="msdyn_productivitymacrosolutionconfiguration" id="msdyn_productivitymacrosolutionconfigurationid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
@@ -18,8 +18,8 @@
     <querytype>2</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="msdyn_macrosolutionconfiguration_v2">
-          <attribute name="msdyn_macrosolutionconfiguration_v2id" />
+        <entity name="msdyn_productivitymacrosolutionconfiguration">
+          <attribute name="msdyn_productivitymacrosolutionconfigurationid" />
           <attribute name="msdyn_name" />
           <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />

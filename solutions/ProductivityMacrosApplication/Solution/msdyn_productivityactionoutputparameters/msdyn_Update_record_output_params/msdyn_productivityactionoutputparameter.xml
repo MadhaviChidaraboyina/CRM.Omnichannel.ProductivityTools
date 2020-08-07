@@ -1,0 +1,9 @@
+<msdyn_productivityactionoutputparameter msdyn_uniquename="msdyn_Update_record_output_params">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateoutputparameterid>
+    <msdyn_uniquename>msdyn_Update_Record</msdyn_uniquename>
+  </msdyn_actiontemplateoutputparameterid>
+  <msdyn_name>Update_record_output_params</msdyn_name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivityactionoutputparameter>

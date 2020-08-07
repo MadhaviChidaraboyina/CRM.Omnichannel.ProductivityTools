@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name LocalizedName="Macro Connector" OriginalName="Macro Connector">msdyn_macroconnector_v2</Name>
+  <Name LocalizedName="Macro Connector" OriginalName="Macro Connector">msdyn_productivitymacroconnector</Name>
   <EntityInfo>
-    <entity Name="msdyn_macroconnector_v2">
+    <entity Name="msdyn_productivitymacroconnector">
       <LocalizedNames>
         <LocalizedName description="Macro Connector" languagecode="1033" />
       </LocalizedNames>
@@ -529,10 +529,10 @@
             <Description description="Icon URL to be rendered for this connector" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_macroconnector_v2Id">
+        <attribute PhysicalName="msdyn_productivitymacroconnectorId">
           <Type>primarykey</Type>
-          <Name>msdyn_macroconnector_v2id</Name>
-          <LogicalName>msdyn_macroconnector_v2id</LogicalName>
+          <Name>msdyn_productivitymacroconnectorid</Name>
+          <LogicalName>msdyn_productivitymacroconnectorid</LogicalName>
           <RequiredLevel>systemrequired</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
@@ -1034,7 +1034,7 @@
           <IsFilterable>1</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_macroconnector_v2_statecode">
+          <optionset Name="msdyn_productivitymacroconnector_statecode">
             <OptionSetType>state</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -1094,7 +1094,7 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_macroconnector_v2_statuscode">
+          <optionset Name="msdyn_productivitymacroconnector_statuscode">
             <OptionSetType>status</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -1231,7 +1231,7 @@
           </displaynames>
         </EntityKey>
       </EntityKeys>
-      <EntitySetName>msdyn_macroconnector_v2s</EntitySetName>
+      <EntitySetName>msdyn_productivitymacroconnectors</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>

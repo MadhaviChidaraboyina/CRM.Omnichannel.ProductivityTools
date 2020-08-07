@@ -1,0 +1,9 @@
+<msdyn_productivityactionoutputparameter msdyn_uniquename="msdyn_open_kb_article_attribute_output_param">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateoutputparameterid>
+    <msdyn_uniquename>msdyn_Open_KB_Article</msdyn_uniquename>
+  </msdyn_actiontemplateoutputparameterid>
+  <msdyn_name>open_kb_article_attribute_output_param</msdyn_name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivityactionoutputparameter>

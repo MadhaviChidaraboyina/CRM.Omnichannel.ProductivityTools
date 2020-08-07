@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ImportExportXml version="9.0.0000.0000" SolutionPackageVersion="9.0" languagecode="1033" generatedBy="OnPremise" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
-    <UniqueName>msdyn_ProductivityMacrosComponent</UniqueName>
+    <UniqueName>msdyn_Macros</UniqueName>
     <LocalizedNames>
       <LocalizedName description="Macros" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="This solution provides web resources to use Macros designer and APIs to automate business process tasks." languagecode="1033" />
+      <Description description="Macros to be used in productivity tool." languagecode="1033" />
     </Descriptions>
     <Version>1.0.0.000</Version>
     <Managed>2</Managed>
@@ -82,12 +82,12 @@
       </Addresses>
     </Publisher>
     <RootComponents>
-      <RootComponent type="1" schemaName="msdyn_actioninputparameter_v2" behavior="0" />
-      <RootComponent type="1" schemaName="msdyn_actionoutputparameter_v2" behavior="0" />
-      <RootComponent type="1" schemaName="msdyn_macroactiontemplate_v2" behavior="0" />
-      <RootComponent type="1" schemaName="msdyn_macroconnector_v2" behavior="0" />
-      <RootComponent type="1" schemaName="msdyn_macrosolutionconfiguration_v2" behavior="0" />
-      <RootComponent type="1" schemaName="msdyn_parameterdefinition_v2" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_productivityactioninputparameter" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_productivityactionoutputparameter" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_productivitymacroactiontemplate" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_productivitymacroconnector" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_productivitymacrosolutionconfiguration" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_productivityparameterdefinition" behavior="0" />
       <RootComponent type="60" id="{206b5fb0-376f-40cf-9e78-2acce3e61f42}" behavior="0" />
       <RootComponent type="60" id="{4956d6b7-1d8c-4767-b73b-d4d9de0dd17d}" behavior="0" />
       <RootComponent type="60" id="{55d8cfea-d1d1-43b8-b581-e83b6d276695}" behavior="0" />

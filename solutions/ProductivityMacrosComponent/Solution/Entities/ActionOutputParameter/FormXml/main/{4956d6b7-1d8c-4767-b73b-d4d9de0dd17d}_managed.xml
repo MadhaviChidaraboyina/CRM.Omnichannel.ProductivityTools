@@ -52,8 +52,8 @@
                           <parameters>
                             <ViewId>{FCDEB389-DBF3-46A7-A555-B956D3388C7E}</ViewId>
                             <IsUserView>false</IsUserView>
-                            <RelationshipName>msdyn_msdyn_actionoutputparameter_v2_msdyn_pa</RelationshipName>
-                            <TargetEntityType>msdyn_parameterdefinition_v2</TargetEntityType>
+                            <RelationshipName>msdyn_msdyn_prod_actionoutputparameter_msdyn_pa</RelationshipName>
+                            <TargetEntityType>msdyn_productivityparameterdefinition</TargetEntityType>
                             <AutoExpand>Fixed</AutoExpand>
                             <EnableQuickFind>false</EnableQuickFind>
                             <EnableViewPicker>false</EnableViewPicker>

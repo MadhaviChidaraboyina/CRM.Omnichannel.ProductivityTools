@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <EntityRelationship Name="lk_msdyn_actioninputparameter_v2_createdby">
+  <EntityRelationship Name="lk_msdyn_productivityactioninputparameter_createdby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_actioninputparameter_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivityactioninputparameter</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -20,12 +20,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_actioninputparameter_v2_modifiedby">
+  <EntityRelationship Name="lk_msdyn_productivityactioninputparameter_modifiedby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_actioninputparameter_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivityactioninputparameter</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -40,12 +40,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_actionoutputparameter_v2_createdby">
+  <EntityRelationship Name="lk_msdyn_productivityactionoutputparameter_createdby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_actionoutputparameter_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivityactionoutputparameter</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -60,12 +60,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_actionoutputparameter_v2_modifiedby">
+  <EntityRelationship Name="lk_msdyn_productivityactionoutputparameter_modifiedby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_actionoutputparameter_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivityactionoutputparameter</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -80,12 +80,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_macroactiontemplate_v2_createdby">
+  <EntityRelationship Name="lk_msdyn_productivitymacroactiontemplate_createdby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_macroactiontemplate_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivitymacroactiontemplate</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -100,12 +100,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_macroactiontemplate_v2_modifiedby">
+  <EntityRelationship Name="lk_msdyn_productivitymacroactiontemplate_modifiedby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_macroactiontemplate_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivitymacroactiontemplate</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -120,12 +120,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_macroconnector_v2_createdby">
+  <EntityRelationship Name="lk_msdyn_productivitymacroconnector_createdby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_macroconnector_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivitymacroconnector</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -140,12 +140,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_macroconnector_v2_modifiedby">
+  <EntityRelationship Name="lk_msdyn_productivitymacroconnector_modifiedby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_macroconnector_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivitymacroconnector</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -160,12 +160,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_macrosolutionconfiguration_v2_createdby">
+  <EntityRelationship Name="lk_msdyn_productivitymacrosolutionconfiguration_createdby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_macrosolutionconfiguration_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivitymacrosolutionconfiguration</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -180,12 +180,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_macrosolutionconfiguration_v2_modifiedby">
+  <EntityRelationship Name="lk_msdyn_productivitymacrosolutionconfiguration_modifiedby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_macrosolutionconfiguration_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivitymacrosolutionconfiguration</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -200,12 +200,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_parameterdefinition_v2_createdby">
+  <EntityRelationship Name="lk_msdyn_productivityparameterdefinition_createdby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_parameterdefinition_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivityparameterdefinition</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -220,12 +220,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="lk_msdyn_parameterdefinition_v2_modifiedby">
+  <EntityRelationship Name="lk_msdyn_productivityparameterdefinition_modifiedby">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_parameterdefinition_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivityparameterdefinition</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -240,12 +240,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="user_msdyn_actioninputparameter_v2">
+  <EntityRelationship Name="user_msdyn_productivityactioninputparameter">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_actioninputparameter_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivityactioninputparameter</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -260,12 +260,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="user_msdyn_actionoutputparameter_v2">
+  <EntityRelationship Name="user_msdyn_productivityactionoutputparameter">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_actionoutputparameter_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivityactionoutputparameter</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -280,12 +280,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="user_msdyn_macroactiontemplate_v2">
+  <EntityRelationship Name="user_msdyn_productivitymacroactiontemplate">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_macroactiontemplate_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivitymacroactiontemplate</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -300,12 +300,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="user_msdyn_macroconnector_v2">
+  <EntityRelationship Name="user_msdyn_productivitymacroconnector">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_macroconnector_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivitymacroconnector</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -320,12 +320,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="user_msdyn_macrosolutionconfiguration_v2">
+  <EntityRelationship Name="user_msdyn_productivitymacrosolutionconfiguration">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_macrosolutionconfiguration_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivitymacrosolutionconfiguration</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
@@ -340,12 +340,12 @@
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
-  <EntityRelationship Name="user_msdyn_parameterdefinition_v2">
+  <EntityRelationship Name="user_msdyn_productivityparameterdefinition">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>msdyn_parameterdefinition_v2</ReferencingEntityName>
+    <ReferencingEntityName>msdyn_productivityparameterdefinition</ReferencingEntityName>
     <ReferencedEntityName>SystemUser</ReferencedEntityName>
     <RelationshipBehavior>None</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>

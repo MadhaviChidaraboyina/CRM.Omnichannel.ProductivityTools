@@ -8,8 +8,8 @@
     <isdefault>1</isdefault>
     <savedqueryid>{194ee9b0-9bac-40de-995f-11138a0b7142}</savedqueryid>
     <layoutxml>
-      <grid name="msdyn_parameterdefinition_v2s" jump="msdyn_name" select="1" icon="1" preview="1">
-        <row name="msdyn_parameterdefinition_v2" id="msdyn_parameterdefinition_v2id">
+      <grid name="msdyn_productivityparameterdefinitions" jump="msdyn_name" select="1" icon="1" preview="1">
+        <row name="msdyn_productivityparameterdefinition" id="msdyn_productivityparameterdefinitionid">
           <cell name="msdyn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
@@ -18,8 +18,8 @@
     <querytype>2</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="msdyn_parameterdefinition_v2">
-          <attribute name="msdyn_parameterdefinition_v2id" />
+        <entity name="msdyn_productivityparameterdefinition">
+          <attribute name="msdyn_productivityparameterdefinitionid" />
           <attribute name="msdyn_name" />
           <attribute name="createdon" />
           <order attribute="msdyn_name" descending="false" />

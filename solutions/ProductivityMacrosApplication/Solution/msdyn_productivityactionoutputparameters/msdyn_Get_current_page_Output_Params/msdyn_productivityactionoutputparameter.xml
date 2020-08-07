@@ -1,0 +1,9 @@
+<msdyn_productivityactionoutputparameter msdyn_uniquename="msdyn_Get_current_page_Output_Params">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateoutputparameterid>
+    <msdyn_uniquename>msdyn_Get_current_page</msdyn_uniquename>
+  </msdyn_actiontemplateoutputparameterid>
+  <msdyn_name>Get_current_page_Output_Params</msdyn_name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivityactionoutputparameter>

@@ -466,15 +466,15 @@ module MscrmControls.Callscript
         private getCallscriptFetchxml(sessionTemplateUniqueName: string): string
 		{
 			let fetchXml = "<fetch version='1.0' output-format='xml-platform' mapping='logical' returntotalrecordcount='true' page='1' no-lock='false'>" +
-								"<entity name='msdyn_agentscript_v2'>" + 
-									"<attribute name='msdyn_agentscript_v2id'/>"  +
+								"<entity name='msdyn_productivityagentscript'>" + 
+									"<attribute name='msdyn_productivityagentscriptid'/>"  +
 									"<attribute name='msdyn_name'/>" +
 									"<attribute name='msdyn_description'/>" +
 									"<order attribute='msdyn_name' descending='false'/>" +
 									"<filter type='and'>" +
 										`<condition attribute='msdyn_language' operator='eq' value='${this.languageId}' />` +
 									"</filter>" +
-									"<link-entity name='msdyn_msdyn_agentscript_v2_msdyn_sessiontempl' intersect='true' visible='false' to='msdyn_agentscript_v2id' from='msdyn_agentscript_v2id'>" +
+									"<link-entity name='msdyn_msdyn_prod_agentscript_msdyn_sessiontempl' intersect='true' visible='false' to='msdyn_productivityagentscriptid' from='msdyn_productivityagentscriptid'>" +
 									"<link-entity name='msdyn_sessiontemplate' from='msdyn_sessiontemplateid' to='msdyn_sessiontemplateid' alias='bb'>" +
 									"<filter type='and'>" +
 										`<condition attribute='msdyn_uniquename' operator='eq' value='${sessionTemplateUniqueName}'/>` +
@@ -494,8 +494,8 @@ module MscrmControls.Callscript
 		private getStepsFetchxml(callscriptId: string): string
 		{
 			let fetchxml = "<fetch version='1.0' output-format='xml-platform' mapping='logical' returntotalrecordcount='true' page='1' no-lock='false'>" +
-								"<entity name='msdyn_agentscriptstep_v2'>" +
-									"<attribute name='msdyn_agentscriptstep_v2id'/>" +
+								"<entity name='msdyn_productivityagentscriptstep'>" +
+									"<attribute name='msdyn_productivityagentscriptstepid'/>" +
 									"<attribute name='msdyn_name'/>" +
 									"<attribute name='msdyn_order'/>" +
 									"<attribute name='msdyn_actiontype'/>" +
@@ -504,9 +504,9 @@ module MscrmControls.Callscript
 									"<attribute name='msdyn_routeactionid'/>" +
 									"<attribute name='msdyn_macroactionid'/>" +
 									"<order attribute='msdyn_order' descending='false'/>" +
-									"<link-entity name='msdyn_agentscript_v2' from='msdyn_agentscript_v2id' to='msdyn_agentscriptid' alias='bb'>" +
+									"<link-entity name='msdyn_productivityagentscript' from='msdyn_productivityagentscriptid' to='msdyn_agentscriptid' alias='bb'>" +
 										"<filter type='and'>" +
-											`<condition attribute='msdyn_agentscript_v2id' operator='eq' value='${callscriptId}'/>` +
+											`<condition attribute='msdyn_productivityagentscriptid' operator='eq' value='${callscriptId}'/>` +
 										"</filter>" +
 									"</link-entity>" +
 									"</entity>" +

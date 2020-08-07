@@ -6,7 +6,7 @@
       <LocalizedName description="Productivity Pane Component" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="Dynamics 365 ProductivityPaneComponent workload" languagecode="1033" />
+      <Description description="Productivity pane for productivity tools" languagecode="1033" />
     </Descriptions>
     <Version>9.2.1.0</Version>
     <Managed>2</Managed>
