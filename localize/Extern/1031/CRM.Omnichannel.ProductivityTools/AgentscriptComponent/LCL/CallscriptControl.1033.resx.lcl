@@ -107,18 +107,37 @@
       </Item>
       <Item ItemId=";ControlHeader" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Agent script]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Agent-Skript]]></Val>
+          <Val><![CDATA[Agent scripts]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Agent-Skripts]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Agent script]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:10.0004664Z" />
+        <Modified By="v-rondai" DateTime="2020-08-05T06:42:51.0007625Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Header value for callscript control]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33336_20200803" />
+        </Props>
+      </Item>
+      <Item ItemId=";ControlHeaderInfo" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent scripts help you to be accurate and effective while also being faster and more efficient in terms of customer handling]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mithilfe von Agent-Skripts können Sie Kundenangelegenheiten genauer und effektiver sowie zugleich schneller und effizienter bearbeiten.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-05T06:42:51.0007625Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Info value for callscript control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO33336_20200803" />
         </Props>
       </Item>
       <Item ItemId=";FailedMacroStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

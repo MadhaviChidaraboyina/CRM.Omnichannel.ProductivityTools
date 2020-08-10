@@ -142,11 +142,11 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Δέσμη ενεργειών εκπροσώπου</value>
+    <value>Δέσμες ενεργειών εκπροσώπου</value>
     <comment>Header value for callscript control</comment>
   </data>
   <data name="ControlHeaderInfo" xml:space="preserve">
-    <value>Agent scripts help you to be accurate and effective while also being faster and more efficient in terms of customer handling</value>
+    <value>Οι δέσμες ενεργειών εκπροσώπου σας βοηθούν να είστε ακριβείς και αποτελεσματικοί, και παράλληλα ταχύτεροι και πιο αποτελεσματικοί όσον αφορά τον χειρισμό πελατών</value>
     <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">

@@ -142,11 +142,11 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Agento scenarijus</value>
+    <value>Agento scenarijai</value>
     <comment>Header value for callscript control</comment>
   </data>
   <data name="ControlHeaderInfo" xml:space="preserve">
-    <value>Agent scripts help you to be accurate and effective while also being faster and more efficient in terms of customer handling</value>
+    <value>Naudodami agento scenarijus galite dirbti tiksliai bei veiksmingai ir greičiau bei efektyviau aptarnauti klientus</value>
     <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">

@@ -65,11 +65,20 @@
       </Item>
       <Item ItemId=";ControlHeader" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Agent script]]></Val>
+          <Val><![CDATA[Agent scripts]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Header value for callscript control]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";ControlHeaderInfo" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent scripts help you to be accurate and effective while also being faster and more efficient in terms of customer handling]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Info value for callscript control]]></Cmt>
         </Cmts>
       </Item>
       <Item ItemId=";FailedMacroStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

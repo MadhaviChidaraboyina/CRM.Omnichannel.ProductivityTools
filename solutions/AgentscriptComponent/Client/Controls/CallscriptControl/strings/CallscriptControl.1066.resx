@@ -146,7 +146,7 @@
     <comment>Header value for callscript control</comment>
   </data>
   <data name="ControlHeaderInfo" xml:space="preserve">
-    <value>Agent scripts help you to be accurate and effective while also being faster and more efficient in terms of customer handling</value>
+    <value>Kịch bản tổng đài viên giúp bạn làm việc chính xác và hiệu quả, đồng thời xử lý vấn đề cho khách hàng nhanh và năng suất hơn</value>
     <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">

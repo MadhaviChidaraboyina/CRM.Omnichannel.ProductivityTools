@@ -107,18 +107,37 @@
       </Item>
       <Item ItemId=";ControlHeader" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Agent script]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Skripta agenta]]></Val>
+          <Val><![CDATA[Agent scripts]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Skripte agenta]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Agent script]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T09:39:20.0005494Z" />
+        <Modified By="v-rondai" DateTime="2020-08-05T09:01:36.0004497Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Header value for callscript control]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33336_20200803" />
+        </Props>
+      </Item>
+      <Item ItemId=";ControlHeaderInfo" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent scripts help you to be accurate and effective while also being faster and more efficient in terms of customer handling]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skripte agenta pomažu vam da budete precizni i učinkoviti, a istovremeno budete brži i efikasniji u pogledu obrade klijenta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-05T09:01:36.0004497Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Info value for callscript control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO33336_20200803" />
         </Props>
       </Item>
       <Item ItemId=";FailedMacroStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

@@ -107,18 +107,37 @@
       </Item>
       <Item ItemId=";ControlHeader" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Agent script]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Agendi skript]]></Val>
+          <Val><![CDATA[Agent scripts]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Agendiskriptid]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Agent script]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-robjan" DateTime="2020-07-13T17:13:52.0009219Z" />
+        <Modified By="v-majanc" DateTime="2020-08-05T14:57:47.0007181Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Header value for callscript control]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33336_20200803" />
+        </Props>
+      </Item>
+      <Item ItemId=";ControlHeaderInfo" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent scripts help you to be accurate and effective while also being faster and more efficient in terms of customer handling]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Agendiskriptid aitavad teil olla täpne ja tõhus ning samuti ka kiirem ja efektiivsem klientide haldamisel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-majanc" DateTime="2020-08-05T14:57:47.0007181Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Info value for callscript control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO33336_20200803" />
         </Props>
       </Item>
       <Item ItemId=";FailedMacroStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

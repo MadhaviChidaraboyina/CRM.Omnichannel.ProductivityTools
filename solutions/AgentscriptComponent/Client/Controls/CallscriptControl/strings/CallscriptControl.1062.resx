@@ -142,11 +142,11 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Aģenta skripts</value>
+    <value>Aģenta skripti</value>
     <comment>Header value for callscript control</comment>
   </data>
   <data name="ControlHeaderInfo" xml:space="preserve">
-    <value>Agent scripts help you to be accurate and effective while also being faster and more efficient in terms of customer handling</value>
+    <value>Aģenta skripti palīdz strādāt precīzi un efektīvi, kā arī īstenot ātrāku un efektīvāku klientu apkalpošanu</value>
     <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">

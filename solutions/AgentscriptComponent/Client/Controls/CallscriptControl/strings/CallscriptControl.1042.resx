@@ -146,7 +146,7 @@
     <comment>Header value for callscript control</comment>
   </data>
   <data name="ControlHeaderInfo" xml:space="preserve">
-    <value>Agent scripts help you to be accurate and effective while also being faster and more efficient in terms of customer handling</value>
+    <value>고객 처리 측면에서 에이전트 스크립트를 사용하면 정확하고 효과적이면서도 빠르고 효율적으로 작업할 수 있습니다.</value>
     <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">

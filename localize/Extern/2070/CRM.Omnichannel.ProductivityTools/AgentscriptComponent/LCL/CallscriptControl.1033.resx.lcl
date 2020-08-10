@@ -107,18 +107,37 @@
       </Item>
       <Item ItemId=";ControlHeader" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Agent script]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Script de agente]]></Val>
+          <Val><![CDATA[Agent scripts]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Scripts de agente]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Agent script]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T08:02:56.0008959Z" />
+        <Modified By="v-rondai" DateTime="2020-08-05T06:42:51.0007819Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Header value for callscript control]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33336_20200803" />
+        </Props>
+      </Item>
+      <Item ItemId=";ControlHeaderInfo" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent scripts help you to be accurate and effective while also being faster and more efficient in terms of customer handling]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Os scripts de agente ajudam-no a ser preciso e eficaz, ao mesmo tempo que resolve os problemas dos clientes de forma mais rápida e eficiente]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-05T06:42:51.0007819Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Info value for callscript control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO33336_20200803" />
         </Props>
       </Item>
       <Item ItemId=";FailedMacroStep_AccessibilityLabel" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
