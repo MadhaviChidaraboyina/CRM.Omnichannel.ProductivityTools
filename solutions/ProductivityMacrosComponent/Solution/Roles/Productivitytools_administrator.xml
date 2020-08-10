@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Role id="{702DDD04-6EA4-4534-82F9-B05EDE681B55}" name="Productivity tools administrator">
+<Role id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" name="Productivity tools administrator">
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
     <RolePrivilege name="prvAppendToWorkflow" level="Global" />
