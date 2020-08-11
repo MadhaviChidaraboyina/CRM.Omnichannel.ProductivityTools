@@ -726,7 +726,7 @@
           <Type>nvarchar</Type>
           <Name>msdyn_sourceentityname</Name>
           <LogicalName>msdyn_sourceentityname</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
+          <RequiredLevel>required</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>
