@@ -20,6 +20,21 @@ module MscrmControls.SmartassistPanelControl {
         public static CECEntityRecordType = "entityrecord";
         public static SAConfigCacheKey = "SAConfig";
         public static SAAnyEntityControlContainerId = "SAAnyEntityControl_";
+        public static FPBTag = "FPB";
+        public static TPBTag = "smartbot";
+
+        //AppConfig
+        public static saAppRealtionName = "msdyn_smartassistconfig_msdyn_appconfig";
+        public static appIdSchema = "msdyn_appconfigurationid";
+        public static appConfigEntityName = "msdyn_appconfiguration";
+        public static uniqueNameSchema = "msdyn_uniquename";
+
+        //TPBot
+        public static ConversatonControlOrigin = "ConversatonControlOrigin";
+        public static ServiceEndpointEntity = "serviceendpoint";
+        public static LWIEntityName = "msdyn_ocliveworkitem";
+        public static CDNEndpointFilter = "?$filter=name eq 'oc-cdn-endpoint'";
+        public static ValidSourceEntities = [Constants.LWIEntityName, Constants.IncidentEntityName];
 
         // CSS
         public static SAPanelLoaderCss = "sa-panel-loader";
@@ -33,7 +48,7 @@ module MscrmControls.SmartassistPanelControl {
         public static SAPanelTitleIconPath = "/WebResources/msdyn_infoiconblue.svg";
         public static IconPopOutId = "IconPopOutId";
         public static SAPanelTitleIconInfoDiv = `<div tabindex="0" onclick="var popup = document.getElementById('${Constants.IconPopOutId}');popup.classList.toggle('show');" class="popup"><img class="popup ${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/>  <span class="popuptext" id="${Constants.IconPopOutId}">{1}</span></div>`;
-        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" ><label tabindex="0" class="${Constants.TitleLabelCss}">{0}</label>${Constants.SAPanelTitleIconInfoDiv}</div>`;        
+        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" ><label tabindex="0" class="${Constants.TitleLabelCss}">{0}</label>${Constants.SAPanelTitleIconInfoDiv}</div>`;
         public static SAPanelStyle =
             `<style id="sa-panel-style">
 	        .hide-element{
@@ -182,9 +197,10 @@ module MscrmControls.SmartassistPanelControl {
     }
 
     /**Smart Assit Configuration Type KM or Case */
-    export enum SuggestionType {
+    export enum SuggestionType {        
         KnowledgeArticleSuggestion = 192360000,
-        SimilarCaseSuggestion = 192360001
+        SimilarCaseSuggestion = 192360001,
+        BotSuggestion = 192360002
     }
 
     /**Suggestions Setting  status type */

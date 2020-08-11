@@ -86,5 +86,21 @@ module MscrmControls.SmartassistPanelControl {
             let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
             window.top.dispatchEvent(event);
         }
+
+        /**
+         * Check if provided entity name is valid
+         * @param entityName: source entity name
+         */
+        public static isValidSourceEntityName(entityName: string): boolean {
+            if (Constants.ValidSourceEntities.indexOf(entityName) == -1 || Utility.isNullOrEmptyString(entityName)) {
+                return false;
+            }
+            return true;
+        }
+
+        /** Get App runtime envirnonment data */
+        public static async getAppRuntimeEnvironment() {
+            return await Microsoft.AppRuntime.Utility.getEnvironment();
+        }
     }
 }

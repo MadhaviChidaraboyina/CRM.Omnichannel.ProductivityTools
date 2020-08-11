@@ -4,6 +4,7 @@
         <ProjectToBuild Include="Controls\SmartassistPanelControl\SmartassistPanelControl.csproj" />
 		<ProjectToBuild Include="Controls\RecommendationControl\RecommendationControl.csproj" />
         <ProjectToBuild Include="Controls\SmartAssistAnyEntityControl\SmartAssistAnyEntityControl.csproj" />
+        <ProjectToBuild Include="Controls\TPBotControl\TPBotControl.csproj" />
   </ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />

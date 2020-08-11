@@ -38,10 +38,13 @@ module MscrmControls.SmartassistPanelControl {
          * Get Filtered SA config from admin suggestions setting
          * @param saConfig: All active SA config
          */
-        public async getFilteredSAConfig() {
+        public async getFilteredSAConfig(sourceEntity: string) {
             await this.getSuggestionsSetting();
             var configs = await this.getSAConfigurations();
             var result = configs.filter((data) => {
+                //Source entity filter
+                if (sourceEntity !== data.SourceEntityName) return false;
+                //Filter admin setting
                 switch (data.SuggestionType) {
                     case SuggestionType.SimilarCaseSuggestion:
                         return this.suggestionsSetting.CaseIsEnabled;
@@ -72,7 +75,11 @@ module MscrmControls.SmartassistPanelControl {
         private async fetchSAConfigurationsData() {
             let eventParameters = new TelemetryLogger.EventParameters();
             try {
-                let fetchXml = await this.getXmlQueryForSAConfig()
+                let environmentData = await Utility.getAppRuntimeEnvironment();
+                if (!environmentData.AppConfigName) {
+                    throw "App Config name cannot be null - getAppRuntimeEnvironment"
+                }
+                let fetchXml = this.getXmlQueryForSAConfig(environmentData.AppConfigName)
                 var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;
                 this.saConfig = [];
                 for (var i = 0; i < result.entities.length; i++) {
@@ -92,16 +99,23 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**
-         * Gets xml query to fetch data from two entities
-         * @param parentEntity : Parent Entity to join
-         * @param parentId : Parent entity unique identifier
-         * @param childEntity : Child Entity to join with
-         * @param childId : Child entity unique identifier
+         *  Gets xml query to fetch sa Configs
+         * @param appConfigName: App  Config Unique name
          */
-        private getXmlQueryForSAConfig(): string {
+        private getXmlQueryForSAConfig(appConfigName: string): string {
             let filter = `<filter type='and'><condition attribute='${this.saConfigSchema.StatusCode}' operator='eq' value='${SAConfigStatus.Active}' /></filter>`
-            let query: string = `?fetchXml=<fetch version="1.0" mapping="logical"><entity name="${this.saConfigSchema.EntityName}"> <all-attributes/>{0} <link-entity name="${this.acConfigSchema.EntityName}" to="${this.saConfigSchema.SuggestionControlConfigUniquename}" from="${this.acConfigSchema.UniqueName}" link-type="inner"><attribute name="${this.acConfigSchema.AdaptiveCardTemplate}" alias="${this.acConfigSchema.AdaptiveCardTemplateAlias}"/></link-entity></entity></fetch>`;
-            query = query.Format(filter);
+            let appConfigfilter = ` <filter type='and'><condition attribute='${Constants.uniqueNameSchema}' operator='eq' value='${appConfigName}' /></filter>`            
+            let query: string = `?fetchXml=<fetch version="1.0"><entity name="${this.saConfigSchema.EntityName}"><all-attributes/>{0}
+                                    <link-entity name="${Constants.saAppRealtionName}" from="${this.saConfigSchema.SmartassistConfigurationId}" to="${this.saConfigSchema.SmartassistConfigurationId}" link-type="inner">
+                                      <link-entity name="${Constants.appConfigEntityName}" from="${Constants.appIdSchema}" to="${Constants.appIdSchema}" link-type="inner">{1}
+                                      </link-entity>
+                                    </link-entity>
+                                    <link-entity name="${this.acConfigSchema.EntityName}" to="${this.saConfigSchema.SuggestionControlConfigUniquename}" from="${this.acConfigSchema.UniqueName}" link-type="outer">
+                                      <attribute name="${this.acConfigSchema.AdaptiveCardTemplate}" alias="${this.acConfigSchema.AdaptiveCardTemplateAlias}"/>
+                                    </link-entity>
+                                  </entity>
+                                </fetch>`;
+            query = query.Format(filter, appConfigfilter);
             return query
         }
 

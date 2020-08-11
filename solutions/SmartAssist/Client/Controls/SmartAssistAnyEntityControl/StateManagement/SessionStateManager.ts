@@ -27,7 +27,7 @@
 
         /**
          * Returns for the given entityId and configId
-         * @param entityId The record Id.
+         * @param entityId The record Id (incident id in CSW scenario/ conversation Id in OC scenario)
          * @param configId SAConfig Id.
          */
         getAllRecordsForConfigId(entityId: string, configId: string): string[] {

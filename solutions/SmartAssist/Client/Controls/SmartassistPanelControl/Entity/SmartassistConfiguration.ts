@@ -20,6 +20,7 @@ module MscrmControls.SmartassistPanelControl {
         public TitleIconePath: string;
         public SuggestionControlConfigUniquename: string;
         public UniqueName: string;
+        public SourceEntityName: string;
 
         /**Define SAConfig Entity props schema*/
         constructor() {
@@ -35,6 +36,7 @@ module MscrmControls.SmartassistPanelControl {
             this.StatusCode = "statuscode";
             this.TitleIconePath = "msdyn_iconurl";
             this.SuggestionControlConfigUniquename = "msdyn_suggestioncontrolconfiguniquename";
+            this.SourceEntityName = "msdyn_sourceentityname";
             this.EntityName = "msdyn_smartassistconfig";            
         }
     }
@@ -56,6 +58,7 @@ module MscrmControls.SmartassistPanelControl {
         public SmartassistConfigurationId = "";
         public TitleIconePath = "";
         public SuggestionControlConfigUniquename = "";
+        public SourceEntityName = "";
 
         /**
          * Sets SAConfig Model Values.
@@ -77,6 +80,7 @@ module MscrmControls.SmartassistPanelControl {
                 this.SAConfigTitle = Utility.GetValue(response[this.AttributeName.SAConfigTitle]);
                 this.TitleIconePath = Utility.GetValue(response[this.AttributeName.TitleIconePath]);
                 this.SuggestionControlConfigUniquename = Utility.GetValue(response[this.AttributeName.SuggestionControlConfigUniquename]);
+                this.SourceEntityName = Utility.GetValue(response[this.AttributeName.SourceEntityName]);
             }
         }
     }

@@ -4,6 +4,7 @@
         private _sessionStateManager: SessionStateManager;
         private _sessionStorageManager: SessionStorageManager;
         private _controlContext: Mscrm.ControlData<IInputBag>;
+        private _isSmartAssistAvailable: boolean = null;
         private CONSTRUCTOR_CACHE: {
             [name: string]: {
                 new(): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider;
@@ -35,15 +36,7 @@
 
                 // call API if the data is not available in cache.
                 if (!this.Suggestions || fromServer) {
-                    await this.getSuggestionsDataFromAPI(saConfig, recordId)
-
-                    // Raise PP notification
-                    var saConfigData = this.Suggestions;
-                    if (saConfigData && this.Suggestions[saConfig.SmartassistConfigurationId]) {
-                        var sessionId = Utility.getCurrentSessionId();
-                        var dataCount = saConfigData[saConfig.SmartassistConfigurationId].length;
-                        Utility.DispatchPanelInboundEvent(dataCount, sessionId);
-                    }
+                    await this.getSuggestionsDataFromAPI(saConfig, recordId);                    
                 }
             }
             catch (error) {
@@ -88,13 +81,20 @@
                 }
 
                 if (!findCtor || typeof findCtor !== "function") {
-                    throw new Error(`Could not find/invoke ${suggestionProviderName}'s constructor`);
+                    let eventParameters = new TelemetryLogger.EventParameters();
+                    let message = `Could not find/invoke ${suggestionProviderName}'s constructor`;
+                    eventParameters.addParameter("Exception Details", message);
+                    SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "getSuggestionProvider", message, eventParameters);
+                    throw new Error(message);
                 }
 
                 ctor = findCtor as {
                     new(): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider;
                 };
                 this.CONSTRUCTOR_CACHE[suggestionProviderName] = ctor;
+                return new ctor();
+            }
+            else {
                 return new ctor();
             }
         }
@@ -104,7 +104,7 @@
          * @param saConfig: Smart Assist configuration for suggestion.
          * @param RecordId: Record id to find the suggestion upon.
          */
-        private async getSuggestionsDataFromAPI(saConfig: SAConfig, RecordId: string) {
+        public async getSuggestionsDataFromAPI(saConfig: SAConfig, RecordId: string) {
             let eventParameters = new TelemetryLogger.EventParameters();
             try {
                 const suggestionProvider = this.getSuggestionProvider(saConfig);
@@ -130,11 +130,22 @@
                 }
                 this.Suggestions[saConfig.SmartassistConfigurationId] = data;
                 this.initializeCacheForSuggestions(saConfig, RecordId);
+
+                // Raise PP notification
+                var saConfigData = this.Suggestions;
+                if (saConfigData && this.Suggestions[saConfig.SmartassistConfigurationId]) {
+                    var sessionId = Utility.getCurrentSessionId();
+                    var dataCount = saConfigData[saConfig.SmartassistConfigurationId].length;
+                    Utility.DispatchPanelInboundEvent(dataCount, sessionId);
+                }
+
+                return this.Suggestions;
             }
             catch (error) {
                 this.Suggestions = null;
                 eventParameters.addParameter("Exception Details", error.message);
                 SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "getSuggestionsDataFromAPI", "Error occurred while getting suggestions from API", eventParameters);
+                return null;
             }
         }
 
@@ -173,6 +184,72 @@
 
             let suggestionIdsToSave = previousSuggestionIds.concat(suggestionIds);
             window.sessionStorage.setItem(sessionId, JSON.stringify(suggestionIdsToSave));
+        }
+
+        /**Check if Smart assist is added in OC WS */
+        public async isSmartassistAvailable() {
+            var liveworkStreamItem = Utility.getLiveWorkStreamId();
+            if (Utility.isNullOrEmptyString(liveworkStreamItem)) {
+                return false;
+            }
+            var sessionId = Utility.getCurrentSessionId();
+            let isSmartAssistBotAvailable: any = sessionStorage.getItem(sessionId + liveworkStreamItem + StringConstants.isSmartAssistFound);
+            if (isSmartAssistBotAvailable == null) {
+                await this.FetchSmartAssistBotRecordAndSetCriteria(liveworkStreamItem, sessionId);
+                return this._isSmartAssistAvailable;
+            }
+            return (isSmartAssistBotAvailable == "true");
+        }
+
+        /**
+         * Fet sa bots set SA rendering criteria
+         * @param liveWorkStreamId: Work Stream Unique identifier
+         */
+        private async FetchSmartAssistBotRecordAndSetCriteria(liveWorkStreamId: string, sessionId: string) {
+            let eventParameters = new TelemetryLogger.EventParameters();
+            try {
+                //fetch smart assist bots
+                let fetchXml = this.getSmartAssistFetchXml(liveWorkStreamId);
+                let fetchXmlQuery = StringConstants.FetchOperator + encodeURIComponent(fetchXml);
+                let dataResponse = await SmartAssistAnyEntityControl._context.webAPI.retrieveMultipleRecords(StringConstants.UserEntityName, fetchXmlQuery) as any;
+                let entityRecords: WebApi.Entity[] = dataResponse.entities;
+                this._isSmartAssistAvailable = entityRecords.length > 0;
+                sessionStorage.setItem(sessionId + liveWorkStreamId + StringConstants.isSmartAssistFound, this._isSmartAssistAvailable as any)
+
+                eventParameters.addParameter("total SmartAssistBotRecordFetch", entityRecords.length.toString());
+                SmartAssistAnyEntityControl._telemetryReporter.logSuccess("Main Component", "SmartAssistBotRecordFetch", eventParameters);
+            }
+            catch (error) {
+                this._isSmartAssistAvailable = null;
+                sessionStorage.removeItem(sessionId + liveWorkStreamId + StringConstants.isSmartAssistFound);
+                eventParameters.addParameter("Exception Details", error.message);
+                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "SmartAssistBotRecordFetch", "Error occurred while fetching smart assist bot", eventParameters);
+            }
+
+        }
+
+        /**
+         * Xml to fetch sa bots from work stream
+         * @param workStreamId: Work Stream Unique identifier
+         */
+        private getSmartAssistFetchXml(workStreamId: string): string {
+            //todo: Resolve- Can we have fetch xml in XML ?
+            let fetchXrml = "<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='true'>" +
+                "<entity name='systemuser'>" +
+                "<attribute name='fullname' />" +
+                "<attribute name='businessunitid' />" +
+                "<attribute name='systemuserid' />" +
+                "<order attribute='fullname' descending='false' />" +
+                "<link-entity name='msdyn_msdyn_liveworkstream_systemuser' from='systemuserid' to='systemuserid' visible='false' intersect='true'>" +
+                "<link-entity name='msdyn_liveworkstream' from='msdyn_liveworkstreamid' to='msdyn_liveworkstreamid' alias='aa'>" +
+                "<filter type='and'>" +
+                "<condition attribute='msdyn_liveworkstreamid' operator='eq' uitype='msdyn_liveworkstream' value='{" + workStreamId + "}' />" +
+                "</filter>" +
+                "</link-entity>" +
+                "</link-entity>" +
+                "</entity>" +
+                "</fetch>";
+            return fetchXrml;
         }
     }
 }

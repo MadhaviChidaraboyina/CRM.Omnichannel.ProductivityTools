@@ -8,7 +8,18 @@ module MscrmControls.SmartAssistAnyEntityControl {
     export class StringConstants {
         public static AnyEntityContainer = "sa-anyentity-container-";
         public static AnyEntityInnerDiv = "sa-anyentity-inner-div-";
-        public static PPChildControlId = "MscrmControls.SmartassistPanelControl.SmartassistPanelControl";
+        public static PPChildControlId = "MscrmControls.SmartassistPanelControl.SmartassistPanelControl";      
+        public static TPBotUniqueName = "msdyn_thirdpartybot_config";      
+        public static isSmartAssistFound = "_isSmartAssistFound";      
+        public static UserEntityName = "systemuser";      
+        public static FetchOperator = "?fetchXml=";      
+
+        //FPBot
+        public static ConversatonControlOrigin = "ConversatonControlOrigin";
+        public static ServiceEndpointEntity = "serviceendpoint";
+        public static LWIEntityName = "msdyn_ocliveworkitem";
+        public static CDNEndpointFilter = "?$filter=name eq 'oc-cdn-endpoint'";
+        public static FPBTag = "FPB";
 
         // css
         public static AnyentityStyleTemplateId = "smartassist-anyentity-style";
@@ -67,6 +78,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
     /**Smart Assit Configuration Type KM or Case */
     export enum SuggestionType {
         KnowledgeArticleSuggestion = 192360000,
-        SimilarCaseSuggestion = 192360001
+        SimilarCaseSuggestion = 192360001,
+        BotSuggestion = 192360002
     }
 }

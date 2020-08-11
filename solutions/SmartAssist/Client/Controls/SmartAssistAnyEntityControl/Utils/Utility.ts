@@ -30,7 +30,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Get current session context.
          * */
         public static getCurrentSessionContext(): AppRuntimeClientSdk.ISessionContext {
-            return SmartAssistAnyEntityControl._sessionContext; 
+            return SmartAssistAnyEntityControl._sessionContext;
         }
 
         /**
@@ -44,7 +44,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Get RC Component Id
          * @param suggestionId: suggestion entity record id
          */
-        public static getComponentId(suggestionId: string) {
+        public static getRCComponentId(suggestionId: string) {
             return "Suggestion_" + suggestionId + "_component";
         }
 
@@ -75,6 +75,32 @@ module MscrmControls.SmartAssistAnyEntityControl {
             let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(StringConstants.PPChildControlId, new MscrmControls.PanelControl.PanelNotification(notificationNumber, sesssionId));
             let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
             window.top.dispatchEvent(event);
+        }
+
+        /**Get live work stream id */
+        public static getLiveWorkStreamId(): string {
+            let eventParameters = new TelemetryLogger.EventParameters();
+            let workStreamId: string = null;
+            try {
+                let cifUtil = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
+                let templateParams = cifUtil.getSessionTemplateParams();
+                let data = templateParams.data;
+                workStreamId = data.ocContext.config.sessionParams.LiveWorkStreamId;
+            } catch (error) {
+                eventParameters.addParameter("Exception Details", error.message);
+                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "GetLiveWorkStreamId", "Failed to retrieve Live WorkStream id from form param", eventParameters);
+            }
+            return workStreamId;
+        }
+
+        /**Get Anchor tab context */
+        public static async getAnchorContext() {
+            let tabcontext = null;
+            var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext() as any;
+            if (context) {
+                tabcontext = context.getTabContext("anchor");
+            }
+            return tabcontext
         }
     }
 }

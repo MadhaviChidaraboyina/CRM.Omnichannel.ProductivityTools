@@ -21,6 +21,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private _sessionStorageManager: SessionStorageManager;
         private _handleDismissEvent: (args: any) => void;
         private sessionCloseHandlerId: string;
+        private receiveFPBMessageEventHandler: any;
 
 		/**
 		 * Empty constructor.
@@ -31,6 +32,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             this._sessionStateManager = SessionStateManager.Instance;
             this._sessionStorageManager = SessionStorageManager.Instance;
             this._handleDismissEvent = this.handleDismissEvent.bind(this);
+            this.receiveFPBMessageEventHandler = this.receiveMessage.bind(this);
             window.top.addEventListener(StringConstants.DismissCardEvent, this._handleDismissEvent, false);
             this.sessionCloseHandlerId = Microsoft.AppRuntime.Sessions.addOnAfterSessionClose(this.handleSessionClose.bind(this));
         }
@@ -59,19 +61,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this.anyEntityContainer.appendChild(anyEntityElement);
                     this.anyEntityDataManager.initializeContextParameters(context);
 
-                    // Anyentity inner Container with style
-                    var currentElement = $("#" + this.parentDivId);
-                    currentElement.html(AnyEntityTemplate.get());
-                    var innerElm: HTMLDivElement = document.createElement("div");
-                    innerElm.id = StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId;
-                    $("#" + this.parentDivId).append(innerElm);
+                    // inner container
+                    this.constructAnyEntityInnerContainers();
 
-                    // Loader element
-                    var loaderElement: HTMLDivElement = document.createElement("div");
-                    var loaderLocale = Utility.getString(LocalizedStrings.LoadingText);
-                    loaderElement.innerHTML = ViewTemplates.SALoader.Format(this.saConfig.SmartassistConfigurationId, loaderLocale);
-                    $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(loaderElement);
-
+                    this.registerBotEventHandler();
                     this.initCompleted = true;
                 }
                 // fromcache: true; fromServer: false;
@@ -123,66 +116,127 @@ module MscrmControls.SmartAssistAnyEntityControl {
             Microsoft.AppRuntime.Sessions.removeOnAfterSessionClose(this.sessionCloseHandlerId);
             this._sessionStateManager = null;
             this._sessionStorageManager = null;
+
+            // Remove listener on session close
+            window.top.removeEventListener("message", this.receiveFPBMessageEventHandler, false);
+
         }
 
         /**
          * Intitiate Recomendation Control
          */
-        public async InitiateSuggestionControl(): Promise<void> {
+        public async InitiateSuggestionControl(isFPBot = false): Promise<void> {
 
             //Get Current context
             await this.getCurrentContext();
-
-            this.appendTitle();
             this.showLoader();
-            // Get Suggestions data records for provide saConfig
-            var data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
-            var dataLength = 0;
-            if (data && data[this.saConfig.SmartassistConfigurationId]) {
-                dataLength = data[this.saConfig.SmartassistConfigurationId].length;
-            }
-            if (dataLength < 1) {
-                var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
-                if (!noSuggestionElm) {
-                    var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig);
-                    $("#" + this.parentDivId).append(emptyRecordElm);
+            if (this.saConfig.UniqueName == StringConstants.TPBotUniqueName) {
+                var isSAAvailable = await this.anyEntityDataManager.isSmartassistAvailable() as any;
+                if (isSAAvailable == true) {
+                    this.appendTitle();
+                    const componentId = "TPBot";
+                    let properties: any =
+                    {
+                        parameters: {},
+                        key: componentId,
+                        id: componentId,
+                    };
+                    var divElement = document.createElement("div");
+                    divElement.id = "Component_TPBot";
+
+                    //Initiate Suggestion Control
+                    let suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.ProductivityPanel.TPBotControl", componentId, properties);
+                    SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
+                    $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
                 }
             }
-            for (let i = 0; i <= (dataLength - 1); i++) {
-                var record = data[this.saConfig.SmartassistConfigurationId][i];
-                const componentId = Utility.getComponentId(record.SuggestionId);
-                let properties: any =
-                {
-                    parameters: {
-                        data: {
-                            Type: "Multiple",
-                            Primary: false,
-                            Static: true,
-                            Usage: 1, // input
-                            Value: record
-                        },
-                        Template: {
-                            Type: "Multiple",
-                            Primary: false,
-                            Static: true,
-                            Usage: 1,
-                            Value: this.saConfig.ACTemplate
-                        }
-                    },
-                    key: componentId,
-                    id: componentId,
-                };
-                var divElement = document.createElement("div");
-                divElement.id = "Suggestion_" + record.SuggestionId;
+            else {
+                this.appendTitle();
+                var data;
 
-                //Initiate Suggestion Control
-                const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", componentId, properties);
-                SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
-                $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
+                // Get Suggestions data records for provide saConfig
+                if (isFPBot == true) {
+                    data = await this.anyEntityDataManager.getSuggestionsDataFromAPI(this.saConfig, this.recordId) as { [key: string]: any };
+                }
+                else {
+                    data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
+                }
+
+                var dataLength = 0;
+                if (data && data[this.saConfig.SmartassistConfigurationId]) {
+                    dataLength = data[this.saConfig.SmartassistConfigurationId].length;
+                }
+
+                if (dataLength < 1) {
+                    var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
+                    if (!noSuggestionElm) {
+                        var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig);
+                        $("#" + this.parentDivId).append(emptyRecordElm);
+                    }
+                }
+                for (let i = 0; i <= (dataLength - 1); i++) {
+                    var record = data[this.saConfig.SmartassistConfigurationId][i];
+                    const componentId = Utility.getRCComponentId(record.SuggestionId);
+                    let properties: any =
+                    {
+                        parameters: {
+                            data: {
+                                Type: "Multiple",
+                                Primary: false,
+                                Static: true,
+                                Usage: 1, // input
+                                Value: record
+                            },
+                            Template: {
+                                Type: "Multiple",
+                                Primary: false,
+                                Static: true,
+                                Usage: 1,
+                                Value: this.saConfig.ACTemplate
+                            }
+                        },
+                        key: componentId,
+                        id: componentId,
+                    };
+                    var divElement = document.createElement("div");
+                    divElement.id = "Suggestion_" + record.SuggestionId;
+
+                    //Initiate Suggestion Control
+                    const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", componentId, properties);
+                    SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
+                    $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
+                }
             }
+
             setTimeout(() => {
                 this.hideLoader();
             }, StringConstants.LoaderTimeout);
+        }
+
+        /**
+         * Dismiss all the previus suggestions and clear the cache.
+         * */
+        private dismissPreviousSuggestions() {
+            try {
+                var suggestionIds = this._sessionStateManager.getAllRecordsForConfigId(this.recordId, this.saConfig.SmartassistConfigurationId);
+
+                // unbind RM controls for all the previous suggestions and clear suggestions from cache.
+                for (let suggestion of suggestionIds) {
+                    const componentId = Utility.getRCComponentId(suggestion);
+                    var id = "Suggestion_" + suggestion;
+                    var el = <HTMLElement>document.querySelector('#' + id);
+                    SmartAssistAnyEntityControl._context.utils.unbindDOMComponent(componentId);
+                    el.parentNode.removeChild(el);
+                    this._sessionStateManager.deleteRecord(this.recordId, this.saConfig.SmartassistConfigurationId, suggestion);
+                    this._sessionStorageManager.deleteRecord(suggestion);
+                }
+            } catch (error) {
+                let eventParameters = new TelemetryLogger.EventParameters();
+                eventParameters.addParameter("Exception Details", error.message);
+                let message = "Failed to dismiss previous suggestions";
+                SmartAssistAnyEntityControl._telemetryReporter.logError("MainComponent", "dismissPreviousSuggestions", message, eventParameters);
+            }
+            $("#" + StringConstants.AnyEntityContainer + this.saConfig.SmartassistConfigurationId).empty();
         }
 
         /** Append title for Specific SA suggestions */
@@ -237,7 +291,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 const renderedSuggestionIds = this._sessionStateManager.getAllRecordsForConfigId(this.recordId, this.saConfig.SmartassistConfigurationId);
 
                 if (renderedSuggestionIds.indexOf(suggestionId) != -1) {
-                    const componentId = Utility.getComponentId(suggestionId);
+                    const componentId = Utility.getRCComponentId(suggestionId);
                     var id = "Suggestion_" + suggestionId;
                     var el = <HTMLElement>document.querySelector('#' + id);
                     if (el) {
@@ -282,6 +336,73 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private async getCurrentContext() {
             const sessionId = Utility.getCurrentSessionId();
             SmartAssistAnyEntityControl._sessionContext = await Microsoft.AppRuntime.Sessions.getSession(sessionId).getContext();
+        }
+
+        /**Register message event */
+        private async registerBotEventHandler() {
+            var anchorContext = await Utility.getAnchorContext();
+            //Add message listner for FPB
+            if (anchorContext.entityName == StringConstants.LWIEntityName) {
+                Xrm.WebApi.retrieveMultipleRecords(StringConstants.ServiceEndpointEntity, StringConstants.CDNEndpointFilter).then((data: any) => {
+                    window[StringConstants.ConversatonControlOrigin] = data.entities[0].path;
+                    window.top.addEventListener("message", this.receiveFPBMessageEventHandler, false);
+                });
+            }
+        }
+
+        /**
+         * Conversation message listner
+         * @param event: event payload
+         */
+        private receiveMessage(event: any): void {
+            // TODO: uncomment
+            //if (window[Constants.ConversatonControlOrigin].indexOf(event.origin) == -1)
+            //  return;
+            if (event.data.messageType != "notifyEvent") {
+                return;
+            }
+            if (event.data && event.data.messageData.get("notificationUXObject")) {
+                let messageMap = event.data.messageData.get("notificationUXObject");
+                let conversationId = messageMap.get("conversationId");
+                let uiSessionId = messageMap.get("uiSessionId");
+                let tags = messageMap.get("tags");
+                if (conversationId && uiSessionId && tags.indexOf(StringConstants.FPBTag) != -1 && this.saConfig.UniqueName != StringConstants.TPBotUniqueName) {
+                    try {
+                        // remove previous suggestions
+                        this.dismissPreviousSuggestions();
+                        this.constructAnyEntityInnerContainers();
+
+                        // re-initialize suggestions
+                        this.InitiateSuggestionControl(true);
+                    } catch (error) {
+                        let eventParameters = new TelemetryLogger.EventParameters();
+                        eventParameters.addParameter("Exception Details", error.message);
+                        let message = "Failed to render FPB suggestions";
+                        SmartAssistAnyEntityControl._telemetryReporter.logError("MainComponent", "receiveMessage", message, eventParameters);
+                    }
+                }
+            }
+        }
+        /**Add loader element in config div */
+        private addConfigLoader() {
+            // Loader element
+            var loaderElement: HTMLDivElement = document.createElement("div");
+            var loaderLocale = Utility.getString(LocalizedStrings.LoadingText);
+            loaderElement.innerHTML = ViewTemplates.SALoader.Format(this.saConfig.SmartassistConfigurationId, loaderLocale);
+            $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(loaderElement);
+        }
+
+        /**Inner container */
+        private constructAnyEntityInnerContainers() {
+            // Anyentity inner Container with style
+            var currentElement = $("#" + this.parentDivId);
+            currentElement.html(AnyEntityTemplate.get());
+            var innerElm: HTMLDivElement = document.createElement("div");
+            innerElm.id = StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId;
+            $("#" + this.parentDivId).append(innerElm);
+
+            //Loder
+            this.addConfigLoader();
         }
     }
 }

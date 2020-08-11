@@ -87,13 +87,17 @@ module MscrmControls.SmartassistPanelControl {
 		 */
         public updateView(context: Mscrm.ControlData<IInputBag>): void {
             SmartassistPanelControl._context = context;
+            if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
+                this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
+            }
             if (context.parameters.SessionContext && Utility.IsValidJsonString(context.parameters.SessionContext.raw)) {
                 this.ppSessionContext = JSON.parse(context.parameters.SessionContext.raw);
             }
-
             if (this.newInstance) {
-                if (Constants.IncidentEntityName == this.AnchorTabContext.entityName && !Utility.isNullOrEmptyString(this.AnchorTabContext.entityId)) {
-                    this.renderSuggestions(false, Utility.FormatGuid(this.AnchorTabContext.entityId));
+                let recordId = this.getEntityRecordId(this.AnchorTabContext);
+                if (Utility.isValidSourceEntityName(this.AnchorTabContext.entityName)
+                    && !Utility.isNullOrEmptyString(recordId)) {
+                    this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
                 }
                 else {
                     // No data to PP
@@ -133,7 +137,8 @@ module MscrmControls.SmartassistPanelControl {
          */
         public loadWebresourceAndRenderSmartassistAnyEntity(saConfig: SAConfig, callback: (config: SAConfig, recordId: string, update: boolean) => void, recordId: string, update: boolean): void {
             let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
-            if (!document.getElementById(src)) {
+            //SuggestionWebResourceUrl is empty for TPBot
+            if (!document.getElementById(src) && !Utility.isNullOrEmptyString(saConfig.SuggestionWebResourceUrl)) {
                 let script = document.createElement("script");
                 script.onerror = function (event: ErrorEvent) {
                     let eventParameters = new TelemetryLogger.EventParameters();
@@ -199,7 +204,7 @@ module MscrmControls.SmartassistPanelControl {
          * Initialize SmartAssistAnyEntityControl to render suggestions
          * @param recordId: Anchor tab Entity id from PP control
          */
-        public async renderSuggestions(update: boolean, recordId: string = null): Promise<void> {
+        public async renderSuggestions(update: boolean, entityName: string, recordId: string = null): Promise<void> {
             this.showLoader();
 
             // validate current context
@@ -207,7 +212,7 @@ module MscrmControls.SmartassistPanelControl {
                 if (Utility.isNullOrEmptyString(recordId)) {
                     recordId = this.tabSwitchEntityId;
                 }
-                var configs = await SAConfigDataManager.Instance.getFilteredSAConfig() as SmartassistPanelControl.SAConfig[];
+                var configs = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName) as SmartassistPanelControl.SAConfig[];
 
                 if (configs.length < 1) {
 
@@ -247,20 +252,19 @@ module MscrmControls.SmartassistPanelControl {
             }
             if (!this.isSameSession(sessionId)) {
                 if (anchorContext && anchorContext.entityName) {
-                    if (anchorContext.entityName != Constants.IncidentEntityName
-                        || Utility.isNullOrEmptyString(anchorContext.entityId)) {
-                        var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
-                        for (let i = 0; i <= (configs.length - 1); i++) {
-                            const componentId = Constants.SAAnyEntityControlContainerId + configs[i].SmartassistConfigurationId;
-                            SmartassistPanelControl._context.utils.unbindDOMComponent(componentId);
-                        }
+                    var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
+                    //Unbind all configs- in OC both(lwi and case) configs could be present 
+                    this.unbindSAConfigs(configs);
 
+                    let entityId = this.getEntityRecordId(anchorContext);
+                    if (!Utility.isValidSourceEntityName(anchorContext.entityName)
+                        || Utility.isNullOrEmptyString(entityId)) {
                         // No Data to PP
                         this.DispatchNoDataEvent();
                     }
                     else {
-                        this.anchorTabEntityId = Utility.FormatGuid(anchorContext.entityId);
-                        this.renderSuggestions(true, this.anchorTabEntityId);
+                        this.anchorTabEntityId = Utility.FormatGuid(entityId);
+                        this.renderSuggestions(true, anchorContext.entityName, this.anchorTabEntityId);
                     }
                 }
             }
@@ -298,6 +302,30 @@ module MscrmControls.SmartassistPanelControl {
 
             // Dispatch No Data PP event 
             Utility.DispatchPanelInboundEvent(ppRerender);
+        }      
+
+        /**
+         * Get entity recordId from anchor Context
+         * @param anchorContext: anchor tab context
+         */
+        private getEntityRecordId(anchorContext: any): string {
+            let recordId = anchorContext.entityId;
+            if (anchorContext.entityName == Constants.LWIEntityName) {
+                recordId = anchorContext.data.ocContext.config.sessionParams.LiveWorkItemId;
+            }
+            return recordId;
         }
+
+        /**
+         * unBind given config from pane UI
+         * @param configs: list of unbinding configs
+         */
+        private unbindSAConfigs(configs: SAConfig[]) {
+            for (let i = 0; i <= (configs.length - 1); i++) {
+                const componentId = Constants.SAAnyEntityControlContainerId + configs[i].SmartassistConfigurationId;
+                SmartassistPanelControl._context.utils.unbindDOMComponent(componentId);
+            }
+        }
+
     }
 }

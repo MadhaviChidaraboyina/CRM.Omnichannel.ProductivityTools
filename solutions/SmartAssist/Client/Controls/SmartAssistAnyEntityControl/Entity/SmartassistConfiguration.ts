@@ -21,6 +21,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public TitleIconePath: string;
         public SuggestionControlConfigUniquename: string;
         public UniqueName: string;
+        public SourceEntityName: string;
 
         /**Define SAConfig Entity props schema*/
         constructor() {
@@ -37,6 +38,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             this.TitleIconePath = "msdyn_iconurl";
             this.SuggestionControlConfigUniquename = "msdyn_suggestioncontrolconfiguniquename";
             this.EntityName = "msdyn_smartassistconfig";
+            this.SourceEntityName = "msdyn_sourceentityname";            
         }
     }
 
@@ -53,6 +55,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public UniqueName = "";
         public StatusCode: number = null;
         public SmartassistConfigurationId = "";
+        public SourceEntityName = "";
         public SuggestionControlConfigUniquename = "";
         public TitleIconePath = "";
     }
