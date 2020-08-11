@@ -81,10 +81,7 @@
                 }
 
                 if (!findCtor || typeof findCtor !== "function") {
-                    let eventParameters = new TelemetryLogger.EventParameters();
                     let message = `Could not find/invoke ${suggestionProviderName}'s constructor`;
-                    eventParameters.addParameter("Exception Details", message);
-                    SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "getSuggestionProvider", message, eventParameters);
                     throw new Error(message);
                 }
 

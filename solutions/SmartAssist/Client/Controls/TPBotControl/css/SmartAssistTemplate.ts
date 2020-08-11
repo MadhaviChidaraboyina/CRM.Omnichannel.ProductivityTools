@@ -85,7 +85,7 @@ module MscrmControls.ProductivityPanel {
 	.tpbot-card-container:last-child {
 			margin-bottom: 0px;
 	}
-	.ac-pushButton {
+	.tpb-ac-pushButton {
 		background: none!important;
 		border: none;
 		padding: 0px!important;
@@ -93,15 +93,15 @@ module MscrmControls.ProductivityPanel {
 		cursor: pointer;
 	}
 
-	.ac-textBlock {
+	.tpb-ac-textBlock {
 		color: #666666;
 	}
 
-	.ac-container {
+	.tpb-ac-container {
 		padding: ${containerPadding}
 	}
 
-	.ac-pushButton > img{
+	.tpb-ac-pushButton > img{
 		width: 14px!important;
 		height: 14px!important;
 	}

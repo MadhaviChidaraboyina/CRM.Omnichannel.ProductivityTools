@@ -76,7 +76,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 				.relative-parent
 				{
 					position: relative !important;
-					min-height:200px;
+					min-height:356px;
 					min-width:200px;	
 				}
 				/* Safari */

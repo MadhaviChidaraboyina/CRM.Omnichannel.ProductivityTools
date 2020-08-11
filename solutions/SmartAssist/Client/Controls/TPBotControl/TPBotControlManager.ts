@@ -76,6 +76,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 			if (!this.adaptiveCard) {
 				this.adaptiveCard = AdaptiveCardHelper.InitializeAdaptiveCardsHostConfig();
 			}
+			this.adaptiveCard.hostConfig.cssClassNamePrefix = "tpb";
 			this.adaptiveCard.parse(card);
 			let renderedCard = this.adaptiveCard.render();
 
