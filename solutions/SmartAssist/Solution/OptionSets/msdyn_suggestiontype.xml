@@ -17,7 +17,7 @@
         <label description="Knowledge Article Suggestion" languagecode="1033" />
       </labels>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Knowledge Article Suggestion" languagecode="1033" />
       </Descriptions>
     </option>
     <option value="192360001" ExternalValue="" Color="#0000ff">
@@ -25,8 +25,16 @@
         <label description="Similar Case Suggestion" languagecode="1033" />
       </labels>
       <Descriptions>
-        <Description description="" languagecode="1033" />
+        <Description description="Similar Case Suggestions" languagecode="1033" />
       </Descriptions>
     </option>
+      <option value="192360002" ExternalValue="" Color="#0000ff">
+          <labels>
+              <label description="Bot Suggestion" languagecode="1033" />
+          </labels>
+          <Descriptions>
+              <Description description="Bot Suggestion" languagecode="1033" />
+          </Descriptions>
+      </option>
   </options>
 </optionset>
