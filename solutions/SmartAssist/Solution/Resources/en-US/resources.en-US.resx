@@ -312,6 +312,10 @@
     <value>Reason for the status of the Smartassist configuration</value>
     <comment>'msdyn_smartassistconfig' : Description for OptionSet 'msdyn_smartassistconfig_statuscode' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_SourceEntityName" xml:space="preserve">
+    <value>Suggestion source entity logical name.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SourceEntityName' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_Suggestioncontainertitle" xml:space="preserve">
     <value>This will be used as a title for entity suggestion panel</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestioncontainertitle' on Entity</comment>
@@ -324,13 +328,13 @@
     <value>Denotes the control type for suggestions, (e.g) Adaptive card</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestioncontroltype' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_SuggestionProvider" xml:space="preserve">
+    <value>Provide the class name of Suggestion provider</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SuggestionProvider' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_Suggestiontype" xml:space="preserve">
     <value>Denotes the type of suggestions like Similar case or KB article suggestion</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestiontype' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_smartassistconfigmsdyn_suggestionwebresourcemethod" xml:space="preserve">
-    <value>This method will be called by smart assist to retrieve suggestions.</value>
-    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_suggestionwebresourcemethod' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_SuggestionWebresourceURL" xml:space="preserve">
     <value>Suggestion Webresource which brings smart assist actions or api to retrieve suggestions</value>
@@ -500,6 +504,10 @@
     <value>Status Reason</value>
     <comment>'msdyn_smartassistconfig' : displayname for OptionSet 'msdyn_smartassistconfig_statuscode' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_SourceEntityName" xml:space="preserve">
+    <value>Source Entity Name</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_SourceEntityName' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_Suggestioncontainertitle" xml:space="preserve">
     <value>Suggestion panel title</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_Suggestioncontainertitle' on Entity</comment>
@@ -512,13 +520,13 @@
     <value>Suggestioncontroltype</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_Suggestioncontroltype' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_SuggestionProvider" xml:space="preserve">
+    <value>Suggestion Provider</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_SuggestionProvider' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_Suggestiontype" xml:space="preserve">
     <value>Suggestiontype</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_Suggestiontype' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_smartassistconfigmsdyn_suggestionwebresourcemethod" xml:space="preserve">
-    <value>Suggestionwebresourcemethod</value>
-    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_suggestionwebresourcemethod' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_SuggestionWebresourceURL" xml:space="preserve">
     <value>Suggestion Webresource URL</value>
@@ -692,6 +700,10 @@
     <value />
     <comment>'Smartassist configuration' : label for tab in Entity FormXml ID: '{139b8758-0e79-48f7-8d18-9521e7492727}'</comment>
   </data>
+  <data name="1:label,Smartassist configuration{30600e39-2bc3-7e42-35d4-a7382de163ad}" xml:space="preserve">
+    <value>Suggestion Provider</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{30600e39-2bc3-7e42-35d4-a7382de163ad}'</comment>
+  </data>
   <data name="1:label,Smartassist configuration{3098b899-2fed-4738-bfc2-863ad133dce1}" xml:space="preserve">
     <value>General</value>
     <comment>'Smartassist configuration' : label for section in Entity FormXml ID: '{3098b899-2fed-4738-bfc2-863ad133dce1}'</comment>
@@ -768,6 +780,10 @@
     <value />
     <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{b80bba50-14d8-444d-80ce-d8338a547ac9}'</comment>
   </data>
+  <data name="1:label,Smartassist configuration{bdcf237b-84b5-4aa1-b0da-296d76be1279}" xml:space="preserve">
+    <value>Source Entity Name</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{bdcf237b-84b5-4aa1-b0da-296d76be1279}'</comment>
+  </data>
   <data name="1:label,Smartassist configuration{c2347681-2d12-42f0-a8c8-9c4c70bea31b}" xml:space="preserve">
     <value />
     <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{c2347681-2d12-42f0-a8c8-9c4c70bea31b}'</comment>
@@ -793,7 +809,7 @@
     <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{f79d4adb-ab43-4229-966b-cbb00bc6f034}'</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_adaptivecardconfigurationentitymsdyn_adaptivecardconfiguration" xml:space="preserve">
-    <value>adaptivecardconfigurations</value>
+    <value>Adaptive Card Configuration</value>
     <comment> 'msdyn_adaptivecardconfiguration' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_smartassistconfigentitymsdyn_smartassistconfig" xml:space="preserve">
@@ -941,12 +957,16 @@
     <comment>'msdyn_suggestiontype' : Description for OptionSet</comment>
   </data>
   <data name="9:Description,msdyn_suggestiontype192360000" xml:space="preserve">
-    <value />
+    <value>Knowledge Article Suggestion</value>
     <comment>'msdyn_suggestiontype' : Description for OptionSet Value '192360000'</comment>
   </data>
   <data name="9:Description,msdyn_suggestiontype192360001" xml:space="preserve">
-    <value />
+    <value>Similar Case Suggestions</value>
     <comment>'msdyn_suggestiontype' : Description for OptionSet Value '192360001'</comment>
+  </data>
+  <data name="9:Description,msdyn_suggestiontype192360002" xml:space="preserve">
+    <value>Bot Suggestion</value>
+    <comment>'msdyn_suggestiontype' : Description for OptionSet Value '192360002'</comment>
   </data>
   <data name="9:displayname,msdyn_suggestioncontroltype" xml:space="preserve">
     <value>Suggestion Control Type</value>
@@ -967,5 +987,9 @@
   <data name="9:label,msdyn_suggestiontype192360001" xml:space="preserve">
     <value>Similar Case Suggestion</value>
     <comment>'msdyn_suggestiontype' : label for OptionSet Value '192360001'</comment>
+  </data>
+  <data name="9:label,msdyn_suggestiontype192360002" xml:space="preserve">
+    <value>Bot Suggestion</value>
+    <comment>'msdyn_suggestiontype' : label for OptionSet Value '192360002'</comment>
   </data>
 </root>

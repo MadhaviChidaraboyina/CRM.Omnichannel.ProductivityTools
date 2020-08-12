@@ -116,7 +116,7 @@
 											</cell>
 										</row>
 										<row>
-											<cell id="{30600e39-2bc3-7e42-35d4-a7382de163ad}" showlabel="true" locklevel="0" ordinalvalue="10012" solutionaction="Added">
+											<cell id="{30600e39-2bc3-7e42-35d4-a7382de163ad}" showlabel="true" locklevel="0" >
 												<labels>
 													<label description="Suggestion Provider" languagecode="1033" />
 												</labels>
