@@ -9,7 +9,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static AnyEntityContainer = "sa-anyentity-container-";
         public static AnyEntityInnerDiv = "sa-anyentity-inner-div-";
         public static PPChildControlId = "MscrmControls.SmartassistPanelControl.SmartassistPanelControl";      
-        public static TPBotUniqueName = "msdyn_thirdpartybot_config";      
+        public static TPBotUniqueName = "msdyn_sa_oc_thirdpartybot_config";      
         public static isSmartAssistFound = "_isSmartAssistFound";      
         public static UserEntityName = "systemuser";      
         public static FetchOperator = "?fetchXml=";      
