@@ -443,10 +443,10 @@
           <MaxLength>1024</MaxLength>
           <Length>2048</Length>
           <displaynames>
-            <displayname description="An oData query to retrieve record from which to read designer URL" languagecode="1033" />
+            <displayname description="An OData query to retrieve record from which to read designer URL" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="An oData query to retrieve record from which to read designer URL" languagecode="1033" />
+            <Description description="An OData query to retrieve record from which to read designer URL" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_designerurlrelativepath">
