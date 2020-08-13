@@ -456,6 +456,10 @@
     <value>Unique value to enable or disable build expression</value>
     <comment>'msdyn_sessiontemplate' : Description for OptionSet 'msdyn_sessiontemplate_msdyn_enablebuildexpression' on Entity</comment>
   </data>
+  <data name="1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
+    <value>List of active macros</value>
+    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
+  </data>
   <data name="1:Description,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" xml:space="preserve">
     <value>A form for this entity.</value>
     <comment>'Session Template' : Description for systemform in Entity FormXml ID: '{5de0d599-f36d-425a-9c06-b80630d91def}'</comment>
@@ -1147,6 +1151,10 @@
   <data name="1:LocalizedName,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
     <value>Session Template</value>
     <comment> 'msdyn_sessiontemplate' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
+    <value>Active macros</value>
+    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:LocalizedName,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" xml:space="preserve">
     <value>Information</value>
