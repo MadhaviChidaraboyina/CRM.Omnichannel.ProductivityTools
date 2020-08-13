@@ -277,9 +277,6 @@ module MscrmControls.Callscript {
 			if (this.stateManager.scriptDataFetchFailed) {
 				return this.getScriptLoadErrorContainer(LocalizedStrings.InitialScriptDataLoadFailure);
 			}
-			if (this.stateManager.callscriptsForCurrentSession.length == 0) {
-				return this.getScriptLoadErrorContainer(LocalizedStrings.NoCallScriptFoundErrorMessage);
-			}
 
 			let callscriptComponents: Mscrm.Component[] = [];
 
@@ -306,6 +303,10 @@ module MscrmControls.Callscript {
 						controlStyles[i] = styleProps[i];
 				}
 			}
+
+            if (this.stateManager.callscriptsForCurrentSession.length == 0) {
+                callscriptComponents.push(this.getScriptLoadErrorContainer(LocalizedStrings.NoDataCallScriptMessage));
+            }
 
 			return context.factory.createElement(
 				"CONTAINER", {

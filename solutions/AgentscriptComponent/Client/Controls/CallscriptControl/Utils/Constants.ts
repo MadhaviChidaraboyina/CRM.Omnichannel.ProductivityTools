@@ -99,7 +99,9 @@ module MscrmControls.Callscript {
 		public static InitialScriptDataLoadFailure = "InitialScriptDataLoadFailure";
 		public static NoCallScriptFoundErrorMessage = "NoCallScriptFoundErrorMessage";
 		public static MacroStepFailureMessage = "MacroStepFailure_ErrorMessageWithoutError";
-		public static ScriptStepFailureMessage = "ScriptStepsDataLoadFailure";
+        public static ScriptStepFailureMessage = "ScriptStepsDataLoadFailure";
+        public static NoDataCallScriptMessage = "NoDataCallScriptMessage";
+
 	}
 
 	/**
