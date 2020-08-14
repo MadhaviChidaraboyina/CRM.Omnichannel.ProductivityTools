@@ -9,91 +9,91 @@
     <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
-      <Item ItemId=";10:Description,business_unit_msdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,business_unit_msdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,business_unit_msdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,business_unit_msdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,lk_msdyn_agentscript_v2_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,lk_msdyn_productivityagentscript_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,lk_msdyn_agentscript_v2_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,lk_msdyn_productivityagentscript_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,lk_msdyn_agentscriptstep_v2_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,lk_msdyn_productivityagentscriptstep_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,lk_msdyn_agentscriptstep_v2_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,lk_msdyn_productivityagentscriptstep_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for agent script associated with agent script step.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for target script associated with agent script step]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,msdyn_workflow_msdyn_agentscriptstep_v2_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,msdyn_workflow_msdyn_prod_agentscriptstep_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for macro associated with agent script step]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,owner_msdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,owner_msdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owner Id]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,owner_msdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,owner_msdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owner Id]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,team_msdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,team_msdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,team_msdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,team_msdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,user_msdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,user_msdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";10:Description,user_msdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,user_msdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
         </Str>
@@ -105,13 +105,19 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";15062:Description,msdyn_Agentscripts" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent scripts to be used in productivity tool]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19236" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Microsoft Dynamics 365]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";15062:LocalizedName,msdyn_AgentscriptComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";15062:LocalizedName,msdyn_Agentscripts" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent scripts]]></Val>
         </Str>
@@ -153,319 +159,325 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[List of active macros]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:Description,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A form for this entity.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2CreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2CreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was created.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2CreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2ModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2ModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was modified.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2ModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2OverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Date and time that the record was migrated.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2OwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owner Id]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2OwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2OwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2OwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2TimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[For internal use only.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2UTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2entitymsdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script v2]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique Name for the entity.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_agentscript_v2Id" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for entity instances]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_agentscript_v2_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status of the Agent script]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Reason for the status of the Agent script]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Description of the agent scrip]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_language" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_language" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Language for agent script]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name of the custom entity.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status of the Agent script]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Reason for the status of the Agent script]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2CreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2CreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Date and time when the record was created.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2CreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2ModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2ModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Date and time when the record was modified.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2ModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2OverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2OwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Owner Id]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2OwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2OwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2OwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2TimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[For internal use only.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2UTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2entitymsdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique Name for the entity.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Action type for agent script step]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for agent script associated with agent script step.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2Id" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for entity instances]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Agent script]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Agent script]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Agent script]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Agent script]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner Id]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique Name for the entity.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Action type for agent script step]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Status of the Agent script step]]></Val>
+          <Val><![CDATA[Unique identifier for agent script associated with agent script step.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Reason for the status of the Agent script step]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Description for agent script step]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for macro associated with agent script step]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name of the custom entity.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_order" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_order" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Display order]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for target script associated with agent script step]]></Val>
+          <Val><![CDATA[Unique identifier for entity instances]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_textinstruction" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Instruction for text action type]]></Val>
+          <Val><![CDATA[Action type for agent script step]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status of the Agent script step]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Agent script step]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for target script associated with agent script step]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_textinstruction" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Instruction for text action type]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Agent script step]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Reason for the status of the Agent script step]]></Val>
         </Str>
@@ -495,13 +507,13 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:LocalizedCollectionName,msdyn_agentscript_v2entitymsdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent scripts]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:LocalizedCollectionName,msdyn_agentscriptstep_v2entitymsdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script steps]]></Val>
         </Str>
@@ -645,19 +657,25 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active macros]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";1:LocalizedName,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Information]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:LocalizedName,msdyn_agentscript_v2entitymsdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:LocalizedName,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:LocalizedName,msdyn_agentscriptstep_v2entitymsdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:LocalizedName,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script step]]></Val>
         </Str>
@@ -729,301 +747,301 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2CreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Created By]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2CreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Created On]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2CreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Created By (Delegate)]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2ModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Modified By]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2ModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Modified On]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2ModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Modified By (Delegate)]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2OverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Record Created On]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2OwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owner]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2OwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owning Business Unit]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2OwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owning Team]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2OwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owning User]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2TimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Time Zone Rule Version Number]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2UTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique Name]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_agentscript_v2Id" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Agent script]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_agentscript_v2_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status Reason]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Description]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_language" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_language" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Language]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status Reason]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2CreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Created By]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2CreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Created On]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2CreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Created By (Delegate)]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2ModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Modified By]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2ModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Modified On]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2ModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Modified By (Delegate)]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2OverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Record Created On]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2OwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Owner]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2OwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Owning Business Unit]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2OwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Owning Team]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2OwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Owning User]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2TimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2UTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique Name]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Action type]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2Id" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Agent script step]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Action type]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status Reason]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Description]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Target macro]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_order" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Order]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Target script]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_textinstruction" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Text instructions]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Business Unit]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Team]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning User]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique Name]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action type]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Description]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Target macro]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_order" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Order]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script step]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action type]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Target script]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_textinstruction" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Text instructions]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status Reason]]></Val>
         </Str>
@@ -1515,67 +1533,67 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Active]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Inactive]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Active]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Inactive]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype192350000" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350000" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Text]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype192350001" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350001" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Macro]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype192350002" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350002" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Script]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Active]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Inactive]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Active]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Inactive]]></Val>
         </Str>

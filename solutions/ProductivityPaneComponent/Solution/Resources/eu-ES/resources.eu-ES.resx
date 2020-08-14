@@ -177,7 +177,7 @@
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
   <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
-    <value>Dynamics 365-en ProductivityPaneComponent elementuaren lan-karga</value>
+    <value>Produktibitate-tresnetarako produktibitate-panela</value>
     <comment> 'msdyn_ProductivityPaneComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">

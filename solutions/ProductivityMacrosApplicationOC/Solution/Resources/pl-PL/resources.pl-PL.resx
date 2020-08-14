@@ -136,12 +136,16 @@
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
+  <data name="15062:Description,msdyn_MacrosDataOmnichannel" xml:space="preserve">
+    <value>Dane makr używane w aplikacji Obsługa wielokanałowa</value>
+    <comment> 'msdyn_MacrosDataOmnichannel' : Description for Solution</comment>
+  </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,msdyn_ProductivityMacrosApplicationOC" xml:space="preserve">
+  <data name="15062:LocalizedName,msdyn_MacrosDataOmnichannel" xml:space="preserve">
     <value>Makra</value>
-    <comment> 'msdyn_ProductivityMacrosApplicationOC' : LocalizedName for Solution</comment>
+    <comment> 'msdyn_MacrosDataOmnichannel' : LocalizedName for Solution</comment>
   </data>
 </root>

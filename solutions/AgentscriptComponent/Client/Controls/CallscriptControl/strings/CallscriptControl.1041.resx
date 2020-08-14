@@ -245,4 +245,8 @@
     <value>{0} のテキスト指示ステップ。</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
   </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>No relative agent scripts found.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
+  </data>
 </root>

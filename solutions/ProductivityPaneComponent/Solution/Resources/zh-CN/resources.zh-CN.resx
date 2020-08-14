@@ -177,7 +177,7 @@
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
   <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
-    <value>Dynamics 365 工作效率窗格组件工作负荷</value>
+    <value>生产力工具的生产力窗格</value>
     <comment> 'msdyn_ProductivityPaneComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">

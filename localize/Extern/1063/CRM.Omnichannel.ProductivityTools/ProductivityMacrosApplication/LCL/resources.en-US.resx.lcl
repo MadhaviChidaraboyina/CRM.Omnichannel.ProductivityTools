@@ -22,6 +22,19 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
+      <Item ItemId=";15062:Description,msdyn_MacrosDataForExperienceDesigner" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro data used for experience designer]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makrokomandos duomenys, naudoti patirties dizaino įrankyje]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:31.0009771Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn10000" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Microsoft Dynamics 365]]></Val>
@@ -35,7 +48,7 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";15062:LocalizedName,msdyn_ProductivityMacrosApplication" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";15062:LocalizedName,msdyn_MacrosDataForExperienceDesigner" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Macros]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -43,9 +56,9 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-29T04:44:06.0008596Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:31.0009771Z" />
         <Props>
-          <Str Name="Custom3" Val="WO32880_20200727" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
     </Item>

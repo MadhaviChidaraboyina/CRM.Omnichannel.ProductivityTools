@@ -136,12 +136,16 @@
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
+  <data name="15062:Description,msdyn_MacrosDataForExperienceDesigner" xml:space="preserve">
+    <value>Данные макросов, используемые для конструктора интерфейса</value>
+    <comment> 'msdyn_MacrosDataForExperienceDesigner' : Description for Solution</comment>
+  </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,msdyn_ProductivityMacrosApplication" xml:space="preserve">
+  <data name="15062:LocalizedName,msdyn_MacrosDataForExperienceDesigner" xml:space="preserve">
     <value>Макросы</value>
-    <comment> 'msdyn_ProductivityMacrosApplication' : LocalizedName for Solution</comment>
+    <comment> 'msdyn_MacrosDataForExperienceDesigner' : LocalizedName for Solution</comment>
   </data>
 </root>

@@ -177,7 +177,7 @@
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
   <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
-    <value>Càrrega de treball del component de la subfinestra de productivitat del Dynamics 365</value>
+    <value>Subfinestra de productivitat per a eines de productivitat</value>
     <comment> 'msdyn_ProductivityPaneComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">

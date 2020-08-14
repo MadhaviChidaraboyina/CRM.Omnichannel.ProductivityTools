@@ -132,77 +132,81 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
-  <data name="10:Description,business_unit_msdyn_agentscriptstep_v2" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис.</value>
-    <comment>msdyn_agentscriptstep_v2 Description for EntityRelationship 'business_unit_msdyn_agentscriptstep_v2'</comment>
+  <data name="10:Description,business_unit_msdyn_productivityagentscript" xml:space="preserve">
+    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'business_unit_msdyn_productivityagentscript'</comment>
   </data>
-  <data name="10:Description,business_unit_msdyn_agentscript_v2" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис.</value>
-    <comment>msdyn_agentscript_v2 Description for EntityRelationship 'business_unit_msdyn_agentscript_v2'</comment>
+  <data name="10:Description,business_unit_msdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'business_unit_msdyn_productivityagentscriptstep'</comment>
   </data>
-  <data name="10:Description,lk_msdyn_agentscriptstep_v2_createdby" xml:space="preserve">
+  <data name="10:Description,lk_msdyn_productivityagentscriptstep_createdby" xml:space="preserve">
     <value>Унікальний ідентифікатор користувача, який створив запис.</value>
-    <comment>msdyn_agentscriptstep_v2 Description for EntityRelationship 'lk_msdyn_agentscriptstep_v2_createdby'</comment>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_createdby'</comment>
   </data>
-  <data name="10:Description,lk_msdyn_agentscriptstep_v2_modifiedby" xml:space="preserve">
+  <data name="10:Description,lk_msdyn_productivityagentscriptstep_modifiedby" xml:space="preserve">
     <value>Унікальний ідентифікатор користувача, який змінив запис.</value>
-    <comment>msdyn_agentscriptstep_v2 Description for EntityRelationship 'lk_msdyn_agentscriptstep_v2_modifiedby'</comment>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_modifiedby'</comment>
   </data>
-  <data name="10:Description,lk_msdyn_agentscript_v2_createdby" xml:space="preserve">
+  <data name="10:Description,lk_msdyn_productivityagentscript_createdby" xml:space="preserve">
     <value>Унікальний ідентифікатор користувача, який створив запис.</value>
-    <comment>msdyn_agentscript_v2 Description for EntityRelationship 'lk_msdyn_agentscript_v2_createdby'</comment>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_createdby'</comment>
   </data>
-  <data name="10:Description,lk_msdyn_agentscript_v2_modifiedby" xml:space="preserve">
+  <data name="10:Description,lk_msdyn_productivityagentscript_modifiedby" xml:space="preserve">
     <value>Унікальний ідентифікатор користувача, який змінив запис.</value>
-    <comment>msdyn_agentscript_v2 Description for EntityRelationship 'lk_msdyn_agentscript_v2_modifiedby'</comment>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_modifiedby'</comment>
   </data>
-  <data name="10:Description,msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_agentscriptid" xml:space="preserve">
+  <data name="10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid" xml:space="preserve">
     <value>Унікальний ідентифікатор для сценарію агента, пов’язаного з кроком сценарію агента.</value>
-    <comment>msdyn_agentscriptstep_v2 Description for EntityRelationship 'msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_agentscriptid'</comment>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid'</comment>
   </data>
-  <data name="10:Description,msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_routeactionid" xml:space="preserve">
+  <data name="10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_routeactionid" xml:space="preserve">
     <value>Унікальний ідентифікатор цільового сценарію, пов’язаного з кроком сценарію агента</value>
-    <comment>msdyn_agentscriptstep_v2 Description for EntityRelationship 'msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_routeactionid'</comment>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_routeactionid'</comment>
   </data>
-  <data name="10:Description,msdyn_workflow_msdyn_agentscriptstep_v2_macroactionid" xml:space="preserve">
+  <data name="10:Description,msdyn_workflow_msdyn_prod_agentscriptstep_macroactionid" xml:space="preserve">
     <value>Унікальний ідентифікатор для макросу, пов’язаного з кроком сценарію агента</value>
-    <comment>msdyn_agentscriptstep_v2 Description for EntityRelationship 'msdyn_workflow_msdyn_agentscriptstep_v2_macroactionid'</comment>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_workflow_msdyn_prod_agentscriptstep_macroactionid'</comment>
   </data>
-  <data name="10:Description,owner_msdyn_agentscriptstep_v2" xml:space="preserve">
+  <data name="10:Description,owner_msdyn_productivityagentscript" xml:space="preserve">
     <value>Ідентифікатор відповідального</value>
-    <comment>msdyn_agentscriptstep_v2 Description for EntityRelationship 'owner_msdyn_agentscriptstep_v2'</comment>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'owner_msdyn_productivityagentscript'</comment>
   </data>
-  <data name="10:Description,owner_msdyn_agentscript_v2" xml:space="preserve">
+  <data name="10:Description,owner_msdyn_productivityagentscriptstep" xml:space="preserve">
     <value>Ідентифікатор відповідального</value>
-    <comment>msdyn_agentscript_v2 Description for EntityRelationship 'owner_msdyn_agentscript_v2'</comment>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'owner_msdyn_productivityagentscriptstep'</comment>
   </data>
-  <data name="10:Description,team_msdyn_agentscriptstep_v2" xml:space="preserve">
-    <value>Унікальний ідентифікатор для робочої групи, яка відповідає за запис.</value>
-    <comment>msdyn_agentscriptstep_v2 Description for EntityRelationship 'team_msdyn_agentscriptstep_v2'</comment>
+  <data name="10:Description,team_msdyn_productivityagentscript" xml:space="preserve">
+    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'team_msdyn_productivityagentscript'</comment>
   </data>
-  <data name="10:Description,team_msdyn_agentscript_v2" xml:space="preserve">
-    <value>Унікальний ідентифікатор для робочої групи, яка відповідає за запис.</value>
-    <comment>msdyn_agentscript_v2 Description for EntityRelationship 'team_msdyn_agentscript_v2'</comment>
+  <data name="10:Description,team_msdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'team_msdyn_productivityagentscriptstep'</comment>
   </data>
-  <data name="10:Description,user_msdyn_agentscriptstep_v2" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, який відповідає за запис.</value>
-    <comment>msdyn_agentscriptstep_v2 Description for EntityRelationship 'user_msdyn_agentscriptstep_v2'</comment>
+  <data name="10:Description,user_msdyn_productivityagentscript" xml:space="preserve">
+    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'user_msdyn_productivityagentscript'</comment>
   </data>
-  <data name="10:Description,user_msdyn_agentscript_v2" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, який відповідає за запис.</value>
-    <comment>msdyn_agentscript_v2 Description for EntityRelationship 'user_msdyn_agentscript_v2'</comment>
+  <data name="10:Description,user_msdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'user_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn19236" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
   </data>
+  <data name="15062:Description,msdyn_Agentscripts" xml:space="preserve">
+    <value>Сценарії агентів, які використовуватимуться в засобі підвищення продуктивності</value>
+    <comment> 'msdyn_Agentscripts' : Description for Solution</comment>
+  </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19236" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,msdyn_AgentscriptComponent" xml:space="preserve">
+  <data name="15062:LocalizedName,msdyn_Agentscripts" xml:space="preserve">
     <value>Сценарії агентів</value>
-    <comment> 'msdyn_AgentscriptComponent' : LocalizedName for Solution</comment>
+    <comment> 'msdyn_Agentscripts' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,Agent script step{194a3727-e2aa-ea11-a81c-000d3ac5e423}" xml:space="preserve">
     <value>Активні кроки сценарію агента, за які я відповідаю</value>
@@ -228,213 +232,213 @@
     <value>Форма для цієї сутності.</value>
     <comment>'Agent script' : Description for systemform in Entity FormXml ID: '{fc60eca2-37c4-43c3-b604-e11d433ae008}'</comment>
   </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2CreatedBy" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptCreatedBy" xml:space="preserve">
     <value>Унікальний ідентифікатор користувача, який створив запис.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'CreatedBy' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2CreatedOn" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptCreatedOn" xml:space="preserve">
     <value>Дата та час створення запису.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'CreatedOn' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2CreatedOnBehalfBy" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
     <value>Унікальний ідентифікатор користувача-представника, який створив запис.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2entitymsdyn_agentscriptstep_v2" xml:space="preserve">
-    <value />
-    <comment> 'msdyn_agentscriptstep_v2' : Description for Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2ModifiedBy" xml:space="preserve">
-    <value>Унікальний ідентифікатор користувача, який змінив запис.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'ModifiedBy' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2ModifiedOn" xml:space="preserve">
-    <value>Дата та час змінення запису.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'ModifiedOn' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2ModifiedOnBehalfBy" xml:space="preserve">
-    <value>Унікальний ідентифікатор користувача-представника, який змінив запис.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_actiontype" xml:space="preserve">
-    <value>Тип дії для кроку сценарію агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'msdyn_actiontype' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptid" xml:space="preserve">
-    <value>Унікальний ідентифікатор для сценарію агента, пов’язаного з кроком сценарію агента.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'msdyn_agentscriptid' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2Id" xml:space="preserve">
-    <value>Унікальний ідентифікатор одного з екземплярів сутності</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'msdyn_agentscriptstep_v2Id' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype" xml:space="preserve">
-    <value>Тип дії для кроку сценарію агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for OptionSet 'msdyn_agentscriptstep_v2_msdyn_actiontype' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode" xml:space="preserve">
-    <value>Стан кроку сценарію агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for OptionSet 'msdyn_agentscriptstep_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode" xml:space="preserve">
-    <value>Опис стану кроку сценарію агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for OptionSet 'msdyn_agentscriptstep_v2_statuscode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_description" xml:space="preserve">
-    <value>Опис кроку сценарію агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'msdyn_description' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_macroactionid" xml:space="preserve">
-    <value>Унікальний ідентифікатор для макросу, пов’язаного з кроком сценарію агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'msdyn_macroactionid' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_name" xml:space="preserve">
-    <value>Ім’я настроюваної сутності.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'msdyn_name' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_order" xml:space="preserve">
-    <value>Порядок відображення</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'msdyn_order' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_routeactionid" xml:space="preserve">
-    <value>Унікальний ідентифікатор цільового сценарію, пов’язаного з кроком сценарію агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'msdyn_routeactionid' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_textinstruction" xml:space="preserve">
-    <value>Інструкція для типу дії з текстом</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'msdyn_textinstruction' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2msdyn_UniqueName" xml:space="preserve">
-    <value>Унікальне ім’я сутності.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2OverriddenCreatedOn" xml:space="preserve">
-    <value>Дата та час перенесення запису.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2OwnerId" xml:space="preserve">
-    <value>Ідентифікатор відповідального</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'OwnerId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2OwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2OwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор для робочої групи, яка відповідає за запис.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'OwningTeam' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2OwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, який відповідає за запис.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'OwningUser' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2statecode" xml:space="preserve">
-    <value>Стан кроку сценарію агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2statuscode" xml:space="preserve">
-    <value>Опис стану кроку сценарію агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'statuscode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2TimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Лише для внутрішнього використання.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscriptstep_v2UTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Код часового поясу, використаний під час створення запису.</value>
-    <comment>'msdyn_agentscriptstep_v2' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2CreatedBy" xml:space="preserve">
-    <value>Унікальний ідентифікатор користувача, який створив запис.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'CreatedBy' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2CreatedOn" xml:space="preserve">
-    <value>Дата та час створення запису.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'CreatedOn' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2CreatedOnBehalfBy" xml:space="preserve">
-    <value>Унікальний ідентифікатор користувача-представника, який створив запис.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2entitymsdyn_agentscript_v2" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" xml:space="preserve">
     <value>Сценарій агента (версія 2)</value>
-    <comment> 'msdyn_agentscript_v2' : Description for Entity</comment>
+    <comment> 'msdyn_productivityagentscript' : Description for Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2ModifiedBy" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptModifiedBy" xml:space="preserve">
     <value>Унікальний ідентифікатор користувача, який змінив запис.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'ModifiedBy' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2ModifiedOn" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptModifiedOn" xml:space="preserve">
     <value>Дата та час змінення запису.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'ModifiedOn' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2ModifiedOnBehalfBy" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptModifiedOnBehalfBy" xml:space="preserve">
     <value>Унікальний ідентифікатор користувача-представника, який змінив запис.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2msdyn_agentscript_v2Id" xml:space="preserve">
-    <value>Унікальний ідентифікатор одного з екземплярів сутності</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'msdyn_agentscript_v2Id' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2msdyn_agentscript_v2_statecode" xml:space="preserve">
-    <value>Стан сценарію агента</value>
-    <comment>'msdyn_agentscript_v2' : Description for OptionSet 'msdyn_agentscript_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode" xml:space="preserve">
-    <value>Опис стану сценарію агента</value>
-    <comment>'msdyn_agentscript_v2' : Description for OptionSet 'msdyn_agentscript_v2_statuscode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2msdyn_description" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_description" xml:space="preserve">
     <value>Опис сценарію агента</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'msdyn_description' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_description' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2msdyn_language" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_language" xml:space="preserve">
     <value>Мова для сценарію агента</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'msdyn_language' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_language' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2msdyn_name" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_name" xml:space="preserve">
     <value>Ім’я настроюваної сутності.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'msdyn_name' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2msdyn_UniqueName" xml:space="preserve">
-    <value>Унікальне ім’я сутності.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
+    <value>Унікальний ідентифікатор одного з екземплярів сутності</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2OverriddenCreatedOn" xml:space="preserve">
-    <value>Дата та час перенесення запису.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2OwnerId" xml:space="preserve">
-    <value>Ідентифікатор відповідального</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'OwnerId' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2OwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2OwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор для робочої групи, яка відповідає за запис.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'OwningTeam' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2OwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, який відповідає за запис.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'OwningUser' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_agentscript_v2statecode" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
     <value>Стан сценарію агента</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'statecode' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_productivityagentscript_statecode' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2statuscode" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode" xml:space="preserve">
     <value>Опис стану сценарію агента</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'statuscode' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_productivityagentscript_statuscode' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2TimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Лише для внутрішнього використання.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_UniqueName" xml:space="preserve">
+    <value>Унікальне ім’я сутності.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_agentscript_v2UTCConversionTimeZoneCode" xml:space="preserve">
+  <data name="1:Description,msdyn_productivityagentscriptOverriddenCreatedOn" xml:space="preserve">
+    <value>Дата та час перенесення запису.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptOwnerId" xml:space="preserve">
+    <value>Ідентифікатор відповідального</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptOwningBusinessUnit" xml:space="preserve">
+    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
+    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
+    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstatecode" xml:space="preserve">
+    <value>Стан сценарію агента</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstatuscode" xml:space="preserve">
+    <value>Опис стану сценарію агента</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepCreatedBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача, який створив запис.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepCreatedOn" xml:space="preserve">
+    <value>Дата та час створення запису.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача-представника, який створив запис.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_productivityagentscriptstep' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepModifiedBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача, який змінив запис.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepModifiedOn" xml:space="preserve">
+    <value>Дата та час змінення запису.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepModifiedOnBehalfBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача-представника, який змінив запис.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_actiontype" xml:space="preserve">
+    <value>Тип дії для кроку сценарію агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_actiontype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_agentscriptid" xml:space="preserve">
+    <value>Унікальний ідентифікатор для сценарію агента, пов’язаного з кроком сценарію агента.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_agentscriptid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_description" xml:space="preserve">
+    <value>Опис кроку сценарію агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_macroactionid" xml:space="preserve">
+    <value>Унікальний ідентифікатор для макросу, пов’язаного з кроком сценарію агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_macroactionid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_name" xml:space="preserve">
+    <value>Ім’я настроюваної сутності.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_order" xml:space="preserve">
+    <value>Порядок відображення</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_order' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
+    <value>Унікальний ідентифікатор одного з екземплярів сутності</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
+    <value>Тип дії для кроку сценарію агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_productivityagentscriptstep_msdyn_actiontype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode" xml:space="preserve">
+    <value>Стан кроку сценарію агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_productivityagentscriptstep_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode" xml:space="preserve">
+    <value>Опис стану кроку сценарію агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_productivityagentscriptstep_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_routeactionid" xml:space="preserve">
+    <value>Унікальний ідентифікатор цільового сценарію, пов’язаного з кроком сценарію агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_routeactionid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_textinstruction" xml:space="preserve">
+    <value>Інструкція для типу дії з текстом</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_textinstruction' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_UniqueName" xml:space="preserve">
+    <value>Унікальне ім’я сутності.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepOverriddenCreatedOn" xml:space="preserve">
+    <value>Дата та час перенесення запису.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepOwnerId" xml:space="preserve">
+    <value>Ідентифікатор відповідального</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepOwningBusinessUnit" xml:space="preserve">
+    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
+    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
+    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepstatecode" xml:space="preserve">
+    <value>Стан кроку сценарію агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepstatuscode" xml:space="preserve">
+    <value>Опис стану кроку сценарію агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Тільки для внутрішнього використання.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
     <value>Код часового поясу, використаний під час створення запису.</value>
-    <comment>'msdyn_agentscript_v2' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Тільки для внутрішнього використання.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Код часового поясу, використаний під час створення запису.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
     <value />
@@ -452,209 +456,213 @@
     <value>Унікальне значення для ввімкнення або вимкнення виразу збірки</value>
     <comment>'msdyn_sessiontemplate' : Description for OptionSet 'msdyn_sessiontemplate_msdyn_enablebuildexpression' on Entity</comment>
   </data>
+  <data name="1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
+    <value>List of active macros</value>
+    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
+  </data>
   <data name="1:Description,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" xml:space="preserve">
     <value>Форма для цієї сутності.</value>
     <comment>'Session Template' : Description for systemform in Entity FormXml ID: '{5de0d599-f36d-425a-9c06-b80630d91def}'</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2CreatedBy" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptCreatedBy" xml:space="preserve">
     <value>Автор</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'CreatedBy' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'CreatedBy' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2CreatedOn" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptCreatedOn" xml:space="preserve">
     <value>Створено</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'CreatedOn' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'CreatedOn' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2CreatedOnBehalfBy" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
     <value>Автор (представник):</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2ModifiedBy" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptModifiedBy" xml:space="preserve">
     <value>Автор змін</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'ModifiedBy' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2ModifiedOn" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptModifiedOn" xml:space="preserve">
     <value>Змінено</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'ModifiedOn' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2ModifiedOnBehalfBy" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptModifiedOnBehalfBy" xml:space="preserve">
     <value>Автор змін (представник):</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_actiontype" xml:space="preserve">
-    <value>Тип дії</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'msdyn_actiontype' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptid" xml:space="preserve">
-    <value>Сценарій агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'msdyn_agentscriptid' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2Id" xml:space="preserve">
-    <value>Крок сценарію агента</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'msdyn_agentscriptstep_v2Id' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype" xml:space="preserve">
-    <value>Тип дії</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for OptionSet 'msdyn_agentscriptstep_v2_msdyn_actiontype' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode" xml:space="preserve">
-    <value>Стан</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for OptionSet 'msdyn_agentscriptstep_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode" xml:space="preserve">
-    <value>Опис стану</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for OptionSet 'msdyn_agentscriptstep_v2_statuscode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_description" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_description" xml:space="preserve">
     <value>Опис</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'msdyn_description' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_description' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_macroactionid" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_language" xml:space="preserve">
+    <value>Мова</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_language' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_name" xml:space="preserve">
+    <value>Ім’я</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
+    <value>Сценарій агента</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
+    <value>Стан</value>
+    <comment>'msdyn_productivityagentscript' : displayname for OptionSet 'msdyn_productivityagentscript_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode" xml:space="preserve">
+    <value>Опис стану</value>
+    <comment>'msdyn_productivityagentscript' : displayname for OptionSet 'msdyn_productivityagentscript_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_UniqueName" xml:space="preserve">
+    <value>Унікальне ім’я</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptOverriddenCreatedOn" xml:space="preserve">
+    <value>Запис створено</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptOwnerId" xml:space="preserve">
+    <value>Відповідальний</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptOwningBusinessUnit" xml:space="preserve">
+    <value>Відповідальний підрозділ</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
+    <value>Відповідальна робоча група</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
+    <value>Відповідальний користувач</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstatecode" xml:space="preserve">
+    <value>Стан</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstatuscode" xml:space="preserve">
+    <value>Опис стану</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepCreatedBy" xml:space="preserve">
+    <value>Автор</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepCreatedOn" xml:space="preserve">
+    <value>Створено</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
+    <value>Автор (представник):</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepModifiedBy" xml:space="preserve">
+    <value>Автор змін</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepModifiedOn" xml:space="preserve">
+    <value>Змінено</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepModifiedOnBehalfBy" xml:space="preserve">
+    <value>Автор змін (представник):</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_actiontype" xml:space="preserve">
+    <value>Тип дії</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_actiontype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_agentscriptid" xml:space="preserve">
+    <value>Сценарій агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_agentscriptid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_description" xml:space="preserve">
+    <value>Опис</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_macroactionid" xml:space="preserve">
     <value>Цільовий макрос</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'msdyn_macroactionid' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_macroactionid' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_name" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_name" xml:space="preserve">
     <value>Ім’я</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'msdyn_name' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_order" xml:space="preserve">
-    <value>Замов.</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'msdyn_order' on Entity</comment>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_order" xml:space="preserve">
+    <value>Замовлення</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_order' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_routeactionid" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
+    <value>Крок сценарію агента</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
+    <value>Тип дії</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_productivityagentscriptstep_msdyn_actiontype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode" xml:space="preserve">
+    <value>Стан</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_productivityagentscriptstep_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode" xml:space="preserve">
+    <value>Опис стану</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_productivityagentscriptstep_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_routeactionid" xml:space="preserve">
     <value>Цільовий сценарій</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'msdyn_routeactionid' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_routeactionid' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_textinstruction" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_textinstruction" xml:space="preserve">
     <value>Текстові інструкції</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'msdyn_textinstruction' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_textinstruction' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2msdyn_UniqueName" xml:space="preserve">
-    <value>Унікальна назва</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_UniqueName" xml:space="preserve">
+    <value>Унікальне ім’я</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2OverriddenCreatedOn" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepOverriddenCreatedOn" xml:space="preserve">
     <value>Запис створено</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2OwnerId" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepOwnerId" xml:space="preserve">
     <value>Відповідальний</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'OwnerId' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'OwnerId' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2OwningBusinessUnit" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepOwningBusinessUnit" xml:space="preserve">
     <value>Відповідальний підрозділ</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2OwningTeam" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
     <value>Відповідальна робоча група</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'OwningTeam' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'OwningTeam' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2OwningUser" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
     <value>Відповідальний користувач</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'OwningUser' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'OwningUser' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2statecode" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepstatecode" xml:space="preserve">
     <value>Стан</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'statecode' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'statecode' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2statuscode" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepstatuscode" xml:space="preserve">
     <value>Опис стану</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'statuscode' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2TimeZoneRuleVersionNumber" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
     <value>Номер версії правила часового поясу</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscriptstep_v2UTCConversionTimeZoneCode" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
     <value>Код часового поясу у форматі UTC</value>
-    <comment>'msdyn_agentscriptstep_v2' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscript_v2CreatedBy" xml:space="preserve">
-    <value>Автор</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'CreatedBy' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2CreatedOn" xml:space="preserve">
-    <value>Створено</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'CreatedOn' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2CreatedOnBehalfBy" xml:space="preserve">
-    <value>Автор (представник):</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2ModifiedBy" xml:space="preserve">
-    <value>Автор змін</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'ModifiedBy' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2ModifiedOn" xml:space="preserve">
-    <value>Змінено</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'ModifiedOn' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2ModifiedOnBehalfBy" xml:space="preserve">
-    <value>Автор змін (представник):</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2msdyn_agentscript_v2Id" xml:space="preserve">
-    <value>Сценарій агента</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'msdyn_agentscript_v2Id' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2msdyn_agentscript_v2_statecode" xml:space="preserve">
-    <value>Стан</value>
-    <comment>'msdyn_agentscript_v2' : displayname for OptionSet 'msdyn_agentscript_v2_statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode" xml:space="preserve">
-    <value>Опис стану</value>
-    <comment>'msdyn_agentscript_v2' : displayname for OptionSet 'msdyn_agentscript_v2_statuscode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2msdyn_description" xml:space="preserve">
-    <value>Опис</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'msdyn_description' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2msdyn_language" xml:space="preserve">
-    <value>Language</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'msdyn_language' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2msdyn_name" xml:space="preserve">
-    <value>Ім’я</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'msdyn_name' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2msdyn_UniqueName" xml:space="preserve">
-    <value>Унікальна назва</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2OverriddenCreatedOn" xml:space="preserve">
-    <value>Запис створено</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2OwnerId" xml:space="preserve">
-    <value>Відповідальний</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'OwnerId' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2OwningBusinessUnit" xml:space="preserve">
-    <value>Відповідальний підрозділ</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2OwningTeam" xml:space="preserve">
-    <value>Відповідальна робоча група</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'OwningTeam' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2OwningUser" xml:space="preserve">
-    <value>Відповідальний користувач</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'OwningUser' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2statecode" xml:space="preserve">
-    <value>Стан</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'statecode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2statuscode" xml:space="preserve">
-    <value>Опис стану</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'statuscode' on Entity</comment>
-  </data>
-  <data name="1:displayname,msdyn_agentscript_v2TimeZoneRuleVersionNumber" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
     <value>Номер версії правила часового поясу</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
-  <data name="1:displayname,msdyn_agentscript_v2UTCConversionTimeZoneCode" xml:space="preserve">
+  <data name="1:displayname,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
     <value>Код часового поясу у форматі UTC</value>
-    <comment>'msdyn_agentscript_v2' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_sessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">
     <value>Увімкнути вираз збірки</value>
@@ -952,49 +960,49 @@
     <value>Відповідальний</value>
     <comment>'Agent script' : label for cell in Entity FormXml ID: '{fe273ef3-8d02-41ab-95a8-e8ce7c389aaf}'</comment>
   </data>
-  <data name="1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype192350000" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode0" xml:space="preserve">
+    <value>Активне</value>
+    <comment>'msdyn_productivityagentscript' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode1" xml:space="preserve">
+    <value>Неактивне</value>
+    <comment>'msdyn_productivityagentscript' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode1" xml:space="preserve">
+    <value>Активне</value>
+    <comment>'msdyn_productivityagentscript' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode2" xml:space="preserve">
+    <value>Неактивне</value>
+    <comment>'msdyn_productivityagentscript' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350000" xml:space="preserve">
     <value>Текст</value>
-    <comment>'msdyn_agentscriptstep_v2' : label for option '192350000' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : label for option '192350000' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype192350001" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350001" xml:space="preserve">
     <value>Макрос</value>
-    <comment>'msdyn_agentscriptstep_v2' : label for option '192350001' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : label for option '192350001' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype192350002" xml:space="preserve">
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350002" xml:space="preserve">
     <value>Сценарій</value>
-    <comment>'msdyn_agentscriptstep_v2' : label for option '192350002' on Entity</comment>
+    <comment>'msdyn_productivityagentscriptstep' : label for option '192350002' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode0" xml:space="preserve">
-    <value>Активний</value>
-    <comment>'msdyn_agentscriptstep_v2' : label for state '0' on Entity</comment>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode0" xml:space="preserve">
+    <value>Активне</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for state '0' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode1" xml:space="preserve">
-    <value>Неактивний</value>
-    <comment>'msdyn_agentscriptstep_v2' : label for state '1' on Entity</comment>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode1" xml:space="preserve">
+    <value>Неактивне</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for state '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode1" xml:space="preserve">
-    <value>Активний</value>
-    <comment>'msdyn_agentscriptstep_v2' : label for status '1' on Entity</comment>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode1" xml:space="preserve">
+    <value>Активне</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for status '1' on Entity</comment>
   </data>
-  <data name="1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode2" xml:space="preserve">
-    <value>Неактивний</value>
-    <comment>'msdyn_agentscriptstep_v2' : label for status '2' on Entity</comment>
-  </data>
-  <data name="1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statecode0" xml:space="preserve">
-    <value>Активний</value>
-    <comment>'msdyn_agentscript_v2' : label for state '0' on Entity</comment>
-  </data>
-  <data name="1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statecode1" xml:space="preserve">
-    <value>Неактивний</value>
-    <comment>'msdyn_agentscript_v2' : label for state '1' on Entity</comment>
-  </data>
-  <data name="1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode1" xml:space="preserve">
-    <value>Активний</value>
-    <comment>'msdyn_agentscript_v2' : label for status '1' on Entity</comment>
-  </data>
-  <data name="1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode2" xml:space="preserve">
-    <value>Неактивний</value>
-    <comment>'msdyn_agentscript_v2' : label for status '2' on Entity</comment>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode2" xml:space="preserve">
+    <value>Неактивне</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,msdyn_sessiontemplatemsdyn_sessiontemplate_msdyn_enablebuildexpression0" xml:space="preserve">
     <value>Ні</value>
@@ -1032,13 +1040,13 @@
     <value>Сценарії агентів</value>
     <comment>'Session Template' : label for cell in Entity FormXml ID: '{b01cb01a-c807-2e3a-a780-7de072ee7de8}'</comment>
   </data>
-  <data name="1:LocalizedCollectionName,msdyn_agentscriptstep_v2entitymsdyn_agentscriptstep_v2" xml:space="preserve">
-    <value>Кроки сценаріїв агента</value>
-    <comment> 'msdyn_agentscriptstep_v2' : LocalizedCollectionName for Entity</comment>
-  </data>
-  <data name="1:LocalizedCollectionName,msdyn_agentscript_v2entitymsdyn_agentscript_v2" xml:space="preserve">
+  <data name="1:LocalizedCollectionName,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" xml:space="preserve">
     <value>Сценарії агентів</value>
-    <comment> 'msdyn_agentscript_v2' : LocalizedCollectionName for Entity</comment>
+    <comment> 'msdyn_productivityagentscript' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Кроки сценаріїв агента</value>
+    <comment> 'msdyn_productivityagentscriptstep' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
     <value>Шаблони сеансів</value>
@@ -1132,17 +1140,21 @@
     <value>Відомості</value>
     <comment>'Agent script' : LocalizedName for systemform in Entity FormXml ID: '{fc60eca2-37c4-43c3-b604-e11d433ae008}'</comment>
   </data>
-  <data name="1:LocalizedName,msdyn_agentscriptstep_v2entitymsdyn_agentscriptstep_v2" xml:space="preserve">
-    <value>Крок сценарію агента</value>
-    <comment> 'msdyn_agentscriptstep_v2' : LocalizedName for Entity</comment>
-  </data>
-  <data name="1:LocalizedName,msdyn_agentscript_v2entitymsdyn_agentscript_v2" xml:space="preserve">
+  <data name="1:LocalizedName,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" xml:space="preserve">
     <value>Сценарій агента</value>
-    <comment> 'msdyn_agentscript_v2' : LocalizedName for Entity</comment>
+    <comment> 'msdyn_productivityagentscript' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Крок сценарію агента</value>
+    <comment> 'msdyn_productivityagentscriptstep' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
     <value>Шаблон сеансу</value>
     <comment> 'msdyn_sessiontemplate' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
+    <value>Active macros</value>
+    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:LocalizedName,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" xml:space="preserve">
     <value>Відомості</value>

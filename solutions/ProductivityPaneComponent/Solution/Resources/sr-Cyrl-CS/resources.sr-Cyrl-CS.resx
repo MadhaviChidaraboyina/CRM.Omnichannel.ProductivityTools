@@ -177,7 +177,7 @@
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
   <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
-    <value>Радно оптерећење Dynamics 365 компоненте окна продуктивности</value>
+    <value>Окно продуктивности за алате за продуктивност</value>
     <comment> 'msdyn_ProductivityPaneComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">

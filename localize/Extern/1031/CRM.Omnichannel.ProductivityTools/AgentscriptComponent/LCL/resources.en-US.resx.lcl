@@ -9,33 +9,33 @@
     <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
-      <Item ItemId=";10:Description,business_unit_msdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,business_unit_msdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für die Unternehmenseinheit, die für den Datensatz zuständig ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner der Unternehmenseinheit, die für den Datensatz zuständig ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.000314Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005081Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,business_unit_msdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,business_unit_msdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für die Unternehmenseinheit, die für den Datensatz zuständig ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner der Unternehmenseinheit, die für den Datensatz zuständig ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.000314Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,lk_msdyn_agentscript_v2_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,lk_msdyn_productivityagentscript_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -43,12 +43,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.000314Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,lk_msdyn_agentscript_v2_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,lk_msdyn_productivityagentscript_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -56,12 +56,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.000314Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,lk_msdyn_agentscriptstep_v2_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,lk_msdyn_productivityagentscriptstep_createdby" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -69,12 +69,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.000314Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,lk_msdyn_agentscriptstep_v2_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,lk_msdyn_productivityagentscriptstep_modifiedby" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -82,12 +82,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.000314Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for agent script associated with agent script step.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -95,12 +95,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.000314Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,msdyn_msdyn_agentscript_v2_msdyn_agentscriptstep_v2_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for target script associated with agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -108,25 +108,25 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0002931Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,msdyn_workflow_msdyn_agentscriptstep_v2_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,msdyn_workflow_msdyn_prod_agentscriptstep_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for macro associated with agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für das Makro, das dem Agent-Skriptschritt zugeordnet ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner des Makros, das dem Agent-Skriptschritt zugeordnet ist]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0002931Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,owner_msdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,owner_msdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owner Id]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -134,12 +134,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0002931Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,owner_msdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,owner_msdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owner Id]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -147,61 +147,61 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0002931Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,team_msdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,team_msdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für das Team, das für den Datensatz zuständig ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner des Teams, das für den Datensatz zuständig ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0002931Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004933Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,team_msdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,team_msdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für das Team, das für den Datensatz zuständig ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner des Teams, das für den Datensatz zuständig ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0002931Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005092Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,user_msdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,user_msdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für den Benutzer, der für den Datensatz zuständig ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner des Benutzers, der für den Datensatz zuständig ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0002931Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005092Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";10:Description,user_msdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";10:Description,user_msdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für den Benutzer, der für den Datensatz zuständig ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner des Benutzers, der für den Datensatz zuständig ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0002931Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005092Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
       <Item ItemId=";15062:Description,microsoftdynamicsmsdyn19236" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -217,6 +217,19 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
+      <Item ItemId=";15062:Description,msdyn_Agentscripts" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent scripts to be used in productivity tool]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Agent-Skripte, die im Produktivitätstool verwendet werden sollen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005092Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19236" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Microsoft Dynamics 365]]></Val>
@@ -230,7 +243,7 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";15062:LocalizedName,msdyn_AgentscriptComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";15062:LocalizedName,msdyn_Agentscripts" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent scripts]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -238,9 +251,9 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-29T04:44:02.0007987Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005092Z" />
         <Props>
-          <Str Name="Custom3" Val="WO32880_20200727" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,Agent script step{194a3727-e2aa-ea11-a81c-000d3ac5e423}" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -334,7 +347,7 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2CreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -342,38 +355,38 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003132Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005092Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2CreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was created.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Datum und Uhrzeit der Datensatzerstellung]]></Val>
+            <Val><![CDATA[Datum und Uhrzeit der Datensatzerstellung.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003132Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005092Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2CreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für den stellvertretenden Benutzer, der den Datensatz erstellt hat]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner für den stellvertretenden Benutzer, der den Datensatz erstellt hat.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003132Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005092Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2ModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -381,51 +394,51 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005092Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2ModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Date and time when the record was modified.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Datum und Uhrzeit der Datensatzänderung]]></Val>
+            <Val><![CDATA[Datum und Uhrzeit der Datensatzänderung.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005092Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2ModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für den stellvertretenden Benutzer, der den Datensatz geändert hat]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner für den stellvertretenden Benutzer, der den Datensatz geändert hat.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2OverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Date and time that the record was migrated.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Datum und Uhrzeit der Datensatzmigration]]></Val>
+            <Val><![CDATA[Datum und Uhrzeit der Datensatzmigration.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2OwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owner Id]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -433,77 +446,77 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2OwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für die Unternehmenseinheit, die für den Datensatz zuständig ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner der Unternehmenseinheit, die für den Datensatz zuständig ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2OwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für das Team, das für den Datensatz zuständig ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner des Teams, das für den Datensatz zuständig ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2OwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für den Benutzer, der für den Datensatz zuständig ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner des Benutzers, der für den Datensatz zuständig ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2TimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[For internal use only.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nur zur internen Verwendung]]></Val>
+            <Val><![CDATA[Nur zur internen Verwendung.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2UTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Zeitzonencode, der bei Erstellung des Datensatzes verwendet wurde]]></Val>
+            <Val><![CDATA[Zeitzonencode, der bei der Datensatzerstellung verwendet wurde.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2entitymsdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script v2]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -511,64 +524,25 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique Name for the entity.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Name der Entität]]></Val>
+            <Val><![CDATA[Eindeutiger Name der Entität.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_agentscript_v2Id" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for entity instances]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für Entitätsinstanzen]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_agentscript_v2_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status of the Agent script]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Status des Agent-Skripts]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Reason for the status of the Agent script]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Grund für den Status des Agent-Skripts]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Description of the agent scrip]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -576,12 +550,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_language" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_language" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Language for agent script]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -589,272 +563,25 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005087Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2msdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name of the custom entity.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Der Name der benutzerdefinierten Entität]]></Val>
+            <Val><![CDATA[Der Name der benutzerdefinierten Entität.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status of the Agent script]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Status des Agent-Skripts]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscript_v2statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Reason for the status of the Agent script]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Grund für den Status des Agent-Skripts]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2CreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für den Benutzer, der den Datensatz erstellt hat.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2CreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Date and time when the record was created.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Datum und Uhrzeit der Datensatzerstellung]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2CreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für den stellvertretenden Benutzer, der den Datensatz erstellt hat]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2ModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für den Benutzer, der den Datensatz geändert hat.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2ModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Date and time when the record was modified.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Datum und Uhrzeit der Datensatzänderung]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2ModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für den stellvertretenden Benutzer, der den Datensatz geändert hat]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2OverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Datum und Uhrzeit der Datensatzmigration]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2OwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Owner Id]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Besitzer-ID]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2OwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für die Unternehmenseinheit, die für den Datensatz zuständig ist]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2OwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für das Team, das für den Datensatz zuständig ist]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2OwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für den Benutzer, der für den Datensatz zuständig ist]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2TimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[For internal use only.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Nur zur internen Verwendung]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2UTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Zeitzonencode, der bei Erstellung des Datensatzes verwendet wurde]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2entitymsdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
-            <Val><![CDATA[]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique Name for the entity.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Name der Entität]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Action type for agent script step]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Aktionstyp für Agent-Skriptschritt]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for agent script associated with agent script step.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für das Agent-Skript, das dem Agent-Skriptschritt zugeordnet ist.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2Id" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for entity instances]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -862,12 +589,259 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Agent script]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Status des Agent-Skripts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Agent script]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Grund für den Status des Agent-Skripts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Agent script]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Status des Agent-Skripts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Agent script]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Grund für den Status des Agent-Skripts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eindeutiger Bezeichner für den Benutzer, der den Datensatz erstellt hat.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Datum und Uhrzeit der Datensatzerstellung.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who created the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eindeutiger Bezeichner für den stellvertretenden Benutzer, der den Datensatz erstellt hat.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eindeutiger Bezeichner für den Benutzer, der den Datensatz geändert hat.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time when the record was modified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Datum und Uhrzeit der Datensatzänderung.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.000508Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier of the delegate user who modified the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eindeutiger Bezeichner für den stellvertretenden Benutzer, der den Datensatz geändert hat.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Date and time that the record was migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Datum und Uhrzeit der Datensatzmigration.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Besitzer-ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the business unit that owns the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eindeutiger Bezeichner der Unternehmenseinheit, die für den Datensatz zuständig ist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the team that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eindeutiger Bezeichner des Teams, das für den Datensatz zuständig ist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for the user that owns the record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eindeutiger Bezeichner des Benutzers, der für den Datensatz zuständig ist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[For internal use only.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nur zur internen Verwendung.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time zone code that was in use when the record was created.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Zeitzonencode, der bei der Datensatzerstellung verwendet wurde.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="N/A" Orig="New">
+            <Val><![CDATA[]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique Name for the entity.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eindeutiger Name der Entität.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Action type for agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -875,38 +849,25 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Status of the Agent script step]]></Val>
+          <Val><![CDATA[Unique identifier for agent script associated with agent script step.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Status des Agent-Skriptschritts]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner für das Agent-Skript, das dem Agent-Skriptschritt zugeordnet ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004935Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Reason for the status of the Agent script step]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Grund für den Status des Agent-Skriptschritts]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Description for agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -914,38 +875,38 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique identifier for macro associated with agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für das Makro, das dem Agent-Skriptschritt zugeordnet ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner des Makros, das dem Agent-Skriptschritt zugeordnet ist]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name of the custom entity.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Der Name der benutzerdefinierten Entität]]></Val>
+            <Val><![CDATA[Der Name der benutzerdefinierten Entität.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_order" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_order" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Display order]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -953,38 +914,38 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unique identifier for target script associated with agent script step]]></Val>
+          <Val><![CDATA[Unique identifier for entity instances]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Bezeichner für das Zielskript, das dem Agent-Skriptschritt zugeordnet ist]]></Val>
+            <Val><![CDATA[Eindeutiger Bezeichner für Entitätsinstanzen]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2msdyn_textinstruction" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Instruction for text action type]]></Val>
+          <Val><![CDATA[Action type for agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Anweisung für Textaktionstyp]]></Val>
+            <Val><![CDATA[Aktionstyp für Agent-Skriptschritt]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status of the Agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -992,12 +953,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003138Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:Description,msdyn_agentscriptstep_v2statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Reason for the status of the Agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1005,9 +966,61 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003138Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique identifier for target script associated with agent script step]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eindeutiger Bezeichner für das Zielskript, das dem Agent-Skriptschritt zugeordnet ist]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepmsdyn_textinstruction" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Instruction for text action type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Anweisung für Textaktionstyp]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status of the Agent script step]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Status des Agent-Skriptschritts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004944Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:Description,msdyn_productivityagentscriptstepstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason for the status of the Agent script step]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Grund für den Status des Agent-Skriptschritts]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005107Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_sessiontemplateentitymsdyn_sessiontemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1062,7 +1075,7 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";1:LocalizedCollectionName,msdyn_agentscript_v2entitymsdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent scripts]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1070,12 +1083,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003138Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005107Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:LocalizedCollectionName,msdyn_agentscriptstep_v2entitymsdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:LocalizedCollectionName,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script steps]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1083,9 +1096,9 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003138Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005107Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedCollectionName,msdyn_sessiontemplateentitymsdyn_sessiontemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1400,7 +1413,7 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";1:LocalizedName,msdyn_agentscript_v2entitymsdyn_agentscript_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:LocalizedName,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1408,12 +1421,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005107Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:LocalizedName,msdyn_agentscriptstep_v2entitymsdyn_agentscriptstep_v2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:LocalizedName,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1421,9 +1434,9 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0005107Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,msdyn_sessiontemplateentitymsdyn_sessiontemplate" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -1569,7 +1582,7 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2CreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Created By]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1577,25 +1590,25 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003138Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2CreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Created On]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Erstellt am]]></Val>
+            <Val><![CDATA[Erstellungszeitpunkt]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003138Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2CreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Created By (Delegate)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1603,12 +1616,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003138Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2ModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Modified By]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1616,25 +1629,25 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003138Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2ModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Modified On]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Geändert am]]></Val>
+            <Val><![CDATA[Änderungszeitpunkt]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2ModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Modified By (Delegate)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1642,12 +1655,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2OverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Record Created On]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1655,12 +1668,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2OwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owner]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1668,12 +1681,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2OwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owning Business Unit]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1681,25 +1694,25 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2OwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owning Team]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Besitzendes Team]]></Val>
+            <Val><![CDATA[Zuständiges Team]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2OwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owning User]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1707,25 +1720,25 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2TimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Time Zone Rule Version Number]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Versionsnummer der Zeitzonenregel]]></Val>
+            <Val><![CDATA[Zeitzonenregel-Versionsnummer]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004943Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2UTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1733,12 +1746,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unique Name]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1746,51 +1759,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_agentscript_v2Id" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Agent script]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Agent-Skript]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_agentscript_v2_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Status]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003131Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status Reason]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Statusgrund]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Description]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1798,12 +1772,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_language" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_language" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Language]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1811,12 +1785,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2msdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -1824,233 +1798,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Status]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscript_v2statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status Reason]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Statusgrund]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2CreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Created By]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Erstellt von]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2CreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Created On]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Erstellt am]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2CreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Created By (Delegate)]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Erstellt von (Stellvertretung)]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2ModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Modified By]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Geändert von]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2ModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Modified On]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Geändert am]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2ModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Modified By (Delegate)]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Geändert von (Stellvertretung)]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2OverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Record Created On]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Datensatz erstellt am]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2OwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Owner]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Besitzer]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2OwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Owning Business Unit]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Zuständige Unternehmenseinheit]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2OwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Owning Team]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Besitzendes Team]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2OwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Owning User]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Zuständiger Benutzer]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2TimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Versionsnummer der Zeitzonenregel]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2UTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Zeitzonencode für die UTC-Konvertierung]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unique Name]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Eindeutiger Name]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Action type]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Aktionstyp]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -2058,25 +1811,246 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2Id" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Agent script step]]></Val>
+          <Val><![CDATA[Status]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Agent-Skriptschritt]]></Val>
+            <Val><![CDATA[Status]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusgrund]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Status]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusgrund]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepCreatedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Erstellt von]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Erstellungszeitpunkt]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepCreatedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Erstellt von (Stellvertretung)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepModifiedBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Geändert von]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepModifiedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Änderungszeitpunkt]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepModifiedOnBehalfBy" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Modified By (Delegate)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Geändert von (Stellvertretung)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepOverriddenCreatedOn" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Created On]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Datensatz erstellt am]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepOwnerId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owner]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Besitzer]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepOwningBusinessUnit" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Business Unit]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Zuständige Unternehmenseinheit]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepOwningTeam" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning Team]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Zuständiges Team]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepOwningUser" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owning User]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Zuständiger Benutzer]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time Zone Rule Version Number]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Zeitzonenregel-Versionsnummer]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[UTC Conversion Time Zone Code]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Zeitzonencode für die UTC-Konvertierung]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_UniqueName" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unique Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eindeutiger Name]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Action type]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -2084,38 +2058,25 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_agentscriptid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Status]]></Val>
+          <Val><![CDATA[Agent script]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Status]]></Val>
+            <Val><![CDATA[Agent-Skript]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003136Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Status Reason]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Statusgrund]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
-        <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
-        </Props>
-      </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_description" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Description]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -2123,12 +2084,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_macroactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Target macro]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -2136,12 +2097,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_name" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -2149,12 +2110,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_order" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_order" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Order]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -2162,38 +2123,38 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Target script]]></Val>
+          <Val><![CDATA[Agent script step]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Zielskript]]></Val>
+            <Val><![CDATA[Agent-Skriptschritt]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2msdyn_textinstruction" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Text instructions]]></Val>
+          <Val><![CDATA[Action type]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Textanweisungen]]></Val>
+            <Val><![CDATA[Aktionstyp]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -2201,12 +2162,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:displayname,msdyn_agentscriptstep_v2statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Status Reason]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -2214,9 +2175,61 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003134Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_routeactionid" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Target script]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Zielskript]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepmsdyn_textinstruction" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Text instructions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Textanweisungen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepstatecode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Status]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004926Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:displayname,msdyn_productivityagentscriptstepstatuscode" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Status Reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Statusgrund]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004939Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_sessiontemplatemsdyn_enablebuildexpression" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -3272,7 +3285,7 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Active]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3280,12 +3293,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Inactive]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3293,12 +3306,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Active]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3306,12 +3319,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscript_v2msdyn_agentscript_v2_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Inactive]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3319,12 +3332,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype192350000" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350000" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Text]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3332,12 +3345,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype192350001" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350001" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Macro]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3345,12 +3358,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_msdyn_actiontype192350002" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350002" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Script]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3358,12 +3371,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode0" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Active]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3371,12 +3384,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Inactive]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3384,12 +3397,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode1" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Active]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3397,12 +3410,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004924Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
-      <Item ItemId=";1:label,msdyn_agentscriptstep_v2msdyn_agentscriptstep_v2_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
+      <Item ItemId=";1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode2" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Inactive]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -3410,9 +3423,9 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-13T11:11:11.0003135Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:27.0004922Z" />
         <Props>
-          <Str Name="Custom3" Val="WO31963_20200709" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
       <Item ItemId=";1:label,msdyn_sessiontemplatemsdyn_sessiontemplate_msdyn_enablebuildexpression0" ItemType="0;.resx" PsrId="211" Leaf="true">

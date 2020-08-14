@@ -77,7 +77,7 @@
       </Item>
       <Item ItemId=";15062:Description,msdyn_ProductivityPaneComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Dynamics 365 ProductivityPaneComponent workload]]></Val>
+          <Val><![CDATA[Productivity pane for productivity tools]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

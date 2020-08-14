@@ -177,7 +177,7 @@
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
   <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
-    <value>Pracovná záťaž súčasti tably produktivity pre Dynamics 365</value>
+    <value>Tabla produktivity pre nástroje na zvýšenie produktivity</value>
     <comment> 'msdyn_ProductivityPaneComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">

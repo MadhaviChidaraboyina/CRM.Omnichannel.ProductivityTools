@@ -154,15 +154,18 @@
       </Item>
       <Item ItemId=";15062:Description,msdyn_ProductivityPaneComponent" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Dynamics 365 ProductivityPaneComponent workload]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Dynamics 365 tööviljakuspaani komponendi töökoormus]]></Val>
+          <Val><![CDATA[Productivity pane for productivity tools]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[Tööviljakustööriistade tööviljakuspaan]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Dynamics 365 ProductivityPaneComponent workload]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-07-29T08:46:18.0003548Z" />
+        <Modified By="v-rondai" DateTime="2020-08-13T02:13:32.0000663Z" />
         <Props>
-          <Str Name="Custom3" Val="WO32880_20200727" />
+          <Str Name="Custom3" Val="WO33576_20200810" />
         </Props>
       </Item>
       <Item ItemId=";15062:LocalizedName,microsoftdynamicsmsdyn19235" ItemType="0;.resx" PsrId="211" Leaf="true">

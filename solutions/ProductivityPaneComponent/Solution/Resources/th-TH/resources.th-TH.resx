@@ -177,7 +177,7 @@
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
   <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
-    <value>ปริมาณงาน ProductivityPaneComponent ของ Dynamics 365</value>
+    <value>บานหน้าต่างการเพิ่มประสิทธิภาพสำหรับเครื่องมือเพิ่มประสิทธิภาพ</value>
     <comment> 'msdyn_ProductivityPaneComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
