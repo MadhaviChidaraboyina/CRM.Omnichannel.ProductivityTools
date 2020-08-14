@@ -20,6 +20,13 @@
     "PackageCombinations": {},
     "EnvironmentVariableForPatching": "AgentGuidanceEnablePatchGenerator"
   },
+   {
+    "SolutionName": "AgentscriptComponent",
+    "SolutionNameShort": "AgentscriptComponent",
+    "SolutionPatchName": "AgentscriptComponentPatch",
+    "PackageCombinations": {},
+    "EnvironmentVariableForPatching": "AgentscriptComponentEnablePatchGenerator"
+  },
   {
     "SolutionName": "Agentscript",
     "SolutionNameShort": "Agentscript",
