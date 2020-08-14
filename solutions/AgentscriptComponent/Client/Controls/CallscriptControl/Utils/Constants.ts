@@ -29,7 +29,8 @@ module MscrmControls.Callscript {
 		Failed
 	}
 
-	export class Constants {
+    export class Constants {
+        public static ControlId = "MscrmControls.Callscript.CallscriptControl";
 		public static EmptyString = "";
 		public static UninitializedString = "UNINITIALIZED";
 		public static ControlStateKey = "CallscriptControlState";

@@ -35,7 +35,24 @@ module MscrmControls.Callscript {
 		 */
 		public static isNullOrUndefined(object: any): boolean {
 			return typeof (object) == "undefined" || object == null;
-		}
+        }
+
+        /**
+       * Get current session id.
+       */
+        public static getCurrentSessionId(): string {
+            return Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
+        }
+
+        /**
+        * Dispatches Productivity Panel In Bound Event
+        * @param rerender: PP Rerender obj
+        */
+        public static DispatchPanelInboundEvent(rerender: MscrmControls.PanelControl.Rerender | MscrmControls.PanelControl.PanelNotification) {
+            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(Constants.ControlId, rerender);
+            let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
+            window.top.dispatchEvent(event);
+        }
 
 	}
 }
