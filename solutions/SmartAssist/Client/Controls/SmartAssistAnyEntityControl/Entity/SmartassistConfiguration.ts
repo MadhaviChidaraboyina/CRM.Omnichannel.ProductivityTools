@@ -57,6 +57,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public SmartassistConfigurationId = "";
         public SourceEntityName = "";
         public SuggestionControlConfigUniquename = "";
+        public CurrentAppConfigName = "";
         public TitleIconePath = "";
     }
 }

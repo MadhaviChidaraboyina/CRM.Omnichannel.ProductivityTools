@@ -26,9 +26,10 @@ module MscrmControls.SmartassistPanelControl {
 
         /**Gets SA configuration from memory if available otherwise from cds */
         public async getSAConfigurations() {
-            this.getSAConfigurationFromCache();
+            let environmentData = await Utility.getAppRuntimeEnvironment();
+            this.getSAConfigurationFromCache(environmentData.AppConfigName);
             if ((this.saConfig.length < 1)) {
-                await this.fetchSAConfigurationsData();
+                await this.fetchSAConfigurationsData(environmentData.AppConfigName);
             }
 
             return this.saConfig;
@@ -57,12 +58,15 @@ module MscrmControls.SmartassistPanelControl {
             return result;
         }
 
-        private getSAConfigurationFromCache() {
+        private getSAConfigurationFromCache(appConfigName: string) {
             let eventParameters = new TelemetryLogger.EventParameters();
             try {
                 var data = window.sessionStorage.getItem(Constants.SAConfigCacheKey);
                 if (data) {
-                    this.saConfig = JSON.parse(data);
+                    var saConfigs = JSON.parse(data) as SAConfig[];
+                    if (saConfigs[0].CurrentAppConfigName == appConfigName) {
+                        this.saConfig = saConfigs;
+                    }
                 }
             }
             catch (error) {
@@ -72,18 +76,14 @@ module MscrmControls.SmartassistPanelControl {
         };
 
         /**Fetch SA config from cds */
-        private async fetchSAConfigurationsData() {
+        private async fetchSAConfigurationsData(appConfigName: string) {
             let eventParameters = new TelemetryLogger.EventParameters();
             try {
-                let environmentData = await Utility.getAppRuntimeEnvironment();
-                if (!environmentData.AppConfigName) {
-                    throw "App Config name cannot be null - getAppRuntimeEnvironment"
-                }
-                let fetchXml = this.getXmlQueryForSAConfig(environmentData.AppConfigName)
+                let fetchXml = this.getXmlQueryForSAConfig(appConfigName)
                 var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;
                 this.saConfig = [];
                 for (var i = 0; i < result.entities.length; i++) {
-                    this.saConfig.push(new SAConfig(result.entities[i], this.acConfigSchema.AdaptiveCardTemplateAlias))
+                    this.saConfig.push(new SAConfig(result.entities[i], this.acConfigSchema.AdaptiveCardTemplateAlias, appConfigName))
                 }
                 try {
                     window.sessionStorage.setItem(Constants.SAConfigCacheKey, JSON.stringify(this.saConfig));
@@ -104,7 +104,7 @@ module MscrmControls.SmartassistPanelControl {
          */
         private getXmlQueryForSAConfig(appConfigName: string): string {
             let filter = `<filter type='and'><condition attribute='${this.saConfigSchema.StatusCode}' operator='eq' value='${SAConfigStatus.Active}' /></filter>`
-            let appConfigfilter = ` <filter type='and'><condition attribute='${Constants.uniqueNameSchema}' operator='eq' value='${appConfigName}' /></filter>`            
+            let appConfigfilter = ` <filter type='and'><condition attribute='${Constants.uniqueNameSchema}' operator='eq' value='${appConfigName}' /></filter>`
             let query: string = `?fetchXml=<fetch version="1.0"><entity name="${this.saConfigSchema.EntityName}"><all-attributes/>{0}
                                     <link-entity name="${Constants.saAppRealtionName}" from="${this.saConfigSchema.SmartassistConfigurationId}" to="${this.saConfigSchema.SmartassistConfigurationId}" link-type="inner">
                                       <link-entity name="${Constants.appConfigEntityName}" from="${Constants.appIdSchema}" to="${Constants.appIdSchema}" link-type="inner">{1}

@@ -9,11 +9,11 @@ module MscrmControls.SmartassistPanelControl {
         public EntityName: string;
 
         public MaxSuggestionCount: string;
-        public Order: string;        
+        public Order: string;
         public SuggestionControlType: string;
         public SuggestionType: string;
         public SuggestionProvider: string;
-        public SuggestionWebResourceUrl: string;        
+        public SuggestionWebResourceUrl: string;
         public SAConfigTitle: string;
         public SmartassistConfigurationId: string;
         public StatusCode: string;
@@ -37,7 +37,7 @@ module MscrmControls.SmartassistPanelControl {
             this.TitleIconePath = "msdyn_iconurl";
             this.SuggestionControlConfigUniquename = "msdyn_suggestioncontrolconfiguniquename";
             this.SourceEntityName = "msdyn_sourceentityname";
-            this.EntityName = "msdyn_smartassistconfig";            
+            this.EntityName = "msdyn_smartassistconfig";
         }
     }
 
@@ -58,6 +58,7 @@ module MscrmControls.SmartassistPanelControl {
         public SmartassistConfigurationId = "";
         public TitleIconePath = "";
         public SuggestionControlConfigUniquename = "";
+        public CurrentAppConfigName = "";
         public SourceEntityName = "";
 
         /**
@@ -65,7 +66,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param response: Response from server call.
          * @param context:The "Input Bag" containing the parameters and other control metadata.
          */
-        constructor(response: any, AdaptiveCardTemplateAlias: string) {
+        constructor(response: any, AdaptiveCardTemplateAlias: string, appUniqueName: string) {
             if (!SmartassistPanelControl._context.utils.isNullOrUndefined(response)) {
                 this.ACTemplate = Utility.GetValue(response[AdaptiveCardTemplateAlias]);
                 this.MaxSuggestionCount = Utility.GetValue(response[this.AttributeName.MaxSuggestionCount]);
@@ -75,11 +76,12 @@ module MscrmControls.SmartassistPanelControl {
                 this.StatusCode = Utility.GetValue(response[this.AttributeName.StatusCode]) as SAConfigStatus;
                 this.SuggestionProvider = Utility.GetValue(response[this.AttributeName.SuggestionProvider]);
                 this.SuggestionWebResourceUrl = Utility.GetValue(response[this.AttributeName.SuggestionWebResourceUrl]);
-                this.UniqueName = Utility.GetValue(response[this.AttributeName.UniqueName]);                
+                this.UniqueName = Utility.GetValue(response[this.AttributeName.UniqueName]);
                 this.SmartassistConfigurationId = Utility.GetValue(response[this.AttributeName.SmartassistConfigurationId]);
                 this.SAConfigTitle = Utility.GetValue(response[this.AttributeName.SAConfigTitle]);
                 this.TitleIconePath = Utility.GetValue(response[this.AttributeName.TitleIconePath]);
                 this.SuggestionControlConfigUniquename = Utility.GetValue(response[this.AttributeName.SuggestionControlConfigUniquename]);
+                this.CurrentAppConfigName = appUniqueName;
                 this.SourceEntityName = Utility.GetValue(response[this.AttributeName.SourceEntityName]);
             }
         }
