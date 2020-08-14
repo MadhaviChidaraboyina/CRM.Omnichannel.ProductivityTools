@@ -155,7 +155,6 @@
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.3082.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.3098.resx" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_SetDefaultAgentScriptHelpText.html" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_SetDefaultAgentScriptHelpText.html" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.Callscript.CallscriptControl" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.Button.ButtonControl" behavior="0" />
       <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
