@@ -158,6 +158,12 @@ module MscrmControls.PanelControl {
                             Static: true,
                             Value: tool.staticData,
                             Primary: false
+                        },
+                        IsSelected: {
+                            Usage: 1,
+                            Static: true,
+                            Value: (tool.toolControlName === toolSelected.toolControlName)? true : false,
+                            Primary: false
                         }
                     },
                     key: Constants.productivitytoolControlKey + index,
