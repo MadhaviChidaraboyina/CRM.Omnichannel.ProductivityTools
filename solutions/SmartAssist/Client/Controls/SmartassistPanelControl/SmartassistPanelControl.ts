@@ -302,7 +302,7 @@ module MscrmControls.SmartassistPanelControl {
 
             // Dispatch No Data PP event 
             Utility.DispatchPanelInboundEvent(ppRerender);
-        }      
+        }
 
         /**
          * Get entity recordId from anchor Context

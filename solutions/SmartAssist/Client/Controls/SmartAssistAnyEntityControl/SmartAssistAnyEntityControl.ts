@@ -346,6 +346,40 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 Xrm.WebApi.retrieveMultipleRecords(StringConstants.ServiceEndpointEntity, StringConstants.CDNEndpointFilter).then((data: any) => {
                     window[StringConstants.ConversatonControlOrigin] = data.entities[0].path;
                     window.top.addEventListener("message", this.receiveFPBMessageEventHandler, false);
+                    if (!window['removeCacheForSmartAssist']) {
+                        window['removeCacheForSmartAssist'] = (event: any) => {
+
+                            // TODO: Verify and uncomment this condition. 
+                            //if (window[Constants.ConversatonControlOrigin].indexOf(event.origin) == -1)
+                            //  return;
+                            if (event.data.messageType != "notifyEvent") {
+                                return;
+                            }
+                            // clear cache for smart assist if the focus is in home session.
+                            if (event.data && event.data.messageData.get("notificationUXObject") && Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId == "session-id-0") {
+                                let messageMap = event.data.messageData.get("notificationUXObject");
+                                let conversationId = messageMap.get("conversationId");
+                                let uiSessionId = messageMap.get("uiSessionId");
+                                let tags = messageMap.get("tags");
+
+                                if (conversationId && uiSessionId
+                                    && tags.indexOf(StringConstants.FPBTag) != -1) {
+                                    Microsoft.AppRuntime.Sessions.getSession(uiSessionId).getContext().then((context) => {
+                                        const cacheData = window.sessionStorage.getItem(uiSessionId)
+                                        if (cacheData) {
+                                            const suggestionIds = JSON.parse(cacheData) as Array<string>;
+                                            suggestionIds.forEach(id => window.sessionStorage.removeItem(id));
+                                            window.sessionStorage.removeItem(uiSessionId);
+                                        }
+                                        context.set(conversationId, []);
+                                    });
+
+                                }
+
+                            }
+                        }
+                        window.top.addEventListener("message", (<any>window).removeCacheForSmartAssist)
+                    }
                 });
             }
         }
@@ -366,14 +400,29 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 let conversationId = messageMap.get("conversationId");
                 let uiSessionId = messageMap.get("uiSessionId");
                 let tags = messageMap.get("tags");
-                if (conversationId && uiSessionId && tags.indexOf(StringConstants.FPBTag) != -1 && this.saConfig.UniqueName != StringConstants.TPBotUniqueName) {
+                if (conversationId && uiSessionId
+                    && tags.indexOf(StringConstants.FPBTag) != -1
+                    && this.saConfig.UniqueName != StringConstants.TPBotUniqueName) {
                     try {
-                        // remove previous suggestions
-                        this.dismissPreviousSuggestions();
-                        this.constructAnyEntityInnerContainers();
+                        if (this.recordId == conversationId) {
+                            // remove previous suggestions
+                            this.dismissPreviousSuggestions();
+                            this.constructAnyEntityInnerContainers();
 
-                        // re-initialize suggestions
-                        this.InitiateSuggestionControl(true);
+                            // re-initialize suggestions
+                            this.InitiateSuggestionControl(true);
+                        } else {
+                            // Remove old cached data from conversation than current seesion
+                            Utility.getCurrentSessionContextById(uiSessionId).then((context) => {
+                                const cacheData = window.sessionStorage.getItem(uiSessionId)
+                                if (cacheData) {
+                                    const suggestionIds = JSON.parse(cacheData) as Array<string>;
+                                    suggestionIds.forEach(id => this._sessionStorageManager.deleteRecord(id));
+                                    window.sessionStorage.removeItem(uiSessionId);
+                                }
+                                SessionStateManager.Instance.deleteAllRecords(context, conversationId);
+                            });
+                        }
                     } catch (error) {
                         let eventParameters = new TelemetryLogger.EventParameters();
                         eventParameters.addParameter("Exception Details", error.message);

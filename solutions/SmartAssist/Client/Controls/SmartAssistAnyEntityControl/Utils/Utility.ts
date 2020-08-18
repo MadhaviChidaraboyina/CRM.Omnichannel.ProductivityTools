@@ -34,6 +34,13 @@ module MscrmControls.SmartAssistAnyEntityControl {
         }
 
         /**
+         * Get current session context by id.
+         * */
+        public static async getCurrentSessionContextById(sessionId) {
+            return Microsoft.AppRuntime.Sessions.getSession(sessionId).getContext();
+        }
+
+        /**
          * Get current session id.
          */
         public static getCurrentSessionId(): string {

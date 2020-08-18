@@ -20,9 +20,9 @@
          * }
          * @param entityId The record Id.
          */
-        getAllRecords(entityId: string): {[key: string]: string[]} {
+        getAllRecords(entityId: string): { [key: string]: string[] } {
             const sessionContext = Utility.getCurrentSessionContext();
-            return sessionContext.get(entityId);  
+            return sessionContext.get(entityId);
         }
 
         /**
@@ -63,7 +63,7 @@
          * @param configId
          * @param suggestionId
          */
-        addRecord(entityId: string, configId:string, suggestionId: string) {
+        addRecord(entityId: string, configId: string, suggestionId: string) {
             let cacheData = this.getAllRecords(entityId)[configId];
             if (cacheData) {
                 cacheData.push(suggestionId);
@@ -86,6 +86,15 @@
             let filteredData = dataForConfigType.filter((el) => el !== suggestionId);
             cacheData[configId] = filteredData;
             sessionContext.set(entityId, cacheData);
-        }   
+        }
+
+        /**
+         * Delete all suggestion of the given session context
+         * @param sessionContext: session context
+         * @param recordId: suggestions parent id
+         */
+        deleteAllRecords(sessionContext: AppRuntimeClientSdk.ISessionContext, recordId: string) {
+            sessionContext.set(recordId, []);
+        }
     }
 }
