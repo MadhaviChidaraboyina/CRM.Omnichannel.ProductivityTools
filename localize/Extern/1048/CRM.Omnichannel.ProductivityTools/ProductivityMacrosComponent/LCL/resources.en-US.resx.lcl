@@ -2935,15 +2935,18 @@
       </Item>
       <Item ItemId=";1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_designerurlconfigentityquery" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[O interogare oData pentru a regăsi înregistrarea din care se citește URL-ul proiectantului]]></Val>
+          <Val><![CDATA[An OData query to retrieve record from which to read designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[O interogare OData pentru a regăsi înregistrarea din care se citește URL-ul proiectantului]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-08-13T02:13:30.0001862Z" />
+        <Modified By="v-rondai" DateTime="2020-08-17T10:30:47.0002523Z" />
         <Props>
-          <Str Name="Custom3" Val="WO33576_20200810" />
+          <Str Name="Custom3" Val="WO33941_20200813" />
         </Props>
       </Item>
       <Item ItemId=";1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_designerurlrelativepath" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -6896,15 +6899,18 @@
       </Item>
       <Item ItemId=";1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_designerurlconfigentityquery" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[O interogare oData pentru a regăsi înregistrarea din care se citește URL-ul proiectantului]]></Val>
+          <Val><![CDATA[An OData query to retrieve record from which to read designer URL]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
+            <Val><![CDATA[O interogare OData pentru a regăsi înregistrarea din care se citește URL-ul proiectantului]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-08-13T02:13:30.000186Z" />
+        <Modified By="v-rondai" DateTime="2020-08-17T10:30:47.0002519Z" />
         <Props>
-          <Str Name="Custom3" Val="WO33576_20200810" />
+          <Str Name="Custom3" Val="WO33941_20200813" />
         </Props>
       </Item>
       <Item ItemId=";1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_designerurlrelativepath" ItemType="0;.resx" PsrId="211" Leaf="true">
@@ -9171,18 +9177,18 @@
       </Item>
       <Item ItemId=";1:label,Macro Solution Configuration{1ee16a8d-2001-13d1-a04a-414b44515723}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
+          <Val><![CDATA[An OData query to retrieve record from which to read designer URL]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New">
-            <Val><![CDATA[O interogare oData pentru a regăsi înregistrarea din care se citește URL-ul proiectantului]]></Val>
+            <Val><![CDATA[O interogare OData pentru a regăsi înregistrarea din care se citește URL-ul proiectantului]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[An oData query to retrieve record from which to re]]></Val>
+            <Val><![CDATA[An oData query to retrieve record from which to read designer URL]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-08-03T06:03:39.0006405Z" />
+        <Modified By="v-rondai" DateTime="2020-08-17T10:30:47.0002521Z" />
         <Props>
-          <Str Name="Custom3" Val="WO32969_20200730" />
+          <Str Name="Custom3" Val="WO33941_20200813" />
         </Props>
       </Item>
       <Item ItemId=";1:label,Macro Solution Configuration{2d18445e-216a-5c93-6122-9211cb1cc23e}" ItemType="0;.resx" PsrId="211" Leaf="true">

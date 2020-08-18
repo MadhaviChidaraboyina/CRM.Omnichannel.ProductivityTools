@@ -457,7 +457,7 @@
     <comment>'msdyn_sessiontemplate' : Description for OptionSet 'msdyn_sessiontemplate_msdyn_enablebuildexpression' on Entity</comment>
   </data>
   <data name="1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
-    <value>List of active macros</value>
+    <value>Popis aktivnih makronaredbi</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:Description,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" xml:space="preserve">
@@ -1153,7 +1153,7 @@
     <comment> 'msdyn_sessiontemplate' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
-    <value>Active macros</value>
+    <value>Aktivne makronaredbe</value>
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:LocalizedName,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" xml:space="preserve">

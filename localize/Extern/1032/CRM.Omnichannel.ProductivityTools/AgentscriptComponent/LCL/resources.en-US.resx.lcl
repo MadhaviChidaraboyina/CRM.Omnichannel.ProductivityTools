@@ -334,6 +334,19 @@
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
       </Item>
+      <Item ItemId=";1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[List of active macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Λίστα ενεργών μακροεντολών]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-17T08:23:18.0001074Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33941_20200813" />
+        </Props>
+      </Item>
       <Item ItemId=";1:Description,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A form for this entity.]]></Val>
@@ -1398,6 +1411,19 @@
         <Modified By="v-robjan" DateTime="2020-07-13T17:13:52.0009144Z" />
         <Props>
           <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
+      </Item>
+      <Item ItemId=";1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Active macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ενεργές μακροεντολές]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-17T08:23:18.0000879Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO33941_20200813" />
         </Props>
       </Item>
       <Item ItemId=";1:LocalizedName,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" ItemType="0;.resx" PsrId="211" Leaf="true">

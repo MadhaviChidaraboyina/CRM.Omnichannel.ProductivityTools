@@ -246,7 +246,7 @@
     <comment>Text to be read by screen-reader on callscript step focus</comment>
   </data>
   <data name="NoDataCallScriptMessage" xml:space="preserve">
-    <value>No relative agent scripts found.</value>
+    <value>상대 에이전트 스크립트를 찾을 수 없습니다.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>
