@@ -197,7 +197,7 @@ module MscrmControls.SmartassistPanelControl {
     }
 
     /**Smart Assit Configuration Type KM or Case */
-    export enum SuggestionType {        
+    export enum SuggestionType {
         KnowledgeArticleSuggestion = 192360000,
         SimilarCaseSuggestion = 192360001,
         BotSuggestion = 192360002
@@ -207,5 +207,12 @@ module MscrmControls.SmartassistPanelControl {
     export enum SuggestionsSettingState {
         Active = 0,
         Inactive = 1
+    }
+
+    /**Empty status enum*/
+    export enum SuggestionsEmptyStatus {
+        Valid = 0,
+        Invalid = 1,
+        NoSettings = 2
     }
 }

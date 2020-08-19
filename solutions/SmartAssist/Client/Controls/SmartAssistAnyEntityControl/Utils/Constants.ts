@@ -45,6 +45,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
     export class LocalizedStrings {
         public static KnowledgeArticleTitle = "KnowledgeArticleSuggestionTitle";
         public static NoKnowledgeArticleText = "NoKMSuggestionText";
+        public static NoSettingsText = "NoSettingsText";
         public static SimilarCaseTitle = "SimilarCasesSuggestionTitle";
         public static NoSimilarCaseText = "NoSimilarCaseSuggestionText";
         public static LoadingText = "LoadingText";
@@ -80,5 +81,12 @@ module MscrmControls.SmartAssistAnyEntityControl {
         KnowledgeArticleSuggestion = 192360000,
         SimilarCaseSuggestion = 192360001,
         BotSuggestion = 192360002
+    }
+
+    /**Empty status enum*/
+    export enum SuggestionsEmptyStatus {
+        Valid = 0,
+        Invalid = 1,
+        NoSettings = 2
     }
 }

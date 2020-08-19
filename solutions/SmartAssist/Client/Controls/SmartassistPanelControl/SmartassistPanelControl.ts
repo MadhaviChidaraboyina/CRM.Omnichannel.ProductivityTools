@@ -95,16 +95,13 @@ module MscrmControls.SmartassistPanelControl {
             }
             if (this.newInstance) {
                 let recordId = this.getEntityRecordId(this.AnchorTabContext);
-                if (Utility.isValidSourceEntityName(this.AnchorTabContext.entityName)
-                    && !Utility.isNullOrEmptyString(recordId)) {
-                    this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
-                }
-                else {
+                if (!Utility.isValidSourceEntityName(this.AnchorTabContext.entityName)
+                    || Utility.isNullOrEmptyString(recordId)) {
                     // No data to PP
                     this.DispatchNoDataEvent();
                 }
+                this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
             }
-
             this.newInstance = false;
         }
 
@@ -135,7 +132,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param saConfig saConfig
          * @param callback callback to create SmartassistAnyEntityControl
          */
-        public loadWebresourceAndRenderSmartassistAnyEntity(saConfig: SAConfig, callback: (config: SAConfig, recordId: string, update: boolean) => void, recordId: string, update: boolean): void {
+        public loadWebresourceAndRenderSmartassistAnyEntity(saConfig: SAConfig, callback: (config: SAConfig, entityName, recordId: string, update: boolean) => void, entityName: string, recordId: string, update: boolean): void {
             let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
             //SuggestionWebResourceUrl is empty for TPBot
             if (!document.getElementById(src) && !Utility.isNullOrEmptyString(saConfig.SuggestionWebResourceUrl)) {
@@ -147,7 +144,7 @@ module MscrmControls.SmartassistPanelControl {
                     SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "loadWebresourceAndRenderSmartassistAnyEntity", message, eventParameters);
                 };
                 script.onload = function () {
-                    callback(saConfig, recordId, update);
+                    callback(saConfig, entityName, recordId, update);
                 };
 
                 script.src = src;
@@ -155,11 +152,11 @@ module MscrmControls.SmartassistPanelControl {
                 script.type = "text/javascript";
                 document.getElementsByTagName("head")[0].appendChild(script);
             } else {
-                callback(saConfig, recordId, update);
+                callback(saConfig, entityName, recordId, update);
             }
         }
 
-        public renderSmartassistAnyEntityControl(config: SAConfig, recordId: string, update: boolean): void {
+        public renderSmartassistAnyEntityControl(config: SAConfig, entityName: string, recordId: string, update: boolean): void {
             const componentId = Constants.SAAnyEntityControlContainerId + config.SmartassistConfigurationId;
             let properties: any =
             {
@@ -184,6 +181,13 @@ module MscrmControls.SmartassistPanelControl {
                         Static: true,
                         Usage: 1, // input
                         Value: this.ppSessionContext
+                    },
+                    EmptyStatus: {
+                        type: "Multiple",
+                        Primary: false,
+                        Static: true,
+                        Usage: 1, // input
+                        Value: this.checkEmptyStatus(entityName, recordId)
                     }
                 },
                 key: componentId,
@@ -222,7 +226,7 @@ module MscrmControls.SmartassistPanelControl {
                 configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
                 for (let i = 0; i <= (configs.length - 1); i++) {
                     this.addDivForSmartAssistConfig(configs[i]);
-                    this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), recordId, update);
+                    this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), entityName, recordId, update);
                 }
             }
             this.hideLoader();
@@ -255,17 +259,14 @@ module MscrmControls.SmartassistPanelControl {
                     var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
                     //Unbind all configs- in OC both(lwi and case) configs could be present 
                     this.unbindSAConfigs(configs);
-
                     let entityId = this.getEntityRecordId(anchorContext);
                     if (!Utility.isValidSourceEntityName(anchorContext.entityName)
                         || Utility.isNullOrEmptyString(entityId)) {
                         // No Data to PP
                         this.DispatchNoDataEvent();
                     }
-                    else {
-                        this.anchorTabEntityId = Utility.FormatGuid(entityId);
-                        this.renderSuggestions(true, anchorContext.entityName, this.anchorTabEntityId);
-                    }
+                    this.anchorTabEntityId = Utility.FormatGuid(entityId);
+                    this.renderSuggestions(true, anchorContext.entityName, this.anchorTabEntityId);
                 }
             }
             this.tabSwitchEntityId = recordId;
@@ -325,6 +326,23 @@ module MscrmControls.SmartassistPanelControl {
                 const componentId = Constants.SAAnyEntityControlContainerId + configs[i].SmartassistConfigurationId;
                 SmartassistPanelControl._context.utils.unbindDOMComponent(componentId);
             }
+        }
+
+        /**
+         * Check suggestions empty status.
+         * @param entityName
+         * @param entityId
+         */
+        private checkEmptyStatus(entityName: string, entityId: string): SuggestionsEmptyStatus {
+            if (!Utility.isValidSourceEntityName(entityName) || Utility.isNullOrEmptyString(entityId)) {
+                return SuggestionsEmptyStatus.Invalid;
+            }
+            var settings = SAConfigDataManager.Instance.suggestionsSetting
+            if (!settings.CaseIsEnabled && !settings.KbIsEnable) {
+                return SuggestionsEmptyStatus.NoSettings;
+            }
+
+            return SuggestionsEmptyStatus.Valid;
         }
 
     }

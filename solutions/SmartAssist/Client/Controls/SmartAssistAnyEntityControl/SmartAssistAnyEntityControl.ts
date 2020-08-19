@@ -14,6 +14,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
+        private EmptyStatus: SuggestionsEmptyStatus = SuggestionsEmptyStatus.Valid;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;
         private parentDivId: string = "";
@@ -53,6 +54,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this.validateParameters(context);
                     this.recordId = context.parameters.RecordId.raw;
                     this.saConfig = context.parameters.SAConfig.raw as any;
+                    this.EmptyStatus = context.parameters.EmptyStatus.raw as any;
 
                     // Anyentity Main Container
                     this.parentDivId = StringConstants.AnyEntityContainer + this.saConfig.SmartassistConfigurationId;
@@ -130,7 +132,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             //Get Current context
             await this.getCurrentContext();
             this.showLoader();
-            if (this.saConfig.UniqueName == StringConstants.TPBotUniqueName) {
+            if (this.saConfig.UniqueName == StringConstants.TPBotUniqueName && this.EmptyStatus == SuggestionsEmptyStatus.Valid) {
                 var isSAAvailable = await this.anyEntityDataManager.isSmartassistAvailable() as any;
                 if (isSAAvailable == true) {
                     this.appendTitle();
@@ -153,59 +155,69 @@ module MscrmControls.SmartAssistAnyEntityControl {
             else {
                 this.appendTitle();
                 var data;
-
-                // Get Suggestions data records for provide saConfig
-                if (isFPBot == true) {
-                    data = await this.anyEntityDataManager.getSuggestionsDataFromAPI(this.saConfig, this.recordId) as { [key: string]: any };
-                }
-                else {
-                    data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
-                }
-
-                var dataLength = 0;
-                if (data && data[this.saConfig.SmartassistConfigurationId]) {
-                    dataLength = data[this.saConfig.SmartassistConfigurationId].length;
-                }
-
-                if (dataLength < 1) {
+                if (this.EmptyStatus == SuggestionsEmptyStatus.NoSettings || this.EmptyStatus == SuggestionsEmptyStatus.Invalid) {
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                     if (!noSuggestionElm) {
-                        var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig);
+                        var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig, this.EmptyStatus);
                         $("#" + this.parentDivId).append(emptyRecordElm);
                     }
                 }
-                for (let i = 0; i <= (dataLength - 1); i++) {
-                    var record = data[this.saConfig.SmartassistConfigurationId][i];
-                    const componentId = Utility.getRCComponentId(record.SuggestionId);
-                    let properties: any =
-                    {
-                        parameters: {
-                            data: {
-                                Type: "Multiple",
-                                Primary: false,
-                                Static: true,
-                                Usage: 1, // input
-                                Value: record
-                            },
-                            Template: {
-                                Type: "Multiple",
-                                Primary: false,
-                                Static: true,
-                                Usage: 1,
-                                Value: this.saConfig.ACTemplate
-                            }
-                        },
-                        key: componentId,
-                        id: componentId,
-                    };
-                    var divElement = document.createElement("div");
-                    divElement.id = "Suggestion_" + record.SuggestionId;
+                else {
 
-                    //Initiate Suggestion Control
-                    const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", componentId, properties);
-                    SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
-                    $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
+                    // Get Suggestions data records for provide saConfig
+                    if (isFPBot == true) {
+                        data = await this.anyEntityDataManager.getSuggestionsDataFromAPI(this.saConfig, this.recordId) as { [key: string]: any };
+                    }
+                    else {
+                        data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
+                    }
+
+                    var dataLength = 0;
+                    if (data && data[this.saConfig.SmartassistConfigurationId]) {
+                        dataLength = data[this.saConfig.SmartassistConfigurationId].length;
+                    }
+
+                    if (dataLength < 1) {
+                        var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
+                        if (!noSuggestionElm) {
+                            var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig, this.EmptyStatus);
+                            $("#" + this.parentDivId).append(emptyRecordElm);
+                        }
+                    }
+                    for (let i = 0; i <= (dataLength - 1); i++) {
+                        var record = data[this.saConfig.SmartassistConfigurationId][i];
+                        const componentId = Utility.getRCComponentId(record.SuggestionId);
+                        let properties: any =
+                        {
+                            parameters: {
+                                data: {
+                                    Type: "Multiple",
+                                    Primary: false,
+                                    Static: true,
+                                    Usage: 1, // input
+                                    Value: record
+                                },
+                                Template: {
+                                    Type: "Multiple",
+                                    Primary: false,
+                                    Static: true,
+                                    Usage: 1,
+                                    Value: this.saConfig.ACTemplate
+                                }
+                            },
+                            key: componentId,
+                            id: componentId,
+                        };
+                        var divElement = document.createElement("div");
+                        divElement.id = "Suggestion_" + record.SuggestionId;
+
+                        //Initiate Suggestion Control
+                        const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", componentId, properties);
+                        SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
+                        $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
+                    }
                 }
+
             }
 
             setTimeout(() => {

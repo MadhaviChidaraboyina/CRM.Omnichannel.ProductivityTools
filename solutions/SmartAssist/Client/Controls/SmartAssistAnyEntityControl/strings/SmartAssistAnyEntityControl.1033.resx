@@ -133,6 +133,9 @@
     <value>No suggestions found for knowledge article.</value>
     <comment>No KM records</comment>
   </data>
+  <data name="NoSettingsText" xml:space="preserve">
+    <value>AI suggestions not turned on.</value>
+  </data>
   <data name="NoSimilarCaseSuggestionText" xml:space="preserve">
     <value>No suggestions found for similar cases.</value>
     <comment>No Case records</comment>

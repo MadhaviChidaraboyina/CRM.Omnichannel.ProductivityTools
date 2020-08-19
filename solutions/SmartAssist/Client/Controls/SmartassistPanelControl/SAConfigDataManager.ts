@@ -9,7 +9,7 @@ module MscrmControls.SmartassistPanelControl {
         private saConfigSchema: SAConfigSchema = new SAConfigSchema();
         private acConfigSchema: ACConfigSchema = new ACConfigSchema();
         private saConfig: SAConfig[] = [];
-        private suggestionsSetting: SuggestionsSetting = null;
+        public suggestionsSetting: SuggestionsSetting = null;
         private suggestionsSettingSchema: SuggestionsSettingSchema = new SuggestionsSettingSchema();
 
 
@@ -45,15 +45,16 @@ module MscrmControls.SmartassistPanelControl {
             var result = configs.filter((data) => {
                 //Source entity filter
                 if (sourceEntity !== data.SourceEntityName) return false;
+                return true;
                 //Filter admin setting
-                switch (data.SuggestionType) {
-                    case SuggestionType.SimilarCaseSuggestion:
-                        return this.suggestionsSetting.CaseIsEnabled;
-                    case SuggestionType.KnowledgeArticleSuggestion:
-                        return this.suggestionsSetting.KbIsEnable;
-                    default:
-                        return true;
-                }
+                //switch (data.SuggestionType) {
+                //    case SuggestionType.SimilarCaseSuggestion:
+                //        return this.suggestionsSetting.CaseIsEnabled;
+                //    case SuggestionType.KnowledgeArticleSuggestion:
+                //        return this.suggestionsSetting.KbIsEnable;
+                //    default:
+                //        return true;
+                //}
             });
             return result;
         }

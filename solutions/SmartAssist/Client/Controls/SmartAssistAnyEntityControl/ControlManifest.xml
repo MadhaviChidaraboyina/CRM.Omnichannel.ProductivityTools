@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-	<control namespace="MscrmControls.SmartAssistAnyEntityControl" constructor="SmartAssistAnyEntityControl" version="1.0.6" display-name-key="CC_SmartAssist_Any_Entity_Control">    
-    <property name="SAConfig" display-name-key="CC_SAConfig" description-key="CC_SAConfig_Desc" of-type="Multiple" usage="input" required="true" hidden="false" />    
+  <control namespace="MscrmControls.SmartAssistAnyEntityControl" constructor="SmartAssistAnyEntityControl" version="1.0.7" display-name-key="CC_SmartAssist_Any_Entity_Control">
+    <property name="SAConfig" display-name-key="CC_SAConfig" description-key="CC_SAConfig_Desc" of-type="Multiple" usage="input" required="true" hidden="false" />
+    <property name="EmptyStatus" display-name-key="CC_EmptyStatus" description-key="CC_EmptyStatus_Desc" of-type="Multiple" usage="input" required="false" hidden="false" />
     <property name="RecordId" display-name-key="CC_RecordId" description-key="CC_RecordId_Desc" of-type="SingleLine.Text" usage="input" required="true" hidden="false" />
     <property name="PPSessionContext" display-name-key="CC_PPSessionContext" description-key="CC_PPSessionContext_Desc" of-type="Multiple" usage="input" required="false" hidden="false" />
     <modes>
-		</modes>		
-		<resources>
+    </modes>
+    <resources>
       <code path="SmartAssistAnyEntityControl.js" order="1" />
       <resx path="strings/SmartAssistAnyEntityControl.1033.resx" version="1.0.0" />
-		</resources>		
-	</control>
+    </resources>
+  </control>
 </manifest>
