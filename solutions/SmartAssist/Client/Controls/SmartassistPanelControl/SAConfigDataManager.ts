@@ -8,8 +8,8 @@ module MscrmControls.SmartassistPanelControl {
         private static instance: SAConfigDataManager = null;
         private saConfigSchema: SAConfigSchema = new SAConfigSchema();
         private acConfigSchema: ACConfigSchema = new ACConfigSchema();
-        private saConfig: SAConfig[] = [];
-        public suggestionsSetting: SuggestionsSetting = null;
+        private saConfig: SAConfig[] = [];        
+        private suggestionsSetting: { [key: string]: any } = {};
         private suggestionsSettingSchema: SuggestionsSettingSchema = new SuggestionsSettingSchema();
 
 
@@ -40,7 +40,8 @@ module MscrmControls.SmartassistPanelControl {
          * @param saConfig: All active SA config
          */
         public async getFilteredSAConfig(sourceEntity: string) {
-            await this.getSuggestionsSetting();
+            var sessionId = Utility.getCurrentSessionId();
+            await this.getSuggestionsSetting(sessionId);
             var configs = await this.getSAConfigurations();
             var result = configs.filter((data) => {
                 //Source entity filter
@@ -121,9 +122,9 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**Get Session Sttings */
-        public async getSuggestionsSetting() {
-            if (this.suggestionsSetting && !Utility.isNullOrEmptyString(this.suggestionsSetting.SuggestionsSettingId)) {
-                return this.suggestionsSetting;
+        public async getSuggestionsSetting(sessionId: string) {
+            if (this.suggestionsSetting[sessionId] && !Utility.isNullOrEmptyString(this.suggestionsSetting[sessionId].SuggestionsSettingId)) {
+                return this.suggestionsSetting[sessionId];
             }
             return this.getSuggestionsSettingFromAPI();
         }
@@ -131,17 +132,21 @@ module MscrmControls.SmartassistPanelControl {
         /**Gets Admin settings for KM and Case suggestions */
         private async getSuggestionsSettingFromAPI() {
             let eventParameters = new TelemetryLogger.EventParameters();
+            var currentSessionId = Utility.getCurrentSessionId();
             try {
                 var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.suggestionsSettingSchema.EntityName, `?$filter=${this.suggestionsSettingSchema.StatusCode} eq ${SuggestionsSettingState.Active}`) as any;
                 if (result && result.entities && result.entities.length > 0) {
-                    this.suggestionsSetting = new SuggestionsSetting(result.entities[0]);
+                    var data = new SuggestionsSetting(result.entities[0])
+                    this.suggestionsSetting[currentSessionId] = data;
                 }
                 else {
-                    this.suggestionsSetting = new SuggestionsSetting(null);
+                    data = new SuggestionsSetting(null);
+                    this.suggestionsSetting[currentSessionId] = data;
                 }
             }
             catch (error) {
-                this.suggestionsSetting = new SuggestionsSetting(null);
+                data = new SuggestionsSetting(null);
+                this.suggestionsSetting[currentSessionId] = data;
                 eventParameters.addParameter("Exception Details", error.message);
                 SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "getSuggestionsSetting", "Error occurred while fetching suggestions admin settings", eventParameters);
             }

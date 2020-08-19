@@ -135,7 +135,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             if (this.saConfig.UniqueName == StringConstants.TPBotUniqueName && this.EmptyStatus == SuggestionsEmptyStatus.Valid) {
                 var isSAAvailable = await this.anyEntityDataManager.isSmartassistAvailable() as any;
                 if (isSAAvailable == true) {
-                    this.appendTitle();
+                    this.appendTitle();                    
                     const componentId = "TPBot";
                     let properties: any =
                     {
