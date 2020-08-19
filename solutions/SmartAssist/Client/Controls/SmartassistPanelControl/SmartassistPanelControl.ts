@@ -256,6 +256,9 @@ module MscrmControls.SmartassistPanelControl {
                     //Unbind all configs- in OC both(lwi and case) configs could be present 
                     this.unbindSAConfigs(configs);
 
+                    // to handle the ordering when settings updated
+                    $("#" + Constants.SuggestionOuterContainer).empty();
+
                     let entityId = this.getEntityRecordId(anchorContext);
                     if (!Utility.isValidSourceEntityName(anchorContext.entityName)
                         || Utility.isNullOrEmptyString(entityId)) {
