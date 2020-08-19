@@ -1,0 +1,13 @@
+<msdyn_panetoolconfiguration msdyn_uniquename="msdyn_callscript_tool_config">
+  <iscustomizable>1</iscustomizable>
+  <msdyn_category>100000001</msdyn_category>
+  <msdyn_controlname>MscrmControls.Callscript.CallscriptControl</msdyn_controlname>
+  <msdyn_data>{}</msdyn_data>
+  <msdyn_isconfigurable>1</msdyn_isconfigurable>
+  <msdyn_name>Call script tool configuration</msdyn_name>
+  <msdyn_toolconfigurationentity>msdyn_productivityagentscript</msdyn_toolconfigurationentity>
+  <msdyn_learnmorelink>https://go.microsoft.com/fwlink/p/?linkid=2138866</msdyn_learnmorelink>
+  <msdyn_description>Give step-by-step instructions to help minimize human error and provide consistent service.</msdyn_description>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_panetoolconfiguration>
