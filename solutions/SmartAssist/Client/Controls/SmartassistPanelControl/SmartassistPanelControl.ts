@@ -210,24 +210,19 @@ module MscrmControls.SmartassistPanelControl {
          */
         public async renderSuggestions(update: boolean, entityName: string, recordId: string = null): Promise<void> {
             this.showLoader();
+        
+            var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName);
+            configs = (configs.length > 0 ? configs : SAConfigDataManager.Instance.getSAConfigBySource(entityName));
+            configs = (configs.length > 0 ? configs : await SAConfigDataManager.Instance.getCaseKMConfigByAppId());
 
-            // validate current context
-            if (recordId) {
-                if (Utility.isNullOrEmptyString(recordId)) {
-                    recordId = this.tabSwitchEntityId;
-                }
-                var configs = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName) as SmartassistPanelControl.SAConfig[];
-
-                if (configs.length < 1) {
-
-                    // No Data to PP
-                    this.DispatchNoDataEvent();
-                }
-                configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
-                for (let i = 0; i <= (configs.length - 1); i++) {
-                    this.addDivForSmartAssistConfig(configs[i]);
-                    this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), entityName, recordId, update);
-                }
+            if (configs.length < 1) {
+                // No Data to PP
+                this.DispatchNoDataEvent();
+            }
+            configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
+            for (let i = 0; i <= (configs.length - 1); i++) {
+                this.addDivForSmartAssistConfig(configs[i]);
+                this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), entityName, recordId, update);
             }
             this.hideLoader();
         }
@@ -339,14 +334,14 @@ module MscrmControls.SmartassistPanelControl {
          */
         private checkEmptyStatus(entityName: string, entityId: string): SuggestionsEmptyStatus {
             if (!Utility.isValidSourceEntityName(entityName) || Utility.isNullOrEmptyString(entityId)) {
-                return SuggestionsEmptyStatus.Invalid;
+                return SuggestionsEmptyStatus.InvalidSource;
             }
-            var settings = SAConfigDataManager.Instance.suggestionsSetting
+            var currentSession = Utility.getCurrentSessionId();
+            var settings = SAConfigDataManager.Instance.suggestionsSetting[currentSession]
             if (!settings.CaseIsEnabled && !settings.KbIsEnable) {
-                return SuggestionsEmptyStatus.NoSettings;
+                return SuggestionsEmptyStatus.SuggestionsDisabled;
             }
-
-            return SuggestionsEmptyStatus.Valid;
+            return SuggestionsEmptyStatus.ValidSource;
         }
 
     }

@@ -22,6 +22,9 @@ module MscrmControls.SmartassistPanelControl {
         public static SAAnyEntityControlContainerId = "SAAnyEntityControl_";
         public static FPBTag = "FPB";
         public static TPBTag = "smartbot";
+        public static isSmartAssistFound = "_isSmartAssistFound";
+        public static UserEntityName = "systemuser";
+        public static FetchOperator = "?fetchXml=";     
 
         //AppConfig
         public static saAppRealtionName = "msdyn_smartassistconfig_msdyn_appconfig";
@@ -211,8 +214,8 @@ module MscrmControls.SmartassistPanelControl {
 
     /**Empty status enum*/
     export enum SuggestionsEmptyStatus {
-        Valid = 0,
-        Invalid = 1,
-        NoSettings = 2
+        ValidSource = 0,
+        InvalidSource = 1,
+        SuggestionsDisabled = 2
     }
 }

@@ -14,7 +14,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
-        private EmptyStatus: SuggestionsEmptyStatus = SuggestionsEmptyStatus.Valid;
+        private EmptyStatus: SuggestionsEmptyStatus = SuggestionsEmptyStatus.ValidSource;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;
         private parentDivId: string = "";
@@ -132,30 +132,27 @@ module MscrmControls.SmartAssistAnyEntityControl {
             //Get Current context
             await this.getCurrentContext();
             this.showLoader();
-            if (this.saConfig.UniqueName == StringConstants.TPBotUniqueName && this.EmptyStatus == SuggestionsEmptyStatus.Valid) {
-                var isSAAvailable = await this.anyEntityDataManager.isSmartassistAvailable() as any;
-                if (isSAAvailable == true) {
-                    this.appendTitle();                    
-                    const componentId = "TPBot";
-                    let properties: any =
-                    {
-                        parameters: {},
-                        key: componentId,
-                        id: componentId,
-                    };
-                    var divElement = document.createElement("div");
-                    divElement.id = "Component_TPBot";
+            if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.EmptyStatus != SuggestionsEmptyStatus.InvalidSource) {
+                this.appendTitle();
+                const componentId = "TPBot";
+                let properties: any =
+                {
+                    parameters: {},
+                    key: componentId,
+                    id: componentId,
+                };
+                var divElement = document.createElement("div");
+                divElement.id = "Component_TPBot";
 
-                    //Initiate Suggestion Control
-                    let suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.ProductivityPanel.TPBotControl", componentId, properties);
-                    SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
-                    $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
-                }
+                //Initiate Suggestion Control
+                let suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.ProductivityPanel.TPBotControl", componentId, properties);
+                SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
+                $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
             }
             else {
                 this.appendTitle();
                 var data;
-                if (this.EmptyStatus == SuggestionsEmptyStatus.NoSettings || this.EmptyStatus == SuggestionsEmptyStatus.Invalid) {
+                if (this.EmptyStatus != SuggestionsEmptyStatus.ValidSource) {
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                     if (!noSuggestionElm) {
                         var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig, this.EmptyStatus);
@@ -265,8 +262,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param context: The "Input Bag" containing the parameters and other control metadata.
          */
         private validateParameters(context: Mscrm.ControlData<IInputBag>) {
-            if (context.utils.isNullOrUndefined(context.parameters.SAConfig.raw) ||
-                context.utils.isNullOrUndefined(context.parameters.RecordId.raw)) {
+            if (context.utils.isNullOrUndefined(context.parameters.SAConfig.raw)) {
                 // one or more required parameters are null or undefined
                 let errorMessage = "In-correct parameters are passed.";
 

@@ -36,10 +36,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
             switch (saConfig.SuggestionType) {
                 case SuggestionType.KnowledgeArticleSuggestion:
-                    text = EmptyStatus == SuggestionsEmptyStatus.NoSettings ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoKnowledgeArticleText);
+                    text = EmptyStatus == SuggestionsEmptyStatus.SuggestionsDisabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoKnowledgeArticleText);
                     break;
                 case SuggestionType.SimilarCaseSuggestion:
-                    text = EmptyStatus == SuggestionsEmptyStatus.NoSettings ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoSimilarCaseText);                    
+                    text = EmptyStatus == SuggestionsEmptyStatus.SuggestionsDisabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoSimilarCaseText);                    
                     break;
                 default:
             }

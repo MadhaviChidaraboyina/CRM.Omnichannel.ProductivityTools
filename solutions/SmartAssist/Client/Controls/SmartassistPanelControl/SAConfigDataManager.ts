@@ -8,10 +8,10 @@ module MscrmControls.SmartassistPanelControl {
         private static instance: SAConfigDataManager = null;
         private saConfigSchema: SAConfigSchema = new SAConfigSchema();
         private acConfigSchema: ACConfigSchema = new ACConfigSchema();
-        private saConfig: SAConfig[] = [];        
-        private suggestionsSetting: { [key: string]: any } = {};
+        private saConfig: SAConfig[] = [];
+        public suggestionsSetting: { [key: string]: any } = {};
         private suggestionsSettingSchema: SuggestionsSettingSchema = new SuggestionsSettingSchema();
-
+        private _isSmartAssistAvailable: boolean = null;
 
         constructor() {
         }
@@ -36,6 +36,39 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**
+         * Get SA Configuration KM and case config only
+         */
+        public async getCaseKMConfigByAppId() {
+            var kmAdded = false;
+            var caseAdded = false;
+            var appConfig = await Utility.getAppRuntimeEnvironment();
+            return this.saConfig.filter((data) => {
+                if (appConfig.AppConfigName !== data.CurrentAppConfigName) return false;
+                if (SuggestionType.KnowledgeArticleSuggestion == data.SuggestionType && !kmAdded) {
+                    kmAdded = true;
+                    return true;
+                }
+                if (SuggestionType.SimilarCaseSuggestion == data.SuggestionType && !caseAdded) {
+                    caseAdded = true;
+                    return true;
+                }
+                return false;
+            });
+        }
+
+        /**
+         * Get in memmory SA config by entitySource
+         * @param sourceEntity: source entity name
+         */
+        public getSAConfigBySource(sourceEntity: string): SAConfig[] {
+            return this.saConfig.filter((data) => {
+                if (sourceEntity !== data.SourceEntityName) return false;
+                if (data.SuggestionType == SuggestionType.BotSuggestion) return this._isSmartAssistAvailable;
+                return true;
+            });
+        }
+
+        /**
          * Get Filtered SA config from admin suggestions setting
          * @param saConfig: All active SA config
          */
@@ -43,19 +76,27 @@ module MscrmControls.SmartassistPanelControl {
             var sessionId = Utility.getCurrentSessionId();
             await this.getSuggestionsSetting(sessionId);
             var configs = await this.getSAConfigurations();
+
+            var isSAAvailable = false;
+            var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion)
+            if (botConfig) {
+                isSAAvailable = await this.isSmartassistAvailable() as any;
+            }
+
             var result = configs.filter((data) => {
                 //Source entity filter
                 if (sourceEntity !== data.SourceEntityName) return false;
-                return true;
                 //Filter admin setting
-                //switch (data.SuggestionType) {
-                //    case SuggestionType.SimilarCaseSuggestion:
-                //        return this.suggestionsSetting.CaseIsEnabled;
-                //    case SuggestionType.KnowledgeArticleSuggestion:
-                //        return this.suggestionsSetting.KbIsEnable;
-                //    default:
-                //        return true;
-                //}
+                switch (data.SuggestionType) {
+                    case SuggestionType.SimilarCaseSuggestion:
+                        return this.suggestionsSetting[sessionId].CaseIsEnabled;
+                    case SuggestionType.KnowledgeArticleSuggestion:
+                        return this.suggestionsSetting[sessionId].KbIsEnable;
+                    case SuggestionType.BotSuggestion:
+                        return isSAAvailable;
+                    default:
+                        return true;
+                }
             });
             return result;
         }
@@ -150,6 +191,72 @@ module MscrmControls.SmartassistPanelControl {
                 eventParameters.addParameter("Exception Details", error.message);
                 SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "getSuggestionsSetting", "Error occurred while fetching suggestions admin settings", eventParameters);
             }
+        }
+
+        /**Check if Smart assist is added in OC WS */
+        public async isSmartassistAvailable() {
+            var liveworkStreamItem = Utility.getLiveWorkStreamId();
+            if (Utility.isNullOrEmptyString(liveworkStreamItem)) {
+                return false;
+            }
+            var sessionId = Utility.getCurrentSessionId();
+            let isSmartAssistBotAvailable: any = sessionStorage.getItem(sessionId + liveworkStreamItem + Constants.isSmartAssistFound);
+            if (isSmartAssistBotAvailable == null) {
+                await this.FetchSmartAssistBotRecordAndSetCriteria(liveworkStreamItem, sessionId);
+                return this._isSmartAssistAvailable;
+            }
+            return (isSmartAssistBotAvailable == "true");
+        }
+
+        /**
+         * Fet sa bots set SA rendering criteria
+         * @param liveWorkStreamId: Work Stream Unique identifier
+         */
+        private async FetchSmartAssistBotRecordAndSetCriteria(liveWorkStreamId: string, sessionId: string) {
+            let eventParameters = new TelemetryLogger.EventParameters();
+            try {
+                //fetch smart assist bots
+                let fetchXml = this.getSmartAssistFetchXml(liveWorkStreamId);
+                let fetchXmlQuery = Constants.FetchOperator + encodeURIComponent(fetchXml);
+                let dataResponse = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(Constants.UserEntityName, fetchXmlQuery) as any;
+                let entityRecords: WebApi.Entity[] = dataResponse.entities;
+                this._isSmartAssistAvailable = entityRecords.length > 0;
+                sessionStorage.setItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFound, this._isSmartAssistAvailable as any)
+
+                eventParameters.addParameter("total SmartAssistBotRecordFetch", entityRecords.length.toString());
+                SmartassistPanelControl._telemetryReporter.logSuccess("Main Component", "SmartAssistBotRecordFetch", eventParameters);
+            }
+            catch (error) {
+                this._isSmartAssistAvailable = null;
+                sessionStorage.removeItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFound);
+                eventParameters.addParameter("Exception Details", error.message);
+                SmartassistPanelControl._telemetryReporter.logError("Main Component", "SmartAssistBotRecordFetch", "Error occurred while fetching smart assist bot", eventParameters);
+            }
+
+        }
+
+        /**
+         * Get XML for SA binding with LWS
+         * @param workStreamId: Word Stream Unique ID
+         */
+        private getSmartAssistFetchXml(workStreamId: string): string {
+            //todo: Resolve- Can we have fetch xml in XML ?
+            let fetchXrml = "<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='true'>" +
+                "<entity name='systemuser'>" +
+                "<attribute name='fullname' />" +
+                "<attribute name='businessunitid' />" +
+                "<attribute name='systemuserid' />" +
+                "<order attribute='fullname' descending='false' />" +
+                "<link-entity name='msdyn_msdyn_liveworkstream_systemuser' from='systemuserid' to='systemuserid' visible='false' intersect='true'>" +
+                "<link-entity name='msdyn_liveworkstream' from='msdyn_liveworkstreamid' to='msdyn_liveworkstreamid' alias='aa'>" +
+                "<filter type='and'>" +
+                "<condition attribute='msdyn_liveworkstreamid' operator='eq' uitype='msdyn_liveworkstream' value='{" + workStreamId + "}' />" +
+                "</filter>" +
+                "</link-entity>" +
+                "</link-entity>" +
+                "</entity>" +
+                "</fetch>";
+            return fetchXrml;
         }
     }
 }
