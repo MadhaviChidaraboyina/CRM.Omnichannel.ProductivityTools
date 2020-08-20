@@ -206,8 +206,13 @@ module MscrmControls.SmartassistPanelControl {
         public async renderSuggestions(update: boolean, entityName: string, recordId: string = null): Promise<void> {
             this.showLoader();
 
+            // Get Configs to display suggestions
             var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName);
-            configs = (configs.length > 0 ? configs : SAConfigDataManager.Instance.getSAConfigBySource(entityName));
+
+            // If no config to display, get config to executte anyentity control to show no Admin settings 
+            configs = (configs.length > 0 ? configs : SAConfigDataManager.Instance.getSAConfigBySource(entityName)) as SAConfig[];
+
+            // config to handle any entity source(other than case)
             configs = (configs.length > 0 ? configs : await SAConfigDataManager.Instance.getCaseKMConfigByAppId());
 
             var emptyStatus: SuggestionsEmptyStatus = await this.checkEmptyStatus(entityName, recordId);

@@ -60,10 +60,15 @@ module MscrmControls.SmartassistPanelControl {
          * Get in memmory SA config by entitySource
          * @param sourceEntity: source entity name
          */
-        public getSAConfigBySource(sourceEntity: string): SAConfig[] {
+        public async getSAConfigBySource(sourceEntity: string) {
+            var isSAAvailable = false;
+            var botConfig = this.saConfig.find(i => i.SuggestionType == SuggestionType.BotSuggestion)
+            if (botConfig) {
+                isSAAvailable = await this.isSmartassistAvailable() as any;
+            }
             return this.saConfig.filter((data) => {
                 if (sourceEntity !== data.SourceEntityName) return false;
-                if (data.SuggestionType == SuggestionType.BotSuggestion) return this._isSmartAssistAvailable;
+                if (data.SuggestionType == SuggestionType.BotSuggestion) return isSAAvailable;
                 return true;
             });
         }

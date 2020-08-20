@@ -132,7 +132,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             //Get Current context
             await this.getCurrentContext();
             this.showLoader();
-            if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.EmptyStatus != SuggestionsEmptyStatus.Invalid) {
+            if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.EmptyStatus == SuggestionsEmptyStatus.Valid) {
                 this.appendTitle();
                 const componentId = "TPBot";
                 let properties: any =
