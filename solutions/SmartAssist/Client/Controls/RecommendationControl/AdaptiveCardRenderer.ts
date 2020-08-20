@@ -114,21 +114,28 @@ module MscrmControls.Smartassist.Suggestion {
 						
 						let actionPromise = Suggestion.CustomActionHelper.invokeCustomAction(customAction);
 						const notificationBarId = "resolve_" + this._suggestionId;
-						const successMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.SuccessImageEncode, CustomActionHelper.getString(this._context, LocalizedStrings.CustomActionSuccessMessage));
-						const successMessage = ViewTemplates.SuccessMessageTemplate.Format(notificationBarId, successMessageTemplate);
-						const errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, CustomActionHelper.getString(this._context, LocalizedStrings.CustomActionFailureMessage));
-						let errorMessage = ViewTemplates.FailureMessageTemplates.Format(notificationBarId, errorMessageTemplate);
-
+						
 						actionPromise.then((data) => {
-
-							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(successMessage);
-							$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionSuccessStyle);
-							setTimeout(() => {
-								$('#' + notificationBarId).remove();
-								$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionSuccessStyle);
-							}, 3000);
-
-						}).catch((e) => {
+							let successMessageTemplate;
+							if (data) {
+								successMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.SuccessImageEncode, data);
+								const successMessage = ViewTemplates.SuccessMessageTemplate.Format(notificationBarId, successMessageTemplate);
+								$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(successMessage);
+								$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionSuccessStyle);
+								setTimeout(() => {
+									$('#' + notificationBarId).remove();
+									$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionSuccessStyle);
+								}, 3000);
+							}
+						}).catch((error) => {
+							let errorMessageTemplate;
+							if (error) {
+								errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, error);
+							}
+							else {
+								errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, LocalizedStrings.CustomActionFailureMessage);
+                            }
+							let errorMessage = ViewTemplates.FailureMessageTemplates.Format(notificationBarId, errorMessageTemplate);
 							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(errorMessage);
 							$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionErrorStyle);
 							setTimeout(() => {
