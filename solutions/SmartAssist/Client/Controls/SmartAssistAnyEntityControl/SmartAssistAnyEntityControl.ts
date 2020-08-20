@@ -14,7 +14,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
-        private EmptyStatus: SuggestionsEmptyStatus = SuggestionsEmptyStatus.ValidSource;
+        private EmptyStatus: SuggestionsEmptyStatus = SuggestionsEmptyStatus.Valid;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;
         private parentDivId: string = "";
@@ -132,7 +132,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             //Get Current context
             await this.getCurrentContext();
             this.showLoader();
-            if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.EmptyStatus != SuggestionsEmptyStatus.InvalidSource) {
+            if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.EmptyStatus != SuggestionsEmptyStatus.Invalid) {
                 this.appendTitle();
                 const componentId = "TPBot";
                 let properties: any =
@@ -152,7 +152,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             else {
                 this.appendTitle();
                 var data;
-                if (this.EmptyStatus != SuggestionsEmptyStatus.ValidSource) {
+                if (this.EmptyStatus != SuggestionsEmptyStatus.Valid) {
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                     if (!noSuggestionElm) {
                         var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig, this.EmptyStatus);

@@ -95,11 +95,6 @@ module MscrmControls.SmartassistPanelControl {
             }
             if (this.newInstance) {
                 let recordId = this.getEntityRecordId(this.AnchorTabContext);
-                if (!Utility.isValidSourceEntityName(this.AnchorTabContext.entityName)
-                    || Utility.isNullOrEmptyString(recordId)) {
-                    // No data to PP
-                    this.DispatchNoDataEvent();
-                }
                 this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
             }
             this.newInstance = false;
@@ -132,7 +127,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param saConfig saConfig
          * @param callback callback to create SmartassistAnyEntityControl
          */
-        public loadWebresourceAndRenderSmartassistAnyEntity(saConfig: SAConfig, callback: (config: SAConfig, entityName, recordId: string, update: boolean) => void, entityName: string, recordId: string, update: boolean): void {
+        public loadWebresourceAndRenderSmartassistAnyEntity(saConfig: SAConfig, callback: (config: SAConfig, emptyStatus: SuggestionsEmptyStatus, recordId: string, update: boolean) => void, emptyStatus: SuggestionsEmptyStatus, recordId: string, update: boolean): void {
             let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
             //SuggestionWebResourceUrl is empty for TPBot
             if (!document.getElementById(src) && !Utility.isNullOrEmptyString(saConfig.SuggestionWebResourceUrl)) {
@@ -144,7 +139,7 @@ module MscrmControls.SmartassistPanelControl {
                     SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "loadWebresourceAndRenderSmartassistAnyEntity", message, eventParameters);
                 };
                 script.onload = function () {
-                    callback(saConfig, entityName, recordId, update);
+                    callback(saConfig, emptyStatus, recordId, update);
                 };
 
                 script.src = src;
@@ -152,11 +147,11 @@ module MscrmControls.SmartassistPanelControl {
                 script.type = "text/javascript";
                 document.getElementsByTagName("head")[0].appendChild(script);
             } else {
-                callback(saConfig, entityName, recordId, update);
+                callback(saConfig, emptyStatus, recordId, update);
             }
         }
 
-        public renderSmartassistAnyEntityControl(config: SAConfig, entityName: string, recordId: string, update: boolean): void {
+        public renderSmartassistAnyEntityControl(config: SAConfig, emptyStatus: SuggestionsEmptyStatus, recordId: string, update: boolean): void {
             const componentId = Constants.SAAnyEntityControlContainerId + config.SmartassistConfigurationId;
             let properties: any =
             {
@@ -187,7 +182,7 @@ module MscrmControls.SmartassistPanelControl {
                         Primary: false,
                         Static: true,
                         Usage: 1, // input
-                        Value: this.checkEmptyStatus(entityName, recordId)
+                        Value: emptyStatus
                     }
                 },
                 key: componentId,
@@ -210,19 +205,20 @@ module MscrmControls.SmartassistPanelControl {
          */
         public async renderSuggestions(update: boolean, entityName: string, recordId: string = null): Promise<void> {
             this.showLoader();
-        
+
             var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName);
             configs = (configs.length > 0 ? configs : SAConfigDataManager.Instance.getSAConfigBySource(entityName));
             configs = (configs.length > 0 ? configs : await SAConfigDataManager.Instance.getCaseKMConfigByAppId());
 
-            if (configs.length < 1) {
+            var emptyStatus: SuggestionsEmptyStatus = await this.checkEmptyStatus(entityName, recordId);
+            if (configs.length < 1 || emptyStatus != SuggestionsEmptyStatus.Valid) {
                 // No Data to PP
                 this.DispatchNoDataEvent();
             }
             configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
             for (let i = 0; i <= (configs.length - 1); i++) {
                 this.addDivForSmartAssistConfig(configs[i]);
-                this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), entityName, recordId, update);
+                this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), emptyStatus, recordId, update);
             }
             this.hideLoader();
         }
@@ -257,13 +253,7 @@ module MscrmControls.SmartassistPanelControl {
 
                     // to handle the ordering when settings updated
                     $("#" + Constants.SuggestionOuterContainer).empty();
-
                     let entityId = this.getEntityRecordId(anchorContext);
-                    if (!Utility.isValidSourceEntityName(anchorContext.entityName)
-                        || Utility.isNullOrEmptyString(entityId)) {
-                        // No Data to PP
-                        this.DispatchNoDataEvent();
-                    }
                     this.anchorTabEntityId = Utility.FormatGuid(entityId);
                     this.renderSuggestions(true, anchorContext.entityName, this.anchorTabEntityId);
                 }
@@ -332,17 +322,17 @@ module MscrmControls.SmartassistPanelControl {
          * @param entityName
          * @param entityId
          */
-        private checkEmptyStatus(entityName: string, entityId: string): SuggestionsEmptyStatus {
+        private async checkEmptyStatus(entityName: string, entityId: string) {
             if (!Utility.isValidSourceEntityName(entityName) || Utility.isNullOrEmptyString(entityId)) {
-                return SuggestionsEmptyStatus.InvalidSource;
+                return SuggestionsEmptyStatus.Invalid;
             }
             var currentSession = Utility.getCurrentSessionId();
-            var settings = SAConfigDataManager.Instance.suggestionsSetting[currentSession]
-            if (!settings.CaseIsEnabled && !settings.KbIsEnable) {
+            var settings = await SAConfigDataManager.Instance.getSuggestionsSetting(currentSession);
+            var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName);
+            if (!settings.CaseIsEnabled && !settings.KbIsEnable && configs.length < 1) {
                 return SuggestionsEmptyStatus.SuggestionsDisabled;
             }
-            return SuggestionsEmptyStatus.ValidSource;
+            return SuggestionsEmptyStatus.Valid;
         }
-
     }
 }

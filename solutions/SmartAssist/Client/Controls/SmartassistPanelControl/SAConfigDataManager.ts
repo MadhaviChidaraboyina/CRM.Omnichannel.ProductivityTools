@@ -9,7 +9,7 @@ module MscrmControls.SmartassistPanelControl {
         private saConfigSchema: SAConfigSchema = new SAConfigSchema();
         private acConfigSchema: ACConfigSchema = new ACConfigSchema();
         private saConfig: SAConfig[] = [];
-        public suggestionsSetting: { [key: string]: any } = {};
+        private suggestionsSetting: { [key: string]: any } = {};
         private suggestionsSettingSchema: SuggestionsSettingSchema = new SuggestionsSettingSchema();
         private _isSmartAssistAvailable: boolean = null;
 

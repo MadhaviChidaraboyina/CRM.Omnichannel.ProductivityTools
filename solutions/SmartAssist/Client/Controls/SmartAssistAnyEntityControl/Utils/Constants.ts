@@ -85,8 +85,8 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
     /**Empty status enum*/
     export enum SuggestionsEmptyStatus {
-        ValidSource = 0,
-        InvalidSource = 1,
+        Valid = 0,
+        Invalid = 1,
         SuggestionsDisabled = 2
     }
 }
