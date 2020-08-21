@@ -125,6 +125,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
 
         private checkAgentScriptAndSmartAssistBot(context: Mscrm.ControlData<IInputBag>): DisplayCriterias {
             // stor session template id and workstream id 
+            this.currentSessionId = this.getCurrentSessionId();
             this.stateManager.storeSessionTemplateIdInLocStorage(this.currentSessionId);
             this.stateManager.storeLiveWorkStreamIdInLocStorage(this.currentSessionId);
 
@@ -333,6 +334,13 @@ module MscrmControls.ProductivityToolAgentGuidance {
                                 }
                             }, 
                         },
+                        //to force update of child control every time
+                        DummyContext: {
+                            Usage: 1,
+                            Static: true,
+                            Value: Math.random(),
+                            Primary: false
+                        }
                     },
                 }
             };
@@ -368,7 +376,9 @@ module MscrmControls.ProductivityToolAgentGuidance {
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
         public destroy(): void	{
-            delete localStorage[LocalStorageKeyConstants.agentGuidanceDataModel];
+            if (this.currentSessionId != Constants.homeSessionId) {
+                delete localStorage[LocalStorageKeyConstants.agentGuidanceDataModel];
+            }
 		}
     }
 }
