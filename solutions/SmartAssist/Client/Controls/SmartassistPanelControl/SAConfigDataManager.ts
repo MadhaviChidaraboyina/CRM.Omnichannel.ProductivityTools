@@ -65,13 +65,6 @@ module MscrmControls.SmartassistPanelControl {
                         return false;
                     }
                 }
-                if (sourceEntity !== data.SourceEntityName) {
-                    data.IsValid = false;
-                    if (data.CurrentAppConfigName == Constants.ocAppName && data.SourceEntityName != Constants.LWIEntityName) {
-                        return false;
-                    }
-                }
-
                 switch (data.SuggestionType) {
                     case SuggestionType.SimilarCaseSuggestion:
                         data.IsValid = this.suggestionsSetting[sessionId].CaseIsEnabled;
