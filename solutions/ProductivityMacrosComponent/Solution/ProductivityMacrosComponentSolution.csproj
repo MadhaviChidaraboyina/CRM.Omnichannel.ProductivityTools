@@ -116,6 +116,7 @@
     <Content Include="Other\Relationships\Team.xml" />
     <Content Include="Other\Relationships\Workflow.xml" />
     <Content Include="WebResources\CRMClients\msdyn_ProductivityMacrosComponent_internal_library.js.data.xml" />
+   
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_spinner.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroDesigner.bundle.js.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroDesigner.html.data.xml" />
@@ -131,7 +132,51 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="WebResources\CRMClients\msdyn_LogicAppExecutor_v2.js.data.xml" />
-    <Content Include="WebResources\Localization\ProductivityMacros_webresource_strings.1033.resx.data.xml" />
+     <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1025.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1026.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1027.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1028.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1029.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1030.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1031.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1032.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1033.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1035.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1036.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1037.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1038.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1040.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1041.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1042.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1043.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1044.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1045.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1046.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1048.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1049.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1050.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1051.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1053.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1054.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1055.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1057.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1058.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1060.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1061.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1062.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1063.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1066.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1069.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1081.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1086.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1087.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1110.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.2052.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.2070.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.2074.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.3076.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.3082.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.3098.resx.data.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Roles\" />
