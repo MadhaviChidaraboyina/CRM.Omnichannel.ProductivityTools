@@ -68,6 +68,7 @@ module MscrmControls.Smartassist.Suggestion {
                 switch (e.keyCode) {
                     case KeyCodes.ESCAPE_KEY:
                         this.closePopup();
+                        this._popupOwner.focus();
                 }
             }
 

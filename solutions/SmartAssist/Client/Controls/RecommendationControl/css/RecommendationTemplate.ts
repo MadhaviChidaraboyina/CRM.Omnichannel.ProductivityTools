@@ -12,7 +12,7 @@ module MscrmControls.Smartassist {
 				containerPadding = "0px";
 			}
 			return `
-<style id="recommendation-style">
+<style>
 	body, html {
 		height: 100%;
 		width: 99%;
