@@ -1,8 +1,22 @@
 ﻿import { Utils } from "./sharedUtils";
 import { Constants, Action, Parameter, Connector, Kind, Category, DesignerTemplateConfig } from "./sharedDefines";
 import { isNullOrUndefined } from "util";
+import * as Designer from "./DesignerDefinitions";
+import flowScript from "./flowScript";
 
 let globalContext: XrmClientApi.GlobalContext = (window.top as any).Xrm.Utility.getGlobalContext();
+
+
+export const operationManifestMetadata: Designer.Metadata[] = [
+    {
+        conditions: {
+            operationType: 'ListFlows'
+        },
+        connectorId: 'ListFlows',
+        operationId: 'ListFlows',
+        manifest: flowScript
+    }
+];
 
 function _getIconUrl(icon: string): string {
     let url = new URL(icon, globalContext.getClientUrl());
@@ -83,6 +97,8 @@ export class Macros {
         let actions: Action[] = [];
         let categories: Category[] = [];
         let promises: Promise<boolean>[] = [];
+        let connectors: any[] = [];
+        let operationManifestData = operationManifestMetadata;
         let res1 = await Promise.all([
             window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_productivitymacroconnector", "?$filter=statecode eq 0&$select=msdyn_productivitymacroconnectorid,msdyn_name,msdyn_title,msdyn_displayname,msdyn_brandcolor,msdyn_description,msdyn_icon,msdyn_categorykey,msdyn_categorylabel,msdyn_type,msdyn_webresourcename"),
             window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_productivitymacroactiontemplate", "?$filter=statecode eq 0&$select=msdyn_name,msdyn_title,msdyn_subtitle,msdyn_displayname,msdyn_brandcolor,msdyn_actiondescription,msdyn_icon,msdyn_summary,msdyn_visibility,msdyn_kind&$expand=msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput($select=msdyn_name,msdyn_visibility),msdyn_msdyn_prod_macroactiontemplate_msdyn_actionout($select=msdyn_name),msdyn_macroconnector($select=msdyn_name)")
@@ -90,7 +106,6 @@ export class Macros {
         let connectorData = await res1[0];
         let templates = await res1[1];
 
-        let connectors: Connector[] = [];
         let mPromises: Promise<string>[] = [];
         connectorData.entities.forEach(function (templ) {
             if (!isNullOrUndefined(templ.msdyn_webresourcename)) {
@@ -198,7 +213,7 @@ export class Macros {
             actions.push(action);
         });
         await Promise.all(promises);
-        return { actions: actions, connectors: connectors, categories: categories };
+        return { actions: actions, connectors: connectors, categories: categories, operationManifestData: operationManifestData };
     }
 
     public static async getDefinition() {

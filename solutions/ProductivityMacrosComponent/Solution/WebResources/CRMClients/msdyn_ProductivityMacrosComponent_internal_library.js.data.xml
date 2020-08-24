@@ -55,6 +55,7 @@
 		&lt;Library name="Localization/ProductivityMacrosComponent_webresource_strings.3076.resx" displayName="Localization/ProductivityMacrosComponent_webresource_strings.3076.resx" languagecode="3076" description="ProductivityMacrosComponent 3076 resx file" libraryUniqueId="{33E8F77C-61C8-4903-81BA-1C95FF61BBDA}" /&gt;
 		&lt;Library name="Localization/ProductivityMacrosComponent_webresource_strings.3082.resx" displayName="Localization/ProductivityMacrosComponent_webresource_strings.3082.resx" languagecode="3082" description="ProductivityMacrosComponent 3082 resx file" libraryUniqueId="{1ADCCDB6-C6F6-4296-AAC8-E43E7A88DE7B}" /&gt;
 		&lt;Library name="Localization/ProductivityMacrosComponent_webresource_strings.3098.resx" displayName="Localization/ProductivityMacrosComponent_webresource_strings.3098.resx" languagecode="3098" description="ProductivityMacrosComponent 3098 resx file" libraryUniqueId="{BA9B65BB-768F-4F72-9198-4A320A5B7B06}" /&gt;
+		&lt;Library name="MacrosDataLayer/msdyn_MacrosDataLayer.js" displayName="msdyn_MacrosDataLayer.js" languagecode="1033" description="Macros Data layer" libraryUniqueId="{fcd5888e-cd05-4341-89bc-639501b6824d}" /&gt;
 		&lt;/Dependency&gt;
 		&lt;/Dependencies&gt;
 	</DependencyXml>

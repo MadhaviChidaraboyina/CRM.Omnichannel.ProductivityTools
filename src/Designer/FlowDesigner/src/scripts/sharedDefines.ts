@@ -57,7 +57,9 @@ export class WrapperMessages {
 	public static RPC_PING = "__PING__";
 	public static LOG = "log";
 	public static MonitorInitDone = "monitorInitDone";
-	public static GetCrmData = "crmdata";
+    public static GetCrmData = "crmdata";
+    public static GetFlowsData = "flowsData";
+    public static GetEntities = "entities";
 };
 export enum LogLevel {
 	Info = "Info",
@@ -149,10 +151,11 @@ export interface Connector {
 	//runtimeUrls: [],
 }
 export interface DesignerTemplateConfig {
-	actions: Action[],
-	connectors: Connector[],
-	categories: Category[],
-	triggers?: any[]
+    actions: any[],
+    connectors: any[],
+    categories: Category[],
+    operationManifestData: any[],
+    triggers?: any[]
 }
 export interface IDesignerOptions {
 	ApiVersion: string,
@@ -170,7 +173,8 @@ export interface IDesignerOptions {
 	UserVoiceURL?: string,
 	environmentName: string,
 	environmentDescription: string,
-	operationKindDisplayText: { [kind: string]: string }
+    operationKindDisplayText: { [kind: string]: string },
+    OperationManifest: any[],
 };
 
 export interface IMonitorOptions {
@@ -190,7 +194,8 @@ export interface IMonitorOptions {
 	environmentName: string,
 	environmentDescription: string,
 	operationKindDisplayText: { [kind: string]: string }
-	executionStatusJSON: any
+    executionStatusJSON: any,
+    OperationManifest: any[],
 };
 export interface LogicAppDesignerTemplateConfig {
 	actions: any[],

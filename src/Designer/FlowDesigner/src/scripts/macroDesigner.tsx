@@ -1,8 +1,9 @@
 ﻿import * as SharedDefines from "./sharedDefines";
 import * as Utils from "./sharedUtils";
-
+import * as FPIHelper from "./FPIHelper";
 import * as Workflow from "./workflowDefinitions";
 import { MouseEvent } from "react";
+import { isNullOrUndefined } from "util";
 
 let cancelButton = document.getElementById("cancelButton") as HTMLElement;
 async function closeDesigner(event?: Event) {
@@ -174,6 +175,7 @@ async function startDesigner(rpc) {
             ],
             Actions: [
             ],
+            OperationManifest: [],
             operationKindDisplayText: operKindDisplayText
         };
         try {
@@ -186,6 +188,7 @@ async function startDesigner(rpc) {
             designerOptions.Actions = templates.actions;
             designerOptions.Connectors = templates.connectors;
             designerOptions.Categories = templates.categories;
+            designerOptions.OperationManifest = templates.operationManifestData;
             designerOptions.Categories.push({
                 "itemKey": SharedDefines.Constants.BUILTIN_CATEGORY,
                 "linkText": Utils.Utils.getResourceString(SharedDefines.Constants.BUILTIN_CATEGORY_DISPLAY)
@@ -458,6 +461,93 @@ function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, to
     }
 }
 
+async function getEntities() {
+    let response: SharedDefines.ListDynamicValuesResponse = { value: [] };
+    let entityList: SharedDefines.ListDynamicValue[] = [];
+    try {
+        var req = new XMLHttpRequest();
+        req.open("GET", window.top.Xrm.Utility.getGlobalContext().getClientUrl() + "/api/data/v9.0/EntityDefinitions?$select=DisplayName,LogicalCollectionName", false);
+        req.setRequestHeader("OData-MaxVersion", "4.0");
+        req.setRequestHeader("OData-Version", "4.0");
+        req.setRequestHeader("Accept", "application/json");
+        req.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+
+        req.onreadystatechange = function () {
+            if (req.readyState === 4) {
+                req.onreadystatechange = null;
+                if (req.status === 200) {
+                    for (let entity of JSON.parse(req.response).value) {
+                        try {
+                            if (!isNullOrUndefined(entity.DisplayName.UserLocalizedLabel.Label) && !isNullOrUndefined(entity.LogicalCollectionName)) {
+                                let name: string = entity.DisplayName.UserLocalizedLabel.Label;
+                                let val: string = entity.LogicalCollectionName;
+                                let entityListItem: SharedDefines.ListDynamicValue = {
+                                    value: val,
+                                    displayName: name,
+                                    description: "Entity",
+                                    disabled: false
+                                }
+                                entityList.push(entityListItem);
+                            }
+                        }
+                        catch (error) {
+                            console.log("Error occurred while traversing over entity list : " + error);
+                        }
+                    }
+                }
+            }
+        };
+        req.send();
+        response.value = entityList;
+        return (JSON.stringify(response));
+    }
+    catch (error) {
+        let obj: SharedDefines.LogObject = {
+            level: SharedDefines.LogLevel.Error,
+            eventName: SharedDefines.WrapperEvents.DesignerControlExecutionEvent,
+            message: Utils.Utils.genMsgForTelemetry("Unable to get entities", error),
+            eventTimeStamp: new Date(),
+            eventType: SharedDefines.TelemetryEventType.Trace,
+            exception: error.stack
+        };
+        return (JSON.stringify(response));
+    }
+
+}
+
+async function getFlowsData(entityName: any) {
+    let response: SharedDefines.ListDynamicValuesResponse = { value: [] };
+    let flowsList: SharedDefines.ListDynamicValue[] = [];
+    try {
+        let fpiHelper = new FPIHelper.FPIHelper();
+        let flows = await fpiHelper.listFlows(entityName);
+
+        for (let flow of flows.value) {
+            let flowsListItem: SharedDefines.ListDynamicValue = {
+                value: flow.name,
+                displayName: flow.properties.displayName,
+                description: "Flow",
+                disabled: false
+            }
+            flowsList.push(flowsListItem);
+        }
+        response.value = flowsList;
+        return (JSON.stringify(response));
+    }
+    catch (error) {
+        let obj: SharedDefines.LogObject = {
+            level: SharedDefines.LogLevel.Error,
+            eventName: SharedDefines.WrapperEvents.DesignerControlExecutionEvent,
+            message: Utils.Utils.genMsgForTelemetry("Unable to get flows", error),
+            eventTimeStamp: new Date(),
+            eventType: SharedDefines.TelemetryEventType.Trace,
+            exception: error.stack
+        };
+        return (JSON.stringify(response));
+    }
+
+}
+
 require(["LogicApps/rpc/Scripts/logicappdesigner/libs/rpc/rpc.standalone"], async function (Rpc) {
 	let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
 	let targetOrigin = (await initOperations[RequiredCDSOpersForInit.DesignerConfig] as SharedDefines.MacroDesignerConfig).DesignerBaseURL || "*";
@@ -476,7 +566,13 @@ require(["LogicApps/rpc/Scripts/logicappdesigner/libs/rpc/rpc.standalone"], asyn
 	});
 	rpc.register(SharedDefines.WrapperMessages.LOG, function (msgStr) {
 		doTelemetry(JSON.parse(msgStr));
-	});
+    });
+    rpc.register(SharedDefines.WrapperMessages.GetFlowsData, function (entityName) {
+        return getFlowsData(entityName);
+    });
+    rpc.register(SharedDefines.WrapperMessages.GetEntities, function () {
+        return getEntities();
+    });
 	rpc.register(SharedDefines.WrapperMessages.DesignerInitDone,
 		function () {
 			startDesigner(rpc);

@@ -25,6 +25,13 @@
     <Content Include="UnitTests\SpecRunner.html" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="Constants.ts" />
+    <TypeScriptCompile Include="MacrosDataLayer\MacrosDataLayer.ts" />
+    <TypeScriptCompile Include="MacrosDataLayer\Constants\MacrosDataLayerConstants.ts" />
+    <TypeScriptCompile Include="MacrosDataLayer\Libraries\FPIHelper.ts" />
+    <TypeScriptCompile Include="MacrosDataLayer\Models\FPIRequestMessage.ts" />
+    <TypeScriptCompile Include="MacrosDataLayer\Models\RequestMap.ts" />
+    <TypeScriptCompile Include="MacrosDataLayer\Utils\OCEndPoint.ts" />
+    <TypeScriptCompile Include="MacrosDataLayer\Utils\Utils.ts" />
     <TypeScriptCompile Include="CRMClients\LogicAppExecutor\Actions\IfAction.ts" />
     <TypeScriptCompile Include="CRMClients\LogicAppExecutor\Actions\MacroAction.ts" />
     <TypeScriptCompile Include="CRMClients\LogicAppExecutor\Actions\SetDefaultCallScriptAction.ts" />
@@ -40,6 +47,7 @@
     <TypeScriptCompile Include="CRMClients\ProductivityMacroRuntime.ts" />
     <TypeScriptCompile Include="CRMClients\aria-webjs-sdk-1.8.3.d.ts" />
     <TypeScriptCompile Include="CRMClients\Constants.ts" />
+    <TypeScriptCompile Include="CRMClients\FPIHelper.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\TypeScript.targets" />
@@ -71,6 +79,7 @@
     <None Include="..\..\tsconfig\tsconfig.base.uciandclassicweb.json">
       <Link>tsconfig\tsconfig.base.uciandclassicweb.json</Link>
     </None>
+    <Content Include="MacrosDataLayer\tsconfig.json" />
     <Content Include="CRMClients\tsconfig.json" />
     <Content Include="CRMClients\LogicAppExecutor\tsconfig.json" />
   </ItemGroup>

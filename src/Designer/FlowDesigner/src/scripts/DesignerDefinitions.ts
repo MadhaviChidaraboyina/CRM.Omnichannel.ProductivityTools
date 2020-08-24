@@ -768,6 +768,16 @@ export interface SmartRecommendationService extends RecommendationService2 {
 	): Promise<RecommendationSuggestedItem[]>;
 }
 
+export interface Conditions {
+    operationType: string;
+}
+export interface Metadata {
+    conditions: Conditions;
+    connectorId: string;
+    operationId: string;
+    manifest: OperationManifest;
+}
+
 export interface OperationManifest {
 	properties: {
 		iconUri: string;

@@ -115,6 +115,7 @@
     <Content Include="Other\Relationships\SystemUser.xml" />
     <Content Include="Other\Relationships\Team.xml" />
     <Content Include="Other\Relationships\Workflow.xml" />
+    <Content Include="WebResources\MacrosDataLayer\msdyn_MacrosDataLayer.js.data.xml" />
     <Content Include="WebResources\CRMClients\msdyn_ProductivityMacrosComponent_internal_library.js.data.xml" />
    
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_spinner.svg" />

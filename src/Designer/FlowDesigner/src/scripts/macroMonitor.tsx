@@ -169,7 +169,8 @@ async function startMonitor(rpc) {
 			],
 			Actions: [
 			],
-			operationKindDisplayText: operKindDisplayText,
+            operationKindDisplayText: operKindDisplayText,
+            OperationManifest: [],
 			executionStatusJSON: executionStatusJSON.executionstatus
 		};
 		try {
@@ -181,7 +182,8 @@ async function startMonitor(rpc) {
 			monitorOptions.UserVoiceURL = monitorConfig.UserVoiceLink;
 			monitorOptions.Actions = templates.actions;
 			monitorOptions.Connectors = templates.connectors;
-			monitorOptions.Categories = templates.categories;
+            monitorOptions.Categories = templates.categories;
+            monitorOptions.OperationManifest = templates.operationManifestData;
 			let obj: SharedDefines.LogObject = {
 				level: SharedDefines.LogLevel.Info,
 				eventName: WrapperEvents.WrapperConfigLoadEvent,

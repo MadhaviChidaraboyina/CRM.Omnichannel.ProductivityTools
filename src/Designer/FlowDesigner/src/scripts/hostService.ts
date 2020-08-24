@@ -570,10 +570,12 @@ export class SmartRecommendationImpl implements RecommendationRouter, Designer.R
 
 export class OperationManifestServiceImpl implements Designer.OperationManifestService {
 	private designerOptions: SharedDefines.IDesignerOptions;
-	private operationManager: OperationManager;
+    private operationManager: OperationManager;
+    private operationManifestData: Designer.Metadata[]
 	constructor(designerOptions: SharedDefines.IDesignerOptions, operationManager: OperationManager, analytics) {
 		this.designerOptions = designerOptions;
-		this.operationManager = operationManager;
+        this.operationManager = operationManager;
+        this.operationManifestData = this.designerOptions.OperationManifest;
 	}
 	public isSupported(operationType: string, operationKind: string | undefined): boolean {
 		let action1 = this.operationManager.getActionById(operationType);
@@ -589,15 +591,20 @@ export class OperationManifestServiceImpl implements Designer.OperationManifestS
 	}
 
 	public getOperationManifest(connectorId: string, operationId: string): Promise<Designer.OperationManifest> {
-		let searchList = [connectorId, operationId];
-		for (let conId in searchList) {
-			let action = this.operationManager.getActionById(searchList[conId]);
-			if (action) {
-				return Promise.resolve({
-					properties: action.properties
-				});
-			}
-		}
+        const manifest = this._lookupOperationManifest(connectorId, operationId);
+        if (manifest) {
+            return Promise.resolve(manifest);
+        } else {
+            let searchList = [connectorId, operationId];
+            for (let conId in searchList) {
+                let action = this.operationManager.getActionById(searchList[conId]);
+                if (action) {
+                    return Promise.resolve({
+                        properties: action.properties
+                    });
+                }
+            }
+        }
 		return Promise.reject("Unknown connector or operation Id");
 	}
 	public getSplitOnOutputs(connectorId: string, operationId: string, splitOn: /*SplitOn*/ any): any {
@@ -609,7 +616,17 @@ export class OperationManifestServiceImpl implements Designer.OperationManifestS
 			}
 		}
 		return null;
-	}
+    }
+
+    private _lookupOperationManifest(connectorId: string, operationId: string): Designer.OperationManifest | undefined {
+        for (const metadata of this.operationManifestData) {
+            if (metadata.connectorId === connectorId || metadata.operationId === operationId) {
+                return metadata.manifest;
+            }
+        }
+
+        return undefined;
+    }
 }
 
 export class Analytics implements Designer.AnalyticsService {

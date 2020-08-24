@@ -92,6 +92,22 @@ export class ConnectorV2Service implements DesignerConnectorV2Service {
             case "setcallscript" : let crmData = await this._rpc.call(SharedDefines.WrapperMessages.GetCrmData);
                                         response = (JSON.parse(crmData).value);
                                         break;
+            case "ListFlows":
+                try {
+                    let data;
+                    if (parameterAlias == "entityLogicalName") {
+                        data = await this._rpc.call(SharedDefines.WrapperMessages.GetEntities);
+                    }
+                    else if (parameterAlias == "flowId") {
+                        data = await this._rpc.call(SharedDefines.WrapperMessages.GetFlowsData, [parameters.entityLogicalName]);
+                    }
+                    response = (JSON.parse(data).value);
+                }
+                catch (error) {
+                    response = [];
+                }
+                break;
+                
             default: response = [];
         }
         return response;

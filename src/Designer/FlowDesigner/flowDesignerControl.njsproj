@@ -73,7 +73,9 @@
     <TypeScriptCompile Include="src\scripts\sharedDefines.ts" />
     <TypeScriptCompile Include="src\scripts\hostService.ts" />
     <TypeScriptCompile Include="src\scripts\macroDesigner.tsx" />
-    <TypeScriptCompile Include="src\scripts\oAuthService.ts" />
+    <TypeScriptCompile Include="src\scripts\flowScript.ts" />
+    <TypeScriptCompile Include="src\scripts\oAuthService.ts"/>
+    <TypeScriptCompile Include="src\scripts\FPIHelper.ts"/>
     <TypeScriptCompile Include="src\scripts\LogicAppDesigner\hostService.ts" />
     <TypeScriptCompile Include="src\scripts\LogicAppDesigner\agentScriptDesigner.tsx">
       <SubType>Code</SubType>
@@ -104,6 +106,7 @@
     <TypeScriptCompile Include="src\scripts\LogicAppDesigner\Logicapp.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Typings\msdyn_MacrosDataLayer.d.ts" />
     <TypeScriptCompile Include="Typings\XrmClientApi.d.ts" />
     <TypeScriptCompile Include="Typings\XrmClientApiDeprecated.d.ts" />
     <TypeScriptCompile Include="Typings\XrmClientApiInternal.d.ts" />

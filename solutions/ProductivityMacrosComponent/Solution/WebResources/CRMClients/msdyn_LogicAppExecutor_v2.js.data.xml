@@ -7,7 +7,11 @@
 	<IntroducedVersion>1.0</IntroducedVersion>
 	<IsEnabledForMobileClient>0</IsEnabledForMobileClient>
 	<IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
-	<DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <DependencyXml>
+    &lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;
+    &lt;Library name="MacrosDataLayer/msdyn_MacrosDataLayer.js" displayName="msdyn_MacrosDataLayer.js" languagecode="1033" description="Macros Data layer" libraryUniqueId="{fcd5888e-cd05-4341-89bc-639501b6824d}" /&gt;
+    &lt;/Dependencies&gt;
+  </DependencyXml>
 	<IsCustomizable>1</IsCustomizable>
 	<CanBeDeleted>0</CanBeDeleted>
 	<IsHidden>0</IsHidden>

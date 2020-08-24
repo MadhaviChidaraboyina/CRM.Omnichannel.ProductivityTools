@@ -1,7 +1,7 @@
 export class Constants {
     public static LogicAppDesignerRelativeUrl = "/flowcontrol/DesignerBlob/iframeLogicappDesigner.html";
     public static BrandColor = '#2266E3';
-
+    public static GetRequestType = "GET";
 }
 
 let globalContext: XrmClientApi.GlobalContext = (window.top as any).Xrm.Utility.getGlobalContext();
@@ -17,6 +17,7 @@ export const manifestConnectorIds = {
 export const manifestOperationIds = {
     setCallScript: 'setcallscript',
     start: 'start',
+    listFlows: 'ListFlows'
 };
 
 export const icons = {
@@ -25,7 +26,8 @@ export const icons = {
     },
     operations :{
         setcallscript : getIconUrl("WebResources/AgentScriptDesigner/msdyn_setDefaultAction.svg"),
-        start : getIconUrl("WebResources/AgentScriptDesigner/msdyn_manualTrigger.svg")
+        start: getIconUrl("WebResources/AgentScriptDesigner/msdyn_manualTrigger.svg"),
+        listFlows: getIconUrl("WebResources/AgentScriptDesigner/msdyn_setDefaultAction.svg")
     }
 
 };

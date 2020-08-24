@@ -2,6 +2,7 @@
 import * as Utils from "./sharedUtils";
 import * as OAuth from "./oAuthService";
 import * as HostService from "./hostService";
+import { ConnectorV2Service } from "./LogicAppDesigner/ConnectorV2";
 
 function getMonacoLocale(editorLocaleName) {
 	// Mapping of the languages Monaco editor supports. Default to english for non-supported languages.
@@ -285,7 +286,10 @@ function initializeDesigner(req) {
 					};
 					let operationManifestServiceFactory = function (analytics) {
 						return new HostService.OperationManifestServiceImpl(designerOptions, operationManager, analytics);
-					};
+                    };
+                    let connectorV2ServiceFactory = function (analytics) {
+                        return new ConnectorV2Service(rpc);
+                    };
 					let flowConfigurationOptions = {
 						apiVersion: designerOptions.ApiVersion,
 						analyticsServiceFactory: function (version) {
@@ -293,7 +297,8 @@ function initializeDesigner(req) {
 						},
 						features: FeaturesToEnable,
 						builtInTypeServiceFactory: builtInTypeServiceFactory,
-						operationManifestServiceFactory: operationManifestServiceFactory,
+                        operationManifestServiceFactory: operationManifestServiceFactory,
+                        connectorV2ServiceFactory: connectorV2ServiceFactory,
 						urlService: urlService,
 						connectionServiceFactory: connectionServiceFactory,
 						recommendationServiceFactory: recommendationServiceFactory,

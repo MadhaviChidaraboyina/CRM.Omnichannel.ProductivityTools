@@ -6,6 +6,7 @@
 /// <reference path="Constants.ts" />
 /// <reference path="../../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 /// <reference path="../TelemetryHelper.ts" />
+/// <reference path="FPIHelper.ts" />
 
 /** @internal */
 namespace Microsoft.ProductivityMacros.Internal {
@@ -1462,4 +1463,81 @@ namespace Microsoft.ProductivityMacros.Internal {
             });
         });
     }
+
+    export function triggerFlow(actionName: string, actionInputs: any): Promise<string> {
+        if (!(isNullOrUndefined(actionInputs))) {
+            return new Promise<any>((resolve, reject) => {
+                var ouputResponse: any = {};
+                var sessionContextParams: any = {};
+
+                let fpiHelper = new FPIHelper();
+                fpiHelper.fetchFlowsEnvId()
+                    .then((flowEnvIdResponse) => {
+                        var flowEnvId: string = flowEnvIdResponse.name;
+                        // Build dialog parameters for Flow MDD.
+                        const dialogParams: XrmClientApi.Parameters = populateFlowDialogParams(
+                            actionInputs.flowId,
+                            actionInputs.entityLogicalName,
+                            actionInputs.entityRecordId,
+                            flowEnvId);
+
+                        // Set dialog options
+                        const dialogOptions: XrmClientApi.DialogOptions = {} as XrmClientApi.DialogOptions;
+                        dialogOptions.height = Constants.DIALOG_HEIGHT;
+                        dialogOptions.width = Constants.DIALOG_WIDTH;
+
+                        // Open dialog to invoke the Flow
+                        return Xrm.Navigation.openDialog(Constants.MICROSOFT_FLOWS_DIALOG, dialogOptions, dialogParams).then((result: any) => {
+                            sessionContextParams[actionName + Constants.SuffixFlowId] = result.parameters.flow_id;
+                            ouputResponse[Constants.OutputResult] = sessionContextParams;
+                            return resolve(ouputResponse);
+                        },
+                            (error: Error) => {
+                                let errorData = generateErrorObject(error, "ProductivityMacrosWrapper - triggerFlow", errorTypes.XrmApiError);
+                                logFailure("triggerFlow", errorData, "");
+                                return reject(error);
+                            });
+                    });
+
+            });
+        } else {
+            let errorObject = {} as IErrorHandler;
+            errorObject.errorMsg = "formInputs is Null or Undefined";
+            errorObject.errorType = errorTypes.InvalidParams;
+            errorObject.reportTime = new Date().toUTCString();
+            errorObject.sourceFunc = "ProductivityMacrosWrapper - triggerFlow";
+            logFailure("triggerFlow", errorObject, "");
+            return Promise.reject("triggerFlow - formInputs is Null or Undefined");
+        }
+    }
+
+
+    function populateFlowDialogParams(flowId: any, entityLogicalName: any, entityRecordId: any,
+        flowEnvId: String): XrmClientApi.Parameters {
+        const dialogParams: XrmClientApi.Parameters = {};
+        const entityIds = [];
+        entityIds.push(entityRecordId);
+        const entityId = JSON.stringify(entityIds);
+        dialogParams[Constants.ENTITIES_ID] = entityId;
+
+        dialogParams[Constants.DIALOG_FLOW_ID] = flowId;
+        dialogParams[Constants.DIALOG_FLOWS_ENVIRONMENT_ID] = flowEnvId;
+        dialogParams[Constants.DIALOG_ORG_UNIQUE_NAME] = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
+        const destinationUrl = Xrm.Utility.getGlobalContext().getAdvancedConfigSetting(
+            Constants.FLOW_DESTINATION_URL
+        );
+
+        dialogParams[Constants.DIALOG_ENTITY_LOGICAL_NAME] = entityLogicalName;
+        dialogParams[Constants.DIALOG_FLOWS_DESTINATION_URL] = destinationUrl;
+
+        const flowFpiUrl = Xrm.Utility.getGlobalContext().getAdvancedConfigSetting(Constants.FLOW_FPI_URL);
+        dialogParams[Constants.DIALOG_FLOWS_FPI_SITE_URL] =
+            flowFpiUrl + Constants.FLOW_FPI_URL_ENABLE_WIDGET_V2_PARAMETER;
+
+        // Always load widget v2.
+        dialogParams[Constants.DIALOG_FLOWS_ENABLE_WIDGET_V2] = true;
+
+        return dialogParams;
+    }
+
 }

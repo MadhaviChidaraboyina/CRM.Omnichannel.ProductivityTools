@@ -12,6 +12,7 @@
     "sourceMap": true,
     "rootDirs": [ "src" ],
     "traceResolution": false,
+    "skipLibCheck": true,
     "paths": {
       "*": [ "*" ],
       "LogicAppsCore": ["LogicApps/core/scripts/*" ]
