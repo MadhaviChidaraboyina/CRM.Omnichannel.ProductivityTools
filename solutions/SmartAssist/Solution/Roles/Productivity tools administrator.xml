@@ -2,7 +2,17 @@
 <Role id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" name="Productivity tools administrator">
 	<IsCustomizable>0</IsCustomizable>
 	<RolePrivileges>
-		<RolePrivilege name="prvWritemsdyn_smartassistconfig" level="Global" />
-		<RolePrivilege name="prvWritemsdyn_adaptivecardconfiguration" level="Global" />
+		<RolePrivilege name="prvCreatemsdyn_adaptivecardconfiguration" level="Global" />
+				<RolePrivilege name="prvCreatemsdyn_smartassistconfig" level="Global" />
+				<RolePrivilege name="prvCreatemsdyn_suggestionssetting" level="Global" />
+				<RolePrivilege name="prvDeletemsdyn_adaptivecardconfiguration" level="Global" />
+				<RolePrivilege name="prvDeletemsdyn_smartassistconfig" level="Global" />
+				<RolePrivilege name="prvDeletemsdyn_suggestionssetting" level="Global" />
+				<RolePrivilege name="prvReadmsdyn_adaptivecardconfiguration" level="Global" />
+				<RolePrivilege name="prvReadmsdyn_smartassistconfig" level="Global" />
+				<RolePrivilege name="prvReadmsdyn_suggestionssetting" level="Global" />
+				<RolePrivilege name="prvWritemsdyn_adaptivecardconfiguration" level="Global" />
+				<RolePrivilege name="prvWritemsdyn_smartassistconfig" level="Global" />
+				<RolePrivilege name="prvWritemsdyn_suggestionssetting" level="Global" />
 	</RolePrivileges>
 </Role>
