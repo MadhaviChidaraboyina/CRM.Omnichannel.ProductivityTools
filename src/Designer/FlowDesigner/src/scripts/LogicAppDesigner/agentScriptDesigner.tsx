@@ -368,8 +368,8 @@ function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, to
     //TODO: add telemetry TASK 1960251
     //Utils.Utils.logAdminTelemetry(msg);
     console.log(msg.eventTimeStamp + " " + msg.eventType + " " + msg.level + " " + msg.eventName + " " + msg.message);
-    if (userVisibleError) {
-        window.top.Xrm.Navigation.openAlertDialog({ text: Utils.Utils.getResourceString(userVisibleError) }).then(function () {
+    if (userVisibleError) { 
+        window.top.Xrm.Navigation.openAlertDialog({ text: AgentScriptUtils.AgentScriptUtils.getResourceString(userVisibleError) }).then(function () {
             if (toClose) {
                 closeDesigner();
             }

@@ -123,7 +123,7 @@
   <data name="Set_Default_AgentScript_Yes_Help_Text" xml:space="preserve">
     <value>Set the toggle to Yes to enable and build expression to set the default script for a particular session type.</value>
   </data>
-    <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
+  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
     <value>Built-in</value>
     <comment>Display string for logic app built in category</comment>
   </data>
@@ -175,12 +175,44 @@
     <value>Condition</value>
     <comment>Summary for expression builder for expression evaluation</comment>
   </data>
-    <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
+  <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
     <value>Save and close</value>
     <comment>Action to save and close</comment>
   </data>
   <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
     <value>Cancel</value>
     <comment>Action to cancel</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" xml:space="preserve">
+    <value>Unable to read macro definition</value>
+    <comment>Error message when the macro definition to be edited could not be read</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
+    <value>Unable to read action templates</value>
+    <comment>Error message when templates entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
+    <value>Unable to find designer configuration</value>
+    <comment>Error message when config entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_CDS_WRITE_ERROR" xml:space="preserve">
+    <value>Unable to save macro definition</value>
+    <comment>Error message when write to CDS fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
+    <value>Designer control initialization failed</value>
+    <comment>Error message when designer control initialization fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">
+    <value>Unable to create macro definition</value>
+    <comment>Error message when designer control cannot generate a valid JSON</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_LOAD_FAILURE" xml:space="preserve">
+    <value>Unable to load macro definition</value>
+    <comment>Error message when the control cannot load the macro definition</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_RENDER_FAILURE" xml:space="preserve">
+    <value>Unable to render macro designer control</value>
+    <comment>Error message when the control cannot be rendered</comment>
   </data>
 </root>
