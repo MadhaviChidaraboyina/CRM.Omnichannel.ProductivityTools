@@ -127,7 +127,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param saConfig saConfig
          * @param callback callback to create SmartassistAnyEntityControl
          */
-        public loadWebresourceAndRenderSmartassistAnyEntity(saConfig: SAConfig, callback: (config: SAConfig, emptyStatus: SuggestionsEmptyStatus, recordId: string, update: boolean) => void, emptyStatus: SuggestionsEmptyStatus, recordId: string, update: boolean): void {
+        public loadWebresourceAndRenderSmartassistAnyEntity(saConfig: SAConfig, callback: (config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean) => void, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean): void {
             let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
             //SuggestionWebResourceUrl is empty for TPBot
             if (!document.getElementById(src) && !Utility.isNullOrEmptyString(saConfig.SuggestionWebResourceUrl)) {
@@ -151,7 +151,7 @@ module MscrmControls.SmartassistPanelControl {
             }
         }
 
-        public renderSmartassistAnyEntityControl(config: SAConfig, emptyStatus: SuggestionsEmptyStatus, recordId: string, update: boolean): void {
+        public renderSmartassistAnyEntityControl(config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean): void {
             const componentId = Constants.SAAnyEntityControlContainerId + config.SmartassistConfigurationId;
             let properties: any =
             {
@@ -177,7 +177,7 @@ module MscrmControls.SmartassistPanelControl {
                         Usage: 1, // input
                         Value: this.ppSessionContext
                     },
-                    EmptyStatus: {
+                    AnyEntityContainerState: {
                         type: "Multiple",
                         Primary: false,
                         Static: true,
@@ -209,14 +209,8 @@ module MscrmControls.SmartassistPanelControl {
             // Get Configs to display suggestions
             var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName);
 
-            // If no config to display, get config to executte anyentity control to show no Admin settings 
-            configs = (configs.length > 0 ? configs : SAConfigDataManager.Instance.getSAConfigBySource(entityName)) as SAConfig[];
-
-            // config to handle any entity source(other than case)
-            configs = (configs.length > 0 ? configs : await SAConfigDataManager.Instance.getCaseKMConfigByAppId());
-
-            var emptyStatus: SuggestionsEmptyStatus = await this.checkEmptyStatus(entityName, recordId);
-            if (configs.length < 1 || emptyStatus != SuggestionsEmptyStatus.Valid) {
+            var emptyStatus: AnyEntityContainerState = await this.checkEmptyStatus(entityName, recordId, configs);
+            if (configs.length < 1 || emptyStatus != AnyEntityContainerState.Enabled) {
                 // No Data to PP
                 this.DispatchNoDataEvent();
             }
@@ -327,17 +321,17 @@ module MscrmControls.SmartassistPanelControl {
          * @param entityName
          * @param entityId
          */
-        private async checkEmptyStatus(entityName: string, entityId: string) {
+        private async checkEmptyStatus(entityName: string, entityId: string, configs: SAConfig[]) {
             if (!Utility.isValidSourceEntityName(entityName) || Utility.isNullOrEmptyString(entityId)) {
-                return SuggestionsEmptyStatus.Invalid;
+                return AnyEntityContainerState.NoSuggestions;
             }
             var currentSession = Utility.getCurrentSessionId();
             var settings = await SAConfigDataManager.Instance.getSuggestionsSetting(currentSession);
-            var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName);
-            if (!settings.CaseIsEnabled && !settings.KbIsEnable && configs.length < 1) {
-                return SuggestionsEmptyStatus.SuggestionsDisabled;
+            var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion)
+            if (!settings.CaseIsEnabled && !settings.KbIsEnable && !botConfig) {
+                return AnyEntityContainerState.Disabled;
             }
-            return SuggestionsEmptyStatus.Valid;
+            return AnyEntityContainerState.Enabled;
         }
     }
 }

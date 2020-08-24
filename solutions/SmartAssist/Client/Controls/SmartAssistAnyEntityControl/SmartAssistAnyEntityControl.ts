@@ -14,7 +14,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
-        private EmptyStatus: SuggestionsEmptyStatus = SuggestionsEmptyStatus.Valid;
+        private AnyEntityContainerState: AnyEntityContainerState = AnyEntityContainerState.Enabled;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;
         private parentDivId: string = "";
@@ -54,7 +54,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this.validateParameters(context);
                     this.recordId = context.parameters.RecordId.raw;
                     this.saConfig = context.parameters.SAConfig.raw as any;
-                    this.EmptyStatus = context.parameters.EmptyStatus.raw as any;
+                    this.AnyEntityContainerState = context.parameters.AnyEntityContainerState.raw as any;
 
                     // Anyentity Main Container
                     this.parentDivId = StringConstants.AnyEntityContainer + this.saConfig.SmartassistConfigurationId;
@@ -132,7 +132,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             //Get Current context
             await this.getCurrentContext();
             this.showLoader();
-            if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.EmptyStatus == SuggestionsEmptyStatus.Valid) {
+            if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.AnyEntityContainerState == AnyEntityContainerState.Enabled) {
                 this.appendTitle();
                 const componentId = "TPBot";
                 let properties: any =
@@ -149,17 +149,18 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
                 $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
             }
-            else {
-                this.appendTitle();
+            else {               
                 var data;
-                if (this.EmptyStatus != SuggestionsEmptyStatus.Valid) {
+                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled) {
+                    this.appendTitle();
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                     if (!noSuggestionElm) {
-                        var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig, this.EmptyStatus);
+                        var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
                         $("#" + this.parentDivId).append(emptyRecordElm);
                     }
                 }
-                else {
+                else if (this.saConfig.IsValid) {
+                    this.appendTitle();
 
                     // Get Suggestions data records for provide saConfig
                     if (isFPBot == true) {
@@ -177,7 +178,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     if (dataLength < 1) {
                         var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                         if (!noSuggestionElm) {
-                            var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig, this.EmptyStatus);
+                            var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
                             $("#" + this.parentDivId).append(emptyRecordElm);
                         }
                     }
@@ -214,9 +215,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
                     }
                 }
-
             }
-
             setTimeout(() => {
                 this.hideLoader();
             }, StringConstants.LoaderTimeout);

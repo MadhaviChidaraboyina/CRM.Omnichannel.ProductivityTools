@@ -11,7 +11,7 @@ module MscrmControls.SmartassistPanelControl {
         private saConfig: SAConfig[] = [];
         private suggestionsSetting: { [key: string]: any } = {};
         private suggestionsSettingSchema: SuggestionsSettingSchema = new SuggestionsSettingSchema();
-        private _isSmartAssistAvailable: boolean = null;
+        private isSmartbotAvailable: boolean = null;
 
         constructor() {
         }
@@ -36,69 +36,51 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**
-         * Get SA Configuration KM and case config only
-         */
-        public async getCaseKMConfigByAppId() {
-            var kmAdded = false;
-            var caseAdded = false;
-            var appConfig = await Utility.getAppRuntimeEnvironment();
-            return this.saConfig.filter((data) => {
-                if (appConfig.AppConfigName !== data.CurrentAppConfigName) return false;
-                if (SuggestionType.KnowledgeArticleSuggestion == data.SuggestionType && !kmAdded) {
-                    kmAdded = true;
-                    return true;
-                }
-                if (SuggestionType.SimilarCaseSuggestion == data.SuggestionType && !caseAdded) {
-                    caseAdded = true;
-                    return true;
-                }
-                return false;
-            });
-        }
-
-        /**
-         * Get in memmory SA config by entitySource
-         * @param sourceEntity: source entity name
-         */
-        public async getSAConfigBySource(sourceEntity: string) {
-            var isSAAvailable = false;
-            var botConfig = this.saConfig.find(i => i.SuggestionType == SuggestionType.BotSuggestion)
-            if (botConfig) {
-                isSAAvailable = await this.isSmartassistAvailable() as any;
-            }
-            return this.saConfig.filter((data) => {
-                if (sourceEntity !== data.SourceEntityName) return false;
-                if (data.SuggestionType == SuggestionType.BotSuggestion) return isSAAvailable;
-                return true;
-            });
-        }
-
-        /**
-         * Get Filtered SA config from admin suggestions setting
-         * @param saConfig: All active SA config
-         */
+        * Get Filtered SA config from admin suggestions setting
+        * @param saConfig: All active SA config
+        */
         public async getFilteredSAConfig(sourceEntity: string) {
             var sessionId = Utility.getCurrentSessionId();
             await this.getSuggestionsSetting(sessionId);
             var configs = await this.getSAConfigurations();
 
-            var isSAAvailable = false;
+            var isSmartbotAvailable = false;
             var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion)
             if (botConfig) {
-                isSAAvailable = await this.isSmartassistAvailable() as any;
+                isSmartbotAvailable = await this.isSmartassistAvailable() as any;
             }
 
             var result = configs.filter((data) => {
+                if (data.SuggestionType == SuggestionType.BotSuggestion) return isSmartbotAvailable;
+
                 //Source entity filter
-                if (sourceEntity !== data.SourceEntityName) return false;
-                //Filter admin setting
+                if (Utility.isValidSourceEntityName(sourceEntity)) {
+                    if (sourceEntity != data.SourceEntityName) {
+                        return false;
+                    }
+                }
+                else {
+                    data.IsValid = false;
+                    if (data.CurrentAppConfigName == Constants.ocAppName && data.SourceEntityName != Constants.LWIEntityName) {
+                        return false;
+                    }
+                }
+                if (sourceEntity !== data.SourceEntityName) {
+                    data.IsValid = false;
+                    if (data.CurrentAppConfigName == Constants.ocAppName && data.SourceEntityName != Constants.LWIEntityName) {
+                        return false;
+                    }
+                }
+
                 switch (data.SuggestionType) {
                     case SuggestionType.SimilarCaseSuggestion:
-                        return this.suggestionsSetting[sessionId].CaseIsEnabled;
+                        data.IsValid = this.suggestionsSetting[sessionId].CaseIsEnabled;
+                        return true
                     case SuggestionType.KnowledgeArticleSuggestion:
-                        return this.suggestionsSetting[sessionId].KbIsEnable;
+                        data.IsValid = this.suggestionsSetting[sessionId].KbIsEnable;
+                        return true;
                     case SuggestionType.BotSuggestion:
-                        return isSAAvailable;
+                        return isSmartbotAvailable;
                     default:
                         return true;
                 }
@@ -205,10 +187,10 @@ module MscrmControls.SmartassistPanelControl {
                 return false;
             }
             var sessionId = Utility.getCurrentSessionId();
-            let isSmartAssistBotAvailable: any = sessionStorage.getItem(sessionId + liveworkStreamItem + Constants.isSmartAssistFound);
+            let isSmartAssistBotAvailable: any = sessionStorage.getItem(sessionId + liveworkStreamItem + Constants.isSmartAssistFoundName);
             if (isSmartAssistBotAvailable == null) {
                 await this.FetchSmartAssistBotRecordAndSetCriteria(liveworkStreamItem, sessionId);
-                return this._isSmartAssistAvailable;
+                return this.isSmartbotAvailable;
             }
             return (isSmartAssistBotAvailable == "true");
         }
@@ -225,15 +207,15 @@ module MscrmControls.SmartassistPanelControl {
                 let fetchXmlQuery = Constants.FetchOperator + encodeURIComponent(fetchXml);
                 let dataResponse = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(Constants.UserEntityName, fetchXmlQuery) as any;
                 let entityRecords: WebApi.Entity[] = dataResponse.entities;
-                this._isSmartAssistAvailable = entityRecords.length > 0;
-                sessionStorage.setItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFound, this._isSmartAssistAvailable as any)
+                this.isSmartbotAvailable = entityRecords.length > 0;
+                sessionStorage.setItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFoundName, this.isSmartbotAvailable as any)
 
                 eventParameters.addParameter("total SmartAssistBotRecordFetch", entityRecords.length.toString());
                 SmartassistPanelControl._telemetryReporter.logSuccess("Main Component", "SmartAssistBotRecordFetch", eventParameters);
             }
             catch (error) {
-                this._isSmartAssistAvailable = null;
-                sessionStorage.removeItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFound);
+                this.isSmartbotAvailable = null;
+                sessionStorage.removeItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFoundName);
                 eventParameters.addParameter("Exception Details", error.message);
                 SmartassistPanelControl._telemetryReporter.logError("Main Component", "SmartAssistBotRecordFetch", "Error occurred while fetching smart assist bot", eventParameters);
             }

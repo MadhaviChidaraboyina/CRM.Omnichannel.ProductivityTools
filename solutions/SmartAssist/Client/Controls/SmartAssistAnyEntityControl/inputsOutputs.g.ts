@@ -9,7 +9,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 	export interface IInputBag {
 		RecordId: Mscrm.SingleLineProperty;
 		SAConfig: Mscrm.StringProperty;
-		EmptyStatus: Mscrm.StringProperty;
+		AnyEntityContainerState: Mscrm.StringProperty;
 		PPSessionContext: Mscrm.StringProperty;
 	}
 

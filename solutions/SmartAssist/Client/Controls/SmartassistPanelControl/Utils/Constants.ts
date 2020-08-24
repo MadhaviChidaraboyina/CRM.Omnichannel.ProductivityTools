@@ -22,15 +22,16 @@ module MscrmControls.SmartassistPanelControl {
         public static SAAnyEntityControlContainerId = "SAAnyEntityControl_";
         public static FPBTag = "FPB";
         public static TPBTag = "smartbot";
-        public static isSmartAssistFound = "_isSmartAssistFound";
+        public static isSmartAssistFoundName = "_isSmartAssistFound";
         public static UserEntityName = "systemuser";
-        public static FetchOperator = "?fetchXml=";     
+        public static FetchOperator = "?fetchXml=";
 
         //AppConfig
         public static saAppRealtionName = "msdyn_smartassistconfig_msdyn_appconfig";
         public static appIdSchema = "msdyn_appconfigurationid";
         public static appConfigEntityName = "msdyn_appconfiguration";
         public static uniqueNameSchema = "msdyn_uniquename";
+        public static ocAppName = "msdyn_oehapp";
 
         //TPBot
         public static ConversatonControlOrigin = "ConversatonControlOrigin";
@@ -213,9 +214,21 @@ module MscrmControls.SmartassistPanelControl {
     }
 
     /**Empty status enum*/
-    export enum SuggestionsEmptyStatus {
-        Valid = 0,
-        Invalid = 1,
-        SuggestionsDisabled = 2
+    export enum AnyEntityContainerState {
+        /**Just show that section which is enabled:
+         * 1. Suggestions turned ON,
+         * 2. Supported Source entity
+         * 3. Valid SAConfig - SAConfig is present or not
+         * */
+        Enabled = 0,
+        /** No Suggestions Screen:
+         * 1. Unsupported Source entity
+         * 2. Source Entity ID is empty - opening a new session with create screen
+         * */
+        NoSuggestions = 1,
+        /**AI suggestions not turned ON:
+         * 1. Both are disabled and TPB not configured
+         * */
+        Disabled = 2
     }
 }
