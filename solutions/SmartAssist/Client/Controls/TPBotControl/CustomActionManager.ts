@@ -166,7 +166,11 @@ module MscrmControls.ProductivityPanel.TPBot {
 					}
 				};
 
-				new (window as any).top.Microsoft.CIFramework.External.CIFExternalUtilityImpl().createTab(tabInput);
+				if (this.CreateTab(tabInput)) {
+					eventParameters.addParameter("Message", "CustomAction OpenForm Succeeded");
+					this.logger.logSuccess(this.logger.baseComponent, "CustomActionOpenForm", eventParameters);
+					return Promise.resolve();
+				}
 
 			} catch (Error) {
 				eventParameters.addParameter("Exception Details", Error);
@@ -210,13 +214,24 @@ module MscrmControls.ProductivityPanel.TPBot {
 						isFocused: true
 					}
 				};
-				new (window as any).top.Microsoft.CIFramework.External.CIFExternalUtilityImpl().createTab(tabInput);
+				if (this.CreateTab(tabInput)) {
+					eventParameters.addParameter("Message", "CustomAction CreateEntity Succeeded");
+					this.logger.logSuccess(this.logger.baseComponent, "CustomActionCreateEntity", eventParameters);
+					return Promise.resolve();
+				}
 
 			} catch (Error) {
 				eventParameters.addParameter("Exception Details", Error);
 				this.logger.logError(this.logger.baseComponent, "CustomActionCreateEntity", "Error occurred while running custom action - CreateEntity", eventParameters);
 				return Promise.reject("Failed while executing custom action to create entity");
 			}
+		}
+
+		private CreateTab(tabInput: any): boolean {
+			Xrm.App.sessions.getFocusedSession().tabs.createTab(tabInput).then(() => {
+				return true;
+			});
+			return false;
 		}
 	}
 }
