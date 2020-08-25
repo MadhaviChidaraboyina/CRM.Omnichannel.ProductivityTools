@@ -199,6 +199,9 @@ module MscrmControls.Smartassist.Suggestion {
                     actionSet.parse(item.actionset, errors);
                     actionSet.orientation = AdaptiveCards.Orientation.Vertical;
                     actionSet.hostConfig.actions.buttonSpacing = 3;
+                    if (actionSet.getActionCount() == 0) {
+                        this._popupOwner.style.opacity = "0.5";
+                    }
                     for (let i = 0; i < actionSet.getActionCount(); i++) {
                         var action = actionSet.getActionAt(i);
                         action.onExecute = this.onExecuteAction.bind(this);
