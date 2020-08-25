@@ -133,6 +133,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             await this.getCurrentContext();
             this.showLoader();
             if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.AnyEntityContainerState == AnyEntityContainerState.Enabled) {
+                //TODO: add telemetry for all the scenarios
                 this.appendTitle();
                 const componentId = "TPBot";
                 let properties: any =
@@ -149,8 +150,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
                 $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
             }
-            else {               
-                var data;
+            else {          
+                //TODO: add telemetry for all the scenarios
+                var data;                
                 if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled) {
                     this.appendTitle();
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);

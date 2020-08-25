@@ -11,7 +11,7 @@ module MscrmControls.SmartassistPanelControl {
         private saConfig: SAConfig[] = [];
         private suggestionsSetting: { [key: string]: any } = {};
         private suggestionsSettingSchema: SuggestionsSettingSchema = new SuggestionsSettingSchema();
-        private isSmartbotAvailable: boolean = null;
+        private _isSmartbotAvailable: boolean = null;
 
         constructor() {
         }
@@ -47,7 +47,7 @@ module MscrmControls.SmartassistPanelControl {
             var isSmartbotAvailable = false;
             var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion)
             if (botConfig) {
-                isSmartbotAvailable = await this.isSmartassistAvailable() as any;
+                isSmartbotAvailable = await this.isSmartbotAvailable() as any;
             }
 
             var result = configs.filter((data) => {
@@ -174,7 +174,7 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**Check if Smart assist is added in OC WS */
-        public async isSmartassistAvailable() {
+        public async isSmartbotAvailable() {
             var liveworkStreamItem = Utility.getLiveWorkStreamId();
             if (Utility.isNullOrEmptyString(liveworkStreamItem)) {
                 return false;
@@ -183,7 +183,7 @@ module MscrmControls.SmartassistPanelControl {
             let isSmartAssistBotAvailable: any = sessionStorage.getItem(sessionId + liveworkStreamItem + Constants.isSmartAssistFoundName);
             if (isSmartAssistBotAvailable == null) {
                 await this.FetchSmartAssistBotRecordAndSetCriteria(liveworkStreamItem, sessionId);
-                return this.isSmartbotAvailable;
+                return this._isSmartbotAvailable;
             }
             return (isSmartAssistBotAvailable == "true");
         }
@@ -200,14 +200,14 @@ module MscrmControls.SmartassistPanelControl {
                 let fetchXmlQuery = Constants.FetchOperator + encodeURIComponent(fetchXml);
                 let dataResponse = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(Constants.UserEntityName, fetchXmlQuery) as any;
                 let entityRecords: WebApi.Entity[] = dataResponse.entities;
-                this.isSmartbotAvailable = entityRecords.length > 0;
-                sessionStorage.setItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFoundName, this.isSmartbotAvailable as any)
+                this._isSmartbotAvailable = entityRecords.length > 0;
+                sessionStorage.setItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFoundName, this._isSmartbotAvailable as any)
 
                 eventParameters.addParameter("total SmartAssistBotRecordFetch", entityRecords.length.toString());
                 SmartassistPanelControl._telemetryReporter.logSuccess("Main Component", "SmartAssistBotRecordFetch", eventParameters);
             }
             catch (error) {
-                this.isSmartbotAvailable = null;
+                this._isSmartbotAvailable = null;
                 sessionStorage.removeItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFoundName);
                 eventParameters.addParameter("Exception Details", error.message);
                 SmartassistPanelControl._telemetryReporter.logError("Main Component", "SmartAssistBotRecordFetch", "Error occurred while fetching smart assist bot", eventParameters);

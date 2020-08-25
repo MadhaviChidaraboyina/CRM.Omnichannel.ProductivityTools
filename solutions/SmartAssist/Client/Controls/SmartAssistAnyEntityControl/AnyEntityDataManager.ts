@@ -4,7 +4,6 @@
         private _sessionStateManager: SessionStateManager;
         private _sessionStorageManager: SessionStorageManager;
         private _controlContext: Mscrm.ControlData<IInputBag>;
-        private _isSmartAssistAvailable: boolean = null;
         private CONSTRUCTOR_CACHE: {
             [name: string]: {
                 new(): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider;
