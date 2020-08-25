@@ -192,22 +192,25 @@ module MscrmControls.Smartassist.Suggestion {
         parse(json: any, errors?: Array<AdaptiveCards.IValidationError>) {
             const actionItems = json.items;
             this._imageUrl = json.image;
+            var hasAction = false;
             for (var item of actionItems) {
                 const displayAction = item && ((item.hasOwnProperty(Suggestion.Constants.FilterExpression) && item[Suggestion.Constants.FilterExpression]) || !item.hasOwnProperty(Suggestion.Constants.FilterExpression));
                 if (displayAction == true) {
+                    hasAction = displayAction;
                     let actionSet = new AdaptiveCards.ActionSet();
                     actionSet.parse(item.actionset, errors);
                     actionSet.orientation = AdaptiveCards.Orientation.Vertical;
                     actionSet.hostConfig.actions.buttonSpacing = 3;
-                    if (actionSet.getActionCount() == 0) {
-                        this._popupOwner.style.opacity = "0.5";
-                    }
                     for (let i = 0; i < actionSet.getActionCount(); i++) {
                         var action = actionSet.getActionAt(i);
                         action.onExecute = this.onExecuteAction.bind(this);
                     }
                     this._popupActionContainer.addItem(actionSet);
                 }
+            }
+
+            if (!hasAction) {
+                this._popupOwner.style.opacity = "0.5";
             }
         }
     }
