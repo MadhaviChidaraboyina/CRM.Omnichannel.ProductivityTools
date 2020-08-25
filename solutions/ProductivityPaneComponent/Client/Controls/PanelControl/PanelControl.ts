@@ -89,7 +89,8 @@ module MscrmControls.PanelControl {
                     const data = {
                         productivityToolSelected: this.productivityPaneConfigData.getDefaultTool().toolName,
                         panelToggle: this.productivityPaneConfigData.productivityPaneMode,
-                        isCollapsedByUser: false
+                        isCollapsedByUser: false,
+                        isToggledByUser: false
                     }
                      for(let tool of this.productivityPaneConfigData.productivityToolsConfig.ToolsList){
                          data[LocalStorageKeyConstants.hasData+tool.toolControlName] = true;
@@ -127,8 +128,8 @@ module MscrmControls.PanelControl {
             let isRTL = this.context.client.isRTL;
             let sessionContextJSON = JSON.stringify(this.sessionChangeManager.getSessionChangeEventData());
             let anchorTabContextJSON = JSON.stringify(this.sessionChangeManager.AnchorTabContext);
-
-            let toolSelected: ToolConfig = this.productivityPaneConfigData.getToolByName(this.productivityToolSelected);
+            let sessionData = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
+            let toolSelected: ToolConfig = this.productivityPaneConfigData.getToolByName(sessionData.productivityToolSelected);
 
             let toolsList: Mscrm.Component[] = [];
             this.productivityPaneConfigData.productivityToolsConfig.ToolsList.forEach((tool, index) => {
@@ -368,6 +369,7 @@ module MscrmControls.PanelControl {
                 let sessionData = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
                 if(sessionData!=undefined){
                     this.panelToggle = sessionData.panelToggle;
+                    this.productivityToolSelected = sessionData.productivityToolSelected;
                 }
                 let paneState = this.productivityPaneConfigData.productivityPaneState;
                 if (paneState == true) {
@@ -438,6 +440,7 @@ module MscrmControls.PanelControl {
             let sessionData = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
             sessionData.productivityToolSelected = this.productivityToolSelected;
             sessionData.isCollapsedByUser = this.panelToggle;
+            sessionData.isToggledByUser = true;
             sessionData.panelToggle = !this.panelToggle;
             this.panelToggle = !this.panelToggle;
             this.panelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, sessionData);
@@ -469,6 +472,7 @@ module MscrmControls.PanelControl {
             let sessionData = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
             sessionData.productivityToolSelected = this.productivityToolSelected;
             sessionData.panelToggle = this.panelToggle;
+            sessionData.isToggledByUser = true;
             if(isCollapsedByUser != undefined){
                  sessionData.isCollapsedByUser = isCollapsedByUser;
             }            
