@@ -35,7 +35,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             this._handleDismissEvent = this.handleDismissEvent.bind(this);
             this.receiveFPBMessageEventHandler = this.receiveMessage.bind(this);
             window.top.addEventListener(StringConstants.DismissCardEvent, this._handleDismissEvent, false);
-            this.sessionCloseHandlerId = Microsoft.AppRuntime.Sessions.addOnAfterSessionClose(this.handleSessionClose.bind(this));
+            this.handleSessionClose();
         }
 
 		/**
@@ -115,13 +115,11 @@ module MscrmControls.SmartAssistAnyEntityControl {
 		 */
         public destroy(): void {
             window.top.removeEventListener(StringConstants.DismissCardEvent, this._handleDismissEvent, false);
-            Microsoft.AppRuntime.Sessions.removeOnAfterSessionClose(this.sessionCloseHandlerId);
             this._sessionStateManager = null;
             this._sessionStorageManager = null;
 
             // Remove listener on session close
             window.top.removeEventListener("message", this.receiveFPBMessageEventHandler, false);
-
         }
 
         /**
@@ -276,17 +274,30 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }
         }
 
-        private handleSessionClose(event: any) {
-            try {
-                const sessionId = event.getEventArgs()._inputArguments.sessionId;
-                const cacheData = window.sessionStorage.getItem(sessionId)
-                if (cacheData) {
-                    const suggestionIds = JSON.parse(cacheData) as Array<string>;
-                    suggestionIds.forEach(id => this._sessionStorageManager.deleteRecord(id));
-                    window.sessionStorage.removeItem(sessionId);
+        /**Delete suggestion states on UI session close */
+        private handleSessionClose() {
+            // TODO: Revert(remove handler from window) this logic when PP is not destroyed in home tab
+            if (!window["HandleSuggestionDataOnSessionClose"]) {
+                window["HandleSuggestionDataOnSessionClose"] = (event: any) => {                  
+                    var sessions = [];
+                    if (event.type == "unload") {
+                        var allSessions = Microsoft.AppRuntime.Sessions.getAll();
+                        sessions.concat(allSessions);
+                    }
+                    else {
+                        sessions.push(event.getEventArgs()._inputArguments.sessionId);
+                    }                    
+                    for (let i = 0; i < sessions.length; i++) {
+                        const cacheData = window.sessionStorage.getItem(sessions[i]);
+                        if (cacheData) {
+                            const suggestionIds = JSON.parse(cacheData) as Array<string>;
+                            suggestionIds.forEach(id => window.sessionStorage.removeItem(id));
+                            window.sessionStorage.removeItem(sessions[i]);
+                        }
+                    }                    
                 }
-            } catch (error) {
-                // TODo: Unable to clear cache.
+                this.sessionCloseHandlerId = Microsoft.AppRuntime.Sessions.addOnAfterSessionClose((<any>window).HandleSuggestionDataOnSessionClose);
+                window.addEventListener("unload", (<any>window).HandleSuggestionDataOnSessionClose);
             }
         }
 

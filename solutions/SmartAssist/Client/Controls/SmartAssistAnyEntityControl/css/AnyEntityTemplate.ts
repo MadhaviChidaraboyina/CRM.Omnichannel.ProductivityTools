@@ -6,7 +6,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
         public static get(): string {
             return `
-			<style id="${StringConstants.AnyentityStyleTemplateId}">
+			<style>
 				body, html {
 					height: 100%;
 					width: 99%;
