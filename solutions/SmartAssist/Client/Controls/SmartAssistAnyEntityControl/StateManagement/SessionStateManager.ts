@@ -64,9 +64,13 @@
          * @param suggestionId
          */
         addRecord(entityId: string, configId: string, suggestionId: string) {
-            let cacheData = this.getAllRecords(entityId)[configId];
-            if (cacheData) {
-                cacheData.push(suggestionId);
+            let cacheDataForSession = this.getAllRecords(entityId);
+            let cacheDataForConfig = cacheDataForSession[configId];
+            if (cacheDataForConfig) {
+                const sessionContext = Utility.getCurrentSessionContext();
+                cacheDataForConfig.push(suggestionId);
+                cacheDataForSession[configId] = cacheDataForConfig
+                sessionContext.set(entityId, cacheDataForSession);
             }
             else {
                 this.createOrUpdateRecord(entityId, { configId: [suggestionId] });

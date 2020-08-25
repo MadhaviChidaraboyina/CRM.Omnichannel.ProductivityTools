@@ -64,6 +64,17 @@ module MscrmControls.SmartAssistAnyEntityControl {
         }
 
         /**
+         * Get the key for cachepool
+         * */
+        public static getCachePoolKey(sessioId: string) {
+            if (Utility.isNullOrEmptyString(sessioId)) {
+                return "smartassist-" + Utility.getCurrentSessionId() + "-cachepool";
+            } else {
+                return "smartassist-" + sessioId + "-cachepool"
+            }
+        }
+
+        /**
          * Get localization string
          * @param resourceName: resource id
          */
