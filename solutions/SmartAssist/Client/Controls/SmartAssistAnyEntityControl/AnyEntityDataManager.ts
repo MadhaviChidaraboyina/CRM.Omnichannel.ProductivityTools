@@ -4,6 +4,8 @@
         private _sessionStateManager: SessionStateManager;
         private _sessionStorageManager: SessionStorageManager;
         private _controlContext: Mscrm.ControlData<IInputBag>;
+        private _isSmartAssistAvailable: boolean = null;
+        private _cachePoolManager: CachePoolManager;
         private CONSTRUCTOR_CACHE: {
             [name: string]: {
                 new(): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider;
@@ -12,6 +14,7 @@
         constructor() {
             this._sessionStateManager = SessionStateManager.Instance;
             this._sessionStorageManager = SessionStorageManager.Instance;
+            this._cachePoolManager = CachePoolManager.Instance;
         }
 
         public initializeContextParameters(context: Mscrm.ControlData<IInputBag>) {
@@ -118,14 +121,19 @@
                 this.Suggestions = {};
                 let data = suggestionDataFromAPI;
                 data = data.sort((a, b) => a.ConfidenceScore > b.ConfidenceScore ? -1 : 1);
-                data = data.slice(0, parseInt(saConfig.MaxSuggestionCount));
+                var slicedData = data.slice(0, parseInt(saConfig.MaxSuggestionCount));
+
                 for (let item of data) {
                     // Creating an unique id for UI construct.
                     let suggestionId = RecordId + item.SuggestionId;
                     item.SuggestionId = suggestionId;
                 }
-                this.Suggestions[saConfig.SmartassistConfigurationId] = data;
+                this.Suggestions[saConfig.SmartassistConfigurationId] = slicedData;
                 this.initializeCacheForSuggestions(saConfig, RecordId);
+
+                let additionalData = data.slice(parseInt(saConfig.MaxSuggestionCount));
+
+                this._cachePoolManager.addOrUpdateSuggestionsInCachePool(RecordId, saConfig.SmartassistConfigurationId, additionalData);
 
                 // Raise PP notification
                 var saConfigData = this.Suggestions;
@@ -144,6 +152,7 @@
                 return null;
             }
         }
+
 
         /**
          * Stores API data in local storage and suggestionIds in SessionContext.

@@ -23,6 +23,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private _handleDismissEvent: (args: any) => void;
         private sessionCloseHandlerId: string;
         private receiveFPBMessageEventHandler: any;
+        private _cachePoolManager: CachePoolManager;
 
 		/**
 		 * Empty constructor.
@@ -34,6 +35,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             this._sessionStorageManager = SessionStorageManager.Instance;
             this._handleDismissEvent = this.handleDismissEvent.bind(this);
             this.receiveFPBMessageEventHandler = this.receiveMessage.bind(this);
+            this._cachePoolManager = CachePoolManager.Instance;
             window.top.addEventListener(StringConstants.DismissCardEvent, this._handleDismissEvent, false);
             this.handleSessionClose();
         }
@@ -148,9 +150,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
                 $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
             }
-            else {          
+            else {
                 //TODO: add telemetry for all the scenarios
-                var data;                
+                var data;
                 if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled) {
                     this.appendTitle();
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
@@ -184,41 +186,51 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     }
                     for (let i = 0; i <= (dataLength - 1); i++) {
                         var record = data[this.saConfig.SmartassistConfigurationId][i];
-                        const componentId = Utility.getRCComponentId(record.SuggestionId);
-                        let properties: any =
-                        {
-                            parameters: {
-                                data: {
-                                    Type: "Multiple",
-                                    Primary: false,
-                                    Static: true,
-                                    Usage: 1, // input
-                                    Value: record
-                                },
-                                Template: {
-                                    Type: "Multiple",
-                                    Primary: false,
-                                    Static: true,
-                                    Usage: 1,
-                                    Value: this.saConfig.ACTemplate
-                                }
-                            },
-                            key: componentId,
-                            id: componentId,
-                        };
-                        var divElement = document.createElement("div");
-                        divElement.id = "Suggestion_" + record.SuggestionId;
-
                         //Initiate Suggestion Control
-                        const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", componentId, properties);
-                        SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
-                        $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
+                        const suggestionControl = this.createAndBindRecommendationControl(record);
+
                     }
                 }
+
+                setTimeout(() => {
+                    this.hideLoader();
+                }, StringConstants.LoaderTimeout);
             }
-            setTimeout(() => {
-                this.hideLoader();
-            }, StringConstants.LoaderTimeout);
+        }
+
+        private createAndBindRecommendationControl(record: any, display: string = "block"): string {
+            const componentId = Utility.getRCComponentId(record.SuggestionId);
+            let properties: any =
+            {
+                parameters: {
+                    data: {
+                        Type: "Multiple",
+                        Primary: false,
+                        Static: true,
+                        Usage: 1, // input
+                        Value: record
+                    },
+                    Template: {
+                        Type: "Multiple",
+                        Primary: false,
+                        Static: true,
+                        Usage: 1,
+                        Value: this.saConfig.ACTemplate
+                    }
+                },
+                key: componentId,
+                id: componentId,
+            };
+            
+            var divElement = document.createElement("div");
+            divElement.id = "Suggestion_" + record.SuggestionId;
+            divElement.style.display = display;
+
+            //Initiate Suggestion Control
+            const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", componentId, properties);
+            SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
+            $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
+            return divElement.id;
         }
 
         /**
@@ -238,6 +250,12 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this._sessionStateManager.deleteRecord(this.recordId, this.saConfig.SmartassistConfigurationId, suggestion);
                     this._sessionStorageManager.deleteRecord(suggestion);
                 }
+
+                
+                // clear cachepool for previous window.
+                this._cachePoolManager.clearCachePoolForConfig(this.saConfig.SmartassistConfigurationId, this.recordId);
+                window.sessionStorage.setItem(Utility.getCurrentSessionId(), JSON.stringify([]));
+
             } catch (error) {
                 let eventParameters = new TelemetryLogger.EventParameters();
                 eventParameters.addParameter("Exception Details", error.message);
@@ -280,12 +298,15 @@ module MscrmControls.SmartAssistAnyEntityControl {
             if (!window["HandleSuggestionDataOnSessionClose"]) {
                 window["HandleSuggestionDataOnSessionClose"] = (event: any) => {                  
                     var sessions = [];
+                    var cachePoolKeys = [];
                     if (event.type == "unload") {
                         var allSessions = Microsoft.AppRuntime.Sessions.getAll();
                         sessions.concat(allSessions);
+                        cachePoolKeys = sessions.map(id => "smartassist-" + id + "-cachepool");
                     }
                     else {
                         sessions.push(event.getEventArgs()._inputArguments.sessionId);
+                        cachePoolKeys.push("smartassist-" + event.getEventArgs()._inputArguments.sessionId + "-cachepool")
                     }                    
                     for (let i = 0; i < sessions.length; i++) {
                         const cacheData = window.sessionStorage.getItem(sessions[i]);
@@ -294,11 +315,31 @@ module MscrmControls.SmartAssistAnyEntityControl {
                             suggestionIds.forEach(id => window.sessionStorage.removeItem(id));
                             window.sessionStorage.removeItem(sessions[i]);
                         }
-                    }                    
+                    } 
+
+                    cachePoolKeys.forEach(cp => window.sessionStorage.removeItem(cp));
                 }
+                
                 this.sessionCloseHandlerId = Microsoft.AppRuntime.Sessions.addOnAfterSessionClose((<any>window).HandleSuggestionDataOnSessionClose);
                 window.addEventListener("unload", (<any>window).HandleSuggestionDataOnSessionClose);
             }
+        }
+
+        /**
+         * Fetch new suggestion from cachepool.
+         * */
+        private fetchNewCard(): string {
+            var data = this._cachePoolManager.fetchSuggestionFromCachePool(this.recordId, this.saConfig.SmartassistConfigurationId);
+            if (data) {
+                var id = this.createAndBindRecommendationControl(data, "none");
+                this._sessionStateManager.addRecord(this.recordId, this.saConfig.SmartassistConfigurationId, data.SuggestionId);
+                this._sessionStorageManager.createRecord(data.SuggestionId, JSON.stringify({ data: data }));
+                let suggestionIds = [];
+                suggestionIds.push(data.SuggestionId);
+                this.anyEntityDataManager.saveAllSuggestionIdsInSessionStorage(suggestionIds);
+                return id;
+            }
+            return null;
         }
 
         /**
@@ -316,19 +357,23 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     var el = <HTMLElement>document.querySelector('#' + id);
                     if (el) {
                         var speed = 1000;
-                        var seconds = 1;
+                        var seconds = 0.5;
                         el.style.transition = "opacity " + seconds + "s ease";
                         el.style.opacity = "0";
+                        var self = this;
+                        const newCardId = self.fetchNewCard();
                         setTimeout(function () {
-                            SmartAssistAnyEntityControl._context.utils.unbindDOMComponent(componentId);
-                            el.parentNode.removeChild(el);
+                            $("#" + id).slideUp("slow", function () {
+                                $("#" + id).remove();
+                            });
+                            if (newCardId) {
+                                $("#" + newCardId).fadeIn("slow");
+                            }
                         }, speed);
 
-                        this._sessionStateManager.deleteRecord(this.recordId, this.saConfig.SmartassistConfigurationId, suggestionId);
+                        self._sessionStateManager.deleteRecord(this.recordId, this.saConfig.SmartassistConfigurationId, suggestionId);
+                        self._sessionStorageManager.deleteRecord(suggestionId);
                     }
-
-                    const dataToOverride = args.detail.data;
-                    this._sessionStorageManager.updateSuggestionData(suggestionId, dataToOverride);
                 }
             } catch (error) {
                 //Log error
