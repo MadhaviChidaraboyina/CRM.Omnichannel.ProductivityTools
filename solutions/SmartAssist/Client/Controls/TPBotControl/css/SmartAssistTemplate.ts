@@ -74,7 +74,7 @@ module MscrmControls.ProductivityPanel {
 
 	.tpbot-card-container {
 		max-width: calc(100% - 25px);
-		background-color: #FFF;
+		background-color: #FDFFEA;
 		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.18), 0px 2px 4px rgba(0, 0, 0, 0.12);
 		border-radius: 4px;
 		position: relative;		
@@ -89,7 +89,7 @@ module MscrmControls.ProductivityPanel {
 		background: none!important;
 		border: none;
 		padding: 0px!important;
-		color: #069;
+		color: #605E5C;
 		cursor: pointer;
 	}
 

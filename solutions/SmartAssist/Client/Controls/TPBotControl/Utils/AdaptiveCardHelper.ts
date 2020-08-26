@@ -40,8 +40,8 @@ module MscrmControls.ProductivityPanel.TPBot {
 					"lineColor": "#FFFFFF"
 				},
 				"fontSizes": {
-					"small": 12,
-					"default": 14,
+					"small": 10,
+					"default": 12,
 					"medium": 17,
 					"large": 21,
 					"extraLarge": 26
@@ -60,7 +60,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 					"default": {
 						"foregroundColors": {
 							"default": {
-								"default": "#333333",
+								"default": "#605E5C",
 								"subtle": "#EE333333"
 							},
 							"dark": {
@@ -88,7 +88,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 								"subtle": "#DDFF0000"
 							}
 						},
-						"backgroundColor": "#FFFFFF"
+						"backgroundColor": "#FDFFEA"
 					},
 					"emphasis": {
 						"foregroundColors": {
