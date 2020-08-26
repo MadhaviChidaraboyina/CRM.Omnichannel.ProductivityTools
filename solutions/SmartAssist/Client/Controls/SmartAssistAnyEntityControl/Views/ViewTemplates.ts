@@ -5,9 +5,9 @@
 
 module MscrmControls.SmartAssistAnyEntityControl {
     export class ViewTemplates {
-        private static TitleIconTemplate = '<img src="{0}" class="' + StringConstants.SuggestionsTitleIconCss + '">';
+        private static TitleIconTemplate = '<img src="{0}" alt="icon" class="' + StringConstants.SuggestionsTitleIconCss + '">';
         private static TitleTextTemplate = '<div id="{0}" class="' + StringConstants.SuggestionsTitleDivCss + '" tabindex= "0">{1}<label class="' + StringConstants.SuggestionsTitLelabelCss + '">{2}</label></div>';
-        private static NoSugegstionsIconTemplate = '<img src="{0}" class="' + StringConstants.NoSuggestionsIconCss + '">';
+        private static NoSugegstionsIconTemplate = '<img src="{0}" alt="icon" class="' + StringConstants.NoSuggestionsIconCss + '">';
         private static NoSugegstionsTextTemplate = '<div id="{0}" class="' + StringConstants.NoSuggestionsDivCss + '" >{1}<label class="' + StringConstants.NoSuggestionsLabelCss + '">{2}</label></div>';
         //public static SALoader = '<div id="' + Utility.getLoaderComponent("{0}") + '" class="hide-element ' + StringConstants.SALoaderCss + '" ></div>';
         public static SALoader = '<div id="' + Utility.getLoaderComponent("{0}") + '" class="hide-element ' + StringConstants.SALoaderParentCss + '"><div class="' + StringConstants.SALoaderCss + '"></div><label>{1}</label></div>';

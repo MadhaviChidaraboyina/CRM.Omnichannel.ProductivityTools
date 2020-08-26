@@ -48,7 +48,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 					font-size:11px;
 					line-height:16px;
 					align-items:center;
-					color: #8A8886;
+					color: #605e5c;
 				}
 				.hide-element{
 					display:none !important;
