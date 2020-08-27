@@ -10,7 +10,6 @@ module MscrmControls.ProductivityPanel.TPBot {
 		private static instance: TPBotManager = null;
 		private adaptiveCard: AdaptiveCards.AdaptiveCard = null;
 		private logger: TelemetryLogger;
-        public callbackOnCardReceived: (value: any) => void;
 
 		private constructor() {
 			this.TPBotCards = {};
@@ -223,13 +222,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 			$('#' + Constants.TPBotDismissCardButtonId + cardId).on(Constants.eventClick, () => {
 				let id = Constants.TPBotCardContainerIdPrefix + cardId;
 				$("#" + id).remove();
-                ConversationStateManager.GetConversationState(conversationId).RemoveCard(cardId);
-                var conversationState = TPBot.ConversationStateManager.GetConversationState(conversationId);
-                var cards = conversationState.GetAllCards();                
-                var length = Object.keys(cards).length;
-                if (length == 0) {
-                    this.callbackOnCardReceived(false);
-                }
+                ConversationStateManager.GetConversationState(conversationId).RemoveCard(cardId);              
 			});
 			$('#' + TPBot.Constants.TPBotDismissCardButtonId + cardId).on(Constants.eventKeyPress, function (args) {
 				let id = TPBot.Constants.TPBotDismissCardButtonId + cardId;
